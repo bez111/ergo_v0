@@ -1,0 +1,545 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 0%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 30 98% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 30 98% 10%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 30 98% 20%;
+    --input: 0 0% 10%;
+    --ring: 30 98% 50%;
+    --radius: 0.25rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Scanline animation */
+@keyframes scanline {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 100%;
+  }
+}
+
+.animate-scanline {
+  animation: scanline 8s linear infinite;
+}
+
+/* Scan animation */
+@keyframes scan {
+  0%,
+  100% {
+    background-position: -100% 0;
+  }
+  50% {
+    background-position: 200% 0;
+  }
+}
+
+/* Glitch animations */
+@keyframes glitch {
+  0% {
+    clip-path: inset(40% 0 61% 0);
+    transform: translate(-2px, -2px);
+  }
+  20% {
+    clip-path: inset(92% 0 1% 0);
+    transform: translate(2px, 2px);
+  }
+  40% {
+    clip-path: inset(43% 0 1% 0);
+    transform: translate(-2px, -2px);
+  }
+  60% {
+    clip-path: inset(25% 0 58% 0);
+    transform: translate(2px, 2px);
+  }
+  80% {
+    clip-path: inset(54% 0 7% 0);
+    transform: translate(-2px, -2px);
+  }
+  100% {
+    clip-path: inset(58% 0 43% 0);
+    transform: translate(2px, 2px);
+  }
+}
+
+@keyframes glitch-1 {
+  0% {
+    clip-path: inset(20% 0 40% 0);
+    transform: translate(-2px);
+  }
+  20% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translate(2px);
+  }
+  40% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(-2px);
+  }
+  60% {
+    clip-path: inset(80% 0 0% 0);
+    transform: translate(2px);
+  }
+  80% {
+    clip-path: inset(10% 0 70% 0);
+    transform: translate(-2px);
+  }
+  100% {
+    clip-path: inset(30% 0 50% 0);
+    transform: translate(2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0% {
+    clip-path: inset(40% 0 40% 0);
+    transform: translate(2px);
+  }
+  20% {
+    clip-path: inset(20% 0 60% 0);
+    transform: translate(-2px);
+  }
+  40% {
+    clip-path: inset(60% 0 20% 0);
+    transform: translate(2px);
+  }
+  60% {
+    clip-path: inset(0% 0 80% 0);
+    transform: translate(-2px);
+  }
+  80% {
+    clip-path: inset(70% 0 10% 0);
+    transform: translate(2px);
+  }
+  100% {
+    clip-path: inset(50% 0 30% 0);
+    transform: translate(-2px);
+  }
+}
+
+.animate-glitch-1 {
+  animation: glitch-1 300ms infinite linear alternate-reverse;
+}
+
+.animate-glitch-2 {
+  animation: glitch-2 300ms infinite linear alternate-reverse;
+}
+
+.ergo-glitch {
+  position: relative;
+  animation: glitch 500ms infinite;
+}
+
+.ergo-glitch::before,
+.ergo-glitch::after {
+  content: "ERGO";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ergo-glitch::before {
+  color: #0ff;
+  z-index: -1;
+  left: 2px;
+  text-shadow: -1px 0 #ff8800;
+  animation: glitch-anim 2s infinite linear alternate-reverse;
+}
+
+.ergo-glitch::after {
+  color: #f0f;
+  z-index: -2;
+  left: -2px;
+  text-shadow: 1px 0 #ff8800;
+  animation: glitch-anim2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip-path: inset(80% 0 0 0);
+  }
+  20% {
+    clip-path: inset(20% 0 60% 0);
+  }
+  40% {
+    clip-path: inset(40% 0 40% 0);
+  }
+  60% {
+    clip-path: inset(60% 0 20% 0);
+  }
+  80% {
+    clip-path: inset(0 0 80% 0);
+  }
+  100% {
+    clip-path: inset(100% 0 0 0);
+  }
+}
+
+@keyframes glitch-anim2 {
+  0% {
+    clip-path: inset(0 0 0 80%);
+  }
+  20% {
+    clip-path: inset(0 60% 0 20%);
+  }
+  40% {
+    clip-path: inset(0 40% 0 40%);
+  }
+  60% {
+    clip-path: inset(0 20% 0 60%);
+  }
+  80% {
+    clip-path: inset(0 80% 0 0);
+  }
+  100% {
+    clip-path: inset(0 0 0 100%);
+  }
+}
+
+/* Scroll animation */
+@keyframes scroll-y {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.animate-scroll-y {
+  animation: scroll-y 20s linear infinite;
+}
+
+/* Terminal text animation */
+@keyframes terminal-typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes cursor-blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ff8800;
+  }
+}
+
+.terminal-text {
+  font-family: "Courier New", monospace;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ff8800;
+  max-width: 100%;
+  animation: terminal-typing 3.5s steps(40, end), cursor-blink 0.75s step-end infinite;
+}
+
+/* Neon text effect */
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff8800, 0 0 20px #ff8800, 0 0 25px #ff8800;
+  animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+  from {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff8800, 0 0 20px #ff8800;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #ff8800, 0 0 20px #ff8800, 0 0 25px #ff8800, 0 0 30px #ff8800;
+  }
+}
+
+/* Cyber card styles */
+.cyber-card {
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.cyber-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(255, 136, 0, 0.5);
+}
+
+.cyber-card:hover .cyber-card-image {
+  transform: scale(1.1);
+}
+
+.cyber-glitch-overlay {
+  background: linear-gradient(
+    45deg,
+    transparent 0%,
+    rgba(255, 136, 0, 0.1) 25%,
+    transparent 50%,
+    rgba(255, 136, 0, 0.1) 75%,
+    transparent 100%
+  );
+  background-size: 200% 200%;
+  animation: glitch-background 5s linear infinite;
+}
+
+@keyframes glitch-background {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* Cyber button styles */
+.cyber-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-button:hover {
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.7);
+}
+
+.cyber-button-glitch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 0%, rgba(255, 136, 0, 0.2) 50%, transparent 100%);
+  background-size: 200% 200%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.cyber-button:hover .cyber-button-glitch {
+  opacity: 1;
+  animation: button-glitch 1s linear infinite;
+}
+
+@keyframes button-glitch {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* Cyber target interface */
+.cyber-target {
+  background: radial-gradient(
+      circle at center,
+      transparent 30%,
+      rgba(255, 136, 0, 0.1) 30%,
+      rgba(255, 136, 0, 0.1) 32%,
+      transparent 32%
+    ),
+    radial-gradient(
+      circle at center,
+      transparent 36%,
+      rgba(255, 136, 0, 0.1) 36%,
+      rgba(255, 136, 0, 0.1) 38%,
+      transparent 38%
+    ),
+    radial-gradient(
+      circle at center,
+      transparent 44%,
+      rgba(255, 136, 0, 0.05) 44%,
+      rgba(255, 136, 0, 0.05) 46%,
+      transparent 46%
+    );
+  background-size: 100% 100%;
+  background-position: center;
+  animation: target-scan 3s linear infinite;
+}
+
+@keyframes target-scan {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.5;
+  }
+}
+
+/* Cyber stat styles */
+.cyber-stat {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-stat:hover {
+  border-color: rgba(255, 136, 0, 0.5);
+  box-shadow: 0 0 10px rgba(255, 136, 0, 0.3);
+}
+
+.cyber-stat:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 0%, rgba(255, 136, 0, 0.1) 50%, transparent 100%);
+  background-size: 200% 200%;
+  animation: stat-glitch 1s linear infinite;
+}
+
+@keyframes stat-glitch {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 200% 200%;
+  }
+}
+
+/* Cyber header styles */
+.cyber-header {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  font-family: "Courier New", monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: white;
+}
+
+.cyber-header-bracket-left,
+.cyber-header-bracket-right {
+  font-size: 1.5em;
+  color: #ff8800;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cyber-header-bracket-left {
+  left: 0;
+}
+
+.cyber-header-bracket-right {
+  right: 0;
+}
+
+.cyber-header-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.5em;
+  background-color: rgba(255, 136, 0, 0.2);
+  color: #ff8800;
+  padding: 0.1em 0.3em;
+  border: 1px solid rgba(255, 136, 0, 0.5);
+}
+
+.cyber-header-glitch-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent 0%, rgba(255, 136, 0, 0.1) 50%, transparent 100%);
+  background-size: 200% 200%;
+  opacity: 0;
+  animation: header-glitch 5s linear infinite;
+}
+
+@keyframes header-glitch {
+  0%,
+  90%,
+  100% {
+    opacity: 0;
+  }
+  92%,
+  98% {
+    opacity: 1;
+    background-position: 200% 200%;
+  }
+}
+
+/* Cyber CTA button styles */
+.cyber-cta-button {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.cyber-cta-button::before,
+.cyber-cta-button::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #ff8800;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.cyber-cta-button::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.cyber-cta-button::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+.cyber-cta-button:hover::before,
+.cyber-cta-button:hover::after {
+  width: 20px;
+  height: 20px;
+  opacity: 1;
+}
+
+/* Shimmer animation */
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
