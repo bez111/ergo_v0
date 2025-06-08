@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react" // Added useEffect
 import { useCases } from "@/lib/use-cases-data"
 import { HeroSection } from "@/components/use-cases/hero-section"
 import { CategoryNavigation } from "@/components/use-cases/category-navigation"
@@ -9,37 +9,43 @@ import { HowItWorks } from "@/components/use-cases/how-it-works"
 import { InfoBlock } from "@/components/use-cases/info-block"
 import { FAQSection } from "@/components/use-cases/faq-section"
 import { motion } from "framer-motion"
-import { ArrowRight, ExternalLink } from "lucide-react"
+import { ArrowRight, ExternalLink, Loader2 } from "lucide-react" // Added Loader2
 
 export default function UseCasesPage() {
+  const [mounted, setMounted] = useState(false)
   const [selectedCategory, setSelectedCategory] = useState("all")
 
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   const filteredUseCases = useMemo(() => {
+    if (!useCases || !Array.isArray(useCases)) return []
     if (selectedCategory === "all") return useCases
     return useCases.filter((uc) => uc.category === selectedCategory)
-  }, [selectedCategory, useCases]) // Added useCases to dependency array for correctness
+  }, [selectedCategory, useCases])
+
+  if (!mounted) {
+    return (
+      <div className="flex min-h-screen items-center justify-center bg-gray-950">
+        <Loader2 className="h-16 w-16 animate-spin text-primary" />
+      </div>
+    ) // Or return null, or a basic skeleton
+  }
 
   if (!useCases || !Array.isArray(useCases)) {
-    // Basic check for data, though unlikely the cause of this specific error
-    return <div>Loading use cases or data error...</div>
+    return <div className="flex min-h-screen items-center justify-center bg-gray-950 text-white">Data error...</div>
   }
 
   return (
     <div className="min-h-screen bg-gray-950 relative overflow-hidden">
       {/* Background elements */}
       <div className="fixed inset-0 z-0">
-        {/* Base gradient */}
         <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-black" />
-
-        {/* Subtle pattern overlay */}
         <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-[0.02] bg-repeat" />
-
-        {/* Radial gradients for depth */}
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-blue-500/3 rounded-full blur-3xl" />
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-primary/3 to-transparent rounded-full blur-2xl" />
-
-        {/* Animated floating elements */}
         <div className="absolute inset-0 overflow-hidden">
           {[...Array(6)].map((_, i) => (
             <div
@@ -54,8 +60,6 @@ export default function UseCasesPage() {
             />
           ))}
         </div>
-
-        {/* Subtle grid overlay */}
         <div
           className="absolute inset-0 opacity-[0.015]"
           style={{
@@ -66,20 +70,13 @@ export default function UseCasesPage() {
             backgroundSize: "50px 50px",
           }}
         />
-
-        {/* Vignette effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/20 via-transparent to-black/20" />
         <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
       </div>
 
       <div className="relative z-10">
-        {/* Hero Section */}
         <HeroSection />
-
-        {/* Category Navigation */}
         <CategoryNavigation selectedCategory={selectedCategory} onCategoryChange={setSelectedCategory} />
-
-        {/* Use Cases Grid */}
         <section className="py-16">
           <div className="max-w-6xl mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -89,17 +86,9 @@ export default function UseCasesPage() {
             </div>
           </div>
         </section>
-
-        {/* How It Works */}
         <HowItWorks />
-
-        {/* Info Block */}
         <InfoBlock />
-
-        {/* FAQ Section */}
         <FAQSection />
-
-        {/* Final CTA */}
         <section className="py-20">
           <div className="max-w-4xl mx-auto px-4 text-center">
             <motion.div
@@ -113,7 +102,6 @@ export default function UseCasesPage() {
               <p className="text-gray-400 mb-6 text-lg max-w-2xl mx-auto">
                 Start your journey below and discover how Ergo can solve real-world problems.
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
                   type="button"
@@ -124,7 +112,6 @@ export default function UseCasesPage() {
                   <span>Browse All Use Cases</span>
                   <ArrowRight className="w-5 h-5" />
                 </motion.button>
-
                 <motion.button
                   type="button"
                   whileHover={{ scale: 1.02 }}
@@ -134,7 +121,6 @@ export default function UseCasesPage() {
                   <span>See Ecosystem</span>
                   <ExternalLink className="w-5 h-5" />
                 </motion.button>
-
                 <motion.button
                   type="button"
                   whileHover={{ scale: 1.02 }}
