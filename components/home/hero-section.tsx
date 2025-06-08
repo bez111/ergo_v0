@@ -3,7 +3,7 @@
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
-import { ArrowRight, Code, Layers, Shield, Zap } from "lucide-react"
+import { Code, Shield, Zap, Layers } from "lucide-react"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer, StaggerItem } from "@/components/animations/stagger-container"
 import { CyberButton } from "@/components/animations/cyber-button"
@@ -125,7 +125,13 @@ export function HeroSection() {
             <div className="space-y-4 relative">
               <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white">
                 <span className="relative inline-block">
-                  <span className="relative z-10 font-mono">
+                  <span
+                    className="relative z-10 font-mono whitespace-nowrap overflow-hidden"
+                    style={{
+                      fontSize: `${Math.max(0.6, 1 - typedText.length * 0.01)}em`,
+                      transition: "font-size 0.1s ease-out",
+                    }}
+                  >
                     <span className="text-primary">&gt;</span> {typedText}
                     <motion.span
                       className="text-primary"
@@ -143,7 +149,7 @@ export function HeroSection() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
               >
-                Programmable. Private. Fair. For Everyone.
+                Join a movement for open, programmable, and censorship-resistant finance.
               </motion.p>
             </div>
           </FadeIn>
@@ -153,12 +159,13 @@ export function HeroSection() {
             <StaggerItem>
               <CyberButton
                 size="lg"
-                className="gap-2 bg-primary text-black hover:bg-primary/80 font-mono uppercase tracking-wider border-2 border-primary"
+                className="gap-2 bg-primary text-white hover:bg-primary/80 font-mono uppercase tracking-wider border-2 border-primary px-6 py-3"
                 asChild
               >
-                <Link href="/start">
-                  Get Started
-                  <ArrowRight className="h-5 w-5" />
+                <Link href="/start" className="flex items-center">
+                  <span className="text-white">&gt;</span>
+                  <span className="ml-2">get-started</span>
+                  <span className="ml-1 animate-pulse">_</span>
                 </Link>
               </CyberButton>
             </StaggerItem>
@@ -172,19 +179,6 @@ export function HeroSection() {
                 <Link href="/build">
                   <Code className="h-5 w-5" />
                   Start Building
-                </Link>
-              </CyberButton>
-            </StaggerItem>
-            <StaggerItem>
-              <CyberButton
-                variant="outline"
-                size="lg"
-                className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
-                asChild
-              >
-                <Link href="/use/dapps">
-                  <Layers className="h-5 w-5" />
-                  Try dApps
                 </Link>
               </CyberButton>
             </StaggerItem>

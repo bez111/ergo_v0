@@ -3,21 +3,21 @@
 import { useState, useEffect } from "react"
 
 interface DigitalCounterProps {
-  value: string
+  value: string | number
+  suffix?: string
+  duration?: number
   className?: string
 }
 
-export function DigitalCounter({ value, className = "" }: DigitalCounterProps) {
+export function DigitalCounter({ value, suffix = "", duration = 1000, className = "" }: DigitalCounterProps) {
   const [displayValue, setDisplayValue] = useState("0")
   const [isAnimating, setIsAnimating] = useState(false)
 
   useEffect(() => {
     setIsAnimating(true)
 
-    // Simulate digital counter animation
-    let currentValue = "0"
-    const targetValue = value
-    const duration = 1000 // ms
+    // Convert value to string for consistent handling
+    const targetValue = String(value) + suffix
     const steps = 10
     const stepTime = duration / steps
 
@@ -30,30 +30,29 @@ export function DigitalCounter({ value, className = "" }: DigitalCounterProps) {
         setDisplayValue(targetValue)
         setIsAnimating(false)
       } else {
-        // Generate random numbers/characters during animation
+        // Generate progressive values during animation
         if (targetValue.startsWith("$")) {
           // For currency values
           const numericPart = Number.parseFloat(targetValue.replace(/[^0-9.]/g, ""))
           const progress = step / steps
           const currentNumeric = (numericPart * progress).toFixed(1)
-          currentValue = targetValue.replace(/[0-9.]+/, currentNumeric)
-        } else if (/\d+\+$/.test(targetValue)) {
-          // For values with + suffix
+          setDisplayValue(targetValue.replace(/[0-9.]+/, currentNumeric))
+        } else if (/\d+/.test(targetValue)) {
+          // For numeric values (with or without suffix)
           const numericPart = Number.parseInt(targetValue.replace(/[^0-9]/g, ""))
           const progress = step / steps
           const currentNumeric = Math.floor(numericPart * progress)
-          currentValue = `${currentNumeric}+`
+          const suffixPart = targetValue.replace(/[0-9]/g, "")
+          setDisplayValue(currentNumeric + suffixPart)
         } else {
           // For other values
-          currentValue = targetValue
+          setDisplayValue(targetValue)
         }
-
-        setDisplayValue(currentValue)
       }
     }, stepTime)
 
     return () => clearInterval(interval)
-  }, [value])
+  }, [value, suffix, duration])
 
   return (
     <div className={`digital-counter font-mono ${className}`}>

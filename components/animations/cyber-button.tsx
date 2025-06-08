@@ -36,7 +36,7 @@ export function CyberButton({
         damping: 17,
       }}
     >
-      <Button variant={variant} size={size} onClick={onClick} className={className} asChild={asChild}>
+      <Button variant={variant} size={size} onClick={onClick} className={`text-black ${className}`} asChild={asChild}>
         <motion.div
           initial={false}
           whileHover={{

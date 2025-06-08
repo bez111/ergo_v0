@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { Lock, Zap, RefreshCw, Users, BookOpen } from "lucide-react"
+import { Lock, Zap, RefreshCw, Users, BookOpen, Shield } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { SectionHeading } from "@/components/section-heading"
 
@@ -10,29 +10,40 @@ export function Differentiation() {
 
   const differentiators = [
     {
-      text: "NO ICO, NO PREMINE, PURE POW",
-      icon: Lock,
-      description: "Fair launch with no pre-allocated tokens ensures true decentralization",
+      text: "FAIR LAUNCH & PROOF-OF-WORK",
+      icon: Shield,
+      description:
+        "Launched with no ICO or premine, secured by Autolykos v2 – an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one.",
     },
     {
-      text: "eUTXO MODEL FOR SCALABLE DEFI & PRIVACY",
+      text: "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
       icon: Zap,
-      description: "Extended UTXO model combines Bitcoin's security with Ethereum's programmability",
+      description:
+        "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi.",
     },
     {
-      text: "STORAGE RENT FOR SUSTAINABILITY",
+      text: "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
       icon: RefreshCw,
-      description: "Prevents blockchain bloat and ensures long-term economic sustainability",
+      description:
+        'A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data ("dust") back to miners, preventing bloat and keeping the chain efficient.',
+    },
+    {
+      text: "RESEARCH-DRIVEN INNOVATION",
+      icon: BookOpen,
+      description:
+        "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+    },
+    {
+      text: "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
+      icon: Lock,
+      description:
+        "Leveraging cutting-edge Sigma protocols, Ergo delivers powerful, optional on-chain privacy for both transactions and dApps, giving users control over their financial data.",
     },
     {
       text: "COMMUNITY-DRIVEN GOVERNANCE",
       icon: Users,
-      description: "Decisions made through community consensus rather than centralized control",
-    },
-    {
-      text: "RESEARCH-BASED DEVELOPMENT",
-      icon: BookOpen,
-      description: "Built on peer-reviewed academic research and cryptographic innovations",
+      description:
+        "Ergo is governed and developed by its global community, free from venture capital or corporate control.",
     },
   ]
 

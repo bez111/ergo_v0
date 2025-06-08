@@ -3,45 +3,53 @@
 import { useEffect, useState } from "react"
 
 export function CodeLines() {
-  const [codeLines, setCodeLines] = useState<string[]>([])
+  const [lines, setLines] = useState<string[]>([])
 
   useEffect(() => {
-    // Generate random binary/hex code lines
-    const generateCodeLines = () => {
-      const lines: string[] = []
-      const lineCount = 50
+    const codeSnippets = [
+      "const blockchain = new ErgoBlockchain()",
+      "function validateTransaction(tx) {",
+      "  return tx.inputs.every(input => {",
+      "    return verifySignature(input)",
+      "  })",
+      "}",
+      "class SmartContract {",
+      "  constructor(script) {",
+      "    this.ergoscript = script",
+      "  }",
+      "}",
+      "// UTXO model implementation",
+      "const utxo = {",
+      "  value: 1000000,",
+      "  address: '9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v'",
+      "}",
+      "if (proof.isValid()) {",
+      "  executeContract()",
+      "}",
+      "// Sigma protocols for privacy",
+      "const commitment = pedersen.commit(value, randomness)",
+      "function generateNIPoPoW() {",
+      "  return compressedProof",
+      "}",
+    ]
 
-      for (let i = 0; i < lineCount; i++) {
-        // Randomly choose between binary and hex
-        if (Math.random() > 0.5) {
-          // Binary
-          let line = ""
-          for (let j = 0; j < 30; j++) {
-            line += Math.round(Math.random()).toString()
-          }
-          lines.push(line)
-        } else {
-          // Hex
-          let line = ""
-          const hexChars = "0123456789ABCDEF"
-          for (let j = 0; j < 20; j++) {
-            line += hexChars[Math.floor(Math.random() * hexChars.length)]
-          }
-          lines.push(line)
-        }
-      }
-
-      return lines
-    }
-
-    setCodeLines(generateCodeLines())
+    setLines(codeSnippets)
   }, [])
 
   return (
-    <div className="absolute top-0 right-0 h-full w-40 overflow-hidden opacity-20 pointer-events-none">
-      <div className="font-mono text-xs text-primary whitespace-pre animate-scroll-y">
-        {codeLines.map((line, index) => (
-          <div key={index} className="opacity-70">
+    <div className="absolute inset-0 overflow-hidden pointer-events-none">
+      <div className="relative h-full">
+        {lines.map((line, index) => (
+          <div
+            key={index}
+            className="absolute text-green-400/20 font-mono text-sm whitespace-nowrap"
+            style={{
+              top: `${(index * 40) % 100}%`,
+              left: `${(index * 60) % 100}%`,
+              transform: `rotate(${(index * 15) % 360}deg)`,
+              animationDelay: `${index * 0.5}s`,
+            }}
+          >
             {line}
           </div>
         ))}

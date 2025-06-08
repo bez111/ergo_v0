@@ -10,36 +10,59 @@ import { PageTransition } from "@/components/animations/page-transition"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Ergo Blockchain | Contractual Money",
+  metadataBase: new URL("https://ergoplatform.org"), // Важно для OpenGraph URL
+  title: {
+    default: "Ergo Blockchain | Resilient Platform for Contractual Money",
+    template: "%s | Ergo Platform",
+  },
   description:
-    "A resilient platform for contractual money. Ergo Blockchain provides the tools for people to secure financial interactions.",
-  keywords: ["blockchain", "cryptocurrency", "ergo", "smart contracts", "defi", "privacy"],
-  authors: [{ name: "Ergo Platform" }],
+    "Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps.",
+  keywords: [
+    "ergo",
+    "blockchain",
+    "cryptocurrency",
+    "smart contracts",
+    "eutxo",
+    "proof-of-work",
+    "ergoscript",
+    "sigma protocols",
+    "defi",
+    "privacy",
+    "decentralized applications",
+    "contractual money",
+  ],
+  authors: [{ name: "Ergo Platform", url: "https://ergoplatform.org" }],
   creator: "Ergo Platform",
   publisher: "Ergo Platform",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://ergoplatform.org",
-    title: "Ergo Blockchain | Contractual Money",
+    title: {
+      default: "Ergo Blockchain | Resilient Platform for Contractual Money",
+      template: "%s | Ergo Platform",
+    },
     description:
-      "A resilient platform for contractual money. Ergo Blockchain provides the tools for people to secure financial interactions.",
+      "Ergo is a next-generation smart contract platform that ensures economic freedom for ordinary people through secure, accessible, and decentralized financial tools.",
     siteName: "Ergo Platform",
     images: [
       {
-        url: "/og-image.png",
+        url: "/og-image.png", // Убедитесь, что этот файл существует в /public
         width: 1200,
         height: 630,
-        alt: "Ergo Platform",
+        alt: "Ergo Platform - Contractual Money",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ergo Blockchain | Contractual Money",
+    title: {
+      default: "Ergo Blockchain | Resilient Platform for Contractual Money",
+      template: "%s | Ergo Platform",
+    },
     description:
-      "A resilient platform for contractual money. Ergo Blockchain provides the tools for people to secure financial interactions.",
-    images: ["/og-image.png"],
+      "Explore Ergo: a secure, decentralized platform for contractual money. Learn about eUTXO, ErgoScript, and build the future of finance.",
+    images: ["/og-image.png"], // Убедитесь, что этот файл существует в /public
     creator: "@ergoplatform",
   },
   robots: {
@@ -52,7 +75,14 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
+  },,
+  // Добавьте manifest если его нет
+  // manifest: '/manifest.json',
+  // Добавьте иконки
+  // icons: {
+  //   icon: '/favicon.ico',
+  //   apple: '/apple-touch-icon.png',
+  // },
     generator: 'v0.dev'
 }
 
@@ -76,13 +106,22 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Ergo Platform",
               url: "https://ergoplatform.org",
-              logo: "https://ergoplatform.org/logo.png",
-              description: "A resilient platform for contractual money",
+              logo: "https://ergoplatform.org/logo.png", // Замените на актуальный URL логотипа
+              description:
+                "A resilient platform for contractual money. Ergo Blockchain provides the tools for people to secure financial interactions.",
               sameAs: [
                 "https://twitter.com/ergoplatform",
                 "https://github.com/ergoplatform",
                 "https://discord.gg/ergo",
+                "https://www.reddit.com/r/ergonauts/",
+                "https://t.me/ergoplatform",
+                // Добавьте другие релевантные социальные профили
               ],
+              contactPoint: {
+                "@type": "ContactPoint",
+                contactType: "Customer Support", // или "Technical Support", "Community Support"
+                url: "https://ergoplatform.org/community/discussion", // Ссылка на страницу поддержки или контактов
+              },
             }),
           }}
         />

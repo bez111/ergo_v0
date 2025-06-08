@@ -8,6 +8,13 @@ import { cn } from "@/lib/utils"
 export function QuickActions() {
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null)
 
+  const handleLinkClick = () => {
+    // Прокрутка наверх при переходе на новую страницу
+    setTimeout(() => {
+      window.scrollTo(0, 0)
+    }, 100)
+  }
+
   const actions = [
     {
       title: "GET WALLET",
@@ -16,28 +23,28 @@ export function QuickActions() {
       href: "/wallet",
     },
     {
-      title: "TRY A DAPP",
-      description: "Explore decentralized apps",
-      icon: Layers,
-      href: "/use/dapps",
-    },
-    {
-      title: "JOIN COMMUNITY",
-      description: "Connect with Ergo users",
-      icon: Users,
-      href: "/community",
-    },
-    {
       title: "BUY ERG",
       description: "Purchase Ergo tokens",
       icon: CreditCard,
-      href: "/use/buy",
+      href: "/use/get-erg",
+    },
+    {
+      title: "TRY A DAPP",
+      description: "Explore decentralized apps",
+      icon: Layers,
+      href: "/ecosystem",
     },
     {
       title: "MINE ERG",
       description: "Secure the network",
       icon: Cpu,
       href: "/use/mining",
+    },
+    {
+      title: "JOIN COMMUNITY",
+      description: "Connect with Ergo users",
+      icon: Users,
+      href: "/start/community",
     },
   ]
 
@@ -52,6 +59,7 @@ export function QuickActions() {
             <Link
               key={index}
               href={action.href}
+              onClick={handleLinkClick}
               className="group relative flex flex-col items-center text-center gap-3 p-4 rounded-lg border border-primary/30 bg-black hover:border-primary hover:bg-primary/5 transition-all duration-300"
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}

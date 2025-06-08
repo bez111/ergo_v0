@@ -11,32 +11,36 @@ export function CorePillars() {
   const pillars = [
     {
       title: "SECURE POW",
-      description: "ASIC-resistant Proof of Work consensus for long-term security and decentralization",
+      description:
+        "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone.",
       icon: Shield,
     },
     {
       title: "SMART CONTRACTS",
-      description: "Powerful ErgoScript language designed for secure financial contracts",
+      description:
+        "Formally verifiable, expressive, and secure contracts—powered by ErgoScript and the advanced eUTXO model.",
       icon: Code,
     },
     {
       title: "SUSTAINABLE ECONOMICS",
-      description: "Storage rent mechanism prevents blockchain bloat and ensures long-term sustainability",
+      description: "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat.",
       icon: RefreshCw,
     },
     {
       title: "PRIVACY",
-      description: "Advanced cryptographic features enabling optional privacy while maintaining compliance",
+      description: "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions.",
       icon: Lock,
     },
     {
       title: "ORACLE POOLS",
-      description: "First-class oracle solution for reliable off-chain data with built-in incentives",
+      description:
+        "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives.",
       icon: Database,
     },
     {
       title: "DEV FRIENDLY",
-      description: "Comprehensive tools and resources for developers to build innovative applications",
+      description:
+        "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative.",
       icon: Cpu,
     },
   ]
