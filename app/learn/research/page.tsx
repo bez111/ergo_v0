@@ -35,135 +35,135 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
-const keyPapers = [
-  {
-    title: "Ergo Whitepaper",
-    description: "The core technical paper describing Ergo's design, principles, and protocol innovations.",
-    url: "https://ergoplatform.org/docs/whitepaper.pdf",
-    category: "Core Protocol",
-  },
-  {
-    title: "Extended UTXO (eUTXO) Model",
-    description: "By IOHK/Cardano & Ergo researchers — the definitive paper on the eUTXO paradigm.",
-    url: "https://iohk.io/en/research/library/papers/extended-utxo-a-formal-model-for-utxo-based-cryptocurrencies/",
-    category: "Architecture",
-  },
-  {
-    title: "Sigma Protocols",
-    description: "The cryptographic backbone of privacy and ring signatures in Ergo.",
-    url: "https://ergoplatform.org/docs/sigma-protocol.pdf",
-    category: "Cryptography",
-  },
-  {
-    title: "Autolykos: Ergo's PoW Algorithm",
-    description: "A novel, ASIC-resistant Proof-of-Work consensus mechanism.",
-    url: "https://ergoplatform.org/docs/Autolykos.pdf",
-    category: "Consensus",
-  },
-  {
-    title: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work)",
-    description: "Research on cross-chain, lightweight validation protocols.",
-    url: "https://nipopows.com/",
-    category: "Interoperability",
-  },
-]
-
-const researchCategories = [
-  {
-    title: "Formal Security & Protocol Analysis",
-    icon: Shield,
-    color: "from-red-500 to-orange-500",
-    papers: [
-      {
-        title: "Formal Verification of ErgoScript",
-        url: "https://ergoplatform.org/en/blog/2022_09_01-formal-verification/",
-      },
-      {
-        title: "ErgoScript: Foundations and Security",
-        url: "https://ergoplatform.org/docs/ErgoScript.pdf",
-      },
-      {
-        title: "Security Properties of eUTXO-based Smart Contracts",
-        url: "https://eprint.iacr.org/2020/1402.pdf",
-      },
-    ],
-  },
-  {
-    title: "Privacy & Zero-Knowledge",
-    icon: Eye,
-    color: "from-purple-500 to-pink-500",
-    papers: [
-      {
-        title: "Zero-Knowledge Proofs in Sigma Protocols",
-        url: "https://eprint.iacr.org/2017/1050.pdf",
-      },
-      {
-        title: "Ring Signatures for Blockchain Privacy",
-        url: "https://ergoplatform.org/docs/ring-signatures.pdf",
-      },
-    ],
-  },
-  {
-    title: "DeFi & Economic Models",
-    icon: DollarSign,
-    color: "from-green-500 to-emerald-500",
-    papers: [
-      {
-        title: "Composable DeFi Primitives on eUTXO",
-        url: "https://ergoplatform.org/en/blog/2021_12_07-composable-defi/",
-      },
-      {
-        title: "On-chain Lending, LETS, and Oracles",
-        url: "https://ergoplatform.org/en/blog/2020_07_13-leveraging-oracles/",
-      },
-    ],
-  },
-  {
-    title: "Storage Rent & Blockchain Sustainability",
-    icon: Database,
-    color: "from-blue-500 to-cyan-500",
-    papers: [
-      {
-        title: "Ergo Storage Rent Model",
-        url: "https://ergoplatform.org/docs/storage-rent.pdf",
-      },
-      {
-        title: "Efficient Blockchain State Management",
-        url: "https://eprint.iacr.org/2019/1072.pdf",
-      },
-    ],
-  },
-]
-
-const developerResources = [
-  {
-    title: "ErgoScript Documentation",
-    url: "https://ergoplatform.org/docs/ergoscript.pdf",
-    icon: Code,
-  },
-  {
-    title: "Protocol Specifications",
-    url: "https://ergoplatform.org/docs/ErgoProtocol.pdf",
-    icon: FileText,
-  },
-  {
-    title: "Node Implementation",
-    url: "https://github.com/ergoplatform/ergo",
-    icon: Github,
-  },
-  {
-    title: "Sigma-Rust Cryptography Library",
-    url: "https://github.com/ergoplatform/sigma-rust",
-    icon: Shield,
-  },
-  {
-    title: "ErgoMixer Technical Overview",
-    url: "https://ergoplatform.org/en/blog/2020_05_28-ergomixer/",
-    icon: Eye,
-  },
-]
-
 export default function ResearchPage() {
+  const keyPapers = [
+    {
+      title: "Ergo Whitepaper",
+      description: "The core technical paper describing Ergo design, principles, and protocol innovations.",
+      url: "https://ergoplatform.org/docs/whitepaper.pdf",
+      category: "Core Protocol",
+    },
+    {
+      title: "Extended UTXO (eUTXO) Model",
+      description: "By IOHK/Cardano & Ergo researchers — the definitive paper on the eUTXO paradigm.",
+      url: "https://iohk.io/en/research/library/papers/extended-utxo-a-formal-model-for-utxo-based-cryptocurrencies/",
+      category: "Architecture",
+    },
+    {
+      title: "Sigma Protocols",
+      description: "The cryptographic backbone of privacy and ring signatures in Ergo.",
+      url: "https://ergoplatform.org/docs/sigma-protocol.pdf",
+      category: "Cryptography",
+    },
+    {
+      title: "Autolykos: Ergo PoW Algorithm",
+      description: "A novel, ASIC-resistant Proof-of-Work consensus mechanism.",
+      url: "https://ergoplatform.org/docs/Autolykos.pdf",
+      category: "Consensus",
+    },
+    {
+      title: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work)",
+      description: "Research on cross-chain, lightweight validation protocols.",
+      url: "https://nipopows.com/",
+      category: "Interoperability",
+    },
+  ]
+
+  const researchCategories = [
+    {
+      title: "Formal Security & Protocol Analysis",
+      icon: Shield,
+      color: "from-red-500 to-orange-500",
+      papers: [
+        {
+          title: "Formal Verification of ErgoScript",
+          url: "https://ergoplatform.org/en/blog/2022_09_01-formal-verification/",
+        },
+        {
+          title: "ErgoScript: Foundations and Security",
+          url: "https://ergoplatform.org/docs/ErgoScript.pdf",
+        },
+        {
+          title: "Security Properties of eUTXO-based Smart Contracts",
+          url: "https://eprint.iacr.org/2020/1402.pdf",
+        },
+      ],
+    },
+    {
+      title: "Privacy & Zero-Knowledge",
+      icon: Eye,
+      color: "from-purple-500 to-pink-500",
+      papers: [
+        {
+          title: "Zero-Knowledge Proofs in Sigma Protocols",
+          url: "https://eprint.iacr.org/2017/1050.pdf",
+        },
+        {
+          title: "Ring Signatures for Blockchain Privacy",
+          url: "https://ergoplatform.org/docs/ring-signatures.pdf",
+        },
+      ],
+    },
+    {
+      title: "DeFi & Economic Models",
+      icon: DollarSign,
+      color: "from-green-500 to-emerald-500",
+      papers: [
+        {
+          title: "Composable DeFi Primitives on eUTXO",
+          url: "https://ergoplatform.org/en/blog/2021_12_07-composable-defi/",
+        },
+        {
+          title: "On-chain Lending, LETS, and Oracles",
+          url: "https://ergoplatform.org/en/blog/2020_07_13-leveraging-oracles/",
+        },
+      ],
+    },
+    {
+      title: "Storage Rent & Blockchain Sustainability",
+      icon: Database,
+      color: "from-blue-500 to-cyan-500",
+      papers: [
+        {
+          title: "Ergo Storage Rent Model",
+          url: "https://ergoplatform.org/docs/storage-rent.pdf",
+        },
+        {
+          title: "Efficient Blockchain State Management",
+          url: "https://eprint.iacr.org/2019/1072.pdf",
+        },
+      ],
+    },
+  ]
+
+  const developerResources = [
+    {
+      title: "ErgoScript Documentation",
+      url: "https://ergoplatform.org/docs/ergoscript.pdf",
+      icon: Code,
+    },
+    {
+      title: "Protocol Specifications",
+      url: "https://ergoplatform.org/docs/ErgoProtocol.pdf",
+      icon: FileText,
+    },
+    {
+      title: "Node Implementation",
+      url: "https://github.com/ergoplatform/ergo",
+      icon: Github,
+    },
+    {
+      title: "Sigma-Rust Cryptography Library",
+      url: "https://github.com/ergoplatform/sigma-rust",
+      icon: Shield,
+    },
+    {
+      title: "ErgoMixer Technical Overview",
+      url: "https://ergoplatform.org/en/blog/2020_05_28-ergomixer/",
+      icon: Eye,
+    },
+  ]
+
   return (
     <div className="min-h-screen bg-black text-white">
       {/* Hero Section */}
@@ -181,7 +181,7 @@ export default function ResearchPage() {
             Research & Papers
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Academic research, whitepapers, and foundational studies that power Ergo&apos;s innovations
+            Academic research, whitepapers, and foundational studies that power Ergo innovations
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="outline" className="text-orange-400 border-orange-400/50">
@@ -214,7 +214,7 @@ export default function ResearchPage() {
               Key Whitepapers & Foundational Papers
             </h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Essential reading for understanding Ergo&apos;s core innovations and technical foundations
+              Essential reading for understanding Ergo core innovations and technical foundations
             </p>
           </motion.div>
 
@@ -263,7 +263,7 @@ export default function ResearchPage() {
               Academic Research
             </h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Peer-reviewed research and academic studies exploring Ergo&apos;s innovations
+              Peer-reviewed research and academic studies exploring Ergo innovations
             </p>
           </motion.div>
 
@@ -407,7 +407,7 @@ export default function ResearchPage() {
                   How to Contribute
                 </CardTitle>
                 <CardDescription className="text-gray-300 text-lg">
-                  Join the research community and contribute to Ergo&apos;s academic foundation
+                  Join the research community and contribute to Ergo academic foundation
                 </CardDescription>
               </CardHeader>
               <CardContent>
