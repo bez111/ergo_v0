@@ -17,7 +17,12 @@ export default function UseCasesPage() {
   const filteredUseCases = useMemo(() => {
     if (selectedCategory === "all") return useCases
     return useCases.filter((uc) => uc.category === selectedCategory)
-  }, [selectedCategory])
+  }, [selectedCategory, useCases]) // Added useCases to dependency array for correctness
+
+  if (!useCases || !Array.isArray(useCases)) {
+    // Basic check for data, though unlikely the cause of this specific error
+    return <div>Loading use cases or data error...</div>
+  }
 
   return (
     <div className="min-h-screen bg-gray-950 relative overflow-hidden">
@@ -111,6 +116,7 @@ export default function UseCasesPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <motion.button
+                  type="button"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="px-8 py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-100 transition-colors flex items-center gap-2 justify-center"
@@ -120,6 +126,7 @@ export default function UseCasesPage() {
                 </motion.button>
 
                 <motion.button
+                  type="button"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="px-8 py-3 border border-gray-600 text-gray-300 font-semibold rounded-lg hover:bg-gray-800 transition-colors flex items-center gap-2 justify-center"
@@ -129,6 +136,7 @@ export default function UseCasesPage() {
                 </motion.button>
 
                 <motion.button
+                  type="button"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   className="px-8 py-3 border border-gray-700 text-gray-400 font-semibold rounded-lg hover:bg-gray-800 transition-colors"
