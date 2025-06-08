@@ -10,7 +10,7 @@ import { PageTransition } from "@/components/animations/page-transition"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ergoplatform.org"), // Важно для OpenGraph URL
+  metadataBase: new URL("https://ergoplatform.org"),
   title: {
     default: "Ergo Blockchain | Resilient Platform for Contractual Money",
     template: "%s | Ergo Platform",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     siteName: "Ergo Platform",
     images: [
       {
-        url: "/og-image.png", // Убедитесь, что этот файл существует в /public
+        url: "/og-image.png",
         width: 1200,
         height: 630,
         alt: "Ergo Platform - Contractual Money",
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     },
     description:
       "Explore Ergo: a secure, decentralized platform for contractual money. Learn about eUTXO, ErgoScript, and build the future of finance.",
-    images: ["/og-image.png"], // Убедитесь, что этот файл существует в /public
+    images: ["/og-image.png"],
     creator: "@ergoplatform",
   },
   robots: {
@@ -75,14 +75,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },,
-  // Добавьте manifest если его нет
-  // manifest: '/manifest.json',
-  // Добавьте иконки
-  // icons: {
-  //   icon: '/favicon.ico',
-  //   apple: '/apple-touch-icon.png',
-  // },
+  },
     generator: 'v0.dev'
 }
 
@@ -106,7 +99,7 @@ export default function RootLayout({
               "@type": "Organization",
               name: "Ergo Platform",
               url: "https://ergoplatform.org",
-              logo: "https://ergoplatform.org/logo.png", // Замените на актуальный URL логотипа
+              logo: "https://ergoplatform.org/logo.png",
               description:
                 "A resilient platform for contractual money. Ergo Blockchain provides the tools for people to secure financial interactions.",
               sameAs: [
@@ -115,12 +108,11 @@ export default function RootLayout({
                 "https://discord.gg/ergo",
                 "https://www.reddit.com/r/ergonauts/",
                 "https://t.me/ergoplatform",
-                // Добавьте другие релевантные социальные профили
               ],
               contactPoint: {
                 "@type": "ContactPoint",
-                contactType: "Customer Support", // или "Technical Support", "Community Support"
-                url: "https://ergoplatform.org/community/discussion", // Ссылка на страницу поддержки или контактов
+                contactType: "Customer Support",
+                url: "https://ergoplatform.org/community/discussion",
               },
             }),
           }}
