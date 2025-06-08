@@ -181,7 +181,7 @@ export default function ResearchPage() {
             Research & Papers
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Academic research, whitepapers, and foundational studies that power Ergo's innovations
+            Academic research, whitepapers, and foundational studies that power Ergo&apos;s innovations
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Badge variant="outline" className="text-orange-400 border-orange-400/50">
@@ -214,7 +214,7 @@ export default function ResearchPage() {
               Key Whitepapers & Foundational Papers
             </h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Essential reading for understanding Ergo's core innovations and technical foundations
+              Essential reading for understanding Ergo&apos;s core innovations and technical foundations
             </p>
           </motion.div>
 
@@ -263,7 +263,7 @@ export default function ResearchPage() {
               Academic Research
             </h2>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Peer-reviewed research and academic studies exploring Ergo's innovations
+              Peer-reviewed research and academic studies exploring Ergo&apos;s innovations
             </p>
           </motion.div>
 
@@ -407,7 +407,7 @@ export default function ResearchPage() {
                   How to Contribute
                 </CardTitle>
                 <CardDescription className="text-gray-300 text-lg">
-                  Join the research community and contribute to Ergo's academic foundation
+                  Join the research community and contribute to Ergo&apos;s academic foundation
                 </CardDescription>
               </CardHeader>
               <CardContent>
