@@ -2,7 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 export default function MiningLoading() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen relative">
       <div className="pt-32 pb-16 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Skeleton */}

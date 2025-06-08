@@ -2,7 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 export default function GrantsLoading() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen relative">
       <div className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Skeleton className="h-20 w-96 mx-auto mb-6 bg-gray-800" />

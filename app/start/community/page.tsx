@@ -157,18 +157,7 @@ const guidelines = [
 
 export default function CommunityPage() {
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-5 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-[url('/tech-pattern.png')] opacity-3 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-[url('/resistance-texture.png')] opacity-2 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-orange-900/10 via-transparent to-red-900/5"></div>
-        <ParticleBackground color="#ff8800" />
-      </div>
-
-      {/* Content */}
+    <div className="min-h-screen relative">
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 py-8">
           {/* Hero Section */}

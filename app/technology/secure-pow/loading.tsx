@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 export default function SecurePowLoading() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen relative">
       <div className="container mx-auto px-4 py-16">
         {/* Header Skeleton */}
         <div className="text-center mb-16">

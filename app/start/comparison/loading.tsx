@@ -6,7 +6,7 @@ import { DigitalRainEffect } from "@/components/digital-rain-effect"
 
 export default function ComparisonLoading() {
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className="min-h-screen relative">
       <DigitalRainEffect />
 
       <div className="relative z-10">

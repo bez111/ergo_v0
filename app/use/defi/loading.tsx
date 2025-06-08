@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 export default function DeFiLoading() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen relative">
       {/* Hero Section Skeleton */}
       <section className="py-20 px-4">
         <div className="max-w-6xl mx-auto text-center">

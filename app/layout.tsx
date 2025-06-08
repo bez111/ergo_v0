@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { PageTransition } from "@/components/animations/page-transition"
+import { ParticleBackground } from "@/components/particle-background"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -122,8 +123,19 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1">
-              <PageTransition>{children}</PageTransition>
+            <main className="flex-1 relative overflow-hidden">
+              {/* Background Elements */}
+              <div className="fixed inset-0 z-0">
+                <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10" />
+                <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90" />
+                <div className="absolute top-0 right-0 w-full h-full bg-[url('/tech-pattern.png')] bg-no-repeat bg-cover opacity-5" />
+                <div className="absolute bottom-0 left-0 w-full h-full bg-[url('/resistance-texture.png')] bg-no-repeat bg-cover opacity-5" />
+                <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/10 via-transparent to-red-900/10" />
+              </div>
+              <ParticleBackground />
+              <div className="relative z-10">
+                <PageTransition>{children}</PageTransition>
+              </div>
             </main>
             <Footer />
           </div>

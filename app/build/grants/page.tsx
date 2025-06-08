@@ -22,7 +22,7 @@ export default function BuildGrantsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen relative">
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="py-20 px-4">

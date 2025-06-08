@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 export default function EUTXOModelLoading() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen relative">
       {/* Background Effects */}
       <div className="fixed inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-cyan-500/5" />
       <div className="fixed inset-0 bg-[url('/cyberpunk-grid.png')] opacity-10" />

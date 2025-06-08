@@ -171,7 +171,7 @@ export default function MiningPage() {
   })
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className="min-h-screen relative">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-10"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
@@ -206,38 +206,28 @@ export default function MiningPage() {
               <motion.div variants={itemVariants}>
                 <CyberCard className="p-6 text-center">
                   <Activity className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <DigitalCounter
-                    end={2.5}
-                    duration={2000}
-                    suffix=" TH/s"
-                    className="text-2xl font-bold text-primary"
-                  />
+                  <DigitalCounter value={210} suffix=" TH/s" duration={3000} className="text-2xl font-mono text-primary" />
                   <p className="text-sm text-gray-400">Network Hashrate</p>
                 </CyberCard>
               </motion.div>
               <motion.div variants={itemVariants}>
                 <CyberCard className="p-6 text-center">
                   <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <DigitalCounter end={2} duration={2000} suffix=" min" className="text-2xl font-bold text-primary" />
+                  <DigitalCounter value={2} suffix=" min" duration={3000} className="text-2xl font-mono text-primary" />
                   <p className="text-sm text-gray-400">Block Time</p>
                 </CyberCard>
               </motion.div>
               <motion.div variants={itemVariants}>
                 <CyberCard className="p-6 text-center">
                   <DollarSign className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <DigitalCounter
-                    end={67.5}
-                    duration={2000}
-                    suffix=" ERG"
-                    className="text-2xl font-bold text-primary"
-                  />
+                  <DigitalCounter value={1.2} suffix="P" duration={3000} className="text-2xl font-mono text-primary" />
                   <p className="text-sm text-gray-400">Block Reward</p>
                 </CyberCard>
               </motion.div>
               <motion.div variants={itemVariants}>
                 <CyberCard className="p-6 text-center">
                   <Users className="w-8 h-8 text-primary mx-auto mb-2" />
-                  <DigitalCounter end={15000} duration={2000} suffix="+" className="text-2xl font-bold text-primary" />
+                  <DigitalCounter value={12847} suffix="" duration={3000} className="text-2xl font-mono text-primary" />
                   <p className="text-sm text-gray-400">Active Miners</p>
                 </CyberCard>
               </motion.div>

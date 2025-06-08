@@ -2,7 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 export default function UseCasesLoading() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen relative">
       <div className="container mx-auto px-4 pt-24 pb-12">
         {/* Header Skeleton */}
         <div className="text-center mb-16">

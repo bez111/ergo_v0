@@ -3,7 +3,7 @@ import { Card, CardContent, CardHeader } from "@/components/ui/card"
 
 export default function DAppsLoading() {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen relative">
       <div className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Hero Section Skeleton */}

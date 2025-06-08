@@ -2,7 +2,7 @@ import { Skeleton } from "@/components/ui/skeleton"
 
 export default function FAQLoading() {
   return (
-    <div className="min-h-screen bg-gray-950 text-white">
+    <div className="min-h-screen relative">
       {/* Hero Section Skeleton */}
       <section className="py-20 px-4">
         <div className="max-w-4xl mx-auto text-center">

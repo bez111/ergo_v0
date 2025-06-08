@@ -461,12 +461,9 @@ export default function EcosystemPage() {
   }, [selectedCategory, searchQuery])
 
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-white relative overflow-hidden">
+    <div className="min-h-screen relative">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Dark gradient base */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800 opacity-80" />
-
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-orange-500/10 animate-pulse" />

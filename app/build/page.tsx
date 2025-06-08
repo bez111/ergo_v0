@@ -135,7 +135,7 @@ export default function BuildPageRedesign() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className="min-h-screen relative">
       <ParticleBackground />
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.02)_1px,transparent_1px)] bg-[size:30px_30px] opacity-50"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70"></div>
@@ -151,11 +151,7 @@ export default function BuildPageRedesign() {
           <Badge variant="outline" className="mb-6 border-primary/50 text-primary text-sm px-4 py-1">
             ERGO DEVELOPER PORTAL V2
           </Badge>
-          <GlitchText
-            text="BUILD ON ERGO"
-            className="text-5xl sm:text-6xl md:text-7xl font-bold mb-6 text-white"
-            as="h1"
-          />
+          <GlitchText text="Build on Ergo" className="text-white" />
           <p className="text-xl sm:text-2xl text-primary mb-8 font-mono max-w-3xl mx-auto">
             The Future of Secure & Programmable Money.
           </p>

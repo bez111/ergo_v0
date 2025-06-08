@@ -214,19 +214,7 @@ export default function GetErgPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[url('/tech-pattern.png')] bg-no-repeat bg-cover opacity-5" />
-        <div className="absolute bottom-0 left-0 w-full h-full bg-[url('/resistance-texture.png')] bg-no-repeat bg-cover opacity-5" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/10 via-transparent to-red-900/10" />
-      </div>
-
-      <ParticleBackground />
-
-      {/* Content */}
+    <div className="min-h-screen relative">
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4">

@@ -61,7 +61,7 @@ const itemVariants = {
 
 export default function BabelFeesPage() {
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className="min-h-screen relative">
       <BackgroundEffect />
 
       {/* Hero Section */}

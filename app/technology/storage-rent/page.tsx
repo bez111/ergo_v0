@@ -154,7 +154,7 @@ export default function StorageRentPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-black text-white overflow-hidden">
+    <div className="min-h-screen relative">
       {/* Enhanced Background Effects */}
       <div className="fixed inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-cyan-500/10" />
       <div className="fixed inset-0 bg-gradient-to-br from-gray-800/20 via-gray-900/20 to-black opacity-5" />
@@ -200,7 +200,7 @@ export default function StorageRentPage() {
                     Storage
                   </span>
                   <br />
-                  <GlitchText className="text-white">Rent</GlitchText>
+                  <GlitchText text="Rent" className="text-white" />
                 </motion.h1>
 
                 <motion.p

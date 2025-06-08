@@ -50,7 +50,7 @@ export default function MiningPage() {
   })
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className="min-h-screen relative">
       {/* Binary Rain Background */}
       <div className="fixed inset-0 pointer-events-none opacity-20">
         {Array.from({ length: 100 }).map((_, i) => (

@@ -28,8 +28,32 @@ import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
 import { ParticleBackground } from "@/components/particle-background"
+import { LucideIcon } from "lucide-react"
 
-const walletData = {
+interface Wallet {
+  id: string
+  name: string
+  description: string
+  image: string
+  platforms: string[]
+  features: string[]
+  category: string
+  isOfficial: boolean
+  websiteUrl: string
+  downloadUrl: string
+  rating: number
+  users: string
+}
+
+interface WalletData {
+  official: Wallet[]
+  desktop: Wallet[]
+  mobile: Wallet[]
+  browser: Wallet[]
+  hardware: Wallet[]
+}
+
+const walletData: WalletData = {
   official: [
     {
       id: "ergo-wallet",
@@ -149,7 +173,7 @@ const categories = [
   { id: "hardware", name: "Hardware", icon: HardDrive },
 ]
 
-const platformIcons = {
+const platformIcons: Record<string, LucideIcon> = {
   Windows: Monitor,
   macOS: Apple,
   Linux: Monitor,
@@ -189,7 +213,7 @@ export default function WalletPage() {
   const filteredWallets = getFilteredWallets()
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <div className="min-h-screen relative">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <ParticleBackground />

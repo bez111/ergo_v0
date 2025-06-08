@@ -1,5 +1,6 @@
 interface SectionHeadingProps {
-  title: string
+  title?: string
+  text?: string
   subtitle?: string
   description?: string
   className?: string
@@ -11,6 +12,7 @@ interface SectionHeadingProps {
 
 export function SectionHeading({
   title,
+  text,
   subtitle, // This is the text that usually goes below the main title
   description,
   className = "",
@@ -19,5 +21,6 @@ export function SectionHeading({
   descriptionClassName = "",
   badgeText, // If a badge is part of the heading structure
 }: SectionHeadingProps) {
+  const headingText = title || text || ""
   return null
 }

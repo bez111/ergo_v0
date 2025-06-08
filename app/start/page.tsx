@@ -94,14 +94,7 @@ export default function StartPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-5 bg-cover bg-center"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-      </div>
-
-      {/* Content */}
+    <div className="min-h-screen relative">
       <div className="relative z-10">
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4">

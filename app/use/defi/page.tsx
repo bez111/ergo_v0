@@ -246,7 +246,7 @@ export default function DeFiPage() {
   const { total, profit } = calculateReturns()
 
   return (
-    <div className="min-h-screen bg-black text-white relative">
+    <div className="min-h-screen relative">
       <BinaryRainBackground />
 
       <div className="relative z-10">
