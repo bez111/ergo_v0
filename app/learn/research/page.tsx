@@ -19,6 +19,7 @@ import {
   MessageCircle,
 } from "lucide-react"
 import Link from "next/link"
+import { useState, useEffect } from "react"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -164,279 +165,374 @@ export default function ResearchPage() {
     },
   ]
 
-  return (
-    <div className="min-h-screen relative">
-      {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-4xl mx-auto text-center relative z-10"
-        >
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-            Research & Papers
-          </h1>
-          <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
-            Academic research, whitepapers, and foundational studies that power Ergo innovations
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="outline" className="text-orange-400 border-orange-400/50 bg-white/5 backdrop-blur-md">
-              <BookOpen className="w-4 h-4 mr-2" />
-              Academic Papers
-            </Badge>
-            <Badge variant="outline" className="text-cyan-400 border-cyan-400/50 bg-white/5 backdrop-blur-md">
-              <FileText className="w-4 h-4 mr-2" />
-              Technical Documentation
-            </Badge>
-            <Badge variant="outline" className="text-purple-400 border-purple-400/50 bg-white/5 backdrop-blur-md">
-              <Shield className="w-4 h-4 mr-2" />
-              Security Research
-            </Badge>
-          </div>
-        </motion.div>
-      </section>
+  const [isMobile, setIsMobile] = useState(false)
 
-      <div className="max-w-7xl mx-auto px-4 pb-20">
-        {/* Key Whitepapers Section */}
-        <motion.section
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-              Key Whitepapers & Foundational Papers
-            </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Essential reading for understanding Ergo core innovations and technical foundations
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+
+    return () => {
+      window.removeEventListener('resize', checkMobile)
+    }
+  }, [])
+
+  const MobileResearchPage = () => {
+    return (
+      <div className="min-h-screen relative">
+        {/* Hero Section */}
+        <section className="relative py-12 px-4 overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center relative z-10"
+          >
+            <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              Research & Papers
+            </h1>
+            <p className="text-lg text-gray-300 mb-6">
+              Academic research, whitepapers, and foundational studies
             </p>
+            <div className="flex flex-wrap justify-center gap-2">
+              <Badge variant="outline" className="text-orange-400 border-orange-400/50 bg-white/5 backdrop-blur-md text-xs">
+                <BookOpen className="w-3 h-3 mr-1" />
+                Academic Papers
+              </Badge>
+              <Badge variant="outline" className="text-cyan-400 border-cyan-400/50 bg-white/5 backdrop-blur-md text-xs">
+                <FileText className="w-3 h-3 mr-1" />
+                Technical Docs
+              </Badge>
+              <Badge variant="outline" className="text-purple-400 border-purple-400/50 bg-white/5 backdrop-blur-md text-xs">
+                <Shield className="w-3 h-3 mr-1" />
+                Security
+              </Badge>
+            </div>
           </motion.div>
+        </section>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {keyPapers.map((paper, index) => (
-              <motion.div key={index} variants={itemVariants}>
-                <Card className="h-full bg-gray-900/50 border-gray-700/50 backdrop-blur-sm hover:bg-gray-800/50 transition-all duration-300 group">
-                  <CardHeader>
-                    <div className="flex items-start justify-between mb-2">
-                      <Badge variant="outline" className="text-xs">
-                        {paper.category}
-                      </Badge>
-                      <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-orange-400 transition-colors" />
-                    </div>
-                    <CardTitle className="text-lg group-hover:text-orange-400 transition-colors">
-                      {paper.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-gray-400 mb-4">{paper.description}</CardDescription>
-                    <Button asChild variant="outline" size="sm" className="w-full">
-                      <Link href={paper.url} target="_blank" rel="noopener noreferrer">
-                        Read Paper
-                        <ExternalLink className="w-4 h-4 ml-2" />
-                      </Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
-        </motion.section>
+        <div className="px-4 pb-12">
+          {/* Key Whitepapers Section */}
+          <motion.section
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <motion.div variants={itemVariants} className="text-center mb-8">
+              <h2 className="text-2xl font-bold mb-3 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                Key Whitepapers
+              </h2>
+              <p className="text-gray-400 text-sm">
+                Essential reading for understanding Ergo
+              </p>
+            </motion.div>
 
-        <Separator className="bg-gray-700/50 mb-20" />
-
-        {/* Academic Research Section */}
-        <motion.section
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-              Academic Research
-            </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Peer-reviewed research and academic studies exploring Ergo innovations
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {researchCategories.map((category, index) => {
-              const IconComponent = category.icon
-              return (
+            <div className="space-y-4">
+              {keyPapers.map((paper, index) => (
                 <motion.div key={index} variants={itemVariants}>
-                  <Card className="h-full bg-gray-900/50 border-gray-700/50 backdrop-blur-sm">
-                    <CardHeader>
-                      <div className="flex items-center gap-3 mb-2">
-                        <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
-                          <IconComponent className="w-5 h-5 text-white" />
-                        </div>
-                        <CardTitle className="text-xl">{category.title}</CardTitle>
+                  <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm hover:bg-gray-800/50 transition-all duration-300 group">
+                    <CardHeader className="p-4">
+                      <div className="flex items-start justify-between mb-2">
+                        <Badge variant="outline" className="text-xs">
+                          {paper.category}
+                        </Badge>
+                        <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-orange-400 transition-colors" />
                       </div>
+                      <CardTitle className="text-base group-hover:text-orange-400 transition-colors">
+                        {paper.title}
+                      </CardTitle>
                     </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {category.papers.map((paper, paperIndex) => (
-                          <div
-                            key={paperIndex}
-                            className="flex items-center justify-between p-3 rounded-lg bg-gray-800/50 hover:bg-gray-700/50 transition-colors group"
-                          >
-                            <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
-                              {paper.title}
-                            </span>
-                            <Button asChild variant="ghost" size="sm">
-                              <Link href={paper.url} target="_blank" rel="noopener noreferrer">
-                                <ExternalLink className="w-4 h-4" />
-                              </Link>
-                            </Button>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              )
-            })}
-          </div>
-        </motion.section>
-
-        <Separator className="bg-gray-700/50 mb-20" />
-
-        {/* Developer Resources Section */}
-        <motion.section
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <motion.div variants={itemVariants} className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-              Developer Resources & Technical References
-            </h2>
-            <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              Technical documentation and implementation guides for developers
-            </p>
-          </motion.div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {developerResources.map((resource, index) => {
-              const IconComponent = resource.icon
-              return (
-                <motion.div key={index} variants={itemVariants}>
-                  <Card className="h-full bg-gray-900/50 border-gray-700/50 backdrop-blur-sm hover:bg-gray-800/50 transition-all duration-300 group">
-                    <CardContent className="p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="p-2 rounded-lg bg-gradient-to-r from-orange-500 to-cyan-500">
-                          <IconComponent className="w-5 h-5 text-white" />
-                        </div>
-                        <h3 className="font-semibold group-hover:text-orange-400 transition-colors">
-                          {resource.title}
-                        </h3>
-                      </div>
+                    <CardContent className="p-4 pt-0">
+                      <CardDescription className="text-gray-400 text-sm mb-4">{paper.description}</CardDescription>
                       <Button asChild variant="outline" size="sm" className="w-full">
-                        <Link href={resource.url} target="_blank" rel="noopener noreferrer">
-                          Access Resource
+                        <Link href={paper.url} target="_blank" rel="noopener noreferrer">
+                          Read Paper
                           <ExternalLink className="w-4 h-4 ml-2" />
                         </Link>
                       </Button>
                     </CardContent>
                   </Card>
                 </motion.div>
-              )
-            })}
-          </div>
-        </motion.section>
+              ))}
+            </div>
+          </motion.section>
 
-        <Separator className="bg-gray-700/50 mb-20" />
+          <Separator className="bg-gray-700/50 mb-12" />
 
-        {/* Citations & Academic Partners */}
-        <motion.section
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="mb-20"
-        >
-          <motion.div variants={itemVariants}>
-            <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl md:text-3xl bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Citations & Academic Partners
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="text-center">
-                <div className="grid md:grid-cols-2 gap-8">
-                  <div>
-                    <h3 className="text-lg font-semibold mb-4 text-orange-400">Cited By</h3>
-                    <div className="space-y-2 text-gray-300">
-                      <p>IOHK Research</p>
-                      <p>Cardano Foundation</p>
-                      <p>ePrint/IACR</p>
-                      <p>Cryptography researchers globally</p>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold mb-4 text-cyan-400">Key Collaborators</h3>
-                    <div className="space-y-2 text-gray-300">
-                      <p>Alex Chepurnoy (Kushti)</p>
-                      <p>IOHK/Cardano Research Team</p>
-                      <p>Sigma Research Group</p>
-                      <p>Academic institutions worldwide</p>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </motion.section>
+          {/* Academic Research Section */}
+          <motion.section
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <motion.div variants={itemVariants} className="text-center mb-8">
+              <h2 className="text-2xl font-bold mb-3 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                Academic Research
+              </h2>
+              <p className="text-gray-400 text-sm">
+                Deep dive into specific research areas
+              </p>
+            </motion.div>
 
-        {/* How to Contribute Section */}
-        <motion.section variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
-          <motion.div variants={itemVariants}>
-            <Card className="bg-gradient-to-br from-orange-500/10 to-cyan-500/10 border-orange-500/20 backdrop-blur-xl">
-              <CardHeader className="text-center">
-                <CardTitle className="text-2xl md:text-3xl bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  How to Contribute
-                </CardTitle>
-                <CardDescription className="text-gray-300 text-lg">
-                  Join the research community and contribute to Ergo academic foundation
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex flex-wrap justify-center gap-4">
-                  <Button asChild variant="outline" className="border-orange-500/50 hover:bg-orange-500/10">
-                    <Link href="/contact">
-                      <Users className="w-4 h-4 mr-2" />
-                      Suggest Research Topics
+            <div className="space-y-4">
+              {researchCategories.map((category, index) => (
+                <motion.div key={index} variants={itemVariants}>
+                  <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm">
+                    <CardHeader className="p-4">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className={`p-2 rounded-lg bg-gradient-to-r ${category.color}`}>
+                          <category.icon className="w-5 h-5 text-white" />
+                        </div>
+                        <CardTitle className="text-base">{category.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="p-4 pt-0">
+                      <div className="space-y-3">
+                        {category.papers.map((paper, paperIndex) => (
+                          <Button
+                            key={paperIndex}
+                            asChild
+                            variant="ghost"
+                            className="w-full justify-start text-gray-300 hover:text-orange-400"
+                          >
+                            <Link href={paper.url} target="_blank" rel="noopener noreferrer">
+                              <FileText className="w-5 h-5 mr-3" />
+                              {paper.title}
+                            </Link>
+                          </Button>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+
+          <Separator className="bg-gray-700/50 mb-12" />
+
+          {/* Developer Resources Section */}
+          <motion.section
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div variants={itemVariants} className="text-center mb-8">
+              <h2 className="text-2xl font-bold mb-3 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                Developer Resources
+              </h2>
+              <p className="text-gray-400 text-sm">
+                Technical documentation and implementation details
+              </p>
+            </motion.div>
+
+            <div className="space-y-3">
+              {developerResources.map((resource, index) => (
+                <motion.div key={index} variants={itemVariants}>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full justify-start h-auto py-4 bg-gray-900/50 border-gray-700/50 backdrop-blur-sm hover:bg-gray-800/50"
+                  >
+                    <Link href={resource.url} target="_blank" rel="noopener noreferrer">
+                      <resource.icon className="w-5 h-5 mr-3" />
+                      {resource.title}
+                      <ExternalLink className="w-5 h-5 ml-auto" />
                     </Link>
                   </Button>
-                  <Button asChild variant="outline" className="border-cyan-500/50 hover:bg-cyan-500/10">
-                    <Link href="https://discord.gg/ergoplatform" target="_blank" rel="noopener noreferrer">
-                      <MessageCircle className="w-4 h-4 mr-2" />
-                      Join Discord Discussions
-                    </Link>
-                  </Button>
-                  <Button asChild variant="outline" className="border-purple-500/50 hover:bg-purple-500/10">
-                    <Link
-                      href="https://github.com/ergoplatform/ergo/discussions"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github className="w-4 h-4 mr-2" />
-                      GitHub Discussions
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </motion.section>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
+
+  const DesktopResearchPage = () => {
+    return (
+      <div className="min-h-screen relative">
+        {/* Hero Section */}
+        <section className="relative py-20 px-4 overflow-hidden">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="max-w-4xl mx-auto text-center relative z-10"
+          >
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              Research & Papers
+            </h1>
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              Academic research, whitepapers, and foundational studies that power Ergo innovations
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Badge variant="outline" className="text-orange-400 border-orange-400/50 bg-white/5 backdrop-blur-md">
+                <BookOpen className="w-4 h-4 mr-2" />
+                Academic Papers
+              </Badge>
+              <Badge variant="outline" className="text-cyan-400 border-cyan-400/50 bg-white/5 backdrop-blur-md">
+                <FileText className="w-4 h-4 mr-2" />
+                Technical Documentation
+              </Badge>
+              <Badge variant="outline" className="text-purple-400 border-purple-400/50 bg-white/5 backdrop-blur-md">
+                <Shield className="w-4 h-4 mr-2" />
+                Security Research
+              </Badge>
+            </div>
+          </motion.div>
+        </section>
+
+        <div className="max-w-7xl mx-auto px-4 pb-20">
+          {/* Key Whitepapers Section */}
+          <motion.section
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <motion.div variants={itemVariants} className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                Key Whitepapers & Foundational Papers
+              </h2>
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                Essential reading for understanding Ergo core innovations and technical foundations
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {keyPapers.map((paper, index) => (
+                <motion.div key={index} variants={itemVariants}>
+                  <Card className="h-full bg-gray-900/50 border-gray-700/50 backdrop-blur-sm hover:bg-gray-800/50 transition-all duration-300 group">
+                    <CardHeader>
+                      <div className="flex items-start justify-between mb-2">
+                        <Badge variant="outline" className="text-xs">
+                          {paper.category}
+                        </Badge>
+                        <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-orange-400 transition-colors" />
+                      </div>
+                      <CardTitle className="text-lg group-hover:text-orange-400 transition-colors">
+                        {paper.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <CardDescription className="text-gray-400 mb-4">{paper.description}</CardDescription>
+                      <Button asChild variant="outline" size="sm" className="w-full">
+                        <Link href={paper.url} target="_blank" rel="noopener noreferrer">
+                          Read Paper
+                          <ExternalLink className="w-4 h-4 ml-2" />
+                        </Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+
+          <Separator className="bg-gray-700/50 mb-20" />
+
+          {/* Academic Research Section */}
+          <motion.section
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="mb-20"
+          >
+            <motion.div variants={itemVariants} className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                Academic Research
+              </h2>
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                Deep dive into specific research areas and technical innovations
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {researchCategories.map((category, index) => (
+                <motion.div key={index} variants={itemVariants}>
+                  <Card className="bg-gray-900/50 border-gray-700/50 backdrop-blur-sm">
+                    <CardHeader>
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className={`p-3 rounded-lg bg-gradient-to-r ${category.color}`}>
+                          <category.icon className="w-6 h-6 text-white" />
+                        </div>
+                        <CardTitle className="text-xl">{category.title}</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-4">
+                        {category.papers.map((paper, paperIndex) => (
+                          <Button
+                            key={paperIndex}
+                            asChild
+                            variant="ghost"
+                            className="w-full justify-start text-gray-300 hover:text-orange-400"
+                          >
+                            <Link href={paper.url} target="_blank" rel="noopener noreferrer">
+                              <FileText className="w-5 h-5 mr-3" />
+                              {paper.title}
+                            </Link>
+                          </Button>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+
+          <Separator className="bg-gray-700/50 mb-20" />
+
+          {/* Developer Resources Section */}
+          <motion.section
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            <motion.div variants={itemVariants} className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                Developer Resources
+              </h2>
+              <p className="text-gray-400 text-lg max-w-3xl mx-auto">
+                Technical documentation and implementation details for developers
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {developerResources.map((resource, index) => (
+                <motion.div key={index} variants={itemVariants}>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="w-full justify-start h-auto py-4 bg-gray-900/50 border-gray-700/50 backdrop-blur-sm hover:bg-gray-800/50"
+                  >
+                    <Link href={resource.url} target="_blank" rel="noopener noreferrer">
+                      <resource.icon className="w-5 h-5 mr-3" />
+                      {resource.title}
+                      <ExternalLink className="w-5 h-5 ml-auto" />
+                    </Link>
+                  </Button>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
+        </div>
+      </div>
+    )
+  }
+
+  return isMobile ? <MobileResearchPage /> : <DesktopResearchPage />
 }
