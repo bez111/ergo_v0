@@ -72,7 +72,10 @@ export function Header() {
                   .map((item) =>
                     item.children ? (
                       <NavigationMenuItem key={item.title}>
-                        <NavigationMenuTrigger className="font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary data-[state=open]:bg-primary/10 data-[state=open]:text-primary">
+                        <NavigationMenuTrigger
+                          style={{ caretColor: 'transparent', userSelect: 'none' }}
+                          className="font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary data-[state=open]:bg-primary/10 data-[state=open]:text-primary"
+                        >
                           {item.title}
                         </NavigationMenuTrigger>
                         <NavigationMenuContent>
@@ -99,6 +102,7 @@ export function Header() {
                       <NavigationMenuItem key={item.title}>
                         <Link href={item.href} legacyBehavior passHref>
                           <NavigationMenuLink
+                            style={{ caretColor: 'transparent', userSelect: 'none' }}
                             className={cn(
                               navigationMenuTriggerStyle(),
                               "font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary",
@@ -114,6 +118,7 @@ export function Header() {
                 <NavigationMenuItem>
                   <Link href="/blog" legacyBehavior passHref>
                     <NavigationMenuLink
+                      style={{ caretColor: 'transparent', userSelect: 'none' }}
                       className={cn(
                         navigationMenuTriggerStyle(),
                         "font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary",

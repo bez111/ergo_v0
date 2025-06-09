@@ -461,79 +461,10 @@ export default function EcosystemPage() {
   }, [selectedCategory, searchQuery])
 
   return (
-    <div className="min-h-screen relative">
-      {/* Background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        {/* Animated gradient overlay */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-orange-500/10 animate-pulse" />
-        </div>
-
-        {/* Subtle noise texture */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")`,
-          }}
-        />
-
-        {/* Grid lines */}
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(255, 136, 0, 0.1) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(255, 136, 0, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "100px 100px",
-            transform: `translate(${mousePosition.x * -20}px, ${mousePosition.y * -20}px)`,
-            transition: "transform 0.2s ease-out",
-          }}
-        />
-
-        {/* Larger grid lines */}
-        <div
-          className="absolute inset-0 opacity-5"
-          style={{
-            backgroundImage: `
-              linear-gradient(to right, rgba(255, 136, 0, 0.2) 1px, transparent 1px),
-              linear-gradient(to bottom, rgba(255, 136, 0, 0.2) 1px, transparent 1px)
-            `,
-            backgroundSize: "400px 400px",
-            transform: `translate(${mousePosition.x * -40}px, ${mousePosition.y * -40}px)`,
-            transition: "transform 0.4s ease-out",
-          }}
-        />
-
-        {/* Glowing orbs with parallax */}
-        <div
-          className="absolute top-1/4 left-1/4 w-[600px] h-[600px] rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(249, 115, 22, 0.15) 0%, rgba(249, 115, 22, 0) 70%)",
-            transform: `translate(${mousePosition.x * -60}px, ${mousePosition.y * -60}px)`,
-            transition: "transform 0.6s ease-out",
-          }}
-        />
-        <div
-          className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] rounded-full"
-          style={{
-            background: "radial-gradient(circle, rgba(249, 115, 22, 0.1) 0%, rgba(249, 115, 22, 0) 70%)",
-            transform: `translate(${mousePosition.x * -40}px, ${mousePosition.y * -40}px)`,
-            transition: "transform 0.5s ease-out",
-          }}
-        />
-
-        {/* Digital rain effect */}
-        <div className="absolute inset-0 overflow-hidden opacity-10">
-          <div className="digital-rain" />
-        </div>
-
-        {/* Horizontal scan lines */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="scan-lines" />
-        </div>
-      </div>
-
+    <div className="min-h-screen w-full relative overflow-hidden">
+      {/* Фон как на остальных страницах */}
+      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
+      <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10 bg-cover bg-center" />
       <div className="relative z-10 py-20 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
@@ -916,56 +847,6 @@ export default function EcosystemPage() {
           </motion.div>
         </div>
       </div>
-
-      <style jsx global>{`
-        @keyframes scan {
-          0% { transform: translateY(-100%); }
-          100% { transform: translateY(100vh); }
-        }
-        
-        .scan-lines::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 1px;
-          background: linear-gradient(90deg, transparent, rgba(255, 136, 0, 0.5), transparent);
-          animation: scan 8s linear infinite;
-        }
-        
-        .scan-lines::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, rgba(255, 136, 0, 0.2), transparent);
-          animation: scan 12s linear infinite;
-          animation-delay: 4s;
-        }
-        
-        @keyframes rain {
-          0% { transform: translateY(-100%); }
-          100% { transform: translateY(100vh); }
-        }
-        
-        .digital-rain {
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: linear-gradient(0deg, 
-            transparent 0%, 
-            rgba(255, 136, 0, 0.03) 50%, 
-            transparent 100%
-          );
-          background-size: 100% 20px;
-          animation: rain 20s linear infinite;
-        }
-      `}</style>
     </div>
   )
 }

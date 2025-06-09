@@ -168,9 +168,6 @@ export default function ResearchPage() {
     <div className="min-h-screen relative">
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-transparent to-cyan-500/10" />
-        <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-5" />
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -184,15 +181,15 @@ export default function ResearchPage() {
             Academic research, whitepapers, and foundational studies that power Ergo innovations
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Badge variant="outline" className="text-orange-400 border-orange-400/50">
+            <Badge variant="outline" className="text-orange-400 border-orange-400/50 bg-white/5 backdrop-blur-md">
               <BookOpen className="w-4 h-4 mr-2" />
               Academic Papers
             </Badge>
-            <Badge variant="outline" className="text-cyan-400 border-cyan-400/50">
+            <Badge variant="outline" className="text-cyan-400 border-cyan-400/50 bg-white/5 backdrop-blur-md">
               <FileText className="w-4 h-4 mr-2" />
               Technical Documentation
             </Badge>
-            <Badge variant="outline" className="text-purple-400 border-purple-400/50">
+            <Badge variant="outline" className="text-purple-400 border-purple-400/50 bg-white/5 backdrop-blur-md">
               <Shield className="w-4 h-4 mr-2" />
               Security Research
             </Badge>
