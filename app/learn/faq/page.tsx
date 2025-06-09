@@ -497,64 +497,28 @@ export default function LearnFAQPage() {
 
             <FadeIn>
               <Card className="bg-gray-900/60 border-primary/30 backdrop-blur-sm">
-                <CardContent className="p-12 text-center">
-                  <div className="mb-8">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 font-mono">
-                      EXPLORE ADDITIONAL RESOURCES
-                    </h2>
-                    <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                      Dive deeper into Ergo's technology and join our vibrant community for real-time discussions and
-                      support
-                    </p>
-                  </div>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                    <Button
-                      asChild
-                      className="bg-gradient-to-r from-blue-600 to-cyan-600 text-white hover:shadow-lg font-mono uppercase tracking-wider"
-                    >
-                      <Link href="/start/introduction">
-                        <BookOpen className="w-4 h-4 mr-2" />
-                        Get Started
-                      </Link>
-                    </Button>
-
-                    <Button
-                      asChild
-                      className="bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:shadow-lg font-mono uppercase tracking-wider"
-                    >
-                      <Link href="https://docs.ergoplatform.com" target="_blank" rel="noopener noreferrer">
+                <CardContent className="p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-bold text-white font-mono">Technical Documentation</h3>
+                      <p className="text-gray-400">
+                        Explore detailed technical documentation, API references, and development guides.
+                      </p>
+                      <Button variant="outline" className="w-full">
                         <ExternalLink className="w-4 h-4 mr-2" />
-                        Docs
-                      </Link>
-                    </Button>
-
-                    <Button
-                      asChild
-                      className="bg-gradient-to-r from-green-600 to-emerald-600 text-white hover:shadow-lg font-mono uppercase tracking-wider"
-                    >
-                      <Link href="/start/community">
+                        View Documentation
+                      </Button>
+                    </div>
+                    <div className="space-y-4">
+                      <h3 className="text-xl font-bold text-white font-mono">Community Resources</h3>
+                      <p className="text-gray-400">
+                        Join our community forums, Discord server, and social media channels for support.
+                      </p>
+                      <Button variant="outline" className="w-full">
                         <Users className="w-4 h-4 mr-2" />
-                        Community
-                      </Link>
-                    </Button>
-
-                    <Button
-                      asChild
-                      className="bg-gradient-to-r from-orange-600 to-red-600 text-white hover:shadow-lg font-mono uppercase tracking-wider"
-                    >
-                      <Link href="/ecosystem">
-                        <Globe className="w-4 h-4 mr-2" />
-                        Ecosystem
-                      </Link>
-                    </Button>
-                  </div>
-
-                  <div className="mt-8 pt-8 border-t border-primary/20">
-                    <p className="text-gray-400 font-mono">
-                      <span className="text-primary">&gt;</span> Building the future of decentralized finance, one block
-                      at a time
-                    </p>
+                        Join Community
+                      </Button>
+                    </div>
                   </div>
                 </CardContent>
               </Card>
