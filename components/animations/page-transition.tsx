@@ -1,8 +1,9 @@
 "use client"
 
-import { motion, AnimatePresence } from "framer-motion"
+import { useRef, useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import type React from "react"
+import { MotionDiv, AnimatePresence } from "./motion"
 
 interface PageTransitionProps {
   children: React.ReactNode
@@ -34,10 +35,21 @@ const pageTransition = {
 
 export function PageTransition({ children }: PageTransitionProps) {
   const pathname = usePathname()
+  const isFirstLoad = useRef(true)
+  const [shouldAnimate, setShouldAnimate] = useState(false)
 
-  return (
+  useEffect(() => {
+    if (isFirstLoad.current) {
+      setShouldAnimate(false)
+      isFirstLoad.current = false
+    } else {
+      setShouldAnimate(true)
+    }
+  }, [pathname])
+
+  return shouldAnimate ? (
     <AnimatePresence mode="wait" initial={false}>
-      <motion.div
+      <MotionDiv
         key={pathname}
         initial="initial"
         animate="in"
@@ -47,7 +59,9 @@ export function PageTransition({ children }: PageTransitionProps) {
         className="min-h-screen"
       >
         {children}
-      </motion.div>
+      </MotionDiv>
     </AnimatePresence>
+  ) : (
+    <div className="min-h-screen">{children}</div>
   )
 }

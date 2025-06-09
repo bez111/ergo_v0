@@ -1,8 +1,8 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
 import type React from "react"
+import { MotionDiv } from "./motion"
 
 interface CyberCardProps {
   children: React.ReactNode
@@ -12,7 +12,7 @@ interface CyberCardProps {
 
 export function CyberCard({ children, className, delay = 0 }: CyberCardProps) {
   return (
-    <motion.div
+    <MotionDiv
       initial={{
         opacity: 0,
         y: 50,
@@ -43,7 +43,7 @@ export function CyberCard({ children, className, delay = 0 }: CyberCardProps) {
       }}
     >
       <Card className={className}>
-        <motion.div
+        <MotionDiv
           whileHover={{
             scale: 1.02,
           }}
@@ -53,8 +53,8 @@ export function CyberCard({ children, className, delay = 0 }: CyberCardProps) {
           }}
         >
           {children}
-        </motion.div>
+        </MotionDiv>
       </Card>
-    </motion.div>
+    </MotionDiv>
   )
 }

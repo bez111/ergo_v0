@@ -1,7 +1,7 @@
 "use client"
 
-import { motion } from "framer-motion"
 import type React from "react"
+import { MotionDiv } from "./motion"
 
 interface FadeInProps {
   children: React.ReactNode
@@ -19,7 +19,7 @@ export function FadeIn({ children, delay = 0, direction = "up", className }: Fad
   }
 
   return (
-    <motion.div
+    <MotionDiv
       initial={{
         opacity: 0,
         ...directionOffset[direction],
@@ -37,6 +37,6 @@ export function FadeIn({ children, delay = 0, direction = "up", className }: Fad
       className={className}
     >
       {children}
-    </motion.div>
+    </MotionDiv>
   )
 }
