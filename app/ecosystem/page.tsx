@@ -461,10 +461,7 @@ export default function EcosystemPage() {
   }, [selectedCategory, searchQuery])
 
   return (
-    <div className="min-h-screen w-full relative overflow-hidden">
-      {/* Фон как на остальных страницах */}
-      <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-      <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10 bg-cover bg-center" />
+    <div className="min-h-screen relative">
       <div className="relative z-10 py-20 px-4">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
