@@ -3,7 +3,17 @@
 import { useCases } from "./data"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
-import { UseCaseCard } from "@/components/use-cases/use-case-card"
+import { UseCard } from "@/components/ui/use-card"
+import { Coins, Shield, Palette, Users, TrendingUp, Link2 } from "lucide-react"
+
+const iconMap = {
+  coins: <Coins className="w-6 h-6 text-gray-300" />,
+  shield: <Shield className="w-6 h-6 text-gray-300" />,
+  palette: <Palette className="w-6 h-6 text-gray-300" />,
+  users: <Users className="w-6 h-6 text-gray-300" />,
+  link: <Link2 className="w-6 h-6 text-gray-300" />,
+  "trending-up": <TrendingUp className="w-6 h-6 text-gray-300" />,
+}
 
 export default function UsePage() {
   return (
@@ -26,7 +36,16 @@ export default function UsePage() {
         className="grid grid-cols-1 md:grid-cols-2 gap-10"
       >
         {useCases.map((uc, idx) => (
-          <UseCaseCard key={uc.id} useCase={uc} index={idx} />
+          <UseCard
+            key={uc.id}
+            icon={iconMap[uc.icon as keyof typeof iconMap]}
+            title={uc.title}
+            subtitle={uc.problemStatement}
+            description={uc.solution}
+            tags={uc.tags}
+            projects={uc.supportedProjects}
+            cta={{ label: "Explore Use Case", href: `/use/use-cases/${uc.id}` }}
+          />
         ))}
       </motion.div>
     </div>
