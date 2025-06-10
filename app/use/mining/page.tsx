@@ -32,6 +32,7 @@ import {
   Wrench,
   Globe,
 } from "lucide-react"
+import { Card } from "@/components/ui/card"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -171,10 +172,13 @@ export default function MiningPage() {
   })
 
   return (
-    <div className="min-h-screen relative">
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-10"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent"></div>
+    <div className="min-h-screen relative bg-neutral-950 overflow-hidden">
+      {/* Ecosystem-style Background */}
+      <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90 z-0" />
+      <div className="absolute top-0 right-0 w-full h-full bg-[url('/tech-pattern.png')] bg-no-repeat bg-cover opacity-5 z-0" />
+      <div className="absolute bottom-0 left-0 w-full h-full bg-[url('/resistance-texture.png')] bg-no-repeat bg-cover opacity-5 z-0" />
+      <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/10 via-transparent to-red-900/10 z-0" />
 
       <div className="relative z-10">
         {/* Hero Section */}
@@ -187,7 +191,7 @@ export default function MiningPage() {
                 transition={{ duration: 0.8 }}
                 className="mb-8"
               >
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-primary via-orange-400 to-primary bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
                   MINE ERGO
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
@@ -204,32 +208,32 @@ export default function MiningPage() {
               className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-12"
             >
               <motion.div variants={itemVariants}>
-                <CyberCard className="p-6 text-center">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 text-center transition-all duration-300 hover:border-orange-500/50">
                   <Activity className="w-8 h-8 text-primary mx-auto mb-2" />
                   <DigitalCounter value={210} suffix=" TH/s" duration={3000} className="text-2xl font-mono text-primary" />
                   <p className="text-sm text-gray-400">Network Hashrate</p>
-                </CyberCard>
+                </Card>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <CyberCard className="p-6 text-center">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 text-center transition-all duration-300 hover:border-orange-500/50">
                   <Clock className="w-8 h-8 text-primary mx-auto mb-2" />
                   <DigitalCounter value={2} suffix=" min" duration={3000} className="text-2xl font-mono text-primary" />
                   <p className="text-sm text-gray-400">Block Time</p>
-                </CyberCard>
+                </Card>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <CyberCard className="p-6 text-center">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 text-center transition-all duration-300 hover:border-orange-500/50">
                   <DollarSign className="w-8 h-8 text-primary mx-auto mb-2" />
                   <DigitalCounter value={1.2} suffix="P" duration={3000} className="text-2xl font-mono text-primary" />
                   <p className="text-sm text-gray-400">Block Reward</p>
-                </CyberCard>
+                </Card>
               </motion.div>
               <motion.div variants={itemVariants}>
-                <CyberCard className="p-6 text-center">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 text-center transition-all duration-300 hover:border-orange-500/50">
                   <Users className="w-8 h-8 text-primary mx-auto mb-2" />
                   <DigitalCounter value={12847} suffix="" duration={3000} className="text-2xl font-mono text-primary" />
                   <p className="text-sm text-gray-400">Active Miners</p>
-                </CyberCard>
+                </Card>
               </motion.div>
             </motion.div>
           </div>
@@ -274,7 +278,7 @@ export default function MiningPage() {
                 <SectionHeading text="MINING OVERVIEW" />
 
                 <div className="grid md:grid-cols-2 gap-8">
-                  <CyberCard className="p-8">
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                     <h3 className="text-2xl font-bold mb-4 text-primary">What is Ergo Mining?</h3>
                     <p className="text-gray-300 mb-6 leading-relaxed">
                       Ergo uses the Autolykos2 Proof-of-Work algorithm, designed to be ASIC-resistant and memory-hard.
@@ -298,9 +302,9 @@ export default function MiningPage() {
                         <span>Emission schedule until 2045</span>
                       </div>
                     </div>
-                  </CyberCard>
+                  </Card>
 
-                  <CyberCard className="p-8">
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                     <h3 className="text-2xl font-bold mb-4 text-primary">Why Mine Ergo?</h3>
                     <div className="space-y-4">
                       <div className="flex items-start gap-3">
@@ -332,11 +336,11 @@ export default function MiningPage() {
                         </div>
                       </div>
                     </div>
-                  </CyberCard>
+                  </Card>
                 </div>
 
                 {/* Profitability Factors */}
-                <CyberCard className="p-8">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                   <h3 className="text-2xl font-bold mb-6 text-primary">Profitability Factors</h3>
                   <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     {profitabilityFactors.map((factor, index) => (
@@ -359,7 +363,7 @@ export default function MiningPage() {
                       </div>
                     ))}
                   </div>
-                </CyberCard>
+                </Card>
               </TabsContent>
 
               {/* Getting Started Tab */}
@@ -368,7 +372,7 @@ export default function MiningPage() {
 
                 <div className="grid gap-6">
                   {miningSteps.map((step, index) => (
-                    <CyberCard key={index} className="p-6">
+                    <Card key={index} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6">
                       <div className="flex items-center gap-6">
                         <div className="flex-shrink-0 w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center border border-primary">
                           <span className="text-primary font-bold">{step.step}</span>
@@ -382,12 +386,12 @@ export default function MiningPage() {
                         </div>
                         <Button className="bg-primary hover:bg-primary/80 text-black">{step.action}</Button>
                       </div>
-                    </CyberCard>
+                    </Card>
                   ))}
                 </div>
 
                 {/* Mining Software */}
-                <CyberCard className="p-8">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                   <h3 className="text-2xl font-bold mb-6 text-primary">Recommended Mining Software</h3>
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="p-6 bg-gray-900/50 rounded-lg border border-primary/20">
@@ -430,7 +434,7 @@ export default function MiningPage() {
                       </Button>
                     </div>
                   </div>
-                </CyberCard>
+                </Card>
               </TabsContent>
 
               {/* Hardware Tab */}
@@ -439,7 +443,7 @@ export default function MiningPage() {
 
                 <div className="grid gap-8">
                   {hardwareRequirements.map((hw, index) => (
-                    <CyberCard key={index} className="p-8">
+                    <Card key={index} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                       <div className="flex items-center gap-4 mb-6">
                         <div className="p-3 bg-primary/20 rounded-lg border border-primary">{hw.icon}</div>
                         <div>
@@ -479,12 +483,12 @@ export default function MiningPage() {
                           </div>
                         </div>
                       </div>
-                    </CyberCard>
+                    </Card>
                   ))}
                 </div>
 
                 {/* GPU Comparison */}
-                <CyberCard className="p-8">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                   <h3 className="text-2xl font-bold mb-6 text-primary">GPU Performance Comparison</h3>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm">
@@ -529,7 +533,7 @@ export default function MiningPage() {
                       </tbody>
                     </table>
                   </div>
-                </CyberCard>
+                </Card>
               </TabsContent>
 
               {/* Mining Pools Tab */}
@@ -547,7 +551,7 @@ export default function MiningPage() {
 
                 <div className="grid md:grid-cols-2 gap-6">
                   {miningPools.map((pool, index) => (
-                    <CyberCard key={index} className="p-6">
+                    <Card key={index} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6">
                       <div className="flex items-center justify-between mb-4">
                         <h3 className="text-xl font-bold text-primary">{pool.name}</h3>
                         <Badge variant={pool.status === "active" ? "default" : "secondary"}>{pool.status}</Badge>
@@ -583,12 +587,12 @@ export default function MiningPage() {
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Visit Pool
                       </Button>
-                    </CyberCard>
+                    </Card>
                   ))}
                 </div>
 
                 {/* Pool Configuration Example */}
-                <CyberCard className="p-8">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                   <h3 className="text-2xl font-bold mb-6 text-primary">Configuration Example</h3>
                   <div className="bg-gray-900 p-6 rounded-lg border border-primary/20">
                     <h4 className="font-semibold mb-4">T-Rex Miner Configuration:</h4>
@@ -606,14 +610,14 @@ export default function MiningPage() {
                       Replace YOUR_WALLET_ADDRESS with your actual Ergo wallet address
                     </p>
                   </div>
-                </CyberCard>
+                </Card>
               </TabsContent>
 
               {/* Calculator Tab */}
               <TabsContent value="calculator" className="space-y-8">
                 <SectionHeading text="PROFITABILITY CALCULATOR" />
 
-                <CyberCard className="p-8">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                   <div className="grid md:grid-cols-2 gap-8">
                     <div className="space-y-6">
                       <h3 className="text-xl font-bold text-primary">Mining Parameters</h3>
@@ -715,7 +719,7 @@ export default function MiningPage() {
                       </Alert>
                     </div>
                   </div>
-                </CyberCard>
+                </Card>
               </TabsContent>
 
               {/* Troubleshooting Tab */}
@@ -723,7 +727,7 @@ export default function MiningPage() {
                 <SectionHeading text="TROUBLESHOOTING & TIPS" />
 
                 <div className="grid md:grid-cols-2 gap-8">
-                  <CyberCard className="p-6">
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6">
                     <h3 className="text-xl font-bold mb-4 text-primary flex items-center gap-2">
                       <Wrench className="w-5 h-5" />
                       Common Issues
@@ -757,9 +761,9 @@ export default function MiningPage() {
                         </ul>
                       </div>
                     </div>
-                  </CyberCard>
+                  </Card>
 
-                  <CyberCard className="p-6">
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6">
                     <h3 className="text-xl font-bold mb-4 text-primary flex items-center gap-2">
                       <BookOpen className="w-5 h-5" />
                       Optimization Tips
@@ -793,11 +797,11 @@ export default function MiningPage() {
                         </ul>
                       </div>
                     </div>
-                  </CyberCard>
+                  </Card>
                 </div>
 
                 {/* Security Tips */}
-                <CyberCard className="p-8">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-8">
                   <h3 className="text-2xl font-bold mb-6 text-primary flex items-center gap-2">
                     <Shield className="w-6 h-6" />
                     Security Best Practices
@@ -831,7 +835,7 @@ export default function MiningPage() {
                       </ul>
                     </div>
                   </div>
-                </CyberCard>
+                </Card>
               </TabsContent>
             </Tabs>
           </div>
@@ -840,7 +844,7 @@ export default function MiningPage() {
         {/* Call to Action */}
         <section className="py-16 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <CyberCard className="p-12">
+            <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-12">
               <h2 className="text-3xl font-bold mb-6 text-primary">Ready to Start Mining?</h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join thousands of miners securing the Ergo network and earning rewards
@@ -855,7 +859,7 @@ export default function MiningPage() {
                   Join Mining Community
                 </Button>
               </div>
-            </CyberCard>
+            </Card>
           </div>
         </section>
       </div>

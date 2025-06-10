@@ -31,7 +31,6 @@ export function CyberCard({ children, className, delay = 0 }: CyberCardProps) {
       whileHover={{
         y: -10,
         rotateX: 5,
-        boxShadow: "0 20px 40px rgba(255, 136, 0, 0.3)",
         transition: {
           duration: 0.3,
           ease: "easeOut",
@@ -42,7 +41,7 @@ export function CyberCard({ children, className, delay = 0 }: CyberCardProps) {
         perspective: 1000,
       }}
     >
-      <Card className={className}>
+      <Card className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl ${className || ""}`}>
         <MotionDiv
           whileHover={{
             scale: 1.02,

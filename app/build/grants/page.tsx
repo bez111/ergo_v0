@@ -134,7 +134,7 @@ export default function BuildGrantsPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3"
+                className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                 size="lg"
                 asChild
               >
@@ -142,7 +142,7 @@ export default function BuildGrantsPage() {
               </Button>
               <Button
                 variant="outline"
-                className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-black px-8 py-3"
+                className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                 size="lg"
                 asChild
               >

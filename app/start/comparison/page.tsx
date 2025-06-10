@@ -107,60 +107,50 @@ export default function ComparisonPage() {
             <section>
               <div className="max-w-7xl mx-auto px-4 pt-32 pb-16">
                 <FadeIn>
-                  <div className="text-center mb-16">
-                    <motion.div
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6 }}
-                      className="mb-8"
-                    >
-                      <span className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium backdrop-blur-md mb-4">
-                        Platform Analysis
-                      </span>
-                      <h1 className="text-5xl lg:text-6xl font-bold text-white mb-6 drop-shadow-lg leading-tight">
-                        Why Choose{" "}
-                        <span className="bg-gradient-to-r from-orange-400 to-amber-400 bg-clip-text text-transparent">
-                          Ergo
-                        </span>
-                        ?
-                      </h1>
-                      <p className="text-white/90 text-xl mb-8 leading-relaxed max-w-3xl mx-auto">
-                        Understanding Ergo's positioning in the blockchain ecosystem through technical and philosophical
-                        comparisons with leading platforms.
-                      </p>
-                    </motion.div>
-                  </div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="mb-8 text-center"
+                  >
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
+                      WHY CHOOSE ERGO?
+                    </h1>
+                    <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                      Understanding Ergo's positioning in the blockchain ecosystem through technical and philosophical comparisons with leading platforms.
+                    </p>
+                  </motion.div>
                 </FadeIn>
-
-                {/* Quick Stats */}
-                <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
-                  {[
-                    { label: "Fair Launch", value: "✓", color: "text-orange-400", desc: "No ICO or pre-mine" },
-                    { label: "ASIC Resistant", value: "✓", color: "text-orange-400", desc: "GPU-friendly mining" },
-                    {
-                      label: "Advanced Crypto",
-                      value: "Σ-protocols",
-                      color: "text-amber-400",
-                      desc: "Built-in privacy",
-                    },
-                    { label: "Predictable Fees", value: "✓", color: "text-orange-400", desc: "No gas surprises" },
-                  ].map((stat, index) => (
-                    <motion.div
-                      key={stat.label}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.1 }}
-                      className="relative bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-orange-500/10 hover:border-orange-400/30 transition-all duration-300 group"
-                    >
-                      <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
-                      <div className="text-white font-semibold mb-1">{stat.label}</div>
-                      <div className="text-white/60 text-sm">{stat.desc}</div>
-                      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-                    </motion.div>
-                  ))}
-                </StaggerContainer>
               </div>
             </section>
+
+            {/* Quick Stats */}
+            <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+              {[
+                { label: "Fair Launch", value: "✓", color: "text-orange-400", desc: "No ICO or pre-mine" },
+                { label: "ASIC Resistant", value: "✓", color: "text-orange-400", desc: "GPU-friendly mining" },
+                {
+                  label: "Advanced Crypto",
+                  value: "Σ-protocols",
+                  color: "text-amber-400",
+                  desc: "Built-in privacy",
+                },
+                { label: "Predictable Fees", value: "✓", color: "text-orange-400", desc: "No gas surprises" },
+              ].map((stat, index) => (
+                <motion.div
+                  key={stat.label}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  className="relative bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 hover:bg-orange-500/10 hover:border-orange-400/30 transition-all duration-300 group"
+                >
+                  <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
+                  <div className="text-white font-semibold mb-1">{stat.label}</div>
+                  <div className="text-white/60 text-sm">{stat.desc}</div>
+                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+                </motion.div>
+              ))}
+            </StaggerContainer>
 
             {/* Comparison Table */}
             <section className="py-16 px-4">
@@ -534,12 +524,12 @@ export default function ComparisonPage() {
                       <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <Button
                           size="lg"
-                          className="bg-gradient-to-r from-orange-500 to-amber-500 hover:from-orange-600 hover:to-amber-600 text-white border-0"
+                          className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                           asChild
                         >
                           <Link href="/build">Start Building on Ergo</Link>
                         </Button>
-                        <Button size="lg" variant="outline" className="border-gray-600 text-gray-300 hover:bg-gray-800">
+                        <Button size="lg" variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
                           Explore the Ecosystem
                         </Button>
                       </div>

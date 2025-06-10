@@ -22,6 +22,7 @@ import {
 import { SectionHeading } from "@/components/section-heading"
 import { GlitchText } from "@/components/glitch-text"
 import { DigitalCounter } from "@/components/digital-counter"
+import { FadeIn } from "@/components/animations/fade-in"
 
 export default function StartPage() {
   const [hoveredPath, setHoveredPath] = useState<number | null>(null)
@@ -97,56 +98,23 @@ export default function StartPage() {
     <div className="min-h-screen relative">
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center mb-16"
-            >
-              <div className="inline-flex items-center gap-4 mb-8">
-                <div className="w-16 h-16 bg-gradient-to-r from-primary to-orange-500 rounded-lg flex items-center justify-center">
-                  <Play className="w-8 h-8 text-black" />
-                </div>
-                <div className="text-left">
-                  <GlitchText text="START YOUR" className="text-4xl md:text-6xl font-bold" />
-                  <GlitchText text="ERGO JOURNEY" className="text-4xl md:text-6xl font-bold text-primary" />
-                </div>
-              </div>
-
-              <div className="max-w-4xl mx-auto mb-12">
-                <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-                  <span className="text-primary">[</span>
-                  CHOOSE YOUR PATH TO DECENTRALIZED FINANCE
-                  <span className="text-primary">]</span>
-                </h2>
-                <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-                  Whether you're new to blockchain or an experienced developer, Ergo offers powerful tools for building
-                  the future of finance. Discover personalized resources to help you get started.
+        <section className="pt-32 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <FadeIn>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="mb-8"
+              >
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
+                  START YOUR ERGO JOURNEY
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                  Whether you're new to blockchain or an experienced developer, Ergo offers powerful tools for building the future of finance. Discover personalized resources to help you get started.
                 </p>
-              </div>
-
-              {/* Stats */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto mb-12">
-                {stats.map((stat, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 + 0.5 }}
-                    className="bg-gray-900/50 border border-primary/20 rounded-lg p-4"
-                  >
-                    <DigitalCounter
-                      value={stat.value}
-                      suffix={stat.suffix}
-                      className="text-2xl md:text-3xl font-bold text-primary mb-2"
-                    />
-                    <p className="text-sm text-gray-400 font-mono uppercase tracking-wider">{stat.label}</p>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+              </motion.div>
+            </FadeIn>
           </div>
         </section>
 
@@ -166,7 +134,7 @@ export default function StartPage() {
                   onMouseEnter={() => setHoveredPath(index)}
                   onMouseLeave={() => setHoveredPath(null)}
                 >
-                  <Card className="bg-gray-900/40 border-primary/20 hover:border-primary/50 transition-all duration-500 h-full backdrop-blur-sm group-hover:scale-105">
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl h-full group-hover:scale-105">
                     <CardHeader className="pb-4">
                       <div className="flex items-center justify-between mb-4">
                         <div className={`p-4 rounded-xl bg-gradient-to-r ${path.color} shadow-lg`}>
@@ -197,7 +165,8 @@ export default function StartPage() {
                     <CardFooter>
                       <Button
                         asChild
-                        className={`w-full bg-gradient-to-r ${path.color} text-white hover:shadow-lg font-mono uppercase tracking-wider transition-all duration-300 group-hover:scale-105`}
+                        className="w-full rounded-lg font-mono uppercase tracking-wider bg-orange-500 hover:bg-orange-600 text-black"
+                        variant="default"
                       >
                         <Link href={path.href}>
                           Get Started
@@ -238,7 +207,7 @@ export default function StartPage() {
                 >
                   <Link
                     href={action.href}
-                    className="block p-6 bg-gray-900/40 border border-primary/20 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group-hover:scale-105"
+                    className="block p-6 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl hover:border-orange-500/50 hover:bg-gray-900/60 transition-all duration-300 group-hover:scale-105"
                   >
                     <div className="flex flex-col items-center text-center gap-4">
                       <div className="p-3 rounded-lg bg-primary/10 border border-primary/30 group-hover:bg-primary/20 transition-colors">
@@ -260,7 +229,7 @@ export default function StartPage() {
         <section className="py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}>
-              <Card className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-primary/40 backdrop-blur-sm">
+              <Card className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                 <CardContent className="p-12 text-center">
                   <div className="mb-8">
                     <div className="inline-flex items-center gap-4 mb-6">
@@ -276,8 +245,7 @@ export default function StartPage() {
                   <div className="flex flex-col sm:flex-row gap-6 justify-center">
                     <Button
                       asChild
-                      size="lg"
-                      className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg hover:shadow-primary/25 font-mono uppercase tracking-wider px-8 py-4 text-lg"
+                      className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                     >
                       <Link href="/start/quiz">
                         <Target className="w-5 h-5 mr-2" />
@@ -287,9 +255,8 @@ export default function StartPage() {
 
                     <Button
                       asChild
-                      size="lg"
                       variant="outline"
-                      className="border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-8 py-4 text-lg"
+                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                     >
                       <Link href="/start/faq">
                         <BookOpen className="w-5 h-5 mr-2" />
@@ -309,7 +276,7 @@ export default function StartPage() {
             <SectionHeading text="LEARNING RESOURCES" />
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
+              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mb-4">
                     <BookOpen className="w-6 h-6 text-white" />
@@ -343,7 +310,7 @@ export default function StartPage() {
                   <Button
                     asChild
                     variant="outline"
-                    className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                    className="w-full rounded-lg border-orange-500 text-orange-500 hover:bg-orange-500/10"
                   >
                     <Link href="/start/introduction">
                       <ArrowRight className="w-4 h-4 mr-2" />
@@ -353,7 +320,7 @@ export default function StartPage() {
                 </CardFooter>
               </Card>
 
-              <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
+              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center mb-4">
                     <Code className="w-6 h-6 text-white" />
@@ -381,7 +348,7 @@ export default function StartPage() {
                   <Button
                     asChild
                     variant="outline"
-                    className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                    className="w-full rounded-lg border-orange-500 text-orange-500 hover:bg-orange-500/10"
                   >
                     <Link href="/build">
                       <ArrowRight className="w-4 h-4 mr-2" />
@@ -391,7 +358,7 @@ export default function StartPage() {
                 </CardFooter>
               </Card>
 
-              <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
+              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                 <CardHeader>
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mb-4">
                     <Users className="w-6 h-6 text-white" />
@@ -419,7 +386,7 @@ export default function StartPage() {
                   <Button
                     asChild
                     variant="outline"
-                    className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                    className="w-full rounded-lg border-orange-500 text-orange-500 hover:bg-orange-500/10"
                   >
                     <Link href="/start/community">
                       <ArrowRight className="w-4 h-4 mr-2" />
@@ -436,7 +403,7 @@ export default function StartPage() {
         <section className="py-20 px-4">
           <div className="max-w-5xl mx-auto">
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.5 }}>
-              <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
+              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                 <CardContent className="p-12 text-center">
                   <h3 className="text-3xl md:text-4xl font-bold text-white mb-6 font-mono">
                     READY TO EXPLORE THE ECOSYSTEM?
@@ -448,7 +415,8 @@ export default function StartPage() {
                     <Button
                       asChild
                       size="lg"
-                      className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg font-mono uppercase tracking-wider px-8 py-4"
+                      className="rounded-lg font-mono uppercase tracking-wider px-8 py-4 bg-orange-500 hover:bg-orange-600 text-black"
+                      variant="default"
                     >
                       <Link href="/ecosystem">
                         <ExternalLink className="w-5 h-5 mr-2" />
@@ -459,7 +427,7 @@ export default function StartPage() {
                       asChild
                       size="lg"
                       variant="outline"
-                      className="border-primary/50 text-primary hover:bg-primary/10 font-mono uppercase tracking-wider px-8 py-4"
+                      className="rounded-lg font-mono uppercase tracking-wider px-8 py-4 border-orange-500 text-orange-500 hover:bg-orange-500/10"
                     >
                       <Link href="/wallet">
                         <Shield className="w-5 h-5 mr-2" />

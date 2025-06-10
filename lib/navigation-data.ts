@@ -38,7 +38,7 @@ export const mainNavItems = [
     children: [
       {
         title: "Use Cases",
-        href: "/use/use-cases",
+        href: "/use",
         description: "Explore different ways to leverage Ergo's capabilities across various domains.",
       },
       {

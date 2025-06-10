@@ -658,12 +658,12 @@ export default function GuidesClientPage() {
               <FadeIn>
                 <div className="text-center mb-16">
                   <motion.div
-                    className="text-4xl md:text-6xl lg:text-8xl font-bold mb-6 text-orange-500"
+                    className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
                   >
-                    <GlitchText text="ERGO GUIDES" />
+                    ERGO GUIDES
                   </motion.div>
 
                   <motion.p

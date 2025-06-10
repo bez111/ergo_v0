@@ -461,11 +461,11 @@ export default function MiningPage() {
                     Join thousands of Ergo miners in active communities to share knowledge and get help.
                   </p>
                   <div className="space-y-3">
-                    <Button className="w-full bg-[#5865F2] hover:bg-[#4752C4]">
+                    <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
                       Join Discord
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
-                    <Button className="w-full bg-[#FF4500] hover:bg-[#E03D00]">
+                    <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
                       Join Reddit
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
@@ -546,7 +546,7 @@ export default function MiningPage() {
             <p className="text-xl text-gray-300 mb-8">
               Start mining now and help secure a fair, research-driven financial future.
             </p>
-            <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
+            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
               Start Mining Ergo
             </Button>
           </div>

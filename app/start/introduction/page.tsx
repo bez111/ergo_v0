@@ -9,6 +9,7 @@ import { SectionHeading } from "@/components/section-heading"
 import { DigitalCounter } from "@/components/digital-counter"
 import { GlitchText } from "@/components/glitch-text"
 import { ParticleBackground } from "@/components/particle-background"
+import { FadeIn } from "@/components/animations/fade-in"
 
 export default function IntroductionPage() {
   // Animation variants
@@ -37,36 +38,23 @@ export default function IntroductionPage() {
     <div className="min-h-screen relative">
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="relative pt-16 pb-12 overflow-hidden border-b border-primary/20">
-          <div className="container relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <div className="inline-block mb-4 px-4 py-1 border border-primary/30 bg-primary/5 rounded-full">
-                <span className="text-primary font-mono text-sm">ERGO PLATFORM // QUICK INTRODUCTION</span>
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">
-                <GlitchText text="Discover Ergo" className="text-white" />
-                <span className="block mt-2 text-primary">An Overview and Core Purpose</span>
-              </h1>
-              <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto font-mono">
-                A next-generation blockchain platform designed for secure financial contracts and true decentralization
-              </p>
-
-              {/* Digital counter effect */}
-              <div className="mt-8 flex flex-wrap justify-center gap-8">
-                <div className="text-center">
-                  <DigitalCounter value={2019} duration={3000} className="text-2xl font-mono text-primary" />
-                  <p className="text-sm text-gray-500 font-mono mt-1">LAUNCHED</p>
-                </div>
-                <div className="text-center">
-                  <DigitalCounter value={97} suffix="M" duration={3000} className="text-2xl font-mono text-primary" />
-                  <p className="text-sm text-gray-500 font-mono mt-1">MAX SUPPLY</p>
-                </div>
-                <div className="text-center">
-                  <DigitalCounter value={100} suffix="+" duration={3000} className="text-2xl font-mono text-primary" />
-                  <p className="text-sm text-gray-500 font-mono mt-1">PROJECTS</p>
-                </div>
-              </div>
-            </div>
+        <section className="pt-32 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <FadeIn>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="mb-8"
+              >
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
+                  DISCOVER ERGO
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                  A next-generation blockchain platform designed for secure financial contracts and true decentralization
+                </p>
+              </motion.div>
+            </FadeIn>
           </div>
         </section>
 
@@ -184,7 +172,7 @@ export default function IntroductionPage() {
                   believe in creating tools that are useful in the real world.
                 </p>
 
-                <Card className="border-primary/20 bg-black/50">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                   <CardContent className="p-4">
                     <div className="text-center p-4 border border-dashed border-primary/40 rounded-md">
                       <span className="text-primary font-mono text-xs">CORE MISSION</span>
@@ -388,7 +376,7 @@ sigmaProp(
                   (Duckpools).
                 </p>
                 <div className="flex justify-end">
-                  <Button variant="link" asChild className="text-primary p-0 font-mono text-xs">
+                  <Button variant="link" asChild className="text-orange-500 p-0 font-mono text-xs">
                     <Link href="/ecosystem/defi">
                       EXPLORE DEFI <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
@@ -405,7 +393,7 @@ sigmaProp(
                   protocols.
                 </p>
                 <div className="flex justify-end">
-                  <Button variant="link" asChild className="text-primary p-0 font-mono text-xs">
+                  <Button variant="link" asChild className="text-orange-500 p-0 font-mono text-xs">
                     <Link href="/ecosystem/privacy">
                       LEARN MORE <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
@@ -421,7 +409,7 @@ sigmaProp(
                   Create, buy, and sell unique digital assets on marketplaces like Ergo Auction House and SkyHarbor.
                 </p>
                 <div className="flex justify-end">
-                  <Button variant="link" asChild className="text-primary p-0 font-mono text-xs">
+                  <Button variant="link" asChild className="text-orange-500 p-0 font-mono text-xs">
                     <Link href="/ecosystem/nfts">
                       DISCOVER NFTs <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
@@ -437,7 +425,7 @@ sigmaProp(
                   Rosen Bridge connects Ergo with other major blockchains like Bitcoin, Ethereum, Cardano, and BSC.
                 </p>
                 <div className="flex justify-end">
-                  <Button variant="link" asChild className="text-primary p-0 font-mono text-xs">
+                  <Button variant="link" asChild className="text-orange-500 p-0 font-mono text-xs">
                     <Link href="/ecosystem/bridges">
                       EXPLORE BRIDGES <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
@@ -453,7 +441,7 @@ sigmaProp(
                   Participate in decentralized governance and community-driven projects through various DAO structures.
                 </p>
                 <div className="flex justify-end">
-                  <Button variant="link" asChild className="text-primary p-0 font-mono text-xs">
+                  <Button variant="link" asChild className="text-orange-500 p-0 font-mono text-xs">
                     <Link href="/ecosystem/daos">
                       VIEW DAOs <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
@@ -469,7 +457,7 @@ sigmaProp(
                   SDKs, libraries, and frameworks to help developers build the next generation of dApps on Ergo.
                 </p>
                 <div className="flex justify-end">
-                  <Button variant="link" asChild className="text-primary p-0 font-mono text-xs">
+                  <Button variant="link" asChild className="text-orange-500 p-0 font-mono text-xs">
                     <Link href="/build">
                       START BUILDING <ArrowRight className="ml-1 h-3 w-3" />
                     </Link>
@@ -572,7 +560,7 @@ sigmaProp(
               <motion.div variants={itemVariants} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <Button
                   asChild
-                  className="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono h-auto py-4 flex-col gap-2"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                 >
                   <Link href="/ecosystem">
                     <ExternalLink className="h-5 w-5" />
@@ -582,7 +570,8 @@ sigmaProp(
 
                 <Button
                   asChild
-                  className="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono h-auto py-4 flex-col gap-2"
+                  variant="outline"
+                  className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
                   <Link href="/wallet">
                     <ExternalLink className="h-5 w-5" />
@@ -592,7 +581,7 @@ sigmaProp(
 
                 <Button
                   asChild
-                  className="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono h-auto py-4 flex-col gap-2"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                 >
                   <Link href="/community">
                     <ExternalLink className="h-5 w-5" />
@@ -602,7 +591,7 @@ sigmaProp(
 
                 <Button
                   asChild
-                  className="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono h-auto py-4 flex-col gap-2"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                 >
                   <Link href="/technology">
                     <ExternalLink className="h-5 w-5" />
@@ -612,7 +601,7 @@ sigmaProp(
 
                 <Button
                   asChild
-                  className="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono h-auto py-4 flex-col gap-2"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                 >
                   <Link href="https://spectrum.fi/" target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="h-5 w-5" />
@@ -622,7 +611,7 @@ sigmaProp(
 
                 <Button
                   asChild
-                  className="bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono h-auto py-4 flex-col gap-2"
+                  className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                 >
                   <Link href="/start/quiz">
                     <ExternalLink className="h-5 w-5" />

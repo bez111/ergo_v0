@@ -210,40 +210,39 @@ export default function FAQPage() {
     <div className="min-h-screen relative">
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="pt-32 pb-20 px-4">
-          <div className="max-w-6xl mx-auto">
+        <section className="pt-32 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
             <FadeIn>
-              <div className="text-center mb-16">
-                <div className="inline-flex items-center gap-4 mb-8">
-                  <GlitchText text="ERGO FAQ" className="text-6xl md:text-8xl font-bold" />
-                </div>
-
-                <div className="max-w-4xl mx-auto mb-12">
-                  <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-                    <span className="text-primary">[</span>
-                    THE COMPLETE BEGINNER'S GUIDE
-                    <span className="text-primary">]</span>
-                  </h2>
-                  <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-                    Welcome to Ergo! This FAQ is designed to answer your most common questions and help you understand
-                    our platform, its core purpose, and how you can get involved. If you don't find your answer here,
-                    our community is always ready to help!
-                  </p>
-                </div>
-
-                {/* Search Bar */}
-                <div className="max-w-2xl mx-auto relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
-                  <Input
-                    type="text"
-                    placeholder="SEARCH FAQ..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-12 bg-gray-900/50 border-primary/30 text-white font-mono placeholder:text-gray-500 focus:border-primary h-14 text-lg"
-                  />
-                </div>
-              </div>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="mb-8"
+              >
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
+                  ERGO FAQ
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                  Answers to the most common questions about Ergo, its technology, and ecosystem
+                </p>
+              </motion.div>
             </FadeIn>
+          </div>
+        </section>
+
+        {/* Search Bar */}
+        <section className="py-20 px-4">
+          <div className="max-w-6xl mx-auto">
+            <div className="max-w-2xl mx-auto relative">
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Input
+                type="text"
+                placeholder="SEARCH FAQ..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="pl-12 bg-gray-900/50 border-primary/30 text-white font-mono placeholder:text-gray-500 focus:border-primary h-14 text-lg"
+              />
+            </div>
           </div>
         </section>
 

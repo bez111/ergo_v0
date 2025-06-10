@@ -161,46 +161,22 @@ export default function CommunityPage() {
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 py-8">
           {/* Hero Section */}
-          <section className="pt-32 pb-20 px-4">
-            <div className="max-w-7xl mx-auto">
+          <section className="pt-32 pb-16 px-4">
+            <div className="max-w-7xl mx-auto text-center">
               <FadeIn>
-                <div className="text-center mb-16">
-                  <div className="inline-flex items-center gap-4 mb-8">
-                    <GlitchText text="ERGO COMMUNITY" className="text-6xl md:text-8xl font-bold" />
-                  </div>
-
-                  <div className="max-w-4xl mx-auto mb-12">
-                    <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-                      <span className="text-primary">[</span>
-                      JOIN THE DECENTRALIZED REVOLUTION
-                      <span className="text-primary">]</span>
-                    </h2>
-                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-                      Connect with passionate developers, researchers, and enthusiasts building the future of
-                      decentralized finance. Your voice matters in shaping Ergo's evolution.
-                    </p>
-                  </div>
-
-                  {/* Community Stats */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-                    {stats.map((stat, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="bg-gray-900/50 border border-primary/20 rounded-lg p-4 backdrop-blur-sm"
-                      >
-                        <DigitalCounter
-                          value={stat.value}
-                          suffix={stat.suffix}
-                          className="text-2xl md:text-3xl font-bold text-primary mb-2"
-                        />
-                        <p className="text-sm text-gray-400 font-mono uppercase tracking-wider">{stat.label}</p>
-                      </motion.div>
-                    ))}
-                  </div>
-                </div>
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8 }}
+                  className="mb-8"
+                >
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
+                    ERGO COMMUNITY
+                  </h1>
+                  <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                    Connect with passionate developers, researchers, and enthusiasts building the future of decentralized finance. Your voice matters in shaping Ergo's evolution.
+                  </p>
+                </motion.div>
               </FadeIn>
             </div>
           </section>
@@ -336,7 +312,7 @@ export default function CommunityPage() {
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {guidelines.map((guideline, index) => (
-                  <FadeIn key={index} delay={index * 0.2}>
+                  <FadeIn key={index}>
                     <Card className="bg-gray-900/40 border-primary/20 h-full backdrop-blur-sm">
                       <CardContent className="p-8">
                         <div className="flex items-center gap-4 mb-6">

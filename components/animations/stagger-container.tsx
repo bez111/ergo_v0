@@ -1,6 +1,6 @@
 "use client"
 
-import dynamic from 'next/dynamic'
+import { motion } from "framer-motion"
 import type React from "react"
 
 interface StaggerContainerProps {
@@ -9,14 +9,9 @@ interface StaggerContainerProps {
   staggerDelay?: number
 }
 
-// Dynamically import motion components
-const MotionDiv = dynamic(() => import('framer-motion').then(mod => mod.motion.div), {
-  ssr: false
-})
-
 export function StaggerContainer({ children, className, staggerDelay = 0.1 }: StaggerContainerProps) {
   return (
-    <MotionDiv
+    <motion.div
       initial="hidden"
       animate="visible"
       variants={{
@@ -31,13 +26,13 @@ export function StaggerContainer({ children, className, staggerDelay = 0.1 }: St
       className={`flex flex-wrap justify-center items-center gap-4 ${className || ""}`}
     >
       {children}
-    </MotionDiv>
+    </motion.div>
   )
 }
 
 export function StaggerItem({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
-    <MotionDiv
+    <motion.div
       variants={{
         hidden: { opacity: 0, y: 20 },
         visible: {
@@ -52,6 +47,6 @@ export function StaggerItem({ children, className }: { children: React.ReactNode
       className={className}
     >
       {children}
-    </MotionDiv>
+    </motion.div>
   )
 }

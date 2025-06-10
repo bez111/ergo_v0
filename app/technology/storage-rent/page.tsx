@@ -505,13 +505,13 @@ export default function StorageRentPage() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                      <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold text-xl px-10 py-5 rounded-2xl">
+                      <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
                         <ArrowRight className="mr-3 w-6 h-6" />
                         Start Building on Ergo
                       </Button>
                       <Button
                         variant="outline"
-                        className="border-2 border-cyan-500 text-cyan-400 hover:bg-cyan-500/10 text-xl px-10 py-5 rounded-2xl"
+                        className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                       >
                         <ExternalLink className="mr-3 w-6 h-6" />
                         Read Technical Docs

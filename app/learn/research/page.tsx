@@ -352,6 +352,31 @@ export default function ResearchPage() {
               ))}
             </div>
           </motion.section>
+
+          <Separator className="bg-gray-700/50 mb-12" />
+
+          <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
+            <Link href="/contact">
+              <Users className="w-4 h-4 mr-2" />
+              Suggest Research Topics
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
+            <Link href="https://discord.gg/ergoplatform" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-4 h-4 mr-2" />
+              Join Discord Discussions
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
+            <Link
+              href="https://github.com/ergoplatform/ergo/discussions"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-4 h-4 mr-2" />
+              GitHub Discussions
+            </Link>
+          </Button>
         </div>
       </div>
     )
@@ -529,6 +554,31 @@ export default function ResearchPage() {
               ))}
             </div>
           </motion.section>
+
+          <Separator className="bg-gray-700/50 mb-20" />
+
+          <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
+            <Link href="/contact">
+              <Users className="w-4 h-4 mr-2" />
+              Suggest Research Topics
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
+            <Link href="https://discord.gg/ergoplatform" target="_blank" rel="noopener noreferrer">
+              <MessageCircle className="w-4 h-4 mr-2" />
+              Join Discord Discussions
+            </Link>
+          </Button>
+          <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
+            <Link
+              href="https://github.com/ergoplatform/ergo/discussions"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Github className="w-4 h-4 mr-2" />
+              GitHub Discussions
+            </Link>
+          </Button>
         </div>
       </div>
     )

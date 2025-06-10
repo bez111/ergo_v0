@@ -519,44 +519,39 @@ export default function QuizPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="pt-32 pb-20 px-4"
+              className="flex flex-col justify-center items-center min-h-[70vh] px-4"
             >
-              <div className="max-w-5xl mx-auto">
+              <div className="max-w-3xl w-full text-center">
                 <FadeIn>
-                  <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-4 mb-8">
-                      <GlitchText text="ERGO PATH FINDER" className="text-6xl md:text-8xl font-bold" />
-                    </div>
-
-                    <div className="max-w-4xl mx-auto mb-12">
-                      <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-                        <span className="text-primary">[</span>
-                        DISCOVER YOUR PLACE IN THE ECOSYSTEM
-                        <span className="text-primary">]</span>
-                      </h2>
-                      <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
-                        Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will
-                        help you identify which aspects of Ergo might interest you most and guide you to personalized
-                        resources.
-                      </p>
-                      <p className="text-lg text-gray-300 font-mono">
-                        Answer a few simple questions to find your path: Are you a future{" "}
-                        <span className="text-primary">Investor</span>, <span className="text-primary">Developer</span>,{" "}
-                        <span className="text-primary">Miner</span>,{" "}
-                        <span className="text-primary">NFT Enthusiast</span>,{" "}
-                        <span className="text-primary">DeFi User</span>, or something else?
-                      </p>
-                    </div>
-
-                    <Button
-                      onClick={handleStartQuiz}
-                      size="lg"
-                      className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg hover:shadow-primary/25 font-mono uppercase tracking-wider px-12 py-6 text-xl"
-                    >
-                      <span className="mr-2">START QUIZ</span>
-                      <ChevronRight className="w-6 h-6" />
-                    </Button>
-                  </div>
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="mb-8"
+                  >
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
+                      ERGO PATH FINDER
+                    </h1>
+                    <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
+                      <span className="text-primary">[</span>
+                      DISCOVER YOUR PLACE IN THE ECOSYSTEM
+                      <span className="text-primary">]</span>
+                    </h2>
+                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-6">
+                      Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will help you identify which aspects of Ergo might interest you most and guide you to personalized resources.
+                    </p>
+                    <p className="text-lg text-gray-300 text-center mb-0">
+                      Answer a few simple questions to find your path: Are you a future <span className="text-primary">Investor</span>, <span className="text-primary">Developer</span>, <span className="text-primary">Miner</span>, <span className="text-primary">NFT Enthusiast</span>, <span className="text-primary">DeFi User</span>, or something else?
+                    </p>
+                  </motion.div>
+                  <Button
+                    onClick={handleStartQuiz}
+                    size="lg"
+                    className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg hover:shadow-primary/25 font-mono uppercase tracking-wider px-12 py-6 text-xl"
+                  >
+                    <span className="mr-2">START QUIZ</span>
+                    <ChevronRight className="w-6 h-6" />
+                  </Button>
                 </FadeIn>
               </div>
             </motion.section>

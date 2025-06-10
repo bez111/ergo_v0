@@ -28,6 +28,7 @@ import {
 } from "lucide-react"
 import { GlitchText } from "@/components/glitch-text"
 import { ParticleBackground } from "@/components/particle-background"
+import { FadeIn } from "@/components/animations/fade-in"
 
 const developerPaths = [
   {
@@ -142,41 +143,41 @@ export default function BuildPageRedesign() {
 
       <div className="relative z-10 container mx-auto px-4 py-16 sm:py-24">
         {/* Hero Section */}
-        <motion.section
-          className="text-center mb-20 sm:mb-32"
-          initial="hidden"
-          animate="visible"
-          variants={sectionVariants}
-        >
-          <Badge variant="outline" className="mb-6 border-primary/50 text-primary text-sm px-4 py-1">
-            ERGO DEVELOPER PORTAL V2
-          </Badge>
-          <GlitchText text="Build on Ergo" className="text-white" />
-          <p className="text-xl sm:text-2xl text-primary mb-8 font-mono max-w-3xl mx-auto">
-            The Future of Secure & Programmable Money.
-          </p>
-          <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
-            Access powerful tools, comprehensive documentation, and a vibrant community to create innovative
-            decentralized applications on the Ergo Platform.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/80 text-black font-bold px-8 py-3 text-lg" asChild>
-              <Link href="/build/quick-start">
-                <Play className="w-5 h-5 mr-2" /> Get Started Quickly
-              </Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 hover:text-primary font-bold px-8 py-3 text-lg"
-              asChild
-            >
-              <Link href="#developer-paths">
-                <Rocket className="w-5 h-5 mr-2" /> Find Your Path
-              </Link>
-            </Button>
-          </div>
-        </motion.section>
+        <section className="flex flex-col justify-center items-center min-h-[60vh] text-center mb-20 sm:mb-32">
+          <FadeIn>
+            <Badge variant="outline" className="mb-6 border-primary/50 text-primary text-sm px-4 py-1">
+              ERGO DEVELOPER PORTAL V2
+            </Badge>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
+              BUILD ON ERGO
+            </h1>
+            <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
+              <span className="text-primary">[</span>
+              The Future of Secure & Programmable Money.
+              <span className="text-primary">]</span>
+            </h2>
+            <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
+              Access powerful tools, comprehensive documentation, and a vibrant community to create innovative decentralized applications on the Ergo Platform.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl" asChild>
+                <Link href="/build/quick-start">
+                  <Play className="w-5 h-5 mr-2" /> Get Started Quickly
+                </Link>
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                asChild
+              >
+                <Link href="#developer-paths">
+                  <Rocket className="w-5 h-5 mr-2" /> Find Your Path
+                </Link>
+              </Button>
+            </div>
+          </FadeIn>
+        </section>
 
         {/* Developer Paths Section */}
         <motion.section
@@ -187,12 +188,14 @@ export default function BuildPageRedesign() {
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-            <span className="text-primary">[</span> Your Developer Journey <span className="text-primary">]</span>
-          </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
-            Choose your path based on your experience and interests.
-          </p>
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
+              <span className="text-primary">[</span> Your Developer Journey <span className="text-primary">]</span>
+            </h2>
+            <p className="text-center text-gray-400 mb-12 text-lg">
+              Choose your path based on your experience and interests.
+            </p>
+          </FadeIn>
           <div className="grid md:grid-cols-3 gap-8">
             {developerPaths.map((path, i) => {
               const Icon = path.icon
@@ -247,12 +250,14 @@ export default function BuildPageRedesign() {
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-            <span className="text-primary">[</span> Ergo's Core Technology <span className="text-primary">]</span>
-          </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
-            Understand the foundational pillars that make Ergo unique and powerful.
-          </p>
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
+              <span className="text-primary">[</span> Ergo's Core Technology <span className="text-primary">]</span>
+            </h2>
+            <p className="text-center text-gray-400 mb-12 text-lg">
+              Understand the foundational pillars that make Ergo unique and powerful.
+            </p>
+          </FadeIn>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {coreTech.map((tech, i) => {
               const Icon = tech.icon
@@ -288,10 +293,12 @@ export default function BuildPageRedesign() {
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-            <span className="text-primary">[</span> Essential Toolkit <span className="text-primary">]</span>
-          </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">Quick access to the tools you'll need most.</p>
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
+              <span className="text-primary">[</span> Essential Toolkit <span className="text-primary">]</span>
+            </h2>
+            <p className="text-center text-gray-400 mb-12 text-lg">Quick access to the tools you'll need most.</p>
+          </FadeIn>
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
             {essentialTools.map((tool, i) => {
               const Icon = tool.icon
@@ -330,12 +337,14 @@ export default function BuildPageRedesign() {
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-            <span className="text-primary">[</span> Featured Resources <span className="text-primary">]</span>
-          </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
-            Curated guides and articles to accelerate your learning.
-          </p>
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
+              <span className="text-primary">[</span> Featured Resources <span className="text-primary">]</span>
+            </h2>
+            <p className="text-center text-gray-400 mb-12 text-lg">
+              Curated guides and articles to accelerate your learning.
+            </p>
+          </FadeIn>
           <div className="space-y-8">
             {featuredResources.map((resource, i) => {
               const Icon = resource.icon
@@ -388,12 +397,14 @@ export default function BuildPageRedesign() {
           viewport={{ once: true, amount: 0.3 }}
           variants={sectionVariants}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-            <span className="text-primary">[</span> Connect & Contribute <span className="text-primary">]</span>
-          </h2>
-          <p className="text-center text-gray-400 mb-12 text-lg">
-            Join our thriving community, get support, and help shape the future of Ergo.
-          </p>
+          <FadeIn>
+            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
+              <span className="text-primary">[</span> Connect & Contribute <span className="text-primary">]</span>
+            </h2>
+            <p className="text-center text-gray-400 mb-12 text-lg">
+              Join our thriving community, get support, and help shape the future of Ergo.
+            </p>
+          </FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {communityHighlights.map((item, i) => {
               const Icon = item.icon

@@ -6,6 +6,7 @@ import { Search, CheckCircle, Clock, AlertCircle, ExternalLink, Filter, Zap } fr
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { FadeIn } from "@/components/animations/fade-in"
 
 const projects = [
   {
@@ -463,9 +464,25 @@ export default function EcosystemPage() {
   return (
     <div className="min-h-screen relative">
       <div className="relative z-10">
-        <h1 className="text-5xl md:text-7xl font-bold mb-10 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
-          Ergo Ecosystem
-        </h1>
+        <section className="pt-32 pb-16 px-4">
+          <div className="max-w-7xl mx-auto text-center">
+            <FadeIn>
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.8 }}
+                className="mb-8"
+              >
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
+                  ERGO ECOSYSTEM
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+                  Discover the growing collection of decentralized applications, tools, and services built on Ergo
+                </p>
+              </motion.div>
+            </FadeIn>
+          </div>
+        </section>
         <div className="relative z-10 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             {/* Header */}

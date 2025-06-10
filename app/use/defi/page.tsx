@@ -253,16 +253,21 @@ export default function DeFiPage() {
         {/* Hero Section */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto text-center">
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">EARN WITH DEFI</h1>
-              <p className="text-xl md:text-2xl text-orange-500 mb-4">
-                Discover Passive Income Opportunities in Ergo's DeFi Ecosystem
-              </p>
-              <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-                From liquidity providing to yield farming, staking to algorithmic trading - explore comprehensive ways
-                to grow your crypto assets on Ergo.
-              </p>
+            <motion.div
+              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent text-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              EARN WITH DEFI
             </motion.div>
+            <p className="text-xl md:text-2xl text-orange-500 mb-4">
+              Discover Passive Income Opportunities in Ergo's DeFi Ecosystem
+            </p>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+              From liquidity providing to yield farming, staking to algorithmic trading - explore comprehensive ways
+              to grow your crypto assets on Ergo.
+            </p>
 
             {/* Quick Stats */}
             <motion.div
@@ -325,9 +330,7 @@ export default function DeFiPage() {
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                       >
                         <Card
-                          className={`bg-gray-900/50 border-orange-500/20 cursor-pointer transition-all duration-300 hover:border-orange-500/50 ${
-                            selectedMethod === index ? "border-orange-500 bg-orange-500/10" : ""
-                          }`}
+                          className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer ${selectedMethod === index ? "border-orange-500 bg-orange-500/10" : ""}`}
                           onClick={() => setSelectedMethod(index)}
                         >
                           <CardHeader className="pb-3">
@@ -369,7 +372,7 @@ export default function DeFiPage() {
 
                   {/* Method Details */}
                   <div className="lg:sticky lg:top-8">
-                    <Card className="bg-gray-900/50 border-orange-500/20">
+                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                       <CardHeader>
                         <div className="flex items-center gap-3">
                           <div className="p-2 bg-orange-500/20 rounded-lg text-orange-500">
@@ -431,7 +434,9 @@ export default function DeFiPage() {
                           </div>
                         </div>
 
-                        <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                        <Button
+                          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
+                        >
                           Get Started with {earningMethods[selectedMethod].title}
                         </Button>
                       </CardContent>
@@ -450,7 +455,7 @@ export default function DeFiPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                     >
-                      <Card className="bg-gray-900/50 border-orange-500/20 hover:border-orange-500/50 transition-all duration-300 h-full">
+                      <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl h-full">
                         <CardHeader>
                           <div className="flex items-center justify-between">
                             <div>
@@ -500,7 +505,7 @@ export default function DeFiPage() {
                           </div>
 
                           <Button
-                            className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold"
+                            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                             disabled={protocol.status !== "Live"}
                           >
                             {protocol.status === "Live" ? "Start Earning" : "Coming Soon"}
@@ -523,7 +528,7 @@ export default function DeFiPage() {
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.5, delay: index * 0.2 }}
                     >
-                      <Card className="bg-gray-900/50 border-orange-500/20">
+                      <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                         <CardHeader>
                           <div className="flex items-center justify-between">
                             <div>
@@ -587,7 +592,9 @@ export default function DeFiPage() {
                                 <div className="text-sm text-gray-400">Time Commitment</div>
                                 <div className="text-white">{strategy.timeCommitment}</div>
                               </div>
-                              <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+                              <Button
+                                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
+                              >
                                 Start This Strategy
                               </Button>
                             </div>
@@ -602,7 +609,7 @@ export default function DeFiPage() {
               {/* Calculator Tab */}
               <TabsContent value="calculator" className="mt-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <Card className="bg-gray-900/50 border-orange-500/20">
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                     <CardHeader>
                       <CardTitle className="text-white flex items-center gap-2">
                         <Calculator className="h-5 w-5 text-orange-500" />
@@ -646,7 +653,7 @@ export default function DeFiPage() {
                     </CardContent>
                   </Card>
 
-                  <Card className="bg-gray-900/50 border-orange-500/20">
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                     <CardHeader>
                       <CardTitle className="text-white">Projected Returns</CardTitle>
                       <CardDescription className="text-gray-300">
@@ -742,7 +749,7 @@ export default function DeFiPage() {
                   </Alert>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Card className="bg-gray-900/50 border-red-500/20">
+                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                       <CardHeader>
                         <CardTitle className="text-white flex items-center gap-2">
                           <Shield className="h-5 w-5 text-red-500" />
@@ -783,7 +790,7 @@ export default function DeFiPage() {
                       </CardContent>
                     </Card>
 
-                    <Card className="bg-gray-900/50 border-green-500/20">
+                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                       <CardHeader>
                         <CardTitle className="text-white flex items-center gap-2">
                           <Shield className="h-5 w-5 text-green-500" />
@@ -825,7 +832,7 @@ export default function DeFiPage() {
                     </Card>
                   </div>
 
-                  <Card className="bg-gray-900/50 border-orange-500/20">
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
                     <CardHeader>
                       <CardTitle className="text-white">Due Diligence Checklist</CardTitle>
                       <CardDescription className="text-gray-300">
@@ -876,13 +883,13 @@ export default function DeFiPage() {
                 amounts and gradually increase your exposure as you learn.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3">
+                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
                   Get ERG to Start
                   <ExternalLink className="ml-2 h-4 w-4" />
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-orange-500 text-orange-500 hover:bg-orange-500/10 px-8 py-3"
+                  className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
                   Setup Wallet
                   <ExternalLink className="ml-2 h-4 w-4" />

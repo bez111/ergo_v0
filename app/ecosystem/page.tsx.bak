@@ -1,0 +1,779 @@
+"use client"
+
+import { useState, useMemo, useEffect } from "react"
+import { motion } from "framer-motion"
+import { Search, CheckCircle, Clock, AlertCircle, ExternalLink, Filter, Zap } from "lucide-react"
+import { Input } from "@/components/ui/input"
+import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { SectionHeading } from "@/components/section-heading"
+
+const projects = [
+  {
+    id: 1,
+    name: "Spectrum Finance",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "A cutting-edge open-source decentralized exchange (DEX) operating on the Ergo and Cardano blockchains. It offers liquidity provision (LP), yield farming, and supports Babel Fees.",
+    icon: "💱",
+    url: "https://spectrum.fi",
+  },
+  {
+    id: 2,
+    name: "SigmaUSD",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "The first eUTXO-based stablecoin, implementing the AgeUSD protocol. It is pegged to the US dollar and backed by ERG with a floating reserve ratio (400%-800%).",
+    icon: "💵",
+    url: "https://sigmausd.io",
+  },
+  {
+    id: 3,
+    name: "Rosen Bridge",
+    category: "INFRASTRUCTURE",
+    status: "OPERATIONAL",
+    description:
+      "An open-source protocol for cross-chain asset transfers between Ergo and other blockchains like Cardano, Bitcoin Runes, and Dogecoin.",
+    icon: "🌉",
+    url: "https://rosen.tech",
+  },
+  {
+    id: 4,
+    name: "ErgoMixer",
+    category: "PRIVACY",
+    status: "OPERATIONAL",
+    description:
+      "The first non-interactive, non-custodial mixer in the crypto industry. It allows users to privately send tokens using Σ-protocols for enhanced privacy.",
+    icon: "🔀",
+    url: "https://ergomixer.io",
+  },
+  {
+    id: 5,
+    name: "Ergo Auction House",
+    category: "NFT",
+    status: "OPERATIONAL",
+    description:
+      "The first open-source NFT marketplace on Ergo. It supports artist royalties, on-site minting, various auction types, and multiple currencies.",
+    icon: "🖼️",
+    url: "https://ergoauctions.org",
+  },
+  {
+    id: 6,
+    name: "Nautilus Wallet",
+    category: "WALLETS",
+    status: "OPERATIONAL",
+    description:
+      "A browser extension and mobile wallet for Ergo, focused on privacy, security, and user experience. It supports Ledger, multiple wallets, and a dApp connector.",
+    icon: "🔒",
+    url: "https://nautilus-wallet.io",
+  },
+  {
+    id: 7,
+    name: "DuckPools",
+    category: "DEFI",
+    status: "TESTING",
+    description:
+      "A collateralized lending platform with algorithmic lending pools. Users provide ERG or native assets to earn income or borrow assets against ERG collateral.",
+    icon: "🦆",
+    url: "https://duckpools.io",
+  },
+  {
+    id: 8,
+    name: "Paideia",
+    category: "DAO",
+    status: "OPERATIONAL",
+    description:
+      "A suite of tools for creating and managing Decentralized Autonomous Organizations (DAOs) on Ergo and Cardano with governance and treasury management.",
+    icon: "🏛️",
+    url: "https://paideia.im",
+  },
+  {
+    id: 9,
+    name: "Oracle Pools",
+    category: "ORACLES",
+    status: "OPERATIONAL",
+    description:
+      "A decentralized oracle system on Ergo that connects smart contracts with external data without needing to trust centralized sources.",
+    icon: "🔮",
+    url: "https://explorer.ergoplatform.com/en/oracle-pools-list",
+  },
+  {
+    id: 10,
+    name: "Ergo Explorer",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "The main official block explorer for Ergo. It allows users to track transactions, blocks, addresses, tokens, and view general network statistics.",
+    icon: "🔍",
+    url: "https://explorer.ergoplatform.com",
+  },
+  {
+    id: 11,
+    name: "ErgoPad",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "A token launch (IDO) and fundraising platform on the Ergo blockchain. It gives token holders the opportunity to participate in IDOs.",
+    icon: "🚀",
+    url: "https://ergopad.io",
+  },
+  {
+    id: 12,
+    name: "SkyHarbor",
+    category: "NFT",
+    status: "TESTING",
+    description:
+      "An NFT marketplace on Ergo, positioned as a reliable platform for fixed-price NFT transactions with planned features like NFT refunds and financing.",
+    icon: "🏪",
+    url: "#",
+  },
+  {
+    id: 13,
+    name: "Mew Finance",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "A decentralized finance (DeFi) platform offering a suite of financial applications including DEX, NFT marketplace, and various financial tools.",
+    icon: "💎",
+    url: "#",
+  },
+  {
+    id: 14,
+    name: "SatErgo",
+    category: "WALLETS",
+    status: "OPERATIONAL",
+    description:
+      "A comprehensive desktop wallet for Ergo with the option to integrate a full node to support network decentralization. Privacy-focused with offline vault.",
+    icon: "💼",
+    url: "https://satergo.com",
+  },
+  {
+    id: 15,
+    name: "SAFEW",
+    category: "WALLETS",
+    status: "OPERATIONAL",
+    description: "A browser extension wallet for Ergo that integrates with ErgoMixer for enhanced transaction privacy.",
+    icon: "🛡️",
+    url: "https://safew.org",
+  },
+  {
+    id: 16,
+    name: "ErgoWatch",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "An analytical block explorer providing Ergo network metrics, DeFi statistics (e.g., TVL), charts, and dashboards for monitoring blockchain activity.",
+    icon: "����",
+    url: "https://ergo.watch",
+  },
+  {
+    id: 17,
+    name: "CyberPixels",
+    category: "GAMING",
+    status: "TESTING",
+    description:
+      "A gaming project featuring an open-world pixel-style game with blockchain integration (NFTs, custom tokens, in-game marketplace).",
+    icon: "🎮",
+    url: "#",
+  },
+  {
+    id: 18,
+    name: "SigmaFi",
+    category: "DEFI",
+    status: "PROTOTYPE",
+    description:
+      "A suite of decentralized P2P financial contracts on Ergo, including SigmaBonds for creating P2P debt obligations.",
+    icon: "🏦",
+    url: "#",
+  },
+  {
+    id: 19,
+    name: "ErgoRaffle",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "A crowdfunding service with lottery elements, allowing fundraising for projects where participants can win rewards.",
+    icon: "🎟️",
+    url: "https://ergoraffle.com",
+  },
+  {
+    id: 20,
+    name: "Minotaur Wallet",
+    category: "WALLETS",
+    status: "TESTING",
+    description:
+      "A mobile wallet for Ergo with advanced features like multi-signatures, enhancing fund management security.",
+    icon: "📱",
+    url: "https://github.com/minotaur-ergo/minotaur-wallet",
+  },
+  {
+    id: 21,
+    name: "GuapSwap",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "A decentralized smart contract-based service for swapping miner profits on Ergo, allowing automatic exchange of mining rewards.",
+    icon: "⛏️",
+    url: "#",
+  },
+  {
+    id: 22,
+    name: "DexyGold",
+    category: "DEFI",
+    status: "PROTOTYPE",
+    description:
+      "An algorithmic stablecoin pegged to the price of gold (XAU/USD), utilizing seigniorage, price oracles, and excess ERG collateral.",
+    icon: "🥇",
+    url: "#",
+  },
+  {
+    id: 23,
+    name: "SigmaO",
+    category: "DEFI",
+    status: "PROTOTYPE",
+    description:
+      "A platform for trading options (Call/Put, American/European) on Ergo EIP-4 tokens using an order book style.",
+    icon: "📈",
+    url: "#",
+  },
+  {
+    id: 24,
+    name: "Blitz TCG",
+    category: "GAMING",
+    status: "TESTING",
+    description: "A collectible trading card game (TCG) on the Ergo blockchain.",
+    icon: "🃏",
+    url: "#",
+  },
+  {
+    id: 25,
+    name: "Sigmaverse",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "A centralized portal and directory for the Ergo dApp ecosystem, allowing developers to list applications and users to find services.",
+    icon: "🌐",
+    url: "https://sigmaverse.io",
+  },
+  {
+    id: 26,
+    name: "ErgOne",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "A decentralized, community-driven marketing platform for promoting Ergo and its projects using the ERGONE token and Proof-of-Commitment Protocol.",
+    icon: "📢",
+    url: "#",
+  },
+  {
+    id: 27,
+    name: "Hodlbox",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "A platform encouraging long-term holding of ERG with treasure chests and various fund-locking options, rewarding users with NFTs.",
+    icon: "📦",
+    url: "#",
+  },
+  {
+    id: 28,
+    name: "Lilium",
+    category: "TOOLS",
+    status: "TESTING",
+    description:
+      "A platform designed to facilitate the launch of NFT collections on the Ergo blockchain, helping artists and projects mint and sell NFTs.",
+    icon: "🌸",
+    url: "#",
+  },
+  {
+    id: 29,
+    name: "TokenJay",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description: "A platform for P2P (peer-to-peer) token trading within the Ergo ecosystem.",
+    icon: "🔄",
+    url: "#",
+  },
+  {
+    id: 30,
+    name: "Single Tx Swap",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description: "A tool for executing P2P (peer-to-peer) token swaps within a single transaction.",
+    icon: "⚡",
+    url: "#",
+  },
+  {
+    id: 31,
+    name: "Crux Finance",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "A tool for managing crypto portfolios within the Ergo ecosystem, allowing tracking of P&L, investments, and generating tax reports.",
+    icon: "📊",
+    url: "#",
+  },
+  {
+    id: 32,
+    name: "Fleet SDK",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "A JavaScript library designed to simplify the creation and signing of transactions on the Ergo blockchain in web applications and Node.js.",
+    icon: "⚙️",
+    url: "https://github.com/fleet-sdk/fleet",
+  },
+  {
+    id: 33,
+    name: "AppKit",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "The primary Software Development Kit (SDK) for developing applications on Ergo using JVM-based programming languages.",
+    icon: "🔧",
+    url: "https://github.com/ergoplatform/ergo-appkit",
+  },
+  {
+    id: 34,
+    name: "SigmaRust",
+    category: "TOOLS",
+    status: "OPERATIONAL",
+    description:
+      "An implementation of the ErgoTree interpreter in Rust, providing tools for working with transactions and bindings for various languages.",
+    icon: "🦀",
+    url: "https://github.com/ergoplatform/sigma-rust",
+  },
+  {
+    id: 35,
+    name: "Gluon",
+    category: "DEFI",
+    status: "PROTOTYPE",
+    description:
+      "A protocol developed to strengthen (harden) existing stablecoins in the Ergo ecosystem, such as SigmaUSD.",
+    icon: "🔬",
+    url: "#",
+  },
+  {
+    id: 36,
+    name: "ChainCash",
+    category: "TOOLS",
+    status: "PROTOTYPE",
+    description:
+      "A framework for creating decentralized P2P monetary systems on Ergo, allowing users to issue their own currencies backed by trust or collateral.",
+    icon: "💰",
+    url: "#",
+  },
+  {
+    id: 37,
+    name: "SigRSV",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "The reserve coin for the SigmaUSD stablecoin protocol. Users mint SigRSV by depositing ERG into reserves and can profit from ERG price increases.",
+    icon: "🏛️",
+    url: "#",
+  },
+  {
+    id: 38,
+    name: "EXLE",
+    category: "DEFI",
+    status: "TESTING",
+    description: "A lending/borrowing protocol within the Ergo ecosystem, integrated with Crux Finance.",
+    icon: "🏪",
+    url: "#",
+  },
+]
+
+const categories = [
+  { id: "ALL", label: "ALL", count: projects.length },
+  { id: "DEFI", label: "DEFI", count: projects.filter((p) => p.category === "DEFI").length },
+  {
+    id: "INFRASTRUCTURE",
+    label: "INFRASTRUCTURE",
+    count: projects.filter((p) => p.category === "INFRASTRUCTURE").length,
+  },
+  { id: "WALLETS", label: "WALLETS", count: projects.filter((p) => p.category === "WALLETS").length },
+  { id: "NFT", label: "NFT", count: projects.filter((p) => p.category === "NFT").length },
+  { id: "DAO", label: "DAO", count: projects.filter((p) => p.category === "DAO").length },
+  { id: "PRIVACY", label: "PRIVACY", count: projects.filter((p) => p.category === "PRIVACY").length },
+  { id: "ORACLES", label: "ORACLES", count: projects.filter((p) => p.category === "ORACLES").length },
+  { id: "TOOLS", label: "TOOLS", count: projects.filter((p) => p.category === "TOOLS").length },
+  { id: "GAMING", label: "GAMING", count: projects.filter((p) => p.category === "GAMING").length },
+]
+
+const statusConfig = {
+  OPERATIONAL: {
+    icon: CheckCircle,
+    color: "text-green-400",
+    bgColor: "bg-green-400/10",
+    borderColor: "border-green-400/30",
+  },
+  TESTING: {
+    icon: Clock,
+    color: "text-yellow-400",
+    bgColor: "bg-yellow-400/10",
+    borderColor: "border-yellow-400/30",
+  },
+  PROTOTYPE: {
+    icon: AlertCircle,
+    color: "text-blue-400",
+    bgColor: "bg-blue-400/10",
+    borderColor: "border-blue-400/30",
+  },
+  "COMING-SOON": {
+    icon: AlertCircle,
+    color: "text-blue-400",
+    bgColor: "bg-blue-400/10",
+    borderColor: "border-blue-400/30",
+  },
+}
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+}
+
+export default function EcosystemPage() {
+  const [selectedCategory, setSelectedCategory] = useState("ALL")
+  const [searchQuery, setSearchQuery] = useState("")
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
+
+  // Track mouse position for parallax effect
+  useEffect(() => {
+    const handleMouseMove = (e: MouseEvent) => {
+      setMousePosition({
+        x: e.clientX / window.innerWidth,
+        y: e.clientY / window.innerHeight,
+      })
+    }
+
+    window.addEventListener("mousemove", handleMouseMove)
+    return () => {
+      window.removeEventListener("mousemove", handleMouseMove)
+    }
+  }, [])
+
+  const filteredProjects = useMemo(() => {
+    return projects.filter((project) => {
+      const matchesCategory = selectedCategory === "ALL" || project.category === selectedCategory
+      const matchesSearch =
+        project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        project.description.toLowerCase().includes(searchQuery.toLowerCase())
+      return matchesCategory && matchesSearch
+    })
+  }, [selectedCategory, searchQuery])
+
+  const activeFilters = useMemo(() => {
+    const filters = []
+    if (searchQuery) filters.push(`Search: "${searchQuery}"`)
+    if (selectedCategory !== "ALL") {
+      const category = categories.find((cat) => cat.id === selectedCategory)
+      if (category) filters.push(`Category: ${category.label}`)
+    }
+    return filters
+  }, [searchQuery, selectedCategory])
+
+  const clearFilters = () => {
+    setSearchQuery("")
+    setSelectedCategory("ALL")
+  }
+
+  return (
+    <div className="min-h-screen relative">
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-black to-cyan-500/10" />
+        <motion.div
+          className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, -80, 0],
+            y: [0, 60, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "linear",
+          }}
+        />
+      </div>
+
+      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
+        {/* Hero Section */}
+        <motion.section variants={itemVariants} className="pt-32 pb-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
+                  ERGO ECOSYSTEM
+                </Badge>
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                  Ecosystem
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+                  Explore the Complete Ergo Ecosystem
+                </p>
+                <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                  Discover a vibrant ecosystem of decentralized applications, tools, and services built on Ergo's secure and efficient blockchain platform.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                    Explore Projects
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                  >
+                    View Documentation
+                  </Button>
+                </div>
+              </div>
+              <div className="relative">
+                <motion.div
+                  className="relative z-10"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
+                    <CardContent className="p-0">
+                      <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                        Featured Projects
+                      </h3>
+                      <div className="space-y-4">
+                        {filteredProjects.slice(0, 3).map((project, index) => (
+                          <div key={project.id} className="flex items-center gap-3 p-3 bg-black/20 rounded-lg hover:bg-orange-500/10 transition-all duration-300">
+                            <span className="text-2xl">{project.icon}</span>
+                            <div>
+                              <h4 className="font-semibold text-white mb-1">{project.name}</h4>
+                              <p className="text-gray-400 text-sm">{project.description.slice(0, 100)}...</p>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Filters & Search */}
+        <motion.section variants={itemVariants} className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-8">
+              {/* Search */}
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <Search className="w-5 h-5 text-orange-500" />
+                  <h2 className="text-2xl font-bold text-white">Search Projects</h2>
+                </div>
+                <p className="text-gray-400 mb-4">Find specific projects or explore by category</p>
+                <div className="relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-cyan-500/20 rounded-xl blur-xl" />
+                  <div className="relative">
+                    <Input
+                      placeholder="Search by name or description..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full bg-black/40 border-gray-700/50 text-white placeholder-gray-500 rounded-xl px-6 py-4 text-lg backdrop-blur-xl"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              {/* Category Filter */}
+              <div>
+                <div className="flex items-center gap-3 mb-2">
+                  <Filter className="w-5 h-5 text-orange-500" />
+                  <h2 className="text-2xl font-bold text-white">Filter by Category</h2>
+                </div>
+                <p className="text-gray-400 mb-4">Browse projects by their category</p>
+                <div className="flex flex-wrap gap-3">
+                  {categories.map((category) => (
+                    <Button
+                      key={category.id}
+                      variant={selectedCategory === category.id ? "default" : "outline"}
+                      onClick={() => setSelectedCategory(category.id)}
+                      className={`font-mono text-sm tracking-wider transition-all duration-300 ${
+                        selectedCategory === category.id
+                          ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black border-orange-500 shadow-lg shadow-orange-500/25"
+                          : "border-orange-500/30 hover:border-orange-500 bg-gray-800/50 backdrop-blur-sm text-orange-500 hover:bg-orange-500/10"
+                      }`}
+                    >
+                      {category.label} ({category.count})
+                    </Button>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {/* Active Filters */}
+            {activeFilters.length > 0 && (
+              <div className="mt-6 flex items-center gap-3">
+                <span className="text-gray-400">Active filters:</span>
+                <div className="flex flex-wrap gap-2">
+                  {activeFilters.map((filter, index) => (
+                    <Badge
+                      key={index}
+                      variant="outline"
+                      className="bg-gray-800/50 text-gray-300 border-gray-700/50"
+                    >
+                      {filter}
+                    </Badge>
+                  ))}
+                  <Button
+                    variant="ghost"
+                    onClick={clearFilters}
+                    className="text-orange-500 hover:text-orange-400 hover:bg-orange-500/10"
+                  >
+                    Clear all
+                  </Button>
+                </div>
+              </div>
+            )}
+          </div>
+        </motion.section>
+
+        {/* Projects Grid */}
+        <motion.section variants={itemVariants} className="py-20 px-4">
+          <div className="max-w-7xl mx-auto">
+            <motion.h2
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="text-3xl font-bold text-white mb-8"
+            >
+              {selectedCategory !== "ALL"
+                ? `${categories.find((cat) => cat.id === selectedCategory)?.label} Projects`
+                : "All Projects"}
+              <span className="text-white/60 text-lg ml-3">({filteredProjects.length})</span>
+            </motion.h2>
+
+            {filteredProjects.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredProjects.map((project, index) => {
+                  const StatusIcon = statusConfig[project.status as keyof typeof statusConfig]?.icon || CheckCircle
+                  const statusColor = statusConfig[project.status as keyof typeof statusConfig]?.color || "text-green-400"
+
+                  return (
+                    <motion.div
+                      key={project.id}
+                      variants={itemVariants}
+                      className="group relative"
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ type: "spring", stiffness: 300 }}
+                    >
+                      <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl overflow-hidden h-full">
+                        <CardContent className="p-6">
+                          <div className="flex items-start justify-between mb-4">
+                            <div className="flex items-center gap-3">
+                              <div className="text-3xl">{project.icon}</div>
+                              <div>
+                                <h3 className="font-bold text-white group-hover:text-orange-400 transition-colors">
+                                  {project.name}
+                                </h3>
+                                <Badge
+                                  variant="outline"
+                                  className="mt-1 font-mono text-xs border-orange-500/30 text-orange-500 bg-gray-800/50 backdrop-blur-sm"
+                                >
+                                  {project.category}
+                                </Badge>
+                              </div>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <StatusIcon className={`w-4 h-4 ${statusColor}`} />
+                              <span className={`text-xs font-mono ${statusColor}`}>{project.status}</span>
+                            </div>
+                          </div>
+
+                          <p className="text-gray-400 text-sm mb-6 line-clamp-3">{project.description}</p>
+
+                          {project.url !== "#" && (
+                            <a
+                              href={project.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-2 text-orange-500 hover:text-orange-400 transition-colors text-sm font-mono"
+                            >
+                              Visit Project
+                              <ExternalLink className="w-4 h-4" />
+                            </a>
+                          )}
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  )
+                })}
+              </div>
+            ) : (
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="text-center py-16"
+              >
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">No projects found</h3>
+                <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
+                <Button
+                  onClick={clearFilters}
+                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold hover:scale-105 transition-transform"
+                >
+                  Clear Filters
+                </Button>
+              </motion.div>
+            )}
+          </div>
+        </motion.section>
+
+        {/* Stats */}
+        <motion.section variants={itemVariants} className="text-center">
+          <div className="inline-flex items-center gap-4 px-8 py-4 backdrop-blur-sm bg-gray-900/50 border border-orange-500/30 rounded-lg font-mono shadow-lg shadow-orange-500/10">
+            <span className="text-orange-500">TOTAL PROJECTS:</span>
+            <span className="text-white font-bold text-lg">{filteredProjects.length}</span>
+            <span className="text-gray-500">|</span>
+            <span className="text-orange-500">OPERATIONAL:</span>
+            <span className="text-green-400 font-bold text-lg animate-pulse">
+              {filteredProjects.filter((p) => p.status === "OPERATIONAL").length}
+            </span>
+            <span className="text-gray-500">|</span>
+            <span className="text-orange-500">TESTING:</span>
+            <span className="text-yellow-400 font-bold text-lg animate-pulse delay-200">
+              {filteredProjects.filter((p) => p.status === "TESTING").length}
+            </span>
+            <span className="text-gray-500">|</span>
+            <span className="text-orange-500">PROTOTYPE:</span>
+            <span className="text-blue-400 font-bold text-lg animate-pulse delay-400">
+              {filteredProjects.filter((p) => p.status === "PROTOTYPE").length}
+            </span>
+          </div>
+        </motion.section>
+      </motion.div>
+    </div>
+  )
+}

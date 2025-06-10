@@ -358,8 +358,10 @@ export default function LearnFAQPage() {
           <div className="max-w-6xl mx-auto">
             <FadeIn>
               <div className="text-center mb-16">
-                <div className="inline-flex items-center gap-4 mb-8">
-                  <GlitchText text="ERGO KNOWLEDGE BASE" className="text-6xl md:text-8xl font-bold" />
+                <div
+                  className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent text-center"
+                >
+                  ERGO KNOWLEDGE BASE
                 </div>
 
                 <div className="max-w-4xl mx-auto mb-12">
@@ -504,7 +506,9 @@ export default function LearnFAQPage() {
                       <p className="text-gray-400">
                         Explore detailed technical documentation, API references, and development guides.
                       </p>
-                      <Button variant="outline" className="w-full">
+                      <Button
+                        className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
+                      >
                         <ExternalLink className="w-4 h-4 mr-2" />
                         View Documentation
                       </Button>
@@ -514,7 +518,10 @@ export default function LearnFAQPage() {
                       <p className="text-gray-400">
                         Join our community forums, Discord server, and social media channels for support.
                       </p>
-                      <Button variant="outline" className="w-full">
+                      <Button
+                        variant="outline"
+                        className="w-full border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                      >
                         <Users className="w-4 h-4 mr-2" />
                         Join Community
                       </Button>
