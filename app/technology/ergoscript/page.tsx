@@ -72,7 +72,7 @@ export default function ErgoScriptPage() {
           <div className="max-w-7xl mx-auto mb-16">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block">
                   ErgoScript
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Advanced Smart Contracts Made Simple</p>

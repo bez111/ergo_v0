@@ -8,6 +8,9 @@ import { Input } from "@/components/ui/input"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { ArrowUpRight, ChevronRight, Info, ExternalLink, AlertTriangle } from "lucide-react"
 import Link from "next/link"
+import { FadeIn } from "@/components/animations/fade-in"
+import { SectionHeading } from "@/components/section-heading"
+import { Badge } from "@/components/ui/badge"
 
 export default function MiningPage() {
   const [hashrate, setHashrate] = useState("")
@@ -51,323 +54,253 @@ export default function MiningPage() {
 
   return (
     <div className="min-h-screen relative">
-      {/* Binary Rain Background */}
-      <div className="fixed inset-0 pointer-events-none opacity-20">
-        {Array.from({ length: 100 }).map((_, i) => (
-          <div
-            key={i}
-            className="absolute text-orange-500 text-xs font-mono animate-pulse"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 2}s`,
-            }}
-          >
-            {Math.random() > 0.5 ? "1" : "0"}
-          </div>
-        ))}
+      {/* Animated Background */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-black to-cyan-500/10" />
+        <motion.div
+          className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, 100, 0],
+            y: [0, -50, 0],
+          }}
+          transition={{
+            duration: 20,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "linear",
+          }}
+        />
+        <motion.div
+          className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
+          animate={{
+            x: [0, -80, 0],
+            y: [0, 60, 0],
+          }}
+          transition={{
+            duration: 25,
+            repeat: Number.POSITIVE_INFINITY,
+            ease: "linear",
+          }}
+        />
       </div>
 
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="py-20 px-4 border-b border-orange-500/20">
-          <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <motion.h1
-                  className="text-5xl font-bold mb-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <span className="text-orange-500">SECURE THE NETWORK</span>
-                </motion.h1>
-                <motion.h2
-                  className="text-3xl font-bold mb-6"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.1 }}
-                >
-                  Mine Ergo • Secure the Future • Earn Today
-                </motion.h2>
-                <motion.p
-                  className="text-xl text-gray-300 mb-8"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  Proof-of-Work keeps Ergo trust-minimised. Add your hash-power, collect block rewards, and underpin the
-                  ecosystem.
-                </motion.p>
+        <FadeIn>
+          <section className="pt-32 pb-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
+                    MINING
+                  </Badge>
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block">
+                    Mine Ergo
+                  </h1>
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Secure the Network • Earn Today</p>
+                  <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                    Proof-of-Work keeps Ergo trust-minimised. Add your hash-power, collect block rewards, and underpin the
+                    ecosystem.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                      Start Mining Now
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    >
+                      Why Mine Ergo?
+                    </Button>
+                  </div>
+                </div>
                 <motion.div
-                  className="flex flex-wrap gap-4"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.3 }}
+                  className="relative"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600">
-                    ⛏️ Start Mining Now
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-orange-500 text-orange-500 hover:bg-orange-500/10"
-                  >
-                    💡 Why Mine Ergo?
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-orange-500 text-orange-500 hover:bg-orange-500/10"
-                  >
-                    ⚙️ Profitability Calculator
-                  </Button>
-                </motion.div>
-              </div>
-              <motion.div
-                className="relative"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-              >
-                <Card className="bg-gray-900/70 border-orange-500/30 overflow-hidden">
-                  <CardHeader>
-                    <CardTitle className="text-2xl">Network Overview</CardTitle>
-                    <CardDescription>Real-time mining statistics</CardDescription>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <div className="text-gray-400">Network Hashrate</div>
-                        <div className="text-2xl font-bold">{networkStats.hashrate} TH/s</div>
-                        <div className="text-sm text-green-500">▲ {networkStats.hashrateChange} (24h)</div>
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
+                    <CardContent className="p-0">
+                      <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent leading-[1.1] pb-1">
+                        Network Overview
+                      </h3>
+                      <div className="grid grid-cols-2 gap-6">
+                        <div className="space-y-2">
+                          <div className="text-gray-400">Network Hashrate</div>
+                          <div className="text-2xl font-bold">{networkStats.hashrate} TH/s</div>
+                          <div className="text-sm text-green-500">▲ {networkStats.hashrateChange} (24h)</div>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="text-gray-400">Difficulty</div>
+                          <div className="text-2xl font-bold">{networkStats.difficulty} PH</div>
+                          <div className="text-sm text-green-500">▲ {networkStats.difficultyChange} (24h)</div>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="text-gray-400">Block Reward</div>
+                          <div className="text-2xl font-bold">{networkStats.blockReward} ERG</div>
+                        </div>
+                        <div className="space-y-2">
+                          <div className="text-gray-400">Avg Block Time</div>
+                          <div className="text-2xl font-bold">{networkStats.blockTime} min</div>
+                        </div>
                       </div>
-                      <div className="space-y-2">
-                        <div className="text-gray-400">Difficulty</div>
-                        <div className="text-2xl font-bold">{networkStats.difficulty} PH</div>
-                        <div className="text-sm text-green-500">▲ {networkStats.difficultyChange} (24h)</div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="text-gray-400">Block Reward</div>
-                        <div className="text-2xl font-bold">{networkStats.blockReward} ERG</div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="text-gray-400">Avg Block Time</div>
-                        <div className="text-2xl font-bold">{networkStats.blockTime} min</div>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </div>
-          </div>
-        </section>
-
-        {/* Why Mine Ergo Section */}
-        <section className="py-20 px-4 border-b border-orange-500/20">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Why Mine Ergo: More Than Just Mining</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Ergo mining offers unique advantages beyond simple profit calculations
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Earn ERG",
-                  description:
-                    "Receive block rewards and transaction fees. ERG fuels Ergo's innovative DeFi ecosystem, NFTs, and DAO tooling.",
-                  icon: "💰",
-                },
-                {
-                  title: "Network Strength",
-                  description:
-                    "Every extra hash you contribute raises the cost of 51% attacks, making the Ergo network extremely resilient and ensuring transaction integrity.",
-                  icon: "🔒",
-                },
-                {
-                  title: "Fair Distribution",
-                  description:
-                    "Ergo launched without an ICO or premine, adhering to true decentralization principles. Mining is the gateway to supply.",
-                  icon: "⚖️",
-                },
-                {
-                  title: "Autolykos v2 (GPU-friendly)",
-                  description:
-                    "Memory-hard tweaks keep ASICs at bay. The latest research adds multi-path 'random twists' for enhanced resistance, favoring GPUs over specialized hardware.",
-                  icon: "🖥️",
-                },
-                {
-                  title: "Storage-Rent Upside",
-                  description:
-                    "Dormant boxes are recycled, boosting miner income and supporting the network's long-term economic sustainability.",
-                  icon: "📦",
-                },
-                {
-                  title: "Community Governance",
-                  description:
-                    "Miners have a voice in Ergo's future through on-chain governance mechanisms and community proposals.",
-                  icon: "🗣️",
-                },
-              ].map((benefit, index) => (
-                <motion.div
-                  key={benefit.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card className="bg-gray-900/50 border-orange-500/20 h-full hover:border-orange-500/50 transition-all duration-300">
-                    <CardHeader>
-                      <div className="text-3xl mb-2">{benefit.icon}</div>
-                      <CardTitle>{benefit.title}</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300">{benefit.description}</p>
                     </CardContent>
                   </Card>
                 </motion.div>
-              ))}
+              </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </FadeIn>
+
+        {/* Why Mine Ergo Section */}
+        <FadeIn delay={0.2}>
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <SectionHeading
+                text="Why Mine Ergo"
+                subtitle="More Than Just Mining"
+                description="Ergo mining offers unique advantages beyond simple profit calculations"
+              />
+
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: "Earn ERG",
+                    description:
+                      "Receive block rewards and transaction fees. ERG fuels Ergo's innovative DeFi ecosystem, NFTs, and DAO tooling.",
+                    icon: "💰",
+                    color: "from-orange-500/20 to-orange-500/5",
+                  },
+                  {
+                    title: "Network Strength",
+                    description:
+                      "Every extra hash you contribute raises the cost of 51% attacks, making the Ergo network extremely resilient and ensuring transaction integrity.",
+                    icon: "🔒",
+                    color: "from-cyan-500/20 to-cyan-500/5",
+                  },
+                  {
+                    title: "Fair Distribution",
+                    description:
+                      "Ergo launched without an ICO or premine, adhering to true decentralization principles. Mining is the gateway to supply.",
+                    icon: "⚖️",
+                    color: "from-purple-500/20 to-purple-500/5",
+                  },
+                  {
+                    title: "Autolykos v2 (GPU-friendly)",
+                    description:
+                      "Memory-hard tweaks keep ASICs at bay. The latest research adds multi-path 'random twists' for enhanced resistance, favoring GPUs over specialized hardware.",
+                    icon: "🖥️",
+                    color: "from-orange-500/20 to-orange-500/5",
+                  },
+                  {
+                    title: "Storage-Rent Upside",
+                    description:
+                      "Dormant boxes are recycled, boosting miner income and supporting the network's long-term economic sustainability.",
+                    icon: "📦",
+                    color: "from-cyan-500/20 to-cyan-500/5",
+                  },
+                  {
+                    title: "Community Governance",
+                    description:
+                      "Miners have a voice in Ergo's future through on-chain governance mechanisms and community proposals.",
+                    icon: "🗣️",
+                    color: "from-purple-500/20 to-purple-500/5",
+                  },
+                ].map((benefit, index) => (
+                  <motion.div
+                    key={benefit.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.5 + index * 0.1 }}
+                    whileHover={{ scale: 1.05, rotateY: 5 }}
+                    className="group"
+                  >
+                    <Card
+                      className={`bg-gradient-to-br ${benefit.color} border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full`}
+                    >
+                      <CardContent className="p-8 text-center">
+                        <div className="text-3xl mb-4">{benefit.icon}</div>
+                        <h3 className="text-xl font-semibold mb-4 text-white">{benefit.title}</h3>
+                        <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </FadeIn>
 
         {/* Getting Started Guide */}
-        <section className="py-20 px-4 border-b border-orange-500/20">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">From Rig to First ERG: Getting Started Guide</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Everything you need to begin your mining journey
-              </p>
-            </div>
+        <FadeIn delay={0.4}>
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <SectionHeading
+                text="Getting Started Guide"
+                subtitle="From Rig to First ERG"
+                description="Everything you need to begin your mining journey"
+              />
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <div>
-                <Card className="bg-gray-900/50 border-orange-500/20 mb-8">
-                  <CardHeader>
-                    <CardTitle>GPU (Graphics Cards):</CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <ul className="list-disc pl-5 space-y-2 text-gray-300">
-                      <li>Recommendations: Nvidia RTX 30/40 or AMD RX 6000/7000 GPUs</li>
-                      <li>VRAM: Minimum 4GB (6GB+ recommended for Autolykos v2)</li>
-                      <li>Top performer: CMP 170 HX still tops hashrate charts at ~415 MH/s</li>
-                    </ul>
-                    <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-500/10">
-                      GPU Selection Guide
-                      <ArrowUpRight className="w-4 h-4 ml-2" />
-                    </Button>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-gray-900/50 border-orange-500/20">
-                  <CardHeader>
-                    <CardTitle>Other Hardware:</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <ul className="list-disc pl-5 space-y-2 text-gray-300">
-                      <li>CPU, Motherboard, RAM, PSU (Power Supply Unit), Storage (SSD/HDD)</li>
-                      <li>Mining Frame or Case with good airflow</li>
-                      <li>PCIe Risers for multi-GPU setups</li>
-                      <li>Cooling solutions (fans, adequate ventilation)</li>
-                    </ul>
-                  </CardContent>
-                </Card>
-              </div>
-
-              <div>
-                <Card className="bg-gray-900/50 border-orange-500/20 h-full">
-                  <CardHeader>
-                    <CardTitle>Optimize & Save Watts: Efficiency Tips</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <Accordion type="single" collapsible className="w-full">
-                      <AccordionItem value="item-1" className="border-orange-500/20">
-                        <AccordionTrigger className="hover:text-orange-500">Overclock / Undervolt</AccordionTrigger>
-                        <AccordionContent>
-                          <p className="mb-2">
-                            Tune core and memory frequencies to achieve the best hashrate per watt ratio.
-                          </p>
-                          <ul className="list-disc pl-5 space-y-1 text-gray-300 text-sm">
-                            <li>Tools: MSI Afterburner, AMD Radeon Software, specific Linux tools.</li>
-                            <li>Start with conservative settings and test stability before pushing limits.</li>
-                            <li>
-                              Memory overclocks typically yield better results than core overclocks for Autolykos v2.
-                            </li>
-                          </ul>
-                          <Button size="sm" variant="link" className="text-orange-500 p-0 h-auto mt-2">
-                            Learn more
-                            <ChevronRight className="w-4 h-4 ml-1" />
-                          </Button>
-                        </AccordionContent>
-                      </AccordionItem>
-
-                      <AccordionItem value="item-2" className="border-orange-500/20">
-                        <AccordionTrigger className="hover:text-orange-500">Cooling Solutions</AccordionTrigger>
-                        <AccordionContent>
-                          <p className="mb-2">Keep GPUs under 65°C for optimal performance and hardware longevity.</p>
-                          <ul className="list-disc pl-5 space-y-1 text-gray-300 text-sm">
-                            <li>Ensure proper airflow in your mining rig or case.</li>
-                            <li>Clean dust from fans and heatsinks monthly.</li>
-                            <li>Consider additional cooling fans for multi-GPU setups.</li>
-                          </ul>
-                          <Button size="sm" variant="link" className="text-orange-500 p-0 h-auto mt-2">
-                            Learn more
-                            <ChevronRight className="w-4 h-4 ml-1" />
-                          </Button>
-                        </AccordionContent>
-                      </AccordionItem>
-
-                      <AccordionItem value="item-3" className="border-orange-500/20">
-                        <AccordionTrigger className="hover:text-orange-500">Driver Versions</AccordionTrigger>
-                        <AccordionContent>
-                          <p className="mb-2">Latest Studio or PRO drivers often yield +3% hash improvement.</p>
-                          <ul className="list-disc pl-5 space-y-1 text-gray-300 text-sm">
-                            <li>Test different driver versions to find the optimal one for your GPU model.</li>
-                            <li>Some older cards may perform better with specific legacy driver versions.</li>
-                            <li>Linux drivers often provide better mining performance than Windows.</li>
-                          </ul>
-                          <Button size="sm" variant="link" className="text-orange-500 p-0 h-auto mt-2">
-                            Learn more
-                            <ChevronRight className="w-4 h-4 ml-1" />
-                          </Button>
-                        </AccordionContent>
-                      </AccordionItem>
-
-                      <AccordionItem value="item-4" className="border-orange-500/20">
-                        <AccordionTrigger className="hover:text-orange-500">Software Updates</AccordionTrigger>
-                        <AccordionContent>
-                          <p className="mb-2">Miner releases frequently add +5-10% efficiency improvements.</p>
-                          <ul className="list-disc pl-5 space-y-1 text-gray-300 text-sm">
-                            <li>lolMiner v2.05 added mixed-precision Autolykos improvements.</li>
-                            <li>Check for updates regularly on GitHub repositories.</li>
-                            <li>Test new versions on a single GPU before updating your entire farm.</li>
-                          </ul>
-                          <Button size="sm" variant="link" className="text-orange-500 p-0 h-auto mt-2">
-                            Learn more
-                            <ChevronRight className="w-4 h-4 ml-1" />
-                          </Button>
-                        </AccordionContent>
-                      </AccordionItem>
-                    </Accordion>
-
-                    <div className="mt-6 bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 flex items-start gap-3">
-                      <AlertTriangle className="w-5 h-5 text-yellow-500 flex-shrink-0 mt-0.5" />
-                      <div>
-                        <div className="text-yellow-500 font-medium">Warning</div>
-                        <div className="text-sm text-gray-300">
-                          Over-tuning can brick cards. Test incrementally and monitor temperatures.
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <Card className="bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent border-orange-500/30 backdrop-blur-xl h-full relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl" />
+                    <CardHeader className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                          <span className="text-2xl">🖥️</span>
                         </div>
+                        <CardTitle className="text-2xl font-bold text-orange-400">GPU Mining</CardTitle>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <ul className="list-disc pl-5 space-y-2 text-gray-300">
+                        <li>Recommendations: Nvidia RTX 30/40 or AMD RX 6000/7000 GPUs</li>
+                        <li>VRAM: Minimum 4GB (6GB+ recommended for Autolykos v2)</li>
+                        <li>Top performer: CMP 170 HX still tops hashrate charts at ~415 MH/s</li>
+                      </ul>
+                      <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-500/10">
+                        GPU Selection Guide
+                        <ArrowUpRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <Card className="bg-gradient-to-br from-cyan-500/20 via-cyan-500/10 to-transparent border-cyan-500/30 backdrop-blur-xl h-full relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl" />
+                    <CardHeader className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                          <span className="text-2xl">⚡</span>
+                        </div>
+                        <CardTitle className="text-2xl font-bold text-cyan-400">CPU Mining</CardTitle>
+                      </div>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <ul className="list-disc pl-5 space-y-2 text-gray-300">
+                        <li>CPU, Motherboard, RAM, PSU (Power Supply Unit), Storage (SSD/HDD)</li>
+                        <li>Mining Frame or Case with good airflow</li>
+                        <li>PCIe Risers for multi-GPU setups</li>
+                        <li>Cooling solutions (fans, adequate ventilation)</li>
+                      </ul>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </FadeIn>
 
         {/* Autolykos v2 Section */}
         <section className="py-20 px-4 border-b border-orange-500/20">
