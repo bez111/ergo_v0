@@ -3,16 +3,15 @@
 import Link from "next/link"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Coins, Shield, Palette, Users, TrendingUp } from "lucide-react"
+import { ArrowRight, Coins, Shield, Palette, Users, TrendingUp, Link2 } from "lucide-react"
 import type { UseCase } from "@/lib/use-cases-data"
-import NextLink from "next/link"
 
 const iconMap = {
   coins: Coins,
   shield: Shield,
   palette: Palette,
   users: Users,
-  link: Link,
+  link: Link2,
   "trending-up": TrendingUp,
 }
 
@@ -75,15 +74,17 @@ export function UseCaseCard({ useCase, index }: UseCaseCardProps) {
       </div>
 
       {/* CTA */}
-      <NextLink href={`/use/use-cases/${useCase.id}`}>
-        <motion.div
-          whileHover={{ x: 5 }}
-          className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors cursor-pointer"
-        >
-          <span className="font-medium">Explore Use Case</span>
-          <ArrowRight className="w-4 h-4" />
-        </motion.div>
-      </NextLink>
+      {useCase.id && (
+        <Link href={`/use/use-cases/${useCase.id}`}>
+          <motion.div
+            whileHover={{ x: 5 }}
+            className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors cursor-pointer"
+          >
+            <span className="font-medium">Explore Use Case</span>
+            <ArrowRight className="w-4 h-4" />
+          </motion.div>
+        </Link>
+      )}
     </motion.div>
   )
 }
