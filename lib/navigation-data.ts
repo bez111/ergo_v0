@@ -124,6 +124,11 @@ export const mainNavItems = [
     description: "Core technical concepts and innovations of Ergo",
     children: [
       {
+        title: "Overview",
+        href: "/technology",
+        description: "Overview of Ergo's core technology and innovations."
+      },
+      {
         title: "eUTXO Model",
         href: "/technology/eutxo-model",
         description: "An extended UTXO model delivering security and expressiveness for advanced smart contracts.",
