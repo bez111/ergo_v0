@@ -43,6 +43,7 @@ export function DigitalRainEffect({
 
     // Draw function
     function draw() {
+      if (!canvas || !ctx) return;
       // Semi-transparent black background to create trail effect
       ctx.fillStyle = "rgba(0, 0, 0, 0.05)"
       ctx.fillRect(0, 0, canvas.width, canvas.height)

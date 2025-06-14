@@ -69,7 +69,6 @@ export const MotionImage = motion.image
 export const MotionMarker = motion.marker
 export const MotionMask = motion.mask
 export const MotionMetadata = motion.metadata
-export const MotionMPath = motion.mpath
 export const MotionPattern = motion.pattern
 export const MotionScript = motion.script
 export const MotionStyle = motion.style
