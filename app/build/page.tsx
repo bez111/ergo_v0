@@ -1,45 +1,43 @@
 "use client"
 
-import Link from "next/link"
 import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import {
-  Code,
-  BookOpen,
-  Layers,
-  Package,
-  PiIcon as Api,
-  Wrench,
-  Server,
-  GitBranch,
-  DollarSign,
-  ArrowRight,
-  Zap,
-  Shield,
-  Play,
-  Lightbulb,
-  Rocket,
-  Brain,
-  MessageSquare,
-  GithubIcon,
-  Sparkles,
-} from "lucide-react"
-import { GlitchText } from "@/components/glitch-text"
-import { ParticleBackground } from "@/components/particle-background"
+import { Button } from "@/components/ui/button"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
+import { Code, Shield, Zap, ExternalLink, ArrowRight, Play, Rocket, Brain } from "lucide-react"
+import Link from "next/link"
+
+const features = [
+  {
+    icon: Play,
+    title: "Quick Start",
+    description: "Get up and running with Ergo development in minutes. Perfect for beginners.",
+    color: "from-orange-500/20 to-orange-500/5",
+  },
+  {
+    icon: Rocket,
+    title: "Advanced DeFi",
+    description: "Build sophisticated financial applications with Ergo's powerful tools.",
+    color: "from-cyan-500/20 to-cyan-500/5",
+  },
+  {
+    icon: Brain,
+    title: "Protocol Research",
+    description: "Contribute to Ergo's core technology and research initiatives.",
+    color: "from-purple-500/20 to-purple-500/5",
+  },
+]
 
 const developerPaths = [
   {
     title: "New to Blockchain?",
     description: "Start your journey with Ergo. Learn core concepts and build your first simple dApp.",
-    icon: Lightbulb,
+    icon: Play,
     cta: "Beginner's Guide",
     href: "/build/getting-started",
-    bgColor: "bg-green-500/10",
-    borderColor: "border-green-500/30",
-    textColor: "text-green-400",
   },
   {
     title: "Experienced DeFi Developer?",
@@ -47,9 +45,6 @@ const developerPaths = [
     icon: Rocket,
     cta: "Explore Advanced DeFi",
     href: "/build/ergoscript",
-    bgColor: "bg-blue-500/10",
-    borderColor: "border-blue-500/30",
-    textColor: "text-blue-400",
   },
   {
     title: "Researcher or Cryptographer?",
@@ -57,415 +52,422 @@ const developerPaths = [
     icon: Brain,
     cta: "Protocol Deep Dive",
     href: "/build/protocol",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/30",
-    textColor: "text-purple-400",
   },
 ]
 
-const coreTech = [
-  {
-    name: "eUTXO Model",
-    description: "Enhanced security & parallelism.",
-    icon: Layers,
-    href: "/technology/eutxo-model",
-  },
-  { name: "ErgoScript", description: "Powerful & secure smart contracts.", icon: Code, href: "/technology/ergoscript" },
-  {
-    name: "Sigma Protocols",
-    description: "Advanced privacy & ZKPs.",
-    icon: Shield,
-    href: "/technology/privacy-features",
-  },
-  { name: "Proof-of-Work", description: "ASIC-resistant & decentralized.", icon: Zap, href: "/technology/secure-pow" },
-]
+const codeExample = `// Example: Simple ErgoScript contract
+{
+  // Check if transaction is signed by the owner
+  sigmaProp(
+    proveDlog(ownerPubKey)
+  )
+}`
 
-const essentialTools = [
-  { name: "Ergo Playground", icon: Play, href: "https://playground.ergoplatform.com", external: true },
-  { name: "Appkit (JVM SDK)", icon: Package, href: "/build/sdks#appkit" },
-  { name: "SigmaRust (SDK)", icon: Package, href: "/build/sdks#sigmarust" },
-  { name: "Node Setup Guide", icon: Server, href: "/build/node" },
-  { name: "Explorer API", icon: Api, href: "/build/api#explorer" },
-  { name: "Dev Tools", icon: Wrench, href: "/build/tools" },
-]
-
-const featuredResources = [
-  {
-    title: "Building Your First Ergo dApp: A Step-by-Step Tutorial",
-    category: "Tutorial",
-    icon: BookOpen,
-    href: "/build/quick-start",
-    description: "A comprehensive guide for beginners to get hands-on experience with Ergo development.",
-  },
-  {
-    title: "Understanding Ergo's Transaction Model (eUTXO)",
-    category: "Concept",
-    icon: Layers,
-    href: "/technology/eutxo-model",
-    description: "Explore the nuances of the extended UTXO model and its benefits for dApp development.",
-  },
-  {
-    title: "Mastering ErgoScript: Best Practices and Patterns",
-    category: "Advanced",
-    icon: Code,
-    href: "/build/ergoscript/advanced",
-    description: "Learn advanced techniques for writing efficient and secure ErgoScript contracts.",
-  },
-]
-
-const communityHighlights = [
-  { name: "Developer Discord", icon: MessageSquare, href: "https://discord.gg/ergo", cta: "Join Chat" },
-  { name: "Ergo GitHub", icon: GithubIcon, href: "https://github.com/ergoplatform", cta: "Explore Code" },
-  { name: "Grant Program", icon: DollarSign, href: "/build/grants", cta: "Apply for Funding" },
-  { name: "Contribution Guide", icon: GitBranch, href: "/build/contributing", cta: "Start Contributing" },
-]
-
-export default function BuildPageRedesign() {
-  const sectionVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  }
-
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.95 },
-    visible: (i: number) => ({
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5, delay: i * 0.1 },
-    }),
-  }
-
+export default function BuildPage() {
   return (
-    <div className="min-h-screen relative">
-      <ParticleBackground />
-      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.02)_1px,transparent_1px)] bg-[size:30px_30px] opacity-50"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-transparent to-black opacity-70"></div>
-
-      <div className="relative z-10 container mx-auto px-4 py-16 sm:py-24">
-        {/* Hero Section */}
-        <section className="flex flex-col justify-center items-center min-h-[60vh] text-center mb-20 sm:mb-32">
-          <FadeIn>
-            <Badge variant="outline" className="mb-6 border-primary/50 text-primary text-sm px-4 py-1">
-              ERGO DEVELOPER PORTAL V2
+    <div className="min-h-screen text-white relative">
+      <div className="container mx-auto px-4 py-16 relative z-10">
+        {/* Header */}
+        <FadeIn>
+          <div className="text-center mb-16">
+            <Badge variant="outline" className="mb-4 border-primary/50 text-primary backdrop-blur-sm">
+              DEVELOPER PORTAL
             </Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
-              BUILD ON ERGO
-            </h1>
-            <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-              <span className="text-primary">[</span>
-              The Future of Secure & Programmable Money.
-              <span className="text-primary">]</span>
-            </h2>
-            <p className="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
-              Access powerful tools, comprehensive documentation, and a vibrant community to create innovative decentralized applications on the Ergo Platform.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl" asChild>
-                <Link href="/build/quick-start">
-                  <Play className="w-5 h-5 mr-2" /> Get Started Quickly
-                </Link>
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                asChild
-              >
-                <Link href="#developer-paths">
-                  <Rocket className="w-5 h-5 mr-2" /> Find Your Path
-                </Link>
-              </Button>
-            </div>
-          </FadeIn>
-        </section>
+            <SectionHeading
+              text="Build on Ergo"
+              subtitle="Powerful Tools for Decentralized Development"
+              description="Access comprehensive documentation, development tools, and a vibrant community to create innovative applications on the Ergo Platform."
+            />
+          </div>
+        </FadeIn>
 
-        {/* Developer Paths Section */}
-        <motion.section
-          id="developer-paths"
-          className="mb-20 sm:mb-32"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-        >
-          <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-              <span className="text-primary">[</span> Your Developer Journey <span className="text-primary">]</span>
-            </h2>
-            <p className="text-center text-gray-400 mb-12 text-lg">
-              Choose your path based on your experience and interests.
-            </p>
-          </FadeIn>
-          <div className="grid md:grid-cols-3 gap-8">
-            {developerPaths.map((path, i) => {
-              const Icon = path.icon
-              return (
-                <motion.div
-                  key={path.title}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={cardVariants}
-                >
-                  <Card
-                    className={`h-full ${path.bgColor} border-2 ${path.borderColor} hover:shadow-xl hover:shadow-primary/20 transition-all duration-300 group flex flex-col`}
+        {/* Hero Section */}
+        <FadeIn delay={0.2}>
+          <div className="max-w-7xl mx-auto mb-16">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block">
+                  Build on Ergo
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">The Future of Secure & Programmable Money</p>
+                <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                  Access powerful tools, comprehensive documentation, and a vibrant community to create innovative decentralized applications on the Ergo Platform.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl" asChild>
+                    <Link href="/build/quick-start">
+                      <Play className="w-5 h-5 mr-2" /> Get Started
+                    </Link>
+                  </Button>
+                  <Button
+                    variant="outline"
+                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    asChild
                   >
-                    <CardHeader className="items-center text-center">
-                      <div
-                        className={`p-4 rounded-full ${path.bgColor === "bg-green-500/10" ? "bg-green-500/20" : path.bgColor === "bg-blue-500/10" ? "bg-blue-500/20" : "bg-purple-500/20"} mb-4 group-hover:scale-110 transition-transform`}
-                      >
-                        <Icon className={`w-10 h-10 ${path.textColor}`} />
+                    <Link href="#developer-paths">
+                      <Rocket className="w-5 h-5 mr-2" /> Find Your Path
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              <div className="relative">
+                <motion.div
+                  className="relative z-10"
+                  whileHover={{ scale: 1.05 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
+                    <CardContent className="p-0">
+                      <h3 className="text-xl font-bold mb-4 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                        Sample Contract
+                      </h3>
+                      <div className="bg-black/50 rounded-lg p-6 font-mono text-sm">
+                        <pre className="text-green-400">{codeExample}</pre>
                       </div>
-                      <CardTitle
-                        className={`text-2xl font-bold ${path.textColor} group-hover:text-primary transition-colors`}
-                      >
-                        {path.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="text-center flex-grow">
-                      <p className="text-gray-300 mb-6">{path.description}</p>
+                      <p className="text-gray-400 mt-4 italic text-center">Simple. Powerful. Secure.</p>
                     </CardContent>
-                    <div className="p-6 pt-0">
-                      <Button
-                        variant="outline"
-                        className={`w-full ${path.borderColor} ${path.textColor} hover:bg-primary/10 hover:text-primary font-semibold`}
-                        asChild
-                      >
-                        <Link href={path.href}>{path.cta}</Link>
-                      </Button>
-                    </div>
                   </Card>
                 </motion.div>
-              )
-            })}
+              </div>
+            </div>
           </div>
-        </motion.section>
+        </FadeIn>
 
-        {/* Core Tech Stack Section */}
-        <motion.section
-          className="mb-20 sm:mb-32"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-        >
-          <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-              <span className="text-primary">[</span> Ergo's Core Technology <span className="text-primary">]</span>
+        {/* Key Features */}
+        <FadeIn delay={0.4}>
+          <div className="max-w-6xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
+              Developer Paths
             </h2>
-            <p className="text-center text-gray-400 mb-12 text-lg">
-              Understand the foundational pillars that make Ergo unique and powerful.
-            </p>
-          </FadeIn>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {coreTech.map((tech, i) => {
-              const Icon = tech.icon
-              return (
+            <div className="grid md:grid-cols-3 gap-8">
+              {features.map((feature, index) => (
                 <motion.div
-                  key={tech.name}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={cardVariants}
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.5 + index * 0.1 }}
+                  whileHover={{ scale: 1.05, rotateY: 5 }}
+                  className="group"
                 >
-                  <Link href={tech.href}>
-                    <Card className="bg-black/40 backdrop-blur-sm border border-primary/30 hover:border-primary/60 hover:bg-primary/5 transition-all duration-300 group text-center p-6 h-full">
-                      <Icon className="w-10 h-10 text-primary mx-auto mb-4 group-hover:scale-110 transition-transform" />
-                      <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-primary transition-colors">
-                        {tech.name}
-                      </h3>
-                      <p className="text-sm text-gray-400">{tech.description}</p>
-                    </Card>
-                  </Link>
-                </motion.div>
-              )
-            })}
-          </div>
-        </motion.section>
-
-        {/* Essential Toolkit Section */}
-        <motion.section
-          className="mb-20 sm:mb-32"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-        >
-          <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-              <span className="text-primary">[</span> Essential Toolkit <span className="text-primary">]</span>
-            </h2>
-            <p className="text-center text-gray-400 mb-12 text-lg">Quick access to the tools you'll need most.</p>
-          </FadeIn>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
-            {essentialTools.map((tool, i) => {
-              const Icon = tool.icon
-              return (
-                <motion.div
-                  key={tool.name}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={cardVariants}
-                >
-                  <Link
-                    href={tool.href}
-                    target={tool.external ? "_blank" : undefined}
-                    rel={tool.external ? "noopener noreferrer" : undefined}
+                  <Card
+                    className={`bg-gradient-to-br ${feature.color} border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full`}
                   >
-                    <div className="bg-black/40 backdrop-blur-sm border border-primary/20 hover:border-primary/50 p-4 rounded-lg text-center transition-all group h-full flex flex-col justify-center items-center">
-                      <Icon className="w-8 h-8 text-primary mb-2 group-hover:text-orange-300 transition-colors" />
-                      <span className="text-sm text-gray-200 group-hover:text-white transition-colors">
-                        {tool.name}
-                      </span>
-                    </div>
-                  </Link>
+                    <CardContent className="p-8 text-center">
+                      <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-6">
+                        <feature.icon className="w-8 h-8 text-primary" />
+                      </div>
+                      <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
+                      <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                    </CardContent>
+                  </Card>
                 </motion.div>
-              )
-            })}
+              ))}
+            </div>
           </div>
-        </motion.section>
+        </FadeIn>
 
-        {/* Featured Resources Section */}
-        <motion.section
-          className="mb-20 sm:mb-32"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-        >
-          <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-              <span className="text-primary">[</span> Featured Resources <span className="text-primary">]</span>
-            </h2>
-            <p className="text-center text-gray-400 mb-12 text-lg">
-              Curated guides and articles to accelerate your learning.
-            </p>
-          </FadeIn>
-          <div className="space-y-8">
-            {featuredResources.map((resource, i) => {
-              const Icon = resource.icon
-              return (
-                <motion.div
-                  key={resource.title}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={cardVariants}
-                >
-                  <Link href={resource.href}>
-                    <Card className="bg-black/40 backdrop-blur-sm border border-primary/30 hover:border-primary/60 hover:bg-primary/5 transition-all duration-300 group">
-                      <CardContent className="p-6 flex items-start space-x-4">
-                        <div className="p-3 bg-primary/10 rounded-lg mt-1 group-hover:bg-primary/20 transition-colors">
-                          <Icon className="w-6 h-6 text-primary" />
+        {/* Tabs Section */}
+        <FadeIn delay={0.6}>
+          <Tabs defaultValue="paths" className="mb-16">
+            <TabsList className="flex w-full gap-2 bg-transparent p-0">
+              <TabsTrigger
+                value="paths"
+                className="flex-1 rounded-md bg-gray-800 px-4 py-2 text-gray-300 hover:bg-primary/20 data-[state=active]:bg-primary data-[state=active]:text-black"
+              >
+                Developer Paths
+              </TabsTrigger>
+              <TabsTrigger
+                value="tools"
+                className="flex-1 rounded-md bg-gray-800 px-4 py-2 text-gray-300 hover:bg-primary/20 data-[state=active]:bg-primary data-[state=active]:text-black"
+              >
+                Development Tools
+              </TabsTrigger>
+              <TabsTrigger
+                value="community"
+                className="flex-1 rounded-md bg-gray-800 px-4 py-2 text-gray-300 hover:bg-primary/20 data-[state=active]:bg-primary data-[state=active]:text-black"
+              >
+                Community
+              </TabsTrigger>
+            </TabsList>
+
+            <TabsContent value="paths" className="mt-8">
+              <div className="grid lg:grid-cols-3 gap-8">
+                {developerPaths.map((path, index) => (
+                  <motion.div
+                    key={path.title}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.2 + index * 0.1 }}
+                    whileHover={{ scale: 1.02 }}
+                  >
+                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl h-full">
+                      <CardHeader>
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center">
+                            <path.icon className="w-6 h-6 text-primary" />
+                          </div>
+                          <CardTitle className="text-xl font-bold text-white">{path.title}</CardTitle>
                         </div>
-                        <div>
-                          <Badge variant="outline" className="mb-2 border-primary/40 text-primary/80 text-xs">
-                            {resource.category}
-                          </Badge>
-                          <h3 className="text-xl font-semibold text-white mb-1 group-hover:text-primary transition-colors">
-                            {resource.title}
-                          </h3>
-                          <p className="text-gray-400 text-sm">{resource.description}</p>
-                        </div>
-                        <ArrowRight className="w-5 h-5 text-primary ml-auto self-center opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all" />
+                        <p className="text-gray-300 leading-relaxed">{path.description}</p>
+                      </CardHeader>
+                      <CardContent>
+                        <Button
+                          variant="outline"
+                          className="w-full border-primary/50 text-primary hover:bg-primary/10"
+                          asChild
+                        >
+                          <Link href={path.href}>
+                            {path.cta} <ArrowRight className="w-4 h-4 ml-2" />
+                          </Link>
+                        </Button>
                       </CardContent>
                     </Card>
-                  </Link>
-                </motion.div>
-              )
-            })}
-          </div>
-          <div className="text-center mt-12">
-            <Button variant="outline" className="border-primary text-primary hover:bg-primary/10 font-semibold" asChild>
-              <Link href="/build/all-resources">
-                Explore All Resources <Sparkles className="w-4 h-4 ml-2" />
-              </Link>
-            </Button>
-          </div>
-        </motion.section>
+                  </motion.div>
+                ))}
+              </div>
+            </TabsContent>
 
-        {/* Community & Contribution Section */}
-        <motion.section
-          className="mb-16 sm:mb-24"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-        >
-          <FadeIn>
-            <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 font-mono">
-              <span className="text-primary">[</span> Connect & Contribute <span className="text-primary">]</span>
-            </h2>
-            <p className="text-center text-gray-400 mb-12 text-lg">
-              Join our thriving community, get support, and help shape the future of Ergo.
-            </p>
-          </FadeIn>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {communityHighlights.map((item, i) => {
-              const Icon = item.icon
-              return (
+            <TabsContent value="tools" className="mt-8">
+              <div className="grid lg:grid-cols-2 gap-8">
                 <motion.div
-                  key={item.name}
-                  custom={i}
-                  initial="hidden"
-                  whileInView="visible"
-                  viewport={{ once: true }}
-                  variants={cardVariants}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                  whileHover={{ scale: 1.02 }}
                 >
-                  <Link
-                    href={item.href}
-                    target={item.href.startsWith("http") ? "_blank" : undefined}
-                    rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                  >
-                    <Card className="bg-black/40 backdrop-blur-sm border border-primary/30 hover:border-primary/60 hover:bg-primary/5 transition-all duration-300 group text-center p-6 h-full flex flex-col justify-center items-center">
-                      <Icon className="w-10 h-10 text-primary mb-4 group-hover:scale-110 transition-transform" />
-                      <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-primary transition-colors">
-                        {item.name}
-                      </h3>
-                      <span className="text-sm text-primary group-hover:underline">{item.cta}</span>
-                    </Card>
-                  </Link>
+                  <Card className="bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent border-orange-500/30 backdrop-blur-xl h-full relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl" />
+                    <CardHeader className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                          <Code className="w-6 h-6 text-orange-400" />
+                        </div>
+                        <CardTitle className="text-2xl font-bold text-orange-400">Development Tools</CardTitle>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">
+                        Everything you need to build, test, and deploy your Ergo applications.
+                      </p>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <div className="space-y-4">
+                        {[
+                          {
+                            title: "Ergo Playground",
+                            description: "Test and debug your smart contracts",
+                            icon: "🎮",
+                          },
+                          {
+                            title: "Appkit (JVM SDK)",
+                            description: "Build applications in Java/Kotlin",
+                            icon: "⚡",
+                          },
+                          {
+                            title: "SigmaRust (SDK)",
+                            description: "Native Rust implementation",
+                            icon: "🦀",
+                          },
+                        ].map((tool, index) => (
+                          <motion.div
+                            key={tool.title}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 + index * 0.1 }}
+                            className="flex items-start gap-3 p-3 bg-black/20 rounded-lg hover:bg-orange-500/10 transition-all duration-300"
+                            whileHover={{ x: 5 }}
+                          >
+                            <span className="text-xl">{tool.icon}</span>
+                            <div>
+                              <h4 className="font-semibold text-white mb-1">{tool.title}</h4>
+                              <p className="text-gray-400 text-sm">{tool.description}</p>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
                 </motion.div>
-              )
-            })}
-          </div>
-        </motion.section>
 
-        {/* Final Terminal Prompt */}
-        <motion.section
-          className="max-w-3xl mx-auto"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          variants={sectionVariants}
-        >
-          <div className="bg-black/70 backdrop-blur-md border border-green-500/40 rounded-lg p-6 font-mono text-green-400">
-            <div className="flex items-center gap-2 mb-2">
-              <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-              <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-            </div>
-            <p className="mb-1">
-              <span className="text-green-300">ergo-dev@ergo-platform</span>:<span className="text-blue-400">~</span>$
-              git clone https://github.com/ergoplatform/ergo.git
-            </p>
-            <p className="mb-1 text-gray-400">Cloning into 'ergo'...</p>
-            <p className="mb-1 text-gray-400">remote: Enumerating objects: 153271, done.</p>
-            <p className="mb-1 text-gray-400">remote: Counting objects: 100% (587/587), done.</p>
-            <p className="mb-1 text-gray-400">remote: Compressing objects: 100% (271/271), done.</p>
-            <p className="text-gray-400">Receiving objects: 100% (153271/153271), 68.78 MiB | 12.45 MiB/s, done.</p>
-            <p className="text-gray-400">Resolving deltas: 100% (116585/116585), done.</p>
-            <p className="mt-2">
-              <span className="text-green-300">ergo-dev@ergo-platform</span>:
-              <span className="text-blue-400">~/ergo</span>$ <span className="animate-pulse">█</span>
-            </p>
-          </div>
-        </motion.section>
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <Card className="bg-gradient-to-br from-cyan-500/20 via-cyan-500/10 to-transparent border-cyan-500/30 backdrop-blur-xl h-full relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl" />
+                    <CardHeader className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                          <Shield className="w-6 h-6 text-cyan-400" />
+                        </div>
+                        <CardTitle className="text-2xl font-bold text-cyan-400">Security & Testing</CardTitle>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">
+                        Tools and best practices for building secure applications.
+                      </p>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <div className="space-y-4">
+                        {[
+                          {
+                            title: "Formal Verification",
+                            description: "Mathematical proofs for contract correctness",
+                            icon: "🔬",
+                          },
+                          {
+                            title: "Testing Framework",
+                            description: "Comprehensive testing tools",
+                            icon: "🧪",
+                          },
+                          {
+                            title: "Security Guidelines",
+                            description: "Best practices for secure development",
+                            icon: "🛡️",
+                          },
+                        ].map((tool, index) => (
+                          <motion.div
+                            key={tool.title}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 + index * 0.1 }}
+                            className="flex items-start gap-3 p-3 bg-black/20 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
+                            whileHover={{ x: 5 }}
+                          >
+                            <span className="text-xl">{tool.icon}</span>
+                            <div>
+                              <h4 className="font-semibold text-white mb-1">{tool.title}</h4>
+                              <p className="text-gray-400 text-sm">{tool.description}</p>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
+            </TabsContent>
+
+            <TabsContent value="community" className="mt-8">
+              <div className="grid lg:grid-cols-2 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.2 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <Card className="bg-gradient-to-br from-purple-500/20 via-purple-500/10 to-transparent border-purple-500/30 backdrop-blur-xl h-full relative overflow-hidden">
+                    <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-2xl" />
+                    <CardHeader className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                          <Zap className="w-6 h-6 text-purple-400" />
+                        </div>
+                        <CardTitle className="text-2xl font-bold text-purple-400">Join the Community</CardTitle>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">
+                        Connect with other developers and contribute to the ecosystem.
+                      </p>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <div className="space-y-4">
+                        {[
+                          {
+                            title: "Developer Discord",
+                            description: "Join our active developer community",
+                            icon: "💬",
+                          },
+                          {
+                            title: "GitHub Organization",
+                            description: "Contribute to open-source projects",
+                            icon: "📦",
+                          },
+                          {
+                            title: "Grant Program",
+                            description: "Get funding for your projects",
+                            icon: "💰",
+                          },
+                        ].map((item, index) => (
+                          <motion.div
+                            key={item.title}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 + index * 0.1 }}
+                            className="flex items-start gap-3 p-3 bg-black/20 rounded-lg hover:bg-purple-500/10 transition-all duration-300"
+                            whileHover={{ x: 5 }}
+                          >
+                            <span className="text-xl">{item.icon}</span>
+                            <div>
+                              <h4 className="font-semibold text-white mb-1">{item.title}</h4>
+                              <p className="text-gray-400 text-sm">{item.description}</p>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.4 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <Card className="bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent border-orange-500/30 backdrop-blur-xl h-full relative overflow-hidden">
+                    <div className="absolute top-0 left-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl" />
+                    <CardHeader className="relative z-10">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                          <Rocket className="w-6 h-6 text-orange-400" />
+                        </div>
+                        <CardTitle className="text-2xl font-bold text-orange-400">Resources</CardTitle>
+                      </div>
+                      <p className="text-gray-300 leading-relaxed">
+                        Learn from the community and access valuable resources.
+                      </p>
+                    </CardHeader>
+                    <CardContent className="relative z-10">
+                      <div className="space-y-4">
+                        {[
+                          {
+                            title: "Documentation",
+                            description: "Comprehensive guides and tutorials",
+                            icon: "📚",
+                          },
+                          {
+                            title: "Blog",
+                            description: "Latest updates and insights",
+                            icon: "📝",
+                          },
+                          {
+                            title: "Showcase",
+                            description: "Featured projects and applications",
+                            icon: "✨",
+                          },
+                        ].map((item, index) => (
+                          <motion.div
+                            key={item.title}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: 0.3 + index * 0.1 }}
+                            className="flex items-start gap-3 p-3 bg-black/20 rounded-lg hover:bg-orange-500/10 transition-all duration-300"
+                            whileHover={{ x: 5 }}
+                          >
+                            <span className="text-xl">{item.icon}</span>
+                            <div>
+                              <h4 className="font-semibold text-white mb-1">{item.title}</h4>
+                              <p className="text-gray-400 text-sm">{item.description}</p>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
+            </TabsContent>
+          </Tabs>
+        </FadeIn>
       </div>
     </div>
   )

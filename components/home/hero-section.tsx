@@ -55,9 +55,49 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-24 lg:py-32">
-      {/* Simplified background */}
+      {/* Background elements */}
       <div className="absolute inset-0 bg-black z-0"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-orange-500/5 to-transparent z-0"></div>
+      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-20 bg-cover bg-center z-0"></div>
+
+      {/* Animated grid lines */}
+      <motion.div
+        className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)] z-0"
+        animate={{
+          backgroundPosition: ["0px 0px", "40px 40px"],
+        }}
+        transition={{
+          duration: 20,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "linear",
+        }}
+      ></motion.div>
+
+      {/* Glowing elements */}
+      <motion.div
+        className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] z-0"
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.6, 0.3],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+        }}
+      ></motion.div>
+      <motion.div
+        className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] z-0"
+        animate={{
+          scale: [1.2, 1, 1.2],
+          opacity: [0.6, 0.3, 0.6],
+        }}
+        transition={{
+          duration: 4,
+          repeat: Number.POSITIVE_INFINITY,
+          ease: "easeInOut",
+          delay: 2,
+        }}
+      ></motion.div>
 
       <div className="container relative z-10 px-4 md:px-6" ref={containerRef}>
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
