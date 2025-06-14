@@ -6,6 +6,7 @@ import { Differentiation } from "@/components/home/differentiation"
 import { AudiencePaths } from "@/components/home/audience-paths"
 import { SubscribeSection } from "@/components/home/subscribe-section"
 import { Manifesto } from "@/components/home/manifesto"
+import { BlogSection } from "@/components/home/blog-section"
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Differentiation />
       <AudiencePaths />
       <SubscribeSection />
+      <BlogSection />
     </div>
   )
 }

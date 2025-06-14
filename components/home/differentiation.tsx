@@ -57,7 +57,11 @@ export function Differentiation() {
 
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
-          <SectionHeading text="HOW IS ERGO DIFFERENT?" />
+          <div className="flex justify-center mb-8">
+            <h2 className="text-4xl md:text-5xl font-extrabold uppercase tracking-tight text-white text-center m-0">
+              HOW IS ERGO DIFFERENT?
+            </h2>
+          </div>
 
           <div className="space-y-4">
             {differentiators.map((item, index) => (

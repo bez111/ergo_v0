@@ -7,26 +7,26 @@ interface SectionHeadingProps {
   description?: string
   className?: string
   titleClassName?: string
-  subtitleClassName?: string // This was the prop for the text above the main title in some versions
+  subtitleClassName?: string
   descriptionClassName?: string
-  badgeText?: string // Adding an optional badge text to be rendered by SectionHeading itself
+  badgeText?: string
   children?: ReactNode
 }
 
 export function SectionHeading({
   title,
   text,
-  subtitle, // This is the text that usually goes below the main title
+  subtitle,
   description,
   className = "",
   titleClassName = "",
-  subtitleClassName = "", // This prop will be used for the text below the main title
+  subtitleClassName = "",
   descriptionClassName = "",
-  badgeText, // If a badge is part of the heading structure
+  badgeText,
   children,
 }: SectionHeadingProps) {
   const headingText = title || text || ""
-  
+
   return (
     <div className={className}>
       {badgeText && (
@@ -35,17 +35,19 @@ export function SectionHeading({
         </span>
       )}
       {headingText && (
-        <h2 className={`text-3xl font-bold tracking-tight ${titleClassName}`}>
+        <h2
+          className={`text-4xl md:text-5xl font-extrabold uppercase tracking-tight mb-4 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block ${titleClassName}`}
+        >
           {headingText}
         </h2>
       )}
       {subtitle && (
-        <p className={`mt-2 text-lg text-gray-400 ${subtitleClassName}`}>
+        <p className={`mt-2 text-xl md:text-2xl text-gray-300 mb-2 ${subtitleClassName}`}>
           {subtitle}
         </p>
       )}
       {description && (
-        <p className={`mt-4 text-gray-500 ${descriptionClassName}`}>
+        <p className={`mt-4 text-lg text-gray-400 max-w-2xl ${descriptionClassName}`}>
           {description}
         </p>
       )}
