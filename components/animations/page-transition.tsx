@@ -3,65 +3,36 @@
 import { useRef, useEffect, useState } from "react"
 import { usePathname } from "next/navigation"
 import type React from "react"
-import { MotionDiv, AnimatePresence } from "./motion"
+import { MotionDiv } from "./motion"
 
 interface PageTransitionProps {
   children: React.ReactNode
 }
 
-const pageVariants = {
-  initial: {
-    opacity: 0,
-    y: 20,
-    scale: 0.98,
-  },
-  in: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-  },
-  out: {
-    opacity: 0,
-    y: -20,
-    scale: 1.02,
-  },
-}
-
-const pageTransition = {
-  type: 'tween' as const,
-  ease: 'anticipate' as const,
-  duration: 0.4,
-}
-
 export function PageTransition({ children }: PageTransitionProps) {
   const pathname = usePathname()
   const isFirstLoad = useRef(true)
-  const [shouldAnimate, setShouldAnimate] = useState(false)
+  const [show, setShow] = useState(true)
 
   useEffect(() => {
     if (isFirstLoad.current) {
-      setShouldAnimate(false)
       isFirstLoad.current = false
+      setShow(true)
     } else {
-      setShouldAnimate(true)
+      setShow(false)
+      setTimeout(() => setShow(true), 10)
     }
   }, [pathname])
 
-  return shouldAnimate ? (
-    <AnimatePresence mode="wait" initial={false}>
-      <MotionDiv
-        key={pathname}
-        initial="initial"
-        animate="in"
-        exit="out"
-        variants={pageVariants}
-        transition={pageTransition}
-        className="min-h-screen"
-      >
-        {children}
-      </MotionDiv>
-    </AnimatePresence>
-  ) : (
-    <div className="min-h-screen">{children}</div>
-  )
+  return show ? (
+    <MotionDiv
+      key={pathname}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.3 }}
+      className="min-h-screen"
+    >
+      {children}
+    </MotionDiv>
+  ) : null
 }

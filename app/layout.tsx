@@ -5,7 +5,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { PageTransition } from "@/components/animations/page-transition"
 import { ParticleBackground } from "@/components/particle-background"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -132,9 +131,7 @@ export default function RootLayout({
             <Header />
             <main className="flex-1 relative overflow-hidden">
               <ParticleBackground />
-              <PageTransition>
-                {children}
-              </PageTransition>
+              {children}
             </main>
             <Footer />
           </div>
