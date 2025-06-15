@@ -67,20 +67,6 @@ export default function BuildPage() {
   return (
     <div className="min-h-screen text-white relative">
       <div className="container mx-auto px-4 py-16 relative z-10">
-        {/* Header */}
-        <FadeIn>
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4 border-primary/50 text-primary backdrop-blur-sm">
-              DEVELOPER PORTAL
-            </Badge>
-            <SectionHeading
-              text="Build on Ergo"
-              subtitle="Powerful Tools for Decentralized Development"
-              description="Access comprehensive documentation, development tools, and a vibrant community to create innovative applications on the Ergo Platform."
-            />
-          </div>
-        </FadeIn>
-
         {/* Hero Section */}
         <FadeIn delay={0.2}>
           <div className="max-w-7xl mx-auto mb-16">
