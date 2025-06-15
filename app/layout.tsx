@@ -2,11 +2,11 @@ import type React from "react"
 import type { Metadata } from "next/dist/lib/metadata/types/metadata-interface"
 import { Inter } from "next/font/google"
 import "./globals.css"
-// import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-// import { PageTransition } from "@/components/animations/page-transition"
-// import { ParticleBackground } from "@/components/particle-background"
+import { PageTransition } from "@/components/animations/page-transition"
+import { ParticleBackground } from "@/components/particle-background"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -76,8 +76,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-    generator: 'v0.dev'
+  }
 }
 
 export default function RootLayout({
@@ -120,7 +119,7 @@ export default function RootLayout({
         />
       </head>
       <body className={inter.className + " dark"}>
-        {/* <ThemeProvider attribute="class" defaultTheme="dark" enableSystem> */}
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex min-h-screen flex-col">
             <Header />
             <main className="flex-1 relative overflow-hidden">
@@ -132,15 +131,14 @@ export default function RootLayout({
                 <div className="absolute bottom-0 left-0 w-full h-full bg-[url('/resistance-texture.png')] bg-no-repeat bg-cover opacity-5" />
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/10 via-transparent to-red-900/10" />
               </div>
-              {/* <ParticleBackground /> */}
+              <ParticleBackground />
               <div className="relative z-10">
-                {/* <PageTransition>{children}</PageTransition> */}
-                {children}
+                <PageTransition>{children}</PageTransition>
               </div>
             </main>
             <Footer />
           </div>
-        {/* </ThemeProvider> */}
+        </ThemeProvider>
       </body>
     </html>
   )
