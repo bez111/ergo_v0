@@ -80,20 +80,6 @@ export default function SecurePowPage() {
       </div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
-        {/* Header */}
-        <FadeIn>
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4 border-primary/50 text-primary backdrop-blur-sm">
-              CONSENSUS ALGORITHM
-            </Badge>
-            <SectionHeading
-              text="Secure Proof-of-Work"
-              subtitle="Autolykos v2"
-              description="An ASIC-resistant Proof-of-Work algorithm promoting decentralization and long-term network security."
-            />
-          </div>
-        </FadeIn>
-
         {/* Hero Section */}
         <FadeIn delay={0.2}>
           <div className="max-w-7xl mx-auto mb-16">

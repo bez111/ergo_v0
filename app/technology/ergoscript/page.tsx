@@ -53,20 +53,6 @@ export default function ErgoScriptPage() {
   return (
     <div className="min-h-screen text-white relative">
       <div className="container mx-auto px-4 py-16 relative z-10">
-        {/* Header */}
-        <FadeIn>
-          <div className="text-center mb-16">
-            <Badge variant="outline" className="mb-4 border-primary/50 text-primary backdrop-blur-sm">
-              SMART CONTRACT LANGUAGE
-            </Badge>
-            <SectionHeading
-              text="ErgoScript"
-              subtitle="Advanced Smart Contracts Made Simple"
-              description="A powerful and secure scripting language designed for developing complex and reliable financial contracts on the eUTXO model."
-            />
-          </div>
-        </FadeIn>
-
         {/* Hero Section */}
         <FadeIn delay={0.2}>
           <div className="max-w-7xl mx-auto mb-16">
