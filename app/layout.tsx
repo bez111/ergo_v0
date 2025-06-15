@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { ParticleBackground } from "@/components/particle-background"
+import { SchemaOrg } from "@/components/seo/schema-org"
+import { ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/lib/schema-constants"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -98,32 +100,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ff8800" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "Ergo Platform",
-              url: "https://ergoplatform.org",
-              logo: "https://ergoplatform.org/logo.png",
-              description:
-                "A resilient platform for contractual money. Ergo Blockchain provides the tools for people to secure financial interactions.",
-              sameAs: [
-                "https://twitter.com/ergoplatform",
-                "https://github.com/ergoplatform",
-                "https://discord.gg/ergo",
-                "https://www.reddit.com/r/ergonauts/",
-                "https://t.me/ergoplatform",
-              ],
-              contactPoint: {
-                "@type": "ContactPoint",
-                contactType: "Customer Support",
-                url: "https://ergoplatform.org/community/discussion",
-              },
-            }),
-          }}
-        />
+        <SchemaOrg type="Organization" data={ORGANIZATION_SCHEMA} />
+        <SchemaOrg type="WebSite" data={WEBSITE_SCHEMA} />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>

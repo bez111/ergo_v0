@@ -1,6 +1,9 @@
+import { Metadata } from 'next'
 import { notFound } from "next/navigation"
 import { blogPosts } from "@/lib/blog-data"
 import { BlogPostClient } from "./BlogPostClient"
+import { generateMetadata as generatePageMetadata } from '@/components/seo/page-metadata'
+import { PageMetadata } from '@/components/seo/page-metadata'
 
 interface BlogPostPageProps {
   params: {
@@ -14,24 +17,30 @@ export async function generateStaticParams() {
   }))
 }
 
-export async function generateMetadata({ params }: BlogPostPageProps) {
+export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
   const post = blogPosts.find((post) => post.slug === params.slug)
 
   if (!post) {
     return {
-      title: "Post Not Found",
+      title: 'Post Not Found',
+      description: 'The requested blog post could not be found.',
     }
   }
 
-  return {
-    title: `${post.title} | Ergo Blog`,
+  return generatePageMetadata({
+    title: post.title,
     description: post.description,
-    openGraph: {
+    image: post.image,
+    type: 'article',
+    schemaType: 'Article',
+    schemaData: {
       title: post.title,
       description: post.description,
-      images: [post.image],
+      image: post.image,
+      datePublished: new Date().toISOString(),
+      dateModified: new Date().toISOString(),
     },
-  }
+  })
 }
 
 export default function BlogPostPage({ params }: BlogPostPageProps) {
@@ -43,5 +52,23 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
 
   const relatedPosts = blogPosts.filter((p) => p.id !== post.id && p.category === post.category).slice(0, 3)
 
-  return <BlogPostClient post={post} relatedPosts={relatedPosts} />
+  return (
+    <>
+      <PageMetadata
+        title={post.title}
+        description={post.description}
+        image={post.image}
+        type="article"
+        schemaType="Article"
+        schemaData={{
+          title: post.title,
+          description: post.description,
+          image: post.image,
+          datePublished: new Date().toISOString(),
+          dateModified: new Date().toISOString(),
+        }}
+      />
+      <BlogPostClient post={post} relatedPosts={relatedPosts} />
+    </>
+  )
 }
