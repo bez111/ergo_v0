@@ -4,22 +4,22 @@ import { CorePillars } from "@/components/home/core-pillars"
 import { EcosystemShowcase } from "@/components/home/ecosystem-showcase"
 import { Differentiation } from "@/components/home/differentiation"
 import { AudiencePaths } from "@/components/home/audience-paths"
+import { BlogSection } from "@/components/home/blog-section"
 import { SubscribeSection } from "@/components/home/subscribe-section"
 import { Manifesto } from "@/components/home/manifesto"
-import { BlogSection } from "@/components/home/blog-section"
 
 export default function Home() {
   return (
     <div className="flex flex-col bg-black text-white relative">
       <HeroSection />
-      <Manifesto />
       <QuickActions />
+      <Manifesto />
       <CorePillars />
-      <EcosystemShowcase />
       <Differentiation />
+      <EcosystemShowcase />
       <AudiencePaths />
-      <SubscribeSection />
       <BlogSection />
+      <SubscribeSection />
     </div>
   )
 }
