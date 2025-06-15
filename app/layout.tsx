@@ -31,10 +31,18 @@ export const metadata: Metadata = {
     "privacy",
     "decentralized applications",
     "contractual money",
+    "cryptocurrency platform",
+    "blockchain technology",
+    "decentralized finance",
   ],
   authors: [{ name: "Ergo Platform", url: "https://ergoplatform.org" }],
   creator: "Ergo Platform",
   publisher: "Ergo Platform",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -57,12 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: {
-      default: "Ergo Blockchain | Resilient Platform for Contractual Money",
-      template: "%s | Ergo Platform",
-    },
-    description:
-      "Explore Ergo: a secure, decentralized platform for contractual money. Learn about eUTXO, ErgoScript, and build the future of finance.",
+    title: "Ergo Blockchain | Resilient Platform for Contractual Money",
+    description: "Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money.",
     images: ["/og-image.png"],
     creator: "@ergoplatform",
   },
@@ -76,7 +80,11 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  }
+  },
+  verification: {
+    google: "your-google-site-verification",
+    yandex: "your-yandex-verification",
+  },
 }
 
 export default function RootLayout({
@@ -118,23 +126,15 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className + " dark"}>
+      <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex min-h-screen flex-col">
             <Header />
             <main className="flex-1 relative overflow-hidden">
-              {/* Background Elements */}
-              <div className="fixed inset-0 z-0">
-                <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10" />
-                <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90" />
-                <div className="absolute top-0 right-0 w-full h-full bg-[url('/tech-pattern.png')] bg-no-repeat bg-cover opacity-5" />
-                <div className="absolute bottom-0 left-0 w-full h-full bg-[url('/resistance-texture.png')] bg-no-repeat bg-cover opacity-5" />
-                <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/10 via-transparent to-red-900/10" />
-              </div>
-              <ParticleBackground />
-              <div className="relative z-10">
-                <PageTransition>{children}</PageTransition>
-              </div>
+              <PageTransition>
+                <ParticleBackground />
+                {children}
+              </PageTransition>
             </main>
             <Footer />
           </div>
