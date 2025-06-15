@@ -27,6 +27,8 @@ import {
   ArrowRight,
 } from "lucide-react"
 import Link from "next/link"
+import { GlossarySection } from "@/components/glossary/glossary-section"
+import { ERGO_GLOSSARY } from "@/lib/glossary-constants"
 
 const techFeatures = [
   {
@@ -453,6 +455,15 @@ export default function TechnologyPage() {
             </CardContent>
           </Card>
         </FadeIn>
+      </div>
+
+      {/* Glossary Section */}
+      <div className="container py-12">
+        <GlossarySection
+          terms={ERGO_GLOSSARY.hasDefinedTerm}
+          title={ERGO_GLOSSARY.name}
+          description={ERGO_GLOSSARY.description}
+        />
       </div>
     </div>
   )

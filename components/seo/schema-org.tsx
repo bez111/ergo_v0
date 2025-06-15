@@ -1,31 +1,64 @@
 import {
   Organization,
   WebSite,
-  BreadcrumbList,
   Article,
   FAQPage,
   HowTo,
+  SoftwareApplication,
+  Product,
+  Event,
+  Person,
+  TechArticle,
+  Course,
+  DefinedTerm,
+  DefinedTermSet,
 } from '@/types/schema'
 
-type SchemaType = 'Organization' | 'WebSite' | 'BreadcrumbList' | 'Article' | 'FAQPage' | 'HowTo'
+type SchemaType = 
+  | 'Organization'
+  | 'WebSite'
+  | 'Article'
+  | 'FAQPage'
+  | 'HowTo'
+  | 'SoftwareApplication'
+  | 'Product'
+  | 'Event'
+  | 'Person'
+  | 'TechArticle'
+  | 'Course'
+  | 'DefinedTerm'
+  | 'DefinedTermSet'
+
+type SchemaData = 
+  | Organization
+  | WebSite
+  | Article
+  | FAQPage
+  | HowTo
+  | SoftwareApplication
+  | Product
+  | Event
+  | Person
+  | TechArticle
+  | Course
+  | DefinedTerm
+  | DefinedTermSet
 
 interface SchemaOrgProps {
   type: SchemaType
-  data: Organization | WebSite | BreadcrumbList | Article | FAQPage | HowTo
+  data: SchemaData
 }
 
 export function SchemaOrg({ type, data }: SchemaOrgProps) {
   const schema = {
     '@context': 'https://schema.org',
-    ...data,
+    ...data
   }
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(schema),
-      }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
     />
   )
 } 

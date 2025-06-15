@@ -29,6 +29,8 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
 import { ParticleBackground } from "@/components/particle-background"
 import { LucideIcon } from "lucide-react"
+import { WALLET_SCHEMA } from '@/lib/schema-constants'
+import { SchemaOrg } from '@/components/seo/schema-org'
 
 interface Wallet {
   id: string
@@ -43,6 +45,8 @@ interface Wallet {
   downloadUrl: string
   rating: number
   users: string
+  icon: LucideIcon
+  isRecommended?: boolean
 }
 
 interface WalletData {
@@ -68,6 +72,7 @@ const walletData: WalletData = {
       downloadUrl: "https://ergoplatform.org/en/wallets/",
       rating: 4.8,
       users: "50K+",
+      icon: Globe,
     },
   ],
   desktop: [
@@ -84,6 +89,7 @@ const walletData: WalletData = {
       downloadUrl: "https://github.com/ergoplatform/ergo/releases",
       rating: 4.5,
       users: "5K+",
+      icon: HardDrive,
     },
   ],
   mobile: [
@@ -100,6 +106,7 @@ const walletData: WalletData = {
       downloadUrl: "https://ergoplatform.org/en/wallets/",
       rating: 4.7,
       users: "25K+",
+      icon: Smartphone,
     },
     {
       id: "terminus",
@@ -114,6 +121,7 @@ const walletData: WalletData = {
       downloadUrl: "https://terminus.money/",
       rating: 4.6,
       users: "15K+",
+      icon: Smartphone,
     },
   ],
   browser: [
@@ -130,6 +138,7 @@ const walletData: WalletData = {
       downloadUrl: "https://chrome.google.com/webstore/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai",
       rating: 4.4,
       users: "20K+",
+      icon: Chrome,
     },
     {
       id: "safew",
@@ -144,6 +153,7 @@ const walletData: WalletData = {
       downloadUrl: "https://wallet.ergoplatform.com/",
       rating: 4.2,
       users: "10K+",
+      icon: Globe,
     },
   ],
   hardware: [
@@ -160,6 +170,7 @@ const walletData: WalletData = {
       downloadUrl: "https://www.ledger.com/ergo-wallet",
       rating: 4.9,
       users: "1M+",
+      icon: HardDrive,
     },
   ],
 }
@@ -214,6 +225,7 @@ export default function WalletPage() {
 
   return (
     <div className="min-h-screen relative">
+      <SchemaOrg type="SoftwareApplication" data={WALLET_SCHEMA} />
       {/* Background Effects */}
       <div className="absolute inset-0">
         <ParticleBackground />

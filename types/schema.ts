@@ -1,3 +1,11 @@
+export interface ContactPoint {
+  '@type': 'ContactPoint'
+  contactType: string
+  email?: string
+  url?: string
+  availableLanguage?: string[]
+}
+
 export interface Organization {
   '@type': 'Organization'
   name: string
@@ -5,11 +13,7 @@ export interface Organization {
   logo: string
   description: string
   sameAs: string[]
-  contactPoint: {
-    '@type': 'ContactPoint'
-    contactType: string
-    url: string
-  }
+  contactPoint: ContactPoint
 }
 
 export interface WebSite {
@@ -78,4 +82,140 @@ export interface HowTo {
     text: string
     image?: string
   }[]
+}
+
+export interface SoftwareApplication {
+  '@type': 'SoftwareApplication'
+  name: string
+  description: string
+  applicationCategory: string
+  operatingSystem: string
+  offers: {
+    '@type': 'Offer'
+    price: string
+    priceCurrency: string
+  }
+  downloadUrl: string
+  version: string
+  author: {
+    '@type': 'Organization'
+    name: string
+    url: string
+  }
+}
+
+export interface Product {
+  '@type': 'Product'
+  name: string
+  description: string
+  image: string
+  brand: {
+    '@type': 'Brand'
+    name: string
+  }
+  offers: {
+    '@type': 'Offer'
+    price: string
+    priceCurrency: string
+    availability: string
+  }
+}
+
+export interface Event {
+  '@type': 'Event'
+  name: string
+  description: string
+  startDate: string
+  endDate: string
+  location: {
+    '@type': 'Place'
+    name: string
+    address: {
+      '@type': 'PostalAddress'
+      addressLocality: string
+      addressCountry: string
+    }
+  }
+  organizer: {
+    '@type': 'Organization'
+    name: string
+    url: string
+  }
+}
+
+export interface Person {
+  '@type': 'Person'
+  name: string
+  jobTitle: string
+  description: string
+  image: string
+  url: string
+  sameAs: string[]
+  worksFor: {
+    '@type': 'Organization'
+    name: string
+    url: string
+  }
+}
+
+export interface TechArticle {
+  '@type': 'TechArticle'
+  headline: string
+  description: string
+  image: string
+  datePublished: string
+  dateModified: string
+  author: {
+    '@type': 'Organization'
+    name: string
+    url: string
+  }
+  publisher: {
+    '@type': 'Organization'
+    name: string
+    url: string
+    logo: {
+      '@type': 'ImageObject'
+      url: string
+    }
+  }
+  dependencies: string[]
+  proficiencyLevel: string
+  articleSection: string
+}
+
+export interface Course {
+  '@type': 'Course'
+  name: string
+  description: string
+  provider: {
+    '@type': 'Organization'
+    name: string
+    url: string
+  }
+  courseCode: string
+  educationalLevel: string
+  hasCourseInstance: {
+    '@type': 'CourseInstance'
+    courseMode: string
+    startDate: string
+    endDate: string
+  }[]
+}
+
+export interface DefinedTerm {
+  '@type': 'DefinedTerm'
+  name: string
+  description: string
+  inDefinedTermSet: string
+  category: string
+  relatedTerms?: string[]
+  examples?: string[]
+}
+
+export interface DefinedTermSet {
+  '@type': 'DefinedTermSet'
+  name: string
+  description: string
+  hasDefinedTerm: DefinedTerm[]
 } 
