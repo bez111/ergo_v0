@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Play } from "lucide-react"
 import { useCases } from "@/lib/use-cases-data"
+import Image from "next/image"
 
 export function FeaturedStories() {
   const featuredUseCases = useCases.filter((uc) => uc.featured && uc.story)
@@ -36,10 +37,12 @@ export function FeaturedStories() {
             >
               {/* Image */}
               <div className="relative h-64 overflow-hidden">
-                <img
+                <Image
                   src={useCase.story?.visual || "/placeholder.svg"}
                   alt={useCase.story?.title}
+                  fill
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 

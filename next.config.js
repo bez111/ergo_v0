@@ -4,7 +4,7 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['ergoplatform.org'],
-    unoptimized: true,
+    unoptimized: false,
   },
   experimental: {
     optimizeCss: true,

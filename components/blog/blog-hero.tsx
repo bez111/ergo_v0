@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Eye, Heart, Clock, Star } from "lucide-react"
 import type { BlogPost } from "@/lib/blog-data"
 import Link from "next/link"
+import Image from "next/image"
 
 interface BlogHeroProps {
   featuredPost: BlogPost
@@ -33,10 +34,12 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
         className="relative flex-1 bg-gradient-to-br from-orange-500/20 to-red-700/20 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm border border-orange-500/20"
       >
         <div className="absolute inset-0">
-          <img
+          <Image
             src={featuredPost.image || "/placeholder.svg"}
             alt={featuredPost.title}
+            fill
             className="w-full h-full object-cover opacity-30"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
@@ -83,10 +86,13 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="flex items-center gap-4 mb-6"
           >
-            <img
+            <Image
               src={featuredPost.author.avatar || "/placeholder.svg"}
               alt={featuredPost.author.name}
+              width={48}
+              height={48}
               className="w-12 h-12 rounded-full border-2 border-white/50"
+              loading="lazy"
             />
             <div>
               <div className="text-white font-medium">{featuredPost.author.name}</div>
@@ -148,10 +154,13 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
           >
             <Link href={`/blog/${post.slug}`}>
               <div className="flex gap-4">
-                <img
+                <Image
                   src={post.image || "/placeholder.svg"}
                   alt={post.title}
+                  width={64}
+                  height={64}
                   className="w-16 h-16 rounded-lg object-cover"
+                  loading="lazy"
                 />
                 <div className="flex-1">
                   <span

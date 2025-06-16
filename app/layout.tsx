@@ -102,6 +102,16 @@ export default function RootLayout({
         <meta name="theme-color" content="#ff8800" />
         <SchemaOrg type="Organization" data={ORGANIZATION_SCHEMA} />
         <SchemaOrg type="WebSite" data={WEBSITE_SCHEMA} />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Ergo Platform | Resilient Platform for Contractual Money" />
+        <meta property="og:description" content="Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps." />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:url" content="https://ergoplatform.org" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Ergo Platform | Resilient Platform for Contractual Money" />
+        <meta name="twitter:description" content="Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps." />
+        <meta name="twitter:image" content="/og-image.png" />
+        <meta name="twitter:site" content="@ErgoPlatform" />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
