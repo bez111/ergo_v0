@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Card } from "./card"
 import Link from "next/link"
+import Image from "next/image"
 
 interface Project {
   name: string
@@ -59,7 +60,7 @@ export function UseCard({
           <div className="flex items-center gap-3 flex-wrap">
             {projects.slice(0, 3).map((project) => (
               <div key={project.name} className="flex items-center gap-2">
-                {project.logo && <img src={project.logo} alt={project.name} className="w-6 h-6 rounded opacity-80" />}
+                {project.logo && <Image src={project.logo} alt={project.name} width={24} height={24} className="w-6 h-6 rounded opacity-80" />}
                 <span className="text-gray-300 text-sm">{project.name}</span>
               </div>
             ))}

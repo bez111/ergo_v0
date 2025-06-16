@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 
 import { motion } from "framer-motion"
 import { ArrowRight, Coins, Shield, Palette, Users, TrendingUp, Link2 } from "lucide-react"
@@ -66,7 +67,7 @@ export function UseCaseCard({ useCase, index }: UseCaseCardProps) {
           <div className="flex items-center gap-3 flex-wrap">
             {visibleProjects.map((project) => (
               <div key={project.name} className="flex items-center gap-2">
-                <img src={project.logo || "/placeholder.svg"} alt={project.name} className="w-6 h-6 rounded opacity-80" />
+                <Image src={project.logo || "/placeholder.svg"} alt={project.name} width={24} height={24} className="w-6 h-6 rounded opacity-80" />
                 <span className="text-gray-300 text-sm">{project.name}</span>
               </div>
             ))}

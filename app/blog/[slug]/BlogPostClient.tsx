@@ -8,6 +8,7 @@ import { ParticleBackground } from "@/components/particle-background"
 import { CodeLines } from "@/components/code-lines"
 import Link from "next/link"
 import { useState } from "react"
+import Image from "next/image"
 
 interface BlogPostClientProps {
   post: BlogPost
@@ -78,7 +79,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
           >
             {/* Hero Image */}
             <div className="relative h-64 lg:h-96">
-              <img src={post.image || "/placeholder.svg"} alt={post.title} className="w-full h-full object-cover" />
+              <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
               {/* Category Badge */}
