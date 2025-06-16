@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
-import { SchemaOrg } from '@/components/seo/schema-org'
 
 interface BreadcrumbItem {
   name: string
@@ -14,15 +13,6 @@ interface BreadcrumbsProps {
 export function Breadcrumbs({ items }: BreadcrumbsProps) {
   return (
     <>
-      <SchemaOrg
-        type="BreadcrumbList"
-        data={{
-          items: items.map((item) => ({
-            name: item.name,
-            url: `https://ergoplatform.org${item.href}`,
-          })),
-        }}
-      />
       <nav className="flex" aria-label="Breadcrumb">
         <ol className="flex items-center space-x-2">
           {items.map((item, index) => (

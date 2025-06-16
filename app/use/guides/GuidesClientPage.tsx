@@ -31,6 +31,7 @@ import {
   Eye,
   Heart,
 } from "lucide-react"
+import Image from "next/image"
 
 // Define types
 type GuideLevel = "Beginner" | "Intermediate" | "Advanced"
@@ -292,10 +293,13 @@ function GuideCard({ guide, index = 0 }: { guide: Guide; index?: number }) {
     >
       <Link href={guide.href}>
         <div className="relative">
-          <img
+          <Image
             src={guide.image || "/placeholder.svg?height=200&width=400"}
             alt={guide.title}
+            width={400}
+            height={200}
             className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
@@ -358,10 +362,13 @@ function GuideCard({ guide, index = 0 }: { guide: Guide; index?: number }) {
           <p className="text-white/70 text-sm mb-4 leading-relaxed line-clamp-2">{guide.description}</p>
 
           <div className="flex items-center gap-4 mb-4">
-            <img
+            <Image
               src={guide.author.avatar || "/placeholder.svg?height=32&width=32"}
               alt={guide.author.name}
+              width={32}
+              height={32}
               className="w-8 h-8 rounded-full border border-white/20"
+              loading="lazy"
             />
             <div>
               <div className="text-white text-sm font-medium">{guide.author.name}</div>

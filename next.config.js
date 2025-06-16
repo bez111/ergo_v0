@@ -3,7 +3,12 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ['ergoplatform.org'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'ergoplatform.org',
+      },
+    ],
     unoptimized: false,
   },
   experimental: {

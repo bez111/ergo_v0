@@ -19,9 +19,12 @@ export function HowToSection({ title, description, steps }: HowToSectionProps) {
       <SchemaOrg
         type="HowTo"
         data={{
-          title,
+          '@type': 'HowTo',
+          name: title,
           description,
-          steps: steps.map((step) => ({
+          step: steps.map((step, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
             name: step.name,
             text: step.text,
             image: step.image,

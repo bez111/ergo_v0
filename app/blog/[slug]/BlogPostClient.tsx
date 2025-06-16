@@ -112,9 +112,11 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                 className="flex flex-wrap items-center gap-6 mb-8 pb-8 border-b border-white/10"
               >
                 <div className="flex items-center gap-3">
-                  <img
+                  <Image
                     src={post.author.avatar || "/placeholder.svg"}
                     alt={post.author.name}
+                    width={48}
+                    height={48}
                     className="w-12 h-12 rounded-full border-2 border-orange-500/30"
                   />
                   <div>
@@ -249,9 +251,11 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 mb-12"
           >
             <div className="flex items-center gap-6">
-              <img
+              <Image
                 src={post.author.avatar || "/placeholder.svg"}
                 alt={post.author.name}
+                width={80}
+                height={80}
                 className="w-20 h-20 rounded-full border-4 border-orange-500/30"
               />
               <div className="flex-1">

@@ -39,7 +39,7 @@ export function FeaturedStories() {
               <div className="relative h-64 overflow-hidden">
                 <Image
                   src={useCase.story?.visual || "/placeholder.svg"}
-                  alt={useCase.story?.title}
+                  alt={useCase.story?.title || ""}
                   fill
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   loading="lazy"

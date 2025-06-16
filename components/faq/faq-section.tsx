@@ -20,9 +20,14 @@ export function FAQSection({ title, items }: FAQSectionProps) {
       <SchemaOrg
         type="FAQPage"
         data={{
-          questions: items.map((item) => ({
-            question: item.question,
-            answer: item.answer,
+          '@type': 'FAQPage',
+          mainEntity: items.map((item) => ({
+            '@type': 'Question',
+            name: item.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: item.answer,
+            },
           })),
         }}
       />
