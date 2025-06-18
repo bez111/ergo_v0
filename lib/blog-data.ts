@@ -80,12 +80,10 @@ export const blogPosts: BlogPost[] = [
       "Explore the latest developments and trending narratives in the Ergo ecosystem, from DeFi protocols to mining innovations.",
     content: "Full article content would go here...",
     slug: "future-of-ergo-ecosystem-growth",
-    image: "/placeholder.svg?height=400&width=600",
     category: "defi",
     tags: ["ecosystem", "defi", "innovation", "blockchain"],
     author: {
       name: "Alex Chen",
-      avatar: "/placeholder.svg?height=100&width=100",
       bio: "Blockchain researcher and DeFi analyst with 5+ years experience in the cryptocurrency space.",
       role: "Lead Researcher",
       social: {
@@ -107,12 +105,10 @@ export const blogPosts: BlogPost[] = [
     description: "A comprehensive guide to ErgoScript programming and smart contract development on the Ergo platform.",
     content: "Full article content would go here...",
     slug: "ergoscript-deep-dive-smart-contracts",
-    image: "/placeholder.svg?height=400&width=600",
     category: "development",
     tags: ["ergoscript", "smart-contracts", "programming", "tutorial"],
     author: {
       name: "Sarah Johnson",
-      avatar: "/placeholder.svg?height=100&width=100",
       bio: "Senior blockchain developer and ErgoScript expert, contributing to core Ergo development.",
       role: "Core Developer",
       social: {
@@ -133,12 +129,10 @@ export const blogPosts: BlogPost[] = [
       "Everything you need to know about mining Ergo, from hardware requirements to pool selection and optimization tips.",
     content: "Full article content would go here...",
     slug: "mining-ergo-complete-setup-guide-2024",
-    image: "/placeholder.svg?height=400&width=600",
     category: "mining",
     tags: ["mining", "hardware", "setup", "guide"],
     author: {
       name: "Mike Rodriguez",
-      avatar: "/placeholder.svg?height=100&width=100",
       bio: "Mining specialist with extensive experience in GPU mining and pool operations.",
       role: "Mining Expert",
       social: {
@@ -158,12 +152,10 @@ export const blogPosts: BlogPost[] = [
     description: "A detailed comparison of blockchain architectures and why Ergo chose the extended UTXO model.",
     content: "Full article content would go here...",
     slug: "understanding-utxo-vs-account-model",
-    image: "/placeholder.svg?height=400&width=600",
     category: "tech",
     tags: ["utxo", "blockchain", "architecture", "comparison"],
     author: {
       name: "Dr. Emily Watson",
-      avatar: "/placeholder.svg?height=100&width=100",
       bio: "PhD in Computer Science, specializing in distributed systems and blockchain technology.",
       role: "Research Director",
       social: {
@@ -183,12 +175,10 @@ export const blogPosts: BlogPost[] = [
       "Learn how SigmaUSD works as a decentralized, algorithmic stablecoin built on Ergo's robust foundation.",
     content: "Full article content would go here...",
     slug: "sigmausd-algorithmic-stablecoin-ergo",
-    image: "/placeholder.svg?height=400&width=600",
     category: "defi",
     tags: ["sigmausd", "stablecoin", "defi", "algorithmic"],
     author: {
       name: "James Park",
-      avatar: "/placeholder.svg?height=100&width=100",
       bio: "DeFi protocol designer and economist, focusing on stablecoin mechanisms and monetary policy.",
       role: "DeFi Architect",
       social: {
@@ -208,12 +198,10 @@ export const blogPosts: BlogPost[] = [
       "Essential security tips and best practices for keeping your ERG and tokens safe in various wallet types.",
     content: "Full article content would go here...",
     slug: "ergo-wallet-security-best-practices",
-    image: "/placeholder.svg?height=400&width=600",
     category: "guides",
     tags: ["security", "wallet", "best-practices", "safety"],
     author: {
       name: "Lisa Chang",
-      avatar: "/placeholder.svg?height=100&width=100",
       bio: "Cybersecurity specialist with focus on cryptocurrency security and user education.",
       role: "Security Consultant",
       social: {

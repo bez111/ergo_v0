@@ -213,10 +213,7 @@ export default function TechnologyPage() {
   return (
     <div className="min-h-screen text-white relative">
       {/* Background Elements */}
-      <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10 z-0" />
       <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90 z-0" />
-      <div className="absolute top-0 right-0 w-full h-full bg-[url('/tech-pattern.png')] bg-no-repeat bg-cover opacity-5 z-0" />
-      <div className="absolute bottom-0 left-0 w-full h-full bg-[url('/resistance-texture.png')] bg-no-repeat bg-cover opacity-5 z-0" />
       <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/10 via-transparent to-red-900/10 z-0" />
 
       <div className="container mx-auto px-4 py-16 relative z-10">

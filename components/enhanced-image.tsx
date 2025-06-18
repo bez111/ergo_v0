@@ -29,7 +29,7 @@ export function EnhancedImage({ src, alt, width, height, fill, className, priori
         </div>
       ) : (
         <Image
-          src={src || "/placeholder.svg"}
+          src={src}
           alt={alt}
           width={width}
           height={height}

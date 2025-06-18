@@ -6,9 +6,6 @@ import { SectionHeading } from "@/components/section-heading"
 export function Manifesto() {
   return (
     <section className="py-16 relative overflow-hidden bg-black border-t border-b border-primary/30">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-[url('/distressed-texture.png')] opacity-10 bg-cover bg-center"></div>
-
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-3xl mx-auto">
           <div className="opacity-100">

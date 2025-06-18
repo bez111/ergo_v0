@@ -26,19 +26,16 @@ import { SchemaOrg } from '@/components/seo/schema-org'
 const centralizedExchanges = [
   {
     name: "KuCoin",
-    logo: "/placeholder.svg?height=40&width=40",
     description: "Global CEX, supports ERG/USDT, ERG/BTC",
     link: "https://www.kucoin.com/",
   },
   {
     name: "Gate.io",
-    logo: "/placeholder.svg?height=40&width=40",
     description: "Global CEX, various ERG pairs",
     link: "https://www.gate.io/",
   },
   {
     name: "HTX (formerly Huobi)",
-    logo: "/placeholder.svg?height=40&width=40",
     description: "Global CEX, ERG trading available",
     link: "https://www.htx.com/",
   },
@@ -47,7 +44,6 @@ const centralizedExchanges = [
 const decentralizedExchanges = [
   {
     name: "Spectrum Finance",
-    logo: "/placeholder.svg?height=40&width=40",
     description: "Primary DEX on Ergo, swap various tokens for ERG",
     link: "https://spectrum.fi/",
   },
@@ -153,7 +149,7 @@ export default function GetErgPage() {
                     <motion.div variants={itemVariants} key={index} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 h-full flex flex-col transition-all duration-300 hover:border-orange-500/50">
                       <CardContent className="p-0 text-center flex-1 flex flex-col">
                         <Image
-                          src={exchange.logo || "/placeholder.svg"}
+                          src="/placeholder.svg"
                           alt={`${exchange.name} logo`}
                           width={50}
                           height={50}
@@ -230,7 +226,7 @@ export default function GetErgPage() {
                   <motion.div variants={itemVariants} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 h-full flex flex-col">
                     <CardContent className="p-0 text-center flex-1 flex flex-col">
                       <Image
-                        src={decentralizedExchanges[0].logo || "/placeholder.svg"}
+                        src="/placeholder.svg"
                         alt={`${decentralizedExchanges[0].name} logo`}
                         width={50}
                         height={50}

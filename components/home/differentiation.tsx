@@ -49,9 +49,6 @@ export function Differentiation() {
 
   return (
     <section className="py-16 relative overflow-hidden bg-black border-t border-b border-primary/30">
-      {/* Background elements */}
-      <div className="absolute inset-0 bg-[url('/glitch-texture.png')] opacity-5 bg-cover bg-center"></div>
-
       {/* Animated grid lines */}
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 

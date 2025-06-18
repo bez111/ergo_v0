@@ -77,19 +77,21 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 overflow-hidden mb-8"
           >
             {/* Hero Image */}
-            <div className="relative h-64 lg:h-96">
-              <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="w-full h-full object-cover" />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+            {post.image && (
+              <div className="relative h-64 lg:h-96">
+                <Image src={post.image} alt={post.title} fill className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
-              {/* Category Badge */}
-              <div className="absolute top-6 left-6">
-                <span
-                  className={`inline-block px-4 py-2 rounded-xl bg-gradient-to-r ${getCategoryGradient(post.category)} text-white font-medium backdrop-blur-md`}
-                >
-                  {post.category.toUpperCase()}
-                </span>
+                {/* Category Badge */}
+                <div className="absolute top-6 left-6">
+                  <span
+                    className={`inline-block px-4 py-2 rounded-xl bg-gradient-to-r ${getCategoryGradient(post.category)} text-white font-medium backdrop-blur-md`}
+                  >
+                    {post.category.toUpperCase()}
+                  </span>
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Article Content */}
             <div className="p-8">
@@ -111,13 +113,15 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                 className="flex flex-wrap items-center gap-6 mb-8 pb-8 border-b border-white/10"
               >
                 <div className="flex items-center gap-3">
-                  <Image
-                    src={post.author.avatar || "/placeholder.svg"}
-                    alt={post.author.name}
-                    width={48}
-                    height={48}
-                    className="w-12 h-12 rounded-full border-2 border-orange-500/30"
-                  />
+                  {post.author.avatar && (
+                    <Image
+                      src={post.author.avatar}
+                      alt={post.author.name}
+                      width={48}
+                      height={48}
+                      className="w-12 h-12 rounded-full border-2 border-orange-500/30"
+                    />
+                  )}
                   <div>
                     <div className="text-white font-medium">{post.author.name}</div>
                     <div className="text-orange-400 text-sm">{post.author.role}</div>
@@ -250,13 +254,15 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             className="bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-8 mb-12"
           >
             <div className="flex items-center gap-6">
-              <Image
-                src={post.author.avatar || "/placeholder.svg"}
-                alt={post.author.name}
-                width={80}
-                height={80}
-                className="w-20 h-20 rounded-full border-4 border-orange-500/30"
-              />
+              {post.author.avatar && (
+                <Image
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 rounded-full border-4 border-orange-500/30"
+                />
+              )}
               <div className="flex-1">
                 <h3 className="text-2xl font-bold text-white mb-2">{post.author.name}</h3>
                 <p className="text-orange-400 font-medium mb-3">{post.author.role}</p>

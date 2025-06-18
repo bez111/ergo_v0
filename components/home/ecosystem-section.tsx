@@ -8,28 +8,24 @@ export function EcosystemSection() {
     {
       name: "ErgoDEX",
       description: "Decentralized exchange for Ergo and Cardano ecosystems",
-      image: "/decentralized-exchange.png",
       category: "DeFi",
       url: "/ecosystem/projects/ergodex",
     },
     {
       name: "Spectrum",
       description: "Liquidity and yield farming protocol",
-      image: "/spectrum-display.png",
       category: "DeFi",
       url: "/ecosystem/projects/spectrum",
     },
     {
       name: "SigmaUSD",
       description: "Algorithmic stablecoin protocol",
-      image: "/sigmausd-concept.png",
       category: "Stablecoin",
       url: "/ecosystem/projects/sigmausd",
     },
     {
       name: "Ergo Mixer",
       description: "Non-custodial mixing service for privacy",
-      image: "/placeholder.svg?height=100&width=100&query=Mixer",
       category: "Privacy",
       url: "/ecosystem/projects/ergomixer",
     },
@@ -54,7 +50,7 @@ export function EcosystemSection() {
             >
               <div className="flex items-center gap-4">
                 <Image
-                  src={project.image || "/placeholder.svg"}
+                  src="/placeholder.svg"
                   alt={project.name}
                   width={50}
                   height={50}

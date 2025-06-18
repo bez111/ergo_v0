@@ -1,7 +1,6 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
@@ -22,7 +21,6 @@ export function EcosystemShowcase() {
       subtitle: "Connecting Ergo's Ecosystem",
       description:
         "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
-      image: "/decentralized-exchange.png",
       stats: [
         { label: "Cross-Chain", value: "BTC, ETH, ADA, BSC & more" },
         { label: "Secure Bridge", value: "Watcher & Guard Model" },
@@ -36,7 +34,6 @@ export function EcosystemShowcase() {
       subtitle: "Non-Custodial Privacy Protocol",
       description:
         "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
-      image: "/audio-mixer.png",
       stats: [
         { label: "Mixed Volume", value: "$3.7M" },
         { label: "Privacy Score", value: "99.9%" },
@@ -50,7 +47,6 @@ export function EcosystemShowcase() {
       subtitle: "Algorithmic Stablecoin Protocol",
       description:
         "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
-      image: "/sigmausd-concept.png",
       stats: [
         { label: "Stability Score", value: "99.2%" },
         { label: "Total Supply", value: "$2.1M" },
@@ -64,7 +60,6 @@ export function EcosystemShowcase() {
       subtitle: "Blockchain Gaming Platform",
       description:
         "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
-      image: "/placeholder.svg?height=400&width=600",
       stats: [
         { label: "Active Games", value: "12" },
         { label: "Players", value: "5K+" },
@@ -80,7 +75,6 @@ export function EcosystemShowcase() {
   return (
     <section className="py-16 relative overflow-hidden bg-black border-t border-b border-primary/30">
       {/* Статичный фон */}
-      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-20 bg-cover bg-center"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"></div>
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col gap-12">
@@ -112,20 +106,7 @@ export function EcosystemShowcase() {
           </div>
           {/* Featured project showcase */}
           <div className="grid lg:grid-cols-2 gap-8 bg-black/60 backdrop-blur-sm border border-primary/30 rounded-lg overflow-hidden">
-            {/* Visual/Image side */}
-            <div className="relative h-64 lg:h-96 flex items-center justify-center overflow-hidden">
-              <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-20 bg-cover bg-center"></div>
-              <div className="relative z-10 flex items-center justify-center w-full h-full">
-                <Image
-                  src={currentProject.image || "/placeholder.svg"}
-                  alt={currentProject.title}
-                  width={300}
-                  height={200}
-                  className="object-contain filter brightness-110 contrast-125"
-                />
-              </div>
-            </div>
-            {/* Info side */}
+            {/* Info side (только текст, stats и CTA) */}
             <div className="flex flex-col justify-center p-8 gap-4">
               <h3 className="text-3xl font-bold text-primary mb-2">{currentProject.title}</h3>
               <div className="text-lg text-white font-mono mb-2">{currentProject.subtitle}</div>

@@ -7,7 +7,6 @@ export interface UseCase {
   tags: string[]
   supportedProjects: {
     name: string
-    logo: string
     url: string
   }[]
   icon: string
@@ -15,7 +14,6 @@ export interface UseCase {
   story?: {
     title: string
     description: string
-    visual: string
   }
 }
 
@@ -78,17 +76,14 @@ export const useCases: UseCase[] = [
     supportedProjects: [
       {
         name: "Spectrum Finance",
-        logo: "/abstract-partner-logo.png",
         url: "https://spectrum.fi",
       },
       {
         name: "SigmaUSD",
-        logo: "/abstract-partner-logo-2.png",
         url: "https://sigmausd.io",
       },
       {
         name: "Duckpools",
-        logo: "/abstract-partner-logo-3.png",
         url: "https://duckpools.io",
       },
     ],
@@ -96,7 +91,6 @@ export const useCases: UseCase[] = [
       title: "Cross-Border Remittance Without Banks",
       description:
         "See how Maria sends money from the US to her family in Mexico using Ergo's DeFi infrastructure, avoiding high fees and delays.",
-      visual: "/decentralized-exchange.png",
     },
   },
   {
@@ -111,7 +105,6 @@ export const useCases: UseCase[] = [
     supportedProjects: [
       {
         name: "ErgoMixer",
-        logo: "/abstract-partner-logo.png",
         url: "https://ergomixer.io",
       },
     ],
@@ -119,7 +112,6 @@ export const useCases: UseCase[] = [
       title: "Protecting Activist Funding",
       description:
         "Learn how human rights organizations use Ergo's privacy tools to protect donors and recipients from authoritarian surveillance.",
-      visual: "/sigmausd-concept.png",
     },
   },
   {
@@ -133,12 +125,10 @@ export const useCases: UseCase[] = [
     supportedProjects: [
       {
         name: "SigmaUSD",
-        logo: "/abstract-partner-logo-2.png",
         url: "https://sigmausd.io",
       },
       {
         name: "SigmaRSV",
-        logo: "/abstract-partner-logo-3.png",
         url: "https://sigmausd.io",
       },
     ],
@@ -154,7 +144,6 @@ export const useCases: UseCase[] = [
     supportedProjects: [
       {
         name: "Rosen Bridge",
-        logo: "/abstract-partner-logo.png",
         url: "https://rosen.tech",
       },
     ],
@@ -171,7 +160,6 @@ export const useCases: UseCase[] = [
     supportedProjects: [
       {
         name: "Paideia",
-        logo: "/abstract-partner-logo-4.png",
         url: "https://paideia.im",
       },
     ],
@@ -179,7 +167,6 @@ export const useCases: UseCase[] = [
       title: "Community-Owned Renewable Energy",
       description:
         "Discover how a village in Kenya uses Ergo DAOs to collectively own and manage solar infrastructure, sharing profits transparently.",
-      visual: "/audio-mixer.png",
     },
   },
   {
@@ -193,17 +180,14 @@ export const useCases: UseCase[] = [
     supportedProjects: [
       {
         name: "SkyHarbor",
-        logo: "/abstract-partner-logo.png",
         url: "https://skyharbor.io",
       },
       {
         name: "Auction House",
-        logo: "/abstract-partner-logo-2.png",
         url: "https://ergoauctions.org",
       },
       {
         name: "Lilium",
-        logo: "/abstract-partner-logo-3.png",
         url: "https://lilium.fi",
       },
     ],

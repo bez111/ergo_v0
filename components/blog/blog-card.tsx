@@ -39,14 +39,16 @@ export function BlogCard({ post, variant = "default", index = 0 }: BlogCardProps
         >
           <Link href={`/blog/${post.slug}`}>
             <div className="flex gap-4">
-              <Image
-                src={post.image || "/placeholder.svg"}
-                alt={post.title}
-                width={80}
-                height={80}
-                className="w-20 h-20 rounded-lg object-cover group-hover:scale-105 transition-transform duration-300"
-                loading="lazy"
-              />
+              {post.image && (
+                <Image
+                  src={post.image}
+                  alt={post.title}
+                  width={80}
+                  height={80}
+                  className="w-20 h-20 rounded-lg object-cover group-hover:scale-105 transition-transform duration-300"
+                  loading="lazy"
+                />
+              )}
               <div className="flex-1">
                 <span
                   className={`inline-block px-2 py-1 rounded-lg bg-gradient-to-r ${getCategoryGradient(post.category)} text-white text-xs font-medium mb-2`}
@@ -86,14 +88,16 @@ export function BlogCard({ post, variant = "default", index = 0 }: BlogCardProps
       >
         <Link href={`/blog/${post.slug}`}>
           <div className="relative">
-            <Image
-              src={post.image || "/placeholder.svg"}
-              alt={post.title}
-              width={600}
-              height={192}
-              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
+            {post.image && (
+              <Image
+                src={post.image}
+                alt={post.title}
+                width={600}
+                height={192}
+                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+                loading="lazy"
+              />
+            )}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
             {/* Category badge */}
@@ -126,14 +130,16 @@ export function BlogCard({ post, variant = "default", index = 0 }: BlogCardProps
             <p className="text-white/70 text-sm mb-4 leading-relaxed line-clamp-2">{post.description}</p>
 
             <div className="flex items-center gap-4 mb-4">
-              <Image
-                src={post.author.avatar || "/placeholder.svg"}
-                alt={post.author.name}
-                width={32}
-                height={32}
-                className="w-8 h-8 rounded-full border border-white/20"
-                loading="lazy"
-              />
+              {post.author.avatar && (
+                <Image
+                  src={post.author.avatar}
+                  alt={post.author.name}
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 rounded-full border border-white/20"
+                  loading="lazy"
+                />
+              )}
               <div>
                 <div className="text-white text-sm font-medium">{post.author.name}</div>
                 <div className="text-white/60 text-xs">{post.author.role}</div>

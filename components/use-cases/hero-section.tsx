@@ -8,7 +8,6 @@ export function HeroSection() {
     <section className="relative py-20 overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-gray-950 via-gray-900 to-gray-950" />
-      <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-5 bg-cover bg-center" />
 
       {/* Animated elements */}
       <div className="absolute inset-0 overflow-hidden">

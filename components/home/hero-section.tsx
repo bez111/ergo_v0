@@ -16,16 +16,6 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-24 lg:py-32" aria-label="Hero Section">
       {/* Static background */}
       <div className="absolute inset-0 bg-black z-0" aria-hidden="true"></div>
-      <div className="absolute inset-0 z-0">
-        <Image
-          src="/cyberpunk-grid.png"
-          alt="Decorative cyberpunk grid background"
-          fill
-          priority
-          quality={75}
-          className="opacity-20 object-cover"
-        />
-      </div>
       <div className="container relative z-10 px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
           {/* Logo/Brand */}

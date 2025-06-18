@@ -36,7 +36,6 @@ interface Wallet {
   id: string
   name: string
   description: string
-  image: string
   platforms: string[]
   features: string[]
   category: string
@@ -63,7 +62,6 @@ const walletData: WalletData = {
       id: "ergo-wallet",
       name: "Ergo Wallet",
       description: "Official desktop and mobile wallet with full feature support",
-      image: "/placeholder.svg?height=80&width=80",
       platforms: ["Windows", "macOS", "Linux", "iOS", "Android"],
       features: ["Full Node", "dApp Support", "Multi-Sig", "Privacy Features"],
       category: "Official",
@@ -80,7 +78,6 @@ const walletData: WalletData = {
       id: "ergo-node",
       name: "Ergo Node",
       description: "Full node wallet for advanced users and developers",
-      image: "/placeholder.svg?height=80&width=80",
       platforms: ["Windows", "macOS", "Linux"],
       features: ["Full Node", "API Access", "Mining Support", "Advanced Settings"],
       category: "Desktop",
@@ -97,7 +94,6 @@ const walletData: WalletData = {
       id: "ergo-mobile",
       name: "Ergo Mobile",
       description: "Official mobile wallet for iOS and Android",
-      image: "/placeholder.svg?height=80&width=80",
       platforms: ["iOS", "Android"],
       features: ["Biometric Auth", "QR Scanner", "dApp Browser", "Push Notifications"],
       category: "Mobile",
@@ -112,7 +108,6 @@ const walletData: WalletData = {
       id: "terminus",
       name: "Terminus",
       description: "Feature-rich mobile wallet with advanced dApp integration",
-      image: "/placeholder.svg?height=80&width=80",
       platforms: ["iOS", "Android"],
       features: ["dApp Browser", "DeFi Integration", "NFT Support", "Portfolio Tracking"],
       category: "Mobile",
@@ -129,7 +124,6 @@ const walletData: WalletData = {
       id: "nautilus",
       name: "Nautilus",
       description: "Popular browser extension wallet for web3 interactions",
-      image: "/placeholder.svg?height=80&width=80",
       platforms: ["Chrome", "Firefox", "Brave", "Edge"],
       features: ["Web3 Integration", "dApp Connector", "Multi-Account", "Hardware Support"],
       category: "Browser",
@@ -144,7 +138,6 @@ const walletData: WalletData = {
       id: "safew",
       name: "SAFEW",
       description: "Simple and fast Ergo web wallet",
-      image: "/placeholder.svg?height=80&width=80",
       platforms: ["Web"],
       features: ["Web-based", "No Download", "Quick Setup", "Basic Features"],
       category: "Browser",
@@ -161,7 +154,6 @@ const walletData: WalletData = {
       id: "ledger",
       name: "Ledger",
       description: "Hardware wallet with Ergo support for maximum security",
-      image: "/placeholder.svg?height=80&width=80",
       platforms: ["Hardware"],
       features: ["Cold Storage", "PIN Protection", "Recovery Phrase", "Multi-Currency"],
       category: "Hardware",
@@ -346,7 +338,7 @@ export default function WalletPage() {
                         <div className="flex items-center gap-3">
                           <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center backdrop-blur-sm">
                             <Image
-                              src={wallet.image || "/placeholder.svg"}
+                              src="/placeholder.svg"
                               alt={wallet.name}
                               width={32}
                               height={32}

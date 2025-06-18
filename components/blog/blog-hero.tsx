@@ -34,13 +34,15 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
         className="relative flex-1 bg-gradient-to-br from-orange-500/20 to-red-700/20 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm border border-orange-500/20"
       >
         <div className="absolute inset-0">
-          <Image
-            src={featuredPost.image || "/placeholder.svg"}
-            alt={featuredPost.title}
-            fill
-            className="w-full h-full object-cover opacity-30"
-            loading="lazy"
-          />
+          {featuredPost.image && (
+            <Image
+              src={featuredPost.image}
+              alt={featuredPost.title}
+              fill
+              className="w-full h-full object-cover opacity-30"
+              loading="lazy"
+            />
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
 
@@ -86,14 +88,16 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="flex items-center gap-4 mb-6"
           >
-            <Image
-              src={featuredPost.author.avatar || "/placeholder.svg"}
-              alt={featuredPost.author.name}
-              width={48}
-              height={48}
-              className="w-12 h-12 rounded-full border-2 border-white/50"
-              loading="lazy"
-            />
+            {featuredPost.author.avatar && (
+              <Image
+                src={featuredPost.author.avatar}
+                alt={featuredPost.author.name}
+                width={48}
+                height={48}
+                className="w-12 h-12 rounded-full border-2 border-white/50"
+                loading="lazy"
+              />
+            )}
             <div>
               <div className="text-white font-medium">{featuredPost.author.name}</div>
               <div className="text-white/70 text-sm">
@@ -154,14 +158,16 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
           >
             <Link href={`/blog/${post.slug}`}>
               <div className="flex gap-4">
-                <Image
-                  src={post.image || "/placeholder.svg"}
-                  alt={post.title}
-                  width={64}
-                  height={64}
-                  className="w-16 h-16 rounded-lg object-cover"
-                  loading="lazy"
-                />
+                {post.image && (
+                  <Image
+                    src={post.image}
+                    alt={post.title}
+                    width={64}
+                    height={64}
+                    className="w-16 h-16 rounded-lg object-cover"
+                    loading="lazy"
+                  />
+                )}
                 <div className="flex-1">
                   <span
                     className={`inline-block px-2 py-1 rounded-lg bg-gradient-to-r ${getCategoryGradient(post.category)} text-white text-xs font-medium mb-2`}
