@@ -183,7 +183,7 @@ export default function CommunityPage() {
           {/* Platforms Section */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
-              <SectionHeading text="COMMUNICATION HUBS" />
+              <SectionHeading text="COMMUNICATION HUBS" className="text-center" />
 
               <StaggerContainer>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -255,7 +255,7 @@ export default function CommunityPage() {
           {/* Contribution Opportunities */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
-              <SectionHeading text="CONTRIBUTION MATRIX" />
+              <SectionHeading text="CONTRIBUTION MATRIX" className="text-center" />
 
               <FadeIn>
                 <div className="text-center mb-16">
@@ -307,7 +307,7 @@ export default function CommunityPage() {
           {/* Community Guidelines */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
-              <SectionHeading text="COMMUNITY PROTOCOL" />
+              <SectionHeading text="COMMUNITY PROTOCOL" className="text-center" />
 
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {guidelines.map((guideline, index) => (
