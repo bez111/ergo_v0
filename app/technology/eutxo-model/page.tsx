@@ -9,6 +9,7 @@ import { ChevronDown, ArrowRight, Box, Database, Shield, Zap, Eye, Code, Externa
 import { useState } from "react"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -177,6 +178,17 @@ export default function EUTXOModelPage() {
 
   return (
     <div className="min-h-screen relative">
+      {/* Breadcrumbs */}
+      <div className="container mx-auto px-4 pt-8">
+        <Breadcrumbs
+          items={[
+            { label: "Technology", href: "/technology" },
+            { label: "eUTXO Model", href: "/technology/eutxo-model" }
+          ]}
+          className="mb-8"
+        />
+      </div>
+
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-black to-cyan-500/10" />

@@ -2,7 +2,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "Secure PoW - Autolykos v2 Mining Algorithm | Ergo Platform",
-  description: "Learn about Ergo's Autolykos v2 Proof-of-Work algorithm - ASIC-resistant, energy-efficient mining that promotes decentralization and long-term network security.",
+  description: "Learn about Autolykos v2, Ergo's ASIC-resistant Proof-of-Work algorithm. Designed for decentralized mining with memory-hard functions and energy efficiency.",
   keywords: [
     "Autolykos v2",
     "Proof of Work",
@@ -16,16 +16,20 @@ export const metadata: Metadata = {
     "fair launch"
   ],
   openGraph: {
-    title: "Secure PoW - Autolykos v2 Mining Algorithm | Ergo Platform",
-    description: "ASIC-resistant, energy-efficient mining that promotes decentralization. Mine with standard GPUs and contribute to network security.",
-    type: "article",
-    images: ["/og-secure-pow.png"]
+    title: "Secure PoW - Autolykos v2 Mining Algorithm",
+    description: "Learn about Autolykos v2, Ergo's ASIC-resistant Proof-of-Work algorithm. Designed for decentralized mining with memory-hard functions and energy efficiency.",
+    type: "website",
+    images: ["/og-image.jpg"]
   },
   twitter: {
     card: "summary_large_image",
     title: "Secure PoW - Autolykos v2 Mining Algorithm",
-    description: "ASIC-resistant, energy-efficient mining that promotes decentralization and long-term security."
-  }
+    description: "ASIC-resistant, energy-efficient mining that promotes decentralization and long-term security.",
+    images: ["/og-image.jpg"]
+  },
+  alternates: {
+    canonical: "https://ergoplatform.org/technology/secure-pow",
+  },
 }
 
 export default function SecurePowLayout({

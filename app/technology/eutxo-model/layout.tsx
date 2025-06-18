@@ -2,7 +2,7 @@ import { Metadata } from "next"
 
 export const metadata: Metadata = {
   title: "eUTXO Model - Extended UTXO for Smart Contracts | Ergo Platform",
-  description: "Learn about Ergo's eUTXO model - an extended UTXO system that enables secure, parallel smart contracts with no re-entrancy attacks. Perfect for DeFi and complex financial applications.",
+  description: "Discover the eUTXO model, a secure and scalable approach to smart contracts. Learn how Ergo's extended UTXO model prevents re-entrancy attacks and enables complex DeFi applications.",
   keywords: [
     "eUTXO",
     "Extended UTXO",
@@ -16,16 +16,20 @@ export const metadata: Metadata = {
     "cryptocurrency"
   ],
   openGraph: {
-    title: "eUTXO Model - Secure Smart Contracts | Ergo Platform",
-    description: "Discover how eUTXO enables parallel, secure smart contracts without re-entrancy attacks. The foundation of Ergo's DeFi ecosystem.",
-    type: "article",
-    images: ["/og-eutxo-model.png"]
+    title: "eUTXO Model - Extended UTXO for Smart Contracts",
+    description: "Discover the eUTXO model, a secure and scalable approach to smart contracts. Learn how Ergo's extended UTXO model prevents re-entrancy attacks and enables complex DeFi applications.",
+    type: "website",
+    images: ["/og-image.jpg"]
   },
   twitter: {
     card: "summary_large_image",
     title: "eUTXO Model - Secure Smart Contracts",
-    description: "Parallel, secure smart contracts without re-entrancy attacks. The future of DeFi."
-  }
+    description: "Parallel, secure smart contracts without re-entrancy attacks. The future of DeFi.",
+    images: ["/og-image.jpg"]
+  },
+  alternates: {
+    canonical: "https://ergoplatform.org/technology/eutxo-model",
+  },
 }
 
 export default function EUTXOLayout({

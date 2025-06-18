@@ -10,6 +10,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { Metadata } from "next"
 import { SchemaOrg } from "@/components/seo/schema-org"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 
 export const metadata: Metadata = {
   title: "NIPoPoWs - Non-Interactive Proofs of Proof-of-Work | Ergo Platform",
@@ -187,46 +188,71 @@ export default function NIPOPOWsPage() {
       <SchemaOrg
         type="FAQPage"
         data={{
-          '@type': 'FAQPage',
-          mainEntity: faqs.map((faq) => ({
-            '@type': 'Question',
-            name: faq.question,
-            acceptedAnswer: {
-              '@type': 'Answer',
-              text: faq.answer,
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What are NIPoPoWs?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) are compact proofs that allow light clients to verify blockchain state without downloading the entire blockchain. They provide efficient verification for mobile and IoT devices."
+              }
             },
-          })),
+            {
+              "@type": "Question",
+              name: "How do NIPoPoWs improve scalability?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "NIPoPoWs enable light clients to verify blockchain state with minimal data transfer. This reduces bandwidth requirements, improves mobile wallet performance, and enables blockchain verification on resource-constrained devices."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "What are the benefits of NIPoPoWs?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "NIPoPoWs provide efficient blockchain verification, reduce bandwidth usage, enable mobile and IoT blockchain applications, improve user experience for light clients, and maintain security without full node requirements."
+              }
+            }
+          ]
         }}
       />
-      <div className="min-h-screen relative">
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-black to-cyan-500/10" />
-          <motion.div
-            className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -50, 0],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
-            animate={{
-              x: [0, -80, 0],
-              y: [0, 60, 0],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
+      
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+        {/* Breadcrumbs */}
+        <div className="container mx-auto px-4 pt-8">
+          <Breadcrumbs
+            items={[
+              { label: "Technology", href: "/technology" },
+              { label: "NIPoPoWs", href: "/technology/nipopows" }
+            ]}
+            className="mb-8"
           />
         </div>
+
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-cyan-500/10"></div>
+          <div className="container mx-auto px-4 py-24 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                NIPoPoWs
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
+                Non-Interactive Proofs of Proof-of-Work for efficient blockchain verification 
+                and light client support on mobile and IoT devices.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-4 rounded-xl text-lg">
+                  Learn More
+                </Button>
+                <Button variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-xl text-lg backdrop-blur-sm">
+                  Technical Paper
+                </Button>
+              </div>
+            </div>
+          </div>
+        </section>
 
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
           {/* Hero Section */}

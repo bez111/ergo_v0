@@ -26,6 +26,9 @@ import { GlitchText } from "@/components/animations/glitch-text"
 import { Play } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import { Metadata } from "next"
+import { SchemaOrg } from "@/components/seo/schema-org"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -177,347 +180,333 @@ export default function StorageRentPage() {
   ]
 
   return (
-    <div className="min-h-screen relative">
-      {/* Animated Background (as in eutxo-model) */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-black to-cyan-500/10" />
-        <motion.div
-          className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, -80, 0],
-            y: [0, 60, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
-          }}
-        />
-      </div>
+    <>
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What is Storage Rent?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Storage Rent is a mechanism that charges users for storing data on the blockchain over time. It helps prevent blockchain bloat by incentivizing users to clean up unused data and ensures the network remains efficient and sustainable."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "How does Storage Rent work?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Storage Rent charges a small fee for data stored on the blockchain. Users can either pay the rent to keep their data or remove it to avoid charges. This creates an economic incentive to maintain only necessary data on the blockchain."
+              }
+            },
+            {
+              "@type": "Question",
+              name: "What are the benefits of Storage Rent?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Storage Rent prevents blockchain bloat, reduces storage costs for node operators, encourages efficient data management, and helps maintain network performance and decentralization over time."
+              }
+            }
+          ]
+        }}
+      />
+      
+      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+        {/* Breadcrumbs */}
+        <div className="container mx-auto px-4 pt-8">
+          <Breadcrumbs
+            items={[
+              { label: "Technology", href: "/technology" },
+              { label: "Storage Rent", href: "/technology/storage-rent" }
+            ]}
+            className="mb-8"
+          />
+        </div>
 
-      <div className="relative z-10">
-        {/* HERO SECTION — NIPoPoWs STYLE, NO ANIMATION */}
-        <section className="pt-32 pb-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
-                  SUSTAINABILITY
-                </Badge>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                  Storage Rent
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
-                  Sustainable Blockchain Economics for Ergo
-                </p>
-                <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
-                  While other blockchains bloat with forgotten data, Ergo stays lean, efficient, and sustainable through intelligent storage rent mechanics.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                    Learn More
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                  >
-                    Technical Docs
-                  </Button>
-                </div>
-              </div>
-              <div className="relative">
-                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
-                  <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                      Smart Economics
-                    </h3>
-                    <div className="grid grid-cols-2 gap-4 text-center">
-                      <div>
-                        <div className="text-3xl font-bold text-orange-400">4 Years</div>
-                        <div className="text-sm text-gray-400">Free Storage</div>
-                      </div>
-                      <div>
-                        <div className="text-3xl font-bold text-cyan-400">0.13 ERG</div>
-                        <div className="text-sm text-gray-400">Rent per Box</div>
-                      </div>
-                    </div>
-                    <div className="flex justify-center mt-8">
-                      <Recycle className="w-16 h-16 text-orange-400" />
-                    </div>
-                  </CardContent>
-                </Card>
+        {/* Hero Section */}
+        <section className="relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-cyan-500/10"></div>
+          <div className="container mx-auto px-4 py-24 relative z-10">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                Storage Rent
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
+                A sustainable mechanism to prevent blockchain bloat and maintain network efficiency 
+                through economic incentives for data management.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-4 rounded-xl text-lg">
+                  Learn More
+                </Button>
+                <Button variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-xl text-lg backdrop-blur-sm">
+                  Technical Details
+                </Button>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Problems Section - Enhanced */}
-        <section className="py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">
-                  The Problem
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Traditional blockchains face critical sustainability challenges that threaten their long-term viability
-              </p>
-            </div>
+        <div className="relative z-10">
+          {/* Problems Section - Enhanced */}
+          <section className="py-20 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-5xl font-bold mb-6">
+                  <span className="bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent">
+                    The Problem
+                  </span>
+                </h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Traditional blockchains face critical sustainability challenges that threaten their long-term viability
+                </p>
+              </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
-              {problems.map((problem, index) => (
-                <div
-                  key={problem.title}
-                  className="group cursor-pointer"
-                >
-                  <Card
-                    className={`${problem.bgColor} ${problem.borderColor} border-2 hover:border-opacity-70 transition-all duration-500 h-full`}
-                  >
-                    <CardContent className="p-8 relative">
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-10 rounded-full transform translate-x-8 -translate-y-8" />
-
-                      <div
-                        className={`p-4 bg-gradient-to-r ${problem.color} bg-opacity-20 rounded-2xl text-white w-fit mb-6`}
-                      >
-                        {problem.icon}
-                      </div>
-
-                      <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 group-hover:bg-clip-text transition-all duration-300">
-                        {problem.title}
-                      </h3>
-
-                      <p className="text-gray-300 leading-relaxed mb-4">{problem.description}</p>
-
-                      <div className="flex items-center justify-between">
-                        <Badge variant="outline" className="text-red-400 border-red-400/50">
-                          {problem.stats}
-                        </Badge>
-                        <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-2 transition-all duration-300" />
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Solutions Section - Redesigned */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Ergo's Solution
-                </span>
-              </h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Revolutionary storage rent mechanics that keep the blockchain healthy and sustainable
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              {solutions.map((solution, index) => (
-                <div
-                  key={solution.title}
-                  className="group cursor-pointer"
-                >
-                  <Card
-                    className={`bg-gradient-to-br ${solution.gradient} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full`}
-                  >
-                    <CardContent className="p-8 text-center relative overflow-hidden">
-                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-
-                      <div
-                        className={`${solution.color} mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
-                      >
-                        {solution.icon}
-                      </div>
-
-                      <h3 className="text-2xl font-bold mb-4 text-white">{solution.title}</h3>
-                      <p className="text-gray-300 leading-relaxed">{solution.description}</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Interactive Timeline */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 text-cyan-400">How Storage Rent Works</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Follow the lifecycle of a UTXO through Ergo's storage rent system
-              </p>
-            </div>
-
-            <div className="relative">
-              {/* Timeline Line */}
-              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-500 to-cyan-500 rounded-full" />
-
-              <div className="space-y-16">
-                {timeline.map((phase, index) => (
+              <div className="grid md:grid-cols-3 gap-8">
+                {problems.map((problem, index) => (
                   <div
-                    key={phase.year}
-                    className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                    key={problem.title}
+                    className="group cursor-pointer"
                   >
-                    <div className="flex-1 px-8">
-                      <Card
-                        className={`${phase.bgColor} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300`}
-                      >
-                        <CardContent className="p-8">
-                          <div className="flex items-center mb-4">
-                            <div className={`p-3 ${phase.bgColor} rounded-xl ${phase.color} mr-4`}>{phase.icon}</div>
-                            <div>
-                              <h3 className={`text-2xl font-bold ${phase.color}`}>{phase.status}</h3>
-                              <p className="text-gray-400 font-medium">{phase.year}</p>
-                            </div>
-                          </div>
-                          <p className="text-gray-300 text-lg mb-3">{phase.description}</p>
-                          <p className="text-gray-400 text-sm">{phase.details}</p>
-                        </CardContent>
-                      </Card>
-                    </div>
+                    <Card
+                      className={`${problem.bgColor} ${problem.borderColor} border-2 hover:border-opacity-70 transition-all duration-500 h-full`}
+                    >
+                      <CardContent className="p-8 relative">
+                        <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-10 rounded-full transform translate-x-8 -translate-y-8" />
 
-                    {/* Timeline Node */}
-                    <div
-                      className={`w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-cyan-500 border-4 border-black z-10`}
-                    />
+                        <div
+                          className={`p-4 bg-gradient-to-r ${problem.color} bg-opacity-20 rounded-2xl text-white w-fit mb-6`}
+                        >
+                          {problem.icon}
+                        </div>
 
-                    <div className="flex-1 px-8" />
+                        <h3 className="text-2xl font-bold mb-4 text-white group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-gray-300 group-hover:bg-clip-text transition-all duration-300">
+                          {problem.title}
+                        </h3>
+
+                        <p className="text-gray-300 leading-relaxed mb-4">{problem.description}</p>
+
+                        <div className="flex items-center justify-between">
+                          <Badge variant="outline" className="text-red-400 border-red-400/50">
+                            {problem.stats}
+                          </Badge>
+                          <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-white group-hover:translate-x-2 transition-all duration-300" />
+                        </div>
+                      </CardContent>
+                    </Card>
                   </div>
                 ))}
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        {/* Benefits Grid */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-5xl font-bold mb-6 text-orange-400">Why Storage Rent Matters</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                The benefits extend far beyond just cleaning up the blockchain
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {benefits.map((benefit, index) => (
-                <div
-                  key={index}
-                  className="group cursor-pointer"
-                >
-                  <Card className="bg-gray-900/50 border-gray-700/50 hover:border-green-500/50 transition-all duration-300 rounded-xl overflow-hidden">
-                    <CardContent className="p-6">
-                      <div className="flex items-start space-x-4">
-                        <div className="text-green-400 group-hover:scale-110 transition-transform duration-300">
-                          {benefit.icon}
-                        </div>
-                        <span className="text-gray-300 group-hover:text-white transition-colors duration-300 leading-relaxed">
-                          {benefit.text}
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-              Frequently Asked Questions
-            </h2>
-
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <Card
-                  key={index}
-                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
-                >
-                  <Collapsible
-                    open={openFAQ === index}
-                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  >
-                    <CollapsibleTrigger className="w-full">
-                      <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
-                        <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
-                        <ChevronDown
-                          className={`w-5 h-5 text-gray-400 transition-transform ${
-                            openFAQ === index ? "rotate-180" : ""
-                          }`}
-                        />
-                      </CardContent>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent>
-                      <CardContent className="px-6 pb-6 pt-0">
-                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
-                      </CardContent>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section — NIPoPoWs Style */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Card className="bg-gradient-to-r from-orange-500/20 to-cyan-500/20 border-orange-500/30 backdrop-blur-xl">
-              <CardContent className="p-12">
-                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  The Future is Sustainable
+          {/* Solutions Section - Redesigned */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-5xl font-bold mb-6">
+                  <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                    Ergo's Solution
+                  </span>
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Storage Rent keeps Ergo efficient, fair, and ready for the decades ahead. No bloat, no dead coins, no garbage — just a healthy, sustainable blockchain economy.
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Revolutionary storage rent mechanics that keep the blockchain healthy and sustainable
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    asChild
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                {solutions.map((solution, index) => (
+                  <div
+                    key={solution.title}
+                    className="group cursor-pointer"
                   >
-                    <Link href="/ecosystem" className="flex items-center">
-                      <ArrowRight className="mr-2 w-4 h-4" />
-                      Start Building on Ergo
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                  >
-                    <Link href="https://docs.ergoplatform.com/protocol/storage-rent/" className="flex items-center">
-                      <ExternalLink className="mr-2 w-4 h-4" />
-                      Technical Documentation
-                    </Link>
-                  </Button>
+                    <Card
+                      className={`bg-gradient-to-br ${solution.gradient} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full`}
+                    >
+                      <CardContent className="p-8 text-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                        <div
+                          className={`${solution.color} mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}
+                        >
+                          {solution.icon}
+                        </div>
+
+                        <h3 className="text-2xl font-bold mb-4 text-white">{solution.title}</h3>
+                        <p className="text-gray-300 leading-relaxed">{solution.description}</p>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Interactive Timeline */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-5xl font-bold mb-6 text-cyan-400">How Storage Rent Works</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  Follow the lifecycle of a UTXO through Ergo's storage rent system
+                </p>
+              </div>
+
+              <div className="relative">
+                {/* Timeline Line */}
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-orange-500 to-cyan-500 rounded-full" />
+
+                <div className="space-y-16">
+                  {timeline.map((phase, index) => (
+                    <div
+                      key={phase.year}
+                      className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
+                    >
+                      <div className="flex-1 px-8">
+                        <Card
+                          className={`${phase.bgColor} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300`}
+                        >
+                          <CardContent className="p-8">
+                            <div className="flex items-center mb-4">
+                              <div className={`p-3 ${phase.bgColor} rounded-xl ${phase.color} mr-4`}>{phase.icon}</div>
+                              <div>
+                                <h3 className={`text-2xl font-bold ${phase.color}`}>{phase.status}</h3>
+                                <p className="text-gray-400 font-medium">{phase.year}</p>
+                              </div>
+                            </div>
+                            <p className="text-gray-300 text-lg mb-3">{phase.description}</p>
+                            <p className="text-gray-400 text-sm">{phase.details}</p>
+                          </CardContent>
+                        </Card>
+                      </div>
+
+                      {/* Timeline Node */}
+                      <div
+                        className={`w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-cyan-500 border-4 border-black z-10`}
+                      />
+
+                      <div className="flex-1 px-8" />
+                    </div>
+                  ))}
                 </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+              </div>
+            </div>
+          </section>
+
+          {/* Benefits Grid */}
+          <section className="py-20 px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-5xl font-bold mb-6 text-orange-400">Why Storage Rent Matters</h2>
+                <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+                  The benefits extend far beyond just cleaning up the blockchain
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                {benefits.map((benefit, index) => (
+                  <div
+                    key={index}
+                    className="group cursor-pointer"
+                  >
+                    <Card className="bg-gray-900/50 border-gray-700/50 hover:border-green-500/50 transition-all duration-300 rounded-xl overflow-hidden">
+                      <CardContent className="p-6">
+                        <div className="flex items-start space-x-4">
+                          <div className="text-green-400 group-hover:scale-110 transition-transform duration-300">
+                            {benefit.icon}
+                          </div>
+                          <span className="text-gray-300 group-hover:text-white transition-colors duration-300 leading-relaxed">
+                            {benefit.text}
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* FAQ Section */}
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                Frequently Asked Questions
+              </h2>
+
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <Card
+                    key={index}
+                    className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                  >
+                    <Collapsible
+                      open={openFAQ === index}
+                      onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    >
+                      <CollapsibleTrigger className="w-full">
+                        <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                          <ChevronDown
+                            className={`w-5 h-5 text-gray-400 transition-transform ${
+                              openFAQ === index ? "rotate-180" : ""
+                            }`}
+                          />
+                        </CardContent>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <CardContent className="px-6 pb-6 pt-0">
+                          <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                        </CardContent>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* CTA Section — NIPoPoWs Style */}
+          <section className="py-20 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <Card className="bg-gradient-to-r from-orange-500/20 to-cyan-500/20 border-orange-500/30 backdrop-blur-xl">
+                <CardContent className="p-12">
+                  <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                    The Future is Sustainable
+                  </h2>
+                  <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                    Storage Rent keeps Ergo efficient, fair, and ready for the decades ahead. No bloat, no dead coins, no garbage — just a healthy, sustainable blockchain economy.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button
+                      asChild
+                      className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
+                    >
+                      <Link href="/ecosystem" className="flex items-center">
+                        <ArrowRight className="mr-2 w-4 h-4" />
+                        Start Building on Ergo
+                      </Link>
+                    </Button>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    >
+                      <Link href="https://docs.ergoplatform.com/protocol/storage-rent/" className="flex items-center">
+                        <ExternalLink className="mr-2 w-4 h-4" />
+                        Technical Documentation
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </section>
+        </div>
       </div>
-    </div>
+    </>
   )
 }
