@@ -5,10 +5,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
-import { Shield, Cpu, Zap, Users, ExternalLink, CheckCircle, TrendingUp } from "lucide-react"
+import { Shield, Cpu, Zap, Users, ExternalLink, CheckCircle, TrendingUp, ChevronDown } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 
 const features = [
   {
@@ -48,6 +50,27 @@ const benefits = [
 ]
 
 export default function SecurePowPage() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
+  const faqs = [
+    {
+      question: "What's \"Secure PoW\" and why does it matter?",
+      answer: "It's Proof-of-Work, but redesigned to stay fair and decentralized—even as mining tech evolves.",
+    },
+    {
+      question: "Does Secure PoW mean \"ASIC-resistant\"?",
+      answer: "It raises the bar for everyone, making it much harder for one group to dominate mining and attack the network.",
+    },
+    {
+      question: "Is it greener?",
+      answer: "The real win: network stays decentralized without a constant arms race, so efficiency stays high over time.",
+    },
+    {
+      question: "Can it be hacked?",
+      answer: "Any PoW can be attacked if someone owns most of the power, but Secure PoW is built to keep that unlikely.",
+    },
+  ]
+
   return (
     <div className="min-h-screen relative">
       {/* Animated Background */}
@@ -269,6 +292,45 @@ export default function SecurePowPage() {
               </p>
             </CardContent>
           </Card>
+        </FadeIn>
+
+        {/* FAQ Section */}
+        <FadeIn delay={0.9}>
+          <div className="max-w-4xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <Card
+                  key={index}
+                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                >
+                  <Collapsible
+                    open={openFAQ === index}
+                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  >
+                    <CollapsibleTrigger className="w-full">
+                      <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                        <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                        <ChevronDown
+                          className={`w-5 h-5 text-gray-400 transition-transform ${
+                            openFAQ === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </CardContent>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <CardContent className="px-6 pb-6 pt-0">
+                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                      </CardContent>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </Card>
+              ))}
+            </div>
+          </div>
         </FadeIn>
 
         {/* CTA */}

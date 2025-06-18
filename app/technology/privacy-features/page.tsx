@@ -4,8 +4,10 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Eye, Shield, Shuffle, Vote, ArrowRight, ExternalLink, CheckCircle, Lock } from "lucide-react"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { Eye, Shield, Shuffle, Vote, ArrowRight, ExternalLink, CheckCircle, Lock, ChevronDown } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,6 +25,8 @@ const itemVariants = {
 }
 
 export default function PrivacyFeaturesPage() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
   const technologies = [
     {
       icon: <Shield className="w-8 h-8" />,
@@ -114,6 +118,25 @@ export default function PrivacyFeaturesPage() {
       features: ["Zero-knowledge proofs", "Ring signatures", "Confidential assets", "Private smart contracts"],
       color: "from-cyan-500/20 to-cyan-500/10",
       border: "border-cyan-500/30",
+    },
+  ]
+
+  const faqs = [
+    {
+      question: "How private is Ergo really?",
+      answer: "Privacy is baked in—mixers, stealth addresses, and selective disclosure. Your transaction, your rules.",
+    },
+    {
+      question: "Will using privacy features put a target on my back?",
+      answer: "On Ergo, privacy is the norm, not the exception. You blend in with everyone else.",
+    },
+    {
+      question: "Is private-by-default \"suspicious\"?",
+      answer: "Not here. Regulators care about intent, and Ergo's tech offers transparency when you want it.",
+    },
+    {
+      question: "Can I ever prove a private transaction if I need to?",
+      answer: "Yes, you can choose when and what to reveal, so compliance and privacy don't have to fight.",
     },
   ]
 
@@ -344,6 +367,45 @@ export default function PrivacyFeaturesPage() {
                     </CardContent>
                   </Card>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+        {/* FAQ Section */}
+        <motion.section variants={itemVariants} className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <Card
+                  key={index}
+                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                >
+                  <Collapsible
+                    open={openFAQ === index}
+                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  >
+                    <CollapsibleTrigger className="w-full">
+                      <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                        <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                        <ChevronDown
+                          className={`w-5 h-5 text-gray-400 transition-transform ${
+                            openFAQ === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </CardContent>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <CardContent className="px-6 pb-6 pt-0">
+                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                      </CardContent>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </Card>
               ))}
             </div>
           </div>

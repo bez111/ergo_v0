@@ -5,10 +5,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
-import { Code, Shield, Zap, ExternalLink, ArrowRight } from "lucide-react"
+import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 
 const features = [
   {
@@ -50,6 +52,27 @@ const codeExample = `{
 }`
 
 export default function ErgoScriptPage() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
+  const faqs = [
+    {
+      question: "What makes ErgoScript different from other smart contract languages?",
+      answer: "Simplicity and predictability. No gotchas, no hidden global state. You can actually read and trust the code.",
+    },
+    {
+      question: "Is ErgoScript only for \"blockchain pros\"?",
+      answer: "Not at all—if you can write simple logic, you can build real dApps. And unlike some languages, it rarely surprises you.",
+    },
+    {
+      question: "Why not just use Solidity?",
+      answer: "Solidity's power comes with caveats. ErgoScript is like a seatbelt for your smart contracts: fewer footguns, more peace of mind.",
+    },
+    {
+      question: "Can I build \"real\" DeFi and NFT projects?",
+      answer: "Absolutely. If you can dream it, you can build it—without sweating the small print.",
+    },
+  ]
+
   return (
     <div className="min-h-screen text-white relative">
       <div className="container mx-auto px-4 py-16 relative z-10">
@@ -607,6 +630,45 @@ nSigs >= 2`}</pre>
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </FadeIn>
+
+        {/* FAQ Section */}
+        <FadeIn delay={0.9}>
+          <div className="max-w-4xl mx-auto mb-16">
+            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <Card
+                  key={index}
+                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                >
+                  <Collapsible
+                    open={openFAQ === index}
+                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  >
+                    <CollapsibleTrigger className="w-full">
+                      <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                        <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                        <ChevronDown
+                          className={`w-5 h-5 text-gray-400 transition-transform ${
+                            openFAQ === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </CardContent>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <CardContent className="px-6 pb-6 pt-0">
+                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                      </CardContent>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </Card>
+              ))}
+            </div>
           </div>
         </FadeIn>
 

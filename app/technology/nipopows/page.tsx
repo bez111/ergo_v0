@@ -4,8 +4,10 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Link2, Smartphone, Zap, Shield, ArrowRight, ExternalLink, Network, CheckCircle } from "lucide-react"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { Link2, Smartphone, Zap, Shield, ArrowRight, ExternalLink, Network, CheckCircle, ChevronDown } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -23,6 +25,8 @@ const itemVariants = {
 }
 
 export default function NIPOPOWsPage() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
   const benefits = [
     {
       icon: <Link2 className="w-8 h-8" />,
@@ -127,6 +131,25 @@ export default function NIPOPOWsPage() {
       title: "Verification",
       description: "Anyone can verify the proof quickly and trustlessly, even on another blockchain or mobile device.",
       icon: <CheckCircle className="w-6 h-6" />,
+    },
+  ]
+
+  const faqs = [
+    {
+      question: "Why do NiPoPoWs matter?",
+      answer: "They let lightweight clients verify blockchains without downloading everything. Think: secure validation on your phone in seconds, not hours.",
+    },
+    {
+      question: "Can I trust NiPoPoWs as much as a full node?",
+      answer: "For most real-world uses—yes. They use cryptographic proofs that make cheating extremely hard, even for motivated attackers.",
+    },
+    {
+      question: "What's the real-world unlock?",
+      answer: "Instantly syncing wallets, fast cross-chain bridges, and DeFi apps that don't eat your storage.",
+    },
+    {
+      question: "Will I ever need to learn the math?",
+      answer: "Only if you love puzzles. Most users and even most devs just enjoy the speed.",
     },
   ]
 
@@ -366,6 +389,45 @@ export default function NIPOPOWsPage() {
                     </CardContent>
                   </Card>
                 </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+        {/* FAQ Section */}
+        <motion.section variants={itemVariants} className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <Card
+                  key={index}
+                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                >
+                  <Collapsible
+                    open={openFAQ === index}
+                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  >
+                    <CollapsibleTrigger className="w-full">
+                      <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                        <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                        <ChevronDown
+                          className={`w-5 h-5 text-gray-400 transition-transform ${
+                            openFAQ === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </CardContent>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <CardContent className="px-6 pb-6 pt-0">
+                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                      </CardContent>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </Card>
               ))}
             </div>
           </div>

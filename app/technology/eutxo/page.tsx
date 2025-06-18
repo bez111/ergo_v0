@@ -4,11 +4,34 @@ import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { FadeIn } from "@/components/animations/fade-in"
-import { Layers, ArrowRight, Link as LinkIcon, Code, Shield, Zap } from "lucide-react"
+import { Layers, ArrowRight, Link as LinkIcon, Code, Shield, Zap, ChevronDown } from "lucide-react"
 import Link from "next/link"
+import { useState } from "react"
 
 export default function EUTXOPage() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
+  const faqs = [
+    {
+      question: "What's the difference between UTXO and eUTXO?",
+      answer: "eUTXO extends Bitcoin's UTXO model with smart contract capabilities while maintaining the security and parallelism benefits of the original design.",
+    },
+    {
+      question: "Why is eUTXO better than account-based models?",
+      answer: "eUTXO enables parallel transaction processing, eliminates double-spending at the protocol level, and provides more predictable fee structures.",
+    },
+    {
+      question: "Can I build complex dApps with eUTXO?",
+      answer: "Absolutely. eUTXO supports complex smart contracts while maintaining the security and simplicity of the UTXO model.",
+    },
+    {
+      question: "Is eUTXO harder to learn than Ethereum's model?",
+      answer: "The concepts are different but eUTXO makes many safety problems easier to solve. Once you understand 'box thinking', it's often more predictable.",
+    },
+  ]
+
   return (
     <div className="min-h-screen text-white relative">
       {/* Background Elements */}
@@ -124,6 +147,45 @@ export default function EUTXOPage() {
                 </div>
               </CardContent>
             </Card>
+          </FadeIn>
+
+          {/* FAQ Section */}
+          <FadeIn>
+            <div className="max-w-4xl mx-auto mb-16">
+              <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                Frequently Asked Questions
+              </h2>
+
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <Card
+                    key={index}
+                    className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                  >
+                    <Collapsible
+                      open={openFAQ === index}
+                      onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    >
+                      <CollapsibleTrigger className="w-full">
+                        <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                          <ChevronDown
+                            className={`w-5 h-5 text-gray-400 transition-transform ${
+                              openFAQ === index ? "rotate-180" : ""
+                            }`}
+                          />
+                        </CardContent>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <CardContent className="px-6 pb-6 pt-0">
+                          <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                        </CardContent>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </FadeIn>
 
           {/* Resources */}
