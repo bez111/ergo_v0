@@ -5,7 +5,6 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { ParticleBackground } from "@/components/particle-background"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/lib/schema-constants"
 
@@ -118,7 +117,6 @@ export default function RootLayout({
           <div className="flex min-h-screen flex-col">
             <Header />
             <main className="flex-1 relative overflow-hidden">
-              <ParticleBackground />
               {children}
             </main>
             <Footer />

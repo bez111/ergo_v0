@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { BookOpen, Code, FileText, Users, ChevronRight } from "lucide-react"
-import { ParticleBackground } from "@/components/particle-background"
 import { GlitchText } from "@/components/glitch-text"
 import { useState, useEffect } from "react"
 
@@ -42,9 +41,6 @@ const MobileLearnPage = () => {
     <div className="min-h-screen relative">
       {/* Hero Section */}
       <section className="relative py-12 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <ParticleBackground />
-        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black z-10"></div>
 
         <div className="container mx-auto px-4 relative z-20">
@@ -171,9 +167,6 @@ const DesktopLearnPage = () => {
     <div className="min-h-screen relative">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <ParticleBackground />
-        </div>
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/50 to-black z-10"></div>
 
         <div className="container mx-auto px-4 relative z-20">

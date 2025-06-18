@@ -7,7 +7,6 @@ import { BlogFilters } from "@/components/blog/blog-filters"
 import { BlogCard } from "@/components/blog/blog-card"
 import { NewsletterSignup } from "@/components/blog/newsletter-signup"
 import { blogPosts, categories } from "@/lib/blog-data"
-import { ParticleBackground } from "@/components/particle-background"
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("")

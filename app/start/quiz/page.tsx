@@ -9,7 +9,6 @@ import { Progress } from "@/components/ui/progress"
 import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
 import { GlitchText } from "@/components/glitch-text"
-import { ParticleBackground } from "@/components/particle-background"
 import Link from "next/link"
 
 interface QuizQuestion {

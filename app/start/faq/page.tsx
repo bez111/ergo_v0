@@ -10,7 +10,6 @@ import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
 import { GlitchText } from "@/components/glitch-text"
 import Link from "next/link"
-import { ParticleBackground } from "@/components/particle-background"
 
 const faqSections = [
   {

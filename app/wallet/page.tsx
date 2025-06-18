@@ -27,7 +27,6 @@ import { motion } from "framer-motion"
 import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
-import { ParticleBackground } from "@/components/particle-background"
 import { LucideIcon } from "lucide-react"
 import { WALLET_SCHEMA } from '@/lib/schema-constants'
 import { SchemaOrg } from '@/components/seo/schema-org'
@@ -229,8 +228,6 @@ export default function WalletPage() {
       <SchemaOrg type="SoftwareApplication" data={WALLET_SCHEMA} />
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <ParticleBackground />
-
         {/* Gradient Overlays */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />

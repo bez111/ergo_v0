@@ -8,7 +8,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
 import { GlitchText } from "@/components/glitch-text"
 import { DigitalCounter } from "@/components/digital-counter"
-import { ParticleBackground } from "@/components/particle-background"
 import {
   MessageCircle,
   Users,

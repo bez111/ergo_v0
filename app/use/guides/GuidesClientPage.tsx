@@ -8,7 +8,6 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { GlitchText } from "@/components/glitch-text"
 import { FadeIn } from "@/components/animations/fade-in"
-import { ParticleBackground } from "@/components/particle-background"
 import {
   Search,
   Cpu,

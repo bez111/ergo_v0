@@ -10,7 +10,6 @@ import { Check, X, Zap, Shield, Coins, Code, Users, TrendingUp } from "lucide-re
 import { PageTransition } from "@/components/animations/page-transition"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
-import { ParticleBackground } from "@/components/particle-background"
 import Link from "next/link"
 
 const comparisonData = [

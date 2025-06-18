@@ -8,7 +8,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { SectionHeading } from "@/components/section-heading"
 import { DigitalCounter } from "@/components/digital-counter"
 import { GlitchText } from "@/components/glitch-text"
-import { ParticleBackground } from "@/components/particle-background"
 import { FadeIn } from "@/components/animations/fade-in"
 
 export default function IntroductionPage() {
