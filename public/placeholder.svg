@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <rect width="400" height="200" fill="#f3f4f6"/>
+  <rect x="1" y="1" width="398" height="198" fill="none" stroke="#d1d5db" stroke-width="2"/>
+  <text x="200" y="100" font-family="Arial, sans-serif" font-size="16" fill="#6b7280" text-anchor="middle" dominant-baseline="middle">
+    <tspan x="200" dy="-10">Placeholder Image</tspan>
+    <tspan x="200" dy="20" font-size="14">400x200</tspan>
+  </text>
+</svg> 

@@ -337,14 +337,9 @@ export default function WalletPage() {
                       <div className="flex items-start justify-between">
                         <div className="flex items-center gap-3">
                           <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center backdrop-blur-sm">
-                            <Image
-                              src="/placeholder.svg"
-                              alt={wallet.name}
-                              width={32}
-                              height={32}
-                              className="w-8 h-8 rounded"
-                              loading="lazy"
-                            />
+                            <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded flex items-center justify-center">
+                              <span className="text-white text-sm font-bold">W</span>
+                            </div>
                           </div>
                           <div>
                             <div className="flex items-center gap-2">

@@ -344,8 +344,10 @@ export default function GetErgPage() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                   <motion.div variants={itemVariants} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 h-full flex flex-col">
                     <CardHeader>
-                      <div className="w-12 h-12 bg-gradient-to-r from-primary to-orange-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <Cpu className="w-6 h-6 text-black" />
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded flex items-center justify-center">
+                          <span className="text-white text-sm font-bold">E</span>
+                        </div>
                       </div>
                       <CardTitle className="text-xl font-bold text-white font-mono">Mining ERG</CardTitle>
                     </CardHeader>
@@ -361,8 +363,10 @@ export default function GetErgPage() {
                   </motion.div>
                   <motion.div variants={itemVariants} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 h-full flex flex-col">
                     <CardHeader>
-                      <div className="w-12 h-12 bg-gradient-to-r from-primary to-orange-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <Gift className="w-6 h-6 text-black" />
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded flex items-center justify-center">
+                          <span className="text-white text-sm font-bold">E</span>
+                        </div>
                       </div>
                       <CardTitle className="text-xl font-bold text-white font-mono">
                         Bounties & Contributions
@@ -380,8 +384,10 @@ export default function GetErgPage() {
                   </motion.div>
                   <motion.div variants={itemVariants} className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 h-full flex flex-col">
                     <CardHeader>
-                      <div className="w-12 h-12 bg-gradient-to-r from-primary to-orange-500 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-                        <DollarSign className="w-6 h-6 text-black" />
+                      <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center backdrop-blur-sm">
+                        <div className="w-8 h-8 bg-gradient-to-br from-green-500 to-blue-600 rounded flex items-center justify-center">
+                          <span className="text-white text-sm font-bold">E</span>
+                        </div>
                       </div>
                       <CardTitle className="text-xl font-bold text-white font-mono">
                         dApp Rewards & Yields

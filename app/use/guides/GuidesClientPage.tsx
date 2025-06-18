@@ -137,13 +137,13 @@ const allGuides: Guide[] = [
     completedBy: 1250,
     author: {
       name: "ergonaut",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: "/api/placeholder/32/32",
       role: "Community Guide",
     },
     publishedAt: "2023-03-15",
     views: 2500,
     likes: 120,
-    image: "/placeholder.svg?height=200&width=400&text=Wallet+Guide",
+    image: "/api/placeholder/400/200",
   },
   {
     id: "nautilus-setup",
@@ -158,13 +158,13 @@ const allGuides: Guide[] = [
     completedBy: 980,
     author: {
       name: "kushti",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: "/api/placeholder/32/32",
       role: "Core Developer",
     },
     publishedAt: "2023-04-01",
     views: 1800,
     likes: 95,
-    image: "/placeholder.svg?height=200&width=400&text=Nautilus+Setup",
+    image: "/api/placeholder/400/200",
   },
   {
     id: "spectrum-swap",
@@ -180,13 +180,13 @@ const allGuides: Guide[] = [
     completedBy: 540,
     author: {
       name: "anon_real",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: "/api/placeholder/32/32",
       role: "DeFi Expert",
     },
     publishedAt: "2023-04-15",
     views: 3200,
     likes: 150,
-    image: "/placeholder.svg?height=200&width=400&text=Spectrum+Finance",
+    image: "/api/placeholder/400/200",
   },
   {
     id: "mining-intro",
@@ -200,13 +200,13 @@ const allGuides: Guide[] = [
     completedBy: 190,
     author: {
       name: "greenpill",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: "/api/placeholder/32/32",
       role: "Mining Expert",
     },
     publishedAt: "2023-05-01",
     views: 1500,
     likes: 80,
-    image: "/placeholder.svg?height=200&width=400&text=Mining+Guide",
+    image: "/api/placeholder/400/200",
   },
   {
     id: "nft-marketplace",
@@ -222,13 +222,13 @@ const allGuides: Guide[] = [
     completedBy: 220,
     author: {
       name: "ergodex",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: "/api/placeholder/32/32",
       role: "NFT Specialist",
     },
     publishedAt: "2023-05-15",
     views: 1200,
     likes: 110,
-    image: "/placeholder.svg?height=200&width=400&text=NFT+Trading",
+    image: "/api/placeholder/400/200",
   },
   {
     id: "security-practices",
@@ -242,13 +242,13 @@ const allGuides: Guide[] = [
     completedBy: 290,
     author: {
       name: "sigmastamp",
-      avatar: "/placeholder.svg?height=32&width=32",
+      avatar: "/api/placeholder/32/32",
       role: "Security Expert",
     },
     publishedAt: "2023-06-01",
     views: 2100,
     likes: 130,
-    image: "/placeholder.svg?height=200&width=400&text=Security+Guide",
+    image: "/api/placeholder/400/200",
   },
 ]
 
@@ -293,7 +293,7 @@ function GuideCard({ guide, index = 0 }: { guide: Guide; index?: number }) {
       <Link href={guide.href}>
         <div className="relative">
           <Image
-            src={guide.image || "/placeholder.svg?height=200&width=400"}
+            src={guide.image || "/api/placeholder/400/200"}
             alt={guide.title}
             width={400}
             height={200}
@@ -362,7 +362,7 @@ function GuideCard({ guide, index = 0 }: { guide: Guide; index?: number }) {
 
           <div className="flex items-center gap-4 mb-4">
             <Image
-              src={guide.author.avatar || "/placeholder.svg?height=32&width=32"}
+              src={guide.author.avatar || "/api/placeholder/32/32"}
               alt={guide.author.name}
               width={32}
               height={32}

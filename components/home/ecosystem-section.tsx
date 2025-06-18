@@ -49,13 +49,11 @@ export function EcosystemSection() {
               className="group flex flex-col gap-4 rounded-lg border p-6 hover:border-primary hover:bg-muted/50 transition-colors"
             >
               <div className="flex items-center gap-4">
-                <Image
-                  src="/placeholder.svg"
-                  alt={project.name}
-                  width={50}
-                  height={50}
-                  className="rounded-md"
-                />
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white text-sm font-bold">E</span>
+                  </div>
+                </div>
                 <div>
                   <h3 className="font-medium group-hover:text-primary transition-colors">{project.name}</h3>
                   <p className="text-xs text-muted-foreground">{project.category}</p>
