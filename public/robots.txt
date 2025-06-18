@@ -1,4 +1,26 @@
 User-agent: *
 Allow: /
 
+# Block admin and private areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Allow important pages
+Allow: /technology/
+Allow: /ecosystem/
+Allow: /build/
+Allow: /use/
+Allow: /learn/
+Allow: /blog/
+
+# Crawl delay for better server performance
+Crawl-delay: 1
+
+# Sitemap location
 Sitemap: https://ergoplatform.org/sitemap.xml
+
+# Additional sitemaps for different content types
+Sitemap: https://ergoplatform.org/sitemap-blog.xml
+Sitemap: https://ergoplatform.org/sitemap-technology.xml
