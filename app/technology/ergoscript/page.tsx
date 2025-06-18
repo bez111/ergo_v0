@@ -11,6 +11,7 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { SchemaOrg } from "@/components/seo/schema-org"
 
 const features = [
   {
@@ -701,6 +702,21 @@ nSigs >= 2`}</pre>
           </Card>
         </FadeIn>
       </div>
+      
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }}
+      />
     </div>
   )
 }

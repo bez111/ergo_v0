@@ -11,6 +11,7 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { Shield, Cpu, Zap, Users, ExternalLink, CheckCircle, TrendingUp, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { SchemaOrg } from "@/components/seo/schema-org"
 
 const features = [
   {
@@ -363,6 +364,21 @@ export default function SecurePowPage() {
           </Card>
         </FadeIn>
       </div>
+      
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }}
+      />
     </div>
   )
 }

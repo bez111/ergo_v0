@@ -8,6 +8,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ChevronDown, ArrowRight, Box, Database, Shield, Zap, Eye, Code, ExternalLink, CheckCircle } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import { SchemaOrg } from "@/components/seo/schema-org"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -585,6 +586,21 @@ export default function EUTXOModelPage() {
           </div>
         </motion.section>
       </motion.div>
+      
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          '@type': 'FAQPage',
+          mainEntity: faqs.map((faq) => ({
+            '@type': 'Question',
+            name: faq.question,
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: faq.answer,
+            },
+          })),
+        }}
+      />
     </div>
   )
 }
