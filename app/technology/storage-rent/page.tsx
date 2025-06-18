@@ -23,6 +23,7 @@ import {
 import { GlitchText } from "@/components/animations/glitch-text"
 import { Play } from "lucide-react"
 import { useState } from "react"
+import Link from "next/link"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -261,7 +262,7 @@ export default function StorageRentPage() {
                   className="group cursor-pointer"
                 >
                   <Card
-                    className={`${problem.bgColor} ${problem.borderColor} border-2 hover:border-opacity-70 transition-all duration-500 h-full rounded-2xl overflow-hidden`}
+                    className={`${problem.bgColor} ${problem.borderColor} border-2 hover:border-opacity-70 transition-all duration-500 h-full`}
                   >
                     <CardContent className="p-8 relative">
                       <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br opacity-10 rounded-full transform translate-x-8 -translate-y-8" />
@@ -313,7 +314,7 @@ export default function StorageRentPage() {
                   className="group cursor-pointer"
                 >
                   <Card
-                    className={`bg-gradient-to-br ${solution.gradient} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full rounded-2xl overflow-hidden`}
+                    className={`bg-gradient-to-br ${solution.gradient} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full`}
                   >
                     <CardContent className="p-8 text-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -356,7 +357,7 @@ export default function StorageRentPage() {
                   >
                     <div className="flex-1 px-8">
                       <Card
-                        className={`${phase.bgColor} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 rounded-2xl`}
+                        className={`${phase.bgColor} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300`}
                       >
                         <CardContent className="p-8">
                           <div className="flex items-center mb-4">
@@ -419,36 +420,37 @@ export default function StorageRentPage() {
           </div>
         </section>
 
-        {/* Call to Action */}
+        {/* CTA Section — NIPoPoWs Style */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Card className="bg-gradient-to-r from-orange-500/10 via-yellow-500/10 to-cyan-500/10 border border-orange-500/30 rounded-3xl overflow-hidden">
-              <CardContent className="p-16 relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-cyan-500/5" />
-                <div className="relative z-10">
-                  <h2 className="text-5xl font-bold mb-6">
-                    <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                      The Future is Sustainable
-                    </span>
-                  </h2>
-                  <p className="text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-                    No bloat, no dead coins, no garbage. Storage Rent ensures Ergo remains efficient and sustainable
-                    for decades to come.
-                  </p>
-
-                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                      <ArrowRight className="mr-3 w-6 h-6" />
+            <Card className="bg-gradient-to-r from-orange-500/20 to-cyan-500/20 border-orange-500/30 backdrop-blur-xl">
+              <CardContent className="p-12">
+                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                  The Future is Sustainable
+                </h2>
+                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                  Storage Rent keeps Ergo efficient, fair, and ready for the decades ahead. No bloat, no dead coins, no garbage — just a healthy, sustainable blockchain economy.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Button
+                    asChild
+                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
+                  >
+                    <Link href="/ecosystem" className="flex items-center">
+                      <ArrowRight className="mr-2 w-4 h-4" />
                       Start Building on Ergo
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                    >
-                      <ExternalLink className="mr-3 w-6 h-6" />
-                      Read Technical Docs
-                    </Button>
-                  </div>
+                    </Link>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                  >
+                    <Link href="https://docs.ergoplatform.com/protocol/storage-rent/" className="flex items-center">
+                      <ExternalLink className="mr-2 w-4 h-4" />
+                      Technical Documentation
+                    </Link>
+                  </Button>
                 </div>
               </CardContent>
             </Card>
