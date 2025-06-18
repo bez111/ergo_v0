@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import {
   Database,
   Recycle,
@@ -19,6 +20,7 @@ import {
   BarChart3,
   RefreshCw,
   Target,
+  ChevronDown,
 } from "lucide-react"
 import { GlitchText } from "@/components/animations/glitch-text"
 import { Play } from "lucide-react"
@@ -50,6 +52,7 @@ const cardHoverVariants = {
 
 export default function StorageRentPage() {
   const [activeTimeline, setActiveTimeline] = useState(0)
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   const problems = [
     {
@@ -151,6 +154,25 @@ export default function StorageRentPage() {
       icon: <TrendingUp className="w-12 h-12" />,
       color: "text-green-400",
       gradient: "from-green-500/20 to-green-500/5",
+    },
+  ]
+
+  const faqs = [
+    {
+      question: "Why does Ergo charge \"storage rent\"? Do I have to pay just to hold ERG?",
+      answer: "No, this isn't a holding tax—it's a way to keep the blockchain \"clean.\" Fees apply only to coins (UTXOs) left untouched for more than 4 years. Think of it like long-term storage: if you abandon a box and never return, a tiny fee is charged for the space you occupy. This keeps the network from getting clogged with forgotten data.",
+    },
+    {
+      question: "Can I lose my funds if I'm a long-term investor (HODLer)?",
+      answer: "Almost impossible. Any action—like sending your coins, even to yourself—resets the 4-year timer. The rent is so small it only affects very low-value UTXOs (\"dust\"). The system is designed to clean up lost change, not to penalize active users or investors.",
+    },
+    {
+      question: "Why is it so important to get rid of \"blockchain dust\"?",
+      answer: "It directly affects decentralization. Every forgotten transaction increases the size of the blockchain state, which full nodes must store and process. Without cleanup, running a full node would become too expensive over time, leaving control to big corporations. Storage rent is a long-term guarantee that Ergo stays accessible and truly decentralized.",
+    },
+    {
+      question: "Where does the collected rent go? Does anyone profit from it?",
+      answer: "The fees aren't kept by a company or burned—they're paid out to miners. This gives miners a direct incentive to help clean up the blockchain state, which aligns perfectly with the community's long-term interests. It's a self-sustaining economic model that keeps the blockchain healthy and resilient.",
     },
   ]
 
@@ -415,6 +437,45 @@ export default function StorageRentPage() {
                     </CardContent>
                   </Card>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h2>
+
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <Card
+                  key={index}
+                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                >
+                  <Collapsible
+                    open={openFAQ === index}
+                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  >
+                    <CollapsibleTrigger className="w-full">
+                      <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                        <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                        <ChevronDown
+                          className={`w-5 h-5 text-gray-400 transition-transform ${
+                            openFAQ === index ? "rotate-180" : ""
+                          }`}
+                        />
+                      </CardContent>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <CardContent className="px-6 pb-6 pt-0">
+                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                      </CardContent>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </Card>
               ))}
             </div>
           </div>

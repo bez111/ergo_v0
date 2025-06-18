@@ -56,20 +56,20 @@ export default function ErgoScriptPage() {
 
   const faqs = [
     {
-      question: "What makes ErgoScript different from other smart contract languages?",
-      answer: "Simplicity and predictability. No gotchas, no hidden global state. You can actually read and trust the code.",
+      question: "What is ErgoScript's main advantage over other languages like Solidity?",
+      answer: "Predictability and security. ErgoScript is designed to eliminate entire classes of vulnerabilities that have plagued other platforms (like re-entrancy attacks). There are no hidden traps or unexpected behaviors in the code. It's a language where what you see is exactly what you get.",
     },
     {
-      question: "Is ErgoScript only for \"blockchain pros\"?",
-      answer: "Not at all—if you can write simple logic, you can build real dApps. And unlike some languages, it rarely surprises you.",
+      question: "Do I need to be a coding guru to build with ErgoScript?",
+      answer: "Not at all. If you understand \"if-then\" logic, you're already halfway there. ErgoScript is intentionally made to be simpler and more logical. It helps developers avoid mistakes rather than creating new opportunities for them to make them. It's the shortest path from an idea to a working and secure dApp.",
     },
     {
-      question: "Why not just use Solidity?",
-      answer: "Solidity's power comes with caveats. ErgoScript is like a seatbelt for your smart contracts: fewer footguns, more peace of mind.",
+      question: "Why not just use Solidity since it's so popular?",
+      answer: "Solidity's popularity comes at a price—complexity that has led to billions of dollars in hacks. ErgoScript is the seatbelt for your smart contracts. It deliberately limits certain features to prevent catastrophic errors. Fewer \"footguns,\" more peace of mind in the code's reliability.",
     },
     {
-      question: "Can I build \"real\" DeFi and NFT projects?",
-      answer: "Absolutely. If you can dream it, you can build it—without sweating the small print.",
+      question: "Can I build complex projects like DeFi and NFTs with ErgoScript?",
+      answer: "Absolutely. ErgoScript is powerful enough to create the most sophisticated financial instruments, including DEXs, stablecoins, lending protocols, and complex NFT projects. Its eUTXO model allows for unique and efficient solutions that are difficult or impossible to build on other platforms.",
     },
   ]
 

@@ -54,20 +54,20 @@ export default function SecurePowPage() {
 
   const faqs = [
     {
-      question: "What's \"Secure PoW\" and why does it matter?",
-      answer: "It's Proof-of-Work, but redesigned to stay fair and decentralized—even as mining tech evolves.",
+      question: "Isn't all Proof-of-Work the same? What's so \"secure\" about Ergo's PoW?",
+      answer: "Not all PoW is created equal. Ergo's algorithm, Autolykos v2, is specifically designed to resist centralization. While other networks can be dominated by specialized hardware manufacturers (ASICs), Ergo remains accessible for mining on standard graphics cards (GPUs). This means more people can participate in securing the network, keeping it decentralized.",
     },
     {
-      question: "Does Secure PoW mean \"ASIC-resistant\"?",
-      answer: "It raises the bar for everyone, making it much harder for one group to dominate mining and attack the network.",
+      question: "Does this mean it's completely \"ASIC-resistant\"?",
+      answer: "It means that creating an ASIC for Ergo is economically unviable. The algorithm is \"memory-hard,\" making performance dependent on memory speed, not just raw processing power. This gives standard GPUs a long-term advantage and prevents the monopolization of mining.",
     },
     {
-      question: "Is it greener?",
-      answer: "The real win: network stays decentralized without a constant arms race, so efficiency stays high over time.",
+      question: "Is this approach \"greener\"?",
+      answer: "The biggest environmental impact of PoW comes from the constant \"arms race,\" where new, more powerful hardware quickly becomes obsolete and is discarded. By keeping GPUs competitive, Ergo reduces this race and the constant hardware turnover. This promotes long-term energy efficiency and reduces electronic waste.",
     },
     {
-      question: "Can it be hacked?",
-      answer: "Any PoW can be attacked if someone owns most of the power, but Secure PoW is built to keep that unlikely.",
+      question: "How protected is the network from attacks?",
+      answer: "By maintaining mining decentralization, Secure PoW significantly increases the cost and difficulty of a \"51% attack.\" An attacker can't simply turn on a warehouse of ASICs; they would have to acquire a massive number of GPUs, which is much harder and more expensive. More miners around the world means more security for everyone.",
     },
   ]
 

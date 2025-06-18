@@ -123,20 +123,20 @@ export default function PrivacyFeaturesPage() {
 
   const faqs = [
     {
-      question: "How private is Ergo really?",
-      answer: "Privacy is baked in—mixers, stealth addresses, and selective disclosure. Your transaction, your rules.",
+      question: "What level of privacy does Ergo offer? Is it just coin mixing?",
+      answer: "Ergo offers multi-layered privacy, not just a single feature. At its core are Sigma protocols—powerful cryptography that allows data to be hidden. On top of this runs Ergo Mixer, the first non-interactive and trustless mixer in the eUTXO space. It allows you to break the link between your transactions, providing real anonymity.",
     },
     {
-      question: "Will using privacy features put a target on my back?",
-      answer: "On Ergo, privacy is the norm, not the exception. You blend in with everyone else.",
+      question: "If I use privacy features, won't my transactions look suspicious?",
+      answer: "On the contrary. Because privacy tools are a core part of the Ergo ecosystem, using them is the norm. When many people mix their coins, they create a large \"anonymity set\" where it's easy to blend in. On Ergo, protecting your financial data is standard practice, not a reason for suspicion.",
     },
     {
-      question: "Is private-by-default \"suspicious\"?",
-      answer: "Not here. Regulators care about intent, and Ergo's tech offers transparency when you want it.",
+      question: "Doesn't this kind of privacy attract criminals?",
+      answer: "Privacy is a fundamental right, not an admission of guilt. You don't use curtains on your windows because you're doing something illegal. Businesses need privacy for trade secrets and payrolls, and individuals need it to protect themselves from tracking of their purchases and financial profiling. Ergo provides the tools for this.",
     },
     {
-      question: "Can I ever prove a private transaction if I need to?",
-      answer: "Yes, you can choose when and what to reveal, so compliance and privacy don't have to fight.",
+      question: "What if I need to prove a transaction for taxes or an audit?",
+      answer: "Ergo uses a \"privacy by choice\" approach. You are in full control of your data. When needed, you can provide \"viewing keys\" for specific transactions to an auditor or regulator without revealing your entire financial history. This allows you to comply with legal and business requirements without sacrificing your privacy.",
     },
   ]
 

@@ -136,20 +136,20 @@ export default function NIPOPOWsPage() {
 
   const faqs = [
     {
-      question: "Why do NiPoPoWs matter?",
-      answer: "They let lightweight clients verify blockchains without downloading everything. Think: secure validation on your phone in seconds, not hours.",
+      question: "How do NiPoPoWs let my phone wallet work instantly instead of waiting for hours?",
+      answer: "Instead of downloading the entire multi-gigabyte blockchain history, NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) allow your device to verify it using a tiny cryptographic proof. It's like reading a book's summary and being certain of the plot without reading every word. The result: syncing and security validation take seconds, not hours.",
     },
     {
-      question: "Can I trust NiPoPoWs as much as a full node?",
-      answer: "For most real-world uses—yes. They use cryptographic proofs that make cheating extremely hard, even for motivated attackers.",
+      question: "How secure is this \"light\" verification compared to a full node?",
+      answer: "It is cryptographically ironclad. NiPoPoWs are based on the same mathematical principles as the blockchain itself. Cheating the system is as difficult as breaking Bitcoin's underlying cryptography. You get the security of a full node without the need to store hundreds of gigabytes of data.",
     },
     {
-      question: "What's the real-world unlock?",
-      answer: "Instantly syncing wallets, fast cross-chain bridges, and DeFi apps that don't eat your storage.",
+      question: "What does this enable in practice that wasn't possible before?",
+      answer: "This opens the door for truly decentralized mobile applications. Imagine DeFi protocols that don't drain your battery, instant cross-chain bridges right from your phone, and wallets that are ready to use immediately after installation. This is the technology that makes blockchain practical for everyday use.",
     },
     {
-      question: "Will I ever need to learn the math?",
-      answer: "Only if you love puzzles. Most users and even most devs just enjoy the speed.",
+      question: "Do I need to understand cryptography to use this?",
+      answer: "Not at all. You don't need to understand how an engine works to drive a car. For users, it simply means speed and convenience. For developers, it's a powerful tool that works \"out of the box,\" allowing them to focus on building their product, not on complex math.",
     },
   ]
 
