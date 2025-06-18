@@ -184,112 +184,64 @@ export default function StorageRentPage() {
         />
       </div>
 
-      {/* Floating Navigation Header */}
-
-      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
-        {/* Revolutionary Hero Section */}
-        <motion.section variants={itemVariants} className="pt-32 pb-20 px-4 relative">
-          <div className="max-w-6xl mx-auto">
+      <div className="relative z-10">
+        {/* HERO SECTION — NIPoPoWs STYLE, NO ANIMATION */}
+        <section className="pt-32 pb-20 px-4">
+          <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <motion.div
-                  initial={{ scale: 0.8, opacity: 0 }}
-                  animate={{ scale: 1, opacity: 1 }}
-                  transition={{ duration: 0.8 }}
-                >
-                  <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
-                    BLOCKCHAIN TECHNOLOGY
-                  </Badge>
-                </motion.div>
-
-                <motion.h1
-                  className="text-6xl md:text-8xl font-bold mb-6 leading-tight"
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.2 }}
-                >
-                  <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-cyan-400 bg-clip-text text-transparent">
-                    Storage
-                  </span>
-                  <br />
-                  <GlitchText text="Rent" className="text-white" />
-                </motion.h1>
-
-                <motion.p
-                  className="text-2xl text-gray-300 mb-8 leading-relaxed"
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.4 }}
-                >
-                  The future of sustainable blockchain economics
-                </motion.p>
-
-                <motion.p
-                  className="text-lg text-gray-400 mb-10 leading-relaxed max-w-xl"
-                  initial={{ x: -100, opacity: 0 }}
-                  animate={{ x: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.6 }}
-                >
-                  While other blockchains bloat with forgotten data, Ergo stays lean, efficient, and sustainable through
-                  intelligent storage rent mechanics.
-                </motion.p>
-
-                <motion.div
-                  className="flex flex-col sm:flex-row gap-4"
-                  initial={{ y: 50, opacity: 0 }}
-                  animate={{ y: 0, opacity: 1 }}
-                  transition={{ duration: 0.8, delay: 0.8 }}
-                >
-                  <Button className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-black font-bold text-lg px-8 py-4 rounded-xl">
-                    <Play className="mr-2 w-5 h-5" />
-                    See How It Works
+                <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
+                  SUSTAINABILITY
+                </Badge>
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                  Storage Rent
+                </h1>
+                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+                  Sustainable Blockchain Economics for Ergo
+                </p>
+                <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                  While other blockchains bloat with forgotten data, Ergo stays lean, efficient, and sustainable through intelligent storage rent mechanics.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                    Learn More
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-xl backdrop-blur-sm"
+                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                   >
-                    <ExternalLink className="mr-2 w-5 h-5" />
                     Technical Docs
                   </Button>
-                </motion.div>
+                </div>
               </div>
-
               <div className="relative">
-                <motion.div
-                  className="relative"
-                  initial={{ scale: 0.8, opacity: 0, rotateY: 45 }}
-                  animate={{ scale: 1, opacity: 1, rotateY: 0 }}
-                  transition={{ duration: 1, delay: 0.5 }}
-                >
-                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 backdrop-blur-xl border-gray-700/50 p-8 rounded-3xl">
-                    <div className="text-center">
-                      <div className="w-24 h-24 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-full mx-auto mb-6 flex items-center justify-center">
-                        <Recycle className="w-12 h-12" />
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
+                  <CardContent className="p-0">
+                    <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                      Smart Economics
+                    </h3>
+                    <div className="grid grid-cols-2 gap-4 text-center">
+                      <div>
+                        <div className="text-3xl font-bold text-orange-400">4 Years</div>
+                        <div className="text-sm text-gray-400">Free Storage</div>
                       </div>
-                      <h3 className="text-2xl font-bold mb-4 text-white">Smart Economics</h3>
-                      <p className="text-gray-300 mb-6">
-                        Automatic fee recycling keeps the network healthy and sustainable
-                      </p>
-                      <div className="grid grid-cols-2 gap-4 text-center">
-                        <div>
-                          <div className="text-3xl font-bold text-orange-400">4 Years</div>
-                          <div className="text-sm text-gray-400">Free Storage</div>
-                        </div>
-                        <div>
-                          <div className="text-3xl font-bold text-cyan-400">0.13 ERG</div>
-                          <div className="text-sm text-gray-400">Rent per Box</div>
-                        </div>
+                      <div>
+                        <div className="text-3xl font-bold text-cyan-400">0.13 ERG</div>
+                        <div className="text-sm text-gray-400">Rent per Box</div>
                       </div>
                     </div>
-                  </Card>
-                </motion.div>
+                    <div className="flex justify-center mt-8">
+                      <Recycle className="w-16 h-16 text-orange-400" />
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Problems Section - Enhanced */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">
@@ -304,10 +256,8 @@ export default function StorageRentPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {problems.map((problem, index) => (
-                <motion.div
+                <div
                   key={problem.title}
-                  variants={cardHoverVariants}
-                  whileHover="hover"
                   className="group cursor-pointer"
                 >
                   <Card
@@ -336,14 +286,14 @@ export default function StorageRentPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Solutions Section - Redesigned */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6">
@@ -358,15 +308,12 @@ export default function StorageRentPage() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
-                <motion.div
+                <div
                   key={solution.title}
-                  initial={{ opacity: 0, y: 50 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.2 }}
-                  viewport={{ once: true }}
+                  className="group cursor-pointer"
                 >
                   <Card
-                    className={`bg-gradient-to-br ${solution.gradient} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full rounded-2xl group`}
+                    className={`bg-gradient-to-br ${solution.gradient} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 h-full rounded-2xl overflow-hidden`}
                   >
                     <CardContent className="p-8 text-center relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -381,14 +328,14 @@ export default function StorageRentPage() {
                       <p className="text-gray-300 leading-relaxed">{solution.description}</p>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Interactive Timeline */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6 text-cyan-400">How Storage Rent Works</h2>
@@ -403,18 +350,13 @@ export default function StorageRentPage() {
 
               <div className="space-y-16">
                 {timeline.map((phase, index) => (
-                  <motion.div
+                  <div
                     key={phase.year}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -100 : 100 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.2 }}
-                    viewport={{ once: true }}
                     className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
-                    onMouseEnter={() => setActiveTimeline(index)}
                   >
                     <div className="flex-1 px-8">
                       <Card
-                        className={`${phase.bgColor} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 rounded-2xl ${activeTimeline === index ? "scale-105 shadow-2xl" : ""}`}
+                        className={`${phase.bgColor} border-gray-700/50 hover:border-gray-600/50 transition-all duration-300 rounded-2xl`}
                       >
                         <CardContent className="p-8">
                           <div className="flex items-center mb-4">
@@ -432,19 +374,19 @@ export default function StorageRentPage() {
 
                     {/* Timeline Node */}
                     <div
-                      className={`w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-cyan-500 border-4 border-black z-10 ${activeTimeline === index ? "scale-150" : ""} transition-transform duration-300`}
+                      className={`w-6 h-6 rounded-full bg-gradient-to-r from-orange-500 to-cyan-500 border-4 border-black z-10`}
                     />
 
                     <div className="flex-1 px-8" />
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Benefits Grid */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-5xl font-bold mb-6 text-orange-400">Why Storage Rent Matters</h2>
@@ -455,15 +397,11 @@ export default function StorageRentPage() {
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {benefits.map((benefit, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ scale: 1.05 }}
+                  className="group cursor-pointer"
                 >
-                  <Card className="bg-gray-900/50 border-gray-700/50 hover:border-green-500/50 transition-all duration-300 rounded-xl group">
+                  <Card className="bg-gray-900/50 border-gray-700/50 hover:border-green-500/50 transition-all duration-300 rounded-xl overflow-hidden">
                     <CardContent className="p-6">
                       <div className="flex items-start space-x-4">
                         <div className="text-green-400 group-hover:scale-110 transition-transform duration-300">
@@ -475,55 +413,48 @@ export default function StorageRentPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Call to Action */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
+        <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Card className="bg-gradient-to-r from-orange-500/10 via-yellow-500/10 to-cyan-500/10 border border-orange-500/30 rounded-3xl overflow-hidden">
               <CardContent className="p-16 relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-cyan-500/5" />
                 <div className="relative z-10">
-                  <motion.div
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    whileInView={{ scale: 1, opacity: 1 }}
-                    transition={{ duration: 0.8 }}
-                    viewport={{ once: true }}
-                  >
-                    <h2 className="text-5xl font-bold mb-6">
-                      <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                        The Future is Sustainable
-                      </span>
-                    </h2>
-                    <p className="text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
-                      No bloat, no dead coins, no garbage. Storage Rent ensures Ergo remains efficient and sustainable
-                      for decades to come.
-                    </p>
+                  <h2 className="text-5xl font-bold mb-6">
+                    <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                      The Future is Sustainable
+                    </span>
+                  </h2>
+                  <p className="text-2xl text-gray-300 mb-10 leading-relaxed max-w-3xl mx-auto">
+                    No bloat, no dead coins, no garbage. Storage Rent ensures Ergo remains efficient and sustainable
+                    for decades to come.
+                  </p>
 
-                    <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                      <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                        <ArrowRight className="mr-3 w-6 h-6" />
-                        Start Building on Ergo
-                      </Button>
-                      <Button
-                        variant="outline"
-                        className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                      >
-                        <ExternalLink className="mr-3 w-6 h-6" />
-                        Read Technical Docs
-                      </Button>
-                    </div>
-                  </motion.div>
+                  <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                      <ArrowRight className="mr-3 w-6 h-6" />
+                      Start Building on Ergo
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    >
+                      <ExternalLink className="mr-3 w-6 h-6" />
+                      Read Technical Docs
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
           </div>
-        </motion.section>
-      </motion.div>
+        </section>
+      </div>
     </div>
   )
 }
