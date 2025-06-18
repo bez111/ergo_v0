@@ -179,7 +179,7 @@ export default function EUTXOModelPage() {
   return (
     <div className="min-h-screen relative">
       {/* Breadcrumbs */}
-      <div className="container mx-auto px-4 pt-8">
+      <div className="sr-only">
         <Breadcrumbs
           items={[
             { label: "Technology", href: "/technology" },

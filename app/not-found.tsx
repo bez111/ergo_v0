@@ -17,7 +17,7 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
       {/* Breadcrumbs */}
-      <div className="container mx-auto px-4 pt-8">
+      <div className="sr-only">
         <Breadcrumbs
           items={[
             { label: "404 - Page Not Found", href: "/404" }

@@ -220,7 +220,7 @@ export default function NIPOPOWsPage() {
       
       <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
         {/* Breadcrumbs */}
-        <div className="container mx-auto px-4 pt-8">
+        <div className="sr-only">
           <Breadcrumbs
             items={[
               { label: "Technology", href: "/technology" },
