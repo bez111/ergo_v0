@@ -231,8 +231,8 @@ const profiles: Record<string, Profile> = {
         category: "DeFi Platforms",
         items: [
           { name: "Spectrum Finance", description: "Decentralized exchange (DEX)", link: "https://spectrum.fi" },
-          { name: "SigmaUSD", description: "Algorithmic stablecoin protocol", link: "/ecosystem/projects/sigmausd" },
-          { name: "Duckpools", description: "Lending and borrowing platform", link: "/ecosystem/projects/duckpools" },
+          { name: "SigmaUSD", description: "Algorithmic stablecoin protocol", link: "/ecosystem" },
+          { name: "Duckpools", description: "Lending and borrowing platform", link: "/ecosystem" },
         ],
       },
       {
@@ -245,14 +245,14 @@ const profiles: Record<string, Profile> = {
     ],
     nextSteps: [
       { text: "Install Nautilus Wallet", link: "/wallet" },
-      { text: "Learn about SigmaUSD Stablecoin", link: "/ecosystem/projects/sigmausd" },
+      { text: "Learn about SigmaUSD Stablecoin", link: "/ecosystem" },
       { text: "Try Trading on Spectrum Finance", link: "https://spectrum.fi" },
       { text: "Join DeFi Discussions on Discord", link: "https://discord.gg/ergo-platform" },
     ],
     communityChannels: [
       { name: "DeFi Discord Channels", link: "https://discord.gg/ergo-platform" },
       { name: "Spectrum Finance Community", link: "https://spectrum.fi" },
-      { name: "SigmaUSD Community", link: "/ecosystem/projects/sigmausd" },
+      { name: "SigmaUSD Community", link: "/ecosystem" },
     ],
   },
   investor: {
@@ -276,7 +276,7 @@ const profiles: Record<string, Profile> = {
         items: [
           { name: "Ergo Whitepaper", description: "Technical foundation", link: "/technology/whitepaper" },
           { name: "Ecosystem Overview", description: "Projects and growth", link: "/ecosystem" },
-          { name: "Network Statistics", description: "Real-time metrics", link: "/ecosystem/stats" },
+          { name: "Network Statistics", description: "Real-time metrics", link: "/technology/eutxo-model" },
         ],
       },
     ],
@@ -346,20 +346,20 @@ const profiles: Record<string, Profile> = {
             description: "Premier NFT marketplace",
             link: "/ecosystem/projects/auction-house",
           },
-          { name: "SkyHarbor", description: "NFT trading platform", link: "/ecosystem/projects/skyharbor" },
+          { name: "SkyHarbor", description: "NFT trading platform", link: "/ecosystem" },
         ],
       },
       {
         category: "Creation Tools",
         items: [
-          { name: "TokenJay", description: "NFT minting platform", link: "/ecosystem/projects/tokenjay" },
+          { name: "TokenJay", description: "NFT minting platform", link: "/ecosystem" },
           { name: "Ergo Utils", description: "NFT creation utilities", link: "/ecosystem/tools" },
         ],
       },
     ],
     nextSteps: [
-      { text: "Explore Ergo Auction House", link: "/ecosystem/projects/auction-house" },
-      { text: "Learn About NFT Creation", link: "/ecosystem/projects/tokenjay" },
+      { text: "Explore Ergo Auction House", link: "/ecosystem" },
+      { text: "Learn About NFT Creation", link: "/ecosystem" },
       { text: "Browse NFT Collections", link: "/ecosystem/nfts" },
       { text: "Join NFT Community", link: "https://discord.gg/ergo-platform" },
     ],
@@ -381,7 +381,7 @@ const profiles: Record<string, Profile> = {
       {
         category: "Privacy Tools",
         items: [
-          { name: "ErgoMixer", description: "Non-custodial transaction mixer", link: "/ecosystem/projects/ergomixer" },
+          { name: "ErgoMixer", description: "Non-custodial transaction mixer", link: "/ecosystem" },
           { name: "Stealth Addresses", description: "Enhanced address privacy", link: "/technology/privacy-features" },
         ],
       },
@@ -398,14 +398,14 @@ const profiles: Record<string, Profile> = {
       },
     ],
     nextSteps: [
-      { text: "Learn About ErgoMixer", link: "/ecosystem/projects/ergomixer" },
+      { text: "Learn About ErgoMixer", link: "/ecosystem" },
       { text: "Understand Sigma Protocols", link: "/technology/privacy-features" },
       { text: "Read Privacy Best Practices", link: "/learn/privacy" },
       { text: "Join Privacy Discussions", link: "https://discord.gg/ergo-platform" },
     ],
     communityChannels: [
       { name: "Privacy Discord Channels", link: "https://discord.gg/ergo-platform" },
-      { name: "ErgoMixer Community", link: "/ecosystem/projects/ergomixer" },
+      { name: "ErgoMixer Community", link: "/ecosystem" },
       { name: "Technical Discussions", link: "https://ergoforum.org" },
     ],
   },

@@ -80,7 +80,6 @@ export default function ErgoScriptPage() {
       <SchemaOrg
         type="FAQPage"
         data={{
-          "@context": "https://schema.org",
           "@type": "FAQPage",
           mainEntity: [
             {

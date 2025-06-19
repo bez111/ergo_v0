@@ -14,9 +14,9 @@ interface BreadcrumbsProps {
 
 export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
   const breadcrumbData = {
-    "@type": "BreadcrumbList",
+    "@type": "BreadcrumbList" as const,
     itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
+      "@type": "ListItem" as const,
       position: index + 1,
       name: item.label,
       item: `https://ergoplatform.org${item.href}`,

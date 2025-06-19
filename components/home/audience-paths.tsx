@@ -43,8 +43,8 @@ export function AudiencePaths() {
       ctaLink: "/start",
       links: [
         { label: "Wallets", href: "/wallet" },
-        { label: "Applications", href: "/use/dapps" },
-        { label: "Buy ERG", href: "/use/buy" },
+        { label: "Applications", href: "/ecosystem" },
+        { label: "Buy ERG", href: "/use/get-erg" },
       ],
     },
     {
@@ -54,8 +54,8 @@ export function AudiencePaths() {
       cta: "EXPLORE ECOSYSTEM",
       ctaLink: "/ecosystem",
       links: [
-        { label: "Projects", href: "/ecosystem/projects" },
-        { label: "Statistics", href: "/ecosystem/stats" },
+        { label: "Projects", href: "/ecosystem" },
+        { label: "Statistics", href: "/technology/eutxo-model" },
         { label: "Use Cases", href: "/learn/use-cases" },
       ],
     },

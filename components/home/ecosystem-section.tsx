@@ -66,7 +66,7 @@ export function EcosystemSection() {
 
         <div className="flex justify-center">
           <Button asChild variant="outline" className="gap-2">
-            <Link href="/ecosystem/projects">
+            <Link href="/ecosystem">
               View All Projects
               <ArrowRight className="h-4 w-4" />
             </Link>

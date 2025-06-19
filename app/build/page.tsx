@@ -44,7 +44,7 @@ const developerPaths = [
     description: "Leverage Ergo's eUTXO model and ErgoScript for advanced financial applications.",
     icon: Rocket,
     cta: "Explore Advanced DeFi",
-    href: "/build/ergoscript",
+    href: "/learn/ergoscript",
   },
   {
     title: "Researcher or Cryptographer?",

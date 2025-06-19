@@ -63,7 +63,7 @@ export function Footer() {
                 <ExternalLink className="h-3 w-3" />
                 Get Started
               </Link>
-              <Link href="/use/buy" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
+              <Link href="/use/get-erg" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
                 <ExternalLink className="h-3 w-3" />
                 Buy ERG
               </Link>
@@ -108,7 +108,7 @@ export function Footer() {
                 Events
               </Link>
               <Link
-                href="/ecosystem/projects"
+                href="/ecosystem"
                 className="text-gray-400 hover:text-primary font-mono flex items-center gap-1"
               >
                 <ExternalLink className="h-3 w-3" />
