@@ -202,32 +202,8 @@ export default function NIPOPOWsPage() {
           />
         </div>
 
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-cyan-500/10"></div>
-          <div className="container mx-auto px-4 py-24 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                NIPoPoWs
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-                Non-Interactive Proofs of Proof-of-Work for efficient blockchain verification 
-                and light client support on mobile and IoT devices.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-4 rounded-xl text-lg">
-                  Learn More
-                </Button>
-                <Button variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-xl text-lg backdrop-blur-sm">
-                  Technical Paper
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
-          {/* Hero Section */}
+          {/* What are NIPoPoWs */}
           <motion.section variants={itemVariants} className="pt-32 pb-20 px-4">
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -235,9 +211,9 @@ export default function NIPOPOWsPage() {
                   <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
                     INTEROPERABILITY
                   </Badge>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                    NIPoPoWs
-                  </h1>
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                    How NIPoPoWs Work
+                  </h2>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
                     Lightweight, Trustless Proofs for Blockchain Interoperability
                   </p>
@@ -266,7 +242,7 @@ export default function NIPOPOWsPage() {
                     <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                          How NIPoPoWs Work
+                          Process Overview
                         </h3>
                         <div className="space-y-4">
                           {workingSteps.map((step, index) => (

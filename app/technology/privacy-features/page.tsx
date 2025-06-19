@@ -190,32 +190,8 @@ export default function PrivacyFeaturesPage() {
           />
         </div>
 
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-cyan-500/10"></div>
-          <div className="container mx-auto px-4 py-24 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                Privacy Features
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-                Advanced cryptographic privacy technologies including Sigma protocols, 
-                ring signatures, and zero-knowledge proofs for secure, private transactions.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-4 rounded-xl text-lg">
-                  Explore Privacy
-                </Button>
-                <Button variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-xl text-lg backdrop-blur-sm">
-                  Technical Details
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
-          {/* Hero Section */}
+          {/* Privacy Overview */}
           <motion.section variants={itemVariants} className="pt-32 pb-20 px-4">
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -223,9 +199,9 @@ export default function PrivacyFeaturesPage() {
                   <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
                     PRIVACY & SECURITY
                   </Badge>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                    Privacy Features
-                  </h1>
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                    Privacy Technologies
+                  </h2>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Sigma Protocols and Beyond</p>
                   <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
                     Financial freedom and privacy go hand in hand. Ergo bakes privacy features directly into its core —

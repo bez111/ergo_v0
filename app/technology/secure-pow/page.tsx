@@ -120,39 +120,15 @@ export default function SecurePowPage() {
           />
         </div>
 
-        {/* Hero Section */}
-        <section className="relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-cyan-500/10"></div>
-          <div className="container mx-auto px-4 py-24 relative z-10">
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-8 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                Secure PoW
-              </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed">
-                Autolykos v2 - ASIC-resistant Proof-of-Work algorithm designed for decentralized mining 
-                with memory-hard functions and energy efficiency.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-4 rounded-xl text-lg">
-                  Start Mining
-                </Button>
-                <Button variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-4 rounded-xl text-lg backdrop-blur-sm">
-                  Mining Guide
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
-
         <div className="container mx-auto px-4 py-16 relative z-10">
-          {/* Hero Section */}
+          {/* Network Statistics */}
           <FadeIn delay={0.2}>
             <div className="max-w-7xl mx-auto mb-16">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
                     Autolykos v2
-                  </h1>
+                  </h2>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Secure Proof-of-Work</p>
                   <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
                     Ergo is committed to fair, transparent, and sustainable decentralization. That's why we use
