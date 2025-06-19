@@ -110,6 +110,47 @@ export default function RootLayout({
         <meta name="twitter:description" content="Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps." />
         <meta name="twitter:image" content="/og-image.png" />
         <meta name="twitter:site" content="@ErgoPlatform" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              document.addEventListener('DOMContentLoaded', function() {
+                // Предотвращаем появление курсора при кликах на body
+                document.addEventListener('click', function(e) {
+                  const target = e.target;
+                  const isInput = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.contentEditable === 'true';
+                  const isButton = target.tagName === 'BUTTON' || target.tagName === 'A' || target.closest('button') || target.closest('a');
+                  
+                  if (!isInput && !isButton) {
+                    // Убираем фокус со всех элементов
+                    if (document.activeElement && document.activeElement !== document.body) {
+                      document.activeElement.blur();
+                    }
+                    // Устанавливаем фокус на body
+                    document.body.focus();
+                    // Убираем выделение текста
+                    if (window.getSelection) {
+                      window.getSelection().removeAllRanges();
+                    }
+                  }
+                });
+                
+                // Предотвращаем появление курсора при двойном клике
+                document.addEventListener('dblclick', function(e) {
+                  const target = e.target;
+                  const isInput = target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.contentEditable === 'true';
+                  
+                  if (!isInput) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    if (window.getSelection) {
+                      window.getSelection().removeAllRanges();
+                    }
+                  }
+                });
+              });
+            `,
+          }}
+        />
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
