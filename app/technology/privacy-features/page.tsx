@@ -199,8 +199,10 @@ export default function PrivacyFeaturesPage() {
                   <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
                     PRIVACY & SECURITY
                   </Badge>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                    Privacy Technologies
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
+                      Privacy Technologies
+                    </span>
                   </h2>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Sigma Protocols and Beyond</p>
                   <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">

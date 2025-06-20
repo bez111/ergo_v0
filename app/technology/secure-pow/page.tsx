@@ -126,8 +126,10 @@ export default function SecurePowPage() {
             <div className="max-w-7xl mx-auto mb-16">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                    Autolykos v2
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
+                      Autolykos v2
+                    </span>
                   </h2>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Secure Proof-of-Work</p>
                   <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">

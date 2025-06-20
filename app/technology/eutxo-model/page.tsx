@@ -227,8 +227,10 @@ export default function EUTXOModelPage() {
                 <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
                   BLOCKCHAIN TECHNOLOGY
                 </Badge>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                  eUTXO Model
+                <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                  <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
+                    eUTXO Model
+                  </span>
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
                   How Ergo Differs from Account-Based Blockchains

@@ -211,8 +211,10 @@ export default function NIPOPOWsPage() {
                   <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
                     INTEROPERABILITY
                   </Badge>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                    How NIPoPoWs Work
+                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                    <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
+                      How NIPoPoWs Work
+                    </span>
                   </h2>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
                     Lightweight, Trustless Proofs for Blockchain Interoperability
