@@ -214,7 +214,7 @@ export default function StorageRentPage() {
         }}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+      <div className="min-h-screen relative">
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
@@ -226,7 +226,121 @@ export default function StorageRentPage() {
           />
         </div>
 
-        <div className="relative z-10">
+        {/* Animated Background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-black to-cyan-500/10" />
+          <motion.div
+            className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl"
+            animate={{
+              x: [0, 100, 0],
+              y: [0, -50, 0],
+            }}
+            transition={{
+              duration: 20,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "linear",
+            }}
+          />
+          <motion.div
+            className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
+            animate={{
+              x: [0, -80, 0],
+              y: [0, 60, 0],
+            }}
+            transition={{
+              duration: 25,
+              repeat: Number.POSITIVE_INFINITY,
+              ease: "linear",
+            }}
+          />
+        </div>
+
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
+          {/* Hero Section */}
+          <motion.section variants={itemVariants} className="pt-32 pb-20 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
+                    SUSTAINABLE ECONOMICS
+                  </Badge>
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                    Storage Rent
+                  </h1>
+                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+                    A Sustainable Economic Model for the Future
+                  </p>
+                  <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                    Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                      Learn More
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    >
+                      View Details
+                    </Button>
+                  </div>
+                </div>
+                <div className="relative">
+                  <motion.div
+                    className="relative z-10"
+                    whileHover={{ scale: 1.05 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
+                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
+                      <CardContent className="p-0">
+                        <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                          Core Principles
+                        </h3>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              name: "Prevent Bloat",
+                              description: "Keeps the blockchain lean and efficient",
+                              icon: <Recycle className="w-6 h-6" />,
+                              color: "from-orange-500/20 to-orange-500/5",
+                            },
+                            {
+                              name: "Economic Sustainability",
+                              description: "Creates long-term incentives for miners",
+                              icon: <TrendingUp className="w-6 h-6" />,
+                              color: "from-cyan-500/20 to-cyan-500/5",
+                            },
+                            {
+                              name: "Predictable Costs",
+                              description: "Users pay a transparent fee for data storage",
+                              icon: <Clock className="w-6 h-6" />,
+                              color: "from-purple-500/20 to-purple-500/5",
+                            },
+                          ].map((feature, index) => (
+                            <motion.div
+                              key={feature.name}
+                              className={`p-4 rounded-lg bg-gradient-to-r ${feature.color} border border-gray-700/50`}
+                              whileHover={{ scale: 1.02, x: 10 }}
+                              transition={{ type: "spring", stiffness: 400 }}
+                            >
+                              <div className="flex items-center space-x-3">
+                                <div className="text-orange-400">{feature.icon}</div>
+                                <div>
+                                  <h4 className="font-semibold text-white">{feature.name}</h4>
+                                  <p className="text-sm text-gray-400">{feature.description}</p>
+                                </div>
+                              </div>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
           {/* Problems Section - Enhanced */}
           <section className="py-20 px-4">
             <div className="max-w-7xl mx-auto">
@@ -481,7 +595,7 @@ export default function StorageRentPage() {
               </Card>
             </div>
           </section>
-        </div>
+        </motion.div>
       </div>
     </>
   )
