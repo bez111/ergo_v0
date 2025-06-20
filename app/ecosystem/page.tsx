@@ -1,12 +1,26 @@
 "use client"
 
-import { useState, useMemo, useEffect } from "react"
+import { useState, useMemo, useEffect, MouseEvent } from "react"
 import { motion } from "framer-motion"
-import { Search, CheckCircle, Clock, AlertCircle, ExternalLink, Filter, Zap } from "lucide-react"
+import {
+  Search,
+  CheckCircle,
+  Clock,
+  AlertCircle,
+  ExternalLink,
+  Filter,
+  Zap,
+  LayoutGrid,
+  List,
+  ChevronLeft,
+  ChevronRight,
+} from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/animations/fade-in"
+import { Card, CardContent } from "@/components/ui/card"
+import Link from "next/link"
 
 const projects = [
   {
@@ -165,7 +179,7 @@ const projects = [
     status: "OPERATIONAL",
     description:
       "An analytical block explorer providing Ergo network metrics, DeFi statistics (e.g., TVL), charts, and dashboards for monitoring blockchain activity.",
-    icon: "����",
+    icon: "🔍",
     url: "https://ergo.watch",
   },
   {
@@ -386,467 +400,320 @@ const projects = [
   },
 ]
 
-const categories = [
-  { id: "ALL", label: "ALL", count: projects.length },
-  { id: "DEFI", label: "DEFI", count: projects.filter((p) => p.category === "DEFI").length },
+const featuredProjects = [
   {
-    id: "INFRASTRUCTURE",
-    label: "INFRASTRUCTURE",
-    count: projects.filter((p) => p.category === "INFRASTRUCTURE").length,
+    id: 3,
+    name: "Rosen Bridge",
+    category: "INFRASTRUCTURE",
+    status: "OPERATIONAL",
+    description:
+      "An open-source protocol for cross-chain asset transfers between Ergo and other blockchains like Cardano, Bitcoin Runes, and Dogecoin.",
+    icon: "🌉",
+    url: "https://rosen.tech",
   },
-  { id: "WALLETS", label: "WALLETS", count: projects.filter((p) => p.category === "WALLETS").length },
-  { id: "NFT", label: "NFT", count: projects.filter((p) => p.category === "NFT").length },
-  { id: "DAO", label: "DAO", count: projects.filter((p) => p.category === "DAO").length },
-  { id: "PRIVACY", label: "PRIVACY", count: projects.filter((p) => p.category === "PRIVACY").length },
-  { id: "ORACLES", label: "ORACLES", count: projects.filter((p) => p.category === "ORACLES").length },
-  { id: "TOOLS", label: "TOOLS", count: projects.filter((p) => p.category === "TOOLS").length },
-  { id: "GAMING", label: "GAMING", count: projects.filter((p) => p.category === "GAMING").length },
+  {
+    id: 13,
+    name: "Mew Finance",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "A decentralized finance (DeFi) platform offering a suite of financial applications including DEX, NFT marketplace, and various financial tools.",
+    icon: "💎",
+    url: "#",
+  },
+  {
+    id: 7,
+    name: "DuckPools",
+    category: "DEFI",
+    status: "TESTING",
+    description:
+      "A collateralized lending platform with algorithmic lending pools. Users provide ERG or native assets to earn income or borrow assets against ERG collateral.",
+    icon: "🦆",
+    url: "https://duckpools.io",
+  },
+  {
+    id: 2,
+    name: "SigmaUSD",
+    category: "DEFI",
+    status: "OPERATIONAL",
+    description:
+      "The first eUTXO-based stablecoin, implementing the AgeUSD protocol. It is pegged to the US dollar and backed by ERG with a floating reserve ratio (400%-800%).",
+    icon: "💵",
+    url: "https://sigmausd.io",
+  },
+  {
+    id: 8,
+    name: "Paideia",
+    category: "DAO",
+    status: "OPERATIONAL",
+    description:
+      "A suite of tools for creating and managing Decentralized Autonomous Organizations (DAOs) on Ergo and Cardano with governance and treasury management.",
+    icon: "🏛️",
+    url: "https://paideia.im",
+  },
+  {
+    id: 5,
+    name: "Ergo Auction House",
+    category: "NFT",
+    status: "OPERATIONAL",
+    description:
+      "The first open-source NFT marketplace on Ergo. It supports artist royalties, on-site minting, various auction types, and multiple currencies.",
+    icon: "🖼️",
+    url: "https://ergoauctions.org",
+  },
 ]
 
+const categories = ["ALL", "DEFI", "INFRASTRUCTURE", "PRIVACY", "NFT", "WALLETS", "DAO", "ORACLES", "TOOLS", "GAMING"]
+const statuses = ["ALL", "OPERATIONAL", "TESTING", "PROTOTYPE"]
+
 const statusConfig = {
-  OPERATIONAL: {
-    icon: CheckCircle,
-    color: "text-green-400",
-    bgColor: "bg-green-400/10",
-    borderColor: "border-green-400/30",
-  },
-  TESTING: {
-    icon: Clock,
-    color: "text-yellow-400",
-    bgColor: "bg-yellow-400/10",
-    borderColor: "border-yellow-400/30",
-  },
-  PROTOTYPE: {
-    icon: AlertCircle,
-    color: "text-blue-400",
-    bgColor: "bg-blue-400/10",
-    borderColor: "border-blue-400/30",
-  },
-  "COMING-SOON": {
-    icon: AlertCircle,
-    color: "text-blue-400",
-    bgColor: "bg-blue-400/10",
-    borderColor: "border-blue-400/30",
+  OPERATIONAL: { icon: <CheckCircle className="w-4 h-4 text-green-400" />, color: "text-green-400" },
+  TESTING: { icon: <Clock className="w-4 h-4 text-yellow-400" />, color: "text-yellow-400" },
+  PROTOTYPE: { icon: <AlertCircle className="w-4 h-4 text-orange-400" />, color: "text-orange-400" },
+}
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
   },
 }
 
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+}
+
 export default function EcosystemPage() {
+  const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("ALL")
-  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedStatus, setSelectedStatus] = useState("ALL")
+  const [viewMode, setViewMode] = useState("grid")
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [currentProjectIndex, setCurrentProjectIndex] = useState(0)
+  const [currentFeaturedIndex, setCurrentFeaturedIndex] = useState(0)
 
-  // Track mouse position for parallax effect
-  useEffect(() => {
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({
-        x: e.clientX / window.innerWidth,
-        y: e.clientY / window.innerHeight,
-      })
-    }
-
-    window.addEventListener("mousemove", handleMouseMove)
-    return () => {
-      window.removeEventListener("mousemove", handleMouseMove)
-    }
-  }, [])
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    setMousePosition({ x: e.clientX, y: e.clientY })
+  }
 
   const filteredProjects = useMemo(() => {
-    return projects.filter((project) => {
-      const matchesCategory = selectedCategory === "ALL" || project.category === selectedCategory
-      const matchesSearch =
-        project.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        project.description.toLowerCase().includes(searchQuery.toLowerCase())
-      return matchesCategory && matchesSearch
-    })
-  }, [selectedCategory, searchQuery])
+    return projects.filter(
+      (project) =>
+        project.name.toLowerCase().includes(searchTerm.toLowerCase()) &&
+        (selectedCategory === "ALL" || project.category === selectedCategory) &&
+        (selectedStatus === "ALL" || project.status === selectedStatus),
+    )
+  }, [searchTerm, selectedCategory, selectedStatus])
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative overflow-hidden bg-black text-white" onMouseMove={handleMouseMove}>
+      <div
+        className="absolute inset-0 z-0 opacity-30"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 136, 0, 0.15), transparent 80%)`,
+        }}
+      />
+
       <div className="relative z-10">
-        <section className="pt-32 pb-16 px-4">
-          <div className="max-w-7xl mx-auto text-center">
-            <FadeIn>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8 }}
-                className="mb-8"
-              >
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
-                  ERGO ECOSYSTEM
-                </h1>
-                <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                  Discover the growing collection of decentralized applications, tools, and services built on Ergo
-                </p>
-              </motion.div>
-            </FadeIn>
-          </div>
-        </section>
-        <div className="relative z-10 py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            {/* Header */}
-            <motion.div
-              className="text-center mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              <div className="relative inline-block">
-                <p className="text-xl text-gray-300 mb-8 max-w-4xl mx-auto backdrop-blur-sm bg-black/20 p-4 rounded-lg border border-orange-500/20">
-                  Explore the complete Ergo ecosystem with advanced filtering and security analysis
-                </p>
+        {/* Hero Section */}
+        <motion.section
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="pt-32 pb-16 px-4 text-center"
+        >
+          <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
+            EXPLORE THE ECOSYSTEM
+          </Badge>
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
+              Ergo Ecosystem
+            </span>
+          </h1>
+          <p className="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            Discover a rich ecosystem of dApps, tools, and services built on the Ergo blockchain, designed for security,
+            privacy, and real-world utility.
+          </p>
+        </motion.section>
 
-                {/* Search */}
-                <div className="max-w-2xl mx-auto relative mb-8">
-                  <div className="absolute inset-0 bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-lg blur-xl" />
-                  <div className="relative">
-                    <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-orange-500 w-5 h-5 z-10" />
-                    <Input
-                      placeholder="Search projects..."
-                      value={searchQuery}
-                      onChange={(e) => setSearchQuery(e.target.value)}
-                      className="pl-12 pr-4 py-4 text-lg bg-gray-900/80 backdrop-blur-sm border-orange-500/30 focus:border-orange-500 rounded-lg font-mono relative z-10"
-                    />
-                  </div>
-                </div>
+        {/* Featured Projects Section */}
+        <div className="border-y border-gray-800 bg-black/20">
+          <motion.section
+            className="max-w-7xl mx-auto px-4 py-12"
+            variants={itemVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <div className="flex justify-between items-center mb-8">
+              <h2 className="text-3xl font-bold text-white">Featured Projects</h2>
+              <div className="flex gap-2">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setCurrentFeaturedIndex((p) => Math.max(0, p - 1))}
+                  disabled={currentFeaturedIndex === 0}
+                >
+                  <ChevronLeft className="w-4 h-4" />
+                </Button>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  onClick={() => setCurrentFeaturedIndex((p) => Math.min(featuredProjects.length - 3, p + 1))}
+                  disabled={currentFeaturedIndex >= featuredProjects.length - 3}
+                >
+                  <ChevronRight className="w-4 h-4" />
+                </Button>
               </div>
-            </motion.div>
-
-            {/* Featured Projects */}
-            <motion.div
-              className="mb-12"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-            >
-              <div className="relative mb-8 flex justify-between items-center">
-                <h2 className="text-3xl font-bold leading-snug pb-2 align-baseline block">FEATURED PROJECTS</h2>
-                <div className="h-1 w-24 bg-orange-500 mt-2 absolute top-full left-0"></div>
-
-                <div className="flex space-x-4">
-                  <button
-                    onClick={() => setCurrentProjectIndex((prev) => Math.max(0, prev - 1))}
-                    className={`p-2 rounded-full border border-orange-500/30 hover:bg-orange-500/20 transition-colors ${currentProjectIndex === 0 ? "opacity-50 cursor-not-allowed" : "opacity-100"}`}
-                    disabled={currentProjectIndex === 0}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-orange-500"
-                    >
-                      <path d="m15 18-6-6 6-6" />
-                    </svg>
-                  </button>
-                  <button
-                    onClick={() => setCurrentProjectIndex((prev) => Math.min(prev + 1, 3))}
-                    className={`p-2 rounded-full border border-orange-500/30 hover:bg-orange-500/20 transition-colors ${currentProjectIndex === 3 ? "opacity-50 cursor-not-allowed" : "opacity-100"}`}
-                    disabled={currentProjectIndex === 3}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      className="text-orange-500"
-                    >
-                      <path d="m9 18 6-6-6-6" />
-                    </svg>
-                  </button>
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {/* Featured Project Cards - Only show 3 at a time */}
-                {[
-                  {
-                    icon: "🌉",
-                    name: "Rosen Bridge",
-                    category: "Infrastructure",
-                    description: "Decentralized cross-chain bridge connecting Ergo with other blockchain ecosystems.",
-                    features: [
-                      "Trustless operation",
-                      "Multi-chain compatibility",
-                      "Enhanced security through guard committees",
-                    ],
-                    url: "https://rosen.tech",
-                  },
-                  {
-                    icon: "💎",
-                    name: "MEW Finance",
-                    category: "DeFi",
-                    description: "Advanced DeFi platform providing innovative financial services on the Ergo blockchain.",
-                    features: [
-                      "Yield optimization strategies",
-                      "Cross-chain liquidity pools",
-                      "Decentralized governance system",
-                    ],
-                    url: "#",
-                  },
-                  {
-                    icon: "🦆",
-                    name: "Duckpools",
-                    category: "DeFi",
-                    description: "Lending and borrowing protocol with a unique revenue-sharing model and DAO structure.",
-                    features: [
-                      "Permissionless lending markets",
-                      "Revenue sharing with liquidity providers",
-                      "Decentralized governance",
-                    ],
-                    url: "https://duckpools.io",
-                  },
-                  {
-                    icon: "⚡",
-                    name: "Dexy",
-                    category: "DeFi",
-                    description:
-                      "Decentralized exchange built on Ergo offering advanced trading features and deep liquidity.",
-                    features: ["Low slippage trading", "Concentrated liquidity pools", "Advanced order types"],
-                    url: "#",
-                  },
-                  {
-                    icon: "🔬",
-                    name: "Gluon",
-                    category: "DeFi",
-                    description: "Liquidity aggregation protocol that optimizes trading across multiple DEXes on Ergo.",
-                    features: ["Smart order routing", "MEV protection", "Gas optimization"],
-                    url: "#",
-                  },
-                  {
-                    icon: "💵",
-                    name: "SigmaUSD",
-                    category: "DeFi",
-                    description:
-                      "Algorithmic stablecoin protocol based on the AgeUSD design, offering stability without centralized collateral.",
-                    features: [
-                      "Crypto-backed stability",
-                      "Decentralized reserve system",
-                      "Resilient in volatile markets",
-                    ],
-                    url: "https://sigmausd.io",
-                  },
-                ]
-                  .slice(currentProjectIndex, currentProjectIndex + 3)
-                  .map((project, index) => (
-                    <motion.div
-                      key={index}
-                      className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-2xl p-6 h-full flex flex-col transition-all duration-300 hover:border-orange-500/50"
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                    >
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="text-3xl">{project.icon}</span>
-                        <span className="font-semibold text-lg text-white">{project.name}</span>
-                        <Badge className="ml-auto" variant="outline">{project.category}</Badge>
-                      </div>
-                      <p className="text-gray-400 mb-4 flex-1">{project.description}</p>
-                      <div className="flex flex-col gap-2 mt-auto">
-                        <h4 className="text-gray-300 font-mono mb-2 text-center text-xs">KEY FEATURES</h4>
-                        <ul className="space-y-1 mb-4">
-                          {project.features.map((feature, i) => (
-                            <li key={i} className="flex items-start">
-                              <span className="text-orange-500 mr-2">•</span>
-                              <span className="text-gray-300 text-sm">{feature}</span>
-                            </li>
-                          ))}
-                        </ul>
-                        <a
-                          href={project.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <Button variant="outline" className="w-full border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-4 py-2 rounded-xl backdrop-blur-sm">
-                            Visit
-                          </Button>
-                        </a>
-                      </div>
-                    </motion.div>
-                  ))}
-              </div>
-            </motion.div>
-
-            {/* Filter by Category */}
-            <motion.div
-              className="mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              <div className="backdrop-blur-sm bg-gray-900/50 p-6 rounded-lg border border-orange-500/20">
-                <div className="flex items-center gap-2 mb-4">
-                  <Filter className="w-5 h-5 text-orange-500" />
-                  <h2 className="text-lg font-mono font-bold text-orange-500 tracking-wider leading-snug pb-2 align-baseline block">FILTER BY CATEGORY</h2>
-                  <span className="text-sm text-gray-500 font-mono">SECURITY ANALYSIS</span>
-                  <Zap className="w-4 h-4 text-orange-500 animate-pulse" />
-                </div>
-
-                <div className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
-                    <Button
-                      key={category.id}
-                      variant={selectedCategory === category.id ? "default" : "outline"}
-                      onClick={() => setSelectedCategory(category.id)}
-                      className={`font-mono text-sm tracking-wider transition-all duration-300 ${
-                        selectedCategory === category.id
-                          ? "bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black border-orange-500 shadow-lg shadow-orange-500/25"
-                          : "border-orange-500/30 hover:border-orange-500 bg-gray-800/50 backdrop-blur-sm text-orange-500 hover:bg-orange-500/10"
-                      }`}
-                    >
-                      {category.label} {category.count}
-                    </Button>
-                  ))}
-                </div>
-              </div>
-            </motion.div>
-
-            {/* Available Projects */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
-              <div className="backdrop-blur-sm bg-gray-900/50 rounded-lg border border-orange-500/20 overflow-hidden">
-                <div className="flex items-center gap-2 mb-6 p-6 pb-0">
-                  <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse" />
-                  <h2 className="text-lg font-mono font-bold text-orange-500 tracking-wider leading-snug pb-2 align-baseline block">AVAILABLE PROJECTS</h2>
-                  <span className="text-sm text-gray-500 font-mono">SECURITY ANALYSIS</span>
-                  <div className="flex gap-1 ml-auto">
-                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full animate-pulse delay-200" />
-                    <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse delay-400" />
-                  </div>
-                </div>
-
-                {/* Table Header */}
-                <div className="grid grid-cols-12 gap-4 py-4 px-6 border-b border-orange-500/30 font-mono text-sm font-bold text-orange-500 tracking-wider bg-gradient-to-r from-orange-500/5 to-orange-600/5">
-                  <div className="col-span-3">PROJECT NAME</div>
-                  <div className="col-span-2">CATEGORY</div>
-                  <div className="col-span-2">STATUS</div>
-                  <div className="col-span-5">DESCRIPTION</div>
-                </div>
-
-                {/* Projects List */}
-                <div className="space-y-0">
-                  {filteredProjects.map((project, index) => {
-                    const StatusIcon = statusConfig[project.status as keyof typeof statusConfig]?.icon || CheckCircle
-                    const statusColor =
-                      statusConfig[project.status as keyof typeof statusConfig]?.color || "text-green-400"
-
-                    return (
-                      <motion.div
-                        key={project.id}
-                        className="grid grid-cols-12 gap-4 py-4 px-6 border-b border-gray-800/30 hover:bg-gradient-to-r hover:from-orange-500/10 hover:to-orange-600/5 transition-all duration-300 group cursor-pointer relative overflow-hidden"
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.05 }}
-                        onClick={() => project.url !== "#" && window.open(project.url, "_blank")}
-                      >
-                        {/* Hover effect */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-                        {/* Project Name */}
-                        <div className="col-span-3 flex items-center gap-3 relative z-10">
-                          <div className="text-2xl group-hover:scale-110 transition-transform duration-300">
-                            {project.icon}
-                          </div>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {featuredProjects.slice(currentFeaturedIndex, currentFeaturedIndex + 3).map((project) => (
+                <motion.div key={project.id} variants={itemVariants}>
+                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full flex flex-col">
+                    <CardContent className="p-6 flex-1 flex flex-col">
+                      <div className="flex items-start justify-between mb-4">
+                        <div className="flex items-center gap-4">
+                          <div className="text-4xl">{project.icon}</div>
                           <div>
-                            <div className="font-mono font-medium text-white group-hover:text-orange-500 transition-colors duration-300">
-                              {project.name}
-                            </div>
+                            <h2 className="text-xl font-bold text-white">{project.name}</h2>
+                            <Badge variant="secondary" className="mt-1">
+                              {project.category}
+                            </Badge>
                           </div>
                         </div>
-
-                        {/* Category */}
-                        <div className="col-span-2 flex items-center relative z-10">
-                          <Badge
-                            variant="outline"
-                            className="font-mono text-xs border-orange-500/30 text-orange-500 bg-gray-800/50 backdrop-blur-sm group-hover:border-orange-500 group-hover:bg-orange-500/10 transition-all duration-300"
-                          >
-                            {project.category}
-                          </Badge>
+                        <div
+                          className={`flex items-center gap-2 ${
+                            statusConfig[project.status as keyof typeof statusConfig]?.color
+                          }`}
+                        >
+                          {statusConfig[project.status as keyof typeof statusConfig]?.icon}
                         </div>
-
-                        {/* Status */}
-                        <div className="col-span-2 flex items-center gap-2 relative z-10">
-                          <StatusIcon className={`w-4 h-4 ${statusColor} group-hover:animate-pulse`} />
-                          <span className={`font-mono text-sm ${statusColor}`}>{project.status}</span>
-                        </div>
-
-                        {/* Description */}
-                        <div className="col-span-5 flex items-center justify-between relative z-10">
-                          <p className="text-sm text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">
-                            {project.description}
-                          </p>
-                          {project.url !== "#" && (
-                            <span className="ml-4 flex-shrink-0 font-mono text-cyan-400 text-sm">Visit</span>
-                          )}
-                        </div>
-                      </motion.div>
-                    )
-                  })}
-                </div>
-              </div>
-
-              {filteredProjects.length === 0 && (
-                <div className="text-center py-20 backdrop-blur-sm bg-gray-900/50 rounded-lg border border-orange-500/20">
-                  <div className="text-6xl mb-4 animate-bounce">🔍</div>
-                  <h3 className="text-2xl font-bold mb-2 font-mono text-orange-500">NO PROJECTS FOUND</h3>
-                  <p className="text-gray-400 mb-6">Try adjusting your search or filters</p>
-                  <Button
-                    onClick={() => {
-                      setSearchQuery("")
-                      setSelectedCategory("ALL")
-                    }}
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 font-mono shadow-lg shadow-orange-500/25"
-                  >
-                    CLEAR FILTERS
-                  </Button>
-                </div>
-              )}
-            </motion.div>
-
-            {/* Stats */}
-            <motion.div
-              className="mt-12 text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
-              <div className="inline-flex items-center gap-4 px-8 py-4 backdrop-blur-sm bg-gray-900/50 border border-orange-500/30 rounded-lg font-mono shadow-lg shadow-orange-500/10">
-                <span className="text-orange-500">TOTAL PROJECTS:</span>
-                <span className="text-white font-bold text-lg">{filteredProjects.length}</span>
-                <span className="text-gray-500">|</span>
-                <span className="text-orange-500">OPERATIONAL:</span>
-                <span className="text-green-400 font-bold text-lg animate-pulse">
-                  {filteredProjects.filter((p) => p.status === "OPERATIONAL").length}
-                </span>
-                <span className="text-gray-500">|</span>
-                <span className="text-orange-500">TESTING:</span>
-                <span className="text-yellow-400 font-bold text-lg animate-pulse delay-200">
-                  {filteredProjects.filter((p) => p.status === "TESTING").length}
-                </span>
-                <span className="text-gray-500">|</span>
-                <span className="text-orange-500">PROTOTYPE:</span>
-                <span className="text-blue-400 font-bold text-lg animate-pulse delay-400">
-                  {filteredProjects.filter((p) => p.status === "PROTOTYPE").length}
-                </span>
-              </div>
-            </motion.div>
-          </div>
+                      </div>
+                      <p className="text-gray-400 mb-6 flex-1">{project.description}</p>
+                      <Button asChild variant="outline" className="w-full mt-auto">
+                        <Link href={project.url} target="_blank" className="flex items-center gap-2">
+                          Visit Project
+                          <ExternalLink className="w-4 h-4" />
+                        </Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </motion.section>
         </div>
+
+        {/* Filters and Search */}
+        <motion.div
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="sticky top-0 z-20 bg-black/50 backdrop-blur-lg py-6 px-4"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="flex flex-col md:flex-row gap-4 items-center mb-6">
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold text-white">All Projects</h2>
+              </div>
+              <div className="relative w-full md:w-auto md:flex-1">
+                <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+                <Input
+                  type="text"
+                  placeholder="Search projects..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="w-full bg-gray-900/80 border-gray-700/50 pl-12 h-12 rounded-xl focus:border-orange-500/50"
+                />
+              </div>
+              <div className="flex items-center gap-2">
+                <Button
+                  variant={viewMode === "grid" ? "default" : "outline"}
+                  onClick={() => setViewMode("grid")}
+                  className="h-12 w-12"
+                >
+                  <LayoutGrid />
+                </Button>
+                <Button
+                  variant={viewMode === "list" ? "default" : "outline"}
+                  onClick={() => setViewMode("list")}
+                  className="h-12 w-12"
+                >
+                  <List />
+                </Button>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-2 justify-center mb-4">
+              {categories.map((category) => (
+                <Button
+                  key={category}
+                  variant={selectedCategory === category ? "default" : "outline"}
+                  onClick={() => setSelectedCategory(category)}
+                  className="rounded-full backdrop-blur-sm"
+                >
+                  {category}
+                </Button>
+              ))}
+            </div>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {statuses.map((status) => (
+                <Button
+                  key={status}
+                  variant={selectedStatus === status ? "default" : "outline"}
+                  onClick={() => setSelectedStatus(status)}
+                  className="rounded-full backdrop-blur-sm"
+                >
+                  {status}
+                </Button>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Projects Grid/List */}
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className={`max-w-7xl mx-auto px-4 pb-12 grid gap-8 ${
+            viewMode === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
+          }`}
+        >
+          {filteredProjects.map((project) => (
+            <motion.div key={project.id} variants={itemVariants}>
+              <Card
+                className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full flex flex-col`}
+              >
+                <CardContent className="p-6 flex-1 flex flex-col">
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-4">
+                      <div className="text-4xl">{project.icon}</div>
+                      <div>
+                        <h2 className="text-xl font-bold text-white">{project.name}</h2>
+                        <Badge variant="secondary" className="mt-1">
+                          {project.category}
+                        </Badge>
+                      </div>
+                    </div>
+                    <div className={statusConfig[project.status as keyof typeof statusConfig]?.color}>
+                      {statusConfig[project.status as keyof typeof statusConfig]?.icon}
+                    </div>
+                  </div>
+                  <p className="text-gray-400 mb-6 flex-1">{project.description}</p>
+                  <Button asChild variant="outline" className="w-full mt-auto">
+                    <Link href={project.url} target="_blank" className="flex items-center gap-2">
+                      Visit Project
+                      <ExternalLink className="w-4 h-4" />
+                    </Link>
+                  </Button>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
     </div>
   )
