@@ -491,13 +491,21 @@ export default function EcosystemPage() {
   const [searchTerm, setSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("ALL")
   const [selectedStatus, setSelectedStatus] = useState("ALL")
-  const [viewMode, setViewMode] = useState("grid")
+  const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
+  const [currentPage, setCurrentPage] = useState(1)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [currentFeaturedIndex, setCurrentFeaturedIndex] = useState(0)
 
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     setMousePosition({ x: e.clientX, y: e.clientY })
   }
+
+  useEffect(() => {
+    const savedViewMode = localStorage.getItem("ecosystemViewMode")
+    if (savedViewMode) {
+      setViewMode(savedViewMode as "grid" | "list")
+    }
+  }, [])
 
   const filteredProjects = useMemo(() => {
     return projects.filter(
@@ -673,44 +681,93 @@ export default function EcosystemPage() {
           </div>
         </motion.div>
 
+        {/* Projects Table Header (List view only) */}
+        {viewMode === "list" && (
+          <div className="max-w-7xl mx-auto px-4 hidden md:block">
+            <div className="grid grid-cols-12 items-center gap-4 p-4 text-xs font-semibold text-gray-500 border-b border-gray-800 uppercase tracking-wider">
+              <div className="col-span-3">Project</div>
+              <div className="col-span-2">Category</div>
+              <div className="col-span-2">Status</div>
+              <div className="col-span-4">Description</div>
+              <div className="col-span-1 text-right">Link</div>
+            </div>
+          </div>
+        )}
+
         {/* Projects Grid/List */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
-          className={`max-w-7xl mx-auto px-4 pb-12 grid gap-8 ${
-            viewMode === "grid" ? "grid-cols-1 md:grid-cols-2 lg:grid-cols-3" : "grid-cols-1"
+          className={`max-w-7xl mx-auto px-4 pb-12 ${
+            viewMode === "grid"
+              ? "grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3"
+              : "flex flex-col"
           }`}
         >
           {filteredProjects.map((project) => (
             <motion.div key={project.id} variants={itemVariants}>
-              <Card
-                className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full flex flex-col`}
-              >
-                <CardContent className="p-6 flex-1 flex flex-col">
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="flex items-center gap-4">
-                      <div className="text-4xl">{project.icon}</div>
-                      <div>
-                        <h2 className="text-xl font-bold text-white">{project.name}</h2>
-                        <Badge variant="secondary" className="mt-1">
-                          {project.category}
-                        </Badge>
+              {viewMode === "grid" ? (
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full flex flex-col">
+                  <CardContent className="p-6 flex-1 flex flex-col">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="flex items-center gap-4">
+                        <div className="text-4xl">{project.icon}</div>
+                        <div>
+                          <h2 className="text-xl font-bold text-white">{project.name}</h2>
+                          <Badge variant="secondary" className="mt-1">
+                            {project.category}
+                          </Badge>
+                        </div>
+                      </div>
+                      <div
+                        className={`flex items-center gap-2 ${
+                          statusConfig[project.status as keyof typeof statusConfig]?.color
+                        }`}
+                      >
+                        {statusConfig[project.status as keyof typeof statusConfig]?.icon}
                       </div>
                     </div>
-                    <div className={statusConfig[project.status as keyof typeof statusConfig]?.color}>
+                    <p className="text-gray-400 mb-6 flex-1">{project.description}</p>
+                    <Button asChild variant="outline" className="w-full mt-auto">
+                      <Link href={project.url} target="_blank" className="flex items-center gap-2">
+                        Visit Project
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+                    </Button>
+                  </CardContent>
+                </Card>
+              ) : (
+                <Link
+                  href={project.url}
+                  target="_blank"
+                  className="block p-4 rounded-lg hover:bg-gray-900/80 border border-transparent hover:border-gray-800 transition-colors"
+                >
+                  <div className="grid grid-cols-12 items-center gap-4">
+                    <div className="col-span-12 md:col-span-3 flex items-center gap-4">
+                      <div className="text-2xl">{project.icon}</div>
+                      <h3 className="font-semibold text-white">{project.name}</h3>
+                    </div>
+                    <div className="col-span-6 md:col-span-2">
+                      <Badge variant="outline">{project.category}</Badge>
+                    </div>
+                    <div
+                      className={`col-span-6 md:col-span-2 flex items-center gap-2 text-sm ${
+                        statusConfig[project.status as keyof typeof statusConfig]?.color
+                      }`}
+                    >
                       {statusConfig[project.status as keyof typeof statusConfig]?.icon}
+                      <span>{project.status}</span>
+                    </div>
+                    <div className="col-span-11 md:col-span-4 md:col-start-8">
+                      <p className="text-sm text-gray-400 line-clamp-2">{project.description}</p>
+                    </div>
+                    <div className="col-span-1 flex justify-end text-gray-500">
+                      <ExternalLink className="w-4 h-4" />
                     </div>
                   </div>
-                  <p className="text-gray-400 mb-6 flex-1">{project.description}</p>
-                  <Button asChild variant="outline" className="w-full mt-auto">
-                    <Link href={project.url} target="_blank" className="flex items-center gap-2">
-                      Visit Project
-                      <ExternalLink className="w-4 h-4" />
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                </Link>
+              )}
             </motion.div>
           ))}
         </motion.div>

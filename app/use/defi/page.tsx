@@ -1,12 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useMemo, MouseEvent } from "react"
+import Link from "next/link"
 import { motion } from "framer-motion"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Alert, AlertDescription } from "@/components/ui/alert"
+import { Input } from "@/components/ui/input"
+import { Slider } from "@/components/ui/slider"
 import {
   TrendingUp,
   Coins,
@@ -15,889 +16,372 @@ import {
   Calculator,
   ExternalLink,
   AlertTriangle,
-  Info,
   BarChart3,
   Lock,
   Dice6,
-  ArrowUpRight,
-  ArrowDownRight,
-  ChevronRight,
+  ArrowRight,
+  Zap,
+  BookOpen,
+  BrainCircuit,
+  Rocket,
+  CheckCircle,
+  Briefcase,
+  Layers,
 } from "lucide-react"
+import { LucideIcon } from "lucide-react"
 
-// Binary rain background component
-const BinaryRainBackground = () => {
-  const binaryChars = Array.from({ length: 150 }, (_, i) => ({
-    id: i,
-    char: Math.random() > 0.5 ? "1" : "0",
-    left: Math.random() * 100,
-    top: Math.random() * 100,
-    opacity: Math.random() * 0.3 + 0.1,
-    size: Math.random() * 8 + 8,
-  }))
-
-  return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
-      {binaryChars.map((char) => (
-        <div
-          key={char.id}
-          className="absolute text-orange-500/20 font-mono select-none"
-          style={{
-            left: `${char.left}%`,
-            top: `${char.top}%`,
-            opacity: char.opacity,
-            fontSize: `${char.size}px`,
-          }}
-        >
-          {char.char}
-        </div>
-      ))}
-    </div>
-  )
+interface Protocol {
+  name: string
+  category: "DEX" | "Stablecoin" | "Gaming" | "Lending" | "NFT Marketplace"
+  description: string
+  tvl: string
+  status: "Live" | "Development"
+  link: string
+  icon: LucideIcon
 }
 
-const protocols = [
+interface EarningMethod {
+  title: string
+  icon: LucideIcon
+  description: string
+  apy: string
+  risk: "Low" | "Medium" | "High" | "Very High"
+}
+
+interface Strategy {
+  level: "Beginner" | "Intermediate" | "Advanced"
+  title: string
+  description: string
+  steps: string[]
+  expectedApy: string
+  icon: LucideIcon
+}
+
+const protocols: Protocol[] = [
   {
     name: "Spectrum Finance",
-    category: "AMM & DEX",
-    apy: "15-45%",
-    risk: "Medium",
-    description: "Leading AMM on Ergo with liquidity mining rewards",
-    features: ["Liquidity Providing", "Yield Farming", "Token Swaps"],
-    tvl: "$2.1M",
+    category: "DEX",
+    description: "The leading cross-chain DEX on Ergo, enabling swaps and liquidity providing.",
+    tvl: "$2.1M+",
     status: "Live",
-    color: "from-blue-500 to-cyan-500",
+    link: "https://spectrum.fi/",
+    icon: Layers,
   },
   {
     name: "SigmaUSD",
-    category: "Algorithmic Stablecoin",
-    apy: "Variable",
-    risk: "High",
-    description: "Mint SigUSD or SigRSV for different risk profiles",
-    features: ["Stable Minting", "Reserve Backing", "Arbitrage"],
-    tvl: "$850K",
+    category: "Stablecoin",
+    description: "An algorithmic stablecoin protocol that allows minting of SigUSD and SigRSV.",
+    tvl: "$850K+",
     status: "Live",
-    color: "from-green-500 to-emerald-500",
-  },
-  {
-    name: "Auction House",
-    category: "NFT Marketplace",
-    apy: "5-20%",
-    risk: "Medium",
-    description: "Earn through NFT trading and royalties",
-    features: ["NFT Trading", "Royalties", "Collections"],
-    tvl: "$320K",
-    status: "Live",
-    color: "from-orange-500 to-red-500",
+    link: "https://sigmausd.io/",
+    icon: Shield,
   },
   {
     name: "Night Owl Casino",
     category: "Gaming",
-    apy: "Variable",
-    risk: "Very High",
-    description: "Provably fair casino games with house edge",
-    features: ["Dice Games", "Lottery", "House Banking"],
-    tvl: "$180K",
+    description: "A provably fair on-chain casino offering various games of chance.",
+    tvl: "$180K+",
     status: "Live",
-    color: "from-yellow-500 to-orange-500",
+    link: "https://nightowlcasino.io/",
+    icon: Dice6,
   },
   {
-    name: "Lending Protocol",
-    category: "Lending",
-    apy: "Coming Soon",
-    risk: "Medium",
-    description: "Collateralized lending and borrowing",
-    features: ["Lending", "Borrowing", "Liquidations"],
-    tvl: "TBA",
-    status: "Development",
-    color: "from-gray-500 to-slate-500",
+    name: "Ergo Auction House",
+    category: "NFT Marketplace",
+    description: "The primary marketplace for buying, selling, and auctioning Ergo NFTs.",
+    tvl: "$320K+",
+    status: "Live",
+    link: "https://ergoauctions.org/",
+    icon: Briefcase,
   },
 ]
 
-const earningMethods = [
+const earningMethods: EarningMethod[] = [
   {
     title: "Liquidity Providing",
-    icon: <Coins className="h-6 w-6" />,
-    description: "Provide liquidity to AMM pools and earn trading fees plus rewards",
+    icon: Coins,
+    description: "Earn trading fees and rewards by providing liquidity to DEX pools.",
     apy: "15-45%",
     risk: "Medium",
-    complexity: "Beginner",
-    requirements: "Two tokens for pair",
-    pros: ["Trading fee income", "Token rewards", "Relatively stable"],
-    cons: ["Impermanent loss risk", "Smart contract risk", "Market volatility"],
   },
   {
     title: "Yield Farming",
-    icon: <TrendingUp className="h-6 w-6" />,
-    description: "Stake LP tokens or single assets to earn additional token rewards",
+    icon: TrendingUp,
+    description: "Stake your LP tokens to earn additional token rewards from various farms.",
     apy: "20-80%",
-    risk: "Medium-High",
-    complexity: "Intermediate",
-    requirements: "LP tokens or specific assets",
-    pros: ["High potential returns", "Compound rewards", "Multiple strategies"],
-    cons: ["High volatility", "Impermanent loss", "Token price risk"],
+    risk: "High",
   },
   {
     title: "Staking",
-    icon: <Lock className="h-6 w-6" />,
-    description: "Lock tokens for governance participation and steady rewards",
+    icon: Lock,
+    description: "Lock tokens in protocols like ErgoPad to earn rewards and governance rights.",
     apy: "8-25%",
-    risk: "Low-Medium",
-    complexity: "Beginner",
-    requirements: "Native protocol tokens",
-    pros: ["Predictable returns", "Governance rights", "Lower risk"],
-    cons: ["Lock-up periods", "Opportunity cost", "Inflation risk"],
+    risk: "Low",
   },
   {
-    title: "Lending",
-    icon: <PiggyBank className="h-6 w-6" />,
-    description: "Lend assets to borrowers and earn interest (Coming Soon)",
+    title: "Lending & Borrowing",
+    icon: PiggyBank,
+    description: "Lend your assets to earn interest or borrow against collateral (coming soon).",
     apy: "5-15%",
-    risk: "Low-Medium",
-    complexity: "Beginner",
-    requirements: "Supported assets",
-    pros: ["Steady income", "Lower volatility", "Flexible terms"],
-    cons: ["Default risk", "Lower returns", "Liquidity risk"],
-  },
-  {
-    title: "Algorithmic Assets",
-    icon: <BarChart3 className="h-6 w-6" />,
-    description: "Participate in SigmaUSD system as reserve provider or arbitrageur",
-    apy: "Variable",
-    risk: "High",
-    complexity: "Advanced",
-    requirements: "ERG for reserves",
-    pros: ["Arbitrage opportunities", "No impermanent loss", "Market making"],
-    cons: ["High complexity", "Liquidation risk", "Market timing"],
-  },
-  {
-    title: "Gaming & Lotteries",
-    icon: <Dice6 className="h-6 w-6" />,
-    description: "Participate in provably fair games and prediction markets",
-    apy: "Variable",
-    risk: "Very High",
-    complexity: "Beginner",
-    requirements: "ERG or tokens",
-    pros: ["High potential returns", "Entertainment value", "Provably fair"],
-    cons: ["Gambling risk", "House edge", "Addiction potential"],
+    risk: "Low",
   },
 ]
 
-const strategies = [
+const strategies: Strategy[] = [
   {
     level: "Beginner",
-    title: "Conservative Staking",
-    description: "Start with single-asset staking for predictable returns",
-    steps: [
-      "Choose established protocols like ErgoPad",
-      "Start with small amounts to learn",
-      "Focus on governance token staking",
-      "Reinvest rewards for compounding",
-    ],
-    expectedAPY: "8-15%",
-    riskLevel: "Low",
-    timeCommitment: "5 minutes setup",
+    title: "Conservative Start",
+    description: "Ideal for newcomers. Focus on lower-risk activities to learn the ropes.",
+    steps: ["Stake ERG or stablecoins in established protocols.", "Provide liquidity to stable pairs (e.g., SigUSD/USDC)."],
+    expectedApy: "5-15%",
+    icon: BookOpen,
   },
   {
     level: "Intermediate",
-    title: "Balanced LP Strategy",
-    description: "Combine liquidity providing with yield farming",
-    steps: [
-      "Provide liquidity to major pairs (ERG/SigUSD)",
-      "Stake LP tokens for additional rewards",
-      "Monitor impermanent loss regularly",
-      "Diversify across multiple pools",
-    ],
-    expectedAPY: "20-35%",
-    riskLevel: "Medium",
-    timeCommitment: "1-2 hours weekly",
+    title: "Balanced Growth",
+    description: "For those comfortable with core concepts like impermanent loss.",
+    steps: ["Yield farm with major pairs like ERG/SigUSD.", "Explore single-asset vaults with higher APYs."],
+    expectedApy: "15-40%",
+    icon: BrainCircuit,
   },
   {
     level: "Advanced",
-    title: "Multi-Protocol Optimization",
-    description: "Maximize yields across multiple protocols and strategies",
-    steps: [
-      "Analyze yield opportunities across protocols",
-      "Use leverage and advanced strategies",
-      "Implement automated rebalancing",
-      "Participate in governance and voting",
-    ],
-    expectedAPY: "40-80%",
-    riskLevel: "High",
-    timeCommitment: "5+ hours weekly",
+    title: "Aggressive Yield Hunting",
+    description: "For experienced users seeking to maximize returns through complex strategies.",
+    steps: ["Leverage borrowing/lending to enhance yield.", "Participate in new protocol launches (high risk)."],
+    expectedApy: "40%+",
+    icon: Rocket,
   },
 ]
 
-export default function DeFiPage() {
-  const [selectedMethod, setSelectedMethod] = useState(0)
-  const [calculatorValues, setCalculatorValues] = useState({
-    amount: 1000,
-    apy: 25,
-    period: 12,
-  })
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: { opacity: 1, transition: { staggerChildren: 0.1 } },
+}
 
-  const calculateReturns = () => {
-    const { amount, apy, period } = calculatorValues
-    const monthlyRate = apy / 100 / 12
-    const compoundReturns = amount * Math.pow(1 + monthlyRate, period)
-    const profit = compoundReturns - amount
-    return { total: compoundReturns, profit }
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+}
+
+export default function DeFiPage() {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [principal, setPrincipal] = useState(1000)
+  const [apy, setApy] = useState(25)
+  const [duration, setDuration] = useState(12)
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    setMousePosition({ x: e.clientX, y: e.clientY })
   }
 
-  const { total, profit } = calculateReturns()
+  const { totalReturn, profit } = useMemo(() => {
+    const monthlyRate = apy / 100 / 12
+    const total = principal * Math.pow(1 + monthlyRate, duration)
+    return {
+      totalReturn: total,
+      profit: total - principal,
+    }
+  }, [principal, apy, duration])
 
   return (
-    <div className="min-h-screen relative">
-      <BinaryRainBackground />
+    <div className="min-h-screen bg-black text-white relative overflow-hidden" onMouseMove={handleMouseMove}>
+      <div
+        className="absolute inset-0 z-0 opacity-30"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 136, 0, 0.15), transparent 80%)`,
+        }}
+      />
 
-      <div className="relative z-10">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
         {/* Hero Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-6xl mx-auto text-center">
-            <motion.div
-              className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent text-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              EARN WITH DEFI
-            </motion.div>
-            <p className="text-xl md:text-2xl text-orange-500 mb-4">
-              Discover Passive Income Opportunities in Ergo's DeFi Ecosystem
-            </p>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-              From liquidity providing to yield farming, staking to algorithmic trading - explore comprehensive ways
-              to grow your crypto assets on Ergo.
-            </p>
+        <motion.section
+          variants={itemVariants}
+          initial="hidden"
+          animate="visible"
+          className="text-center mb-24"
+        >
+          <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30">DECENTRALIZED FINANCE</Badge>
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pb-4">
+            Ergo DeFi
+          </h1>
+          <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            Put your crypto to work. Discover a growing ecosystem of financial applications built on the secure and
+            powerful Ergo blockchain.
+          </p>
+        </motion.section>
 
-            {/* Quick Stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-12"
-            >
-              <div className="bg-gray-900/50 border border-orange-500/20 rounded-lg p-6">
-                <div className="text-3xl font-bold text-orange-500">$5.2M+</div>
-                <div className="text-gray-300">Total Value Locked</div>
-              </div>
-              <div className="bg-gray-900/50 border border-orange-500/20 rounded-lg p-6">
-                <div className="text-3xl font-bold text-orange-500">15-80%</div>
-                <div className="text-gray-300">APY Range</div>
-              </div>
-              <div className="bg-gray-900/50 border border-orange-500/20 rounded-lg p-6">
-                <div className="text-3xl font-bold text-orange-500">6+</div>
-                <div className="text-gray-300">Active Protocols</div>
-              </div>
-              <div className="bg-gray-900/50 border border-orange-500/20 rounded-lg p-6">
-                <div className="text-3xl font-bold text-orange-500">24/7</div>
-                <div className="text-gray-300">Always Available</div>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-
-        {/* Main Content */}
-        <section className="py-12 px-4">
-          <div className="max-w-6xl mx-auto">
-            <Tabs defaultValue="methods" className="w-full">
-              <TabsList className="grid w-full grid-cols-5 bg-gray-900/50 border border-orange-500/20">
-                <TabsTrigger value="methods" className="data-[state=active]:bg-orange-500">
-                  Earning Methods
-                </TabsTrigger>
-                <TabsTrigger value="protocols" className="data-[state=active]:bg-orange-500">
-                  Protocols
-                </TabsTrigger>
-                <TabsTrigger value="strategies" className="data-[state=active]:bg-orange-500">
-                  Strategies
-                </TabsTrigger>
-                <TabsTrigger value="calculator" className="data-[state=active]:bg-orange-500">
-                  Calculator
-                </TabsTrigger>
-                <TabsTrigger value="risks" className="data-[state=active]:bg-orange-500">
-                  Risks & Safety
-                </TabsTrigger>
-              </TabsList>
-
-              {/* Earning Methods Tab */}
-              <TabsContent value="methods" className="mt-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="space-y-4">
-                    {earningMethods.map((method, index) => (
-                      <motion.div
-                        key={method.title}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                      >
-                        <Card
-                          className={`bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl cursor-pointer ${selectedMethod === index ? "border-orange-500 bg-orange-500/10" : ""}`}
-                          onClick={() => setSelectedMethod(index)}
-                        >
-                          <CardHeader className="pb-3">
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-3">
-                                <div className="p-2 bg-orange-500/20 rounded-lg text-orange-500">{method.icon}</div>
-                                <div>
-                                  <CardTitle className="text-white">{method.title}</CardTitle>
-                                  <div className="flex gap-2 mt-1">
-                                    <Badge variant="outline" className="text-green-400 border-green-400/50">
-                                      {method.apy}
-                                    </Badge>
-                                    <Badge
-                                      variant="outline"
-                                      className={`
-                                      ${
-                                        method.risk === "Low"
-                                          ? "text-green-400 border-green-400/50"
-                                          : method.risk === "Medium"
-                                            ? "text-yellow-400 border-yellow-400/50"
-                                            : method.risk === "Medium-High"
-                                              ? "text-orange-400 border-orange-400/50"
-                                              : "text-red-400 border-red-400/50"
-                                      }
-                                    `}
-                                    >
-                                      {method.risk} Risk
-                                    </Badge>
-                                  </div>
-                                </div>
-                              </div>
-                              <ChevronRight className="h-5 w-5 text-gray-400" />
-                            </div>
-                          </CardHeader>
-                        </Card>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  {/* Method Details */}
-                  <div className="lg:sticky lg:top-8">
-                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                      <CardHeader>
-                        <div className="flex items-center gap-3">
-                          <div className="p-2 bg-orange-500/20 rounded-lg text-orange-500">
-                            {earningMethods[selectedMethod].icon}
-                          </div>
-                          <CardTitle className="text-white">{earningMethods[selectedMethod].title}</CardTitle>
-                        </div>
-                        <CardDescription className="text-gray-300">
-                          {earningMethods[selectedMethod].description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-6">
-                        <div className="grid grid-cols-2 gap-4">
-                          <div>
-                            <div className="text-sm text-gray-400">Expected APY</div>
-                            <div className="text-lg font-semibold text-green-400">
-                              {earningMethods[selectedMethod].apy}
-                            </div>
-                          </div>
-                          <div>
-                            <div className="text-sm text-gray-400">Complexity</div>
-                            <div className="text-lg font-semibold text-orange-400">
-                              {earningMethods[selectedMethod].complexity}
-                            </div>
-                          </div>
-                        </div>
-
-                        <div>
-                          <div className="text-sm text-gray-400 mb-2">Requirements</div>
-                          <div className="text-white">{earningMethods[selectedMethod].requirements}</div>
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                          <div>
-                            <div className="text-sm text-gray-400 mb-2 flex items-center gap-2">
-                              <ArrowUpRight className="h-4 w-4 text-green-400" />
-                              Pros
-                            </div>
-                            <ul className="space-y-1">
-                              {earningMethods[selectedMethod].pros.map((pro, index) => (
-                                <li key={index} className="text-sm text-green-400">
-                                  • {pro}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                          <div>
-                            <div className="text-sm text-gray-400 mb-2 flex items-center gap-2">
-                              <ArrowDownRight className="h-4 w-4 text-red-400" />
-                              Cons
-                            </div>
-                            <ul className="space-y-1">
-                              {earningMethods[selectedMethod].cons.map((con, index) => (
-                                <li key={index} className="text-sm text-red-400">
-                                  • {con}
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                        </div>
-
-                        <Button
-                          className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
-                        >
-                          Get Started with {earningMethods[selectedMethod].title}
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              </TabsContent>
-
-              {/* Protocols Tab */}
-              <TabsContent value="protocols" className="mt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {protocols.map((protocol, index) => (
-                    <motion.div
-                      key={protocol.name}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                    >
-                      <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl h-full">
-                        <CardHeader>
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <CardTitle className="text-white">{protocol.name}</CardTitle>
-                              <CardDescription className="text-gray-400">{protocol.category}</CardDescription>
-                            </div>
-                            <Badge
-                              variant="outline"
-                              className={
-                                protocol.status === "Live"
-                                  ? "text-green-400 border-green-400/50"
-                                  : "text-yellow-400 border-yellow-400/50"
-                              }
-                            >
-                              {protocol.status}
-                            </Badge>
-                          </div>
-                          <div className={`h-1 bg-gradient-to-r ${protocol.color} rounded-full`} />
-                        </CardHeader>
-                        <CardContent className="space-y-4">
-                          <p className="text-gray-300 text-sm">{protocol.description}</p>
-
-                          <div className="grid grid-cols-2 gap-4">
-                            <div>
-                              <div className="text-xs text-gray-400">APY Range</div>
-                              <div className="text-lg font-semibold text-green-400">{protocol.apy}</div>
-                            </div>
-                            <div>
-                              <div className="text-xs text-gray-400">TVL</div>
-                              <div className="text-lg font-semibold text-orange-400">{protocol.tvl}</div>
-                            </div>
-                          </div>
-
-                          <div>
-                            <div className="text-xs text-gray-400 mb-2">Features</div>
-                            <div className="flex flex-wrap gap-1">
-                              {protocol.features.map((feature, idx) => (
-                                <Badge
-                                  key={idx}
-                                  variant="secondary"
-                                  className="text-xs bg-orange-500/20 text-orange-300"
-                                >
-                                  {feature}
-                                </Badge>
-                              ))}
-                            </div>
-                          </div>
-
-                          <Button
-                            className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
-                            disabled={protocol.status !== "Live"}
-                          >
-                            {protocol.status === "Live" ? "Start Earning" : "Coming Soon"}
-                            <ExternalLink className="ml-2 h-4 w-4" />
-                          </Button>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  ))}
-                </div>
-              </TabsContent>
-
-              {/* Strategies Tab */}
-              <TabsContent value="strategies" className="mt-8">
-                <div className="space-y-8">
-                  {strategies.map((strategy, index) => (
-                    <motion.div
-                      key={strategy.level}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5, delay: index * 0.2 }}
-                    >
-                      <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                        <CardHeader>
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <CardTitle className="text-white flex items-center gap-3">
-                                <Badge
-                                  className={`
-                                  ${
-                                    strategy.level === "Beginner"
-                                      ? "bg-green-500"
-                                      : strategy.level === "Intermediate"
-                                        ? "bg-yellow-500"
-                                        : "bg-red-500"
-                                  } text-black
-                                `}
-                                >
-                                  {strategy.level}
-                                </Badge>
-                                {strategy.title}
-                              </CardTitle>
-                              <CardDescription className="text-gray-300 mt-2">{strategy.description}</CardDescription>
-                            </div>
-                            <div className="text-right">
-                              <div className="text-2xl font-bold text-green-400">{strategy.expectedAPY}</div>
-                              <div className="text-sm text-gray-400">Expected APY</div>
-                            </div>
-                          </div>
-                        </CardHeader>
-                        <CardContent>
-                          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                            <div className="lg:col-span-2">
-                              <div className="text-sm text-gray-400 mb-3">Step-by-Step Guide:</div>
-                              <ol className="space-y-2">
-                                {strategy.steps.map((step, idx) => (
-                                  <li key={idx} className="flex items-start gap-3">
-                                    <div className="bg-orange-500 text-black rounded-full w-6 h-6 flex items-center justify-center text-xs font-bold mt-0.5">
-                                      {idx + 1}
-                                    </div>
-                                    <div className="text-gray-300">{step}</div>
-                                  </li>
-                                ))}
-                              </ol>
-                            </div>
-                            <div className="space-y-4">
-                              <div>
-                                <div className="text-sm text-gray-400">Risk Level</div>
-                                <Badge
-                                  className={`
-                                  ${
-                                    strategy.riskLevel === "Low"
-                                      ? "bg-green-500"
-                                      : strategy.riskLevel === "Medium"
-                                        ? "bg-yellow-500"
-                                        : "bg-red-500"
-                                  } text-black
-                                `}
-                                >
-                                  {strategy.riskLevel}
-                                </Badge>
-                              </div>
-                              <div>
-                                <div className="text-sm text-gray-400">Time Commitment</div>
-                                <div className="text-white">{strategy.timeCommitment}</div>
-                              </div>
-                              <Button
-                                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
-                              >
-                                Start This Strategy
-                              </Button>
-                            </div>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  ))}
-                </div>
-              </TabsContent>
-
-              {/* Calculator Tab */}
-              <TabsContent value="calculator" className="mt-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                    <CardHeader>
-                      <CardTitle className="text-white flex items-center gap-2">
-                        <Calculator className="h-5 w-5 text-orange-500" />
-                        DeFi Returns Calculator
-                      </CardTitle>
-                      <CardDescription className="text-gray-300">
-                        Calculate potential earnings from your DeFi investments
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-6">
+        {/* Protocols Section */}
+        <motion.section variants={containerVariants} initial="hidden" animate="visible" className="mb-20">
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-10">
+            Key DeFi Protocols on Ergo
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {protocols.map((protocol) => (
+              <motion.div variants={itemVariants} key={protocol.name}>
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl h-full transition-all duration-300 hover:border-orange-500/50">
+                  <CardHeader>
+                    <div className="flex justify-between items-start">
                       <div>
-                        <label className="text-sm text-gray-400 mb-2 block">Initial Investment (USD)</label>
-                        <input
-                          type="number"
-                          value={calculatorValues.amount}
-                          onChange={(e) => setCalculatorValues({ ...calculatorValues, amount: Number(e.target.value) })}
-                          className="w-full bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-white"
-                          placeholder="1000"
-                        />
+                        <div className="flex items-center gap-3 mb-2">
+                          <protocol.icon className="w-8 h-8 text-orange-400" />
+                          <CardTitle className="text-2xl text-white">{protocol.name}</CardTitle>
+                        </div>
+                        <Badge variant={protocol.status === "Live" ? "default" : "secondary"}>
+                          {protocol.status}
+                        </Badge>
                       </div>
-                      <div>
-                        <label className="text-sm text-gray-400 mb-2 block">Expected APY (%)</label>
-                        <input
-                          type="number"
-                          value={calculatorValues.apy}
-                          onChange={(e) => setCalculatorValues({ ...calculatorValues, apy: Number(e.target.value) })}
-                          className="w-full bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-white"
-                          placeholder="25"
-                        />
-                      </div>
-                      <div>
-                        <label className="text-sm text-gray-400 mb-2 block">Time Period (months)</label>
-                        <input
-                          type="number"
-                          value={calculatorValues.period}
-                          onChange={(e) => setCalculatorValues({ ...calculatorValues, period: Number(e.target.value) })}
-                          className="w-full bg-gray-800 border border-gray-600 rounded-lg px-3 py-2 text-white"
-                          placeholder="12"
-                        />
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                    <CardHeader>
-                      <CardTitle className="text-white">Projected Returns</CardTitle>
-                      <CardDescription className="text-gray-300">
-                        Based on compound interest calculations
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent className="space-y-6">
-                      <div className="space-y-4">
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-400">Initial Investment:</span>
-                          <span className="text-white font-semibold">${calculatorValues.amount.toLocaleString()}</span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-400">Total Value:</span>
-                          <span className="text-green-400 font-semibold text-xl">
-                            ${total.toLocaleString(undefined, { maximumFractionDigits: 0 })}
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-400">Profit:</span>
-                          <span className="text-orange-400 font-semibold text-xl">
-                            +${profit.toLocaleString(undefined, { maximumFractionDigits: 0 })}
-                          </span>
-                        </div>
-                        <div className="flex justify-between items-center">
-                          <span className="text-gray-400">ROI:</span>
-                          <span className="text-orange-400 font-semibold">
-                            +{((profit / calculatorValues.amount) * 100).toFixed(1)}%
-                          </span>
-                        </div>
-                      </div>
-
-                      <Alert className="border-orange-500/20 bg-orange-500/10">
-                        <Info className="h-4 w-4 text-orange-500" />
-                        <AlertDescription className="text-orange-200">
-                          These are theoretical calculations. Actual returns may vary due to market conditions, protocol
-                          changes, and various risks. Always do your own research.
-                        </AlertDescription>
-                      </Alert>
-
-                      <div className="space-y-2">
-                        <div className="text-sm text-gray-400">Popular APY Ranges:</div>
-                        <div className="grid grid-cols-2 gap-2">
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => setCalculatorValues({ ...calculatorValues, apy: 15 })}
-                            className="border-gray-600 text-gray-300 hover:bg-gray-800"
-                          >
-                            Staking: 15%
-                          </Button>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => setCalculatorValues({ ...calculatorValues, apy: 30 })}
-                            className="border-gray-600 text-gray-300 hover:bg-gray-800"
-                          >
-                            LP: 30%
-                          </Button>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => setCalculatorValues({ ...calculatorValues, apy: 50 })}
-                            className="border-gray-600 text-gray-300 hover:bg-gray-800"
-                          >
-                            Farming: 50%
-                          </Button>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={() => setCalculatorValues({ ...calculatorValues, apy: 80 })}
-                            className="border-gray-600 text-gray-300 hover:bg-gray-800"
-                          >
-                            High Risk: 80%
-                          </Button>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
-
-              {/* Risks & Safety Tab */}
-              <TabsContent value="risks" className="mt-8">
-                <div className="space-y-8">
-                  <Alert className="border-red-500/20 bg-red-500/10">
-                    <AlertTriangle className="h-4 w-4 text-red-500" />
-                    <AlertDescription className="text-red-200">
-                      <strong>Important:</strong> DeFi investments carry significant risks. Never invest more than you
-                      can afford to lose. Always research protocols thoroughly and understand the risks before
-                      participating.
-                    </AlertDescription>
-                  </Alert>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                      <CardHeader>
-                        <CardTitle className="text-white flex items-center gap-2">
-                          <Shield className="h-5 w-5 text-red-500" />
-                          Common Risks
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="space-y-3">
-                          <div>
-                            <div className="font-semibold text-red-400">Smart Contract Risk</div>
-                            <div className="text-sm text-gray-300">
-                              Bugs or exploits in protocol code can lead to fund loss
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-red-400">Impermanent Loss</div>
-                            <div className="text-sm text-gray-300">
-                              LP providers may lose value compared to holding assets
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-red-400">Market Volatility</div>
-                            <div className="text-sm text-gray-300">Token prices can fluctuate dramatically</div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-red-400">Liquidation Risk</div>
-                            <div className="text-sm text-gray-300">
-                              Leveraged positions may be liquidated during market moves
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-red-400">Regulatory Risk</div>
-                            <div className="text-sm text-gray-300">
-                              Changing regulations may affect protocol operations
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-
-                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                      <CardHeader>
-                        <CardTitle className="text-white flex items-center gap-2">
-                          <Shield className="h-5 w-5 text-green-500" />
-                          Safety Best Practices
-                        </CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="space-y-3">
-                          <div>
-                            <div className="font-semibold text-green-400">Start Small</div>
-                            <div className="text-sm text-gray-300">
-                              Begin with small amounts to learn and test protocols
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-green-400">Research Protocols</div>
-                            <div className="text-sm text-gray-300">
-                              Check audits, team background, and community feedback
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-green-400">Diversify</div>
-                            <div className="text-sm text-gray-300">
-                              Spread investments across multiple protocols and strategies
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-green-400">Monitor Regularly</div>
-                            <div className="text-sm text-gray-300">
-                              Keep track of your positions and market conditions
-                            </div>
-                          </div>
-                          <div>
-                            <div className="font-semibold text-green-400">Use Reputable Wallets</div>
-                            <div className="text-sm text-gray-300">Only connect trusted wallets to DeFi protocols</div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </div>
-
-                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border border-gray-700/50 backdrop-blur-xl rounded-xl p-6 hover:border-orange-500/50 transition-all duration-300 shadow-xl hover:shadow-2xl">
-                    <CardHeader>
-                      <CardTitle className="text-white">Due Diligence Checklist</CardTitle>
-                      <CardDescription className="text-gray-300">
-                        Questions to ask before investing in any DeFi protocol
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="space-y-3">
-                          <div className="text-sm text-gray-400 font-semibold">Technical</div>
-                          <ul className="space-y-2 text-sm text-gray-300">
-                            <li>• Has the protocol been audited by reputable firms?</li>
-                            <li>• Is the code open source and verifiable?</li>
-                            <li>• How long has the protocol been operating?</li>
-                            <li>• Are there any known vulnerabilities or past exploits?</li>
-                          </ul>
-                        </div>
-                        <div className="space-y-3">
-                          <div className="text-sm text-gray-400 font-semibold">Economic</div>
-                          <ul className="space-y-2 text-sm text-gray-300">
-                            <li>• What is the total value locked (TVL)?</li>
-                            <li>• How are yields generated and sustained?</li>
-                            <li>• What are the tokenomics and emission schedule?</li>
-                            <li>• Is there sufficient liquidity for your position size?</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </TabsContent>
-            </Tabs>
+                      <Button asChild variant="ghost" size="icon">
+                        <Link href={protocol.link} target="_blank">
+                          <ExternalLink className="w-5 h-5" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-gray-400 mb-4">{protocol.description}</p>
+                    <div className="flex justify-between text-sm">
+                      <span className="text-gray-500">Category: {protocol.category}</span>
+                      <span className="font-bold text-white">TVL: {protocol.tvl}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
-        </section>
+        </motion.section>
 
-        {/* CTA Section */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-2xl p-8"
-            >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Start Earning?</h2>
-              <p className="text-gray-300 mb-8 max-w-2xl mx-auto">
-                Join thousands of users already earning passive income in the Ergo DeFi ecosystem. Start with small
-                amounts and gradually increase your exposure as you learn.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                  Get ERG to Start
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
-                <Button
-                  variant="outline"
-                  className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                >
-                  Setup Wallet
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </Button>
+        {/* How to Earn Section */}
+        <motion.section variants={containerVariants} initial="hidden" animate="visible" className="mb-20">
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-10">
+            How to Earn in Ergo DeFi
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {earningMethods.map((method) => (
+              <motion.div variants={itemVariants} key={method.title}>
+                <Card className="bg-gray-900/50 border-gray-800/50 h-full">
+                  <CardContent className="p-6">
+                    <div className="flex items-center gap-4 mb-3">
+                      <method.icon className="w-7 h-7 text-orange-400" />
+                      <h3 className="text-xl font-bold text-white">{method.title}</h3>
+                    </div>
+                    <p className="text-gray-400 text-sm mb-4">{method.description}</p>
+                    <div className="flex justify-between items-center text-xs">
+                      <Badge>APY: {method.apy}</Badge>
+                      <Badge variant="destructive">Risk: {method.risk}</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* Strategies Section */}
+        <motion.section variants={containerVariants} initial="hidden" animate="visible" className="mb-20">
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-10">
+            Example DeFi Strategies
+          </motion.h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {strategies.map((strategy) => (
+              <motion.div variants={itemVariants} key={strategy.title}>
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl h-full flex flex-col transition-all duration-300 hover:border-orange-500/50">
+                  <CardHeader className="flex-row items-center gap-4">
+                    <strategy.icon className="w-10 h-10 text-orange-400" />
+                    <div>
+                      <Badge className="mb-1">{strategy.level}</Badge>
+                      <CardTitle className="text-xl text-white">{strategy.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent className="flex-1 flex flex-col">
+                    <p className="text-gray-400 text-sm mb-4 flex-1">{strategy.description}</p>
+                    <ul className="space-y-2 mb-4">
+                      {strategy.steps.map((step, i) => (
+                        <li key={i} className="flex items-center gap-2 text-xs text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-green-500" />
+                          <span>{step}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="text-center text-sm font-semibold text-white mt-auto">
+                      Expected APY: {strategy.expectedApy}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </motion.section>
+
+        {/* APY Calculator Section */}
+        <motion.section variants={itemVariants} initial="hidden" animate="visible" className="mb-20">
+          <Card className="bg-gray-900/50 border-gray-800/50 backdrop-blur-xl">
+            <CardHeader>
+              <div className="flex items-center gap-3">
+                <Calculator className="w-8 h-8 text-orange-400" />
+                <CardTitle className="text-2xl text-white">DeFi Yield Calculator</CardTitle>
               </div>
-            </motion.div>
-          </div>
-        </section>
+            </CardHeader>
+            <CardContent className="grid md:grid-cols-2 gap-8 items-center">
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-gray-400 mb-2">
+                    Principal Amount ($) - ${principal.toLocaleString()}
+                  </label>
+                  <Slider
+                    value={[principal]}
+                    onValueChange={(val: number[]) => setPrincipal(val[0])}
+                    min={100}
+                    max={100000}
+                    step={100}
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-400 mb-2">
+                    Estimated APY (%) - {apy}%
+                  </label>
+                  <Slider value={[apy]} onValueChange={(val: number[]) => setApy(val[0])} min={1} max={200} step={1} />
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-gray-400 mb-2">
+                    Duration (Months) - {duration}
+                  </label>
+                  <Slider
+                    value={[duration]}
+                    onValueChange={(val: number[]) => setDuration(val[0])}
+                    min={1}
+                    max={60}
+                    step={1}
+                  />
+                </div>
+              </div>
+              <div className="text-center bg-gray-900/70 p-6 rounded-lg">
+                <p className="text-gray-400 mb-2">Total after {duration} months:</p>
+                <p className="text-4xl font-bold text-green-400 mb-4">
+                  ${totalReturn.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                </p>
+                <p className="text-gray-400 text-sm">
+                  Profit: ${profit.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.section>
+
+        {/* Risk Disclaimer */}
+        <motion.section variants={itemVariants} initial="hidden" animate="visible" className="max-w-3xl mx-auto">
+          <Card className="bg-red-900/50 border-red-500/50">
+            <CardContent className="p-8 flex items-center gap-6">
+              <AlertTriangle className="w-12 h-12 text-red-400 flex-shrink-0" />
+              <div>
+                <h3 className="text-xl font-bold text-red-200 mb-2">DeFi Involves Risk</h3>
+                <p className="text-red-300 text-sm">
+                  Decentralized Finance is an emerging technology. Always do your own research (DYOR). Risks include
+                  smart contract vulnerabilities and impermanent loss. Never invest more than you are willing to lose.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </motion.section>
       </div>
     </div>
   )
