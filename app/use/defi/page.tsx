@@ -225,18 +225,18 @@ export default function DeFiPage() {
                         <div className="flex items-center gap-3 mb-2">
                           <protocol.icon className="w-8 h-8 text-orange-400" />
                           <CardTitle className="text-2xl text-white">{protocol.name}</CardTitle>
-                        </div>
+              </div>
                         <Badge variant={protocol.status === "Live" ? "default" : "secondary"}>
                           {protocol.status}
-                        </Badge>
-                      </div>
+                                    </Badge>
+                                  </div>
                       <Button asChild variant="ghost" size="icon">
                         <Link href={protocol.link} target="_blank">
                           <ExternalLink className="w-5 h-5" />
                         </Link>
                       </Button>
-                    </div>
-                  </CardHeader>
+                            </div>
+                          </CardHeader>
                   <CardContent>
                     <p className="text-gray-400 mb-4">{protocol.description}</p>
                     <div className="flex justify-between text-sm">
@@ -244,10 +244,10 @@ export default function DeFiPage() {
                       <span className="font-bold text-white">TVL: {protocol.tvl}</span>
                     </div>
                   </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                        </Card>
+                      </motion.div>
+                    ))}
+                  </div>
         </motion.section>
 
         {/* How to Earn Section */}
@@ -263,17 +263,17 @@ export default function DeFiPage() {
                     <div className="flex items-center gap-4 mb-3">
                       <method.icon className="w-7 h-7 text-orange-400" />
                       <h3 className="text-xl font-bold text-white">{method.title}</h3>
-                    </div>
+                          </div>
                     <p className="text-gray-400 text-sm mb-4">{method.description}</p>
                     <div className="flex justify-between items-center text-xs">
                       <Badge>APY: {method.apy}</Badge>
                       <Badge variant="destructive">Risk: {method.risk}</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
         </motion.section>
 
         {/* Strategies Section */}
@@ -287,11 +287,11 @@ export default function DeFiPage() {
                 <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl h-full flex flex-col transition-all duration-300 hover:border-orange-500/50">
                   <CardHeader className="flex-row items-center gap-4">
                     <strategy.icon className="w-10 h-10 text-orange-400" />
-                    <div>
+                            <div>
                       <Badge className="mb-1">{strategy.level}</Badge>
                       <CardTitle className="text-xl text-white">{strategy.title}</CardTitle>
-                    </div>
-                  </CardHeader>
+                          </div>
+                        </CardHeader>
                   <CardContent className="flex-1 flex flex-col">
                     <p className="text-gray-400 text-sm mb-4 flex-1">{strategy.description}</p>
                     <ul className="space-y-2 mb-4">
@@ -299,31 +299,31 @@ export default function DeFiPage() {
                         <li key={i} className="flex items-center gap-2 text-xs text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-500" />
                           <span>{step}</span>
-                        </li>
-                      ))}
+                                  </li>
+                                ))}
                     </ul>
                     <div className="text-center text-sm font-semibold text-white mt-auto">
                       Expected APY: {strategy.expectedApy}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
         </motion.section>
 
         {/* APY Calculator Section */}
         <motion.section variants={itemVariants} initial="hidden" animate="visible" className="mb-20">
           <Card className="bg-gray-900/50 border-gray-800/50 backdrop-blur-xl">
-            <CardHeader>
+                    <CardHeader>
               <div className="flex items-center gap-3">
                 <Calculator className="w-8 h-8 text-orange-400" />
                 <CardTitle className="text-2xl text-white">DeFi Yield Calculator</CardTitle>
               </div>
-            </CardHeader>
+                    </CardHeader>
             <CardContent className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-6">
-                <div>
+                      <div>
                   <label className="block text-sm font-medium text-gray-400 mb-2">
                     Principal Amount ($) - ${principal.toLocaleString()}
                   </label>
@@ -333,15 +333,15 @@ export default function DeFiPage() {
                     min={100}
                     max={100000}
                     step={100}
-                  />
-                </div>
-                <div>
+                        />
+                      </div>
+                      <div>
                   <label className="block text-sm font-medium text-gray-400 mb-2">
                     Estimated APY (%) - {apy}%
                   </label>
                   <Slider value={[apy]} onValueChange={(val: number[]) => setApy(val[0])} min={1} max={200} step={1} />
-                </div>
-                <div>
+                      </div>
+                      <div>
                   <label className="block text-sm font-medium text-gray-400 mb-2">
                     Duration (Months) - {duration}
                   </label>
@@ -353,7 +353,7 @@ export default function DeFiPage() {
                     step={1}
                   />
                 </div>
-              </div>
+                            </div>
               <div className="text-center bg-gray-900/70 p-6 rounded-lg">
                 <p className="text-gray-400 mb-2">Total after {duration} months:</p>
                 <p className="text-4xl font-bold text-green-400 mb-4">
@@ -362,9 +362,9 @@ export default function DeFiPage() {
                 <p className="text-gray-400 text-sm">
                   Profit: ${profit.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </p>
-              </div>
-            </CardContent>
-          </Card>
+                        </div>
+                      </CardContent>
+                    </Card>
         </motion.section>
 
         {/* Risk Disclaimer */}
@@ -372,15 +372,15 @@ export default function DeFiPage() {
           <Card className="bg-red-900/50 border-red-500/50">
             <CardContent className="p-8 flex items-center gap-6">
               <AlertTriangle className="w-12 h-12 text-red-400 flex-shrink-0" />
-              <div>
+                          <div>
                 <h3 className="text-xl font-bold text-red-200 mb-2">DeFi Involves Risk</h3>
                 <p className="text-red-300 text-sm">
                   Decentralized Finance is an emerging technology. Always do your own research (DYOR). Risks include
                   smart contract vulnerabilities and impermanent loss. Never invest more than you are willing to lose.
                 </p>
-              </div>
-            </CardContent>
-          </Card>
+                        </div>
+                      </CardContent>
+                    </Card>
         </motion.section>
       </div>
     </div>
