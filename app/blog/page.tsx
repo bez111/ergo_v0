@@ -58,8 +58,6 @@ export default function BlogPage() {
             setSearchQuery={setSearchQuery}
             selectedCategory={selectedCategory}
             setSelectedCategory={setSelectedCategory}
-            activeFilters={activeFilters}
-            clearFilters={clearFilters}
           />
 
           {/* Articles Grid */}
