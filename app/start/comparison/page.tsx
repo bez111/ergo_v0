@@ -74,17 +74,17 @@ const comparisonData = [
 const getScoreColor = (score: string) => {
   switch (score) {
     case "excellent":
-      return "text-orange-400 border-orange-400/30 bg-orange-400/10"
+      return "border-orange-400/50 bg-orange-400/10 text-orange-300 hover:bg-orange-400/20"
     case "good":
-      return "text-amber-400 border-amber-400/30 bg-amber-400/10"
+      return "border-amber-400/50 bg-amber-400/10 text-amber-300 hover:bg-amber-400/20"
     case "fair":
-      return "text-yellow-400 border-yellow-400/30 bg-yellow-400/10"
+      return "border-yellow-500/50 bg-yellow-500/10 text-yellow-400 hover:bg-yellow-500/20"
     case "poor":
-      return "text-red-400 border-red-400/30 bg-red-400/10"
+      return "border-red-500/50 bg-red-500/10 text-red-400 hover:bg-red-500/20"
     case "experimental":
-      return "text-purple-400 border-purple-400/30 bg-purple-400/10"
+      return "border-purple-500/50 bg-purple-500/10 text-purple-400 hover:bg-purple-500/20"
     default:
-      return "text-gray-400 border-gray-400/30 bg-gray-400/10"
+      return "border-gray-600/50 bg-gray-600/10 text-gray-400"
   }
 }
 
@@ -178,28 +178,36 @@ export default function ComparisonPage() {
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: index * 0.1 }}
-                        className="grid grid-cols-5 gap-4 p-4 border-b border-gray-800/50 hover:bg-gray-800/20 transition-colors"
+                        className="grid grid-cols-5 gap-4 p-4 border-b border-gray-800/50 hover:bg-gray-800/20 transition-colors duration-300"
                       >
-                        <div className="font-medium text-gray-300 flex items-center">{row.feature}</div>
+                        <div className="font-medium text-gray-200 flex items-center">{row.feature}</div>
 
                         {/* Ergo */}
                         <div className="text-center">
-                          <Badge className={`${getScoreColor(row.ergo.score)} text-xs`}>{row.ergo.value}</Badge>
+                          <Badge variant="outline" className={`${getScoreColor(row.ergo.score)} text-xs transition-all`}>
+                            {row.ergo.value}
+                          </Badge>
                         </div>
 
                         {/* Bitcoin */}
                         <div className="text-center">
-                          <Badge className={`${getScoreColor(row.bitcoin.score)} text-xs`}>{row.bitcoin.value}</Badge>
+                          <Badge variant="outline" className={`${getScoreColor(row.bitcoin.score)} text-xs transition-all`}>
+                            {row.bitcoin.value}
+                          </Badge>
                         </div>
 
                         {/* Ethereum */}
                         <div className="text-center">
-                          <Badge className={`${getScoreColor(row.ethereum.score)} text-xs`}>{row.ethereum.value}</Badge>
+                          <Badge variant="outline" className={`${getScoreColor(row.ethereum.score)} text-xs transition-all`}>
+                            {row.ethereum.value}
+                          </Badge>
                         </div>
 
                         {/* Solana */}
                         <div className="text-center">
-                          <Badge className={`${getScoreColor(row.solana.score)} text-xs`}>{row.solana.value}</Badge>
+                          <Badge variant="outline" className={`${getScoreColor(row.solana.score)} text-xs transition-all`}>
+                            {row.solana.value}
+                          </Badge>
                         </div>
                       </motion.div>
                     ))}
