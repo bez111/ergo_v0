@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/animations/fade-in"
 import { Users, Play } from "lucide-react"
 import Link from "next/link"
-import { codeExample } from "@/lib/build-page-data.tsx"
+import { codeExample } from "@/lib/build-page-data"
 
 export function HeroSection() {
   return (
