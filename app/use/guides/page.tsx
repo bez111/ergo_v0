@@ -34,19 +34,23 @@ export default function GuidesPage() {
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 py-8">
           {/* Header */}
-          <motion.div
+          <motion.section 
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="pt-32 pb-20 px-4"
           >
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-              Ergo Guides
-            </h1>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Master the Ergo ecosystem with comprehensive guides, from wallet setup to advanced smart contract development.
-            </p>
-          </motion.div>
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6">
+                <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
+                  Ergo Guides
+                </span>
+              </h1>
+              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+                Master the Ergo ecosystem with comprehensive guides, from wallet setup to advanced smart contract development.
+              </p>
+            </div>
+          </motion.section>
 
           {/* Filters & Search */}
           <GuidesFilters
