@@ -9,6 +9,7 @@ import { Progress } from "@/components/ui/progress"
 import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
 import Link from "next/link"
+import { QuizPageWrapper } from "@/components/quiz/quiz-page-wrapper"
 
 interface QuizQuestion {
   id: string
@@ -447,6 +448,16 @@ const profiles: Record<string, Profile> = {
   },
 }
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
+
 export default function QuizPage() {
   const [currentStep, setCurrentStep] = useState<"intro" | "quiz" | "results">("intro")
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -507,329 +518,315 @@ export default function QuizPage() {
   const progress = currentStep === "quiz" ? ((currentQuestion + 1) / quizQuestions.length) * 100 : 0
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="fixed inset-0 z-0">
-        <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black via-gray-900 to-black opacity-90" />
-        <div className="absolute top-0 right-0 w-full h-full bg-[url('/tech-pattern.png')] bg-no-repeat bg-cover opacity-5" />
-        <div className="absolute bottom-0 left-0 w-full h-full bg-[url('/resistance-texture.png')] bg-no-repeat bg-cover opacity-5" />
-        <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/10 via-transparent to-red-900/10" />
-      </div>
-
-      <div className="relative z-10">
-        <AnimatePresence mode="wait">
-          {/* Introduction */}
-          {currentStep === "intro" && (
-            <motion.section
-              key="intro"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              className="pt-32 pb-20 px-4"
-            >
-              <div className="max-w-5xl mx-auto">
-                <FadeIn>
-                  <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-4 mb-8">
-                      <h1 className="text-6xl md:text-8xl font-bold">ERGO PATH FINDER</h1>
-                    </div>
-
-                    <div className="max-w-4xl mx-auto mb-12">
-                      <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-                        <span className="text-primary">[</span>
-                        DISCOVER YOUR PLACE IN THE ECOSYSTEM
-                        <span className="text-primary">]</span>
-                      </h2>
-                      <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
-                        Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will
-                        help you identify which aspects of Ergo might interest you most and guide you to personalized
-                        resources.
-                      </p>
-                      <p className="text-lg text-gray-300 font-mono">
-                        Answer a few simple questions to find your path: Are you a future{" "}
-                        <span className="text-primary">Investor</span>, <span className="text-primary">Developer</span>,{" "}
-                        <span className="text-primary">Miner</span>,{" "}
-                        <span className="text-primary">NFT Enthusiast</span>,{" "}
-                        <span className="text-primary">DeFi User</span>, or something else?
-                      </p>
-                    </div>
-
-                    <Button
-                      onClick={handleStartQuiz}
-                      size="lg"
-                      className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg hover:shadow-primary/25 font-mono uppercase tracking-wider px-12 py-6 text-xl"
-                    >
-                      <span className="mr-2">START QUIZ</span>
-                      <ChevronRight className="w-6 h-6" />
-                    </Button>
+    <QuizPageWrapper>
+      <AnimatePresence mode="wait">
+        {/* Introduction */}
+        {currentStep === "intro" && (
+          <motion.section
+            key="intro"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            className="pt-32 pb-20 px-4"
+          >
+            <div className="max-w-5xl mx-auto">
+              <FadeIn>
+                <div className="text-center mb-16">
+                  <div className="inline-flex items-center gap-4 mb-8">
+                    <h1 className="text-6xl md:text-8xl font-bold">ERGO PATH FINDER</h1>
                   </div>
-                </FadeIn>
-              </div>
-            </motion.section>
-          )}
 
-          {/* Quiz */}
-          {currentStep === "quiz" && (
-            <motion.section
-              key="quiz"
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              className="pt-32 pb-20 px-4"
-            >
-              <div className="max-w-4xl mx-auto">
-                {/* Progress Bar */}
-                <div className="mb-12">
-                  <div className="flex items-center justify-between mb-4">
-                    <span className="text-primary font-mono text-sm">
-                      QUESTION {currentQuestion + 1} OF {quizQuestions.length}
-                    </span>
-                    <span className="text-gray-400 font-mono text-sm">{Math.round(progress)}% COMPLETE</span>
+                  <div className="max-w-4xl mx-auto mb-12">
+                    <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
+                      <span className="text-primary">[</span>
+                      DISCOVER YOUR PLACE IN THE ECOSYSTEM
+                      <span className="text-primary">]</span>
+                    </h2>
+                    <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
+                      Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will
+                      help you identify which aspects of Ergo might interest you most and guide you to personalized
+                      resources.
+                    </p>
+                    <p className="text-lg text-gray-300 font-mono">
+                      Answer a few simple questions to find your path: Are you a future{" "}
+                      <span className="text-primary">Investor</span>, <span className="text-primary">Developer</span>,{" "}
+                      <span className="text-primary">Miner</span>,{" "}
+                      <span className="text-primary">NFT Enthusiast</span>,{" "}
+                      <span className="text-primary">DeFi User</span>, or something else?
+                    </p>
                   </div>
-                  <Progress value={progress} className="h-2 bg-gray-800" />
-                </div>
 
-                {/* Question */}
-                <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
-                  <CardContent className="p-8">
-                    <motion.div
-                      key={currentQuestion}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.5 }}
-                    >
-                      <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 font-mono">
-                        {quizQuestions[currentQuestion].question}
-                      </h2>
-
-                      <div className="space-y-4">
-                        {quizQuestions[currentQuestion].options.map((option, index) => (
-                          <motion.button
-                            key={index}
-                            onClick={() => handleAnswerSelect(quizQuestions[currentQuestion].id, index)}
-                            className="w-full p-6 text-left border border-primary/20 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
-                            whileHover={{ scale: 1.02 }}
-                            whileTap={{ scale: 0.98 }}
-                          >
-                            <div className="flex items-center justify-between">
-                              <span className="text-lg text-gray-300 group-hover:text-white font-mono">
-                                {option.text}
-                              </span>
-                              <ChevronRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
-                            </div>
-                          </motion.button>
-                        ))}
-                      </div>
-                    </motion.div>
-                  </CardContent>
-                </Card>
-
-                {/* Navigation */}
-                <div className="flex justify-between mt-8">
                   <Button
-                    onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
-                    variant="outline"
-                    disabled={currentQuestion === 0}
-                    className="border-primary/50 text-primary hover:bg-primary/10"
+                    onClick={handleStartQuiz}
+                    size="lg"
+                    className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg hover:shadow-primary/25 font-mono uppercase tracking-wider px-12 py-6 text-xl"
                   >
-                    <ChevronLeft className="w-4 h-4 mr-2" />
-                    Previous
-                  </Button>
-
-                  <Button onClick={resetQuiz} variant="ghost" className="text-gray-400 hover:text-white">
-                    <RotateCcw className="w-4 h-4 mr-2" />
-                    Restart
+                    <span className="mr-2">START QUIZ</span>
+                    <ChevronRight className="w-6 h-6" />
                   </Button>
                 </div>
+              </FadeIn>
+            </div>
+          </motion.section>
+        )}
+
+        {/* Quiz */}
+        {currentStep === "quiz" && (
+          <motion.section
+            key="quiz"
+            initial={{ opacity: 0, x: 100 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -100 }}
+            className="pt-32 pb-20 px-4"
+          >
+            <div className="max-w-4xl mx-auto">
+              {/* Progress Bar */}
+              <div className="mb-12">
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-primary font-mono text-sm">
+                    QUESTION {currentQuestion + 1} OF {quizQuestions.length}
+                  </span>
+                  <span className="text-gray-400 font-mono text-sm">{Math.round(progress)}% COMPLETE</span>
+                </div>
+                <Progress value={progress} className="h-2 bg-gray-800" />
               </div>
-            </motion.section>
-          )}
 
-          {/* Results */}
-          {currentStep === "results" && selectedProfile && (
-            <motion.section
-              key="results"
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 1.05 }}
-              className="pt-32 pb-20 px-4"
-            >
-              <div className="max-w-6xl mx-auto">
-                <FadeIn>
-                  <div className="text-center mb-16">
-                    <div className="inline-flex items-center gap-4 mb-8">
-                      <div className="w-16 h-16 bg-gradient-to-r from-primary to-orange-500 rounded-lg flex items-center justify-center text-3xl">
-                        {profiles[selectedProfile].icon}
-                      </div>
-                      <div className="text-left">
-                        <h1 className="text-4xl md:text-6xl font-bold text-white font-mono">YOUR ERGO PATH:</h1>
-                        <h2 className="text-3xl md:text-5xl font-bold text-primary">
-                          {profiles[selectedProfile].name.toUpperCase()}
-                        </h2>
-                      </div>
-                    </div>
+              {/* Question */}
+              <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <motion.div
+                    key={currentQuestion}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5 }}
+                  >
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 font-mono">
+                      {quizQuestions[currentQuestion].question}
+                    </h2>
 
-                    <div className="max-w-4xl mx-auto">
-                      <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-                        <span className="text-primary">[</span>
-                        {profiles[selectedProfile].title}
-                        <span className="text-primary">]</span>
-                      </h2>
-                      <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
-                        {profiles[selectedProfile].description}
-                      </p>
-                    </div>
-                  </div>
-                </FadeIn>
-
-                {/* Tools & Resources */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                  {profiles[selectedProfile].tools.map((toolCategory, index) => (
-                    <motion.div
-                      key={index}
-                      initial={{ opacity: 0, y: 20 }}
-                      animate={{ opacity: 1, y: 0 }}
-                      transition={{ delay: index * 0.2 }}
-                    >
-                      <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm h-full">
-                        <CardContent className="p-8">
-                          <h3 className="text-xl font-bold text-white mb-6 font-mono flex items-center gap-2">
-                            <CheckCircle className="w-5 h-5 text-primary" />
-                            {toolCategory.category}
-                          </h3>
-                          <div className="space-y-4">
-                            {toolCategory.items.map((item, itemIndex) => (
-                              <div key={itemIndex} className="border-l-2 border-primary/30 pl-4">
-                                <Link href={item.link} className="block hover:text-primary transition-colors group">
-                                  <h4 className="font-medium text-white group-hover:text-primary flex items-center gap-2">
-                                    {item.name}
-                                    <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                  </h4>
-                                  <p className="text-sm text-gray-400 mt-1">{item.description}</p>
-                                </Link>
-                              </div>
-                            ))}
+                    <div className="space-y-4">
+                      {quizQuestions[currentQuestion].options.map((option, index) => (
+                        <motion.button
+                          key={index}
+                          onClick={() => handleAnswerSelect(quizQuestions[currentQuestion].id, index)}
+                          className="w-full p-6 text-left border border-primary/20 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
+                          whileHover={{ scale: 1.02 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <div className="flex items-center justify-between">
+                            <span className="text-lg text-gray-300 group-hover:text-white font-mono">
+                              {option.text}
+                            </span>
+                            <ChevronRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
+                        </motion.button>
+                      ))}
+                    </div>
+                  </motion.div>
+                </CardContent>
+              </Card>
+
+              {/* Navigation */}
+              <div className="flex justify-between mt-8">
+                <Button
+                  onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
+                  variant="outline"
+                  disabled={currentQuestion === 0}
+                  className="border-primary/50 text-primary hover:bg-primary/10"
+                >
+                  <ChevronLeft className="w-4 h-4 mr-2" />
+                  Previous
+                </Button>
+
+                <Button onClick={resetQuiz} variant="ghost" className="text-gray-400 hover:text-white">
+                  <RotateCcw className="w-4 h-4 mr-2" />
+                  Restart
+                </Button>
+              </div>
+            </div>
+          </motion.section>
+        )}
+
+        {/* Results */}
+        {currentStep === "results" && selectedProfile && (
+          <motion.section
+            key="results"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 1.05 }}
+            className="pt-32 pb-20 px-4"
+          >
+            <div className="max-w-6xl mx-auto">
+              <FadeIn>
+                <div className="text-center mb-16">
+                  <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8 }}
+                    className="mb-8"
+                  >
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2">
+                      YOUR ERGO PATH: {profiles[selectedProfile].name.toUpperCase()}
+                    </h1>
+                    <h2 className="text-2xl md:text-3xl text-gray-300 font-mono">
+                      <span className="text-primary">[</span>
+                      {profiles[selectedProfile].title}
+                      <span className="text-primary">]</span>
+                    </h2>
+                  </motion.div>
+
+                  <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto">
+                    {profiles[selectedProfile].description}
+                  </p>
+                </div>
+              </FadeIn>
+
+              {/* Tools & Resources */}
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                {profiles[selectedProfile].tools.map((toolCategory, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.2 }}
+                  >
+                    <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm h-full">
+                      <CardContent className="p-8">
+                        <h3 className="text-xl font-bold text-white mb-6 font-mono flex items-center gap-2">
+                          <CheckCircle className="w-5 h-5 text-primary" />
+                          {toolCategory.category}
+                        </h3>
+                        <div className="space-y-4">
+                          {toolCategory.items.map((item, itemIndex) => (
+                            <div key={itemIndex} className="border-l-2 border-primary/30 pl-4">
+                              <Link href={item.link} className="block hover:text-primary transition-colors group">
+                                <h4 className="font-medium text-white group-hover:text-primary flex items-center gap-2">
+                                  {item.name}
+                                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                </h4>
+                                <p className="text-sm text-gray-400 mt-1">{item.description}</p>
+                              </Link>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Next Steps */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="mb-16"
+              >
+                <SectionHeading text="YOUR NEXT STEPS" />
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {profiles[selectedProfile].nextSteps.map((step, index) => (
+                    <Button
+                      key={index}
+                      asChild
+                      className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider h-auto py-4"
+                    >
+                      <Link href={step.link}>
+                        <ArrowRight className="w-4 h-4 mr-2" />
+                        {step.text}
+                      </Link>
+                    </Button>
                   ))}
                 </div>
+              </motion.div>
 
-                {/* Next Steps */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.6 }}
-                  className="mb-16"
-                >
-                  <SectionHeading text="YOUR NEXT STEPS" />
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {profiles[selectedProfile].nextSteps.map((step, index) => (
+              {/* Community Channels */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8 }}
+                className="mb-16"
+              >
+                <Card className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-primary/40 backdrop-blur-sm">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-2xl font-bold text-white mb-4 font-mono">CONNECT WITH YOUR COMMUNITY</h3>
+                    <p className="text-gray-300 mb-6">
+                      Join others who share your interests and get support on your Ergo journey
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-4">
+                      {profiles[selectedProfile].communityChannels.map((channel, index) => (
+                        <Button
+                          key={index}
+                          asChild
+                          variant="outline"
+                          className="border-primary/50 text-primary hover:bg-primary/10"
+                        >
+                          <Link href={channel.link} target="_blank" rel="noopener noreferrer">
+                            <ExternalLink className="w-4 h-4 mr-2" />
+                            {channel.name}
+                          </Link>
+                        </Button>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+
+              {/* General Learn More */}
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
+                <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
+                  <CardContent className="p-8 text-center">
+                    <h3 className="text-xl font-bold text-white mb-6 font-mono">
+                      WANT TO EXPLORE OTHER ASPECTS OF ERGO?
+                    </h3>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Button
-                        key={index}
                         asChild
-                        className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider h-auto py-4"
+                        className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg font-mono uppercase tracking-wider"
                       >
-                        <Link href={step.link}>
+                        <Link href="/ecosystem">
                           <ArrowRight className="w-4 h-4 mr-2" />
-                          {step.text}
+                          Explore Entire Ecosystem
                         </Link>
                       </Button>
-                    ))}
-                  </div>
-                </motion.div>
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="border-primary/50 text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
+                      >
+                        <Link href="/start/faq">
+                          <ArrowRight className="w-4 h-4 mr-2" />
+                          Read Full FAQ
+                        </Link>
+                      </Button>
+                      <Button
+                        asChild
+                        variant="outline"
+                        className="border-primary/50 text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
+                      >
+                        <Link href="/community">
+                          <ArrowRight className="w-4 h-4 mr-2" />
+                          Join Main Community
+                        </Link>
+                      </Button>
+                    </div>
 
-                {/* Community Channels */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.8 }}
-                  className="mb-16"
-                >
-                  <Card className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-primary/40 backdrop-blur-sm">
-                    <CardContent className="p-8 text-center">
-                      <h3 className="text-2xl font-bold text-white mb-4 font-mono">CONNECT WITH YOUR COMMUNITY</h3>
-                      <p className="text-gray-300 mb-6">
-                        Join others who share your interests and get support on your Ergo journey
-                      </p>
-                      <div className="flex flex-wrap justify-center gap-4">
-                        {profiles[selectedProfile].communityChannels.map((channel, index) => (
-                          <Button
-                            key={index}
-                            asChild
-                            variant="outline"
-                            className="border-primary/50 text-primary hover:bg-primary/10"
-                          >
-                            <Link href={channel.link} target="_blank" rel="noopener noreferrer">
-                              <ExternalLink className="w-4 h-4 mr-2" />
-                              {channel.name}
-                            </Link>
-                          </Button>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-
-                {/* General Learn More */}
-                <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
-                  <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
-                    <CardContent className="p-8 text-center">
-                      <h3 className="text-xl font-bold text-white mb-6 font-mono">
-                        WANT TO EXPLORE OTHER ASPECTS OF ERGO?
-                      </h3>
-                      <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button
-                          asChild
-                          className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg font-mono uppercase tracking-wider"
-                        >
-                          <Link href="/ecosystem">
-                            <ArrowRight className="w-4 h-4 mr-2" />
-                            Explore Entire Ecosystem
-                          </Link>
-                        </Button>
-                        <Button
-                          asChild
-                          variant="outline"
-                          className="border-primary/50 text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
-                        >
-                          <Link href="/start/faq">
-                            <ArrowRight className="w-4 h-4 mr-2" />
-                            Read Full FAQ
-                          </Link>
-                        </Button>
-                        <Button
-                          asChild
-                          variant="outline"
-                          className="border-primary/50 text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
-                        >
-                          <Link href="/community">
-                            <ArrowRight className="w-4 h-4 mr-2" />
-                            Join Main Community
-                          </Link>
-                        </Button>
-                      </div>
-
-                      <div className="mt-8 pt-8 border-t border-primary/20">
-                        <Button
-                          onClick={resetQuiz}
-                          variant="ghost"
-                          className="text-gray-400 hover:text-white font-mono"
-                        >
-                          <RotateCcw className="w-4 h-4 mr-2" />
-                          Take Quiz Again
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </div>
-            </motion.section>
-          )}
-        </AnimatePresence>
-      </div>
-    </div>
+                    <div className="mt-8 pt-8 border-t border-primary/20">
+                      <Button
+                        onClick={resetQuiz}
+                        variant="ghost"
+                        className="text-gray-400 hover:text-white font-mono"
+                      >
+                        <RotateCcw className="w-4 h-4 mr-2" />
+                        Take Quiz Again
+                      </Button>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </motion.section>
+        )}
+      </AnimatePresence>
+    </QuizPageWrapper>
   )
 }
