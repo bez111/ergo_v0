@@ -35,51 +35,6 @@ import {
 import Link from "next/link"
 import { useState } from "react"
 
-const sidebarNav = [
-  {
-    title: "Getting Started",
-    children: [
-      { title: "Quickstart", href: "#quickstart", icon: Rocket, description: "Launch your first Ergo app in minutes" },
-      { title: "Dev Environment Setup", href: "#setup", icon: Settings, description: "Configure your development environment" },
-      { title: "First Ergo DApp", href: "#first-dapp", icon: Code, description: "Build and deploy your first dApp" },
-    ],
-  },
-  {
-    title: "Core Concepts",
-    children: [
-      { title: "eUTXO Model", href: "#eutxo", icon: Layers, description: "Understanding Ergo's account model" },
-      { title: "Transactions & Scripts", href: "#transactions", icon: Share2, description: "How transactions work in Ergo" },
-      { title: "Fees & Mining", href: "#fees", icon: Zap, description: "Network economics and mining" },
-      { title: "Smart Contracts", href: "#contracts", icon: FileQuestion, description: "ErgoScript fundamentals" },
-    ],
-  },
-  {
-    title: "Development",
-    children: [
-      { title: "SDKs & Libraries", href: "#sdks", icon: Code, description: "Available development tools" },
-      { title: "RPC API", href: "#api", icon: Share2, description: "Node interaction interface" },
-      { title: "ErgoBox & ErgoTree", href: "#ergobox", icon: Database, description: "Core data structures" },
-      { title: "Developer Tools", href: "#tools", icon: Wrench, description: "Explorers, wallets, debuggers" },
-    ],
-  },
-  {
-    title: "Operating the Network",
-    children: [
-      { title: "Running a Node", href: "#node", icon: Cpu, description: "Deploy and configure Ergo nodes" },
-      { title: "System Requirements", href: "#requirements", icon: Settings, description: "Hardware and software specs" },
-      { title: "Staking & Mining", href: "#mining", icon: Database, description: "Participate in network consensus" },
-    ],
-  },
-  {
-    title: "Community & Support",
-    children: [
-      { title: "Forums & Chats", href: "#forums", icon: Users, description: "Connect with the community" },
-      { title: "FAQ & Troubleshooting", href: "#faq", icon: LifeBuoy, description: "Common issues and solutions" },
-      { title: "Contribution Guide", href: "#contribute", icon: Github, description: "How to contribute to Ergo" },
-    ],
-  },
-]
-
 const sdks = [
   {
     name: "AppKit (JVM)",
@@ -107,842 +62,389 @@ const sdks = [
   },
 ]
 
-export default function DocsV2Page() {
+const quickLinks = [
+  {
+    title: "Quickstart",
+    description: "Build your first Ergo program directly in the browser",
+    href: "/build/docs/quickstart",
+    icon: Rocket,
+    color: "from-orange-500 to-red-500",
+  },
+  {
+    title: "eUTXO Model",
+    description: "How Ergo stores data",
+    href: "/build/docs/eutxo",
+    icon: Layers,
+    color: "from-cyan-500 to-blue-500",
+  },
+  {
+    title: "SDKs & Libraries",
+    description: "Available development tools and frameworks",
+    href: "/build/docs/sdks",
+    icon: Code,
+    color: "from-green-500 to-emerald-500",
+  },
+  {
+    title: "Smart Contracts",
+    description: "Smart contracts on Ergo",
+    href: "/build/docs/contracts",
+    icon: FileQuestion,
+    color: "from-purple-500 to-pink-500",
+  },
+]
+
+export default function DocsPage() {
   const [searchQuery, setSearchQuery] = useState("")
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      {/* Background */}
-      <div className="absolute inset-0 -z-10 h-full w-full bg-black bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:14px_24px]" />
-      <div className="absolute left-0 top-0 -z-10 h-1/3 w-full bg-[radial-gradient(circle_800px_at_50%_0px,#27272a,transparent)]" />
+    <main>
+      <div className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:text-white prose-a:text-cyan-400 prose-a:underline">
+        {/* Hero Section */}
+        <div className="mb-16">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent mb-4">
+            Ergo Documentation
+          </h1>
+          <p className="text-xl text-gray-400 mb-8">
+            Your central hub for building on Ergo. From your first dApp to advanced protocol integrations.
+          </p>
+        </div>
 
-      <div className="container mx-auto px-4 pt-24 pb-12">
-        <div className="grid lg:grid-cols-[320px_1fr] gap-x-12">
-          {/* Sidebar Navigation */}
-          <aside className="hidden lg:block">
-            <nav className="sticky top-24">
-              {/* Search */}
-              <div className="mb-8">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search documentation..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 bg-neutral-900/50 border border-neutral-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400"
-                  />
-                </div>
+        {/* Getting Started Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-white">Getting Started</h2>
+          
+          {/* Quickstart Card */}
+          <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-xl p-8 mb-8">
+            <div className="flex items-start gap-6">
+              <div className="p-3 bg-orange-500 rounded-lg">
+                <Rocket className="w-8 h-8 text-black" />
               </div>
-
-              {/* Navigation */}
-              <ul className="space-y-8">
-                {sidebarNav.map(section => (
-                  <li key={section.title}>
-                    <h3 className="font-semibold text-lg mb-4 text-orange-400">{section.title}</h3>
-                    <ul className="space-y-3 border-l-2 border-neutral-800">
-                      {section.children.map(link => (
-                        <li key={link.title}>
-                          <a
-                            href={link.href}
-                            className="relative flex flex-col gap-1 pl-6 text-gray-300 hover:text-white transition -ml-px border-l-2 border-transparent hover:border-orange-400 group"
-                          >
-                            <div className="flex items-center gap-3">
-                              <link.icon className="w-4 h-4" />
-                              <span className="font-medium">{link.title}</span>
-                            </div>
-                            <p className="text-xs text-gray-500 group-hover:text-gray-400 pl-7">
-                              {link.description}
-                            </p>
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </aside>
-
-          {/* Main Content */}
-          <main>
-            <div className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:text-white prose-a:text-cyan-400 prose-a:underline">
-              {/* Hero Section */}
-              <div className="mb-16">
-                <h1 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent mb-4">
-                  Ergo Developer Documentation
-                </h1>
-                <p className="text-xl text-gray-400 mb-6">
-                  Your central hub for building on Ergo. From your first dApp to advanced protocol integrations.
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-white mb-2">Quickstart</h3>
+                <p className="text-gray-300 mb-4">
+                  Build your first Ergo program directly in the browser. No setup required - write and test ErgoScript contracts instantly.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
                     href="/build/playground"
-                    className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+                    className="inline-flex items-center px-4 py-2 bg-orange-500 rounded-lg font-medium text-black hover:bg-orange-600 transition-colors"
                   >
-                    <Play className="w-5 h-5 mr-2" /> Try Ergo Playground
+                    <Play className="w-4 h-4 mr-2" /> Try Ergo Playground
                   </Link>
                   <Link
-                    href="https://discord.gg/ergoplatform"
-                    className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
+                    href="/build/docs/quickstart"
+                    className="inline-flex items-center px-4 py-2 bg-neutral-800 rounded-lg font-medium text-white hover:bg-neutral-700 transition-colors"
                   >
-                    <Users className="w-5 h-5 mr-2" /> Join Discord
+                    <Code className="w-4 h-4 mr-2" /> Quickstart Guide
                   </Link>
                 </div>
               </div>
-
-              {/* Getting Started Section */}
-              <section id="quickstart" className="mb-20 scroll-mt-24">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Getting Started: Quickstart
-                </h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  This section is designed for new developers to quickly and easily dive into the Ergo ecosystem, 
-                  lowering barriers to entry and providing immediate hands-on experience.
-                </p>
-
-                <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
-                  <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                    <Rocket className="w-5 h-5 text-orange-400" /> Goal
-                  </h3>
-                  <p className="text-gray-300">
-                    Allow users to write and run their first Ergo program in minutes, without the need for complex local setup.
-                  </p>
-                </div>
-
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4">Start Your Journey with Ergo</h3>
-                  <p className="text-lg text-gray-300 mb-6">
-                    Start your journey with Ergo right in your browser! Our Ergo Playground is an interactive environment 
-                    that allows you to write, compile, and simulate ErgoScript contracts without installing any software 
-                    on your computer. It's the ideal way to quickly grasp the basics of ErgoScript and the eUTXO model.
-                  </p>
-                </div>
-
-                {/* Original Graphic Cards */}
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                    <h4 className="text-xl font-bold mb-3 flex items-center gap-2">
-                      <Play className="w-5 h-5 text-orange-400" /> Interactive Tutorial
-                    </h4>
-                    <p className="text-gray-400 mb-4">
-                      Start with our browser-based playground. No setup required - write and test ErgoScript contracts instantly.
-                    </p>
-                    <Link
-                      href="/build/playground"
-                      className="inline-flex items-center text-orange-400 hover:text-orange-300"
-                    >
-                      Open Playground <ExternalLink className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                  <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                    <h4 className="text-xl font-bold mb-3 flex items-center gap-2">
-                      <Code className="w-5 h-5 text-cyan-400" /> First dApp
-                    </h4>
-                    <p className="text-gray-400 mb-4">
-                      Build a complete decentralized application step-by-step with our guided tutorial.
-                    </p>
-                    <Link
-                      href="#first-dapp"
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300"
-                    >
-                      Start Building <ChevronRight className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-
-                <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Play className="w-5 h-5 text-cyan-400" /> Introduction to Ergo Playground
-                  </h3>
-                  <p className="text-gray-300 mb-4">
-                    Ergo Playground is a web-based tool that provides you with a sandbox for experimenting with ErgoScript. It includes:
-                  </p>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-start gap-3">
-                      <Code className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span><strong>Code Editor:</strong> For writing your ErgoScript.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Settings className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                      <span><strong>Compiler:</strong> Converts your ErgoScript into ErgoTree (bytecode). Note: The compiler functionality in Playground may sometimes lag behind the CLI compiler (ergo-tool).</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Share2 className="w-5 h-5 text-purple-400 mt-0.5 flex-shrink-0" />
-                      <span><strong>Transaction Simulator:</strong> Allows you to create and test transactions that interact with your contract, mimicking blockchain behavior.</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Wrench className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                      <span><strong>Debugging Tools:</strong> Help you understand how your script processes various inputs. Important: Debugging in Playground is limited, and it's not always possible to see a full trace. For complex contracts and deep debugging, it is recommended to test on a local or testnet environment.</span>
-                    </li>
-                  </ul>
-                </div>
-
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-4">Step-by-step Tutorial: A Simple Counter in ErgoScript</h3>
-                  <p className="text-lg text-gray-300 mb-6">
-                    Let's create a simple smart contract that will store a number and allow it to be incremented.
-                  </p>
-
-                  <div className="space-y-6">
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
-                        <span className="bg-orange-500 text-black px-2 py-1 rounded text-sm font-bold">1</span>
-                        Open Ergo Playground
-                      </h4>
-                      <p className="text-gray-300 mb-3">
-                        Go to the link: <Link href="/build/playground" className="text-orange-400 hover:text-orange-300">Ergo Playground</Link>.
-                      </p>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
-                        <span className="bg-orange-500 text-black px-2 py-1 rounded text-sm font-bold">2</span>
-                        Write ErgoScript
-                      </h4>
-                      <p className="text-gray-300 mb-3">
-                        Paste the following code into the editor:
-                      </p>
-                      <div className="bg-black border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-                        <pre className="text-sm text-gray-300">
-{`{
-  // Contract for a simple counter
-  // Input parameters:
-  //   currentValue: Long - current value of the counter
-  //   incrementAmount: Long - amount to increment the counter by
-  //   pk: SigmaProp - public key of the owner who can increment the counter
-
-  // Spending condition:
-  //   1. The input box must contain the current counter value in R4.
-  //   2. The output box must contain the new counter value (currentValue + incrementAmount) in R4.
-  //   3. The output box must be protected by the same public key.
-  //   4. The input transaction must be signed by the owner.
-
-  // Check that the input box has the correct type and contains the counter value
-  // (assuming R4 is used to store the counter value)
-  val current_value = SELF.R4[Long].get
-
-  // Check that there is one output box
-  val output_box = OUTPUTS(0)
-
-  // Check that the output box is protected by the same public key
-  val output_pk = output_box.propositionBytes == pk.propBytes
-
-  // Check that the new counter value in the output box equals the expected value
-  val value_incremented = output_box.R4[Long].get == current_value + incrementAmount
-
-  // Check that the transaction is signed by the owner
-  val signed_by_owner = pk.isValid
-
-  // All conditions must be true
-  output_pk && value_incremented && signed_by_owner
-}`}
-                        </pre>
-                      </div>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
-                        <span className="bg-orange-500 text-black px-2 py-1 rounded text-sm font-bold">3</span>
-                        Compile
-                      </h4>
-                      <p className="text-gray-300">
-                        Click the "Compile" button (or similar) in the Playground. You will see the generated ErgoTree (bytecode) of your contract.
-                      </p>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
-                        <span className="bg-orange-500 text-black px-2 py-1 rounded text-sm font-bold">4</span>
-                        Simulate a Transaction
-                      </h4>
-                      <div className="space-y-4">
-                        <div>
-                          <h5 className="font-semibold mb-2">Create an input box:</h5>
-                          <p className="text-gray-300 text-sm">
-                            Simulate an existing UTXO that will contain the initial counter value. Specify the initial value in R4 (register 4), for example, 10.
-                          </p>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold mb-2">Create an output box:</h5>
-                          <p className="text-gray-300 text-sm">
-                            Simulate a new UTXO that will contain the incremented value. Specify the new value in R4, for example, 11 (if incrementAmount will be 1).
-                          </p>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold mb-2">Specify parameters:</h5>
-                          <p className="text-gray-300 text-sm">
-                            In the "Context" or "Parameters" section, specify incrementAmount = 1 and pk = &lt;your public key&gt;.
-                          </p>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold mb-2">Run simulation:</h5>
-                          <p className="text-gray-300 text-sm">
-                            Click "Run" or "Simulate". The Playground will show if the script executed successfully and why.
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Settings className="w-5 h-5 text-green-400" /> Explanation of Playground Interface Elements
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-2">Code Editor</h4>
-                      <p className="text-sm text-gray-400">The main area for writing ErgoScript.</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Compiled Script / ErgoTree</h4>
-                      <p className="text-sm text-gray-400">Displays the bytecode of your compiled script.</p>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Input Boxes</h4>
-                      <p className="text-sm text-gray-400">Here you define the UTXOs that will be "spent" by your transaction. You can specify their value, registers (R4-R9), and creationHeight.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <LinkIcon className="w-5 h-5 text-purple-400" /> Links to Quickstart Code Examples
-                  </h3>
-                  <div className="space-y-3">
-                    <Link
-                      href="https://docs.ergoplatform.com/dev/sc/examples/"
-                      className="flex items-center text-orange-400 hover:text-orange-300"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      ErgoScript Examples Collection
-                    </Link>
-                    <Link
-                      href="https://github.com/ergoplatform/ergo-script-cookbook"
-                      className="flex items-center text-orange-400 hover:text-orange-300"
-                    >
-                      <ExternalLink className="w-4 h-4 mr-2" />
-                      ErgoScript Cookbook on GitHub
-                    </Link>
-                  </div>
-                </div>
-              </section>
-
-              {/* Dev Environment Setup Section */}
-              <section id="setup" className="mb-20 scroll-mt-24">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Dev Environment Setup
-                </h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  For full-fledged development of decentralized applications on Ergo, you will need to set up a local environment. 
-                  This includes installing the necessary tools, dependencies, and possibly a local Ergo node.
-                </p>
-
-                <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 mb-8">
-                  <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                    <Settings className="w-5 h-5 text-cyan-400" /> Goal
-                  </h3>
-                  <p className="text-gray-300">
-                    Provide clear and complete instructions for setting up a local environment for full-fledged Ergo development.
-                  </p>
-                </div>
-
-                {/* Tools Grid */}
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                    <Package className="w-6 h-6 text-orange-400" /> Required Tools and Dependencies
-                  </h3>
-                  <p className="text-lg text-gray-300 mb-6">
-                    Make sure you have the following tools installed:
-                  </p>
-                  
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-colors">
-                      <div className="flex items-center gap-3 mb-3">
-                        <GitBranch className="w-8 h-8 text-green-400" />
-                        <h4 className="text-lg font-bold">Git</h4>
-                      </div>
-                      <p className="text-gray-400 text-sm mb-4">Version control system</p>
-                      <Link
-                        href="https://git-scm.com/downloads"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        Download <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-colors">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Cpu className="w-8 h-8 text-blue-400" />
-                        <h4 className="text-lg font-bold">Java JDK</h4>
-                      </div>
-                      <p className="text-gray-400 text-sm mb-4">JDK 11+ (JDK 17 recommended)</p>
-                      <Link
-                        href="https://openjdk.java.net/install/"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        Install <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-colors">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Code className="w-8 h-8 text-yellow-400" />
-                        <h4 className="text-lg font-bold">Node.js</h4>
-                      </div>
-                      <p className="text-gray-400 text-sm mb-4">LTS version for JS/TS development</p>
-                      <Link
-                        href="https://nodejs.org/en/download/"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        Download <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-colors">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Shield className="w-8 h-8 text-red-400" />
-                        <h4 className="text-lg font-bold">Rust</h4>
-                      </div>
-                      <p className="text-gray-400 text-sm mb-4">For Sigma-Rust development</p>
-                      <Link
-                        href="https://rustup.rs/"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        Install <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-colors">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Terminal className="w-8 h-8 text-purple-400" />
-                        <h4 className="text-lg font-bold">Python</h4>
-                      </div>
-                      <p className="text-gray-400 text-sm mb-4">For Python SDK</p>
-                      <Link
-                        href="https://www.python.org/downloads/"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        Download <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-colors">
-                      <div className="flex items-center gap-3 mb-3">
-                        <Monitor className="w-8 h-8 text-cyan-400" />
-                        <h4 className="text-lg font-bold">VS Code</h4>
-                      </div>
-                      <p className="text-gray-400 text-sm mb-4">Recommended IDE</p>
-                      <Link
-                        href="https://code.visualstudio.com/"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        Download <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Ergo Node Installation */}
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                    <Cpu className="w-6 h-6 text-green-400" /> Ergo Node Installation
-                  </h3>
-                  <p className="text-lg text-gray-300 mb-6">
-                    Running a local Ergo node is essential for full control over blockchain interaction, sending transactions, and accessing the RPC API.
-                  </p>
-
-                  <div className="grid lg:grid-cols-2 gap-8">
-                    {/* Method 1 */}
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="bg-green-500 text-black px-3 py-1 rounded-full text-sm font-bold">Method 1</span>
-                        <h4 className="text-xl font-bold">Pre-built Binaries</h4>
-                      </div>
-                      <p className="text-gray-400 mb-4">Recommended for most users</p>
-                      
-                      <div className="space-y-4">
-                        <div className="flex items-start gap-3">
-                          <span className="bg-orange-500 text-black px-2 py-1 rounded text-xs font-bold mt-1">1</span>
-                          <div>
-                            <h5 className="font-semibold mb-1">Download</h5>
-                            <p className="text-sm text-gray-400">Go to Ergo Node GitHub releases and download for your OS</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <span className="bg-orange-500 text-black px-2 py-1 rounded text-xs font-bold mt-1">2</span>
-                          <div>
-                            <h5 className="font-semibold mb-1">Configure</h5>
-                            <p className="text-sm text-gray-400">Set network = "testnet" in ergo.conf</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <span className="bg-orange-500 text-black px-2 py-1 rounded text-xs font-bold mt-1">3</span>
-                          <div>
-                            <h5 className="font-semibold mb-1">Start</h5>
-                            <p className="text-sm text-gray-400">Run: java -jar ergo.jar -c ergo.conf</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Method 2 */}
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <div className="flex items-center gap-3 mb-4">
-                        <span className="bg-blue-500 text-black px-3 py-1 rounded-full text-sm font-bold">Method 2</span>
-                        <h4 className="text-xl font-bold">Docker</h4>
-                      </div>
-                      <p className="text-gray-400 mb-4">Containerized deployment</p>
-                      
-                      <div className="space-y-4">
-                        <div className="flex items-start gap-3">
-                          <span className="bg-blue-500 text-black px-2 py-1 rounded text-xs font-bold mt-1">1</span>
-                          <div>
-                            <h5 className="font-semibold mb-1">Install Docker</h5>
-                            <p className="text-sm text-gray-400">Get Docker for your platform</p>
-                          </div>
-                        </div>
-                        <div className="flex items-start gap-3">
-                          <span className="bg-blue-500 text-black px-2 py-1 rounded text-xs font-bold mt-1">2</span>
-                          <div>
-                            <h5 className="font-semibold mb-1">Run Container</h5>
-                            <p className="text-sm text-gray-400">Use the provided Docker command</p>
-                          </div>
-                        </div>
-                        <div className="bg-black border border-neutral-600 rounded-lg p-3">
-                          <code className="text-xs text-gray-300">
-                            docker run -p 9053:9053 -p 9030:9030 -v ergo_data:/root/.ergo --name ergo-node ergoplatform/ergo:latest -D ergo.network.network=testnet
-                          </code>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Wallet Installation */}
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                    <Smartphone className="w-6 h-6 text-purple-400" /> Ergo Wallet Installation
-                  </h3>
-                  <p className="text-lg text-gray-300 mb-6">
-                    For testing dApps and managing test tokens, you will need a wallet.
-                  </p>
-
-                  <div className="grid md:grid-cols-3 gap-6">
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center">
-                      <Monitor className="w-12 h-12 mx-auto mb-4 text-green-400" />
-                      <h4 className="text-lg font-bold mb-2">Ergo Reference Wallet</h4>
-                      <p className="text-sm text-gray-400 mb-4">GUI wallet for desktop</p>
-                      <Link
-                        href="https://github.com/ergoplatform/ergo-wallet/releases"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        Download <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center">
-                      <Globe className="w-12 h-12 mx-auto mb-4 text-blue-400" />
-                      <h4 className="text-lg font-bold mb-2">Nautilus Wallet</h4>
-                      <p className="text-sm text-gray-400 mb-4">Browser extension</p>
-                      <Link
-                        href="https://nautiluswallet.io/"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        Install Extension <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center">
-                      <Smartphone className="w-12 h-12 mx-auto mb-4 text-purple-400" />
-                      <h4 className="text-lg font-bold mb-2">Mobile Wallet</h4>
-                      <p className="text-sm text-gray-400 mb-4">Android and iOS</p>
-                      <Link
-                        href="#"
-                        className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                      >
-                        App Store <ExternalLink className="w-3 h-3 ml-1" />
-                      </Link>
-                    </div>
-                  </div>
-
-                  <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-4 mt-6">
-                    <div className="flex items-start gap-3">
-                      <AlertTriangle className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold mb-1">Important Note</h4>
-                        <p className="text-sm text-gray-300">
-                          For advanced development, especially when working with scripts and keys, many developers prefer to use a separate test wallet, 
-                          as web and mobile wallets may not always provide full access to the low-level features required for script interaction.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* IDE Setup */}
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                    <Monitor className="w-6 h-6 text-cyan-400" /> IDE Setup (VS Code)
-                  </h3>
-                  <p className="text-lg text-gray-300 mb-6">
-                    Visual Studio Code is a popular choice for development.
-                  </p>
-
-                  <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                    <div className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold mb-3">Recommended Extensions</h4>
-                        <div className="space-y-3">
-                          <div className="flex items-center gap-3">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            <span className="text-sm">Scala (Metals) - For AppKit and node code</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            <span className="text-sm">Rust Analyzer - For Sigma-Rust</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            <span className="text-sm">ESLint, Prettier - For JavaScript/TypeScript</span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            <span className="text-sm">GitLens - For improved Git integration</span>
-                          </div>
-                        </div>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold mb-3">Installation</h4>
-                        <Link
-                          href="https://code.visualstudio.com/"
-                          className="inline-flex items-center px-4 py-2 bg-cyan-500 text-black rounded-lg font-semibold hover:bg-cyan-600 transition-colors"
-                        >
-                          <Download className="w-4 h-4 mr-2" /> Download VS Code
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Verification and Troubleshooting */}
-                <div className="mb-8">
-                  <h3 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                    <CheckCircle className="w-6 h-6 text-green-400" /> Installation Verification
-                  </h3>
-                  
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                        <Terminal className="w-5 h-5 text-green-400" /> Node Verification
-                      </h4>
-                      <p className="text-gray-400 mb-3">Open your browser and go to:</p>
-                      <div className="bg-black border border-neutral-600 rounded-lg p-3 mb-3">
-                        <code className="text-sm text-gray-300">http://localhost:9053/info</code>
-                      </div>
-                      <p className="text-sm text-gray-400">You should see a JSON response with information about your node.</p>
-                    </div>
-
-                    <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <h4 className="text-lg font-bold mb-4 flex items-center gap-2">
-                        <AlertTriangle className="w-5 h-5 text-yellow-400" /> Common Issues
-                      </h4>
-                      <div className="space-y-3">
-                        <div>
-                          <h5 className="font-semibold text-sm mb-1">Java Issues</h5>
-                          <p className="text-xs text-gray-400">Ensure correct JDK version and JAVA_HOME environment variable</p>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-sm mb-1">Sync Problems</h5>
-                          <p className="text-xs text-gray-400">Check node logs for sync status and network connectivity</p>
-                        </div>
-                        <div>
-                          <h5 className="font-semibold text-sm mb-1">Port Conflicts</h5>
-                          <p className="text-xs text-gray-400">Ensure ports 9053 and 9030 are available</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="bg-blue-400/10 border border-blue-400/20 rounded-xl p-4 mt-6">
-                    <div className="flex items-start gap-3">
-                      <Zap className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <h4 className="font-semibold mb-1">Accelerated Synchronization</h4>
-                        <p className="text-sm text-gray-300">
-                          For faster node synchronization, especially on first launch, it is recommended to use bootstraps (blockchain images). 
-                          Instructions for their use are often published on the official Ergo forum or in the Discord channel.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* Core Concepts Section */}
-              <section id="eutxo" className="mb-20 scroll-mt-24">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Core Concepts: eUTXO Model
-                </h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  Understand Ergo's unique Extended UTXO model, which provides a secure and scalable foundation for all smart contracts. 
-                  This section explains how data is stored and managed on the ledger.
-                </p>
-                <blockquote className="border-l-4 border-orange-400 pl-6 py-4 bg-orange-400/10 rounded-r-lg">
-                  <p className="text-lg italic">
-                    "The eUTXO model combines the security of Bitcoin's UTXO system with the expressive power of smart contracts."
-                  </p>
-                </blockquote>
-                <div className="mt-8">
-                  <h3 className="text-2xl font-bold mb-4">Key Features</h3>
-                  <ul className="space-y-3 text-gray-300">
-                    <li className="flex items-start gap-3">
-                      <Shield className="w-5 h-5 text-green-400 mt-0.5 flex-shrink-0" />
-                      <span><strong>Security:</strong> Each UTXO can only be spent once, preventing double-spending attacks</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Layers className="w-5 h-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                      <span><strong>Composability:</strong> Smart contracts can interact with each other seamlessly</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Zap className="w-5 h-5 text-yellow-400 mt-0.5 flex-shrink-0" />
-                      <span><strong>Scalability:</strong> Parallel processing of independent transactions</span>
-                    </li>
-                  </ul>
-                </div>
-              </section>
-
-              {/* Development Section */}
-              <section id="sdks" className="mb-20 scroll-mt-24">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Development: SDKs & Libraries
-                </h2>
-                <p className="text-lg text-gray-300 mb-8">
-                  A centralized list of available Software Development Kits (SDKs) to interact with the Ergo blockchain. 
-                  Find links to documentation, repositories, and usage examples for your preferred language.
-                </p>
-                <div className="grid gap-6">
-                  {sdks.map(sdk => (
-                    <div key={sdk.name} className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                      <div className="flex items-start justify-between mb-4">
-                        <div className="flex items-center gap-3">
-                          <sdk.icon className="w-8 h-8 text-orange-400" />
-                          <div>
-                            <h3 className="text-xl font-bold">{sdk.name}</h3>
-                            <p className="text-sm text-gray-400">{sdk.language}</p>
-                          </div>
-                        </div>
-                        <div className="flex gap-2">
-                          <Link
-                            href={sdk.href}
-                            className="inline-flex items-center px-3 py-1 bg-orange-500/20 text-orange-400 rounded-lg text-sm hover:bg-orange-500/30"
-                          >
-                            <BookOpen className="w-4 h-4 mr-1" /> Docs
-                          </Link>
-                          <Link
-                            href={sdk.github}
-                            className="inline-flex items-center px-3 py-1 bg-neutral-700 text-gray-300 rounded-lg text-sm hover:bg-neutral-600"
-                          >
-                            <Github className="w-4 h-4 mr-1" /> GitHub
-                          </Link>
-                        </div>
-                      </div>
-                      <p className="text-gray-400">{sdk.description}</p>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {/* Operating the Network Section */}
-              <section id="node" className="mb-20 scroll-mt-24">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Operating the Network: Running a Node
-                </h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  A step-by-step guide for deploying and configuring a full Ergo node. Running your own node gives you direct, 
-                  trustless access to the network for building advanced dApps or participating in mining.
-                </p>
-                <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                  <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
-                    <Cpu className="w-5 h-5 text-green-400" /> System Requirements
-                  </h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    <div>
-                      <h4 className="font-semibold mb-2">Minimum Requirements</h4>
-                      <ul className="text-sm text-gray-400 space-y-1">
-                        <li>• 4GB RAM</li>
-                        <li>• 50GB storage</li>
-                        <li>• Stable internet connection</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-2">Recommended</h4>
-                      <ul className="text-sm text-gray-400 space-y-1">
-                        <li>• 8GB RAM</li>
-                        <li>• 100GB SSD storage</li>
-                        <li>• High-speed internet</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </section>
-
-              {/* Community Section */}
-              <section id="contribute" className="mb-20 scroll-mt-24">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Community: Contribution Guide
-                </h2>
-                <p className="text-lg text-gray-300 mb-6">
-                  Ergo is an open-source project. This guide provides instructions for developers who want to contribute 
-                  to the Ergo ecosystem, from fixing bugs to building new features.
-                </p>
-                <div className="grid md:grid-cols-3 gap-6">
-                  <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center">
-                    <Github className="w-12 h-12 mx-auto mb-4 text-orange-400" />
-                    <h3 className="text-lg font-bold mb-2">Code Contributions</h3>
-                    <p className="text-sm text-gray-400 mb-4">
-                      Submit pull requests, report bugs, or propose new features
-                    </p>
-                    <Link
-                      href="https://github.com/ergoplatform"
-                      className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
-                    >
-                      View Repositories <ExternalLink className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                  <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center">
-                    <Users className="w-12 h-12 mx-auto mb-4 text-cyan-400" />
-                    <h3 className="text-lg font-bold mb-2">Community Support</h3>
-                    <p className="text-sm text-gray-400 mb-4">
-                      Help other developers and share your knowledge
-                    </p>
-                    <Link
-                      href="https://discord.gg/ergoplatform"
-                      className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm"
-                    >
-                      Join Discord <ExternalLink className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                  <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center">
-                    <BookOpen className="w-12 h-12 mx-auto mb-4 text-purple-400" />
-                    <h3 className="text-lg font-bold mb-2">Documentation</h3>
-                    <p className="text-sm text-gray-400 mb-4">
-                      Improve docs, write tutorials, or translate content
-                    </p>
-                    <Link
-                      href="#"
-                      className="inline-flex items-center text-purple-400 hover:text-purple-300 text-sm"
-                    >
-                      Contribute Docs <ExternalLink className="w-4 h-4 ml-1" />
-                    </Link>
-                  </div>
-                </div>
-              </section>
             </div>
-          </main>
-        </div>
+          </div>
+
+          {/* Setup Steps */}
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Settings className="w-6 h-6 text-orange-400" />
+                <h3 className="font-semibold text-white">Setup Local Environment</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Install dependencies for Ergo development
+              </p>
+              <Link
+                href="/build/docs/setup"
+                className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+            
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Code className="w-6 h-6 text-cyan-400" />
+                <h3 className="font-semibold text-white">Deploy Your First dApp</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Deploy your first Ergo application
+              </p>
+              <Link
+                href="/build/docs/first-dapp"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+            
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Play className="w-6 h-6 text-green-400" />
+                <h3 className="font-semibold text-white">Try Ergo: Play 2048</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Play 2048 on Ergo where every move sends a transaction
+              </p>
+              <Link
+                href="/build/playground"
+                className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium"
+              >
+                Play Game <ExternalLink className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Start Learning Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-white">Start Learning</h2>
+          <p className="text-gray-400 mb-6">
+            Learn the key concepts specific to Ergo development.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Layers className="w-6 h-6 text-orange-400" />
+                <h3 className="font-semibold text-white">eUTXO Model</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                How Ergo stores data
+              </p>
+              <Link
+                href="/build/docs/eutxo"
+                className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+            
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Zap className="w-6 h-6 text-cyan-400" />
+                <h3 className="font-semibold text-white">Fees on Ergo</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Costs to send transactions on Ergo
+              </p>
+              <Link
+                href="/build/docs/fees"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+            
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Share2 className="w-6 h-6 text-green-400" />
+                <h3 className="font-semibold text-white">Transactions</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                How to interact with the Ergo network
+              </p>
+              <Link
+                href="/build/docs/transactions"
+                className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+            
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <FileQuestion className="w-6 h-6 text-purple-400" />
+                <h3 className="font-semibold text-white">Smart Contracts</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Smart contracts on Ergo
+              </p>
+              <Link
+                href="/build/docs/contracts"
+                className="inline-flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Client Side Development Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-white">Client Side Development</h2>
+          <p className="text-gray-400 mb-6">
+            If you develop on the client side, the following community-contributed SDKs help you interact with the network in popular languages:
+          </p>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-neutral-700">
+                  <th className="text-left py-3 px-4 text-white font-semibold">Language</th>
+                  <th className="text-left py-3 px-4 text-white font-semibold">SDK</th>
+                </tr>
+              </thead>
+              <tbody className="text-gray-300">
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 px-4 font-medium">Rust</td>
+                  <td className="py-3 px-4">
+                    <Link href="https://docs.rs/sigma-rust" className="text-orange-400 hover:text-orange-300">
+                      sigma-rust
+                    </Link>
+                  </td>
+                </tr>
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 px-4 font-medium">TypeScript</td>
+                  <td className="py-3 px-4">
+                    <Link href="https://github.com/ergoplatform/fleet" className="text-orange-400 hover:text-orange-300">
+                      @ergoplatform/fleet
+                    </Link>
+                  </td>
+                </tr>
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 px-4 font-medium">Java/Kotlin/Scala</td>
+                  <td className="py-3 px-4">
+                    <Link href="https://github.com/ergoplatform/ergo-appkit" className="text-orange-400 hover:text-orange-300">
+                      ergo-appkit
+                    </Link>
+                  </td>
+                </tr>
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 px-4 font-medium">Python</td>
+                  <td className="py-3 px-4">
+                    <Link href="https://github.com/ergoplatform/ergo-python" className="text-orange-400 hover:text-orange-300">
+                      ergo-python
+                    </Link>
+                  </td>
+                </tr>
+                <tr className="border-b border-neutral-800">
+                  <td className="py-3 px-4 font-medium">Go</td>
+                  <td className="py-3 px-4">
+                    <Link href="https://github.com/ergoplatform/ergo-go" className="text-orange-400 hover:text-orange-300">
+                      ergo-go
+                    </Link>
+                  </td>
+                </tr>
+                <tr>
+                  <td className="py-3 px-4 font-medium">C#</td>
+                  <td className="py-3 px-4">
+                    <Link href="https://github.com/ergoplatform/ergo-dotnet" className="text-orange-400 hover:text-orange-300">
+                      ergo-dotnet
+                    </Link>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        {/* Running a validator Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-white">Running a validator</h2>
+          <p className="text-gray-400 mb-6">
+            Explore what it takes to operate an Ergo validator and help secure the network.
+          </p>
+          
+          <div className="grid md:grid-cols-3 gap-6">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Cpu className="w-6 h-6 text-orange-400" />
+                <h3 className="font-semibold text-white">Validators</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Individual nodes securing the Ergo network
+              </p>
+              <Link
+                href="/build/docs/node"
+                className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+            
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Settings className="w-6 h-6 text-cyan-400" />
+                <h3 className="font-semibold text-white">System Requirements</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Recommended hardware requirements and ERG required to operate a validator
+              </p>
+              <Link
+                href="/build/docs/requirements"
+                className="inline-flex items-center text-cyan-400 hover:text-cyan-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+            
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Database className="w-6 h-6 text-green-400" />
+                <h3 className="font-semibold text-white">Validator Setup</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Setup a validator and get connected to a cluster for the first time
+              </p>
+              <Link
+                href="/build/docs/mining"
+                className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium"
+              >
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Getting Support Section */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-bold mb-8 text-white">Getting Support</h2>
+          <p className="text-gray-400 mb-6">
+            Get help from the Ergo community on Discord and Telegram.
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <Users className="w-6 h-6 text-orange-400" />
+                <h3 className="font-semibold text-white">Community</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Connect with other Ergo developers, ask questions, and share your projects.
+              </p>
+              <div className="flex gap-2">
+                <Link
+                  href="https://discord.gg/ergoplatform"
+                  className="inline-flex items-center px-3 py-2 bg-blue-600 rounded-lg text-sm font-medium text-white hover:bg-blue-700 transition-colors"
+                >
+                  Discord
+                </Link>
+                <Link
+                  href="https://t.me/ergoplatform"
+                  className="inline-flex items-center px-3 py-2 bg-blue-500 rounded-lg text-sm font-medium text-white hover:bg-blue-600 transition-colors"
+                >
+                  Telegram
+                </Link>
+              </div>
+            </div>
+            
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <LifeBuoy className="w-6 h-6 text-cyan-400" />
+                <h3 className="font-semibold text-white">Support</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-4">
+                Find answers to common questions and get help with troubleshooting.
+              </p>
+              <Link
+                href="/build/docs/faq"
+                className="inline-flex items-center px-3 py-2 bg-orange-500 rounded-lg text-sm font-medium text-black hover:bg-orange-600 transition-colors"
+              >
+                FAQ & Troubleshooting
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
-    </div>
+    </main>
   )
 } 
