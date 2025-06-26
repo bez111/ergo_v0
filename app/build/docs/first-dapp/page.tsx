@@ -1,10 +1,23 @@
 import React from "react";
 import Link from "next/link";
-import { Code, Rocket, Settings, FileCode, Globe, Database, Zap, CheckCircle, AlertTriangle, Terminal, Package, Cpu } from "lucide-react";
+import {
+  Code,
+  Rocket,
+  Settings,
+  FileCode,
+  Globe,
+  Database,
+  Zap,
+  CheckCircle,
+  AlertTriangle,
+  Terminal,
+  Package,
+  Cpu,
+} from "lucide-react";
 
 export default function FirstDappPage() {
   return (
-    <div className="max-w-4xl mx-auto py-12">
+    <>
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4">
@@ -15,7 +28,7 @@ export default function FirstDappPage() {
         </p>
         <div className="bg-gradient-to-r from-orange-500/10 to-cyan-500/10 border border-orange-500/20 rounded-xl p-6">
           <p className="text-gray-300 leading-relaxed">
-            After setting up your development environment, you are ready to create your first decentralized application (dApp) on Ergo. 
+            After setting up your development environment, you are ready to create your first decentralized application (dApp) on Ergo.
             We will walk through the process of creating a simple dApp for minting a custom token.
           </p>
         </div>
@@ -30,7 +43,6 @@ export default function FirstDappPage() {
           <p className="text-gray-300 mb-4">
             Ergo offers several SDKs for various programming languages. The choice depends on your preferences and the type of dApp.
           </p>
-          
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-gradient-to-br from-blue-500/10 to-neutral-900/60 border border-blue-500/30 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-3">
@@ -41,7 +53,6 @@ export default function FirstDappPage() {
                 The de facto best SDK for frontend/web, ideal for web applications and frontends.
               </p>
             </div>
-            
             <div className="bg-gradient-to-br from-green-500/10 to-neutral-900/60 border border-green-500/30 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-3">
                 <Cpu className="w-5 h-5 text-green-400" />
@@ -51,7 +62,6 @@ export default function FirstDappPage() {
                 Excellent for backend services, wallets, and complex dApps.
               </p>
             </div>
-            
             <div className="bg-gradient-to-br from-orange-500/10 to-neutral-900/60 border border-orange-500/30 rounded-xl p-4">
               <div className="flex items-center gap-2 mb-3">
                 <Zap className="w-5 h-5 text-orange-400" />
@@ -62,7 +72,6 @@ export default function FirstDappPage() {
               </p>
             </div>
           </div>
-          
           <div className="mt-4 p-4 bg-gradient-to-r from-cyan-500/10 to-orange-500/10 border border-cyan-500/20 rounded-lg">
             <p className="text-gray-300 text-sm">
               <strong>For this tutorial, we will use the Fleet SDK</strong> due to its simplicity and web orientation.
@@ -76,20 +85,17 @@ export default function FirstDappPage() {
         <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
           <Settings className="w-6 h-6 text-cyan-400" /> 2. Setting up a Fleet Project
         </h2>
-        
         <div className="space-y-6">
           <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
             <div className="font-semibold mb-3 text-orange-400">Create a new Node.js project:</div>
-            <pre className="bg-black text-orange-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">mkdir ergo-token-minter
+            <pre className="bg-black text-orange-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`mkdir ergo-token-minter
 cd ergo-token-minter
-npm init -y</pre>
+npm init -y`}</pre>
           </div>
-          
           <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
             <div className="font-semibold mb-3 text-cyan-400">Install Fleet SDK:</div>
-            <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">npm install @fleet-sdk/core @fleet-sdk/common</pre>
+            <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`npm install @fleet-sdk/core @fleet-sdk/common`}</pre>
           </div>
-          
           <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
             <div className="font-semibold mb-3 text-green-400">Create index.js file:</div>
             <pre className="bg-black text-green-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`// index.js
@@ -185,14 +191,13 @@ mintToken();`}</pre>
         </h2>
         <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 mb-6">
           <p className="text-gray-300 mb-4">
-            For more complex dApps, such as escrow or voting, you will need to write an ErgoScript contract. 
+            For more complex dApps, such as escrow or voting, you will need to write an ErgoScript contract.
             This contract will define the conditions under which funds can be spent from a box.
           </p>
-          
           <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 border border-purple-500/20 rounded-xl p-4 mb-4">
             <div className="font-semibold mb-2 text-purple-400">Example: Simple Escrow Contract</div>
             <p className="text-gray-300 text-sm mb-3">
-              This contract allows two parties (Alice and Bob) to jointly control funds. 
+              This contract allows two parties (Alice and Bob) to jointly control funds.
               Funds can be spent if both parties sign the transaction.
             </p>
             <pre className="bg-black text-purple-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`{
@@ -217,7 +222,6 @@ mintToken();`}</pre>
           <p className="text-gray-300 mb-4">
             After writing the ErgoScript contract, you will compile it into ErgoTree (bytecode) and use it in your dApp.
           </p>
-          
           <pre className="bg-black text-blue-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`// Example of using compiled ErgoTree in Fleet SDK
 import { ErgoAddress } from '@fleet-sdk/core';
 
@@ -236,10 +240,9 @@ const compiledEscrowTree = ErgoAddress.fromErgoTree(escrowScript).ergoTree; // C
         </h2>
         <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
           <p className="text-gray-300 mb-4">
-            For a web dApp, you will need a frontend. You can use any framework (React, Vue, Angular) or plain HTML/CSS/JS. 
+            For a web dApp, you will need a frontend. You can use any framework (React, Vue, Angular) or plain HTML/CSS/JS.
             The Fleet SDK is designed for seamless integration with web applications.
           </p>
-          
           <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-xl p-4">
             <p className="text-gray-300 text-sm">
               <strong>Example:</strong> A "Mint Token" button that calls the mintToken() function from your index.js.
@@ -257,7 +260,6 @@ const compiledEscrowTree = ErgoAddress.fromErgoTree(escrowScript).ergoTree; // C
           <p className="text-gray-300 mb-4">
             In Ergo, "deploying a contract" means creating a UTXO (box) protected by your ErgoScript.
           </p>
-          
           <ul className="list-decimal pl-6 text-gray-300 space-y-2 mb-6">
             <li><strong>Get test ERG:</strong> Use the Ergo Testnet Faucet to get free test ERG to your address.</li>
             <li><strong>Create a box with the contract:</strong> Use your SDK (e.g., Fleet) to create a transaction that sends a small amount of ERG to an address generated from your compiled ErgoScript. This box will be the "contract."</li>
@@ -275,7 +277,6 @@ const compiledEscrowTree = ErgoAddress.fromErgoTree(escrowScript).ergoTree; // C
           <p className="text-gray-300 mb-4">
             After deploying the contract, you can interact with it by creating transactions that spend or modify its state.
           </p>
-          
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
             <li><strong>For the counter:</strong> Create a transaction that spends the current counter box and creates a new box with an incremented value, using your ErgoScript logic.</li>
             <li><strong>For escrow:</strong> Create a transaction that spends the escrow box, requiring signatures from both parties.</li>
@@ -299,7 +300,6 @@ const compiledEscrowTree = ErgoAddress.fromErgoTree(escrowScript).ergoTree; // C
                 <li>Gradually add more complex features</li>
               </ul>
             </div>
-            
             <div>
               <div className="font-semibold mb-3 text-orange-400">Resources</div>
               <ul className="list-disc pl-6 text-gray-300 space-y-1">
@@ -310,16 +310,15 @@ const compiledEscrowTree = ErgoAddress.fromErgoTree(escrowScript).ergoTree; // C
               </ul>
             </div>
           </div>
-          
           <div className="mt-6 p-4 bg-neutral-900/60 border border-neutral-700 rounded-lg">
             <div className="text-sm text-orange-300 flex items-center gap-2">
-              <AlertTriangle className="w-4 h-4" /> 
-              <strong>Important:</strong> Always test your dApps on testnet before deploying to mainnet. 
+              <AlertTriangle className="w-4 h-4" />
+              <strong>Important:</strong> Always test your dApps on testnet before deploying to mainnet.
               Use the Ergo Testnet Faucet to get free test ERG for development.
             </div>
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
-} 
+}

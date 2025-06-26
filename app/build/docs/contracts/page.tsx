@@ -4,7 +4,7 @@ import { Code, Shield, KeyRound, BookOpen, Layers, CheckCircle, AlertTriangle } 
 
 export default function ContractsPage() {
   return (
-    <div className="max-w-4xl mx-auto py-12">
+    <>
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4">
@@ -87,13 +87,13 @@ export default function ContractsPage() {
             <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto mb-2 font-mono text-sm">atLeast(2, Coll(PK1, PK2, PK3))</pre>
             <span className="text-gray-400 text-xs">Requires 2 out of 3 signatures</span>
             <div className="font-semibold mt-4 mb-2 text-cyan-400">Atomic Swap (simplified):</div>
-            <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto mb-2 font-mono text-sm">// Alice receives Bob's token if Bob knows the secret
+            <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto mb-2 font-mono text-sm">{`// Alice receives Bob's token if Bob knows the secret
 // pkA: Alice's public key
 // hashX: hash of secret X
 // timeout: block height after which Alice can reclaim funds
 
-(pkA.isValid &amp;&amp; blake2b256(SELF.R4.get) == hashX) ||
-(HEIGHT &gt; timeout &amp;&amp; pkA.isValid)</pre>
+(pkA.isValid && blake2b256(SELF.R4.get) == hashX) ||
+(HEIGHT > timeout && pkA.isValid)`}</pre>
             <span className="text-gray-400 text-xs">Trustless exchange with timeout</span>
           </div>
         </div>
@@ -130,6 +130,6 @@ export default function ContractsPage() {
           </ul>
         </div>
       </section>
-    </div>
+    </>
   )
 }

@@ -1,5 +1,17 @@
 import Link from "next/link"
-import { ExternalLink, Terminal, Download, CheckCircle, AlertTriangle, Wrench, Code, Cpu, Github, ChevronRight, Smartphone } from "lucide-react"
+import {
+  ExternalLink,
+  Terminal,
+  Download,
+  CheckCircle,
+  AlertTriangle,
+  Wrench,
+  Code,
+  Cpu,
+  Github,
+  ChevronRight,
+  Smartphone,
+} from "lucide-react"
 
 export default function SetupPage() {
   return (
@@ -25,29 +37,74 @@ export default function SetupPage() {
               <Download className="w-5 h-5 text-orange-400" />
               <span className="font-semibold">Git</span>
             </div>
-            <p className="text-gray-400 text-sm">Version control system. <Link href="https://git-scm.com/downloads" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Download <ExternalLink className="w-4 h-4 ml-1" /></Link></p>
+            <p className="text-gray-400 text-sm">
+              Version control system.{" "}
+              <Link
+                href="https://git-scm.com/downloads"
+                target="_blank"
+                className="text-orange-400 hover:underline inline-flex items-center"
+              >
+                Download <ExternalLink className="w-4 h-4 ml-1" />
+              </Link>
+            </p>
             <div className="flex items-center gap-2">
               <Code className="w-5 h-5 text-cyan-400" />
               <span className="font-semibold">JDK 11+</span>
             </div>
-            <p className="text-gray-400 text-sm">Java Development Kit. <span className="text-xs">JDK 17 recommended.</span> <Link href="https://openjdk.java.net/install/" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Install <ExternalLink className="w-4 h-4 ml-1" /></Link></p>
+            <p className="text-gray-400 text-sm">
+              Java Development Kit. <span className="text-xs">JDK 17 recommended.</span>{" "}
+              <Link
+                href="https://openjdk.java.net/install/"
+                target="_blank"
+                className="text-orange-400 hover:underline inline-flex items-center"
+              >
+                Install <ExternalLink className="w-4 h-4 ml-1" />
+              </Link>
+            </p>
             <div className="flex items-center gap-2">
               <Code className="w-5 h-5 text-green-400" />
               <span className="font-semibold">Node.js (LTS) & npm/yarn</span>
             </div>
-            <p className="text-gray-400 text-sm">For JavaScript/TypeScript (Fleet SDK). <Link href="https://nodejs.org/en/download/" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Download <ExternalLink className="w-4 h-4 ml-1" /></Link></p>
+            <p className="text-gray-400 text-sm">
+              For JavaScript/TypeScript (Fleet SDK).{" "}
+              <Link
+                href="https://nodejs.org/en/download/"
+                target="_blank"
+                className="text-orange-400 hover:underline inline-flex items-center"
+              >
+                Download <ExternalLink className="w-4 h-4 ml-1" />
+              </Link>
+            </p>
           </div>
           <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
             <div className="flex items-center gap-2">
               <Code className="w-5 h-5 text-yellow-400" />
               <span className="font-semibold">Rust (optional)</span>
             </div>
-            <p className="text-gray-400 text-sm">For Sigma-Rust or low-level dev. <Link href="https://rustup.rs/" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Install <ExternalLink className="w-4 h-4 ml-1" /></Link></p>
+            <p className="text-gray-400 text-sm">
+              For Sigma-Rust or low-level dev.{" "}
+              <Link
+                href="https://rustup.rs/"
+                target="_blank"
+                className="text-orange-400 hover:underline inline-flex items-center"
+              >
+                Install <ExternalLink className="w-4 h-4 ml-1" />
+              </Link>
+            </p>
             <div className="flex items-center gap-2">
               <Code className="w-5 h-5 text-blue-400" />
               <span className="font-semibold">Python (optional)</span>
             </div>
-            <p className="text-gray-400 text-sm">For Python SDK. <Link href="https://www.python.org/downloads/" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Download <ExternalLink className="w-4 h-4 ml-1" /></Link></p>
+            <p className="text-gray-400 text-sm">
+              For Python SDK.{" "}
+              <Link
+                href="https://www.python.org/downloads/"
+                target="_blank"
+                className="text-orange-400 hover:underline inline-flex items-center"
+              >
+                Download <ExternalLink className="w-4 h-4 ml-1" />
+              </Link>
+            </p>
           </div>
         </div>
       </section>
@@ -59,33 +116,75 @@ export default function SetupPage() {
         </h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="bg-gradient-to-br from-orange-500/10 to-neutral-900/60 border border-orange-500/30 rounded-xl p-6">
-            <h3 className="font-semibold text-lg mb-2 flex items-center gap-2"><Download className="w-5 h-5 text-orange-400" /> Pre-built Binaries (Recommended)</h3>
+            <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Download className="w-5 h-5 text-orange-400" /> Pre-built Binaries (Recommended)
+            </h3>
             <ol className="list-decimal pl-6 text-gray-300 space-y-2">
-              <li>Download: <Link href="https://github.com/ergoplatform/ergo/releases" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Ergo Node Releases <ExternalLink className="w-4 h-4 ml-1" /></Link></li>
-              <li>Unpack: Extract to <code>~/ergo-node</code></li>
-              <li>Configure:
+              <li>
+                Download:{" "}
+                <Link
+                  href="https://github.com/ergoplatform/ergo/releases"
+                  target="_blank"
+                  className="text-orange-400 hover:underline inline-flex items-center"
+                >
+                  Ergo Node Releases <ExternalLink className="w-4 h-4 ml-1" />
+                </Link>
+              </li>
+              <li>
+                Unpack: Extract to <code>~/ergo-node</code>
+              </li>
+              <li>
+                Configure:
                 <ul className="list-disc pl-6">
-                  <li>Copy <code>ergo.conf.template</code> to <code>ergo.conf</code></li>
-                  <li>Edit <code>ergo.conf</code>:
+                  <li>
+                    Copy <code>ergo.conf.template</code> to <code>ergo.conf</code>
+                  </li>
+                  <li>
+                    Edit <code>ergo.conf</code>:
                     <ul className="list-disc pl-6">
-                      <li>Set <code>network = "testnet"</code></li>
-                      <li>Set <code>ergo.restApi.bindAddress = 0.0.0.0:9053</code></li>
-                      <li>Configure <code>ergo.restApi.apiKeys</code> if needed</li>
+                      <li>
+                        Set <code>network = "testnet"</code>
+                      </li>
+                      <li>
+                        Set <code>ergo.restApi.bindAddress = 0.0.0.0:9053</code>
+                      </li>
+                      <li>
+                        Configure <code>ergo.restApi.apiKeys</code> if needed
+                      </li>
                     </ul>
                   </li>
                 </ul>
               </li>
-              <li>Start the node:
-                <pre className="bg-black text-orange-300 p-3 rounded-lg overflow-x-auto"><code>java -jar ergo.jar -c ergo.conf</code></pre>
+              <li>
+                Start the node:
+                <pre className="bg-black text-orange-300 p-3 rounded-lg overflow-x-auto">
+                  <code>java -jar ergo.jar -c ergo.conf</code>
+                </pre>
               </li>
             </ol>
           </div>
           <div className="bg-gradient-to-br from-cyan-500/10 to-neutral-900/60 border border-cyan-500/30 rounded-xl p-6">
-            <h3 className="font-semibold text-lg mb-2 flex items-center gap-2"><Terminal className="w-5 h-5 text-cyan-400" /> Docker Method</h3>
+            <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Terminal className="w-5 h-5 text-cyan-400" /> Docker Method
+            </h3>
             <ol className="list-decimal pl-6 text-gray-300 space-y-2">
-              <li>Install Docker: <Link href="https://docs.docker.com/get-docker/" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Get Docker <ExternalLink className="w-4 h-4 ml-1" /></Link></li>
-              <li>Run Ergo Node:
-                <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto"><code>docker run -p 9053:9053 -p 9030:9030 -v ergo_data:/root/.ergo --name ergo-node ergoplatform/ergo:latest -D ergo.network.network=testnet</code></pre>
+              <li>
+                Install Docker:{" "}
+                <Link
+                  href="https://docs.docker.com/get-docker/"
+                  target="_blank"
+                  className="text-orange-400 hover:underline inline-flex items-center"
+                >
+                  Get Docker <ExternalLink className="w-4 h-4 ml-1" />
+                </Link>
+              </li>
+              <li>
+                Run Ergo Node:
+                <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto">
+                  <code>
+                    docker run -p 9053:9053 -p 9030:9030 -v ergo_data:/root/.ergo --name ergo-node ergoplatform/ergo:latest -D ergo.network.network=testnet
+                  </code>
+                </pre>
               </li>
             </ol>
           </div>
@@ -99,16 +198,32 @@ export default function SetupPage() {
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
           <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 flex flex-col gap-2">
-            <div className="flex items-center gap-2"><Github className="w-5 h-5 text-orange-400" /> Ergo Reference Wallet (GUI)</div>
-            <Link href="https://github.com/ergoplatform/ergo-wallet/releases" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Download <ExternalLink className="w-4 h-4 ml-1" /></Link>
+            <div className="flex items-center gap-2">
+              <Github className="w-5 h-5 text-orange-400" /> Ergo Reference Wallet (GUI)
+            </div>
+            <Link
+              href="https://github.com/ergoplatform/ergo-wallet/releases"
+              target="_blank"
+              className="text-orange-400 hover:underline inline-flex items-center"
+            >
+              Download <ExternalLink className="w-4 h-4 ml-1" />
+            </Link>
           </div>
           <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 flex flex-col gap-2">
-            <div className="flex items-center gap-2"><Code className="w-5 h-5 text-cyan-400" /> Yoroi Wallet (browser extension)</div>
-            <span className="text-gray-400 text-sm">Install from browser extension store (supports Ergo).</span>
+            <div className="flex items-center gap-2">
+              <Code className="w-5 h-5 text-cyan-400" /> Yoroi Wallet (browser extension)
+            </div>
+            <span className="text-gray-400 text-sm">
+              Install from browser extension store (supports Ergo).
+            </span>
           </div>
           <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 flex flex-col gap-2">
-            <div className="flex items-center gap-2"><Smartphone className="w-5 h-5 text-green-400" /> Ergo Mobile Wallet</div>
-            <span className="text-gray-400 text-sm">Available for Android and iOS.</span>
+            <div className="flex items-center gap-2">
+              <Smartphone className="w-5 h-5 text-green-400" /> Ergo Mobile Wallet
+            </div>
+            <span className="text-gray-400 text-sm">
+              Available for Android and iOS.
+            </span>
           </div>
         </div>
         <div className="mt-4 text-sm text-orange-300 flex items-center gap-2">
@@ -122,7 +237,16 @@ export default function SetupPage() {
           <Wrench className="w-6 h-6 text-purple-400" /> 4. IDE Setup (VS Code)
         </h2>
         <div className="bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-xl p-6">
-          <div className="flex items-center gap-2 mb-2"><Download className="w-5 h-5 text-purple-400" /> <span className="font-semibold">Install VS Code:</span> <Link href="https://code.visualstudio.com/" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Download <ExternalLink className="w-4 h-4 ml-1" /></Link></div>
+          <div className="flex items-center gap-2 mb-2">
+            <Download className="w-5 h-5 text-purple-400" /> <span className="font-semibold">Install VS Code:</span>{" "}
+            <Link
+              href="https://code.visualstudio.com/"
+              target="_blank"
+              className="text-orange-400 hover:underline inline-flex items-center"
+            >
+              Download <ExternalLink className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
           <div className="font-semibold mb-2">Recommended Extensions:</div>
           <ul className="list-disc pl-6 text-gray-300">
             <li>Scala (Metals): For AppKit and node code</li>
@@ -150,11 +274,19 @@ export default function SetupPage() {
               <strong>Java issues:</strong> Ensure correct JDK version and <code>JAVA_HOME</code> is set.
             </li>
             <li>
-              <strong>Accelerated sync (Bootstrapping):</strong> For faster sync, use blockchain bootstraps. See <Link href="https://ergoforum.org/" target="_blank" className="text-orange-400 hover:underline inline-flex items-center">Ergo Forum <ExternalLink className="w-4 h-4 ml-1" /></Link> or Discord for instructions.
+              <strong>Accelerated sync (Bootstrapping):</strong> For faster sync, use blockchain bootstraps. See{" "}
+              <Link
+                href="https://ergoforum.org/"
+                target="_blank"
+                className="text-orange-400 hover:underline inline-flex items-center"
+              >
+                Ergo Forum <ExternalLink className="w-4 h-4 ml-1" />
+              </Link>{" "}
+              or Discord for instructions.
             </li>
           </ul>
         </div>
       </section>
     </div>
   )
-} 
+}

@@ -1,9 +1,21 @@
 import Link from "next/link"
-import { Layers, Share2, Code, CheckCircle, AlertTriangle, Terminal, Database, Clock, KeyRound, Users, ChevronRight } from "lucide-react"
+import {
+  Layers,
+  Share2,
+  Code,
+  CheckCircle,
+  AlertTriangle,
+  Terminal,
+  Database,
+  Clock,
+  KeyRound,
+  Users,
+  ChevronRight
+} from "lucide-react"
 
 export default function TransactionsPage() {
   return (
-    <div className="max-w-4xl mx-auto py-12">
+    <>
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4">
@@ -76,22 +88,22 @@ export default function TransactionsPage() {
             <div className="font-semibold mb-2 text-cyan-400">Examples:</div>
             <div className="mb-2">
               <span className="font-mono text-orange-300">sigmaProp(PK)</span>
-              <span className="text-gray-400 text-xs ml-2">// Pay-to-PublicKey</span>
+              <span className="text-gray-400 text-xs ml-2">{"// Pay-to-PublicKey"}</span>
             </div>
             <div className="mb-2">
               <span className="font-mono text-orange-300">atLeast(2, Coll(PK1, PK2, PK3))</span>
-              <span className="text-gray-400 text-xs ml-2">// 2-of-3 MultiSig</span>
+              <span className="text-gray-400 text-xs ml-2">{"// 2-of-3 MultiSig"}</span>
             </div>
             <div className="mb-2">
               <span className="font-mono text-orange-300">HEIGHT &gt; 1234567 &amp;&amp; PK.isValid</span>
-              <span className="text-gray-400 text-xs ml-2">// Time-Locked</span>
+              <span className="text-gray-400 text-xs ml-2">{"// Time-Locked"}</span>
             </div>
             <div className="mb-2">
-              <span className="font-mono text-orange-300">val oracleBox = CONTEXT.dataInputs(0)
+              <span className="font-mono text-orange-300">{`val oracleBox = CONTEXT.dataInputs(0)
 val price = oracleBox.R4[Long].get
-val myCondition = price &gt; 1000000000L
-myCondition &amp;&amp; PK.isValid</span>
-              <span className="text-gray-400 text-xs ml-2">// Oracle Example</span>
+val myCondition = price > 1000000000L
+myCondition && PK.isValid`}</span>
+              <span className="text-gray-400 text-xs ml-2">{"// Oracle Example"}</span>
             </div>
           </div>
         </div>
@@ -134,6 +146,6 @@ myCondition &amp;&amp; PK.isValid</span>
           </p>
         </div>
       </section>
-    </div>
+    </>
   )
-} 
+}

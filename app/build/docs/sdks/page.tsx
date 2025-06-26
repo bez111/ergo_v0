@@ -1,8 +1,9 @@
 import Link from "next/link"
 import { BookOpen, Server, Terminal, Info, ExternalLink } from "lucide-react"
+
 export default function SdksPage() {
   return (
-    <div className="max-w-4xl mx-auto py-12">
+    <>
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent mb-4">
@@ -136,6 +137,6 @@ async function sendErg(inputBox) {
           <span className="text-gray-400 text-xs">This example shows how to build and prepare a transaction using Fleet SDK (JavaScript/TypeScript).</span>
         </div>
       </section>
-    </div>
+    </>
   )
-} 
+}
