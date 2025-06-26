@@ -69,7 +69,7 @@ const sidebarNav = [
     children: [
       { title: "Running a Node", href: "/build/docs/node", icon: Cpu, description: "Deploy and configure Ergo nodes" },
       { title: "System Requirements", href: "/build/docs/requirements", icon: Settings, description: "Hardware and software specs" },
-      { title: "Staking & Mining", href: "/build/docs/mining", icon: Database, description: "Participate in network consensus" },
+      { title: "Mining", href: "/build/docs/mining", icon: Database, description: "Participate in network consensus" },
     ],
   },
   {
