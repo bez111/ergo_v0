@@ -15,7 +15,7 @@ import {
 
 export default function SetupPage() {
   return (
-    <div className="max-w-4xl mx-auto py-12">
+    <>
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4">
@@ -287,6 +287,6 @@ export default function SetupPage() {
           </ul>
         </div>
       </section>
-    </div>
+    </>
   )
-} 
+}
