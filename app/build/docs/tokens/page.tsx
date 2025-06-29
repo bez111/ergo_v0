@@ -31,16 +31,16 @@ export default function TokensPage() {
           <h3 className="font-semibold mb-3 text-orange-400">Key Characteristics:</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
             <li>
-              **First-Class Citizens:** Tokens are treated with the same importance as ERG, meaning they are handled directly by the protocol without the need for complex smart contracts.
+              <strong>First-Class Citizens:</strong> Tokens are treated with the same importance as ERG, meaning they are handled directly by the protocol without the need for complex smart contracts.
             </li>
             <li>
-              **Enhanced Security:** Reduced attack surface compared to smart-contract-based tokens, as their logic is handled by the secure underlying protocol.
+              <strong>Enhanced Security:</strong> Reduced attack surface compared to smart-contract-based tokens, as their logic is handled by the secure underlying protocol.
             </li>
             <li>
-              **Efficiency:** Lower transaction fees and faster processing for token transfers.
+              <strong>Efficiency:</strong> Lower transaction fees and faster processing for token transfers.
             </li>
             <li>
-              **UTXO-Based:** Tokens reside within Ergo boxes alongside ERG, inheriting all the security and composability benefits of the eUTXO model.
+              <strong>UTXO-Based:</strong> Tokens reside within Ergo boxes alongside ERG, inheriting all the security and composability benefits of the eUTXO model.
             </li>
           </ul>
         </div>
@@ -58,13 +58,13 @@ export default function TokensPage() {
           <h3 className="font-semibold mb-3 text-cyan-400">Key Characteristics:</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
             <li>
-              **Uniqueness:** Each NFT has a unique Token ID, ensuring its individuality.
+              <strong>Uniqueness:</strong> Each NFT has a unique Token ID, ensuring its individuality.
             </li>
             <li>
-              **Metadata:** NFTs can carry rich metadata (e.g., image URLs, descriptions, properties) stored in the registers of the Ergo box they reside in.
+              <strong>Metadata:</strong> NFTs can carry rich metadata (e.g., image URLs, descriptions, properties) stored in the registers of the Ergo box they reside in.
             </li>
             <li>
-              **Programmable:** Like other Ergo boxes, NFTs can be protected by ErgoScript, allowing for complex ownership rules, royalties, and other custom logic.
+              <strong>Programmable:</strong> Like other Ergo boxes, NFTs can be protected by ErgoScript, allowing for complex ownership rules, royalties, and other custom logic.
             </li>
           </ul>
         </div>
@@ -177,13 +177,13 @@ sendToken();
           <h3 className="font-semibold mb-3 text-green-400">EIPs (Ergo Improvement Proposals):</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
             <li>
-              **EIP-4 (Token Standard):** Defines the basic structure and properties of fungible tokens on Ergo.
+              <strong>EIP-4 (Token Standard):</strong> Defines the basic structure and properties of fungible tokens on Ergo.
             </li>
             <li>
-              **EIP-14 (NFT Standard):** Specifies how Non-Fungible Tokens should be structured, including metadata and unique identifiers.
+              <strong>EIP-14 (NFT Standard):</strong> Specifies how Non-Fungible Tokens should be structured, including metadata and unique identifiers.
             </li>
             <li>
-              **EIP-21 (Token Burning):** Describes the process for permanently removing tokens from circulation.
+              <strong>EIP-21 (Token Burning):</strong> Describes the process for permanently removing tokens from circulation.
             </li>
           </ul>
           <div className="mt-4 text-sm text-orange-300 flex items-center gap-2">

@@ -177,16 +177,16 @@ export default function FeesPage() {
           <h3 className="font-semibold mt-6 mb-3 text-blue-400">Purpose & Benefits:</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
             <li>
-              **Incentivizes State Management:** Encourages users to manage their UTXOs efficiently and spend or consolidate dormant funds, reducing unnecessary data on the blockchain.
+              <strong>Incentivizes State Management:</strong> Encourages users to manage their UTXOs efficiently and spend or consolidate dormant funds, reducing unnecessary data on the blockchain.
             </li>
             <li>
-              **Prevents State Bloat:** Helps to keep the blockchain size manageable, making it easier and more affordable for individuals to run full nodes, thus promoting decentralization.
+              <strong>Prevents State Bloat:</strong> Helps to keep the blockchain size manageable, making it easier and more affordable for individuals to run full nodes, thus promoting decentralization.
             </li>
             <li>
-              **Sustainable Miner Income:** Provides an additional, sustainable source of income for miners, especially as block rewards decrease over time, ensuring the long-term security of the network.
+              <strong>Sustainable Miner Income:</strong> Provides an additional, sustainable source of income for miners, especially as block rewards decrease over time, ensuring the long-term security of the network.
             </li>
             <li>
-              **Fairness:** Those who utilize blockchain storage for extended periods contribute to its maintenance.
+              <strong>Fairness:</strong> Those who utilize blockchain storage for extended periods contribute to its maintenance.
             </li>
           </ul>
           <div className="mt-4 text-sm text-orange-300 flex items-center gap-2">

@@ -96,31 +96,31 @@ export default function ContributePage() {
               <ol className="space-y-3 text-gray-300">
                 <li className="flex items-start gap-2">
                   <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">1</span>
-                  <span>**Find a task:** Look for open issues with labels like "good first issue," "help wanted," or "bug" in the relevant repository. You can also propose new features.</span>
+                  <span><strong>Find a task:</strong> Look for open issues with labels like "good first issue," "help wanted," or "bug" in the relevant repository. You can also propose new features.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">2</span>
-                  <span>**Fork the repository:** Create a personal fork of the repository on GitHub.</span>
+                  <span><strong>Fork the repository:</strong> Create a personal fork of the repository on GitHub.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">3</span>
-                  <span>**Clone & branch:** Clone your fork to your local machine and create a new branch for your changes (e.g., `feature/my-new-feature` or `fix/bug-name`).</span>
+                  <span><strong>Clone & branch:</strong> Clone your fork to your local machine and create a new branch for your changes (e.g., `feature/my-new-feature` or `fix/bug-name`).</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">4</span>
-                  <span>**Make changes:** Implement your code, ensuring it adheres to the project's coding style and includes relevant tests.</span>
+                  <span><strong>Make changes:</strong> Implement your code, ensuring it adheres to the project's coding style and includes relevant tests.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">5</span>
-                  <span>**Test your changes:** Run existing tests and add new ones if necessary to cover your changes.</span>
+                  <span><strong>Test your changes:</strong> Run existing tests and add new ones if necessary to cover your changes.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">6</span>
-                  <span>**Submit Pull Request (PR):** Create a pull request from your branch to the main repository. Provide a clear and detailed description of your changes.</span>
+                  <span><strong>Submit Pull Request (PR):</strong> Create a pull request from your branch to the main repository. Provide a clear and detailed description of your changes.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold">7</span>
-                  <span>**Code Review:** Address feedback from core developers and community members during the review process.</span>
+                  <span><strong>Code Review:</strong> Address feedback from core developers and community members during the review process.</span>
                 </li>
               </ol>
             </div>
@@ -153,19 +153,19 @@ export default function ContributePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <ArrowRight className="w-4 h-4 text-green-400 mt-1" />
-                  <span>**Find something to improve:** Look for typos, grammatical errors, areas that lack clarity, outdated information, or suggest new topics and tutorials.</span>
+                  <span><strong>Find something to improve:</strong> Look for typos, grammatical errors, areas that lack clarity, outdated information, or suggest new topics and tutorials.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ArrowRight className="w-4 h-4 text-green-400 mt-1" />
-                  <span>**Fork & Clone:** Fork the relevant documentation repository on GitHub and clone it to your local machine.</span>
+                  <span><strong>Fork & Clone:</strong> Fork the relevant documentation repository on GitHub and clone it to your local machine.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ArrowRight className="w-4 h-4 text-green-400 mt-1" />
-                  <span>**Make Changes:** Edit the Markdown files using your preferred text editor.</span>
+                  <span><strong>Make Changes:</strong> Edit the Markdown files using your preferred text editor.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <ArrowRight className="w-4 h-4 text-green-400 mt-1" />
-                  <span>**Submit Pull Request:** Create a pull request with a clear description of your changes.</span>
+                  <span><strong>Submit Pull Request:</strong> Create a pull request with a clear description of your changes.</span>
                 </li>
               </ul>
             </div>
@@ -178,23 +178,23 @@ export default function ContributePage() {
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>**Clarity & Accuracy:** Strive for clear, concise, and technically accurate information.</span>
+                  <span><strong>Clarity & Accuracy:</strong> Strive for clear, concise, and technically accurate information.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>**Code Examples:** Use code examples where appropriate, ensuring they are correct and easy to understand.</span>
+                  <span><strong>Code Examples:</strong> Use code examples where appropriate, ensuring they are correct and easy to understand.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>**Consistency:** Follow existing style guides, formatting, and terminology used throughout the documentation.</span>
+                  <span><strong>Consistency:</strong> Follow existing style guides, formatting, and terminology used throughout the documentation.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>**Visual Aids:** Include diagrams, screenshots, or flowcharts to explain complex concepts.</span>
+                  <span><strong>Visual Aids:</strong> Include diagrams, screenshots, or flowcharts to explain complex concepts.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>**User-Centric:** Write from the perspective of the user, anticipating their questions and needs.</span>
+                  <span><strong>User-Centric:</strong> Write from the perspective of the user, anticipating their questions and needs.</span>
                 </li>
               </ul>
             </div>
@@ -226,23 +226,23 @@ export default function ContributePage() {
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Clear steps to reproduce the issue:** What did you do?</span>
+                  <span><strong>Clear steps to reproduce the issue:</strong> What did you do?</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Expected vs actual behavior:** What did you expect to happen, and what actually happened?</span>
+                  <span><strong>Expected vs actual behavior:</strong> What did you expect to happen, and what actually happened?</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Error messages and logs:** Include full stack traces or relevant log snippets.</span>
+                  <span><strong>Error messages and logs:</strong> Include full stack traces or relevant log snippets.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Environment details:** Node/SDK version, operating system, hardware specifications.</span>
+                  <span><strong>Environment details:</strong> Node/SDK version, operating system, hardware specifications.</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Screenshots or videos:** Visual aids can be very helpful.</span>
+                  <span><strong>Screenshots or videos:</strong> Visual aids can be very helpful.</span>
                 </li>
               </ul>
             </div>
@@ -258,19 +258,19 @@ export default function ContributePage() {
               <ul className="space-y-2 text-gray-300">
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Clear description of the feature:** What is it, and how would it work?</span>
+                  <span><strong>Clear description of the feature:</strong> What is it, and how would it work?</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Rationale and potential benefits:** Why is this feature needed, and what problem does it solve?</span>
+                  <span><strong>Rationale and potential benefits:</strong> Why is this feature needed, and what problem does it solve?</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Use cases and examples:** How would users interact with it?</span>
+                  <span><strong>Use cases and examples:</strong> How would users interact with it?</span>
                 </li>
                 <li className="flex items-center gap-2">
                   <ArrowRight className="w-4 h-4 text-purple-400" />
-                  <span>**Implementation suggestions (optional):** If you have ideas on how it could be built, include them.</span>
+                  <span><strong>Implementation suggestions (optional):</strong> If you have ideas on how it could be built, include them.</span>
                 </li>
               </ul>
             </div>
@@ -335,19 +335,19 @@ export default function ContributePage() {
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-orange-400" />
-                <span>**Be respectful and inclusive:** Treat all community members with dignity and respect, regardless of background, experience, or opinions.</span>
+                <span><strong>Be respectful and inclusive:</strong> Treat all community members with dignity and respect, regardless of background, experience, or opinions.</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-orange-400" />
-                <span>**Focus on constructive feedback:** Provide feedback that is helpful and actionable, focusing on the content rather than the person.</span>
+                <span><strong>Focus on constructive feedback:</strong> Provide feedback that is helpful and actionable, focusing on the content rather than the person.</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-orange-400" />
-                <span>**Help create a welcoming environment:** Be patient and supportive, especially with newcomers.</span>
+                <span><strong>Help create a welcoming environment:</strong> Be patient and supportive, especially with newcomers.</span>
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-orange-400" />
-                <span>**Report violations:** If you witness or experience behavior that violates the Code of Conduct, please report it to the project maintainers.</span>
+                <span><strong>Report violations:</strong> If you witness or experience behavior that violates the Code of Conduct, please report it to the project maintainers.</span>
               </li>
             </ul>
           </div>

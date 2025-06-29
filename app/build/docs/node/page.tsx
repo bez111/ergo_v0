@@ -37,11 +37,11 @@ export default function NodePage() {
               <Download className="w-5 h-5 text-blue-400" /> Pre-built Binaries
             </h3>
             <p className="text-gray-400 text-sm mb-4">
-              **Recommended for most users.** This is the simplest way to get started. You download a ready-to-run `.jar` file and execute it directly.
+              <strong>Recommended for most users.</strong> This is the simplest way to get started. You download a ready-to-run `.jar` file and execute it directly.
             </p>
             <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
-              <li>**Pros:** Easiest setup, no compilation required.</li>
-              <li>**Cons:** Less control over build process, relies on pre-compiled versions.</li>
+              <li><strong>Pros:</strong> Easiest setup, no compilation required.</li>
+              <li><strong>Cons:</strong> Less control over build process, relies on pre-compiled versions.</li>
             </ul>
           </div>
           <div className="bg-neutral-900/60 border border-blue-500/30 rounded-xl p-6 flex flex-col gap-2">
@@ -52,8 +52,8 @@ export default function NodePage() {
               Ideal for containerized environments, cloud deployments, or users who prefer isolated setups. Uses the official Ergo Docker image.
             </p>
             <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
-              <li>**Pros:** Isolated environment, easy deployment, consistent across platforms.</li>
-              <li>**Cons:** Requires Docker knowledge, slight overhead.</li>
+              <li><strong>Pros:</strong> Isolated environment, easy deployment, consistent across platforms.</li>
+              <li><strong>Cons:</strong> Requires Docker knowledge, slight overhead.</li>
             </ul>
           </div>
           <div className="bg-neutral-900/60 border border-blue-500/30 rounded-xl p-6 flex flex-col gap-2">
@@ -64,8 +64,8 @@ export default function NodePage() {
               For advanced users, developers, or those who need to customize the node. Requires Scala Build Tool (SBT) and JDK.
             </p>
             <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
-              <li>**Pros:** Full control, latest features, contributes to decentralization.</li>
-              <li>**Cons:** More complex setup, requires development tools.</li>
+              <li><strong>Pros:</strong> Full control, latest features, contributes to decentralization.</li>
+              <li><strong>Cons:</strong> More complex setup, requires development tools.</li>
             </ul>
           </div>
         </div>
@@ -104,7 +104,7 @@ export default function NodePage() {
                       <b>Data Directory:</b> Specify where blockchain data will be stored: <span className="font-mono">ergo.directory = "/path/to/your/data"</span>. Ensure this directory has sufficient disk space.
                     </li>
                     <li>
-                      <b>RPC API Binding:</b> To allow external applications (like wallets or dApps) to communicate with your node, set <span className="font-mono">ergo.restApi.bindAddress = "0.0.0.0:9053"</span>. **Caution:** Be extremely careful exposing this port to the public internet without proper security measures (e.g., firewall, VPN).
+                      <b>RPC API Binding:</b> To allow external applications (like wallets or dApps) to communicate with your node, set <span className="font-mono">ergo.restApi.bindAddress = "0.0.0.0:9053"</span>. <strong>Caution:</strong> Be extremely careful exposing this port to the public internet without proper security measures (e.g., firewall, VPN).
                     </li>
                     <li>
                       <b>API Key:</b> For security, it's highly recommended to set an API key: <span className="font-mono">ergo.restApi.apiKeys = ["your_secret_api_key"]</span>. Include this key in the `api_key` header for all RPC requests.
@@ -168,16 +168,16 @@ export default function NodePage() {
           <h3 className="font-semibold mb-3 text-cyan-400">Key Aspects of Synchronization:</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
             <li>
-              **Initial Sync:** Your node will download and verify all historical blocks from the genesis block to the current network height. This ensures your node has a complete and accurate copy of the blockchain.
+              <strong>Initial Sync:</strong> Your node will download and verify all historical blocks from the genesis block to the current network height. This ensures your node has a complete and accurate copy of the blockchain.
             </li>
             <li>
-              **Disk Space:** The blockchain data will be stored in the directory specified by `ergo.directory` in your `ergo.conf`. Ensure you have sufficient disk space (currently several hundred GBs and growing).
+              <strong>Disk Space:</strong> The blockchain data will be stored in the directory specified by `ergo.directory` in your `ergo.conf`. Ensure you have sufficient disk space (currently several hundred GBs and growing).
             </li>
             <li>
-              **Accelerated Sync (Bootstrapping):** To significantly speed up the initial synchronization process, you can use blockchain snapshots or bootstraps. These are pre-synced copies of the blockchain data. Instructions for using them are typically found on the Ergo Forum or Discord channels.
+              <strong>Accelerated Sync (Bootstrapping):</strong> To significantly speed up the initial synchronization process, you can use blockchain snapshots or bootstraps. These are pre-synced copies of the blockchain data. Instructions for using them are typically found on the Ergo Forum or Discord channels.
             </li>
             <li>
-              **Continuous Sync:** Once fully synchronized, your node will continuously listen for new blocks and transactions, keeping its copy of the blockchain up-to-date in real-time.
+              <strong>Continuous Sync:</strong> Once fully synchronized, your node will continuously listen for new blocks and transactions, keeping its copy of the blockchain up-to-date in real-time.
             </li>
           </ul>
           <div className="mt-4 p-4 bg-gradient-to-r from-orange-500/10 to-cyan-500/10 border border-orange-500/20 rounded-lg">
@@ -199,27 +199,27 @@ export default function NodePage() {
           <h3 className="font-semibold mb-3 text-yellow-400">Update Procedure:</h3>
           <ol className="list-decimal list-inside text-gray-300 space-y-2">
             <li>
-              **Stop the Node:** Gracefully stop your running Ergo node. This ensures that all data is properly saved and prevents corruption.
+              <strong>Stop the Node:</strong> Gracefully stop your running Ergo node. This ensures that all data is properly saved and prevents corruption.
             </li>
             <li>
-              **Download New Version:** Download the latest `ergo.jar` file from the official Ergo Node GitHub Releases page.
+              <strong>Download New Version:</strong> Download the latest `ergo.jar` file from the official Ergo Node GitHub Releases page.
               <Link href="https://github.com/ergoplatform/ergo/releases" target="_blank" className="text-orange-400 hover:underline inline-flex items-center ml-2">
                 Ergo Node GitHub Releases <ExternalLink className="w-4 h-4 inline" />
               </Link>
             </li>
             <li>
-              **Replace Executable:** Replace your old `ergo.jar` file with the newly downloaded one in your node's working directory.
+              <strong>Replace Executable:</strong> Replace your old `ergo.jar` file with the newly downloaded one in your node's working directory.
             </li>
             <li>
-              **Review Configuration:** Always check the `ergo.conf.template` file included with the new release for any changes or new configuration options. Update your `ergo.conf` file accordingly.
+              <strong>Review Configuration:</strong> Always check the `ergo.conf.template` file included with the new release for any changes or new configuration options. Update your `ergo.conf` file accordingly.
             </li>
             <li>
-              **Start the New Version:** Start the updated Ergo node using the same command as before.
+              <strong>Start the New Version:</strong> Start the updated Ergo node using the same command as before.
             </li>
           </ol>
           <div className="mt-4 text-sm text-orange-300 flex items-center gap-2">
             <AlertTriangle className="w-4 h-4" />
-            <span>**Important:** Always back up your node's data directory and wallet files before performing any updates to prevent data loss.</span>
+            <span><strong>Important:</strong> Always back up your node's data directory and wallet files before performing any updates to prevent data loss.</span>
           </div>
         </div>
       </section>
