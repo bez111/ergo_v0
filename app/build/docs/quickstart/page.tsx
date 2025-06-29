@@ -21,7 +21,7 @@ export default function QuickstartPage() {
           Quickstart
         </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Build your first Ergo program directly in the browser. This guide will walk you through creating a simple smart contract and deploying it to testnet.
+          Start building on Ergo instantly. This guide helps you write your first smart contract directly in your browser, no setup required.
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
@@ -49,13 +49,24 @@ export default function QuickstartPage() {
         </p>
       </div>
 
+      {/* What You'll Learn Section */}
+      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+        <h3 className="text-xl font-bold mb-4 flex items-center gap-2">
+          <CheckCircle className="w-5 h-5 text-green-400" /> What You'll Learn
+        </h3>
+        <ul className="list-disc list-inside space-y-2 text-gray-300">
+          <li>How to write a basic ErgoScript smart contract.</li>
+          <li>How to compile ErgoScript to ErgoTree (bytecode).</li>
+          <li>How to simulate transactions interacting with your contract.</li>
+          <li>Basic understanding of the Ergo Playground interface.</li>
+        </ul>
+      </div>
+
       {/* Start Your Journey Section */}
       <div className="mb-8">
         <h3 className="text-2xl font-bold mb-4">Start Your Journey with Ergo</h3>
         <p className="text-lg text-gray-300 mb-6">
-          Start your journey with Ergo right in your browser! Our Ergo Playground is an interactive environment 
-          that allows you to write, compile, and simulate ErgoScript contracts without installing any software 
-          on your computer. It's the ideal way to quickly grasp the basics of ErgoScript and the eUTXO model.
+          Dive into Ergo development right from your browser! Our Ergo Playground offers an interactive environment to write, compile, and simulate ErgoScript contracts instantly, without any local setup.
         </p>
       </div>
 
@@ -281,12 +292,7 @@ export default function QuickstartPage() {
             <p className="text-gray-400 text-sm mb-3">
               Now that you've created your first contract, learn how to build a complete dApp.
             </p>
-            <Link
-              href="/build/docs/first-dapp"
-              className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium"
-            >
-              Build Your First dApp <ChevronRight className="w-4 h-4 ml-1" />
-            </Link>
+            
           </div>
           <div>
             <h4 className="font-semibold mb-2 text-cyan-400">Need Help?</h4>

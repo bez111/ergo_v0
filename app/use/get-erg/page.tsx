@@ -51,6 +51,12 @@ const centralizedExchanges = [
     link: "https://www.htx.com/en-us/trade/erg_usdt/",
     icon: Cpu,
   },
+  {
+    name: "Coinex",
+    description: "Exchange supporting ERG/USDT with no KYC required.",
+    link: "https://www.coinex.com/exchange/ERG-USDT",
+    icon: Cpu,
+  },
 ]
 
 const decentralizedExchanges = [

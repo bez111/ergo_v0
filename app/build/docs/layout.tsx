@@ -33,9 +33,14 @@ import {
   Package,
   Menu,
   X,
+  Wallet,
+  Coins,
+  Pickaxe,
 } from "lucide-react"
-import Link from "next/link"
+
 import { useState } from "react"
+import NavLink from "@/components/nav-link"
+
 
 const sidebarNav = [
   {
@@ -43,7 +48,7 @@ const sidebarNav = [
     children: [
       { title: "Quickstart", href: "/build/docs/quickstart", icon: Rocket, description: "Build your first Ergo program directly in the browser" },
       { title: "Setup Local Environment", href: "/build/docs/setup", icon: Settings, description: "Install dependencies for Ergo development" },
-      { title: "Deploy Your First dApp", href: "/build/docs/first-dapp", icon: Code, description: "Deploy your first Ergo application" },
+      
     ],
   },
   {
@@ -53,15 +58,20 @@ const sidebarNav = [
       { title: "Transactions & Scripts", href: "/build/docs/transactions", icon: Share2, description: "How to interact with the Ergo network" },
       { title: "Fees & Mining", href: "/build/docs/fees", icon: Zap, description: "Costs to send transactions on Ergo" },
       { title: "Smart Contracts", href: "/build/docs/contracts", icon: FileQuestion, description: "Smart contracts on Ergo" },
+      { title: "Tokens & Assets", href: "/build/docs/tokens", icon: Package, description: "Native tokens and NFTs on Ergo" },
     ],
   },
   {
     title: "Development",
     children: [
       { title: "SDKs & Libraries", href: "/build/docs/sdks", icon: Code, description: "Available development tools" },
+      { title: "Ergo SDKs", href: "/build/docs/sdks", icon: Package, description: "Client-side development libraries for Ergo" },
       { title: "RPC API", href: "/build/docs/api", icon: Share2, description: "Node interaction interface" },
       { title: "ErgoBox & ErgoTree", href: "/build/docs/ergobox", icon: Database, description: "Core data structures" },
+      { title: "Advanced ErgoScript", href: "/build/docs/advanced-ergoscript", icon: Code, description: "Deep dive into ErgoScript patterns and best practices" },
       { title: "Developer Tools", href: "/build/docs/tools", icon: Wrench, description: "Explorers, wallets, debuggers" },
+      { title: "Developer Toolkit", href: "/build/docs/toolkit", icon: Package, description: "Centralized CLI for Ergo development" },
+      { title: "Testing", href: "/build/docs/testing", icon: GitBranch, description: "Testing ErgoScript smart contracts and dApps" },
     ],
   },
   {
@@ -70,6 +80,22 @@ const sidebarNav = [
       { title: "Running a Node", href: "/build/docs/node", icon: Cpu, description: "Deploy and configure Ergo nodes" },
       { title: "System Requirements", href: "/build/docs/requirements", icon: Settings, description: "Hardware and software specs" },
       { title: "Mining", href: "/build/docs/mining", icon: Database, description: "Participate in network consensus" },
+    ],
+  },
+  {
+    title: "References",
+    children: [
+      { title: "RPC API Reference", href: "/build/docs/references/rpc-api", icon: Code, description: "Detailed documentation for Ergo Node RPC API" },
+      { title: "ErgoScript Language Reference", href: "/build/docs/references/ergoscript-language", icon: BookOpen, description: "Comprehensive guide to ErgoScript syntax and functions" },
+    ],
+  },
+  {
+    title: "Ecosystem",
+    children: [
+      { title: "Overview", href: "/build/docs/ecosystem", icon: Globe, description: "Explore projects, dApps, and services in the Ergo ecosystem" },
+      { title: "Grants & Funding", href: "/ecosystem/grants", icon: Coins, description: "Opportunities for project grants and ecosystem funding" },
+      { title: "Mining Pools", href: "/ecosystem/mining", icon: Pickaxe, description: "Find and join Ergo mining pools" },
+      { title: "Wallets", href: "/wallet", icon: Wallet, description: "Discover secure Ergo wallets" },
     ],
   },
   {
@@ -130,22 +156,16 @@ export default function DocsLayout({
               <ul className="space-y-6">
                 {sidebarNav.map(section => (
                   <li key={section.title}>
-                    <h3 className="font-semibold text-sm mb-3 text-gray-400 uppercase tracking-wider">{section.title}</h3>
+                    <h3 className="font-semibold text-sm mb-3 text-orange-400 uppercase tracking-wider">{section.title}</h3>
                     <ul className="space-y-1">
                       {section.children.map(link => (
                         <li key={link.title}>
-                          <Link
+                          <NavLink
                             href={link.href}
-                            className="block px-3 py-2 text-sm text-gray-300 hover:text-white hover:bg-neutral-800/50 rounded-lg transition-colors"
-                          >
-                            <div className="flex items-center gap-2 mb-1">
-                              <link.icon className="w-4 h-4" />
-                              <span className="font-medium">{link.title}</span>
-                            </div>
-                            <p className="text-xs text-gray-500 ml-6">
-                              {link.description}
-                            </p>
-                          </Link>
+                            title={link.title}
+                            icon={link.icon}
+                            description={link.description}
+                          />
                         </li>
                       ))}
                     </ul>

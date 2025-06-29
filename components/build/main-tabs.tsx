@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card"
 import { SectionHeading } from "@/components/section-heading"
 import Link from "next/link"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import Image from "next/image"
 import { showcase, tools, community, resources } from "@/lib/build-page-data"
 
 export function MainTabs() {
@@ -73,9 +74,11 @@ export function MainTabs() {
                 <Link key={project.title} href={project.href} target="_blank" className="block group">
                   <div className="p-4 rounded-xl border border-neutral-700/30 hover:border-orange-400 transition flex flex-col gap-3 bg-black/30 h-full">
                     {project.image && (
-                      <img
+                      <Image
                         src={project.image}
                         alt={project.title}
+                        width={200}
+                        height={96}
                         className="h-24 w-full object-cover rounded-md bg-neutral-800 mb-2"
                       />
                     )}

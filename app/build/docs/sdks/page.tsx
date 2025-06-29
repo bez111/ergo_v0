@@ -1,142 +1,137 @@
-import Link from "next/link"
-import { BookOpen, Server, Terminal, Info, ExternalLink } from "lucide-react"
+"use client"
 
-export default function SdksPage() {
+import { motion } from "framer-motion"
+import { Badge } from "@/components/ui/badge"
+import { Code, Package, Globe, Cpu, Zap, ExternalLink, CheckCircle, ChevronRight } from "lucide-react"
+import Link from "next/link"
+
+export default function ErgoSDKsPage() {
   return (
     <>
       {/* Hero Section */}
       <div className="mb-12">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent mb-4">
-          Ergo SDKs & Libraries
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+          Ergo SDKs & Client Development
         </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Explore SDKs and libraries for Rust, Scala, JS, Python and more. Build dApps and tools for Ergo in your favorite language.
+          Explore the Software Development Kits (SDKs) available for Ergo, enabling you to build powerful decentralized applications and services in your preferred programming language.
         </p>
       </div>
 
-      {/* SDKs Table Section */}
+      {/* Overview Section */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
-          <BookOpen className="w-6 h-6 text-cyan-400" /> Available SDKs
+          <Package className="w-6 h-6 text-orange-400" /> Overview of Ergo SDKs
         </h2>
-        <div className="overflow-x-auto">
-          <table className="min-w-full text-sm text-left text-gray-300 border border-cyan-500/20 rounded-xl overflow-hidden">
-            <thead className="bg-cyan-900/40 text-cyan-300">
-              <tr>
-                <th className="px-4 py-2 font-semibold">SDK Name</th>
-                <th className="px-4 py-2 font-semibold">Language(s)</th>
-                <th className="px-4 py-2 font-semibold">Description</th>
-                <th className="px-4 py-2 font-semibold">Primary Use Case</th>
-                <th className="px-4 py-2 font-semibold">Links</th>
-              </tr>
-            </thead>
-            <tbody className="bg-neutral-900/60 divide-y divide-cyan-800/20">
-              <tr>
-                <td className="px-4 py-3">AppKit</td>
-                <td className="px-4 py-3">Java, Kotlin, Scala</td>
-                <td className="px-4 py-3">High-level SDK for JVM, providing convenient abstractions for working with transactions, boxes, contracts, and wallets.</td>
-                <td className="px-4 py-3">Backend services, wallets, complex dApps, JVM integrations.</td>
-                <td className="px-4 py-3 flex flex-col gap-1">
-                  <Link href="https://docs.ergoplatform.com/dev/quick-start/" target="_blank" className="text-cyan-400 hover:underline flex items-center gap-1">Docs <ExternalLink className="w-4 h-4" /></Link>
-                  <Link href="https://github.com/ergoplatform/ergo-appkit" target="_blank" className="text-cyan-400 hover:underline flex items-center gap-1">GitHub <ExternalLink className="w-4 h-4" /></Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3">Fleet</td>
-                <td className="px-4 py-3">TypeScript, JavaScript</td>
-                <td className="px-4 py-3">Lightweight and modular SDK for web development, focused on building dApp frontends and interacting with browser wallets.</td>
-                <td className="px-4 py-3">Web apps, browser dApps, React/Vue/Angular integration.</td>
-                <td className="px-4 py-3 flex flex-col gap-1">
-                  <Link href="https://docs.ergoplatform.com/dev/fleet/" target="_blank" className="text-cyan-400 hover:underline flex items-center gap-1">Docs <ExternalLink className="w-4 h-4" /></Link>
-                  <Link href="https://github.com/ergoplatform/fleet" target="_blank" className="text-cyan-400 hover:underline flex items-center gap-1">GitHub <ExternalLink className="w-4 h-4" /></Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3">Sigma-Rust</td>
-                <td className="px-4 py-3">Rust</td>
-                <td className="px-4 py-3">Low-level library implementing Ergo's cryptographic primitives, ErgoTree, and transaction logic.</td>
-                <td className="px-4 py-3">New SDKs, high-performance services, security audits, low-level work.</td>
-                <td className="px-4 py-3 flex flex-col gap-1">
-                  <Link href="https://docs.ergoplatform.com/dev/sigma-rust/" target="_blank" className="text-cyan-400 hover:underline flex items-center gap-1">Docs <ExternalLink className="w-4 h-4" /></Link>
-                  <Link href="https://github.com/ergoplatform/sigma-rust" target="_blank" className="text-cyan-400 hover:underline flex items-center gap-1">GitHub <ExternalLink className="w-4 h-4" /></Link>
-                </td>
-              </tr>
-              <tr>
-                <td className="px-4 py-3">Ergo-Python</td>
-                <td className="px-4 py-3">Python</td>
-                <td className="px-4 py-3">Python SDK for working with transactions, boxes, and ErgoScript.</td>
-                <td className="px-4 py-3">Automation, analytics, simple dApps.</td>
-                <td className="px-4 py-3 flex flex-col gap-1">
-                  <Link href="https://github.com/anon-real/ergo-python" target="_blank" className="text-cyan-400 hover:underline flex items-center gap-1">GitHub <ExternalLink className="w-4 h-4" /></Link>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div className="mt-4 text-sm text-orange-300 flex items-center gap-2">
-          <Info className="w-4 h-4" />
-          <span>AppKit and Fleet are the most actively maintained. Always check the latest docs and versions in their repositories.</span>
+        <p className="text-gray-300 mb-6">
+          Ergo's ecosystem provides several SDKs, each tailored to different development environments and use cases. These SDKs abstract away the complexities of direct blockchain interaction, allowing you to focus on your application's logic.
+        </p>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
+            <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Globe className="w-5 h-5 text-blue-400" /> Fleet SDK (TypeScript/JavaScript)
+            </h3>
+            <p className="text-gray-400 text-sm mb-4">
+              The primary SDK for web and frontend development. Ideal for building dApps that interact with browser-based wallets like Nautilus.
+            </p>
+            <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
+              <li>**Language:** TypeScript/JavaScript</li>
+              <li>**Use Cases:** Web dApps, browser extensions, Node.js backend services.</li>
+              <li>**Features:** Transaction building, wallet integration, ErgoScript compilation, UTXO management.</li>
+            </ul>
+            <Link
+              href="https://github.com/fleet-sdk/fleet"
+              target="_blank"
+              className="inline-flex items-center text-orange-400 hover:underline mt-4"
+            >
+              GitHub Repository <ExternalLink className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
+          <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
+            <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Cpu className="w-5 h-5 text-green-400" /> Ergo AppKit (Java/Kotlin/Scala)
+            </h3>
+            <p className="text-gray-400 text-sm mb-4">
+              A robust SDK for JVM-based applications. Perfect for backend services, desktop wallets, and complex dApp logic.
+            </p>
+            <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
+              <li>**Language:** Java, Kotlin, Scala</li>
+              <li>**Use Cases:** Backend dApps, full node integration, custom wallet development, enterprise solutions.</li>
+              <li>**Features:** Full node RPC client, transaction construction, ErgoScript evaluation, cryptographic operations.</li>
+            </ul>
+            <Link
+              href="https://github.com/ergoplatform/ergo-appkit"
+              target="_blank"
+              className="inline-flex items-center text-orange-400 hover:underline mt-4"
+            >
+              GitHub Repository <ExternalLink className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
+          <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
+            <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
+              <Zap className="w-5 h-5 text-orange-400" /> Sigma-Rust (Rust)
+            </h3>
+            <p className="text-gray-400 text-sm mb-4">
+              A low-level, high-performance library for Rust developers. Ideal for performance-critical components and cryptographic implementations.
+            </p>
+            <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
+              <li>**Language:** Rust</li>
+              <li>**Use Cases:** Core protocol development, high-performance dApp components, cryptographic research.</li>
+              <li>**Features:** ErgoScript parsing/evaluation, cryptographic primitives, transaction serialization.</li>
+            </ul>
+            <Link
+              href="https://github.com/ergoplatform/sigma-rust"
+              target="_blank"
+              className="inline-flex items-center text-orange-400 hover:underline mt-4"
+            >
+              GitHub Repository <ExternalLink className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Core Functions Section */}
+      {/* Choosing an SDK Section */}
       <section className="mb-12">
         <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
-          <Server className="w-6 h-6 text-orange-400" /> Core Functions of Ergo SDKs
+          <CheckCircle className="w-6 h-6 text-green-400" /> Choosing the Right SDK
         </h2>
-        <div className="bg-gradient-to-r from-cyan-500/10 to-orange-500/10 border border-cyan-500/20 rounded-xl p-6">
+        <p className="text-gray-300 mb-6">
+          The best SDK for your project depends on your programming language preference, the type of application you're building, and the level of control you need.
+        </p>
+        <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>Creating and building transactions: form input/output boxes, add tokens, set fees.</li>
-            <li>Signing transactions: use private keys or integrate with wallets.</li>
-            <li>Sending transactions: submit signed transactions to the network.</li>
-            <li>Interacting with boxes: retrieve box info, contents, and registers.</li>
-            <li>Working with ErgoScript: compile scripts, create addresses from scripts.</li>
-            <li>Working with tokens: mint, send, receive custom tokens.</li>
+            <li>
+              **For Web dApps & Frontend:** Fleet SDK is generally the recommended choice due to its JavaScript/TypeScript compatibility and browser wallet integration.
+            </li>
+            <li>
+              **For Backend Services & Desktop Apps:** Ergo AppKit provides robust JVM-based solutions with full node interaction capabilities.
+            </li>
+            <li>
+              **For Low-Level & Performance-Critical Development:** Sigma-Rust offers fine-grained control and high performance for specialized use cases.
+            </li>
           </ul>
         </div>
       </section>
 
-      {/* Example Section */}
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
-          <Terminal className="w-6 h-6 text-cyan-400" /> Example: Sending ERG with Fleet SDK
-        </h2>
-        <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
-          <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto mb-2 font-mono text-sm">{`
-import { ErgoAddress, TransactionBuilder } from '@fleet-sdk/core';
-
-// Assuming you have access to your wallet's UTXOs
-const senderAddress = '9f...'; // Your address
-const recipientAddress = '9g...'; // Recipient's address
-const amountToSend = 1000000000n; // 1 ERG (in nano-ERG)
-const fee = 1000000n; // 0.001 ERG
-
-async function sendErg(inputBox) {
-  const unsignedTx = new TransactionBuilder()
-    .from(inputBox)
-    .to({
-      value: amountToSend,
-      ergoTree: ErgoAddress.fromBase58(recipientAddress).ergoTree,
-    })
-    .sendChangeTo(senderAddress)
-    .payFee(fee)
-    .build();
-
-  // In a real dApp: unsignedTx will be sent to the user's wallet for signing
-  // (e.g., via Yoroi dApp Connector or Nautilus)
-  // const signedTx = await wallet.signTx(unsignedTx);
-  // await wallet.submitTx(signedTx);
-
-  console.log('Unsigned Transaction:', unsignedTx);
-  // For testing, you can use the node's RPC for signing (not for production)
-}
-
-// Example call (inputBox must be obtained from your node/wallet)
-// sendErg(yourUnspentBox);
-`}</pre>
-          <span className="text-gray-400 text-xs">This example shows how to build and prepare a transaction using Fleet SDK (JavaScript/TypeScript).</span>
+      {/* Next Steps */}
+      <div className="mt-12 p-6 bg-gradient-to-r from-orange-500/10 to-cyan-500/10 border border-orange-500/20 rounded-xl">
+        <h3 className="text-xl font-bold mb-4 text-white">Next Steps: Start Building!</h3>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
+            <h4 className="font-semibold mb-2 text-orange-400">Set Up Your Environment</h4>
+            <p className="text-gray-400 text-sm mb-3">
+              Get your local development environment ready with the necessary tools and an Ergo node.
+            </p>
+            <Link
+              href="/build/docs/setup"
+              className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm font-medium"
+            >
+              Setup Guide <ChevronRight className="w-4 h-4 ml-1" />
+            </Link>
+          </div>
+          
         </div>
-      </section>
+      </div>
     </>
   )
 }

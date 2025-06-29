@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function FaqPage() {
+export default function DeveloperToolkitPage() {
   return (
     <div>
-      <h1>FAQ - Placeholder</h1>
+      <h1>Developer Toolkit - Placeholder</h1>
       <p>Content coming soon...</p>
     </div>
   );
