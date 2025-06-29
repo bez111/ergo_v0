@@ -19,7 +19,7 @@ import Link from "next/link"
 
 export default function ContributePage() {
   return (
-    <div className="mb-12">
+    <>
       {/* Hero Section */}
       <div className="mb-10">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4">
@@ -47,7 +47,7 @@ export default function ContributePage() {
             <h2 className="text-2xl font-semibold text-blue-400">Code Contributions: Development & Core Protocol</h2>
           </div>
           <p className="text-gray-300 mb-6">
-            Contributing code is a direct way to impact Ergo's development, from core protocol enhancements to new dApps and tools. All Ergo code development is managed through the ErgoPlatform Organization on GitHub.
+            All Ergo code development is managed through the ErgoPlatform Organization on GitHub.
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
@@ -77,7 +77,7 @@ export default function ContributePage() {
                 </li>
                 <li className="flex items-center gap-2">
                   <CheckCircle className="w-4 h-4 text-green-400" />
-                  <span>**ergo-wallet:** Reference GUI wallet implementation.</span>
+                  <span><strong>ergo-wallet:</strong> Reference GUI wallet implementation.</span>
                 </li>
               </ul>
               <Link href="https://github.com/ergoplatform" target="_blank" className="inline-flex items-center text-orange-400 hover:underline mt-4">
@@ -331,7 +331,7 @@ export default function ContributePage() {
           </p>
           
           <div className="bg-neutral-800/50 rounded-lg p-4 border border-orange-500/20">
-            <h3 className="text-lg font-semibold text-orange-300 mb-2">Key Principles:</h3>
+            <h3 className="font-semibold text-lg mb-2">Key Principles:</h3>
             <ul className="space-y-2 text-gray-300">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-orange-400" />
@@ -386,6 +386,6 @@ export default function ContributePage() {
           </a>
         </div>
       </div>
-    </div>
+    </>
   )
-} 
+}
