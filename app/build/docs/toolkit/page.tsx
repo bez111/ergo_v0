@@ -53,7 +53,7 @@ export default function DeveloperToolkitPage() {
           className="text-center mb-24"
         >
           <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30">DEVELOPER TOOLKIT</Badge>
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pb-4">
+          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pb-4 leading-tight pb-1">
             Ergo Developer Toolkit
           </h1>
           <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">

@@ -335,7 +335,7 @@ function FaqAccordion({ q, a, color }: { q: string; a: React.ReactNode; color: s
 export default function FaqPage() {
   return (
     <div className="mb-12">
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4">
+      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
         Ergo FAQ
       </h1>
       <p className="text-xl text-gray-400 mb-10">
