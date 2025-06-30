@@ -65,6 +65,7 @@ const sidebarNav = [
     title: "Development",
     children: [
       { title: "SDKs & Libraries", href: "/build/docs/sdks", icon: Code, description: "Available development tools" },
+      { title: "Cookbook", href: "/build/docs/cookbook", icon: BookOpen, description: "Ready-to-use code recipes for Ergo developers" },
       { title: "Ergo SDKs", href: "/build/docs/sdks", icon: Package, description: "Client-side development libraries for Ergo" },
       { title: "RPC API", href: "/build/docs/api", icon: Share2, description: "Node interaction interface" },
       { title: "ErgoBox & ErgoTree", href: "/build/docs/ergobox", icon: Database, description: "Core data structures" },

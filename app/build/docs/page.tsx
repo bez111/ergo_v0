@@ -91,6 +91,13 @@ const quickLinks = [
     icon: FileQuestion,
     color: "from-purple-500 to-pink-500",
   },
+  {
+    title: "Cookbook",
+    description: "Ready-to-use code recipes for Ergo developers",
+    href: "/build/docs/cookbook",
+    icon: BookOpen,
+    color: "from-orange-500 to-cyan-500",
+  },
 ]
 
 export default function DocsPage() {
@@ -101,7 +108,7 @@ export default function DocsPage() {
       <div className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:text-white prose-a:text-cyan-400 prose-a:underline">
         {/* Hero Section */}
         <div className="mb-16">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent mb-4">
+          <h1 className="text-5xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
             Ergo Documentation
           </h1>
           <p className="text-xl text-gray-400 mb-8">
@@ -178,17 +185,17 @@ export default function DocsPage() {
             
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <Play className="w-6 h-6 text-green-400" />
-                <h3 className="font-semibold text-white">Try Ergo: Play 2048</h3>
+                <BookOpen className="w-6 h-6 text-green-400" />
+                <h3 className="font-semibold text-white">Cookbook</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Play 2048 on Ergo where every move sends a transaction
+                Ready-to-use code recipes for Ergo developers
               </p>
               <Link
-                href="/build/playground"
+                href="/build/docs/cookbook"
                 className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium"
               >
-                Play Game <ExternalLink className="w-4 h-4 ml-1" />
+                Open Cookbook <ExternalLink className="w-4 h-4 ml-1" />
               </Link>
             </div>
           </div>
@@ -337,18 +344,18 @@ export default function DocsPage() {
           </div>
         </section>
 
-        {/* Running a validator Section */}
+        {/* Running a node Section */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold mb-8 text-white">Running a validator</h2>
+          <h2 className="text-2xl font-bold mb-8 text-white">Running a node</h2>
           <p className="text-gray-400 mb-6">
-            Explore what it takes to operate an Ergo validator and help secure the network.
+            Explore what it takes to operate an Ergo node and help secure the network.
           </p>
           
           <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Cpu className="w-6 h-6 text-orange-400" />
-                <h3 className="font-semibold text-white">Validators</h3>
+                <h3 className="font-semibold text-white">Nodes</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
                 Individual nodes securing the Ergo network
@@ -367,7 +374,7 @@ export default function DocsPage() {
                 <h3 className="font-semibold text-white">System Requirements</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Recommended hardware requirements and ERG required to operate a validator
+                Recommended hardware requirements and ERG required to operate a node
               </p>
               <Link
                 href="/build/docs/requirements"
@@ -380,10 +387,10 @@ export default function DocsPage() {
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
                 <Database className="w-6 h-6 text-green-400" />
-                <h3 className="font-semibold text-white">Validator Setup</h3>
+                <h3 className="font-semibold text-white">Node Setup</h3>
               </div>
               <p className="text-gray-400 text-sm mb-4">
-                Setup a validator and get connected to a cluster for the first time
+                Setup a node and get connected to a cluster for the first time
               </p>
               <Link
                 href="/build/docs/mining"

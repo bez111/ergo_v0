@@ -101,6 +101,11 @@ export const mainNavItems = [
         description: "The central hub for starting, supporting, and connecting as an Ergo developer.",
       },
       {
+        title: "Cookbook",
+        href: "/build/docs/cookbook",
+        description: "Ready-to-use code recipes and practical snippets for Ergo developers.",
+      },
+      {
         title: "SDKs, Tools & Docs",
         href: "/build/docs",
         description:
