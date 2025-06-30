@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
-import { Globe, Code, Coins, Pickaxe, Wallet, ExternalLink, ChevronRight } from "lucide-react"
+import { Globe, Code, Coins, Pickaxe, Wallet, ExternalLink, ChevronRight, Image as ImageIcon } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 
@@ -44,7 +44,7 @@ export default function EcosystemOverviewPage() {
           </div>
           <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
             <h3 className="font-semibold text-lg mb-2 flex items-center gap-2">
-              <Image src="/path/to/your/nft-icon.png" alt="NFTs & Digital Collectibles icon" width={24} height={24} className="w-5 h-5 text-purple-400" /> NFTs & Digital Collectibles
+              <ImageIcon className="w-5 h-5 text-purple-400" /> NFTs & Digital Collectibles
             </h3>
             <p className="text-gray-400 text-sm mb-4">
               Discover NFT marketplaces, minting platforms, and unique digital assets built on Ergo's native token capabilities.
