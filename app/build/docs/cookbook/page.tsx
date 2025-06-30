@@ -197,7 +197,7 @@ export default function CookbookPage() {
                   </pre>
                   <div className="mt-auto">
                     <a href={r.doc} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-cyan-400 hover:underline text-sm">
-                      Подробнее <ChevronRight className="w-4 h-4 ml-1" />
+                      More <ChevronRight className="w-4 h-4 ml-1" />
                     </a>
                   </div>
                 </div>
