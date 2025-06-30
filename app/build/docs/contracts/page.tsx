@@ -55,25 +55,25 @@ export default function ErgoScriptLanguageReferencePage() {
             <div>
               <h3 className="font-semibold mb-3 text-cyan-400">Primitive Types:</h3>
               <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                <li>**Boolean:** `true`, `false`</li>
-                <li>**Byte:** 8-bit unsigned integer</li>
-                <li>**Short:** 16-bit signed integer</li>
-                <li>**Int:** 32-bit signed integer</li>
-                <li>**Long:** 64-bit signed integer (used for ERG amounts, timestamps)</li>
-                <li>**BigInt:** Arbitrary-precision integers</li>
-                <li>**GroupElement:** Point on an elliptic curve (for cryptography)</li>
-                <li>**SigmaProp:** Cryptographic proposition (public keys, multi-signatures, etc.)</li>
+                <li><strong>Boolean:</strong> `true`, `false`</li>
+                <li><strong>Byte:</strong> 8-bit unsigned integer</li>
+                <li><strong>Short:</strong> 16-bit signed integer</li>
+                <li><strong>Int:</strong> 32-bit signed integer</li>
+                <li><strong>Long:</strong> 64-bit signed integer (used for ERG amounts, timestamps)</li>
+                <li><strong>BigInt:</strong> Arbitrary-precision integers</li>
+                <li><strong>GroupElement:</strong> Point on an elliptic curve (for cryptography)</li>
+                <li><strong>SigmaProp:</strong> Cryptographic proposition (public keys, multi-signatures, etc.)</li>
               </ul>
             </div>
             <div>
               <h3 className="font-semibold mb-3 text-cyan-400">Collection & Special Types:</h3>
               <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                <li>**Coll[T]:** Collection (array) of elements of type `T`. E.g., `Coll[Byte]` for byte arrays.</li>
-                <li>**Option[T]:** Represents an optional value. Can be `Some(value)` or `None`.</li>
-                <li>**Box:** Represents an Ergo UTXO. Provides access to its properties (`value`, `assets`, `ergoTree`, `registers`, `creationHeight`).</li>
-                <li>**Context:** Provides access to the transaction context and blockchain state.</li>
-                <li>**Header:** Represents a block header.</li>
-                <li>**PreHeader:** Represents a block header before it's fully formed.</li>
+                <li><strong>Coll[T]:</strong> Collection (array) of elements of type `T`. E.g., `Coll[Byte]` for byte arrays.</li>
+                <li><strong>Option[T]:</strong> Represents an optional value. Can be `Some(value)` or `None`.</li>
+                <li><strong>Box:</strong> Represents an Ergo UTXO. Provides access to its properties (`value`, `assets`, `ergoTree`, `registers`, `creationHeight`).</li>
+                <li><strong>Context:</strong> Provides access to the transaction context and blockchain state.</li>
+                <li><strong>Header:</strong> Represents a block header.</li>
+                <li><strong>PreHeader:</strong> Represents a block header before it's fully formed.</li>
               </ul>
             </div>
           </div>
@@ -91,37 +91,21 @@ export default function ErgoScriptLanguageReferencePage() {
         <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
           <h3 className="font-semibold mb-3 text-purple-400">Common Operators:</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>**Arithmetic:** `+`, `-`, `*`, `/`, `%`</li>
-            <li>**Logical:** `&&` (AND), `||` (OR), `!` (NOT)</li>
-            <li>**Comparison:** `==`, `!=`, `&gt;`, `&lt;`, `&gt;=`, `&lt;=`</li>
+            <li><strong>Arithmetic:</strong> `+`, `-`, `*`, `/`, `%`</li>
+            <li><strong>Logical:</strong> `&&` (AND), `||` (OR), `!` (NOT)</li>
+            <li><strong>Comparison:</strong> `==`, `!=`, `&gt;`, `&lt;`, `&gt;=`, `&lt;=`</li>
           </ul>
           <h3 className="font-semibold mt-6 mb-3 text-purple-400">Key Built-in Functions:</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>**`SELF`:** Refers to the current input box being spent.</li>
-            <li>
-              **`INPUTS`:** Collection of all input boxes in the transaction.
-            </li>
-            <li>
-              **`OUTPUTS`:** Collection of all output boxes created by the transaction.
-            </li>
-            <li>
-              **`DATA_INPUTS`:** Collection of all data input boxes (read-only).
-            </li>
-            <li>
-              **`CONTEXT`:** Provides access to blockchain context (e.g., `CONTEXT.HEIGHT`).
-            </li>
-            <li>
-              **`blake2b256(Coll[Byte])`:** Computes the Blake2b hash of a byte array.
-            </li>
-            <li>
-              **`sigmaProp(Boolean)`:** Converts a boolean expression into a Sigma-protocol proposition.
-            </li>
-            <li>
-              **`atLeast(Int, Coll[SigmaProp])`:** Requires at least `Int` number of proofs from the collection of Sigma-protocols.
-            </li>
-            <li>
-              **`getVar[T](Byte)`:** Retrieves a variable from the context by its ID.
-            </li>
+            <li><strong>`SELF`:</strong> Refers to the current input box being spent.</li>
+            <li><strong>`INPUTS`:</strong> Collection of all input boxes in the transaction.</li>
+            <li><strong>`OUTPUTS`:</strong> Collection of all output boxes created by the transaction.</li>
+            <li><strong>`DATA_INPUTS`:</strong> Collection of all data input boxes (read-only).</li>
+            <li><strong>`CONTEXT`:</strong> Provides access to blockchain context (e.g., `CONTEXT.HEIGHT`).</li>
+            <li><strong>`blake2b256(Coll[Byte])`:</strong> Computes the Blake2b hash of a byte array.</li>
+            <li><strong>`sigmaProp(Boolean)`:</strong> Converts a boolean expression into a Sigma-protocol proposition.</li>
+            <li><strong>`atLeast(Int, Coll[SigmaProp])`:</strong> Requires at least `Int` number of proofs from the collection of Sigma-protocols.</li>
+            <li><strong>`getVar[T](Byte)`:</strong> Retrieves a variable from the context by its ID.</li>
           </ul>
         </div>
       </section>
@@ -137,21 +121,11 @@ export default function ErgoScriptLanguageReferencePage() {
         <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
           <h3 className="font-semibold mb-3 text-green-400">Common Sigma-Protocol Functions:</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>
-              **`proveDlog(GroupElement)`:** Proves knowledge of a discrete logarithm (private key) corresponding to a public key.
-            </li>
-            <li>
-              **`proveDHTuple(GroupElement, GroupElement, GroupElement, GroupElement)`:** Proves knowledge of a Diffie-Hellman tuple.
-            </li>
-            <li>
-              **`OR(Coll[SigmaProp])`:** Logical OR of multiple Sigma-protocol propositions.
-            </li>
-            <li>
-              **`AND(Coll[SigmaProp])`:** Logical AND of multiple Sigma-protocol propositions.
-            </li>
-            <li>
-              **`atLeast(Int, Coll[SigmaProp])`:** Threshold signature, requiring `Int` proofs from the collection.
-            </li>
+            <li><strong>`proveDlog(GroupElement)`:</strong> Proves knowledge of a discrete logarithm (private key) corresponding to a public key.</li>
+            <li><strong>`proveDHTuple(GroupElement, GroupElement, GroupElement, GroupElement)`:</strong> Proves knowledge of a Diffie-Hellman tuple.</li>
+            <li><strong>`OR(Coll[SigmaProp])`:</strong> Logical OR of multiple Sigma-protocol propositions.</li>
+            <li><strong>`AND(Coll[SigmaProp])`:</strong> Logical AND of multiple Sigma-protocol propositions.</li>
+            <li><strong>`atLeast(Int, Coll[SigmaProp])`:</strong> Threshold signature, requiring `Int` proofs from the collection.</li>
           </ul>
         </div>
       </section>

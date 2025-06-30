@@ -35,9 +35,9 @@ export default function ErgoSDKsPage() {
               The primary SDK for web and frontend development. Ideal for building dApps that interact with browser-based wallets like Nautilus.
             </p>
             <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
-              <li>**Language:** TypeScript/JavaScript</li>
-              <li>**Use Cases:** Web dApps, browser extensions, Node.js backend services.</li>
-              <li>**Features:** Transaction building, wallet integration, ErgoScript compilation, UTXO management.</li>
+              <li><strong>Language:</strong> TypeScript/JavaScript</li>
+              <li><strong>Use Cases:</strong> Web dApps, browser extensions, Node.js backend services.</li>
+              <li><strong>Features:</strong> Transaction building, wallet integration, ErgoScript compilation, UTXO management.</li>
             </ul>
             <Link
               href="https://github.com/fleet-sdk/fleet"
@@ -55,9 +55,9 @@ export default function ErgoSDKsPage() {
               A robust SDK for JVM-based applications. Perfect for backend services, desktop wallets, and complex dApp logic.
             </p>
             <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
-              <li>**Language:** Java, Kotlin, Scala</li>
-              <li>**Use Cases:** Backend dApps, full node integration, custom wallet development, enterprise solutions.</li>
-              <li>**Features:** Full node RPC client, transaction construction, ErgoScript evaluation, cryptographic operations.</li>
+              <li><strong>Language:</strong> Java, Kotlin, Scala</li>
+              <li><strong>Use Cases:</strong> Backend dApps, full node integration, custom wallet development, enterprise solutions.</li>
+              <li><strong>Features:</strong> Full node RPC client, transaction construction, ErgoScript evaluation, cryptographic operations.</li>
             </ul>
             <Link
               href="https://github.com/ergoplatform/ergo-appkit"
@@ -75,9 +75,9 @@ export default function ErgoSDKsPage() {
               A low-level, high-performance library for Rust developers. Ideal for performance-critical components and cryptographic implementations.
             </p>
             <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
-              <li>**Language:** Rust</li>
-              <li>**Use Cases:** Core protocol development, high-performance dApp components, cryptographic research.</li>
-              <li>**Features:** ErgoScript parsing/evaluation, cryptographic primitives, transaction serialization.</li>
+              <li><strong>Language:</strong> Rust</li>
+              <li><strong>Use Cases:</strong> Core protocol development, high-performance dApp components, cryptographic research.</li>
+              <li><strong>Features:</strong> ErgoScript parsing/evaluation, cryptographic primitives, transaction serialization.</li>
             </ul>
             <Link
               href="https://github.com/ergoplatform/sigma-rust"
@@ -101,13 +101,13 @@ export default function ErgoSDKsPage() {
         <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
             <li>
-              **For Web dApps & Frontend:** Fleet SDK is generally the recommended choice due to its JavaScript/TypeScript compatibility and browser wallet integration.
+              <strong>For Web dApps & Frontend:</strong> Fleet SDK is generally the recommended choice due to its JavaScript/TypeScript compatibility and browser wallet integration.
             </li>
             <li>
-              **For Backend Services & Desktop Apps:** Ergo AppKit provides robust JVM-based solutions with full node interaction capabilities.
+              <strong>For Backend Services & Desktop Apps:</strong> Ergo AppKit provides robust JVM-based solutions with full node interaction capabilities.
             </li>
             <li>
-              **For Low-Level & Performance-Critical Development:** Sigma-Rust offers fine-grained control and high performance for specialized use cases.
+              <strong>For Low-Level & Performance-Critical Development:</strong> Sigma-Rust offers fine-grained control and high performance for specialized use cases.
             </li>
           </ul>
         </div>

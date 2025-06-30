@@ -41,15 +41,9 @@ export default function AdvancedErgoScriptPage() {
           </ul>
           <h3 className="font-semibold mt-6 mb-3 text-blue-400">Practical Applications:</h3>
           <ul className="list-disc pl-6 text-gray-300 space-y-2">
-            <li>
-              **Ring Signatures:** A form of multi-signature where the signer is part of a group, but their specific identity remains hidden within the group.
-            </li>
-            <li>
-              **Confidential Transactions:** While not fully implemented, Sigma-protocols lay the groundwork for future confidential transactions on Ergo.
-            </li>
-            <li>
-              **Complex Access Control:** Create sophisticated access rules for funds or assets based on multiple conditions and proofs.
-            </li>
+            <li><strong>Ring Signatures:</strong> A form of multi-signature where the signer is part of a group, but their specific identity remains hidden within the group.</li>
+            <li><strong>Confidential Transactions:</strong> While not fully implemented, Sigma-protocols lay the groundwork for future confidential transactions on Ergo.</li>
+            <li><strong>Complex Access Control:</strong> Create sophisticated access rules for funds or assets based on multiple conditions and proofs.</li>
           </ul>
         </div>
       </section>
