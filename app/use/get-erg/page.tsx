@@ -121,6 +121,24 @@ export default function GetErgPage() {
             The easiest way to get ERG is to buy it directly using fiat currency (e.g., USD, EUR) through an on-ramp
             service.
           </motion.p>
+          {/* Onramper Widget Section */}
+          <motion.div variants={itemVariants} className="flex justify-center mb-10">
+            <div className="w-full max-w-2xl bg-neutral-900/80 border border-neutral-700 rounded-xl p-4">
+              <h3 className="text-xl font-bold text-white mb-2 text-center">Buy ERG via Onramper (Fiat Onramp Aggregator)</h3>
+              <iframe
+                src="https://widget.onramper.com?defaultCrypto=ERG&onlyCryptos=ERG&isAddressEditable=true&theme=dark&containerColor=222428&primaryColor=ff8800&secondaryColor=00bcd4&apiKey=YOUR_ONRAMPER_API_KEY"
+                title="Buy ERG via Onramper"
+                frameBorder="0"
+                allow="accelerometer; autoplay; camera; gyroscope; payment"
+                width="100%"
+                height="630px"
+                style={{ borderRadius: '12px', background: '#222428' }}
+              />
+              <div className="text-xs text-gray-500 mt-2 text-center">
+                Powered by <a href="https://www.onramper.com/" target="_blank" rel="noopener noreferrer" className="underline text-orange-400">Onramper</a>
+              </div>
+            </div>
+          </motion.div>
           <div className="flex justify-center">
             {onRampServices.map((service) => (
               <motion.div variants={itemVariants} key={service.name} className="w-full max-w-md">
