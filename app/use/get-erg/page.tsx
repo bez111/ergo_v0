@@ -24,6 +24,12 @@ const onRampServices = [
     link: "https://banxa.com/",
     icon: CreditCard,
   },
+  {
+    name: "Onramper",
+    description: "Aggregator: buy ERG with fiat using 20+ providers and 130+ payment methods. Fast, global, and easy.",
+    link: "https://onramper.com",
+    icon: Banknote,
+  },
 ]
 
 const centralizedExchanges = [
@@ -60,6 +66,12 @@ const centralizedExchanges = [
 ]
 
 const decentralizedExchanges = [
+  {
+    name: "Hyperliquid",
+    description: "Trade ERG perpetuals on a decentralized derivatives exchange with deep liquidity.",
+    link: "https://app.hyperliquid.xyz/trade",
+    icon: RefreshCw,
+  },
   {
     name: "PancakeSwap",
     description: "Swap for rsERG (wrapped ERG) on the Binance Smart Chain.",
@@ -121,25 +133,7 @@ export default function GetErgPage() {
             The easiest way to get ERG is to buy it directly using fiat currency (e.g., USD, EUR) through an on-ramp
             service.
           </motion.p>
-          {/* Onramper Widget Section */}
-          <motion.div variants={itemVariants} className="flex justify-center mb-10">
-            <div className="w-full max-w-2xl bg-neutral-900/80 border border-neutral-700 rounded-xl p-4">
-              <h3 className="text-xl font-bold text-white mb-2 text-center">Buy ERG via Onramper (Fiat Onramp Aggregator)</h3>
-              <iframe
-                src="https://widget.onramper.com?defaultCrypto=ERG&onlyCryptos=ERG&isAddressEditable=true&theme=dark&containerColor=222428&primaryColor=ff8800&secondaryColor=00bcd4&apiKey=YOUR_ONRAMPER_API_KEY"
-                title="Buy ERG via Onramper"
-                frameBorder="0"
-                allow="accelerometer; autoplay; camera; gyroscope; payment"
-                width="100%"
-                height="630px"
-                style={{ borderRadius: '12px', background: '#222428' }}
-              />
-              <div className="text-xs text-gray-500 mt-2 text-center">
-                Powered by <a href="https://www.onramper.com/" target="_blank" rel="noopener noreferrer" className="underline text-orange-400">Onramper</a>
-              </div>
-            </div>
-          </motion.div>
-          <div className="flex justify-center">
+          <div className="flex flex-row justify-center gap-8">
             {onRampServices.map((service) => (
               <motion.div variants={itemVariants} key={service.name} className="w-full max-w-md">
                 <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl transition-all duration-300 hover:border-orange-500/50">
@@ -168,17 +162,16 @@ export default function GetErgPage() {
             Trade for ERG on established cryptocurrency exchanges. This usually requires creating an account and
             verifying your identity (KYC).
           </motion.p>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="flex flex-wrap justify-center gap-6">
             {centralizedExchanges.map((exchange) => (
-              <motion.div variants={itemVariants} key={exchange.name} className="h-full">
-                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl h-full flex flex-col transition-all duration-300 hover:border-orange-500/50">
-                  <CardContent className="p-6 text-center flex-1 flex flex-col">
-                    <exchange.icon className="w-10 h-10 text-orange-400 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-white mb-2">{exchange.name}</h3>
-                    <p className="text-sm text-gray-400 flex-1 mb-4">{exchange.description}</p>
-                    <Button asChild variant="outline" className="mt-auto">
+              <motion.div variants={itemVariants} key={exchange.name} className="w-40">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl flex flex-col items-center p-4 transition-all duration-300 hover:border-orange-500/50">
+                  <CardContent className="flex flex-col items-center p-0">
+                    <exchange.icon className="w-8 h-8 text-orange-400 mb-2" />
+                    <h3 className="text-base font-semibold text-white mb-2 text-center">{exchange.name}</h3>
+                    <Button asChild variant="outline" className="w-full text-xs py-1 px-2">
                       <Link href={exchange.link} target="_blank" rel="noopener noreferrer">
-                        Go to trade <ExternalLink className="w-4 h-4 ml-2" />
+                        Trade <ExternalLink className="w-3 h-3 ml-1" />
                       </Link>
                     </Button>
                   </CardContent>
@@ -199,8 +192,8 @@ export default function GetErgPage() {
           </motion.p>
           <div className="flex flex-wrap justify-center gap-8">
             {decentralizedExchanges.map((exchange) => (
-              <motion.div variants={itemVariants} key={exchange.name} className="h-full lg:w-1/4 md:w-1/2 w-full">
-                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl h-full flex flex-col transition-all duration-300 hover:border-orange-500/50">
+              <motion.div variants={itemVariants} key={exchange.name} className="h-full w-80">
+                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl h-64 flex flex-col transition-all duration-300 hover:border-orange-500/50">
                   <CardContent className="p-6 text-center flex-1 flex flex-col">
                     <exchange.icon className="w-10 h-10 text-orange-400 mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-white mb-2">{exchange.name}</h3>
