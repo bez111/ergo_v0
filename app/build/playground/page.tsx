@@ -32,14 +32,27 @@ export default function PlaygroundPage() {
   const [copied, setCopied] = useState(false)
   const [success, setSuccess] = useState(true)
   const [showOutput, setShowOutput] = useState(false)
+  const [loading, setLoading] = useState(false)
 
-  function runCode() {
-    setSuccess(Math.random() > 0.2)
-    setOutput(success
-      ? '✔️ Simulation successful! (This is a mock output)'
-      : '❌ Error: Invalid contract syntax (This is a mock error)')
+  async function runCode() {
+    setLoading(true)
     setShowOutput(false)
-    setTimeout(() => setShowOutput(true), 100)
+    setOutput('')
+    try {
+      const res = await fetch('http://localhost:3001/api/compile', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ code })
+      })
+      const data = await res.json()
+      setSuccess(res.ok)
+      setOutput(res.ok ? data.result : data.error)
+    } catch (e) {
+      setSuccess(false)
+      setOutput('Network error: ' + (e instanceof Error ? e.message : String(e)))
+    }
+    setLoading(false)
+    setShowOutput(true)
   }
 
   function copyCode() {
@@ -74,6 +87,21 @@ export default function PlaygroundPage() {
         </aside>
         {/* Main editor and output */}
         <section className="flex-1 flex flex-col gap-4">
+          {/* Requirements for Playground */}
+          <div className="mb-4 bg-neutral-900/80 border-l-4 border-cyan-500 rounded px-4 py-3 text-cyan-200 text-sm">
+            <span className="font-bold block mb-1">Requirements for Playground:</span>
+            <ul className="list-disc pl-5">
+              <li>Installed <b>Docker</b> (for sandboxed compilation)</li>
+              <li>Running backend server (<code>server.js</code>) with access to Docker and the <code>ergoplatform/ergo-tool</code> image</li>
+              <li>Open port <b>3001</b> (or another, if changed)</li>
+              <li>For local development: make sure Docker and backend are running on the same machine as the frontend</li>
+            </ul>
+          </div>
+          {/* Instruction about sandbox */}
+          <div className="mb-4 flex items-center bg-neutral-800/80 border-l-4 border-orange-500 rounded px-4 py-3 text-orange-200 text-sm">
+            <span className="mr-2 flex items-center"><span className="text-xl mr-2">⚠️</span><span className="font-bold">Note:</span></span>
+            <span>Your code is compiled in an isolated environment (Docker sandbox) for security. Compilation errors and results are returned in real time.</span>
+          </div>
           <div className="flex items-center justify-between mb-2">
             <h1 className="text-2xl font-bold">Ergo Playground</h1>
             <button
@@ -105,9 +133,10 @@ export default function PlaygroundPage() {
           <div className="flex gap-3 mt-2">
             <button
               onClick={runCode}
-              className="inline-flex items-center gap-2 px-6 py-2 bg-green-500 rounded font-semibold text-black hover:bg-green-600 transition-all text-base active:scale-95"
+              disabled={loading}
+              className={`inline-flex items-center gap-2 px-6 py-2 rounded font-semibold text-base active:scale-95 transition-all ${loading ? 'bg-gray-600 text-gray-300 cursor-not-allowed' : 'bg-green-500 text-black hover:bg-green-600'}`}
             >
-              <Play className="w-5 h-5" /> Run
+              <Play className="w-5 h-5" /> {loading ? 'Running...' : 'Run'}
             </button>
             <button
               onClick={() => { setCode(examples[selected].code); setOutput(''); setShowOutput(false) }}
@@ -120,7 +149,7 @@ export default function PlaygroundPage() {
           {showOutput && output && (
             <div className={`flex items-center gap-3 mt-4 px-4 py-3 rounded-lg border text-base font-mono transition-all duration-300 ${success ? 'bg-green-900/30 border-green-700 text-green-300' : 'bg-red-900/30 border-red-700 text-red-300'}`}>
               {success ? <CheckCircle className="w-5 h-5 text-green-400" /> : <AlertTriangle className="w-5 h-5 text-red-400" />}
-              <span>{output}</span>
+              <span className="whitespace-pre-line">{output}</span>
             </div>
           )}
         </section>
