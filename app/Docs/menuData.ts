@@ -2,9 +2,10 @@ export const menuData = [
   {
     title: "Introduction",
     items: [
-      { title: "Why Ergo", href: "/Docs/introduction" },
+      { title: "Why Ergo", href: "/Docs/why-ergo" },
       {
         title: "Key Features",
+        href: "/Docs/introduction/key-features",
         items: [
           {
             title: "eUTxO",
@@ -39,16 +40,20 @@ export const menuData = [
       {
         title: "Roadmap",
         items: [
-          { title: "Scaling", href: "/Docs/introduction/scaling" },
-          { title: "Layer 0", href: "/Docs/introduction/layer-0" },
-          { title: "Layer 1", href: "/Docs/introduction/layer-1" },
-          { title: "Layer 2", href: "/Docs/introduction/layer-2" },
           {
-            title: "Discussions",
+            title: "Scaling",
             items: [
-              { title: "Roadmaps", href: "/Docs/introduction/roadmaps" },
-              { title: "Transactions Per Second", href: "/Docs/introduction/tps" },
-              { title: "Atomic Composability", href: "/Docs/introduction/atomic-composability" },
+              { title: "Layer 0", href: "/Docs/introduction/layer-0" },
+              { title: "Layer 1", href: "/Docs/introduction/layer-1" },
+              { title: "Layer 2", href: "/Docs/introduction/layer-2" },
+              {
+                title: "Discussions",
+                items: [
+                  { title: "Roadmaps", href: "/Docs/introduction/roadmaps" },
+                  { title: "Transactions Per Second", href: "/Docs/introduction/tps" },
+                  { title: "Atomic Composability", href: "/Docs/introduction/atomic-composability" },
+                ],
+              },
             ],
           },
         ],
