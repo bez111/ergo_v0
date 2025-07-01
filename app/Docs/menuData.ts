@@ -9,6 +9,7 @@ export const menuData = [
         items: [
           {
             title: "eUTxO",
+            href: "/Docs/introduction/utxo-vs-account",
             items: [
               { title: "UTxO vs Account", href: "/Docs/introduction/utxo-vs-account" },
               { title: "Atomic Swaps", href: "/Docs/introduction/atomic-swaps" },
