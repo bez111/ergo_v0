@@ -33,11 +33,7 @@ export const menuData = [
       },
       {
         title: "Research & Whitepapers",
-        items: [
-          { title: "Whitepaper", href: "/Docs/introduction/whitepaper" },
-          { title: "ErgoScript Whitepaper", href: "/Docs/introduction/ergoscript-whitepaper" },
-          { title: "On Contractual Money", href: "/Docs/introduction/on-contractual-money" },
-        ],
+        href: "/Docs/introduction/research-whitepapers"
       },
       {
         title: "Roadmap",
