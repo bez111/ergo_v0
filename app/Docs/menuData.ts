@@ -9,7 +9,7 @@ export const menuData = [
         items: [
           {
             title: "eUTxO",
-            href: "/Docs/introduction/utxo-vs-account",
+            href: "/Docs/introduction/eutxo",
             items: [
               { title: "UTxO vs Account", href: "/Docs/introduction/utxo-vs-account" },
               { title: "Atomic Swaps", href: "/Docs/introduction/atomic-swaps" },
@@ -19,6 +19,7 @@ export const menuData = [
           },
           {
             title: "NIPoPoWs",
+            href: "/Docs/introduction/nipopows",
             items: [
               { title: "Light Clients", href: "/Docs/introduction/light-clients" },
               { title: "Light Miners", href: "/Docs/introduction/light-miners" },
