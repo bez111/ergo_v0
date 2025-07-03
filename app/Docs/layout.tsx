@@ -54,8 +54,6 @@ const introductionNav = [
   ]},
   { title: "Events", children: [
     { title: "Events", href: "/Docs/introduction/events" },
-    { title: "ERGOHACK", href: "/Docs/introduction/ergohack" },
-    { title: "ErgoSummit", href: "/Docs/introduction/ergosummit" },
   ]},
   { title: "Contribute", children: [
     { title: "Developers", children: [
@@ -99,7 +97,7 @@ export default function DocsLayout({ children }: { children: React.ReactNode }) 
           </aside>
           {/* Main Content */}
           <main className="lg:pl-8">
-            <div className="prose prose-invert prose-lg max-w-none prose-headings:font-bold prose-headings:text-white prose-a:text-orange-400 prose-a:no-underline hover:prose-a:underline">
+            <div className="prose prose-invert prose-lg max-w-3xl prose-headings:font-bold prose-headings:text-white prose-a:text-orange-400 prose-a:no-underline hover:prose-a:underline">
               {children}
             </div>
           </main>
