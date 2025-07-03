@@ -10,12 +10,6 @@ export const menuData = [
           {
             title: "eUTxO",
             href: "/Docs/introduction/eutxo",
-            items: [
-              { title: "UTxO vs Account", href: "/Docs/introduction/utxo-vs-account" },
-              { title: "Atomic Swaps", href: "/Docs/introduction/atomic-swaps" },
-              { title: "Ergo vs Cardano", href: "/Docs/introduction/ergo-vs-cardano" },
-              { title: "UTXO State", href: "/Docs/introduction/utxo-state" },
-            ],
           },
           {
             title: "NIPoPoWs",
