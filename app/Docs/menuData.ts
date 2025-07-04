@@ -14,11 +14,6 @@ export const menuData = [
           {
             title: "NIPoPoWs",
             href: "/Docs/introduction/nipopows",
-            items: [
-              { title: "Light Clients", href: "/Docs/introduction/light-clients" },
-              { title: "Light Miners", href: "/Docs/introduction/light-miners" },
-              { title: "Sidechains", href: "/Docs/introduction/sidechains" },
-            ],
           },
           { title: "Privacy", href: "/Docs/introduction/privacy" },
           { title: "Storage Rent", href: "/Docs/introduction/storage-rent" },
