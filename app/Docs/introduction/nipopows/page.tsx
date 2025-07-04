@@ -46,7 +46,7 @@ export default function NipopowsPage() {
       </TabsList>
       
       <TabsContent value="overview">
-        {/* Hero Section */}
+      {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
             Non-interactive Proof-of-Proof-of-Work (NIPoPoWs)
@@ -371,8 +371,8 @@ export default function NipopowsPage() {
                 Trustless operation
               </li>
             </ul>
-          </div>
         </div>
+      </div>
 
         {/* How NIPoPoWs Work for Light Clients */}
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
@@ -420,9 +420,9 @@ export default function NipopowsPage() {
               </div>
             </div>
             <p className="text-orange-300 font-semibold">
-              The security of NIPoPoWs relies on the honest majority assumption. The verifier accepts multiple proofs, and as long as at least one of them is honestly generated, the verifier can extract the correct information about the occurrence of the event.
-            </p>
-          </div>
+          The security of NIPoPoWs relies on the honest majority assumption. The verifier accepts multiple proofs, and as long as at least one of them is honestly generated, the verifier can extract the correct information about the occurrence of the event.
+        </p>
+      </div>
         </div>
 
         {/* Advantages */}
@@ -537,8 +537,8 @@ export default function NipopowsPage() {
           </p>
           <p className="text-lg text-gray-300 mb-6">
             By retaining only a select few important blocks, light miners can validate the entire blockchain, eliminating the need for full storage.
-          </p>
-        </div>
+        </p>
+      </div>
 
         {/* Quote Section */}
         <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
@@ -714,7 +714,7 @@ export default function NipopowsPage() {
               </li>
             </ul>
           </div>
-        </div>
+      </div>
 
         {/* Quick Links */}
         <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6">
@@ -756,8 +756,8 @@ export default function NipopowsPage() {
           </p>
           <p className="text-lg text-gray-300 mb-6">
             They can be used to transfer assets from one blockchain to another and back, implementing a two-way peg with enhanced security.
-          </p>
-        </div>
+        </p>
+      </div>
 
         {/* Quote Section */}
         <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
@@ -886,7 +886,7 @@ export default function NipopowsPage() {
                 Automated responses
               </li>
             </ul>
-          </div>
+      </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -933,7 +933,7 @@ export default function NipopowsPage() {
               </li>
             </ul>
           </div>
-        </div>
+      </div>
 
         {/* Adoption Considerations */}
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
@@ -977,8 +977,8 @@ export default function NipopowsPage() {
                     <CheckCircle className="w-4 h-4 text-green-400" />
                     Smart contract capability
                   </li>
-                </ul>
-              </div>
+        </ul>
+      </div>
             </div>
             <p className="text-orange-300 font-semibold">
               Miners and full nodes of the target blockchain do not need to be aware of the source blockchain, as they treat the NIPoPoW proofs as opaque strings passed to a smart contract. This blockchain agnosticism allows users to initiate cross-chain relationships between different blockchains dynamically.

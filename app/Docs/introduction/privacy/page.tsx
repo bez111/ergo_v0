@@ -33,16 +33,18 @@ export default function PrivacyPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/introduction/utxo-vs-account"
+            href="/Docs/introduction/privacy-features"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
-            <Database className="w-5 h-5 mr-2" /> UTXO vs Account
+            <Shield className="w-5 h-5 mr-2" /> Explore Privacy Features
           </Link>
           <Link
-            href="/Docs/introduction/faq"
+            href="https://ergoplatform.org/en/blog/2021-11-10-learning-ergo-101-eutxo-explained-for-human-beings/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
-            <FileText className="w-5 h-5 mr-2" /> Learn More
+            <FileText className="w-5 h-5 mr-2" /> Read the Whitepaper
           </Link>
         </div>
       </div>

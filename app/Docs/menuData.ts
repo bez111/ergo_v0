@@ -16,8 +16,8 @@ export const menuData = [
             href: "/Docs/introduction/nipopows",
           },
           { title: "Privacy", href: "/Docs/introduction/privacy" },
-          { title: "Storage Rent", href: "/Docs/introduction/storage-rent" },
           { title: "Autolykos", href: "/Docs/introduction/autolykos" },
+          { title: "Storage Rent", href: "/Docs/introduction/storage-rent" },          
         ],
       },
       {
@@ -441,6 +441,7 @@ export const menuData = [
           },
         ],
       },
+      { title: "Resources", href: "/Docs/miners/resources" },
     ],
   },
   {
