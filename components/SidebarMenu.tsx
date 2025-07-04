@@ -13,6 +13,13 @@ function MenuItem({ item, level = 0 }: { item: any, level?: number }) {
     ? "font-medium text-base text-gray-200 hover:text-orange-400"
     : "font-normal text-sm text-gray-400 hover:text-orange-300";
 
+  const handleLinkClick = (e: React.MouseEvent) => {
+    if (hasChildren) {
+      setOpen(true);
+    }
+    // Не отменяем переход по ссылке, чтобы страница тоже открывалась
+  };
+
   return (
     <div className={`py-0.5 ${level > 0 ? "ml-4" : ""}`}> 
       <div
@@ -20,7 +27,7 @@ function MenuItem({ item, level = 0 }: { item: any, level?: number }) {
       >
         <div className="flex items-center gap-2 w-full">
           {item.href ? (
-            <Link href={item.href} className={baseClass + " w-full block py-1 transition-colors"}>
+            <Link href={item.href} className={baseClass + " w-full block py-1 transition-colors"} onClick={handleLinkClick}>
               {item.title}
             </Link>
           ) : (

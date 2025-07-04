@@ -68,11 +68,7 @@ export const menuData = [
       },
       {
         title: "Events",
-        items: [
-          { title: "Events", href: "/Docs/introduction/events" },
-          { title: "ERGOHACK", href: "/Docs/introduction/ergohack" },
-          { title: "ErgoSummit", href: "/Docs/introduction/ergosummit" },
-        ],
+        href: "/Docs/introduction/events",
       },
       {
         title: "Contribute",
