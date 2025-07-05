@@ -385,11 +385,11 @@ function Layer2Content() {
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-          Layer 2: Off-Chain
-        </h1>
+            Layer 2: Off-Chain
+          </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Layer 2 solutions are secondary frameworks or protocols constructed on top of a Layer 1 blockchain protocol. Their purpose is to enhance the efficiency, scalability, and capabilities of the underlying blockchain by facilitating off-chain transactions or computations.
-        </p>
+            Layer 2 solutions are secondary frameworks or protocols constructed on top of a Layer 1 blockchain protocol. Their purpose is to enhance the efficiency, scalability, and capabilities of the underlying blockchain by facilitating off-chain transactions or computations.
+          </p>
         <p className="text-gray-300 mb-4">
           Ergo is compatible with a broad range of Layer 2 solutions derived from other UTXO blockchains. The platform can implement various off-chain solutions like Hydra and sidechains, which help alleviate blockchain congestion and offer benefits akin to ZK-rollups.
         </p>
@@ -436,7 +436,7 @@ function Layer2Content() {
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Enhanced support for payment channels</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> More efficient state channel operations</li>
                 <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Improved settlement layer for off-chain transactions</li>
-              </ul>
+        </ul>
             </div>
             <div>
               <h4 className="font-semibold text-cyan-300 mb-2">Capabilities</h4>
@@ -448,11 +448,11 @@ function Layer2Content() {
               </ul>
             </div>
           </div>
-        </div>
+      </div>
 
         {/* Grid of major solutions */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          {/* SigmaChains and Sidechains */}
+      {/* SigmaChains and Sidechains */}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
             <div className="flex items-center gap-2 mb-2">
               <GitBranch className="w-6 h-6 text-cyan-400" />
@@ -466,10 +466,10 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Experimental platform for new features</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Various chain commitment options</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Comprehensive technical documentation</li>
-            </ul>
-          </div>
+        </ul>
+      </div>
 
-          {/* ChainCash */}
+      {/* ChainCash */}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
             <div className="flex items-center gap-2 mb-2">
               <Coins className="w-6 h-6 text-orange-400" />
@@ -483,8 +483,8 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Digital notes representing various values</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Support for digital tokens and real-world assets</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Top-up transactions and blockchain scanning</li>
-            </ul>
-          </div>
+        </ul>
+      </div>
 
           {/* Plasma */}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
@@ -500,8 +500,8 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Contract simplification</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Plasma staking contracts</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Off-chain operation management</li>
-            </ul>
-          </div>
+        </ul>
+      </div>
 
           {/* NIPoPoWs */}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
@@ -517,7 +517,7 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Security for small chains</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Sidechains & state channels</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Asset transfers</li>
-            </ul>
+        </ul>
           </div>
         </div>
       </div>
@@ -539,7 +539,7 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Multi-signature wallets</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Off-chain transactions</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Payment channels</li>
-            </ul>
+        </ul>
           </div>
 
           {/* Rainbow Network */}
@@ -555,8 +555,8 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Off-chain trading</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Borrowing and lending</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Multiple assets support</li>
-            </ul>
-          </div>
+        </ul>
+      </div>
 
           {/* Rollups */}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
@@ -571,7 +571,7 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Optimistic Rollups with fraud-proof principles</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> ZK-Rollups using zkSNARKs</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Bundle hundreds of transfers off-chain</li>
-            </ul>
+        </ul>
           </div>
 
           {/* Additional Solutions */}
@@ -588,7 +588,7 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Zero-Knowledge Contingent Payments</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> FairSwap/FastSwap protocols</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Coinpools for transaction grouping</li>
-            </ul>
+        </ul>
           </div>
         </div>
       </div>
@@ -607,7 +607,7 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Careful evaluation of security implications</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Selection of appropriate consensus mechanisms</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Implementation of robust fraud prevention</li>
-            </ul>
+        </ul>
           </div>
 
           {/* User Experience */}
@@ -620,7 +620,7 @@ function Layer2Content() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Development of mempool chaining</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Seamless Layer 1 and Layer 2 integration</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Optimization of transaction processing</li>
-            </ul>
+        </ul>
           </div>
         </div>
       </div>
@@ -638,8 +638,8 @@ function Layer2Content() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Improved transaction ordering</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Enhanced mempool management</li>
-            </ul>
-          </div>
+        </ul>
+      </div>
         </div>
       </div>
     </div>
@@ -652,11 +652,11 @@ function DiscussionsContent() {
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-          Ergo Scaling Roadmap Discussions
-        </h1>
+            Ergo Scaling Roadmap Discussions
+          </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Join our discussions on scaling on Telegram or #layer2 on Discord. We welcome all insights and contributions.
-        </p>
+            Join our discussions on scaling on Telegram or #layer2 on Discord. We welcome all insights and contributions.
+          </p>
         <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-4">
           <p className="text-orange-300 font-semibold">💬 Join the Layer 2 discussion on <a href="#" className="underline">Telegram</a> or <a href="#" className="underline">Discord</a>.</p>
         </div>
@@ -685,7 +685,7 @@ function DiscussionsContent() {
             <ul className="space-y-2 text-gray-400 text-sm">
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-yellow-400" /> Planning for Node V6 & scalability improvements</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-yellow-400" /> Development of SPV Client</li>
-            </ul>
+        </ul>
           </div>
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-lg font-semibold mb-4 text-orange-300">Completed</h3>
@@ -924,7 +924,7 @@ function AtomicComposabilityContent() {
             Layer 2 solutions, such as <b>Hydra state channels</b>, contribute to atomic composability by facilitating communication across different heads (participants). This allows for the atomic execution of complex operations involving multiple state channel participants. This mechanism enables complex transactions to be executed off-chain, with the final state being settled on the main chain.
           </p>
         </div>
-      </div>
+          </div>
 
       {/* ACE: Enhancing the Execution of Complex Smart Contracts */}
       <div className="mb-12">
@@ -936,7 +936,7 @@ function AtomicComposabilityContent() {
             Ergo's ability to execute complex and composable smart contracts could be further enhanced by implementing concepts like <b>ACE (Asynchronous Contract Execution)</b>. ACE suggests decomposing smart contracts into smaller, concurrent tasks that can be executed independently, thereby improving overall performance and throughput. It allows one contract to safely invoke another contract executed by a different set of service providers, facilitating off-chain execution of interactive smart contracts with flexible trust assumptions and enhancing atomic composability.
           </p>
         </div>
-      </div>
+          </div>
 
       {/* Sharding and Its Impact on Atomic Composability */}
       <div className="mb-12">
@@ -955,7 +955,7 @@ function AtomicComposabilityContent() {
           <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-lg p-4">
             <p className="text-cyan-300 font-semibold">💡 Example: Consider a scenario where a user wants to execute a transaction that involves assets and operations spanning multiple shards. If the transaction fails to execute atomically across all shards, it could lead to inconsistencies, such as assets being locked or lost, or operations being partially executed.</p>
           </div>
-        </div>
+          </div>
 
         {/* Strategies for Preserving Atomic Composability in Sharding */}
         <div className="mb-8">
@@ -972,7 +972,7 @@ function AtomicComposabilityContent() {
               <div className="text-gray-300 text-sm mb-2">
                 Establish a mechanism for secure and efficient communication between shards to enable cross-shard transactions. This mechanism ensures that all components of a multi-step transaction are either fully committed or rolled back, even when the transaction spans multiple shards.
               </div>
-            </div>
+          </div>
 
             {/* Locking Mechanisms */}
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
@@ -983,18 +983,18 @@ function AtomicComposabilityContent() {
               <div className="text-gray-300 text-sm mb-2">
                 Introduce locking mechanisms to prevent double-spending and fraud during cross-shard transactions. Temporarily locking the assets involved until the transaction is complete can help preserve atomic composability.
               </div>
-            </div>
+          </div>
 
             {/* Two-phase Commit Protocols */}
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
               <div className="flex items-center gap-2 mb-2">
                 <CheckCircle className="w-6 h-6 text-cyan-400" />
                 <span className="font-bold text-cyan-300 text-lg">Two-phase Commit Protocols</span>
-              </div>
+          </div>
               <div className="text-gray-300 text-sm mb-2">
                 Employ two-phase commit protocols to coordinate cross-shard transactions. In the first phase, shards tentatively execute the transaction and lock the relevant assets. In the second phase, once all shards have confirmed the transaction, it is committed, and the locked assets are released.
-              </div>
-            </div>
+        </div>
+      </div>
 
             {/* Optimistic Execution */}
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
@@ -1018,7 +1018,7 @@ function AtomicComposabilityContent() {
               </div>
             </div>
           </div>
-        </div>
+          </div>
 
         {/* Challenges and Limitations */}
         <div className="mb-8">
@@ -1035,18 +1035,18 @@ function AtomicComposabilityContent() {
               <div className="text-gray-300 text-sm mb-2">
                 Implementing mechanisms for cross-shard communication, locking, and two-phase commit protocols can add significant complexity to the system, potentially introducing new attack vectors or vulnerabilities.
               </div>
-            </div>
+          </div>
 
             {/* Performance Overhead */}
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
               <div className="flex items-center gap-2 mb-2">
                 <BarChart3 className="w-6 h-6 text-orange-400" />
                 <span className="font-bold text-orange-300 text-lg">Performance Overhead</span>
-              </div>
+          </div>
               <div className="text-gray-300 text-sm mb-2">
                 Maintaining atomic composability across shards may introduce performance overhead, such as increased latency or decreased throughput, which could potentially negate some of the scalability benefits of sharding.
-              </div>
-            </div>
+        </div>
+      </div>
 
             {/* Trust Assumptions */}
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
@@ -1085,7 +1085,7 @@ function AtomicComposabilityContent() {
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Formal Verification and Testing</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Decentralized Governance Models</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Integration with Advanced Smart Contract Languages</li>
-          </ul>
+        </ul>
         </div>
       </div>
 
@@ -1132,8 +1132,8 @@ function AtomicComposabilityContent() {
               <ExternalLink className="w-4 h-4 text-cyan-400" />
               <a href="https://www.ergoforum.org/t/a-scalability-plan-for-ergo/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 underline hover:text-cyan-200">(May 20) A Scalability Plan for Ergo</a>
             </li>
-          </ul>
-        </div>
+        </ul>
+      </div>
       </div>
     </div>
   );
@@ -1146,7 +1146,7 @@ function TransactionSpeedContent() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
           Transaction Speed & TPS in Blockchains
-        </h1>
+          </h1>
         <p className="text-xl text-gray-400 mb-6">
           How fast can blockchains process transactions? What really matters for scalability?
         </p>
@@ -1185,7 +1185,7 @@ function TransactionSpeedContent() {
           <p className="text-gray-300 mb-4">
             While TPS could be boosted by introducing measures like <b>supernodes</b> or eliminating <b>mempools</b>, as seen in projects like Solana and Avalanche, these approaches compromise the decentralization and integrity of the network. Therefore, if the goal is to maintain a truly decentralized cryptocurrency, these methods should be avoided.
           </p>
-        </div>
+      </div>
       </div>
 
       {/* Viable Solutions */}
@@ -1197,7 +1197,7 @@ function TransactionSpeedContent() {
           <p className="text-gray-300 mb-4">
             The remaining viable solution for improving TPS lies in <b>optimizing bandwidth usage</b> and implementing <b>Layer 2 solutions</b> and <b>sidechains</b>, also known as application-specific chains.
           </p>
-        </div>
+      </div>
       </div>
 
       {/* Comparative TPS Values */}
@@ -1247,13 +1247,13 @@ function TransactionSpeedContent() {
               </tbody>
             </table>
             <div className="text-xs text-gray-600 mt-2 ml-1">*TPS — Transactions Per Second</div>
-          </div>
+      </div>
           <div className="mt-6">
             <span className="text-orange-400 text-base font-medium flex items-center gap-2 mb-1"><span className="text-xl">💡</span> <span>However, the conventional TPS metric only offers a glimpse into Ergo's true potential.</span></span>
             <span className="text-gray-300 text-sm block mt-1">It's not merely about the number of transactions; <span className="font-semibold text-orange-300">the weight of the transaction</span> and <span className="font-semibold text-orange-300">the computational cost limit per block</span> are equally important. These aspects are shaped by several dynamic factors, including the size of the network and the hardware resources available to miners.</span>
-          </div>
         </div>
-      </div>
+          </div>
+          </div>
 
       {/* Ergo's TPS and Technical Details */}
       <div className="mb-12">
@@ -1264,8 +1264,8 @@ function TransactionSpeedContent() {
           <p className="text-gray-300 mb-4">
             With the Node v5 already operational, Ergo's raw TPS is approximately <b>47.5 transactions/second</b>, with room for further enhancements. For an in-depth technical understanding of how this figure is derived, please refer to this report.
           </p>
-        </div>
-      </div>
+          </div>
+          </div>
 
       {/* The Extended Unspent Transaction Output (eUTXO) Model Advantage */}
       <div className="mb-12">
@@ -1280,7 +1280,7 @@ function TransactionSpeedContent() {
             <p className="text-cyan-300 font-semibold">⚡ The primary objective in scaling Ergo is to enhance TPS without compromising the fundamental principles and assurances typically linked with blockchain technology.</p>
           </div>
         </div>
-      </div>
+          </div>
 
       {/* Future Scalability Enhancements */}
       <div className="mb-12">
@@ -1293,10 +1293,10 @@ function TransactionSpeedContent() {
             <div className="flex items-center gap-2 mb-2">
               <Zap className="w-6 h-6 text-cyan-400" />
               <span className="font-bold text-cyan-300 text-lg">Microblocks & Block Extension</span>
-            </div>
+          </div>
             <div className="text-gray-300 text-sm mb-2">
               Enable faster transaction confirmations and improved throughput through microblocks that can be processed more quickly than full blocks.
-            </div>
+          </div>
             <ul className="space-y-1 text-gray-400 text-sm">
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Faster confirmations</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Improved throughput</li>
@@ -1309,26 +1309,26 @@ function TransactionSpeedContent() {
             <div className="flex items-center gap-2 mb-2">
               <CheckCircle className="w-6 h-6 text-orange-400" />
               <span className="font-bold text-orange-300 text-lg">Sub-block Confirmation</span>
-            </div>
+        </div>
             <div className="text-gray-300 text-sm mb-2">
               Implement sub-block confirmation protocols to provide faster transaction finality and improved network responsiveness.
-            </div>
+      </div>
             <ul className="space-y-1 text-gray-400 text-sm">
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Faster finality</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Improved responsiveness</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Better user experience</li>
-            </ul>
-          </div>
+        </ul>
+      </div>
 
           {/* Sharding */}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
             <div className="flex items-center gap-2 mb-2">
               <GitBranch className="w-6 h-6 text-cyan-400" />
               <span className="font-bold text-cyan-300 text-lg">Sharding</span>
-            </div>
+      </div>
             <div className="text-gray-300 text-sm mb-2">
               Divide the blockchain into smaller sections to process transactions in parallel, significantly increasing overall throughput.
-            </div>
+    </div>
             <ul className="space-y-1 text-gray-400 text-sm">
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Parallel processing</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Increased throughput</li>
@@ -1341,16 +1341,16 @@ function TransactionSpeedContent() {
             <div className="flex items-center gap-2 mb-2">
               <Network className="w-6 h-6 text-orange-400" />
               <span className="font-bold text-orange-300 text-lg">Service Chains</span>
-            </div>
+        </div>
             <div className="text-gray-300 text-sm mb-2">
               Implement specialized chains for specific services and applications, enabling optimized performance for different use cases.
-            </div>
+      </div>
             <ul className="space-y-1 text-gray-400 text-sm">
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Specialized processing</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Optimized performance</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Use case optimization</li>
             </ul>
-          </div>
+      </div>
         </div>
       </div>
 
@@ -1374,7 +1374,7 @@ function TransactionSpeedContent() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Network bandwidth</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Node connectivity</li>
             </ul>
-          </div>
+      </div>
 
           {/* Consensus Mechanism */}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
@@ -1390,7 +1390,7 @@ function TransactionSpeedContent() {
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Message overhead</li>
               <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Cryptographic primitives</li>
             </ul>
-          </div>
+      </div>
 
           {/* Block Size and Limits */}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col gap-3">
@@ -1458,7 +1458,7 @@ function TransactionSpeedContent() {
               <a href="https://www.ergoforum.org/t/a-scalability-plan-for-ergo/" target="_blank" rel="noopener noreferrer" className="text-cyan-300 underline hover:text-cyan-200">(May 20) A Scalability Plan for Ergo</a>
             </li>
           </ul>
-        </div>
+      </div>
       </div>
     </div>
   );
