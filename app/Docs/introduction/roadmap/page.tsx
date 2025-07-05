@@ -22,12 +22,12 @@ function ScalingContent() {
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-          Scaling Ergo
-        </h1>
+            Scaling Ergo
+          </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Creating a scalable blockchain infrastructure is a complex task. Ergo, fortified by a decade of research, rigorous testing, and ongoing development, has risen to the challenge. This guide will walk you through Ergo's sophisticated scalability features.
-        </p>
-      </div>
+            Creating a scalable blockchain infrastructure is a complex task. Ergo, fortified by a decade of research, rigorous testing, and ongoing development, has risen to the challenge. This guide will walk you through Ergo's sophisticated scalability features.
+          </p>
+        </div>
 
       {/* Factors & Approach Grid (compact, clear) */}
       <div className="grid md:grid-cols-2 gap-6 mb-12">
@@ -41,21 +41,21 @@ function ScalingContent() {
             <div>
               <div className="font-bold text-orange-300">Cryptoeconomic incentive model</div>
               <div className="text-gray-300 text-sm">Ensures miners receive suitable rewards for the various costs associated with scaling a blockchain.</div>
-            </div>
-          </div>
+      </div>
+      </div>
           <div className="flex items-start gap-3">
             <Cpu className="w-6 h-6 text-cyan-400 mt-1" />
             <div>
               <div className="font-bold text-cyan-300">Consensus model</div>
               <div className="text-gray-300 text-sm">Determines the feasibility of certain scalability solutions. E.g., PoS does not support NiPoPoWs.</div>
-            </div>
+      </div>
           </div>
           <div className="flex items-start gap-3">
             <Book className="w-6 h-6 text-orange-400 mt-1" />
             <div>
               <div className="font-bold text-orange-300">Accounting model</div>
               <div className="text-gray-300 text-sm">Manages transactions and operations. Bitcoin uses UTXO, Ethereum uses Account Model.</div>
-            </div>
+          </div>
           </div>
         </div>
         {/* Ergo's Approach */}
@@ -65,7 +65,7 @@ function ScalingContent() {
           </h3>
           <div className="text-gray-300 text-base">
             Ergo's eUTXO model sets it apart by creating transactions off-chain and validating them on-chain, reducing node load and boosting scalability.
-          </div>
+      </div>
           <ul className="space-y-2 text-gray-400 text-sm mt-2">
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Off-chain transaction creation</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> On-chain validation</li>
@@ -104,11 +104,11 @@ function Layer0Content() {
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-          Layer 0: The Network Layer
-        </h1>
+            Layer 0: The Network Layer
+          </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Layer 0, also known as the Network or Peer-to-Peer (P2P) layer, forms the bedrock of decentralized communication within a blockchain network. It plays a pivotal role in facilitating the exchange of data and information across the network, allowing nodes to distribute and validate transactions, blocks, and other data types without the need for a centralized authority.
-        </p>
+            Layer 0, also known as the Network or Peer-to-Peer (P2P) layer, forms the bedrock of decentralized communication within a blockchain network. It plays a pivotal role in facilitating the exchange of data and information across the network, allowing nodes to distribute and validate transactions, blocks, and other data types without the need for a centralized authority.
+          </p>
       </div>
 
       {/* Client Types — первая большая карточка */}
@@ -121,14 +121,14 @@ function Layer0Content() {
           <div>
             <div className="font-bold text-orange-300">Full 'Archive' Node</div>
             <div className="text-gray-300 text-sm">Stores all blocks from genesis, checks PoW, maintains full UTXO set. Highest security, high storage needs.</div>
-          </div>
-        </div>
+      </div>
+      </div>
         <div className="flex items-start gap-3">
           <Cpu className="w-6 h-6 text-cyan-400 mt-1" />
           <div>
             <div className="font-bold text-cyan-300">Pruned-Fullnode</div>
             <div className="text-gray-300 text-sm">Downloads all headers, validates PoW, prunes unnecessary data after UTXO snapshot. Improves storage efficiency.</div>
-          </div>
+      </div>
         </div>
         <div className="flex items-start gap-3">
           <Zap className="w-6 h-6 text-orange-400 mt-1" />
@@ -206,7 +206,7 @@ function Layer0Content() {
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Rapid onchain confirmations (~2s via sub-blocks)</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Faster failure detection (~2s vs. up to 6 min before)</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Cooperative mempool for better responsiveness</li>
-          </ul>
+        </ul>
         </div>
       </div>
 
@@ -247,7 +247,7 @@ function Layer0Content() {
           <ul className="space-y-2 text-gray-400 text-sm mt-2">
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Ordering blocks must validate preceding input blocks</li>
             <li className="flex items-center gap-2"><CheckCircle className="w-4 h-4 text-green-400" /> Dual confirmation: input blocks (fast), ordering blocks (finality)</li>
-          </ul>
+        </ul>
         </div>
       </div>
 
@@ -263,7 +263,7 @@ function Layer0Content() {
           <li className="flex items-center gap-2"><CheckCircle className="w-5 h-5 text-green-400" /> Architecture balances performance, security, and decentralization</li>
         </ul>
       </div>
-    </div>
+      </div>
   );
 }
 
