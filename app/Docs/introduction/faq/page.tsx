@@ -573,7 +573,7 @@ export default function FAQPage() {
     })),
   ];
   return (
-    <div className="max-w-4xl mx-auto py-8 px-2 sm:px-4">
+    <div className="px-4">
       {/* Вводная секция */}
       <div className="mb-10 text-center">
         <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">Ergo FAQ</h1>

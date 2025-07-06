@@ -117,7 +117,7 @@ export default function WalletsPage() {
     }
   }, []);
   return (
-    <div className="max-w-5xl mx-auto py-10 px-4 space-y-12">
+    <div className="px-4 space-y-12">
       {/* Hero Section */}
       <div className="mb-6">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent leading-tight pb-1">
@@ -139,28 +139,28 @@ export default function WalletsPage() {
         <h2 className="text-2xl font-bold mb-5 flex items-center gap-2"><Info className="w-6 h-6 text-cyan-400" /> How to Choose a Wallet?</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <div className="flex items-start gap-3 bg-neutral-900/50 rounded-xl p-4">
-            <Smartphone className="w-6 h-6 text-orange-400 mt-1" />
+            <Smartphone className="w-9 h-9 text-orange-400 mt-2" />
             <div>
               <div className="font-bold text-orange-300 mb-1">Mobile Use</div>
               <div className="text-gray-300 text-sm">If you need access to your funds primarily on your smartphone (iOS or Android), look at <span className="text-orange-300 font-semibold">Mobile Wallets</span>.</div>
             </div>
           </div>
           <div className="flex items-start gap-3 bg-neutral-900/50 rounded-xl p-4">
-            <Monitor className="w-6 h-6 text-green-400 mt-1" />
+            <Monitor className="w-9 h-9 text-green-400 mt-2" />
             <div>
               <div className="font-bold text-green-300 mb-1">Desktop Management</div>
               <div className="text-gray-300 text-sm">If you prefer managing funds on your computer (Windows, macOS, Linux), check out <span className="text-green-300 font-semibold">Desktop Wallets</span>.</div>
             </div>
           </div>
           <div className="flex items-start gap-3 bg-neutral-900/50 rounded-xl p-4">
-            <Globe className="w-6 h-6 text-cyan-400 mt-1" />
+            <Globe className="w-9 h-9 text-cyan-400 mt-2" />
             <div>
               <div className="font-bold text-cyan-300 mb-1">dApp Interaction</div>
               <div className="text-gray-300 text-sm">If you plan to frequently interact with Ergo dApps directly through your web browser, a <span className="text-cyan-300 font-semibold">Browser Extension Wallet</span> is often the most convenient.</div>
             </div>
           </div>
           <div className="flex items-start gap-3 bg-neutral-900/50 rounded-xl p-4">
-            <Lock className="w-6 h-6 text-neutral-400 mt-1" />
+            <Lock className="w-9 h-9 text-neutral-400 mt-2" />
             <div>
               <div className="font-bold text-neutral-300 mb-1">Maximum Security / Long-Term Storage</div>
               <div className="text-gray-300 text-sm">For storing significant amounts of ERG or holding funds offline ("cold storage"), consider a <span className="text-neutral-300 font-semibold">Paper Wallet</span> or the offline/cold wallet features available in some mobile/desktop wallets.</div>
@@ -306,6 +306,11 @@ export default function WalletsPage() {
           <li><a href="https://github.com/ergoplatform/ergo-ios" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">Developer: SwiftAPI for iOS Wallet Dev</a></li>
           <li><a href="https://github.com/anon-real/ergo-light-client" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">Community Project: Ergo Light Client (iOS Beta)</a> <span className="text-xs text-gray-400">(Requires a full node)</span></li>
         </ul>
+      </div>
+      {/* Glossary & FAQ links as separate block */}
+      <div className="flex flex-col gap-2 mt-8">
+        <a href="/Docs/introduction/glossary" className="text-2xl font-semibold text-gray-400 hover:text-cyan-400 transition-colors">Glossary</a>
+        <a href="/Docs/introduction/faq" className="text-2xl font-semibold text-gray-400 hover:text-cyan-400 transition-colors">FAQ</a>
       </div>
     </div>
   );
