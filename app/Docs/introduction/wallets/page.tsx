@@ -1,8 +1,9 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Shield, Smartphone, Monitor, Globe, Lock, BookOpen, ExternalLink, CheckCircle, Info, AlertTriangle, ArrowDown, ArrowUp, Users, Star, Key, FileText } from "lucide-react";
 import Link from "next/link";
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 const wallets = [
   {
@@ -100,6 +101,21 @@ const wallets = [
 
 export default function WalletsPage() {
   const [showAdvanced, setShowAdvanced] = useState(false);
+  const walletTypes = [
+    { key: "Mobile", label: "Mobile", icon: <Smartphone className="w-4 h-4" /> },
+    { key: "Desktop", label: "Desktop", icon: <Monitor className="w-4 h-4" /> },
+    { key: "Browser Extension", label: "Browser Ext.", icon: <Globe className="w-4 h-4" /> },
+    { key: "Web", label: "Web", icon: <Globe className="w-4 h-4" /> },
+    { key: "Offline Generation", label: "Paper", icon: <Lock className="w-4 h-4" /> },
+    { key: "all", label: "All", icon: <Star className="w-4 h-4" /> },
+  ];
+  const [tab, setTab] = useState("Desktop");
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent);
+      setTab(isMobile ? "Mobile" : "Desktop");
+    }
+  }, []);
   return (
     <div className="max-w-5xl mx-auto py-10 px-4 space-y-12">
       {/* Hero Section */}
@@ -152,27 +168,40 @@ export default function WalletsPage() {
           </div>
         </div>
       </div>
-      {/* Wallet Cards */}
+      {/* Wallet Tabs by Type */}
       <div>
         <h2 className="text-2xl font-bold mb-6 flex items-center gap-2"><Star className="w-6 h-6 text-orange-400" /> Recommended Wallets by Type</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          {wallets.map((w) => (
-            <div key={w.name} className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 flex flex-col gap-2 shadow-md">
-              <div className="flex items-center gap-3 mb-2">
-                {w.icon}
-                <span className="font-bold text-lg bg-gradient-to-r from-orange-300 to-cyan-300 bg-clip-text text-transparent">{w.name}</span>
+        <Tabs value={tab} onValueChange={setTab} className="w-full">
+          <TabsList className="grid grid-cols-6 w-full mb-6 bg-neutral-900/50 border border-neutral-700/50">
+            {walletTypes.map((t) => (
+              <TabsTrigger key={t.key} value={t.key} className="flex items-center gap-2 justify-center">
+                {t.icon} {t.label}
+              </TabsTrigger>
+            ))}
+          </TabsList>
+          {walletTypes.map((t) => (
+            <TabsContent key={t.key} value={t.key}>
+              <div className="grid md:grid-cols-2 gap-6">
+                {wallets.filter(w => t.key === "all" || w.type === t.key).map((w) => (
+                  <div key={w.name} className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 flex flex-col gap-2 shadow-md">
+                    <div className="flex items-center gap-3 mb-2">
+                      {w.icon}
+                      <span className="font-bold text-lg bg-gradient-to-r from-orange-300 to-cyan-300 bg-clip-text text-transparent">{w.name}</span>
+                    </div>
+                    <div className="text-gray-400 text-sm mb-1">{w.description}</div>
+                    <div className="text-gray-300 text-xs mb-1"><b>Best For:</b> {w.bestFor}</div>
+                    <div className="flex flex-wrap gap-2 text-xs text-gray-400 mb-2">
+                      <span className="bg-neutral-800 px-2 py-1 rounded">{w.type}</span>
+                      <span className="bg-neutral-800 px-2 py-1 rounded">{w.platforms}</span>
+                      <span className="bg-neutral-800 px-2 py-1 rounded">{w.feature}</span>
+                    </div>
+                    <a href={w.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-300 hover:text-orange-200 text-xs font-semibold underline mt-auto"><ExternalLink className="w-4 h-4 mr-1" /> Official Site</a>
+                  </div>
+                ))}
               </div>
-              <div className="text-gray-400 text-sm mb-1">{w.description}</div>
-              <div className="text-gray-300 text-xs mb-1"><b>Best For:</b> {w.bestFor}</div>
-              <div className="flex flex-wrap gap-2 text-xs text-gray-400 mb-2">
-                <span className="bg-neutral-800 px-2 py-1 rounded">{w.type}</span>
-                <span className="bg-neutral-800 px-2 py-1 rounded">{w.platforms}</span>
-                <span className="bg-neutral-800 px-2 py-1 rounded">{w.feature}</span>
-              </div>
-              <a href={w.link} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-orange-300 hover:text-orange-200 text-xs font-semibold underline mt-auto"><ExternalLink className="w-4 h-4 mr-1" /> Official Site</a>
-            </div>
+            </TabsContent>
           ))}
-        </div>
+        </Tabs>
       </div>
       {/* Quick Comparison Table */}
       <div>
