@@ -106,15 +106,18 @@ export default function IntroductionPage() {
           transition={{ duration: 0.7 }}
           className="text-center py-24 sm:py-32"
         >
-          <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30">
+          <span className="inline-block bg-orange-900/60 text-orange-300 text-xs px-3 py-1 rounded-full mb-4 tracking-widest">
             INTRODUCTION TO ERGO
-          </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pb-4">
-            A Platform for the People
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            Ergo is a next-generation Proof-of-Work smart-contract platform that enables new models of financial interaction, built by the people, for the people.
-          </p>
+          </span>
+          <div className="max-w-4xl mx-auto px-4">
+            <h1 className="text-5xl md:text-7xl font-extrabold text-orange-400 mb-6">
+              Decentralize Everything.<br className="hidden md:block" />
+              Build What Matters.
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
+              Ergo is a next-generation Proof-of-Work smart contract platform empowering anyone to launch new forms of digital value, experiment with economic logic, and own their assets—without permission. Decentralize everything. Build what matters.
+            </p>
+          </div>
         </motion.section>
 
         {/* What is Ergo Section */}
