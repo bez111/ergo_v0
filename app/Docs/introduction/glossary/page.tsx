@@ -38,7 +38,7 @@ export default function GlossaryPage() {
 
   return (
     <div className="px-4">
-      <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent leading-tight">
+      <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent leading-tight pb-1">
         Glossary
       </h1>
       {/* Поиск */}
@@ -101,8 +101,20 @@ export default function GlossaryPage() {
                     {term.seeAlso && (
                       <div className="text-sm text-gray-400 mt-1">
                         See also: {term.seeAlso.map((t, i) => (
-                          <a key={t} href={`#${t.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`} className="underline text-orange-300 hover:text-orange-200">{t}</a>
-                        )).join(", ")}
+                          <React.Fragment key={typeof t === "string" ? t : String(i)}>
+                            {typeof t === "string" ? (
+                              <a
+                                href={`#${t.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+                                className="underline text-orange-300 hover:text-orange-200"
+                              >
+                                {t}
+                              </a>
+                            ) : (
+                              <span style={{ color: 'red' }}>{JSON.stringify(t)}</span>
+                            )}
+                            {i < term.seeAlso.length - 1 && ', '}
+                          </React.Fragment>
+                        ))}
                       </div>
                     )}
                   </dd>
