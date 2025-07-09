@@ -537,6 +537,79 @@ scorex {
             <p className="text-gray-300">You can download Docker Desktop for your specific Operating System from the following link: <a href="https://www.docker.com/products/docker-desktop/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">Docker Desktop</a></p>
           </div>
 
+          <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <Settings className="w-6 h-6 text-orange-400" /> Ergo Rosen Bridge Watcher Setup
+            </h3>
+            <p className="text-gray-300 mb-4">
+              Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
+            </p>
+            <div className="bg-neutral-800/50 border-l-4 border-orange-400 p-4 mb-6 rounded">
+              <p className="text-orange-200 text-sm italic">This section is adapted from the `deploy-docker.md` in the Rosen Bridge documentation.</p>
+            </div>
+
+            <h4 className="text-xl font-semibold text-cyan-400 mb-3">1. Clone the Repository and Prepare the Environment</h4>
+            <p className="text-gray-300 mb-3">First, clone the operational repository and navigate to the watcher directory:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`git clone https://github.com/rosen-bridge/operation.git
+cd operation/watcher/`}</pre>
+            <p className="text-gray-300 mb-3">Create and configure the environment file from the provided template:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`cp env.template .env
+# Edit the .env file to set POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DB, and POSTGRES_PORT`}</pre>
+
+            <h4 className="text-xl font-semibold text-cyan-400 mb-3">2. Configure Environment Variables and Permissions</h4>
+            <p className="text-gray-300 mb-3">Set up necessary environment variables in the `.env` file and adjust file permissions:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`POSTGRES_PASSWORD=your_password    # Random alphanumeric password (no special characters)
+POSTGRES_USER=your_user            # Random username
+POSTGRES_DB=your_db                # Random database name
+POSTGRES_PORT=5432                 # Default is 5432, can be changed`}</pre>
+            <p className="text-gray-300 mb-3">Adjust permissions and create `local.yaml`:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`sudo chown -R 3000:3000 logs
+touch config/local.yaml`}</pre>
+            <p className="text-gray-300 mb-3">For <b>macOS</b> users, set permissions for the logs directory:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`sudo chmod -R 707 logs`}</pre>
+
+            <h4 className="text-xl font-semibold text-cyan-400 mb-3">3. (Optional) Configure Docker for ARM Devices</h4>
+            <p className="text-gray-300 mb-4">If you are deploying on Raspberry Pi or other ARM devices, ensure Docker is set up to support ARM architecture.</p>
+
+            <h4 className="text-xl font-semibold text-cyan-400 mb-3">4. Pull Docker Images and Start the Watcher</h4>
+            <p className="text-gray-300 mb-3">Before starting the watcher, pull the necessary Docker images and run the service:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`docker compose pull
+docker compose up -d`}</pre>
+
+            <h4 className="text-xl font-semibold text-cyan-400 mb-3">5. Configure `local.yaml` for Ergo</h4>
+            <p className="text-gray-300 mb-3">Set up the `local.yaml` configuration file specifically for the Ergo network:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`network: ergo
+api:
+  apiKeyHash: 'YOUR_API_KEY_HASH'
+ergo:
+  type: node
+  initialHeight: <latest height>
+  mnemonic: 'YOUR_WALLET_MNEMONIC'
+  node:
+    url: 127.0.0.1:9053
+observation:
+  confirmation: 10
+  validThreshold: 720`}</pre>
+            <p className="text-gray-300 mb-4">Replace placeholders with your actual values and URLs according to your setup requirements.</p>
+
+            <h4 className="text-xl font-semibold text-cyan-400 mb-3">6. Start the Watcher and Monitor</h4>
+            <p className="text-gray-300 mb-3">After configuring all files and setting up the environment, start the watcher:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`docker compose up -d`}</pre>
+            <p className="text-gray-300 mb-3">Access the watcher UI by visiting:</p>
+            <p className="text-gray-300 mb-4"><a href="http://localhost:3030" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline font-semibold">http://localhost:3030</a></p>
+            <p className="text-gray-300 mb-4">Use this dashboard to monitor network information and health status.</p>
+
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-4">
+              <h5 className="font-bold text-yellow-400 mb-2">Notes</h5>
+              <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
+                <li>Adjust the `apiKeyHash` and `mnemonic` in `local.yaml` or via the `.env` file for security.</li>
+                <li>Ensure your Docker environment is properly configured, especially for ARM-based deployments.</li>
+                <li>Regularly update your configuration files and Docker images to keep up with network changes and software updates.</li>
+                <li>For troubleshooting, FAQs, and further tips, refer to the main watcher documentation.</li>
+              </ul>
+            </div>
+          </div>
+
           <h2 className="text-2xl font-bold flex items-center gap-2 mb-8 mt-8">
             <Info className="w-5 h-5 text-orange-400" /> Watcher FAQs
         </h2>
