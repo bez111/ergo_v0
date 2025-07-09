@@ -188,8 +188,8 @@ export default function RosenBridgePage() {
                 <li>• Access control</li>
               </ul>
             </div>
-          </div>
         </div>
+      </div>
 
         {/* Features */}
         <div className="mb-12">

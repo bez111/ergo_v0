@@ -7,11 +7,13 @@ import { usePathname } from "next/navigation"
 function MenuItem({ item, level = 0 }: { item: any, level?: number }) {
   const [open, setOpen] = useState(false)
   const hasChildren = !!item.items?.length
+  const pathname = usePathname() || "";
 
   // Определяем стиль для пункта
+  const isActive = item.href && pathname === item.href;
   const baseClass = level === 0
-    ? "font-medium text-base text-gray-200 hover:text-orange-400"
-    : "font-normal text-sm text-gray-400 hover:text-orange-300";
+    ? `font-medium text-base text-gray-200 hover:text-orange-400${isActive ? " text-orange-400" : ""}`
+    : `font-normal text-sm text-gray-400 hover:text-orange-300${isActive ? " text-orange-300" : ""}`;
 
   const handleLinkClick = (e: React.MouseEvent) => {
     if (hasChildren) {
@@ -23,7 +25,7 @@ function MenuItem({ item, level = 0 }: { item: any, level?: number }) {
   return (
     <div className={`py-0.5 ${level > 0 ? "ml-4" : ""}`}> 
       <div
-        className={`flex items-center justify-between select-none rounded px-2 transition-colors ${open ? "bg-neutral-800" : ""}`}
+        className={`flex items-center justify-between select-none rounded px-2 transition-colors ${open ? "bg-neutral-800" : ""} ${isActive ? "bg-neutral-800" : ""}`}
       >
         <div className="flex items-center gap-2 w-full">
           {item.href ? (

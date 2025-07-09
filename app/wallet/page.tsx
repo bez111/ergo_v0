@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo, MouseEvent } from "react"
+import { useState, useMemo, MouseEvent, useEffect } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -32,7 +32,7 @@ interface Wallet {
   description: string
   platforms: string[]
   features: string[]
-  category: "Desktop" | "Mobile" | "Browser" | "Hardware"
+  category: "Desktop" | "Mobile" | "Browser" | "Hardware" | "paper" | "node"
   isOfficial?: boolean
   websiteUrl: string
   downloadUrl?: string
@@ -40,6 +40,17 @@ interface Wallet {
   users: string
   icon: LucideIcon
   isRecommended?: boolean
+}
+
+const categoryMap: Record<string, Wallet["category"] | null> = {
+  desktop: "Desktop",
+  mobile: "Mobile",
+  "browser-extension": "Browser",
+  web: null, // web-кошельков нет в allWallets, если появятся — добавить
+  hardware: "Hardware",
+  paper: "paper",
+  node: "node",
+  all: null,
 }
 
 const allWallets: Wallet[] = [
@@ -109,14 +120,40 @@ const allWallets: Wallet[] = [
     users: "1M+",
     icon: Lock,
   },
+  {
+    id: "paper-wallet",
+    name: "Paper Wallet",
+    description: "Offline key generation and storage for maximum security.",
+    platforms: ["Offline Generation"],
+    features: ["Cold Storage", "No Internet Required", "Printable Keys"],
+    category: "paper",
+    websiteUrl: "https://ergoplatform.org/en/wallets/",
+    rating: 4.7,
+    users: "N/A",
+    icon: Lock,
+  },
+  {
+    id: "node-wallet",
+    name: "Node Wallet (Core)",
+    description: "Wallet built into the Ergo reference node for advanced users.",
+    platforms: ["Windows", "macOS", "Linux"],
+    features: ["Full Node Integration", "CLI/API Access", "Cold Storage"],
+    category: "node",
+    websiteUrl: "https://ergoplatform.org/en/wallets/",
+    rating: 4.2,
+    users: "N/A",
+    icon: HardDrive,
+  },
 ]
 
 const categories = [
-  { id: "all", name: "All Wallets", icon: Globe },
+  { id: "browser-extension", name: "Browser Extension", icon: Chrome },
   { id: "desktop", name: "Desktop", icon: Monitor },
   { id: "mobile", name: "Mobile", icon: Smartphone },
-  { id: "browser", name: "Browser", icon: Chrome },
   { id: "hardware", name: "Hardware", icon: HardDrive },
+  { id: "paper", name: "Paper/Offline", icon: Lock },
+  { id: "node", name: "Node/Core", icon: HardDrive },
+  { id: "all", name: "All Wallets", icon: Globe },
 ]
 
 const platformIcons: Record<string, LucideIcon> = {
@@ -147,15 +184,32 @@ export default function WalletPage() {
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const isMobile = /Mobi|Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i.test(navigator.userAgent)
+      setSelectedCategory(isMobile ? "mobile" : "desktop")
+    }
+  }, [])
+
   const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
     setMousePosition({ x: e.clientX, y: e.clientY })
   }
 
   const filteredWallets = useMemo(() => {
-    if (selectedCategory === "all") {
-      return allWallets
-    }
-    return allWallets.filter((wallet) => wallet.category.toLowerCase() === selectedCategory)
+    const mappedCategory = categoryMap[selectedCategory]
+    let wallets = mappedCategory === null
+      ? allWallets
+      : allWallets.filter((wallet) => wallet.category === mappedCategory)
+    wallets = wallets.slice().sort((a, b) => {
+      if ((b.isRecommended ? 1 : 0) !== (a.isRecommended ? 1 : 0)) {
+        return (b.isRecommended ? 1 : 0) - (a.isRecommended ? 1 : 0)
+      }
+      if (b.rating !== a.rating) {
+        return b.rating - a.rating
+      }
+      return a.name.localeCompare(b.name)
+    })
+    return wallets
   }, [selectedCategory])
 
   return (

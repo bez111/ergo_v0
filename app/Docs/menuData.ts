@@ -33,12 +33,7 @@ export const menuData = [
         items: [
           {
             title: "Ergo Foundation",
-            items: [
-              { title: "Scope", href: "/Docs/introduction/scope" },
-              { title: "Treasury", href: "/Docs/introduction/treasury" },
-              { title: "Votes", href: "/Docs/introduction/votes" },
-              { title: "Future", href: "/Docs/introduction/future" },
-            ],
+            href: "/Docs/introduction/ergo-foundation",
           },
           { title: "DevDao", href: "/Docs/introduction/devdao" },
           { title: "Sigmanauts", href: "/Docs/introduction/sigmanauts" },
@@ -50,20 +45,8 @@ export const menuData = [
       },
       {
         title: "Contribute",
-        items: [
-          {
-            title: "Developers",
-            items: [
-              { title: "Technical Guidelines", href: "/Docs/introduction/guidelines" },
-              { title: "Bounties", href: "/Docs/introduction/bounties" },
-              { title: "Grants", href: "/Docs/introduction/grants" },
-              { title: "Roles", href: "/Docs/introduction/roles" },
-            ],
-          },
-          { title: "Marketing", href: "/Docs/introduction/marketing" },
-          { title: "Sigmanauts", href: "/Docs/introduction/sigmanauts-contrib" },
-          { title: "Contribute to the docs!", href: "/Docs/introduction/contribute-docs" },
-        ],
+        href: "/Docs/contribute",
+        items: [],
       },
       { title: "Wallets", href: "/Docs/introduction/wallets" },
       {
@@ -73,35 +56,30 @@ export const menuData = [
           { title: "Audit", href: "/Docs/introduction/audit" },
           { title: "The Howey Test", href: "/Docs/introduction/howey-test" },
           { title: "Privacy Guide", href: "/Docs/introduction/privacy-guide" },
-          { title: "Glossary", href: "/Docs/introduction/glossary" },
-          { title: "FAQ", href: "/Docs/introduction/faq" },
           { title: "Common Misconceptions", href: "/Docs/introduction/misconceptions" },
           { title: "A CBDC For All", href: "/Docs/introduction/cbdc" },
         ],
+      },
+      { 
+        title: "Glossary", href: "/Docs/introduction/glossary" 
+      },
+      { 
+        title: "FAQ", href: "/Docs/introduction/faq" 
       },
     ],
   },
   {
     title: "Ecosystem",
     items: [
-      { title: "Artificial Intelligence" },
+      { title: "Artificial Intelligence", href: "/Docs/ecosystem/ai" },
       {
         title: "Infrastructure",
+        href: "/Docs/ecosystem/infrastructure",
         items: [
           {
             title: "Rosen Bridge",
+            href: "/Docs/ecosystem/infrastructure/rosen-bridge",
             items: [
-              {
-                title: "Watchers",
-                items: [
-                  { title: "Prerequisites" },
-                  { title: "Ergo Watcher" },
-                  { title: "Bitcoin Watcher" },
-                ],
-              },
-              { title: "Guards" },
-              { title: "Tokenomics" },
-              { title: "Team" },
               {
                 title: "Uses",
                 items: [
@@ -113,31 +91,21 @@ export const menuData = [
           },
           {
             title: "Oracles",
-            items: [
-              { title: "Oracle Pools V2" },
-              { title: "Mixicles" },
-            ],
+            href: "/Docs/ecosystem/infrastructure/oracles",
           },
           {
             title: "Sidechains",
-            items: [
-              {
-                title: "Sub Blocks",
-                items: [
-                  { title: "Technical Details" },
-                ],
-              },
-              { title: "Sigma Chains" },
-              { title: "PoUW" },
-            ],
+            href: "/Docs/ecosystem/infrastructure/sidechains",
           },
         ],
       },
       {
         title: "Financial",
+        href: "/Docs/ecosystem/financial",
         items: [
           {
             title: "Decentralized Exchanges",
+            href: "/Docs/ecosystem/financial/dex",
             items: [
               { title: "Spectrum Finance" },
               { title: "Trade House" },
@@ -219,6 +187,7 @@ export const menuData = [
       },
       {
         title: "NFTs",
+        href: "/Docs/ecosystem/nfts",
         items: [
           { title: "Trade House" },
           { title: "SkyHarbor" },
@@ -227,6 +196,7 @@ export const menuData = [
       },
       {
         title: "Gaming",
+        href: "/Docs/ecosystem/gaming",
         items: [
           { title: "BlitzTCG" },
           { title: "Cyberverse" },
@@ -234,6 +204,7 @@ export const menuData = [
       },
       {
         title: "Tooling",
+        href: "/Docs/ecosystem/tooling",
         items: [
           { title: "Crux Finance" },
           { title: "ErgoNames" },
@@ -267,6 +238,7 @@ export const menuData = [
       },
       {
         title: "Applications",
+        href: "/Docs/ecosystem/applications",
         items: [
           { title: "Thz.FM" },
           { title: "TabbyPOS" },
@@ -282,6 +254,7 @@ export const menuData = [
       },
       {
         title: "Privacy",
+        href: "/Docs/ecosystem/privacy",
         items: [
           {
             title: "Mixing",
@@ -304,6 +277,7 @@ export const menuData = [
       },
       {
         title: "DAOs",
+        href: "/Docs/ecosystem/daos",
         items: [
           { title: "Paideia" },
           { title: "ErgoPad" },

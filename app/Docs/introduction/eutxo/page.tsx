@@ -7,7 +7,7 @@ import {
   Zap, 
   GitBranch, 
   Globe, 
-  BookOpen, 
+  BookOpen,
   FileText, 
   Video, 
   Shield, 
