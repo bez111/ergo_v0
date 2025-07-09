@@ -307,11 +307,6 @@ export default function WalletsPage() {
           <li><a href="https://github.com/anon-real/ergo-light-client" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">Community Project: Ergo Light Client (iOS Beta)</a> <span className="text-xs text-gray-400">(Requires a full node)</span></li>
         </ul>
       </div>
-      {/* Glossary & FAQ links as separate block */}
-      <div className="flex flex-col gap-2 mt-8">
-        <a href="/Docs/introduction/glossary" className="text-2xl font-semibold text-gray-400 hover:text-cyan-400 transition-colors">Glossary</a>
-        <a href="/Docs/introduction/faq" className="text-2xl font-semibold text-gray-400 hover:text-cyan-400 transition-colors">FAQ</a>
-      </div>
     </div>
   );
 } 

@@ -71,7 +71,7 @@ export default function KeyFeaturesPage() {
           <p className="text-gray-300 mb-4">
             Ergo's Extended UTXO model provides superior security, scalability, and composability compared to account-based models. Each UTXO can carry arbitrary data and complex spending conditions.
           </p>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               Immutable transaction outputs
@@ -85,6 +85,12 @@ export default function KeyFeaturesPage() {
               Enhanced privacy features
             </li>
           </ul>
+          <Link
+            href="/Docs/introduction/eutxo"
+            className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors font-semibold"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -94,7 +100,7 @@ export default function KeyFeaturesPage() {
           <p className="text-gray-300 mb-4">
             A powerful, declarative smart contract language that enables complex financial instruments while maintaining security and predictability.
           </p>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               Declarative programming model
@@ -108,6 +114,12 @@ export default function KeyFeaturesPage() {
               Sigma Protocols integration
             </li>
           </ul>
+          <Link
+            href="/Docs/developers/ergoscript"
+            className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -117,7 +129,7 @@ export default function KeyFeaturesPage() {
           <p className="text-gray-300 mb-4">
             Advanced cryptographic protocols that enable zero-knowledge proofs and complex authentication schemes without compromising security.
           </p>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               Zero-knowledge proofs
@@ -131,6 +143,12 @@ export default function KeyFeaturesPage() {
               Application-level privacy
             </li>
           </ul>
+          <Link
+            href="/Docs/developers/sigma-protocols"
+            className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-semibold"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -140,7 +158,7 @@ export default function KeyFeaturesPage() {
           <p className="text-gray-300 mb-4">
             Non-Interactive Proofs of Proof-of-Work enable lightweight clients to verify transactions without downloading the entire blockchain.
           </p>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               Lightweight verification
@@ -154,6 +172,12 @@ export default function KeyFeaturesPage() {
               Reduced bandwidth usage
             </li>
           </ul>
+          <Link
+            href="/Docs/introduction/nipopows"
+            className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors font-semibold"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -163,7 +187,7 @@ export default function KeyFeaturesPage() {
           <p className="text-gray-300 mb-4">
             Built-in privacy mechanisms including stealth addresses, ring signatures, and mixing protocols for enhanced user confidentiality.
           </p>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               Stealth addresses
@@ -177,6 +201,12 @@ export default function KeyFeaturesPage() {
               ErgoMixer integration
             </li>
           </ul>
+          <Link
+            href="/Docs/introduction/privacy"
+            className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -186,7 +216,7 @@ export default function KeyFeaturesPage() {
           <p className="text-gray-300 mb-4">
             ASIC-resistant Proof-of-Work algorithm that ensures fair mining distribution and prevents centralization of mining power.
           </p>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               ASIC-resistant design
@@ -200,6 +230,12 @@ export default function KeyFeaturesPage() {
               Decentralized mining
             </li>
           </ul>
+          <Link
+            href="/Docs/introduction/autolykos"
+            className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors font-semibold"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -209,7 +245,7 @@ export default function KeyFeaturesPage() {
           <p className="text-gray-300 mb-4">
             Economic mechanism that prevents blockchain bloat by charging fees for long-term data storage, ensuring sustainable growth.
           </p>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               Prevents blockchain bloat
@@ -223,6 +259,12 @@ export default function KeyFeaturesPage() {
               Sustainable growth
             </li>
           </ul>
+          <Link
+            href="/Docs/introduction/storage-rent"
+            className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-semibold"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -232,7 +274,7 @@ export default function KeyFeaturesPage() {
           <p className="text-gray-300 mb-4">
             Support for interoperable sidechains that enable specialized functionality while maintaining security through the main chain.
           </p>
-          <ul className="space-y-2 text-gray-400 text-sm">
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
             <li className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-green-400" />
               Interoperable design
@@ -246,6 +288,12 @@ export default function KeyFeaturesPage() {
               Enhanced scalability
             </li>
           </ul>
+          <Link
+            href="/Docs/ecosystem/infrastructure/sidechains"
+            className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors font-semibold"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
       </div>
 
@@ -257,15 +305,33 @@ export default function KeyFeaturesPage() {
         <div className="grid md:grid-cols-3 gap-4">
           <div className="bg-neutral-800/50 rounded-lg p-4">
             <h4 className="font-bold text-orange-400 mb-2">Multi-Stage Protocols</h4>
-            <p className="text-gray-300 text-sm">Complex smart contracts that span multiple transactions with state management.</p>
+            <p className="text-gray-300 text-sm mb-3">Complex smart contracts that span multiple transactions with state management.</p>
+            <Link
+              href="/Docs/developers/multi-stage-protocols"
+              className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors text-sm font-semibold"
+            >
+              Learn More <ChevronRight className="w-3 h-3 ml-1" />
+            </Link>
           </div>
           <div className="bg-neutral-800/50 rounded-lg p-4">
             <h4 className="font-bold text-cyan-400 mb-2">Data Inputs</h4>
-            <p className="text-gray-300 text-sm">Read-only access to UTXO data without consuming them, enabling oracle integration.</p>
+            <p className="text-gray-300 text-sm mb-3">Read-only access to UTXO data without consuming them, enabling oracle integration.</p>
+            <Link
+              href="/Docs/ecosystem/infrastructure/oracles"
+              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-semibold"
+            >
+              Learn More <ChevronRight className="w-3 h-3 ml-1" />
+            </Link>
           </div>
           <div className="bg-neutral-800/50 rounded-lg p-4">
             <h4 className="font-bold text-green-400 mb-2">Atomic Swaps</h4>
-            <p className="text-gray-300 text-sm">Trustless cross-chain token exchanges without intermediaries or centralized exchanges.</p>
+            <p className="text-gray-300 text-sm mb-3">Trustless cross-chain token exchanges without intermediaries or centralized exchanges.</p>
+            <Link
+              href="/Docs/ecosystem/financial/dex/analog-ergo"
+              className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors text-sm font-semibold"
+            >
+              Learn More <ChevronRight className="w-3 h-3 ml-1" />
+            </Link>
           </div>
         </div>
       </div>
@@ -295,7 +361,7 @@ export default function KeyFeaturesPage() {
           Ergo operates an open model where contributions from all are welcomed. Participate in decentralised finance!
         </p>
         <Link
-          href="/Docs/introduction/contribute"
+          href="/Docs/contribute"
           className="inline-flex items-center px-4 py-2 bg-cyan-500 rounded-lg font-semibold text-black hover:bg-cyan-600 transition-colors"
         >
           Get Involved <ChevronRight className="w-4 h-4 ml-1" />

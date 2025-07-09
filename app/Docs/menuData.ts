@@ -30,14 +30,7 @@ export const menuData = [
       },
       {
         title: "Entities",
-        items: [
-          {
-            title: "Ergo Foundation",
-            href: "/Docs/introduction/ergo-foundation",
-          },
-          { title: "DevDao", href: "/Docs/introduction/devdao" },
-          { title: "Sigmanauts", href: "/Docs/introduction/sigmanauts" },
-        ],
+        href: "/Docs/introduction/entities"
       },
       {
         title: "Events",
@@ -45,20 +38,12 @@ export const menuData = [
       },
       {
         title: "Contribute",
-        href: "/Docs/contribute",
-        items: [],
+        href: "/Docs/contribute"
       },
       { title: "Wallets", href: "/Docs/introduction/wallets" },
       {
         title: "Resources",
-        items: [
-          { title: "Social Contract", href: "/Docs/introduction/social-contract" },
-          { title: "Audit", href: "/Docs/introduction/audit" },
-          { title: "The Howey Test", href: "/Docs/introduction/howey-test" },
-          { title: "Privacy Guide", href: "/Docs/introduction/privacy-guide" },
-          { title: "Common Misconceptions", href: "/Docs/introduction/misconceptions" },
-          { title: "A CBDC For All", href: "/Docs/introduction/cbdc" },
-        ],
+        href: "/Docs/introduction/resources"
       },
       { 
         title: "Glossary", href: "/Docs/introduction/glossary" 
@@ -106,38 +91,10 @@ export const menuData = [
           {
             title: "Decentralized Exchanges",
             href: "/Docs/ecosystem/financial/dex",
-            items: [
-              { title: "Spectrum Finance" },
-              { title: "Trade House" },
-              { title: "Palmyra" },
-              { title: "Crystal Pool" },
-              { title: "Machina Finance" },
-              { title: "Mew Finance" },
-              {
-                title: "P2P",
-                items: [
-                  { title: "Token Jay" },
-                  { title: "Analog Ergo" },
-                  { title: "Single Tx Swap" },
-                ],
-              },
-            ],
           },
           {
             title: "Monetary Systems",
-            items: [
-              { title: "SigmaUSD" },
-              { title: "ChainCash" },
-              { title: "Gluon" },
-              { title: "DexyGold" },
-              {
-                title: "Local Exchange Trading Systems",
-                items: [
-                  { title: "Basic Implementation" },
-                  { title: "Trustless LETS" },
-                ],
-              },
-            ],
+            href: "/Docs/ecosystem/financial/monetary-systems",
           },
           {
             title: "Decentralized Finance",
