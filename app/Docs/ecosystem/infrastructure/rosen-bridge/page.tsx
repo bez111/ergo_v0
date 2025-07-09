@@ -188,8 +188,8 @@ export default function RosenBridgePage() {
                 <li>• Access control</li>
               </ul>
             </div>
+          </div>
         </div>
-      </div>
 
         {/* Features */}
         <div className="mb-12">
@@ -494,8 +494,48 @@ export default function RosenBridgePage() {
             </ul>
           </div>
 
-          <h3 className="text-xl font-semibold mb-2">Pre-requisites</h3>
-          <p className="text-gray-300 mb-4">See the pre-requisites page for information on setting up a local node, as well as minimal hardware and software requirements. (Docker)</p>
+          <h3 className="text-xl font-semibold mb-2">Prerequisites</h3>
+          <div className="mb-4 space-y-4">
+            <h4 className="font-bold text-orange-400">Rosen Watcher Prerequisites</h4>
+
+            <h5 className="font-semibold text-cyan-400">Recommended Hardware Requirements</h5>
+            <ul className="list-disc pl-6 text-gray-300">
+              <li><b>CPU:</b> 2 cores</li>
+              <li><b>RAM:</b> 2 GB</li>
+              <li><b>Storage:</b> 20 GB</li>
+            </ul>
+
+            <h5 className="font-semibold text-cyan-400">Ergo Node</h5>
+            <p className="text-gray-300">If you aren't running an explorer, you will need to run a node with <code>ExtraIndex</code> enabled.<br />
+            This setting, if set to <code>true</code>, allows the node to store all transactions, boxes, and addresses in an index.<br />
+            <code>extraCacheSize</code> sets the number of recently used extra indexes kept in memory.</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">extraIndex = false
+extraCacheSize = 500</pre>
+            <p className="text-gray-300">With your complete config looking something like this:</p>
+            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`ergo {
+  node {
+    mining = false
+    extraIndex = true
+    extraCacheSize = 500
+  }
+}
+
+scorex {
+  restApi {
+    # Note: you must set a unique password for your API!
+    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
+  }
+}
+`}</pre>
+
+            <h5 className="font-semibold text-cyan-400">Docker Compose</h5>
+            <p className="text-gray-300">Docker Compose is a tool used for defining and running multi-container Docker applications.<br />
+            It uses YAML files to configure the application's services and performs the creation and start-up process of all the containers with a single command.<br />
+            Docker Compose is particularly useful for development, testing, and staging environments, as well as CI workflows.</p>
+            <p className="text-gray-300">The recommended method for installing Docker Compose is to install <b>Docker Desktop</b>, which includes Docker Compose, Docker Engine, and Docker CLI.<br />
+            These are all necessary components for running multi-container Docker applications.</p>
+            <p className="text-gray-300">You can download Docker Desktop for your specific Operating System from the following link: <a href="https://www.docker.com/products/docker-desktop/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">Docker Desktop</a></p>
+          </div>
 
           <h2 className="text-2xl font-bold flex items-center gap-2 mb-8 mt-8">
             <Info className="w-5 h-5 text-orange-400" /> Watcher FAQs
