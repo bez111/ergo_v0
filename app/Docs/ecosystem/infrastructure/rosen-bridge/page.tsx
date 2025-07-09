@@ -481,104 +481,51 @@ export default function RosenBridgePage() {
             Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
           </p>
 
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Settings className="w-6 h-6 text-cyan-400" /> Watcher Setup Guides
-          </h2>
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-2">Tutorials</h3>
-            <ul className="list-disc pl-6 text-gray-300 mb-2">
-              <li>General Watchers app Tutorials Playlist, and more tailored guides for each platform:</li>
-              <li><b>Windows:</b> <a href="#" className="text-cyan-400 underline">Rosen Bridge Watcher — Windows Setup Guide</a></li>
-              <li><b>Mac:</b> <a href="#" className="text-cyan-400 underline">Rosen Watcher with Mac (ErgoTutorials)</a></li>
-              <li><b>Linux:</b> <a href="#" className="text-cyan-400 underline">mgpai walks through a Watcher instance in Linux and Cloud</a></li>
-            </ul>
-          </div>
+          {/* Watcher Setup Guides */}
+          <Accordion type="multiple" className="mb-8">
+            <AccordionItem value="ergo-watcher-setup">
+              <AccordionTrigger className="text-2xl font-bold flex items-center gap-2">
+                <Settings className="w-6 h-6 text-orange-400" /> Ergo Rosen Bridge Watcher Setup
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-gray-300 mb-4">
+                  Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
+                </p>
+                <div className="bg-neutral-800/50 border-l-4 border-orange-400 p-4 mb-6 rounded">
+                  <p className="text-orange-200 text-sm italic">This section is adapted from the `deploy-docker.md` in the Rosen Bridge documentation.</p>
+                </div>
 
-          <h3 className="text-xl font-semibold mb-2">Prerequisites</h3>
-          <div className="mb-4 space-y-4">
-            <h4 className="font-bold text-orange-400">Rosen Watcher Prerequisites</h4>
-
-            <h5 className="font-semibold text-cyan-400">Recommended Hardware Requirements</h5>
-            <ul className="list-disc pl-6 text-gray-300">
-              <li><b>CPU:</b> 2 cores</li>
-              <li><b>RAM:</b> 2 GB</li>
-              <li><b>Storage:</b> 20 GB</li>
-            </ul>
-
-            <h5 className="font-semibold text-cyan-400">Ergo Node</h5>
-            <p className="text-gray-300">If you aren't running an explorer, you will need to run a node with <code>ExtraIndex</code> enabled.<br />
-            This setting, if set to <code>true</code>, allows the node to store all transactions, boxes, and addresses in an index.<br />
-            <code>extraCacheSize</code> sets the number of recently used extra indexes kept in memory.</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">extraIndex = false
-extraCacheSize = 500</pre>
-            <p className="text-gray-300">With your complete config looking something like this:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`ergo {
-  node {
-    mining = false
-    extraIndex = true
-    extraCacheSize = 500
-  }
-}
-
-scorex {
-  restApi {
-    # Note: you must set a unique password for your API!
-    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
-  }
-}
-`}</pre>
-
-            <h5 className="font-semibold text-cyan-400">Docker Compose</h5>
-            <p className="text-gray-300">Docker Compose is a tool used for defining and running multi-container Docker applications.<br />
-            It uses YAML files to configure the application's services and performs the creation and start-up process of all the containers with a single command.<br />
-            Docker Compose is particularly useful for development, testing, and staging environments, as well as CI workflows.</p>
-            <p className="text-gray-300">The recommended method for installing Docker Compose is to install <b>Docker Desktop</b>, which includes Docker Compose, Docker Engine, and Docker CLI.<br />
-            These are all necessary components for running multi-container Docker applications.</p>
-            <p className="text-gray-300">You can download Docker Desktop for your specific Operating System from the following link: <a href="https://www.docker.com/products/docker-desktop/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline">Docker Desktop</a></p>
-          </div>
-
-          <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
-            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Settings className="w-6 h-6 text-orange-400" /> Ergo Rosen Bridge Watcher Setup
-            </h3>
-            <p className="text-gray-300 mb-4">
-              Watchers are integral to Rosen Bridge, serving as cross-chain oracles. They observe and report deposit events on their network to Ergo, contributing to the network's security and expansion.
-            </p>
-            <div className="bg-neutral-800/50 border-l-4 border-orange-400 p-4 mb-6 rounded">
-              <p className="text-orange-200 text-sm italic">This section is adapted from the `deploy-docker.md` in the Rosen Bridge documentation.</p>
-            </div>
-
-            <h4 className="text-xl font-semibold text-cyan-400 mb-3">1. Clone the Repository and Prepare the Environment</h4>
-            <p className="text-gray-300 mb-3">First, clone the operational repository and navigate to the watcher directory:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`git clone https://github.com/rosen-bridge/operation.git
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">1. Clone the Repository and Prepare the Environment</h4>
+                <p className="text-gray-300 mb-3">First, clone the operational repository and navigate to the watcher directory:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`git clone https://github.com/rosen-bridge/operation.git
 cd operation/watcher/`}</pre>
-            <p className="text-gray-300 mb-3">Create and configure the environment file from the provided template:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`cp env.template .env
+                <p className="text-gray-300 mb-3">Create and configure the environment file from the provided template:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`cp env.template .env
 # Edit the .env file to set POSTGRES_PASSWORD, POSTGRES_USER, POSTGRES_DB, and POSTGRES_PORT`}</pre>
 
-            <h4 className="text-xl font-semibold text-cyan-400 mb-3">2. Configure Environment Variables and Permissions</h4>
-            <p className="text-gray-300 mb-3">Set up necessary environment variables in the `.env` file and adjust file permissions:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`POSTGRES_PASSWORD=your_password    # Random alphanumeric password (no special characters)
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">2. Configure Environment Variables and Permissions</h4>
+                <p className="text-gray-300 mb-3">Set up necessary environment variables in the `.env` file and adjust file permissions:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`POSTGRES_PASSWORD=your_password    # Random alphanumeric password (no special characters)
 POSTGRES_USER=your_user            # Random username
 POSTGRES_DB=your_db                # Random database name
 POSTGRES_PORT=5432                 # Default is 5432, can be changed`}</pre>
-            <p className="text-gray-300 mb-3">Adjust permissions and create `local.yaml`:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`sudo chown -R 3000:3000 logs
+                <p className="text-gray-300 mb-3">Adjust permissions and create `local.yaml`:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`sudo chown -R 3000:3000 logs
 touch config/local.yaml`}</pre>
-            <p className="text-gray-300 mb-3">For <b>macOS</b> users, set permissions for the logs directory:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`sudo chmod -R 707 logs`}</pre>
+                <p className="text-gray-300 mb-3">For <b>macOS</b> users, set permissions for the logs directory:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`sudo chmod -R 707 logs`}</pre>
 
-            <h4 className="text-xl font-semibold text-cyan-400 mb-3">3. (Optional) Configure Docker for ARM Devices</h4>
-            <p className="text-gray-300 mb-4">If you are deploying on Raspberry Pi or other ARM devices, ensure Docker is set up to support ARM architecture.</p>
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">3. (Optional) Configure Docker for ARM Devices</h4>
+                <p className="text-gray-300 mb-4">If you are deploying on Raspberry Pi or other ARM devices, ensure Docker is set up to support ARM architecture.</p>
 
-            <h4 className="text-xl font-semibold text-cyan-400 mb-3">4. Pull Docker Images and Start the Watcher</h4>
-            <p className="text-gray-300 mb-3">Before starting the watcher, pull the necessary Docker images and run the service:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`docker compose pull
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">4. Pull Docker Images and Start the Watcher</h4>
+                <p className="text-gray-300 mb-3">Before starting the watcher, pull the necessary Docker images and run the service:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`docker compose pull
 docker compose up -d`}</pre>
 
-            <h4 className="text-xl font-semibold text-cyan-400 mb-3">5. Configure `local.yaml` for Ergo</h4>
-            <p className="text-gray-300 mb-3">Set up the `local.yaml` configuration file specifically for the Ergo network:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`network: ergo
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">5. Configure `local.yaml` for Ergo</h4>
+                <p className="text-gray-300 mb-3">Set up the `local.yaml` configuration file specifically for the Ergo network:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`network: ergo
 api:
   apiKeyHash: 'YOUR_API_KEY_HASH'
 ergo:
@@ -590,25 +537,236 @@ ergo:
 observation:
   confirmation: 10
   validThreshold: 720`}</pre>
-            <p className="text-gray-300 mb-4">Replace placeholders with your actual values and URLs according to your setup requirements.</p>
+                <p className="text-gray-300 mb-4">Replace placeholders with your actual values and URLs according to your setup requirements.</p>
 
-            <h4 className="text-xl font-semibold text-cyan-400 mb-3">6. Start the Watcher and Monitor</h4>
-            <p className="text-gray-300 mb-3">After configuring all files and setting up the environment, start the watcher:</p>
-            <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`docker compose up -d`}</pre>
-            <p className="text-gray-300 mb-3">Access the watcher UI by visiting:</p>
-            <p className="text-gray-300 mb-4"><a href="http://localhost:3030" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline font-semibold">http://localhost:3030</a></p>
-            <p className="text-gray-300 mb-4">Use this dashboard to monitor network information and health status.</p>
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">6. Start the Watcher and Monitor</h4>
+                <p className="text-gray-300 mb-3">After configuring all files and setting up the environment, start the watcher:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-3 overflow-x-auto">{`docker compose up -d`}</pre>
+                <p className="text-gray-300 mb-3">Access the watcher UI by visiting:</p>
+                <p className="text-gray-300 mb-4"><a href="http://localhost:3030" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline font-semibold">http://localhost:3030</a></p>
+                <p className="text-gray-300 mb-4">Use this dashboard to monitor network information and health status.</p>
 
-            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-4">
-              <h5 className="font-bold text-yellow-400 mb-2">Notes</h5>
-              <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
-                <li>Adjust the `apiKeyHash` and `mnemonic` in `local.yaml` or via the `.env` file for security.</li>
-                <li>Ensure your Docker environment is properly configured, especially for ARM-based deployments.</li>
-                <li>Regularly update your configuration files and Docker images to keep up with network changes and software updates.</li>
-                <li>For troubleshooting, FAQs, and further tips, refer to the main watcher documentation.</li>
-              </ul>
-            </div>
-          </div>
+                <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-4">
+                  <h5 className="font-bold text-yellow-400 mb-2">Notes</h5>
+                  <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
+                    <li>Adjust the `apiKeyHash` and `mnemonic` in `local.yaml` or via the `.env` file for security.</li>
+                    <li>Ensure your Docker environment is properly configured, especially for ARM-based deployments.</li>
+                    <li>Regularly update your configuration files and Docker images to keep up with network changes and software updates.</li>
+                    <li>For troubleshooting, FAQs, and further tips, refer to the main watcher documentation.</li>
+                  </ul>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+            {/* Здесь можно добавить другие AccordionItem для других сетапов */}
+            <AccordionItem value="bitcoin-watcher-setup">
+              <AccordionTrigger className="text-2xl font-bold flex items-center gap-2">
+                <Settings className="w-6 h-6 text-orange-400" /> Bitcoin Rosen Bridge Watcher Setup
+              </AccordionTrigger>
+              <AccordionContent>
+                <p className="text-gray-300 mb-4">
+                  To participate as a watcher in the Rosen Bridge, you need to deploy a watcher app that observes one of the supported networks. Each supported network has its own set of watchers responsible for reporting users' actions on that specific network.
+                </p>
+                <div className="bg-neutral-800/50 border-l-4 border-orange-400 p-4 mb-6 rounded">
+                  <p className="text-orange-200 text-sm italic">This section is adapted from the <code>deploy-docker.md</code> section in the Rosen Bridge documentation.</p>
+                </div>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Docker Setup</h4>
+                <ol className="list-decimal pl-6 text-gray-300 mb-4 space-y-2">
+                  <li>
+                    <b>Clone the Operation repository and navigate to the watcher directory:</b>
+                    <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`git clone https://github.com/rosen-bridge/operation.git
+cd operation/watcher/`}</pre>
+                  </li>
+                  <li>
+                    <b>Create your environment file <code>.env</code> based on the <code>env.template</code> file:</b>
+                    <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`cp env.template .env`}</pre>
+                    <div className="bg-neutral-900/60 border-l-4 border-cyan-400 p-3 mb-2 rounded text-cyan-200 text-xs">
+                      To view hidden <code>.env</code> files later, use <b>ls -a</b>.
+                    </div>
+                  </li>
+                </ol>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Environment Variable Configurations</h4>
+                <p className="text-gray-300 mb-2">Configure the required environment variables in the <code>.env</code> file (ensure no spaces after the '=' sign):</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`POSTGRES_PASSWORD=your_random_password
+POSTGRES_USER=your_random_username
+POSTGRES_DB=your_random_db_name
+POSTGRES_PORT=5432`}</pre>
+                <p className="text-gray-300 mb-2">Set permissions and create the <code>local.yaml</code> file in the <code>config</code> directory:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`sudo chown -R 3000:3000 logs
+touch config/local.yaml`}</pre>
+                <p className="text-gray-300 mb-2">For <b>MacOS</b> users, set 707 permission for the logs directory:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-4 overflow-x-auto">{`sudo chmod -R 707 logs`}</pre>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Working with Docker</h4>
+                <div className="mb-4">
+                  <b>Checking logs</b>
+                  <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`docker compose logs`}</pre>
+                  <b>Updating your watcher</b>
+                  <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`docker compose pull
+docker compose down
+docker compose up -d`}</pre>
+                  <b>Restarting your watcher</b>
+                  <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`docker compose up -d`}</pre>
+                  <b>no configuration files provided: not found</b>
+                  <div className="bg-neutral-900/60 border-l-4 border-yellow-400 p-3 mb-2 rounded text-yellow-200 text-xs">
+                    Ensure you're in the correct directory. You should execute docker compose commands from within the <code>operation/watcher</code> folder.
+                  </div>
+                  <b>Dumping databases</b>
+                  <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`docker compose down
+docker volume remove watcher_postgres-data
+# ---edit block height in YAML after this step
+docker compose up -d`}</pre>
+                  <b>Clearing Volumes</b>
+                  <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`docker compose down --volumes
+docker compose up -d`}</pre>
+                  <b>Clean Slate</b>
+                  <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`docker ps -a
+docker compose down
+docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3
+# Then delete the folder and start fresh`}</pre>
+                </div>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Note for Raspberry Pi ARM Users</h4>
+                <p className="text-gray-300 mb-2">To run the watcher on an ARM-based Raspberry Pi, use an ARM-based DB image. Update your <code>docker-compose.yml</code>:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`services:
+  db:
+    # image: rapidfort/postgresql:16.0.0
+    image: arm64v8/postgres:16.0
+    volumes:
+      # - postgres-data:/bitnami/postgresql
+      - postgres-data:/var/lib/postgresql/data/`}</pre>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Pull Docker Images and Run Service</h4>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`docker compose pull`}</pre>
+                <p className="text-gray-300 mb-2">Set up your <code>local.yaml</code> using the instructions in the next section (Local Config). After saving changes, run the container:</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`docker compose up -d`}</pre>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Local Config</h4>
+                <p className="text-gray-300 mb-2">To start your watcher, configure the <code>local.yaml</code> file.</p>
+                <b>Specify the Target Network</b>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`network: bitcoin`}</pre>
+                <b>API Configuration</b>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`api:
+  apiKeyHash: "YOUR_API_KEY_HASH"`}</pre>
+                <div className="bg-neutral-900/60 border-l-4 border-cyan-400 p-3 mb-2 rounded text-cyan-200 text-xs">
+                  To secure action-based APIs (e.g., lock, unlock), set a unique and robust API key hash using the Blake2b algorithm.<br />
+                  You can generate the hash using the Rosen CLI:
+                  <pre className="bg-neutral-900/80 rounded p-4 text-xs text-orange-300 mb-2 overflow-x-auto">{`npx @rosen-bridge/cli blake2b-hash YOUR_API_KEY`}</pre>
+                  Or with Docker:
+                  <pre className="bg-neutral-900/80 rounded p-4 text-xs text-orange-300 mb-2 overflow-x-auto">{`docker run -it --rm node:18.16 npx --yes @rosen-bridge/cli blake2b-hash YOUR_API_KEY`}</pre>
+                </div>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Bitcoin Configuration</h4>
+                <p className="text-gray-300 mb-2">Choose your information source for the Bitcoin network and specify connection info.</p>
+                <b>RPC Example:</b>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`bitcoin:
+  type: rpc
+  rpc:
+    url: "YOUR_RPC_URL"
+    username: "YOUR_RPC_USERNAME"
+    password: "YOUR_RPC_PASSWORD"`}</pre>
+                <div className="bg-neutral-900/60 border-l-4 border-yellow-400 p-3 mb-2 rounded text-yellow-200 text-xs">
+                  <b>Setting Up a Bitcoin Node (RPC)</b><br />
+                  For optimal watcher performance and decentralization, running your own fully synced Bitcoin node is recommended. This requires significant disk space. You may use a public node as detailed in the next section.<br /><br />
+                  <b>Install Bitcoin Core</b> following the <a href="https://bitcoin.org/en/download" className="text-cyan-400 underline">official instructions</a> for your OS.<br />
+                  Configure <code>bitcoin.conf</code> in the appropriate directory for your OS.<br />
+                  Generate RPC username and password using <a href="https://jlopp.github.io/bitcoin-core-rpc-auth-generator/" className="text-cyan-400 underline">this RPC auth generator</a>.<br />
+                  Paste the <code>rpcauth</code> line and add:
+                  <pre className="bg-neutral-900/80 rounded p-4 text-xs text-orange-300 mb-2 overflow-x-auto">{`server=1
+rpcbind=0.0.0.0
+rpcallowip=0.0.0.0/0
+txindex=1
+rest=1`}</pre>
+                  For security, limit <code>rpcallowip</code> to Docker network:
+                  <pre className="bg-neutral-900/80 rounded p-4 text-xs text-orange-300 mb-2 overflow-x-auto">{`rpcallowip=172.16.0.0/12`}</pre>
+                  Restart Bitcoin Core:
+                  <pre className="bg-neutral-900/80 rounded p-4 text-xs text-orange-300 mb-2 overflow-x-auto">{`bitcoin-cli stop
+bitcoind -daemon`}</pre>
+                  Verify sync:
+                  <pre className="bg-neutral-900/80 rounded p-4 text-xs text-orange-300 mb-2 overflow-x-auto">{`bitcoin-cli getblockchaininfo`}</pre>
+                  <b>Important:</b> A pruned Bitcoin node is not compatible. The watcher requires <code>txindex=1</code>.<br />
+                  To speed up sync: <code>dbcache=4096</code> (adjust to your RAM).<br />
+                  As of June 2024, the Bitcoin blockchain size is ~657GB.<br />
+                  Only use full-node, txindex=1 snapshots.<br />
+                  Monitor sync progress: <code>bitcoin-cli getblockchaininfo</code> (look for <code>verificationprogress: 1.000000</code>).<br />
+                  If resources are limited, run Bitcoin node on a separate machine and update your <code>local.yaml</code> accordingly.
+                  <pre className="bg-neutral-900/80 rounded p-4 text-xs text-orange-300 mb-2 overflow-x-auto">{`bitcoin:
+  type: rpc
+  rpc:
+    url: "http://<user>:<password>@<remote-ip>:8332"`}</pre>
+                  Set <code>rpcallowip</code> in bitcoin.conf to allow the watcher machine's IP.<br />
+                  To enable transaction broadcasting (optional, for debugging):
+                  <pre className="bg-neutral-900/80 rounded p-4 text-xs text-orange-300 mb-2 overflow-x-auto">{`zmqpubrawtx=tcp://0.0.0.0:28332`}</pre>
+                </div>
+                <b>Or use esplora:</b>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`bitcoin:
+  type: esplora
+  esplora:
+    url: https://mempool.space`}</pre>
+                <b>Set your watcher's initial height:</b>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`initial:
+  height: LATEST_BITCOIN_HEIGHT`}</pre>
+                <b>Customize observation confirmation and validity threshold:</b>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`observation:
+  confirmation: 2
+  validThreshold: 72`}</pre>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Ergo Configuration</h4>
+                <p className="text-gray-300 mb-2">Even if running a Bitcoin Watcher, you must configure the Ergo section.</p>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`ergo:
+  mnemonic: "YOUR_WALLET_MNEMONIC"
+  type: node
+  node:
+    url: https://example.node.com
+  explorer:
+    url: https://api.ergoplatform.com
+  initialHeight: LATEST_HEIGHT
+  observation:
+    confirmation: 10
+    validThreshold: 720`}</pre>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Example Configuration for Bitcoin Watcher</h4>
+                <pre className="bg-neutral-900/80 rounded p-4 text-sm text-orange-300 mb-2 overflow-x-auto">{`network: bitcoin
+api:
+  apiKeyHash: "YOUR_API_KEY_HASH"
+ergo:
+  type: explorer
+  initialHeight: LATEST_ERGO_HEIGHT
+  mnemonic: "YOUR_WALLET_MNEMONIC"
+  node:
+    url: https://example.node.com
+bitcoin:
+  type: rpc
+  rpc:
+    url: "YOUR_BITCOIN_RPC_URL"
+    username: "YOUR_RPC_USERNAME"
+    password: "YOUR_RPC_PASSWORD"
+  initial:
+    height: LATEST_BITCOIN_HEIGHT
+observation:
+  confirmation: 2
+  validThreshold: 72`}</pre>
+
+                <h4 className="text-xl font-semibold text-cyan-400 mb-3">Get Your Watcher Permit</h4>
+                <p className="text-gray-300 mb-2">After setup and running your watcher, access the watcher UI at <a href="http://localhost:3030" target="_blank" rel="noopener noreferrer" className="text-cyan-400 underline font-semibold">http://localhost:3030</a>.<br />Here you can view network info, assets, health, and perform actions.<br />To activate your watcher, use the <b>LOCK</b> action and use assets from the watcher wallet for registration and obtaining reporting permits.<br />Top up your wallet with the required ERG and RSN amounts to receive permits.</p>
+                <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-4 mb-4">
+                  <b>As a watcher, your responsibilities:</b>
+                  <ul className="list-disc pl-6 text-gray-300 text-sm space-y-1">
+                    <li>Monitor your network and report bridge-related actions.</li>
+                    <li>To report bridge events, you must hold report permits.</li>
+                    <li><b>Acquiring permits involves:</b>
+                      <ul className="list-disc pl-6 text-gray-300 text-xs">
+                        <li><b>Collateral:</b> One-time deposit of ERG and RSN to obtain initial report permits (refunded when returning permits/unregistering watcher).</li>
+                        <li><b>RSN for Permits:</b> Lock RSN to receive permit tokens. The number of permits = number of concurrent reports. Valid reports: permit is refunded + reward. Invalid: permit is seized as penalty.</li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <p className="text-gray-300 mb-2">For troubleshooting, FAQs, and additional info, refer to the main watcher documentation.</p>
+              </AccordionContent>
+            </AccordionItem>
+          </Accordion>
 
           <h2 className="text-2xl font-bold flex items-center gap-2 mb-8 mt-8">
             <Info className="w-5 h-5 text-orange-400" /> Watcher FAQs
