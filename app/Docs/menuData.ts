@@ -98,32 +98,16 @@ export const menuData = [
           },
           {
             title: "Decentralized Finance",
+            href: "/Docs/ecosystem/financial/defi",
             items: [
               {
                 title: "Lending",
-                items: [
-                  { title: "duckpools" },
-                  { title: "EXLE" },
-                  { title: "SigmaFi" },
-                ],
               },
               {
                 title: "Derivatives and Synthetics",
-                items: [
-                  { title: "Hodlbox" },
-                  { title: "HodlCoin" },
-                  { title: "AuctionCoin" },
-                  { title: "OptionCoin" },
-                  { title: "OptionPools" },
-                  { title: "SigmaO" },
-                ],
               },
               {
                 title: "Crowdfunding",
-                items: [
-                  { title: "ErgoRaffle" },
-                  { title: "Sigma Subscriptions" },
-                ],
               },
             ],
           },

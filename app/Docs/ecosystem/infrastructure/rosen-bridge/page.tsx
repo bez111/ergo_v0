@@ -59,15 +59,33 @@ export default function RosenBridgePage() {
       </TabsList>
       
       <TabsContent value="overview">
-      {/* Hero Section */}
+      {/* Hero Section (SigmaUSD style) */}
         <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-          Rosen Bridge: The Future of Cross-Chain Asset Transfers
+            Rosen Bridge
         </h1>
           <p className="text-xl text-gray-400 mb-6">
-            Rosen Bridge is an open-source protocol pioneering the future of cross-chain asset transfers. It's currently in beta, testing its first bridge to Cardano.
+            The future of cross-chain asset transfers. Open-source protocol for secure, efficient, and decentralized bridging between Ergo and other blockchains.
           </p>
-          <p className="text-lg text-gray-300 mb-6">
+          <div className="flex flex-wrap gap-4 mb-6">
+            <a
+              href="https://t.me/rosen_bridge"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+            >
+              <ExternalLink className="w-5 h-5 mr-2" /> Join Telegram
+            </a>
+            <Link
+              href="https://rosenbridge.io"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
+            >
+              <Globe className="w-5 h-5 mr-2" /> Visit Website
+            </Link>
+          </div>
+          <p className="text-lg text-gray-300">
             Rosen Bridge leverages Ergo's capabilities to facilitate secure and efficient coin and token transfers between Ergo and other blockchains, eliminating the need for smart contracts on other chains.
           </p>
         </div>
@@ -947,414 +965,575 @@ docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3</pre>
         </div>
       </TabsContent>
       <TabsContent value="guards">
-        <div className="max-w-3xl mx-auto py-8">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6">Rosen Guards</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            Rosen is an Ergo-centric bridge fortified with multi-layered security protection. In the initial layer, <b>Watchers</b> monitor network activities and report valid bridge-related events to the subsequent layer, <b>Guards</b>. These Guards then carefully process the reported events and execute required actions. In brief, Guards are dedicated to security maintenance and executing responses, while Watchers are focused on the ongoing monitoring of activities and transparent reporting.
+        {/* Hero Section */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            Rosen Guards
+          </h1>
+          <p className="text-xl text-gray-400 mb-6">
+            Guards are the backbone of Rosen Bridge security, processing events reported by Watchers and executing cross-chain actions. They operate with locked collateral and strict slashing rules to ensure trust and reliability.
           </p>
-
-          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Shield className="w-6 h-6 text-orange-400" /> Guard Set: Security & Collateral
-            </h2>
-            <p className="text-gray-300 mb-2">Guards are a federated group of entities managing the Rosen core. Their authority over Rosen is restricted through multisignature contracts and wallets. Failure or collusion of Guards will be tolerated while the majority of Guards are healthy. Each Guard has a reasonable amount of funds locked as collateral and will lose all their funds at once in case of malicious behaviour.</p>
-            <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
-              <li>Guards need to lock RSN as collateral.</li>
-              <li>Funds will be emitted to the Guard Set and involved Watchers in case of any successful bridge transfers.</li>
-              <li>Funds will be slashed/collected in case of malicious behavior.</li>
-              <li>When RSN emission has ended, all bridge fees will be collected in the RSN token.</li>
-              <li>Holding RSN will have special fee benefits for projects.</li>
-            </ul>
+          <div className="flex flex-wrap gap-4 mb-6">
+            <Link href="/Docs/ecosystem/infrastructure/rosen-bridge" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
+              <ChevronRight className="w-5 h-5 mr-2" /> Back to Rosen Bridge
+            </Link>
+            <a href="https://github.com/rosen-bridge" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
+              <GitBranch className="w-5 h-5 mr-2" /> Rosen GitHub
+            </a>
           </div>
-
+        </div>
+        {/* Overview Card */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Users className="w-6 h-6 text-cyan-400" /> Becoming a Guard
+            <Shield className="w-6 h-6 text-orange-400" /> Guard Set: Security & Collateral
           </h2>
-          <h4 className="font-semibold text-cyan-400 mb-2">Who can become a Guard?</h4>
-          <p className="text-gray-300 mb-2">Becoming a guard is effort-intensive and permission-based, starting with selected known entities and later admissions by the guard set. Guards buy and lock RSN tokens in a multisig wallet, with stakes lost for misconduct or inactivity.</p>
-          <h4 className="font-semibold text-cyan-400 mb-2">Who are the current Guards?</h4>
-          <p className="text-gray-300 mb-6">The Guard Set can be seen on <a href="https://rosen.tech" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline">rosen.tech</a></p>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Database className="w-6 h-6 text-yellow-400" /> How are transactions submitted to the target blockchain?
-          </h2>
-          <div className="mb-8">
-            <h4 className="font-semibold text-cyan-400 mb-2">The Rosen Bridge Guard Service facilitates transaction submissions across different blockchains. Here's how transactions are submitted to the target blockchain within this service:</h4>
-            <ol className="list-decimal pl-6 text-gray-300 mb-4">
-              <li>
-                <b>Event Processing:</b>
-                <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
-                  <li><b>Scanner & Extractor:</b> The system includes a blockchain scanner and data extractor that monitor the Ergo blockchain and Rosen Bridge for relevant events. These components fetch new blocks, looking for specific transaction patterns or events that need to be acted upon.</li>
-                  <li><b>Event Processor:</b> Each event detected by the extractor is processed to verify its authenticity and relevance. This process includes checks against predefined rules and conditions specific to the blockchain operations being monitored.</li>
-                </ul>
-              </li>
-              <li>
-                <b>Transaction Agreement and Execution:</b>
-                <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
-                  <li><b>TxAgreement:</b> For actions that require consensus or agreement (like cross-chain movements involving significant value), the Guard Service utilizes a multi-guard consensus mechanism. Each guard node independently verifies the transaction details and signals agreement.</li>
-                  <li><b>Transaction Processor:</b> Once consensus is reached, the Transaction Processor crafts the necessary blockchain transaction. This component is responsible for creating a valid and secure transaction that represents the agreed-upon action (like transferring assets between chains).</li>
-                  <li><b>MultiSig & TSS (Threshold Signature Scheme):</b> The final transaction is signed using multi-signature and threshold signature schemes to ensure security and trustworthiness. These cryptographic schemes help in securing transactions by requiring multiple signatures or a subset of signatures from a larger set to authorize a transaction.</li>
-                </ul>
-              </li>
-              <li>
-                <b>Blockchain Interaction:</b>
-                <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
-                  <li><b>BaseChain and Reward Services:</b> These services handle the actual interaction with the blockchain. They generate and verify payment transactions, interacting directly with the blockchain to submit the signed transactions.</li>
-                  <li>The services are designed to be flexible enough to support various blockchains (like Ergo and Cardano), which means that transaction formats, signing mechanisms, and interaction protocols are tailored to the specific requirements of each blockchain.</li>
-                </ul>
-              </li>
-              <li>
-                <b>Confirmation and Finalization:</b>
-                <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
-                  <li>After a transaction is submitted to the blockchain, it is monitored for confirmation. The system ensures that the transaction achieves a sufficient number of confirmations to be considered final and irreversible.</li>
-                  <li>The Transaction Processor also checks for successful transaction execution and handles any necessary follow-up actions or notifications.</li>
-                </ul>
-              </li>
-            </ol>
-            <div className="bg-cyan-900/30 border-l-4 border-cyan-400 p-4 mb-6 rounded">
-              <h4 className="font-bold text-cyan-300 mb-2 flex items-center gap-2"><Shield className="w-4 h-4" /> Summary</h4>
-              <p className="text-cyan-100 text-sm">The Guard Service from the Rosen Bridge project orchestrates the entire process from event detection on one blockchain through agreement and transaction crafting, to final submission and confirmation on another blockchain. This robust mechanism ensures that cross-chain transactions are executed securely and reliably, adhering to the consensus and operational rules of the involved blockchains.</p>
-            </div>
+          <p className="text-gray-300 mb-2">Guards are a federated group of entities managing the Rosen core. Their authority over Rosen is restricted through multisignature contracts and wallets. Failure or collusion of Guards will be tolerated while the majority of Guards are healthy. Each Guard has a reasonable amount of funds locked as collateral and will lose all their funds at once in case of malicious behaviour.</p>
+          <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
+            <li>Guards need to lock RSN as collateral.</li>
+            <li>Funds will be emitted to the Guard Set and involved Watchers in case of any successful bridge transfers.</li>
+            <li>Funds will be slashed/collected in case of malicious behavior.</li>
+            <li>When RSN emission has ended, all bridge fees will be collected in the RSN token.</li>
+            <li>Holding RSN will have special fee benefits for projects.</li>
+          </ul>
+        </div>
+        {/* Key Features Grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <Users className="w-5 h-5 text-cyan-400" /> Becoming a Guard
+            </h3>
+            <p className="text-gray-300 mb-2">Becoming a guard is effort-intensive and permission-based, starting with selected known entities and later admissions by the guard set. Guards buy and lock RSN tokens in a multisig wallet, with stakes lost for misconduct or inactivity.</p>
+            <p className="text-gray-300 mb-2">The Guard Set can be seen on <a href="https://rosen.tech" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline">rosen.tech</a></p>
           </div>
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <Database className="w-5 h-5 text-yellow-400" /> Transaction Submission
+            </h3>
+            <p className="text-gray-300 mb-2">Guards process events, reach consensus, and submit transactions to the target blockchain using multi-signature and threshold signature schemes. The system is designed for flexibility and security across multiple chains.</p>
+          </div>
+        </div>
+        {/* Technical Details Accordion */}
+        <div className="mb-8">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
+            <details className="group">
+              <summary className="cursor-pointer px-6 py-4 text-lg font-semibold flex items-center gap-4 select-none hover:text-cyan-400 group-open:text-cyan-400">
+                <span className="inline-block">
+                  <Shield className="w-8 h-8 text-cyan-400 transition-transform duration-300 group-open:rotate-90" />
+                </span>
+                <span>Technical Details</span>
+                <span className="ml-auto text-xs text-gray-400 group-open:text-cyan-400">Click to expand</span>
+              </summary>
+              <div className="px-6 pb-6 pt-2 text-gray-300 text-base">
+                <h4 className="font-semibold text-cyan-400 mb-2">Who can become a Guard?</h4>
+                <p className="text-gray-300 mb-4">Becoming a guard is effort-intensive and permission-based, starting with selected known entities and later admissions by the guard set. Guards buy and lock RSN tokens in a multisig wallet, with stakes lost for misconduct or inactivity.</p>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Who are the current Guards?</h4>
+                <p className="text-gray-300 mb-6">The Guard Set can be seen on <a href="https://rosen.tech" target="_blank" rel="noopener noreferrer" className="text-orange-400 underline">rosen.tech</a></p>
+
+                <h4 className="font-semibold text-cyan-400 mb-2">How are transactions submitted to the target blockchain?</h4>
+                <p className="text-gray-300 mb-4">The Rosen Bridge Guard Service facilitates transaction submissions across different blockchains. Here's how transactions are submitted to the target blockchain within this service:</p>
+                
+                <ol className="list-decimal pl-6 text-gray-300 mb-4">
+                  <li>
+                    <b>Event Processing:</b>
+                    <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
+                      <li><b>Scanner & Extractor:</b> The system includes a blockchain scanner and data extractor that monitor the Ergo blockchain and Rosen Bridge for relevant events. These components fetch new blocks, looking for specific transaction patterns or events that need to be acted upon.</li>
+                      <li><b>Event Processor:</b> Each event detected by the extractor is processed to verify its authenticity and relevance. This process includes checks against predefined rules and conditions specific to the blockchain operations being monitored.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Transaction Agreement and Execution:</b>
+                    <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
+                      <li><b>TxAgreement:</b> For actions that require consensus or agreement (like cross-chain movements involving significant value), the Guard Service utilizes a multi-guard consensus mechanism. Each guard node (participant in the Rosen Bridge Guard network) independently verifies the transaction details and signals agreement.</li>
+                      <li><b>Transaction Processor:</b> Once consensus is reached, the Transaction Processor crafts the necessary blockchain transaction. This component is responsible for creating a valid and secure transaction that represents the agreed-upon action (like transferring assets between chains).</li>
+                      <li><b>MultiSig & TSS (Threshold Signature Scheme):</b> The final transaction is signed using multi-signature and threshold signature schemes to ensure security and trustworthiness. These cryptographic schemes help in securing transactions by requiring multiple signatures or a subset of signatures from a larger set to authorize a transaction.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Blockchain Interaction:</b>
+                    <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
+                      <li><b>BaseChain and Reward Services:</b> These services handle the actual interaction with the blockchain. They generate and verify payment transactions, interacting directly with the blockchain to submit the signed transactions.</li>
+                      <li>The services are designed to be flexible enough to support various blockchains (like Ergo and Cardano as indicated in the components), which means that transaction formats, signing mechanisms, and interaction protocols are tailored to the specific requirements of each blockchain.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    <b>Confirmation and Finalization:</b>
+                    <ul className="list-disc pl-6 text-gray-400 text-sm mb-2">
+                      <li>After a transaction is submitted to the blockchain, it is monitored for confirmation. The system ensures that the transaction achieves a sufficient number of confirmations to be considered final and irreversible.</li>
+                      <li>The Transaction Processor also checks for successful transaction execution and handles any necessary follow-up actions or notifications.</li>
+                    </ul>
+                  </li>
+                </ol>
+                
+                <div className="bg-cyan-900/30 border-l-4 border-cyan-400 p-4 mb-6 rounded">
+                  <h4 className="font-bold text-cyan-300 mb-2 flex items-center gap-2"><Shield className="w-4 h-4" /> Summary</h4>
+                  <p className="text-cyan-100 text-sm">The Guard Service from the Rosen Bridge project orchestrates the entire process from event detection on one blockchain through agreement and transaction crafting, to final submission and confirmation on another blockchain. This robust mechanism ensures that cross-chain transactions are executed securely and reliably, adhering to the consensus and operational rules of the involved blockchains.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        {/* In a Nutshell */}
+        <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+          <h3 className="text-xl font-bold mb-4 text-white">In a Nutshell</h3>
+          <p className="text-gray-300 mb-4">Guards are the final line of defense in Rosen Bridge, ensuring that only valid, consensus-approved transactions are executed across chains. Their design combines strong economic incentives, slashing, and multi-signature security.</p>
         </div>
       </TabsContent>
       <TabsContent value="tokenomics">
-        <div className="max-w-3xl mx-auto py-8">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6">Tokenomics</h1>
-          <p className="text-lg text-gray-300 mb-8">
+        {/* Hero Section */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            Rosen Tokenomics
+          </h1>
+          <p className="text-xl text-gray-400 mb-6">
             Rosen Bridge is designed to bootstrap liquidity across multiple ecosystems. The Rosen Token serves as a sybil resistance mechanism for the Rosen framework, a fee distribution mechanism, and means to access services of the Rosen Bridge.
           </p>
-
-          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Coins className="w-6 h-6 text-orange-400" /> Collateral & Participation
-            </h2>
-            <ul className="list-disc pl-6 text-gray-300 mb-2">
-              <li>Watchers are required to put collateral in RSN and ERG by staking, which allows them to acquire reporting permits.</li>
-              <li>Guards need to lock RSN as collateral.</li>
-              <li>Funds will be emitted to the Guard Set and involved Watchers in case of any successful bridge transfers.</li>
-              <li>Funds will be slashed/collected in case of malicious behavior.</li>
-              <li>When RSN emission has ended, all bridge fees will be collected in the RSN token.</li>
-              <li>Holding RSN will have special fee benefits for projects.</li>
-            </ul>
-            <p className="text-gray-300 mt-2">Any user can join as a Watcher given they meet the collateral requirements needed to participate, and earn rewards for their services.</p>
+          <div className="flex flex-wrap gap-4 mb-6">
+            <Link href="/Docs/ecosystem/infrastructure/rosen-bridge" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
+              <ChevronRight className="w-5 h-5 mr-2" /> Back to Rosen Bridge
+            </Link>
+            <a href="https://github.com/rosen-bridge" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
+              <GitBranch className="w-5 h-5 mr-2" /> Rosen GitHub
+            </a>
           </div>
-
+        </div>
+        {/* Overview Card */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Info className="w-6 h-6 text-cyan-400" /> Overview
+            <Coins className="w-6 h-6 text-orange-400" /> Collateral & Participation
           </h2>
-          <ul className="list-disc pl-6 text-gray-300 mb-8">
-            <li><b>Token Name:</b> Rosen Bridge Token</li>
-            <li><b>Token Ticker:</b> RSN</li>
-            <li><b>Max Supply:</b> 1,000,000,000</li>
-            <li><b>Initial Liquidity Bootstrapping:</b> 100,000,000</li>
+          <ul className="list-disc pl-6 text-gray-300 mb-2">
+            <li>Watchers are required to put collateral in RSN and ERG by staking, which allows them to acquire reporting permits.</li>
+            <li>Guards need to lock RSN as collateral.</li>
+            <li>Funds will be emitted to the Guard Set and involved Watchers in case of any successful bridge transfers.</li>
+            <li>Funds will be slashed/collected in case of malicious behavior.</li>
+            <li>When RSN emission has ended, all bridge fees will be collected in the RSN token.</li>
+            <li>Holding RSN will have special fee benefits for projects.</li>
           </ul>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Database className="w-6 h-6 text-yellow-400" /> Breakdown
-          </h2>
-          <div className="overflow-x-auto mb-8">
-            <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
-              <thead className="bg-neutral-800">
-                <tr>
-                  <th className="px-4 py-2 text-left">Token Allocation</th>
-                  <th className="px-4 py-2 text-left">Number of Tokens</th>
-                  <th className="px-4 py-2 text-left">% of Total Supply</th>
-                  <th className="px-4 py-2 text-left">Distribution Method</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="border-t border-neutral-700">
-                  <td className="px-4 py-2">Initial Liquidity Bootstrapping (Ergo and Cardano)</td>
-                  <td className="px-4 py-2">100,000,000</td>
-                  <td className="px-4 py-2">10%</td>
-                  <td className="px-4 py-2">Liquidity pool and ISPO</td>
-                </tr>
-                <tr className="border-t border-neutral-700">
-                  <td className="px-4 py-2">Future Liquidity Bootstrapping (New Chains)</td>
-                  <td className="px-4 py-2">385,000,000</td>
-                  <td className="px-4 py-2">38.5%</td>
-                  <td className="px-4 py-2">Liquidity on new chains</td>
-                </tr>
-                <tr className="border-t border-neutral-700">
-                  <td className="px-4 py-2">Event-Based Emission (Rewards)</td>
-                  <td className="px-4 py-2">250,000,000</td>
-                  <td className="px-4 py-2">25%</td>
-                  <td className="px-4 py-2">Event-based</td>
-                </tr>
-                <tr className="border-t border-neutral-700">
-                  <td className="px-4 py-2">Passive Staking</td>
-                  <td className="px-4 py-2">25,000,000</td>
-                  <td className="px-4 py-2">2.5%</td>
-                  <td className="px-4 py-2">Staking rewards</td>
-                </tr>
-                <tr className="border-t border-neutral-700">
-                  <td className="px-4 py-2">Team Budget</td>
-                  <td className="px-4 py-2">105,000,000</td>
-                  <td className="px-4 py-2">10.5%</td>
-                  <td className="px-4 py-2">48-Months vested</td>
-                </tr>
-                <tr className="border-t border-neutral-700">
-                  <td className="px-4 py-2">Treasury</td>
-                  <td className="px-4 py-2">105,000,000</td>
-                  <td className="px-4 py-2">10.5%</td>
-                  <td className="px-4 py-2">48-Months vested</td>
-                </tr>
-                <tr className="border-t border-neutral-700">
-                  <td className="px-4 py-2">Ergo Foundation</td>
-                  <td className="px-4 py-2">30,000,000</td>
-                  <td className="px-4 py-2">3%</td>
-                  <td className="px-4 py-2">48-Months vested</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <DollarSign className="w-6 h-6 text-green-400" /> Funding
-          </h2>
-          <p className="text-gray-300 mb-4">Rosen Bridge is entirely self-funded, with no private sales, venture capital, or SAFT agreements involved, with all contracts being financed out of pocket as there is no emission yet. The core team consists of 6 main developers.</p>
-          <p className="text-gray-300 mb-4">Initial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP. There were no bots or front-running involved.</p>
-          <p className="text-gray-300 mb-4">We collaborated with Zengate for Catalyst, as it involves Cardano politics, an area that falls within their realm of expertise.</p>
-          <p className="text-gray-300 mb-8">We have successfully completed and received funds from milestone 3 and have submitted milestone 4 for F10 funding.</p>
-
-          <div className="bg-cyan-900/30 border-l-4 border-cyan-400 p-4 mb-6 rounded">
-            <h4 className="font-bold text-cyan-300 mb-2 flex items-center gap-2"><Info className="w-4 h-4" /> Why is the RSN token needed?</h4>
-            <ul className="list-disc pl-6 text-cyan-100 text-sm mb-2">
-              <li>Capital Formation. Development has costs. Also need to form liquidity on the market.</li>
-              <li>Creates incentives (event-based emission).</li>
+          <p className="text-gray-300 mt-2">Any user can join as a Watcher given they meet the collateral requirements needed to participate, and earn rewards for their services.</p>
+        </div>
+        {/* Key Features Grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <Info className="w-5 h-5 text-cyan-400" /> Token Overview
+            </h3>
+            <ul className="list-disc pl-6 text-gray-300 mb-2">
+              <li><b>Token Name:</b> Rosen Bridge Token</li>
+              <li><b>Token Ticker:</b> RSN</li>
+              <li><b>Max Supply:</b> 1,000,000,000</li>
+              <li><b>Initial Liquidity Bootstrapping:</b> 100,000,000</li>
             </ul>
-            <p className="text-cyan-100 text-sm">See this answer from Armeanio in the Weekly Update & AMA - December 14th 2023.</p>
           </div>
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <DollarSign className="w-5 h-5 text-green-400" /> Funding Model
+            </h3>
+            <p className="text-gray-300 mb-2">Rosen Bridge is entirely self-funded, with no private sales, venture capital, or SAFT agreements involved. All contracts are financed out of pocket as there is no emission yet.</p>
+            <p className="text-gray-300 mb-2">The core team consists of 6 main developers.</p>
+          </div>
+        </div>
+        {/* Technical Details Accordion */}
+        <div className="mb-8">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
+            <details className="group">
+              <summary className="cursor-pointer px-6 py-4 text-lg font-semibold flex items-center gap-4 select-none hover:text-cyan-400 group-open:text-cyan-400">
+                <span className="inline-block">
+                  <Database className="w-8 h-8 text-cyan-400 transition-transform duration-300 group-open:rotate-90" />
+                </span>
+                <span>Detailed Breakdown & Funding</span>
+                <span className="ml-auto text-xs text-gray-400 group-open:text-cyan-400">Click to expand</span>
+              </summary>
+              <div className="px-6 pb-6 pt-2 text-gray-300 text-base">
+                <h4 className="font-semibold text-cyan-400 mb-2">Token Breakdown</h4>
+                <div className="overflow-x-auto mb-4">
+                  <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
+                    <thead className="bg-neutral-800">
+                      <tr>
+                        <th className="px-4 py-2 text-left">Token Allocation</th>
+                        <th className="px-4 py-2 text-left">Number of Tokens</th>
+                        <th className="px-4 py-2 text-left">% of Total Supply</th>
+                        <th className="px-4 py-2 text-left">Distribution Method</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr className="border-t border-neutral-700">
+                        <td className="px-4 py-2">Initial Liquidity Bootstrapping (Ergo and Cardano)</td>
+                        <td className="px-4 py-2">100,000,000</td>
+                        <td className="px-4 py-2">10%</td>
+                        <td className="px-4 py-2">Liquidity pool and ISPO</td>
+                      </tr>
+                      <tr className="border-t border-neutral-700">
+                        <td className="px-4 py-2">Future Liquidity Bootstrapping (New Chains)</td>
+                        <td className="px-4 py-2">385,000,000</td>
+                        <td className="px-4 py-2">38.5%</td>
+                        <td className="px-4 py-2">Liquidity on new chains</td>
+                      </tr>
+                      <tr className="border-t border-neutral-700">
+                        <td className="px-4 py-2">Event-Based Emission (Rewards)</td>
+                        <td className="px-4 py-2">250,000,000</td>
+                        <td className="px-4 py-2">25%</td>
+                        <td className="px-4 py-2">Event-based</td>
+                      </tr>
+                      <tr className="border-t border-neutral-700">
+                        <td className="px-4 py-2">Passive Staking</td>
+                        <td className="px-4 py-2">25,000,000</td>
+                        <td className="px-4 py-2">2.5%</td>
+                        <td className="px-4 py-2">Staking rewards</td>
+                      </tr>
+                      <tr className="border-t border-neutral-700">
+                        <td className="px-4 py-2">Team Budget</td>
+                        <td className="px-4 py-2">105,000,000</td>
+                        <td className="px-4 py-2">10.5%</td>
+                        <td className="px-4 py-2">48-Months vested</td>
+                      </tr>
+                      <tr className="border-t border-neutral-700">
+                        <td className="px-4 py-2">Treasury</td>
+                        <td className="px-4 py-2">105,000,000</td>
+                        <td className="px-4 py-2">10.5%</td>
+                        <td className="px-4 py-2">48-Months vested</td>
+                      </tr>
+                      <tr className="border-t border-neutral-700">
+                        <td className="px-4 py-2">Ergo Foundation</td>
+                        <td className="px-4 py-2">30,000,000</td>
+                        <td className="px-4 py-2">3%</td>
+                        <td className="px-4 py-2">48-Months vested</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Funding Details</h4>
+                <p className="text-gray-300 mb-4">Rosen Bridge is entirely self-funded, with no private sales, venture capital, or SAFT agreements involved, with all contracts being financed out of pocket as there is no emission yet. The core team consists of 6 main developers.</p>
+                <p className="text-gray-300 mb-4">Initial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP. There were no bots or front-running involved.</p>
+                <p className="text-gray-300 mb-4">We collaborated with Zengate for Catalyst, as it involves Cardano politics, an area that falls within their realm of expertise.</p>
+                <p className="text-gray-300 mb-6">We have successfully completed and received funds from milestone 3 and have submitted milestone 4 for F10 funding.</p>
+                
+                <div className="bg-cyan-900/30 border-l-4 border-cyan-400 p-4 mb-6 rounded">
+                  <h4 className="font-bold text-cyan-300 mb-2 flex items-center gap-2"><Info className="w-4 h-4" /> Why is the RSN token needed?</h4>
+                  <ul className="list-disc pl-6 text-cyan-100 text-sm mb-2">
+                    <li>Capital Formation. Development has costs. Also need to form liquidity on the market.</li>
+                    <li>Creates incentives (event-based emission).</li>
+                  </ul>
+                  <p className="text-cyan-100 text-sm">See this answer from Armeanio in the Weekly Update & AMA - December 14th 2023.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        {/* In a Nutshell */}
+        <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+          <h3 className="text-xl font-bold mb-4 text-white">In a Nutshell</h3>
+          <p className="text-gray-300 mb-4">The RSN token serves as the economic backbone of Rosen Bridge, providing sybil resistance, fee distribution, and access control. With a total supply of 1 billion tokens and a focus on liquidity bootstrapping across multiple chains, RSN creates sustainable incentives for network participants.</p>
         </div>
       </TabsContent>
       <TabsContent value="team">
-        <div className="max-w-3xl mx-auto py-8">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6">Rosen Team</h1>
-          <p className="text-lg text-gray-300 mb-8">
+        {/* Hero Section */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            Rosen Team
+          </h1>
+          <p className="text-xl text-gray-400 mb-6">
             The Rosen team is comprised of 8 full-time developers and 2-3 part-time developers. Some frontend and UI tasks are outsourced. The team's strength is further enhanced by the support of several advisors.
           </p>
-
-          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <Users className="w-6 h-6 text-orange-400" /> Team & Funding
-            </h2>
-            <ul className="list-disc pl-6 text-gray-300 mb-2">
-              <li>Rosen Bridge operates entirely on self-funding, with no involvement of private sales, venture capital, or SAFT agreements.</li>
-              <li>All contracts are financed out of pocket as there is no emission yet. The core team is made up of 6 main developers.</li>
-              <li>Initial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP. This process was carried out without the involvement of bots or front-running. (Refer to the Tokenomics section for more details)</li>
-              <li>A collaboration was established with Zengate for Catalyst, as it involves Cardano politics, an area that falls within their realm of expertise.</li>
-              <li>The team has successfully completed and received funds from milestone 3 and has submitted milestone 4 for F10 funding.</li>
-            </ul>
+          <div className="flex flex-wrap gap-4 mb-6">
+            <Link href="/Docs/ecosystem/infrastructure/rosen-bridge" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
+              <ChevronRight className="w-5 h-5 mr-2" /> Back to Rosen Bridge
+            </Link>
+            <a href="https://github.com/rosen-bridge" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
+              <GitBranch className="w-5 h-5 mr-2" /> Rosen GitHub
+            </a>
           </div>
-
+        </div>
+        {/* Overview Card */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Info className="w-6 h-6 text-cyan-400" /> History
+            <Users className="w-6 h-6 text-orange-400" /> Team & Funding
           </h2>
-          <p className="text-gray-300 mb-4">The Rosen Bridge team was initially assembled during ERGOHACK I. Under the mentorship of <b>@mhs_sam</b>, team members <b>@RaaCT0R</b>, <b>@vorujack</b>, and <b>@zargarzadeh</b> developed ErgoRaffle. This marked the beginning of their significant contributions to the ecosystem, which include projects like minotaur-wallet and ergo-faucet. The concept of a bridge has been a consistent focus for the team since 2021, initially with ErgoGravity, an Ergo connector to the Wormhole bridge. However, after the Wormhole bridge was compromised, resulting in a loss of $325m, the team shifted their focus towards developing a bridge centered around Ergo.</p>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Users className="w-6 h-6 text-yellow-400" /> Founders
-          </h2>
-          <ul className="list-disc pl-6 text-gray-300 mb-6">
-            <li><b>Mohammad Hasan Samadani (mhs_sam)</b> — an honourary Ergo Foundation board member and a founder of Rosen Bridge, has a PhD in computer science and over 12 years of experience in security and software development. He has made significant contributions to the Ergo mining infrastructure, Stratum server, and ergopool. His expertise in product ownership, research, and team leadership has been instrumental in the development of Rosen Bridge.</li>
-            <li><b>Joseph Armeanio</b> — a board member and director of the Ergo Foundation and a founder of Rosen Bridge, has been involved in the crypto industry since 2013. He was a partner CIO at Big Bear Investments and has been on the board of the Universal Education Foundation, a 501(c)3 organisation, since 2008. Joseph's passion for counter-economic frameworks and tools for social good drives his work in creating partnerships in the crypto industry, educational partnerships, and research opportunities, all while promoting the adoption of Ergo tooling in the public and non-profit sectors.</li>
+          <ul className="list-disc pl-6 text-gray-300 mb-2">
+            <li>Rosen Bridge operates entirely on self-funding, with no involvement of private sales, venture capital, or SAFT agreements.</li>
+            <li>All contracts are financed out of pocket as there is no emission yet. The core team is made up of 6 main developers.</li>
+            <li>Initial liquidity for Ergo, accounting for 5%, was deposited on the Spectrum LP. This process was carried out without the involvement of bots or front-running.</li>
+            <li>A collaboration was established with Zengate for Catalyst, as it involves Cardano politics, an area that falls within their realm of expertise.</li>
+            <li>The team has successfully completed and received funds from milestone 3 and has submitted milestone 4 for F10 funding.</li>
           </ul>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Users className="w-6 h-6 text-green-400" /> Developers
-          </h2>
-          <ul className="list-disc pl-6 text-gray-300 mb-6">
-            <li><b>Mohammad Kermani</b> — software engineer with over 7 years of experience, including five years in the industry. He enjoys the challenge of building user-centric applications and is always eager to learn new technologies.</li>
-            <li><b>Fateme Rahmani</b> — dedicated developer on the Rosen Bridge team who's previously worked on the Ergo Raffle backend.</li>
-            <li><b>Moein Zargarzadeh</b> — previous contributions include ergo-faucet and Ergo Raffle.</li>
-            <li><b>SepehrGanji</b> — previously contributed to FleetSDK, GraphQL.</li>
-            <li><b>RaaCT0R</b></li>
-            <li><b>Esmaeil Mohammed (vorujack)</b> — previously contributed to minotaur-wallet.</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Info className="w-6 h-6 text-orange-400" /> Is Rosen Bridge Affiliated with Ergo or The Ergo Foundation?
-          </h2>
-          <div className="bg-yellow-900/30 border-l-4 border-yellow-400 p-4 mb-6 rounded">
-            <p className="text-yellow-100 text-sm mb-2">Rosen Bridge, although initiated by members of the Ergo Foundation, operates independently. The Ergo Foundation does not exercise any managerial or controlling influence over Rosen Bridge. However, the Foundation has provided support to Rosen Bridge in the form of grants, a common practice for projects within the ecosystem. The Foundation is also set to receive 3% of the total supply of RSN. For more details, refer to the Tokenomics section.</p>
+        </div>
+        {/* Key Features Grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <Info className="w-5 h-5 text-cyan-400" /> Team Structure
+            </h3>
+            <p className="text-gray-300 mb-2">The Rosen team consists of 8 full-time developers and 2-3 part-time developers. Some frontend and UI tasks are outsourced. The team's strength is further enhanced by the support of several advisors.</p>
           </div>
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <DollarSign className="w-5 h-5 text-green-400" /> Self-Funded
+            </h3>
+            <p className="text-gray-300 mb-2">Rosen Bridge operates entirely on self-funding, with no involvement of private sales, venture capital, or SAFT agreements. All contracts are financed out of pocket.</p>
+          </div>
+        </div>
+        {/* Technical Details Accordion */}
+        <div className="mb-8">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
+            <details className="group">
+              <summary className="cursor-pointer px-6 py-4 text-lg font-semibold flex items-center gap-4 select-none hover:text-cyan-400 group-open:text-cyan-400">
+                <span className="inline-block">
+                  <Users className="w-8 h-8 text-cyan-400 transition-transform duration-300 group-open:rotate-90" />
+                </span>
+                <span>Team History & Members</span>
+                <span className="ml-auto text-xs text-gray-400 group-open:text-cyan-400">Click to expand</span>
+              </summary>
+              <div className="px-6 pb-6 pt-2 text-gray-300 text-base">
+                <h4 className="font-semibold text-cyan-400 mb-2">History</h4>
+                <p className="text-gray-300 mb-4">The Rosen Bridge team was initially assembled during ERGOHACK I. Under the mentorship of <b>@mhs_sam</b>, team members <b>@RaaCT0R</b>, <b>@vorujack</b>, and <b>@zargarzadeh</b> developed ErgoRaffle. This marked the beginning of their significant contributions to the ecosystem, which include projects like minotaur-wallet and ergo-faucet. The concept of a bridge has been a consistent focus for the team since 2021, initially with ErgoGravity, an Ergo connector to the Wormhole bridge. However, after the Wormhole bridge was compromised, resulting in a loss of $325m, the team shifted their focus towards developing a bridge centered around Ergo.</p>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Founders</h4>
+                <ul className="list-disc pl-6 text-gray-300 mb-6">
+                  <li><b>Mohammad Hasan Samadani (mhs_sam)</b> — an honourary Ergo Foundation board member and a founder of Rosen Bridge, has a PhD in computer science and over 12 years of experience in security and software development. He has made significant contributions to the Ergo mining infrastructure, Stratum server, and ergopool. His expertise in product ownership, research, and team leadership has been instrumental in the development of Rosen Bridge.</li>
+                  <li><b>Joseph Armeanio</b> — a board member and director of the Ergo Foundation and a founder of Rosen Bridge, has been involved in the crypto industry since 2013. He was a partner CIO at Big Bear Investments and has been on the board of the Universal Education Foundation, a 501(c)3 organisation, since 2008. Joseph's passion for counter-economic frameworks and tools for social good drives his work in creating partnerships in the crypto industry, educational partnerships, and research opportunities, all while promoting the adoption of Ergo tooling in the public and non-profit sectors.</li>
+                </ul>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Developers</h4>
+                <ul className="list-disc pl-6 text-gray-300 mb-6">
+                  <li><b>Mohammad Kermani</b> — software engineer with over 7 years of experience, including five years in the industry. He enjoys the challenge of building user-centric applications and is always eager to learn new technologies.</li>
+                  <li><b>Fateme Rahmani</b> — dedicated developer on the Rosen Bridge team who's previously worked on the Ergo Raffle backend.</li>
+                  <li><b>Moein Zargarzadeh</b> — previous contributions include ergo-faucet and Ergo Raffle.</li>
+                  <li><b>SepehrGanji</b> — previously contributed to FleetSDK, GraphQL.</li>
+                  <li><b>RaaCT0R</b></li>
+                  <li><b>Esmaeil Mohammed (vorujack)</b> — previously contributed to minotaur-wallet.</li>
+                </ul>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Is Rosen Bridge Affiliated with Ergo or The Ergo Foundation?</h4>
+                <div className="bg-yellow-900/30 border-l-4 border-yellow-400 p-4 mb-6 rounded">
+                  <p className="text-yellow-100 text-sm mb-2">Rosen Bridge, although initiated by members of the Ergo Foundation, operates independently. The Ergo Foundation does not exercise any managerial or controlling influence over Rosen Bridge. However, the Foundation has provided support to Rosen Bridge in the form of grants, a common practice for projects within the ecosystem. The Foundation is also set to receive 3% of the total supply of RSN. For more details, refer to the Tokenomics section.</p>
+                </div>
+              </div>
+            </details>
+          </div>
+        </div>
+        {/* In a Nutshell */}
+        <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+          <h3 className="text-xl font-bold mb-4 text-white">In a Nutshell</h3>
+          <p className="text-gray-300 mb-4">The Rosen team brings together experienced developers and founders with deep expertise in blockchain technology and the Ergo ecosystem. Operating independently while maintaining strong ties to the Ergo Foundation, the team has built a self-funded, community-driven bridge solution.</p>
         </div>
       </TabsContent>
       <TabsContent value="uses">
-        <div className="max-w-3xl mx-auto py-8">
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6">Rosen Bridge: Connecting Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain</h1>
-          <p className="text-lg text-gray-300 mb-8">
-            The Rosen Bridge enables seamless interaction between the Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain blockchains. This bridge doesn't facilitate direct swaps between native tokens. Instead, it allows users to convert:
+        {/* Hero Section */}
+        <div className="mb-12">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            Rosen Bridge: Connecting Multiple Blockchains
+          </h1>
+          <p className="text-xl text-gray-400 mb-6">
+            The Rosen Bridge enables seamless interaction between the Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain blockchains. This bridge doesn't facilitate direct swaps between native tokens. Instead, it allows users to convert tokens across chains.
           </p>
-          <ul className="list-disc pl-6 text-gray-300 mb-6">
+          <div className="flex flex-wrap gap-4 mb-6">
+            <Link href="/Docs/ecosystem/infrastructure/rosen-bridge" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
+              <ChevronRight className="w-5 h-5 mr-2" /> Back to Rosen Bridge
+            </Link>
+            <a href="https://github.com/rosen-bridge" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
+              <GitBranch className="w-5 h-5 mr-2" /> Rosen GitHub
+            </a>
+          </div>
+        </div>
+        {/* Overview Card */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Coins className="w-6 h-6 text-orange-400" /> Supported Conversions
+          </h2>
+          <ul className="list-disc pl-6 text-gray-300 mb-2">
             <li>ADA into <b>rsADA</b> on the Ergo blockchain</li>
             <li>ERG into <b>rsERG</b> on the Cardano blockchain</li>
             <li>BTC into <b>rsBTC</b> on both Ergo and Cardano blockchains</li>
             <li>ETH into <b>rsETH</b> on both Ergo and Cardano blockchains</li>
             <li>BNB into <b>rsBNB</b> on both Ergo and Cardano blockchains (Soon!)</li>
           </ul>
-          <p className="text-gray-300 mb-8">This functionality opens up new possibilities for token holders across these ecosystems.</p>
-
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Coins className="w-6 h-6 text-orange-400" /> Supported Tokens
-        </h2>
-          <p className="text-gray-300 mb-4">You can see a full list of locked assets <a href="#" className="text-cyan-400 underline">here</a>.</p>
-
-          <Accordion type="multiple" className="mb-8">
-            <AccordionItem value="ergo">
-              <AccordionTrigger className="text-lg font-semibold text-orange-300">Ergo Network</AccordionTrigger>
+          <p className="text-gray-300 mt-2">This functionality opens up new possibilities for token holders across these ecosystems.</p>
+        </div>
+        {/* Key Features Grid */}
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <Zap className="w-5 h-5 text-cyan-400" /> Ergo Ecosystem
+            </h3>
+            <p className="text-gray-300 mb-2">Use Ergodex to acquire native tokens like rsADA, rsBTC, rsETH, rsBNB, or rsHOSKY. Access decentralized marketplace, peer-to-peer bonds, lending, privacy features, and options trading.</p>
+          </div>
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <Rocket className="w-5 h-5 text-green-400" /> Future Developments
+            </h3>
+            <p className="text-gray-300 mb-2">As the bridge continues to evolve, we anticipate more integrations and offerings involving rsADA, rsERG, rsBTC, rsETH, rsBNB, and other bridged tokens across all five ecosystems.</p>
+          </div>
+        </div>
+        {/* Technical Details Accordion */}
+        <div className="mb-8">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
+            <details className="group">
+              <summary className="cursor-pointer px-6 py-4 text-lg font-semibold flex items-center gap-4 select-none hover:text-cyan-400 group-open:text-cyan-400">
+                <span className="inline-block">
+                  <Target className="w-8 h-8 text-cyan-400 transition-transform duration-300 group-open:rotate-90" />
+                </span>
+                <span>Supported Tokens & Ecosystem Opportunities</span>
+                <span className="ml-auto text-xs text-gray-400 group-open:text-cyan-400">Click to expand</span>
+              </summary>
+              <div className="px-6 pb-6 pt-2 text-gray-300 text-base">
+                <h4 className="font-semibold text-cyan-400 mb-2">Supported Tokens</h4>
+                <p className="text-gray-300 mb-4">You can see a full list of locked assets <a href="#" className="text-cyan-400 underline">here</a>.</p>
+                
+                <Accordion type="multiple" className="mb-8">
+                  <AccordionItem value="ergo">
+                    <AccordionTrigger className="text-lg font-semibold text-orange-300">Ergo Network</AccordionTrigger>
             <AccordionContent>
-                <div className="overflow-x-auto mb-4">
-                  <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
-                    <thead className="bg-neutral-800">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Token</th>
-                        <th className="px-4 py-2 text-left">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">ERG</td><td className="px-4 py-2">Native Ergo token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">SigUSD / SigRSV</td><td className="px-4 py-2">Ergo stablecoin and reserve</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">RSN</td><td className="px-4 py-2">Rosen Bridge token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">COMET</td><td className="px-4 py-2">Ergo ecosystem token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">SPF</td><td className="px-4 py-2">Spectrum Finance token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">AHT</td><td className="px-4 py-2">ergouactions.org</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">Bober</td><td className="px-4 py-2">Meme Coin</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">COS</td><td className="px-4 py-2">Cup of Sugar</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">EPOS</td><td className="px-4 py-2">tabbypos Point of sale</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">ErgOne</td><td className="px-4 py-2">ErgOne</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">GIF</td><td className="px-4 py-2">GreasyCex</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">GluonW GAU</td><td className="px-4 py-2">Gluon</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">GluonW GAUC</td><td className="px-4 py-2">Gluon</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">MEW</td><td className="px-4 py-2">MewFinance</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">Paideia</td><td className="px-4 py-2">DAO Toolkit</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">QUACKS</td><td className="px-4 py-2">Duckpools (Lending)</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">Troll</td><td className="px-4 py-2">New supported token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">WALRUS</td><td className="px-4 py-2">New supported token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">CYPX</td><td className="px-4 py-2">Cyberverse</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                      <div className="overflow-x-auto mb-4">
+                        <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
+                          <thead className="bg-neutral-800">
+                            <tr>
+                              <th className="px-4 py-2 text-left">Token</th>
+                              <th className="px-4 py-2 text-left">Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">ERG</td><td className="px-4 py-2">Native Ergo token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">SigUSD / SigRSV</td><td className="px-4 py-2">Ergo stablecoin and reserve</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">RSN</td><td className="px-4 py-2">Rosen Bridge token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">COMET</td><td className="px-4 py-2">Ergo ecosystem token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">SPF</td><td className="px-4 py-2">Spectrum Finance token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">AHT</td><td className="px-4 py-2">ergouactions.org</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">Bober</td><td className="px-4 py-2">Meme Coin</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">COS</td><td className="px-4 py-2">Cup of Sugar</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">EPOS</td><td className="px-4 py-2">tabbypos Point of sale</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">ErgOne</td><td className="px-4 py-2">ErgOne</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">GIF</td><td className="px-4 py-2">GreasyCex</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">GluonW GAU</td><td className="px-4 py-2">Gluon</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">GluonW GAUC</td><td className="px-4 py-2">Gluon</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">MEW</td><td className="px-4 py-2">MewFinance</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">Paideia</td><td className="px-4 py-2">DAO Toolkit</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">QUACKS</td><td className="px-4 py-2">Duckpools (Lending)</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">Troll</td><td className="px-4 py-2">New supported token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">WALRUS</td><td className="px-4 py-2">New supported token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">CYPX</td><td className="px-4 py-2">Cyberverse</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
             </AccordionContent>
           </AccordionItem>
-            <AccordionItem value="cardano">
-              <AccordionTrigger className="text-lg font-semibold text-cyan-300">Cardano Network</AccordionTrigger>
+                  <AccordionItem value="cardano">
+                    <AccordionTrigger className="text-lg font-semibold text-cyan-300">Cardano Network</AccordionTrigger>
             <AccordionContent>
-                <div className="overflow-x-auto mb-4">
-                  <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
-                    <thead className="bg-neutral-800">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Token</th>
-                        <th className="px-4 py-2 text-left">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">ADA</td><td className="px-4 py-2">Native Cardano token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">Hosky</td><td className="px-4 py-2">Cardano meme token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">NIKEPIG</td><td className="px-4 py-2">Cardano meme token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">SUGAR</td><td className="px-4 py-2">New supported token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">BANA</td><td className="px-4 py-2">New supported token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">O</td><td className="px-4 py-2">New supported token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">DIS</td><td className="px-4 py-2">New supported token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">sOADA</td><td className="px-4 py-2">New supported token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">OADA</td><td className="px-4 py-2">New supported token</td></tr>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">MNT</td><td className="px-4 py-2">New supported token</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                      <div className="overflow-x-auto mb-4">
+                        <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
+                          <thead className="bg-neutral-800">
+                            <tr>
+                              <th className="px-4 py-2 text-left">Token</th>
+                              <th className="px-4 py-2 text-left">Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">ADA</td><td className="px-4 py-2">Native Cardano token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">Hosky</td><td className="px-4 py-2">Cardano meme token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">NIKEPIG</td><td className="px-4 py-2">Cardano meme token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">SUGAR</td><td className="px-4 py-2">New supported token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">BANA</td><td className="px-4 py-2">New supported token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">O</td><td className="px-4 py-2">New supported token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">DIS</td><td className="px-4 py-2">New supported token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">sOADA</td><td className="px-4 py-2">New supported token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">OADA</td><td className="px-4 py-2">New supported token</td></tr>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">MNT</td><td className="px-4 py-2">New supported token</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
             </AccordionContent>
           </AccordionItem>
-            <AccordionItem value="bitcoin">
-              <AccordionTrigger className="text-lg font-semibold text-yellow-300">Bitcoin Network</AccordionTrigger>
+                  <AccordionItem value="bitcoin">
+                    <AccordionTrigger className="text-lg font-semibold text-yellow-300">Bitcoin Network</AccordionTrigger>
             <AccordionContent>
-                <div className="overflow-x-auto mb-4">
-                  <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
-                    <thead className="bg-neutral-800">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Token</th>
-                        <th className="px-4 py-2 text-left">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">BTC</td><td className="px-4 py-2">Native Bitcoin token</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                      <div className="overflow-x-auto mb-4">
+                        <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
+                          <thead className="bg-neutral-800">
+                            <tr>
+                              <th className="px-4 py-2 text-left">Token</th>
+                              <th className="px-4 py-2 text-left">Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">BTC</td><td className="px-4 py-2">Native Bitcoin token</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
             </AccordionContent>
           </AccordionItem>
-            <AccordionItem value="ethereum">
-              <AccordionTrigger className="text-lg font-semibold text-purple-300">Ethereum Network</AccordionTrigger>
+                  <AccordionItem value="ethereum">
+                    <AccordionTrigger className="text-lg font-semibold text-purple-300">Ethereum Network</AccordionTrigger>
             <AccordionContent>
-                <div className="overflow-x-auto mb-4">
-                  <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
-                    <thead className="bg-neutral-800">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Token</th>
-                        <th className="px-4 py-2 text-left">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">ETH</td><td className="px-4 py-2">Native Ethereum token</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                      <div className="overflow-x-auto mb-4">
+                        <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
+                          <thead className="bg-neutral-800">
+                            <tr>
+                              <th className="px-4 py-2 text-left">Token</th>
+                              <th className="px-4 py-2 text-left">Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">ETH</td><td className="px-4 py-2">Native Ethereum token</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
             </AccordionContent>
           </AccordionItem>
-            <AccordionItem value="bsc">
-              <AccordionTrigger className="text-lg font-semibold text-yellow-400">Binance Smart Chain Network</AccordionTrigger>
+                  <AccordionItem value="bsc">
+                    <AccordionTrigger className="text-lg font-semibold text-yellow-400">Binance Smart Chain Network</AccordionTrigger>
             <AccordionContent>
-                <div className="overflow-x-auto mb-4">
-                  <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
-                    <thead className="bg-neutral-800">
-                      <tr>
-                        <th className="px-4 py-2 text-left">Token</th>
-                        <th className="px-4 py-2 text-left">Description</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-t border-neutral-700"><td className="px-4 py-2">BNB</td><td className="px-4 py-2">Native Binance Smart Chain token</td></tr>
-                    </tbody>
-                  </table>
-                </div>
+                      <div className="overflow-x-auto mb-4">
+                        <table className="min-w-full text-sm text-gray-300 border border-neutral-700 rounded-xl overflow-hidden">
+                          <thead className="bg-neutral-800">
+                            <tr>
+                              <th className="px-4 py-2 text-left">Token</th>
+                              <th className="px-4 py-2 text-left">Description</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr className="border-t border-neutral-700"><td className="px-4 py-2">BNB</td><td className="px-4 py-2">Native Binance Smart Chain token</td></tr>
+                          </tbody>
+                        </table>
+                      </div>
             </AccordionContent>
           </AccordionItem>
         </Accordion>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 mt-8">
-            <Zap className="w-6 h-6 text-cyan-400" /> Ergo Ecosystem Opportunities
-          </h2>
-          <ul className="list-disc pl-6 text-gray-300 mb-6">
-            <li><b>Token Swaps:</b> Use Ergodex to acquire native tokens like rsADA, rsBTC, rsETH, rsBNB, or rsHOSKY.</li>
-            <li><b>Auction House:</b> A decentralized marketplace for NFTs and tokens that now accepts rsADA, rsBTC, rsETH, and rsBNB. List tokens in bulk or make offers.</li>
-            <li><b>SigmaFi:</b> A decentralized peer-to-peer bonds market where you can use wrapped tokens as collateral.</li>
-            <li><b>DuckPools:</b> Lend rsADA, rsBTC, rsETH, rsBNB, and other supported tokens.</li>
-            <li><b>ErgoMixer:</b> Enhance privacy by mixing your wrapped tokens.</li>
-            <li><b>SigmaO:</b> Create American-style call and put options on any wrapped token.</li>
-            <li><b>Tip:</b> Low on ERG for transaction fees? Use babel-fees on Ergo to pay transaction fees with native tokens when you don't have enough ERG.</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 mt-8">
-            <Zap className="w-6 h-6 text-cyan-400" /> Cardano Ecosystem Opportunities
-          </h2>
-          <ul className="list-disc pl-6 text-gray-300 mb-6">
-            <li><b>Cardano DEXs:</b> Gain exposure to Ergo, Bitcoin, Ethereum, and Binance Smart Chain bridged tokens on popular Cardano decentralized exchanges: Spectrum, Minswap, Sundaeswap</li>
-            <li><b>Liqwid Finance:</b> Participate in DeFi activities using bridged tokens, including rsERG, rsBTC, rsETH, and rsBNB.</li>
-            <li><b>Lenfi:</b> Explore lending and borrowing options with bridged assets.</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 mt-8">
-            <Zap className="w-6 h-6 text-cyan-400" /> Ethereum Ecosystem Opportunities
-          </h2>
-          <ul className="list-disc pl-6 text-gray-300 mb-6">
-            <li>TBC</li>
-          </ul>
-
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 mt-8">
-            <Rocket className="w-6 h-6 text-green-400" /> Future Developments
-          </h2>
-          <p className="text-gray-300 mb-4">As the bridge continues to evolve, we anticipate more integrations and offerings involving rsADA, rsERG, rsBTC, rsETH, rsBNB, and other bridged tokens. Stay tuned for exciting developments across all five ecosystems.</p>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Ergo Ecosystem Opportunities</h4>
+                <ul className="list-disc pl-6 text-gray-300 mb-6">
+                  <li><b>Token Swaps:</b> Use Ergodex to acquire native tokens like rsADA, rsBTC, rsETH, rsBNB, or rsHOSKY.</li>
+                  <li><b>Auction House:</b> A decentralized marketplace for NFTs and tokens that now accepts rsADA, rsBTC, rsETH, and rsBNB. List tokens in bulk or make offers.</li>
+                  <li><b>SigmaFi:</b> A decentralized peer-to-peer bonds market where you can use wrapped tokens as collateral.</li>
+                  <li><b>DuckPools:</b> Lend rsADA, rsBTC, rsETH, rsBNB, and other supported tokens.</li>
+                  <li><b>ErgoMixer:</b> Enhance privacy by mixing your wrapped tokens.</li>
+                  <li><b>SigmaO:</b> Create American-style call and put options on any wrapped token.</li>
+                  <li><b>Tip:</b> Low on ERG for transaction fees? Use babel-fees on Ergo to pay transaction fees with native tokens when you don't have enough ERG.</li>
+                </ul>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Cardano Ecosystem Opportunities</h4>
+                <ul className="list-disc pl-6 text-gray-300 mb-6">
+                  <li><b>Cardano DEXs:</b> Gain exposure to Ergo, Bitcoin, Ethereum, and Binance Smart Chain bridged tokens on popular Cardano decentralized exchanges: Spectrum, Minswap, Sundaeswap</li>
+                  <li><b>Liqwid Finance:</b> Participate in DeFi activities using bridged tokens, including rsERG, rsBTC, rsETH, and rsBNB.</li>
+                  <li><b>Lenfi:</b> Explore lending and borrowing options with bridged assets.</li>
+                </ul>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Ethereum Ecosystem Opportunities</h4>
+                <ul className="list-disc pl-6 text-gray-300 mb-6">
+                  <li>TBC</li>
+                </ul>
+                
+                <h4 className="font-semibold text-cyan-400 mb-2">Future Developments</h4>
+                <p className="text-gray-300 mb-4">As the bridge continues to evolve, we anticipate more integrations and offerings involving rsADA, rsERG, rsBTC, rsETH, rsBNB, and other bridged tokens. Stay tuned for exciting developments across all five ecosystems.</p>
+              </div>
+            </details>
       </div>
+    </div>
+        {/* In a Nutshell */}
+        <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+          <h3 className="text-xl font-bold mb-4 text-white">In a Nutshell</h3>
+          <p className="text-gray-300 mb-4">Rosen Bridge creates a seamless cross-chain ecosystem, enabling users to access DeFi opportunities across multiple blockchains. From token swaps and lending to privacy features and options trading, the bridge opens up a world of possibilities for users across the Ergo, Cardano, Bitcoin, Ethereum, and Binance Smart Chain ecosystems.</p>
+        </div>
       </TabsContent>
     </Tabs>
   );
