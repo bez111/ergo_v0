@@ -103,7 +103,7 @@ const defiList: Array<{
     category: "Crowdfunding",
     description: "Decentralized raffle and crowdfunding platform.",
     link: "https://ergoraffle.com/",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/ergoraffle",
     highlight: false,
   },
   {
@@ -111,8 +111,8 @@ const defiList: Array<{
     status: "In Development",
     category: "Crowdfunding",
     description: "Subscription-based crowdfunding protocol.",
-    link: "https://github.com/anon-real/sigma-subscriptions",
-    more: null,
+    link: "https://github.com/cornbelt-dev/sigma-subscriptions",
+    more: "/Docs/ecosystem/financial/defi/sigma-subscriptions",
     highlight: false,
   },
 ];
@@ -254,7 +254,7 @@ export default function DeFiPage() {
                     <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
                       {item.name}
                       {item.status && (
-                        <span className={`ml-2 text-xs font-semibold px-2 py-0.5 rounded ${item.status === 'Live' ? 'bg-green-700/80 text-green-200' : item.status === 'Experimental' ? 'bg-orange-700/80 text-orange-200' : item.status === 'In Development' ? 'bg-cyan-800/80 text-cyan-200' : 'bg-neutral-800 text-gray-400'}`}>{item.status}</span>
+                        <span className={`ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap ${item.status === 'Live' ? 'bg-green-700/80 text-green-200' : item.status === 'Experimental' ? 'bg-orange-700/80 text-orange-200' : item.status === 'In Development' ? 'bg-cyan-800/80 text-cyan-200' : 'bg-neutral-800 text-gray-400'}`}>{item.status}</span>
                       )}
                     </h3>
                     <p className="text-gray-300 mb-4 text-sm">{description}</p>
