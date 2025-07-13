@@ -20,7 +20,7 @@ const defiList: Array<{
     category: "Lending",
     description: "Decentralized lending pools on Ergo.",
     link: "https://duckpools.io/",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/duckpools",
     highlight: false,
   },
   {
@@ -29,16 +29,16 @@ const defiList: Array<{
     category: "Lending",
     description: "Experimental lending engine for DeFi.",
     link: "https://github.com/anon-real/exle",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/exle",
     highlight: false,
   },
   {
     name: "SigmaFi",
-    status: "In Development",
+    status: "Live",
     category: "Lending",
-    description: "Lending and borrowing protocol for the Ergo ecosystem.",
+    description: "P2P DeFi bond market for collateralized loans on Ergo.",
     link: "https://github.com/SigmaFi/",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/sigmafi",
     highlight: false,
   },
   // Derivatives
@@ -48,7 +48,7 @@ const defiList: Array<{
     category: "Derivatives and Synthetics",
     description: "Yield and synthetic asset platform.",
     link: "https://hodlbox.io/",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/hodlbox",
     highlight: false,
   },
   {
@@ -57,7 +57,7 @@ const defiList: Array<{
     category: "Derivatives and Synthetics",
     description: "Synthetic asset pegged to holding behavior.",
     link: "https://hodlbox.io/",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/hodlcoin",
     highlight: false,
   },
   {
@@ -66,7 +66,7 @@ const defiList: Array<{
     category: "Derivatives and Synthetics",
     description: "Auction-based synthetic asset.",
     link: "https://github.com/anon-real/auctioncoin",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/auctioncoin",
     highlight: false,
   },
   {
@@ -75,7 +75,7 @@ const defiList: Array<{
     category: "Derivatives and Synthetics",
     description: "Options protocol for synthetic assets.",
     link: "https://github.com/anon-real/optioncoin",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/optioncoin",
     highlight: false,
   },
   {
@@ -84,7 +84,7 @@ const defiList: Array<{
     category: "Derivatives and Synthetics",
     description: "Pooled options trading on Ergo.",
     link: "https://github.com/anon-real/optionpools",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/optionpools",
     highlight: false,
   },
   {
@@ -93,7 +93,7 @@ const defiList: Array<{
     category: "Derivatives and Synthetics",
     description: "Advanced options and derivatives protocol.",
     link: "https://github.com/SigmaO/",
-    more: null,
+    more: "/Docs/ecosystem/financial/defi/sigmao",
     highlight: false,
   },
   // Crowdfunding
@@ -228,15 +228,15 @@ export default function DeFiPage() {
               const moreLink = item.more || null;
               const highlight = (item as any).highlight;
 
-              // Для карточек Derivatives: подробные описания
+              // Для карточек Derivatives: лаконичные описания
               let description = item.description;
               if (cat.key === "Derivatives and Synthetics") {
                 if (item.name === "HodlCoin") {
-                  description = `Hodlcoin is a high-risk, high-reward game that encourages players to "HODL" their ERGs. Players can deposit their ERGs into a common reserve (HODLing) or withdraw ERGs from the reserve by burning their HODL ERGs (un-HODLing). Un-HODLing incurs a penalty fee (e.g., 3% or 10%) that is added to the common reserve, creating an incentive for players to hold their ERGs for longer periods.`;
+                  description = `A high-risk, high-reward game that incentivizes users to HODL ERG. Un-HODLing incurs a penalty fee, rewarding long-term holders.`;
                 } else if (item.name === "OptionCoin") {
-                  description = `OptionCoin is a novel concept that combines decentralized options trading with token emission on the Ergo blockchain. It is a smart contract that periodically issues new tokens and sells them via call options, with the exercise price determined by the current market price on a decentralized exchange (DEX) like Spectrum. Traders can buy or sell these call options, allowing them to speculate on the future price of OptionCoin.`;
+                  description = `A smart contract that issues tokens and sells them via call options, letting traders speculate on future prices in a decentralized way.`;
                 } else if (item.name === "OptionPools") {
-                  description = `OptionPools is a groundbreaking pool-to-peer Automated Market Maker (AMM) trading protocol designed for decentralized options trading. Built on the robust Ergo blockchain, OptionPools leverages Ergo's unique capabilities to create a secure and efficient platform for trading options directly on Layer 1. It introduces innovative features like dual-asset liquidity pools, on-chain Black-Scholes pricing, and options price adjustments based on real-time pool utility.`;
+                  description = `A pool-to-peer AMM protocol for decentralized options trading on Ergo, featuring dual-asset pools and on-chain pricing.`;
                 }
               }
 
@@ -272,12 +272,12 @@ export default function DeFiPage() {
                           More
                         </a>
                       ) : (
-                        <a
+                        <Link
                           href={moreLink}
                           className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
                         >
                           More
-                        </a>
+                        </Link>
                       )
                     ) : (
                       <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
