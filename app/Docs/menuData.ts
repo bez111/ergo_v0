@@ -87,61 +87,14 @@ export const menuData = [
       {
         title: "Financial",
         href: "/Docs/ecosystem/financial",
-        items: [
-          {
-            title: "Decentralized Exchanges",
-            href: "/Docs/ecosystem/financial/dex",
-          },
-          {
-            title: "Monetary Systems",
-            href: "/Docs/ecosystem/financial/monetary-systems",
-          },
-          {
-            title: "Decentralized Finance",
-            href: "/Docs/ecosystem/financial/defi",
-            items: [
-              {
-                title: "Lending",
-              },
-              {
-                title: "Derivatives and Synthetics",
-              },
-              {
-                title: "Crowdfunding",
-              },
-            ],
-          },
-          {
-            title: "Degenerate Finance",
-            items: [
-              { title: "HodlCoin" },
-              { title: "AuctionCoin" },
-              { title: "Grand Gambit" },
-              { title: "Hodlbox" },
-              { title: "OptionCoin" },
-              { title: "Obolflip" },
-              { title: "Lotteries" },
-              { title: "The Field" },
-            ],
-          },
-        ],
       },
       {
         title: "NFTs",
         href: "/Docs/ecosystem/nfts",
-        items: [
-          { title: "Trade House" },
-          { title: "SkyHarbor" },
-          { title: "Lilium" },
-        ],
       },
       {
         title: "Gaming",
         href: "/Docs/ecosystem/gaming",
-        items: [
-          { title: "BlitzTCG" },
-          { title: "Cyberverse" },
-        ],
       },
       {
         title: "Tooling",

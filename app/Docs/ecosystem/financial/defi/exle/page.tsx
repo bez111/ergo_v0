@@ -1,159 +1,336 @@
 "use client";
 
 import React from "react";
-import { ExternalLink, Info, Zap, CheckCircle, Globe, Users, Shield, Target } from "lucide-react";
+import {
+  ExternalLink,
+  Info,
+  Zap,
+  CheckCircle,
+  TrendingUp,
+  Shield,
+  Users,
+  Gavel,
+  AlertTriangle,
+  Target,
+  Layers,
+  Calculator,
+  ArrowUpDown,
+  ChevronRight,
+  Brain,
+  GitBranch,
+  Globe,
+  Banknote,
+  Cpu,
+  Settings,
+  Gift,
+  FileText,
+  Code,
+  Play,
+  BookOpen,
+  Coins
+} from "lucide-react";
+import Link from "next/link";
 
 export default function EXLEPage() {
   return (
     <>
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-        EXLE (Ergo-Lend): Global DeFi Lending Platform
-      </h1>
-      
-      {/* Overview */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
-          <Info className="w-6 h-6 text-cyan-400" /> Overview
-        </h2>
-        <p className="text-gray-300 mb-2">
-          EXLE is enhancing financial access globally through its decentralized finance (DeFi) initiatives on the Ergo Blockchain. By targeting those typically excluded by traditional banking institutions, EXLE employs blockchain technology to create a global lending platform, governed transparently by a decentralized autonomous organization (DAO). Stay connected with EXLE through Telegram and Twitter for updates and community engagement.
+      {/* Hero Section */}
+      <div className="mb-12">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+          EXLE
+        </h1>
+        <p className="text-xl text-gray-400 mb-6">
+          EXLE (formerly Ergo-Lend) is a person-to-person (P2P) lending platform on Ergo that enables global lending with easy-to-use tools for borrowing and lending money, leveraging blockchain technology to create a decentralized lending ecosystem.
         </p>
-      </div>
-
-      {/* Beta Status */}
-      <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-orange-400">
-          <Zap className="w-5 h-5" /> EXLE 2.0 Beta
-        </h2>
-        <p className="text-gray-300 mb-4">
-          EXLE 2.0 is currently in private beta. Key developments include:
-        </p>
-        <div className="space-y-3 mb-4">
-          <div className="flex items-center gap-3">
-            <CheckCircle className="w-5 h-5 text-green-400" />
-            <span className="text-gray-300">Peer-to-peer (P2P) lending: <span className="text-green-400 font-semibold">Completed</span></span>
-          </div>
-          <div className="flex items-center gap-3">
-            <CheckCircle className="w-5 h-5 text-green-400" />
-            <span className="text-gray-300">Crowdloans backend: <span className="text-green-400 font-semibold">Completed</span></span>
-          </div>
-          <div className="flex items-center gap-3">
-            <div className="w-5 h-5 rounded-full border-2 border-orange-400 flex items-center justify-center">
-              <div className="w-2 h-2 bg-orange-400 rounded-full"></div>
-            </div>
-            <span className="text-gray-300">Website redesign to integrate crowdloans feature: <span className="text-orange-400 font-semibold">In progress</span></span>
-          </div>
-        </div>
-        <a
-          href="https://github.com/anon-real/exle"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center px-4 py-2 bg-orange-500/80 rounded-lg font-semibold text-white hover:bg-orange-500 hover:text-black transition-colors"
-        >
-          View EXLE 2.0 Project Proposal <ExternalLink className="w-4 h-4 ml-2" />
-        </a>
-      </div>
-
-      {/* Kenya Microfinance */}
-      <div className="bg-neutral-900/50 border border-green-700 rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-green-400">
-          <Globe className="w-5 h-5" /> Streamlining Microfinance in Kenya
-        </h2>
-        <p className="text-gray-300 mb-4">
-          EXLE is committed to using blockchain for social impact, as seen in its work in Kenya. Through peer-to-peer, uncollateralized loan projects, EXLE bridges the gap between lenders and borrowers in underserved areas. The shift from informal to structured, zero-interest loans under EXLE contracts, funded through raffles (Exle P2P Microfinance Initiative and Interest-Free Loans to a Kenyan Cooperative), showcases the potential of blockchain in microfinance.
-        </p>
-        <p className="text-gray-300 mb-4">
-          In 2022, EXLE, in collaboration with the WEQNT Cardano Stake Pool, has made significant strides in increasing micro loan accessibility in Kenya, launching in Kakuma County and gaining government certification. This certification allows WEQNT and EXLE to legally issue microcredit and crypto-based loans, providing local businesses with fair and competitive loan options. This access to micro loans fosters the growth of new businesses and promotes social and economic engagement in the region.
-        </p>
-        <div className="bg-green-800/20 border border-green-600 rounded-lg p-4">
-          <h3 className="font-semibold text-green-400 mb-2">Introducing the first Micro-Credit Cooperative in Northern Kenya</h3>
-          <p className="text-gray-300 text-sm">with - lowest interest rates - WEQNT</p>
-        </div>
-      </div>
-
-      {/* GoodThingsDAO */}
-      <div className="bg-neutral-900/50 border border-purple-700 rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-purple-400">
-          <Users className="w-5 h-5" /> GoodThingsDAO
-        </h2>
-        <p className="text-gray-300 mb-4">
-          The GoodThingsDAO hasn't fully formed until it started in Paideia. Donors from both raffles will receive DAO membership tokens. The funds raised in both auctions are expected to be repaid by the borrowers who took the interest-free loans. The DAO will decide which loans to fund and plan future fundraisers. Currently, the process is facilitated through a Christian missionary cooperative in Kenya.
-        </p>
-        <p className="text-gray-300 text-sm">
-          Loan requests are made through an intake process on EXLE.
-        </p>
-      </div>
-
-      {/* Financial Exclusion */}
-      <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-cyan-400">
-          <Target className="w-5 h-5" /> Addressing Financial Exclusion
-        </h2>
-        <p className="text-gray-300 mb-4">
-          The core mission of EXLE is to address the challenges faced by the unbanked, offering solutions to the limitations imposed by traditional financial institutions. By focusing on reducing loan costs, including underwriting and financing expenses, EXLE aims to make financial services more accessible. This approach not only benefits borrowers with more options and better rates but also provides lenders with opportunities to make direct, impactful loans.
-        </p>
-      </div>
-
-      {/* Blockchain Innovation */}
-      <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-orange-400">
-          <Zap className="w-5 h-5" /> Innovating with Blockchain
-        </h2>
-        <p className="text-gray-300 mb-4">
-          EXLE leverages blockchain technology to automate loan processes and create a global pool of lenders, significantly reducing the cost and accessibility barriers associated with traditional loans. This innovation enables loans to be as accessible as an app on a cell phone, reaching individuals regardless of their location. The platform's design eliminates the need for physical bank branches, extensive legal frameworks, and the traditional banking infrastructure, making smaller loans viable for a broader audience.
-        </p>
-      </div>
-
-      {/* Community-Driven Platform */}
-      <div className="bg-neutral-900/50 border border-green-700 rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-green-400">
-          <Users className="w-5 h-5" /> Building a Community-Driven Platform
-        </h2>
-        <p className="text-gray-300 mb-4">
-          The foundation of EXLE's approach is the creation of a democratic lending and borrowing community, guided by the principles outlined in The Ergo Manifesto. The platform aims to foster a community DAO that will provide social underwriting for borrowers and decide on the development and financial products of the platform. This community-driven approach is aimed at ensuring fairer access to loans, thereby creating new economic relationships and opportunities.
-        </p>
-      </div>
-
-      {/* Future of Lending */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-cyan-400">
-          <Shield className="w-5 h-5" /> The Future of Lending with Ergo-Lend
-        </h2>
-        <p className="text-gray-300 mb-4">
-          With ongoing projects in Kenya and plans for expansion into other regions, EXLE is positioned to redefine the landscape of lending. By developing real-world pilot projects and leveraging the technical and entrepreneurial capabilities of the Ergo-Lend team, EXLE is not just providing immediate financial solutions but also laying the groundwork for sustainable economic empowerment. The platform's goal is to transform lending through blockchain technology, making it more inclusive, efficient, and accessible to all, thereby embodying the vision of democratic access to financial services.
-        </p>
-      </div>
-
-      {/* Community Resources */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-        <h2 className="text-xl font-bold mb-4 flex items-center gap-2 text-cyan-400">
-          Community Resources
-        </h2>
         <div className="flex flex-wrap gap-4">
+          <Link
+            href="/Docs/ecosystem/financial/defi"
+            className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+          >
+            <ChevronRight className="w-5 h-5 mr-2" /> Back to DeFi
+          </Link>
           <a
-            href="https://t.me/ErgoLend"
+            href="https://exle.io/"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center px-5 py-2.5 bg-cyan-700/80 rounded-xl font-semibold text-white hover:bg-orange-500 hover:text-black transition-transform hover:scale-105"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
-            Telegram <ExternalLink className="w-4 h-4 ml-2" />
+            <ExternalLink className="w-5 h-5 mr-2" /> Visit EXLE
           </a>
-          <a
-            href="https://twitter.com/ErgoLend"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-5 py-2.5 bg-cyan-700/80 rounded-xl font-semibold text-white hover:bg-orange-500 hover:text-black transition-transform hover:scale-105"
-          >
-            Twitter <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
-          <a
-            href="https://github.com/anon-real/exle"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-5 py-2.5 bg-cyan-700/80 rounded-xl font-semibold text-white hover:bg-orange-500 hover:text-black transition-transform hover:scale-105"
-          >
-            Github <ExternalLink className="w-4 h-4 ml-2" />
-          </a>
+        </div>
+      </div>
+
+      {/* Overview Section */}
+      <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <Brain className="w-6 h-6 text-orange-400" /> What is EXLE?
+        </h2>
+        <p className="text-gray-300">
+          EXLE is a new paradigm for lending that leverages blockchain technology to create a global lending platform. The goal is to provide universal access to financial services, especially for the billions of unbanked people around the world, through a decentralized autonomous organization (DAO) that will manage the platform.
+        </p>
+      </div>
+
+      {/* Key Features Grid */}
+      <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+            <Users className="w-5 h-5 text-green-400" /> P2P Lending Platform
+          </h3>
+          <p className="text-gray-300 mb-4">
+            Person-to-person lending with easy-to-use tools for borrowing and lending money on the Ergo blockchain, eliminating traditional banking intermediaries.
+          </p>
+          <ul className="space-y-2 text-gray-400 text-sm">
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Direct peer-to-peer lending
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Easy-to-use borrowing tools
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Transparent lending terms
+            </li>
+          </ul>
+        </div>
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+            <Shield className="w-5 h-5 text-blue-400" /> Secure & Trustless
+          </h3>
+          <p className="text-gray-300 mb-4">
+            Built on Ergo's secure blockchain with trustless peer-to-peer payments and privacy features, allowing users to be their own bank.
+          </p>
+          <ul className="space-y-2 text-gray-400 text-sm">
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Trustless peer-to-peer payments
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Privacy-focused transactions
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Self-custody of funds
+            </li>
+          </ul>
+        </div>
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+            <Globe className="w-5 h-5 text-purple-400" /> Universal Access
+          </h3>
+          <p className="text-gray-300 mb-4">
+            Designed to provide financial services to unbanked populations worldwide, making small loans viable through lower borrowing costs and reduced operational expenses.
+          </p>
+          <ul className="space-y-2 text-gray-400 text-sm">
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Access for unbanked populations
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Lower borrowing costs
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Mobile-first approach
+            </li>
+          </ul>
+        </div>
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+            <Zap className="w-5 h-5 text-yellow-400" /> DAO Governance
+          </h3>
+          <p className="text-gray-300 mb-4">
+            Platform managed by a decentralized autonomous organization (DAO), ensuring community-driven development and transparent governance of the lending ecosystem.
+          </p>
+          <ul className="space-y-2 text-gray-400 text-sm">
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Decentralized governance
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Community-driven development
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Transparent platform management
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* Mission & Vision Section */}
+      <div className="bg-neutral-900/50 border border-green-700 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-green-400">
+          <Target className="w-6 h-6" /> Mission & Vision
+        </h2>
+        <p className="text-gray-300 mb-4">
+          EXLE aims to overcome the limitations of traditional financial systems that are not designed to provide small loans at reasonable rates, especially for people in rural areas and unbanked populations.
+        </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div>
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <AlertTriangle className="w-5 h-5 text-orange-400" /> Current Financial System Issues
+            </h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li className="flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4 text-orange-400" />
+                High loan costs and limited availability
+              </li>
+              <li className="flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4 text-orange-400" />
+                Expensive underwriting for rural areas
+              </li>
+              <li className="flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4 text-orange-400" />
+                Middlemen increasing borrowing costs
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-green-400" /> EXLE Solutions
+            </h3>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Lower borrowing costs enable smaller loans
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Ubiquitous mobile access to financial services
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Removal of traditional middlemen
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Token Economics Section */}
+      <div className="bg-neutral-900/50 border border-purple-700 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-purple-400">
+          <Coins className="w-6 h-6" /> Token Economics
+        </h2>
+        <p className="text-gray-300 mb-4">
+          EXLE token distribution is designed to support the platform's growth and community governance, with IDO facilitated by ErgoPad.
+        </p>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="space-y-3">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Ergopad Staker Round</span>
+              <span className="text-purple-400 font-semibold">16%</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Ergopad Seed Round</span>
+              <span className="text-purple-400 font-semibold">21%</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Ergopad Strategic Round</span>
+              <span className="text-purple-400 font-semibold">11%</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Liquidity (Locked)</span>
+              <span className="text-purple-400 font-semibold">6%</span>
+            </div>
+          </div>
+          <div className="space-y-3">
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">DAO Reserve</span>
+              <span className="text-purple-400 font-semibold">20%</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Distribution Partner</span>
+              <span className="text-purple-400 font-semibold">5%</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-300">Core Team</span>
+              <span className="text-purple-400 font-semibold">21%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Development Timeline Section */}
+      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-cyan-400">
+          <Play className="w-6 h-6" /> Development Timeline
+        </h2>
+        <div className="space-y-4">
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-cyan-400 mb-2">October 8-10, 2021</h3>
+            <p className="text-gray-300 text-sm">
+              ErgoHack II event - Ergo-Lend took first place! Completed first version of UI and large portion of ergoscript required to function.
+            </p>
+          </div>
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-cyan-400 mb-2">End of February, 2022</h3>
+            <p className="text-gray-300 text-sm">
+              Completed full end-to-end test using fully functional ergoscript contracts, scala backend and nextjs frontend.
+            </p>
+          </div>
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-cyan-400 mb-2">End of March, 2022</h3>
+            <p className="text-gray-300 text-sm">
+              Contract bug bash and refactor to fix all found bugs and improve features.
+            </p>
+          </div>
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-cyan-400 mb-2">May 18, 2022</h3>
+            <p className="text-gray-300 text-sm">
+              Rebranding from Ergo-Lend to EXLE.
+            </p>
+          </div>
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-cyan-400 mb-2">Summer 2022</h3>
+            <p className="text-gray-300 text-sm">
+              Scaling the backend for engineering and performance improvements.
+            </p>
+          </div>
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-cyan-400 mb-2">Fall 2022</h3>
+            <p className="text-gray-300 text-sm">
+              New features for both frontend and backend planned with community proposals and submissions.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ Section */}
+      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <BookOpen className="w-6 h-6 text-green-400" /> Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-green-400 mb-2">What is EXLE?</h3>
+            <p className="text-gray-300 text-sm">
+              EXLE (formerly Ergo-Lend) is a person-to-person (P2P) lending platform on Ergo that enables global lending with easy-to-use tools for borrowing and lending money.
+            </p>
+          </div>
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-green-400 mb-2">How does EXLE help unbanked populations?</h3>
+            <p className="text-gray-300 text-sm">
+              EXLE provides universal access to financial services through lower borrowing costs, reduced operational expenses, and mobile-first approach, making small loans viable for previously underserved populations.
+            </p>
+          </div>
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-green-400 mb-2">Is EXLE secure?</h3>
+            <p className="text-gray-300 text-sm">
+              Yes, EXLE is built on Ergo's secure blockchain with trustless peer-to-peer payments and privacy features, allowing users to be their own bank without relying on traditional financial intermediaries.
+            </p>
+          </div>
+          <div className="border border-neutral-700 rounded-lg p-4">
+            <h3 className="font-semibold text-green-400 mb-2">How is the platform governed?</h3>
+            <p className="text-gray-300 text-sm">
+              EXLE is managed by a decentralized autonomous organization (DAO), ensuring community-driven development and transparent governance of the lending ecosystem.
+            </p>
+          </div>
         </div>
       </div>
     </>
