@@ -41,7 +41,7 @@ export default function HodlBoxPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
           HodlBox
-        </h1>
+      </h1>
         <p className="text-xl text-gray-400 mb-6">
           A unique platform designed to encourage long-term holding of Ergo (ERG) by offering users the opportunity to purchase "treasure chests" with varying locking options, rewarding commitment with NFTs and promoting sustainable holding practices in the Ergo ecosystem.
         </p>
@@ -323,7 +323,7 @@ export default function HodlBoxPage() {
               HodlBox combines financial incentives with gamification through treasure chests and NFT rewards, creating a structured approach to long-term holding that addresses the common problem of impulsive selling in cryptocurrency markets.
             </p>
           </div>
-
+          
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
               <Clock className="w-5 h-5 text-green-400" /> How long are funds locked?
@@ -332,7 +332,7 @@ export default function HodlBoxPage() {
               Funds remain locked for either two years or until the value of ERG reaches $20, whichever comes first. This provides clear exit conditions while encouraging long-term holding.
             </p>
           </div>
-
+          
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
               <Award className="w-5 h-5 text-yellow-400" /> What are the NFT rewards?
@@ -341,7 +341,7 @@ export default function HodlBoxPage() {
               Users receive unique NFTs as rewards for their commitment to long-term holding. These NFTs serve as proof of commitment and can have additional value as collectibles within the Ergo ecosystem.
             </p>
           </div>
-
+          
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
               <Shield className="w-5 h-5 text-blue-400" /> Is it safe to lock my ERG?

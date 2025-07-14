@@ -37,7 +37,7 @@ export default function ErgoRafflePage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
           ErgoRaffle
-        </h1>
+      </h1>
         <p className="text-xl text-gray-400 mb-6">
           ErgoRaffle is a decentralized crowdfunding platform on Ergo that enables anyone to raise funds for projects, charities, academic plans, or business initiatives through transparent and secure raffle mechanisms.
         </p>
@@ -97,7 +97,7 @@ export default function ErgoRafflePage() {
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Shield className="w-5 h-5 text-blue-400" /> Secure & Transparent
           </h3>
-          <p className="text-gray-300 mb-4">
+        <p className="text-gray-300 mb-4">
             Built on Ergo's eUTXO model with open-source smart contracts ensuring transparency, security, and verifiable fund distribution.
           </p>
           <ul className="space-y-2 text-gray-400 text-sm">
@@ -113,7 +113,7 @@ export default function ErgoRafflePage() {
               <CheckCircle className="w-4 h-4 text-green-400" />
               Verifiable transactions
             </li>
-          </ul>
+        </ul>
         </div>
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -232,8 +232,8 @@ export default function ErgoRafflePage() {
             </p>
             <a
               href="https://github.com/ErgoRaffle/raffle-frontend"
-              target="_blank"
-              rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
               className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
             >
               View Frontend <ExternalLink className="w-4 h-4 ml-1" />
@@ -246,8 +246,8 @@ export default function ErgoRafflePage() {
             </p>
             <a
               href="https://github.com/ErgoRaffle/raffle-documentation"
-              target="_blank"
-              rel="noopener noreferrer"
+            target="_blank"
+            rel="noopener noreferrer"
               className="inline-flex items-center text-orange-400 hover:text-orange-300 text-sm"
             >
               View Docs <ExternalLink className="w-4 h-4 ml-1" />

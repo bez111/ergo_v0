@@ -29,7 +29,8 @@ import {
   Settings,
   Wallet,
   Target,
-  DollarSign
+  DollarSign,
+  BookOpen
 } from "lucide-react";
 import Link from "next/link";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -37,7 +38,7 @@ import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/
 export default function RosenBridgePage() {
   return (
     <Tabs defaultValue="overview" className="w-full">
-      <TabsList className="grid w-full grid-cols-6 mb-8 bg-neutral-900/50 border border-neutral-700/50">
+      <TabsList className="grid w-full grid-cols-7 mb-8 bg-neutral-900/50 border border-neutral-700/50">
         <TabsTrigger value="overview" className="flex items-center gap-2 justify-center">
           <GitBranch className="w-4 h-4" /> Overview
         </TabsTrigger>
@@ -55,6 +56,9 @@ export default function RosenBridgePage() {
         </TabsTrigger>
         <TabsTrigger value="uses" className="flex items-center gap-2 justify-center">
           <Target className="w-4 h-4" /> Uses
+        </TabsTrigger>
+        <TabsTrigger value="tutorials" className="flex items-center gap-2 justify-center">
+          <BookOpen className="w-4 h-4" /> Tutorials
         </TabsTrigger>
       </TabsList>
       
@@ -1533,6 +1537,35 @@ docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3</pre>
         <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
           <h3 className="text-xl font-bold mb-4 text-white">In a Nutshell</h3>
           <p className="text-gray-300 mb-4">Rosen Bridge creates a seamless cross-chain ecosystem, enabling users to access DeFi opportunities across multiple blockchains. From token swaps and lending to privacy features and options trading, the bridge opens up a world of possibilities for users across the Ergo, Cardano, Bitcoin, Ethereum, and Binance Smart Chain ecosystems.</p>
+        </div>
+      </TabsContent>
+      <TabsContent value="tutorials">
+        <div className="mb-12">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
+            Rosen Bridge Tutorials
+          </h1>
+          {/* rsERG-LP Tutorial */}
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <BookOpen className="w-6 h-6 text-orange-400" /> Participating in rsERG Liquidity Pools
+            </h2>
+            <p className="text-gray-300 mb-4">
+              This guide walks you through the process of participating in rsERG/ETH liquidity pools. It covers essential precautions, the bridging process, and how to provide liquidity on Uniswap step by step.
+            </p>
+            {/* ... Здесь будет подробный контент rsERG-LP с шагами, списками, картинками ... */}
+            <a href="https://docs.ergoplatform.com/tutorials/rsERGLP/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Read the full guide on ErgoDocs</a>
+          </section>
+          {/* Token Integration Guides Tutorial */}
+          <section>
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <BookOpen className="w-6 h-6 text-cyan-400" /> Token Integration Guides
+            </h2>
+            <p className="text-gray-300 mb-4">
+              Step-by-step instructions for integrating tokens with Rosen Bridge and other supported platforms.
+            </p>
+            {/* ... Здесь будет подробный контент Token Integration Guides с шагами, списками, картинками ... */}
+            <a href="https://docs.ergoplatform.com/tutorials/token_integration/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Read the full guide on ErgoDocs</a>
+          </section>
         </div>
       </TabsContent>
     </Tabs>

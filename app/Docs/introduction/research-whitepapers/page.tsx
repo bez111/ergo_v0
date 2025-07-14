@@ -75,7 +75,7 @@ export default function ResearchWhitepapersPage() {
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1 flex items-center gap-3">
-          <BookOpen className="w-8 h-8 text-orange-400" /> Research & White Papers
+          <BookOpen className="w-5 h-5 text-orange-400" /> Research & White Papers
         </h1>
         <p className="text-xl text-gray-400 mb-6">
           Ergo's approach is grounded in peer-reviewed research and robust, well-tested solutions. Most innovations are formalized in papers and widely discussed in the community.
@@ -93,35 +93,35 @@ export default function ResearchWhitepapersPage() {
       {/* Overviews Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <FileText className="w-6 h-6 text-orange-400" /> Overviews
+          <FileText className="w-5 h-5 text-orange-400" /> Overviews
         </h2>
         <ResourceCards items={overviews} icon={<FileText className="w-5 h-5 text-orange-400" />} />
       </div>
       {/* Foundational Papers Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Star className="w-6 h-6 text-blue-400" /> Foundational Papers
+          <Star className="w-5 h-5 text-blue-400" /> Foundational Papers
         </h2>
         <ResourceCards items={foundational} icon={<Star className="w-5 h-5 text-blue-400" />} />
       </div>
       {/* Post-Mainnet Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <FileText className="w-6 h-6 text-cyan-400" /> Post-Mainnet
+          <FileText className="w-5 h-5 text-cyan-400" /> Post-Mainnet
         </h2>
         <ResourceCards items={postMainnet} icon={<FileText className="w-5 h-5 text-cyan-400" />} />
       </div>
       {/* Video Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Video className="w-6 h-6 text-orange-400" /> Notable Youtube Appearances
+          <Video className="w-5 h-5 text-orange-400" /> Notable Youtube Appearances
         </h2>
         <ResourceCards items={videos} icon={<Video className="w-5 h-5 text-orange-400" />} />
       </div>
       {/* Meetups Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Users className="w-6 h-6 text-blue-400" /> Meetups and Presentations
+          <Users className="w-5 h-5 text-blue-400" /> Meetups and Presentations
         </h2>
         <ResourceCards items={meetups} icon={<Users className="w-5 h-5 text-blue-400" />} />
       </div>

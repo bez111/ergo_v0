@@ -38,7 +38,7 @@ export default function EXLEPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
           EXLE
-        </h1>
+      </h1>
         <p className="text-xl text-gray-400 mb-6">
           EXLE (formerly Ergo-Lend) is a person-to-person (P2P) lending platform on Ergo that enables global lending with easy-to-use tools for borrowing and lending money, leveraging blockchain technology to create a decentralized lending ecosystem.
         </p>
@@ -76,7 +76,7 @@ export default function EXLEPage() {
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Users className="w-5 h-5 text-green-400" /> P2P Lending Platform
           </h3>
-          <p className="text-gray-300 mb-4">
+        <p className="text-gray-300 mb-4">
             Person-to-person lending with easy-to-use tools for borrowing and lending money on the Ergo blockchain, eliminating traditional banking intermediaries.
           </p>
           <ul className="space-y-2 text-gray-400 text-sm">
@@ -93,7 +93,7 @@ export default function EXLEPage() {
               Transparent lending terms
             </li>
           </ul>
-        </div>
+          </div>
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Shield className="w-5 h-5 text-blue-400" /> Secure & Trustless
@@ -115,7 +115,7 @@ export default function EXLEPage() {
               Self-custody of funds
             </li>
           </ul>
-        </div>
+          </div>
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Globe className="w-5 h-5 text-purple-400" /> Universal Access
@@ -137,7 +137,7 @@ export default function EXLEPage() {
               Mobile-first approach
             </li>
           </ul>
-        </div>
+            </div>
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Zap className="w-5 h-5 text-yellow-400" /> DAO Governance
@@ -284,14 +284,14 @@ export default function EXLEPage() {
             <h3 className="font-semibold text-cyan-400 mb-2">May 18, 2022</h3>
             <p className="text-gray-300 text-sm">
               Rebranding from Ergo-Lend to EXLE.
-            </p>
-          </div>
+        </p>
+      </div>
           <div className="border border-neutral-700 rounded-lg p-4">
             <h3 className="font-semibold text-cyan-400 mb-2">Summer 2022</h3>
             <p className="text-gray-300 text-sm">
               Scaling the backend for engineering and performance improvements.
-            </p>
-          </div>
+        </p>
+      </div>
           <div className="border border-neutral-700 rounded-lg p-4">
             <h3 className="font-semibold text-cyan-400 mb-2">Fall 2022</h3>
             <p className="text-gray-300 text-sm">
@@ -329,8 +329,8 @@ export default function EXLEPage() {
             <h3 className="font-semibold text-green-400 mb-2">How is the platform governed?</h3>
             <p className="text-gray-300 text-sm">
               EXLE is managed by a decentralized autonomous organization (DAO), ensuring community-driven development and transparent governance of the lending ecosystem.
-            </p>
-          </div>
+        </p>
+      </div>
         </div>
       </div>
     </>

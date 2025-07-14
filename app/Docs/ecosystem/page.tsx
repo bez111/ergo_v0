@@ -32,49 +32,57 @@ export default function EcosystemPage() {
       title: "Applications",
       description: "Ergo's ecosystem is built on a solid foundation of key technologies and applications that cater to diverse use cases.",
       icon: Rocket,
-      color: "text-orange-400"
+      color: "text-orange-400",
+      link: "/Docs/ecosystem/applications"
     },
     {
       title: "Infrastructure", 
       description: "Explore the underlying technologies that power the Ergo blockchain, including our robust Proof of Work consensus algorithm, sidechains, bridges, and oracle systems.",
       icon: Settings,
-      color: "text-cyan-400"
+      color: "text-cyan-400",
+      link: "/Docs/ecosystem/infrastructure"
     },
     {
       title: "Financial Tools",
       description: "Dive into the financial applications and services within the Ergo ecosystem, including decentralized exchanges, stablecoins, lending platforms, and derivatives.",
       icon: DollarSign,
-      color: "text-green-400"
+      color: "text-green-400",
+      link: "/Docs/ecosystem/financial"
     },
     {
       title: "Privacy Solutions",
       description: "Ergo is at the forefront of privacy innovation with solutions like non-custodial mixers and stealth addresses.",
       icon: Lock,
-      color: "text-purple-400"
+      color: "text-purple-400",
+      link: "/Docs/ecosystem/privacy"
     },
     {
       title: "Decentralized Governance",
       description: "Discover the tools and platforms that enable decentralized governance within the Ergo ecosystem, including DAOs and community-driven initiatives.",
       icon: Users,
-      color: "text-yellow-400"
+      color: "text-yellow-400",
+      link: "/Docs/ecosystem/daos"
     },
     {
       title: "Gaming and Metaverse",
       description: "Ergo supports a growing number of gaming and metaverse projects, offering developers the tools they need to create immersive, blockchain-based experiences.",
       icon: Gamepad2,
-      color: "text-pink-400"
+      color: "text-pink-400",
+      link: "/Docs/ecosystem/gaming"
     },
     {
       title: "Tooling and Developer Resources",
       description: "Get access to a suite of developer tools and resources designed to facilitate the creation and deployment of decentralized applications on the Ergo blockchain.",
       icon: Wrench,
-      color: "text-indigo-400"
+      color: "text-indigo-400",
+      link: "/Docs/ecosystem/tooling"
     },
     {
       title: "Further Ideas and Innovation",
       description: "Explore new and experimental ideas within the Ergo ecosystem that push the boundaries of what's possible with blockchain technology.",
       icon: Lightbulb,
-      color: "text-teal-400"
+      color: "text-teal-400",
+      link: "/Docs/ecosystem/further-ideas"
     }
   ];
 
@@ -181,10 +189,27 @@ export default function EcosystemPage() {
       <div className="grid md:grid-cols-2 gap-6 mb-12">
         {ecosystemSections.map((section, index) => {
           const IconComponent = section.icon;
-          return (
+          return section.link ? (
+            <Link
+              key={index}
+              href={section.link}
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 block cursor-pointer group"
+            >
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2 group-hover:text-cyan-300 transition-colors">
+                <IconComponent className={`w-5 h-5 ${section.color}`} />
+                {section.title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                {section.description}
+              </p>
+              <div className="flex items-center text-cyan-300 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
+                Learn more <ChevronRight className="w-4 h-4 ml-1" />
+              </div>
+            </Link>
+          ) : (
             <div 
               key={index}
-              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6"
             >
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                 <IconComponent className={`w-5 h-5 ${section.color}`} />

@@ -401,7 +401,7 @@ export default function GamingPage() {
         <blockquote className="text-xl italic text-center text-gray-300">
           "The Ergo gaming ecosystem represents the future of blockchain gaming, combining innovative gameplay mechanics with the security and transparency of decentralized technology."
         </blockquote>
-      </div>
+    </div>
     </>
-      );
-  } 
+  );
+} 

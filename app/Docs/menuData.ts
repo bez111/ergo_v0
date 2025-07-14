@@ -6,41 +6,28 @@ export const menuData = [
       {
         title: "Key Features",
         href: "/Docs/introduction/key-features",
-        items: [
-          {
-            title: "eUTxO",
-            href: "/Docs/introduction/eutxo",
-          },
-          {
-            title: "NIPoPoWs",
-            href: "/Docs/introduction/nipopows",
-          },
-          { title: "Privacy", href: "/Docs/introduction/privacy" },
-          { title: "Autolykos", href: "/Docs/introduction/autolykos" },
-          { title: "Storage Rent", href: "/Docs/introduction/storage-rent" },          
-        ],
-      },
-      {
-        title: "Research & Whitepapers",
-        href: "/Docs/introduction/research-whitepapers"
       },
       {
         title: "Roadmap",
         href: "/Docs/introduction/roadmap"
       },
       {
+        title: "Research & Whitepapers",
+        href: "/Docs/introduction/research-whitepapers"
+      },
+      {
         title: "Entities",
         href: "/Docs/introduction/entities"
+      },
+      { title: "Wallets", href: "/Docs/introduction/wallets" },
+      {
+        title: "Contribute",
+        href: "/Docs/contribute"
       },
       {
         title: "Events",
         href: "/Docs/introduction/events",
       },
-      {
-        title: "Contribute",
-        href: "/Docs/contribute"
-      },
-      { title: "Wallets", href: "/Docs/introduction/wallets" },
       {
         title: "Resources",
         href: "/Docs/introduction/resources"
@@ -56,33 +43,9 @@ export const menuData = [
   {
     title: "Ecosystem",
     items: [
-      { title: "Artificial Intelligence", href: "/Docs/ecosystem/ai" },
       {
         title: "Infrastructure",
         href: "/Docs/ecosystem/infrastructure",
-        items: [
-          {
-            title: "Rosen Bridge",
-            href: "/Docs/ecosystem/infrastructure/rosen-bridge",
-            items: [
-              {
-                title: "Uses",
-                items: [
-                  { title: "rsERG-LP" },
-                  { title: "Token Integration Guides" },
-                ],
-              },
-            ],
-          },
-          {
-            title: "Oracles",
-            href: "/Docs/ecosystem/infrastructure/oracles",
-          },
-          {
-            title: "Sidechains",
-            href: "/Docs/ecosystem/infrastructure/sidechains",
-          },
-        ],
       },
       {
         title: "Financial",
@@ -92,6 +55,7 @@ export const menuData = [
         title: "NFTs",
         href: "/Docs/ecosystem/nfts",
       },
+      { title: "Artificial Intelligence", href: "/Docs/ecosystem/ai" },
       {
         title: "Gaming",
         href: "/Docs/ecosystem/gaming",
@@ -99,36 +63,6 @@ export const menuData = [
       {
         title: "Tooling",
         href: "/Docs/ecosystem/tooling",
-        items: [
-          { title: "Crux Finance" },
-          { title: "ErgoNames" },
-          {
-            title: "Celaut",
-            items: [
-              { title: "Reputation System" },
-            ],
-          },
-          { title: "Netnotes" },
-          { title: "SigmaRand" },
-          { title: "Moria Finance" },
-          {
-            title: "Trading",
-            items: [
-              { title: "Arbit" },
-              {
-                title: "Grid Trading",
-                items: [
-                  {
-                    title: "Off the Grid",
-                    items: [
-                      { title: "Tutorial" },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
       },
       {
         title: "Applications",

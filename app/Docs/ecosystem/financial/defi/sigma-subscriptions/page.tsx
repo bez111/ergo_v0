@@ -26,7 +26,7 @@ export default function SigmaSubscriptionsPage() {
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
           Sigma Subscriptions
-        </h1>
+      </h1>
         <p className="text-xl text-gray-400 mb-6">
           Sigma Subscriptions is a decentralized protocol for recurring payments and on-chain subscriptions on Ergo. It enables creators, dApps, and services to automate payments, memberships, and access control in a trustless, programmable way.
         </p>
@@ -146,7 +146,7 @@ export default function SigmaSubscriptionsPage() {
               <CheckCircle className="w-4 h-4 text-green-400" />
               Open-source code
             </li>
-          </ul>
+        </ul>
         </div>
       </div>
 
