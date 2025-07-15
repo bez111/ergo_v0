@@ -7,6 +7,14 @@ import Link from "next/link";
 export default function FinancialPage() {
   const financialSections = [
     {
+      title: "Decentralized Finance",
+      description:
+        "Lending, borrowing, derivatives, and crowdfunding — all on a secure, decentralized blockchain. Dive into Ergo’s DeFi protocols.",
+      icon: Layers,
+      color: "text-green-400",
+      link: "/Docs/ecosystem/financial/defi"
+    },
+    {
       title: "Decentralized Exchanges",
       description:
         "Non-custodial, permissionless trading platforms and liquidity protocols on Ergo. Explore DEXs, cross-chain swaps, and more.",
@@ -21,14 +29,6 @@ export default function FinancialPage() {
       icon: Coins,
       color: "text-orange-400",
       link: "/Docs/ecosystem/financial/monetary-systems"
-    },
-    {
-      title: "Decentralized Finance",
-      description:
-        "Lending, borrowing, derivatives, and crowdfunding — all on a secure, decentralized blockchain. Dive into Ergo’s DeFi protocols.",
-      icon: Layers,
-      color: "text-green-400",
-      link: "/Docs/ecosystem/financial/defi"
     },
     {
       title: "Degenerate Finance",

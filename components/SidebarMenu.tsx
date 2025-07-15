@@ -4,13 +4,21 @@ import Link from "next/link"
 import { menuData } from "../app/Docs/menuData"
 import { usePathname } from "next/navigation"
 
-function MenuItem({ item, level = 0 }: { item: any, level?: number }) {
+function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: number, parentPath?: string }) {
   const [open, setOpen] = useState(false)
   const hasChildren = !!item.items?.length
   const pathname = usePathname() || "";
 
+  // Build the full path for nested items
+  const fullPath = item.href || parentPath;
+
   // Определяем стиль для пункта
   const isActive = item.href && pathname === item.href;
+  // Special case: open Tooling if on /Docs/miners/Miner-Tooling
+  const shouldForceOpen =
+    (item.title === "Tooling" && pathname.startsWith("/Docs/miners/Miner-Tooling")) ||
+    (hasChildren && item.items?.some((child: any) => child.href && pathname === child.href));
+
   const baseClass = level === 0
     ? `font-medium text-base text-gray-200 hover:text-orange-400${isActive ? " text-orange-400" : ""}`
     : `font-normal text-sm text-gray-400 hover:text-orange-300${isActive ? " text-orange-300" : ""}`;
@@ -25,7 +33,7 @@ function MenuItem({ item, level = 0 }: { item: any, level?: number }) {
   return (
     <div className={`py-0.5 ${level > 0 ? "ml-4" : ""}`}> 
       <div
-        className={`flex items-center justify-between select-none rounded px-2 transition-colors ${open ? "bg-neutral-800" : ""} ${isActive ? "bg-neutral-800" : ""}`}
+        className={`flex items-center justify-between select-none rounded px-2 transition-colors ${open || shouldForceOpen ? "bg-neutral-800" : ""} ${isActive ? "bg-neutral-800" : ""}`}
       >
         <div className="flex items-center gap-2 w-full">
           {item.href ? (
@@ -38,7 +46,7 @@ function MenuItem({ item, level = 0 }: { item: any, level?: number }) {
         </div>
         {hasChildren && (
           <span
-            className={`ml-2 transition-transform text-gray-400 ${open ? "rotate-90" : ""}`}
+            className={`ml-2 transition-transform text-gray-400 ${(open || shouldForceOpen) ? "rotate-90" : ""}`}
             onClick={e => { e.stopPropagation(); setOpen(v => !v); }}
             style={{ cursor: "pointer" }}
           >
@@ -46,10 +54,10 @@ function MenuItem({ item, level = 0 }: { item: any, level?: number }) {
           </span>
         )}
       </div>
-      {hasChildren && open && (
+      {hasChildren && (open || shouldForceOpen) && (
         <div className="mt-1">
           {item.items.map((child: any, idx: number) => (
-            <MenuItem key={idx} item={child} level={level + 1} />
+            <MenuItem key={idx} item={child} level={level + 1} parentPath={fullPath} />
           ))}
         </div>
       )}
@@ -98,7 +106,7 @@ export default function SidebarMenu() {
         <div className="mb-6 px-6">
           <h2 className="font-semibold text-sm mb-3 text-orange-400 uppercase tracking-wider">{section.title}</h2>
           {section.items.map((item: any, idx: number) => (
-            <MenuItem key={idx} item={item} />
+            <MenuItem key={idx} item={item} parentPath={""} />
           ))}
         </div>
       )}

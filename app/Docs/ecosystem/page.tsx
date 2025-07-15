@@ -64,11 +64,11 @@ export default function EcosystemPage() {
       link: "/Docs/ecosystem/daos"
     },
     {
-      title: "Gaming and Metaverse",
-      description: "Ergo supports a growing number of gaming and metaverse projects, offering developers the tools they need to create immersive, blockchain-based experiences.",
+      title: "NFTs & Gaming",
+      description: "NFT collections and play-to-earn games built on Ergo. Tools and protocols for creators and developers.",
       icon: Gamepad2,
       color: "text-pink-400",
-      link: "/Docs/ecosystem/gaming"
+      link: "/Docs/ecosystem/nfts"
     },
     {
       title: "Tooling and Developer Resources",
@@ -77,13 +77,6 @@ export default function EcosystemPage() {
       color: "text-indigo-400",
       link: "/Docs/ecosystem/tooling"
     },
-    {
-      title: "Further Ideas and Innovation",
-      description: "Explore new and experimental ideas within the Ergo ecosystem that push the boundaries of what's possible with blockchain technology.",
-      icon: Lightbulb,
-      color: "text-teal-400",
-      link: "/Docs/ecosystem/further-ideas"
-    }
   ];
 
   const coreComponents = [

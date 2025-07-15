@@ -49,6 +49,27 @@ const nftSectors = [
     ],
   },
   {
+    key: "Applications",
+    label: "NFT Applications",
+    icon: <Gift className="w-6 h-6 text-pink-400" />,
+    color: "pink-400",
+    infoBlock: {
+      title: "NFT Applications on Ergo",
+      icon: <Gift className="w-5 h-5 text-pink-400" />,
+      color: "text-pink-400",
+      description: "NFTs on Ergo are used for more than art and gaming—they power access control, event tickets, supply chain tracking, and more. Explore the growing ecosystem of NFT-powered applications.",
+    },
+    projects: [
+      {
+        name: "PandaV",
+        description: "NFT access control and digital asset platform leveraging Ergo. Secure, decentralized, and transparent management of access rights and ownership using NFTs and blockchain.",
+        icon: <Gift className="w-7 h-7 text-pink-400" />,
+        link: "https://www.pandav.io/",
+        more: "/Docs/ecosystem/nfts/pandaV",
+      },    // Add more application projects here
+    ],
+  },
+  {
     key: "Gaming",
     label: "Gaming on Ergo",
     icon: <Gamepad2 className="w-6 h-6 text-green-400" />,
@@ -76,33 +97,11 @@ const nftSectors = [
       },
     ],
   },
-  {
-    key: "Applications",
-    label: "NFT Applications",
-    icon: <Gift className="w-6 h-6 text-pink-400" />,
-    color: "pink-400",
-    infoBlock: {
-      title: "NFT Applications on Ergo",
-      icon: <Gift className="w-5 h-5 text-pink-400" />,
-      color: "text-pink-400",
-      description: "NFTs on Ergo are used for more than art and gaming—they power access control, event tickets, supply chain tracking, and more. Explore the growing ecosystem of NFT-powered applications.",
-    },
-    projects: [
-      {
-        name: "PandaV",
-        description: "NFT access control and digital asset platform leveraging Ergo. Secure, decentralized, and transparent management of access rights and ownership using NFTs and blockchain.",
-        icon: <Gift className="w-7 h-7 text-pink-400" />,
-        link: "https://www.pandav.io/",
-        more: "/Docs/ecosystem/nfts/pandaV",
-      },
-      // Add more application projects here
-    ],
-  },
 ];
 
 export default function NFTsPage() {
   return (
-    <div className="max-w-5xl mx-auto px-4 py-12">
+    <>
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
@@ -121,76 +120,69 @@ export default function NFTsPage() {
           NFTs (Non-Fungible Tokens) represent unique digital assets on the Ergo blockchain. They enable new forms of ownership, creativity, and utility—from art and collectibles to gaming and access control.
         </p>
       </div>
-      {/* Sectors Accordion */}
-      <Accordion type="single" collapsible className="mb-12">
-        {nftSectors.map((sector) => (
-          <AccordionItem key={sector.key} value={sector.key}>
-            <AccordionTrigger>
-              <span className="flex items-center gap-2">{sector.icon} {sector.label}</span>
-            </AccordionTrigger>
-            <AccordionContent>
-              {/* Info Block */}
-              <div className={`bg-neutral-900/50 border border-${sector.color} rounded-xl p-6 mb-8`}>
-                <h3 className={`text-lg font-bold mb-2 flex items-center gap-2 ${sector.infoBlock.color}`}>
-                  {sector.infoBlock.icon} {sector.infoBlock.title}
-                </h3>
-                <p className="text-gray-300 mb-3">{sector.infoBlock.description}</p>
-              </div>
-              {/* Cards Grid */}
-              <div className="grid md:grid-cols-2 gap-6">
-                {sector.projects.map((item) => (
-                  <div
-                    key={item.name}
-                    className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-neutral-700 hover:border-cyan-400/60"
-                  >
-                    <div>
-                      <div className="flex items-center gap-3 mb-2">
-                        {item.icon}
-                        <span className="text-xl font-bold text-white">{item.name}</span>
-                      </div>
-                      <p className="text-gray-300 mb-4 text-sm">{item.description}</p>
-                    </div>
-                    <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
-                      {/* More button */}
-                      {item.more ? (
-                        <Link
-                          href={item.more}
-                          className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
-                        >
-                          More
-                        </Link>
-                      ) : (
-                        <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
-                          More
-                        </span>
-                      )}
-                      {/* Visit button */}
-                      {item.link ? (
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
-                        >
-                          Visit <ExternalLink className="w-4 h-4 ml-1" />
-                        </a>
-                      ) : (
-                        <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
-                          Visit <ExternalLink className="w-4 h-4 ml-1" />
-                        </span>
-                      )}
-                    </div>
+      {/* Flat Sectors List */}
+      {nftSectors.map((sector) => (
+        <div key={sector.key} className="mb-12">
+          {/* Info Block */}
+          <div className={`bg-neutral-900/50 border border-${sector.color} rounded-xl p-6 mb-8`}>
+            <h3 className={`text-lg font-bold mb-2 flex items-center gap-2 ${sector.infoBlock.color}`}>
+              {sector.infoBlock.icon} {sector.infoBlock.title}
+            </h3>
+            <p className="text-gray-300 mb-3">{sector.infoBlock.description}</p>
+          </div>
+          {/* Cards Grid */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {sector.projects.map((item) => (
+              <div
+                key={item.name}
+                className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-neutral-700 hover:border-cyan-400/60"
+              >
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    {item.icon}
+                    <span className="text-xl font-bold text-white">{item.name}</span>
                   </div>
-                ))}
+                  <p className="text-gray-300 mb-4 text-sm">{item.description}</p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  {/* More button */}
+                  {item.more ? (
+                    <Link
+                      href={item.more}
+                      className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                    >
+                      More
+                    </Link>
+                  ) : (
+                    <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                      More
+                    </span>
+                  )}
+                  {/* Visit button */}
+                  {item.link ? (
+                    <a
+                      href={item.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                    >
+                      Visit <ExternalLink className="w-4 h-4 ml-1" />
+                    </a>
+                  ) : (
+                    <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                      Visit <ExternalLink className="w-4 h-4 ml-1" />
+                    </span>
+                  )}
+                </div>
               </div>
-            </AccordionContent>
-          </AccordionItem>
-        ))}
-      </Accordion>
+            ))}
+          </div>
+        </div>
+      ))}
       {/* Minting instructions */}
       <div className="mt-12 text-gray-400 text-base">
         For instructions on how to mint your own NFTs, refer to the <Link href="/Docs/developers/data-model/box/assets/tokens/non-fungible-tokens/minting-a-nft" className="text-cyan-400 hover:underline">developer section</Link>.
       </div>
-    </div>
+    </>
   );
 } 

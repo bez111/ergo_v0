@@ -160,7 +160,7 @@ export default function SigmajoinPage() {
             rel="noopener noreferrer"
             className="inline-flex items-center px-4 py-2 bg-cyan-500 rounded-lg font-semibold text-black hover:bg-cyan-600 transition-colors"
           >
-            <ExternalLink className="w-4 h-4 mr-2" /> Outsourceable Mix
+            <ExternalLink className="w-4 h-4 mr-2" /> Outsource Mix
           </a>
         </div>
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">

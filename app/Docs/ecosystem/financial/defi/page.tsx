@@ -3,11 +3,12 @@
 import React from "react";
 import { CheckCircle, Zap, TrendingUp, Info, Coins, Layers, Gift, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 const defiList: Array<{
   name: string;
   status: "Live" | "Experimental" | "In Development";
-  category: "Lending" | "Derivatives and Synthetics" | "Crowdfunding";
+  category: "Lending" | "Synthetics & Derivatives" | "Crowdfunding";
   description: string;
   link: string | null;
   more: string | null;
@@ -41,11 +42,35 @@ const defiList: Array<{
     more: "/Docs/ecosystem/financial/defi/exle",
     highlight: false,
   },  
-  // Derivatives and Synthetics
+  {
+    name: "Micro Credit",
+    status: "In Development",
+    category: "Lending",
+    description: "Micro-loans for individuals and small businesses — expand access to DeFi on Ergo.",
+    link: null,
+    more: "/Docs/ecosystem/financial/defi/micro-credit",
+  },
+  {
+    name: "Flash Loans",
+    status: "Experimental",
+    category: "Lending",
+    description: "Instant, collateral-free loans for advanced DeFi strategies and arbitrage on Ergo.",
+    link: null,
+    more: "/Docs/ecosystem/financial/defi/flash-loans",
+  },
+  {
+    name: "Mutual Credit",
+    status: "Experimental",
+    category: "Lending",
+    description: "Peer-to-peer credit protocols for trustless, decentralized borrowing and lending circles.",
+    link: null,
+    more: "/Docs/ecosystem/financial/defi/mutual-credit",
+  },
+  // Synthetics & Derivatives
   {
     name: "SigmaO",
     status: "In Development",
-    category: "Derivatives and Synthetics",
+    category: "Synthetics & Derivatives",
     description: "Advanced options and derivatives protocol.",
     link: "https://github.com/SigmaO/",
     more: "/Docs/ecosystem/financial/defi/sigmao",
@@ -54,12 +79,37 @@ const defiList: Array<{
   {
     name: "OptionPools",
     status: "Experimental",
-    category: "Derivatives and Synthetics",
+    category: "Synthetics & Derivatives",
     description: "Pooled options trading on Ergo.",
     link: "https://github.com/anon-real/optionpools",
     more: "/Docs/ecosystem/financial/defi/optionpools",
     highlight: false,
   },
+  {
+    name: "Trustless Prediction Markets",
+    status: "Experimental",
+    category: "Synthetics & Derivatives",
+    description: "100% trustless, permissionless prediction markets powered by the UTXO model. Make markets on any on-chain data, with automatic verification and payout based on smart contracts.",
+    link: null,
+    more: "/Docs/ecosystem/financial/defi/trustless-prediction-markets",
+  },
+  {
+    name: "Perpetual Tokens",
+    status: "Experimental",
+    category: "Synthetics & Derivatives",
+    description: "Tokens designed to persist indefinitely on-chain, enabled by ErgoScript. Perpetual tokens can only be removed via garbage collection, ensuring long-term existence and innovative protocol design.",
+    link: null,
+    more: "/Docs/ecosystem/financial/defi/perpetual-tokens",
+  },
+  {
+    name: "Multi-Stage Protocols",
+    status: "In Development",
+    category: "Synthetics & Derivatives",
+    description: "Protocols enabling advanced DeFi logic through scripts that reference each other across stages. Supports complex interactions, including cyclic references and persistent state across transactions.",
+    link: null,
+    more: "/Docs/ecosystem/financial/defi/multi-stage-protocols",
+  },
+  
   
   // Crowdfunding
   {
@@ -82,9 +132,9 @@ const defiList: Array<{
   },
 ];
 
-const categoryIcons: Record<"Lending" | "Derivatives and Synthetics" | "Crowdfunding", JSX.Element> = {
+const categoryIcons: Record<"Lending" | "Synthetics & Derivatives" | "Crowdfunding", JSX.Element> = {
   Lending: <Coins className="w-6 h-6 text-cyan-400" />,
-  "Derivatives and Synthetics": <Layers className="w-6 h-6 text-orange-400" />,
+  "Synthetics & Derivatives": <Layers className="w-6 h-6 text-orange-400" />,
   Crowdfunding: <Gift className="w-6 h-6 text-green-400" />,
 };
 
@@ -98,12 +148,12 @@ const advantages = [
 export default function DeFiPage() {
   // Группируем проекты по категориям
   const categories: Array<{
-    key: "Lending" | "Derivatives and Synthetics" | "Crowdfunding";
+    key: "Lending" | "Synthetics & Derivatives" | "Crowdfunding";
     label: string;
     icon: JSX.Element;
   }> = [
     { key: "Lending", label: "Lending", icon: categoryIcons["Lending"] },
-    { key: "Derivatives and Synthetics", label: "Derivatives and Synthetics", icon: categoryIcons["Derivatives and Synthetics"] },
+    { key: "Synthetics & Derivatives", label: "Synthetics & Derivatives", icon: categoryIcons["Synthetics & Derivatives"] },
     { key: "Crowdfunding", label: "Crowdfunding", icon: categoryIcons["Crowdfunding"] },
   ];
 
@@ -132,46 +182,60 @@ export default function DeFiPage() {
           {advantages.map((adv, i) => <li key={i}>{adv}</li>)}
         </ul>
       </div>
-      {categories.map(cat => (
-        <section key={cat.key} className="mb-12">
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            {cat.icon} {cat.label}
-          </h2>
-          {/* Lending Info Block */}
+      {/* Sectors Accordion */}
+      <Accordion type="single" collapsible className="mb-12">
+        {categories.map((cat, idx) => (
+          <AccordionItem key={cat.key} value={cat.key}>
+            <AccordionTrigger>
+              <span className="flex items-center gap-2">{cat.icon} {cat.label}</span>
+            </AccordionTrigger>
+            <AccordionContent>
+              {/* Info Block */}
           {cat.key === "Lending" && (
             <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-cyan-400">
-                <Coins className="w-5 h-5" /> How Lending & Borrowing Work
+                    <Coins className="w-5 h-5" /> Lending on Ergo
               </h3>
               <p className="text-gray-300 mb-3">
-                Lending and borrowing are two components that increase liquidity flow in financial systems. For example, you have Bitcoins but want to leverage your holding without selling your BTC. So, you can stake your BTC (or even your house as collateral) to borrow SigUSD and use it in exchanges or yield farming protocols. On the other side, another user can leverage their unused SigUSD by staking in the lending protocol. Traditional banks have very low-interest rates and may take a lot of revenue from your deposits. With decentralized lending protocols, users can lend and borrow across crypto ecosystems without relying on centralized platforms. Crypto lending protocols are open to more experimental designs, such as interest-free loans, enabling even more use cases on blockchains.
-              </p>
-              <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm">
-                <li>Loans: we have an interest-free loan contract example</li>
-                <li>With SigmaUSD, loans can be attractive to miners and not only</li>
-                <li>See also the targeted microloan contract from the "Smart Contracts for the People" article</li>
+                    Lending and borrowing are core pillars of DeFi, enabling users to earn yield or unlock liquidity from their assets — all without banks or intermediaries.
+                  </p>
+                  <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
+                    <li><b>Borrow against your crypto:</b> Use your ERG, stablecoins, or even NFTs as collateral to access instant liquidity without selling your holdings.</li>
+                    <li><b>Lend and earn:</b> Put your idle assets to work and earn competitive yields by providing liquidity to lending pools.</li>
+                    <li><b>Experiment with new models:</b> Explore innovative designs like interest-free loans, microloans, and peer-to-peer credit circles, all powered by smart contracts.</li>
+                  </ul>
+                  <p className="text-gray-400 text-sm mb-2">
+                    Traditional banks offer low interest rates and restrict access. In contrast, Ergo DeFi lending is open, permissionless, and censorship-resistant, giving you full control and new ways to participate in the global financial system.
+                  </p>
+                  <div className="mt-4">
+                    <span className="font-bold text-cyan-400">Featured Examples:</span>
+                    <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mt-1">
+                      <li>Interest-free loans via SigmaUSD and custom contracts</li>
+                      <li>Microloans and targeted credit for individuals and small businesses</li>
+                      <li>Experimental protocols for instant, collateral-free lending (Flash Loans), and decentralized mutual credit</li>
               </ul>
+                  </div>
             </div>
           )}
-          {/* Derivatives Info Block */}
-          {cat.key === "Derivatives and Synthetics" && (
+              {cat.key === "Synthetics & Derivatives" && (
             <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-orange-400">
-                <Layers className="w-5 h-5" /> Derivatives & Options on Ergo
+                    <Layers className="w-6 h-6 text-orange-400" /> Synthetics & Derivatives on Ergo
               </h3>
               <p className="text-gray-300 mb-3">
-                Ergo's powerful capabilities enable the creation of innovative decentralized finance (DeFi) primitives, including derivatives and options trading protocols. These protocols offer traders alternative platforms for speculating on asset prices, managing risk, and generating yield in a trustless and decentralized manner.
+                    Ergo’s advanced smart contract capabilities make it possible to build a new generation of decentralized financial primitives, including synthetic assets, derivatives, prediction markets, and perpetual tokens. These protocols empower traders and DeFi users to create, trade, and manage exposure to a wide range of assets and market outcomes — all in a trustless and decentralized environment.
               </p>
               <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
-                <li>Decentralized Options Trading: Protocols for trustless, on-chain options markets</li>
-                <li>Mining power derivatives and other advanced DeFi use cases</li>
+                    <li><b>Synthetic Assets:</b> Create and trade on-chain representations of stocks, commodities, currencies, and other real-world or crypto-native assets.</li>
+                    <li><b>Decentralized Derivatives:</b> Trustless protocols for options, futures, and perpetual swaps, enabling users to hedge risk or speculate on price movements.</li>
+                    <li><b>Prediction Markets:</b> Bet on real-world events, economic trends, or blockchain outcomes in open, censorship-resistant markets.</li>
+                    <li><b>Perpetual Tokens:</b> Innovative DeFi primitives for continuous exposure and leveraged positions, all managed by smart contracts.</li>
               </ul>
               <p className="text-gray-400 text-sm">
-                Ergo's decentralized finance ecosystem continues to evolve, offering traders and investors innovative ways to manage risk, speculate on asset prices, and generate yield in a trustless and decentralized manner.
+                    Ergo’s synthetic and derivative protocols unlock new ways to manage risk, access global markets, and generate yield — giving anyone the tools to participate in the future of open finance.
               </p>
             </div>
           )}
-          {/* Crowdfunding Info Block */}
           {cat.key === "Crowdfunding" && (
             <div className="bg-neutral-900/50 border border-green-700 rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-green-400">
@@ -187,15 +251,13 @@ export default function DeFiPage() {
               </ul>
             </div>
           )}
+              {/* Cards Grid */}
           <div className="grid md:grid-cols-2 gap-6">
             {defiList.filter(item => item.category === cat.key).map(item => {
-              // Определяем moreLink и highlight
               const moreLink = item.more || null;
               const highlight = (item as any).highlight;
-
-              // Для карточек Derivatives: лаконичные описания
               let description = item.description;
-              if (cat.key === "Derivatives and Synthetics") {
+                  if (cat.key === "Synthetics & Derivatives") {
                 if (item.name === "HodlCoin") {
                   description = `A high-risk, high-reward game that incentivizes users to HODL ERG. Un-HODLing incurs a penalty fee, rewarding long-term holders.`;
                 } else if (item.name === "OptionCoin") {
@@ -204,7 +266,6 @@ export default function DeFiPage() {
                   description = `A pool-to-peer AMM protocol for decentralized options trading on Ergo, featuring dual-asset pools and on-chain pricing.`;
                 }
               }
-
               return (
                 <div
                   key={item.name}
@@ -269,8 +330,210 @@ export default function DeFiPage() {
               );
             })}
           </div>
-        </section>
-      ))}
+            </AccordionContent>
+          </AccordionItem>
+        ))}
+        {/* Profit Mechanisms Accordion Item (after Crowdfunding, before Tokenomics) */}
+        <AccordionItem value="ProfitMechanisms">
+          <AccordionTrigger>
+            <span className="flex items-center gap-2"><TrendingUp className="w-6 h-6 text-yellow-400" /> Profit Mechanisms</span>
+          </AccordionTrigger>
+          <AccordionContent>
+            <div className="bg-yellow-400/10 border border-yellow-400/60 rounded-xl p-6 mb-8">
+              <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-yellow-400">
+                <Gift className="w-5 h-5" /> Revenue Sharing on Ergo
+              </h3>
+              <p className="text-gray-300 mb-3">
+                Ergo enables decentralized, programmable profit-sharing for dApps and DAOs. Protocols like the Ergo Profit-Sharing DApp allow for transparent, fair, and automated distribution of income among stakeholders using smart contracts and tokens.
+              </p>
+              <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
+                <li>Stakeholders receive rewards based on their staked tokens and system income.</li>
+                <li>Distribution, staking, and income contracts ensure security and flexibility.</li>
+                <li>Supports both ERG and token-based revenue sharing.</li>
+              </ul>
+              <p className="text-gray-400 text-sm">
+                Explore the protocol and its components below.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Profit Sharing Card */}
+              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-yellow-700 hover:border-yellow-400/80">
+                <div>
+                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
+                    Profit Sharing
+                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-yellow-700/80 text-yellow-200">Experimental</span>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    A modular solution for decentralized profit/revenue sharing on Ergo. Includes distribution, staking, and income contracts for fair and transparent reward allocation among stakeholders. Can be integrated as a service for other dApps.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  {/* More button */}
+                  <Link
+                    href="/Docs/ecosystem/financial/defi/revenue-sharing"
+                    className="inline-flex items-center text-yellow-400 font-semibold text-base hover:text-yellow-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                  >
+                    More
+                  </Link>
+                  {/* Visit button */}
+                  <a
+                    href="https://github.com/profit-sharing"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center text-yellow-400 font-semibold text-base hover:text-yellow-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                  >
+                    Visit <ExternalLink className="w-4 h-4 ml-1" />
+                  </a>
+                </div>
+              </div>
+              {/* Buy Back Guarantees Card */}
+              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-yellow-700 hover:border-yellow-400/80">
+                <div>
+                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
+                    Buy Back Guarantees
+                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-yellow-700/80 text-yellow-200">Experimental</span>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Protocols that guarantee token buybacks, stabilizing price and providing investors with an additional profit assurance.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  <Link
+                    href="/Docs/ecosystem/financial/defi/buyback-guarantees"
+                    className="inline-flex items-center text-yellow-400 font-semibold text-base hover:text-yellow-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                  >
+                    More
+                  </Link>
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    Visit <ExternalLink className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </div>
+              {/* Insurance Card */}
+              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-yellow-700 hover:border-yellow-400/80">
+                <div>
+                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
+                    Insurance
+                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-cyan-800/80 text-cyan-200">In Development</span>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Decentralized insurance protocols to protect user funds and profits from hacks, bugs, or unexpected events in the DeFi ecosystem.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  <Link
+                    href="/Docs/ecosystem/financial/defi/insurance"
+                    className="inline-flex items-center text-yellow-400 font-semibold text-base hover:text-yellow-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                  >
+                    More
+                  </Link>
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    Visit <ExternalLink className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+        {/* Tokenomics Accordion Item */}
+        <AccordionItem value="Tokenomics">
+          <AccordionTrigger>
+            <span className="flex items-center gap-2"><TrendingUp className="w-6 h-6 text-pink-400" /> Tokenomics</span>
+          </AccordionTrigger>
+          <AccordionContent>
+            <div className="bg-pink-400/10 border border-pink-400/60 rounded-xl p-6 mb-8">
+              <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-pink-400">
+                <TrendingUp className="w-5 h-5" /> Tokenomics on Ergo
+              </h3>
+              <p className="text-gray-300 mb-3">
+                Explore innovative token models and economic primitives on Ergo. From ICOs to index coins, PoW tokens, and bonding curves — these mechanisms power new forms of value creation, distribution, and governance in DeFi.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* ICOs Card */}
+              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-pink-700 hover:border-pink-400/80">
+                <div>
+                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
+                    ICOs
+                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-pink-700/80 text-pink-200">Experimental</span>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Initial Coin Offerings (ICOs) allow projects to raise funds and distribute tokens to early supporters in a transparent, on-chain process.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    More
+                  </span>
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    Visit <ExternalLink className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </div>
+              {/* Index Coins Card */}
+              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-pink-700 hover:border-pink-400/80">
+                <div>
+                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
+                    Index Coins
+                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-pink-700/80 text-pink-200">Experimental</span>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Index coins track the value of a basket of assets, providing diversified exposure and simplified portfolio management for DeFi users.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    More
+                  </span>
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    Visit <ExternalLink className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </div>
+              {/* PoW Tokens Card */}
+              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-pink-700 hover:border-pink-400/80">
+                <div>
+                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
+                    PoW Tokens
+                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-pink-700/80 text-pink-200">Experimental</span>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Proof-of-Work tokens are mined or earned through computational work, enabling new incentive models and decentralized distribution.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    More
+                  </span>
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    Visit <ExternalLink className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </div>
+              {/* Bonding Curve Card */}
+              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-pink-700 hover:border-pink-400/80">
+                <div>
+                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
+                    Bonding Curve
+                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-pink-700/80 text-pink-200">Experimental</span>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Bonding curves are mathematical mechanisms for dynamic token pricing and supply, enabling continuous fundraising and automated market making.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    More
+                  </span>
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    Visit <ExternalLink className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </div>
+            </div>
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
     </>
   );
 } 

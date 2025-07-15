@@ -5,6 +5,14 @@ import { CheckCircle, Zap, TrendingUp, ExternalLink, Info } from "lucide-react";
 
 const dexList = [
   {
+    name: "Mew Finance",
+    status: "Live",
+    description:
+      "Mew Finance is a sophisticated decentralized finance platform on the Ergo Blockchain, designed to deliver a secure, user-friendly, and innovative DeFi experience.",
+    highlight: true,
+    link: "https://mew.fi"
+  },
+  {
     name: "Spectrum Finance",
     status: "Live",
     description:
@@ -38,14 +46,6 @@ const dexList = [
     description:
       "Machina Finance aims to promote decentralization and facilitate P2P trade by leveraging the power of grid contracts.",
     link: "https://machina.finance/"
-  },
-  {
-    name: "Mew Finance",
-    status: "Live",
-    description:
-      "Mew Finance is a sophisticated decentralized finance platform on the Ergo Blockchain, designed to deliver a secure, user-friendly, and innovative DeFi experience.",
-    highlight: true,
-    link: "https://mew.fi"
   },
   {
     name: "GuapSwap",

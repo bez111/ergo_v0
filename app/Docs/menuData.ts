@@ -21,16 +21,16 @@ export const menuData = [
       },
       { title: "Wallets", href: "/Docs/introduction/wallets" },
       {
+        title: "Resources",
+        href: "/Docs/introduction/resources"
+      },
+      {
         title: "Contribute",
         href: "/Docs/contribute"
       },
       {
         title: "Events",
         href: "/Docs/introduction/events",
-      },
-      {
-        title: "Resources",
-        href: "/Docs/introduction/resources"
       },
       { 
         title: "Glossary", href: "/Docs/introduction/glossary" 
@@ -52,66 +52,29 @@ export const menuData = [
         href: "/Docs/ecosystem/financial",
       },
       {
-        title: "NFTs",
+        title: "Privacy",
+        href: "/Docs/ecosystem/privacy",
+      },
+      {
+        title: "NFTs & Gaming",
         href: "/Docs/ecosystem/nfts",
       },
       { title: "Artificial Intelligence", href: "/Docs/ecosystem/ai" },
       {
-        title: "Gaming",
-        href: "/Docs/ecosystem/gaming",
+        title: "DAO",
+        href: "/Docs/ecosystem/daos",
+      },
+      {
+        title: "Applications",
+        href: "/Docs/ecosystem/applications",
       },
       {
         title: "Tooling",
         href: "/Docs/ecosystem/tooling",
       },
       {
-        title: "Applications",
-        href: "/Docs/ecosystem/applications",
-        items: [
-          { title: "Thz.FM" },
-          { title: "TabbyPOS" },
-          { title: "PandaV" },
-          {
-            title: "ZenGate Global",
-            items: [
-              { title: "Solaris Portal" },
-              { title: "Cyberiad" },
-            ],
-          },
-        ],
-      },
-      {
-        title: "Privacy",
-        href: "/Docs/ecosystem/privacy",
-        items: [
-          {
-            title: "Mixing",
-            items: [
-              {
-                title: "ErgoMixer",
-                items: [
-                  { title: "Identifiability" },
-                  { title: "Best Practices" },
-                  { title: "FAQ" },
-                  { title: "Token" },
-                  { title: "Install on Android" },
-                ],
-              },
-              { title: "SigmaJoin" },
-            ],
-          },
-          { title: "Stealth Addresses" },
-        ],
-      },
-      {
-        title: "DAOs",
-        href: "/Docs/ecosystem/daos",
-        items: [
-          { title: "Paideia" },
-          { title: "ErgoPad" },
-          { title: "The Field" },
-          { title: "Thz.FM" },
-        ],
+        title: "Standarts",
+        href: "/Docs/ecosystem/Standarts",
       },
     ],
   },
@@ -232,13 +195,9 @@ export const menuData = [
   {
     title: "Further Ideas",
     items: [
-      { title: "Profit Sharing" },
       { title: "Email Client for Blocked Internet" },
-      { title: "Flash Loans" },
       { title: "Prediction Markets" },
       { title: "Insurance" },
-      { title: "Micro Credit" },
-      { title: "Mutual Credit" },
       { title: "Bonding Curve" },
       {
         title: "Tokens",
