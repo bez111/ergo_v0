@@ -5,7 +5,7 @@ import { BookOpen, Globe, Code, Pickaxe, Menu } from "lucide-react"
 import { usePathname } from "next/navigation"
 import NavLink from "@/components/nav-link"
 import SidebarMenu from "@/components/SidebarMenu"
-import { LocalSearch } from "@/components/search/LocalSearch";
+import { LocalSearch } from "@/components/search/LocalSearch"
 
 const NoIcon = () => null;
 
