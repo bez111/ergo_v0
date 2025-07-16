@@ -5,6 +5,7 @@ import { BookOpen, Globe, Code, Pickaxe, Menu } from "lucide-react"
 import { usePathname } from "next/navigation"
 import NavLink from "@/components/nav-link"
 import SidebarMenu from "@/components/SidebarMenu"
+import { LocalSearch } from "@/components/search/LocalSearch";
 
 const NoIcon = () => null;
 
@@ -89,6 +90,10 @@ const sectionButtons = [
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="bg-black text-white min-h-screen">
+      {/* Кнопка поиска между header и контентом */}
+      <div className="container mx-auto px-4 pt-8 pb-4">
+        <LocalSearch />
+      </div>
       <div className="container mx-auto px-4 pt-24 pb-12">
         <div className="grid lg:grid-cols-[280px_1fr] gap-x-8">
           {/* Sidebar Navigation */}

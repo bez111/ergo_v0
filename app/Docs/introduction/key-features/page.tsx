@@ -64,7 +64,7 @@ export default function KeyFeaturesPage() {
 
       {/* Core Features Grid */}
       <div className="grid md:grid-cols-2 gap-6 mb-12">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group transition-all duration-200">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Database className="w-5 h-5 text-orange-400" /> eUTXO Model
           </h3>
@@ -87,13 +87,13 @@ export default function KeyFeaturesPage() {
           </ul>
           <Link
             href="/Docs/introduction/eutxo"
-            className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors font-semibold"
+            className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors font-semibold opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group transition-all duration-200">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Code className="w-5 h-5 text-cyan-400" /> ErgoScript
           </h3>
@@ -116,13 +116,13 @@ export default function KeyFeaturesPage() {
           </ul>
           <Link
             href="/Docs/developers/ergoscript"
-            className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold"
+            className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors font-semibold opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group transition-all duration-200">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Shield className="w-5 h-5 text-green-400" /> Sigma Protocols
           </h3>
@@ -145,13 +145,13 @@ export default function KeyFeaturesPage() {
           </ul>
           <Link
             href="/Docs/developers/sigma-protocols"
-            className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-semibold"
+            className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-semibold opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group transition-all duration-200">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Eye className="w-5 h-5 text-purple-400" /> NIPoPoWs
           </h3>
@@ -174,13 +174,13 @@ export default function KeyFeaturesPage() {
           </ul>
           <Link
             href="/Docs/introduction/nipopows"
-            className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors font-semibold"
+            className="inline-flex items-center text-purple-400 hover:text-purple-300 transition-colors font-semibold opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group transition-all duration-200">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Lock className="w-5 h-5 text-blue-400" /> Privacy Features
           </h3>
@@ -203,13 +203,13 @@ export default function KeyFeaturesPage() {
           </ul>
           <Link
             href="/Docs/introduction/privacy"
-            className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-semibold"
+            className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors font-semibold opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group transition-all duration-200">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Cpu className="w-5 h-5 text-yellow-400" /> Autolykos v2
           </h3>
@@ -232,13 +232,13 @@ export default function KeyFeaturesPage() {
           </ul>
           <Link
             href="/Docs/introduction/autolykos"
-            className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors font-semibold"
+            className="inline-flex items-center text-yellow-400 hover:text-yellow-300 transition-colors font-semibold opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group transition-all duration-200">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Coins className="w-5 h-5 text-green-400" /> Storage Rent
           </h3>
@@ -261,13 +261,13 @@ export default function KeyFeaturesPage() {
           </ul>
           <Link
             href="/Docs/introduction/storage-rent"
-            className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-semibold"
+            className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors font-semibold opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
         </div>
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group transition-all duration-200">
           <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
             <Network className="w-5 h-5 text-red-400" /> Sidechains
           </h3>
@@ -290,7 +290,7 @@ export default function KeyFeaturesPage() {
           </ul>
           <Link
             href="/Docs/ecosystem/infrastructure/sidechains"
-            className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors font-semibold"
+            className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors font-semibold opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto pointer-events-none transition-opacity duration-200"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
