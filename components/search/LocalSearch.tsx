@@ -172,6 +172,26 @@ function buildSearchIndex() {
     '/Docs/introduction/social-contract': 'Social contract of Ergo. Community values and principles.',
     '/Docs/miners/Miner-Tooling': 'Mining tools and utilities for Ergo. Software and hardware for miners.',
   };
+
+  // Image descriptions and alt-text for image search
+  const imageDescriptions: Record<string, string> = {
+    'DistributionTx.png': 'Distribution transaction diagram showing how ERG tokens are distributed in the Ergo ecosystem. Visual representation of token economics and distribution mechanisms.',
+    'FundingTx.png': 'Funding transaction illustration demonstrating how projects receive funding through transparent on-chain mechanisms. Shows the funding flow and governance structure.',
+    'fee-3d.png': '3D visualization of storage rent fee structure in Ergo blockchain. Shows how fees are calculated and distributed to maintain network security and efficiency.',
+    'ergo-logo.png': 'Official Ergo blockchain logo and branding. Represents the Ergo ecosystem and community identity.',
+    'blockchain-diagram.png': 'Blockchain architecture diagram showing Ergo\'s unique features including eUTXO model, ErgoScript, and consensus mechanism.',
+    'mining-hardware.png': 'Mining hardware and equipment used for Ergo mining. Shows different types of mining setups and hardware configurations.',
+    'privacy-protocol.png': 'Privacy protocol diagram illustrating Sigma protocols, stealth addresses, and confidential transactions on Ergo.',
+    'defi-protocols.png': 'DeFi protocols visualization showing lending, derivatives, and crowdfunding applications built on Ergo blockchain.',
+    'smart-contract.png': 'Smart contract diagram demonstrating ErgoScript programming and formal verification processes.',
+    'consensus-flow.png': 'Consensus mechanism flow chart showing Autolykos v2 proof-of-work algorithm and block validation process.',
+    'utxo-model.png': 'UTXO model diagram comparing traditional UTXO with Ergo\'s extended UTXO (eUTXO) model and its advantages.',
+    'oracle-network.png': 'Oracle network diagram showing how external data feeds are integrated into Ergo blockchain for DeFi applications.',
+    'sidechain-bridge.png': 'Sidechain bridge illustration demonstrating cross-chain interoperability and asset transfers between Ergo and other blockchains.',
+    'wallet-security.png': 'Wallet security diagram showing multi-signature setups, hardware wallet integration, and security best practices for Ergo wallets.',
+    'mining-pool.png': 'Mining pool visualization showing how miners collaborate and share rewards in the Ergo network.',
+    'governance-structure.png': 'Governance structure diagram illustrating community decision-making processes and DAO governance in the Ergo ecosystem.'
+  };
   
   // Function to process menu sections (existing pages with href)
   function processMenuSection(section: any, parentSection: string = '') {
@@ -307,6 +327,19 @@ function buildSearchIndex() {
       });
     }
   });
+
+  // Add image search entries
+  Object.entries(imageDescriptions).forEach(([imageName, description]) => {
+    index.push({
+      objectID: `image-${imageName}`,
+      title: `Image: ${imageName.replace('.png', '').replace(/-/g, ' ')}`,
+      content: description,
+      url: `/public/${imageName}`,
+      section: 'Images & Diagrams',
+      tags: extractTags(description, 'Images & Diagrams'),
+      type: 'content' as const,
+    });
+  });
   
   // Log the total number of pages in search index
   console.log(`Search index built with ${index.length} pages`);
@@ -354,11 +387,40 @@ function getContentType(url: string, title: string): 'title' | 'content' | 'code
 function searchInIndex(query: string, index: SearchHit[]): GroupedSearchResult[] {
   if (!query.trim()) return [];
   
+  // Define synonyms for better search
+  const synonyms: Record<string, string[]> = {
+    'ergo': ['ergo', 'erg', 'blockchain', 'cryptocurrency'],
+    'defi': ['defi', 'decentralized finance', 'lending', 'borrowing', 'yield'],
+    'utxo': ['utxo', 'eutxo', 'unspent transaction output', 'transaction model'],
+    'ergoscript': ['ergoscript', 'smart contract', 'script', 'programming'],
+    'mining': ['mining', 'autolykos', 'proof of work', 'pow', 'consensus'],
+    'privacy': ['privacy', 'sigma', 'confidential', 'private', 'stealth'],
+    'oracles': ['oracles', 'data feeds', 'external data', 'price feeds'],
+    'sidechains': ['sidechains', 'layer 2', 'scaling', 'off-chain'],
+    'lending': ['lending', 'borrowing', 'loans', 'credit', 'duckpools'],
+    'derivatives': ['derivatives', 'options', 'futures', 'synthetics'],
+    'crowdfunding': ['crowdfunding', 'fundraising', 'ico', 'tokensale'],
+    'wallets': ['wallets', 'yoroi', 'nautilus', 'storage', 'keys'],
+    'consensus': ['consensus', 'autolykos', 'mining', 'proof of work'],
+    'smart contracts': ['smart contracts', 'ergoscript', 'programming', 'automation'],
+    'nipopows': ['nipopows', 'light clients', 'verification', 'proofs'],
+    'storage rent': ['storage rent', 'fees', 'economic model', 'incentives']
+  };
+  
   const queryLower = query.toLowerCase();
   const queryWords = queryLower.split(' ').filter(word => word.length > 0);
+  
+  // Expand query with synonyms
+  const expandedQueryWords = [...queryWords];
+  queryWords.forEach(word => {
+    const wordSynonyms = synonyms[word] || [];
+    expandedQueryWords.push(...wordSynonyms);
+  });
+  
   const results: Array<SearchHit & { score: number }> = [];
   
   console.log('Searching with query words:', queryWords);
+  console.log('Expanded query words:', expandedQueryWords);
   
   index.forEach(hit => {
     let score = 0;
@@ -366,100 +428,104 @@ function searchInIndex(query: string, index: SearchHit[]): GroupedSearchResult[]
     let contentMatch = false;
     let tagsMatch = false;
     let sectionMatch = false;
+    let exactMatch = false;
     
-    // Check each query word
-    queryWords.forEach(word => {
-      // Title matches (highest weight) - also check partial matches
-      if (hit.title.toLowerCase().includes(word) || 
-          hit.title.toLowerCase().startsWith(word) ||
-          word.length > 2 && hit.title.toLowerCase().includes(word.substring(0, word.length - 1))) {
+    // Check each query word and its synonyms
+    expandedQueryWords.forEach(word => {
+      // Exact title match (highest weight)
+      if (hit.title.toLowerCase() === word) {
+        score += 20;
+        titleMatch = true;
+        exactMatch = true;
+      }
+      // Title starts with word
+      else if (hit.title.toLowerCase().startsWith(word)) {
+        score += 15;
+        titleMatch = true;
+      }
+      // Title contains word
+      else if (hit.title.toLowerCase().includes(word)) {
         score += 10;
         titleMatch = true;
       }
       
-      // Content matches (medium weight) - also check partial matches
-      if (hit.content.toLowerCase().includes(word) ||
-          word.length > 2 && hit.content.toLowerCase().includes(word.substring(0, word.length - 1))) {
+      // Content exact match
+      if (hit.content.toLowerCase() === word) {
+        score += 15;
+        contentMatch = true;
+        exactMatch = true;
+      }
+      // Content contains word
+      else if (hit.content.toLowerCase().includes(word)) {
         score += 5;
         contentMatch = true;
       }
       
-      // Tags matches (high weight) - also check partial matches
-      if (hit.tags.some(tag => tag.toLowerCase().includes(word) ||
-          word.length > 2 && tag.toLowerCase().includes(word.substring(0, word.length - 1)))) {
+      // Tags exact match
+      if (hit.tags.some(tag => tag.toLowerCase() === word)) {
+        score += 12;
+        tagsMatch = true;
+        exactMatch = true;
+      }
+      // Tags contains word
+      else if (hit.tags.some(tag => tag.toLowerCase().includes(word))) {
         score += 8;
         tagsMatch = true;
       }
       
-      // Section matches (low weight) - also check partial matches
-      if (hit.section.toLowerCase().includes(word) ||
-          word.length > 2 && hit.section.toLowerCase().includes(word.substring(0, word.length - 1))) {
+      // Section contains word
+      if (hit.section.toLowerCase().includes(word)) {
         score += 3;
         sectionMatch = true;
       }
     });
     
-    // Bonus for exact matches
-    if (hit.title.toLowerCase() === queryLower) score += 20;
-    if (hit.content.toLowerCase().includes(queryLower)) score += 15;
+    // Bonus for multiple matches
+    if (titleMatch && contentMatch) score += 5;
+    if (titleMatch && tagsMatch) score += 3;
+    if (exactMatch) score += 10;
     
-    // Bonus for type relevance
+    // Bonus for recent/important content
     if (hit.type === 'title') score += 2;
+    if (hit.url.includes('/introduction/')) score += 1;
     
     if (score > 0) {
-      console.log('Match found:', hit.title, 'with score:', score);
-      // Create enhanced snippet with context around matches
-      let snippet = createEnhancedSnippet(hit.content, queryWords, hit.title);
-      
-      results.push({
-        ...hit,
-        content: snippet,
-        score
-      });
+      results.push({ ...hit, score });
     }
   });
-  
-  console.log('Total matches found:', results.length);
   
   // Sort by score (highest first)
   results.sort((a, b) => b.score - a.score);
   
   // Group results by page
-  const groupedResults: Record<string, GroupedSearchResult> = {};
+  const groupedResults = new Map<string, GroupedSearchResult>();
   
   results.forEach(hit => {
-    const pageUrl = hit.url.split('#')[0]; // Remove anchor
-    const pageTitle = hit.title;
-    const pageSection = hit.section;
-    
-    if (!groupedResults[pageUrl]) {
-      groupedResults[pageUrl] = {
-        pageUrl,
-        pageTitle,
-        pageSection,
+    if (!groupedResults.has(hit.url)) {
+      groupedResults.set(hit.url, {
+        pageUrl: hit.url,
+        pageTitle: hit.title,
+        pageSection: hit.section,
         hits: [],
         totalHits: 0,
         visibleHits: 0,
         expanded: false,
         relevanceScore: 0
-      };
+      });
     }
     
-    groupedResults[pageUrl].hits.push(hit);
-    groupedResults[pageUrl].totalHits++;
-    groupedResults[pageUrl].relevanceScore += hit.score;
+    const group = groupedResults.get(hit.url)!;
+    group.hits.push(hit);
+    group.totalHits++;
+    group.relevanceScore = Math.max(group.relevanceScore, hit.score);
   });
   
   // Convert to array and sort by relevance
-  const groupedArray = Object.values(groupedResults);
-  groupedArray.sort((a, b) => b.relevanceScore - a.relevanceScore);
+  const finalResults = Array.from(groupedResults.values());
+  finalResults.sort((a, b) => b.relevanceScore - a.relevanceScore);
   
-  // Set initial visible hits (show first 3 per page)
-  groupedArray.forEach(group => {
-    group.visibleHits = Math.min(3, group.totalHits);
-  });
-  
-  return groupedArray;
+  // Limit results to top 20 pages
+  return finalResults.slice(0, 20);
 }
 
 // Create enhanced snippets with context around matches
@@ -534,8 +600,76 @@ export function LocalSearch() {
   const [error, setError] = useState<string | null>(null);
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [expandedGroups, setExpandedGroups] = useState<Set<string>>(new Set());
+  const [searchHistory, setSearchHistory] = useState<string[]>([]);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1);
+  const [selectedContentType, setSelectedContentType] = useState<string>('all');
   
   const searchIndex = useRef<SearchHit[]>([]);
+  const modalRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  // Content type filters
+  const contentTypes = [
+    { id: 'all', label: 'All', icon: '📄', description: 'All content types' },
+    { id: 'documentation', label: 'Documentation', icon: '📚', description: 'Technical documentation and guides' },
+    { id: 'code', label: 'Code', icon: '💻', description: 'ErgoScript, Sigma, and code examples' },
+    { id: 'guides', label: 'Guides', icon: '📖', description: 'Tutorials and how-to guides' },
+    { id: 'api', label: 'API', icon: '🔧', description: 'API documentation and references' }
+  ];
+
+  // Code-related terms for enhanced search
+  const codeTerms = [
+    'ergoscript', 'sigma', 'nipopows', 'autolykos', 'eutxo', 'utxo',
+    'consensus', 'proof-of-work', 'pow', 'smart contract', 'script',
+    'programming', 'blockchain', 'cryptography', 'hash', 'signature',
+    'transaction', 'block', 'mining', 'wallet', 'key', 'address',
+    'token', 'nft', 'defi', 'oracle', 'sidechain', 'privacy',
+    'confidential', 'stealth', 'mixing', 'zero-knowledge', 'zk',
+    'formal verification', 'type system', 'compiler', 'interpreter'
+  ];
+
+  // Image-related terms for image search
+  const imageTerms = [
+    'diagram', 'chart', 'graph', 'visualization', 'illustration',
+    'flowchart', 'architecture', 'structure', 'model', 'design',
+    'blockchain diagram', 'consensus flow', 'utxo model', 'mining setup',
+    'privacy protocol', 'defi protocols', 'smart contract', 'oracle network',
+    'sidechain bridge', 'wallet security', 'governance structure',
+    'distribution transaction', 'funding transaction', 'storage rent',
+    'hardware', 'equipment', 'setup', 'configuration', 'network'
+  ];
+
+  // Popular queries and suggestions
+  const popularQueries = [
+    'mining', 'defi', 'privacy', 'wallets', 'ergoscript',
+    'utxo', 'oracles', 'sidechains', 'smart contracts',
+    'consensus', 'autolykos', 'sigma', 'nipopows',
+    'lending', 'derivatives', 'crowdfunding', 'storage rent',
+    'diagram', 'visualization', 'architecture', 'flowchart'
+  ];
+
+  // Related topics for smart suggestions
+  const relatedTopics: Record<string, string[]> = {
+    'mining': ['autolykos', 'consensus', 'proof-of-work', 'hardware'],
+    'defi': ['lending', 'derivatives', 'crowdfunding', 'yield farming'],
+    'privacy': ['sigma', 'stealth-addresses', 'confidential', 'mixing'],
+    'wallets': ['yoroi', 'nautilus', 'keys', 'security'],
+    'ergoscript': ['smart contracts', 'programming', 'sigma', 'scripting'],
+    'utxo': ['eutxo', 'transaction model', 'state management'],
+    'oracles': ['data feeds', 'external data', 'price feeds'],
+    'sidechains': ['layer 2', 'scaling', 'off-chain', 'interoperability'],
+    'smart contracts': ['ergoscript', 'automation', 'programming'],
+    'consensus': ['autolykos', 'proof-of-work', 'mining', 'security'],
+    'lending': ['borrowing', 'duckpools', 'credit', 'loans'],
+    'derivatives': ['options', 'futures', 'synthetics', 'trading'],
+    'crowdfunding': ['ico', 'fundraising', 'tokensale', 'grants'],
+    'diagram': ['visualization', 'chart', 'graph', 'illustration'],
+    'visualization': ['diagram', 'chart', 'graph', 'architecture'],
+    'architecture': ['structure', 'design', 'model', 'diagram'],
+    'flowchart': ['flow', 'process', 'diagram', 'visualization']
+  };
 
   // Initialize search index
   useEffect(() => {
@@ -549,6 +683,152 @@ export function LocalSearch() {
     }
   }, []);
 
+  // Load search history from localStorage
+  useEffect(() => {
+    const savedHistory = localStorage.getItem('searchHistory');
+    if (savedHistory) {
+      try {
+        setSearchHistory(JSON.parse(savedHistory));
+      } catch (e) {
+        console.error('Failed to load search history:', e);
+      }
+    }
+  }, []);
+
+  // Save search history to localStorage
+  const saveSearchHistory = (searchTerm: string) => {
+    if (!searchTerm.trim()) return;
+    
+    const newHistory = [
+      searchTerm,
+      ...searchHistory.filter(item => item !== searchTerm)
+    ].slice(0, 10); // Keep only last 10 searches
+    
+    setSearchHistory(newHistory);
+    localStorage.setItem('searchHistory', JSON.stringify(newHistory));
+  };
+
+  // Remove item from search history
+  const removeFromHistory = (historyItem: string) => {
+    const newHistory = searchHistory.filter(item => item !== historyItem);
+    setSearchHistory(newHistory);
+    localStorage.setItem('searchHistory', JSON.stringify(newHistory));
+  };
+
+  // Clear all search history
+  const clearAllHistory = () => {
+    if (window.confirm('Are you sure you want to clear all search history?')) {
+      setSearchHistory([]);
+      localStorage.removeItem('searchHistory');
+    }
+  };
+
+  // Generate suggestions based on query
+  const generateSuggestions = useCallback((query: string) => {
+    if (!query.trim() || query.length < 1) {
+      setSuggestions([]);
+      setShowSuggestions(false);
+      return;
+    }
+
+    const queryLower = query.toLowerCase();
+    const suggestions: string[] = [];
+
+    // Add popular queries that match
+    popularQueries.forEach(term => {
+      if (term.toLowerCase().includes(queryLower)) {
+        suggestions.push(term);
+      }
+    });
+
+    // Add code terms that match
+    codeTerms.forEach(term => {
+      if (term.toLowerCase().includes(queryLower)) {
+        suggestions.push(term);
+      }
+    });
+
+    // Add image terms that match
+    imageTerms.forEach(term => {
+      if (term.toLowerCase().includes(queryLower)) {
+        suggestions.push(term);
+      }
+    });
+
+    // Add related topics
+    Object.entries(relatedTopics).forEach(([topic, related]) => {
+      if (topic.toLowerCase().includes(queryLower)) {
+        suggestions.push(...related);
+      }
+    });
+
+    // Add from search history
+    searchHistory.forEach(historyItem => {
+      if (historyItem.toLowerCase().includes(queryLower) && !suggestions.includes(historyItem)) {
+        suggestions.push(historyItem);
+      }
+    });
+
+    // Remove duplicates and limit to 8 suggestions
+    const uniqueSuggestions = [...new Set(suggestions)].slice(0, 8);
+    setSuggestions(uniqueSuggestions);
+    setShowSuggestions(uniqueSuggestions.length > 0);
+    setSelectedSuggestionIndex(-1);
+  }, [searchHistory]);
+
+  // Handle keyboard shortcuts
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      // Ctrl+K or Cmd+K to open search
+      if ((event.ctrlKey || event.metaKey) && event.key === 'k') {
+        event.preventDefault();
+        setIsOpen(true);
+        setTimeout(() => {
+          inputRef.current?.focus();
+        }, 100);
+      }
+      
+      // Escape to close search
+      if (event.key === 'Escape' && isOpen) {
+        event.preventDefault();
+        handleCloseModal();
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, [isOpen]);
+
+  // Handle click outside modal
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+        handleCloseModal();
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [isOpen]);
+
+  // Handle modal close and reset
+  const handleCloseModal = () => {
+    setIsOpen(false);
+    setQuery('');
+    setResults([]);
+    setSelectedTags([]);
+    setExpandedGroups(new Set());
+    setSuggestions([]);
+    setShowSuggestions(false);
+    setSelectedSuggestionIndex(-1);
+    setSelectedContentType('all');
+  };
+
   // Search function with minimum query length
   const performSearch = useCallback((searchQuery: string) => {
     if (!searchQuery.trim() || searchQuery.trim().length < 2) {
@@ -556,17 +836,80 @@ export function LocalSearch() {
       return;
     }
     if (error) return;
+    
     console.log('Searching for:', searchQuery, 'in', searchIndex.current.length, 'pages');
     const searchResults = searchInIndex(searchQuery, searchIndex.current);
     console.log('Found', searchResults.length, 'result groups');
     setResults(searchResults);
+    
+    // Save to search history
+    saveSearchHistory(searchQuery);
   }, [error]);
 
   // Handle search input
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    performSearch(value);
+    
+    // Generate suggestions
+    generateSuggestions(value);
+    
+    // Perform search if query is long enough
+    if (value.length >= 2) {
+      performSearch(value);
+    } else {
+      setResults([]);
+    }
+  };
+
+  // Handle keyboard navigation in suggestions
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (!showSuggestions) return;
+
+    switch (e.key) {
+      case 'ArrowDown':
+        e.preventDefault();
+        setSelectedSuggestionIndex(prev => 
+          prev < suggestions.length - 1 ? prev + 1 : prev
+        );
+        break;
+      case 'ArrowUp':
+        e.preventDefault();
+        setSelectedSuggestionIndex(prev => prev > 0 ? prev - 1 : -1);
+        break;
+      case 'Enter':
+        e.preventDefault();
+        if (selectedSuggestionIndex >= 0 && suggestions[selectedSuggestionIndex]) {
+          handleSuggestionClick(suggestions[selectedSuggestionIndex]);
+        }
+        break;
+      case 'Tab':
+        if (selectedSuggestionIndex >= 0 && suggestions[selectedSuggestionIndex]) {
+          e.preventDefault();
+          handleSuggestionClick(suggestions[selectedSuggestionIndex]);
+        }
+        break;
+    }
+  };
+
+  // Handle suggestion click
+  const handleSuggestionClick = (suggestion: string) => {
+    setQuery(suggestion);
+    setShowSuggestions(false);
+    setSelectedSuggestionIndex(-1);
+    performSearch(suggestion);
+  };
+
+  // Handle search history click
+  const handleHistoryClick = (historyItem: string) => {
+    setQuery(historyItem);
+    setShowSuggestions(false);
+    performSearch(historyItem);
+  };
+
+  // Handle content type filter
+  const handleContentTypeFilter = (contentType: string) => {
+    setSelectedContentType(contentType);
   };
 
   // Handle tag selection
@@ -593,7 +936,7 @@ export function LocalSearch() {
 
   // Handle result click - close modal and navigate
   const handleResultClick = () => {
-    setIsOpen(false);
+    handleCloseModal();
   };
 
   // Get all unique tags from results
@@ -607,32 +950,84 @@ export function LocalSearch() {
     return Array.from(tagSet).sort();
   }, [results]);
 
-  // Filter results by selected tags
+  // Filter results by selected tags and content type
   const filteredResults = useMemo(() => {
-    if (selectedTags.length === 0) return results;
-    return results.filter(group => 
-      group.hits.some(hit => 
-        selectedTags.some(selectedTag => 
-          hit.tags.includes(selectedTag)
+    let filtered = results;
+    
+    // Filter by content type
+    if (selectedContentType !== 'all') {
+      filtered = filtered.filter(group => 
+        group.hits.some(hit => {
+          const url = hit.url.toLowerCase();
+          const title = hit.title.toLowerCase();
+          const content = hit.content.toLowerCase();
+          
+          switch (selectedContentType) {
+            case 'code':
+              return url.includes('/ergoscript') || 
+                     url.includes('/code') || 
+                     title.includes('ergoscript') ||
+                     title.includes('sigma') ||
+                     content.includes('ergoscript') ||
+                     content.includes('sigma') ||
+                     hit.type === 'code';
+            case 'documentation':
+              return url.includes('/introduction') || 
+                     url.includes('/docs') ||
+                     title.includes('documentation') ||
+                     title.includes('guide');
+            case 'guides':
+              return url.includes('/guides') || 
+                     url.includes('/tutorial') ||
+                     title.includes('guide') ||
+                     title.includes('tutorial') ||
+                     title.includes('how-to');
+            case 'api':
+              return url.includes('/api') || 
+                     url.includes('/reference') ||
+                     title.includes('api') ||
+                     title.includes('reference');
+            default:
+              return true;
+          }
+        })
+      );
+    }
+    
+    // Filter by selected tags
+    if (selectedTags.length > 0) {
+      filtered = filtered.filter(group => 
+        group.hits.some(hit => 
+          selectedTags.some(selectedTag => 
+            hit.tags.includes(selectedTag)
+          )
         )
-      )
-    );
-  }, [results, selectedTags]);
+      );
+    }
+    
+    return filtered;
+  }, [results, selectedTags, selectedContentType]);
 
   return (
     <>
-      {/* Search Button */}
-      <button
-        onClick={() => setIsOpen(true)}
-        className="flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 rounded-lg transition-colors duration-200 text-gray-300 hover:text-white"
-      >
-        <Search className="w-4 h-4" />
-        <span className="hidden sm:inline">Search</span>
-        <kbd className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 text-xs bg-neutral-700 rounded">
-          <Command className="w-3 h-3" />
-          K
-        </kbd>
-      </button>
+      {/* Search Bar - Updated to match the image design */}
+      <div className="relative w-full max-w-2xl">
+        <div className="relative">
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search articles..."
+            onClick={() => setIsOpen(true)}
+            readOnly
+            className="w-full pl-12 pr-4 py-3 bg-neutral-800 border border-neutral-700 rounded-full text-gray-300 placeholder-gray-400 focus:outline-none focus:border-cyan-400/60 transition-colors duration-200 cursor-pointer"
+          />
+          {/* Keyboard shortcut hint */}
+          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-xs text-gray-500">
+            <kbd className="px-1.5 py-0.5 bg-neutral-700 rounded text-gray-300">⌘</kbd>
+            <kbd className="px-1.5 py-0.5 bg-neutral-700 rounded text-gray-300">K</kbd>
+          </div>
+        </div>
+      </div>
 
       {/* Error message */}
       {error && (
@@ -644,25 +1039,88 @@ export function LocalSearch() {
       {/* Search Modal */}
       {isOpen && !error && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center pt-20 animate-in fade-in duration-200">
-          <div className="w-full max-w-4xl mx-4 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl max-h-[80vh] flex flex-col animate-in slide-in-from-bottom-4 duration-300">
+          <div ref={modalRef} className="w-full max-w-4xl mx-4 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl max-h-[80vh] flex flex-col animate-in slide-in-from-bottom-4 duration-300">
             {/* Header */}
             <div className="flex items-center justify-between p-6 border-b border-neutral-700">
-              <div className="flex items-center gap-3 flex-1">
+              <div className="flex items-center gap-3 flex-1 relative">
                 <Search className="w-5 h-5 text-gray-400" />
                 <input
+                  ref={inputRef}
                   type="text"
                   value={query}
                   onChange={handleSearchChange}
+                  onKeyDown={handleKeyDown}
                   placeholder="Search documentation... (min 2 characters)"
                   className="w-full bg-transparent text-white placeholder-gray-400 outline-none text-lg"
+                  autoFocus
                 />
+                
+                {/* Autocomplete Suggestions */}
+                {showSuggestions && suggestions.length > 0 && (
+                  <div className="absolute top-full left-0 right-0 mt-1 bg-neutral-800 border border-neutral-600 rounded-lg shadow-lg z-10 max-h-64 overflow-y-auto">
+                    {suggestions.map((suggestion, index) => (
+                      <div key={index} className="flex items-center justify-between">
+                        <button
+                          onClick={() => handleSuggestionClick(suggestion)}
+                          className={`flex-1 text-left px-4 py-3 hover:bg-neutral-700 transition-colors duration-150 ${
+                            index === selectedSuggestionIndex 
+                              ? 'bg-neutral-700 text-white' 
+                              : 'text-gray-300'
+                          }`}
+                        >
+                          <div className="flex items-center gap-3">
+                            <Search className="w-4 h-4 text-gray-500" />
+                            <span>{suggestion}</span>
+                            {searchHistory.includes(suggestion) && (
+                              <span className="ml-auto text-xs text-gray-500">Recent</span>
+                            )}
+                          </div>
+                        </button>
+                        {searchHistory.includes(suggestion) && (
+                          <button
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              removeFromHistory(suggestion);
+                            }}
+                            className="p-2 hover:bg-neutral-700 rounded-full transition-colors duration-200 mr-2"
+                            title="Remove from history"
+                          >
+                            <Trash2 className="w-3 h-3 text-gray-500 hover:text-red-400" />
+                          </button>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                )}
               </div>
               <button
-                onClick={() => setIsOpen(false)}
+                onClick={handleCloseModal}
                 className="p-2 hover:bg-neutral-800 rounded-lg transition-colors duration-200"
+                title="Close (Esc)"
               >
                 <X className="w-5 h-5 text-gray-400" />
               </button>
+            </div>
+
+            {/* Content Type Filters */}
+            <div className="px-6 py-3 border-b border-neutral-700">
+              <div className="flex flex-wrap gap-2">
+                {contentTypes.map((contentType) => (
+                  <button
+                    key={contentType.id}
+                    onClick={() => handleContentTypeFilter(contentType.id)}
+                    className={`px-3 py-2 rounded-lg transition-colors duration-200 text-sm flex items-center gap-2 ${
+                      selectedContentType === contentType.id
+                        ? 'bg-cyan-600 text-white'
+                        : 'bg-neutral-700 text-gray-300 hover:bg-neutral-600'
+                    }`}
+                    title={contentType.description}
+                  >
+                    <span>{contentType.icon}</span>
+                    <span>{contentType.label}</span>
+                  </button>
+                ))}
+              </div>
             </div>
 
             {/* Tag Filters */}
@@ -688,12 +1146,75 @@ export function LocalSearch() {
 
             {/* Results */}
             <div className="flex-1 overflow-y-auto p-6">
+              {/* Search History (when no query or results) */}
+              {(!query || query.length < 2) && searchHistory.length > 0 && (
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-gray-400 mb-3">Recent searches</h3>
+                  <div className="space-y-2">
+                    {searchHistory.slice(0, 5).map((historyItem, index) => (
+                      <div key={index} className="flex items-center justify-between bg-neutral-800/50 rounded-lg hover:bg-neutral-800/70 transition-colors duration-200">
+                        <button
+                          onClick={() => handleHistoryClick(historyItem)}
+                          className="flex-1 text-left p-3 text-gray-300 hover:text-white transition-colors duration-200"
+                        >
+                          <div className="flex items-center gap-2">
+                            <Search className="w-4 h-4 text-gray-500" />
+                            <span>{historyItem}</span>
+                          </div>
+                        </button>
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            removeFromHistory(historyItem);
+                          }}
+                          className="p-2 hover:bg-neutral-700 rounded-full transition-colors duration-200 mr-2"
+                          title="Remove from history"
+                        >
+                          <Trash2 className="w-4 h-4 text-gray-500 hover:text-red-400" />
+                        </button>
+                      </div>
+                    ))}
+                    {searchHistory.length > 0 && (
+                      <button
+                        onClick={clearAllHistory}
+                        className="w-full text-center text-sm text-red-400 hover:text-red-300 transition-colors duration-200 py-2"
+                      >
+                        Clear All History
+                      </button>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Popular Queries (when no query) */}
+              {(!query || query.length < 2) && (
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-gray-400 mb-3">Popular searches</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {popularQueries.slice(0, 8).map((query, index) => (
+                      <button
+                        key={index}
+                        onClick={() => handleSuggestionClick(query)}
+                        className="px-3 py-2 bg-neutral-800/50 rounded-lg hover:bg-neutral-800/70 transition-colors duration-200 text-gray-300 hover:text-white text-sm"
+                      >
+                        {query}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+              )}
+
               {query && query.length >= 2 && (
                 <div className="mb-4 text-sm text-gray-400">
                   {filteredResults.length > 0 ? (
                     `${filteredResults.reduce((sum, group) => sum + group.totalHits, 0)} matching documents`
                   ) : (
                     'No results found'
+                  )}
+                  {selectedContentType !== 'all' && (
+                    <span className="ml-2 text-cyan-400">
+                      • Filtered by {contentTypes.find(ct => ct.id === selectedContentType)?.label}
+                    </span>
                   )}
                 </div>
               )}
