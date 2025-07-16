@@ -59,9 +59,24 @@ const dexList = [
 export default function DexPage() {
   return (
     <>
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-        Decentralised Exchanges (DEXs)
-      </h1>
+      {/* HERO Section with Back Button */}
+      <div className="mb-12">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+          Decentralised Exchanges (DEXs)
+        </h1>
+        <p className="text-xl text-gray-400 mb-6">
+          Explore Ergo's DEX landscape: non-custodial, cross-chain, and innovative trading platforms for everyone.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <a
+            href="/Docs/ecosystem/financial"
+            className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+            Back to Financial
+          </a>
+        </div>
+      </div>
       {/* Overview Section */}
       <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">

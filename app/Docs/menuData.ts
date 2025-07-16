@@ -73,8 +73,8 @@ export const menuData = [
         href: "/Docs/ecosystem/tooling",
       },
       {
-        title: "Standarts",
-        href: "/Docs/ecosystem/Standarts",
+        title: "Standards",
+        href: "/Docs/ecosystem/Standards",
       },
     ],
   },

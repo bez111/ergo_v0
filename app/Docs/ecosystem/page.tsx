@@ -2,20 +2,18 @@
 
 import React from "react";
 import Head from "next/head";
-import { 
-  Rocket, 
-  Settings, 
-  DollarSign, 
-  Lock, 
-  Users, 
-  Gamepad2, 
-  Wrench, 
+import {
+  Rocket,
+  Settings,
+  DollarSign,
+  Lock,
+  Users,
+  Gamepad2,
+  Wrench,
   Lightbulb,
-  ExternalLink,
   ChevronRight,
-  CheckCircle,
-  Globe,
   Shield,
+  Globe,
   Cpu,
   Database,
   Coins,
@@ -29,108 +27,101 @@ import Link from 'next/link';
 export default function EcosystemPage() {
   const ecosystemSections = [
     {
-      title: "Applications",
-      description: "Ergo's ecosystem is built on a solid foundation of key technologies and applications that cater to diverse use cases.",
-      icon: Rocket,
-      color: "text-orange-400",
-      link: "/Docs/ecosystem/applications"
-    },
-    {
-      title: "Infrastructure", 
-      description: "Explore the underlying technologies that power the Ergo blockchain, including our robust Proof of Work consensus algorithm, sidechains, bridges, and oracle systems.",
+      title: "Infrastructure",
+      description: "Explore the technologies powering Ergo: robust Proof of Work consensus, extended UTXO, oracles, bridges, and cross-chain capabilities.",
       icon: Settings,
       color: "text-cyan-400",
       link: "/Docs/ecosystem/infrastructure"
     },
     {
       title: "Financial Tools",
-      description: "Dive into the financial applications and services within the Ergo ecosystem, including decentralized exchanges, stablecoins, lending platforms, and derivatives.",
+      description: "Dive into the financial backbone of Ergo: decentralized exchanges, stablecoins, lending, synthetics, and new DeFi primitives.",
       icon: DollarSign,
       color: "text-green-400",
       link: "/Docs/ecosystem/financial"
     },
     {
       title: "Privacy Solutions",
-      description: "Ergo is at the forefront of privacy innovation with solutions like non-custodial mixers and stealth addresses.",
+      description: "Ergo is at the forefront of privacy innovation, featuring native zero-knowledge proofs, non-custodial mixers, and stealth addresses.",
       icon: Lock,
       color: "text-purple-400",
       link: "/Docs/ecosystem/privacy"
     },
     {
       title: "Decentralized Governance",
-      description: "Discover the tools and platforms that enable decentralized governance within the Ergo ecosystem, including DAOs and community-driven initiatives.",
+      description: "Community-driven governance with DAOs, on-chain voting, and collaborative tools that empower open decision-making.",
       icon: Users,
       color: "text-yellow-400",
       link: "/Docs/ecosystem/daos"
     },
     {
       title: "NFTs & Gaming",
-      description: "NFT collections and play-to-earn games built on Ergo. Tools and protocols for creators and developers.",
+      description: "NFT collections, creator protocols, and on-chain games: experience a thriving digital culture built on Ergo.",
       icon: Gamepad2,
       color: "text-pink-400",
       link: "/Docs/ecosystem/nfts"
     },
     {
-      title: "Tooling and Developer Resources",
-      description: "Get access to a suite of developer tools and resources designed to facilitate the creation and deployment of decentralized applications on the Ergo blockchain.",
+      title: "Developer Tooling",
+      description: "All the SDKs, APIs, libraries, templates, and resources to build your vision on Ergo’s innovative platform.",
       icon: Wrench,
       color: "text-indigo-400",
       link: "/Docs/ecosystem/tooling"
-    },
+    }
   ];
 
   const coreComponents = [
     {
       name: "Autolykos",
-      description: "The underlying Memory-hard ASIC-resistant Proof of Work (PoW) algorithm oriented towards GPUs.",
+      description: "Memory-hard, ASIC-resistant Proof of Work algorithm optimized for GPUs. The security backbone of the Ergo blockchain.",
       link: "/Docs/introduction/autolykos",
       icon: Cpu
     },
     {
       name: "eUTXO",
-      description: "Ergo uses a so-called extended-UTXO model, which implies UTXOs with the ability to contain arbitrary data and sophisticated scripts.",
+      description: "Ergo’s extended UTXO model enables complex scripts, arbitrary data, and powerful on-chain logic at the protocol level.",
       link: "/Docs/introduction/eutxo",
       icon: Database
     },
     {
+      name: "ErgoScript",
+      description: "A robust, high-level smart contract language for expressive and auditable decentralized logic.",
+      link: "/Docs/introduction/ergoscript",
+      icon: Code
+    },
+    {
       name: "NIPoPoWs",
-      description: "Enable extended support of light nodes which makes Ergo friendly for end-users, allowing them to run contracts on common devices such as mobile phones without centralised intermediaries.",
+      description: "Non-Interactive Proofs of Proof-of-Work: true light clients, secure bridges, and efficient mobile-first interactions.",
       link: "/Docs/introduction/nipopows",
       icon: Zap
     },
     {
       name: "Privacy",
-      description: "Ergo provides superior access to discrete log-based zero-knowledge proofs",
+      description: "Native support for discrete log-based zero-knowledge proofs and privacy-preserving transactions.",
       link: "/Docs/introduction/privacy",
       icon: Lock
     },
     {
-      name: "Scaling",
-      description: "Explore the various scaling solutions being explored on Ergo.",
-      link: "/Docs/introduction/scaling",
-      icon: GitBranch
-    },
-    {
       name: "Storage Rent",
-      description: "Storage Rent is a nominal fee incurred by unmoved boxes after four years.",
+      description: "A unique mechanism charging small fees for unmoved coins, keeping the blockchain state sustainable long-term.",
       link: "/Docs/introduction/storage-rent",
       icon: Coins
     },
     {
-      name: "ErgoScript",
-      description: "A simple high-level language enabling clear descriptions of contractual logic.",
-      link: "/Docs/introduction/ergoscript",
-      icon: Code
-    },
-    {
       name: "Oracles",
-      description: "The messengers in and out of blockchains. Ergo Blockchain's design allows Oracle Pools, protected by trust heirarchies.",
-      link: "/Docs/introduction/oracle-pool",
+      description: "Decentralized Oracle Pools securely inject real-world data into Ergo, powering advanced DeFi and cross-chain dApps.",
+      link: "/Docs/ecosystem/infrastructure/oracles",
       icon: Globe
     },
     {
+      name: "Scaling",
+      description: "Layer-1 optimizations, stateless clients, and ongoing sharding research for efficient, future-proof growth.",
+      link: "/Docs/introduction/scaling",
+      icon: GitBranch
+    },
+    {
       name: "Parachains/Sidechains",
-      description: "Explore the various scaling solutions being explored on Ergo.",
+      description: "Interoperability and horizontal scaling via NIPoPoW-powered sidechains and cross-chain bridges.",
       link: "/Docs/introduction/nipopow-sidechains",
       icon: GitBranch
     }
@@ -140,8 +131,8 @@ export default function EcosystemPage() {
     <>
       <Head>
         <title>Ergo Ecosystem - Explore the Ergo Universe</title>
-        <meta name="description" content="Explore the thriving Ergo ecosystem with decentralized applications, tools, and protocols designed to empower users, developers, and communities." />
-        <meta name="keywords" content="ergo ecosystem, decentralized applications, defi, privacy, gaming, metaverse, blockchain tools" />
+        <meta name="description" content="Explore the thriving Ergo ecosystem: robust infrastructure, DeFi, privacy, NFTs, governance, and tooling for builders and users." />
+        <meta name="keywords" content="ergo ecosystem, decentralized applications, defi, privacy, nft, governance, developer tools, blockchain" />
       </Head>
 
       {/* Hero Section */}
@@ -150,7 +141,7 @@ export default function EcosystemPage() {
           Welcome to the Ergo Ecosystem
         </h1>
         <p className="text-lg text-gray-300 mb-6">
-          The Ergo Ecosystem is a thriving hub of decentralized applications, tools, and protocols designed to empower users, developers, and communities in the blockchain space. This section provides an overview of the various components that make up the Ergo Ecosystem, highlighting the innovation and utility that drive our growing network.
+          The Ergo Ecosystem is a thriving hub of decentralized applications, infrastructure, and protocols empowering users, developers, and communities. Explore everything from secure DeFi to private transactions, community DAOs, and next-generation developer tooling.
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
@@ -174,7 +165,7 @@ export default function EcosystemPage() {
           <Brain className="w-6 h-6 text-orange-400" /> The Ergo Ecosystem Vision
         </h2>
         <p className="text-gray-300">
-          Ergo's ecosystem encapsulates the best of blockchain innovation, merging proven concepts with cutting-edge research. This comprehensive ecosystem provides the tools, infrastructure, and applications needed to build the future of decentralized finance and beyond.
+          Ergo merges proven blockchain foundations with innovative research, providing a platform for open finance, privacy, and resilient, community-owned infrastructure. Build, experiment, and collaborate on a platform engineered for real-world impact.
         </p>
       </div>
 
@@ -182,7 +173,7 @@ export default function EcosystemPage() {
       <div className="grid md:grid-cols-2 gap-6 mb-12">
         {ecosystemSections.map((section, index) => {
           const IconComponent = section.icon;
-          return section.link ? (
+          return (
             <Link
               key={index}
               href={section.link}
@@ -199,19 +190,6 @@ export default function EcosystemPage() {
                 Learn more <ChevronRight className="w-4 h-4 ml-1" />
               </div>
             </Link>
-          ) : (
-            <div 
-              key={index}
-              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6"
-            >
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <IconComponent className={`w-5 h-5 ${section.color}`} />
-                {section.title}
-              </h3>
-              <p className="text-gray-300 leading-relaxed">
-                {section.description}
-              </p>
-            </div>
           );
         })}
       </div>
@@ -225,10 +203,10 @@ export default function EcosystemPage() {
           {coreComponents.map((component, index) => {
             const IconComponent = component.icon;
             return (
-              <div 
+              <Link
                 key={index}
-                className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-all duration-300 group cursor-pointer"
-                onClick={() => window.location.href = component.link}
+                href={component.link}
+                className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-all duration-300 group cursor-pointer block"
               >
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2 group-hover:text-orange-200 transition-colors">
                   <IconComponent className="w-5 h-5 text-orange-300" />
@@ -240,7 +218,7 @@ export default function EcosystemPage() {
                 <div className="flex items-center text-orange-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity">
                   Learn more <ChevronRight className="w-4 h-4 ml-1" />
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
@@ -278,12 +256,12 @@ export default function EcosystemPage() {
       <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-gray-200">Explore the Ecosystem</h2>
         <p className="text-gray-300 mb-6 leading-relaxed">
-          Use the navigation on the left to explore each of these sections in detail. Whether you're interested in financial services, privacy solutions, or decentralized governance, the Ergo Ecosystem has something to offer for everyone.
+          Use the navigation on the left to explore each section in detail. Whether you're interested in DeFi, privacy, NFTs, or governance, the Ergo Ecosystem has something for everyone.
         </p>
         <p className="text-lg text-orange-300 font-semibold">
-          Join us in building the future of decentralized finance and beyond.
+          Join us in building the future of open, decentralized finance and technology.
         </p>
       </div>
     </>
   );
-} 
+}

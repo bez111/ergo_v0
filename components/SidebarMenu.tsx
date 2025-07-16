@@ -2,34 +2,25 @@
 import { useState } from "react"
 import Link from "next/link"
 import { menuData } from "../app/Docs/menuData"
-import { usePathname } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 
 function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: number, parentPath?: string }) {
   const [open, setOpen] = useState(false)
   const hasChildren = !!item.items?.length
   const pathname = usePathname() || "";
-
-  // Build the full path for nested items
   const fullPath = item.href || parentPath;
-
-  // Определяем стиль для пункта
   const isActive = item.href && pathname === item.href;
-  // Special case: open Tooling if on /Docs/miners/Miner-Tooling
   const shouldForceOpen =
     (item.title === "Tooling" && pathname.startsWith("/Docs/miners/Miner-Tooling")) ||
     (hasChildren && item.items?.some((child: any) => child.href && pathname === child.href));
-
   const baseClass = level === 0
     ? `font-medium text-base text-gray-200 hover:text-orange-400${isActive ? " text-orange-400" : ""}`
     : `font-normal text-sm text-gray-400 hover:text-orange-300${isActive ? " text-orange-300" : ""}`;
-
   const handleLinkClick = (e: React.MouseEvent) => {
     if (hasChildren) {
       setOpen(true);
     }
-    // Не отменяем переход по ссылке, чтобы страница тоже открывалась
   };
-
   return (
     <div className={`py-0.5 ${level > 0 ? "ml-4" : ""}`}> 
       <div
@@ -82,34 +73,47 @@ function getSectionKeyByPath(pathname: string) {
 
 export default function SidebarMenu() {
   const pathname = usePathname() || "";
+  const router = useRouter();
+  const [openSection, setOpenSection] = useState(() => getSectionKeyByPath(pathname));
   const activeSection = getSectionKeyByPath(pathname);
-  const section = menuData.find((s: any) => typeof s.title === 'string' && s.title === activeSection);
+
+  // Always open the section matching the current path
+  // const section = menuData.find((s: any) => typeof s.title === 'string' && s.title === openSection);
+
+  const handleSectionClick = (tab: any) => {
+    setOpenSection(tab.key);
+    router.push(tab.href);
+  };
+
   return (
     <aside className="w-full max-w-xs bg-neutral-900 text-white p-0 pt-6 rounded-none border-r border-neutral-800 h-full overflow-auto">
-      {/* Tabs */}
-      <div className="flex flex-wrap gap-3 px-6 pt-2 pb-4 mb-4 bg-neutral-900 z-10 sticky top-0">
-        {sectionTabs.map(tab => (
-          <Link
-            key={tab.key}
-            href={tab.href as string}
-            className={`px-5 py-2 rounded-lg text-base font-bold uppercase tracking-wider shadow-sm transition-colors duration-150 ${
-              activeSection === tab.key ? "bg-orange-400 text-white" : "bg-neutral-800 text-gray-300 hover:bg-orange-300 hover:text-white"
-            }`}
-            style={{ outline: "none", border: "none" }}
-          >
-            {tab.label}
-          </Link>
-        ))}
+      {/* 4 Big Section Buttons + Accordions */}
+      <div className="flex flex-col gap-3 px-6 pt-2 pb-4 mb-4 bg-neutral-900 z-10">
+        {sectionTabs.map(tab => {
+          const section = menuData.find((s: any) => typeof s.title === 'string' && s.title === tab.key);
+          const isOpen = openSection === tab.key;
+          return (
+            <div key={tab.key}>
+              <button
+                onClick={() => handleSectionClick(tab)}
+                className={`w-full px-5 py-3 rounded-lg text-base font-bold uppercase tracking-wider shadow-sm transition-colors duration-150 text-left ${
+                  isOpen ? "bg-orange-400 text-white" : "bg-neutral-800 text-gray-300 hover:bg-orange-300 hover:text-black"
+                }`}
+              >
+                {tab.label}
+              </button>
+              {/* Подменю — без тайтла раздела */}
+              {isOpen && section && (
+                <div className="pl-2 pt-2">
+                  {section.items?.map((item: any) => (
+                    <MenuItem key={item.title} item={item} level={1} parentPath={""} />
+                  ))}
+                </div>
+              )}
+            </div>
+          );
+        })}
       </div>
-      {/* Section content */}
-      {section && (
-        <div className="mb-6 px-6">
-          <h2 className="font-semibold text-sm mb-3 text-orange-400 uppercase tracking-wider">{section.title}</h2>
-          {section.items.map((item: any, idx: number) => (
-            <MenuItem key={idx} item={item} parentPath={""} />
-          ))}
-        </div>
-      )}
     </aside>
   );
 } 

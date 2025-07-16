@@ -161,9 +161,24 @@ export default function DeFiPage() {
 
   return (
     <>
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-        Decentralized Finance (DeFi)
-      </h1>
+      {/* HERO Section with Back Button */}
+      <div className="mb-12">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+          Decentralized Finance (DeFi)
+        </h1>
+        <p className="text-xl text-gray-400 mb-6">
+          Explore Ergo's open, permissionless DeFi ecosystem: lending, synthetics, crowdfunding, and more — all on a secure, decentralized blockchain.
+        </p>
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href="/Docs/ecosystem/financial"
+            className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+            Back to Financial
+          </Link>
+        </div>
+      </div>
       {/* Overview Section */}
       <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-3 flex items-center gap-2">
@@ -194,45 +209,49 @@ export default function DeFiPage() {
           {cat.key === "Lending" && (
             <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-cyan-400">
-                    <Coins className="w-5 h-5" /> Lending on Ergo
+                <Coins className="w-5 h-5" /> Lending on Ergo
               </h3>
               <p className="text-gray-300 mb-3">
-                    Lending and borrowing are core pillars of DeFi, enabling users to earn yield or unlock liquidity from their assets — all without banks or intermediaries.
-                  </p>
-                  <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
-                    <li><b>Borrow against your crypto:</b> Use your ERG, stablecoins, or even NFTs as collateral to access instant liquidity without selling your holdings.</li>
-                    <li><b>Lend and earn:</b> Put your idle assets to work and earn competitive yields by providing liquidity to lending pools.</li>
-                    <li><b>Experiment with new models:</b> Explore innovative designs like interest-free loans, microloans, and peer-to-peer credit circles, all powered by smart contracts.</li>
-                  </ul>
-                  <p className="text-gray-400 text-sm mb-2">
-                    Traditional banks offer low interest rates and restrict access. In contrast, Ergo DeFi lending is open, permissionless, and censorship-resistant, giving you full control and new ways to participate in the global financial system.
-                  </p>
-                  <div className="mt-4">
-                    <span className="font-bold text-cyan-400">Featured Examples:</span>
-                    <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mt-1">
-                      <li>Interest-free loans via SigmaUSD and custom contracts</li>
-                      <li>Microloans and targeted credit for individuals and small businesses</li>
-                      <li>Experimental protocols for instant, collateral-free lending (Flash Loans), and decentralized mutual credit</li>
+                Lending and borrowing are at the core of DeFi, empowering anyone to unlock liquidity or earn yield from their assets — all without banks or intermediaries.
+              </p>
+              <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
+                <li><b>Borrow with confidence:</b> Instantly unlock liquidity by using your ERG, stablecoins, or even NFTs as collateral. No need to sell your holdings or exit the market.</li>
+                <li><b>Lend and earn:</b> Put your idle assets to work. Earn competitive, on-chain yields by supplying liquidity to decentralized lending pools.</li>
+                <li><b>Innovate beyond banks:</b> Experiment with interest-free loans, microloans, and peer-to-peer credit circles — all powered by open, programmable smart contracts.</li>
               </ul>
-                  </div>
+              <p className="text-gray-400 text-sm mb-2">
+                Traditional finance locks users out with low yields and high barriers. Ergo DeFi lending is open, permissionless, and censorship-resistant — putting you in full control of your assets and participation.
+              </p>
+              <div className="mt-4">
+                <span className="font-bold text-cyan-400">Featured Examples:</span>
+                <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mt-1 mb-2">
+                  <li>Interest-free loans and peer-to-peer credit via SigmaFi and custom contracts</li>
+                  <li>Microloans for individuals and small businesses — expanding access to DeFi</li>
+                  <li>Experimental protocols for instant, collateral-free lending (Flash Loans) and decentralized mutual credit networks</li>
+                </ul>
+                <p className="text-gray-400 text-sm">
+                  Ergo’s lending ecosystem is built for everyone: whether you’re a yield farmer, a small business, or just looking for new ways to access capital — all with transparency and freedom at the core.
+                </p>
+              </div>
             </div>
           )}
               {cat.key === "Synthetics & Derivatives" && (
             <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
               <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-orange-400">
-                    <Layers className="w-6 h-6 text-orange-400" /> Synthetics & Derivatives on Ergo
+                <Layers className="w-6 h-6 text-orange-400" /> Synthetics & Derivatives on Ergo
               </h3>
               <p className="text-gray-300 mb-3">
-                    Ergo’s advanced smart contract capabilities make it possible to build a new generation of decentralized financial primitives, including synthetic assets, derivatives, prediction markets, and perpetual tokens. These protocols empower traders and DeFi users to create, trade, and manage exposure to a wide range of assets and market outcomes — all in a trustless and decentralized environment.
+                Ergo’s programmable smart contracts unlock a new generation of decentralized financial tools—synthetic assets, derivatives, prediction markets, and perpetual tokens. These protocols empower traders and DeFi users to create, manage, and trade a wide spectrum of market exposures with no intermediaries or gatekeepers.
               </p>
               <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
-                    <li><b>Synthetic Assets:</b> Create and trade on-chain representations of stocks, commodities, currencies, and other real-world or crypto-native assets.</li>
-                    <li><b>Decentralized Derivatives:</b> Trustless protocols for options, futures, and perpetual swaps, enabling users to hedge risk or speculate on price movements.</li>
-                    <li><b>Prediction Markets:</b> Bet on real-world events, economic trends, or blockchain outcomes in open, censorship-resistant markets.</li>
-                    <li><b>Perpetual Tokens:</b> Innovative DeFi primitives for continuous exposure and leveraged positions, all managed by smart contracts.</li>
+                <li><b>Synthetic Assets:</b> Instantly create and trade on-chain representations of stocks, commodities, currencies, and other real-world or crypto-native assets. Gain exposure or hedge risk directly from the Ergo blockchain.</li>
+                <li><b>Decentralized Derivatives:</b> Trustless protocols for options, futures, and perpetuals let users leverage, speculate, or manage risk in a transparent, permissionless way.</li>
+                <li><b>Prediction Markets:</b> Bet on real-world events, economic outcomes, or blockchain activity in open, censorship-resistant markets—powered entirely by smart contracts.</li>
+                <li><b>Perpetual Tokens:</b> A new DeFi primitive—tokens that exist indefinitely on-chain and enable continuous, leveraged market exposure, managed by code, not intermediaries.</li>
+                <li><b>Multi-Stage Protocols:</b> Compose complex DeFi logic across multiple transactions, enabling advanced automations and new financial engineering models on Ergo.</li>
               </ul>
               <p className="text-gray-400 text-sm">
-                    Ergo’s synthetic and derivative protocols unlock new ways to manage risk, access global markets, and generate yield — giving anyone the tools to participate in the future of open finance.
+                From advanced hedging strategies to global market access and community-driven bets, Ergo’s synthetic and derivative protocols offer anyone the freedom to participate and build in open, next-generation finance.
               </p>
             </div>
           )}
@@ -242,13 +261,16 @@ export default function DeFiPage() {
                 <Gift className="w-5 h-5" /> Crowdfunding on Ergo
               </h3>
               <p className="text-gray-300 mb-3">
-                Crowdfunding for common infrastructure and tooling on the Ergo network is a way for users, developers, and miners to work together to fund and advance the network far into the future.
+                Crowdfunding on the Ergo network enables users, developers, and miners to collaboratively fund new tools, infrastructure, and ecosystem projects. This empowers the community to accelerate network growth, experiment with new models, and promote financial sovereignty.
               </p>
-              <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm">
-                <li>We already have crowdfunding on the Ergo blockchain via <b>Ergo Raffle</b>; this allows projects to host 'Raffles' with a prize percentage allocated to the lucky donor.</li>
-                <li><b>ErgoWell</b> is a project meant to be used for investing in ventures trying to raise money through crowdfunding.</li>
-                <li><b>ErgoFund</b> will eventually provide a more sophisticated crowdfunding experience, with contracts for campaigns with thousands of pledges and enable 'Self-Soverign DeFi'.</li>
+              <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
+                <li><b>ErgoRaffle:</b> Decentralized raffle and crowdfunding platform, letting projects host transparent “prize” campaigns for contributors.</li>
+                <li><b>Sigma Subscriptions:</b> Subscription-based crowdfunding protocol, allowing recurring, programmable donations for continuous project support.</li>
+                <li><b>ICOs:</b> Initial Coin Offerings (ICOs) represent a token-based crowdfunding model, where contributors receive newly issued tokens in exchange for funding and become early supporters.</li>
               </ul>
+              <p className="text-gray-400 text-sm">
+                Crowdfunding on Ergo supports everything from creative experiments and community tools to large infrastructure ventures—combining open, on-chain transparency with flexible fundraising models.
+              </p>
             </div>
           )}
               {/* Cards Grid */}
@@ -329,6 +351,31 @@ export default function DeFiPage() {
                 </div>
               );
             })}
+            {/* ICOs Card перенесена из Tokenomics */}
+            {cat.key === "Crowdfunding" && (
+              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-pink-700 hover:border-pink-400/80">
+                <div>
+                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
+                    ICOs
+                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-pink-700/80 text-pink-200">Experimental</span>
+                  </h3>
+                  <p className="text-gray-300 mb-4 text-sm">
+                    Initial Coin Offerings (ICOs) allow projects to raise funds and distribute tokens to early supporters in a transparent, on-chain process.
+                  </p>
+                </div>
+                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
+                  <Link
+                    href="/Docs/ecosystem/financial/defi/ico"
+                    className="inline-flex items-center text-pink-400 font-semibold text-base hover:text-pink-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                  >
+                    More
+                  </Link>
+                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                    Visit <ExternalLink className="w-4 h-4 ml-1" />
+                  </span>
+                </div>
+              </div>
+            )}
           </div>
             </AccordionContent>
           </AccordionItem>
@@ -344,15 +391,15 @@ export default function DeFiPage() {
                 <Gift className="w-5 h-5" /> Revenue Sharing on Ergo
               </h3>
               <p className="text-gray-300 mb-3">
-                Ergo enables decentralized, programmable profit-sharing for dApps and DAOs. Protocols like the Ergo Profit-Sharing DApp allow for transparent, fair, and automated distribution of income among stakeholders using smart contracts and tokens.
+                Ergo enables programmable, decentralized profit-sharing for dApps, DAOs, and DeFi protocols. With flexible smart contracts, income can be distributed transparently and automatically among stakeholders, aligning incentives and rewarding participation.
               </p>
               <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
-                <li>Stakeholders receive rewards based on their staked tokens and system income.</li>
-                <li>Distribution, staking, and income contracts ensure security and flexibility.</li>
-                <li>Supports both ERG and token-based revenue sharing.</li>
+                <li><b>Stakeholder rewards:</b> Earn a share of protocol income or fees by staking tokens, participating in governance, or providing liquidity.</li>
+                <li><b>Flexible contracts:</b> Automated distribution, staking, and income streams ensure security and customizable profit models.</li>
+                <li><b>Multiple models:</b> Supports both ERG-based and token-based revenue sharing, plus buyback and insurance mechanisms for extra confidence.</li>
               </ul>
               <p className="text-gray-400 text-sm">
-                Explore the protocol and its components below.
+                Explore the protocols and discover how you can participate in fair, on-chain profit sharing and protection.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
@@ -446,30 +493,18 @@ export default function DeFiPage() {
                 <TrendingUp className="w-5 h-5" /> Tokenomics on Ergo
               </h3>
               <p className="text-gray-300 mb-3">
-                Explore innovative token models and economic primitives on Ergo. From ICOs to index coins, PoW tokens, and bonding curves — these mechanisms power new forms of value creation, distribution, and governance in DeFi.
+                Explore next-generation token models and economic primitives on Ergo. From index coins and PoW tokens to bonding curves, these mechanisms enable new ways to create, distribute, and govern value in DeFi — unlocking powerful tools for builders, investors, and communities.
+              </p>
+              <ul className="list-disc pl-6 text-gray-400 space-y-1 text-sm mb-2">
+                <li><b>Index Coins:</b> Diversify risk and simplify portfolio management with tokens that track baskets of assets — giving DeFi users exposure to multiple markets in a single coin.</li>
+                <li><b>PoW Tokens:</b> Earn tokens by contributing computational work, creating new decentralized incentive models and fairer distribution beyond traditional mining.</li>
+                <li><b>Bonding Curves:</b> Harness automated, mathematical pricing for tokens. Enable continuous fundraising, dynamic supply, and on-chain liquidity — powering everything from DAOs to novel DeFi apps.</li>
+              </ul>
+              <p className="text-gray-400 text-sm">
+                Innovative tokenomics on Ergo lets anyone experiment, launch, and manage new economic systems — fully on-chain and open to all.
               </p>
             </div>
             <div className="grid md:grid-cols-2 gap-6">
-              {/* ICOs Card */}
-              <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-pink-700 hover:border-pink-400/80">
-                <div>
-                  <h3 className="text-xl font-bold mb-1 flex items-center gap-2">
-                    ICOs
-                    <span className="ml-2 text-xs font-semibold px-2 py-0.5 rounded whitespace-nowrap bg-pink-700/80 text-pink-200">Experimental</span>
-                  </h3>
-                  <p className="text-gray-300 mb-4 text-sm">
-                    Initial Coin Offerings (ICOs) allow projects to raise funds and distribute tokens to early supporters in a transparent, on-chain process.
-                  </p>
-                </div>
-                <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
-                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
-                    More
-                  </span>
-                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
-                    Visit <ExternalLink className="w-4 h-4 ml-1" />
-                  </span>
-                </div>
-              </div>
               {/* Index Coins Card */}
               <div className="relative bg-neutral-900/50 border rounded-xl p-6 flex flex-col justify-between transition-all duration-300 border-pink-700 hover:border-pink-400/80">
                 <div>
@@ -482,9 +517,12 @@ export default function DeFiPage() {
                   </p>
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
-                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                  <Link
+                    href="/Docs/ecosystem/financial/defi/index-coins"
+                    className="inline-flex items-center text-pink-400 font-semibold text-base hover:text-pink-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                  >
                     More
-                  </span>
+                  </Link>
                   <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
                     Visit <ExternalLink className="w-4 h-4 ml-1" />
                   </span>
@@ -502,9 +540,12 @@ export default function DeFiPage() {
                   </p>
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
-                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                  <Link
+                    href="/Docs/ecosystem/financial/defi/pow-tokens"
+                    className="inline-flex items-center text-pink-400 font-semibold text-base hover:text-pink-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                  >
                     More
-                  </span>
+                  </Link>
                   <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
                     Visit <ExternalLink className="w-4 h-4 ml-1" />
                   </span>
@@ -522,9 +563,12 @@ export default function DeFiPage() {
                   </p>
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
-                  <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
+                  <Link
+                    href="/Docs/ecosystem/financial/defi/bonding-curve"
+                    className="inline-flex items-center text-pink-400 font-semibold text-base hover:text-pink-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
+                  >
                     More
-                  </span>
+                  </Link>
                   <span className="inline-flex items-center text-gray-500 font-semibold text-base opacity-60 pointer-events-none mb-2 md:mb-0">
                     Visit <ExternalLink className="w-4 h-4 ml-1" />
                   </span>
