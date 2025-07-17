@@ -54,8 +54,9 @@ export function MainNav() {
                 </NavigationMenuItem>
               ) : (
                 <NavigationMenuItem key={item.title}>
-                  <Link href={item.href} legacyBehavior passHref>
-                    <NavigationMenuLink
+                  <NavigationMenuLink asChild>
+                    <Link
+                      href={item.href}
                       style={{ caretColor: "transparent", userSelect: "none" }}
                       className={cn(
                         navigationMenuTriggerStyle(),
@@ -64,14 +65,15 @@ export function MainNav() {
                       )}
                     >
                       {item.title}
-                    </NavigationMenuLink>
-                  </Link>
+                    </Link>
+                  </NavigationMenuLink>
                 </NavigationMenuItem>
               ),
             )}
           <NavigationMenuItem>
-            <Link href="/Docs" legacyBehavior passHref>
-              <NavigationMenuLink
+            <NavigationMenuLink asChild>
+              <Link
+                href="/Docs"
                 style={{ caretColor: "transparent", userSelect: "none" }}
                 className={cn(
                   navigationMenuTriggerStyle(),
@@ -80,12 +82,13 @@ export function MainNav() {
                 )}
               >
                 DOCS
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
           <NavigationMenuItem>
-            <Link href="/blog" legacyBehavior passHref>
-              <NavigationMenuLink
+            <NavigationMenuLink asChild>
+              <Link
+                href="/blog"
                 style={{ caretColor: "transparent", userSelect: "none" }}
                 className={cn(
                   navigationMenuTriggerStyle(),
@@ -94,8 +97,8 @@ export function MainNav() {
                 )}
               >
                 BLOG
-              </NavigationMenuLink>
-            </Link>
+              </Link>
+            </NavigationMenuLink>
           </NavigationMenuItem>
         </NavigationMenuList>
       </NavigationMenu>
