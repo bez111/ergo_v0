@@ -42,9 +42,6 @@ export default function DockerSetupPage() {
       icon: <CheckCircle className="w-5 h-5 text-green-400" />,
       content: (
         <div>
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-green-400" /> Single Node (Docker CLI)
-          </h3>
           <p className="text-gray-300 mb-4">
             Run a single Ergo node container using the Docker CLI. Suitable for quick experiments and simple deployments.
           </p>
@@ -88,9 +85,6 @@ export default function DockerSetupPage() {
       icon: <Settings className="w-5 h-5 text-blue-400" />,
       content: (
         <div>
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-            <Settings className="w-5 h-5 text-blue-400" /> Docker Compose
-          </h3>
           <p className="text-gray-300 mb-4">
             Use Docker Compose for easier management of multiple containers and configuration.
           </p>
@@ -99,17 +93,28 @@ export default function DockerSetupPage() {
               <span className="text-sm text-gray-400">docker-compose.yml</span>
               <button
                 onClick={() => copyToClipboard(
-                  `version: '3.8'
+                  `version: "3.8"
+
 services:
-  ergo-node:
-    image: ergoplatform/ergo:latest
-    container_name: ergo-node
-    ports:
-      - "9030:9030"
-      - "127.0.0.1:9053:9053"
+  # Ergo blockchain node
+  node:
+    image: ergoplatform/ergo
+    container_name: mn-ergo-node
+    command: --mainnet -c /etc/ergo.conf
     volumes:
-      - ./ergo-data:/home/ergo/.ergo
-    restart: unless-stopped`,
+      - ./.ergo:/home/ergo/.ergo
+      - ./ergo.conf:/etc/ergo.conf:ro
+    ports:
+      - 9053:9053
+      - 9030:9030
+    restart: unless-stopped
+    # Increase or decrease the max heap value as required
+    environment:
+        - MAX_HEAP=4G
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"`,
                   'compose-config'
                 )}
                 className="flex items-center gap-1 text-xs text-gray-400 hover:text-white transition-colors"
@@ -128,17 +133,28 @@ services:
               </button>
             </div>
             <pre className="text-sm text-gray-300 overflow-x-auto">
-{`version: '3.8'
+{`version: "3.8"
+
 services:
-  ergo-node:
-    image: ergoplatform/ergo:latest
-    container_name: ergo-node
-    ports:
-      - "9030:9030"
-      - "127.0.0.1:9053:9053"
+  # Ergo blockchain node
+  node:
+    image: ergoplatform/ergo
+    container_name: mn-ergo-node
+    command: --mainnet -c /etc/ergo.conf
     volumes:
-      - ./ergo-data:/home/ergo/.ergo
-    restart: unless-stopped`}
+      - ./.ergo:/home/ergo/.ergo
+      - ./ergo.conf:/etc/ergo.conf:ro
+    ports:
+      - 9053:9053
+      - 9030:9030
+    restart: unless-stopped
+    # Increase or decrease the max heap value as required
+    environment:
+        - MAX_HEAP=4G
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"`}
             </pre>
           </div>
           <div className="bg-neutral-800 rounded-lg p-4 mb-4">
