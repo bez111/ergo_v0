@@ -13,6 +13,7 @@ import {
   Globe
 } from 'lucide-react';
 import Link from 'next/link';
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 
 const TOKEN_BOX_CODE = `// a tokenBox stores the membership tokens and has this script
 val tokenBox = OUTPUTS(0) // the first output must also be a tokenBox
@@ -82,24 +83,6 @@ out.R6[Long].get == SELF.R6[Long].get &&          // ... and creation height
   (pubKey && correctErgs) // ... or out has correct ergs and tx has signature
 )`;
 
-function CopyButton({ code }: { code: string }) {
-  const [copied, setCopied] = useState(false);
-  return (
-    <button
-      aria-label="Copy code"
-      className={`absolute top-3 right-3 flex items-center gap-1 px-3 py-1.5 rounded-md text-xs font-semibold transition bg-neutral-900/80 hover:bg-neutral-800 border border-neutral-700 text-gray-300 hover:text-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-400 z-10`}
-      onClick={async () => {
-        await navigator.clipboard.writeText(code);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
-      }}
-      type="button"
-    >
-      {copied ? <><CheckIcon className="w-4 h-4 text-orange-400" />Copied!</> : <><CopyIcon className="w-4 h-4" />Copy</>}
-    </button>
-  );
-}
-
 export default function TrustlessLETSPage() {
   return (
     <>
@@ -157,7 +140,7 @@ export default function TrustlessLETSPage() {
         </p>
         <div className="bg-neutral-800/50 rounded-lg p-4 mb-4 overflow-x-auto relative">
           <h4 className="font-bold text-orange-400 mb-2 flex items-center gap-2"><Code className="w-5 h-5" /> Token Box Script (ErgoScript)</h4>
-          <CopyButton code={TOKEN_BOX_CODE} />
+          <UniversalCopyCodeBlock code={TOKEN_BOX_CODE} />
           <pre className="text-xs text-gray-200 whitespace-pre-wrap">
 {TOKEN_BOX_CODE}
           </pre>
@@ -174,7 +157,7 @@ export default function TrustlessLETSPage() {
         </p>
         <div className="bg-neutral-800/50 rounded-lg p-4 mb-4 overflow-x-auto relative">
           <h4 className="font-bold text-cyan-400 mb-2 flex items-center gap-2"><Code className="w-5 h-5" /> Member Box Script (ErgoScript)</h4>
-          <CopyButton code={MEMBER_BOX_CODE} />
+          <UniversalCopyCodeBlock code={MEMBER_BOX_CODE} />
           <pre className="text-xs text-gray-200 whitespace-pre-wrap">
 {MEMBER_BOX_CODE}
           </pre>

@@ -40,14 +40,18 @@ export default function AndroidSetupPage() {
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Setup
           </Link>
-          <a
-            href="https://github.com/ccgarant/ergo-full-node-raspi"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/Docs/developers/infrastructure/node/setup/android/termux-digest"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
-            <ExternalLink className="w-5 h-5 mr-2" /> Comprehensive Guide
-          </a>
+            <ExternalLink className="w-5 h-5 mr-2" /> Termux (Digest)
+          </Link>
+          <Link
+            href="/Docs/developers/infrastructure/node/setup/android/proot-rocksdb"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
+          >
+            <ExternalLink className="w-5 h-5 mr-2" /> UTXO Node Setup (Android)
+          </Link>
         </div>
       </div>
 
@@ -56,9 +60,21 @@ export default function AndroidSetupPage() {
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Brain className="w-6 h-6 text-orange-400" /> What is Android Node Setup?
         </h2>
-        <p className="text-gray-300">
-          This guide provides an overview of the methods available using the Termux terminal emulator. There are two primary approaches, depending on your needs and technical comfort level.
+        <p className="text-gray-300 mb-4">
+          This guide provides an overview of the methods available using the <a href="https://termux.dev/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Termux</a> terminal emulator. There are two primary approaches, depending on your needs and technical comfort level:
         </p>
+        <ol className="list-decimal list-inside text-gray-300 text-base space-y-2 mb-4">
+          <li>
+            <b><a href="/Docs/developers/infrastructure/node/setup/android/termux-digest" className="text-cyan-400 hover:underline">Direct Termux Setup (Digest Mode)</a>:</b> <span className="text-sm">Recommended for most users. Runs the node directly within Termux. Best suited for the resource-efficient <code className="bg-neutral-800 px-1 rounded">stateType="digest"</code> mode. Simpler setup process.</span>
+          </li>
+          <li>
+            <b><a href="/Docs/developers/infrastructure/node/setup/android/proot-rocksdb" className="text-cyan-400 hover:underline">Arch Linux via proot (RocksDB/UTXO Mode)</a>:</b> <span className="text-sm">Advanced method. Required if you need to run <code className="bg-neutral-800 px-1 rounded">stateType="utxo"</code> (RocksDB) or encounter database compatibility issues. Involves running an Arch Linux environment within Termux to provide <code>glibc</code> compatibility for RocksDB. More complex setup and higher resource usage.</span>
+          </li>
+        </ol>
+        <div className="bg-cyan-400/10 border border-cyan-400/30 rounded-lg p-4 mt-4">
+          <h4 className="font-bold text-cyan-400 mb-2 flex items-center gap-2"><Info className="w-5 h-5 text-cyan-400" /> One-Click App Attempt</h4>
+          <p className="text-gray-300 text-sm mb-2"> <a href="https://github.com/rustinmyeye/ErgoNodeAndroid" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoNodeAndroid</a> is a community project attempting a one-click Ergo node app for Android, based on Termux scripts. It typically sets up a stateless/digest node. You may explore this as an alternative to manual setup.</p>
+        </div>
       </div>
 
       {/* Methods Grid */}

@@ -306,11 +306,11 @@ export default function DocsSearchModal({ open, onClose }: { open: boolean; onCl
                   <div className="flex flex-wrap gap-2">
                     {searchHistory.map(term => (
                       <button
-                        key={term}
-                        onClick={() => handleSearch(term)}
+                        key={term.query}
+                        onClick={() => handleSearch(term.query)}
                         className="px-3 py-1 text-xs bg-neutral-800 text-gray-300 rounded-full hover:bg-neutral-700 transition-colors"
                       >
-                        {term}
+                        {term.query}
                       </button>
                     ))}
                   </div>

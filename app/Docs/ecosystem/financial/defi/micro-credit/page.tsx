@@ -5,29 +5,7 @@ import Link from "next/link";
 import { BookOpen, Users, Coins, ExternalLink, Info, Copy, Check, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-
-function CopyBlock({ code }: { code: string }) {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1200);
-  };
-  return (
-    <div className="relative mb-4 group">
-      <button
-        onClick={handleCopy}
-        aria-label={copied ? "Copied!" : "Copy code"}
-        type="button"
-        className="absolute top-2 right-2 z-10 p-1 rounded-md bg-neutral-800/80 hover:bg-yellow-400/10 transition-colors border border-transparent hover:border-yellow-400 text-yellow-300 hover:text-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
-      >
-        {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
-        <span className="sr-only">{copied ? "Copied!" : "Copy code"}</span>
-      </button>
-      <pre className="bg-neutral-900/80 border border-neutral-700 rounded-lg p-4 text-sm text-yellow-200 overflow-x-auto"><code>{code}</code></pre>
-    </div>
-  );
-}
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 
 export default function MicroCreditPage() {
   return (
@@ -95,7 +73,7 @@ export default function MicroCreditPage() {
         <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
           <BookOpen className="w-6 h-6 text-yellow-400" /> Main Voting Contract (ErgoScript)
         </h2>
-        <CopyBlock code={`val votingSuccess  = atLeast(3, Array(pubkeyA, pubkeyB, pubkeyC, pubkeyD))
+        <UniversalCopyCodeBlock code={`val votingSuccess  = atLeast(3, Array(pubkeyA, pubkeyB, pubkeyC, pubkeyD))
 val properSpending = OUTPUTS(0).value >= 5000L &&
                      blake2b256(OUTPUTS(0).propositionBytes) == spendingContract1Hash &&
                      OUTPUTS(1).value >= 2000L &&
@@ -115,7 +93,7 @@ val withdrawCondition = HEIGHT >= 1000L &&
         <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
           <BookOpen className="w-6 h-6 text-yellow-400" /> Equipment Spending Contract (ErgoScript)
         </h2>
-        <CopyBlock code={`val spendingSuccess = (pubkeyTool1 || pubkeyTool2 || pubkeyTool3 || pubkeyTool4) && businessKey
+        <UniversalCopyCodeBlock code={`val spendingSuccess = (pubkeyTool1 || pubkeyTool2 || pubkeyTool3 || pubkeyTool4) && businessKey
 
 val withdrawCondition = HEIGHT > 5000L &&
                         OUTPUTS(0).value >= 1250L && OUTPUTS(0).propositionBytes == pubkeyA.propBytes &&
@@ -131,7 +109,7 @@ spendingSuccess || withdrawCondition
         <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
           <BookOpen className="w-6 h-6 text-yellow-400" /> Construction Spending Contract (ErgoScript)
         </h2>
-        <CopyBlock code={`val spendingSuccess = (pubkeyConstr1 || pubkeyConstr2 || pubkeyConstr3) && businessKey
+        <UniversalCopyCodeBlock code={`val spendingSuccess = (pubkeyConstr1 || pubkeyConstr2 || pubkeyConstr3) && businessKey
 
 val withdrawCondition = HEIGHT > 5000L &&
                         OUTPUTS(0).value >= 500L && OUTPUTS(0).propositionBytes == pubkeyA.propBytes &&

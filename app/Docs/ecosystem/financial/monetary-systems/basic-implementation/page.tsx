@@ -13,6 +13,7 @@ import {
   Check as CheckIcon
 } from 'lucide-react';
 import Link from 'next/link';
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 
 const ADMIN_CODE = `val selfOut = OUTPUTS(0)
 
@@ -97,24 +98,6 @@ val selfPubKey = SELF.R5[SigmaProp].get
 
 selfPubKey && isLetsTokenProper && doMembersExist && areBalanceDifferencesCorrect && areScriptsPreserved`;
 
-function CopyButton({ code }: { code: string }) {
-  const [copied, setCopied] = useState(false);
-  return (
-    <button
-      aria-label="Copy code"
-      className={`absolute top-3 right-3 flex items-center gap-1 px-3 py-1.5 rounded-md text-xs font-semibold transition bg-neutral-900/80 hover:bg-neutral-800 border border-neutral-700 text-gray-300 hover:text-orange-400 focus:outline-none focus:ring-2 focus:ring-orange-400 z-10`}
-      onClick={async () => {
-        await navigator.clipboard.writeText(code);
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
-      }}
-      type="button"
-    >
-      {copied ? <><CheckIcon className="w-4 h-4 text-orange-400" />Copied!</> : <><CopyIcon className="w-4 h-4" />Copy</>}
-    </button>
-  );
-}
-
 export default function BasicImplementationLETSPage() {
   return (
     <>
@@ -176,7 +159,7 @@ export default function BasicImplementationLETSPage() {
         </p>
         <div className="bg-neutral-800/50 rounded-lg p-4 mb-4 overflow-x-auto relative">
           <h4 className="font-bold text-orange-400 mb-2 flex items-center gap-2"><Code className="w-5 h-5" /> Administrative Contract (ErgoScript)</h4>
-          <CopyButton code={ADMIN_CODE} />
+          <UniversalCopyCodeBlock code={ADMIN_CODE} />
           <pre className="text-xs text-gray-200 whitespace-pre-wrap">
 {ADMIN_CODE}
           </pre>
@@ -193,7 +176,7 @@ export default function BasicImplementationLETSPage() {
         </p>
         <div className="bg-neutral-800/50 rounded-lg p-4 mb-4 overflow-x-auto relative">
           <h4 className="font-bold text-cyan-400 mb-2 flex items-center gap-2"><Code className="w-5 h-5" /> Trade Contract (ErgoScript)</h4>
-          <CopyButton code={TRADE_CODE} />
+          <UniversalCopyCodeBlock code={TRADE_CODE} />
           <pre className="text-xs text-gray-200 whitespace-pre-wrap">
 {TRADE_CODE}
           </pre>

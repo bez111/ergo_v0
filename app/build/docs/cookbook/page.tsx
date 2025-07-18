@@ -3,6 +3,7 @@
 import { useRef } from "react"
 import { Code, Send, PlusCircle, Wallet, FileText, ChevronRight, Clipboard, CheckCircle, Database, Terminal, Zap, Link as LinkIcon } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 
 const categories = [
   {
@@ -185,16 +186,7 @@ export default function CookbookPage() {
                     <h3 className="text-xl font-bold text-white">{r.title}</h3>
                   </div>
                   <p className="text-gray-300 text-sm mb-4">{r.description}</p>
-                  <button
-                    className="absolute top-4 right-4 bg-neutral-800 hover:bg-orange-500 text-white rounded p-1"
-                    title="Copy code"
-                    onClick={() => copyToClipboard(r.code)}
-                  >
-                    <Clipboard className="w-4 h-4" />
-                  </button>
-                  <pre className="bg-black text-orange-200 p-3 rounded-lg overflow-x-auto font-mono text-sm mb-2">
-                    <code>{r.code}</code>
-                  </pre>
+                  <UniversalCopyCodeBlock code={r.code} />
                   <div className="mt-auto">
                     <a href={r.doc} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-cyan-400 hover:underline text-sm">
                       More <ChevronRight className="w-4 h-4 ml-1" />

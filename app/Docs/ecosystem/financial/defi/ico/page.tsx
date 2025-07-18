@@ -3,28 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Copy as CopyIcon, Check as CheckIcon, ChevronRight, BookOpen, GitBranch, Info, Zap, Database, Lock, Target } from "lucide-react";
-
-function CopyableCodeBlock({ code }: { code: string }) {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1200);
-  };
-  return (
-    <div className="relative">
-      <button
-        onClick={handleCopy}
-        className="absolute top-2 right-2 z-10 bg-neutral-800 border border-neutral-700 rounded p-2 text-cyan-400 hover:bg-neutral-700 transition"
-        aria-label="Copy code"
-        type="button"
-      >
-        {copied ? <CheckIcon className="w-4 h-4" /> : <CopyIcon className="w-4 h-4" />}
-      </button>
-      <pre className="bg-neutral-800 rounded p-4 text-sm overflow-x-auto mb-2 mt-0"><code>{code}</code></pre>
-    </div>
-  );
-}
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 
 export default function ICOPage() {
   const fundingCode = `val selfIndexIsZero = INPUTS(0).id == SELF.id
@@ -193,19 +172,19 @@ properTreeModification && valuesCorrect && selfOutputCorrect && tokensPreserved`
       {/* Funding Stage Code */}
       <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-orange-400">Funding Stage Contract</h3>
-        <CopyableCodeBlock code={fundingCode} />
+        <UniversalCopyCodeBlock code={fundingCode} />
       </div>
 
       {/* Issuance Stage Code */}
       <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-cyan-400">Issuance Stage Contract</h3>
-        <CopyableCodeBlock code={issuanceCode} />
+        <UniversalCopyCodeBlock code={issuanceCode} />
       </div>
 
       {/* Withdrawal Stage Code */}
       <div className="bg-neutral-900/50 border border-green-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-green-400">Withdrawal Stage Contract</h3>
-        <CopyableCodeBlock code={withdrawCode} />
+        <UniversalCopyCodeBlock code={withdrawCode} />
       </div>
 
       {/* Enhancements Section */}

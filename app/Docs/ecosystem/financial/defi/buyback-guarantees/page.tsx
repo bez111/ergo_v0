@@ -3,28 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Copy as CopyIcon, Check as CheckIcon } from "lucide-react";
-
-function CopyableCodeBlock({ code }: { code: string }) {
-  const [copied, setCopied] = useState(false);
-  const handleCopy = async () => {
-    await navigator.clipboard.writeText(code);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1200);
-  };
-  return (
-    <div className="relative">
-      <button
-        onClick={handleCopy}
-        className="absolute top-2 right-2 z-10 bg-neutral-800 border border-neutral-700 rounded p-2 text-cyan-400 hover:bg-neutral-700 transition"
-        aria-label="Copy code"
-        type="button"
-      >
-        {copied ? <CheckIcon className="w-4 h-4" /> : <CopyIcon className="w-4 h-4" />}
-      </button>
-      <pre className="bg-neutral-800 rounded p-4 text-sm overflow-x-auto mb-2 mt-0"><code>{code}</code></pre>
-    </div>
-  );
-}
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 
 export default function BuyBackGuaranteesPage() {
   const buybackCode = `{
@@ -80,14 +59,14 @@ export default function BuyBackGuaranteesPage() {
       {/* Buyback Contract Code */}
       <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-cyan-400">Buyback Contract Example</h3>
-        <CopyableCodeBlock code={buybackCode} />
+        <UniversalCopyCodeBlock code={buybackCode} />
         <p className="text-gray-400 text-xs mb-2">This contract enforces the buyback logic and expiration condition.</p>
       </div>
 
       {/* Sell Contract Code */}
       <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-orange-400">Sell Contract Example</h3>
-        <CopyableCodeBlock code={sellCode} />
+        <UniversalCopyCodeBlock code={sellCode} />
         <p className="text-gray-400 text-xs mb-2">Here, <code>bbh</code> is the buyback script hash.</p>
       </div>
 

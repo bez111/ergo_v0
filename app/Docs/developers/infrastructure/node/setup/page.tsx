@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { BookOpen, Hammer, Camera, Package, LifeBuoy, HelpCircle, Cpu, Smartphone, Dock, ChevronRight } from "lucide-react";
+import { BookOpen, Hammer, Camera, Package, LifeBuoy, HelpCircle, Cpu, Smartphone, Dock, ChevronRight, ChevronLeft } from "lucide-react";
 
 const installSections = [
   {
@@ -85,7 +85,7 @@ function SectionGrid({ sections }: { sections: Section[] }) {
         return (
           <div
             key={index}
-            className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 flex flex-col justify-between min-h-[160px]"
+            className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 flex flex-col justify-between min-h-[160px] group relative"
           >
             <div>
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -98,7 +98,8 @@ function SectionGrid({ sections }: { sections: Section[] }) {
             </div>
             <Link
               href={section.link}
-              className="inline-flex items-center text-cyan-400 font-semibold hover:underline mt-auto"
+              className="pointer-events-auto absolute right-6 bottom-6 opacity-0 group-hover:opacity-100 transition-opacity duration-200 inline-flex items-center text-cyan-400 font-semibold hover:underline"
+              tabIndex={-1}
             >
               Learn more <ChevronRight className="w-4 h-4 ml-1" />
             </Link>
@@ -119,7 +120,14 @@ export default function NodeSetupPage() {
       <p className="text-lg text-gray-300 mb-8">
         Choose your preferred method to install, configure, or troubleshoot your Ergo Node. Guides for all platforms and scenarios.
       </p>
-
+      <div className="mb-8">
+        <Link
+          href="/Docs/developers/infrastructure/node"
+          className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+        >
+          <ChevronLeft className="w-5 h-5 mr-2" /> Back to Node
+        </Link>
+      </div>
       {/* Install Section */}
       <h2 className="text-2xl font-semibold text-orange-300 mb-2 mt-8">Install</h2>
       <SectionGrid sections={installSections} />
