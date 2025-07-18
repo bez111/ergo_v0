@@ -123,7 +123,7 @@ export default function NodeSetupPage() {
       <div className="mb-8">
         <Link
           href="/Docs/developers/infrastructure/node"
-          className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+          className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronLeft className="w-5 h-5 mr-2" /> Back to Node
         </Link>

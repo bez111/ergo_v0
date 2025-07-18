@@ -1019,7 +1019,7 @@ export function LocalSearch() {
             placeholder="Search articles..."
             onClick={() => setIsOpen(true)}
             readOnly
-            className="w-full pl-12 pr-4 py-3 bg-neutral-800 border border-neutral-700 rounded-full text-gray-300 placeholder-gray-400 focus:outline-none focus:border-cyan-400/60 transition-colors duration-200 cursor-pointer"
+            className="w-full pl-12 pr-4 py-3 bg-neutral-800 border border-neutral-700 rounded text-gray-300 placeholder-gray-400 focus:outline-none focus:border-cyan-400/60 transition-colors duration-200 cursor-pointer"
           />
           {/* Keyboard shortcut hint */}
           <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-xs text-gray-500">

@@ -12,13 +12,9 @@ const cards1 = [
   },
   {
     title: "🧾 Learning Ergo 101: eUTXO Explained for Human Beings",
+    content: "How Ergo’s eUTXO model works, with simple analogies, boxes, and real use cases.",
     url: "https://dav009.medium.com/learning-ergo-101-blockchain-paradigm-eutxo-c90b0274cf5e"
   },
-  {
-    title: "📹 Learning Blockchains like Cardano and Ergo",
-    content: "Discusses the process of learning blockchain concepts, emphasizing the importance of understanding theoretical aspects and practical interaction through playgrounds and nodes.",
-    url: "https://www.youtube.com/watch?v=HDn49bToTMI"
-  }
 ];
 
 const cards2 = [
@@ -29,12 +25,9 @@ const cards2 = [
   },
   {
     title: "📕 DeCo Education: DApp Components - Backend",
-    url: "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components"
+    url: "https://deco-education.github.io/deco-docs/docs/into-the-woods/trail2-ergo-coding/dapp-components",
+    content: "Understand the backend pillars of a DApp: explorers, transactions, and bots."
   },
-  {
-    title: "📕 DeCo Intro Lessons: Build a Mobile App on Android or iOS",
-    url: "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
-  }
 ];
 
 const cards3 = [
@@ -131,10 +124,10 @@ export default function DevelopersGuide() {
       {/* Resource Cards 1 */}
       <div className="grid md:grid-cols-3 gap-6 mb-12">
         {cards1.map((card, i) => (
-          <a key={i} href={card.url} target="_blank" rel="noopener noreferrer" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 block cursor-pointer group">
+          <a key={i} href={card.url} target="_blank" rel="noopener noreferrer" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 block cursor-pointer group relative">
             <div className="font-semibold text-lg mb-1 text-cyan-300">{card.title}</div>
             {card.content && <div className="text-gray-400 text-sm mb-2">{card.content}</div>}
-            <div className="flex items-center text-cyan-300 text-xs font-semibold mt-2">Learn more <ExternalLink className="w-3 h-3 ml-1" /></div>
+            <div className="flex items-center text-cyan-300 text-xs font-semibold mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">Learn more</div>
           </a>
         ))}
       </div>
@@ -161,10 +154,10 @@ export default function DevelopersGuide() {
       {/* Resource Cards 2 */}
       <div className="grid md:grid-cols-3 gap-6 mb-12">
         {cards2.map((card, i) => (
-          <a key={i} href={card.url} target="_blank" rel="noopener noreferrer" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 block cursor-pointer group">
+          <a key={i} href={card.url} target="_blank" rel="noopener noreferrer" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 block cursor-pointer group relative">
             <div className="font-semibold text-lg mb-1 text-cyan-300">{card.title}</div>
             {card.content && <div className="text-gray-400 text-sm mb-2">{card.content}</div>}
-            <div className="flex items-center text-cyan-300 text-xs font-semibold mt-2">Learn more <ExternalLink className="w-3 h-3 ml-1" /></div>
+            <div className="flex items-center text-cyan-300 text-xs font-semibold mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">Learn more</div>
           </a>
         ))}
       </div>
@@ -235,10 +228,10 @@ export default function DevelopersGuide() {
       {/* Resource Cards 3 */}
       <div className="grid md:grid-cols-3 gap-6 mb-12">
         {cards3.map((card, i) => (
-          <a key={i} href={card.url} target="_blank" rel="noopener noreferrer" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 block cursor-pointer group">
+          <a key={i} href={card.url} target="_blank" rel="noopener noreferrer" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 block cursor-pointer group relative">
             <div className="font-semibold text-lg mb-1 text-cyan-300">{card.title}</div>
             {card.content && <div className="text-gray-400 text-sm mb-2">{card.content}</div>}
-            <div className="flex items-center text-cyan-300 text-xs font-semibold mt-2">Learn more <ExternalLink className="w-3 h-3 ml-1" /></div>
+            <div className="flex items-center text-cyan-300 text-xs font-semibold mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">Learn more</div>
           </a>
         ))}
       </div>
@@ -249,17 +242,44 @@ export default function DevelopersGuide() {
           <Users className="w-5 h-5 text-cyan-400" /> Connect with Our Community
         </h3>
         <div className="grid md:grid-cols-3 gap-6 mb-4">
-          {communityCards.map((card, i) => (
-            <a key={i} href={card.url} target="_blank" rel="noopener noreferrer" className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 block cursor-pointer group flex flex-col items-center">
-              {card.image && <img src={card.image} alt={card.title} className="w-12 h-12 object-contain mb-2 mx-auto" />}
-              <div className="font-semibold text-lg mb-1 text-cyan-300 text-center">{card.title}</div>
-              {card.content && <div className="text-gray-400 text-sm mb-2 text-center">{card.content}</div>}
-              <div className="flex items-center justify-center text-cyan-300 text-xs font-semibold mt-2">Join <ExternalLink className="w-3 h-3 ml-1" /></div>
-            </a>
-          ))}
-        </div>
-        <div className="text-gray-400 text-sm mb-2">
-          All our chat platforms are bridged, ensuring seamless communication. See also: <a href="https://ergonaut.space/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergonaut Space</a>, <a href="https://sigmaverse.io/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Sigmaverse.io</a>, <a href="https://ergcube.com/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgCube</a>
+          {/* Discord */}
+          <a
+            href="https://discord.gg/ergo-platform-668903786361651200"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 flex flex-col items-center justify-between min-h-[240px] text-center"
+          >
+            <Users className="w-10 h-10 text-cyan-400 mb-3" />
+            <div className="font-bold text-lg text-white mb-2">Discord</div>
+            <div className="text-gray-400 text-sm mb-4">Join the action, ask questions, and connect with the Ergo community in real time.</div>
+            <div className="flex items-center justify-center text-cyan-300 text-sm font-semibold mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              Join <ExternalLink className="w-4 h-4 ml-1" />
+            </div>
+          </a>
+          {/* ERGOHACK */}
+          <a
+            href="/events/ergohack.md"
+            className="group bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 flex flex-col items-center justify-between min-h-[240px] text-center"
+          >
+            <Wrench className="w-10 h-10 text-orange-400 mb-3" />
+            <div className="font-bold text-lg text-white mb-2">ERGOHACK</div>
+            <div className="text-gray-400 text-sm mb-4">Take part in regular hackathons — a great opportunity to learn, build, and win prizes.</div>
+            <div className="flex items-center justify-center text-cyan-300 text-sm font-semibold mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              Learn more <ExternalLink className="w-4 h-4 ml-1" />
+            </div>
+          </a>
+          {/* Contribute */}
+          <a
+            href="/contribute/standards/guidelines.md"
+            className="group bg-neutral-900/60 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 transition-all duration-300 flex flex-col items-center justify-between min-h-[240px] text-center"
+          >
+            <Code className="w-10 h-10 text-green-400 mb-3" />
+            <div className="font-bold text-lg text-white mb-2">Contribute</div>
+            <div className="text-gray-400 text-sm mb-4">Help improve Ergo: contribute code, docs, or community support. Bounties and grants available!</div>
+            <div className="flex items-center justify-center text-cyan-300 text-sm font-semibold mt-auto opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+              Learn more <ExternalLink className="w-4 h-4 ml-1" />
+            </div>
+          </a>
         </div>
       </div>
     </>

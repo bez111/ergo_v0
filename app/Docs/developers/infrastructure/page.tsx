@@ -71,9 +71,10 @@ export default function InfrastructurePage() {
         {infraSections.map((section, index) => {
           const IconComponent = section.icon;
           return (
-            <div
+            <Link
               key={index}
-              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 transition-all duration-300 flex flex-col justify-between min-h-[200px]"
+              href={section.link}
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] cursor-pointer group relative"
             >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -84,13 +85,10 @@ export default function InfrastructurePage() {
                   {section.description}
                 </p>
               </div>
-              <Link
-                href={section.link}
-                className="inline-flex items-center text-cyan-400 font-semibold hover:underline mt-auto"
-              >
-                Learn more <ChevronRight className="w-4 h-4 ml-1" />
-              </Link>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+                Learn more
+              </div>
+            </Link>
           );
         })}
       </div>

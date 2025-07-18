@@ -3,6 +3,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { menuData } from "../app/Docs/menuData"
 import { usePathname, useRouter } from "next/navigation"
+import { LocalSearch } from "./search/LocalSearch"
 
 function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: number, parentPath?: string }) {
   const [open, setOpen] = useState(false)
@@ -87,6 +88,11 @@ export default function SidebarMenu() {
 
   return (
     <aside className="w-full max-w-xs bg-neutral-900 text-white p-0 pt-6 rounded-none border-r border-neutral-800 h-full overflow-auto">
+      {/* Search Section */}
+      <div className="px-6 pb-4">
+        <LocalSearch />
+      </div>
+      
       {/* 4 Big Section Buttons + Accordions */}
       <div className="flex flex-col gap-3 px-6 pt-2 pb-4 mb-4 bg-neutral-900 z-10">
         {sectionTabs.map(tab => {

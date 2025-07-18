@@ -1,33 +1,33 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { Info } from "lucide-react";
+import { ChevronLeft, Info } from "lucide-react";
 
 const cards = [
   {
-    title: "Synchronising from scratch",
-    content: "Start sychronising with the testnet from genesis",
-    url: "/Docs/developers/infrastructure/node/testnet/testnet-full.md"
+    title: "Sync from scratch",
+    content: "Start syncing with the testnet from genesis",
+    url: "/Docs/developers/infrastructure/node/testnet/testnet-full"
   },
   {
-    title: "ergo-synced-node",
-    content: "A presynced testnet node from MGPai",
+    title: "Use a presynced node",
+    content: "Quickly launch a ready-to-use node from MGPai",
     url: "https://github.com/mgpai22/ergo-synced-node#ergo-testnet-node-setup"
   },
   {
-    title: "CPU Mining",
-    content: "You can use your CPU to mine on the testnet",
-    url: "/Docs/developers/infrastructure/node/testnet/cpu-mining.md"
+    title: "Mine with CPU",
+    content: "Use your CPU to mine blocks on the testnet",
+    url: "/Docs/developers/infrastructure/node/testnet/cpu-mining"
   },
   {
-    title: "Mine your own chain",
-    content: "Start your own alternative version of Ergo with custom parameters.",
-    url: "/Docs/developers/infrastructure/node/testnet/mine-your-own-chain.md"
+    title: "Launch a custom chain",
+    content: "Fork Ergo with your own parameters",
+    url: "/Docs/developers/infrastructure/node/testnet/mine-your-own-chain"
   },
   {
-    title: "Resources",
-    content: "Port numbers, bookmarks, and any other testnet resources here!",
-    url: "/Docs/developers/infrastructure/node/testnet/testnet-resources.md"
+    title: "Testnet Resources",
+    content: "All port numbers, bookmarks, and tools in one place",
+    url: "/Docs/developers/infrastructure/node/testnet/testnet-resources"
   }
 ];
 
@@ -48,6 +48,14 @@ export default function TestnetPage() {
           </p>
         </div>
       </div>
+      <div className="mb-8">
+        <Link
+          href="/Docs/developers/infrastructure/node"
+          className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
+        >
+          <ChevronLeft className="w-5 h-5 mr-2" /> Back to Node
+        </Link>
+      </div>
       <div className="grid md:grid-cols-2 gap-6">
         {cards.map((card, i) => (
           <a
@@ -55,11 +63,17 @@ export default function TestnetPage() {
             href={card.url}
             target={card.url.startsWith('http') ? '_blank' : undefined}
             rel={card.url.startsWith('http') ? 'noopener noreferrer' : undefined}
-            className="block bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400 transition-colors h-full"
+            className="group block bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400 transition-colors h-full flex flex-col justify-between"
           >
-            <h2 className="text-xl font-semibold text-orange-300 mb-2">{card.title}</h2>
-            <p className="text-gray-300 text-base mb-2">{card.content}</p>
-            <span className="text-cyan-400 text-sm font-medium hover:underline">Learn more →</span>
+            <div>
+              <h2 className="text-xl font-semibold text-orange-300 mb-2">{card.title}</h2>
+              <p className="text-gray-300 text-base mb-2">{card.content}</p>
+            </div>
+            <div className="flex justify-end mt-4">
+              <span className="text-cyan-400 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200 hover:underline">
+                Learn more
+              </span>
+            </div>
           </a>
         ))}
       </div>
