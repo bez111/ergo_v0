@@ -138,8 +138,44 @@ export default function NodeConfigurationPage() {
                   <p className="text-gray-300 text-sm">Main application configuration file with node settings.</p>
                 </div>
                 <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-cyan-300 mb-2">ergo</h4>
+                  <p className="text-gray-300 text-sm">Ergo-specific configuration settings.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-green-300 mb-2">bounded-</h4>
+                  <p className="text-gray-300 text-sm">Bounded configuration parameters.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-blue-300 mb-2">mailbox</h4>
+                  <p className="text-gray-300 text-sm">Mailbox configuration settings.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-purple-300 mb-2">akka</h4>
+                  <p className="text-gray-300 text-sm">Akka framework configuration.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-yellow-300 mb-2">scorex</h4>
+                  <p className="text-gray-300 text-sm">Scorex framework configuration.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-red-300 mb-2">critical-</h4>
+                  <p className="text-gray-300 text-sm">Critical system configuration.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-indigo-300 mb-2">dispatcher</h4>
+                  <p className="text-gray-300 text-sm">Dispatcher configuration settings.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-pink-300 mb-2">api-dispatcher</h4>
+                  <p className="text-gray-300 text-sm">API dispatcher configuration.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
                   <h4 className="font-bold text-cyan-300 mb-2">testnet.conf</h4>
                   <p className="text-gray-300 text-sm">Testnet-specific configuration file for development.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-orange-300 mb-2">devnet.conf</h4>
+                  <p className="text-gray-300 text-sm">Development network configuration file.</p>
                 </div>
               </div>
             </div>
