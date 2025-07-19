@@ -99,69 +99,69 @@ export default function ModifiersPage() {
             </p>
             
             <div className="overflow-x-auto mb-6">
-              <table className="min-w-full border border-neutral-700 rounded-lg overflow-hidden">
+              <table className="w-full max-w-5xl border border-neutral-700 rounded-lg overflow-hidden">
                 <thead className="bg-neutral-800">
                   <tr>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-orange-300 font-semibold">Field</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-cyan-300 font-semibold">Size (Bytes)</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-gray-300 font-semibold">Description</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-orange-300 font-semibold">Field</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-cyan-300 font-semibold">Size (Bytes)</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-gray-300 font-semibold">Description</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">version</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">1</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Block version number, incremented with each soft or hard fork</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">version</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">1</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Block version number, incremented with each soft or hard fork</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">parentId</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">32</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Identifier of the parent block</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">parentId</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">32</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Identifier of the parent block</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ADProofsRoot</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">32</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Hash of ADProofs for transactions in the block</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ADProofsRoot</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">32</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Hash of ADProofs for transactions in the block</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">stateRoot</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">32</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Root hash of the authenticated UTXO set state (an AVL+ tree) after applying the block's transactions</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">stateRoot</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">32</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Root hash of the authenticated UTXO set state (an AVL+ tree) after applying the block's transactions</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">transactionsRoot</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">32</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Root hash of the Merkle tree of transactions included in the block</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">transactionsRoot</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">32</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Root hash of the Merkle tree of transactions included in the block</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">timestamp</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">8</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Block timestamp (in milliseconds since the beginning of the Unix Epoch)</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">timestamp</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">8</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Block timestamp (in milliseconds since the beginning of the Unix Epoch)</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">nBits</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">8</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Current difficulty target (encoded in a compressed format)</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">nBits</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">8</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Current difficulty target (encoded in a compressed format)</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">height</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">4</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Block height (distance from the genesis block)</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">height</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">4</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Block height (distance from the genesis block)</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">extensionRoot</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">32</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Root hash of the block's extension section</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">extensionRoot</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">32</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Root hash of the block's extension section</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">powSolution</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">75-107</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Solution to the Autolykos v2 Proof-of-Work puzzle</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">powSolution</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">75-107</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Solution to the Autolykos v2 Proof-of-Work puzzle</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">votes</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">3</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Bytes representing miner votes for changes in system parameters</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">votes</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">3</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Bytes representing miner votes for changes in system parameters</td>
                   </tr>
                 </tbody>
               </table>
@@ -746,163 +746,163 @@ or "BlocksToKeep + N" blocks back?
             </h2>
             
             <div className="overflow-x-auto">
-              <table className="min-w-full border border-neutral-700 rounded-lg overflow-hidden">
+              <table className="w-full max-w-5xl border border-neutral-700 rounded-lg overflow-hidden">
                 <thead className="bg-neutral-800">
                   <tr>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-orange-300 font-semibold">Id</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-cyan-300 font-semibold">Validation Rule</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-green-300 font-semibold">Soft-forkable</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-blue-300 font-semibold">Active</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-purple-300 font-semibold">Modifiers</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-orange-300 font-semibold w-16">Id</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-cyan-300 font-semibold">Validation Rule</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-green-300 font-semibold w-24">Soft-forkable</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-blue-300 font-semibold w-16">Active</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-purple-300 font-semibold w-32">Modifiers</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">100</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A transaction should have at least one input.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">100</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A transaction should have at least one input.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">101</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A transaction should have at least one output.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">101</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A transaction should have at least one output.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">102</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A number of transaction inputs should not exceed 32767.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">102</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A number of transaction inputs should not exceed 32767.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">103</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A number transaction data inputs should not exceed 32767.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">103</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A number of data inputs should not exceed 32767.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">104</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A number of transaction outputs should not exceed 32767.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">104</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A number of transaction outputs should not exceed 32767.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">105</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Erg amount for a transaction output should not be negative.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">105</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Erg amount for a transaction output must not be negative.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">106</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Sum of transaction output values should not exceed 9223372036854775807.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">106</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Total output value must not exceed 9223372036854775807.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">107</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">There should be no duplicate inputs.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">107</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">There should be no duplicate inputs.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">108</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">All token amounts of transaction outputs should be positive.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">108</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">All token amounts of transaction outputs should be positive.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">109</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A number of tokens within a box should not exceed 255 and sum of assets of one type should not exceed 9223372036854775807.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">109</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A number of tokens within a box should not exceed 255 and sum of assets of one type should not exceed 9223372036854775807.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">111</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Every output of the transaction should contain at least &lt;minValuePerByte * outputSize&gt; nanoErgs.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">111</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Every output of the transaction should contain at least &lt;minValuePerByte * outputSize&gt; nanoErgs.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">112</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Transaction outputs should have creationHeight not exceeding block height.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">112</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Transaction outputs should have creationHeight not exceeding block height.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">113</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Every input of the transaction should be in UTXO.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">113</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Every input of the transaction should be in UTXO.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">114</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Every data input of the transaction should be in UTXO.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">114</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Every data input of the transaction should be in UTXO.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">115</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Sum of transaction inputs should not exceed 9223372036854775807.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">115</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Sum of transaction inputs should not exceed 9223372036854775807.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">116</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Amount of Ergs in inputs should be equal to amount of Erg in outputs.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">116</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Amount of Ergs in inputs should be equal to amount of Erg in outputs.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">117</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">For every token, its amount in outputs should not exceed its amount in inputs.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">117</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">For every token, its amount in outputs should not exceed its amount in inputs.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">119</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Scripts of all transaction inputs should pass verification.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">119</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Scripts of all transaction inputs should pass verification.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">120</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Box size should not exceed 4096.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">120</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Box size should not exceed 4096.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">121</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Box proposition size should not exceed 4096.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">121</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Box proposition size should not exceed 4096.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">122</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Transaction outputs should have non-negative creationHeight.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">122</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Transaction outputs should have non-negative creationHeight.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction</td>
                   </tr>
                 </tbody>
               </table>
@@ -916,114 +916,114 @@ or "BlocksToKeep + N" blocks back?
             </h2>
             
             <div className="overflow-x-auto">
-              <table className="min-w-full border border-neutral-700 rounded-lg overflow-hidden">
+              <table className="w-full max-w-5xl border border-neutral-700 rounded-lg overflow-hidden">
                 <thead className="bg-neutral-800">
                   <tr>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-orange-300 font-semibold">Id</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-cyan-300 font-semibold">Validation Rule</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-green-300 font-semibold">Soft-forkable</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-blue-300 font-semibold">Active</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-purple-300 font-semibold">Modifiers</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-orange-300 font-semibold w-16">Id</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-cyan-300 font-semibold">Validation Rule</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-green-300 font-semibold w-24">Soft-forkable</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-blue-300 font-semibold w-16">Active</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-purple-300 font-semibold w-32">Modifiers</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">200</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Genesis header should have genesis parent id.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">200</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Genesis header should have genesis parent id.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">201</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Genesis header id should be equal to id from the config.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">201</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Genesis header id should be equal to id from the config.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">203</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Genesis height should be 1.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">203</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Genesis height should be 1.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">205</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header timestamp should be greater than the parent's.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">205</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header timestamp should be greater than the parent's.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">206</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A header height should be greater by one than the parent's.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">206</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A header height should be greater by one than the parent's.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">207</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A header should contain correct PoW solution.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">207</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A header should contain correct PoW solution.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">208</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A header should contain correct required difficulty.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">208</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A header should contain correct required difficulty.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">209</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A header height should not be older than current height minus &lt;config.keepVersions&gt;.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">209</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A header height should not be older than current height minus &lt;config.keepVersions&gt;.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">210</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Parent header should not be marked as invalid.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">210</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Parent header should not be marked as invalid.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">212</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Number of non-zero votes should be &lt;= 2.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">212</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Number of non-zero votes should be &lt;= 2.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">213</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A header votes should contain no duplicates.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">213</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A header votes should contain no duplicates.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">214</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A header votes should contain no contradictory votes.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">214</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A header votes should contain no contradictory votes.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">215</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">First header of an epoch should not contain a vote for unknown parameter.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">215</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">First header of an epoch should not contain a vote for unknown parameter.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">216</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">First v2 header on mainnet at height 417,729 should have ID = 0ba60a7db44877aade553beb05200f7d67b586945418d733e455840d283e0508.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">216</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">First v2 header on mainnet at height 417,729 should have ID = 0ba60a7db44877aade553beb05200f7d67b586945418d733e455840d283e0508.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header</td>
                   </tr>
                 </tbody>
               </table>
@@ -1037,58 +1037,58 @@ or "BlocksToKeep + N" blocks back?
             </h2>
             
             <div className="overflow-x-auto">
-              <table className="min-w-full border border-neutral-700 rounded-lg overflow-hidden">
+              <table className="w-full max-w-5xl border border-neutral-700 rounded-lg overflow-hidden">
                 <thead className="bg-neutral-800">
                   <tr>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-orange-300 font-semibold">Id</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-cyan-300 font-semibold">Validation Rule</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-green-300 font-semibold">Soft-forkable</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-blue-300 font-semibold">Active</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-purple-300 font-semibold">Modifiers</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-orange-300 font-semibold w-16">Id</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-cyan-300 font-semibold">Validation Rule</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-green-300 font-semibold w-24">Soft-forkable</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-blue-300 font-semibold w-16">Active</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-purple-300 font-semibold w-32">Modifiers</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">300</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Double application of a modifier is prohibited.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Header, ADProofs, Extension, BlockTransactions</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">300</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Double application of a modifier is prohibited.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Header, ADProofs, Extension, BlockTransactions</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">302</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Block sections should correspond to the declared header.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ADProofs, Extension, BlockTransactions</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">302</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Block sections should correspond to the declared header.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ADProofs, Extension, BlockTransactions</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">303</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">A header for the block section should not be marked as invalid.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ADProofs, Extension, BlockTransactions</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">303</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">A header for the block section should not be marked as invalid.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ADProofs, Extension, BlockTransactions</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">305</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Block section should correspond to a block header that is not pruned yet.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ADProofs, Extension, BlockTransactions</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">305</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Block section should correspond to a block header that is not pruned yet.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ADProofs, Extension, BlockTransactions</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">306</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Size of block transactions section should not exceed &lt;maxBlockSize&gt;.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">BlockTransactions</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">306</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Size of block transactions section should not exceed &lt;maxBlockSize&gt;.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">BlockTransactions</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">307</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Accumulated cost of block transactions should not exceed &lt;maxBlockCost&gt;.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoTransaction, BlockTransactions</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">307</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Accumulated cost of block transactions should not exceed &lt;maxBlockCost&gt;.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoTransaction, BlockTransactions</td>
                   </tr>
                 </tbody>
               </table>
@@ -1102,107 +1102,107 @@ or "BlocksToKeep + N" blocks back?
             </h2>
             
             <div className="overflow-x-auto">
-              <table className="min-w-full border border-neutral-700 rounded-lg overflow-hidden">
+              <table className="w-full max-w-5xl border border-neutral-700 rounded-lg overflow-hidden">
                 <thead className="bg-neutral-800">
                   <tr>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-orange-300 font-semibold">Id</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-cyan-300 font-semibold">Validation Rule</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-green-300 font-semibold">Soft-forkable</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-blue-300 font-semibold">Active</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-purple-300 font-semibold">Modifiers</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-orange-300 font-semibold w-16">Id</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-cyan-300 font-semibold">Validation Rule</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-green-300 font-semibold w-24">Soft-forkable</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-blue-300 font-semibold w-16">Active</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-purple-300 font-semibold w-32">Modifiers</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">400</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Size of extension section should not exceed 32768.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">400</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Size of extension section should not exceed 32768.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">401</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Interlinks should be packed properly.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">401</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Interlinks should be packed properly.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">402</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Interlinks should have the correct structure.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">402</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Interlinks should have the correct structure.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">403</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension fields key length should be 2.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">403</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension fields key length should be 2.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">404</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension field value length should be &lt;= 64.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">404</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension field value length should be &lt;= 64.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">405</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">An extension should not contain duplicate keys.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">405</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">An extension should not contain duplicate keys.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">406</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension of non-genesis block should not be empty.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">406</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension of non-genesis block should not be empty.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">407</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Voting for fork could be started only after activation period of a previous soft-fork.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">407</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Voting for fork could be started only after activation period of a previous soft-fork.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">408</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">At the beginning of the epoch, the extension should contain correctly packed parameters.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">408</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">At the beginning of the epoch, the extension should contain correctly packed parameters.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">409</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">At the beginning of the epoch, the extension should contain all the system parameters.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">409</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">At the beginning of the epoch, the extension should contain all the system parameters.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">410</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Versions in header and parameters section should be equal.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">410</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Versions in header and parameters section should be equal.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">411</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">At the beginning of the epoch, the extension should contain correctly packed validation settings.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">411</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">At the beginning of the epoch, the extension should contain correctly packed validation settings.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">412</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">At the beginning of the epoch, the extension should contain all the validation settings.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Extension</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">412</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">At the beginning of the epoch, the extension should contain all the validation settings.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Extension</td>
                   </tr>
                 </tbody>
               </table>
@@ -1216,30 +1216,30 @@ or "BlocksToKeep + N" blocks back?
             </h2>
             
             <div className="overflow-x-auto">
-              <table className="min-w-full border border-neutral-700 rounded-lg overflow-hidden">
+              <table className="w-full max-w-5xl border border-neutral-700 rounded-lg overflow-hidden">
                 <thead className="bg-neutral-800">
                   <tr>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-orange-300 font-semibold">Id</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-cyan-300 font-semibold">Validation Rule</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-green-300 font-semibold">Soft-forkable</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-blue-300 font-semibold">Active</th>
-                    <th className="border border-neutral-700 px-4 py-3 text-left text-purple-300 font-semibold">Modifiers</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-orange-300 font-semibold w-16">Id</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-cyan-300 font-semibold">Validation Rule</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-green-300 font-semibold w-24">Soft-forkable</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-blue-300 font-semibold w-16">Active</th>
+                    <th className="border border-neutral-700 px-2 py-2 text-left text-purple-300 font-semibold w-32">Modifiers</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="bg-neutral-900/50">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">500</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Operations against the state AVL+ tree should be successful.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoFullBlock</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">500</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Operations against the state AVL+ tree should be successful.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoFullBlock</td>
                   </tr>
                   <tr className="bg-neutral-900">
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300 font-mono">501</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">Calculated AVL+ digest should be equal to one written in the block header.</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">x</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-green-400">√</td>
-                    <td className="border border-neutral-700 px-4 py-3 text-gray-300">ErgoFullBlock</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300 font-mono">501</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">Calculated AVL+ digest should be equal to one written in the block header.</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">x</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-green-400">√</td>
+                    <td className="border border-neutral-700 px-2 py-2 text-gray-300">ErgoFullBlock</td>
                   </tr>
                 </tbody>
               </table>
