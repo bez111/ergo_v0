@@ -255,28 +255,29 @@ export default function NodeConfigurationPage() {
                 </li>
               </ul>
             </div>
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Server className="w-5 h-5 text-cyan-400" /> Tor Configuration
-              </h3>
-              <p className="text-gray-300 mb-4">
-                Setup and configuration options for integrating Tor with your Ergo node for enhanced privacy.
-              </p>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  Tor service configuration
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  Hidden service setup
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  Connection routing
-                </li>
-              </ul>
-            </div>
+            <Link 
+              href="/Docs/developers/infrastructure/node/configuration/tor"
+              className="relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:from-purple-500/20 hover:to-purple-600/10 transition-all duration-300 group overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
+              <div className="relative z-10">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="bg-purple-500/20 text-purple-400 w-10 h-10 rounded-xl flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
+                    <Shield className="w-5 h-5" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
+                    Tor Configuration
+                  </h3>
+                </div>
+                <p className="text-gray-300 mb-4 group-hover:text-gray-200 transition-colors leading-relaxed">
+                  Configure your Ergo node to route P2P network traffic through Tor for enhanced privacy and anonymity.
+                </p>
+                <div className="flex items-center text-purple-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                  <span className="text-sm font-semibold">Learn more</span>
+                  <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
 
@@ -349,37 +350,7 @@ export default function NodeConfigurationPage() {
           </div>
         </section>
 
-        {/* Tor Configuration Section */}
-        <section>
-          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Shield className="w-6 h-6 text-purple-400" /> Tor Configuration
-          </h2>
-          <div className="grid grid-cols-1 gap-6">
-            <Link 
-              href="/Docs/developers/infrastructure/node/configuration/tor"
-              className="relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:from-purple-500/20 hover:to-purple-600/10 transition-all duration-300 group overflow-hidden"
-            >
-              <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>
-              <div className="relative z-10">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="bg-purple-500/20 text-purple-400 w-10 h-10 rounded-xl flex items-center justify-center group-hover:bg-purple-500/30 transition-colors">
-                    <Shield className="w-5 h-5" />
-                  </div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">
-                    Tor Configuration
-                  </h3>
-                </div>
-                <p className="text-gray-300 mb-4 group-hover:text-gray-200 transition-colors leading-relaxed">
-                  Configure your Ergo node to route P2P network traffic through Tor for enhanced privacy and anonymity.
-                </p>
-                <div className="flex items-center text-purple-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                  <span className="text-sm font-semibold">Learn more</span>
-                  <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                </div>
-              </div>
-            </Link>
-          </div>
-        </section>
+
       </div>
     </>
   );
