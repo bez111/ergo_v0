@@ -39,7 +39,7 @@ export default function NodeConfigurationPage() {
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Wallet className="w-6 h-6 text-green-400" /> Node Wallet
           </h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             <Link 
               href="/Docs/developers/infrastructure/node/configuration/wallet/initialize"
               className="relative bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/20 rounded-2xl p-6 hover:border-green-400/40 hover:from-green-500/20 hover:to-green-600/10 transition-all duration-300 group overflow-hidden"
