@@ -39,50 +39,30 @@ export default function NodeConfigurationPage() {
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Wallet className="w-6 h-6 text-green-400" /> Node Wallet
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Lock className="w-5 h-5 text-green-400" /> Wallet Security
+                <Database className="w-5 h-5 text-green-400" /> Hierarchical
               </h3>
               <p className="text-gray-300 mb-4">
-                Secure wallet management for your Ergo node, including key generation, storage, and transaction signing capabilities.
+                Hierarchical deterministic wallet structure for secure key management and backup.
               </p>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                  Secure key generation and storage
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                  Transaction signing and validation
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                  Multi-signature support
-                </li>
-              </ul>
             </div>
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Database className="w-5 h-5 text-cyan-400" /> Wallet Integration
+                <Lock className="w-5 h-5 text-cyan-400" /> Keys
               </h3>
               <p className="text-gray-300 mb-4">
-                Integration with external wallets and applications through standardized APIs and protocols.
+                Key generation, storage, and management for secure wallet operations.
               </p>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  REST API integration
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  ErgoPay protocol support
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-cyan-400 rounded-full"></span>
-                  Third-party wallet compatibility
-                </li>
-              </ul>
+            </div>
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                <Settings className="w-5 h-5 text-orange-400" /> Wallet Setup
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Step-by-step wallet configuration and initialization process.
+              </p>
             </div>
           </div>
         </section>
@@ -95,47 +75,19 @@ export default function NodeConfigurationPage() {
           <div className="grid md:grid-cols-2 gap-6">
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <FileText className="w-5 h-5 text-blue-400" /> API Documentation
+                <FileText className="w-5 h-5 text-blue-400" /> OpenAPI Spec
               </h3>
               <p className="text-gray-300 mb-4">
-                Comprehensive REST API documentation with Swagger/OpenAPI specification for Ergo node interactions.
+                OpenAPI specification for Ergo node REST API with comprehensive endpoint documentation.
               </p>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                  Interactive API documentation
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                  Request/response examples
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-blue-400 rounded-full"></span>
-                  Authentication methods
-                </li>
-              </ul>
             </div>
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Server className="w-5 h-5 text-orange-400" /> API Endpoints
+                <ExternalLink className="w-5 h-5 text-green-400" /> Try it out!
               </h3>
               <p className="text-gray-300 mb-4">
-                Complete list of available API endpoints for blockchain data, wallet operations, and network information.
+                Interactive API testing interface to explore and test Ergo node endpoints.
               </p>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                  Blockchain data queries
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                  Transaction operations
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-orange-400 rounded-full"></span>
-                  Network statistics
-                </li>
-              </ul>
             </div>
           </div>
           <div className="mt-6">
@@ -150,55 +102,46 @@ export default function NodeConfigurationPage() {
           </div>
         </section>
 
+        {/* Indexed Node Section */}
+        <section>
+          <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+            <Database className="w-6 h-6 text-blue-400" /> Indexed Node
+          </h2>
+          <div className="grid md:grid-cols-1 gap-6">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                <Code className="w-5 h-5 text-blue-400" /> API
+              </h3>
+              <p className="text-gray-300 mb-4">
+                Indexed node API for enhanced blockchain data access and querying capabilities.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Configuration Files Section */}
         <section>
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <FileText className="w-6 h-6 text-yellow-400" /> Configuration Files
+            <FileText className="w-6 h-6 text-yellow-400" /> Configuration
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-1 gap-6">
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Settings className="w-5 h-5 text-yellow-400" /> Main Configuration
+                <Settings className="w-5 h-5 text-yellow-400" /> Files
               </h3>
               <p className="text-gray-300 mb-4">
-                Primary configuration file for Ergo node settings, including network parameters, storage options, and API configuration.
+                Configuration files for Ergo node setup and customization.
               </p>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-                  Network type (mainnet/testnet)
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-                  Storage directory settings
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-yellow-400 rounded-full"></span>
-                  API endpoint configuration
-                </li>
-              </ul>
-            </div>
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Database className="w-5 h-5 text-green-400" /> Advanced Settings
-              </h3>
-              <p className="text-gray-300 mb-4">
-                Advanced configuration options for mining, mempool management, and performance optimization.
-              </p>
-              <ul className="space-y-2 text-gray-400 text-sm">
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                  Mining configuration
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                  Mempool settings
-                </li>
-                <li className="flex items-center gap-2">
-                  <span className="w-2 h-2 bg-green-400 rounded-full"></span>
-                  Performance tuning
-                </li>
-              </ul>
+              <div className="grid md:grid-cols-2 gap-4 mt-4">
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-orange-300 mb-2">application.conf</h4>
+                  <p className="text-gray-300 text-sm">Main application configuration file with node settings.</p>
+                </div>
+                <div className="bg-neutral-800/50 rounded-lg p-4">
+                  <h4 className="font-bold text-cyan-300 mb-2">testnet.conf</h4>
+                  <p className="text-gray-300 text-sm">Testnet-specific configuration file for development.</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
