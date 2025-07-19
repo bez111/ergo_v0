@@ -36,16 +36,6 @@ export default function ModifiersPage() {
           In Ergo's P2P protocol, the fundamental units of data exchanged between nodes, such as blocks and transactions, are referred to as "modifiers." Modifiers are transmitted as part of the network synchronization process. The Modifier Exchange process encompasses the protocols and systems designed to exchange this information efficiently and securely across the network.
         </p>
 
-        <div className="mb-6">
-          <Link
-            href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
-            className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
-          >
-            <ChevronLeft className="w-5 h-5 mr-2" />
-            Back to P2P Overview
-          </Link>
-        </div>
-
         <div className="space-y-8">
           <section>
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
