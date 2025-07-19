@@ -1044,9 +1044,6 @@ docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3</pre>
             Guards are the backbone of Rosen Bridge security, processing events reported by Watchers and executing cross-chain actions. They operate with locked collateral and strict slashing rules to ensure trust and reliability.
           </p>
           <div className="flex flex-wrap gap-4 mb-6">
-            <Link href="/Docs/ecosystem/infrastructure/rosen-bridge" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
-              <ChevronRight className="w-5 h-5 mr-2" /> Back to Rosen Bridge
-            </Link>
             <a href="https://github.com/rosen-bridge" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
               <GitBranch className="w-5 h-5 mr-2" /> Rosen GitHub
             </a>
@@ -1159,9 +1156,6 @@ docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3</pre>
             Rosen Bridge is designed to bootstrap liquidity across multiple ecosystems. The Rosen Token serves as a sybil resistance mechanism for the Rosen framework, a fee distribution mechanism, and means to access services of the Rosen Bridge.
           </p>
           <div className="flex flex-wrap gap-4 mb-6">
-            <Link href="/Docs/ecosystem/infrastructure/rosen-bridge" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
-              <ChevronRight className="w-5 h-5 mr-2" /> Back to Rosen Bridge
-            </Link>
             <a href="https://github.com/rosen-bridge" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
               <GitBranch className="w-5 h-5 mr-2" /> Rosen GitHub
             </a>
@@ -1307,9 +1301,6 @@ docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3</pre>
             The Rosen team is comprised of 8 full-time developers and 2-3 part-time developers. Some frontend and UI tasks are outsourced. The team's strength is further enhanced by the support of several advisors.
           </p>
           <div className="flex flex-wrap gap-4 mb-6">
-            <Link href="/Docs/ecosystem/infrastructure/rosen-bridge" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
-              <ChevronRight className="w-5 h-5 mr-2" /> Back to Rosen Bridge
-            </Link>
             <a href="https://github.com/rosen-bridge" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
               <GitBranch className="w-5 h-5 mr-2" /> Rosen GitHub
             </a>
@@ -1398,9 +1389,6 @@ docker rm CONTAINERID1 CONTAINERID2 CONTAINERID3</pre>
             The Rosen Bridge enables seamless interaction between the Cardano, Ergo, Bitcoin, Ethereum, and Binance Smart Chain blockchains. This bridge doesn't facilitate direct swaps between native tokens. Instead, it allows users to convert tokens across chains.
           </p>
           <div className="flex flex-wrap gap-4 mb-6">
-            <Link href="/Docs/ecosystem/infrastructure/rosen-bridge" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
-              <ChevronRight className="w-5 h-5 mr-2" /> Back to Rosen Bridge
-            </Link>
             <a href="https://github.com/rosen-bridge" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
               <GitBranch className="w-5 h-5 mr-2" /> Rosen GitHub
             </a>
