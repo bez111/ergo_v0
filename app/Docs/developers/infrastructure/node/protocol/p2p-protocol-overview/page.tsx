@@ -81,14 +81,20 @@ export default function P2POverviewCards() {
           <Link
             key={key}
             href={link}
-            className="border border-neutral-700 rounded-xl bg-neutral-900/50 p-5 hover:bg-neutral-800/70 hover:border-cyan-500/30 transition-all flex flex-col gap-2 group relative"
+            className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] cursor-pointer group relative"
           >
-            <div className="flex items-center gap-3">
-              <Icon className="w-5 h-5 text-cyan-400" />
-              <h2 className="text-lg font-semibold text-white">{title}</h2>
+            <div>
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                <Icon className="w-6 h-6 text-cyan-400" />
+                {title}
+              </h3>
+              <p className="text-gray-300 leading-relaxed mb-4">
+                {description}
+              </p>
             </div>
-            <p className="text-sm text-gray-400">{description}</p>
-            <span className="text-xs text-cyan-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">Learn more</span>
+            <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+              Learn more
+            </div>
           </Link>
         ))}
       </div>

@@ -146,29 +146,37 @@ export default function NodeProtocolPage() {
         {/* P2P Card */}
         <Link
           href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
-          className="group bg-neutral-900/50 border border-neutral-700 rounded-lg p-5 hover:border-cyan-400/60 hover:bg-neutral-800/70 hover:shadow-lg hover:shadow-cyan-400/20 transition-all duration-300 flex flex-col items-center justify-between min-h-[130px] text-center cursor-pointer transform hover:scale-[1.03]"
+          className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] cursor-pointer group relative"
         >
-          <div className="p-2 bg-cyan-400/10 rounded-lg mb-3 group-hover:bg-cyan-400/20 transition-colors duration-300">
-            <Share2 className="w-6 h-6 text-cyan-400 group-hover:text-cyan-300 transition-colors duration-300" />
+          <div>
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <Share2 className="w-6 h-6 text-cyan-400" />
+              P2P Protocol
+            </h3>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              How nodes communicate, share information, and maintain network connectivity in Ergo.
+            </p>
           </div>
-          <div className="font-bold text-lg text-white mb-2 group-hover:text-cyan-50 transition-colors duration-300">P2P Protocol</div>
-          <div className="text-gray-400 text-sm mb-4 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">How nodes communicate, share information, and maintain network connectivity in Ergo.</div>
-          <div className="flex items-center justify-center text-cyan-300 text-xs font-semibold mt-auto opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-0 translate-y-1">
-            Learn more →
+          <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+            Learn more
           </div>
         </Link>
         {/* EIPs Card */}
         <Link
           href="/Docs/developers/infrastructure/node/protocol/eips"
-          className="group bg-neutral-900/50 border border-neutral-700 rounded-lg p-5 hover:border-orange-400/60 hover:bg-neutral-800/70 hover:shadow-lg hover:shadow-orange-400/20 transition-all duration-300 flex flex-col items-center justify-between min-h-[130px] text-center cursor-pointer transform hover:scale-[1.03]"
+          className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] cursor-pointer group relative"
         >
-          <div className="p-2 bg-orange-400/10 rounded-lg mb-3 group-hover:bg-orange-400/20 transition-colors duration-300">
-            <FileText className="w-6 h-6 text-orange-400 group-hover:text-orange-300 transition-colors duration-300" />
+          <div>
+            <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+              <FileText className="w-6 h-6 text-orange-400" />
+              EIPs
+            </h3>
+            <p className="text-gray-300 leading-relaxed mb-4">
+              Ergo Improvement Proposals: standards and upgrades for the Ergo protocol and ecosystem.
+            </p>
           </div>
-          <div className="font-bold text-lg text-white mb-2 group-hover:text-orange-50 transition-colors duration-300">EIPs</div>
-          <div className="text-gray-400 text-sm mb-4 leading-relaxed group-hover:text-gray-300 transition-colors duration-300">Ergo Improvement Proposals: standards and upgrades for the Ergo protocol and ecosystem.</div>
-          <div className="flex items-center justify-center text-orange-300 text-xs font-semibold mt-auto opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:translate-y-0 translate-y-1">
-            Learn more →
+          <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+            Learn more
           </div>
         </Link>
       </div>
