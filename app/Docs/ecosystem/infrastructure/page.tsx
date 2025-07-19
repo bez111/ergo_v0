@@ -46,14 +46,6 @@ export default function InfrastructurePage() {
       color: "text-cyan-400",
       link: "/Docs/ecosystem/infrastructure/sidechains#sigma-chains"
     },
-    {
-      title: "Proof of Useful Work (PoUW)",
-      description:
-        "Research and experiments on integrating useful computation into consensus. PoUW sidechains and economic challenges.",
-      icon: Cpu,
-      color: "text-green-400",
-      link: "/Docs/ecosystem/infrastructure/sidechains#pouw"
-    },
   ];
 
   return (

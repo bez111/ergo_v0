@@ -40,30 +40,51 @@ export default function NodeConfigurationPage() {
             <Wallet className="w-6 h-6 text-green-400" /> Node Wallet
           </h2>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Database className="w-5 h-5 text-green-400" /> Hierarchical
+            <Link 
+              href="/Docs/developers/infrastructure/node/configuration/wallet/initialize"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 hover:bg-neutral-800/50 transition-all duration-200 group"
+            >
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2 group-hover:text-orange-400 transition-colors">
+                <Database className="w-5 h-5 text-green-400 group-hover:text-orange-400 transition-colors" /> 1. Initialize Wallet
               </h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4 group-hover:text-gray-200 transition-colors">
+                Initialize and set up your Ergo node wallet with comprehensive security guidance.
+              </p>
+              <div className="flex items-center text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-sm font-semibold">Learn more</span>
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </div>
+            </Link>
+            <Link 
+              href="/Docs/developers/infrastructure/node/configuration/wallet/hierarchical"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 hover:bg-neutral-800/50 transition-all duration-200 group"
+            >
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2 group-hover:text-orange-400 transition-colors">
+                <Lock className="w-5 h-5 text-cyan-400 group-hover:text-orange-400 transition-colors" /> 2. Hierarchical Keys
+              </h3>
+              <p className="text-gray-300 mb-4 group-hover:text-gray-200 transition-colors">
                 Hierarchical deterministic wallet structure for secure key management and backup.
               </p>
-            </div>
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Lock className="w-5 h-5 text-cyan-400" /> Keys
+              <div className="flex items-center text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-sm font-semibold">Learn more</span>
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </div>
+            </Link>
+            <Link 
+              href="/Docs/developers/infrastructure/node/configuration/wallet/setup"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 hover:bg-neutral-800/50 transition-all duration-200 group"
+            >
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2 group-hover:text-orange-400 transition-colors">
+                <Settings className="w-5 h-5 text-orange-400 group-hover:text-orange-400 transition-colors" /> 3. Wallet Setup
               </h3>
-              <p className="text-gray-300 mb-4">
-                Key generation, storage, and management for secure wallet operations.
-              </p>
-            </div>
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Settings className="w-5 h-5 text-orange-400" /> Wallet Setup
-              </h3>
-              <p className="text-gray-300 mb-4">
+              <p className="text-gray-300 mb-4 group-hover:text-gray-200 transition-colors">
                 Step-by-step wallet configuration and initialization process.
               </p>
-            </div>
+              <div className="flex items-center text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="text-sm font-semibold">Learn more</span>
+                <ChevronRight className="w-4 h-4 ml-1" />
+              </div>
+            </Link>
           </div>
         </section>
 
