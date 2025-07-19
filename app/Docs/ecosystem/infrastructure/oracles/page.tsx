@@ -359,12 +359,6 @@ docker-compose up -d
             >
               <ExternalLink className="w-5 h-5 mr-2" /> Learn More
             </a>
-            <Link
-              href="/Docs/ecosystem/infrastructure"
-              className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
-            >
-              <ChevronRight className="w-5 h-5 mr-2" /> Back to Infrastructure
-            </Link>
           </div>
         </div>
 
