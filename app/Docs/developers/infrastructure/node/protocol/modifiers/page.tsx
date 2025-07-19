@@ -3,7 +3,7 @@
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Link from "next/link";
-import { ChevronLeft, Layers, FileText, Cpu, Shield, RefreshCw } from "lucide-react";
+import { ChevronLeft, Layers, FileText, Cpu, Shield, RefreshCw, ArrowRight, Package, Download, CheckCircle } from "lucide-react";
 import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 
 export default function ModifiersPage() {
@@ -1249,10 +1249,245 @@ or "BlocksToKeep + N" blocks back?
       </TabsContent>
 
       <TabsContent value="synchronisation">
-        <div className="text-center py-12">
-          <FileText className="w-16 h-16 text-gray-500 mx-auto mb-4" />
-          <h3 className="text-xl font-bold text-gray-400 mb-2">Synchronisation</h3>
-          <p className="text-gray-500">Content coming soon...</p>
+        <div className="space-y-8">
+          <section>
+            <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+              <RefreshCw className="w-6 h-6 text-green-400" />
+              Blockchain Synchronization
+            </h2>
+            
+            <p className="text-gray-300 mb-6">
+              In Ergo, modifiers (blocks, transactions, etc.) progress through several states during the synchronization process:
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h3 className="font-semibold text-orange-300 mb-2">Unknown</h3>
+                <p className="text-gray-300 text-sm">The node is unaware of this modifier, or the synchronization process for it hasn't started.</p>
+              </div>
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h3 className="font-semibold text-yellow-300 mb-2">Requested</h3>
+                <p className="text-gray-300 text-sm">The modifier has been requested from one or more peers.</p>
+              </div>
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h3 className="font-semibold text-blue-300 mb-2">Received</h3>
+                <p className="text-gray-300 text-sm">The modifier's data has been received from a peer but has not yet been fully validated and applied.</p>
+              </div>
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h3 className="font-semibold text-green-300 mb-2">Held</h3>
+                <p className="text-gray-300 text-sm">The modifier has been successfully validated and applied. Persistent Modifiers are held by the History component, while Ephemeral Modifiers are held by the Mempool.</p>
+              </div>
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h3 className="font-semibold text-red-300 mb-2">Invalid</h3>
+                <p className="text-gray-300 text-sm">The modifier has been determined to be permanently invalid according to consensus rules.</p>
+              </div>
+            </div>
+            
+            <p className="text-gray-300 mb-6">
+              The primary goal of the synchronization process is to transition necessary modifiers from the <strong>Unknown</strong> state to the <strong>Held</strong> state, thereby bringing the node's view of the blockchain up-to-date with the network.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <ArrowRight className="w-5 h-5 text-cyan-400" />
+              Transition from Unknown to Requested
+            </h2>
+            
+            <p className="text-gray-300 mb-4">
+              The transition of a modifier from the Unknown state to the Requested state can occur in different ways, depending on the current node status (bootstrapping/stable) and the type of modifier.
+            </p>
+            
+            <h3 className="font-semibold text-orange-300 mb-3">Inv Protocol</h3>
+            <p className="text-gray-300 mb-4">
+              The Inv (inventory) protocol is a communication protocol used during the synchronization process. It involves the following steps:
+            </p>
+            
+            <div className="space-y-4 mb-6">
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-300 mb-2">1. Creating Inv Message</h4>
+                <p className="text-gray-300 text-sm">An Inv message contains pairs of <code className="bg-neutral-700 px-1 rounded">(ModifierTypeId, Seq[ModifierId])</code>. When Node A sends an Inv message to Node B, it signals that Node A possesses the listed modifiers and is prepared to send them upon request from Node B.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-300 mb-2">2. Broadcasting Inv Message</h4>
+                <p className="text-gray-300 text-sm mb-2">A node broadcasts Inv messages primarily in two scenarios:</p>
+                <ul className="list-disc list-inside text-gray-300 text-sm space-y-1 ml-4">
+                  <li>When it successfully applies a new modifier (like a block header or transaction) to its History or Mempool. This helps propagate new information quickly across the network, especially when nodes are already synchronized.</li>
+                  <li>In response to receiving an <code className="bg-neutral-700 px-1 rounded">ErgoSyncInfo</code> message from a peer (see Headers Synchronization below).</li>
+                </ul>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-cyan-300 mb-2">3. Receiving Inv Message</h4>
+                <p className="text-gray-300 text-sm">Upon receiving an Inv message from a peer, a node:</p>
+                <ul className="list-disc list-inside text-gray-300 text-sm space-y-1 ml-4">
+                  <li>Filters the list to identify modifiers it doesn't already know about (i.e., those currently in the <strong>Unknown</strong> state).</li>
+                  <li>Requests these unknown modifiers from the peer that sent the Inv message.</li>
+                  <li>Transitions the state of these requested modifiers to <strong>Requested</strong>.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Layers className="w-5 h-5 text-green-400" />
+              Headers Synchronization
+            </h2>
+            
+            <p className="text-gray-300 mb-4">
+              Headers synchronization is the initial step in the synchronization process. It ensures that a node's headers chain is in sync with the network. The process involves the following steps:
+            </p>
+            
+            <div className="space-y-4 mb-6">
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">1. Sending ErgoSyncInfo</h4>
+                <p className="text-gray-300 text-sm">Periodically (every <code className="bg-neutral-700 px-1 rounded">syncInterval</code>), a node calculates and sends an <code className="bg-neutral-700 px-1 rounded">ErgoSyncInfo</code> message to a selection of its peers (<code className="bg-neutral-700 px-1 rounded">peersToSyncWith()</code>). This message contains the IDs of the last <code className="bg-neutral-700 px-1 rounded">ErgoSyncInfo.MaxBlockIds</code> headers in its current best chain, allowing peers to compare chains.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">2. Triggering ErgoSyncInfo</h4>
+                <p className="text-gray-300 text-sm">To speed up synchronization, a node might also send an <code className="bg-neutral-700 px-1 rounded">ErgoSyncInfo</code> message more frequently if its headers chain is lagging behind the network's perceived best chain, but the number of headers it still needs to request is relatively small (e.g., less than <code className="bg-neutral-700 px-1 rounded">desiredInvObjects / 2</code>).</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">3. Receiving ErgoSyncInfo</h4>
+                <p className="text-gray-300 text-sm">Upon receiving an <code className="bg-neutral-700 px-1 rounded">ErgoSyncInfo</code> message from a peer, a node compares the received header IDs with its own chain to determine the relative status (<code className="bg-neutral-700 px-1 rounded">OtherNodeSyncingStatus</code>: Younger, Older, Equal, Nonsense, or Unknown). Based on this comparison, it identifies any headers the sender might be missing from its own chain.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">4. Responding with Inv</h4>
+                <p className="text-gray-300 text-sm">The node then constructs and sends an Inv message back to the original sender, containing the IDs of up to <code className="bg-neutral-700 px-1 rounded">maxInvObjects</code> headers that the sender appears to be missing. This helps the sender catch up.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Package className="w-5 h-5 text-blue-400" />
+              Block Section Synchronization
+            </h2>
+            
+            <p className="text-gray-300 mb-4">
+              Block section synchronization is a crucial step that occurs after applying headers. A node synchronizes block sections (BlockTransactions, Extension, and ADProofs), the amount and composition of which may vary based on node settings. The process involves the following steps:
+            </p>
+            
+            <div className="space-y-4 mb-6">
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-300 mb-2">1. Identifying Needed Modifiers</h4>
+                <p className="text-gray-300 text-sm">Periodically (every <code className="bg-neutral-700 px-1 rounded">syncInterval</code>), a node determines the next set of block sections (<code className="bg-neutral-700 px-1 rounded">BlockTransactions</code>, <code className="bg-neutral-700 px-1 rounded">Extension</code>, <code className="bg-neutral-700 px-1 rounded">ADProofs</code>) it needs to download (<code className="bg-neutral-700 px-1 rounded">nextModifiersToDownload()</code>). This typically corresponds to the headers it has received but for which it lacks the full block data, starting from its current best <em>fully validated</em> block height.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-300 mb-2">2. Requesting Modifiers</h4>
+                <p className="text-gray-300 text-sm">The node requests these needed modifiers from random peers (as it doesn't know which specific peer has them). The state of these modifiers transitions to <strong>Requested</strong>.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-300 mb-2">3. Triggering Downloads</h4>
+                <p className="text-gray-300 text-sm">To speed up synchronization, the node might also request <code className="bg-neutral-700 px-1 rounded">nextModifiersToDownload()</code> more frequently if its header chain is synchronized but it's lagging behind in downloading block sections, provided the number of pending sections is small (e.g., less than <code className="bg-neutral-700 px-1 rounded">desiredInvObjects / 2</code>).</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-300 mb-2">4. Applying Block Header (Triggering Download)</h4>
+                <p className="text-gray-300 text-sm">When a node successfully applies a new block header while its header chain is considered synchronized, the History component might return <code className="bg-neutral-700 px-1 rounded">ProgressInfo</code> indicating which block sections (<code className="bg-neutral-700 px-1 rounded">ToDownload</code>) are now needed to fully validate and apply this new block and potentially older blocks.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-blue-300 mb-2">5. Processing ToDownload Request</h4>
+                <p className="text-gray-300 text-sm">When the NodeViewSynchronizer (NVS) receives this <code className="bg-neutral-700 px-1 rounded">ToDownload</code> information (either from periodic checks or header application), it requests the necessary modifiers from random peers, transitioning their state to <strong>Requested</strong>.</p>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <Download className="w-5 h-5 text-purple-400" />
+              Transition from Requested to Received
+            </h2>
+            
+            <p className="text-gray-300 mb-4">
+              The transition from the Requested state to the Received state involves the following steps:
+            </p>
+            
+            <div className="space-y-4 mb-6">
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-purple-300 mb-2">1. Tracking Requests</h4>
+                <p className="text-gray-300 text-sm">When a node requests a modifier from a specific peer, it records this request (modifier ID and peer) in its <code className="bg-neutral-700 px-1 rounded">DeliveryTracker</code>. It also schedules a <code className="bg-neutral-700 px-1 rounded">CheckDelivery</code> message to itself after a <code className="bg-neutral-700 px-1 rounded">deliveryTimeout</code>.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-purple-300 mb-2">2. Receiving Modifiers</h4>
+                <p className="text-gray-300 text-sm">When a node receives a modifier:</p>
+                <ul className="list-disc list-inside text-gray-300 text-sm space-y-1 ml-4">
+                  <li>It checks if the modifier was requested from the sending peer using the <code className="bg-neutral-700 px-1 rounded">DeliveryTracker</code>.</li>
+                  <li>If it was requested, the NodeViewSynchronizer (NVS) attempts to parse and perform initial validation on the received data.</li>
+                </ul>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-purple-300 mb-2">3. Handling Invalid Modifiers</h4>
+                <ul className="list-disc list-inside text-gray-300 text-sm space-y-1">
+                  <li>If the received data fails parsing or initial validation (e.g., incorrect format, size limits exceeded), the NVS penalizes the sending peer and transitions the modifier's state to <strong>Invalid</strong>.</li>
+                  <li>If the peer provided syntactically correct but semantically incorrect modifier bytes (which might fail later validation stages), the NVS penalizes the peer, and the modifier might revert to <strong>Unknown</strong> or be marked <strong>Invalid</strong> depending on the failure type.</li>
+                </ul>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-purple-300 mb-2">4. Processing Valid Modifiers</h4>
+                <p className="text-gray-300 text-sm">If the modifier passes initial parsing and validation, the NVS sends it to the NodeViewHolder (NVH) for further processing and transitions the modifier's state to <strong>Received</strong>.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-purple-300 mb-2">5. Checking Delivery Timeout</h4>
+                <p className="text-gray-300 text-sm">When the scheduled <code className="bg-neutral-700 px-1 rounded">CheckDelivery</code> message is processed:</p>
+                <ul className="list-disc list-inside text-gray-300 text-sm space-y-1 ml-4">
+                  <li>If the modifier is already in the <strong>Received</strong> or <strong>Held</strong> state, no action is needed.</li>
+                  <li>If the modifier is still in the <strong>Requested</strong> state (i.e., not delivered within the timeout), the node might retry the request a few times (<code className="bg-neutral-700 px-1 rounded">maxDeliveryChecks</code>).</li>
+                  <li>If delivery ultimately fails after retries, the node penalizes the peer from which it was requested (unless it was requested from a random peer initially) and transitions the modifier's state back to <strong>Unknown</strong> so it can be requested again later, potentially from a different peer.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section>
+            <h2 className="text-xl font-bold mb-4 flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-green-400" />
+              Transition from Received to Held
+            </h2>
+            
+            <p className="text-gray-300 mb-4">
+              The transition from the Received state to the Held state involves the following steps:
+            </p>
+            
+            <div className="space-y-4">
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">1. Receiving Modifiers</h4>
+                <p className="text-gray-300 text-sm">When the NodeViewHolder (NVH) receives new modifiers (in the <strong>Received</strong> state) from the NVS, it stores them temporarily in its <code className="bg-neutral-700 px-1 rounded">modifiersCache</code>.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">2. Applying Modifiers</h4>
+                <p className="text-gray-300 text-sm">The NVH attempts to apply modifiers from the cache to the History and State components in the correct order (respecting dependencies).</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">3. Handling Successful Application</h4>
+                <p className="text-gray-300 text-sm">For every modifier successfully applied (passing all validation rules and updating History/State), the NVH publishes a <code className="bg-neutral-700 px-1 rounded">SyntacticallySuccessfulModifier</code> event. Upon receiving this event, the NVS transitions the modifier's state to <strong>Held</strong>.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">4. Handling Cache Size Limit</h4>
+                <p className="text-gray-300 text-sm">If the <code className="bg-neutral-700 px-1 rounded">modifiersCache</code> exceeds its size limit after attempting applications, the NVH removes older or less relevant modifiers from the cache.</p>
+              </div>
+              
+              <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-green-300 mb-2">5. Handling Processing Results</h4>
+                <p className="text-gray-300 text-sm">After attempting to apply modifiers, the NVH publishes a <code className="bg-neutral-700 px-1 rounded">ModifiersProcessingResult</code> message listing which modifiers were successfully applied and which were removed from the cache (potentially because they were invalid or their dependencies weren't met yet). When the NVS receives this message, it transitions any modifiers that were removed from the cache <em>without</em> being successfully applied back to the <strong>Unknown</strong> state, allowing them to be potentially requested and processed again later. Modifiers that failed validation might be transitioned to <strong>Invalid</strong>.</p>
+              </div>
+            </div>
+          </section>
         </div>
       </TabsContent>
     </Tabs>
