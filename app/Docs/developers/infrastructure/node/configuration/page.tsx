@@ -232,7 +232,7 @@ export default function NodeConfigurationPage() {
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
             <Shield className="w-6 h-6 text-purple-400" /> Tor Integration
           </h2>
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6">
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                 <Lock className="w-5 h-5 text-purple-400" /> Privacy Features
