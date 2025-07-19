@@ -10,6 +10,10 @@ import {
 export default function EIPsPage() {
   return (
     <>
+      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
+        Ergo Improvement Proposals (EIPs)
+      </h1>
+
       <div className="mb-8">
         <Link
           href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
@@ -18,10 +22,6 @@ export default function EIPsPage() {
           <ChevronRight className="w-5 h-5 mr-2" /> Back to P2P Overview
         </Link>
       </div>
-
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-        Ergo Improvement Proposals (EIPs)
-      </h1>
 
       <div className="space-y-8">
         {/* Overview Section */}
