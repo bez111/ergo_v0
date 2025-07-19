@@ -257,12 +257,6 @@ export default function SidechainsPage() {
               Sub-blocks (input blocks) and ordering blocks enable near-instant confirmations and a more responsive network, dramatically improving user experience on Ergo.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link
-                href="/Docs/ecosystem/infrastructure"
-                className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
-              >
-                <ChevronRight className="w-5 h-5 mr-2" /> Back to Infrastructure
-              </Link>
               <a
                 href="https://github.com/ergoplatform/ergo"
                 target="_blank"
