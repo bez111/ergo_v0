@@ -243,16 +243,6 @@ export default function ModifiersPage() {
           In Ergo's P2P protocol, blocks and transactions are referred to as "modifiers". Modifiers are transmitted between nodes as part of the network synchronization process. The Modifier Exchange process encompasses the protocols and systems in place to exchange this information efficiently and securely across the network.
         </p>
 
-        <div className="mb-6">
-          <Link
-            href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
-            className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
-          >
-            <ChevronLeft className="w-5 h-5 mr-2" />
-            Back to P2P Overview
-          </Link>
-        </div>
-
         <div className="space-y-8">
           <section>
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
@@ -380,16 +370,6 @@ export default function ModifiersPage() {
         <p className="text-gray-300 mb-8 text-lg leading-relaxed">
           Ergo's modifiers processing algorithm is a universal mechanism that operates consistently across all security modes. Unlike many blockchain systems, Ergo introduces several types of modifiers, which can be broadly classified into two categories: In-memory and Persistent.
         </p>
-
-        <div className="mb-6">
-          <Link
-            href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
-            className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
-          >
-            <ChevronLeft className="w-5 h-5 mr-2" />
-            Back to P2P Overview
-          </Link>
-        </div>
 
         <div className="space-y-8">
           <section>
@@ -741,16 +721,6 @@ or "BlocksToKeep + N" blocks back?
         <p className="text-gray-300 mb-8 text-lg leading-relaxed">
           This section contains a list of all consensus-critical validation rules that every node in the network should perform; rules that are not listed in this table should not be considered consensus-critical and enforced by the network.
         </p>
-
-        <div className="mb-6">
-          <Link
-            href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
-            className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
-          >
-            <ChevronLeft className="w-5 h-5 mr-2" />
-            Back to P2P Overview
-          </Link>
-        </div>
 
         <div className="bg-orange-900/20 border border-orange-400/30 rounded-xl p-6 mb-8">
           <p className="text-gray-300 mb-4">
@@ -1269,16 +1239,6 @@ or "BlocksToKeep + N" blocks back?
       </TabsContent>
 
       <TabsContent value="synchronisation">
-        <div className="mb-6">
-          <Link
-            href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
-            className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
-          >
-            <ChevronLeft className="w-5 h-5 mr-2" />
-            Back to P2P Overview
-          </Link>
-        </div>
-
         <div className="space-y-8">
           <section>
             <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
