@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { UniversalCopyCodeBlock } from "@/components/UniversalCopyCodeBlock";
 
 export default function ApplicationConfPage() {
   const [activeTab, setActiveTab] = useState("overview");
@@ -19,15 +18,14 @@ export default function ApplicationConfPage() {
 
   return (
     <>
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-7 mb-8">
-            {tabs.map((tab) => (
-              <TabsTrigger key={tab.id} value={tab.id} className="text-sm">
-                {tab.label}
-              </TabsTrigger>
-            ))}
-          </TabsList>
+      <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <TabsList className="grid w-full grid-cols-7 mb-8">
+          {tabs.map((tab) => (
+            <TabsTrigger key={tab.id} value={tab.id} className="text-sm">
+              {tab.label}
+            </TabsTrigger>
+          ))}
+        </TabsList>
 
           <TabsContent value="overview" className="space-y-6">
             <div className="mb-8">
@@ -423,7 +421,6 @@ export default function ApplicationConfPage() {
             </div>
           </TabsContent>
         </Tabs>
-      </div>
     </>
   );
 } 
