@@ -12,7 +12,13 @@ import {
   ArrowLeft,
   ExternalLink,
   BookOpen,
-  Settings
+  Settings,
+  ChevronRight,
+  Globe,
+  Activity,
+  Cpu,
+  Clock,
+  Code
 } from "lucide-react";
 import Link from "next/link";
 
@@ -30,38 +36,40 @@ export default function ArchivalNodePage() {
         </p>
         
         {/* Navigation Buttons */}
-        <div className="flex flex-wrap gap-4 mb-8">
+        <div className="flex flex-wrap gap-4">
           <Link 
             href="/Docs/developers/infrastructure/node/modes"
-            className="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 border border-gray-600 hover:border-gray-500"
+            className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
           >
-            <ArrowLeft className="w-4 h-4 mr-2" />
+            <ChevronRight className="w-5 h-5 mr-2" />
             Back to Node Modes
           </Link>
-          <Link 
-            href="/Docs/developers/infrastructure/node/configuration"
-            className="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 border border-gray-600 hover:border-gray-500"
+          <Link
+            href="/Docs/developers/infrastructure/node/modes/archival-node/technical-details"
+            className="inline-flex items-center px-6 py-3 bg-purple-500 rounded-xl font-semibold text-white hover:bg-purple-600 transition-transform hover:scale-105"
           >
-            <Settings className="w-4 h-4 mr-2" />
-            Node Configuration
+            <Code className="w-5 h-5 mr-2" />
+            Technical Details
           </Link>
-          <Link 
+          <a 
             href="https://github.com/ergoplatform/ergo/wiki/Node-Configuration"
             target="_blank"
-            className="inline-flex items-center px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-colors duration-200 border border-gray-600 hover:border-gray-500"
+            rel="noopener noreferrer"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
-            <ExternalLink className="w-4 h-4 mr-2" />
+            <ExternalLink className="w-5 h-5 mr-2" />
             View on GitHub
-          </Link>
+          </a>
         </div>
       </div>
 
-      {/* Overview Section */}
-      <div className="mb-12">
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+      {/* Main Content */}
+      <div className="space-y-8">
+        {/* Overview Section */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <div className="flex items-center mb-4">
             <Server className="w-6 h-6 text-blue-400 mr-3" />
-            <h2 className="text-2xl font-bold text-white">Overview</h2>
+            <h2 className="text-2xl font-semibold text-blue-400">Overview</h2>
           </div>
           <p className="text-gray-300 leading-relaxed">
             The Archival Node Mode is the complete full node in Ergo. It is designed to store all blocks 
@@ -70,19 +78,17 @@ export default function ArchivalNodePage() {
             validate any transaction, regardless of its complexity or origin.
           </p>
         </div>
-      </div>
 
-      {/* Key Features Section */}
-      <div className="mb-12">
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        {/* Key Features Section */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <div className="flex items-center mb-6">
             <Shield className="w-6 h-6 text-green-400 mr-3" />
-            <h2 className="text-2xl font-bold text-white">Key Features and Functionalities</h2>
+            <h2 className="text-2xl font-semibold text-green-400">Key Features and Functionalities</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
             {/* Feature 1 */}
-            <div className="bg-gray-700 border border-gray-600 rounded-lg p-4">
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <div className="flex items-center mb-3">
                 <History className="w-5 h-5 text-blue-400 mr-2" />
                 <h3 className="text-lg font-semibold text-white">Comprehensive Blockchain Storage</h3>
@@ -94,7 +100,7 @@ export default function ArchivalNodePage() {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-gray-700 border border-gray-600 rounded-lg p-4">
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <div className="flex items-center mb-3">
                 <Zap className="w-5 h-5 text-yellow-400 mr-2" />
                 <h3 className="text-lg font-semibold text-white">Proof-of-Work Verification</h3>
@@ -106,7 +112,7 @@ export default function ArchivalNodePage() {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-gray-700 border border-gray-600 rounded-lg p-4">
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <div className="flex items-center mb-3">
                 <LinkIcon className="w-5 h-5 text-purple-400 mr-2" />
                 <h3 className="text-lg font-semibold text-white">Linking Structure Verification</h3>
@@ -118,7 +124,7 @@ export default function ArchivalNodePage() {
             </div>
 
             {/* Feature 4 */}
-            <div className="bg-gray-700 border border-gray-600 rounded-lg p-4">
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <div className="flex items-center mb-3">
                 <Database className="w-5 h-5 text-cyan-400 mr-2" />
                 <h3 className="text-lg font-semibold text-white">UTXO Set Storage</h3>
@@ -130,140 +136,152 @@ export default function ArchivalNodePage() {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Configuration Section */}
-      <div className="mb-12">
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        {/* Configuration Section */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <div className="flex items-center mb-4">
             <Settings className="w-6 h-6 text-orange-400 mr-3" />
-            <h2 className="text-2xl font-bold text-white">Configuration</h2>
+            <h2 className="text-2xl font-semibold text-orange-400">Configuration</h2>
           </div>
           
-          <div className="bg-gray-900 border border-gray-600 rounded-lg p-4 mb-4">
-            <h3 className="text-lg font-semibold text-white mb-3">Required Settings</h3>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                <code className="text-green-400">node.stateType = "utxo"</code>
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                <code className="text-green-400">node.blocksToKeep = -1</code>
+          {/* Required Settings */}
+          <div className="mb-8">
+            <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+              <CheckCircle className="w-5 h-5 text-green-400" /> Required Settings
+            </h3>
+            <div className="bg-neutral-800/50 rounded-lg p-4 mb-4">
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <code className="text-green-400 font-mono">node.stateType = "utxo"</code>
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
+                  <code className="text-green-400 font-mono">node.blocksToKeep = -1</code>
+                </div>
               </div>
             </div>
+            <p className="text-gray-300 text-sm">
+              These settings ensure the node operates in archival mode, storing all blocks and maintaining the complete UTXO set.
+            </p>
           </div>
 
-          <div className="bg-gray-900 border border-gray-600 rounded-lg p-4">
-            <h3 className="text-lg font-semibold text-white mb-3">Optional Bootstrapping</h3>
-            <div className="space-y-2 text-sm">
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                <code className="text-blue-400">node.utxoBootstrap = true</code> - Use UTXO snapshot for faster sync
-              </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
-                <code className="text-blue-400">node.nipopowBootstrap = true</code> - Use NiPoPoW for faster sync
+          {/* Optional Bootstrapping */}
+          <div className="mb-8">
+            <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+              <Activity className="w-5 h-5 text-blue-400" /> Optional Bootstrapping
+            </h3>
+            <div className="bg-neutral-800/50 rounded-lg p-4 mb-4">
+              <div className="space-y-2 text-sm">
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                  <code className="text-blue-400 font-mono">node.utxoBootstrap = true</code> - Use UTXO snapshot for faster sync
+                </div>
+                <div className="flex items-center">
+                  <CheckCircle className="w-4 h-4 text-blue-400 mr-2" />
+                  <code className="text-blue-400 font-mono">node.nipopowBootstrap = true</code> - Use NiPoPoW for faster sync
+                </div>
               </div>
             </div>
+            <p className="text-gray-300 text-sm">
+              These options can significantly speed up the initial synchronization process while maintaining full archival capabilities.
+            </p>
           </div>
         </div>
-      </div>
 
-      {/* Use Cases Section */}
-      <div className="mb-12">
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        {/* Use Cases Section */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <div className="flex items-center mb-4">
             <BookOpen className="w-6 h-6 text-purple-400 mr-3" />
-            <h2 className="text-2xl font-bold text-white">Use Cases</h2>
+            <h2 className="text-2xl font-semibold text-purple-400">Use Cases</h2>
           </div>
           
           <div className="grid md:grid-cols-2 gap-6">
-            <div className="bg-gray-700 border border-gray-600 rounded-lg p-4">
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <h3 className="text-lg font-semibold text-white mb-2">Blockchain Explorers</h3>
               <p className="text-gray-300 text-sm">
                 Provides complete historical data for blockchain explorers and analytics platforms.
               </p>
             </div>
             
-            <div className="bg-gray-700 border border-gray-600 rounded-lg p-4">
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <h3 className="text-lg font-semibold text-white mb-2">Wallet Restoration</h3>
               <p className="text-gray-300 text-sm">
                 Essential for restoring wallets from seed phrases, regardless of when they were created.
               </p>
             </div>
             
-            <div className="bg-gray-700 border border-gray-600 rounded-lg p-4">
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <h3 className="text-lg font-semibold text-white mb-2">Research & Development</h3>
               <p className="text-gray-300 text-sm">
                 Complete data access for blockchain research, analysis, and development purposes.
               </p>
             </div>
             
-            <div className="bg-gray-700 border border-gray-600 rounded-lg p-4">
-              <h3 className="text-lg font-semibold text-white mb-2">Maximum Security</h3>
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+              <h3 className="text-lg font-semibold text-white mb-2">Network Security</h3>
               <p className="text-gray-300 text-sm">
-                Provides the highest level of security and validation capabilities for critical applications.
+                Provides maximum security by validating all transactions and maintaining complete network state.
               </p>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Resource Requirements */}
-      <div className="mb-12">
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        {/* Resource Requirements Section */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <div className="flex items-center mb-4">
-            <HardDrive className="w-6 h-6 text-red-400 mr-3" />
-            <h2 className="text-2xl font-bold text-white">Resource Requirements</h2>
+            <Cpu className="w-6 h-6 text-red-400 mr-3" />
+            <h2 className="text-2xl font-semibold text-red-400">Resource Requirements</h2>
           </div>
           
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="text-center">
-              <div className="text-2xl font-bold text-red-400 mb-2">100s GB+</div>
-              <div className="text-gray-400 text-sm">Storage Space</div>
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+              <div className="flex items-center mb-2">
+                <HardDrive className="w-5 h-5 text-orange-400 mr-2" />
+                <h3 className="text-lg font-semibold text-white">Storage</h3>
+              </div>
+              <p className="text-gray-300 text-sm">
+                Requires significant disk space (100s GB+) as it stores all blocks and the complete UTXO set.
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-yellow-400 mb-2">High</div>
-              <div className="text-gray-400 text-sm">CPU & RAM</div>
+            
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+              <div className="flex items-center mb-2">
+                <Activity className="w-5 h-5 text-green-400 mr-2" />
+                <h3 className="text-lg font-semibold text-white">Memory</h3>
+              </div>
+              <p className="text-gray-300 text-sm">
+                High RAM requirements for processing large UTXO sets and maintaining blockchain state.
+              </p>
             </div>
-            <div className="text-center">
-              <div className="text-2xl font-bold text-orange-400 mb-2">Very Long</div>
-              <div className="text-gray-400 text-sm">Initial Sync Time</div>
+            
+            <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+              <div className="flex items-center mb-2">
+                <Clock className="w-5 h-5 text-blue-400 mr-2" />
+                <h3 className="text-lg font-semibold text-white">Sync Time</h3>
+              </div>
+              <p className="text-gray-300 text-sm">
+                Initial synchronization can take several days due to processing all historical blocks.
+              </p>
             </div>
-          </div>
-          
-          <div className="mt-6 p-4 bg-yellow-900/20 border border-yellow-600 rounded-lg">
-            <div className="flex items-center mb-2">
-              <CheckCircle className="w-5 h-5 text-yellow-400 mr-2" />
-              <h3 className="text-lg font-semibold text-yellow-400">Important Note</h3>
-            </div>
-            <p className="text-gray-300 text-sm">
-              Archival nodes require significant storage space and time for initial synchronization. 
-              Consider using bootstrapping options for faster setup, but be aware that the complete 
-              blockchain history will still be downloaded and stored.
-            </p>
           </div>
         </div>
-      </div>
 
-      {/* Reference Section */}
-      <div className="mb-12">
-        <div className="bg-gray-800 border border-gray-700 rounded-lg p-6">
+        {/* Security Notes Section */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <div className="flex items-center mb-4">
-            <ExternalLink className="w-6 h-6 text-blue-400 mr-3" />
-            <h2 className="text-2xl font-bold text-white">Reference</h2>
+            <Shield className="w-6 h-6 text-yellow-400 mr-3" />
+            <h2 className="text-2xl font-semibold text-yellow-400">Security Notes</h2>
           </div>
-          <p className="text-gray-300 mb-4">
-            For detailed instructions on setting up a full node, please refer to the manual configuration page.
-          </p>
-          <Link 
-            href="/Docs/developers/infrastructure/node/configuration"
-            className="inline-flex items-center px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors duration-200"
-          >
-            <Settings className="w-4 h-4 mr-2" />
-            Node Configuration Manual
-          </Link>
+          
+          <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+            <ul className="list-disc list-inside space-y-2 text-gray-300 text-sm">
+              <li>Archival nodes provide the highest level of security by validating all transactions.</li>
+              <li>They can detect and reject any invalid transactions or blocks.</li>
+              <li>Essential for maintaining network integrity and preventing double-spending attacks.</li>
+              <li>Recommended for critical infrastructure and high-value applications.</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -46,7 +46,7 @@ export default function NetworkMessagesPage() {
               <tr className="bg-neutral-900/50">
                 <td className="border border-neutral-700 px-4 py-3 text-gray-300">byte[4]</td>
                 <td className="border border-neutral-700 px-4 py-3 text-gray-300">Magic bytes</td>
-                <td className="border border-neutral-700 px-4 py-3 text-gray-300">For the mainnet, the magic bytes are <code className="bg-neutral-800 px-2 py-1 rounded">{1, 0, 2, 4}</code>. For testnet, <code className="bg-neutral-800 px-2 py-1 rounded">{2, 0, 0, 1}</code>.</td>
+                <td className="border border-neutral-700 px-4 py-3 text-gray-300">For the mainnet, the magic bytes are <code className="bg-neutral-800 px-2 py-1 rounded">[1, 0, 2, 4]</code>. For testnet, <code className="bg-neutral-800 px-2 py-1 rounded">[2, 0, 0, 1]</code>.</td>
               </tr>
               <tr className="bg-neutral-900">
                 <td className="border border-neutral-700 px-4 py-3 text-gray-300">unsigned byte</td>
@@ -118,7 +118,7 @@ export default function NetworkMessagesPage() {
               <tr className="bg-neutral-900/50">
                 <td className="border border-neutral-700 px-4 py-3 text-gray-300">byte[3]</td>
                 <td className="border border-neutral-700 px-4 py-3 text-gray-300">Version</td>
-                <td className="border border-neutral-700 px-4 py-3 text-gray-300">For example, <code className="bg-neutral-800 px-2 py-1 rounded">{4, 0, 25}</code></td>
+                <td className="border border-neutral-700 px-4 py-3 text-gray-300">For example, <code className="bg-neutral-800 px-2 py-1 rounded">[4, 0, 25]</code></td>
               </tr>
               <tr className="bg-neutral-900">
                 <td className="border border-neutral-700 px-4 py-3 text-gray-300">unsigned byte</td>
