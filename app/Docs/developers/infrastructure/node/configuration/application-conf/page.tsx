@@ -22,56 +22,31 @@ export default function ApplicationConfPage() {
       title: "Node",
       description: "Core node configuration including state type, mining settings, transaction verification, and memory pool management.",
       icon: Settings,
-      color: "text-blue-400",
-      config: {
-        "State Type": "stateType = \"utxo\"",
-        "Mining": "mining = false",
-        "Verification": "verifyTransactions = true"
-      }
+      color: "text-blue-400"
     },
     {
       title: "Cache",
       description: "Cache configuration for optimizing node performance and memory usage with extra indexing and state snapshots.",
       icon: Database,
-      color: "text-green-400",
-      config: {
-        "Extra Index": "extraIndex = false",
-        "Cache Size": "extraCacheSize = 500",
-        "State Versions": "keepVersions = 200"
-      }
+      color: "text-green-400"
     },
     {
       title: "Chain",
       description: "Blockchain parameters and chain synchronization settings including block intervals and difficulty recalculation.",
       icon: Link,
-      color: "text-orange-400",
-      config: {
-        "Block Interval": "blockInterval = 120",
-        "Epoch Length": "epochLength = 1024",
-        "Chain Update Delay": "acceptableChainUpdateDelay = 30m"
-      }
+      color: "text-orange-400"
     },
     {
       title: "Wallet",
       description: "Built-in wallet configuration and security settings for key management and transaction scanning.",
       icon: Wallet,
-      color: "text-purple-400",
-      config: {
-        "Secret Keys": "dlogSecretsNumber = 10",
-        "Scanning": "scanningInterval = 1000ms",
-        "Seed": "seed = null"
-      }
+      color: "text-purple-400"
     },
     {
       title: "Voting",
       description: "Voting mechanism configuration and governance settings for protocol upgrades and proposals.",
       icon: Vote,
-      color: "text-cyan-400",
-      config: {
-        "Voting Enabled": "votingEnabled = false",
-        "Voting Interval": "votingInterval = 1000ms",
-        "Governance Address": "governanceAddress = null"
-      }
+      color: "text-cyan-400"
     }
   ];
 
@@ -386,24 +361,16 @@ export default function ApplicationConfPage() {
               return (
                 <div
                   key={index}
-                  className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[280px] group relative"
+                  className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] group relative"
                 >
                   <div>
                     <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                       <IconComponent className={`w-6 h-6 ${section.color}`} />
                       {section.title}
                     </h3>
-                    <p className="text-gray-300 leading-relaxed mb-4">
+                    <p className="text-gray-300 leading-relaxed">
                       {section.description}
                     </p>
-                    <div className="space-y-2">
-                      {Object.entries(section.config).map(([key, value]) => (
-                        <div key={key} className="bg-neutral-800/50 rounded-lg p-3">
-                          <div className="text-sm text-gray-400 mb-1">{key}</div>
-                          <code className="text-orange-400 text-sm">{value}</code>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
               );
