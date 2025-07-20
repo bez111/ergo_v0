@@ -53,20 +53,6 @@ export default function LightSpvNodePage() {
           <Code className="w-5 h-5 mr-2" />
           Technical Details
         </Link>
-        <Link 
-          href="/Docs/developers/infrastructure/node/modes/light-full-node"
-          className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
-        >
-          <Lightbulb className="w-5 h-5 mr-2" />
-          Light Full-Node
-        </Link>
-        <Link 
-          href="/Docs/developers/infrastructure/node/modes/pruned-full-node"
-          className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
-        >
-          <Database className="w-5 h-5 mr-2" />
-          Pruned Full-Node
-        </Link>
       </div>
 
       {/* Main Content */}
