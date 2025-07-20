@@ -62,6 +62,20 @@ export default function LightFullNodePage() {
             <Code className="w-5 h-5 mr-2" />
             Technical Details
           </Link>
+          <Link 
+            href="/Docs/developers/infrastructure/node/modes/history-pruning"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
+          >
+            <History className="w-5 h-5 mr-2" />
+            History Pruning
+          </Link>
+          <Link 
+            href="/Docs/developers/infrastructure/node/modes/digest-state"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
+          >
+            <Database className="w-5 h-5 mr-2" />
+            Digest State
+          </Link>
           <a 
             href="https://github.com/ergoplatform/ergo"
             target="_blank"
@@ -445,6 +459,18 @@ scorex {
                   <a href="/Docs/developers/infrastructure/node/protocol/nipopows" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     NiPoPoWS Documentation
+                  </a>
+                </li>
+                <li>
+                  <a href="/Docs/developers/infrastructure/node/modes/history-pruning" 
+                     className="text-blue-400 hover:text-blue-300 underline">
+                    History Pruning
+                  </a>
+                </li>
+                <li>
+                  <a href="/Docs/developers/infrastructure/node/modes/digest-state" 
+                     className="text-blue-400 hover:text-blue-300 underline">
+                    Digest State
                   </a>
                 </li>
                 <li>
