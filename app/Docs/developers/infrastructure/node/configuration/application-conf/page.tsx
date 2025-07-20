@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Settings, Database, Link, Wallet, Vote } from "lucide-react";
+import { Settings, Database, Link as LinkIcon, Wallet, Vote } from "lucide-react";
+import Link from "next/link";
 
 export default function ApplicationConfPage() {
   const [activeTab, setActiveTab] = useState("overview");
@@ -22,31 +23,36 @@ export default function ApplicationConfPage() {
       title: "Node",
       description: "Core node configuration including state type, mining settings, transaction verification, and memory pool management.",
       icon: Settings,
-      color: "text-blue-400"
+      color: "text-blue-400",
+      link: "/Docs/developers/infrastructure/node/configuration/application-conf/node"
     },
     {
       title: "Cache",
       description: "Cache configuration for optimizing node performance and memory usage with extra indexing and state snapshots.",
       icon: Database,
-      color: "text-green-400"
+      color: "text-green-400",
+      link: "/Docs/developers/infrastructure/node/configuration/application-conf/cache"
     },
     {
       title: "Chain",
       description: "Blockchain parameters and chain synchronization settings including block intervals and difficulty recalculation.",
-      icon: Link,
-      color: "text-orange-400"
+      icon: LinkIcon,
+      color: "text-orange-400",
+      link: "/Docs/developers/infrastructure/node/configuration/application-conf/chain"
     },
     {
       title: "Wallet",
       description: "Built-in wallet configuration and security settings for key management and transaction scanning.",
       icon: Wallet,
-      color: "text-purple-400"
+      color: "text-purple-400",
+      link: "/Docs/developers/infrastructure/node/configuration/application-conf/wallet"
     },
     {
       title: "Voting",
       description: "Voting mechanism configuration and governance settings for protocol upgrades and proposals.",
       icon: Vote,
-      color: "text-cyan-400"
+      color: "text-cyan-400",
+      link: "/Docs/developers/infrastructure/node/configuration/application-conf/voting"
     }
   ];
 
@@ -359,9 +365,10 @@ export default function ApplicationConfPage() {
             {nodeSections.map((section, index) => {
               const IconComponent = section.icon;
               return (
-                <div
+                <Link
                   key={index}
-                  className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] group relative"
+                  href={section.link}
+                  className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] group relative cursor-pointer"
                 >
                   <div>
                     <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -372,7 +379,10 @@ export default function ApplicationConfPage() {
                       {section.description}
                     </p>
                   </div>
-                </div>
+                  <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+                    Learn more
+                  </div>
+                </Link>
               );
             })}
           </div>
