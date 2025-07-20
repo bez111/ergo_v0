@@ -196,7 +196,7 @@ export default function NodeConfigurationPage() {
                 </div>
               </a>
               <a 
-                href="https://explorer.ergoplatform.com/api/v1/docs"
+                href="https://api.ergoplatform.com/api/v1/docs/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
@@ -481,63 +481,39 @@ export default function NodeConfigurationPage() {
         {/* Configuration Files Section */}
         <section>
           <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-            <Settings className="w-6 h-6 text-yellow-400" /> Configuration
+            <Settings className="w-6 h-6 text-yellow-400" /> Configuration Files
           </h2>
-          <div className="grid md:grid-cols-1 gap-6">
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link 
+              href="/Docs/developers/infrastructure/node/configuration/application-conf"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
+            >
               <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Settings className="w-5 h-5 text-yellow-400" /> Files
+                <FileText className="w-5 h-5 text-orange-400" /> application.conf
               </h3>
-              <p className="text-gray-300 mb-4">
-                Configuration files for Ergo node setup and customization.
+              <p className="text-gray-300 mb-4 text-sm">
+                Main application configuration file with comprehensive node settings and parameters.
               </p>
-              <div className="grid md:grid-cols-2 gap-4 mt-4">
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-orange-300 mb-2">application.conf</h4>
-                  <p className="text-gray-300 text-sm">Main application configuration file with node settings.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-cyan-300 mb-2">ergo</h4>
-                  <p className="text-gray-300 text-sm">Ergo-specific configuration settings.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-green-300 mb-2">bounded-</h4>
-                  <p className="text-gray-300 text-sm">Bounded configuration parameters.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-blue-300 mb-2">mailbox</h4>
-                  <p className="text-gray-300 text-sm">Mailbox configuration settings.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-purple-300 mb-2">akka</h4>
-                  <p className="text-gray-300 text-sm">Akka framework configuration.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-yellow-300 mb-2">scorex</h4>
-                  <p className="text-gray-300 text-sm">Scorex framework configuration.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-red-300 mb-2">critical-</h4>
-                  <p className="text-gray-300 text-sm">Critical system configuration.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-indigo-300 mb-2">dispatcher</h4>
-                  <p className="text-gray-300 text-sm">Dispatcher configuration settings.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-pink-300 mb-2">api-dispatcher</h4>
-                  <p className="text-gray-300 text-sm">API dispatcher configuration.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-cyan-300 mb-2">testnet.conf</h4>
-                  <p className="text-gray-300 text-sm">Testnet-specific configuration file for development.</p>
-                </div>
-                <div className="bg-neutral-800/50 rounded-lg p-4">
-                  <h4 className="font-bold text-orange-300 mb-2">devnet.conf</h4>
-                  <p className="text-gray-300 text-sm">Development network configuration file.</p>
-                </div>
+              <div className="flex items-center text-orange-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <span className="text-sm font-semibold">View configuration</span>
+                <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
               </div>
-            </div>
+            </Link>
+            <Link 
+              href="/Docs/developers/infrastructure/node/configuration/testnet-conf"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
+            >
+              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                <FileText className="w-5 h-5 text-cyan-400" /> testnet.conf
+              </h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                Testnet-specific configuration file for development and testing environments.
+              </p>
+              <div className="flex items-center text-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                <span className="text-sm font-semibold">View configuration</span>
+                <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+              </div>
+            </Link>
           </div>
         </section>
 
