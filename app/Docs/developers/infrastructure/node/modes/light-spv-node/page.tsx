@@ -67,8 +67,8 @@ export default function LightSpvNodePage() {
         {/* What is SPV */}
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8">
           <div className="flex items-center mb-6">
-            <Info className="w-6 h-6 text-blue-400 mr-3" />
-            <h2 className="text-2xl font-semibold text-blue-400">What is SPV?</h2>
+            <Shield className="w-6 h-6 text-blue-400 mr-3" />
+            <h2 className="text-xl font-semibold text-blue-400">What is SPV?</h2>
           </div>
           <div className="space-y-6 text-gray-300">
             <p className="text-lg leading-relaxed">
