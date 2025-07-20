@@ -410,34 +410,7 @@ scorex {
           </div>
         </div>
 
-        {/* Technical Details Section */}
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-          <div className="flex items-center mb-4">
-            <Code className="w-6 h-6 text-cyan-400 mr-3" />
-            <h2 className="text-2xl font-semibold text-cyan-400">Technical Details</h2>
-          </div>
-          <p className="text-gray-300 leading-relaxed mb-4">
-            The light full-node mode uses a 2-party authenticated dynamic dictionary built on top of the UTXO set. 
-            For more information on the technical workflow and implementation details, you can refer to the technical documentation.
-          </p>
-          
-          <div className="flex flex-wrap gap-4">
-            <Link 
-              href="/Docs/developers/infrastructure/node/modes/light-full-node/technical-details"
-              className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
-            >
-              <Code className="w-5 h-5 mr-2" />
-              View Technical Details
-            </Link>
-            <Link 
-              href="/Docs/developers/infrastructure/node/configuration"
-              className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
-            >
-              <Settings className="w-5 h-5 mr-2" />
-              Node Configuration
-            </Link>
-          </div>
-        </div>
+
 
         {/* Additional Resources */}
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
