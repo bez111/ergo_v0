@@ -24,7 +24,7 @@ import Link from "next/link";
 
 export default function LightSpvNodePage() {
   return (
-    <div className="text-white max-w-6xl mx-auto px-8 py-8">
+    <>
       {/* Hero Section */}
       <div className="mb-16">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-6 leading-tight pb-2">
@@ -258,6 +258,6 @@ export default function LightSpvNodePage() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 } 
