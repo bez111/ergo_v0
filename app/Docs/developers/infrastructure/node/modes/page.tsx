@@ -31,14 +31,14 @@ export default function NodeModesPage() {
           Node Modes of Operation
         </h1>
         <p className="text-xl text-gray-400 mb-6">
-          The <a href="/Docs/developers/infrastructure/node/install" className="text-blue-400 hover:text-blue-300">Ergo node</a> offers several modes of operation, allowing users to balance resource requirements (disk space, memory, bandwidth) with security assumptions and desired functionality. Choosing the right mode depends on your specific use case, such as running a backend for a dApp, securing personal funds, or simply verifying transactions.
+          The <a href="/Docs/developers/infrastructure/node" className="text-blue-400 hover:text-blue-300">Ergo node</a> offers several modes of operation, allowing users to balance resource requirements (disk space, memory, bandwidth) with security assumptions and desired functionality. Choosing the right mode depends on your specific use case, such as running a backend for a dApp, securing personal funds, or simply verifying transactions.
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node/install"
+            href="/Docs/developers/infrastructure/node"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
-            <ChevronRight className="w-5 h-5 mr-2" /> Back to Node Installation
+            <ChevronRight className="w-5 h-5 mr-2" /> Back to Node
           </Link>
         </div>
       </div>
