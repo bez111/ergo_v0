@@ -76,15 +76,6 @@ export default function LightFullNodePage() {
             <Database className="w-5 h-5 mr-2" />
             Digest State
           </Link>
-          <a 
-            href="https://github.com/ergoplatform/ergo"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
-          >
-            <ExternalLink className="w-5 h-5 mr-2" />
-            View on GitHub
-          </a>
         </div>
       </div>
 
