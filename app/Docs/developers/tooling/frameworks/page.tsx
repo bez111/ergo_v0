@@ -41,6 +41,24 @@ const frameworks = [
     icon: <FileText className="w-7 h-7 text-cyan-400" />,
     link: "/Docs/developers/tooling/frameworks/jde"
   },
+  {
+    title: "SigmaRust",
+    description: "Core Rust implementation of ErgoScript and blockchain primitives. Provides multi-language bindings.",
+    icon: <Cpu className="w-7 h-7 text-red-400" />,
+    link: "/Docs/developers/tooling/frameworks/sigmarust"
+  },
+  {
+    title: "Ergpy",
+    description: "Python-JVM wrapper for interacting with the Ergo blockchain from Python scripts.",
+    icon: <Code2 className="w-7 h-7 text-yellow-300" />,
+    link: "/Docs/developers/tooling/frameworks/ergpy"
+  },
+  {
+    title: "FleetSharp",
+    description: "C#/.NET library for serializing, deserializing, and interacting with Ergo blockchain data.",
+    icon: <Code2 className="w-7 h-7 text-indigo-400" />,
+    link: "/Docs/developers/tooling/frameworks/fleetsharp"
+  },
 ];
 
 export default function FrameworksPage() {
@@ -52,6 +70,15 @@ export default function FrameworksPage() {
       <p className="text-lg text-gray-300 mb-8">
         Explore SDKs, UI frameworks, and developer toolkits for building on Ergo.
       </p>
+      <div className="mb-6">
+        <Link
+          href="/Docs/developers/tooling"
+          className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
+        >
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+          Back
+        </Link>
+      </div>
       <div className="grid md:grid-cols-2 gap-6 mb-12">
         {frameworks.map((fw) => (
           <Link

@@ -1,42 +1,30 @@
 "use client";
-
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
 
 const platformCards = [
   {
-    title: "JVM",
-    content: "",
-    url: "../lang/jvm.md"
-  },
-  {
-    title: "Rust",
-    content: "",
-    url: "../lang/rust.md"
-  },
-  {
-    title: "Node.js",
-    content: "",
-    url: "../lang/js.md"
-  },
-  {
-    title: "Python",
-    content: "",
-    url: "../lang/python.md"
+    title: "AppKit",
+    content: "A library for polyglot development of Ergo Applications",
+    url: "appkit.md"
   },
   {
     title: "Mosaik",
     content: "UI system for dApps",
     url: "mosaik/intro.md"
+  },
+  {
+    title: "sigma-rust",
+    content: "iOS bindings are implemented in sigma-rust",
+    url: "sigma-rust.md"
   }
 ];
 
-const toolCards = [
+const gettingStartedCards = [
   {
-    title: "JSON dApp Environment",
-    content: "",
-    url: "jde.md"
+    title: "📕 DeCo Intro Lessons: Build a mobile app on Android or iOS",
+    url: "https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4BpMoSMh5hQk8gVfWk-si6"
   }
 ];
 
@@ -64,28 +52,20 @@ function CardGrid({ items }: { items: any[] }) {
   );
 }
 
-export default function ServerPage() {
+export default function IOSPage() {
   return (
     <>
-      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-        Server
-      </h1>
+      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">iOS</h1>
       <div className="mb-6">
-        <Link
-          href="/Docs/developers/tooling/development-stack"
-          className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
-        >
-          <ArrowLeft className="w-5 h-5 mr-2" />
-          Back
+        <Link href="/Docs/developers/tooling/mobile" className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105">
+          <ArrowLeft className="w-5 h-5 mr-2" />Back
         </Link>
       </div>
-      <p className="text-lg text-gray-300 mb-8">
-        Developers can use tools to read data from the blockchain, compute using that data and create transactions to be broadcast. Each tool requires the developer to program in some language.
-      </p>
+      <p className="text-lg text-gray-300 mb-8">You want to develop with Java/Kotlin/Scala and run on iOS.</p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Platforms</h2>
       <CardGrid items={platformCards} />
-      <h2 className="text-2xl font-bold text-cyan-400 mb-4">Tools</h2>
-      <CardGrid items={toolCards} />
+      <h2 className="text-2xl font-bold text-cyan-400 mb-4">Getting Started</h2>
+      <CardGrid items={gettingStartedCards} />
     </>
   );
 } 

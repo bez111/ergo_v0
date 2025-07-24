@@ -32,17 +32,17 @@ const justGettingStartedCards = [
 ];
 const frameworksToolsCards = [
   {
+    title: "Starter Tutorial",
+    content: "Step-by-step guide for your first Ergo dApp.",
+    icon: <Rocket className="w-10 h-10 text-orange-400" />,
+    url: "/Docs/developers/tooling/starter-tutorial"
+  },
+  {
     title: "Frameworks",
     content: "Jump straight to an overview of all frameworks",
     icon: <Wrench className="w-10 h-10 text-orange-400" />,
     url: "/Docs/developers/tooling/frameworks"
-  },
-  {
-    title: "Bundled dApps",
-    content: "Distribute your dApp as a bundled package for users.",
-    icon: <Package className="w-10 h-10 text-yellow-400" />,
-    url: "/Docs/developers/tooling/bundled-dapps"
-  },
+  }
 ];
 const deployCards = [
   {
@@ -249,6 +249,15 @@ export default function DevelopmentStackPage() {
       <p className="text-lg text-gray-300 mb-8">
         Overview of Ergo development, tools, libraries, SDKs, frameworks and utilities developers can use to interact with the blockchain, build their applications, and display them to users.
       </p>
+      <div className="mb-6">
+        <Link
+          href="/Docs/developers/tooling"
+          className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
+        >
+          <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
+          Back
+        </Link>
+      </div>
       {/* Development Stack Sections */}
       {/* Just Getting Started section removed */}
       <h2 className="text-2xl font-bold text-cyan-400 mb-6 flex items-center">Frameworks & Tools</h2>
@@ -264,8 +273,6 @@ export default function DevelopmentStackPage() {
         ))}
       </div>
       {/* Introduction Sections */}
-      <h2 className="text-2xl font-bold text-cyan-400 mb-6 flex items-center">Frameworks</h2>
-      <DevelopmentStackCardGrid items={frameworks} icon />
       <h2 className="text-2xl font-bold text-cyan-400 mb-6 flex items-center">ErgoScript Interpreter/Compilers</h2>
       <DevelopmentStackCardGrid items={interpreters} icon />
       <h2 className="text-2xl font-bold text-cyan-400 mb-6 flex items-center">Libraries</h2>

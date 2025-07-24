@@ -15,7 +15,7 @@ const pathwaysSections = [
     description: "Supported languages and best practices for building on Ergo.",
     icon: Code2,
     color: "text-orange-400",
-    link: "/Docs/developers/tooling/pathways/programming-languages"
+    link: "/Docs/developers/tooling/programming-languages"
   },
 ];
 const toolingSections = [
@@ -59,7 +59,7 @@ export default function ToolingPage() {
             <Link
               key={index}
               href={section.link}
-              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[160px] cursor-pointer group relative"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -82,7 +82,7 @@ export default function ToolingPage() {
             <Link
               key={index}
               href={section.link}
-              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[220px] cursor-pointer group relative"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
