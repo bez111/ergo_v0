@@ -17,12 +17,12 @@ const frameworks = [
   {
     title: "AppKit",
     content: "Can be configured to run JavaScript under GraalVM.",
-    url: "/Docs/developers/tooling/appkit"
+    url: "/Docs/developers/tooling/frameworks/appkit"
   },
   {
     title: "sigma-rust (via WASM)",
     content: "Core Rust library with JS/TS bindings available via WebAssembly.",
-    url: "/Docs/developers/tooling/sigma-rust#bindings"
+    url: "/Docs/developers/tooling/frameworks/sigmarust"
   }
 ];
 

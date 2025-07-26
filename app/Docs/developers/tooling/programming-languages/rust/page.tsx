@@ -12,12 +12,12 @@ const frameworks = [
   {
     title: "HDF",
     content: "Headless dApp Framework",
-    url: "/Docs/developers/tooling/headless"
+    url: "/Docs/developers/tooling/frameworks/headless-dapp-framework"
   },
   {
     title: "RustKit",
     content: "(WIP), A SDK for building applications on the Ergo blockchain",
-    url: "/Docs/developers/tooling/rustkit"
+    url: "/Docs/developers/tooling/frameworks/rustkit"
   }
 ];
 
