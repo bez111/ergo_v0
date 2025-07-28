@@ -1,7 +1,40 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink } from "lucide-react";
+import { ArrowLeft, Copy, Check } from "lucide-react";
+
+const CopyButton = ({ text }: { text: string }) => {
+  const [copied, setCopied] = React.useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy text: ', err);
+    }
+  };
+
+  return (
+    <button
+      onClick={handleCopy}
+      className="absolute top-2 right-2 p-2 rounded bg-neutral-800 hover:bg-neutral-700 transition-colors"
+      title="Copy code"
+    >
+      {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4 text-gray-400" />}
+    </button>
+  );
+};
+
+const CodeBlock = ({ children, language = "scala" }: { children: string; language?: string }) => (
+  <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 mb-6 relative">
+    <CopyButton text={children} />
+    <pre className="text-sm text-gray-300 overflow-x-auto">
+      <code>{children}</code>
+    </pre>
+  </div>
+);
 
 export default function SimpleSyntaxPage() {
   return (
@@ -31,7 +64,7 @@ export default function SimpleSyntaxPage() {
 
         <h3 className="text-xl font-bold text-cyan-400 mb-3">ErgoScript and the UTXO Model</h3>
         <div className="text-gray-300 mb-6 max-w-2xl">
-          Ergo operates on the UTXO (Unspent Transaction Output) model and employs a Proof-of-Work consensus mechanism. However, Ergo enhances the traditional UTXO model with its <i>extended-UTXO model</i>, which supports the execution of intricate financial contracts, similar to those possible on Ethereum's account-based model.
+          Ergo operates on the UTXO (Unspent Transaction Output) model and employs a Proof-of-Work consensus mechanism. However, Ergo enhances the traditional UTXO model with its <em>extended-UTXO model</em>, which supports the execution of intricate financial contracts, similar to those possible on Ethereum's account-based model.
         </div>
 
         <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 mb-6">
@@ -53,7 +86,7 @@ export default function SimpleSyntaxPage() {
             <li><strong>Immutable Values</strong>: In ErgoScript, you define values using <code className="bg-neutral-800 px-1 rounded">val</code>, ensuring immutability (similar to constants in other languages). Unlike Scala, ErgoScript does not support the <code className="bg-neutral-800 px-1 rounded">var</code> keyword, meaning all defined values are immutable.</li>
             <li><strong>Array Access</strong>: Both Scala and ErgoScript use round parentheses for array access. For example, <code className="bg-neutral-800 px-1 rounded">OUTPUTS(0)</code> refers to the first element of the <code className="bg-neutral-800 px-1 rounded">OUTPUTS</code> array.</li>
             <li><strong>Functional Programming</strong>: ErgoScript supports functional programming constructs such as <code className="bg-neutral-800 px-1 rounded">foreach</code>, <code className="bg-neutral-800 px-1 rounded">exists</code>, and <code className="bg-neutral-800 px-1 rounded">fold</code>, making it easier to work with collections. More details on these can be found in the <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/ergoscript-compiler.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript Compiler Documentation</a>.</li>
-            <li><strong>Boolean Predicates</strong>: ErgoScript programs, like ErgoTree, consist of sequences of boolean predicates connected using <code className="bg-neutral-800 px-1 rounded">&&</code> (AND) and <code className="bg-neutral-800 px-1 rounded">||</code> (OR).</li>
+            <li><strong>Boolean Predicates</strong>: ErgoScript programs, like ErgoTree, consist of sequences of boolean predicates connected using <code className="bg-neutral-800 px-1 rounded">&amp;&amp;</code> (AND) and <code className="bg-neutral-800 px-1 rounded">||</code> (OR).</li>
             <li><strong>Cryptographic Operations</strong>: ErgoScript supports cryptographic operations with <code className="bg-neutral-800 px-1 rounded">BigInt</code> and <code className="bg-neutral-800 px-1 rounded">GroupElement</code> types, allowing for addition, multiplication, and exponentiation. Note that <code className="bg-neutral-800 px-1 rounded">BigInt</code> operations in ErgoScript are performed modulo <code className="bg-neutral-800 px-1 rounded">2^256</code>, so overflow management is crucial.</li>
           </ul>
         </div>
@@ -63,11 +96,7 @@ export default function SimpleSyntaxPage() {
           Here's a simple ErgoScript example to help you get started:
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 mb-6">
-          <pre className="text-sm text-gray-300 overflow-x-auto">
-            <code>{`val bool: Boolean = true`}</code>
-          </pre>
-        </div>
+        <CodeBlock>{`val bool: Boolean = true`}</CodeBlock>
 
         <div className="text-gray-300 mb-6 max-w-2xl">
           In this example:
@@ -84,9 +113,7 @@ export default function SimpleSyntaxPage() {
           Let's explore a more complex example that demonstrates control structures, data types, and basic operations:
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 mb-6">
-          <pre className="text-sm text-gray-300 overflow-x-auto">
-            <code>{`if(bool == true){
+        <CodeBlock>{`if(bool == true){
     val x = 0
     val y = 1
     val z = ((x * y) + 5) - (3 / 2)
@@ -96,9 +123,7 @@ export default function SimpleSyntaxPage() {
     val z: (Long, Long) = (3, 4)
     val a: (Long, Coll[Long]) = (x, y) // Combining Long and collection types
     val b: Coll[((Long, Long), Boolean)] = Coll(((2L, 4L), true), ((7L, 2L), false))
-}`}</code>
-          </pre>
-        </div>
+}`}</CodeBlock>
 
         <div className="text-gray-300 mb-4 max-w-2xl">
           In this code:
@@ -122,18 +147,15 @@ export default function SimpleSyntaxPage() {
         </div>
 
         <h3 className="text-xl font-bold text-cyan-400 mb-3">Example Code</h3>
-        <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 mb-6">
-          <pre className="text-sm text-gray-300 overflow-x-auto">
-            <code>{`def computeAsDef(myInt: Int): Int = {
+        
+        <CodeBlock>{`def computeAsDef(myInt: Int): Int = {
   myInt + 1
 }
 
-val computeAsVal: Int = {
+val computeAsVal: Int => Int = {
   (myInt: Int) =>
     myInt + 1
-}`}</code>
-          </pre>
-        </div>
+}`}</CodeBlock>
 
         <div className="text-gray-300 mb-4 max-w-2xl">
           Both functions accomplish the same task but differ in when the computation occurs:
@@ -148,17 +170,13 @@ val computeAsVal: Int = {
           ErgoScript supports higher-order functions and advanced functional programming constructs, allowing for powerful data manipulation:
         </div>
 
-        <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 mb-6">
-          <pre className="text-sm text-gray-300 overflow-x-auto">
-            <code>{`val myMap: Coll[(Int, Long)] = {      
+        <CodeBlock>{`val myMap: Coll[(Int, Long)] = {      
   val intCollection = Coll(0, 1, 2)
   intCollection.map{
     (myInt: Int) =>                   
     (myInt, myInt.toLong)
   }                                      
-}`}</code>
-          </pre>
-        </div>
+}`}</CodeBlock>
 
         <div className="text-gray-300 mb-4 max-w-2xl">
           In this example:
@@ -199,6 +217,12 @@ val computeAsVal: Int = {
               ErgoScript Reference Guide
             </a>
             : A detailed guide on writing ErgoScript.
+          </li>
+          <li>
+            <Link href="/Docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
+              ErgoScript Language Description
+            </Link>
+            : Complete language specification with all types and functions.
           </li>
         </ul>
       </div>

@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Code, Settings, Database, Zap, BookOpen, Info } from "lucide-react";
+import { ArrowLeft, ExternalLink, Code, Settings, Database, Zap, BookOpen, Info, Cpu } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export default function ErgoScriptLanguagesPage() {
@@ -54,7 +54,7 @@ export default function ErgoScriptLanguagesPage() {
           </div>
 
           <div className="text-gray-300 mb-6 max-w-2xl">
-            ErgoScript code is translated into a lower-level representation called <Link href="/Docs/developers/ergotree" className="text-cyan-400 hover:underline font-semibold">ErgoTree</Link> before being stored on the <Link href="/Docs/developers/protocol-overview" className="text-cyan-400 hover:underline">blockchain</Link>. During <Link href="/Docs/developers/validation" className="text-cyan-400 hover:underline">transaction validation</Link>, ErgoTree is interpreted using cryptographic protocols based on <Link href="/Docs/developers/sigma" className="text-cyan-400 hover:underline">Sigma Protocols</Link>. This unique architecture enables Ergo to support advanced cryptographic functionalities like <Link href="/Docs/developers/ring" className="text-cyan-400 hover:underline">ring signatures</Link> and <Link href="/Docs/developers/threshold" className="text-cyan-400 hover:underline">threshold signatures</Link> directly within the scripting language, without requiring special core protocol changes.
+            ErgoScript code is translated into a lower-level representation called <Link href="/Docs/developers/ergotree" className="text-cyan-400 hover:underline">ErgoTree</Link> before being stored on the <Link href="/Docs/developers/protocol-overview" className="text-cyan-400 hover:underline">blockchain</Link>. During <Link href="/Docs/developers/validation" className="text-cyan-400 hover:underline">transaction validation</Link>, ErgoTree is interpreted using cryptographic protocols based on <Link href="/Docs/developers/sigma" className="text-cyan-400 hover:underline">Sigma Protocols</Link>. This unique architecture enables Ergo to support advanced cryptographic functionalities like <Link href="/Docs/developers/ring" className="text-cyan-400 hover:underline">ring signatures</Link> and <Link href="/Docs/developers/threshold" className="text-cyan-400 hover:underline">threshold signatures</Link> directly within the scripting language, without requiring special core protocol changes.
           </div>
 
           <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-4 mb-6">
@@ -479,14 +479,394 @@ export default function ErgoScriptLanguagesPage() {
       </TabsContent>
 
       <TabsContent value="tooling">
-        <div className="text-gray-300 mb-8">
-          <p>Content for Tooling tab will be added soon.</p>
+        <div className="space-y-8">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            ErgoScript Tooling
+          </h1>
+
+          <div className="text-gray-300 mb-8">
+            <p className="mb-4">
+              ErgoScript is a powerful and flexible language for creating smart contracts on the Ergo blockchain. As with any programming language, having the right tools can greatly enhance the development experience and productivity. This page provides an overview of various tools, resources, and examples to help you get started with ErgoScript development.
+            </p>
+          </div>
+
+          <h2 className="text-2xl font-bold text-cyan-400 mb-4">Introduction</h2>
+          <div className="text-gray-300 mb-8">
+            <p className="mb-4">
+              ErgoScript is a domain-specific language designed specifically for the Ergo blockchain. It is inspired by Scala and allows developers to create secure and efficient smart contracts. While ErgoScript is not Turing-complete, it can be used to build Turing-complete applications by leveraging the extended UTXO model of the Ergo blockchain.
+            </p>
+            <p className="mb-4">
+              The ErgoScript ecosystem offers a wide range of tools and resources to help developers at all levels, from beginners to experienced professionals. These tools include playgrounds, tutorials, courses, explanations, references, and examples.
+            </p>
+          </div>
+
+          {/* Tooling Cards Grid */}
+          <h2 className="text-2xl font-bold text-cyan-400 mb-6">Tooling Categories</h2>
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <Link
+              href="/Docs/developers/tooling/compilers"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Cpu className="w-6 h-6 text-purple-400" />
+                  Interpreters & Compilers
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Core tools for compiling and interpreting ErgoScript code, including the reference implementation and development environments.
+                </p>
+              </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+                Learn more
+              </div>
+            </Link>
+
+            <Link
+              href="/Docs/developers/tooling/playgrounds"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Code className="w-6 h-6 text-green-400" />
+                  Playgrounds
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Interactive environments for experimenting with ErgoScript code, testing contracts, and learning the language.
+                </p>
+              </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+                Learn more
+              </div>
+            </Link>
+
+            <Link
+              href="/Docs/developers/tooling/debugging"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Settings className="w-6 h-6 text-red-400" />
+                  Debugging
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Tools and techniques for debugging ErgoScript contracts, testing functionality, and ensuring contract security.
+                </p>
+              </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+                Learn more
+              </div>
+            </Link>
+
+            <Link
+              href="/Docs/developers/tooling/flowcards"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Database className="w-6 h-6 text-blue-400" />
+                  FlowCards: Visual dApp Design for Ergo
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                FlowCards let you quickly build Ergo smart contracts with visual diagrams and declarative templates—no manual coding required.
+                </p>
+              </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3">
+                Learn more
+              </div>
+            </Link>
+          </div>
+
+          <h3 className="text-xl font-bold text-orange-400 mb-4">Playgrounds</h3>
+          <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+            <li><a href="https://escript.online/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">escript.online</a></li>
+            <li>Compile ErgoScript directly in your browser with <a href="https://wallet.plutomonkey.com/p2s/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript Playground</a></li>
+            <li>There is also <a href="https://scastie.scala-lang.org/greenhat/T2jSEv11QcWpXX1XrcHUdw/31" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Scastie</a></li>
+            <li><Link href="/Docs/developers/tooling/kiosk" className="text-cyan-400 hover:underline">Kiosk</Link> lets anyone play with ErgoScript using a basic web-based UI</li>
+            <li><a href="https://github.com/ergoplatform/ergoscript-compiler" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergoscript-compiler</a></li>
+          </ul>
+
+          <h4 className="text-lg font-bold text-orange-400 mb-4">Courses</h4>
+          <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+            <li><a href="https://docs.google.com/presentation/d/10gYO82z_7qloRrFOcCxTFuzpP40IImPyIKMV2ZFd9M4/edit#slide=id.p" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript 101 Crash Course</a> (Slides)</li>
+            <li><a href="https://www.youtube.com/watch?v=8l2v1asHgyA" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Learn ErgoScript By Example Via The Ergo Playground with Robert Kornacki (Video)</a></li>
+            <li><a href="https://github.com/DeCo-Education/ErgoScript-Developer-Course" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">The ErgoScript Developer Course from DeCo Education</a></li>
+            <li><a href="https://www.youtube.com/watch?v=qR0_k7VH6KI&list=PLopsKGshj0B4DfFnS-pvriZhba050eaXu" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Deco Education: 2022 Script Class</a></li>
+          </ul>
+
+          <h4 className="text-lg font-bold text-orange-400 mb-4">Tutorials</h4>
+          <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+            <li><a href="https://github.com/ergoplatform/ergoscript-by-example" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript by Example Repository</a></li>
+            <li><a href="https://github.com/anon-real/contract-testing" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Testing Ergo Contracts Off-chain</a></li>
+          </ul>
+
+          <h4 className="text-lg font-bold text-orange-400 mb-4">Advanced Tutorials</h4>
+          <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+            <li><a href="https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Advanced ErgoScript Tutorial</a></li>
+            <li><a href="https://ergoplatform.org/docs/ErgoScript.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript tutorial</a></li>
+          </ul>
+
+          <h4 className="text-lg font-bold text-orange-400 mb-4">Explanations</h4>
+          <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+            <li><a href="https://www.ergoforum.org/t/ergoscript-design-patterns/222" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript Design patterns</a></li>
+            <li><a href="https://storage.googleapis.com/ergo-cms-media/docs/sigmastate_protocols.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">SigmaState Protocols</a></li>
+          </ul>
+
+          <h4 className="text-lg font-bold text-orange-400 mb-4">References</h4>
+          <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+            <li><a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript Language Spec</a></li>
+            <li><a href="https://ergoplatform.org/docs/ErgoScript.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript</a></li>
+            <li><a href="https://ergoplatform.org/docs/ErgoTree.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoTree</a></li>
+            <li><a href="https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/High%20Level%20Design%20Patterns%20In%20Extended%20UTXO%20Systems.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">High-Level Design Patterns In Extended UTXO Systems</a></li>
+          </ul>
+
+          <h4 className="text-lg font-bold text-orange-400 mb-4">Examples</h4>
+          <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+            <li><a href="https://github.com/paideiadao/paideia-contracts/blob/main/paideia_contracts/contracts/plasma_staking/ergoscript/latest/plasmaStaking.es" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoPad Plasma Staking Contracts</a></li>
+            <li><a href="https://github.com/GetBlok-io/ergo-smartpooling-contracts" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">GetBlok.io Smart Pools</a></li>
+          </ul>
+
+          <h4 className="text-lg font-bold text-orange-400 mb-4">Visual</h4>
+          <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-2">
+            <li><Link href="/Docs/developers/tooling/flowcards" className="text-cyan-400 hover:underline">FlowCards</Link> is <em>A Declarative Framework for Development of Ergo dApps</em></li>
+            <li><a href="https://github.com/lucagdangelo/flowcardLib" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">flowcardLib: Ergo FlowCard library for diagrams.net</a></li>
+            <li><a href="https://github.com/iandebeer/ergo-castanet" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergo-castanet</a></li>
+          </ul>
+
+          <h4 className="text-lg font-bold text-orange-400 mb-4">Box</h4>
+          <div className="text-gray-300 mb-8">
+            <p className="mb-4">Here is a box you can experiment with:</p>
+            <p>
+              This P2S <a href="https://wallet.plutomonkey.com/p2s/?source=c2lnbWFQcm9wKFNFTEYuaWQgPT0gSU5QVVRTKDApLmlkKQ==" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">address</a> corresponds to this unspent <a href="https://api.ergoplatform.com/api/v0/transactions/boxes/byAddress/unspent/ZX44DGQZJ4SoDVh58XRuNZjAq" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">box</a>.
+            </p>
+          </div>
         </div>
       </TabsContent>
 
       <TabsContent value="ergotree">
-        <div className="text-gray-300 mb-8">
-          <p>Content for ErgoTree tab will be added soon.</p>
+        <div className="space-y-8">
+          <div className="text-gray-300 mb-8">
+            <h1 className="text-3xl font-bold text-cyan-400 mb-6">ErgoTree: Reference Manual</h1>
+            
+            <p className="mb-4">
+              ErgoTree forms the backbone of Ergo's <Link href="/Docs/developers/data-model" className="text-cyan-400 hover:underline">smart contracts</Link>. It is the typed abstract syntax of the ErgoTree language used for defining logical propositions that protect <Link href="/Docs/developers/ergoscript-languages/accessing-boxes" className="text-cyan-400 hover:underline">boxes</Link> (coin abstractions) in Ergo. While ErgoTree is fundamental, most users interact with it indirectly, primarily developing contracts using a higher-level language called <Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript</Link>, which later compiles into ErgoTree.
+            </p>
+
+            <h2 className="text-2xl font-bold text-cyan-400 mb-4">Understanding ErgoTree</h2>
+            
+            <p className="mb-4">
+              ErgoTree serves as a specialized language, encapsulating the <a href="https://www.martinfowler.com/bliki/UbiquitousLanguage.html" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline"><em>universal language</em> <ExternalLink className="w-4 h-4 inline ml-1" /></a> of the <Link href="/Docs/introduction" className="text-cyan-400 hover:underline">Ergo blockchain</Link>. It directly interacts with key components such as <Link href="/Docs/developers/ergoscript-languages/accessing-boxes" className="text-cyan-400 hover:underline">Boxes</Link>, <Link href="/Docs/developers/data-model" className="text-cyan-400 hover:underline">Tokens</Link>, and <Link href="/Docs/developers/ergoscript-languages/sigma-propositions" className="text-cyan-400 hover:underline">Zero-Knowledge Sigma-Propositions</Link>. ErgoTree is optimized for efficient storage and rapid execution.
+            </p>
+
+            <p className="mb-4">
+              A language intended for writing <Link href="/Docs/developers/data-model" className="text-cyan-400 hover:underline">blockchain contracts</Link> must be deterministic to ensure spam-resistance. It also needs to be simple yet expressive enough to function as a solid platform for contractual money. ErgoTree meets these requirements, making it an essential tool for creating, securing, and managing boxes on the <Link href="/Docs/introduction" className="text-cyan-400 hover:underline">Ergo blockchain</Link>.
+            </p>
+
+            <p className="mb-6">
+              Complementing ErgoTree is a frontend language named <Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript</Link>. Drawing inspiration from Scala/Kotlin, ErgoScript shares common subsets with Java and C#, making it user-friendly for programmers acquainted with these languages. ErgoScript is designed to attract a broad spectrum of programmers with its intuitive approach.
+            </p>
+
+            <h2 className="text-2xl font-bold text-cyan-400 mb-4">Structure, Authentication, and Application</h2>
+            
+            <p className="mb-4">
+              ErgoTree, distinct from low-level languages like stack-based EVM assembly, is structured as a <em>typed abstract syntax tree</em>. In this regard, ErgoTree is a kind of authentication language aka <em>"smart signature"</em> used to validate transactions or actions by verifying specific conditions.
+            </p>
+
+            <p className="mb-4">ErgoTree achieves this by combining:</p>
+
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li><strong>Secret Data Predicates</strong>: Conditions verifying confidential information such as <Link href="/Docs/developers/infrastructure/wallets" className="text-cyan-400 hover:underline">digital signatures</Link> or <Link href="/Docs/developers/infrastructure/wallets" className="text-cyan-400 hover:underline">secret keys</Link>.</li>
+              <li><strong><Link href="/Docs/developers/ergoscript-languages/blockchain-context" className="text-cyan-400 hover:underline">Blockchain Context</Link> Predicates</strong>: Conditions dependent on the <Link href="/Docs/developers/ergoscript-languages/blockchain-context" className="text-cyan-400 hover:underline">transaction's specific context</Link> within the <Link href="/Docs/introduction" className="text-cyan-400 hover:underline">blockchain</Link>.</li>
+            </ul>
+
+            <p className="mb-4">
+              By evaluating these predicates, ErgoTree authenticates transactions, ensuring their legitimacy and adherence to set rules. Its ability to validate and secure transactions while adapting to the transaction context makes ErgoTree a versatile tool, extending its applicability to various digital platforms, including other cryptocurrencies and <Link href="/Docs/introduction/cbdc" className="text-cyan-400 hover:underline">Central Bank Digital Currencies (CBDCs)</Link>, or even non-monetary digital objects where smart access could be needed. Off-chain applications often need to perform similar validations; see <Link href="/Docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet SDK Recipes</Link> for examples using JavaScript/TypeScript.
+            </p>
+
+            <ul className="list-disc pl-6 mb-6 space-y-1">
+              <li>Additional parties can be authorized</li>
+              <li>Parties can delegate authorization</li>
+              <li>AND/OR expressions</li>
+              <li>Conditions can extend beyond signer identity.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-cyan-400 mb-4">Key ErgoTree Concepts</h2>
+            
+            <ul className="list-disc pl-6 mb-4 space-y-2">
+              <li>ErgoTree is written into <Link href="/Docs/developers/ergoscript-languages/accessing-boxes" className="text-cyan-400 hover:underline">UTXO boxes</Link> and is subsequently evaluated by the transaction verifier.</li>
+              <li>The propositions are stored in the blockchain in the <a href="https://ergoplatform.org/docs/ErgoTree.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoTree serialization format <ExternalLink className="w-4 h-4 inline ml-1" /></a>. This format optimizes for compact storage, swift script execution, and efficient transaction validation.</li>
+              <li>The reference implementation of ErgoTree is in Scala, but alternative implementations can utilize other languages.</li>
+              <li>ErgoTree's binary format intentionally omits metadata, which might be necessary for various Ergo applications.</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold text-cyan-400 mb-4">Additional Resources</h2>
+            
+            <ul className="list-disc pl-6 mb-8 space-y-2">
+              <li>ErgoTree serialization section <a href="https://ergoplatform.org/docs/ErgoTree.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">available here <ExternalLink className="w-4 h-4 inline ml-1" /></a>.</li>
+              <li><a href="https://github.com/ScorexFoundation/sigmastate-interpreter/issues/264" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Constant-less lambdas <ExternalLink className="w-4 h-4 inline ml-1" /></a>.</li>
+              <li><a href="https://www.ergoforum.org/t/ergotree-as-an-authentication-language/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoTree as an Authentication Language <ExternalLink className="w-4 h-4 inline ml-1" /></a>.</li>
+              <li><a href="https://github.com/ScorexFoundation/sigmastate-interpreter/pull/812" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Human representation for ergo tree #812 <ExternalLink className="w-4 h-4 inline ml-1" /></a>.</li>
+              <li><a href="https://github.com/ross-weir/ergo-script-re/tree/main/ergotree-pseudo-code" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoTree pseudo-code <ExternalLink className="w-4 h-4 inline ml-1" /></a>: Generates pseudo code for compiled ErgoTrees on a best effort basis.</li>
+            </ul>
+          </div>
+
+          {/* ErgoTree Cards Grid */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Info className="w-6 h-6 text-cyan-400" />
+                  Introduction
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Overview of ErgoTree language fundamentals and core concepts.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Code className="w-6 h-6 text-green-400" />
+                  As a Language
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  ErgoTree as a programming language with syntax and semantics.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Zap className="w-6 h-6 text-yellow-400" />
+                  Typing
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Type system and type inference in ErgoTree expressions.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Settings className="w-6 h-6 text-orange-400" />
+                  Evaluation
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  How ErgoTree expressions are evaluated and executed.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Database className="w-6 h-6 text-purple-400" />
+                  Serialization
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Binary format and serialization of ErgoTree structures.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <BookOpen className="w-6 h-6 text-blue-400" />
+                  Predefined Types
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Built-in data types available in ErgoTree language.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Cpu className="w-6 h-6 text-red-400" />
+                  Predefined Functions
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Built-in functions and operations in ErgoTree.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Code className="w-6 h-6 text-indigo-400" />
+                  Encoding
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Encoding schemes and data representation in ErgoTree.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Settings className="w-6 h-6 text-emerald-400" />
+                  Script Validation
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Validation process and rules for ErgoTree scripts.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Zap className="w-6 h-6 text-pink-400" />
+                  Script Optimisation
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Optimization techniques for ErgoTree script performance.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <BookOpen className="w-6 h-6 text-teal-400" />
+                  Templates
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Reusable ErgoTree templates and pattern libraries.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+              <div>
+                <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+                  <Database className="w-6 h-6 text-amber-400" />
+                  ErgoScript vs ErgoTree
+                </h3>
+                <p className="text-gray-300 leading-relaxed mb-4">
+                  Comparison between high-level ErgoScript and low-level ErgoTree.
+                </p>
+              </div>
+              <div className="text-gray-400 text-sm">Coming soon</div>
+            </div>
+          </div>
         </div>
       </TabsContent>
 
