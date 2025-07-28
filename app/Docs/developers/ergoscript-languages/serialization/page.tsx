@@ -8,7 +8,7 @@ export default function ErgoTreeSerializationPage() {
     <>
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1 flex items-center gap-3">
         <Database className="w-10 h-10 text-purple-400" />
-        ErgoTree Serialization
+        Serialization
       </h1>
       
       <div className="mb-6">

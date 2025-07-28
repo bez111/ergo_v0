@@ -712,7 +712,7 @@ export default function ErgoScriptLanguagesPage() {
           {/* ErgoTree Cards Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/introduction"
+              href="/Docs/developers/ergoscript-languages/introduction"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -730,7 +730,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/as-a-language"
+              href="/Docs/developers/ergoscript-languages/as-a-language"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -748,7 +748,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/typing"
+              href="/Docs/developers/ergoscript-languages/typing"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -766,7 +766,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/evaluation"
+              href="/Docs/developers/ergoscript-languages/evaluation"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -784,7 +784,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/serialization"
+              href="/Docs/developers/ergoscript-languages/serialization"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -802,7 +802,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/predefined-types"
+              href="/Docs/developers/ergoscript-languages/predefined-types"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -820,7 +820,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/predefined-functions"
+              href="/Docs/developers/ergoscript-languages/predefined-functions"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -838,7 +838,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/encoding"
+              href="/Docs/developers/ergoscript-languages/encoding"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -856,7 +856,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/script-validation"
+              href="/Docs/developers/ergoscript-languages/script-validation"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -874,7 +874,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/script-optimisation"
+              href="/Docs/developers/ergoscript-languages/script-optimisation"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -892,7 +892,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/templates"
+              href="/Docs/developers/ergoscript-languages/templates"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -910,7 +910,7 @@ export default function ErgoScriptLanguagesPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/ergotree/ergoscript-vs-ergotree"
+              href="/Docs/developers/ergoscript-languages/ergoscript-vs-ergotree"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
