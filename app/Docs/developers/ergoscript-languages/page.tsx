@@ -711,7 +711,10 @@ export default function ErgoScriptLanguagesPage() {
 
           {/* ErgoTree Cards Grid */}
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/introduction"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Info className="w-6 h-6 text-cyan-400" />
@@ -721,10 +724,15 @@ export default function ErgoScriptLanguagesPage() {
                   Overview of ErgoTree language fundamentals and core concepts.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/as-a-language"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Code className="w-6 h-6 text-green-400" />
@@ -734,10 +742,15 @@ export default function ErgoScriptLanguagesPage() {
                   ErgoTree as a programming language with syntax and semantics.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/typing"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Zap className="w-6 h-6 text-yellow-400" />
@@ -747,10 +760,15 @@ export default function ErgoScriptLanguagesPage() {
                   Type system and type inference in ErgoTree expressions.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/evaluation"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Settings className="w-6 h-6 text-orange-400" />
@@ -760,10 +778,15 @@ export default function ErgoScriptLanguagesPage() {
                   How ErgoTree expressions are evaluated and executed.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/serialization"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Database className="w-6 h-6 text-purple-400" />
@@ -773,10 +796,15 @@ export default function ErgoScriptLanguagesPage() {
                   Binary format and serialization of ErgoTree structures.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/predefined-types"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <BookOpen className="w-6 h-6 text-blue-400" />
@@ -786,10 +814,15 @@ export default function ErgoScriptLanguagesPage() {
                   Built-in data types available in ErgoTree language.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/predefined-functions"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Cpu className="w-6 h-6 text-red-400" />
@@ -799,10 +832,15 @@ export default function ErgoScriptLanguagesPage() {
                   Built-in functions and operations in ErgoTree.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/encoding"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Code className="w-6 h-6 text-indigo-400" />
@@ -812,10 +850,15 @@ export default function ErgoScriptLanguagesPage() {
                   Encoding schemes and data representation in ErgoTree.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/script-validation"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Settings className="w-6 h-6 text-emerald-400" />
@@ -825,10 +868,15 @@ export default function ErgoScriptLanguagesPage() {
                   Validation process and rules for ErgoTree scripts.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/script-optimisation"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Zap className="w-6 h-6 text-pink-400" />
@@ -838,10 +886,15 @@ export default function ErgoScriptLanguagesPage() {
                   Optimization techniques for ErgoTree script performance.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/templates"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <BookOpen className="w-6 h-6 text-teal-400" />
@@ -851,10 +904,15 @@ export default function ErgoScriptLanguagesPage() {
                   Reusable ErgoTree templates and pattern libraries.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
 
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative">
+            <Link
+              href="/Docs/developers/ergoscript-languages/ergotree/ergoscript-vs-ergotree"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
+            >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
                   <Database className="w-6 h-6 text-amber-400" />
@@ -864,8 +922,10 @@ export default function ErgoScriptLanguagesPage() {
                   Comparison between high-level ErgoScript and low-level ErgoTree.
                 </p>
               </div>
-              <div className="text-gray-400 text-sm">Coming soon</div>
-            </div>
+              <div className="text-cyan-400 font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-200 absolute bottom-3 right-3 hover:underline">
+                Learn more
+              </div>
+            </Link>
           </div>
         </div>
       </TabsContent>
