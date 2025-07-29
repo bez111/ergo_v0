@@ -26,14 +26,63 @@ const toc = [
 ];
 
 export default function DataModelApisPage() {
+  const [activeSection, setActiveSection] = React.useState<string>('intro');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState<boolean>(false);
+
   React.useEffect(() => {
     // Enable smooth scroll for anchor links
     if (typeof window !== 'undefined') {
       document.documentElement.style.scrollBehavior = 'smooth';
     }
+
+    // Track active section on scroll
+    const handleScroll = () => {
+      const sections = toc.map(item => item.id);
+      let currentActiveSection = sections[0]; // Default to first section
+      
+      // Check if we're at the bottom of the page
+      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+      
+      if (isAtBottom) {
+        // If at bottom, activate the last section
+        currentActiveSection = sections[sections.length - 1];
+      } else {
+        // Find the section that is currently visible in the top part of the viewport
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const section = document.getElementById(sections[i]);
+          if (section) {
+            const rect = section.getBoundingClientRect();
+            // Section is active if its top is above the fold (with some offset for header)
+            if (rect.top <= 200) {
+              currentActiveSection = sections[i];
+              break;
+            }
+          }
+        }
+      }
+      
+      setActiveSection(currentActiveSection);
+    };
+
+    // Throttle scroll handler for better performance
+    let ticking = false;
+    const throttledHandleScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+
+    window.addEventListener('scroll', throttledHandleScroll, { passive: true });
+    handleScroll(); // Call once to set initial state
+
     return () => {
       if (typeof window !== 'undefined') {
         document.documentElement.style.scrollBehavior = '';
+        window.removeEventListener('scroll', throttledHandleScroll);
       }
     };
   }, []);
@@ -69,6 +118,52 @@ export default function DataModelApisPage() {
             <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
               The Ergo Data Model: Revolutionizing Blockchain Architecture
             </h1>
+
+            {/* Mobile TOC */}
+            <div className="lg:hidden mb-6">
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="w-full flex items-center justify-between p-3 bg-neutral-900/80 rounded-xl border border-neutral-800 text-gray-300 hover:text-orange-300 transition"
+              >
+                <div className="flex items-center gap-2">
+                  <BookOpen className="w-4 h-4" />
+                  <span className="font-medium">Table of Contents</span>
+                </div>
+                <ChevronRight className={`w-4 h-4 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`} />
+              </button>
+              
+              {isMobileMenuOpen && (
+                <div className="mt-2 p-3 bg-neutral-900/80 rounded-xl border border-neutral-800 backdrop-blur-sm animate-in slide-in-from-top-2 duration-200">
+                  <div className="flex flex-col gap-1">
+                    {toc.map(({ id, title }) => (
+                      <a
+                        key={id}
+                        href={`#${id}`}
+                        onClick={(e) => {
+                          e.preventDefault();
+                          const element = document.getElementById(id);
+                          if (element) {
+                            const yOffset = -80;
+                            const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                            window.scrollTo({ top: y, behavior: 'smooth' });
+                            setIsMobileMenuOpen(false); // Close menu after navigation
+                          }
+                        }}
+                        className={`
+                          cursor-pointer transition-all duration-200 block py-2 px-3 rounded-md border-l-2 text-sm
+                          ${activeSection === id 
+                            ? 'text-orange-300 bg-orange-400/10 border-orange-400 font-medium' 
+                            : 'text-gray-400 hover:text-orange-300 hover:bg-neutral-800/50 border-transparent'
+                          }
+                        `}
+                      >
+                        {title}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
 
             {/* 1. Introduction */}
             <section id="intro">
@@ -465,20 +560,36 @@ export default function DataModelApisPage() {
 
           {/* Table of contents sidebar */}
           <aside className="w-64 flex-shrink-0 hidden lg:block">
-            <div className="sticky top-8">
-              <h3 className="text-lg font-semibold mb-4 text-gray-200">Table of Contents</h3>
-              <nav className="space-y-2">
-                {toc.map((item) => (
-                  <a
-                    key={item.id}
-                    href={`#${item.id}`}
-                    className="block text-sm text-gray-400 hover:text-orange-400 transition-colors duration-200 py-1"
-                  >
-                    {item.title}
-                  </a>
-                ))}
-              </nav>
-            </div>
+            <nav className="sticky top-8 flex flex-col gap-1 text-sm text-gray-300 bg-neutral-900/80 rounded-xl p-4 border border-neutral-800 backdrop-blur-sm">
+              <div className="mb-3 font-bold text-orange-300 flex items-center gap-2">
+                <BookOpen className="w-4 h-4" />
+                Table of Contents
+              </div>
+              {toc.map(({ id, title }) => (
+                <a
+                  key={id}
+                  href={`#${id}`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const element = document.getElementById(id);
+                    if (element) {
+                      const yOffset = -80; // Header offset
+                      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                      window.scrollTo({ top: y, behavior: 'smooth' });
+                    }
+                  }}
+                  className={`
+                    cursor-pointer transition-all duration-200 block py-1.5 px-2 rounded-md border-l-2
+                    ${activeSection === id 
+                      ? 'text-orange-300 bg-orange-400/10 border-orange-400 font-medium' 
+                      : 'text-gray-400 hover:text-orange-300 hover:bg-neutral-800/50 border-transparent hover:border-orange-400/30'
+                    }
+                  `}
+                >
+                  {title}
+                </a>
+              ))}
+            </nav>
           </aside>
         </div>
       </TabsContent>
