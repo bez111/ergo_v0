@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Shield, KeyRound, Eye, Database } from "lucide-react";
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
@@ -10,11 +10,19 @@ export default function CryptographicPrimitivesPage() {
   return (
     <>
       <Tabs defaultValue="cryptographic" className="w-full">
-        <TabsList className="grid w-full grid-cols-4 mb-8">
-          <TabsTrigger value="cryptographic">Cryptographic</TabsTrigger>
-          <TabsTrigger value="signature-schemes">Signature Schemes</TabsTrigger>
-          <TabsTrigger value="zero-knowledge-proofs">Zero-Knowledge Proofs</TabsTrigger>
-          <TabsTrigger value="data-structures">Data Structures</TabsTrigger>
+        <TabsList className="grid w-full grid-cols-4 mb-8 bg-neutral-900/50 border border-neutral-700/50">
+          <TabsTrigger value="cryptographic" className="flex items-center gap-2 justify-center">
+            <Shield className="w-4 h-4" /> Cryptographic
+          </TabsTrigger>
+          <TabsTrigger value="signature-schemes" className="flex items-center gap-2 justify-center">
+            <KeyRound className="w-4 h-4" /> Signature Schemes
+          </TabsTrigger>
+          <TabsTrigger value="zero-knowledge-proofs" className="flex items-center gap-2 justify-center">
+            <Eye className="w-4 h-4" /> Zero-Knowledge Proofs
+          </TabsTrigger>
+          <TabsTrigger value="data-structures" className="flex items-center gap-2 justify-center">
+            <Database className="w-4 h-4" /> Data Structures
+          </TabsTrigger>
         </TabsList>
 
         <TabsContent value="cryptographic">
@@ -246,6 +254,36 @@ export default function CryptographicPrimitivesPage() {
         </TabsContent>
 
         <TabsContent value="signature-schemes">
+          {/* HERO section */}
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+              Signature Schemes
+            </h1>
+            <p className="text-lg text-gray-300 mb-6">
+              Ergo's signature schemes are built on advanced cryptographic protocols that enable secure, privacy-preserving, and flexible authentication mechanisms. These schemes form the foundation for multi-signature wallets, ring signatures, and threshold signatures.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-6">
+              <Link
+                href="/Docs/developers/cryptographic-primitives/schnorr"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+              >
+                <KeyRound className="w-5 h-5 mr-2" /> Schnorr
+              </Link>
+              <Link
+                href="/Docs/developers/cryptographic-primitives/diffie"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+              >
+                <Shield className="w-5 h-5 mr-2" /> Diffie
+              </Link>
+              <Link
+                href="/Docs/developers/cryptographic-primitives/other-signatures"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+              >
+                <Database className="w-5 h-5 mr-2" /> Other Signatures
+              </Link>
+            </div>
+          </div>
+
           <div className="prose prose-invert max-w-none">
             
 
