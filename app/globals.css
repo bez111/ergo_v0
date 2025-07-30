@@ -2,6 +2,52 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Sticky TOC Menu - Ergo Navigation Header Height: ~64px */
+.sticky-toc {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5rem; /* 80px - accounting for Ergo header */
+  z-index: 40;
+  max-height: calc(100vh - 6rem);
+  overflow-y: auto;
+  align-self: flex-start;
+  will-change: transform;
+}
+
+/* Ensure sticky works in all browsers */
+@supports (position: sticky) {
+  .sticky-toc {
+    position: sticky;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 1024px) {
+  .sticky-toc {
+    top: 4rem;
+    max-height: calc(100vh - 5rem);
+  }
+}
+
+/* Force sticky positioning for TOC */
+aside .sticky-toc {
+  position: sticky !important;
+  top: 5rem !important;
+}
+
+.sticky-toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sticky-toc::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sticky-toc::-webkit-scrollbar-thumb {
+  background: #525252;
+  border-radius: 2px;
+}
+
 @layer base {
   :root {
     --background: 0 0% 0%;

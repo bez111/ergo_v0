@@ -111,14 +111,13 @@ export default function DataModelApisPage() {
       </TabsList>
 
       <TabsContent value="overview">
-        <div className="flex flex-col md:flex-row gap-8 min-h-screen">
+        <div className="flex flex-col lg:flex-row gap-8 relative min-h-screen">
           {/* Main content */}
-          <main className="flex-1 min-w-0">
+          <main className="flex-1 min-w-0 lg:order-1">
             {/* Title */}
             <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
               The Ergo Data Model: Revolutionizing Blockchain Architecture
             </h1>
-
             {/* Mobile TOC */}
             <div className="lg:hidden mb-6">
               <button
@@ -131,7 +130,6 @@ export default function DataModelApisPage() {
                 </div>
                 <ChevronRight className={`w-4 h-4 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`} />
               </button>
-              
               {isMobileMenuOpen && (
                 <div className="mt-2 p-3 bg-neutral-900/80 rounded-xl border border-neutral-800 backdrop-blur-sm animate-in slide-in-from-top-2 duration-200">
                   <div className="flex flex-col gap-1">
@@ -164,7 +162,6 @@ export default function DataModelApisPage() {
                 </div>
               )}
             </div>
-
             {/* 1. Introduction */}
             <section id="intro">
               <h2 className="text-2xl font-bold mb-4 mt-8">
@@ -557,10 +554,19 @@ export default function DataModelApisPage() {
               </div>
             </section>
           </main>
-
-          {/* Table of contents sidebar */}
-          <aside className="w-64 flex-shrink-0 hidden lg:block">
-            <nav className="sticky top-8 flex flex-col gap-1 text-sm text-gray-300 bg-neutral-900/80 rounded-xl p-4 border border-neutral-800 backdrop-blur-sm">
+          {/* Table of contents sidebar - направо на десктопе */}
+          <aside className="w-64 flex-shrink-0 hidden lg:block lg:h-fit lg:order-2">
+            <div 
+              className="flex flex-col gap-1 text-sm text-gray-300 bg-neutral-900/95 rounded-xl p-4 border border-neutral-800 backdrop-blur-md shadow-xl"
+              style={{
+                position: 'sticky',
+                top: '80px',
+                zIndex: 50,
+                maxHeight: 'calc(100vh - 100px)',
+                overflowY: 'auto',
+                alignSelf: 'flex-start'
+              }}
+            >
               <div className="mb-3 font-bold text-orange-300 flex items-center gap-2">
                 <BookOpen className="w-4 h-4" />
                 Table of Contents
@@ -589,7 +595,7 @@ export default function DataModelApisPage() {
                   {title}
                 </a>
               ))}
-            </nav>
+            </div>
           </aside>
         </div>
       </TabsContent>

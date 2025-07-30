@@ -215,7 +215,7 @@ export default function EcosystemAIPage() {
                     <strong className="text-orange-300">Expand Operations:</strong> Launch new AEI agents with different models or parameters to secure a share of future rewards. Successful AEIs might spawn new instances, possibly with modified parameters or specialized functions, to exploit new market opportunities or scale profitable operations.
                   </div>
                 </li>
-              </ul>
+            </ul>
             </div>
 
             <p>
@@ -492,7 +492,7 @@ export default function EcosystemAIPage() {
                 <li>• <strong>Enhanced Security:</strong> Limited scope of interactions reduces possibility of unforeseen cross-contract side effects</li>
                 <li>• <strong>Safer Environment:</strong> Reduced risk of reentrancy attacks common in account models</li>
                 <li>• <strong>Flexible Contract Templates:</strong> Support for bonds and other financial instruments with flexible terms</li>
-              </ul>
+            </ul>
             </div>
           </div>
         </section>
@@ -640,7 +640,7 @@ export default function EcosystemAIPage() {
                     <li>• <strong>Self-Sustainability:</strong> Pay predictable transaction fees and storage rent</li>
                     <li>• <strong>Resource Optimization:</strong> Adjust usage based on profitability</li>
                     <li>• <strong>Budget Monitoring:</strong> Track income vs. expenses automatically</li>
-                  </ul>
+            </ul>
                 </div>
               </div>
             </div>

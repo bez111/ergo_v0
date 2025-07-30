@@ -3,6 +3,11 @@ import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink, Code, Settings, Database, Zap, BookOpen, Info, Cpu } from "lucide-react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { ArrowRight, FileText, Globe, Lightbulb, Users } from "lucide-react";
 
 export default function ErgoScriptLanguagesPage() {
   return (
@@ -287,15 +292,6 @@ export default function ErgoScriptLanguagesPage() {
           <p className="text-xl text-gray-400 mb-6">
             The Sigma Language is the foundation of ErgoScript, implementing authentication languages based on Sigma-protocols.
           </p>
-          <div className="flex flex-wrap gap-4 mb-6">
-            <Link
-              href="/Docs/developers"
-              className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
-            >
-              <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
-              Back to Developers
-            </Link>
-          </div>
         </div>
 
         <div className="space-y-6">
@@ -931,14 +927,383 @@ export default function ErgoScriptLanguagesPage() {
       </TabsContent>
 
       <TabsContent value="features">
-        <div className="text-gray-300 mb-8">
-          <p>Content for Features tab will be added soon.</p>
+        <div className="space-y-8">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            Data Inputs in ErgoScript
+          </h1>
+
+          <div className="mb-6">
+            <Link
+              href="/Docs/developers/ergoscript-languages/multi-stage-protocol"
+              className="inline-flex items-center px-6 py-3 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
+            >
+              Multi-Stage Protocols
+              <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7"></path></svg>
+            </Link>
+          </div>
+
+          <div className="space-y-6">
+            <div className="text-gray-300">
+              <p className="mb-4">
+                ErgoScript's data inputs are a novel feature that enhances the traditional UTXO-based blockchain's functionality. This section delves into the concept of data inputs, their advantages, and their application within Ergo transactions.
+              </p>
+            </div>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Understanding Data Inputs</h2>
+              <div className="text-gray-300 space-y-4">
+                <p>
+                  Traditional UTXO-based blockchains involve the consumption and subsequent destruction of inputs during transactions. Ergo innovates on this model with <strong>data inputs</strong>, which permit transactions to reference and read from existing UTXOs without the need to consume them. This breakthrough overcomes several limitations of the classic UTXO model, adding a layer of flexibility and efficiency to Ergo's extended UTXO (eUTXO) model.
+                </p>
+
+                <div className="bg-neutral-900/50 rounded-lg p-4">
+                  <h3 className="text-xl font-semibold text-orange-400 mb-3">Key Features of Data Inputs</h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    <li><strong>Non-Destructive Access:</strong> Data inputs grant transactions the ability to tap into UTXO contents without the need to spend or consume them, preserving the UTXOs for future transactions.</li>
+                    <li><strong>Concurrent Data Access:</strong> Data inputs allow for the simultaneous referencing and reading of a UTXO's data by multiple transactions within a single block, without any of them spending the UTXO. This feature facilitates parallel processing and alleviates transaction execution bottlenecks.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Benefits of Data Inputs</h2>
+              <div className="text-gray-300">
+                <p className="mb-4">The integration of data inputs into ErgoScript offers several notable benefits:</p>
+                <ol className="list-decimal pl-6 space-y-3">
+                  <li>
+                    <strong>Reduced Transaction Fees:</strong> Since data inputs do not necessitate script execution or the generation of new outputs, they contribute to lower transaction fees, making them an economical choice for intricate transactions.
+                  </li>
+                  <li>
+                    <strong>Enhanced DeFi Applications:</strong> Data inputs prove invaluable for decentralized finance (DeFi) applications, such as decentralized exchanges (DEXs) or order-book systems. They enable contracts to reference external data, like oracle data or order book states, without the need to consume the data boxes, facilitating concurrent interactions with the same state by multiple parties.
+                  </li>
+                  <li>
+                    <strong>Improved Scalability and Efficiency:</strong> Data inputs contribute to network scalability and efficiency by allowing several transactions to concurrently read from the same data input, reducing the necessity for extra outputs and lessening the likelihood of transaction conflicts.
+                  </li>
+                </ol>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Working with Data Inputs</h2>
+              <div className="text-gray-300 space-y-4">
+                <p>
+                  Ergo's data inputs are a distinctive feature not found in other eUTXO-based systems. When employing data inputs in ErgoScript, it's crucial to grasp their operation and how to leverage them effectively in smart contracts.
+                </p>
+
+                <div className="bg-neutral-900/50 rounded-lg p-4">
+                  <h3 className="text-xl font-semibold text-orange-400 mb-3">Usage in Transactions</h3>
+                  <p className="mb-4">
+                    In ErgoScript, data inputs are "read-only" boxes that supply vital information for contract validation without being spent in the transaction. For instance, a DeFi contract might utilize a data input to verify an asset's current price from an oracle box, ensuring the transaction complies with specific conditions without modifying the oracle box.
+                  </p>
+                </div>
+
+                <div className="bg-neutral-900/50 rounded-lg p-4">
+                  <h3 className="text-xl font-semibold text-orange-400 mb-3">Example Use Case</h3>
+                  <p className="mb-4">
+                    Imagine a transaction that references a box with the ID <code className="bg-neutral-700 px-2 py-0.5 rounded text-cyan-300">d2b9b6536287b242f436436ce5a1e4a117d7b4843a13ce3abe3168bff99924a1</code> as both an input and a data input. This illustrates the versatility of data inputs, enabling a transaction to read and potentially update a box's state in one operation, assuming the box pre-existed the transaction.
+                  </p>
+                  <p className="mb-4">In ErgoScript, you can refer to other boxes in the transaction using constructs like:</p>
+                  <pre className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 text-sm text-gray-200 overflow-x-auto">
+<code className="language-scala">INPUTS(0).value &gt; 10000 &amp;&amp; OUTPUTS(1).value &gt; 20000</code>
+                  </pre>
+                  <p className="mt-4">
+                    This script enforces conditions based on the values of the first input and the second output boxes, showcasing how data inputs can be used to influence the logic of a transaction without consuming the referenced boxes.
+                  </p>
+                </div>
+
+                <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
+                  <h3 className="text-xl font-semibold text-blue-400 mb-3">Comparison with Traditional Models</h3>
+                  <p>
+                    Data inputs in ErgoScript provide a significant advancement over traditional UTXO models, particularly in how they facilitate more complex and interactive smart contracts. For a more detailed comparison between eUTXO and account-based models, refer to the <a href="https://ergoplatform.org/en/blog/2021-10-04-off-chain-logic-and-eutxo/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Off Chain Logic & eUTXO</a> article.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Best Practices and Considerations</h2>
+              <div className="text-gray-300">
+                <ul className="list-disc pl-6 space-y-3">
+                  <li><strong>Selective Use:</strong> Only include data inputs that are necessary for your contract logic to minimize transaction size and fees.</li>
+                  <li><strong>Reliable Sources:</strong> Ensure that the data accessed through data inputs is reliable and comes from trusted sources, especially when using oracles or external data providers.</li>
+                  <li><strong>Validation Checks:</strong> Always validate the data within data inputs to ensure it is in the expected format and state, reducing the risk of transaction failures.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Additional Resources</h2>
+              <div className="text-gray-300">
+                <p className="mb-4">For further reading and deeper understanding of the UTXO model and its implementation in Ergo, consider the following resources:</p>
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><a href="https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Unlocking The Potential Of The UTXO Model</a></li>
+                  <li><a href="https://www.ergoforum.org/t/building-a-portable-and-reusable-par-utxo-dapp-standard/441" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Building A Portable And Reusable (PaR) UTXO dApp Standard</a></li>
+                  <li><a href="https://www.ergoforum.org/t/data-inputs-semantics/654" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Data Inputs Semantics</a></li>
+                  <li><Link href="/Docs/developers/ergoscript-languages/examples/model-tx" className="text-cyan-400 hover:underline">Model Transaction Example</Link></li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="bg-green-500/10 border border-green-500/30 rounded-xl p-6">
+              <h3 className="text-xl font-bold text-green-400 mb-3">Conclusion</h3>
+              <div className="text-gray-300">
+                <p>
+                  Data inputs are a powerful feature in ErgoScript that significantly enhance the flexibility, efficiency, and scalability of smart contracts. By allowing read-only access to UTXOs, data inputs enable more sophisticated interactions within the Ergo blockchain, making them an essential tool for developers building complex dApps and DeFi solutions.
+                </p>
+              </div>
+            </section>
+          </div>
         </div>
       </TabsContent>
 
       <TabsContent value="resources">
-        <div className="text-gray-300 mb-8">
-          <p>Content for Resources tab will be added soon.</p>
+        <div className="space-y-8">
+          <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            ErgoScript FAQ
+          </h1>
+
+          <div className="space-y-6">
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Why Does Ergo Use [Coll] Instead of an Array?</h2>
+              <div className="text-gray-300 space-y-4">
+                <p>
+                  Ergo uses [Coll] instead of an Array to maintain a one-to-one correspondence between ErgoScript and Scala. In Scala, an Array is mutable, which means its elements can be changed after it's created. However, all elements in ErgoScript are immutable - they can't be altered after creation. This difference could lead to confusion if both languages used the term "Array".
+                </p>
+                <p>
+                  During the design discussions in our Slack channel in 2018-2019, several names were considered, but none seemed more suitable than "Coll". The term "Collection[Int]" was also considered, but it appeared visually unappealing and cumbersome to type.
+                </p>
+                <p>
+                  "Seq" wasn't an ideal choice either, as it is covariant in Scala while Coll is not covariant in ErgoScript. Covariance refers to the ability of a type to change its element type to a subtype, which doesn't align with the principles of ErgoScript.
+                </p>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Debugging Techniques</h2>
+              <div className="text-gray-300 space-y-4">
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>Check the versions of dependencies like <code className="bg-neutral-700 px-2 py-0.5 rounded">ergo-lib-wasm-nodejs</code> and <code className="bg-neutral-700 px-2 py-0.5 rounded">ergo-lib-wasm-browser</code> to ensure you have the latest fixes.</li>
+                  <li>If an issue is suspected to originate from the Nautilus wallet, try manually replacing the <code className="bg-neutral-700 px-2 py-0.5 rounded">.wasm</code> file in the extension directory with an updated version from <code className="bg-neutral-700 px-2 py-0.5 rounded">sigma-rust</code>.</li>
+                  <li>Building Nautilus from source with updated dependencies can help identify issues.</li>
+                  <li>When encountering issues with on-chain boxes, you can try the following:
+                    <ol className="list-decimal pl-6 mt-2 space-y-1">
+                      <li>Make temporary contract edits (e.g., set a condition to always evaluate to <code className="bg-neutral-700 px-2 py-0.5 rounded">true</code>).</li>
+                      <li>Compile the modified contract and obtain the new ErgoTree hex.</li>
+                      <li>Replace the ErgoTree of the problematic box with the new hex (off-chain).</li>
+                      <li>Attempt to sign the transaction (this should work locally even if the modified tree wouldn't validate on-chain, helping isolate signing issues).</li>
+                    </ol>
+                  </li>
+                  <li>For mocking boxes in unit tests, use the <code className="bg-neutral-700 px-2 py-0.5 rounded">mockUTxO</code> function from <code className="bg-neutral-700 px-2 py-0.5 rounded">@fleet-sdk/mock-chain</code> instead of manually editing box contents.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">FAQs</h2>
+              <div className="text-gray-300 space-y-4">
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">Is the EIP-3 Secret similar to an account index for derived public keys?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>Yes, the EIP-3 secret functions similarly to an account index for deriving public keys. As confirmed by user 'Aberg (Satergo dev)', the Satergo wallet refers to this as the "address index," and custom indices can be utilized.</p>
+                  </div>
+                </details>
+
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">How do I convert a Coll[Byte] of proposition bytes to the SigmaProp type?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>The <code className="bg-neutral-700 px-2 py-0.5 rounded">decodePoint</code> method is likely what you need to convert proposition bytes (<code className="bg-neutral-700 px-2 py-0.5 rounded">Coll[Byte]</code>) into a <code className="bg-neutral-700 px-2 py-0.5 rounded">SigmaProp</code>.</p>
+                  </div>
+                </details>
+
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">Can I insert two tokens with the same ID but different amounts into a box?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>Yes, you can, but be aware that some off-chain code might become confused. The amounts will be merged into a single entry in the box's tokens array.</p>
+                  </div>
+                </details>
+
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">How do I fix the "Tree root should be real but was UnprovenSchnorr(ProveDlog(Ecp(..." error?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>This error usually indicates that the transaction was signed using an incorrect private key (i.e., one that doesn't correspond to the public key expected by the script).</p>
+                  </div>
+                </details>
+
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">As a complete coding beginner, should I learn Java then Scala before ErgoScript?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>It's generally recommended to focus on understanding UTXO model concepts first, rather than diving deep into Java or Scala initially. The courses available at <a href="https://docs.ergoplatform.com/dev/get-started/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">https://docs.ergoplatform.com/dev/get-started/</a> provide a good starting point without requiring prior Java or Scala knowledge.</p>
+                  </div>
+                </details>
+
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">How are dApp fees handled in ErgoScript contracts?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>In ErgoScript, fees are handled explicitly during the transaction building process, not directly within the script logic itself. The script verifies conditions based on the transaction outputs. See the Token Sale Service contract example for illustration: <a href="https://github.com/ergoplatform/ergoscript-by-example/blob/main/tokenSalesService.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">https://github.com/ergoplatform/ergoscript-by-example/blob/main/tokenSalesService.md</a></p>
+                    <div className="bg-neutral-900/50 rounded-lg p-4 mt-3">
+                      <h4 className="text-md font-semibold text-cyan-400 mb-2">Key aspects:</h4>
+                      <ul className="list-disc pl-6 space-y-1">
+                        <li>The transaction fee (<code className="bg-neutral-700 px-2 py-0.5 rounded">MinTxFee</code>) must be included in one of the output boxes (typically the last one, designated for the miner).</li>
+                        <li>Other output boxes handle the distribution of payment and token amounts according to the contract's logic.</li>
+                        <li>The fee is paid from the value contained within the input boxes being spent.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </details>
+
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">How can Option/Some(...) be used in ErgoScript outside of registers and context variables?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>The use of <code className="bg-neutral-700 px-2 py-0.5 rounded">Option</code> types (like <code className="bg-neutral-700 px-2 py-0.5 rounded">Some(...)</code>) is effectively limited to values originating from registers (<code className="bg-neutral-700 px-2 py-0.5 rounded">box.R&lt;N&gt;[Type]</code>) and context variables (<code className="bg-neutral-700 px-2 py-0.5 rounded">getVar[T](...)</code>). A potential workaround for other scenarios involves using a "dummy" optional register value and applying a map operation: <code className="bg-neutral-700 px-2 py-0.5 rounded">box.R4[Boolean].map(r =&gt; &lt;some expression which doesn't depend on r&gt;)</code>.</p>
+                  </div>
+                </details>
+
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">What's the proper syntax for fold/map/reduce operations in ErgoScript?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>Here are some examples demonstrating common collection operations:</p>
+                    <UniversalCopyCodeBlock code={`// Simple sum using fold with an explicitly defined function
+def sumFunc(a: Long, b: Box): Long = a + b.value
+val totalValue = INPUTS.fold(0L, sumFunc)
+
+// Using fold with an inline lambda function
+val totalValueLambda = INPUTS.fold(0L, { (accum: Long, box: Box) => accum + box.value })
+
+// Declaring a generic function (though type parameter often inferred)
+// def sumGeneric[T](a: T, b: Box): T = ??? // Example structure
+// val totalGeneric = INPUTS.fold(0L, sumGeneric) // Type parameter usually not needed here
+
+// Note: Upcoming Sigma 6.0 might introduce more direct methods like:
+// val total = INPUTS.sumBy(b => b.value)`} />
+                  </div>
+                </details>
+
+                <details className="group border border-neutral-700 rounded-lg">
+                  <summary className="flex justify-between items-center cursor-pointer p-4 hover:bg-neutral-700/50 transition-colors">
+                    <h3 className="text-lg font-semibold text-orange-400">How can I store a script hash in a register using Fleet for later comparison?</h3>
+                    <svg className="w-5 h-5 text-gray-400 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </summary>
+                  <div className="p-4 pt-0">
+                    <p>To store the bytes of a script (ErgoTree) in a register, allowing an ErgoScript contract to later verify that an output box is protected by that specific script:</p>
+                    <div className="bg-neutral-900/50 rounded-lg p-4 mt-3">
+                      <h4 className="text-md font-semibold text-cyan-400 mb-2">In your off-chain Fleet code (JavaScript/TypeScript):</h4>
+                      <UniversalCopyCodeBlock code={`// Create an output box and set register R8 to the hex representation 
+// of the target script's ErgoTree bytes.
+new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)  
+  // ... other builder methods
+  .setAdditionalRegisters({
+    R8: SConstant(SColl(SByte, ErgoAddress.fromBase58(TARGET_SCRIPT_ADDRESS).ergoTree)).toHex() 
+  });`} />
+                    </div>
+                    <div className="bg-neutral-900/50 rounded-lg p-4 mt-3">
+                      <h4 className="text-md font-semibold text-cyan-400 mb-2">In your ErgoScript contract:</h4>
+                      <UniversalCopyCodeBlock code={`{
+  // Retrieve the expected script bytes from the register
+  val expectedScriptBytes = SELF.R8[Coll[Byte]].get 
+  
+  // Get the actual script bytes of an output box
+  val outputBoxScriptBytes = OUTPUTS(0).propositionBytes 
+
+  // Verify that the output box uses the expected script
+  expectedScriptBytes == outputBoxScriptBytes
+  // ... other conditions
+}`} />
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Noted Issues</h2>
+              <div className="text-gray-300 space-y-4">
+                <ul className="list-disc pl-6 space-y-2">
+                  <li>A bug existed in <code className="bg-neutral-700 px-2 py-0.5 rounded">sigma-rust</code> where <code className="bg-neutral-700 px-2 py-0.5 rounded">coll.slice</code> did not gracefully handle empty collections, differing from the Scala version used in nodes. This caused issues for approximately 3 weeks until fixed by user 'greenhat'. The fix has been merged into the <code className="bg-neutral-700 px-2 py-0.5 rounded">develop</code> branch of <code className="bg-neutral-700 px-2 py-0.5 rounded">sigma-rust</code>.</li>
+                  <li>This fix needs to propagate through the dependency tree (including updates to libraries like <code className="bg-neutral-700 px-2 py-0.5 rounded">ergo-lib-wasm</code> and wallets like Nautilus) before fully resolving issues for all end users.</li>
+                  <li>Some unexpected exceptions have been reported when using <code className="bg-neutral-700 px-2 py-0.5 rounded">.toBigInt</code> on <code className="bg-neutral-700 px-2 py-0.5 rounded">Long</code> register values in ErgoScript. Further investigation is needed.</li>
+                  <li>With ErgoNames, if a token representing a registered name is burned, that name registration is permanently lost. Potential solutions are being researched.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Tutorial Code Snippets</h2>
+              <div className="text-gray-300 space-y-4">
+                <div>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-2">Summing nanoErgs of all inputs:</h3>
+                  <UniversalCopyCodeBlock code={`// Define a function to add a box's value to an accumulator
+def sumValues(accum: Long, box: Box): Long = accum + box.value
+// Use fold to apply the sum function across all INPUTS, starting with 0L
+val totalNanoErgs = INPUTS.fold(0L, sumValues)`} />
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-semibold text-orange-400 mb-2">Storing a script hash in a register using Fleet:</h3>
+                  <UniversalCopyCodeBlock code={`// Off-chain code to create an output box storing the target script's hash in R8
+const targetAddress = "TARGET_SCRIPT_ADDRESS"; // Replace with the actual address
+const targetErgoTreeBytes = ErgoAddress.fromBase58(targetAddress).ergoTree;
+
+new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)
+  .setAdditionalRegisters({ 
+    R8: SConstant(SColl(SByte, targetErgoTreeBytes)).toHex() 
+  });`} />
+                </div>
+              </div>
+            </section>
+
+            <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+              <h2 className="text-2xl font-bold text-cyan-400 mb-4">Additional Resources</h2>
+              <div className="text-gray-300 space-y-4">
+                <ul className="list-disc pl-6 space-y-2">
+                  <li><a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript Language Specification</a></li>
+                  <li><a href="https://escript.online/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Playground/eScript IDE</a></li>
+                </ul>
+              </div>
+            </section>
+          </div>
         </div>
       </TabsContent>
     </Tabs>
