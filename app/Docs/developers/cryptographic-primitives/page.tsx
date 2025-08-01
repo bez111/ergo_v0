@@ -457,18 +457,434 @@ val thresholdScript = s"""
 
         <TabsContent value="zero-knowledge-proofs">
           <div className="prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold mb-4 text-white">Zero-Knowledge Proofs</h2>
+            <h2 className="text-3xl font-bold mb-4 text-white">Non-Interactive Zero-Knowledge Proofs in Ergo</h2>
+            
+            <h3 className="text-2xl font-bold mb-4 text-white">Overview</h3>
             <p className="text-gray-300 mb-6">
-              Content for Zero-Knowledge Proofs will be added here.
+              Non-Interactive Zero-Knowledge Proofs (NIZKs) are advanced cryptographic techniques that allow one party to prove knowledge of a secret without revealing the secret itself, and without requiring real-time interaction between the prover and verifier.
+            </p>
+
+            <div className="flex gap-4 mb-6">
+              <Link
+                href="/Docs/developers/cryptographic-primitives/zerojoin"
+                className="inline-flex items-center px-6 py-3 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
+              >
+                ZeroJoin
+              </Link>
+            </div>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Theoretical Foundation</h3>
+            <p className="text-gray-300 mb-4">
+              NIZKs in Ergo are primarily implemented through <strong>Sigma Protocols</strong> (Σ-protocols), which provide a powerful and flexible approach to zero-knowledge proofs. These protocols are a cornerstone of Ergo's privacy and cryptographic infrastructure.
+            </p>
+            
+            <h4 className="text-xl font-bold mb-3 text-white">Key Characteristics</h4>
+            
+            <div className="space-y-4 mb-6">
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h5 className="font-semibold text-green-400 mb-2">Non-Interactive</h5>
+                <p className="text-sm text-gray-300">
+                  Proofs can be verified without direct communication
+                </p>
+                <ul className="text-sm text-gray-300 mt-2 space-y-1">
+                  <li>• Unlike traditional interactive zero-knowledge proofs, NIZKs can be verified asynchronously</li>
+                  <li>• Reduces computational overhead and network complexity</li>
+                </ul>
+              </div>
+              
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h5 className="font-semibold text-green-400 mb-2">Zero-Knowledge</h5>
+                <p className="text-sm text-gray-300">
+                  No information about the secret is revealed
+                </p>
+                <ul className="text-sm text-gray-300 mt-2 space-y-1">
+                  <li>• Cryptographically guarantees that only the validity of a statement is proven</li>
+                  <li>• Protects sensitive information while maintaining verifiability</li>
+                </ul>
+              </div>
+              
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h5 className="font-semibold text-green-400 mb-2">Composable</h5>
+                <p className="text-sm text-gray-300">
+                  Can be combined using logical operators like AND, OR, and THRESHOLD
+                </p>
+                <ul className="text-sm text-gray-300 mt-2 space-y-1">
+                  <li>• Enables creation of complex cryptographic conditions</li>
+                  <li>• Supports advanced smart contract logic and privacy-preserving protocols</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Cryptographic Primitives</h3>
+            <p className="text-gray-300 mb-4">
+              Ergo supports several fundamental zero-knowledge proof types:
+            </p>
+            
+            <div className="space-y-4 mb-6">
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h5 className="font-semibold text-purple-400 mb-2">1. Discrete Logarithm Proofs</h5>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Prove knowledge of a secret key without revealing it</li>
+                  <li>• Fundamental to <a href="/Docs/developers/cryptographic-primitives/schnorr" className="text-blue-400 hover:text-blue-300 underline">Schnorr signature verification</a></li>
+                  <li>• Implemented using <code className="bg-neutral-800 px-2 py-1 rounded">proveDlog()</code> predicate in <a href="/Docs/developers/ergoscript-languages" className="text-blue-400 hover:text-blue-300 underline">ErgoScript</a></li>
+                </ul>
+              </div>
+              
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h5 className="font-semibold text-purple-400 mb-2">2. Diffie-Hellman Tuple Proofs</h5>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Prove equality of discrete logarithms across different generators</li>
+                  <li>• Enables privacy-preserving key exchange and contract designs</li>
+                  <li>• Critical for advanced cryptographic protocols</li>
+                </ul>
+              </div>
+            </div>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Implementation Techniques</h3>
+            
+            <h4 className="text-xl font-bold mb-3 text-white">Fiat-Shamir Transformation</h4>
+            <p className="text-gray-300 mb-4">
+              Ergo makes proofs non-interactive using the Fiat-Shamir transformation, which converts interactive proofs into non-interactive ones by using a cryptographic hash function.
+            </p>
+            
+            <div className="bg-neutral-900/50 rounded-lg p-4 mb-4">
+              <h5 className="font-semibold text-yellow-400 mb-2">Key steps:</h5>
+              <ul className="text-sm text-gray-300 space-y-1">
+                <li>• Transform an interactive proof into a non-interactive version</li>
+                <li>• Use a cryptographic hash function to generate a challenge</li>
+                <li>• Eliminates the need for real-time communication between prover and verifier</li>
+              </ul>
+            </div>
+            
+            <h4 className="text-xl font-bold mb-3 text-white">Proof Composition</h4>
+            <p className="text-gray-300 mb-4">
+              Sigma protocols can be combined to create complex proofs:
+            </p>
+            
+            <div className="mb-6">
+              <UniversalCopyCodeBlock
+                code={`// Example of a threshold signature proof
+val thresholdProof = prove {
+  atLeast(
+    3,  // Minimum number of signatures required
+    Coll(
+      PK("pubkey1"),
+      PK("pubkey2"),
+      PK("pubkey3"),
+      PK("pubkey4"),
+      PK("pubkey5")
+    )
+  )
+}`}
+              />
+            </div>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Advanced Applications</h3>
+            
+            <h4 className="text-xl font-bold mb-3 text-white">Privacy-Preserving Techniques</h4>
+            
+            <div className="space-y-4 mb-6">
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">1. Ring Signatures</h5>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Prove one of multiple possible signers without revealing the exact signer</li>
+                  <li>• Enables anonymous transactions</li>
+                  <li>• Detailed in <a href="/Docs/developers/cryptographic-primitives/other-signatures/ring" className="text-blue-400 hover:text-blue-300 underline">Ring Signatures</a> documentation</li>
+                </ul>
+              </div>
+              
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">2. Threshold Signatures</h5>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Require k-out-of-n participants to sign</li>
+                  <li>• Supports multi-party computational scenarios</li>
+                  <li>• Explored in <a href="/Docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-blue-400 hover:text-blue-300 underline">Threshold Signatures</a> documentation</li>
+                </ul>
+              </div>
+              
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h5 className="font-semibold text-cyan-400 mb-2">3. Stealth Addresses</h5>
+                <ul className="text-sm text-gray-300 space-y-1">
+                  <li>• Generate one-time addresses for enhanced transaction privacy</li>
+                  <li>• Prevent linking of transactions to a specific public address</li>
+                  <li>• Crucial for maintaining financial privacy</li>
+                </ul>
+              </div>
+            </div>
+            
+            <h4 className="text-xl font-bold mb-3 text-white">Mixer Protocols</h4>
+            <p className="text-gray-300 mb-4">
+              <strong>ZeroJoin</strong> demonstrates a practical application:
+            </p>
+            <ul className="text-sm text-gray-300 space-y-1 ml-4 mb-6">
+              <li>• Uses ring signatures and Diffie-Hellman tuples</li>
+              <li>• Restores fungibility of digital tokens</li>
+              <li>• Provides non-interactive, trustless mixing</li>
+              <li>• Detailed in <a href="/Docs/developers/cryptographic-primitives/mixer" className="text-blue-400 hover:text-blue-300 underline">Mixer Protocol</a> documentation</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Security Considerations</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li>• Based on the hardness of the discrete logarithm problem</li>
+              <li>• Requires careful implementation to prevent potential vulnerabilities</li>
+              <li>• Extensive test coverage in Ergo's cryptographic implementations</li>
+              <li>• Relies on well-established cryptographic assumptions</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Related Cryptographic Concepts</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li>• <a href="/Docs/developers/cryptographic-primitives/discrete-logarithm" className="text-blue-400 hover:text-blue-300 underline">Discrete Logarithm Proofs</a></li>
+              <li>• <a href="/Docs/developers/cryptographic-primitives/other-signatures/ring" className="text-blue-400 hover:text-blue-300 underline">Ring Signatures</a></li>
+              <li>• <a href="/Docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-blue-400 hover:text-blue-300 underline">Threshold Signatures</a></li>
+              <li>• <a href="/Docs/developers/cryptographic-primitives/sigma-protocols" className="text-blue-400 hover:text-blue-300 underline">Sigma Protocols</a></li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Future Research Directions</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li>• Enhanced privacy protocol implementations</li>
+              <li>• More efficient zero-knowledge proof constructions</li>
+              <li>• Cross-chain interoperability using NIZKs</li>
+              <li>• Integration with advanced cryptographic techniques</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Performance and Scalability</h3>
+            <p className="text-gray-300 mb-4">
+              NIZKs in Ergo are designed with performance in mind:
+            </p>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li>• Constant-time proof verification</li>
+              <li>• Minimal computational overhead</li>
+              <li>• Efficient serialization and deserialization</li>
+              <li>• Support for batch verification techniques</li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">References</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li>• <a href="/Docs/developers/cryptographic-primitives/sigma-protocols" className="text-blue-400 hover:text-blue-300 underline">Sigma Protocols Overview</a></li>
+              <li>• <a href="/Docs/developers/cryptographic-primitives" className="text-blue-400 hover:text-blue-300 underline">Cryptographic Foundations</a></li>
+              <li>• Zero-Knowledge Proofs in Ergo (this tab)</li>
+              <li>• Academic Papers:</li>
+              <ul className="ml-8 space-y-1">
+                <li>• <a href="https://eprint.iacr.org/2021/1022" className="text-blue-400 hover:text-blue-300 underline">Sigma Protocols: A Survey</a></li>
+                <li>• <a href="https://eprint.iacr.org/2016/263" className="text-blue-400 hover:text-blue-300 underline">Non-Interactive Zero-Knowledge Proofs</a></li>
+              </ul>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Conclusion</h3>
+            <p className="text-gray-300 mb-6">
+              Ergo's Non-Interactive Zero-Knowledge Proofs represent a sophisticated approach to cryptographic privacy, enabling complex, secure, and flexible smart contract designs while maintaining user confidentiality. By leveraging advanced cryptographic techniques like Sigma Protocols and the Fiat-Shamir transformation, Ergo provides a robust framework for privacy-preserving computational techniques.
             </p>
           </div>
         </TabsContent>
 
         <TabsContent value="data-structures">
           <div className="prose prose-invert max-w-none">
-            <h2 className="text-3xl font-bold mb-4 text-white">Data Structures</h2>
+            <h2 className="text-3xl font-bold mb-8 text-white">Data Structures in Ergo</h2>
+            
             <p className="text-gray-300 mb-6">
-              Content for Data Structures will be added here.
+              In Ergo, several key data structures are employed to support its blockchain and smart contract functionality. These data structures are designed to ensure efficient and secure access to data, guaranteeing optimal performance and data integrity.
+            </p>
+
+            <p className="text-gray-300 mb-6">
+              Here's a list of the main data structures used within the Ergo ecosystem:
+            </p>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">1. AVL Trees (Authenticated Dynamic Dictionaries)</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Purpose</strong>: AVL Trees in Ergo are a specialized type of self-balancing binary search tree, used to store and authenticate dynamic sets of data in a compact and efficient manner. They ensure efficient and secure access to your data, guaranteeing optimal performance and data integrity.</li>
+              <li><strong>Usage</strong>:
+                <ul className="ml-4 space-y-1">
+                  <li>In the storage of UTXO states, where efficient verification of state changes is required.</li>
+                  <li>In applications like off-chain code and distributed systems managing the Plasma infrastructure, where privacy-preserving transactions need to verify inclusion or exclusion of certain elements without revealing all details.</li>
+                </ul>
+              </li>
+              <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/avl" className="text-blue-400 hover:text-blue-300 underline">AVL Trees in Ergo</a>, <a href="/Docs/developers/cryptographic-primitives/plasma" className="text-blue-400 hover:text-blue-300 underline">Plasma</a></li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">2. Merkle Trees</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Purpose</strong>: Merkle Trees are a fundamental data structure in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying transactions within blocks to securing additional metadata in the Extension Block.</li>
+              <li><strong>Usage</strong>:
+                <ul className="ml-4 space-y-1">
+                  <li>In the construction of the <a href="/Docs/developers/cryptographic-primitives/tx-merkle" className="text-blue-400 hover:text-blue-300 underline">Transaction Merkle Tree</a>, combining all transactions and their corresponding spending proofs into a single Merkle Tree.</li>
+                  <li>In the <a href="/Docs/developers/cryptographic-primitives/merkle-extension" className="text-blue-400 hover:text-blue-300 underline">Extension Block Merkle Tree</a>, securing key-value data like miner votes and protocol parameters.</li>
+                  <li>In creating <a href="/Docs/developers/cryptographic-primitives/merkle-batch-proof" className="text-blue-400 hover:text-blue-300 underline">Merkle Batch Proofs</a>, allowing efficient validation of the integrity and authenticity of data transactions.</li>
+                  <li>In generating compact proofs of state transitions, enabling lightweight clients to securely participate in the network.</li>
+                </ul>
+              </li>
+              <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Trees in Ergo</a></li>
+            </ul>
+
+            <div className="mb-6">
+              <Link
+                href="/Docs/developers/cryptographic-primitives/merkle-tree"
+                className="inline-flex items-center px-6 py-3 bg-green-500 rounded-xl font-semibold text-black hover:bg-green-600 transition-transform hover:scale-105"
+              >
+                <Database className="w-5 h-5 mr-2" />
+                Merkle Tree
+              </Link>
+            </div>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">3. Sigma Trees (ErgoTree)</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Purpose</strong>: Sigma Trees, also known as ErgoTrees, are specialized data structures that represent logical propositions and cryptographic conditions in the Ergo blockchain. These trees are used in the execution of smart contracts and scripts, encapsulating complex logic and cryptographic proofs.</li>
+              <li><strong>Usage</strong>:
+                <ul className="ml-4 space-y-1">
+                  <li>In representing the logic and conditions of ErgoScript smart contracts.</li>
+                  <li>In evaluating conditions for spending boxes (UTXOs) by verifying the cryptographic proofs and logic encoded in the ErgoTree.</li>
+                  <li>Potential future integration with Merkle Trees (MT) or Sparse Merkle Trees (SMT) to enable working with Ergo transactions and the extension block database directly from ErgoScript.</li>
+                </ul>
+              </li>
+              <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/ergotree" className="text-blue-400 hover:text-blue-300 underline">ErgoTree</a></li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">4. Context Data Structures</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Purpose</strong>: These structures represent the contextual information that is available during the execution of ErgoScripts. Contexts include details such as the current block height, the transaction being processed, and any additional data inputs.</li>
+              <li><strong>Usage</strong>:
+                <ul className="ml-4 space-y-1">
+                  <li>In providing necessary environmental details for smart contract execution.</li>
+                  <li>In enabling the contextual flexibility of ErgoScripts.</li>
+                </ul>
+              </li>
+              <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/blockchain-context" className="text-blue-400 hover:text-blue-300 underline">Context Data Structures</a></li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">5. Proof of Proof-of-Work (PoPow) Data Structures</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Purpose</strong>: These are specialized data structures used to implement PoPow, which allows lightweight nodes to verify the longest chain without downloading the entire blockchain.</li>
+              <li><strong>Usage</strong>:
+                <ul className="ml-4 space-y-1">
+                  <li>In creating and verifying interlink vectors, which are crucial for PoPow security.</li>
+                  <li>In enabling lightweight clients to participate in the network with minimal data requirements.</li>
+                </ul>
+              </li>
+              <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/popow" className="text-blue-400 hover:text-blue-300 underline">PoPow Data Structures</a></li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">6. Box Data Structures</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Purpose</strong>: Boxes are the fundamental data structures representing UTXOs in Ergo. Each box contains value, associated tokens, and an ErgoScript that defines spending conditions.</li>
+              <li><strong>Usage</strong>:
+                <ul className="ml-4 space-y-1">
+                  <li>In the creation and management of UTXOs.</li>
+                  <li>In defining conditions for transaction execution within the blockchain.</li>
+                </ul>
+              </li>
+              <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/box" className="text-blue-400 hover:text-blue-300 underline">Box Format</a></li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">7. Transaction Data Structures</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Purpose</strong>: These structures represent the transactions within the Ergo blockchain. They include inputs, outputs, data inputs, and other necessary information for executing transactions.</li>
+              <li><strong>Usage</strong>:
+                <ul className="ml-4 space-y-1">
+                  <li>In organizing and executing financial transfers, contract calls, and state changes.</li>
+                  <li>In ensuring the integrity and validity of transactions through the blockchain.</li>
+                </ul>
+              </li>
+              <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/transactions" className="text-blue-400 hover:text-blue-300 underline">Transaction Format</a></li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">8. Interlink Vectors</h3>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Purpose</strong>: Used in conjunction with Merkle Trees for PoPow proofs, interlink vectors allow efficient verification of the chain of blocks in the blockchain.</li>
+              <li><strong>Usage</strong>:
+                <ul className="ml-4 space-y-1">
+                  <li>In the implementation of PoPow protocols for verifying blockchain headers.</li>
+                </ul>
+              </li>
+              <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/interlink-vectors" className="text-blue-400 hover:text-blue-300 underline">Interlink Vectors</a></li>
+            </ul>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Potential Additional Data Structures</h3>
+            <p className="text-gray-300 mb-6">
+              As the Ergo ecosystem continues to evolve, additional data structures may be introduced, particularly in areas such as privacy-preserving protocols, advanced smart contract functionalities, or optimization of blockchain operations.
+            </p>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Hash-Based Accumulators</h3>
+            <p className="text-gray-300 mb-6">
+              For UTXO-based systems, simpler and well-studied hash-based accumulators are effective. Sparse Merkle Trees are sufficient for UTXO settings, though not the most efficient solution. More efficient alternatives include UTREEXO or the approaches described in <a href="https://eprint.iacr.org/2021/340.pdf" className="text-blue-400 hover:text-blue-300 underline">this paper</a>.
+            </p>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">UTREEXO</h3>
+            <p className="text-gray-300 mb-6">
+              UTREEXO is a more efficient alternative for representing the UTXO set compared to traditional Merkle Trees. It allows for partially stateless clients, which can be practical in many scenarios. However, fully stateless clients still require archival nodes to store and update client proofs.
+            </p>
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Partially Stateless Clients</h3>
+            <p className="text-gray-300 mb-6">
+              Ergo currently employs an approach outlined in <a href="https://eprint.iacr.org/2016/994.pdf" className="text-blue-400 hover:text-blue-300 underline">this paper</a> to support partially stateless clients. This approach balances security and efficiency, as fully stateless clients still depend on archival nodes for storing and updating client proofs.
+            </p>
+
+            <hr className="border-neutral-700 my-8" />
+
+            <h3 className="text-2xl font-bold mb-4 text-white">Comparison of AVL Trees and Merkle Trees in Ergo</h3>
+            <p className="text-gray-300 mb-6">
+              In Ergo, both AVL trees and Merkle trees play critical roles in ensuring the integrity, security, and efficiency of the blockchain. While they are both binary trees, their specific structures, purposes, and use cases differ significantly, making each suitable for different aspects of the Ergo ecosystem.
+            </p>
+
+            <h4 className="text-xl font-bold mb-3 text-white">AVL Trees (Authenticated Dynamic Dictionaries)</h4>
+            <p className="text-gray-300 mb-4">
+              <strong>Overview</strong>: AVL trees in Ergo, particularly the AVL+ variant, are self-balancing binary search trees used to store and authenticate dynamic data sets. The main characteristic of AVL trees is their ability to maintain balance, which ensures that the height of the tree remains logarithmic in relation to the number of nodes. This property guarantees that operations such as search, insertion, and deletion can be performed efficiently, even as the data set grows.
+            </p>
+
+            <p className="text-gray-300 mb-4">
+              <strong>Use Case in Ergo</strong>:
+            </p>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>UTXO Set Management</strong>: AVL+ trees are employed to manage the UTXO (Unspent Transaction Output) set in the Ergo blockchain. Since UTXOs are frequently created and spent, the dynamic nature of AVL trees makes them ideal for this application. They support efficient updates while providing compact proofs for verification, which is crucial for maintaining the blockchain's performance.</li>
+            </ul>
+
+            <p className="text-gray-300 mb-4">
+              <strong>Key Advantages</strong>:
+            </p>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Efficient Handling of Dynamic Data</strong>: AVL trees are optimized for scenarios where data changes frequently, such as the UTXO set, where coins are constantly being spent and created.</li>
+              <li><strong>Compact Proofs</strong>: AVL+ trees generate compact proofs for the inclusion or exclusion of elements, aiding in efficient state verification.</li>
+            </ul>
+
+            <h4 className="text-xl font-bold mb-3 text-white">Merkle Trees</h4>
+            <p className="text-gray-300 mb-4">
+              <strong>Overview</strong>: Merkle trees are hash-based binary trees where each node contains a cryptographic hash. They are primarily used to ensure the integrity and authenticity of data. In a Merkle tree, leaf nodes represent individual data elements, and each non-leaf node is a hash of its child nodes. The Merkle root, derived from the tree, serves as a cryptographic commitment to the entire data set, allowing for efficient verification of data integrity through Merkle proofs.
+            </p>
+
+            <p className="text-gray-300 mb-4">
+              <strong>Use Case in Ergo</strong>:
+            </p>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Transaction Verification</strong>: Merkle trees are used in Ergo to commit all transactions in a block into a single tree structure. The resulting Merkle root is included in the block header, enabling the network to verify the inclusion of any transaction within the block quickly.</li>
+              <li><strong>Extension Block Security</strong>: Merkle trees are also utilized in the Extension Block to secure additional metadata, such as miner votes and protocol parameters. This ensures that the data has not been tampered with after the block is created.</li>
+            </ul>
+
+            <p className="text-gray-300 mb-4">
+              <strong>Key Advantages</strong>:
+            </p>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Efficient Verification of Static Data</strong>: Merkle trees are particularly well-suited for static or infrequently changing datasets. They allow for quick verification of data integrity without the need to access the entire data set.</li>
+              <li><strong>Compact Proofs</strong>: Merkle proofs are compact and efficient, making them ideal for verifying individual elements within a large dataset, such as transactions within a block.</li>
+            </ul>
+
+            <h4 className="text-xl font-bold mb-3 text-white">Why Use AVL Trees or Merkle Trees?</h4>
+            <p className="text-gray-300 mb-4">
+              <strong>When to Use AVL Trees</strong>:
+            </p>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Dynamic Data Management</strong>: AVL trees are the preferred choice for dynamic data sets that require frequent updates, such as the UTXO set in Ergo.</li>
+              <li><strong>Real-Time Applications</strong>: Their ability to maintain balance and support efficient insertions and deletions makes AVL trees ideal for real-time blockchain applications.</li>
+            </ul>
+
+            <p className="text-gray-300 mb-4">
+              <strong>When to Use Merkle Trees</strong>:
+            </p>
+            <ul className="text-gray-300 space-y-2 ml-4 mb-6">
+              <li><strong>Data Integrity and Authentication</strong>: Merkle trees excel in scenarios where data integrity needs to be proven without frequent modifications. They are perfect for static datasets where the structure remains relatively unchanged, such as in block headers or extension blocks.</li>
+              <li><strong>Efficient Data Verification</strong>: For use cases requiring efficient verification of specific data elements within a large dataset, Merkle trees provide the necessary cryptographic proofs with minimal overhead.</li>
+            </ul>
+
+            <h4 className="text-xl font-bold mb-3 text-white">Conclusion</h4>
+            <p className="text-gray-300 mb-6">
+              Both AVL and Merkle trees are indispensable in the Ergo blockchain, each serving distinct but complementary purposes. AVL trees are optimized for dynamic data management and are essential for handling the UTXO set, where data changes frequently. In contrast, Merkle trees are used to ensure the integrity and authenticity of static datasets, such as transactions within a block or data in the Extension Block, through efficient cryptographic proofs. Understanding these differences is crucial for developers working within the Ergo ecosystem to leverage the right data structure for their specific use case.
             </p>
           </div>
         </TabsContent>

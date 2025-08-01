@@ -11,7 +11,7 @@ export default function DiffiePage() {
       {/* HERO section */}
       <div className="mb-8">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6">
-          Diffie-Hellman (DH) Protocol in Ergo
+          Diffie-Hellman (DH) Protocol
         </h1>
         <p className="text-lg text-gray-300 mb-6">
           The <strong>Diffie-Hellman (DH)</strong> protocol is a cornerstone of cryptography, allowing two parties to generate a shared secret over a public communication channel. This shared secret can then be used to encrypt future communications. Importantly, <strong>Diffie-Hellman does not involve exchanging the secret itself</strong>—instead, the two parties collaboratively generate it, ensuring that the secret remains secure, even if an observer intercepts their communication.
@@ -36,7 +36,8 @@ export default function DiffiePage() {
           In the context of Ergo, <strong>Diffie-Hellman tuples</strong> (DHTs) are used to prove knowledge of a shared secret without revealing it. The tuple consists of public group elements <strong>g, h, u, v</strong>, and the goal is to prove knowledge of a secret <strong>x</strong> such that:
         </p>
 
-        <BlockMath>u = g^x \quad \text{and} \quad v = h^x</BlockMath>
+        <BlockMath>u = g^x</BlockMath>
+        <BlockMath>v = h^x</BlockMath>
 
         <p className="text-gray-300 mb-6">
           The protocol works as follows:
@@ -45,14 +46,15 @@ export default function DiffiePage() {
         <h3 className="text-2xl font-bold mb-4 text-white">Interactive Protocol</h3>
 
         <ol className="list-decimal list-inside space-y-2 text-gray-300 mb-6 ml-4">
-          <li>The prover selects a random value <strong>r ←<sup>R</sup> Z<sub>q</sub></strong> and computes two temporary values <strong>t<sub>0</sub></strong> and <strong>t<sub>1</sub></strong>:
+          <li>The prover selects a random value <strong>r &larr;<sup>R</sup> Z<sub>q</sub></strong> and computes two temporary values <strong>t<sub>0</sub></strong> and <strong>t<sub>1</sub></strong>:
             <BlockMath>t_0 = g^r, \quad t_1 = h^r</BlockMath>
             The prover sends <strong>(t<sub>0</sub>, t<sub>1</sub>)</strong> to the verifier.
           </li>
-          <li>The verifier selects a random challenge <strong>c ←<sup>R</sup> Z<sub>q</sub></strong> and sends it to the prover.</li>
+          <li>The verifier selects a random challenge <strong>c &larr;<sup>R</sup> Z<sub>q</sub></strong> and sends it to the prover.</li>
           <li>The prover computes the response <strong>z = r + cx</strong> and sends it to the verifier.</li>
           <li>The verifier accepts the proof if:
-            <BlockMath>g^z = t_0 \cdot u^c \quad \text{and} \quad h^z = t_1 \cdot v^c</BlockMath>
+            <BlockMath>g^z = t_0 \cdot u^c</BlockMath>
+            <BlockMath>h^z = t_1 \cdot v^c</BlockMath>
             This process allows the prover to demonstrate knowledge of <strong>x</strong> without actually revealing <strong>x</strong>.
           </li>
         </ol>
