@@ -122,7 +122,7 @@ export default function ErgoScriptLanguagesPage() {
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6">
             <div className="text-yellow-400 font-semibold mb-2">📝 Data Inputs</div>
             <div className="text-gray-300">
-              Ergo offers a unique approach to smart contracts by allowing them to access data from other <Link href="/Docs/developers/box" className="text-cyan-400 hover:underline">boxes</Link> on the blockchain without spending them, using <Link href="/Docs/developers/read-only-inputs" className="text-cyan-400 hover:underline font-semibold">data inputs</Link>. This enables efficient access to shared information like <Link href="/Docs/developers/oracles" className="text-cyan-400 hover:underline">oracle price feeds</Link> or <Link href="/Docs/developers/dao" className="text-cyan-400 hover:underline">DAO</Link> parameters.
+              Ergo offers a unique approach to smart contracts by allowing them to access data from other <Link href="/Docs/developers/box" className="text-cyan-400 hover:underline">boxes</Link> on the blockchain without spending them, using <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-cyan-400 hover:underline font-semibold">data inputs</Link>. This enables efficient access to shared information like <Link href="/Docs/developers/oracles" className="text-cyan-400 hover:underline">oracle price feeds</Link> or <Link href="/Docs/developers/dao" className="text-cyan-400 hover:underline">DAO</Link> parameters.
             </div>
           </div>
 
@@ -196,7 +196,7 @@ export default function ErgoScriptLanguagesPage() {
             <li>Always consider <Link href="/Docs/developers/validation" className="text-cyan-400 hover:underline">transaction validation</Link> overhead and potential costs.</li>
             <li>Test contracts thoroughly using playgrounds and SDK testing frameworks.</li>
             <li>Reason carefully about all possible execution paths and potential economic exploits.</li>
-            <li>Leverage <Link href="/Docs/developers/read-only-inputs" className="text-cyan-400 hover:underline">data inputs</Link> for accessing shared state efficiently.</li>
+            <li>Leverage <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-cyan-400 hover:underline">data inputs</Link> for accessing shared state efficiently.</li>
           </ol>
 
           <h2 className="text-2xl font-bold text-cyan-400 mb-4">Common Pitfalls to Avoid</h2>

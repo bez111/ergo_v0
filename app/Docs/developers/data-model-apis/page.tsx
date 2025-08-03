@@ -3,10 +3,11 @@
 import React from "react";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 import {
   Database, Box, FileText, Shield, Key, Users, Layers, 
   BookOpen, ChevronRight, Cpu, Zap, Lock, Eye, Quote,
-  Brain, Target, Code, Network, Settings, Globe
+  Brain, Target, Code, Network, Settings, Globe, RefreshCw, Coins
 } from "lucide-react";
 
 // Table of contents for Overview tab
@@ -106,7 +107,7 @@ export default function DataModelApisPage() {
           <Layers className="w-4 h-4" /> Block
         </TabsTrigger>
         <TabsTrigger value="discrete" className="flex items-center gap-2 justify-center">
-          <Shield className="w-4 h-4" /> Discrete Logarithm
+          <Lock className="w-4 h-4" /> DLog Proofs
         </TabsTrigger>
       </TabsList>
 
@@ -343,7 +344,7 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">5.3 Specialized Transaction Features</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/read-only-inputs" className="text-orange-400 hover:underline">Data Inputs (Read-Only Inputs)</Link>: Access additional data in transactions without spending boxes.</li>
+                  <li><Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline">Data Inputs (Read-Only Inputs)</Link>: Access additional data in transactions without spending boxes.</li>
                   <li><Link href="/Docs/developers/min-fee" className="text-orange-400 hover:underline">Transaction Fees</Link>: Understanding fee structures, ensuring that <Link href="/Docs/developers/mining-overview" className="text-orange-400 hover:underline">miners</Link> are incentivized.</li>
                   <li><Link href="/Docs/developers/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> and <Link href="/Docs/developers/babel-fleet" className="text-orange-400 hover:underline">Babel Fees Plugin</Link>: Innovative mechanisms allowing fees to be paid in alternative <Link href="/Docs/developers/eip4" className="text-orange-400 hover:underline">tokens</Link>.</li>
                 </ul>
@@ -603,17 +604,170 @@ export default function DataModelApisPage() {
       <TabsContent value="box">
         <div className="space-y-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-            Box Architecture
+            The Ergo 'Box' Model
           </h1>
           <p className="text-xl text-gray-400 mb-6">
-            Understanding Ergo's foundational state units - Boxes as enhanced UTXOs with programmable capabilities.
+            Ergo uses a transactional model similar to Bitcoin's UTXO model, where transactions create and consume single-use entities called 'boxes'.
           </p>
-          
-          <div className="bg-blue-400/10 border border-blue-400/20 rounded-xl p-6">
-            <h2 className="text-2xl font-bold mb-4">Box Structure & Components</h2>
-            <p className="text-gray-300 mb-4">
-              Detailed exploration of Box architecture, registers, and capabilities coming soon...
-            </p>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <Link href="/Docs/developers/data-model-apis/registers" className="group">
+              <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                    <Database className="w-6 h-6 text-blue-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-blue-400">Registers</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Boxes contain 10 registers (R0-R9) with specific purposes and rich computational potential.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-blue-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/Docs/developers/data-model-apis/lifecycle" className="group">
+              <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                    <RefreshCw className="w-6 h-6 text-green-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-green-400">Lifecycle</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Understanding how boxes are created, consumed, and managed throughout their lifecycle.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-green-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/Docs/developers/data-model-apis/assets" className="group">
+              <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                    <Coins className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-purple-400">Assets</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Boxes can hold various assets including ERG, tokens, and custom data structures.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-purple-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/Docs/developers/data-model-apis/modeling" className="group">
+              <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                    <Cpu className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-orange-400">Modeling</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  Advanced patterns and techniques for modeling complex state in Ergo boxes.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-orange-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Main Content */}
+          <div className="space-y-6">
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">Key Points</h2>
+              <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li>A box is an immutable unit, which can be created or removed, but never altered.</li>
+                <li>The box is not just a simple coin; it houses data, code, and <Link href="/Docs/developers/registers" className="text-orange-400 hover:underline">registers</Link>, with all of its contents exclusively stored in the registers.</li>
+                <li>Four pre-defined registers contain the box's monetary value, its protection script (the <Link href="/Docs/developers/ergotree" className="text-orange-400 hover:underline">ErgoTree</Link>), and the ID of the transaction that created the box.</li>
+                <li>Each box has a unique ID, derived from the unique contents of the box, including the data of the transaction that created it.</li>
+                <li>Boxes are integral to the Ergo <Link href="/Docs/developers/protocol-overview" className="text-orange-400 hover:underline">protocol</Link>. The active box set (UTXO set) is authenticated through a <Link href="/Docs/developers/structures/merkle/merkle-tree" className="text-orange-400 hover:underline">hash-based data structure</Link>, facilitating the development of <Link href="/Docs/developers/light-full-node" className="text-orange-400 hover:underline">lightweight full nodes</Link>, as detailed in <a href="https://eprint.iacr.org/2016/994" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">this paper</a>.</li>
+                <li>A box can hold up to six additional <Link href="/Docs/developers/registers" className="text-orange-400 hover:underline">registers</Link> (R4-R9) with typed data, accessible by the script.</li>
+                <li>Transactions consist of both <em>input</em> and <em>output</em> boxes.</li>
+              </ul>
+            </div>
+
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4 text-green-400">Example Box</h2>
+              <p className="text-gray-300 mb-4">
+                Consider the 'proof-of-no-premine' box from the Ergo genesis state. This box contains the last block IDs from Bitcoin and Ethereum at the launch time, as well as the latest news headlines:
+              </p>
+              <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
+                <UniversalCopyCodeBlock
+                  code={`{
+  "boxId": "b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd",
+  "value": 1000000000,
+  "ergoTree": "10010100d17300",
+  "assets": [],
+  "creationHeight": 0,
+  "additionalRegisters": {
+    "R5": "0e42307864303761393732393334363864393133326335613261646162326535326132333030396536373938363038653437623064323632336337653365393233343633",
+    "R6": "0e464272657869743a20626f746820546f727920736964657320706c617920646f776e207269736b206f66206e6f2d6465616c20616674657220627573696e65737320616c61726d",
+    "R8": "0e45d094d0b8d0b2d0b8d0b4d0b5d0bdd0b4d18b20d0a7d0a2d09fd09720d0b2d18bd180d0b0d182d183d18220d0bdd0b02033332520d0bdd0b020d0b0d0bad186d0b8d18e",
+    "R7": "0e54e8bfb0e8af84efbc9ae5b9b3e8a1a1e38081e68c81e7bbade38081e58c85e5aeb9e28094e28094e696b0e697b6e4bba3e5ba94e5afb9e585a8e79083e58c96e68c91e68898e79a84e4b8ade59bbde4b98be98193",
+    "R4": "0e4030303030303030303030303030303030303031346332653265376533336435316165376536366636636362363934326333343337313237623336633333373437"
+  }
+}`}
+                />
+              </div>
+            </div>
+
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4 text-purple-400">Additional Box Functions</h2>
+              <p className="text-gray-300 mb-4">
+                Besides the <Link href="/Docs/developers/registers" className="text-orange-400 hover:underline">registers</Link>, each box features a unique identification hash that can be referenced using the <code className="bg-neutral-700 px-2 py-1 rounded">id</code> function in <Link href="/Docs/developers/ergoscript" className="text-orange-400 hover:underline">ErgoScript</Link>. Box ids are computed by applying the <code className="bg-neutral-700 px-2 py-1 rounded">blake2b256</code> hash function to the box's content.
+              </p>
+              
+              <h3 className="text-xl font-semibold mb-3 text-orange-400">Example ErgoScript</h3>
+              <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
+                <UniversalCopyCodeBlock
+                  code={`{ // Example ErgoScript using box properties
+  // Retrieve the value and token multipliers from the registers of the current box (SELF)
+  val valueMultiplier = SELF.R4[Int].get
+  val tokenMultiplier = INPUTS(1).R4[Int].get // Accessing register of another input box
+
+  // Check if the current box being spent (SELF) is the same as the first input box
+  if(SELF.id == INPUTS(0).id){
+    // If it is, check if the first output box has the correct value and token amounts
+    val outputValue = OUTPUTS(0).value == SELF.value * valueMultiplier
+    val outputTokens = OUTPUTS(0).tokens(0)._2 == SELF.value * tokenMultiplier
+    // Return a Sigma proposition that is true only if both outputValue and outputTokens are true
+    sigmaProp(outputValue && outputTokens)
+  }else{
+    // If the current box is not the same as the first input box, check if the output goes to a specified address
+    val outputGoesToCheese = {
+      // Create a public key that corresponds to a specific address
+      PK("9etXmP7D3ZkWssDopWcWkCPpjn22RVuEyXoFSbVPWAvvzDbcDXE").propBytes
+        == OUTPUTS(0).propositionBytes // propositionBytes holds the script (ErgoTree)
+    }
+    // Return a Sigma proposition that is true only if outputGoesToCheese is true
+    sigmaProp(outputGoesToCheese)
+  }
+}
+// Context Variables used: SELF, INPUTS, OUTPUTS (See ../scs/blockchain-context.md)
+// Functions used: sigmaProp, PK (See ../scs/sigma.md)`}
+                />
+              </div>
+            </div>
+
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4 text-blue-400">Additional Resources</h2>
+              <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li>See the <Link href="/Docs/developers/format" className="text-orange-400 hover:underline">Transaction Format</Link> page for details on how boxes are serialized within transactions.</li>
+                <li>For the box type description in the <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md#box-type" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ErgoScript language specification</a>.</li>
+                <li>Visit <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/ec71a6f988f7412bc36199f46e7ad8db643478c7/sigmastate/src/main/scala/org/ergoplatform/ErgoAddress.scala" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ErgoAddress.scala</a>, <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala#L24-L43" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ErgoBoxCandidate</a>, and <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBox.scala#L22-L59" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ErgoBox</a> in the reference client codebase.</li>
+                <li>For an in-depth explanation on Ergo box modeling, see <Link href="/Docs/developers/box_modeling" className="text-orange-400 hover:underline">this page</Link>.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </TabsContent>
@@ -621,17 +775,55 @@ export default function DataModelApisPage() {
       <TabsContent value="addresses">
         <div className="space-y-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-green-400 to-teal-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-            Address System
+            Addresses
           </h1>
-          <p className="text-xl text-gray-400 mb-6">
-            Comprehensive guide to Ergo's address types, encoding, and validation mechanisms.
-          </p>
           
-          <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6">
-            <h2 className="text-2xl font-bold mb-4">Address Types & Encoding</h2>
-            <p className="text-gray-300 mb-4">
-              Detailed address documentation coming soon...
-            </p>
+          <div className="space-y-6">
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+              <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li>Addresses in Ergo are short strings that correspond to specific scripts and serve as a means to protect a <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">box</Link>.</li>
+                <li>Unlike Bitcoin (BTC), where addresses store a single amount, in Ergo's <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTxO</Link> model, a box contains <Link href="/Docs/developers/registers" className="text-orange-400 hover:underline">registers</Link> that can store various values, including its native tokens.</li>
+                <li>So, each <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">box</Link> has an ERG amount and may or may not have a bunch of <code className="bg-neutral-700 px-2 py-1 rounded">{`{tokenid, token amount}`}</code> pairs, all in the UTXO model.</li>
+                <li>Unlike account-based models like eth, ergo tokens are <em>native</em> and are not smart contracts.</li>
+              </ul>
+            </div>
+
+            {/* Hero Buttons */}
+            <div className="flex gap-4">
+              <Link href="/Docs/developers/data-model-apis/address_types" className="group">
+                <button className="px-6 py-3 bg-green-500/10 border border-green-500/20 rounded-xl hover:bg-green-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
+                  <Key className="w-5 h-5 text-green-400" />
+                  <span className="text-green-400 font-semibold">Types</span>
+                </button>
+              </Link>
+              <Link href="/Docs/developers/data-model-apis/address_validation" className="group">
+                <button className="px-6 py-3 bg-teal-500/10 border border-teal-500/20 rounded-xl hover:bg-teal-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
+                  <Shield className="w-5 h-5 text-teal-400" />
+                  <span className="text-teal-400 font-semibold">Validation</span>
+                </button>
+              </Link>
+            </div>
+
+            <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4">Address Types</h2>
+              <p className="text-gray-300">
+                Learn about the different types of addresses used in Ergo and their corresponding address types by visiting the <Link href="/Docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Types</Link> page.
+              </p>
+            </div>
+
+            <div className="bg-teal-400/10 border border-teal-400/20 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4">Address Validation</h2>
+              <p className="text-gray-300">
+                Learn how to validate Ergo addresses by visiting the <Link href="/Docs/developers/data-model-apis/address_validation" className="text-orange-400 hover:underline">Address Validation</Link> page, which provides essential insights and methods for verifying P2S, P2SH, and P2PK addresses.
+              </p>
+            </div>
+
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4">Resources</h2>
+              <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li><a href="https://github.com/CryptoCream/ErgoVision" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Ergo Vision</a> | A wallet visualization tool to be used for investigating transactions and addresses</li>
+              </ul>
+            </div>
           </div>
         </div>
       </TabsContent>
@@ -639,17 +831,99 @@ export default function DataModelApisPage() {
       <TabsContent value="transactions">
         <div className="space-y-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-            Transaction System
+            Transactions
           </h1>
-          <p className="text-xl text-gray-400 mb-6">
-            Deep dive into Ergo's transaction structure, validation, and advanced features.
-          </p>
           
-          <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6">
-            <h2 className="text-2xl font-bold mb-4">Transaction Architecture</h2>
-            <p className="text-gray-300 mb-4">
-              Comprehensive transaction documentation coming soon...
+          <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+            <p className="text-gray-300">
+              Each Ergo transaction is an <b>atomic state transition operation</b>, which means that it <em>destroys</em> a <Link href="/Docs/developers/data-model-apis" className="text-orange-400 hover:underline">box</Link> from the state and creates new ones.
             </p>
+          </div>
+
+          {/* Hero Buttons */}
+          <div className="flex flex-wrap gap-4">
+            <Link href="/Docs/developers/data-model-apis/composing" className="group">
+              <button className="px-6 py-3 bg-purple-500/10 border border-purple-500/20 rounded-xl hover:bg-purple-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
+                <Network className="w-5 h-5 text-purple-400" />
+                <span className="text-purple-400 font-semibold">Composing Transactions</span>
+              </button>
+            </Link>
+            <Link href="/Docs/developers/data-model-apis/babel-fees" className="group">
+              <button className="px-6 py-3 bg-pink-500/10 border border-pink-500/20 rounded-xl hover:bg-pink-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
+                <Coins className="w-5 h-5 text-pink-400" />
+                <span className="text-pink-400 font-semibold">Babel Fees</span>
+              </button>
+            </Link>
+            <Link href="/Docs/developers/data-model-apis/resources" className="group">
+              <button className="px-6 py-3 bg-cyan-500/10 border border-cyan-500/20 rounded-xl hover:bg-cyan-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
+                <BookOpen className="w-5 h-5 text-cyan-400" />
+                <span className="text-cyan-400 font-semibold">Resources</span>
+              </button>
+            </Link>
+          </div>
+
+          <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4">Anatomy</h2>
+            <p className="text-gray-300 mb-4">
+              Each transaction executed on Ergo consists of <b>these three things</b>.
+            </p>
+            
+            <div className="space-y-4">
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h3 className="text-lg font-semibold text-purple-300 mb-2">
+                  <code className="bg-purple-600/20 px-2 py-1 rounded">One or more</code> Input boxes
+                </h3>
+                <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                  <li>This is the source of your funds for the transaction.</li>
+                  <li>These boxes must already exist and will be destroyed by the transaction.</li>
+                  <li>The guard script in each box will be evaluated and must return <code className="bg-neutral-700 px-2 py-1 rounded">true</code> for the transaction to be considered valid.</li>
+                </ul>
+              </div>
+
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h3 className="text-lg font-semibold text-pink-300 mb-2">
+                  <code className="bg-pink-600/20 px-2 py-1 rounded">One or more</code> Output boxes
+                </h3>
+                <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                  <li>This is your destination of funds.</li>
+                  <li>These boxes will be created.</li>
+                </ul>
+              </div>
+
+              <div className="bg-neutral-900/50 rounded-lg p-4">
+                <h3 className="text-lg font-semibold text-cyan-300 mb-2">
+                  <code className="bg-cyan-600/20 px-2 py-1 rounded">Zero or more</code> Data-Input boxes
+                </h3>
+                <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                  <li>These are additional boxes whose data can be referenced and used by smart contracts of the inputs.</li>
+                  <li>The guard script in these boxes will not be evaluated.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6">
+            <h3 className="text-xl font-bold mb-3 text-cyan-400">Data Inputs</h3>
+            <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+              <li><Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline"><b>Data inputs</b></Link> are a unique concept created by Ergo, which were added to Cardano with the <em>Vasil</em> Hardfork. These allow multiple transactions to share a data-input box, storing only a single reference to the box in the block.</li>
+            </ul>
+          </div>
+
+          <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4">Overview</h2>
+            <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+              <li>If the transaction is spending boxes protected by a non-trivial script, its inputs should also contain <em>proof of spending correctness</em> - context extension (user-defined key-value map) and data inputs (links to existing boxes in the state) that you may use during script reduction to crypto, signatures that satisfies the remaining cryptographic protection of the script.</li>
+              <li>Transactions are not encrypted, meaning you can publicly view transactions included in blocks.</li>
+            </ul>
+          </div>
+
+          <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4">Tools</h2>
+            <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+              <li>
+                <a href="https://thierrym1212.github.io/txbuilder/" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Transaction builder</a> | The application allows you to manipulate Ergo JSON transactions with a UI and to sign them with a wallet or to prepare the JSON for the Swagger API. It can also load the JSON of an unsigned transaction to edit it. | <a href="https://github.com/ThierryM1212/transaction-builder/" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a> | <a href="https://youtu.be/0VhfY7osT2k" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Video</a>
+              </li>
+            </ul>
           </div>
         </div>
       </TabsContent>

@@ -678,6 +678,42 @@ val thresholdProof = prove {
         </TabsContent>
 
         <TabsContent value="data-structures">
+          {/* HERO section */}
+          <div className="mb-8">
+            <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6">
+              Data Structures
+            </h1>
+            <p className="text-lg text-gray-300 mb-6">
+              Ergo employs specialized cryptographic data structures to ensure secure and efficient state management within its blockchain. These structures form the foundation for UTXO management, transaction verification, and smart contract execution.
+            </p>
+            <div className="flex flex-wrap gap-4 mb-6">
+              <Link
+                href="/Docs/developers/cryptographic-primitives/avl"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+              >
+                <Database className="w-5 h-5 mr-2" /> AVL Trees
+              </Link>
+              <Link
+                href="/Docs/developers/cryptographic-primitives/merkle-tree"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+              >
+                <Database className="w-5 h-5 mr-2" /> Merkle Trees
+              </Link>
+              <Link
+                href="/Docs/developers/cryptographic-primitives/popow"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+              >
+                <Database className="w-5 h-5 mr-2" /> PoPow
+              </Link>
+              <Link
+                href="/Docs/developers/cryptographic-primitives/interlink-vectors"
+                className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
+              >
+                <Database className="w-5 h-5 mr-2" /> Interlink Vectors
+              </Link>
+            </div>
+          </div>
+
           <div className="prose prose-invert max-w-none">
             <h2 className="text-3xl font-bold mb-8 text-white">Data Structures in Ergo</h2>
             
@@ -715,15 +751,7 @@ val thresholdProof = prove {
               <li><strong>Documentation Reference</strong>: <a href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Trees in Ergo</a></li>
             </ul>
 
-            <div className="mb-6">
-              <Link
-                href="/Docs/developers/cryptographic-primitives/merkle-tree"
-                className="inline-flex items-center px-6 py-3 bg-green-500 rounded-xl font-semibold text-black hover:bg-green-600 transition-transform hover:scale-105"
-              >
-                <Database className="w-5 h-5 mr-2" />
-                Merkle Tree
-              </Link>
-            </div>
+
 
             <h3 className="text-2xl font-bold mb-4 text-white">3. Sigma Trees (ErgoTree)</h3>
             <ul className="text-gray-300 space-y-2 ml-4 mb-6">

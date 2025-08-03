@@ -11,12 +11,12 @@ export default function ErgoTreeEncodingPage() {
       <div className="mb-10">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent mb-4 leading-tight pb-1 flex items-center gap-3">
           <Binary className="w-8 h-8 text-indigo-400" /> Understanding ErgoTree Encoding
-        </h1>
+      </h1>
         <p className="text-xl text-gray-400 mb-6 max-w-2xl">
           A comprehensive guide to ErgoTree's binary formatting system for storage, transfer, and cross-platform operation of contracts.
         </p>
-        <Link 
-          href="/Docs/developers/ergoscript-languages" 
+        <Link
+          href="/Docs/developers/ergoscript-languages"
           className="inline-flex items-center px-6 py-3 bg-indigo-500 rounded-xl font-semibold text-black hover:bg-indigo-600 transition-transform hover:scale-105 gap-2"
         >
           <ArrowLeft className="w-5 h-5" />
