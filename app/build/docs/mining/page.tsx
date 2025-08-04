@@ -15,6 +15,7 @@ import {
   Link2,
 } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 export default function MiningPage() {
   return (
@@ -134,14 +135,14 @@ export default function MiningPage() {
             Replace `YOUR_ERGO_WALLET_ADDRESS` with your actual Ergo wallet address and `YOUR_WORKER_NAME` with a name for your mining rig.
           </p>
           <p className="text-gray-300 text-sm mb-1"><strong>Windows (.bat file):</strong></p>
-          <div className="bg-neutral-900/80 border border-blue-500/20 rounded-lg p-4 my-2 overflow-x-auto">
-            <pre className="text-orange-200 text-sm"><code>{`miner.exe --algo autolykos2 --server stratum+tcp://erg.2miners.com:9090 --user YOUR_ERGO_WALLET_ADDRESS.YOUR_WORKER_NAME
-pause`}</code></pre>
-          </div>
+          <UniversalCopyCodeBlock
+            code={`miner.exe --algo autolykos2 --server stratum+tcp://erg.2miners.com:9090 --user YOUR_ERGO_WALLET_ADDRESS.YOUR_WORKER_NAME
+pause`}
+          />
           <p className="text-gray-300 text-sm mb-1"><strong>Linux (command line):</strong></p>
-          <div className="bg-neutral-900/80 border border-blue-500/20 rounded-lg p-4 my-2 overflow-x-auto">
-            <pre className="text-orange-200 text-sm"><code>{`./miner --algo autolykos2 --server stratum+tcp://erg.2miners.com:9090 --user YOUR_ERGO_WALLET_ADDRESS.YOUR_WORKER_NAME`}</code></pre>
-          </div>
+          <UniversalCopyCodeBlock
+            code={`./miner --algo autolykos2 --server stratum+tcp://erg.2miners.com:9090 --user YOUR_ERGO_WALLET_ADDRESS.YOUR_WORKER_NAME`}
+          />
           <div className="mt-4 text-sm text-orange-300 flex items-center gap-2">
             <AlertTriangle className="w-4 h-4" /> Always verify the pool's stratum address and port on their official website.
           </div>
@@ -168,7 +169,9 @@ pause`}</code></pre>
           <p className="text-gray-300 text-sm mb-3">
             Ensure your Ergo node is running and its RPC API is accessible (typically `http://localhost:9053`).
           </p>
-          <pre className="bg-black text-orange-200 text-sm p-3 rounded-lg overflow-x-auto font-mono">{`./miner --algo autolykos2 --server http://localhost:9053 --user YOUR_ERGO_WALLET_ADDRESS`}</pre>
+          <UniversalCopyCodeBlock
+            code="./miner --algo autolykos2 --server http://localhost:9053 --user YOUR_ERGO_WALLET_ADDRESS"
+          />
           <p className="text-gray-400 text-xs mt-2">
             Replace `YOUR_ERGO_WALLET_ADDRESS` with the address of the wallet associated with your local node.
           </p>

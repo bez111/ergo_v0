@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Code, BookOpen, Layers, Shield, CheckCircle, AlertTriangle, ChevronRight } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 export default function ErgoScriptLanguageReferencePage() {
   return (
@@ -28,17 +29,21 @@ export default function ErgoScriptLanguageReferencePage() {
         </p>
         <div className="bg-neutral-900/60 border border-neutral-700 rounded-xl p-6">
           <h3 className="font-semibold mb-3 text-orange-400">Basic Structure:</h3>
-          <pre className="bg-black text-orange-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`{
+          <UniversalCopyCodeBlock
+            code={`{
   // ErgoScript code goes here
   // The last expression evaluated is the spending condition
   sigmaProp(true) // Example: always true
-}`}</pre>
+}`}
+          />
           <h3 className="font-semibold mt-6 mb-3 text-orange-400">Comments:</h3>
-          <pre className="bg-black text-orange-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`// Single-line comment
+          <UniversalCopyCodeBlock
+            code={`// Single-line comment
 /*
   Multi-line
   comment
-*/`}</pre>
+*/`}
+          />
         </div>
       </section>
 

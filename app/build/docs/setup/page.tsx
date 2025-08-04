@@ -12,6 +12,7 @@ import {
   ChevronRight,
   Smartphone,
 } from "lucide-react"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 export default function SetupPage() {
   return (
@@ -174,9 +175,9 @@ export default function SetupPage() {
               </li>
               <li>
                 **Start the node:** Open your terminal in the node directory and run:
-                <pre className="bg-black text-orange-300 p-3 rounded-lg overflow-x-auto">
-                  <code>java -jar ergo.jar -c ergo.conf</code>
-                </pre>
+                <UniversalCopyCodeBlock
+                  code="java -jar ergo.jar -c ergo.conf"
+                />
               </li>
             </ol>
           </div>
@@ -197,11 +198,9 @@ export default function SetupPage() {
               </li>
               <li>
                 Run the Ergo Node Docker image:
-                <pre className="bg-black text-cyan-300 p-3 rounded-lg overflow-x-auto">
-                  <code>
-                    docker run -p 9053:9053 -p 9030:9030 -v ergo_data:/root/.ergo --name ergo-node ergoplatform/ergo:latest -D ergo.network.network=testnet
-                  </code>
-                </pre>
+                <UniversalCopyCodeBlock
+                  code={`docker run -p 9053:9053 -p 9030:9030 -v ergo_data:/root/.ergo --name ergo-node ergoplatform/ergo:latest -D ergo.network.network=testnet`}
+                />
                 <p className="text-sm text-gray-400 mt-2">
                   This command maps ports 9053 (REST API) and 9030 (P2P) and mounts a volume for persistent data.
                 </p>

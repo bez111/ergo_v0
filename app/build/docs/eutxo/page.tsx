@@ -13,6 +13,7 @@ import {
   Globe,
 } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 export default function EUTXOPage() {
   return (
@@ -144,9 +145,8 @@ export default function EUTXOPage() {
               <p className="text-gray-300 text-sm mb-4">
                 Consider a simple counter dApp. The current count would be stored in an Ergo box:
               </p>
-              <div className="bg-black border border-neutral-600 rounded-lg p-4">
-                <pre className="text-xs text-gray-300">
-{`Box {
+              <UniversalCopyCodeBlock
+                code={`Box {
   value: 1000000, // 0.001 ERG (minimum value)
   assets: [],
   ergoTree: "0008cd03...", // Compiled ErgoScript for counter logic
@@ -155,8 +155,7 @@ export default function EUTXOPage() {
   },
   creationHeight: 1234567 // Block height when this box was created
 }`}
-                </pre>
-              </div>
+              />
               <p className="text-sm text-gray-400 mt-3">
                 This box contains a counter value of 42 in register R4, protected by a script that only allows the owner to increment it. To update the counter, this box is consumed, and a new box with `R4: 43` is created.
               </p>
@@ -360,17 +359,17 @@ export default function EUTXOPage() {
               <div className="space-y-3">
                 <div className="bg-black border border-neutral-600 rounded-lg p-3">
                   <h4 className="font-semibold text-sm text-white mb-1">Simple Signature (Pay-to-Public-Key)</h4>
-                  <pre className="text-xs text-gray-300">pk.isValid</pre>
+                  <UniversalCopyCodeBlock code="pk.isValid" />
                   <p className="text-gray-400 text-xs mt-1">Requires a valid signature from the public key `pk`.</p>
                 </div>
                 <div className="bg-black border border-neutral-600 rounded-lg p-3">
                   <h4 className="font-semibold text-sm text-white mb-1">Multi-Signature (Any-of-N)</h4>
-                  <pre className="text-xs text-gray-300">pk1.isValid || pk2.isValid</pre>
+                  <UniversalCopyCodeBlock code="pk1.isValid || pk2.isValid" />
                   <p className="text-gray-400 text-xs mt-1">Requires a valid signature from either `pk1` OR `pk2`.</p>
                 </div>
                 <div className="bg-black border border-neutral-600 rounded-lg p-3">
                   <h4 className="font-semibold text-sm text-white mb-1">Time Lock (Absolute Height)</h4>
-                  <pre className="text-xs text-gray-300">HEIGHT &gt; 1000000</pre>
+                  <UniversalCopyCodeBlock code="HEIGHT > 1000000" />
                   <p className="text-gray-400 text-xs mt-1">The box can only be spent after block height 1,000,000.</p>
                 </div>
               </div>

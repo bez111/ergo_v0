@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Package, Coins, Code, CheckCircle, AlertTriangle, ChevronRight, Image as LucideImage } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 import Image from "next/image"
 
 export default function TokensPage() {
@@ -83,7 +84,8 @@ export default function TokensPage() {
           <p className="text-gray-300 text-sm mb-3">
             To mint a new token, you create a transaction where the first output box contains the token definition. The `tokenId` of the newly minted token will be the `boxId` of the first input box of the minting transaction.
           </p>
-          <pre className="bg-black text-purple-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`import { ErgoAddress, SByte, SColl, SConstant, SLong, TransactionBuilder } from '@fleet-sdk/core';
+          <UniversalCopyCodeBlock
+            code={`import { ErgoAddress, SByte, SColl, SConstant, SLong, TransactionBuilder } from '@fleet-sdk/core';
 import { hexToBytes } from '@fleet-sdk/common';
 
 // ... (Node URL, API Key, Sender Address, Recipient Address setup)
@@ -122,13 +124,14 @@ async function mintToken() {
   // ... (Sign and send transaction)
 }
 
-mintToken();
-`}</pre>
+mintToken();`}
+          />
           <h3 className="font-semibold mt-6 mb-3 text-purple-400">Transferring Tokens:</h3>
           <p className="text-gray-300 text-sm mb-3">
             Transferring tokens is similar to transferring ERG. You consume a box containing the tokens and create a new box with the tokens sent to the recipient.
           </p>
-          <pre className="bg-black text-purple-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`import { ErgoAddress, TransactionBuilder } from '@fleet-sdk/core';
+          <UniversalCopyCodeBlock
+            code={`import { ErgoAddress, TransactionBuilder } from '@fleet-sdk/core';
 
 // ... (Node URL, API Key, Sender Address, Recipient Address setup)
 
@@ -160,8 +163,8 @@ async function sendToken() {
   // ... (Sign and send transaction)
 }
 
-sendToken();
-`}</pre>
+sendToken();`}
+          />
         </div>
       </section>
 

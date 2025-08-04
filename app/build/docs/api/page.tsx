@@ -11,6 +11,7 @@ import {
     ExternalLink,
   } from "lucide-react"
   import Link from "next/link"
+  import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
   
   export default function ApiPage() {
     return (
@@ -93,11 +94,11 @@ import {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-blue-400"><Info className="w-6 h-6" /> Example: Get Node Info</h2>
           <p className="mb-2 text-gray-300">Returns general information about the node's status, including current blockchain height, version, and sync status.</p>
-          <div className="bg-neutral-900/80 border border-blue-500/20 rounded-lg p-4 mb-2 overflow-x-auto">
-            <pre className="text-orange-200 text-sm"><code>{`curl http://localhost:9053/info`}</code></pre>
-          </div>
-          <div className="bg-neutral-900/60 border border-blue-500/10 rounded-lg p-4 text-xs font-mono text-gray-200 overflow-x-auto">
-            <pre>{`{
+          <UniversalCopyCodeBlock
+            code={`curl http://localhost:9053/info`}
+          />
+          <UniversalCopyCodeBlock
+            code={`{
     "name": "ergo",
     "appVersion": "5.0.0",
     "fullHeight": 1234567,
@@ -111,27 +112,27 @@ import {
     "genesisBlockId": "...",
     "network": "testnet",
     "parameters": {}
-  }`}</pre>
-          </div>
+  }`}
+          />
         </section>
   
         {/* Example: Send Transaction */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-green-400"><Settings2 className="w-6 h-6" /> Example: Send Signed Transaction</h2>
           <p className="mb-2 text-gray-300">Submits a fully signed transaction to the network. The transaction must be in JSON format.</p>
-          <div className="bg-neutral-900/80 border border-green-500/20 rounded-lg p-4 mb-2 overflow-x-auto">
-            <pre className="text-orange-200 text-sm"><code>{`curl -X POST -H "Content-Type: application/json" \
+          <UniversalCopyCodeBlock
+            code={`curl -X POST -H "Content-Type: application/json" \\
     -d '{
       "id": "...",
       "inputs": [...],
       "dataInputs": [],
       "outputs": [...]
-    }' \
-    http://localhost:9053/transactions/send`}</code></pre>
-          </div>
-          <div className="bg-neutral-900/60 border border-green-500/10 rounded-lg p-4 text-xs font-mono text-gray-200 overflow-x-auto">
-            <pre>{`"transactionId_of_submitted_transaction"`}</pre>
-          </div>
+    }' \\
+    http://localhost:9053/transactions/send`}
+          />
+          <UniversalCopyCodeBlock
+            code={`"transactionId_of_submitted_transaction"`}
+          />
         </section>
   
         {/* Error Handling */}
@@ -141,13 +142,13 @@ import {
             <li>Standard HTTP status codes (200, 400, 401, 500, ...)</li>
             <li>JSON error responses with <span className="font-mono">error</span> and <span className="font-mono">detail</span> fields</li>
           </ul>
-          <div className="bg-neutral-900/60 border border-red-500/10 rounded-lg p-4 text-xs font-mono text-gray-200 overflow-x-auto mb-2">
-            <pre>{`{
+          <UniversalCopyCodeBlock
+            code={`{
     "error": 400,
     "reason": "Bad Request",
     "detail": "Transaction is invalid: Insufficient funds"
-  }`}</pre>
-          </div>
+  }`}
+          />
           <div className="mt-4 text-sm text-orange-300 flex items-center gap-2">
             <Info className="w-4 h-4" />
             For the most up-to-date API docs, use the <Link href="http://localhost:9053/swagger" target="_blank" className="underline text-orange-400">Swagger UI</Link> of your running node.

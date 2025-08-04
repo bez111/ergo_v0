@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Code, Shield, KeyRound, Layers, CheckCircle, AlertTriangle, ChevronRight, BookOpen, ExternalLink } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 export default function AdvancedErgoScriptPage() {
   return (
@@ -76,12 +77,14 @@ export default function AdvancedErgoScriptPage() {
             </li>
           </ul>
           <h3 className="font-semibold mt-6 mb-3 text-orange-400">Example: Time-Locked Multi-Sig</h3>
-          <pre className="bg-black text-orange-300 p-3 rounded-lg overflow-x-auto font-mono text-sm">{`{
+          <UniversalCopyCodeBlock
+            code={`{
   // Requires 2 of 3 signatures OR
   // 1 signature after a certain block height
   atLeast(2, Coll(pk1, pk2, pk3)) ||
   (HEIGHT > 1234567 && pk1.isValid)
-}`}</pre>
+}`}
+          />
           <p className="text-gray-400 text-xs mt-2">
             This contract demonstrates combining a multi-signature condition with a time-lock fallback, showcasing the expressiveness of ErgoScript.
           </p>

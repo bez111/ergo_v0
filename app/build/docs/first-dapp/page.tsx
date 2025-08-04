@@ -2,6 +2,7 @@
 
 import { Code, BookOpen, Settings, Rocket, CheckCircle, AlertTriangle } from "lucide-react";
 import Link from "next/link";
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 
 export default function FirstDappPage() {
   return (
@@ -40,11 +41,16 @@ export default function FirstDappPage() {
           </li>
           <li>
             Clone the <b>Fleet SDK</b> starter project:
-            <pre className="bg-zinc-900 rounded p-3 text-sm overflow-x-auto mt-2">{`git clone https://github.com/fleet-sdk/fleet-starter.git`}</pre>
+                          <UniversalCopyCodeBlock
+                code={`git clone https://github.com/fleet-sdk/fleet-starter.git`}
+              />
           </li>
           <li>
             Install dependencies:
-            <pre className="bg-zinc-900 rounded p-3 text-sm overflow-x-auto mt-2">{`cd fleet-starter\nnpm install`}</pre>
+                          <UniversalCopyCodeBlock
+                code={`cd fleet-starter
+npm install`}
+              />
           </li>
         </ol>
       </div>
@@ -55,7 +61,10 @@ export default function FirstDappPage() {
           <Code className="w-5 h-5 text-cyan-400" /> 2. Write a Simple ErgoScript Contract
         </h2>
         <p className="mb-2">Let's create a basic contract that allows spending only by a specific public key.</p>
-        <pre className="bg-zinc-900 rounded p-3 text-sm overflow-x-auto mb-2">{`// simple-contract.es\nsigmaProp(pubKey == YOUR_PUBLIC_KEY)`}</pre>
+                  <UniversalCopyCodeBlock
+            code={`// simple-contract.es
+sigmaProp(pubKey == YOUR_PUBLIC_KEY)`}
+          />
         <p className="text-gray-400 text-xs mb-2">Replace <code>YOUR_PUBLIC_KEY</code> with your actual public key (not your full Ergo address).</p>
       </div>
 
@@ -72,7 +81,10 @@ export default function FirstDappPage() {
           </li>
           <li>
             Build a transaction using Fleet SDK:
-            <pre className="bg-zinc-900 rounded p-3 text-sm overflow-x-auto mt-2">{`import { compile } from '@fleet-sdk/compiler';\nconst ergoTree = compile('sigmaProp(pubKey == YOUR_PUBLIC_KEY)');`}</pre>
+            <UniversalCopyCodeBlock
+            code={`import { compile } from '@fleet-sdk/compiler';
+const ergoTree = compile('sigmaProp(pubKey == YOUR_PUBLIC_KEY)');`}
+          />
           </li>
           <li>Send the transaction to the Ergo testnet using your wallet or Fleet SDK.</li>
         </ol>

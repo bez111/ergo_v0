@@ -11,6 +11,7 @@ import {
   Info,
 } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 export default function NodePage() {
   return (
@@ -121,15 +122,15 @@ export default function NodePage() {
             </li>
             <li>
               <b>Start the node:</b> Open your terminal, navigate to your node's working directory, and run the `.jar` file:
-              <div className="bg-neutral-900/80 border border-green-500/20 rounded-lg p-4 my-2 overflow-x-auto">
-                <pre className="text-orange-200 text-sm"><code>{`java -jar ergo.jar -c ergo.conf`}</code></pre>
-              </div>
+              <UniversalCopyCodeBlock
+                code={`java -jar ergo.jar -c ergo.conf`}
+              />
               <p className="text-gray-400 text-sm mt-2">
                 To run the node in the background (recommended for servers, Linux/macOS):
               </p>
-              <div className="bg-neutral-900/80 border border-green-500/20 rounded-lg p-4 my-2 overflow-x-auto">
-                <pre className="text-orange-200 text-sm"><code>{`nohup java -jar ergo.jar -c ergo.conf > ergo_node.log 2>&1 &`}</code></pre>
-              </div>
+              <UniversalCopyCodeBlock
+                code={`nohup java -jar ergo.jar -c ergo.conf > ergo_node.log 2>&1 &`}
+              />
               <p className="text-gray-400 text-sm mt-2">
                 This command will redirect output to `ergo_node.log` and run the process in the background.
               </p>
@@ -139,9 +140,9 @@ export default function NodePage() {
               <ul className="list-disc ml-6 mt-2 text-sm space-y-1">
                 <li>
                   Check node info via RPC: Open your browser or use `curl` to access <span className="font-mono">http://localhost:9053/info</span>. You should see detailed node information in JSON format.
-                  <div className="bg-neutral-900/80 border border-green-500/20 rounded-lg p-4 my-2 overflow-x-auto">
-                    <pre className="text-orange-200 text-sm"><code>{`curl http://localhost:9053/info`}</code></pre>
-                  </div>
+                  <UniversalCopyCodeBlock
+                    code={`curl http://localhost:9053/info`}
+                  />
                 </li>
                 <li>
                   Monitor logs: Check the `ergo_node.log` file for any errors or warnings.

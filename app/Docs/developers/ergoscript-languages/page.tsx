@@ -55,22 +55,22 @@ export default function ErgoScriptLanguagesPage() {
 
         <div className="space-y-6">
           <div className="text-lg text-gray-300 mb-6 max-w-2xl">
-            <b>ErgoScript</b> is a powerful, developer-friendly programming language designed specifically for writing <Link href="/Docs/developers/contracts" className="text-cyan-400 hover:underline">smart contracts</Link> on the <Link href="/Docs/developers/protocol-overview" className="text-cyan-400 hover:underline">Ergo blockchain</Link>. Think of it as a specialized language that allows you to create complex <Link href="/Docs/developers/contracts" className="text-cyan-400 hover:underline">financial contracts</Link> and applications with unprecedented flexibility and <Link href="/Docs/developers/security" className="text-cyan-400 hover:underline">security</Link>. Designed as a subset of Scala, it allows developers to define complex conditions for spending funds.
+            <b>ErgoScript</b> is a powerful, developer-friendly programming language designed specifically for writing <Link href="/Docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline">smart contracts</Link> on the <Link href="/Docs/introduction" className="text-cyan-400 hover:underline">Ergo blockchain</Link>. Think of it as a specialized language that allows you to create complex <Link href="/Docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline">financial contracts</Link> and applications with unprecedented flexibility and <Link href="/Docs/introduction/audit" className="text-cyan-400 hover:underline">security</Link>. Designed as a subset of Scala, it allows developers to define complex conditions for spending funds.
           </div>
 
           <div className="text-gray-300 mb-6 max-w-2xl">
-            ErgoScript code is translated into a lower-level representation called <Link href="/Docs/developers/ergotree" className="text-cyan-400 hover:underline">ErgoTree</Link> before being stored on the <Link href="/Docs/developers/protocol-overview" className="text-cyan-400 hover:underline">blockchain</Link>. During <Link href="/Docs/developers/validation" className="text-cyan-400 hover:underline">transaction validation</Link>, ErgoTree is interpreted using cryptographic protocols based on <Link href="/Docs/developers/sigma" className="text-cyan-400 hover:underline">Sigma Protocols</Link>. This unique architecture enables Ergo to support advanced cryptographic functionalities like <Link href="/Docs/developers/ring" className="text-cyan-400 hover:underline">ring signatures</Link> and <Link href="/Docs/developers/threshold" className="text-cyan-400 hover:underline">threshold signatures</Link> directly within the scripting language, without requiring special core protocol changes.
+            ErgoScript code is translated into a lower-level representation called <Link href="/Docs/developers/ergoscript-languages/ergoscript-vs-ergotree" className="text-cyan-400 hover:underline">ErgoTree</Link> before being stored on the <Link href="/Docs/introduction" className="text-cyan-400 hover:underline">blockchain</Link>. During <Link href="/Docs/developers/data-model-apis/block-transactions" className="text-cyan-400 hover:underline">transaction validation</Link>, ErgoTree is interpreted using cryptographic protocols based on <Link href="/Docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Sigma Protocols</Link>. This unique architecture enables Ergo to support advanced cryptographic functionalities like <Link href="/Docs/developers/cryptographic-primitives/other-signatures/ring" className="text-cyan-400 hover:underline">ring signatures</Link> and <Link href="/Docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-cyan-400 hover:underline">threshold signatures</Link> directly within the scripting language, without requiring special core protocol changes.
           </div>
 
           <div className="bg-cyan-500/10 border border-cyan-500/30 rounded-lg p-4 mb-6">
             <div className="text-cyan-400 font-semibold mb-2">💡 Sigma Protocols</div>
             <div className="text-gray-300">
-              Ergo's support for <Link href="/Docs/developers/sigma" className="text-cyan-400 hover:underline">Sigma Protocols</Link> (aka generalized Schnorr proofs) is a key feature, providing efficient and composable building blocks for <Link href="/Docs/developers/zkp" className="text-cyan-400 hover:underline">zero-knowledge proofs</Link>. <Link href="/Docs/developers/schnorr" className="text-cyan-400 hover:underline">Schnorr proofs</Link> and <Link href="/Docs/developers/diffie" className="text-cyan-400 hover:underline">proofs of Diffie-Hellman tuples</Link> are supported by default, with the potential for the community to add more through <Link href="/Docs/developers/soft-fork" className="text-cyan-400 hover:underline">soft forks</Link>.
+              Ergo's support for <Link href="/Docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Sigma Protocols</Link> (aka generalized Schnorr proofs) is a key feature, providing efficient and composable building blocks for <Link href="/Docs/developers/cryptographic-primitives/zero-knowledge-proofs" className="text-cyan-400 hover:underline">zero-knowledge proofs</Link>. <Link href="/Docs/developers/cryptographic-primitives/schnorr" className="text-cyan-400 hover:underline">Schnorr proofs</Link> and <Link href="/Docs/developers/cryptographic-primitives/diffie" className="text-cyan-400 hover:underline">proofs of Diffie-Hellman tuples</Link> are supported by default, with the potential for the community to add more through <Link href="/Docs/introduction" className="text-cyan-400 hover:underline">soft forks</Link>.
             </div>
           </div>
 
           <div className="text-gray-300 mb-6 max-w-2xl">
-            ErgoScript builds upon the security principles of Bitcoin while enabling much more complex financial contracts. Unlike Bitcoin Script, ErgoScript supports features necessary for advanced applications, including the ability to reference blockchain state and implement complex logic, effectively enabling Turing-Complete computations through <Link href="/Docs/developers/multi" className="text-cyan-400 hover:underline">multi-stage contract interactions</Link>.
+            ErgoScript builds upon the security principles of Bitcoin while enabling much more complex financial contracts. Unlike Bitcoin Script, ErgoScript supports features necessary for advanced applications, including the ability to reference blockchain state and implement complex logic, effectively enabling Turing-Complete computations through <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol" className="text-cyan-400 hover:underline">multi-stage contract interactions</Link>.
           </div>
 
           <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4 mb-6">
@@ -80,19 +80,19 @@ export default function ErgoScriptLanguagesPage() {
               <div className="mt-3 space-y-4">
                 <div>
                   <h4 className="font-semibold text-gray-200 mb-2">Paradigm</h4>
-                  <p>The account model (used by Ethereum) is imperative: sending coins involves changing balances in a global storage state. Ergo's <Link href="/Docs/developers/eutxo" className="text-cyan-400 hover:underline">eUTXO-based</Link> programming model is declarative: ErgoScript contracts specify <i>conditions</i> under which funds (<Link href="/Docs/developers/eutxo" className="text-cyan-400 hover:underline">UTXOs</Link>) can be spent, rather than dictating state changes.</p>
+                  <p>The account model (used by Ethereum) is imperative: sending coins involves changing balances in a global storage state. Ergo's <Link href="/Docs/introduction/eutxo" className="text-cyan-400 hover:underline">eUTXO-based</Link> programming model is declarative: ErgoScript contracts specify <i>conditions</i> under which funds (<Link href="/Docs/introduction/eutxo" className="text-cyan-400 hover:underline">UTXOs</Link>) can be spent, rather than dictating state changes.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-200 mb-2">Scalability</h4>
-                  <p>In the account model, both storage changes and validity checks happen <b>on-chain</b> during contract execution. In Ergo, <Link href="/Docs/developers/transactions" className="text-cyan-400 hover:underline">transactions</Link> are typically created <b>off-chain</b>, and only the validation checks occur on-chain. This significantly reduces the computational load on validating <Link href="/Docs/developers/modes" className="text-cyan-400 hover:underline">nodes</Link>. The immutable nature of the transaction graph also allows for various optimizations to improve throughput. Furthermore, Ergo's design facilitates <Link href="/Docs/developers/nipopow_nodes" className="text-cyan-400 hover:underline font-semibold">light verifying nodes</Link> (via <Link href="/Docs/developers/nipopows" className="text-cyan-400 hover:underline">NIPoPoWs</Link>), enhancing network <Link href="/Docs/developers/scaling" className="text-cyan-400 hover:underline">scalability</Link> and accessibility.</p>
+                  <p>In the account model, both storage changes and validity checks happen <b>on-chain</b> during contract execution. In Ergo, <Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">transactions</Link> are typically created <b>off-chain</b>, and only the validation checks occur on-chain. This significantly reduces the computational load on validating <Link href="/Docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">nodes</Link>. The immutable nature of the transaction graph also allows for various optimizations to improve throughput. Furthermore, Ergo's design facilitates <Link href="/Docs/introduction/light-clients" className="text-cyan-400 hover:underline font-semibold">light verifying nodes</Link> (via <Link href="/Docs/introduction/nipopows" className="text-cyan-400 hover:underline">NIPoPoWs</Link>), enhancing network <Link href="/Docs/technology" className="text-cyan-400 hover:underline">scalability</Link> and accessibility.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-200 mb-2">Shared State</h4>
-                  <p>The account-based model relies on a shared mutable state, which can lead to complex interactions and subtle bugs in concurrent systems. Ergo's model, based on Bitcoin's UTXO concept, uses an immutable <Link href="/Docs/developers/transactions" className="text-cyan-400 hover:underline">graph of transactions</Link>, which is inherently more suitable for distributed environments and simplifies the development of <Link href="/Docs/developers/light-spv-node" className="text-cyan-400 hover:underline">light clients</Link>.</p>
+                  <p>The account-based model relies on a shared mutable state, which can lead to complex interactions and subtle bugs in concurrent systems. Ergo's model, based on Bitcoin's UTXO concept, uses an immutable <Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">graph of transactions</Link>, which is inherently more suitable for distributed environments and simplifies the development of <Link href="/Docs/introduction/light-clients" className="text-cyan-400 hover:underline">light clients</Link>.</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-200 mb-2">Expressive Power</h4>
-                  <p>While Ethereum's Turing-complete language offers theoretical flexibility, it has practical limitations like blockchain bloat, complex bugs, unpredictable gas costs, and limits on contract complexity. Ergo achieves similar expressive power through its <Link href="/Docs/developers/eutxo" className="text-cyan-400 hover:underline">eUTXO model</Link> and <Link href="/Docs/developers/multi-stage-txs" className="text-cyan-400 hover:underline">multi-stage contracts</Link>, but intentionally keeps the core ErgoScript language itself non-Turing-complete to enhance security and predictability.</p>
+                  <p>While Ethereum's Turing-complete language offers theoretical flexibility, it has practical limitations like blockchain bloat, complex bugs, unpredictable gas costs, and limits on contract complexity. Ergo achieves similar expressive power through its <Link href="/Docs/introduction/eutxo" className="text-cyan-400 hover:underline">eUTXO model</Link> and <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol" className="text-cyan-400 hover:underline">multi-stage contracts</Link>, but intentionally keeps the core ErgoScript language itself non-Turing-complete to enhance security and predictability.</p>
                 </div>
               </div>
             </details>
@@ -108,28 +108,28 @@ export default function ErgoScriptLanguagesPage() {
   (HEIGHT >= 100000 && bobPubKey)
 }`}</code></pre>
             <div className="text-gray-300 mt-2 text-sm">
-              (<code>HEIGHT</code> is a context variable representing the current <Link href="/Docs/developers/block-header" className="text-cyan-400 hover:underline">block height</Link>. <code>alicePubKey</code> and <code>bobPubKey</code> represent proof of knowledge of their respective secret keys, typically via a <Link href="/Docs/developers/signing" className="text-cyan-400 hover:underline">signature check</Link>).
+              (<code>HEIGHT</code> is a context variable representing the current <Link href="/Docs/developers/data-model-apis/block-header" className="text-cyan-400 hover:underline">block height</Link>. <code>alicePubKey</code> and <code>bobPubKey</code> represent proof of knowledge of their respective secret keys, typically via a <Link href="/Docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline">signature check</Link>).
             </div>
           </div>
 
           <div className="bg-purple-500/10 border border-purple-500/30 rounded-lg p-4 mb-6">
             <div className="text-purple-400 font-semibold mb-2">🔑 Key Concepts</div>
             <div className="text-gray-300">
-              Explore the <Link href="/Docs/developers/ergoscript-key-concepts" className="text-cyan-400 hover:underline">Core Concepts of ErgoScript</Link>.
+              Explore the <Link href="/Docs/developers/ergoscript-languages/core-concepts" className="text-cyan-400 hover:underline">Core Concepts of ErgoScript</Link>.
             </div>
           </div>
 
           <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-4 mb-6">
             <div className="text-yellow-400 font-semibold mb-2">📝 Data Inputs</div>
             <div className="text-gray-300">
-              Ergo offers a unique approach to smart contracts by allowing them to access data from other <Link href="/Docs/developers/box" className="text-cyan-400 hover:underline">boxes</Link> on the blockchain without spending them, using <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-cyan-400 hover:underline font-semibold">data inputs</Link>. This enables efficient access to shared information like <Link href="/Docs/developers/oracles" className="text-cyan-400 hover:underline">oracle price feeds</Link> or <Link href="/Docs/developers/dao" className="text-cyan-400 hover:underline">DAO</Link> parameters.
+              Ergo offers a unique approach to smart contracts by allowing them to access data from other <Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">boxes</Link> on the blockchain without spending them, using <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-cyan-400 hover:underline font-semibold">data inputs</Link>. This enables efficient access to shared information like <Link href="/Docs/ecosystem/infrastructure/oracles" className="text-cyan-400 hover:underline">oracle price feeds</Link> or <Link href="/Docs/ecosystem/daos" className="text-cyan-400 hover:underline">DAO</Link> parameters.
             </div>
           </div>
 
           <div className="bg-orange-500/10 border border-orange-500/30 rounded-lg p-4 mb-6">
             <div className="text-orange-400 font-semibold mb-2">⚙️ ErgoScript vs ErgoTree</div>
             <div className="text-gray-300">
-              ErgoScript is the high-level, developer-friendly language. It gets compiled into <Link href="/Docs/developers/ergotree" className="text-cyan-400 hover:underline font-semibold">ErgoTree</Link>, a lower-level, serialized representation stored on the blockchain and interpreted by nodes. Explore the distinction <Link href="/Docs/developers/ergotree" className="text-cyan-400 hover:underline">here</Link>.
+              ErgoScript is the high-level, developer-friendly language. It gets compiled into <Link href="/Docs/developers/ergoscript-languages/ergoscript-vs-ergotree" className="text-cyan-400 hover:underline font-semibold">ErgoTree</Link>, a lower-level, serialized representation stored on the blockchain and interpreted by nodes. Explore the distinction <Link href="/Docs/developers/ergoscript-languages/ergoscript-vs-ergotree" className="text-cyan-400 hover:underline">here</Link>.
             </div>
           </div>
 
@@ -142,14 +142,14 @@ export default function ErgoScriptLanguagesPage() {
           <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
             <li>🥇 <a href="https://github.com/ScorexFoundation/sigmastate-interpreter" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline font-semibold">Sigmastate Interpreter</a>: The reference implementation used by nodes.</li>
             <li>🥇 <a href="https://github.com/ergoplatform/ergo-playgrounds" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline font-semibold">Ergo Playgrounds</a>: Scala-based environment for contract and off-chain code testing.</li>
-            <li><Link href="/Docs/developers/puppet" className="text-cyan-400 hover:underline">Ergo-Puppet</Link>: Advanced tool built on Ergo Playgrounds for off-chain experimentation and unit testing.</li>
+            <li><Link href="/Docs/developers/tooling/debugging" className="text-cyan-400 hover:underline">Ergo-Puppet</Link>: Advanced tool built on Ergo Playgrounds for off-chain experimentation and unit testing.</li>
           </ul>
 
           <h3 className="text-xl font-bold text-orange-400 mb-2">Online Editors & Compilers</h3>
           <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
             <li>🥇 <a href="https://escript.online/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline font-semibold">escript.online</a>: Online editor, compiler, and playground.</li>
             <li><a href="https://wallet.plutomonkey.com/p2s/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript P2S Playground (Plutomonkey)</a>: Compile ErgoScript to P2S addresses.</li>
-            <li><Link href="/Docs/developers/scastie" className="text-cyan-400 hover:underline">Scastie</Link>: Online Scala compiler suitable for ErgoScript snippets.</li>
+            <li><a href="https://scastie.scala-lang.org/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Scastie</a>: Online Scala compiler suitable for ErgoScript snippets.</li>
             <li><a href="https://github.com/scalahub/KioskWeb" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">KioskWeb</a>: Web interface for the Kiosk framework (useful for exploring Kiosk-based contracts).</li>
           </ul>
 
@@ -163,7 +163,7 @@ export default function ErgoScriptLanguagesPage() {
 
           <h3 className="text-xl font-bold text-orange-400 mb-2">Debugging & Simulation</h3>
           <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
-            <li><Link href="/Docs/developers/debugging" className="text-cyan-400 hover:underline font-semibold">Debugging Guide</Link>: Covers current best practices, tools, and techniques.</li>
+            <li><Link href="/Docs/developers/tooling/debugging" className="text-cyan-400 hover:underline font-semibold">Debugging Guide</Link>: Covers current best practices, tools, and techniques.</li>
             <li><a href="https://github.com/spectrum-finance/ergoscript-simulator" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergoscript Simulator</a>: A community-developed tool for simulating ErgoScript execution.</li>
           </ul>
 
@@ -172,8 +172,8 @@ export default function ErgoScriptLanguagesPage() {
             ErgoScript's features enable the implementation of complex contract patterns:
           </div>
           <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
-            <li><Link href="/Docs/developers/fsm-example" className="text-cyan-400 hover:underline font-semibold">Finite State Machines (FSMs)</Link>: Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.</li>
-            <li><Link href="/Docs/developers/mast-example" className="text-cyan-400 hover:underline font-semibold">Merkleized Abstract Syntax Trees (MAST)</Link>: Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.</li>
+            <li><Link href="/Docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline font-semibold">Finite State Machines (FSMs)</Link>: Learn how to model multi-stage contracts where behavior depends on the current state encoded within a box.</li>
+            <li><Link href="/Docs/developers/ergoscript-languages/examples" className="text-cyan-400 hover:underline font-semibold">Merkleized Abstract Syntax Trees (MAST)</Link>: Explore techniques to improve privacy and efficiency for contracts with many spending conditions by revealing only the executed script branch.</li>
           </ul>
 
           <h2 className="text-2xl font-bold text-cyan-400 mb-4">Common Use Cases</h2>
@@ -181,8 +181,8 @@ export default function ErgoScriptLanguagesPage() {
             ErgoScript's flexibility enables various applications:
           </div>
           <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
-            <li><Link href="/Docs/developers/threshold" className="text-cyan-400 hover:underline font-semibold">Multi-Signature Wallets</Link>: Create wallets requiring multiple parties to approve <Link href="/Docs/developers/transactions" className="text-cyan-400 hover:underline">transactions</Link>.</li>
-            <li><b>Time-Locked Contracts:</b> Define contracts that can only be executed after a specific time or <Link href="/Docs/developers/block-header" className="text-cyan-400 hover:underline">block height</Link>.</li>
+            <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-cyan-400 hover:underline font-semibold">Multi-Signature Wallets</Link>: Create wallets requiring multiple parties to approve <Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">transactions</Link>.</li>
+            <li><b>Time-Locked Contracts:</b> Define contracts that can only be executed after a specific time or <Link href="/Docs/developers/data-model-apis/block-header" className="text-cyan-400 hover:underline">block height</Link>.</li>
             <li><b>Conditional Spending:</b> Set complex conditions for spending funds based on various parameters (e.g., oracle data, specific inputs).</li>
             <li><b>Atomic Swaps:</b> Facilitate trustless peer-to-peer exchange of different assets across blockchains or within Ergo.</li>
             <li><b>Crowdfunding:</b> Implement secure and transparent crowdfunding campaigns.</li>
@@ -192,8 +192,8 @@ export default function ErgoScriptLanguagesPage() {
           <h2 className="text-2xl font-bold text-cyan-400 mb-4">Best Practices</h2>
           <ol className="list-decimal pl-6 text-gray-300 mb-6 space-y-1">
             <li>Keep contracts simple and readable.</li>
-            <li>Use built-in <Link href="/Docs/developers/crypto" className="text-cyan-400 hover:underline">cryptographic primitives</Link> where possible.</li>
-            <li>Always consider <Link href="/Docs/developers/validation" className="text-cyan-400 hover:underline">transaction validation</Link> overhead and potential costs.</li>
+            <li>Use built-in <Link href="/Docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">cryptographic primitives</Link> where possible.</li>
+            <li>Always consider <Link href="/Docs/developers/data-model-apis/block-transactions" className="text-cyan-400 hover:underline">transaction validation</Link> overhead and potential costs.</li>
             <li>Test contracts thoroughly using playgrounds and SDK testing frameworks.</li>
             <li>Reason carefully about all possible execution paths and potential economic exploits.</li>
             <li>Leverage <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-cyan-400 hover:underline">data inputs</Link> for accessing shared state efficiently.</li>
@@ -204,7 +204,7 @@ export default function ErgoScriptLanguagesPage() {
             <li>Overcomplicating contract logic unnecessarily.</li>
             <li>Ignoring performance implications and transaction costs.</li>
             <li>Neglecting comprehensive error handling and edge cases in off-chain code interacting with contracts.</li>
-            <li>Not fully understanding the nuances of the <Link href="/Docs/developers/eutxo" className="text-cyan-400 hover:underline">eUTXO model</Link> (e.g., box lifecycle, state transitions).</li>
+            <li>Not fully understanding the nuances of the <Link href="/Docs/introduction/eutxo" className="text-cyan-400 hover:underline">eUTXO model</Link> (e.g., box lifecycle, state transitions).</li>
             <li>Insecure handling of secrets or assumptions about context in off-chain components.</li>
           </ul>
 
@@ -213,7 +213,7 @@ export default function ErgoScriptLanguagesPage() {
             <div>
               <h3 className="text-lg font-semibold text-orange-400 mb-2">Beginner:</h3>
               <ul className="list-disc pl-6 text-gray-300 space-y-1">
-                <li>Understand the <Link href="/Docs/developers/ergoscript-key-concepts" className="text-cyan-400 hover:underline">Core Concepts</Link>.</li>
+                <li>Understand the <Link href="/Docs/developers/ergoscript-languages/core-concepts" className="text-cyan-400 hover:underline">Core Concepts</Link>.</li>
                 <li>Experiment with the <a href="https://wallet.plutomonkey.com/p2s/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">P2S Playground</a>.</li>
                 <li>Study simple <Link href="/Docs/developers/contracts" className="text-cyan-400 hover:underline">example contracts</Link>.</li>
               </ul>

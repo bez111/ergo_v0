@@ -4,6 +4,7 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Code, FlaskConical, FileText, CheckCircle, Terminal, BookOpen, ExternalLink, Github } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 const testingConcepts = [
   {
@@ -147,9 +148,9 @@ export default function TestingPage() {
                   <Code className="w-5 h-5 text-orange-400" />
                   <h3 className="text-md font-bold text-white">{ex.title}</h3>
                 </div>
-                <pre className="bg-black text-orange-200 p-3 rounded-lg overflow-x-auto font-mono text-sm mb-2">
-                  <code>{ex.code}</code>
-                </pre>
+                <UniversalCopyCodeBlock
+                  code={ex.code}
+                />
                 <a href={ex.doc} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-cyan-400 hover:underline text-sm">
                   Docs <ExternalLink className="w-4 h-4 ml-1" />
                 </a>

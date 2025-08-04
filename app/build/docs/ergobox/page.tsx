@@ -12,6 +12,7 @@ import {
   Info,
 } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 export default function ErgoBoxPage() {
   return (
@@ -55,13 +56,13 @@ export default function ErgoBoxPage() {
           </ul>
           <div className="mt-4">
             <span className="text-gray-400 text-sm">Example ErgoScript:</span>
-            <div className="bg-neutral-900/80 border border-cyan-500/20 rounded-lg p-4 mt-2 mb-2 overflow-x-auto">
-              <pre className="text-orange-200 text-sm"><code>{`sigmaProp(PubKey)`}</code></pre>
-            </div>
+            <UniversalCopyCodeBlock
+              code={`sigmaProp(PubKey)`}
+            />
             <span className="text-gray-400 text-sm">Compiled ErgoTree (hex):</span>
-            <div className="bg-neutral-900/80 border border-cyan-500/20 rounded-lg p-4 mt-2 overflow-x-auto">
-              <pre className="text-cyan-200 text-xs"><code>{`0008cd02b4a8...`}</code></pre>
-            </div>
+            <UniversalCopyCodeBlock
+              code={`0008cd02b4a8...`}
+            />
           </div>
         </div>
       </section>

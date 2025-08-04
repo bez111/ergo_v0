@@ -15,8 +15,7 @@ export default function DevelopersResources() {
           Developer Resources
         </h1>
         <p className="text-lg text-gray-300 mb-2">
-          Comprehensive resources for Ergo developers - from getting started to advanced topics. Also check out the{' '}
-          <a href="https://sigmaverse.io/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">dev-tools section on sigmaverse <ExternalLink className="inline w-4 h-4 ml-1" /></a>
+          Comprehensive resources for Ergo developers - from getting started to advanced topics.
         </p>
       </div>
 

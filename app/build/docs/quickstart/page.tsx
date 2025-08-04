@@ -11,6 +11,7 @@ import {
   AlertTriangle,
 } from "lucide-react"
 import Link from "next/link"
+import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
 
 export default function QuickstartPage() {
   return (
@@ -156,9 +157,8 @@ export default function QuickstartPage() {
             <p className="text-gray-300 mb-3">
               Paste the following code into the editor:
             </p>
-            <div className="bg-black border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <pre className="text-sm text-gray-300">
-{`{
+            <UniversalCopyCodeBlock
+              code={`{
   // Contract for a simple counter
   // Input parameters:
   //   currentValue: Long - current value of the counter
@@ -190,8 +190,7 @@ export default function QuickstartPage() {
   // All conditions must be true
   output_pk && value_incremented && signed_by_owner
 }`}
-              </pre>
-            </div>
+            />
           </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">

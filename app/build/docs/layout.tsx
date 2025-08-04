@@ -16,7 +16,7 @@ import {
   FileQuestion,
   Github,
   ChevronRight,
-  Search,
+
   ExternalLink,
   Play,
   Brain,
@@ -33,13 +33,12 @@ import {
   Package,
   Menu,
   X,
-  Wallet,
-  Coins,
-  Pickaxe,
+
 } from "lucide-react"
 
 import { useState } from "react"
 import NavLink from "@/components/nav-link"
+import { LocalSearch } from "@/components/search/LocalSearch"
 
 
 const sidebarNav = [
@@ -90,23 +89,7 @@ const sidebarNav = [
       { title: "ErgoScript Language Reference", href: "/build/docs/references/ergoscript-language", icon: BookOpen, description: "Comprehensive guide to ErgoScript syntax and functions" },
     ],
   },
-  {
-    title: "Ecosystem",
-    children: [
-      { title: "Overview", href: "/build/docs/ecosystem", icon: Globe, description: "Explore projects, dApps, and services in the Ergo ecosystem" },
-      { title: "Grants & Funding", href: "/ecosystem/grants", icon: Coins, description: "Opportunities for project grants and ecosystem funding" },
-      { title: "Mining Pools", href: "/ecosystem/mining", icon: Pickaxe, description: "Find and join Ergo mining pools" },
-      { title: "Wallets", href: "/wallet", icon: Wallet, description: "Discover secure Ergo wallets" },
-    ],
-  },
-  {
-    title: "Community & Support",
-    children: [
-      { title: "Forums & Chats", href: "/build/docs/forums", icon: Users, description: "Connect with the community" },
-      { title: "FAQ & Troubleshooting", href: "/build/docs/faq", icon: LifeBuoy, description: "Common issues and solutions" },
-      { title: "Contribution Guide", href: "/build/docs/contribute", icon: Github, description: "How to contribute to Ergo" },
-    ],
-  },
+
 ]
 
 export default function DocsLayout({
@@ -114,7 +97,6 @@ export default function DocsLayout({
 }: {
   children: React.ReactNode
 }) {
-  const [searchQuery, setSearchQuery] = useState("")
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   return (
@@ -139,18 +121,9 @@ export default function DocsLayout({
           <aside className={`lg:block ${mobileMenuOpen ? 'block' : 'hidden'} fixed lg:relative inset-0 z-40 lg:z-auto`}>
             <div className="lg:hidden absolute inset-0 bg-black/80" onClick={() => setMobileMenuOpen(false)} />
             <nav className={`lg:sticky lg:top-24 relative bg-neutral-900/95 lg:bg-transparent border-r border-neutral-800 lg:border-r-0 h-full lg:h-auto overflow-y-auto lg:overflow-visible p-6 lg:p-0`}>
-              {/* Search */}
+              {/* Global Search */}
               <div className="mb-8">
-                <div className="relative">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
-                  <input
-                    type="text"
-                    placeholder="Search documentation..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full pl-10 pr-4 py-2 bg-neutral-800/50 border border-neutral-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-400 text-sm"
-                  />
-                </div>
+                <LocalSearch />
               </div>
 
               {/* Navigation */}
