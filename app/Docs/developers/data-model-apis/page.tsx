@@ -7,7 +7,7 @@ import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
 import {
   Database, Box, FileText, Shield, Key, Users, Layers, 
   BookOpen, ChevronRight, Cpu, Zap, Lock, Eye, Quote,
-  Brain, Target, Code, Network, Settings, Globe, RefreshCw, Coins
+  Brain, Target, Code, Network, Settings, Globe, RefreshCw, Coins, Sigma
 } from "lucide-react";
 
 // Table of contents for Overview tab
@@ -931,17 +931,129 @@ export default function DataModelApisPage() {
       <TabsContent value="block">
         <div className="space-y-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-orange-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-            Block Structure
+            Understanding Blocks in Ergo
           </h1>
           <p className="text-xl text-gray-400 mb-6">
-            Understanding Ergo's block components, headers, and data organization.
+            In blockchain technology, a <b>block</b> is a fundamental unit of data that groups together a set of transactions. These blocks are linked together chronologically to form a "blockchain," serving as a secure and transparent record of all transactions.
           </p>
-          
-          <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-6">
-            <h2 className="text-2xl font-bold mb-4">Block Components</h2>
+
+          <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
             <p className="text-gray-300 mb-4">
-              Detailed block structure documentation coming soon...
+              <Link href="/Docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link> is a consensus mechanism that requires <Link href="/Docs/developers/mining-overview" className="text-orange-400 hover:underline">miners</Link> to solve complex mathematical problems to add new blocks to the blockchain. This process, known as "<Link href="/Docs/developers/mining-overview" className="text-orange-400 hover:underline">mining</Link>," involves significant computational effort, ensuring the security and immutability of the blockchain.
             </p>
+            <p className="text-gray-300">
+              Ergo, like other Proof-of-Work (PoW) blockchains such as Bitcoin, uses blocks to record transactions and ensure the integrity of the network. However, Ergo's block structure is more sophisticated, offering enhanced functionality and efficiency.
+            </p>
+          </div>
+
+          <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4 text-yellow-400">Block Creation & Rewards</h2>
+            <p className="text-gray-300 mb-4">
+              In Ergo, a new block is created approximately every <b>two minutes</b>. Initially, each block rewarded miners with 75 ERG, which were distributed among them and the <Link href="/Docs/developers/ef-treasury" className="text-orange-400 hover:underline">Ergo Foundation Treasury</Link>. This <Link href="/Docs/developers/emission" className="text-orange-400 hover:underline">emission schedule</Link> applied for the first two years of the network's operation.
+            </p>
+          </div>
+
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-4 text-yellow-400">Ergo Block Structure</h2>
+            <p className="text-gray-300 text-lg">
+              Ergo's blocks are divided into distinct sections to optimize organization and functionality:
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <Link href="/Docs/developers/data-model-apis/block-header" className="group">
+              <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                    <FileText className="w-6 h-6 text-yellow-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-yellow-400">Header</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  The header acts as a summary of the block's content. It includes metadata (block version, timestamp, etc.), hashes linking to other block sections, and the Proof-of-Work solution.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-yellow-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/Docs/developers/data-model-apis/block-transactions" className="group">
+              <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                    <Network className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-orange-400">Transactions</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  This section contains the core data of the block – a list of all transactions included within it. These transactions define how tokens and assets are transferred on the Ergo blockchain.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-orange-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/Docs/developers/data-model-apis/block-adproofs" className="group">
+              <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+                    <Shield className="w-6 h-6 text-red-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-red-400">ADProofs</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  These cryptographic proofs, short for Authenticated Data Proofs, allow light clients (nodes with limited storage) to verify transactions without downloading the entire block or the full UTXO set.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-red-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </Link>
+
+            <Link href="/Docs/developers/data-model-apis/extension-section" className="group">
+              <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                    <Settings className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-purple-400">Extension Section</h3>
+                </div>
+                <p className="text-gray-300 text-sm">
+                  This section provides a flexible space to store additional data that doesn't fit into the other sections. It includes interlinks for NiPoPoWs (efficient proof-of-work verification) and system parameters (e.g., block size).
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-purple-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </Link>
+          </div>
+
+          {/* Main Content */}
+          <div className="space-y-6">
+
+
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4 text-cyan-400">Related Concepts</h2>
+              <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li><b>Ergo Modifiers:</b> In Ergo's <Link href="/Docs/developers/p2p-protocol-overview" className="text-orange-400 hover:underline">peer-to-peer network protocol</Link>, blocks and transactions are referred to as "<Link href="/Docs/developers/modifiers" className="text-orange-400 hover:underline">modifiers</Link>." These modifiers are exchanged between nodes to keep the network synchronized.</li>
+                <li><b>Superblock Clients:</b> Ergo supports "superblock clients," which provide an additional layer of efficiency and flexibility for specific use cases, related to <Link href="/Docs/developers/log_space" className="text-orange-400 hover:underline">logarithmic space mining</Link>.</li>
+              </ul>
+            </div>
+
+            <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold mb-4 text-green-400">Additional Resources</h2>
+              <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+                <li><Link href="/Docs/developers/block-header" className="text-orange-400 hover:underline">Block Header</Link>: Detailed examination of block header components</li>
+                <li><Link href="/Docs/developers/block-transactions" className="text-orange-400 hover:underline">Block Transactions</Link>: Understanding how transactions are organized within a block</li>
+                <li><Link href="/Docs/developers/block-adproofs" className="text-orange-400 hover:underline">AD Proofs</Link>: Authenticated Data Proofs for stateless client verification</li>
+                <li><Link href="/Docs/developers/extension-section" className="text-orange-400 hover:underline">Extension Section</Link>: Flexible data storage section for additional metadata</li>
+                <li><Link href="/Docs/developers/mining-overview" className="text-orange-400 hover:underline">Mining Overview</Link>: Understanding the mining process and block creation</li>
+                <li><Link href="/Docs/developers/emission" className="text-orange-400 hover:underline">Emission Schedule</Link>: Details about ERG distribution and rewards</li>
+              </ul>
+            </div>
           </div>
         </div>
       </TabsContent>
@@ -949,17 +1061,135 @@ export default function DataModelApisPage() {
       <TabsContent value="discrete">
         <div className="space-y-8">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-red-400 to-pink-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">
-            Discrete Logarithm Cryptography
+            Discrete Logarithm Proofs in Ergo
           </h1>
           <p className="text-xl text-gray-400 mb-6">
-            Cryptographic foundations and Sigma protocols powering Ergo's security model.
+            Discrete logarithm proofs are a fundamental cryptographic primitive in Ergo's signature verification mechanism, based on the computational hardness of the discrete logarithm problem in elliptic curve cryptography.
           </p>
-          
-          <div className="bg-red-400/10 border border-red-400/20 rounded-xl p-6">
-            <h2 className="text-2xl font-bold mb-4">Cryptographic Primitives</h2>
+
+          <div className="mb-8">
+            <h2 className="text-3xl font-bold mb-4 text-red-400">Key Concepts</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+                    <Lock className="w-6 h-6 text-red-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-red-400">DLog Proof</h3>
+                </div>
+                <p className="text-gray-300 text-sm min-h-[5rem]">
+                  Proofs of knowledge of a discrete logarithm (DLog) verify signature authenticity without revealing the secret key.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-red-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+              <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                    <Key className="w-6 h-6 text-purple-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-purple-400">Schnorr Signature</h3>
+                </div>
+                <p className="text-gray-300 text-sm min-h-[5rem]">
+                  Ergo uses Schnorr signatures built on discrete logarithm proofs for efficient and secure signature verification.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-purple-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+              <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                    <Sigma className="w-6 h-6 text-green-400" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-green-400">Sigma Protocols</h3>
+                </div>
+                <p className="text-gray-300 text-sm min-h-[5rem]">
+                  Related cryptographic protocols: 
+                  <Link href="/Docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline font-semibold">Sigma Protocols</Link>, 
+                  <Link href="/Docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:underline font-semibold">Threshold Signatures</Link>, 
+                  <Link href="/Docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:underline font-semibold">Ring Signatures</Link>.
+                </p>
+                <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-green-400 text-sm font-medium">
+                  Learn more
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4 text-cyan-400">Technical Details</h2>
+            <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+              <li><b>Proof Structure:</b> Demonstrate knowledge of secret exponent <code>w</code> such that <code>g^w = x</code></li>
+              <li><b>g:</b> Generator of an elliptic curve group</li>
+              <li><b>x:</b> Public key point</li>
+              <li><b>w:</b> Private key</li>
+            </ul>
+          </div>
+
+          <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4 text-purple-400">Implementation in ErgoScript</h2>
             <p className="text-gray-300 mb-4">
-              Advanced cryptography documentation coming soon...
+              In ErgoScript, discrete logarithm proofs are implemented using the <code>proveDlog()</code> predicate, which returns true if a valid proof of knowledge can be provided.
             </p>
+            <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 my-4">
+              <pre className="bg-neutral-800 rounded p-3 text-sm text-gray-200 overflow-x-auto">
+// DLog-based signature verification
+val pubKey = ...  // Public key point
+val signature = ...  // Signature proof
+proveDlog(pubKey)
+              </pre>
+            </div>
+          </div>
+
+          <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4 text-green-400">Practical Examples</h2>
+            <div className="space-y-4">
+              <Link href="/Docs/developers/cryptographic-primitives/schnorr" className="group block">
+                <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
+                  <span className="font-semibold text-green-300 group-hover:underline">Schnorr Signature Verification</span>
+                </div>
+              </Link>
+              <Link href="/Docs/developers/cryptographic-primitives/other-signatures" className="group block">
+                <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
+                  <span className="font-semibold text-green-300 group-hover:underline">Public Key Cryptography</span>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4 text-orange-400">Security Considerations</h2>
+            <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300">
+              <li>Based on discrete logarithm problem hardness</li>
+              <li>Efficient and compact signature verification</li>
+              <li>Supports multi-signatures and ring signatures</li>
+            </ul>
+          </div>
+
+          <div className="bg-pink-400/10 border border-pink-400/20 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4 text-pink-400">Advanced Applications</h2>
+            <div className="space-y-4">
+              <Link href="/Docs/developers/cryptographic-primitives" className="group block">
+                <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
+                  <span className="font-semibold text-pink-300 group-hover:underline">Cryptographic Foundations</span>
+                </div>
+              </Link>
+              <Link href="/Docs/developers/cryptographic-primitives/zerojoin" className="group block">
+                <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
+                  <span className="font-semibold text-pink-300 group-hover:underline">ZeroJoin Privacy Protocol</span>
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6">
+            <h2 className="text-2xl font-bold mb-4 text-purple-400">References</h2>
+            <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
+              <li><Link href="/Docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Cryptographic Primitives</Link></li>
+              <li><Link href="/Docs/technology/ergoscript" className="text-orange-400 hover:underline">ErgoScript</Link></li>
+            </ul>
           </div>
         </div>
       </TabsContent>

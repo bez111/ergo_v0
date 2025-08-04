@@ -49,7 +49,7 @@ export default function WalletsPage() {
             Back to Infrastructure
           </Link>
           <Link
-            href="/Docs/developers/infrastructure/wallets/minotaur-multisig"
+            href="/Docs/developers/infrastructure/wallets/multisig"
             className="inline-flex items-center px-6 py-3 bg-cyan-700 rounded-xl font-semibold text-white hover:bg-cyan-800 transition-transform hover:scale-105"
           >
             <Shield className="w-5 h-5 mr-2" />
