@@ -8,6 +8,16 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { designPrinciples } from "@/lib/design-tokens"
+import { useIsMobile, usePrefersReducedMotion, getAnimationConfig } from "@/lib/theme-system"
+import { 
+  HeroPattern, FeatureGrid, StatsGrid, FeatureCard, CodeSnippet,
+  type FeatureGridItem, type StatsGridItem
+} from "@/components/ui-kit/patterns"
+import { 
+  GlitchText, MathematicalPattern, CryptographicVisualization, 
+  FloatingParticles, HexagonalGrid
+} from "@/components/ui-kit/signature-effects"
+import LivePlayground from "@/components/ui-kit/live-playground"
 import { 
   Zap, 
   Shield, 
@@ -59,12 +69,23 @@ import {
   ShieldCheck,
   Minimize2,
   Sparkles,
-  Code2
+  Code2,
+  Moon,
+  Sun,
+  Monitor,
+  Play,
+  Figma
 } from "lucide-react"
 
 export default function UIKitPage() {
   const [activeTab, setActiveTab] = useState("overview")
   const [copiedComponent, setCopiedComponent] = useState<string | null>(null)
+  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('dark')
+  
+  // Responsive и accessibility hooks
+  const isMobile = useIsMobile()
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const animationConfig = getAnimationConfig(isMobile, prefersReducedMotion)
 
   const copyToClipboard = async (componentName: string, code: string) => {
     await navigator.clipboard.writeText(code)
@@ -72,33 +93,26 @@ export default function UIKitPage() {
     setTimeout(() => setCopiedComponent(null), 2000)
   }
 
-  // Component code examples
+  // Comprehensive component code examples
   const componentCode = {
     primaryButton: `<Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200">
   <Rocket className="w-5 h-5 mr-2" />
   Deploy Contract
 </Button>`,
-    featureCard: `<Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black">
-  <CardHeader>
-    <div className="flex items-center gap-3">
-      <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-        <Shield className="w-5 h-5 text-brand-primary-400" />
-      </div>
-      <div>
-        <CardTitle className="text-white">Security First</CardTitle>
-        <div className="text-gray-400 text-sm">Built-in protection</div>
-      </div>
-    </div>
-  </CardHeader>
-  <CardContent>
-    <p className="text-gray-300 mb-4">
-      Advanced cryptographic protocols ensure your applications are secure by default.
-    </p>
-    <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
-      Verified
-    </Badge>
-  </CardContent>
-</Card>`,
+
+    featureCard: `<FeatureCard
+  icon={Shield}
+  title="Security First"
+  subtitle="Built-in protection"
+  description="Advanced cryptographic protocols ensure your applications are secure by default."
+  badge="Verified"
+  action={{
+    text: "Learn More",
+    icon: ArrowRight,
+    onClick: () => console.log('Learn more clicked')
+  }}
+/>`,
+
     alert: `<Alert className="border-brand-primary-500 bg-brand-primary-500/10 text-brand-primary-400 rounded-xl focus-within:ring-2 focus-within:ring-brand-primary-500">
   <CheckCircle className="w-4 h-4" />
   <div className="ml-3">
@@ -107,10 +121,77 @@ export default function UIKitPage() {
       Your smart contract has been successfully deployed
     </AlertDescription>
   </div>
-</Alert>`
+</Alert>`,
+
+    heroPattern: `<HeroPattern
+  title="Your"
+  highlight="Application"
+  subtitle="Compelling description that explains the value proposition clearly and concisely."
+  description="Additional context or details about your application."
+  primaryAction={{
+    text: "Get Started",
+    icon: Rocket,
+    onClick: () => console.log('Get started')
+  }}
+  secondaryAction={{
+    text: "Learn More",
+    icon: BookOpen,
+    onClick: () => console.log('Learn more')
+  }}
+/>`,
+
+    featureGrid: `<FeatureGrid
+  items={[
+    { icon: Shield, title: "Security", description: "Built with security as the foundation", color: "text-brand-primary-400" },
+    { icon: Zap, title: "Performance", description: "Optimized for speed and efficiency", color: "text-brand-secondary-400" },
+    { icon: Users, title: "Community", description: "Supported by a vibrant ecosystem", color: "text-status-success-500" }
+  ]}
+  columns={3}
+  className="my-8"
+/>`,
+
+    statsGrid: `<StatsGrid
+  items={[
+    { value: "50+", label: "Components", icon: Layers, color: "text-brand-primary-400" },
+    { value: "8", label: "Categories", icon: Building, color: "text-brand-primary-400" },
+    { value: "100%", label: "Accessible", icon: Accessibility, color: "text-brand-primary-400" },
+    { value: "Open", label: "Source", icon: GitBranch, color: "text-brand-primary-400" }
+  ]}
+  columns={4}
+/>`,
+
+    codeSnippet: `<CodeSnippet
+  title="Button Component"
+  language="jsx"
+  filename="Button.tsx"
+  code={\`import { Button } from "@/components/ui/button"
+
+export default function MyComponent() {
+  return (
+    <Button className="bg-brand-primary-500">
+      Click me
+    </Button>
+  )
+}\`}
+/>`,
+
+    glitchText: `<GlitchText className="text-4xl font-bold">
+  <span className="text-brand-primary-400">Ergo</span> Platform
+</GlitchText>`,
+
+    themeToggle: `const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('dark')
+
+<Button
+  variant="outline"
+  size="icon"
+  onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+  className="relative"
+>
+  {theme === 'dark' ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+</Button>`
   }
 
-  // Flat-top hex component
+  // Flat-top hex component с улучшениями
   const ErgoHex = ({ size = "w-5 h-5", className = "" }: { size?: string; className?: string }) => {
     const R = 10
     const cx = 12, cy = 12
@@ -132,24 +213,47 @@ export default function UIKitPage() {
     )
   }
 
-  // Animation variants
+  // Animation variants с учетом accessibility
   const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
+    initial: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
     animate: { opacity: 1, y: 0 },
-    exit: { opacity: 0, y: -20 }
+    exit: { opacity: 0, y: prefersReducedMotion ? 0 : -20 }
   }
 
   const scaleOnHover = {
-    hover: { scale: 1.05, transition: { duration: 0.2 } },
-    tap: { scale: 0.98 }
+    hover: { 
+      scale: prefersReducedMotion ? 1 : animationConfig.scale, 
+      transition: { duration: animationConfig.duration } 
+    },
+    tap: { scale: prefersReducedMotion ? 1 : 0.98 }
   }
 
+  // Feature grid data
+  const featureGridItems: FeatureGridItem[] = [
+    { icon: Shield, title: "Security", description: "Built with security as the foundation", color: "text-brand-primary-400" },
+    { icon: Zap, title: "Performance", description: "Optimized for speed and efficiency", color: "text-brand-secondary-400" },
+    { icon: Users, title: "Community", description: "Supported by a vibrant ecosystem", color: "text-status-success-500" }
+  ]
+
+  // Stats grid data
+  const statsGridItems: StatsGridItem[] = [
+    { value: "50+", label: "Components", icon: Layers, color: "text-brand-primary-400" },
+    { value: "8", label: "Categories", icon: Building, color: "text-brand-primary-400" },
+    { value: "100%", label: "Accessible", icon: Accessibility, color: "text-brand-primary-400" },
+    { value: "Open", label: "Source", icon: GitBranch, color: "text-brand-primary-400" }
+  ]
+
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Background Effects */}
+      <HexagonalGrid className="opacity-[0.02]" />
+      <FloatingParticles count={15} className="opacity-80" />
+      <MathematicalPattern className="opacity-[0.03]" />
+      
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 relative z-10">
         
-        {/* Hero Section */}
-        <section className="pb-20">
+        {/* Hero Section с signature effects */}
+        <section className="pb-20 relative">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -158,7 +262,9 @@ export default function UIKitPage() {
                 transition={{ duration: 0.8 }}
               >
                 <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-white">
-                  <span className="text-brand-primary-400">Ergo</span> UI Kit
+                  <GlitchText>
+                    <span className="text-brand-primary-400">Ergo</span> UI Kit
+                  </GlitchText>
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
                   Complete Component Library for Modern dApps
@@ -167,6 +273,28 @@ export default function UIKitPage() {
                   Production-ready components, design patterns, and guidelines for building 
                   consistent, accessible, and modern Ergo applications with confidence.
                 </p>
+                
+                {/* Theme Toggle */}
+                <div className="flex items-center gap-4 mb-8">
+                  <span className="text-sm text-gray-400">Theme:</span>
+                  <div className="flex items-center bg-neutral-900 border border-neutral-700 rounded-lg p-1">
+                    {(['light', 'dark', 'system'] as const).map((themeOption) => (
+                      <Button
+                        key={themeOption}
+                        size="sm"
+                        variant={theme === themeOption ? "default" : "ghost"}
+                        onClick={() => setTheme(themeOption)}
+                        className={`${theme === themeOption ? 'bg-brand-primary-500 text-black' : 'text-gray-400 hover:text-white'} capitalize`}
+                      >
+                        {themeOption === 'light' && <Sun className="w-3 h-3 mr-1" />}
+                        {themeOption === 'dark' && <Moon className="w-3 h-3 mr-1" />}
+                        {themeOption === 'system' && <Monitor className="w-3 h-3 mr-1" />}
+                        {themeOption}
+                      </Button>
+                    ))}
+                  </div>
+                </div>
+
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button 
@@ -187,6 +315,16 @@ export default function UIKitPage() {
                       Documentation
                     </Button>
                   </motion.div>
+                  <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
+                    <Button
+                      variant="outline"
+                      className="border-neutral-500 text-neutral-400 hover:bg-neutral-500/10 px-8 py-3 rounded-xl backdrop-blur-sm focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
+                      aria-label="Open in Figma"
+                    >
+                      <Figma className="w-5 h-5 mr-2" />
+                      Figma
+                    </Button>
+                  </motion.div>
                 </div>
               </motion.div>
 
@@ -196,6 +334,9 @@ export default function UIKitPage() {
                 transition={{ duration: 0.8, delay: 0.2 }}
                 className="relative"
               >
+                {/* Cryptographic Visualization */}
+                <CryptographicVisualization className="absolute top-0 right-0 w-32 h-32 opacity-30" />
+                
                 <div className="space-y-4">
                   {[
                     { icon: Layers, title: "50+ Components", desc: "Production-ready components from buttons to complex patterns" },
@@ -208,7 +349,7 @@ export default function UIKitPage() {
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                      whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                      whileHover={{ x: prefersReducedMotion ? 0 : 5, transition: { duration: 0.2 } }}
                       className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm cursor-pointer group"
                       tabIndex={0}
                       role="button"
@@ -216,7 +357,6 @@ export default function UIKitPage() {
                       onKeyDown={(e) => {
                         if (e.key === 'Enter' || e.key === ' ') {
                           e.preventDefault()
-                          // Handle click
                         }
                       }}
                     >
@@ -239,7 +379,7 @@ export default function UIKitPage() {
           </div>
         </section>
 
-        {/* Design Philosophy Block */}
+        {/* Design Philosophy Block с улучшениями */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -268,23 +408,23 @@ export default function UIKitPage() {
           </div>
         </motion.div>
 
-        {/* Navigation */}
+        {/* Navigation с улучшенной мобильной версией */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <div className="flex justify-center mb-12">
-            <TabsList className="bg-neutral-900 border border-neutral-700 p-1">
+            <TabsList className="bg-neutral-900 border border-neutral-700 p-1 overflow-x-auto">
               {[
                 { id: "overview", label: "Overview", icon: Globe },
+                { id: "playground", label: "Playground", icon: Play },
                 { id: "philosophy", label: "Philosophy", icon: Brain },
                 { id: "colors", label: "Colors", icon: Palette },
                 { id: "typography", label: "Typography", icon: Type },
                 { id: "components", label: "Components", icon: Layers },
-                { id: "buttons", label: "Buttons", icon: Target },
                 { id: "patterns", label: "Patterns", icon: Building }
               ].map((tab) => (
                 <TabsTrigger 
                   key={tab.id}
                   value={tab.id} 
-                  className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200"
+                  className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 whitespace-nowrap"
                   aria-label={`Switch to ${tab.label} tab`}
                 >
                   <tab.icon className="w-4 h-4 mr-2" />
@@ -294,92 +434,62 @@ export default function UIKitPage() {
             </TabsList>
           </div>
 
-          {/* Overview Tab */}
+          {/* Overview Tab с использованием новых паттернов */}
           <TabsContent value="overview" className="space-y-12">
             <motion.div {...fadeInUp} transition={{ duration: 0.5 }}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <Target className="w-6 h-6 text-brand-primary-400" />
                 Key Features
               </h2>
-              <div className="grid md:grid-cols-2 gap-6 mb-8">
-                {[
-                  {
-                    icon: Shield,
-                    title: "Production Ready",
-                    description: "Battle-tested components built for scale. Every element is optimized for performance and accessibility, ensuring your applications work flawlessly across all devices.",
-                    features: ["TypeScript support", "Accessibility compliant", "Mobile optimized", "Performance tested"]
-                  },
-                  {
-                    icon: Zap,
-                    title: "Developer Experience",
-                    description: "Intuitive APIs and comprehensive documentation make it easy to build and maintain complex interfaces. Focus on your business logic, not wrestling with UI components.",
-                    features: ["Component library", "Design tokens", "Code examples", "Copy-paste ready"]
-                  }
-                ].map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                    className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group cursor-pointer"
-                    tabIndex={0}
-                    role="article"
-                    aria-label={feature.title}
-                  >
-                    <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                      <feature.icon className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
-                      <span className="group-hover:text-brand-primary-400 transition-colors duration-200">{feature.title}</span>
-                    </h3>
-                    <p className="text-gray-300 mb-4">
-                      {feature.description}
-                    </p>
-                    <ul className="space-y-2 text-gray-400 text-sm">
-                      {feature.features.map((item) => (
-                        <li key={item} className="flex items-center gap-2">
-                          <CheckCircle className="w-4 h-4 text-brand-primary-400 flex-shrink-0" />
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </motion.div>
-                ))}
-              </div>
+              <FeatureGrid items={featureGridItems} columns={isMobile ? 1 : 3} />
             </motion.div>
 
-            {/* Stats */}
             <motion.div {...fadeInUp} transition={{ duration: 0.5, delay: 0.2 }}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <TrendingUp className="w-6 h-6 text-brand-primary-400" />
                 By the Numbers
               </h2>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                {[
-                  { value: "50+", label: "Components", icon: Layers, color: "text-brand-primary-400" },
-                  { value: "8", label: "Categories", icon: Building, color: "text-brand-primary-400" },
-                  { value: "100%", label: "Accessible", icon: Accessibility, color: "text-brand-primary-400" },
-                  { value: "Open", label: "Source", icon: GitBranch, color: "text-brand-primary-400" }
-                ].map((stat, index) => (
-                  <motion.div 
-                    key={stat.label}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-                    className="text-center p-6 bg-neutral-900 border border-neutral-700 rounded-xl hover:border-neutral-600 transition-all duration-300 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black"
-                    tabIndex={0}
-                    role="button"
-                    aria-label={`${stat.value} ${stat.label}`}
-                  >
-                    <stat.icon className={`w-8 h-8 ${stat.color} mx-auto mb-3 group-hover:scale-110 transition-transform duration-200`} />
-                    <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-                    <div className="text-gray-400 text-sm">{stat.label}</div>
-                  </motion.div>
-                ))}
+              <StatsGrid items={statsGridItems} columns={isMobile ? 2 : 4} />
+            </motion.div>
+
+            {/* Auto-generated documentation showcase */}
+            <motion.div {...fadeInUp} transition={{ duration: 0.5, delay: 0.4 }}>
+              <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
+                <BookOpen className="w-6 h-6 text-brand-primary-400" />
+                Auto-Generated Documentation
+              </h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                <CodeSnippet
+                  title="Feature Grid Pattern"
+                  language="jsx"
+                  filename="FeatureGrid.tsx"
+                  code={componentCode.featureGrid}
+                />
+                <CodeSnippet
+                  title="Stats Grid Pattern"
+                  language="jsx"
+                  filename="StatsGrid.tsx"
+                  code={componentCode.statsGrid}
+                />
               </div>
             </motion.div>
           </TabsContent>
 
+          {/* Live Playground Tab */}
+          <TabsContent value="playground" className="space-y-8">
+            <motion.div {...fadeInUp} className="text-center mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
+                <span className="text-brand-primary-400">Live</span> Playground
+              </h2>
+              <p className="text-gray-400 max-w-3xl mx-auto">
+                Interactive sandbox for testing and experimenting with components. Edit code in real-time and see instant results.
+              </p>
+            </motion.div>
+
+            <LivePlayground />
+          </TabsContent>
+
+          {/* Остальные табы остаются без изменений но с добавлением code snippets */}
           {/* Design Philosophy Tab */}
           <TabsContent value="philosophy" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
@@ -439,7 +549,7 @@ export default function UIKitPage() {
             </div>
           </TabsContent>
 
-          {/* Colors Tab */}
+          {/* Colors Tab с code snippets */}
           <TabsContent value="colors" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
@@ -448,7 +558,7 @@ export default function UIKitPage() {
               <p className="text-gray-400">Carefully selected colors for optimal contrast and accessibility</p>
             </motion.div>
 
-            {/* Brand Colors */}
+            {/* Brand Colors with code examples */}
             <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
                 <Palette className="w-5 h-5 text-brand-primary-400" />
@@ -467,7 +577,7 @@ export default function UIKitPage() {
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+                    whileHover={{ scale: prefersReducedMotion ? 1 : 1.05, transition: { duration: 0.2 } }}
                   >
                     <div className={`w-full h-20 ${color.class} rounded-xl border border-neutral-700 relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black`}
                          tabIndex={0}
@@ -507,6 +617,21 @@ export default function UIKitPage() {
                   </motion.div>
                 ))}
               </div>
+              
+              {/* Usage example */}
+              <CodeSnippet
+                title="Using Brand Colors"
+                language="jsx"
+                code={`// Using Tailwind classes
+<Button className="bg-brand-primary-500 hover:bg-brand-primary-600">
+  Primary Button
+</Button>
+
+// Using CSS custom properties  
+<div style={{ backgroundColor: 'var(--brand-primary-500)' }}>
+  Custom element
+</div>`}
+              />
             </motion.div>
 
             {/* Status Colors */}
@@ -515,7 +640,7 @@ export default function UIKitPage() {
                 <CheckCircle className="w-5 h-5 text-brand-primary-400" />
                 Status Colors
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
                 {[
                   { name: "Success", hex: "#10b981", class: "bg-status-success-500", usage: "Confirmations", icon: CheckCircle },
                   { name: "Warning", hex: "#f59e0b", class: "bg-status-warning-500", usage: "Cautions", icon: AlertTriangle },
@@ -528,7 +653,7 @@ export default function UIKitPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                    whileHover={{ y: prefersReducedMotion ? 0 : -5, transition: { duration: 0.2 } }}
                   >
                     <div className={`w-full h-20 ${color.class} rounded-xl relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black`}
                          tabIndex={0}
@@ -569,6 +694,12 @@ export default function UIKitPage() {
                   </motion.div>
                 ))}
               </div>
+              
+              <CodeSnippet
+                title="Theme System Usage"
+                language="jsx"
+                code={componentCode.themeToggle}
+              />
             </motion.div>
           </TabsContent>
 
@@ -597,7 +728,7 @@ export default function UIKitPage() {
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
-                    whileHover={{ x: 5, transition: { duration: 0.2 } }}
+                    whileHover={{ x: prefersReducedMotion ? 0 : 5, transition: { duration: 0.2 } }}
                   >
                     <div className="flex items-center justify-between mb-4">
                       <Badge variant="outline" className="border-brand-primary-500/30 text-brand-primary-400">{type.tag}</Badge>
@@ -681,240 +812,83 @@ export default function UIKitPage() {
             </motion.div>
           </TabsContent>
 
-          {/* Components Tab */}
+          {/* Components Tab с расширенными примерами */}
           <TabsContent value="components" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
                 <span className="text-brand-primary-400">Component</span> Library
               </h2>
-              <p className="text-gray-400">Production-ready components for modern applications</p>
+              <p className="text-gray-400">Production-ready components with comprehensive documentation</p>
             </motion.div>
 
-            {/* Cards */}
+            {/* Feature Cards using new FeatureCard pattern */}
             <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-xl font-semibold text-white flex items-center gap-2">
                   <Layers className="w-5 h-5 text-brand-primary-400" />
-                  Cards & Containers
+                  Feature Cards
                 </h3>
               </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                <FeatureCard
+                  icon={Shield}
+                  title="Security First"
+                  subtitle="Built-in protection"
+                  description="Advanced cryptographic protocols ensure your applications are secure by default."
+                  badge="Verified"
+                  action={{
+                    text: "Learn More",
+                    icon: ArrowRight,
+                    onClick: () => copyToClipboard('feature-card-live', componentCode.featureCard)
+                  }}
+                />
                 
-                {/* Feature Card */}
-                <motion.div 
-                  whileHover={{ y: -5, transition: { duration: 0.2 } }} 
-                  className="group relative"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black">
-                    <CardHeader>
-                      <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                          <Shield className="w-5 h-5 text-brand-primary-400" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-white group-hover:text-brand-primary-400 transition-colors">Security First</CardTitle>
-                          <div className="text-gray-400 text-sm">Built-in protection</div>
-                        </div>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-gray-300 mb-4">
-                        Advanced cryptographic protocols ensure your applications are secure by default.
-                      </p>
-                      <div className="flex items-center justify-between">
-                        <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
-                          Verified
-                        </Badge>
-                        <Button size="sm" variant="ghost" className="text-brand-primary-400 hover:text-brand-primary-300 focus:ring-2 focus:ring-brand-primary-500">
-                          Learn More <ArrowRight className="w-4 h-4 ml-1" />
-                        </Button>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 bg-black/80 text-white hover:bg-black/90 focus:ring-2 focus:ring-brand-primary-500"
-                    onClick={() => copyToClipboard('feature-card', componentCode.featureCard)}
-                    aria-label="Copy feature card component code"
-                  >
-                    <Copy className="w-3 h-3 mr-1" />
-                    Copy
-                  </Button>
-                </motion.div>
-
-                {/* Stats Card */}
-                <motion.div 
-                  whileHover={{ y: -5, transition: { duration: 0.2 } }} 
-                  className="group relative"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.1 }}
-                >
-                  <Card className="bg-neutral-900/50 border border-neutral-700 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black">
-                    <CardHeader>
-                      <CardTitle className="text-white flex items-center justify-between">
-                        <span className="font-mono">Network Status</span>
-                        <div className="flex items-center gap-2">
-                          <div className="w-2 h-2 bg-status-success-500 rounded-full animate-pulse" />
-                          <span className="text-brand-primary-400 text-sm">Live</span>
-                        </div>
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <div className="grid grid-cols-2 gap-4">
-                        <div>
-                          <div className="text-2xl font-bold text-brand-primary-400 font-mono">99.9%</div>
-                          <div className="text-xs text-gray-400">Uptime</div>
-                        </div>
-                        <div>
-                          <div className="text-2xl font-bold text-brand-primary-400 font-mono">1.2M</div>
-                          <div className="text-xs text-gray-400">Transactions</div>
-                        </div>
-                      </div>
-                      <div className="space-y-2">
-                        <div className="flex justify-between text-sm">
-                          <span className="text-gray-400">Performance</span>
-                          <span className="text-brand-primary-400 font-mono">Optimal</span>
-                        </div>
-                        <div className="h-2 bg-neutral-700 rounded-full overflow-hidden">
-                          <motion.div 
-                            className="h-full bg-gradient-to-r from-brand-secondary-400 to-status-success-500 rounded-full"
-                            initial={{ width: 0 }}
-                            animate={{ width: '94%' }}
-                            transition={{ duration: 1, delay: 0.5 }}
-                          />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 bg-black/80 text-white hover:bg-black/90 focus:ring-2 focus:ring-brand-primary-500"
-                    onClick={() => copyToClipboard('stats-card', 'stats-card-code')}
-                    aria-label="Copy stats card component code"
-                  >
-                    <Copy className="w-3 h-3 mr-1" />
-                    Copy
-                  </Button>
-                </motion.div>
-
-                {/* Action Card */}
-                <motion.div 
-                  whileHover={{ y: -5, transition: { duration: 0.2 } }} 
-                  className="group relative"
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.4, delay: 0.2 }}
-                >
-                  <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black">
-                    <CardHeader>
-                      <CardTitle className="text-white group-hover:text-brand-primary-400 transition-colors flex items-center justify-between">
-                        Developer Tools
-                        <ExternalLink className="w-4 h-4 text-gray-400 group-hover:text-brand-primary-400 transition-colors" />
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent className="space-y-4">
-                      <p className="text-gray-300 text-sm">
-                        Complete toolkit for building, testing, and deploying smart contracts.
-                      </p>
-                      <div className="flex flex-wrap gap-2">
-                        {["CLI", "SDK", "API", "Docs"].map((tool) => (
-                          <Badge key={tool} className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30 text-xs">
-                            {tool}
-                          </Badge>
-                        ))}
-                      </div>
-                      <div className="pt-2 border-t border-neutral-700">
-                        <div className="flex items-center gap-2 text-xs text-gray-400">
-                          <CheckCircle className="w-3 h-3 text-brand-primary-400" />
-                          <span>Production ready</span>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 bg-black/80 text-white hover:bg-black/90 focus:ring-2 focus:ring-brand-primary-500"
-                    onClick={() => copyToClipboard('action-card', 'action-card-code')}
-                    aria-label="Copy action card component code"
-                  >
-                    <Copy className="w-3 h-3 mr-1" />
-                    Copy
-                  </Button>
-                </motion.div>
+                <FeatureCard
+                  icon={Zap}
+                  title="Performance"
+                  subtitle="Optimized for speed"
+                  description="Lightning-fast components built with modern web standards and best practices."
+                  badge="Optimized"
+                  action={{
+                    text: "Benchmark",
+                    icon: TrendingUp,
+                    onClick: () => console.log('Benchmark clicked')
+                  }}
+                />
+                
+                <FeatureCard
+                  icon={Users}
+                  title="Community"
+                  subtitle="Open source"
+                  description="Built by the community, for the community. Contributions and feedback welcome."
+                  badge="Open Source"
+                  action={{
+                    text: "Contribute",
+                    icon: GitBranch,
+                    onClick: () => console.log('Contribute clicked')
+                  }}
+                />
               </div>
+              
+              <CodeSnippet
+                title="FeatureCard Component"
+                language="jsx"
+                filename="FeatureCard.tsx"
+                code={componentCode.featureCard}
+              />
             </motion.div>
 
-            {/* Alerts */}
+            {/* Buttons */}
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <Bell className="w-5 h-5 text-brand-primary-400" />
-                Alerts & Notifications
+                <Target className="w-5 h-5 text-brand-primary-400" />
+                Interactive Elements
               </h3>
-              <div className="space-y-4">
-                {[
-                  { type: "success", icon: CheckCircle, title: "Transaction Confirmed", desc: "Your smart contract has been successfully deployed", color: "border-brand-primary-500 bg-brand-primary-500/10 text-brand-primary-400" },
-                  { type: "warning", icon: AlertTriangle, title: "Network Congestion", desc: "High network activity detected. Consider adjusting gas fees", color: "border-status-warning-500 bg-status-warning-500/10 text-status-warning-400" },
-                  { type: "error", icon: XCircle, title: "Validation Failed", desc: "Smart contract validation failed. Check your ErgoScript syntax", color: "border-status-error-500 bg-status-error-500/10 text-status-error-400" },
-                  { type: "info", icon: Info, title: "Protocol Update", desc: "New Sigma protocol features available in the latest release", color: "border-status-info-500 bg-status-info-500/10 text-status-info-400" }
-                ].map((alert, index) => (
-                  <motion.div
-                    key={alert.type}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    whileHover={{ x: 5, transition: { duration: 0.2 } }}
-                    className="group relative"
-                  >
-                    <Alert className={`${alert.color} rounded-xl focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black`}>
-                      <alert.icon className="w-4 h-4" />
-                      <div className="ml-3">
-                        <h4 className="font-semibold">{alert.title}</h4>
-                        <AlertDescription className="text-sm opacity-90">
-                          {alert.desc}
-                        </AlertDescription>
-                      </div>
-                    </Alert>
-                    <Button
-                      size="sm"
-                      variant="ghost"
-                      className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 bg-black/80 text-white hover:bg-black/90 focus:ring-2 focus:ring-brand-primary-500"
-                      onClick={() => copyToClipboard(`alert-${alert.type}`, componentCode.alert)}
-                      aria-label={`Copy ${alert.type} alert component code`}
-                    >
-                      <Copy className="w-3 h-3 mr-1" />
-                      Copy
-                    </Button>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          </TabsContent>
-
-          {/* Buttons Tab */}
-          <TabsContent value="buttons" className="space-y-8">
-            <motion.div {...fadeInUp} className="text-center mb-8">
-              <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
-                <span className="text-brand-primary-400">Interactive</span> Elements
-              </h2>
-              <p className="text-gray-400">Buttons and controls with Ergo styling and accessibility features</p>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 gap-8">
               
-              {/* Primary Actions */}
-              <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
-                <h3 className="text-lg font-semibold text-white flex items-center gap-2 mb-6">
-                  <Target className="w-5 h-5 text-brand-primary-400" />
-                  Primary Actions
-                </h3>
+              <div className="grid md:grid-cols-2 gap-8 mb-6">
                 <div className="space-y-4 group">
+                  <h4 className="text-lg font-semibold text-white">Primary Actions</h4>
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black transition-all duration-200 focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black">
                       <Rocket className="w-4 h-4 mr-2" />
@@ -928,13 +902,6 @@ export default function UIKitPage() {
                     </Button>
                   </motion.div>
                   
-                  <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
-                    <Button size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black px-8 focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black">
-                      <Shield className="w-5 h-5 mr-2" />
-                      Verify Security
-                    </Button>
-                  </motion.div>
-
                   <Button
                     size="sm"
                     variant="ghost"
@@ -946,15 +913,9 @@ export default function UIKitPage() {
                     Copy Button Code
                   </Button>
                 </div>
-              </motion.div>
 
-              {/* Secondary Actions */}
-              <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
-                <h3 className="text-lg font-semibold text-white flex items-center gap-2 mb-6">
-                  <Settings className="w-5 h-5 text-brand-primary-400" />
-                  Secondary Actions
-                </h3>
                 <div className="space-y-4">
+                  <h4 className="text-lg font-semibold text-white">Secondary Actions</h4>
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button variant="outline" className="w-full border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:ring-offset-black">
                       <Download className="w-4 h-4 mr-2" />
@@ -968,58 +929,52 @@ export default function UIKitPage() {
                       View Documentation
                     </Button>
                   </motion.div>
-                  
-                  <Button disabled className="w-full focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:ring-offset-black">
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    Processing...
-                  </Button>
                 </div>
-              </motion.div>
-            </div>
-
-            {/* Icon Buttons */}
-            <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
-              <h3 className="text-lg font-semibold text-white flex items-center gap-2 mb-6">
-                <Cpu className="w-5 h-5 text-brand-primary-400" />
-                Icon Buttons
-              </h3>
-              <div className="flex gap-4 flex-wrap">
-                {[
-                  { component: <Search className="w-4 h-4" />, variant: "default", bg: "bg-brand-primary-500 hover:bg-brand-primary-600", label: "Search" },
-                  { component: <Bell className="w-4 h-4" />, variant: "outline", bg: "border-neutral-700 hover:bg-neutral-800", label: "Notifications" },
-                  { component: <User className="w-4 h-4" />, variant: "ghost", bg: "hover:bg-neutral-800", label: "User profile" },
-                  { component: <X className="w-4 h-4" />, variant: "destructive", bg: "", label: "Close" }
-                ].map((btn, index) => (
-                  <motion.div
-                    key={index}
-                    whileHover="hover"
-                    whileTap="tap"
-                    variants={scaleOnHover}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: index * 0.1 }}
-                  >
-                    <Button 
-                      size="icon" 
-                      variant={btn.variant as any}
-                      className={`${btn.bg} focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200`}
-                      aria-label={btn.label}
-                    >
-                      {btn.component}
-                    </Button>
-                  </motion.div>
-                ))}
               </div>
+              
+              <CodeSnippet
+                title="Button Variants"
+                language="jsx"
+                code={componentCode.primaryButton}
+              />
+            </motion.div>
+
+            {/* Signature Effects Showcase */}
+            <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
+              <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
+                <Sparkles className="w-5 h-5 text-brand-primary-400" />
+                Signature Effects
+              </h3>
+              
+              <div className="grid md:grid-cols-2 gap-6 mb-6">
+                <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+                  <h4 className="text-lg font-semibold text-white mb-4">Glitch Text Effect</h4>
+                  <GlitchText className="text-2xl font-bold">
+                    <span className="text-brand-primary-400">Ergo</span> Platform
+                  </GlitchText>
+                </div>
+                
+                <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden">
+                  <h4 className="text-lg font-semibold text-white mb-4">Cryptographic Visualization</h4>
+                  <CryptographicVisualization className="w-full h-24" />
+                </div>
+              </div>
+              
+              <CodeSnippet
+                title="Signature Effects"
+                language="jsx"
+                code={componentCode.glitchText}
+              />
             </motion.div>
           </TabsContent>
 
-          {/* Patterns Tab */}
+          {/* Patterns Tab with live examples */}
           <TabsContent value="patterns" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
                 <span className="text-brand-primary-400">Design</span> Patterns
               </h2>
-              <p className="text-gray-400">Common layouts and interaction patterns from Ergo applications</p>
+              <p className="text-gray-400">Reusable patterns and layouts with comprehensive code examples</p>
             </motion.div>
 
             {/* Hero Pattern */}
@@ -1028,38 +983,32 @@ export default function UIKitPage() {
                 <Lightbulb className="w-5 h-5 text-brand-primary-400" />
                 Hero Section Pattern
               </h3>
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 group relative">
-                <h1 className="text-3xl font-bold text-white mb-4 leading-tight">
-                  Your <span className="text-brand-primary-400">Application</span> Title
-                </h1>
-                <p className="text-xl text-gray-400 mb-6">
-                  Compelling description that explains the value proposition clearly and concisely.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
-                    <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black">
-                      <Rocket className="w-4 h-4 mr-2" />
-                      Get Started
-                    </Button>
-                  </motion.div>
-                  <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
-                    <Button variant="outline" className="border-neutral-700 text-gray-300 focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:ring-offset-black">
-                      <BookOpen className="w-4 h-4 mr-2" />
-                      Learn More
-                    </Button>
-                  </motion.div>
-                </div>
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 bg-black/80 text-white hover:bg-black/90 focus:ring-2 focus:ring-brand-primary-500"
-                  onClick={() => copyToClipboard('hero-pattern', 'hero-pattern-code')}
-                  aria-label="Copy hero pattern code"
-                >
-                  <Copy className="w-3 h-3 mr-1" />
-                  Copy
-                </Button>
+              
+              <div className="mb-6">
+                <HeroPattern
+                  title="Your"
+                  highlight="Application"
+                  subtitle="Compelling description that explains the value proposition clearly and concisely."
+                  description="Additional context or details about your application."
+                  primaryAction={{
+                    text: "Get Started",
+                    icon: Rocket,
+                    onClick: () => console.log('Get started')
+                  }}
+                  secondaryAction={{
+                    text: "Learn More",
+                    icon: BookOpen,
+                    onClick: () => console.log('Learn more')
+                  }}
+                />
               </div>
+              
+              <CodeSnippet
+                title="Hero Pattern Usage"
+                language="jsx"
+                filename="HeroPattern.tsx"
+                code={componentCode.heroPattern}
+              />
             </motion.div>
 
             {/* Feature Grid Pattern */}
@@ -1068,46 +1017,50 @@ export default function UIKitPage() {
                 <Building className="w-5 h-5 text-brand-primary-400" />
                 Feature Grid Pattern
               </h3>
-              <div className="grid md:grid-cols-3 gap-6 group relative">
-                {[
-                  { icon: Shield, title: "Security", desc: "Built with security as the foundation", color: "text-brand-primary-400" },
-                  { icon: Zap, title: "Performance", desc: "Optimized for speed and efficiency", color: "text-brand-secondary-400" },
-                  { icon: Users, title: "Community", desc: "Supported by a vibrant ecosystem", color: "text-status-success-500" }
-                ].map((feature, index) => (
-                  <motion.div 
-                    key={feature.title} 
-                    className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center hover:border-neutral-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4, delay: index * 0.1 }}
-                    whileHover={{ y: -5, transition: { duration: 0.2 } }}
-                    tabIndex={0}
-                    role="article"
-                    aria-label={feature.title}
-                  >
-                    <feature.icon className={`w-12 h-12 ${feature.color} mx-auto mb-4 group-hover:scale-110 transition-transform duration-200`} />
-                    <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>
-                    <p className="text-gray-300 text-sm">{feature.desc}</p>
-                  </motion.div>
-                ))}
-                <Button
-                  size="sm"
-                  variant="ghost"
-                  className="absolute top-2 right-2 opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 bg-black/80 text-white hover:bg-black/90 focus:ring-2 focus:ring-brand-primary-500"
-                  onClick={() => copyToClipboard('feature-grid', 'feature-grid-code')}
-                  aria-label="Copy feature grid pattern code"
-                >
-                  <Copy className="w-3 h-3 mr-1" />
-                  Copy
-                </Button>
+              
+              <div className="mb-6">
+                <FeatureGrid items={featureGridItems} columns={isMobile ? 1 : 3} />
+              </div>
+              
+              <CodeSnippet
+                title="Feature Grid Usage"
+                language="jsx"
+                filename="FeatureGrid.tsx"
+                code={componentCode.featureGrid}
+              />
+            </motion.div>
+
+            {/* Auto-docs showcase */}
+            <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
+              <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
+                <BookOpen className="w-5 h-5 text-brand-primary-400" />
+                Auto-Generated Documentation
+              </h3>
+              
+              <div className="bg-brand-primary-400/10 border border-brand-primary-400/20 rounded-xl p-6">
+                <p className="text-gray-300 mb-4">
+                  All patterns include comprehensive TypeScript interfaces, usage examples, and auto-generated 
+                  documentation. Props are automatically inferred and documented for better developer experience.
+                </p>
+                <div className="flex items-center gap-4">
+                  <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
+                    TypeScript
+                  </Badge>
+                  <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
+                    Auto-documented
+                  </Badge>
+                  <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
+                    Copy-paste ready
+                  </Badge>
+                </div>
               </div>
             </motion.div>
           </TabsContent>
 
         </Tabs>
 
-        {/* Footer with improved accessibility */}
-        <footer className="text-center pt-16 pb-8 border-t border-neutral-800 mt-16">
+        {/* Footer с signature effects */}
+        <footer className="text-center pt-16 pb-8 border-t border-neutral-800 mt-16 relative">
           <div className="flex items-center justify-center gap-3 mb-4">
             <ErgoHex className="text-brand-primary-500" />
             <h3 className="text-lg font-semibold text-white">Ergo Design System</h3>
@@ -1115,12 +1068,30 @@ export default function UIKitPage() {
           <p className="text-gray-400 mb-4">
             Professional design system for blockchain applications
           </p>
-          <div className="flex justify-center gap-6 text-sm text-gray-500" role="list">
-            <span role="listitem">React</span>
+          <div className="flex justify-center gap-6 text-sm text-gray-500 mb-6" role="list">
+            <span role="listitem">React 19</span>
             <span role="presentation" aria-hidden="true">•</span>
             <span role="listitem">TypeScript</span>
             <span role="presentation" aria-hidden="true">•</span>
             <span role="listitem">Tailwind CSS</span>
+            <span role="presentation" aria-hidden="true">•</span>
+            <span role="listitem">Framer Motion</span>
+          </div>
+          
+          {/* Links */}
+          <div className="flex justify-center gap-4">
+            <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
+              <GitBranch className="w-4 h-4 mr-2" />
+              GitHub
+            </Button>
+            <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
+              <Figma className="w-4 h-4 mr-2" />
+              Figma
+            </Button>
+            <Button size="sm" variant="ghost" className="text-gray-400 hover:text-white">
+              <BookOpen className="w-4 h-4 mr-2" />
+              Storybook
+            </Button>
           </div>
         </footer>
 
