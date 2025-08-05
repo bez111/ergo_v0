@@ -398,17 +398,17 @@ export const GlitchHex: React.FC<{
               points="38,24 32,39 16,39 10,24 16,9 32,9"
               fill="none"
               stroke="#22d3ee"
-              strokeWidth="2"
-              className="opacity-30 animate-rareGlitch"
+              strokeWidth="1"
+              className="opacity-20 animate-rareGlitch"
               style={{ filter: 'url(#glitchFilter)' }}
             />
             <polygon
               points="38,24 32,39 16,39 10,24 16,9 32,9"
               fill="none"
               stroke="#FF8800"
-              strokeWidth="1"
-              className="opacity-40 animate-rareGlitch"
-              style={{ animationDelay: '2s' }}
+              strokeWidth="0.5"
+              className="opacity-25 animate-rareGlitch"
+              style={{ animationDelay: '4s' }}
             />
           </>
         )}
