@@ -373,7 +373,7 @@ export const GlitchHex: React.FC<{
   size?: number; 
   className?: string;
   animated?: boolean;
-}> = ({ size = 48, className = "", animated = true }) => {
+}> = ({ size = 48, className = "", animated = false }) => {
   return (
     <svg 
       width={size} 
