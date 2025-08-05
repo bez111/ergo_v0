@@ -226,8 +226,13 @@ export const getAnimationConfig = (isMobile: boolean, prefersReducedMotion: bool
 // Media query hooks
 export const useMediaQuery = (query: string) => {
   const [matches, setMatches] = React.useState(false)
+  const [hasMounted, setHasMounted] = React.useState(false)
 
   React.useEffect(() => {
+    setHasMounted(true)
+    
+    if (typeof window === 'undefined') return
+    
     const media = window.matchMedia(query)
     setMatches(media.matches)
 
@@ -237,6 +242,9 @@ export const useMediaQuery = (query: string) => {
     return () => media.removeEventListener('change', listener)
   }, [query])
 
+  // Prevent hydration mismatch by returning false on server
+  if (!hasMounted) return false
+  
   return matches
 }
 

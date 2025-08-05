@@ -63,7 +63,6 @@ import {
   BookOpen,
   GitBranch,
   ChevronRight,
-  Accessibility,
   Heart,
   Fingerprint,
   ShieldCheck,
@@ -154,7 +153,7 @@ export default function UIKitPage() {
   items={[
     { value: "50+", label: "Components", icon: Layers, color: "text-brand-primary-400" },
     { value: "8", label: "Categories", icon: Building, color: "text-brand-primary-400" },
-    { value: "100%", label: "Accessible", icon: Accessibility, color: "text-brand-primary-400" },
+    { value: "100%", label: "Accessible", icon: ShieldCheck, color: "text-brand-primary-400" },
     { value: "Open", label: "Source", icon: GitBranch, color: "text-brand-primary-400" }
   ]}
   columns={4}
@@ -239,7 +238,7 @@ export default function MyComponent() {
   const statsGridItems: StatsGridItem[] = [
     { value: "50+", label: "Components", icon: Layers, color: "text-brand-primary-400" },
     { value: "8", label: "Categories", icon: Building, color: "text-brand-primary-400" },
-    { value: "100%", label: "Accessible", icon: Accessibility, color: "text-brand-primary-400" },
+    { value: "100%", label: "Accessible", icon: ShieldCheck, color: "text-brand-primary-400" },
     { value: "Open", label: "Source", icon: GitBranch, color: "text-brand-primary-400" }
   ]
 
@@ -441,7 +440,7 @@ export default function MyComponent() {
                 <Target className="w-6 h-6 text-brand-primary-400" />
                 Key Features
               </h2>
-              <FeatureGrid items={featureGridItems} columns={isMobile ? 1 : 3} />
+              <FeatureGrid items={featureGridItems} columns={isMobile ? 2 : 3} />
             </motion.div>
 
             <motion.div {...fadeInUp} transition={{ duration: 0.5, delay: 0.2 }}>
@@ -505,7 +504,7 @@ export default function MyComponent() {
             <div className="grid gap-8">
               {Object.entries(designPrinciples).map(([key, principle], index) => {
                 const icons = {
-                  accessibility: Accessibility,
+                  accessibility: ShieldCheck,
                   simplicity: Minimize2,
                   consistency: Target,
                   privacy: Fingerprint,
@@ -1019,7 +1018,7 @@ export default function MyComponent() {
               </h3>
               
               <div className="mb-6">
-                <FeatureGrid items={featureGridItems} columns={isMobile ? 1 : 3} />
+                <FeatureGrid items={featureGridItems} columns={isMobile ? 2 : 3} />
               </div>
               
               <CodeSnippet
