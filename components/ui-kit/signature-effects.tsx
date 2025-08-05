@@ -399,7 +399,7 @@ export const GlitchHex: React.FC<{
               fill="none"
               stroke="#22d3ee"
               strokeWidth="2"
-              className="opacity-30 animate-glitch"
+              className="opacity-30 animate-rareGlitch"
               style={{ filter: 'url(#glitchFilter)' }}
             />
             <polygon
@@ -407,8 +407,8 @@ export const GlitchHex: React.FC<{
               fill="none"
               stroke="#FF8800"
               strokeWidth="1"
-              className="opacity-40 animate-glitch-delayed"
-              style={{ filter: 'url(#glitchFilter)' }}
+              className="opacity-40 animate-rareGlitch"
+              style={{ animationDelay: '2s' }}
             />
           </>
         )}
@@ -494,13 +494,23 @@ export const UndergroundManifesto: React.FC<{ className?: string }> = ({ classNa
       if (t < manifestos[idx].length) {
         c += manifestos[idx][t++]
         setText(c)
-        setTimeout(typeNext, 34 + Math.random() * 40)
+        // Более реалистичная скорость печати с вариациями
+        const baseDelay = 50
+        const randomDelay = Math.random() * 30
+        const charDelay = baseDelay + randomDelay
+        
+        // Случайные паузы для имитации человеческой печати
+        if (Math.random() < 0.1) {
+          setTimeout(typeNext, charDelay + 200)
+        } else {
+          setTimeout(typeNext, charDelay)
+        }
       } else {
         // Пауза перед следующей цитатой
         setTimeout(() => {
           setIdx((idx + 1) % manifestos.length)
           setText("")
-        }, 3000)
+        }, 4000)
       }
     }
     
@@ -595,7 +605,7 @@ export const WatermarkHex: React.FC<{ className?: string }> = ({ className = "" 
   return (
     <div className={`absolute inset-0 pointer-events-none ${className}`}>
       <svg 
-        className="w-full h-full opacity-[0.02] text-brand-primary-400"
+        className="w-full h-full opacity-[0.02] text-brand-primary-400 animate-watermarkFloat"
         viewBox="0 0 100 100"
         preserveAspectRatio="xMidYMid slice"
       >

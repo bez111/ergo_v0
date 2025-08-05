@@ -315,7 +315,7 @@ export default function MyComponent() {
         
         {/* Hero Section с signature effects */}
         <section className="pb-20 relative">
-          <WatermarkHex className="opacity-[0.01]" />
+          <WatermarkHex className="opacity-[0.01] pointer-events-none" />
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -1090,7 +1090,7 @@ export default function MyComponent() {
               <CodeSnippet
                 title="Watermark Hex"
                 language="jsx"
-                code={`<WatermarkHex className="opacity-[0.01]" />`}
+                code={`<WatermarkHex className="opacity-[0.01] pointer-events-none" />`}
               />
             </motion.div>
           </TabsContent>
