@@ -422,7 +422,7 @@ export const GlitchHex: React.FC<{
           fontWeight="bold"
           fill="#FF8800"
           stroke="none"
-          className="select-none pointer-events-none animate-sigmaPulse"
+          className="select-none pointer-events-none"
         >
           Σ
         </text>
