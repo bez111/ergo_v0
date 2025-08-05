@@ -688,21 +688,21 @@ aside .sticky-toc {
 
 /* Rare Glitch Animation */
 @keyframes rareGlitch {
-  0%, 98% { 
+  0%, 99% { 
     transform: translate(0,0); 
     opacity: 0.3; 
   }
-  98.5% { 
+  99.2% { 
     transform: translate(-1px,1px); 
-    opacity: 0.5; 
-  }
-  99% { 
-    transform: translate(1px,-1px); 
     opacity: 0.4; 
   }
-  99.5% { 
+  99.4% { 
+    transform: translate(1px,-1px); 
+    opacity: 0.3; 
+  }
+  99.6% { 
     transform: translate(-1px,1px); 
-    opacity: 0.6; 
+    opacity: 0.5; 
   }
   100% { 
     transform: translate(0,0); 
@@ -711,7 +711,7 @@ aside .sticky-toc {
 }
 
 .animate-rareGlitch { 
-  animation: rareGlitch 8s infinite; 
+  animation: rareGlitch 20s infinite; 
 }
 
 /* Watermark Animation */

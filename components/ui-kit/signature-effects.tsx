@@ -408,7 +408,7 @@ export const GlitchHex: React.FC<{
               stroke="#FF8800"
               strokeWidth="0.5"
               className="opacity-25 animate-rareGlitch"
-              style={{ animationDelay: '4s' }}
+              style={{ animationDelay: '10s' }}
             />
           </>
         )}
