@@ -1,6 +1,6 @@
 "use client"
 
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 // Glitch Effect для текста
@@ -398,16 +398,16 @@ export const GlitchHex: React.FC<{
               points="38,24 32,39 16,39 10,24 16,9 32,9"
               fill="none"
               stroke="#22d3ee"
-              strokeWidth="3"
-              className="opacity-40 animate-glitch"
+              strokeWidth="2"
+              className="opacity-30 animate-glitch"
               style={{ filter: 'url(#glitchFilter)' }}
             />
             <polygon
               points="38,24 32,39 16,39 10,24 16,9 32,9"
               fill="none"
               stroke="#FF8800"
-              strokeWidth="2"
-              className="opacity-60 animate-glitch-delayed"
+              strokeWidth="1"
+              className="opacity-40 animate-glitch-delayed"
               style={{ filter: 'url(#glitchFilter)' }}
             />
           </>
@@ -474,6 +474,48 @@ export const GlitchHex: React.FC<{
 
 // Underground Manifesto Block
 export const UndergroundManifesto: React.FC<{ className?: string }> = ({ className = "" }) => {
+  const [text, setText] = useState("")
+  const [idx, setIdx] = useState(0)
+  const [showCursor, setShowCursor] = useState(true)
+  
+  const manifestos = [
+    "We write code not for compliance. We write code to break the chains.",
+    "Σ | More than a blockchain. A movement.",
+    "Underground. Sovereign. Open source forever.",
+    "Privacy is not a feature. It's a fundamental right.",
+    "Decentralization is not optional. It's inevitable."
+  ]
+
+  useEffect(() => {
+    let t = 0
+    let c = ""
+    
+    const typeNext = () => {
+      if (t < manifestos[idx].length) {
+        c += manifestos[idx][t++]
+        setText(c)
+        setTimeout(typeNext, 34 + Math.random() * 40)
+      } else {
+        // Пауза перед следующей цитатой
+        setTimeout(() => {
+          setIdx((idx + 1) % manifestos.length)
+          setText("")
+        }, 3000)
+      }
+    }
+    
+    typeNext()
+  }, [idx])
+
+  // Мигающий курсор
+  useEffect(() => {
+    const cursorInterval = setInterval(() => {
+      setShowCursor(prev => !prev)
+    }, 500)
+    
+    return () => clearInterval(cursorInterval)
+  }, [])
+
   return (
     <div className={`bg-neutral-950 text-orange-500 border border-orange-500/30 rounded-xl p-6 text-center font-mono text-lg shadow-lg relative overflow-hidden ${className}`}>
       {/* ASCII Art Border */}
@@ -492,22 +534,20 @@ export const UndergroundManifesto: React.FC<{ className?: string }> = ({ classNa
       
       {/* Main content */}
       <div className="relative z-10">
-        <div className="mb-4">
+        <div className="mb-4 min-h-[2.5rem] flex items-center justify-center">
           <span className="font-bold tracking-wide text-xl">
-            "We write code not for compliance.
-          </span>
-        </div>
-        <div className="mb-4">
-          <span className="font-bold tracking-wide text-xl">
-            We write code to break the chains."
+            {text}
+            {showCursor && <span className="text-cyan-400">▌</span>}
           </span>
         </div>
         
-        {/* Signature */}
-        <div className="mt-6 flex justify-center items-center space-x-2">
-          <span className="text-cyan-400 text-sm">{"//"}</span>
+        {/* Meta info */}
+        <div className="mt-6 flex justify-center items-center space-x-4 text-xs text-gray-500">
+          <span>Revised: 2025</span>
+          <span className="text-cyan-400">|</span>
+          <span>Underground v.1.6</span>
+          <span className="text-cyan-400">|</span>
           <span className="text-orange-500 font-bold">Σ</span>
-          <span className="text-cyan-400 text-sm">{"//"}</span>
         </div>
       </div>
       
@@ -534,10 +574,10 @@ export const GlitchButton: React.FC<{
       </span>
       
       {/* Glitch border overlay */}
-      <span className="absolute inset-0 border-2 border-cyan-400 opacity-30 group-hover:animate-glitchBorder pointer-events-none rounded-xl" />
+      <span className="absolute inset-0 border border-cyan-400 opacity-20 group-hover:animate-glitchBorder pointer-events-none rounded-xl" />
       
       {/* Glitch text overlay */}
-      <span className="absolute inset-0 flex items-center justify-center font-semibold tracking-wide text-black opacity-0 group-hover:opacity-20 group-active:opacity-40 transition-opacity duration-200 pointer-events-none">
+      <span className="absolute inset-0 flex items-center justify-center font-semibold tracking-wide text-black opacity-0 group-hover:opacity-10 group-active:opacity-20 transition-opacity duration-200 pointer-events-none">
         {children}
       </span>
       
@@ -547,6 +587,39 @@ export const GlitchButton: React.FC<{
       <div className="absolute bottom-1 left-1 w-2 h-2 border-l border-b border-cyan-400 opacity-50"></div>
       <div className="absolute bottom-1 right-1 w-2 h-2 border-r border-b border-cyan-400 opacity-50"></div>
     </button>
+  )
+}
+
+// Watermark Hex - еле видимый watermark
+export const WatermarkHex: React.FC<{ className?: string }> = ({ className = "" }) => {
+  return (
+    <div className={`absolute inset-0 pointer-events-none ${className}`}>
+      <svg 
+        className="w-full h-full opacity-[0.02] text-brand-primary-400"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="xMidYMid slice"
+      >
+        <g>
+          <polygon
+            points="50,10 80,30 80,70 50,90 20,70 20,30"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="0.5"
+          />
+          <text
+            x="50"
+            y="60"
+            textAnchor="middle"
+            fontSize="12"
+            fontWeight="bold"
+            fill="currentColor"
+            stroke="none"
+          >
+            Σ
+          </text>
+        </g>
+      </svg>
+    </div>
   )
 }
 
@@ -561,5 +634,6 @@ export const signatureEffects = {
   HexagonalGrid,
   GlitchHex,
   UndergroundManifesto,
-  GlitchButton
+  GlitchButton,
+  WatermarkHex
 } 

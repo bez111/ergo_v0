@@ -15,7 +15,7 @@ import {
 } from "@/components/ui-kit/patterns"
 import { 
   MathematicalPattern, CryptographicVisualization, 
-  FloatingParticles, HexagonalGrid, GlitchHex, UndergroundManifesto, GlitchButton
+  FloatingParticles, HexagonalGrid, GlitchHex, UndergroundManifesto, GlitchButton, WatermarkHex
 } from "@/components/ui-kit/signature-effects"
 import LivePlayground from "@/components/ui-kit/live-playground"
 import { 
@@ -315,6 +315,7 @@ export default function MyComponent() {
         
         {/* Hero Section с signature effects */}
         <section className="pb-20 relative">
+          <WatermarkHex className="opacity-[0.01]" />
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
@@ -1073,6 +1074,23 @@ export default function MyComponent() {
                 title="Cryptographic Visualization"
                 language="jsx"
                 code={`<CryptographicVisualization className="w-full h-24" />`}
+              />
+              
+              {/* Watermark Hex */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden mb-6">
+                <h4 className="text-lg font-semibold text-white mb-4">Watermark Hex</h4>
+                <div className="relative h-32 bg-neutral-800 rounded-lg">
+                  <WatermarkHex />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <p className="text-gray-400 text-sm">Subtle watermark effect</p>
+                  </div>
+                </div>
+              </div>
+              
+              <CodeSnippet
+                title="Watermark Hex"
+                language="jsx"
+                code={`<WatermarkHex className="opacity-[0.01]" />`}
               />
             </motion.div>
           </TabsContent>
