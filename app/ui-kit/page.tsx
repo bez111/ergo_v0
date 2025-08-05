@@ -80,6 +80,7 @@ export default function UIKitPage() {
   const [activeTab, setActiveTab] = useState("overview")
   const [copiedComponent, setCopiedComponent] = useState<string | null>(null)
   const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('dark')
+  const [visitedTabs, setVisitedTabs] = useState<Set<string>>(new Set(["overview"]))
   
   // Responsive и accessibility hooks
   const isMobile = useIsMobile()
@@ -90,6 +91,11 @@ export default function UIKitPage() {
     await navigator.clipboard.writeText(code)
     setCopiedComponent(componentName)
     setTimeout(() => setCopiedComponent(null), 2000)
+  }
+
+  const handleTabChange = (newTab: string) => {
+    setActiveTab(newTab)
+    setVisitedTabs(prev => new Set([...prev, newTab]))
   }
 
   // Comprehensive component code examples
@@ -217,6 +223,12 @@ export default function MyComponent() {
     initial: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
     animate: { opacity: 1, y: 0 },
     exit: { opacity: 0, y: prefersReducedMotion ? 0 : -20 }
+  }
+
+  // Conditional animation - no animation for visited tabs
+  const getConditionalAnimation = (tabName: string) => {
+    const isFirstVisit = !visitedTabs.has(tabName) || activeTab === "overview"
+    return isFirstVisit ? fadeInUp : { initial: { opacity: 1, y: 0 }, animate: { opacity: 1, y: 0 } }
   }
 
   const scaleOnHover = {
@@ -408,7 +420,7 @@ export default function MyComponent() {
         </motion.div>
 
         {/* Navigation с улучшенной мобильной версией */}
-        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+        <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
           <div className="flex justify-center mb-12">
             <TabsList className="bg-neutral-900 border border-neutral-700 p-1 overflow-x-auto">
               {[
@@ -435,7 +447,7 @@ export default function MyComponent() {
 
           {/* Overview Tab с использованием новых паттернов */}
           <TabsContent value="overview" className="space-y-12">
-            <motion.div {...fadeInUp} transition={{ duration: 0.5 }}>
+            <motion.div {...getConditionalAnimation("overview")} transition={{ duration: 0.5 }}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <Target className="w-6 h-6 text-brand-primary-400" />
                 Key Features
@@ -443,7 +455,7 @@ export default function MyComponent() {
               <FeatureGrid items={featureGridItems} columns={isMobile ? 2 : 3} />
             </motion.div>
 
-            <motion.div {...fadeInUp} transition={{ duration: 0.5, delay: 0.2 }}>
+            <motion.div {...getConditionalAnimation("overview")} transition={{ duration: 0.5, delay: visitedTabs.has("overview") ? 0 : 0.2 }}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <TrendingUp className="w-6 h-6 text-brand-primary-400" />
                 By the Numbers
@@ -452,7 +464,7 @@ export default function MyComponent() {
             </motion.div>
 
             {/* Auto-generated documentation showcase */}
-            <motion.div {...fadeInUp} transition={{ duration: 0.5, delay: 0.4 }}>
+            <motion.div {...getConditionalAnimation("overview")} transition={{ duration: 0.5, delay: visitedTabs.has("overview") ? 0 : 0.4 }}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <BookOpen className="w-6 h-6 text-brand-primary-400" />
                 Auto-Generated Documentation
@@ -491,7 +503,7 @@ export default function MyComponent() {
           {/* Остальные табы остаются без изменений но с добавлением code snippets */}
           {/* Design Philosophy Tab */}
           <TabsContent value="philosophy" className="space-y-8">
-            <motion.div {...fadeInUp} className="text-center mb-8">
+            <motion.div {...getConditionalAnimation("philosophy")} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
                 <span className="text-brand-primary-400">Design</span> Philosophy
               </h2>
@@ -513,12 +525,14 @@ export default function MyComponent() {
                 
                 const IconComponent = icons[key as keyof typeof icons] || Shield
                 
+                const isPhilosophyVisited = visitedTabs.has("philosophy")
+                
                 return (
                   <motion.div
                     key={key}
-                    initial={{ opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
+                    initial={isPhilosophyVisited ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    transition={{ duration: isPhilosophyVisited ? 0 : 0.6, delay: isPhilosophyVisited ? 0 : index * 0.1 }}
                     className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 hover:border-brand-primary-500/30 transition-all duration-300 group"
                   >
                     <div className="flex items-start gap-6">
