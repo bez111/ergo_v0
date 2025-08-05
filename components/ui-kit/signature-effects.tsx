@@ -368,6 +368,188 @@ export const HexagonalGrid: React.FC<{ className?: string }> = ({ className = ""
   )
 }
 
+// Glitch Hex SVG с анимацией
+export const GlitchHex: React.FC<{ 
+  size?: number; 
+  className?: string;
+  animated?: boolean;
+}> = ({ size = 48, className = "", animated = true }) => {
+  return (
+    <svg 
+      width={size} 
+      height={size} 
+      viewBox="0 0 48 48" 
+      className={`group ${className}`}
+    >
+      <g>
+        {/* Основной шестиугольник */}
+        <polygon
+          points="38,24 32,39 16,39 10,24 16,9 32,9"
+          fill="none"
+          stroke="#FF8800"
+          strokeWidth="3"
+          className="transition-all duration-300 group-hover:stroke-cyan-400"
+        />
+        
+        {/* Глитч-слои */}
+        {animated && (
+          <>
+            <polygon
+              points="38,24 32,39 16,39 10,24 16,9 32,9"
+              fill="none"
+              stroke="#22d3ee"
+              strokeWidth="3"
+              className="opacity-40 animate-glitch"
+              style={{ filter: 'url(#glitchFilter)' }}
+            />
+            <polygon
+              points="38,24 32,39 16,39 10,24 16,9 32,9"
+              fill="none"
+              stroke="#FF8800"
+              strokeWidth="2"
+              className="opacity-60 animate-glitch-delayed"
+              style={{ filter: 'url(#glitchFilter)' }}
+            />
+          </>
+        )}
+        
+        {/* Сигма-символ */}
+        <text
+          x="24"
+          y="31"
+          textAnchor="middle"
+          fontSize="18"
+          fontWeight="bold"
+          fill="#FF8800"
+          stroke="none"
+          className="select-none pointer-events-none animate-sigmaPulse"
+        >
+          Σ
+        </text>
+        
+        {/* Глитч-сигма */}
+        {animated && (
+          <>
+            <text
+              x="24"
+              y="31"
+              textAnchor="middle"
+              fontSize="18"
+              fontWeight="bold"
+              fill="#22d3ee"
+              stroke="none"
+              opacity="0.4"
+              className="select-none pointer-events-none animate-glitch"
+              style={{ filter: 'url(#glitchFilter)' }}
+            >
+              Σ
+            </text>
+            <text
+              x="24"
+              y="31"
+              textAnchor="middle"
+              fontSize="18"
+              fontWeight="bold"
+              fill="#FF8800"
+              stroke="none"
+              opacity="0.6"
+              className="select-none pointer-events-none animate-glitch-delayed"
+              style={{ filter: 'url(#glitchFilter)' }}
+            >
+              Σ
+            </text>
+          </>
+        )}
+      </g>
+      
+      <defs>
+        <filter id="glitchFilter">
+          <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" result="turb"/>
+          <feDisplacementMap in2="turb" in="SourceGraphic" scale="2"/>
+        </filter>
+      </defs>
+    </svg>
+  )
+}
+
+// Underground Manifesto Block
+export const UndergroundManifesto: React.FC<{ className?: string }> = ({ className = "" }) => {
+  return (
+    <div className={`bg-neutral-950 text-orange-500 border border-orange-500/30 rounded-xl p-6 text-center font-mono text-lg shadow-lg relative overflow-hidden ${className}`}>
+      {/* ASCII Art Border */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-1 border-t border-orange-500/50"></div>
+        <div className="absolute bottom-0 left-0 w-full h-1 border-b border-orange-500/50"></div>
+        <div className="absolute top-0 left-0 w-1 h-full border-l border-orange-500/50"></div>
+        <div className="absolute top-0 right-0 w-1 h-full border-r border-orange-500/50"></div>
+        
+        {/* Corner decorations */}
+        <div className="absolute top-2 left-2 text-cyan-400 text-xs">{"//"}</div>
+        <div className="absolute top-2 right-2 text-cyan-400 text-xs">{"//"}</div>
+        <div className="absolute bottom-2 left-2 text-cyan-400 text-xs">{"//"}</div>
+        <div className="absolute bottom-2 right-2 text-cyan-400 text-xs">{"//"}</div>
+      </div>
+      
+      {/* Main content */}
+      <div className="relative z-10">
+        <div className="mb-4">
+          <span className="font-bold tracking-wide text-xl">
+            "We write code not for compliance.
+          </span>
+        </div>
+        <div className="mb-4">
+          <span className="font-bold tracking-wide text-xl">
+            We write code to break the chains."
+          </span>
+        </div>
+        
+        {/* Signature */}
+        <div className="mt-6 flex justify-center items-center space-x-2">
+          <span className="text-cyan-400 text-sm">{"//"}</span>
+          <span className="text-orange-500 font-bold">Σ</span>
+          <span className="text-cyan-400 text-sm">{"//"}</span>
+        </div>
+      </div>
+      
+      {/* Animated scan line */}
+      <div className="absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse opacity-50"></div>
+    </div>
+  )
+}
+
+// Glitch Button с искажением
+export const GlitchButton: React.FC<{ 
+  children: React.ReactNode;
+  className?: string;
+  onClick?: () => void;
+}> = ({ children, className = "", onClick }) => {
+  return (
+    <button 
+      className={`relative bg-brand-primary-500 text-black px-8 py-3 rounded-xl overflow-hidden group transition-all duration-300 hover:bg-brand-primary-400 active:scale-95 ${className}`}
+      onClick={onClick}
+    >
+      {/* Основной текст */}
+      <span className="relative z-10 font-semibold tracking-wide">
+        {children}
+      </span>
+      
+      {/* Glitch border overlay */}
+      <span className="absolute inset-0 border-2 border-cyan-400 opacity-30 group-hover:animate-glitchBorder pointer-events-none rounded-xl" />
+      
+      {/* Glitch text overlay */}
+      <span className="absolute inset-0 flex items-center justify-center font-semibold tracking-wide text-black opacity-0 group-hover:opacity-20 group-active:opacity-40 transition-opacity duration-200 pointer-events-none">
+        {children}
+      </span>
+      
+      {/* Corner decorations */}
+      <div className="absolute top-1 left-1 w-2 h-2 border-l border-t border-cyan-400 opacity-50"></div>
+      <div className="absolute top-1 right-1 w-2 h-2 border-r border-t border-cyan-400 opacity-50"></div>
+      <div className="absolute bottom-1 left-1 w-2 h-2 border-l border-b border-cyan-400 opacity-50"></div>
+      <div className="absolute bottom-1 right-1 w-2 h-2 border-r border-b border-cyan-400 opacity-50"></div>
+    </button>
+  )
+}
+
 // Export all signature effects
 export const signatureEffects = {
   GlitchText,
@@ -376,5 +558,8 @@ export const signatureEffects = {
   BinaryRain,
   GeometricProof,
   FloatingParticles,
-  HexagonalGrid
+  HexagonalGrid,
+  GlitchHex,
+  UndergroundManifesto,
+  GlitchButton
 } 

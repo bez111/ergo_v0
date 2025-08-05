@@ -15,7 +15,7 @@ import {
 } from "@/components/ui-kit/patterns"
 import { 
   MathematicalPattern, CryptographicVisualization, 
-  FloatingParticles, HexagonalGrid
+  FloatingParticles, HexagonalGrid, GlitchHex, UndergroundManifesto, GlitchButton
 } from "@/components/ui-kit/signature-effects"
 import LivePlayground from "@/components/ui-kit/live-playground"
 import { 
@@ -322,9 +322,14 @@ export default function MyComponent() {
                 animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
                 transition={{ duration: prefersReducedMotion ? 0.2 : 0.8, delay: isInitialized ? 0.1 : 0 }}
               >
-                <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-white">
-                  <span className="text-brand-primary-400">Ergo</span> UI Kit
-                </h1>
+                <div className="flex items-center gap-4 mb-6">
+                  <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white">
+                    <span className="text-brand-primary-400">Ergo</span> UI Kit
+                  </h1>
+                  <div className="group w-12 h-12 sm:w-16 sm:h-16">
+                    <GlitchHex size={48} />
+                  </div>
+                </div>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
                   Complete Component Library for Modern dApps
                 </p>
@@ -598,6 +603,19 @@ export default function MyComponent() {
                 )
               })}
             </div>
+            
+            {/* Underground Manifesto */}
+            <motion.div 
+              {...getConditionalAnimation("philosophy")}
+              transition={{ delay: 0.6 }}
+              className="mt-12"
+            >
+              <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
+                <Terminal className="w-5 h-5 text-brand-primary-400" />
+                Underground Manifesto
+              </h3>
+              <UndergroundManifesto />
+            </motion.div>
           </TabsContent>
 
           {/* Colors Tab с code snippets */}
@@ -997,6 +1015,55 @@ export default function MyComponent() {
                 Signature Effects
               </h3>
               
+              {/* Glitch Hex */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden mb-6">
+                <h4 className="text-lg font-semibold text-white mb-4">Glitch Hex with Σ Symbol</h4>
+                <div className="flex justify-center items-center py-8">
+                  <div className="group w-16 h-16 mx-auto">
+                    <GlitchHex size={64} />
+                  </div>
+                </div>
+              </div>
+              
+              <CodeSnippet
+                title="Glitch Hex"
+                language="jsx"
+                code={`<div className="group w-16 h-16 mx-auto">
+  <GlitchHex size={64} />
+</div>`}
+              />
+              
+              {/* Underground Manifesto */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden mb-6">
+                <h4 className="text-lg font-semibold text-white mb-4">Underground Manifesto</h4>
+                <UndergroundManifesto />
+              </div>
+              
+              <CodeSnippet
+                title="Underground Manifesto"
+                language="jsx"
+                code={`<UndergroundManifesto />`}
+              />
+              
+              {/* Glitch Button */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden mb-6">
+                <h4 className="text-lg font-semibold text-white mb-4">Glitch Button</h4>
+                <div className="flex justify-center items-center py-8">
+                  <GlitchButton onClick={() => console.log('Deploy clicked')}>
+                    DEPLOY
+                  </GlitchButton>
+                </div>
+              </div>
+              
+              <CodeSnippet
+                title="Glitch Button"
+                language="jsx"
+                code={`<GlitchButton onClick={() => console.log('Deploy clicked')}>
+  DEPLOY
+</GlitchButton>`}
+              />
+              
+              {/* Cryptographic Visualization */}
               <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden mb-6">
                 <h4 className="text-lg font-semibold text-white mb-4">Cryptographic Visualization</h4>
                 <CryptographicVisualization className="w-full h-24" />

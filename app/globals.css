@@ -621,3 +621,67 @@ aside .sticky-toc {
     transform: translateX(100%);
   }
 }
+
+/* Glitch Hex Animations */
+@keyframes glitch {
+  0%, 100% { 
+    transform: translate(0,0); 
+    opacity: 0.4; 
+  }
+  20% { 
+    transform: translate(-2px,2px); 
+    opacity: 0.7; 
+  }
+  40% { 
+    transform: translate(2px,-2px); 
+    opacity: 0.4; 
+  }
+  60% { 
+    transform: translate(-1px,1px); 
+    opacity: 0.6; 
+  }
+  80% { 
+    transform: translate(2px,2px); 
+    opacity: 0.4; 
+  }
+}
+
+.animate-glitch { 
+  animation: glitch 0.8s infinite; 
+}
+
+.animate-glitch-delayed { 
+  animation: glitch 0.8s infinite 0.2s; 
+}
+
+@keyframes sigmaPulse {
+  0%, 100% { 
+    filter: drop-shadow(0 0 2px #FF8800); 
+    transform: scale(1);
+  }
+  50% { 
+    filter: drop-shadow(0 0 8px #FF8800cc); 
+    transform: scale(1.10);
+  }
+}
+
+.animate-sigmaPulse { 
+  animation: sigmaPulse 2s infinite; 
+}
+
+/* Glitch Border Animation */
+@keyframes glitchBorder {
+  0% { 
+    box-shadow: 0 0 0 #22d3ee; 
+  }
+  50% { 
+    box-shadow: 0 0 12px #22d3ee88; 
+  }
+  100% { 
+    box-shadow: 0 0 0 #22d3ee; 
+  }
+}
+
+.group-hover\:animate-glitchBorder:hover { 
+  animation: glitchBorder 0.3s linear; 
+}
