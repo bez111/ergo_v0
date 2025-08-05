@@ -73,10 +73,10 @@ export default function DlogProofsPage() {
         </p>
         <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4 my-4">
           <pre className="bg-neutral-800 rounded p-3 text-sm text-gray-200 overflow-x-auto">
-// DLog-based signature verification
+{`// DLog-based signature verification
 val pubKey = ...  // Public key point
 val signature = ...  // Signature proof
-proveDlog(pubKey)
+proveDlog(pubKey)`}
           </pre>
         </div>
       </div>

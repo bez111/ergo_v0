@@ -22,7 +22,7 @@ const frameworks = [
   },
 ];
 
-function CardGrid({ items }) {
+function CardGrid({ items }: { items: Array<{ title: string; content: React.ReactNode; url: string; external: boolean }> }) {
   return (
     <div className="grid md:grid-cols-2 gap-6 mb-8">
       {items.map((item) => (

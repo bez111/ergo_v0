@@ -226,7 +226,6 @@ export default function AuctionContractPage() {
   val validConfig = auctionConfig.tokens(0)._1 == AUCTION_CONFIG_TOKEN_ID
   sigmaProp((isNextBid || isFinishedWithBid || isFinishedWithoutBid) && validConfig)
 }`}
-            language="scala"
           />
         </section>
       </div>

@@ -335,6 +335,18 @@ export const FloatingParticles: React.FC<{ className?: string; count?: number }>
 
 // Hexagonal Grid Background
 export const HexagonalGrid: React.FC<{ className?: string }> = ({ className = "" }) => {
+  // Создаем правильный шестиугольник с flat-top
+  const R = 40; // радиус
+  const cx = 50, cy = 50; // центр
+  const points = [...Array(6)].map((_, i) => {
+    const angle = Math.PI / 3 * i; // шаг 60°
+    // flat-top: смещение на Math.PI/6
+    return [
+      cx + R * Math.cos(angle),
+      cy + R * Math.sin(angle)
+    ].join(',');
+  }).join(' ');
+
   return (
     <svg 
       className={`absolute inset-0 w-full h-full opacity-5 ${className}`}
@@ -342,9 +354,9 @@ export const HexagonalGrid: React.FC<{ className?: string }> = ({ className = ""
       preserveAspectRatio="xMidYMid slice"
     >
       <defs>
-        <pattern id="hexPattern" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+        <pattern id="hexPattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
           <polygon 
-            points="30,4 52,17 52,39 30,52 8,39 8,17" 
+            points={points}
             fill="none" 
             stroke="currentColor" 
             strokeWidth="0.5"

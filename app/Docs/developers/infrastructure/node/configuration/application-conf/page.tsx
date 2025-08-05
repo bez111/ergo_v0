@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { 
@@ -34,7 +34,7 @@ import {
 import Link from "next/link";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
-export default function ApplicationConfPage() {
+function ApplicationConfContent() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState("overview");
 
@@ -1497,5 +1497,13 @@ logDir = ${"scorex.dataDir"}"/log"`}
         </div>
       </TabsContent>
     </Tabs>
+  );
+}
+
+export default function ApplicationConfPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ApplicationConfContent />
+    </Suspense>
   );
 } 

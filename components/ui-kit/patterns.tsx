@@ -36,6 +36,8 @@ export interface FeatureGridProps {
   items: FeatureGridItem[]
   columns?: 2 | 3 | 4
   className?: string
+  isInitialized?: boolean
+  isTabVisited?: boolean
 }
 
 // Hero Pattern Component
@@ -89,33 +91,47 @@ export const HeroPattern: React.FC<HeroPatternProps> = ({
 export const FeatureGrid: React.FC<FeatureGridProps> = ({ 
   items, 
   columns = 3, 
-  className = "" 
+  className = "",
+  isInitialized = true,
+  isTabVisited = false
 }) => {
   const gridClass = {
-    2: "grid-cols-1 md:grid-cols-2",
-    3: "grid-cols-1 md:grid-cols-3",
-    4: "grid-cols-2 md:grid-cols-4"
+    2: "grid-cols-1 sm:grid-cols-2",
+    3: "grid-cols-1 sm:grid-cols-2 md:grid-cols-3",
+    4: "grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
   }[columns]
 
   return (
     <div className={`grid ${gridClass} gap-6 ${className}`}>
-      {items.map((feature, index) => (
-        <motion.div 
-          key={feature.title} 
-          className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center hover:border-neutral-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black group"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: index * 0.1 }}
-          whileHover={{ y: -5, transition: { duration: 0.2 } }}
-          tabIndex={0}
-          role="article"
-          aria-label={feature.title}
-        >
-          <feature.icon className={`w-12 h-12 ${feature.color || 'text-brand-primary-400'} mx-auto mb-4 group-hover:scale-110 transition-transform duration-200`} />
-          <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>
-          <p className="text-gray-300 text-sm">{feature.description}</p>
-        </motion.div>
-      ))}
+      {items.map((feature, index) => {
+        const animationProps = isTabVisited 
+          ? {
+              initial: { opacity: 1, y: 0 },
+              animate: { opacity: 1, y: 0 },
+              transition: { duration: 0 }
+            }
+          : {
+              initial: { opacity: 0, y: 20 },
+              animate: { opacity: 1, y: 0 },
+              transition: { duration: 0.4, delay: index * 0.1 }
+            }
+        
+        return (
+          <motion.div 
+            key={feature.title} 
+            className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center hover:border-neutral-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black group cursor-pointer"
+            {...animationProps}
+            whileHover={{ y: -5, transition: { duration: 0.2 } }}
+            tabIndex={0}
+            role="article"
+            aria-label={feature.title}
+          >
+            <feature.icon className={`w-12 h-12 ${feature.color || 'text-brand-primary-400'} mx-auto mb-4 group-hover:scale-110 transition-transform duration-200`} />
+            <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>
+            <p className="text-gray-300 text-sm">{feature.description}</p>
+          </motion.div>
+        )
+      })}
     </div>
   )
 }
@@ -132,38 +148,54 @@ export interface StatsGridProps {
   items: StatsGridItem[]
   columns?: 2 | 3 | 4
   className?: string
+  isInitialized?: boolean
+  isTabVisited?: boolean
 }
 
 export const StatsGrid: React.FC<StatsGridProps> = ({ 
   items, 
   columns = 4, 
-  className = "" 
+  className = "",
+  isInitialized = true,
+  isTabVisited = false
 }) => {
   const gridClass = {
-    2: "grid-cols-1 md:grid-cols-2",
-    3: "grid-cols-1 md:grid-cols-3", 
-    4: "grid-cols-2 md:grid-cols-4"
+    2: "grid-cols-1 sm:grid-cols-2",
+    3: "grid-cols-1 sm:grid-cols-2 md:grid-cols-3", 
+    4: "grid-cols-2 sm:grid-cols-3 md:grid-cols-4"
   }[columns]
 
   return (
     <div className={`grid ${gridClass} gap-4 ${className}`}>
-      {items.map((stat, index) => (
-        <motion.div 
-          key={stat.label}
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
-          whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-          className="text-center p-6 bg-neutral-900 border border-neutral-700 rounded-xl hover:border-neutral-600 transition-all duration-300 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black"
-          tabIndex={0}
-          role="button"
-          aria-label={`${stat.value} ${stat.label}`}
-        >
-          <stat.icon className={`w-8 h-8 ${stat.color || 'text-brand-primary-400'} mx-auto mb-3 group-hover:scale-110 transition-transform duration-200`} />
-          <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
-          <div className="text-gray-400 text-sm">{stat.label}</div>
-        </motion.div>
-      ))}
+      {items.map((stat, index) => {
+        const animationProps = isTabVisited 
+          ? {
+              initial: { opacity: 1, scale: 1 },
+              animate: { opacity: 1, scale: 1 },
+              transition: { duration: 0 }
+            }
+          : {
+              initial: { opacity: 0, scale: 0.8 },
+              animate: { opacity: 1, scale: 1 },
+              transition: { duration: 0.5, delay: index * 0.1 }
+            }
+        
+        return (
+          <motion.div 
+            key={stat.label}
+            {...animationProps}
+            whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+            className="text-center p-6 bg-neutral-900 border border-neutral-700 rounded-xl hover:border-neutral-600 transition-all duration-300 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black"
+            tabIndex={0}
+            role="button"
+            aria-label={`${stat.value} ${stat.label}`}
+          >
+            <stat.icon className={`w-8 h-8 ${stat.color || 'text-brand-primary-400'} mx-auto mb-3 group-hover:scale-110 transition-transform duration-200`} />
+            <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
+            <div className="text-gray-400 text-sm">{stat.label}</div>
+          </motion.div>
+        )
+      })}
     </div>
   )
 }
@@ -197,7 +229,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
       whileHover={{ y: -5, transition: { duration: 0.2 } }} 
       className={`group ${className}`}
     >
-      <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black h-full">
+      <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black h-full cursor-pointer">
         <CardHeader>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">

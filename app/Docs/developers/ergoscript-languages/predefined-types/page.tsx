@@ -481,7 +481,7 @@ export default function PredefinedTypesPage() {
               <h4 className="font-semibold text-cyan-400 mb-2">Box.getReg (99.7)</h4>
               <ul className="text-sm text-gray-300 space-y-1">
                 <li><strong>Description:</strong> Extracts register <code>regId</code> by ID and expected type <code>T</code>. Returns <code>Some(value)</code> if the register exists and has the specified type, <code>None</code> otherwise.</li>
-                <li><strong>Parameters:</strong> <InlineMath math="\mathrm{regId : Int}" /> // zero-based identifier of the register.</li>
+                <li><strong>Parameters:</strong> <InlineMath math="\mathrm{regId : Int}" /> {`// zero-based identifier of the register.`}</li>
                 <li><strong>Result:</strong> <InlineMath math="\mathrm{Option[T]}" /></li>
                 <li><strong>Serialized as:</strong> ExtractRegisterAs</li>
               </ul>

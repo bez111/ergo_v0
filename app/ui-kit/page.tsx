@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -14,7 +14,7 @@ import {
   type FeatureGridItem, type StatsGridItem
 } from "@/components/ui-kit/patterns"
 import { 
-  GlitchText, MathematicalPattern, CryptographicVisualization, 
+  MathematicalPattern, CryptographicVisualization, 
   FloatingParticles, HexagonalGrid
 } from "@/components/ui-kit/signature-effects"
 import LivePlayground from "@/components/ui-kit/live-playground"
@@ -79,13 +79,42 @@ import {
 export default function UIKitPage() {
   const [activeTab, setActiveTab] = useState("overview")
   const [copiedComponent, setCopiedComponent] = useState<string | null>(null)
-  const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('dark')
+
   const [visitedTabs, setVisitedTabs] = useState<Set<string>>(new Set(["overview"]))
+  const [hasMounted, setHasMounted] = useState(false)
+  const [isInitialized, setIsInitialized] = useState(false)
   
-  // Responsive и accessibility hooks
+  // Responsive и accessibility hooks with hydration safety
   const isMobile = useIsMobile()
   const prefersReducedMotion = usePrefersReducedMotion()
   const animationConfig = getAnimationConfig(isMobile, prefersReducedMotion)
+
+  // Prevent hydration mismatch and add initialization delay
+  useEffect(() => {
+    setHasMounted(true)
+    // Небольшая задержка для предотвращения мерцания
+    const timer = setTimeout(() => {
+      setIsInitialized(true)
+    }, 100)
+    
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Prevent hydration issues by rendering simplified version on server
+  if (!hasMounted) {
+    return (
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 relative z-10">
+          <div className="text-center">
+            <h1 className="text-4xl font-bold text-white mb-4">
+              <span className="text-brand-primary-400">Ergo</span> UI Kit
+            </h1>
+            <p className="text-gray-400">Loading...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   const copyToClipboard = async (componentName: string, code: string) => {
     await navigator.clipboard.writeText(code)
@@ -180,9 +209,7 @@ export default function MyComponent() {
 }\`}
 />`,
 
-    glitchText: `<GlitchText className="text-4xl font-bold">
-  <span className="text-brand-primary-400">Ergo</span> Platform
-</GlitchText>`,
+
 
     themeToggle: `const [theme, setTheme] = useState<'light' | 'dark' | 'system'>('dark')
 
@@ -218,17 +245,36 @@ export default function MyComponent() {
     )
   }
 
-  // Animation variants с учетом accessibility
+  // Animation variants с учетом accessibility и инициализации
   const fadeInUp = {
     initial: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
-    animate: { opacity: 1, y: 0 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: prefersReducedMotion ? 0.1 : 0.4 }
+    },
     exit: { opacity: 0, y: prefersReducedMotion ? 0 : -20 }
   }
 
   // Conditional animation - no animation for visited tabs
   const getConditionalAnimation = (tabName: string) => {
-    const isFirstVisit = !visitedTabs.has(tabName) || activeTab === "overview"
-    return isFirstVisit ? fadeInUp : { initial: { opacity: 1, y: 0 }, animate: { opacity: 1, y: 0 } }
+    const isFirstVisit = !visitedTabs.has(tabName) && isInitialized
+    
+    if (isFirstVisit) {
+      // Первый визит - показываем анимацию
+      return {
+        initial: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
+        animate: { opacity: 1, y: 0 },
+        transition: { duration: prefersReducedMotion ? 0.1 : 0.4 }
+      }
+    }
+    
+    // Для всех остальных случаев - мгновенное отображение без анимации
+    return { 
+      initial: { opacity: 1, y: 0 }, 
+      animate: { opacity: 1, y: 0 },
+      transition: { duration: 0 }
+    }
   }
 
   const scaleOnHover = {
@@ -256,10 +302,14 @@ export default function MyComponent() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Effects */}
-      <HexagonalGrid className="opacity-[0.02]" />
-      <FloatingParticles count={15} className="opacity-80" />
-      <MathematicalPattern className="opacity-[0.03]" />
+      {/* Background Effects - загружаются только после инициализации */}
+      {isInitialized && (
+        <>
+          <HexagonalGrid className="opacity-[0.02]" />
+          <FloatingParticles count={15} className="opacity-80" />
+          <MathematicalPattern className="opacity-[0.03]" />
+        </>
+      )}
       
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 relative z-10">
         
@@ -268,14 +318,12 @@ export default function MyComponent() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0, x: prefersReducedMotion ? 0 : -30 }}
+                animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
+                transition={{ duration: prefersReducedMotion ? 0.2 : 0.8, delay: isInitialized ? 0.1 : 0 }}
               >
                 <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-white">
-                  <GlitchText>
-                    <span className="text-brand-primary-400">Ergo</span> UI Kit
-                  </GlitchText>
+                  <span className="text-brand-primary-400">Ergo</span> UI Kit
                 </h1>
                 <p className="text-lg sm:text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
                   Complete Component Library for Modern dApps
@@ -285,26 +333,7 @@ export default function MyComponent() {
                   consistent, accessible, and modern Ergo applications with confidence.
                 </p>
                 
-                {/* Theme Toggle */}
-                <div className="flex items-center gap-4 mb-8">
-                  <span className="text-sm text-gray-400">Theme:</span>
-                  <div className="flex items-center bg-neutral-900 border border-neutral-700 rounded-lg p-1">
-                    {(['light', 'dark', 'system'] as const).map((themeOption) => (
-                      <Button
-                        key={themeOption}
-                        size="sm"
-                        variant={theme === themeOption ? "default" : "ghost"}
-                        onClick={() => setTheme(themeOption)}
-                        className={`${theme === themeOption ? 'bg-brand-primary-500 text-black' : 'text-gray-400 hover:text-white'} capitalize`}
-                      >
-                        {themeOption === 'light' && <Sun className="w-3 h-3 mr-1" />}
-                        {themeOption === 'dark' && <Moon className="w-3 h-3 mr-1" />}
-                        {themeOption === 'system' && <Monitor className="w-3 h-3 mr-1" />}
-                        {themeOption}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
+
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
@@ -312,19 +341,19 @@ export default function MyComponent() {
                       className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
                       aria-label="Get started with Ergo UI Kit"
                     >
-                      <Rocket className="w-5 h-5 mr-2" />
-                      Get Started
-                    </Button>
+                    <Rocket className="w-5 h-5 mr-2" />
+                    Get Started
+                  </Button>
                   </motion.div>
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
-                    <Button
-                      variant="outline"
+                  <Button
+                    variant="outline"
                       className="border-neutral-500 text-neutral-400 hover:bg-neutral-500/10 px-8 py-3 rounded-xl backdrop-blur-sm focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
                       aria-label="View documentation"
-                    >
-                      <FileText className="w-5 h-5 mr-2" />
-                      Documentation
-                    </Button>
+                  >
+                    <FileText className="w-5 h-5 mr-2" />
+                    Documentation
+                  </Button>
                   </motion.div>
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button
@@ -340,9 +369,9 @@ export default function MyComponent() {
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+                initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 30 }}
+                animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
+                transition={{ duration: prefersReducedMotion ? 0.2 : 0.8, delay: isInitialized ? 0.3 : 0 }}
                 className="relative"
               >
                 {/* Cryptographic Visualization */}
@@ -357,9 +386,9 @@ export default function MyComponent() {
                   ].map((feature, index) => (
                     <motion.div
                       key={feature.title}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+                      initial={{ opacity: 0, x: prefersReducedMotion ? 0 : 20 }}
+                      animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
+                      transition={{ duration: prefersReducedMotion ? 0.2 : 0.5, delay: isInitialized ? (0.5 + index * 0.1) : 0 }}
                       whileHover={{ x: prefersReducedMotion ? 0 : 5, transition: { duration: 0.2 } }}
                       className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm cursor-pointer group"
                       tabIndex={0}
@@ -371,11 +400,11 @@ export default function MyComponent() {
                         }
                       }}
                     >
-                      <div className="flex items-center gap-3 mb-3">
+                    <div className="flex items-center gap-3 mb-3">
                         <feature.icon className="w-6 h-6 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                         <h3 className="text-lg font-semibold text-white group-hover:text-brand-primary-400 transition-colors duration-200">{feature.title}</h3>
-                      </div>
-                      <p className="text-gray-400 text-sm">
+                    </div>
+                    <p className="text-gray-400 text-sm">
                         {feature.desc}
                       </p>
                     </motion.div>
@@ -413,7 +442,7 @@ export default function MyComponent() {
                 <div>
                   <h4 className="font-semibold text-white text-sm mb-1">{principle.title}</h4>
                   <p className="text-gray-400 text-xs">{principle.description}</p>
-                </div>
+        </div>
               </div>
             ))}
           </div>
@@ -422,7 +451,7 @@ export default function MyComponent() {
         {/* Navigation с улучшенной мобильной версией */}
         <Tabs value={activeTab} onValueChange={handleTabChange} className="w-full">
           <div className="flex justify-center mb-12">
-            <TabsList className="bg-neutral-900 border border-neutral-700 p-1 overflow-x-auto">
+            <TabsList className="bg-neutral-900 border border-neutral-700 p-1 flex-wrap justify-center">
               {[
                 { id: "overview", label: "Overview", icon: Globe },
                 { id: "playground", label: "Playground", icon: Play },
@@ -435,10 +464,10 @@ export default function MyComponent() {
                 <TabsTrigger 
                   key={tab.id}
                   value={tab.id} 
-                  className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 whitespace-nowrap"
+                  className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 flex-shrink-0 text-sm px-3 py-2"
                   aria-label={`Switch to ${tab.label} tab`}
                 >
-                  <tab.icon className="w-4 h-4 mr-2" />
+                  <tab.icon className="w-4 h-4 mr-1 sm:mr-2" />
                   <span className="hidden sm:inline">{tab.label}</span>
                 </TabsTrigger>
               ))}
@@ -447,24 +476,24 @@ export default function MyComponent() {
 
           {/* Overview Tab с использованием новых паттернов */}
           <TabsContent value="overview" className="space-y-12">
-            <motion.div {...getConditionalAnimation("overview")} transition={{ duration: 0.5 }}>
+            <motion.div {...getConditionalAnimation("overview")}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <Target className="w-6 h-6 text-brand-primary-400" />
                 Key Features
               </h2>
-              <FeatureGrid items={featureGridItems} columns={isMobile ? 2 : 3} />
+              <FeatureGrid items={featureGridItems} columns={3} isTabVisited={visitedTabs.has("overview")} />
             </motion.div>
 
-            <motion.div {...getConditionalAnimation("overview")} transition={{ duration: 0.5, delay: visitedTabs.has("overview") ? 0 : 0.2 }}>
+            <motion.div {...getConditionalAnimation("overview")}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <TrendingUp className="w-6 h-6 text-brand-primary-400" />
                 By the Numbers
               </h2>
-              <StatsGrid items={statsGridItems} columns={isMobile ? 2 : 4} />
-            </motion.div>
+              <StatsGrid items={statsGridItems} columns={4} isTabVisited={visitedTabs.has("overview")} />
+                  </motion.div>
 
             {/* Auto-generated documentation showcase */}
-            <motion.div {...getConditionalAnimation("overview")} transition={{ duration: 0.5, delay: visitedTabs.has("overview") ? 0 : 0.4 }}>
+            <motion.div {...getConditionalAnimation("overview")}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
                 <BookOpen className="w-6 h-6 text-brand-primary-400" />
                 Auto-Generated Documentation
@@ -526,19 +555,28 @@ export default function MyComponent() {
                 const IconComponent = icons[key as keyof typeof icons] || Shield
                 
                 const isPhilosophyVisited = visitedTabs.has("philosophy")
+                const animationProps = isPhilosophyVisited 
+                  ? {
+                      initial: { opacity: 1, x: 0 },
+                      animate: { opacity: 1, x: 0 },
+                      transition: { duration: 0 }
+                    }
+                  : {
+                      initial: { opacity: 0, x: index % 2 === 0 ? -20 : 20 },
+                      animate: { opacity: 1, x: 0 },
+                      transition: { duration: 0.6, delay: index * 0.1 }
+                    }
                 
                 return (
                   <motion.div
                     key={key}
-                    initial={isPhilosophyVisited ? { opacity: 1, x: 0 } : { opacity: 0, x: index % 2 === 0 ? -20 : 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: isPhilosophyVisited ? 0 : 0.6, delay: isPhilosophyVisited ? 0 : index * 0.1 }}
-                    className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 hover:border-brand-primary-500/30 transition-all duration-300 group"
+                    {...animationProps}
+                    className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer"
                   >
                     <div className="flex items-start gap-6">
                       <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
                         <IconComponent className="w-6 h-6 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
-                      </div>
+                    </div>
                       <div className="flex-1">
                         <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-primary-400 transition-colors duration-200">
                           {principle.title}
@@ -552,8 +590,8 @@ export default function MyComponent() {
                               <Check className="w-4 h-4 text-brand-primary-400 mt-0.5 flex-shrink-0" />
                               <span className="text-gray-400 text-sm">{guideline}</span>
                             </div>
-                          ))}
-                        </div>
+                ))}
+              </div>
                       </div>
                     </div>
                   </motion.div>
@@ -629,7 +667,7 @@ export default function MyComponent() {
                     </div>
                   </motion.div>
                 ))}
-              </div>
+            </div>
               
               {/* Usage example */}
               <CodeSnippet
@@ -737,15 +775,15 @@ export default function MyComponent() {
                 ].map((type, index) => (
                   <motion.div 
                     key={type.tag} 
-                    className="border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 transition-colors group"
+                    className="border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 transition-colors group cursor-pointer"
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     whileHover={{ x: prefersReducedMotion ? 0 : 5, transition: { duration: 0.2 } }}
                   >
-                    <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center justify-between mb-4">
                       <Badge variant="outline" className="border-brand-primary-500/30 text-brand-primary-400">{type.tag}</Badge>
-                      <code className="text-gray-500 text-sm">{type.desc}</code>
+                    <code className="text-gray-500 text-sm">{type.desc}</code>
                       <Button
                         size="sm"
                         variant="ghost"
@@ -779,14 +817,14 @@ export default function MyComponent() {
                           )}
                         </AnimatePresence>
                       </Button>
-                    </div>
-                    <div className={`${type.size} ${type.weight} mb-2 text-white`}>
-                      {type.sample}
-                    </div>
+                  </div>
+                  <div className={`${type.size} ${type.weight} mb-2 text-white`}>
+                    {type.sample}
+                  </div>
                     <code className="text-gray-600 text-sm">{type.token}</code>
                   </motion.div>
-                ))}
-              </div>
+              ))}
+            </div>
             </motion.div>
 
             {/* Code Typography */}
@@ -799,8 +837,8 @@ export default function MyComponent() {
                 <div className="flex items-center justify-between mb-4">
                   <h4 className="text-lg font-bold text-white flex items-center gap-2">
                     <Code className="w-5 h-5 text-brand-primary-400" />
-                    ErgoScript Example
-                  </h4>
+                  ErgoScript Example
+                </h4>
                   <Button
                     size="sm"
                     variant="ghost"
@@ -837,11 +875,11 @@ export default function MyComponent() {
             {/* Feature Cards using new FeatureCard pattern */}
             <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-xl font-semibold text-white flex items-center gap-2">
+              <h3 className="text-xl font-semibold text-white flex items-center gap-2">
                   <Layers className="w-5 h-5 text-brand-primary-400" />
                   Feature Cards
-                </h3>
-              </div>
+              </h3>
+                        </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                 <FeatureCard
@@ -882,7 +920,7 @@ export default function MyComponent() {
                     onClick: () => console.log('Contribute clicked')
                   }}
                 />
-              </div>
+                    </div>
               
               <CodeSnippet
                 title="FeatureCard Component"
@@ -897,22 +935,22 @@ export default function MyComponent() {
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
                 <Target className="w-5 h-5 text-brand-primary-400" />
                 Interactive Elements
-              </h3>
+                </h3>
               
               <div className="grid md:grid-cols-2 gap-8 mb-6">
                 <div className="space-y-4 group">
                   <h4 className="text-lg font-semibold text-white">Primary Actions</h4>
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black transition-all duration-200 focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black">
-                      <Rocket className="w-4 h-4 mr-2" />
-                      Deploy Contract
-                    </Button>
+                    <Rocket className="w-4 h-4 mr-2" />
+                    Deploy Contract
+                  </Button>
                   </motion.div>
                   
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button size="sm" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black">
-                      Small Action
-                    </Button>
+                    Small Action
+                  </Button>
                   </motion.div>
                   
                   <Button
@@ -925,26 +963,26 @@ export default function MyComponent() {
                     <Code2 className="w-4 h-4 mr-1" />
                     Copy Button Code
                   </Button>
-                </div>
+              </div>
 
                 <div className="space-y-4">
                   <h4 className="text-lg font-semibold text-white">Secondary Actions</h4>
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button variant="outline" className="w-full border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:ring-offset-black">
-                      <Download className="w-4 h-4 mr-2" />
-                      Download SDK
-                    </Button>
+                    <Download className="w-4 h-4 mr-2" />
+                    Download SDK
+                  </Button>
                   </motion.div>
                   
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button variant="ghost" className="w-full text-gray-300 hover:bg-neutral-800 hover:text-white focus:ring-2 focus:ring-neutral-500 focus:ring-offset-2 focus:ring-offset-black">
-                      <FileText className="w-4 h-4 mr-2" />
-                      View Documentation
-                    </Button>
+                    <FileText className="w-4 h-4 mr-2" />
+                    View Documentation
+                  </Button>
                   </motion.div>
-                </div>
               </div>
-              
+            </div>
+
               <CodeSnippet
                 title="Button Variants"
                 language="jsx"
@@ -959,24 +997,15 @@ export default function MyComponent() {
                 Signature Effects
               </h3>
               
-              <div className="grid md:grid-cols-2 gap-6 mb-6">
-                <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-                  <h4 className="text-lg font-semibold text-white mb-4">Glitch Text Effect</h4>
-                  <GlitchText className="text-2xl font-bold">
-                    <span className="text-brand-primary-400">Ergo</span> Platform
-                  </GlitchText>
-                </div>
-                
-                <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden">
-                  <h4 className="text-lg font-semibold text-white mb-4">Cryptographic Visualization</h4>
-                  <CryptographicVisualization className="w-full h-24" />
-                </div>
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden mb-6">
+                <h4 className="text-lg font-semibold text-white mb-4">Cryptographic Visualization</h4>
+                <CryptographicVisualization className="w-full h-24" />
               </div>
               
               <CodeSnippet
-                title="Signature Effects"
+                title="Cryptographic Visualization"
                 language="jsx"
-                code={componentCode.glitchText}
+                code={`<CryptographicVisualization className="w-full h-24" />`}
               />
             </motion.div>
           </TabsContent>
@@ -1014,7 +1043,7 @@ export default function MyComponent() {
                     onClick: () => console.log('Learn more')
                   }}
                 />
-              </div>
+            </div>
               
               <CodeSnippet
                 title="Hero Pattern Usage"
@@ -1032,7 +1061,7 @@ export default function MyComponent() {
               </h3>
               
               <div className="mb-6">
-                <FeatureGrid items={featureGridItems} columns={isMobile ? 2 : 3} />
+                <FeatureGrid items={featureGridItems} columns={3} isTabVisited={visitedTabs.has("patterns")} />
               </div>
               
               <CodeSnippet
@@ -1065,8 +1094,8 @@ export default function MyComponent() {
                   <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
                     Copy-paste ready
                   </Badge>
-                </div>
               </div>
+            </div>
             </motion.div>
           </TabsContent>
 
