@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://ergoplatform.org'
+  const baseUrl = 'https://ergoblockchain.org'
   
   return {
     rules: [

@@ -22,8 +22,8 @@ export const schemas = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Ergo Platform",
-    "url": "https://ergoplatform.org",
-    "logo": "https://ergoplatform.org/logo.png",
+    "url": "https://ergoblockchain.org",
+    "logo": "https://ergoblockchain.org/logo.png",
     "description": "Ergo is a next-generation smart contract platform that ensures economic freedom through secure, accessible, and decentralized financial tools.",
     "sameAs": [
       "https://twitter.com/ergoplatformorg",
@@ -52,7 +52,7 @@ export const schemas = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "Ergo Platform",
-    "url": "https://ergoplatform.org",
+    "url": "https://ergoblockchain.org",
     "potentialAction": {
       "@type": "SearchAction",
       "target": "https://ergoplatform.org/search?q={search_term_string}",

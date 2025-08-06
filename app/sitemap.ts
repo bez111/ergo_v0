@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ergoplatform.org'
+  const baseUrl = 'https://ergoblockchain.org'
   const currentDate = new Date()
   
   // Main pages with highest priority
