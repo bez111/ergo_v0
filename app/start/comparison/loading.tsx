@@ -2,12 +2,11 @@
 
 import { Skeleton } from "@/components/ui/skeleton"
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { DigitalRainEffect } from "@/components/digital-rain-effect"
 
 export default function ComparisonLoading() {
   return (
     <div className="min-h-screen relative">
-      <DigitalRainEffect />
+      {/* Digital rain effect removed - was causing issues */}
 
       <div className="relative z-10">
         {/* Hero Section Skeleton */}

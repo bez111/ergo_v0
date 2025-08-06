@@ -1,3 +1,5 @@
+"use client"
+
 import { HeroSection } from "@/components/home/hero-section"
 import { QuickActions } from "@/components/home/quick-actions"
 import { CorePillars } from "@/components/home/core-pillars"

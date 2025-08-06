@@ -9,7 +9,6 @@ import { Button } from "@/components/ui/button"
 import { FadeIn } from "@/components/animations/fade-in"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { GlitchText } from "@/components/animations/glitch-text"
-import { DigitalRainEffect } from "@/components/digital-rain-effect"
 import { cn } from "@/lib/utils"
 
 export function EcosystemShowcase() {
@@ -29,7 +28,7 @@ export function EcosystemShowcase() {
       subtitle: "Connecting Ergo's Ecosystem",
       description:
         "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
-      image: "/decentralized-exchange.png",
+      image: "/placeholder.svg",
       stats: [
         { label: "Cross-Chain", value: "BTC, ETH, ADA, BSC & more" },
         { label: "Secure Bridge", value: "Watcher & Guard Model" },
@@ -43,7 +42,7 @@ export function EcosystemShowcase() {
       subtitle: "Non-Custodial Privacy Protocol",
       description:
         "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
-      image: "/audio-mixer.png",
+      image: "/placeholder.svg",
       stats: [
         { label: "Mixed Volume", value: "$3.7M" },
         { label: "Privacy Score", value: "99.9%" },
@@ -58,7 +57,7 @@ export function EcosystemShowcase() {
       subtitle: "Algorithmic Stablecoin Protocol",
       description:
         "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
-      image: "/sigmausd-concept.png",
+      image: "/placeholder.svg",
       stats: [
         { label: "Stability Score", value: "99.2%" },
         { label: "Total Supply", value: "$2.1M" },
@@ -91,10 +90,7 @@ export function EcosystemShowcase() {
       <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-20 bg-cover bg-center"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"></div>
 
-      {/* Digital rain effect - subtle */}
-      <div className="absolute inset-0 overflow-hidden opacity-30">
-        <DigitalRainEffect color="rgba(255, 136, 0, 0.15)" density={15} speed={80} />
-      </div>
+      {/* Digital rain effect removed - was causing issues */}
 
       {/* Hexagonal grid pattern */}
       <div className="absolute inset-0 opacity-20">
@@ -181,7 +177,7 @@ export function EcosystemShowcase() {
             >
               {/* Visual/Image side */}
               <div className="relative h-64 lg:h-96 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center overflow-hidden">
-                <div className="absolute inset-0 bg-[url('/circuit-pattern.png')] opacity-20 bg-cover bg-center"></div>
+                <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-20 bg-cover bg-center"></div>
 
                 {/* Project branding/visual */}
                 <div className="relative z-10 flex items-center justify-center w-full h-full">

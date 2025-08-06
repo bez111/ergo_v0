@@ -2,7 +2,6 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Search, Home, ArrowLeft, ExternalLink } from "lucide-react"
-import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 
 export default function NotFound() {
   const popularPages = [
@@ -16,16 +15,6 @@ export default function NotFound() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      {/* Breadcrumbs */}
-      <div className="sr-only">
-        <Breadcrumbs
-          items={[
-            { label: "404 - Page Not Found", href: "/404" }
-          ]}
-          className="mb-8"
-        />
-      </div>
-
       <div className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* 404 Header */}
