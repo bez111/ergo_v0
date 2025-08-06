@@ -2,91 +2,134 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ergoplatform.org'
+  const currentDate = new Date()
   
-  return [
+  // Main pages with highest priority
+  const mainPages = [
     {
       url: baseUrl,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
+      lastModified: currentDate,
+      changeFrequency: 'daily' as const,
       priority: 1,
     },
     {
       url: `${baseUrl}/technology`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/technology/eutxo-model`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/technology/ergoscript`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/technology/secure-pow`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/technology/storage-rent`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/technology/privacy-features`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/technology/nipopows`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
       url: `${baseUrl}/ecosystem`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
     {
       url: `${baseUrl}/start`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.9,
     },
-    {
-      url: `${baseUrl}/build`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/use`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.7,
-    },
+  ]
+
+  // Technology pages
+  const technologyPages = [
+    'eutxo-model',
+    'ergoscript',
+    'secure-pow',
+    'storage-rent',
+    'privacy-features',
+    'nipopows',
+    'sigma-protocols',
+    'autolykos',
+  ].map(page => ({
+    url: `${baseUrl}/technology/${page}`,
+    lastModified: currentDate,
+    changeFrequency: 'monthly' as const,
+    priority: 0.8,
+  }))
+
+  // Documentation pages
+  const docsPages = [
+    'introduction/glossary',
+    'introduction/eutxo',
+    'introduction/nipopows',
+    'introduction/storage-rent',
+    'developers',
+    'developers/tooling',
+    'developers/frameworks',
+    'ecosystem/infrastructure',
+    'ecosystem/wallets',
+    'ecosystem/defi',
+  ].map(page => ({
+    url: `${baseUrl}/Docs/${page}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Use case pages
+  const useCasePages = [
+    'defi',
+    'nft',
+    'dao',
+    'privacy',
+    'mining',
+    'get-erg',
+  ].map(page => ({
+    url: `${baseUrl}/use/${page}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Build pages
+  const buildPages = [
+    'docs',
+    'tools',
+    'grants',
+    'hackathons',
+  ].map(page => ({
+    url: `${baseUrl}/build/${page}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
+  // Additional important pages
+  const additionalPages = [
     {
       url: `${baseUrl}/blog`,
-      lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/Docs/introduction/glossary`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
+      lastModified: currentDate,
+      changeFrequency: 'daily' as const,
       priority: 0.8,
     },
+    {
+      url: `${baseUrl}/wallet`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/learn`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/events`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    },
+  ]
+
+  return [
+    ...mainPages,
+    ...technologyPages,
+    ...docsPages,
+    ...useCasePages,
+    ...buildPages,
+    ...additionalPages,
   ]
 }
