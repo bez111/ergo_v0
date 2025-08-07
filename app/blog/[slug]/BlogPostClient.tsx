@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { ArrowLeft, Eye, Heart, Clock, Twitter, Linkedin, Copy, Check, UserCircle, Calendar, Tag, BookOpen, MessageCircle, Share2, ChevronRight, Hash, AlertCircle, CheckCircle, RefreshCw, ExternalLink } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCard } from "../_components/blog-card"
-import { BlogBreadcrumbs } from "../_components/blog-breadcrumbs"
+// import { BlogBreadcrumbs } from "../_components/blog-breadcrumbs"
 import { BlogRating } from "../_components/blog-rating"
 import { BlogActions } from "../_components/blog-actions"
 import Link from "next/link"
@@ -165,10 +165,10 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-8 sm:py-16">
         <motion.div initial="hidden" animate="visible" variants={containerVariants}>
           
-          {/* Breadcrumbs */}
-          <motion.div variants={itemVariants}>
+          {/* Breadcrumbs - Hidden */}
+          {/* <motion.div variants={itemVariants}>
             <BlogBreadcrumbs title={post.title} category={post.category} />
-          </motion.div>
+          </motion.div> */}
 
           {/* Hero Section */}
           <motion.header variants={itemVariants} className="mb-12 blog-content">
