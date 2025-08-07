@@ -113,6 +113,21 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
         />
       </div>
 
+      {/* Fixed Back to Blog Button */}
+      <div className="fixed top-20 left-4 z-40">
+        <Button 
+          variant="ghost" 
+          size="default"
+          className="bg-black/80 backdrop-blur-sm border border-gray-800 text-gray-400 hover:text-orange-400 hover:bg-orange-400/10 hover:border-orange-500/50 transition-all duration-200 group"
+          asChild
+        >
+          <Link href="/blog">
+            <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
+            <span className="hidden sm:inline">Back to Blog</span>
+          </Link>
+        </Button>
+      </div>
+
       <div 
         className="pointer-events-none fixed inset-0 z-0 transition duration-300"
         style={{
@@ -122,20 +137,6 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-8 sm:py-16">
         <motion.div initial="hidden" animate="visible" variants={containerVariants}>
-          {/* Back Button */}
-          <motion.div variants={itemVariants} className="mb-8">
-            <Button 
-              variant="ghost" 
-              size="default"
-              className="text-gray-400 hover:text-orange-400 hover:bg-orange-400/10 transition-all duration-200 group"
-              asChild
-            >
-              <Link href="/blog">
-                <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-                Back to Blog
-              </Link>
-            </Button>
-          </motion.div>
           
           {/* Hero Section */}
           <motion.header variants={itemVariants} className="mb-12">
@@ -467,48 +468,6 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                   </nav>
                 </div>
 
-                {/* Author Card */}
-                <div className="p-6 rounded-2xl bg-gray-900/70 border border-gray-800">
-                  <h3 className="font-bold text-lg mb-4 text-white">About the Author</h3>
-                  <div className="flex items-center gap-4 mb-4">
-                    {post.author.avatar ? (
-                      <Image 
-                        src={post.author.avatar} 
-                        alt={post.author.name} 
-                        width={64} 
-                        height={64} 
-                        className="rounded-full"
-                      />
-                    ) : (
-                      <UserCircle className="w-16 h-16 text-orange-400" />
-                    )}
-                    <div>
-                      <h4 className="font-semibold text-white">{post.author.name}</h4>
-                      <p className="text-sm text-gray-400">{post.author.role}</p>
-                    </div>
-                  </div>
-                  <p className="text-sm text-gray-400 mb-4">{post.author.bio}</p>
-                  {post.author.social && (
-                    <div className="flex gap-3">
-                      {post.author.social.twitter && (
-                        <a href={`https://twitter.com/${post.author.social.twitter}`} className="text-gray-400 hover:text-orange-400">
-                          <Twitter className="w-5 h-5" />
-                        </a>
-                      )}
-                      {post.author.social.github && (
-                        <a href={`https://github.com/${post.author.social.github}`} className="text-gray-400 hover:text-orange-400">
-                          <Hash className="w-5 h-5" />
-                        </a>
-                      )}
-                      {post.author.social.linkedin && (
-                        <a href={`https://linkedin.com/in/${post.author.social.linkedin}`} className="text-gray-400 hover:text-orange-400">
-                          <Linkedin className="w-5 h-5" />
-                        </a>
-                      )}
-                    </div>
-                  )}
-                </div>
-
                 {/* Newsletter Signup */}
                 <div className="p-6 rounded-2xl bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20">
                   <h3 className="font-bold text-lg mb-2 text-white">Stay Updated</h3>
@@ -526,17 +485,22 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             </aside>
           </div>
 
-          {/* Related Articles */}
-          <motion.section variants={itemVariants} className="mt-16">
-            <h2 className="text-3xl font-bold mb-8 text-white">
-              Continue Reading
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-              {relatedPosts.map((relatedPost) => (
-                <BlogCard key={relatedPost.id} post={relatedPost} />
-              ))}
-            </div>
-          </motion.section>
+          {/* Related Articles - Enhanced */}
+          {relatedPosts && relatedPosts.length > 0 && (
+            <motion.section variants={itemVariants} className="mt-20 pt-12 border-t border-gray-800">
+              <div className="text-center mb-12">
+                <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
+                  Related Articles
+                </h2>
+                <p className="text-gray-400">Continue exploring with these recommended reads</p>
+              </div>
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                {relatedPosts.slice(0, 3).map((relatedPost) => (
+                  <BlogCard key={relatedPost.id} post={relatedPost} />
+                ))}
+              </div>
+            </motion.section>
+          )}
         </motion.div>
       </div>
     </div>
