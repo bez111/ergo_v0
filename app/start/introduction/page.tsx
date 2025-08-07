@@ -504,24 +504,6 @@ export default function IntroductionPage() {
                 </Button>
               </motion.div>
             </div>
-
-            {/* Quick Stats */}
-            <div className="mt-12 pt-8 border-t border-neutral-700 grid grid-cols-2 md:grid-cols-4 gap-4">
-              {[
-                { label: "Active dApps", value: "50+", icon: Building },
-                { label: "Developers", value: "1000+", icon: Code },
-                { label: "Transactions", value: "2M+", icon: Zap },
-                { label: "Community", value: "Global", icon: Globe }
-              ].map((stat) => (
-                <div key={stat.label} className="text-center">
-                  <div className="flex items-center justify-center gap-2 mb-1">
-                    <stat.icon className="w-4 h-4 text-brand-primary-400" />
-                    <span className="text-2xl font-bold text-white">{stat.value}</span>
-                  </div>
-                  <span className="text-xs text-gray-400">{stat.label}</span>
-                </div>
-              ))}
-            </div>
           </Card>
         </motion.section>
 
