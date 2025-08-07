@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MosaikSimpleUIPage() {
   return (
@@ -30,19 +30,14 @@ export default function MosaikSimpleUIPage() {
       <img src="../../../assets/img/mosaik/tutorial2-1.png" alt="Spring Initializr" className="rounded-xl border border-neutral-700 mb-6" />
       <p className="text-gray-300 mb-4">Generate the project, extract the zip file and open the directory with the IDE of your choice. Using IntelliJ or another Gradle-compatible IDE will sync some time to download and index all dependencies.</p>
       <p className="text-gray-300 mb-4">To start the Spring Boot application, you can use the Terminal command</p>
-      <UniversalCopyCodeBlock code={`./gradlew bootRun`} />
-      <p className="text-gray-300 mb-4">(or <code>gradlw bootRun</code> on Windows)</p>
-      <p className="text-gray-300 mb-4">The command line will tell you that this worked and that the server is listening on port 8080:</p>
-      <img src="../../../assets/img/mosaik/tutorial2-2.png" alt="Spring Boot running" className="rounded-xl border border-neutral-700 mb-6" />
-      <p className="text-gray-300 mb-4">A quick check on <a href="http://localhost:8080" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">http://localhost:8080</a> will give you a “Whitelabel error page”. What sounds like an error means success; it is Spring’s way to tell you that there’s nothing defined it can serve and no error handling defined. Hence the “whitelabel error page”.</p>
-      <p className="text-gray-300 mb-4">Let’s change this by adding a class “MosaikAppController.kt” in the same directory (or better: “package”) as our main “MosaikappApplication”. Annotate this class and add a method as shown:</p>
-      <UniversalCopyCodeBlock code={`@RestController
+      <CodeBlock language="python">{`@RestController
+
 class MosaikAppController {
    @GetMapping("/")
    fun getMainPage(): String {
        return "Hello"
    }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">If you start the server again and visit localhost:8080 in your web browser, you will see that “Hello” is printed. That’s even more success.</p>
       <p className="text-gray-300 mb-4">What did we do to achieve this?</p>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-1">
@@ -53,27 +48,31 @@ class MosaikAppController {
 
       <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Adding Mosaik to the project</h3>
       <p className="text-gray-300 mb-4">After making sure that Spring Boot is working, we now have to add Mosaik to the app. In the JVM ecosystem, libraries are served by Nexus servers, and the build tool fetches these libraries and adds them to the project during the build. We use Gradle as our build tool, and the dependencies for our project are declared in the <b>build.gradle.kts</b> file. Open it. You will find the following section:</p>
-      <UniversalCopyCodeBlock code={`dependencies {
+      <CodeBlock language="typescript">{`dependencies {
+
   implementation("org.springframework.boot:spring-boot-starter-web")
   implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">So at the moment, spring boot web and some Kotlin extensions are declared. We add mosaik below the existing entries:</p>
-      <UniversalCopyCodeBlock code={`// Mosaik
+      <CodeBlock language="scala">{`// Mosaik
+
 val mosaikVersion = "0.5.0"
 implementation("com.github.MrStahlfelge.mosaik:common-model:$mosaikVersion")
 implementation("com.github.MrStahlfelge.mosaik:common-model-ktx:$mosaikVersion")
-implementation("com.github.MrStahlfelge.mosaik:serialization-jackson:$mosaikVersion")`} />
+implementation("com.github.MrStahlfelge.mosaik:serialization-jackson:$mosaikVersion")`}</CodeBlock>
       <p className="text-gray-300 mb-4">We also need to declare another Nexus server that hosts these files. Change the repositories section (it is in the same <b>build.gradle.kts</b> file) like this:</p>
-      <UniversalCopyCodeBlock code={`repositories {
+      <CodeBlock language="typescript">{`repositories {
+
    mavenCentral()
    maven("https://jitpack.io")
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">If you use IntelliJ, it will automatically offer to resync the project. Do it, and it will download everything needed to use Mosaik.</p>
       <p className="text-gray-300 mb-4">Well done! We need one little tweak now. As said before, Spring will automatically serialize objects to JSON. This automated serialization works well in most cases - but for some cases in Mosaik, the default serialization of Jackson, the library used by Spring here, is not what the standard describes and the executing application expects. So we need to tell Spring that some of our Mosaik objects need a different serialization than the default. Configurations like that are done on the Application class, so we change the application class in <b>MosaikappApplication.kt</b> like the following:</p>
-      <UniversalCopyCodeBlock code={`@SpringBootApplication
+      <CodeBlock language="python">{`@SpringBootApplication
+
 class MosaikappApplication {
   @Bean
   @Primary
@@ -82,14 +81,15 @@ class MosaikappApplication {
      // Mosaik Actions and elements that will get serialized by Spring automatically
      return org.ergoplatform.mosaik.jackson.MosaikSerializer.getMosaikMapper()
   }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">This overrides the default “object mapper” (a class to map objects to JSON) with the one defined by Mosaik.</p>
       <p className="text-gray-300 mb-4">Our project setup is complete, and we can start implementing a Mosaik app! Do you remember the Mosaik desktop debugging application we compiled and started in Part 1 of the tutorial series? Keep it ready to be used!</p>
 
       <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">A first simple screen</h3>
       <p className="text-gray-300 mb-4">Now we want to define the first screen users get presented when they open up our Mosaik app. This phrase already said implicit what has to come before the first screen: we must define the Mosaik app itself.</p>
       <p className="text-gray-300 mb-4">Let's change our getMainPage method to return a Mosaik app:</p>
-      <UniversalCopyCodeBlock code={`@GetMapping("/")
+      <CodeBlock language="typescript">{`@GetMapping("/")
+
 fun getMainPage(): MosaikApp {
    return mosaikApp(
        "First Mosaik App", // app name shown in executors
@@ -97,11 +97,12 @@ fun getMainPage(): MosaikApp {
    ) {
        // define the view here
    }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">mosaikApp() is a method defined in our Mosaik Kotlin DSL. It takes some parameters describing the app and, most importantly, the initial view screen.</p>
       <p className="text-gray-300 mb-4">A view screen consists of multiple view elements, and some layout elements can contain other view elements. Check out the layout elements demo that you’ve started in part 1: You see that the three main group elements are Row, Column, and Box. There’s also Card which is nothing else than a decorated box.</p>
       <p className="text-gray-300 mb-4">You should use one of these group elements as your root view element on a screen. We will use a card here. Inside the card, we define a label with a standard text for a first project.</p>
-      <UniversalCopyCodeBlock code={`return mosaikApp(
+      <CodeBlock language="typescript">{`return mosaikApp(
+
    "First Mosaik App", // app name shown in executors
    1 // the app version
 ) {
@@ -109,11 +110,12 @@ fun getMainPage(): MosaikApp {
    card {
        label("Hello Ergo world!")
    }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Start the Spring Boot server and use the desktop demo application to run your MosaikApp. It will look like this:</p>
       <img src="../../../assets/img/mosaik/tutorial2-3.png" alt="Mosaik simple UI" className="rounded-xl border border-neutral-700 mb-6" />
       <p className="text-gray-300 mb-4">We see the app name, a somehow expected screen content, and we can also see how our viewtree looks like in JSON. Let’s spice this up a lot.</p>
-      <UniversalCopyCodeBlock code={`// define the view here
+      <CodeBlock language="typescript">{`// define the view here
+
 card {
    column(Padding.DEFAULT) {
        label("Hello Ergo world!", LabelStyle.HEADLINE2)
@@ -124,7 +126,7 @@ card {
            onClickAction(showDialog("You clicked the button."))
        }
    }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Running it results in this view, and the button works and presents a message.</p>
       <img src="../../../assets/img/mosaik/tutorial2-4.png" alt="Mosaik UI with button" className="rounded-xl border border-neutral-700 mb-6" />
       <p className="text-gray-300 mb-4">For the first part, we improved the layout by adding padding between the card outline and the card contents. The padding is declared on the new column element, not the card element. This might be surprising for people used to web design as they probably would expect that declaring padding on the card would be the better way to do this. But this would not work here: Paddings in Mosaik are always added on the outer side of the element. If you now think that a better name would be margin because, in web design, spacing on the outer side of an element is called margin, you are not quite right. Unlike web element’s margins and like web element’s paddings, paddings in Mosaik will always add spacing for neighboring elements.</p>
@@ -132,7 +134,8 @@ card {
       <p className="text-gray-300 mb-4">The box element between the label and the button has no content and simply adds spacing between the label and button.</p>
       <p className="text-gray-300 mb-4">On the button, an onClickAction is set and given an action that shows a dialog with a message. This line looks very innocent, but a lot is going on thanks to the Kotlin DSL. If you Ctrl-Click on “showDialog” and follow the code that is revealed, you will see that this expression actually defines the action and gives it a random id (because we did not set an id on our own, but the action needs an id), adds this action to the set of actions defined in our ViewContent (= the whole visible screen) and returns the action. “onClickAction” assigns the id of the action to the view element’s onClickAction property.</p>
       <p className="text-gray-300 mb-4">Although the code looks like regular programming, it is crucial to keep in mind what is going on behind the scenes to make the JSON serialization work. The behavior implies that defining two different actions with the same id will result in the first action being overwritten:</p>
-      <UniversalCopyCodeBlock code={`column(Padding.DEFAULT) {
+      <CodeBlock language="scala">{`column(Padding.DEFAULT) {
+
    label("Hello Ergo world!", LabelStyle.HEADLINE2)
 
    box(Padding.HALF_DEFAULT)
@@ -142,7 +145,7 @@ card {
    }
 
    val clashingAction = reloadApp("myaction")
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Although the clashingAction does not seem to be used anywhere in the code, it overwrites the dialog action. Since its ID is assigned to the button, the button will now reload the app.</p>
       <p className="text-gray-300 mb-4">You can now play around, adding some other view elements and actions. Take a look at the view elements and actions demo to see what is available and how to add it. In the next part of the tutorial series, we take a closer look at how the screen content can be altered.</p>
       <p className="text-gray-300 mb-4">If you had any problems in creating the code, you will find it <a href="https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/20ed591936a959fd6ab640e6520dc01e6d6c2d66" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">here</a>.</p>

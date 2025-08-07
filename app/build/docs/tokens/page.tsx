@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Package, Coins, Code, CheckCircle, AlertTriangle, ChevronRight, Image as LucideImage } from "lucide-react"
 import Link from "next/link"
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
+import { CodeBlock } from "@/components/ui"
 import Image from "next/image"
 
 export default function TokensPage() {
@@ -84,7 +84,7 @@ export default function TokensPage() {
           <p className="text-gray-300 text-sm mb-3">
             To mint a new token, you create a transaction where the first output box contains the token definition. The `tokenId` of the newly minted token will be the `boxId` of the first input box of the minting transaction.
           </p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`import { ErgoAddress, SByte, SColl, SConstant, SLong, TransactionBuilder } from '@fleet-sdk/core';
 import { hexToBytes } from '@fleet-sdk/common';
 
@@ -130,7 +130,7 @@ mintToken();`}
           <p className="text-gray-300 text-sm mb-3">
             Transferring tokens is similar to transferring ERG. You consume a box containing the tokens and create a new box with the tokens sent to the recipient.
           </p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`import { ErgoAddress, TransactionBuilder } from '@fleet-sdk/core';
 
 // ... (Node URL, API Key, Sender Address, Recipient Address setup)

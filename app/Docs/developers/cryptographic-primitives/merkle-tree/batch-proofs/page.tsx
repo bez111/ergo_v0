@@ -2,7 +2,7 @@ import React from "react";
 import { ArrowLeft, ListChecks, Code, Shield, Eye, Zap, Database, GitBranch } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MerkleBatchProofsPage() {
   return (

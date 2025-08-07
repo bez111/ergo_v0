@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import { Code, Send, PlusCircle, Wallet, FileText, ChevronRight, Clipboard, CheckCircle, Database, Terminal, Zap, Link as LinkIcon } from "lucide-react"
 import Link from "next/link"
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 const categories = [
   {
@@ -186,7 +186,7 @@ export default function CookbookPage() {
                     <h3 className="text-xl font-bold text-white">{r.title}</h3>
                   </div>
                   <p className="text-gray-300 text-sm mb-4">{r.description}</p>
-                  <UniversalCopyCodeBlock code={r.code} />
+                  <CodeBlock language="typescript" code={r.code} />
                   <div className="mt-auto">
                     <a href={r.doc} target="_blank" rel="noopener noreferrer" className="inline-flex items-center text-cyan-400 hover:underline text-sm">
                       More <ChevronRight className="w-4 h-4 ml-1" />

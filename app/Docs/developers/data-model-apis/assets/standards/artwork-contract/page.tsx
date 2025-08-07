@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Palette, ExternalLink } from 'lucide-react';
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ArtworkContractPage() {
   return (
@@ -98,7 +98,7 @@ export default function ArtworkContractPage() {
           <p className="text-gray-300 mb-4">
             The following specifies the structure for traits.
           </p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`( // properties
   Coll[(  
     Coll[Byte],  // key

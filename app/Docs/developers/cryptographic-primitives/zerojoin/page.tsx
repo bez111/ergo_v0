@@ -3,7 +3,7 @@ import { ArrowLeft, Shield, Eye, Lock, Users, Zap, BookOpen } from "lucide-react
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ZeroJoinPage() {
   return (

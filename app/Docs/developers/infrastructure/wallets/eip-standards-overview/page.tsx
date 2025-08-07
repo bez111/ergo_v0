@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function EipStandardsOverviewPage() {
   return (
@@ -42,7 +42,7 @@ export default function EipStandardsOverviewPage() {
       </ul>
 
       <h3 className="text-xl font-bold mb-2 mt-6">Typical Connection Flow (Conceptual JS)</h3>
-      <UniversalCopyCodeBlock code={`async function connectWallet() {
+      <CodeBlock language="typescript">{`async function connectWallet() {
   // Check if the connector object exists (wallet extension installed)
   if (typeof ergoConnector === 'undefined' || !ergoConnector.ergo) {
     console.error("Ergo Wallet Connector not found. Please install Nautilus or use a compatible wallet.");
@@ -81,7 +81,7 @@ export default function EipStandardsOverviewPage() {
 // const ergoContext = await connectWallet();
 // if (ergoContext) {
 //   // Now use ergoContext.get_used_addresses(), ergoContext.sign_tx(), etc.
-// }`} />
+// }`}</CodeBlock>
 
       <h3 className="text-xl font-bold mb-2 mt-6">Connection API Functions (Examples)</h3>
       <ul className="list-disc pl-6 text-gray-300 mb-4">

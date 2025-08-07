@@ -12,7 +12,7 @@ import {
   ChevronRight,
   Smartphone,
 } from "lucide-react"
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
+import { CodeBlock } from "@/components/ui"
 
 export default function SetupPage() {
   return (
@@ -175,7 +175,7 @@ export default function SetupPage() {
               </li>
               <li>
                 **Start the node:** Open your terminal in the node directory and run:
-                <UniversalCopyCodeBlock
+                <CodeBlock language="typescript"
                   code="java -jar ergo.jar -c ergo.conf"
                 />
               </li>
@@ -198,7 +198,7 @@ export default function SetupPage() {
               </li>
               <li>
                 Run the Ergo Node Docker image:
-                <UniversalCopyCodeBlock
+                <CodeBlock language="typescript"
                   code={`docker run -p 9053:9053 -p 9030:9030 -v ergo_data:/root/.ergo --name ergo-node ergoplatform/ergo:latest -D ergo.network.network=testnet`}
                 />
                 <p className="text-sm text-gray-400 mt-2">

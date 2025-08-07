@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ThreeOutOfFiveThresholdPage() {
   return (
@@ -34,7 +34,7 @@ export default function ThreeOutOfFiveThresholdPage() {
         </p>
 
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`val ringScript = s"""
 {
 atLeast(

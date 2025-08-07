@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 import {
   Database, Box, FileText, Shield, Key, Users, Layers, 
   BookOpen, ChevronRight, Cpu, Zap, Lock, Eye, Quote,
@@ -129,7 +129,7 @@ export default function DataModelApisPage() {
                   <BookOpen className="w-4 h-4" />
                   <span className="font-medium">Table of Contents</span>
                 </div>
-                <ChevronRight className={`w-4 h-4 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`} />
+                <ChevronRight className={`w-4 h-4 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`}</CodeBlock>
               </button>
               {isMobileMenuOpen && (
                 <div className="mt-2 p-3 bg-neutral-900/80 rounded-xl border border-neutral-800 backdrop-blur-sm animate-in slide-in-from-top-2 duration-200">
@@ -702,7 +702,7 @@ export default function DataModelApisPage() {
                 Consider the 'proof-of-no-premine' box from the Ergo genesis state. This box contains the last block IDs from Bitcoin and Ethereum at the launch time, as well as the latest news headlines:
               </p>
               <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-                <UniversalCopyCodeBlock
+                <CodeBlock language="typescript"
                   code={`{
   "boxId": "b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd",
   "value": 1000000000,
@@ -729,7 +729,7 @@ export default function DataModelApisPage() {
               
               <h3 className="text-xl font-semibold mb-3 text-orange-400">Example ErgoScript</h3>
               <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-                <UniversalCopyCodeBlock
+                <CodeBlock language="typescript"
                   code={`{ // Example ErgoScript using box properties
   // Retrieve the value and token multipliers from the registers of the current box (SELF)
   val valueMultiplier = SELF.R4[Int].get

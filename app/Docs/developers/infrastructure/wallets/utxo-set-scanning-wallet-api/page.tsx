@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function UtxoSetScanningWalletApiPage() {
   return (
@@ -47,14 +47,14 @@ export default function UtxoSetScanningWalletApiPage() {
       <p className="text-gray-300 mb-4">
         Example predicate (Haskell-like):
       </p>
-      <UniversalCopyCodeBlock code={`AND(
+      <CodeBlock language="typescript">{`AND(
     CONTAINS_ASSET("bc01de24311298068c07857d3860625abf3277997e2a2b8ff8ea91dda28d47a5"), 
     CONTAINS("0e240008cd029f2230dbe53f6b84d8a884a3407c3dffe43daf8037445441be7cdcd261feeaa4")
-   )`} />
+   )`}</CodeBlock>
       <p className="text-gray-300 mb-4">
         This must be formatted in JSON and sent as a request to register the scan. This is done via the endpoint: <code>/scan/register</code>.
       </p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
     "scanName": "Asset and script tracker",
     "trackingRule" : {
         "predicate": "and",
@@ -63,7 +63,7 @@ export default function UtxoSetScanningWalletApiPage() {
             {"predicate": "containsAsset", "assetId": "02dada811a888cd0dc7a0a41739a3ad9b0f427741fe6ca19700cf1a51200c96bf7"}
         ]
     }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">
         The node API returns an error if something wrong with request. If it is well formed then the wallet will return a new scan ID which the user/dApp can use to reference said scan. The scan identifier(ID) is encoded as 16-bit long signed but always positive integer.
       </p>
@@ -82,14 +82,14 @@ export default function UtxoSetScanningWalletApiPage() {
         <li><b>forced</b> - add found boxes to the wallet</li>
       </ul>
       <p className="text-gray-300 mb-4">Example:</p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
     "scanName": "Script tracker",
     "trackingRule" : {
         "predicate": "contains", 
         "value": "0e240008cd029f2230dbe53f6b84d8a884a3407c3dffe43daf8037445441be7cdcd261feeaa4"       
     },
     "walletInteraction": "forced"
-}`} />
+}`}</CodeBlock>
 
       <h2 className="text-2xl font-bold mb-4 mt-8">Specification: Adding Boxes Externally</h2>
       <p className="text-gray-300 mb-4">

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft, Code, Database, GitBranch, BookOpen, Download, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MerkleBatchProofsImplementationPage() {
   return (
@@ -73,7 +73,7 @@ export default function MerkleBatchProofsImplementationPage() {
               <div className="space-y-4">
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-green-400">1. Clone the Sigma-Rust Repository</h4>
-                  <UniversalCopyCodeBlock
+                  <CodeBlock language="typescript"
                     code={`git clone https://github.com/ergoplatform/sigma-rust.git
 cd sigma-rust`}
                   />
@@ -86,7 +86,7 @@ cd sigma-rust`}
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-green-400">3. Build the Project</h4>
-                  <UniversalCopyCodeBlock
+                  <CodeBlock language="typescript"
                     code={`cargo build`}
                   />
                 </div>
@@ -98,7 +98,7 @@ cd sigma-rust`}
               <p className="text-gray-300 mb-4">
                 First, create a Merkle tree using the <code className="bg-neutral-700 px-2 py-1 rounded">MerkleTree</code> structure provided by the <code className="bg-neutral-700 px-2 py-1 rounded">sigma-rust</code> library.
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={`use sigma_merkle_tree::merkletree::MerkleTree;
 use sigma_merkle_tree::MerkleNode;
 
@@ -125,7 +125,7 @@ fn create_merkle_tree() {
               <p className="text-gray-300 mb-4">
                 Once the Merkle tree is created, you can generate a batch Merkle proof for specific leaves. This proof can be used to verify the inclusion of multiple elements.
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={`use sigma_merkle_tree::batchmerkleproof::BatchMerkleProof;
 
 fn generate_batch_merkle_proof(tree: &MerkleTree) {
@@ -143,7 +143,7 @@ fn generate_batch_merkle_proof(tree: &MerkleTree) {
               <p className="text-gray-300 mb-4">
                 The generated proof can be verified against the Merkle root to ensure that the specified leaves are indeed part of the tree.
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={`fn verify_batch_merkle_proof(tree: &MerkleTree, proof: &BatchMerkleProof) {
     assert!(proof.valid(tree.root_hash().as_ref()));
     println!("Proof is valid.");
@@ -156,7 +156,7 @@ fn generate_batch_merkle_proof(tree: &MerkleTree) {
               <p className="text-gray-300 mb-4">
                 Merkle batch proofs can be serialized and deserialized for storage or transmission, which is crucial for many blockchain applications where proofs are shared between nodes or stored for future verification.
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={`use sigma_ser::ScorexSerializable;
 
 fn serialize_and_deserialize_proof(proof: &BatchMerkleProof) {
@@ -190,7 +190,7 @@ fn serialize_and_deserialize_proof(proof: &BatchMerkleProof) {
               <div className="space-y-4">
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-green-400">1. Clone the Scrypto Repository</h4>
-                  <UniversalCopyCodeBlock
+                  <CodeBlock language="typescript"
                     code={`git clone https://github.com/input-output-hk/scrypto.git
 cd scrypto`}
                   />
@@ -203,7 +203,7 @@ cd scrypto`}
                 </div>
                 <div>
                   <h4 className="text-lg font-semibold mb-2 text-green-400">3. Build the Project</h4>
-                  <UniversalCopyCodeBlock
+                  <CodeBlock language="typescript"
                     code={`sbt compile`}
                   />
                 </div>
@@ -215,7 +215,7 @@ cd scrypto`}
               <p className="text-gray-300 mb-4">
                 The Merkle Tree can be constructed using the <code className="bg-neutral-700 px-2 py-1 rounded">MerkleTree</code> class in Scrypto, similarly to how it's done in Rust.
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={String.raw`import scorex.crypto.authds.merkle.MerkleTree
 import scorex.crypto.authds.LeafData
 import scorex.crypto.hash.Blake2b256
@@ -236,7 +236,7 @@ println(s"Merkle Root: \${tree.rootHash}")`}
               <p className="text-gray-300 mb-4">
                 In Scrypto, you can generate a batch Merkle proof by specifying the indices of the leaves you want to prove.
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={String.raw`import scorex.crypto.authds.merkle.{BatchMerkleProof, Leaf}
 
 val batchProof = tree.proofByIndices(Seq(0, 2)).get
@@ -252,7 +252,7 @@ println(s"Batch Merkle Proof: \${batchProof}")`}
               <p className="text-gray-300 mb-4">
                 You can then verify the generated proof to ensure that the elements are part of the Merkle tree.
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={String.raw`val isValid = batchProof.valid(tree.rootHash)
 println(s"Batch Merkle Proof is valid: \${isValid}")`}
               />
@@ -263,7 +263,7 @@ println(s"Batch Merkle Proof is valid: \${isValid}")`}
               <p className="text-gray-300 mb-4">
                 To serialize and deserialize the proof, Scrypto provides dedicated classes and methods, ensuring the proof can be efficiently stored or transmitted.
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={String.raw`import scorex.crypto.authds.merkle.serialization.BatchMerkleProofSerializer
 
 val serializer = new BatchMerkleProofSerializer[Digest32, Blake2b256.type]
@@ -289,7 +289,7 @@ println("Serialization and deserialization successful.")`}
           <p className="text-gray-300 mb-6">
             Here's an example tying together all the steps in Scrypto:
           </p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`import scorex.crypto.authds.merkle.{MerkleTree, Leaf, BatchMerkleProof}
 import scorex.crypto.authds.merkle.serialization.BatchMerkleProofSerializer
 import scorex.crypto.hash.Blake2b256

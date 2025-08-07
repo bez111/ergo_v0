@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function HeadlessModulesPage() {
   return (
@@ -19,7 +19,7 @@ export default function HeadlessModulesPage() {
       </div>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Box Spec</h2>
       <p className="text-gray-300 mb-4">This module exposes the <code>BoxSpec</code> struct, which allows you to create a specification of a UTXO. This is used for defining the boxes which are required for the actions of your protocol.</p>
-      <UniversalCopyCodeBlock code={`/// A specification which specifies parameters of an \`ErgoBox\`.
+      <CodeBlock language="typescript">{`/// A specification which specifies parameters of an \`ErgoBox\`.
 /// This spec is used as a "source of truth" to both verify and find
 /// \`ErgoBox\`es which match the spec. This is often used for defining
 /// Stages in multi-stage smart contract protocols, but can also be used
@@ -44,10 +44,10 @@ pub struct BoxSpec {
     /// specification logic which gets processed when verifying
     /// the box.
     predicate: Option&lt;fn(&ErgoBox) -&gt; bool&gt;,
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Once you've constructed a <code>BoxSpec</code>, you have a number of essential methods that simplify the experience of writing off-chain code for dApps.</p>
       <p className="text-gray-300 mb-4">For example, <code>verify_box</code> allows you to test whether an <code>ErgoBox</code> you provide as input matches the specification you created with your <code>BoxSpec</code>.</p>
-      <UniversalCopyCodeBlock code={`pub fn verify_box(&self, ergo_box: &ErgoBox) -> Result<()> {`} />
+      <CodeBlock language="typescript">{`pub fn verify_box(&self, ergo_box: &ErgoBox) -> Result<()> {`}</CodeBlock>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Box Traits</h2>
       <p className="text-gray-300 mb-4">This module exposes two traits:</p>
       <ol className="list-decimal pl-6 text-gray-300 mb-4 space-y-1">
@@ -68,14 +68,14 @@ pub struct BoxSpec {
       <p className="text-gray-300 mb-4"><code>ErgsBox</code> are used for acquiring inputs that hold Ergs inside of them which can be used within your smart contract protocol actions.</p>
       <p className="text-gray-300 mb-4"><code>ErgUsdOraclePoolBox</code> & <code>AdaUsdOraclePoolBox</code> provide an extremely simplified interface for both headless dApp developers as well as front-end implementors to utilize data from the two currently running Oracle Pools. These two specified boxes can even be used by wallets/any off-chain application that needs to read the current rates from the Oracle Pool boxes.</p>
       <p className="text-gray-300 mb-4">The code block below shows how in 4 lines you can read the current Erg-USD oracle pool rate from your preferred Ergo Explorer API instance:</p>
-      <UniversalCopyCodeBlock code={`let url = ErgUsdOraclePoolBox::explorer_endpoint("https://api.ergoplatform.com/api").unwrap();
+      <CodeBlock language="typescript">{`let url = ErgUsdOraclePoolBox::explorer_endpoint("https://api.ergoplatform.com/api").unwrap();
 let response = get(&url).unwrap().text().unwrap();
 let oracle_pool_box =
     ErgUsdOraclePoolBox::process_explorer_response(&response).unwrap()[0].clone();
 println!(
     "Erg-USD Oracle Pool: {} nanoErgs per USD",
     oracle_pool_box.datapoint()
-);`} />
+);`}</CodeBlock>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Output Builders</h2>
       <p className="text-gray-300 mb-4">This module exposes structs which provide you with a basic interface for creating common output UTXOs within your Actions. These are often used for creating outputs that hold a user's change or pay a tx fee.</p>
       <p className="text-gray-300 mb-4">Example Output Builders:</p>
@@ -89,10 +89,10 @@ println!(
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Encoding</h2>
       <p className="text-gray-300 mb-4">This module exposes a number of helpful functions related to encoding/decoding/wrapping/unwrapping values from one form into another.</p>
       <p className="text-gray-300 mb-4">Examples:</p>
-      <UniversalCopyCodeBlock code={`pub fn erg_to_nano_erg(erg_amount: f64) -> u64;
+      <CodeBlock language="typescript">{`pub fn erg_to_nano_erg(erg_amount: f64) -> u64;
 pub fn nano_erg_to_erg(nanoerg_amount: u64) -> f64;
 pub fn unwrap_long(c: &Constant) -> Result<i64>;
-pub fn serialize_p2s_from_ergo_tree(ergo_tree: ErgoTree) -> P2SAddressString;`} />
+pub fn serialize_p2s_from_ergo_tree(ergo_tree: ErgoTree) -> P2SAddressString;`}</CodeBlock>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Procedural Macros</h2>
       <p className="text-gray-300 mb-4">This crate exposes three procedural macros to make the life of devs much simpler:</p>
       <ol className="list-decimal pl-6 text-gray-300 mb-4 space-y-1">

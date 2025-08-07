@@ -181,7 +181,7 @@ export default function BoxRegistersPage() {
 
           <p className="text-gray-300 mb-4">For instance,</p>
 
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`// Assign the value of the R4 register of the current box (SELF) to the variable x
 // The script expects R4 to contain an Int.
 val x = SELF.R4[Int]`}
@@ -203,7 +203,7 @@ val x = SELF.R4[Int]`}
             In some use cases, a register may contain values of various types depending on context. An additional register can be employed as a tag to facilitate the access of such a register safely.
           </p>
 
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`// Example using R5 as a type tag for data in R4
 val tagOpt = SELF.R5[Int] // Retrieve the value of the register R5 of type Int and assign it to the variable \`tagOpt\`
 val res = if (tagOpt.isDefined) { // Check if \`tagOpt\` is not empty

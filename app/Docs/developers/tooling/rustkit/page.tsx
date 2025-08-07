@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function RustKitPage() {
   return (
@@ -24,7 +24,7 @@ export default function RustKitPage() {
       <p className="text-gray-300 mb-4">A SDK for building applications on the Ergo blockchain. Our goal is to create a library that creates a simple and easy to use interface for developers to build applications. Currently, the library is in the early stages of development and is not recommended for production use.</p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Setup</h2>
       <p className="text-gray-300 mb-4">The Ergo RustKit is published on crates.io. The crate can be found here.</p>
-      <UniversalCopyCodeBlock code={`ergo-rustkit = "0.5.0"`} />
+      <CodeBlock language="typescript">{`ergo-rustkit = "0.5.0"`}</CodeBlock>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Examples</h2>
       <p className="text-gray-300 mb-4">A directory with multiple examples can be found <a href="https://github.com/ergo-rust/rust-ergo/tree/main/examples" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">here</a>.<br/>Examples will be updated as the library is updated.</p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Contributing</h2>

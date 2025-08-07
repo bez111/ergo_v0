@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronLeft, ExternalLink, AlertTriangle, Info, CheckCircle } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 const bash1 = `pkg update && pkg upgrade -y`;
 const bash2 = `pkg install proot-distro -y`;
@@ -92,45 +92,45 @@ export default function ProotRocksdbPage() {
         <div>
           <h2 className="text-xl font-bold mb-2">1. Install proot-distro in Termux</h2>
           <p className="text-gray-300 mb-2">Open Termux and run:</p>
-          <UniversalCopyCodeBlock code={bash1} />
-          <UniversalCopyCodeBlock code={bash2} />
+          <CodeBlock language="typescript" code={bash1} />
+          <CodeBlock language="typescript" code={bash2} />
         </div>
 
         <div>
           <h2 className="text-xl font-bold mb-2">2. Install Arch Linux via proot-distro</h2>
           <p className="text-gray-300 mb-2">This will download the Arch Linux root filesystem:</p>
-          <UniversalCopyCodeBlock code={bash3} />
+          <CodeBlock language="typescript" code={bash3} />
         </div>
 
         <div>
           <h2 className="text-xl font-bold mb-2">3. Login to Arch Linux Environment</h2>
           <p className="text-gray-300 mb-2">Each time you want to run the node using this method, you first need to log into the Arch environment:</p>
-          <UniversalCopyCodeBlock code={bash4} />
+          <CodeBlock language="typescript" code={bash4} />
           <p className="text-gray-400 text-xs">Your terminal prompt should change, indicating you are now inside Arch Linux within Termux.</p>
         </div>
 
         <div>
           <h2 className="text-xl font-bold mb-2">4. Inside Arch Linux: Install Dependencies (First Time Only)</h2>
           <p className="text-gray-300 mb-2">Update package lists:</p>
-          <UniversalCopyCodeBlock code={bash5} />
+          <CodeBlock language="typescript" code={bash5} />
           <p className="text-gray-300 mb-2">Install Java (OpenJDK 17 recommended), <code>wget</code>, and <code>nano</code>:</p>
-          <UniversalCopyCodeBlock code={bash6} />
+          <CodeBlock language="typescript" code={bash6} />
         </div>
 
         <div>
           <h2 className="text-xl font-bold mb-2">5. Inside Arch Linux: Download RocksDB Ergo Node JAR</h2>
           <p className="text-gray-300 mb-2">You <b>must</b> download the JAR variant specifically built with RocksDB support. Find the correct <code>.jar</code> file (often named <code>ergo-&lt;version&gt;-rocksdb.jar</code>) on the <a href="https://github.com/ergoplatform/ergo/releases" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Releases</a> page.</p>
           <p className="text-gray-300 mb-2">Get the download URL for the specific RocksDB JAR you need. Use <code>wget</code> to download it <i>within the Arch environment</i>:</p>
-          <UniversalCopyCodeBlock code={bash7} />
+          <CodeBlock language="typescript" code={bash7} />
           <p className="text-gray-400 text-xs">(Replace URL with the actual RocksDB JAR URL from the releases page).</p>
         </div>
 
         <div>
           <h2 className="text-xl font-bold mb-2">6. Inside Arch Linux: Create Configuration File (ergo.conf)</h2>
           <p className="text-gray-300 mb-2">Create the file using <code>nano</code>:</p>
-          <UniversalCopyCodeBlock code={bash8} />
+          <CodeBlock language="typescript" code={bash8} />
           <p className="text-gray-300 mb-2">Paste a configuration suitable for <code>stateType="utxo"</code> with pruning (adjust <code>blocksToKeep</code> based on your storage capacity):</p>
-          <UniversalCopyCodeBlock code={conf} />
+          <CodeBlock language="typescript" code={conf} />
           <ul className="list-disc list-inside text-gray-400 text-xs mb-2">
             <li><b>stateType = "utxo"</b>: Use UTXO state with RocksDB.</li>
             <li><b>blocksToKeep = 10080</b>: Keeps roughly the last week's worth of full blocks. Adjust based on storage/needs. Lower values save space but limit historical data access via API.</li>
@@ -142,7 +142,7 @@ export default function ProotRocksdbPage() {
         <div>
           <h2 className="text-xl font-bold mb-2">7. Inside Arch Linux: Launch the Node</h2>
           <p className="text-gray-300 mb-2">Run the RocksDB JAR, allocating sufficient memory (UTXO mode generally needs more than digest mode):</p>
-          <UniversalCopyCodeBlock code={bash9} />
+          <CodeBlock language="typescript" code={bash9} />
           <p className="text-gray-400 text-xs">Adjust <code>-Xmx2G</code> based on your device's available RAM. You might need more or less.</p>
         </div>
 

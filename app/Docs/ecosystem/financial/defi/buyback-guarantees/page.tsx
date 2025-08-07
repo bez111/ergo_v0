@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Copy as CopyIcon, Check as CheckIcon } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function BuyBackGuaranteesPage() {
   const buybackCode = `{
@@ -59,40 +59,3 @@ export default function BuyBackGuaranteesPage() {
       {/* Buyback Contract Code */}
       <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-cyan-400">Buyback Contract Example</h3>
-        <UniversalCopyCodeBlock code={buybackCode} />
-        <p className="text-gray-400 text-xs mb-2">This contract enforces the buyback logic and expiration condition.</p>
-      </div>
-
-      {/* Sell Contract Code */}
-      <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
-        <h3 className="text-lg font-bold mb-2 text-orange-400">Sell Contract Example</h3>
-        <UniversalCopyCodeBlock code={sellCode} />
-        <p className="text-gray-400 text-xs mb-2">Here, <code>bbh</code> is the buyback script hash.</p>
-      </div>
-
-      {/* Playground Link */}
-      <div className="bg-cyan-400/10 border border-cyan-400/30 rounded-xl p-6 mb-8">
-        <h3 className="text-lg font-bold mb-2 text-cyan-400">Try in Playground</h3>
-        <a
-          href="https://scastie.scala-lang.org/oVlOW1GpTkWGLPLzDmJTxA"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 focus:underline"
-        >
-          Open in Scastie
-        </a>
-      </div>
-
-      {/* Smart Orders Section */}
-      <div className="bg-neutral-900/50 border border-pink-700 rounded-xl p-6 mb-8">
-        <h3 className="text-lg font-bold mb-2 text-pink-400">Smart Orders & Composability</h3>
-        <p className="text-gray-300 mb-2">
-          Just like the buyback, we can enhance orders with various conditions, thereby achieving DEX functionality. This makes simple DEX orders composable with complex logic such as token-sale, liquidity providing, etc. This concept is referred to as <b>smart orders</b>.
-        </p>
-        <p className="text-gray-400 text-sm">
-          The main challenge is developing front-end apps and user interfaces for smart order-based DEXes.
-        </p>
-      </div>
-    </>
-  );
-} 

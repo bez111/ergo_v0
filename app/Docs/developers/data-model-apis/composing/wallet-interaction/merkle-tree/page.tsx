@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MerkleTreePage() {
   return (
@@ -55,7 +55,7 @@ export default function MerkleTreePage() {
               </ul>
             </li>
             <li><b>Leaf Construction</b>: The leaf for the <code className="bg-neutral-700 px-2 py-1 rounded">i</code>-th transaction in the block is constructed as:
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code="hash(0 || pos || data)"
                 className="mt-2"
               />
@@ -66,7 +66,7 @@ export default function MerkleTreePage() {
           <h3 className="text-xl font-semibold mb-3 text-pink-300">Internal Node Structure</h3>
           <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300 mb-4">
             <li><b>Node Construction</b>: Internal nodes in the Merkle Tree are constructed by hashing the concatenation of their child nodes:
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code="hash(1 || left_child || right_child)"
                 className="mt-2"
               />

@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Zap, ExternalLink } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function FlowCardsPage() {
   return (
@@ -85,13 +85,13 @@ export default function FlowCardsPage() {
             In the imperative programming model of Ethereum, a transaction is a sequence of operations executed by the Ethereum VM. The following <a href="https://solidity.readthedocs.io/en/develop/introduction-to-smart-contracts.html#subcurrency-example" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Solidity function <ExternalLink className="w-4 h-4 inline ml-1" /></a> implements a transfer of tokens from <code className="bg-neutral-800 px-2 py-1 rounded">sender</code> to <code className="bg-neutral-800 px-2 py-1 rounded">receiver</code>. The transaction starts when the <code className="bg-neutral-800 px-2 py-1 rounded">sender</code> calls this function on an instance of a contract and ends when the function returns.
           </p>
 
-          <UniversalCopyCodeBlock code={`// Sends an amount of existing coins from any caller to an address
+          <CodeBlock language="typescript">{`// Sends an amount of existing coins from any caller to an address
 function send(address receiver, uint amount) public {
     require(amount <= balances[msg.sender], "Insufficient balance.");
     balances[msg.sender] -= amount;
     balances[receiver] += amount;
     emit Sent(msg.sender, receiver, amount);
-}`} />
+}`}</CodeBlock>
 
           <p className="mb-4">
             The function first checks the preconditions, then updates the storage (i.e. balances) and finally publishes the post-condition as the <code className="bg-neutral-800 px-2 py-1 rounded">Sent</code> event. The gas which is consumed by the transaction is sent to the miner as a reward for executing this transaction.
@@ -364,29 +364,29 @@ function send(address receiver, uint amount) public {
             Thus, the ErgoScript code should have an OR operation with two arguments - one for each spending path.
           </p>
 
-          <UniversalCopyCodeBlock code={`/** buyOrder contract */
+          <CodeBlock language="typescript">{`/** buyOrder contract */
 {
   val cancelCondition = {}
   val swapCondition = {}
   cancelCondition || swapCondition
-}`} />
+}`}</CodeBlock>
 
           <p className="mb-4">
             The formula for the <code className="bg-neutral-800 px-2 py-1 rounded">cancelCondition</code> expression is given in the <code className="bg-neutral-800 px-2 py-1 rounded">!cancel</code> spending path of the <code className="bg-neutral-800 px-2 py-1 rounded">buyOrder</code> box. We can directly include it in the script.
           </p>
 
-          <UniversalCopyCodeBlock code={`/** buyOrder contract */
+          <CodeBlock language="typescript">{`/** buyOrder contract */
 {
   val cancelCondition = { buyer }
   val swapCondition = {}
   cancelCondition || swapCondition
-}`} />
+}`}</CodeBlock>
 
           <p className="mb-4">
             For the <code className="bg-neutral-800 px-2 py-1 rounded">!swap</code> spending path of the <code className="bg-neutral-800 px-2 py-1 rounded">buyOrder</code> box, the conditions are specified in the <code className="bg-neutral-800 px-2 py-1 rounded">buyerOut</code> output box of the <code className="bg-neutral-800 px-2 py-1 rounded">Swap</code> transaction. If we simply include them in the <code className="bg-neutral-800 px-2 py-1 rounded">swapCondition</code>, then we get a syntactically incorrect script.
           </p>
 
-          <UniversalCopyCodeBlock code={`/** buyOrder contract */
+          <CodeBlock language="typescript">{`/** buyOrder contract */
 {
   val cancelCondition = { buyer }
   val swapCondition = {
@@ -395,7 +395,7 @@ function send(address receiver, uint amount) public {
     @contract
   }
   cancelCondition || swapCondition
-}`} />
+}`}</CodeBlock>
 
           <p className="mb-4">
             We can, however, translate the conditions from the diagram syntax to ErgoScript expressions using the following simple rules:
@@ -415,7 +415,7 @@ function send(address receiver, uint amount) public {
             After the transformation, we can obtain a correct script that checks all the required preconditions for spending the <code className="bg-neutral-800 px-2 py-1 rounded">buyOrder</code> box.
           </p>
 
-          <UniversalCopyCodeBlock code={`/** buyOrder contract */
+          <CodeBlock language="typescript">{`/** buyOrder contract */
 def DEX(buyer: Addrss, seller: Address, TID: Int, ergAmt: Long, tAmt: Long)
 {
   val cancelCondition: SigmaProp = { buyer }      // verify buyer's sig (ProveDlog)
@@ -433,7 +433,7 @@ def DEX(buyer: Addrss, seller: Address, TID: Int, ergAmt: Long, tAmt: Long)
     } 
   }
   cancelCondition || swapCondition
-}`} />
+}`}</CodeBlock>
 
           <p>
             A similar script for the <code className="bg-neutral-800 px-2 py-1 rounded">sellOrder</code> box can be obtained using the same translation rules. With the help of the tooling, the code of contracts can be mechanically generated from the diagram specification.

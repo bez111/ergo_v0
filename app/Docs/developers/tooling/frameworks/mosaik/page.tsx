@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 import {
   LayoutDashboard,
   Cpu,
@@ -57,30 +57,30 @@ export default function MosaikPage() {
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Mosaik first hands-on</h2>
       <p className="text-gray-300 mb-4">Let’s take a real look at Mosaik to get a feeling for the system. Clone the repository from <a href="https://github.com/MrStahlfelge/mosaik" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">https://github.com/MrStahlfelge/mosaik</a> to your local system. You’ll need Java 11 or newer installed for the next steps. Start the Mosaik Desktop Executor (which also serves as a debugging tool) by invoking the following command.</p>
-      <UniversalCopyCodeBlock code={`./gradlew desktop-demo:run`} />
+      <CodeBlock language="typescript">{`./gradlew desktop-demo:run`}</CodeBlock>
       <p className="text-gray-300 mb-4">(or <code>gradlew desktop-demo:run</code> on Windows). Once downloading the necessary dependencies and compiling is done, you will be presented with the following window:</p>
       <img src="../../../assets/img/mosaik/tutorial1-1.png" alt="Mosaik 1" className="rounded-xl border border-neutral-700 mb-6" />
       <p className="text-gray-300 mb-4">The column on the right gives you info on the input values that the current view holds, as well as the JSON model that is currently shown. Most space is reserved for the actual Mosaik app that is running. The debugger shows a simple built-in app demonstrating a few view elements and actions. Let’s take a closer look at the JSON on the right-hand side. If you copy it in a better-suited editor, you’ll see that its outermost object contains two properties:</p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
   "actions": [...],
   "view": {
     "type": "Column",
     "children": [...]
   }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">The Mosaik app consists of actions and view elements. Here, the root view element is a column. One of the child view elements is the label that shows the text “Label (alignment end, click it)</p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
  "id": "clickLabel",
  "type": "Label",
  "text": "Label (alignment end, click it)",
  "align": "END",
  "style": "BODY1BOLD",
  "onClick": "replaceLabel"
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">If you click this label in the desktop application, you will see that the view changes:</p>
       <img src="../../../assets/img/mosaik/tutorial1-2.png" alt="Mosaik 2" className="rounded-xl border border-neutral-700 mb-6" />
       <p className="text-gray-300 mb-4">This was caused by the onClick attribute defined on the JSON above. It references “replaceLabel”. When you look at the list of defined actions, you’ll find this action declared as follows:</p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
  "type": "ChangeSiteAction",
  "id": "replaceLabel",
  "newContent": {
@@ -93,22 +93,22 @@ export default function MosaikPage() {
      "textColor": "PRIMARY"
    }
  }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Clicking on the label that was first shown caused a “ChangeSiteAction” to be launched, replacing the label with a new one with a different text and color. It is essential to understand that the original label was replaced, not changed, to have a new text and color. All Mosaik elements are immutable.</p>
       <p className="text-gray-300 mb-4">Before we look at a more interesting example, let’s try a simple feature the desktop executor provides that might come in handy when designing your own apps.</p>
       <p className="text-gray-300 mb-4">Locate the definition for the headline label defined as follows in the right-hand pane:</p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
       "type": "Label",
       "style": "HEADLINE2",
       "text": "Welcome to Mosaik demo app"
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Now change the style to <code>HEADLINE1</code>. You’ll see the view immediately changing. (You can edit directly from within this view!)</p>
       <p className="text-gray-300 mb-4">The Mosaik repository ships with a Mosaik app that demonstrates all available view elements and actions. Remember that you are working in a desktop debugging tool when trying it out. Some actions and view elements make sense to be used from within an actual wallet application and are only implemented in a debugger style for you to tweak.</p>
       <p className="text-gray-300 mb-4">You can fire up the view elements and actions demo by calling the following command from the Mosaik repo’s directory:</p>
-      <UniversalCopyCodeBlock code={`./gradlew ergo-mosaik:backend-demo-kotlin:bootRun`} />
+      <CodeBlock language="typescript">{`./gradlew ergo-mosaik:backend-demo-kotlin:bootRun`}</CodeBlock>
       <p className="text-gray-300 mb-4">(or <code>gradlew ergo-mosaik:backend-demo-kotlin:bootRun</code> on Windows)</p>
       <p className="text-gray-300 mb-4">After some compiling, the app is waiting to get fetched on port 8080:</p>
-      <UniversalCopyCodeBlock code={`Tomcat started on port(s): 8080 (http) with context path ''`} />
+      <CodeBlock language="typescript">{`Tomcat started on port(s): 8080 (http) with context path ''`}</CodeBlock>
       <p className="text-gray-300 mb-4">Navigate to localhost:8080 by entering this into the navigation bar and hit enter:</p>
       <img src="../../../assets/img/mosaik/tutorial1-3.png" alt="Mosaik 3" className="rounded-xl border border-neutral-700 mb-6" />
       <p className="text-gray-300 mb-4">Mosaik automatically determines that the actual Mosaik app is served from the path /appselect/ and presents a chooser. Let’s ignore the “typical errors” demo for now (it is meant to be checked by Mosaik executor developers) and make your choice!</p>

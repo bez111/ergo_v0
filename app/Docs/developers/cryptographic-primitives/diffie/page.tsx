@@ -3,7 +3,7 @@ import { ArrowLeft, Shield } from "lucide-react";
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function DiffiePage() {
   return (
@@ -175,14 +175,14 @@ export default function DiffiePage() {
           Below is an example of how the <strong>proveDHTuple</strong> function can be used in an ErgoScript contract to prove knowledge of a shared secret <strong>x</strong>:
         </p>
 
-        <UniversalCopyCodeBlock code={`{
+        <CodeBlock language="typescript">{`{
   val g = decodePoint("028D84...")
   val h = decodePoint("02F937...")
   val u = decodePoint("03C89B...")
   val v = decodePoint("02B1DA...")
 
   proveDHTuple(g, h, u, v)
-}`} />
+}`}</CodeBlock>
 
         <p className="text-gray-300 mb-6">
           This script proves knowledge of <strong>x</strong> such that <strong>u = g^x</strong> and <strong>v = h^x</strong>, enabling privacy-preserving contracts that can securely verify knowledge of shared secrets without revealing them.

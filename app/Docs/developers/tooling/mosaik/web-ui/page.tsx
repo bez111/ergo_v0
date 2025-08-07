@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MosaikWebUIPage() {
   return (
@@ -27,24 +27,28 @@ export default function MosaikWebUIPage() {
       <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Show an informational page in web browsers visiting your Mosaik app</h3>
       <p className="text-gray-300 mb-4">Let’s go back to our tutorial app and start up the Spring Boot process. We know that our Mosaik app is living on <a href="http://localhost:8080/" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">http://localhost:8080/</a> now, and opening it in the desktop debugger works as great as expected. However, when we open up the app in a web browser…we only get to see the json output that is our serialized app. Let’s do this better!</p>
       <p className="text-gray-300 mb-4">There is no way in getting web browsers understanding what a Mosaik app is, so we use a simple trick to achieve what we want: We move the Mosaik app away from the URL, and instead serve HTML content we want the user to see there. But we leave a hint for Mosaik executors where to find the actual Mosaik app.</p>
-      <UniversalCopyCodeBlock code={`@GetMapping("/firstapp")
-fun getMainPage(): MosaikApp {...}`} />
-      <UniversalCopyCodeBlock code={`@PostMapping("/firstapp/enteredName")
-fun userEnteredName(@RequestBody values: Map<String, Any?>) = …`} />
+      <CodeBlock language="typescript">{`@GetMapping("/firstapp")
+
+fun getMainPage(): MosaikApp {...}`}</CodeBlock>
+      <CodeBlock language="typescript">{`@PostMapping("/firstapp/enteredName")
+
+fun userEnteredName(@RequestBody values: Map<String, Any?>) = …`}</CodeBlock>
       <p className="text-gray-300 mb-4">Now we need to define new content for the main page.</p>
-      <UniversalCopyCodeBlock code={`<html>
+      <CodeBlock language="typescript">{`<html>
+
 <head>
    <link rel="mosaik" href="firstapp">
 </head>
 <body>
 Please navigate to this page with a Mosaik executor application.
 </body>
-</html>`} />
+</html>`}</CodeBlock>
       <p className="text-gray-300 mb-4">We tell Spring to serve this file for the main page with the following addition to MosaikAppController.kt.</p>
-      <UniversalCopyCodeBlock code={`@GetMapping("/")
+      <CodeBlock language="typescript">{`@GetMapping("/")
+
 fun browserHintPage(): ModelAndView {
    return ModelAndView("nobrowser.html")
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">And that’s it! After restarting Spring, web browsers show a hint message when visiting localhost:8080, while Mosaik executors automatically load the linked Mosaik app.</p>
       <p className="text-gray-300 mb-4">You can find this version of the example app on <a href="https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/2dc2af35eae0592b7f9a1f252353be0585ddd57f" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a>.</p>
       <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Run your Mosaik app in web browsers</h3>
@@ -66,12 +70,13 @@ fun browserHintPage(): ModelAndView {
       {/* <img src="../../../assets/img/mosaik/tutorial5-1.png" alt="Mosaik web UI" className="rounded-xl border border-neutral-700 mb-6" /> */}
       <p className="text-gray-300 mb-4">Enter your name and click “Click me” changes the title label as expected.</p>
       <p className="text-gray-300 mb-4">But how can we visit our second app for sending ERG? Sure, we could add a button to our main screen with a navigateToApp action. But Mosaik Web executor has a built-in way to directly link to certain Mosaik apps by adding “routes” entries in the mosaikconfig.json.</p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="json">{`{
+
   "starturl": "firstapp",
   "routes": {
    "send": "http://127.0.0.1:8080/sendfunds"
   }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Now you can access and link directly to the sendfunds app with <a href="http://localhost:8080/#send" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">http://localhost:8080/#send</a> - this way, navigating between apps automatically supports the browser’s back/forward history functionality.</p>
       <p className="text-gray-300 mb-4">When you visit our send funds app in browser, you may notice that the following features already work:</p>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-1">
@@ -84,7 +89,8 @@ fun browserHintPage(): ModelAndView {
       <p className="text-gray-300 mb-4">Connecting a wallet with ErgoPay needs establishing a channel back from the wallet app to the Mosaik web executor, that’s why you need to add two new API endpoints and a data holder service to your Spring controllers and configure these two endpoints in web executor’s mosaikconfig.json.</p>
       <p className="text-gray-300 mb-4">For simplicity, the actual code is not shown here as it is some boilerplate. If you read through it, it is pretty easy to understand that it handles the following: Endpoint A is called continuously by the web executor’s connect wallet screen to check if the user already connected. Endpoint B is an ErgoPay endpoint connected from the wallet app when the user connects. It saves the user’s wallet address in a temporary map for endpoint A to pick up.</p>
       <p className="text-gray-300 mb-4">The two endpoints are implemented in UserSessionController and the temporary wallet address map is implemented in UserSessionService. Feel free to copy them as is in your own project. You can find them here: <a href="https://github.com/MrStahlfelge/mosaik-tutorial-series/tree/fba56d65e8c8a01821ecb1c56037bc5dfa8a652a/src/main/kotlin/com/example/ergomosaik/mosaikapp" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">GitHub</a></p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="json">{`{
+
  "starturl": "firstapp",
  "chooseWalletErgoPay": {
    "getAddressForSessionUrl": "http://127.0.0.1:8080/getUserAddress/#RID#",
@@ -93,7 +99,7 @@ fun browserHintPage(): ModelAndView {
  "routes": {
    "send": "http://127.0.0.1:8080/sendfunds"
  }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Please note: Since we have a local address (127.0.0.1) here, the connection won’t work when using a mobile device to read the QR code. It works when using a local network IP.</p>
       <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Conclusion</h3>
       <p className="text-gray-300 mb-4">In the five parts of this tutorial series, you’ve learned what Mosaik is about and how to write Mosaik apps that run as wallet application plugins and on the web. Mosaik is still a framework being worked on. To proceed, we need you, the developers, to jump on. What is not working well yet, where do the existing view elements have shortcomings? Give us feedback by DM or on the Ergo discord in #dev-support</p>

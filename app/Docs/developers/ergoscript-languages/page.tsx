@@ -6,7 +6,7 @@ import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 import { ArrowRight, FileText, Globe, Lightbulb, Users } from "lucide-react";
 
 export default function ErgoScriptLanguagesPage() {
@@ -1203,7 +1203,7 @@ export default function ErgoScriptLanguagesPage() {
                   </summary>
                   <div className="p-4 pt-0">
                     <p>Here are some examples demonstrating common collection operations:</p>
-                    <UniversalCopyCodeBlock code={`// Simple sum using fold with an explicitly defined function
+                    <CodeBlock language="typescript">{`// Simple sum using fold with an explicitly defined function
 def sumFunc(a: Long, b: Box): Long = a + b.value
 val totalValue = INPUTS.fold(0L, sumFunc)
 
@@ -1215,7 +1215,7 @@ val totalValueLambda = INPUTS.fold(0L, { (accum: Long, box: Box) => accum + box.
 // val totalGeneric = INPUTS.fold(0L, sumGeneric) // Type parameter usually not needed here
 
 // Note: Upcoming Sigma 6.0 might introduce more direct methods like:
-// val total = INPUTS.sumBy(b => b.value)`} />
+// val total = INPUTS.sumBy(b => b.value)`}</CodeBlock>
                   </div>
                 </details>
 
@@ -1230,17 +1230,17 @@ val totalValueLambda = INPUTS.fold(0L, { (accum: Long, box: Box) => accum + box.
                     <p>To store the bytes of a script (ErgoTree) in a register, allowing an ErgoScript contract to later verify that an output box is protected by that specific script:</p>
                     <div className="bg-neutral-900/50 rounded-lg p-4 mt-3">
                       <h4 className="text-md font-semibold text-cyan-400 mb-2">In your off-chain Fleet code (JavaScript/TypeScript):</h4>
-                      <UniversalCopyCodeBlock code={`// Create an output box and set register R8 to the hex representation 
+                      <CodeBlock language="typescript">{`// Create an output box and set register R8 to the hex representation 
 // of the target script's ErgoTree bytes.
 new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)  
   // ... other builder methods
   .setAdditionalRegisters({
     R8: SConstant(SColl(SByte, ErgoAddress.fromBase58(TARGET_SCRIPT_ADDRESS).ergoTree)).toHex() 
-  });`} />
+  });`}</CodeBlock>
                     </div>
                     <div className="bg-neutral-900/50 rounded-lg p-4 mt-3">
                       <h4 className="text-md font-semibold text-cyan-400 mb-2">In your ErgoScript contract:</h4>
-                      <UniversalCopyCodeBlock code={`{
+                      <CodeBlock language="typescript">{`{
   // Retrieve the expected script bytes from the register
   val expectedScriptBytes = SELF.R8[Coll[Byte]].get 
   
@@ -1250,7 +1250,7 @@ new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)
   // Verify that the output box uses the expected script
   expectedScriptBytes == outputBoxScriptBytes
   // ... other conditions
-}`} />
+}`}</CodeBlock>
                     </div>
                   </div>
                 </details>
@@ -1274,22 +1274,22 @@ new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)
               <div className="text-gray-300 space-y-4">
                 <div>
                   <h3 className="text-lg font-semibold text-orange-400 mb-2">Summing nanoErgs of all inputs:</h3>
-                  <UniversalCopyCodeBlock code={`// Define a function to add a box's value to an accumulator
+                  <CodeBlock language="typescript">{`// Define a function to add a box's value to an accumulator
 def sumValues(accum: Long, box: Box): Long = accum + box.value
 // Use fold to apply the sum function across all INPUTS, starting with 0L
-val totalNanoErgs = INPUTS.fold(0L, sumValues)`} />
+val totalNanoErgs = INPUTS.fold(0L, sumValues)`}</CodeBlock>
                 </div>
 
                 <div>
                   <h3 className="text-lg font-semibold text-orange-400 mb-2">Storing a script hash in a register using Fleet:</h3>
-                  <UniversalCopyCodeBlock code={`// Off-chain code to create an output box storing the target script's hash in R8
+                  <CodeBlock language="typescript">{`// Off-chain code to create an output box storing the target script's hash in R8
 const targetAddress = "TARGET_SCRIPT_ADDRESS"; // Replace with the actual address
 const targetErgoTreeBytes = ErgoAddress.fromBase58(targetAddress).ergoTree;
 
 new OutputBuilder(SAFE_MIN_BOX_VALUE, /* Some Address */)
   .setAdditionalRegisters({ 
     R8: SConstant(SColl(SByte, targetErgoTreeBytes)).toHex() 
-  });`} />
+  });`}</CodeBlock>
                 </div>
               </div>
             </section>

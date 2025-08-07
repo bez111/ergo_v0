@@ -4,7 +4,7 @@ import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Link from "next/link";
 import { ChevronLeft, Layers, FileText, Cpu, Shield, RefreshCw, ArrowRight, Package, Download, CheckCircle } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ModifiersPage() {
   return (
@@ -496,13 +496,13 @@ export default function ModifiersPage() {
               
               <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
                 <h3 className="text-lg font-bold text-purple-300 mb-3">System Constraint</h3>
-                <UniversalCopyCodeBlock code={`if(VerifyTransactions == false) require(BlocksToKeep == 0)`} />
+                <CodeBlock language="typescript">{`if(VerifyTransactions == false) require(BlocksToKeep == 0)`}</CodeBlock>
               </div>
             </div>
             
             <div className="bg-purple-900/20 border border-purple-400/30 rounded-xl p-6">
               <h3 className="text-lg font-bold text-purple-300 mb-3">Mode Identification</h3>
-              <UniversalCopyCodeBlock code={`mode = if(ADState == false && VerifyTransactions == true
+              <CodeBlock language="typescript">{`mode = if(ADState == false && VerifyTransactions == true
     && PoPoWBootstrap == false && BlocksToKeep < 0) "full"
 else if(ADState == false && VerifyTransactions == true
     && PoPoWBootstrap == false && BlocksToKeep >= 0) "pruned-full"
@@ -512,7 +512,7 @@ else if(ADState == true && VerifyTransactions == false
     && PoPoWBootstrap == true && BlocksToKeep == 0) "light-spv"
 else if(ADState == true && VerifyTransactions == true
     && PoPoWBootstrap == true && BlocksToKeep == 0) "light-full-PoPoW"
-else //Other combinations are possible`} />
+else //Other combinations are possible`}</CodeBlock>
             </div>
           </section>
 
@@ -555,8 +555,8 @@ else //Other combinations are possible`} />
                 <p className="text-gray-300 mb-4">
                   If <strong>PoPoW</strong> is <em>true</em>:
                 </p>
-                <UniversalCopyCodeBlock code={`1.1.1. Send GetPoPoWProof(suffix = Max(MinimalSuffix ,BlocksToKeep)) for all connections
-1.1.2. On receive PoPoWProof, apply it to History`} />
+                <CodeBlock language="typescript">{`1.1.1. Send GetPoPoWProof(suffix = Max(MinimalSuffix ,BlocksToKeep)) for all connections
+1.1.2. On receive PoPoWProof, apply it to History`}</CodeBlock>
                 <p className="text-gray-300 mt-4">
                   If PoPoW is false, update the headers chain to the best in the network.
                 </p>
@@ -567,7 +567,7 @@ else //Other combinations are possible`} />
                 <p className="text-gray-300 mb-4">
                   The system checks for the ADState and BlocksToKeep values to decide how to initialize the state.
                 </p>
-                <UniversalCopyCodeBlock code={`if(ADState == true) {
+                <CodeBlock language="typescript">{`if(ADState == true) {
   Initialize state with state roothash from block header BlocksToKeep ago
 } else if(BlocksToKeep < 0 || BlocksToKeep > History.headersHeight) {
   Initialize state with genesis State
@@ -589,7 +589,7 @@ or "BlocksToKeep + N" blocks back?
      case Failure(e) => ???
      /*UTXOSnapshotChunk or constcucted state roothash is invalid*/
   }
-}`} />
+}`}</CodeBlock>
               </div>
 
               <div>
@@ -597,7 +597,7 @@ or "BlocksToKeep + N" blocks back?
                 <p className="text-gray-300 mb-4">
                   Depending on the values of State.bestHeader, History.bestHeader, and VerifyTransactions, the state is updated accordingly.
                 </p>
-                <UniversalCopyCodeBlock code={` if(State.bestHeader == History.bestHeader) {
+                <CodeBlock language="typescript">{` if(State.bestHeader == History.bestHeader) {
     //Do nothing, State is already updated
   } else if(VerifyTransactions == false) {
 /*Just update State rootshash to best header in history*/
@@ -628,7 +628,7 @@ or "BlocksToKeep + N" blocks back?
         blacklistPeer
       }
       GOTO 3
-    }`} />
+    }`}</CodeBlock>
               </div>
             </div>
           </section>
@@ -660,7 +660,7 @@ or "BlocksToKeep + N" blocks back?
 
             <div className="bg-blue-900/20 border border-blue-400/30 rounded-xl p-6 mb-6">
               <h3 className="text-lg font-bold text-blue-300 mb-3">updateHeadersChainToBestInNetwork Function</h3>
-              <UniversalCopyCodeBlock code={`def updateHeadersChainToBestInNetwork() = {
+              <CodeBlock language="typescript">{`def updateHeadersChainToBestInNetwork() = {
   1.2.1. Send ErgoSyncInfo message to connected peers
   1.2.2. Get response with INV message,
   containing ids of blocks, better than our best block
@@ -672,7 +672,7 @@ or "BlocksToKeep + N" blocks back?
       blacklist peer
       GOTO 1.2.1
    }
-}`} />
+}`}</CodeBlock>
             </div>
             
             <div className="bg-blue-900/20 border border-blue-400/30 rounded-xl p-6">
@@ -680,7 +680,7 @@ or "BlocksToKeep + N" blocks back?
               <p className="text-gray-300 mb-4">
                 The specific actions taken within these loops depend on the values of <code className="bg-neutral-800 px-2 py-1 rounded">State.bestHeader</code>, <code className="bg-neutral-800 px-2 py-1 rounded">History.bestHeader</code>, and <code className="bg-neutral-800 px-2 py-1 rounded">VerifyTransactions</code>.
               </p>
-              <UniversalCopyCodeBlock code={`if(State.bestHeader == History.bestHeader) {
+              <CodeBlock language="typescript">{`if(State.bestHeader == History.bestHeader) {
     // No action is taken as the state is already updated
 } else if(VerifyTransactions == false) {
     // The state root hash is updated to the best header in history
@@ -707,7 +707,7 @@ or "BlocksToKeep + N" blocks back?
         }
     }
     // Continue with the process as described in the bootstrap section
-}`} />
+}`}</CodeBlock>
             </div>
           </section>
         </div>

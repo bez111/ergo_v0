@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ChainedTransactionPage() {
   return (
@@ -35,7 +35,7 @@ export default function ChainedTransactionPage() {
             Start by defining the URL of the node to connect to the Ergo blockchain. This could be either a MainNet or TestNet node URL. The connection is then established using the <code className="bg-neutral-700 px-2 py-1 rounded">ErgoAppKit</code>.
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`# Assign the node URL
 node_url: str = "http://213.239.193.208:9052/"
 
@@ -50,7 +50,7 @@ ergo = appkit.ErgoAppKit(node_url=node_url)`}
             Next, prepare your wallet mnemonic. This is a sentence-like password that will be used to access your wallet. This example includes receiver addresses and the amount to be sent in each transaction. Furthermore, it sets a sleep time, which is the delay between transaction submissions. The required amount for the genesis outbox, which is the first transaction in the chain, is also calculated.
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`# Define the wallet mnemonic
 wallet_mnemonic = "decline reward asthma enter three clean borrow repeat identify wisdom horn pull entire adapt neglect."
 
@@ -84,7 +84,7 @@ genesis_receiver = [""]`}
             To create an output box from the signed transaction, we use the <code className="bg-neutral-700 px-2 py-1 rounded">simple_send</code> method from the <code className="bg-neutral-700 px-2 py-1 rounded">helper_functions</code> module. The function returns a signed transaction, which we then use to obtain the genesis outbox.
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`# Generate a signed transaction
 genesis_tx = helper_functions.simple_send(ergo=ergo, amount=genesis_amount, wallet_mnemonic=wallet_mnemonic,
                                           receiver_addresses=genesis_receiver, return_signed=True)
@@ -99,7 +99,7 @@ genesis_outbox = appkit.get_outputs_to_spend(genesis_tx, 0)`}
             Finally, we submit the transactions to the node. For each transaction in the chain, we use the output box from the previous transaction as the input box for the current transaction. The first transaction retrieves the input box from the genesis outbox. The last transaction is not chained, i.e., its output box will not be used as an input box in any subsequent transaction. The ID of the genesis transaction and the last transaction are printed to the console. After the final transaction is submitted, the process ends.
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`# Print the transaction ID of the genesis transaction
 print(ergo.txId(genesis_tx))  
 

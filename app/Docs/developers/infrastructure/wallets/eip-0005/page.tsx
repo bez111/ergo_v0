@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function Eip0005Page() {
   return (
@@ -92,11 +92,11 @@ export default function Eip0005Page() {
       <p className="text-gray-300 mb-4">
         Contract templates can also be serialized into JSON format, suitable for applications that require human-readable or editable templates. A sample JSON representation is as follows:
       </p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
   "name": "rewardOutputScript",
   "description": "holds mining rewards",
   ...
-}`} />
+}`}</CodeBlock>
 
       <h2 className="text-2xl font-bold mb-4 mt-8">Conversion to ErgoTree</h2>
       <p className="text-gray-300 mb-4">

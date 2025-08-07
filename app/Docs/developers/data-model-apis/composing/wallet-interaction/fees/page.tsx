@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function FeesPage() {
   return (
@@ -57,7 +57,7 @@ export default function FeesPage() {
             Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">voting mechanism among miners</Link>. Nodes can sort transactions based on these metrics, settable in the <Link href="/Docs/developers/conf-node" className="text-orange-400 hover:underline">node configuration</Link>.
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`# Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
 mempoolSorting = "random"`}
           />
@@ -80,7 +80,7 @@ mempoolSorting = "random"`}
             Transaction fees are secured in a <a href="https://ergexplorer.com/addresses#2iHkR7CWvD1R4j1yZg5bkeDRQavjAaVPeTDFGGLZduHyfWMuYpmhHocX8GJoaieTx78FntzJbCBVL6rf96ocJoZdmWBL2fci7NqWgAirppPQmZ7fN9V6z13Ay6brPriBKYqLp1bT2Fk4FkFLCfdPpe" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">contract</a>, which can only be spent through a miner's script. The address used for fees is not fixed by the protocol but is a standard in the Ergo node reference implementation. The ErgoScript for this contract, implicitly defined in the ErgoTree, is detailed in <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/f85f03cc8f063ae7f68d559371733c2b6bbc929a/sigmastate/src/main/scala/org/ergoplatform/ErgoScriptPredef.scala#L72" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">this method</a>.
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`/**
    * This proposition allows sending coins to a box protected by the following proposition:
    * prove the discrete logarithm of the miner's public key and that the height is at least \`delta\` blocks greater than the current one.
@@ -103,7 +103,7 @@ def feeProposition(delta: Int = 720): ErgoTree = {
             And the method to extract the transaction fee method is as follows:
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`private def extractFee(tx: ErgoTransaction): Long = {
   tx.outputs
     .filter(_.ergoTree == settings.chainSettings.monetary.feeProposition)

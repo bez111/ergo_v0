@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft, Shield, Database, Code, BookOpen, Link as LinkIcon } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function PlasmaPage() {
   return (
@@ -47,7 +47,7 @@ export default function PlasmaPage() {
           </p>
 
           <div className="mb-6">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.PlasmaMap
 import org.ergoplatform.appkit.ErgoId
@@ -62,7 +62,7 @@ val plasmaMap = new PlasmaMap[ErgoId, Values.ErgoTree](AvlTreeFlags.AllOperation
           </p>
 
           <div className="mb-6">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`import io.getblok.getblok_plasma.ByteConversion
 import org.ergoplatform.appkit.ErgoId
 import sigmastate.Values
@@ -88,7 +88,7 @@ implicit val convertsErgoTree: ByteConversion[Values.ErgoTree] = new ByteConvers
           </p>
 
           <div className="mb-6">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`import com.google.common.primitives.{Ints, Longs}
 import io.getblok.getblok_plasma.ByteConversion
 import org.bouncycastle.util.encoders.Hex
@@ -123,7 +123,7 @@ def getPaid(byte: Byte): Boolean = {
           </p>
 
           <div className="mb-6">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.{OpResult, PlasmaMap, Proof, ProvenResult}
 import io.getblok.getblok_plasma.ByteConversion.convertsLongVal
@@ -146,7 +146,7 @@ val proof: Proof = result.proof`}
           </p>
 
           <div className="mb-6">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`import io.getblok.getblok_plasma.collections.{PlasmaMap, Proof}
 import org.ergoplatform.appkit.{ErgoClient, ErgoContract, ErgoId, Parameters}
 
@@ -178,7 +178,7 @@ ergoClient.execute {
           </p>
 
           <div className="mb-6">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.LocalPlasmaMap
 import io.getblok.getblok_plasma.ByteConversion.convertsLongKey
@@ -211,7 +211,7 @@ val localMap = new LocalPlasmaMap[Long, Values.ErgoTree](avlStorage, AvlTreeFlag
           </p>
 
           <div className="mb-6">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.{LocalPlasmaMap, ProxyPlasmaMap}
 import org.ergoplatform.appkit.ErgoId

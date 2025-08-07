@@ -30,7 +30,7 @@ export default function FleetSharpPage() {
       </p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Usage</h2>
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Send a simple ERG only transaction</h3>
-      <UniversalCopyCodeBlock code={`var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
+      <CodeBlock language="typescript">{`var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
 var currentHeight = await node.GetCurrentHeight();
 
 var tx = new TransactionBuilder(currentHeight)
@@ -43,7 +43,7 @@ var tx = new TransactionBuilder(currentHeight)
 var signedTx = await node.SignTransaction(tx);
 var transactionId = await node.SubmitSignedTransaction(signedTx);`} className="mb-4" />
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Send a transaction with tokens</h3>
-      <UniversalCopyCodeBlock code={`var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
+      <CodeBlock language="typescript">{`var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
 var currentHeight = await node.GetCurrentHeight();
 
 var tx = new TransactionBuilder(currentHeight)
@@ -64,7 +64,7 @@ var tx = new TransactionBuilder(currentHeight)
 var signedTx = await node.SignTransaction(tx);
 var transactionId = await node.SubmitSignedTransaction(signedTx);`} className="mb-4" />
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Minting tokens</h3>
-      <UniversalCopyCodeBlock code={`var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
+      <CodeBlock language="typescript">{`var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
 var currentHeight = await node.GetCurrentHeight();
 
 var tx = new TransactionBuilder(currentHeight)
@@ -87,7 +87,7 @@ var tx = new TransactionBuilder(currentHeight)
 var signedTx = await node.SignTransaction(tx);
 var transactionId = await node.SubmitSignedTransaction(signedTx);`} className="mb-4" />
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Interacting with a contract and setting registers</h3>
-      <UniversalCopyCodeBlock code={`using static FleetSharp.Sigma.ConstantSerializer;
+      <CodeBlock language="typescript">{`using static FleetSharp.Sigma.ConstantSerializer;
 using static FleetSharp.Sigma.ISigmaCollection;
 using static FleetSharp.Sigma.IPrimitiveSigmaType;
 
@@ -114,7 +114,7 @@ var tx = new TransactionBuilder(currentHeight)
 var signedTx = await node.SignTransaction(tx);
 var transactionId = await node.SubmitSignedTransaction(signedTx);`} className="mb-4" />
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Reading registers from a box</h3>
-      <UniversalCopyCodeBlock code={`using static FleetSharp.Sigma.ConstantSerializer;
+      <CodeBlock language="typescript">{`using static FleetSharp.Sigma.ConstantSerializer;
 using static FleetSharp.Sigma.ISigmaCollection;
 using static FleetSharp.Sigma.IPrimitiveSigmaType;
 

@@ -11,7 +11,7 @@ import {
     ExternalLink,
   } from "lucide-react"
   import Link from "next/link"
-  import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
+  import { CodeBlock } from "@/components/ui"
   
   export default function ApiPage() {
     return (
@@ -94,10 +94,10 @@ import {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-blue-400"><Info className="w-6 h-6" /> Example: Get Node Info</h2>
           <p className="mb-2 text-gray-300">Returns general information about the node's status, including current blockchain height, version, and sync status.</p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`curl http://localhost:9053/info`}
           />
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
     "name": "ergo",
     "appVersion": "5.0.0",
@@ -120,7 +120,7 @@ import {
         <section className="mb-12">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2 text-green-400"><Settings2 className="w-6 h-6" /> Example: Send Signed Transaction</h2>
           <p className="mb-2 text-gray-300">Submits a fully signed transaction to the network. The transaction must be in JSON format.</p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`curl -X POST -H "Content-Type: application/json" \\
     -d '{
       "id": "...",
@@ -130,7 +130,7 @@ import {
     }' \\
     http://localhost:9053/transactions/send`}
           />
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`"transactionId_of_submitted_transaction"`}
           />
         </section>
@@ -142,7 +142,7 @@ import {
             <li>Standard HTTP status codes (200, 400, 401, 500, ...)</li>
             <li>JSON error responses with <span className="font-mono">error</span> and <span className="font-mono">detail</span> fields</li>
           </ul>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
     "error": 400,
     "reason": "Bad Request",

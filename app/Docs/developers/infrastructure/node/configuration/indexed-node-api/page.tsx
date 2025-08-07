@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronRight, ExternalLink, Database, Code, AlertTriangle } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function IndexedNodeAPIPage() {
   return (
@@ -81,13 +81,13 @@ export default function IndexedNodeAPIPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`GET /indexedHeight`} />
+                <CodeBlock language="typescript">{`GET /indexedHeight`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "indexedHeight": 123456
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -101,11 +101,11 @@ export default function IndexedNodeAPIPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`GET /transaction/byId/123abc`} />
+                <CodeBlock language="typescript">{`GET /transaction/byId/123abc`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "transactionId": "123abc",
   "blockHeight": 1234,
   "inputs": [
@@ -124,7 +124,7 @@ export default function IndexedNodeAPIPage() {
       "value": 500000
     }
   ]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -138,11 +138,11 @@ export default function IndexedNodeAPIPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`GET /transaction/byIndex/1234`} />
+                <CodeBlock language="typescript">{`GET /transaction/byIndex/1234`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "transactionId": "123abc",
   "blockHeight": 1234,
   "inputs": [
@@ -161,7 +161,7 @@ export default function IndexedNodeAPIPage() {
       "value": 500000
     }
   ]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -175,16 +175,16 @@ export default function IndexedNodeAPIPage() {
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`POST /transaction/byAddress
+                <CodeBlock language="typescript">{`POST /transaction/byAddress
 Content-Type: application/json
 
 {
   "address": "your_address"
-}`} />
+}`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "transactions": [
     {
       "transactionId": "123abc",
@@ -207,7 +207,7 @@ Content-Type: application/json
       ]
     }
   ]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -221,13 +221,13 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`GET /transaction/range?start=0&end=100`} />
+                <CodeBlock language="typescript">{`GET /transaction/range?start=0&end=100`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "transactionIds": ["123abc", "456def", "789ghi", ...]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -241,16 +241,16 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`GET /box/byId/abc123`} />
+                <CodeBlock language="typescript">{`GET /box/byId/abc123`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "boxId": "abc123",
   "value": 1000000,
   "ergoTree": "your_ergo_tree",
   "address": "your_address"
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -264,16 +264,16 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`GET /box/byIndex/1234`} />
+                <CodeBlock language="typescript">{`GET /box/byIndex/1234`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "boxId": "abc123",
   "value": 1000000,
   "ergoTree": "your_ergo_tree",
   "address": "your_address"
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -287,16 +287,16 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`POST /box/byAddress
+                <CodeBlock language="typescript">{`POST /box/byAddress
 Content-Type: application/json
 
 {
   "address": "your_address"
-}`} />
+}`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "boxes": [
     {
       "boxId": "abc123",
@@ -311,7 +311,7 @@ Content-Type: application/json
       "address": "your_address"
     }
   ]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -325,16 +325,16 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`POST /box/unspent/byAddress
+                <CodeBlock language="typescript">{`POST /box/unspent/byAddress
 Content-Type: application/json
 
 {
   "address": "your_address"
-}`} />
+}`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "boxes": [
     {
       "boxId": "abc123",
@@ -349,7 +349,7 @@ Content-Type: application/json
       "address": "your_address"
     }
   ]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -363,13 +363,13 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`GET /box/range?start=0&end=100`} />
+                <CodeBlock language="typescript">{`GET /box/range?start=0&end=100`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "boxIds": ["abc123", "def456", "ghi789", ...]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -383,16 +383,16 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`POST /box/byErgoTree
+                <CodeBlock language="typescript">{`POST /box/byErgoTree
 Content-Type: application/json
 
 {
   "ergoTree": "your_ergo_tree"
-}`} />
+}`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "boxes": [
     {
       "boxId": "abc123",
@@ -407,7 +407,7 @@ Content-Type: application/json
       "address": "your_address"
     }
   ]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -421,16 +421,16 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`POST /box/unspent/byErgoTree
+                <CodeBlock language="typescript">{`POST /box/unspent/byErgoTree
 Content-Type: application/json
 
 {
   "ergoTree": "your_ergo_tree"
-}`} />
+}`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "boxes": [
     {
       "boxId": "abc123",
@@ -445,7 +445,7 @@ Content-Type: application/json
       "address": "your_address"
     }
   ]
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -459,18 +459,18 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`GET /token/byId/123abc`} />
+                <CodeBlock language="typescript">{`GET /token/byId/123abc`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "tokenId": "123abc",
   "name": "Your Token",
   "description": "Description of your token",
   "totalSupply": 1000000,
   "decimals": 8,
   "issuer": "your_address"
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>
@@ -484,19 +484,19 @@ Content-Type: application/json
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Request</h4>
-                <UniversalCopyCodeBlock code={`POST /balance
+                <CodeBlock language="typescript">{`POST /balance
 Content-Type: application/json
 
 {
   "address": "your_address"
-}`} />
+}`}</CodeBlock>
               </div>
               <div>
                 <h4 className="font-bold text-gray-300 mb-2">Response</h4>
-                <UniversalCopyCodeBlock code={`{
+                <CodeBlock language="typescript">{`{
   "confirmedBalance": 1000000,
   "unconfirmedBalance": 500000
-}`} />
+}`}</CodeBlock>
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function DistributedSignaturesPage() {
   return (
@@ -43,7 +43,7 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
   // Retrieve GroupElement pkA, pkB, and pkC from the register R4, R5, and R6 respectively.
   val pkA  = SELF.R4[GroupElement].get
@@ -65,7 +65,7 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
   "requests": [
     {
@@ -88,7 +88,7 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
   "secretHints": {
     "0": [
@@ -132,7 +132,7 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
   "tx": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
@@ -207,7 +207,7 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
   "transaction": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
@@ -266,7 +266,7 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
   "tx": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",

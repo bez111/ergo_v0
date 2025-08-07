@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft, Shield, Link as LinkIcon, GitBranch, Database } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function InterlinkVectorsPage() {
   return (
@@ -154,7 +154,7 @@ export default function InterlinkVectorsPage() {
           </p>
 
           <div className="mb-6">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`use sigma_merkle_tree::batchmerkleproof::BatchMerkleProof;
 use sigma_merkle_tree::merkletree::MerkleTree;
 use sigma_merkle_tree::MerkleNode;

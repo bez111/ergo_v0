@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function RingSignaturesPage() {
   return (
@@ -60,7 +60,7 @@ export default function RingSignaturesPage() {
 
         <h3 className="text-2xl font-bold mb-4 text-white">Example Scenario</h3>
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`// Simplified conceptual representation
 val ringSignature = prove {
   atLeastOneOf(

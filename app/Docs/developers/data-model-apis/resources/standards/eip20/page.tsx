@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Smartphone, QrCode, Globe, Shield, Users, Zap, FileText, ExternalLink, CheckCircle, AlertTriangle } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function EIP20Page() {
   return (
@@ -249,7 +249,7 @@ export default function EIP20Page() {
           The wallet application should request the URL and obtain the following data (in JSON format):
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`ErgoPaySigningRequest:
   - transaction: ReducedTransaction (optional*)
   - address: String (optional)

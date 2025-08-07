@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function DeterministicWalletStandardPage() {
   return (
@@ -30,7 +30,7 @@ export default function DeterministicWalletStandardPage() {
       <p className="text-gray-300 mb-4">
         The standard has five levels part of its path:
       </p>
-      <UniversalCopyCodeBlock code={`m / 44' / coin_type' / account' / change / address_index`} />
+      <CodeBlock language="typescript">{`m / 44' / coin_type' / account' / change / address_index`}</CodeBlock>
 
       <p className="text-gray-300 mb-4">
         This EIP attempts to define a specific <code>coin_type</code> for the Ergo ecosystem and a policy for how wallets use the <code>change</code> level.
@@ -43,15 +43,15 @@ export default function DeterministicWalletStandardPage() {
       <p className="text-gray-300 mb-4">
         We will be using the word <b>ergo</b> summed based on the numerical values of the ASCII characters for the <b>coin_type</b>. As shown below, this means that our <b>coin_type</b> is <code>429</code>.
       </p>
-      <UniversalCopyCodeBlock code={`101 + 114 + 103 + 111 = 429`} />
+      <CodeBlock language="typescript">{`101 + 114 + 103 + 111 = 429`}</CodeBlock>
       <p className="text-gray-300 mb-4">
         Thus our path will look as such:
       </p>
-      <UniversalCopyCodeBlock code={`m / 44' / 429' / account' / change / address_index`} />
+      <CodeBlock language="typescript">{`m / 44' / 429' / account' / change / address_index`}</CodeBlock>
       <p className="text-gray-300 mb-4">
         And the first default key pair for an Ergo wallet will be:
       </p>
-      <UniversalCopyCodeBlock code={`m / 44' / 429' / 0' / 0 / 0`} />
+      <CodeBlock language="typescript">{`m / 44' / 429' / 0' / 0 / 0`}</CodeBlock>
 
       <h2 className="text-2xl font-bold mb-4 mt-8">Change</h2>
       <p className="text-gray-300 mb-4">
@@ -80,12 +80,12 @@ export default function DeterministicWalletStandardPage() {
       <p className="text-gray-300 mb-4">
         Extended public keys are serialized as follows:
       </p>
-      <UniversalCopyCodeBlock code={`4 byte: version bytes (mainnet: 0x0488B21E; testnet: 0x043587CF)
+      <CodeBlock language="typescript">{`4 byte: version bytes (mainnet: 0x0488B21E; testnet: 0x043587CF)
 1 byte: 4 (depth for our path m/44'/429'/0'/0)
 4 bytes: the fingerprint of the parent's key (or 0x00000000 can be used as we don't validate on import)
 4 bytes: 0x00000000 (child number)
 32 bytes: the chain code
-33 bytes: the public key key data`} />
+33 bytes: the public key key data`}</CodeBlock>
       <p className="text-gray-300 mb-4">
         BIP-0032 leaves it open how this byte array should be encoded and suggests to use Base58 with a checksum. To not confuse Ergo xpubkeys with Bitcoin xpubkeys, we can use hex encoding instead.
       </p>

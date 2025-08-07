@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function DataInputsPage() {
   return (
@@ -77,7 +77,7 @@ export default function DataInputsPage() {
             In ErgoScript, you can refer to other boxes in the transaction using constructs like:
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code="INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000"
           />
           

@@ -40,7 +40,7 @@ export default function PerpetualTokensPage() {
             ErgoScript allows the creation of a <em>perpetual token</em>, a token that is designed to exist indefinitely, unless it is removed by garbage collection.
           </p>
 
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`{
   val isPerpetual = {(b: Box) =>
     b.propositionBytes == SELF.propositionBytes && b.tokens == SELF.tokens
@@ -78,7 +78,7 @@ export default function PerpetualTokensPage() {
             In <code className="bg-neutral-700 px-2 py-1 rounded">script1</code>, we have the statement:
           </p>
 
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`hash(OUTPUTS(0).propositionBytes) == script2Hash`}
           />
 
@@ -90,7 +90,7 @@ export default function PerpetualTokensPage() {
             But, if we want <code className="bg-neutral-700 px-2 py-1 rounded">script2</code> to refer back to <code className="bg-neutral-700 px-2 py-1 rounded">script1</code>, as shown below:
           </p>
 
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`hash(OUTPUTS(0).propositionBytes) == script1Hash`}
           />
 

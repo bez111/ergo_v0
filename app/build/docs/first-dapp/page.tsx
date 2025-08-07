@@ -2,7 +2,7 @@
 
 import { Code, BookOpen, Settings, Rocket, CheckCircle, AlertTriangle } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function FirstDappPage() {
   return (
@@ -41,13 +41,13 @@ export default function FirstDappPage() {
           </li>
           <li>
             Clone the <b>Fleet SDK</b> starter project:
-                          <UniversalCopyCodeBlock
+                          <CodeBlock language="typescript"
                 code={`git clone https://github.com/fleet-sdk/fleet-starter.git`}
               />
           </li>
           <li>
             Install dependencies:
-                          <UniversalCopyCodeBlock
+                          <CodeBlock language="typescript"
                 code={`cd fleet-starter
 npm install`}
               />
@@ -61,7 +61,7 @@ npm install`}
           <Code className="w-5 h-5 text-cyan-400" /> 2. Write a Simple ErgoScript Contract
         </h2>
         <p className="mb-2">Let's create a basic contract that allows spending only by a specific public key.</p>
-                  <UniversalCopyCodeBlock
+                  <CodeBlock language="typescript"
             code={`// simple-contract.es
 sigmaProp(pubKey == YOUR_PUBLIC_KEY)`}
           />
@@ -81,7 +81,7 @@ sigmaProp(pubKey == YOUR_PUBLIC_KEY)`}
           </li>
           <li>
             Build a transaction using Fleet SDK:
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
             code={`import { compile } from '@fleet-sdk/compiler';
 const ergoTree = compile('sigmaProp(pubKey == YOUR_PUBLIC_KEY)');`}
           />

@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Clock, Zap, Cpu, TrendingUp, Shield, FileText, ExternalLink, Calculator, Layers } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function JITCPage() {
   return (

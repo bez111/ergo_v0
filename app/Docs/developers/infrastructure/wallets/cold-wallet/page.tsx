@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ColdWalletPage() {
   return (
@@ -88,7 +88,7 @@ export default function ColdWalletPage() {
       <p className="text-gray-300 mb-4">
         To solve the problem of <i>cold signing</i> we need a new data structure and serialization format called <code>ReducedTransaction</code>.
       </p>
-      <UniversalCopyCodeBlock code={`ReducedTransaction:
+      <CodeBlock language="typescript">{`ReducedTransaction:
   - unsignedTx: UnsignedTransaction
   - reducedInputs: Seq[ReducedInputData]
   - txCost: Int
@@ -107,26 +107,26 @@ ReducedInputData:
 
 ReductionResult:
   - value: SigmaBoolean
-  - cost: Long`} />
+  - cost: Long`}</CodeBlock>
       <p className="text-gray-300 mb-4">
         Having the <code>ReducedTransaction</code> data structure the full transaction signing consists of three steps
       </p>
       <ol className="list-decimal pl-6 text-gray-300 mb-4">
         <li>Create unsigned transaction and then reduce it in the current blockchain context, which has connection to one of the network nodes. This step is performed on Hot Wallet and produces ReducedTransaction without requiring secret keys.</li>
       </ol>
-      <UniversalCopyCodeBlock code={`val ctx: BlockchainContext = ...
+      <CodeBlock language="typescript">{`val ctx: BlockchainContext = ...
 val unsignedIx = createTransaction(ctx, from, to, amountToSend, assets)
 val prover = ctx.newProverBuilder.build // prover without secrets
-val reducedTx: ReducedTransaction = prover.reduce(unsigned, 0)`} />
+val reducedTx: ReducedTransaction = prover.reduce(unsigned, 0)`}</CodeBlock>
       <ol className="list-decimal pl-6 text-gray-300 mb-4" start={2}>
         <li>Serialize ReducedTransaction data structure to bytes and then pass it to the Cold Wallet via QR code.</li>
         <li>Once scanned in the Cold Wallet, the ReducedTransaction object can be deserialized back from bytes and then signed using prover configured with local secrets.</li>
       </ol>
-      <UniversalCopyCodeBlock code={`val reducedTx = ReducedTransactionSerializer.fromBytes(reducedTxBytes)
+      <CodeBlock language="typescript">{`val reducedTx = ReducedTransactionSerializer.fromBytes(reducedTxBytes)
 val ctx: ColdBlockchainContext = ...
 // create prover in the cold context using secrets stored on this device
 val prover = ctx.newProverBuilder.withSecretStorage("storage.json").build
-val signedTx = prover.signReduced(reducedTx)`} />
+val signedTx = prover.signReduced(reducedTx)`}</CodeBlock>
       <p className="text-gray-300 mb-4">
         It is important to note, that signatures for all inputs of the ReducedTransaction can be generated directly, without script evaluation (aka script reduction) and and thus, Cold Wallet don't need complex spending contexts.
       </p>
@@ -157,8 +157,8 @@ val signedTx = prover.signReduced(reducedTx)`} />
         <li>property "n", number of pages (optional if there is only one page)</li>
       </ul>
       <p className="text-gray-300 mb-4">Examples:</p>
-      <UniversalCopyCodeBlock code={`{"CSR":"{\"reducedTx\":\"....\",\"sender\":\"9...\",\"inputs\":[\"...\"]}"}`} />
-      <UniversalCopyCodeBlock code={`{"CSTX":"{\"signedTx\":\"... (actual data, no valid JSON on its own)","n":3,"p":1}`} />
+      <CodeBlock language="typescript">{`{"CSR":"{\"reducedTx\":\"....\",\"sender\":\"9...\",\"inputs\":[\"...\"]}"}`}</CodeBlock>
+      <CodeBlock language="typescript">{`{"CSTX":"{\"signedTx\":\"... (actual data, no valid JSON on its own)","n":3,"p":1}`}</CodeBlock>
       <p className="text-gray-300 mb-4">
         In addition to using the above formats the following requirements are imposed on Hot Wallet and Cold Wallets:
       </p>

@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MosaikProcessingDataPage() {
   return (
@@ -22,15 +22,17 @@ export default function MosaikProcessingDataPage() {
       <p className="text-gray-300 mb-4">In Part 2 of this tutorial series for Ergo Mosaik, we learned how to define the first simple UI for a dApp that can be shown within Wallet applications (and by using the Mosaik web executors in web browsers as well).</p>
       {/* <img src="../../../assets/img/mosaik/tutorial3-1.png" alt="Mosaik UI" className="rounded-xl border border-neutral-700 mb-6" /> */}
       <p className="text-gray-300 mb-4">So far, we have seen how to show a card with a label and a button and how to run actions within Mosaik. I recommend you to take a look at the view elements demo again: Start the backend-demo-kotlin subproject from the mosaik repository and start the desktop debugger</p>
-      <UniversalCopyCodeBlock code={`./gradlew backend-demo-kotlin:bootRun
-./gradlew desktop-demo:run`} />
+      <CodeBlock language="typescript">{`./gradlew backend-demo-kotlin:bootRun
+
+./gradlew desktop-demo:run`}</CodeBlock>
       <p className="text-gray-300 mb-4">Then navigate to localhost:8080 on the desktop demo. Check out all the sub screens to get a feeling of how much is provided by Mosaik. Every page has a GitHub link at the top that brings you to the source code. Use this to learn how to describe the view elements in the code.</p>
       <p className="text-gray-300 mb-4">There is also an overview of available actions. Most actions are much like the showDialog action we already learned about: openBrowser, copyToClipboard etc work quite similar.</p>
       <p className="text-gray-300 mb-4">There are some actions that are more complex. Some enable Mosaik to have real interaction and to process data with your backend, namely backendRequest() and changeView(). Some others allow initiating a blockchain interaction, namely ErgoPay and ErgoAuth. We’ll take a look at the former ones now.</p>
 
       <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Process data with backendRequest</h3>
       <p className="text-gray-300 mb-4">backendRequest() is an action that executes a POST request to your backend containing all input values of the current screen and expects a response with an action to run subsequently. This enables you to write complex logic in your backend resulting in different outcomes for the Mosaik app user. Your logic can operate on input values by the user. To have any input values defined, we need to add an input view element on our current screen. We start with a simple text input field. Open your MosaikController from last time and add it to your card:</p>
-      <UniversalCopyCodeBlock code={`card {
+      <CodeBlock language="typescript">{`card {
+
    column(Padding.DEFAULT) {
        label("Hello Ergo world!", LabelStyle.HEADLINE2)
 
@@ -45,27 +47,30 @@ export default function MosaikProcessingDataPage() {
            onClickAction(showDialog("You clicked the button.", "myaction"))
        }
    }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Start your Spring server process and navigate to your app in the desktop debugger. We can observe two things: First, unsurprisingly, is that the text input field is shown and ready for input. The second observation is less obvious and perhaps not expected: The debugger shows the current values for inputs on the right-hand side above the JSON sources with validity information:</p>
       {/* <img src="../../../assets/img/mosaik/tutorial3-2.png" alt="Mosaik input validity" className="rounded-xl border border-neutral-700 mb-6" /> */}
       <p className="text-gray-300 mb-4">When there is nothing entered (like in the screenshot above), the value for “inputId” is “null” which is valid. Enter something. You will see the value reflected and the type switches to String.</p>
       <p className="text-gray-300 mb-4">What is this validity? On many input types, you can add some properties defining restrictions on which inputs are valid. For example, we can define that only names with a length of 3 to 10 characters are valid by changing our app code like this:</p>
-      <UniversalCopyCodeBlock code={`textInputField("inputId", "Enter your name") {
+      <CodeBlock language="typescript">{`textInputField("inputId", "Enter your name") {
+
    minValue = 3
    maxValue = 10
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Restart the app server and reload the app. You will now see that the text input field will indicate invalid inputs, and the desktop debugger will report them as invalid.</p>
       <p className="text-gray-300 mb-4">The validity information is not only used for indications to the user but also has an effect on the backendRequest(). But for this to see, we will have to introduce the backendRequest by changing the code for our button like this:</p>
-      <UniversalCopyCodeBlock code={`button("Click me") {
+      <CodeBlock language="typescript">{`button("Click me") {
+
    onClickAction(backendRequest("enteredName"))
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Just making a backend request does not make much sense without providing an endpoint it can reach. Our endpoint URL is defined as “enteredName” in the code above, so we add the new endpoint with the following code:</p>
-      <UniversalCopyCodeBlock code={`@PostMapping("/enteredName")
+      <CodeBlock language="bash">{`@PostMapping("/enteredName")
+
 fun userEnteredName(@RequestBody values: Map<String, Any?>) =
    backendResponse(
        1,
        showDialog("User entered \${values["inputId"]}")
-   )`} />
+   )`}</CodeBlock>
       <p className="text-gray-300 mb-4">Let’s break this down line by line.</p>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-1">
         <li><b>@PostMapping</b> is an annotation to tell Spring POST requests on /enteredName should be mapped to the following method.</li>
@@ -74,18 +79,12 @@ fun userEnteredName(@RequestBody values: Map<String, Any?>) =
         <li>this repeats our current app version that we sent to the Mosaik executor when the main app was loaded. We used app version 1 in our main app definition, so we give 1 here, too.</li>
         <li>Here follows our subsequent action that should be run by the Mosaik app. We show a dialog here as we did before, filling it with what the user entered. In case the Kotlin sugar for string replacements and maps confuses you, the following code does exactly the same and might be more familiar and clear for some folks:</li>
       </ul>
-      <UniversalCopyCodeBlock code={`showDialog("User entered " + values.get("inputId"))`} />
-      <p className="text-gray-300 mb-4">Now restart your server and reload the app in the desktop debugger. Observe the following behaviour:</p>
-      <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-1">
-        <li>When a valid name is entered, the backend request is executed and the dialog shows our defined message</li>
-        <li>When no valid name is entered, an error message is displayed and the backend request is not made at all</li>
-      </ul>
-      <p className="text-gray-300 mb-4">This behaviour will fit a lot of use cases, but maybe not all. There might be situations where you want to have a backend request executed even when some input fields contain invalid values. There is a way to make Mosaik behave like this as well by changing the default behaviour on backendRequest() like this:</p>
-      <UniversalCopyCodeBlock code={`button("Click me") {
+      <CodeBlock language="typescript">{`button("Click me") {
+
    onClickAction(backendRequest("enteredName") {
        postValues = BackendRequestAction.PostValueType.VALID
    })
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">The default value for post values is (enforce) “ALL”, now changing it to “VALID” makes the backendRequest action post in any case, but only sending valid inputs. Restart again and try what happens with invalid inputs.</p>
       <p className="text-gray-300 mb-4">We have now seen how to send data to the backend and process it. However, reacting with a dialog to all types of methods is not a good user experience. We will now take a look on how we can alter the screen content.</p>
 
@@ -106,7 +105,8 @@ fun userEnteredName(@RequestBody values: Map<String, Any?>) =
       <p className="text-gray-300 mb-4">This behavior allows to alter the entire screen, or only change some single view elements.</p>
       <p className="text-gray-300 mb-4">To demonstrate this, let’s use our existing screen, but instead of showing a message box when a name was submitted, we change the title of the screen to show the name.</p>
       <p className="text-gray-300 mb-4">We will give the full code here and explain the annotated changes below:</p>
-      <UniversalCopyCodeBlock code={`@RestController
+      <CodeBlock language="bash">{`@RestController
+
 @CrossOrigin
 class MosaikAppController {
    @GetMapping("/")
@@ -155,7 +155,7 @@ class MosaikAppController {
                }
            })
        )
-}`} />
+}`}</CodeBlock>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-1">
         <li><b>Change (1):</b> We have attached an ID “titleLabel” to the title label. With this ID, we can replace this element.</li>
         <li><b>Change (2):</b> We removed the postValues = BackendRequestAction.PostValueType.VALID so that invalid inputs are not allowed any more</li>

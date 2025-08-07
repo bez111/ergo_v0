@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MosaikErgoPayPage() {
   return (
@@ -29,15 +29,17 @@ export default function MosaikErgoPayPage() {
       </ul>
       <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Implementing the UI</h3>
       <p className="text-gray-300 mb-4">We will implement our new send funds app in our existing tutorial project, but we will add a new controller class and use a new endpoint to separate it from our former demo app we’ve implemented so far. This serves also as an example that a single Spring Boot process can serve multiple separated Mosaik apps, if this is needed. Our bare new controller will look like this (see Part 2 “A first simple screen”):</p>
-      <UniversalCopyCodeBlock code={`@RestController
+      <CodeBlock language="python">{`@RestController
+
 class SendFundsAppController {
    @GetMapping("/sendfunds")
    fun getSendFundsApp(): MosaikApp {
 
    }
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">So, let’s get to it and fill it with actual useful content!</p>
-      <UniversalCopyCodeBlock code={`private val idSenderAddress = "ergaddress"
+      <CodeBlock language="scala">{`private val idSenderAddress = "ergaddress"
+
 private val idRecipient = "recipient"
 private val idAmountToSend = "amount"
 
@@ -62,7 +64,7 @@ fun getSendFundsApp(): MosaikApp {
            }
        }
    }
-}`} />
+}`}</CodeBlock>
       {/* <img src="../../../assets/img/mosaik/tutorial4-1.png" alt="Mosaik 1" className="rounded-xl border border-neutral-700 mb-6" /> */}
       <p className="text-gray-300 mb-4">A remark regarding the functionality of the “Choose an address…” button: The desktop debugger will show an ugly input dialog to enter an address when clicked. This is of course not what an end user will see. When using the Android app and clicking the button, the user will get presented the known address selection dialog:</p>
       {/* <img src="../../../assets/img/mosaik/tutorial4-2.png" alt="Mosaik 2" className="rounded-xl border border-neutral-700 mb-6" /> */}
@@ -76,11 +78,13 @@ fun getSendFundsApp(): MosaikApp {
       </ul>
       <h4 className="text-lg font-bold text-cyan-400 mt-4 mb-2">Building a reduced transaction based on user input</h4>
       <p className="text-gray-300 mb-4">This task is already completely covered by <a href="https://medium.com/@bschulte19e/implement-a-dapp-using-ergopay-d95e17a51410" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">[1]</a>. We will do all necessary steps here together, but without much explanation - вы можете найти больше объяснений там.</p>
-      <UniversalCopyCodeBlock code={`// ErgoPay
+      <CodeBlock language="typescript">{`// ErgoPay
+
 dependencies {
     implementation ("org.ergoplatform:ergo-appkit_2.12:4.0.10")
-}`} />
-      <UniversalCopyCodeBlock code={`private fun getReducedSendTx(
+}`}</CodeBlock>
+      <CodeBlock language="scala">{`private fun getReducedSendTx(
+
    amountToSend: Long,
    sender: Address,
    recipient: Address
@@ -105,21 +109,24 @@ val nodeMainnet = "http://213.239.193.208:9053/"
 val nodeTestnet = "http://213.239.193.208:9052/"
 
 private fun getDefaultNodeUrl(networkType: NetworkType): String =
-   if (networkType == NetworkType.MAINNET) nodeMainnet else nodeTestnet`} />
+   if (networkType == NetworkType.MAINNET) nodeMainnet else nodeTestnet`}</CodeBlock>
       <p className="text-gray-300 mb-4">You can change the node used here to your own, or find another one on <a href="https://api.tokenjay.app/peers/list" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">[2]</a>.</p>
       <h4 className="text-lg font-bold text-cyan-400 mt-4 mb-2">Wrapping the reduced transaction</h4>
       <p className="text-gray-300 mb-4">Now we have to wrap this transaction into the ErgoPay protocol. ErgoPay protocol is defined in <a href="https://github.com/ergoplatform/eips/blob/master/eip-0020.md" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">[3]</a>: according to it, we need to wrap the transaction into a json with the following content:</p>
-      <UniversalCopyCodeBlock code={`// transaction: ReducedTransaction (optional*)
+      <CodeBlock language="typescript">{`// transaction: ReducedTransaction (optional*)
+
 // p2pkaddress: String (optional)
 // message: String (optional*)
 // messageSeverity: String (optional) "INFORMATION", "WARNING", "ERROR"
-// replyToUrl: String (optional)`} />
+// replyToUrl: String (optional)`}</CodeBlock>
       <p className="text-gray-300 mb-4">Model classes like “ErgoPay for ErgoPay are already defined to be used in Spring projects in another dependency that we can pull in by adding it to our build.gradle.kts file:</p>
-      <UniversalCopyCodeBlock code={`dependencies {
+      <CodeBlock language="typescript">{`dependencies {
+
     implementation ("com.github.MrStahlfelge:ergoplatform-jackson:4.0.10")
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">The json should be served on an own http endpoint, so we add the ErgoPay endpoint to our SendFundsAppController class:</p>
-      <UniversalCopyCodeBlock code={`@GetMapping("/sendFunds/{sender}/{recipient}/{amount}")
+      <CodeBlock language="scala">{`@GetMapping("/sendFunds/{sender}/{recipient}/{amount}")
+
 fun sendFundsSigningRequest(
    @PathVariable sender: String,
    @PathVariable recipient: String,
@@ -137,15 +144,17 @@ fun sendFundsSigningRequest(
        response.message = t.message
    }
    return response
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">As you can see, the ErgoPay endpoint URL contains exactly the parameters the user can enter. Because we added the @PathVariable annotation, Spring will automatically map the URL path placeholders to the method parameters. The returned ErgoPayResponse object will be converted to json by Spring, too.</p>
       <h4 className="text-lg font-bold text-cyan-400 mt-4 mb-2">Make the Send button use ErgoPay</h4>
       <p className="text-gray-300 mb-4">All we have to do now is map the Mosaik user inputs to the ErgoPay endpoint URL and make the executing wallet application fetch it as an ErgoPay input.</p>
-      <UniversalCopyCodeBlock code={`button("Send") {
+      <CodeBlock language="typescript">{`button("Send") {
+
    onClickAction(backendRequest("sendfundsClicked"))
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">We also need to provide the endpoint for this request:</p>
-      <UniversalCopyCodeBlock code={`@PostMapping("/sendfunds/sendfundsClicked")
+      <CodeBlock language="scala">{`@PostMapping("/sendfunds/sendfundsClicked")
+
 fun sendFundsClicked(@RequestBody values: Map<String, Any?>, request: HttpServletRequest): FetchActionResponse {
    val sender = values[idSenderAddress] as? String
    val recipient = values[idRecipient] as? String
@@ -168,7 +177,7 @@ fun sendFundsClicked(@RequestBody values: Map<String, Any?>, request: HttpServle
        1,
        responseAction
    )
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">So far, this is how we’ve learned it, but there are some marked lines to comment on:</p>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-1">
         <li><b>1)</b> the cast to number and then conversion to long might surprise. We know that the ErgAmountInputField always use Long - what is going on here? To understand this, you must remind yourself that the actual long value is transmitted by JSON format and automatically converted back by Spring. JSON has only a number format, и когда Spring конвертирует это число обратно в объект JVM, он не знает, Long это или Integer, поэтому выбирает Integer, если значение не слишком большое. Поэтому amount может быть Integer или Long. Приведение к Number и преобразование в Long гарантирует, что amount будет Long.</li>

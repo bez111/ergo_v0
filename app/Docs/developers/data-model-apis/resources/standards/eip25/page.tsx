@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Link as LinkIcon, FileText, AlertTriangle, CheckCircle, Code, DollarSign, MessageSquare } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function EIP25Page() {
   return (
@@ -75,7 +75,7 @@ export default function EIP25Page() {
         </div>
         
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto mb-6">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`ergourn        = "ergo:" ergoaddress [ "?" ergoparams ]
 ergoaddress    = *base58
 ergoparams     = ergoparam [ "&" ergoparams ]

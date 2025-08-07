@@ -1,7 +1,7 @@
 import { ArrowLeft, Shield, BookOpen, Code, Lock, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function SignatureInternalsPage() {
   return (

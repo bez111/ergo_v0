@@ -62,7 +62,7 @@ export default function SimpleExamplePage() {
             Here's an example of how to mint an NFT using the ergo-python-appkit:
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`from ergo_python_appkit import ErgoAppKit
 from org.ergoplatform.appkit import ErgoContract
 

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { Copy as CopyIcon, Check as CheckIcon, ChevronRight, BookOpen, GitBranch, Info, Zap, Database, Lock, Target } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ICOPage() {
   const fundingCode = `val selfIndexIsZero = INPUTS(0).id == SELF.id
@@ -172,28 +172,3 @@ properTreeModification && valuesCorrect && selfOutputCorrect && tokensPreserved`
       {/* Funding Stage Code */}
       <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-orange-400">Funding Stage Contract</h3>
-        <UniversalCopyCodeBlock code={fundingCode} />
-      </div>
-
-      {/* Issuance Stage Code */}
-      <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 mb-8">
-        <h3 className="text-lg font-bold mb-2 text-cyan-400">Issuance Stage Contract</h3>
-        <UniversalCopyCodeBlock code={issuanceCode} />
-      </div>
-
-      {/* Withdrawal Stage Code */}
-      <div className="bg-neutral-900/50 border border-green-700 rounded-xl p-6 mb-8">
-        <h3 className="text-lg font-bold mb-2 text-green-400">Withdrawal Stage Contract</h3>
-        <UniversalCopyCodeBlock code={withdrawCode} />
-      </div>
-
-      {/* Enhancements Section */}
-      <div className="bg-pink-400/10 border border-pink-400/30 rounded-xl p-6 mb-8">
-        <h3 className="text-lg font-bold mb-2 text-pink-400">Possible Enhancements</h3>
-        <p className="text-gray-300 mb-2">
-          The example contract can be extended with additional features, such as project or arbiter signatures, self-destruction logic, or more advanced withdrawal conditions. For more, see the <a href="https://link.springer.com/chapter/10.1007/978-3-030-00305-0_4" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Self-reproducing Coins as Universal Turing Machine</a> paper.
-        </p>
-      </div>
-    </div>
-  );
-} 

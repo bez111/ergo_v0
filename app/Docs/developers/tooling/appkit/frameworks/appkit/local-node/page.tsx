@@ -29,11 +29,11 @@ export default function LocalNodePage() {
       <p className="text-gray-300 mb-4 max-w-2xl">
         Suppose we <a href="https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">set up a full node</a> and started it using the following command.
       </p>
-      <UniversalCopyCodeBlock code={`$ java -jar -Xmx4G target/scala-2.12/ergo-4.0.8.jar --testnet -c ergo-testnet.conf`} className="mb-4" />
+      <CodeBlock language="typescript">{`$ java -jar -Xmx4G target/scala-2.12/ergo-4.0.8.jar --testnet -c ergo-testnet.conf`} className="mb-4" />
       <p className="text-gray-300 mb-4 max-w-2xl">
         We will need some configuration parameters which can be loaded from <code>ergotool.json</code> file
       </p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
   "node": {
     "nodeApi": {
       "apiUrl": "http://139.59.29.87:9053",
@@ -56,7 +56,7 @@ export default function LocalNodePage() {
       <p className="text-gray-300 mb-4 max-w-2xl">
         Our example app also reads the amount of NanoErg to put into a new box from command line arguments
       </p>
-      <UniversalCopyCodeBlock code={`public static void main(String[] args) {
+      <CodeBlock language="typescript">{`public static void main(String[] args) {
     long amountToPay = Long.parseLong(args[0]);
     ErgoToolConfig conf = ErgoToolConfig.load("ergotool.json");
     int newBoxSpendingDelay = Integer.parseInt(conf.getParameters().get("newBoxSpendingDelay"));
@@ -66,12 +66,12 @@ export default function LocalNodePage() {
       <p className="text-gray-300 mb-4 max-w-2xl">
         Next, we connect to the running testnet node from our Java application by creating a <code>ErgoClient</code> instance.
       </p>
-      <UniversalCopyCodeBlock code={`ErgoNodeConfig nodeConf = conf.getNode();
+      <CodeBlock language="typescript">{`ErgoNodeConfig nodeConf = conf.getNode();
 ErgoClient ergoClient = RestApiErgoClient.create(nodeConf, null);`} className="mb-4" />
       <p className="text-gray-300 mb-4 max-w-2xl">
         Using <code>ErgoClient</code> we can execute <code>lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java</code> any block of code in the current blockchain context.
       </p>
-      <UniversalCopyCodeBlock code={`String txJson = ergoClient.execute((BlockchainContext ctx) -> {
+      <CodeBlock language="typescript">{`String txJson = ergoClient.execute((BlockchainContext ctx) -> {
     // here we will use ctx to create and sign a new transaction
     // which then be sent to the node and also serialized into Json
 });`} className="mb-4" />
@@ -81,7 +81,7 @@ ErgoClient ergoClient = RestApiErgoClient.create(nodeConf, null);`} className="m
       <p className="text-gray-300 mb-4 max-w-2xl">
         We start with some auxiliary steps.
       </p>
-      <UniversalCopyCodeBlock code={`// access wallet embedded in Ergo node
+      <CodeBlock language="typescript">{`// access wallet embedded in Ergo node
 ErgoWallet wallet = ctx.getWallet();
 
 // calculate total amount of NanoErgs we need to create the new box 
@@ -104,7 +104,7 @@ ErgoProver prover = ctx.newProverBuilder()
       <p className="text-gray-300 mb-4 max-w-2xl">
         Now that we have the input boxes to spend in the transaction, we need to create an output box with the requested <code>amountToPay</code> and the specific contract protecting that box.
       </p>
-      <UniversalCopyCodeBlock code={`// the only way to create transaction is using builder obtained from the context
+      <CodeBlock language="typescript">{`// the only way to create transaction is using builder obtained from the context
 // the builder keeps relationship with the context to access necessary blockchain data.
 UnsignedTransactionBuilder txB = ctx.newTxBuilder();
 
@@ -131,7 +131,7 @@ OutBox newBox = txB.outBoxBuilder()
       <p className="text-gray-300 mb-4 max-w-2xl">
         Next, we create an unsigned transaction using all the data collected so far.
       </p>
-      <UniversalCopyCodeBlock code={`// tell transaction builder which boxes we are going to spend, which outputs
+      <CodeBlock language="typescript">{`// tell transaction builder which boxes we are going to spend, which outputs
 // to create, amount of transaction fees and address for change coins.
 UnsignedTransaction tx = txB.boxesToSpend(boxes.get())
         .outputs(newBox)
@@ -141,7 +141,7 @@ UnsignedTransaction tx = txB.boxesToSpend(boxes.get())
       <p className="text-gray-300 mb-4 max-w-2xl">
         And finally, we use <code>prover</code> to sign the transaction, obtain a new <code>SignedTransaction</code> instance and use context to send it to the Ergo node. 
       </p>
-      <UniversalCopyCodeBlock code={`SignedTransaction signed = prover.sign(tx);
+      <CodeBlock language="typescript">{`SignedTransaction signed = prover.sign(tx);
 String txId = ctx.sendTransaction(signed);
 return signed.toJson(/*prettyPrint=*/true, /*formatJson=*/true);`} className="mb-4" />
       <p className="text-gray-300 mb-4 max-w-2xl">

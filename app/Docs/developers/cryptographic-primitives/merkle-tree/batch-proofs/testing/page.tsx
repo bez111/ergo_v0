@@ -53,7 +53,7 @@ export default function MerkleBatchProofsTestingPage() {
             In Rust, the <code className="bg-neutral-700 px-2 py-1 rounded">sigma-rust</code> library provides the necessary tools to create and test Merkle Batch Proofs. Below is a series of tests written using the Rust testing framework.
           </p>
 
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`#[cfg(test)]
 mod tests {
     use sigma_merkle_tree::merkletree::MerkleTree;
@@ -143,7 +143,7 @@ mod tests {
             For Scala, the <code className="bg-neutral-700 px-2 py-1 rounded">scrypto</code> library is used to test Merkle Batch Proofs. Below are the test cases using ScalaTest, covering tree creation, proof generation, verification, and serialization.
           </p>
 
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import scorex.crypto.authds.merkle.{MerkleTree, BatchMerkleProof}

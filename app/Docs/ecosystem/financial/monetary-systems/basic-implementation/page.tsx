@@ -13,7 +13,7 @@ import {
   Check as CheckIcon
 } from 'lucide-react';
 import Link from 'next/link';
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 const ADMIN_CODE = `val selfOut = OUTPUTS(0)
 
@@ -159,76 +159,3 @@ export default function BasicImplementationLETSPage() {
         </p>
         <div className="bg-neutral-800/50 rounded-lg p-4 mb-4 overflow-x-auto relative">
           <h4 className="font-bold text-orange-400 mb-2 flex items-center gap-2"><Code className="w-5 h-5" /> Administrative Contract (ErgoScript)</h4>
-          <UniversalCopyCodeBlock code={ADMIN_CODE} />
-          <pre className="text-xs text-gray-200 whitespace-pre-wrap">
-{ADMIN_CODE}
-          </pre>
-        </div>
-      </div>
-
-      {/* Trade Contract Section */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <GitBranch className="w-6 h-6 text-cyan-400" /> Trade Contract
-        </h2>
-        <p className="text-gray-300 mb-4">
-          The trade contract script is straightforward. It ensures that a transaction spending an exchange contract box has at least two inputs, both protected by the exchange contract script and containing LETS member tokens. The administrative contract box is provided as a read-only data input to authenticate member tokens.
-        </p>
-        <div className="bg-neutral-800/50 rounded-lg p-4 mb-4 overflow-x-auto relative">
-          <h4 className="font-bold text-cyan-400 mb-2 flex items-center gap-2"><Code className="w-5 h-5" /> Trade Contract (ErgoScript)</h4>
-          <UniversalCopyCodeBlock code={TRADE_CODE} />
-          <pre className="text-xs text-gray-200 whitespace-pre-wrap">
-{TRADE_CODE}
-          </pre>
-        </div>
-      </div>
-
-      {/* Notes Section */}
-      <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <BookOpen className="w-6 h-6 text-orange-400" /> Notes & Extensibility
-        </h2>
-        <p className="text-gray-300">
-          Both the administrative and trade contracts can be modified in various ways to create new systems with different characteristics. This blueprint is intended as a starting point for experimentation and further development.
-        </p>
-      </div>
-
-      {/* Related Pages */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Users className="w-6 h-6 text-cyan-400" /> Related Pages
-        </h2>
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-          <Link
-            href="/Docs/ecosystem/financial/monetary-systems/lets"
-            className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition"
-          >
-            <h4 className="font-bold text-orange-400 mb-2">LETS Overview</h4>
-            <p className="text-gray-300 text-sm">What is a Local Exchange Trading System?</p>
-          </Link>
-          <Link
-            href="/Docs/ecosystem/financial/monetary-systems/sigmausd"
-            className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition"
-          >
-            <h4 className="font-bold text-orange-400 mb-2">SigmaUSD</h4>
-            <p className="text-gray-300 text-sm">The first eUTxO-based stablecoin on Ergo.</p>
-          </Link>
-          <Link
-            href="/Docs/ecosystem/financial/monetary-systems/chaincash"
-            className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition"
-          >
-            <h4 className="font-bold text-green-400 mb-2">ChainCash</h4>
-            <p className="text-gray-300 text-sm">Elastic money creation combining trust and blockchain assets.</p>
-          </Link>
-          <Link
-            href="/Docs/ecosystem/financial/monetary-systems/gluon"
-            className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition"
-          >
-            <h4 className="font-bold text-purple-400 mb-2">Gluon</h4>
-            <p className="text-gray-300 text-sm">Dual to liquidity pools with nuclear reaction-inspired mechanisms.</p>
-          </Link>
-        </div>
-      </div>
-    </>
-  );
-} 

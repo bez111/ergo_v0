@@ -3,7 +3,7 @@ import { ArrowLeft, Shield, KeyRound, Eye, Database } from "lucide-react";
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";
 import "katex/dist/katex.min.css";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 
 export default function CryptographicPrimitivesPage() {
@@ -103,8 +103,7 @@ export default function CryptographicPrimitivesPage() {
             Consider a <strong>3-out-of-5 threshold signature</strong> that allows any three participants to sign a transaction. This ErgoScript implements such a scheme:
           </p>
 
-          <UniversalCopyCodeBlock
-            code={`val ringScript = s"""
+          <CodeBlock language="scala">{`val ringScript = s"""
 {
   atLeast(
     3, 
@@ -117,8 +116,7 @@ export default function CryptographicPrimitivesPage() {
     )
   )
 }
-`}
-          />
+`}</CodeBlock>
 
           <p className="text-gray-300 mb-6">
             This script enables three participants from a group of five to cooperatively sign and authorize a transaction. It leverages the <strong>THRESHOLD (k-out-of-n)</strong> logic, which is native to Sigma protocols, ensuring that only a subset of participants is required to perform cryptographic operations.
@@ -339,7 +337,7 @@ export default function CryptographicPrimitivesPage() {
 
             <h4 className="text-xl font-bold mb-4 text-white">Example: 3-out-of-5 Threshold Signature</h4>
 
-            <UniversalCopyCodeBlock code={`// Example ErgoScript for a 3-out-of-5 multi-signature contract
+            <CodeBlock language="typescript">{`// Example ErgoScript for a 3-out-of-5 multi-signature contract
 val thresholdScript = s"""
 {
   atLeast( // Requires at least 3 proofs from the collection below
@@ -353,7 +351,7 @@ val thresholdScript = s"""
     )
   )
 }
-"""`} />
+"""`}</CodeBlock>
 
             <p className="text-gray-300 mb-6">
               This contract is an example of a <strong>3-out-of-5</strong> threshold signature scheme. It can be compiled to a Pay-to-Script (P2S) <Link href="/Docs/developers/data-model-apis" className="text-orange-400 hover:text-orange-300">address</Link>, where any three of the five public keys can authorize a transaction.
@@ -562,8 +560,7 @@ val thresholdScript = s"""
             </p>
             
             <div className="mb-6">
-              <UniversalCopyCodeBlock
-                code={`// Example of a threshold signature proof
+              <CodeBlock language="scala">{`// Example of a threshold signature proof
 val thresholdProof = prove {
   atLeast(
     3,  // Minimum number of signatures required
@@ -575,8 +572,7 @@ val thresholdProof = prove {
       PK("pubkey5")
     )
   )
-}`}
-              />
+}`}</CodeBlock>
             </div>
 
             <h3 className="text-2xl font-bold mb-4 text-white">Advanced Applications</h3>

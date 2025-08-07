@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function SigningBackendPage() {
   return (
@@ -37,7 +37,7 @@ export default function SigningBackendPage() {
             In this use case, you may need to mint a token and send it to a user when their address is funded. To achieve this, it is recommended to define a wallet on your backend that can sign the transactions. The following code snippet demonstrates how this can be done:
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`import SignerWallet from '../src/services/WalletFromMnemonics';
 
 // Example transaction
@@ -60,7 +60,7 @@ const signedTx = wallet.sign(unsignedTx);
             In this use case, an off-chain bot is responsible for withdrawing funds from a contract. Similar to the previous use case, you will need a backend wallet to sign the transactions. The code snippet below illustrates how to achieve this:
           </p>
           
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`import SignerWallet from '../src/services/WalletFromMnemonics';
 
 // Example transaction

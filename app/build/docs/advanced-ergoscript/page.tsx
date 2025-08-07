@@ -4,7 +4,7 @@ import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Code, Shield, KeyRound, Layers, CheckCircle, AlertTriangle, ChevronRight, BookOpen, ExternalLink } from "lucide-react"
 import Link from "next/link"
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
+import { CodeBlock } from "@/components/ui"
 
 export default function AdvancedErgoScriptPage() {
   return (
@@ -77,7 +77,7 @@ export default function AdvancedErgoScriptPage() {
             </li>
           </ul>
           <h3 className="font-semibold mt-6 mb-3 text-orange-400">Example: Time-Locked Multi-Sig</h3>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`{
   // Requires 2 of 3 signatures OR
   // 1 signature after a certain block height

@@ -15,7 +15,7 @@ import {
   Link2,
 } from "lucide-react"
 import Link from "next/link"
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
+import { CodeBlock } from "@/components/ui"
 
 export default function MiningPage() {
   return (
@@ -135,12 +135,12 @@ export default function MiningPage() {
             Replace `YOUR_ERGO_WALLET_ADDRESS` with your actual Ergo wallet address and `YOUR_WORKER_NAME` with a name for your mining rig.
           </p>
           <p className="text-gray-300 text-sm mb-1"><strong>Windows (.bat file):</strong></p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`miner.exe --algo autolykos2 --server stratum+tcp://erg.2miners.com:9090 --user YOUR_ERGO_WALLET_ADDRESS.YOUR_WORKER_NAME
 pause`}
           />
           <p className="text-gray-300 text-sm mb-1"><strong>Linux (command line):</strong></p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`./miner --algo autolykos2 --server stratum+tcp://erg.2miners.com:9090 --user YOUR_ERGO_WALLET_ADDRESS.YOUR_WORKER_NAME`}
           />
           <div className="mt-4 text-sm text-orange-300 flex items-center gap-2">
@@ -169,7 +169,7 @@ pause`}
           <p className="text-gray-300 text-sm mb-3">
             Ensure your Ergo node is running and its RPC API is accessible (typically `http://localhost:9053`).
           </p>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code="./miner --algo autolykos2 --server http://localhost:9053 --user YOUR_ERGO_WALLET_ADDRESS"
           />
           <p className="text-gray-400 text-xs mt-2">

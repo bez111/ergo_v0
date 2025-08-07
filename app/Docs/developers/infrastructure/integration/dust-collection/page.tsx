@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function DustCollectionPage() {
   return (
@@ -27,7 +27,7 @@ export default function DustCollectionPage() {
       <p className="text-gray-300 mb-4">
         Add the block below to your <b>ergo.conf</b>. Full syntax is in <a href="conf-wallet.md" className="text-cyan-400 hover:underline">conf‑wallet.md</a>.
       </p>
-      <UniversalCopyCodeBlock code={`ergo {
+      <CodeBlock language="typescript">{`ergo {
   wallet {
     # larger Bloom filters and caches
     profile        = "exchange"       
@@ -50,7 +50,7 @@ export default function DustCollectionPage() {
       "003bd19d0187117f130b62e1bcab0939929ff5c7709f843c5c4dd158949285d0"  
     ]
   }
-}`} />
+}`}</CodeBlock>
       <div className="overflow-x-auto mb-6">
         <table className="min-w-[600px] w-full text-sm text-left border border-neutral-700 rounded-xl">
           <thead>
@@ -106,10 +106,10 @@ export default function DustCollectionPage() {
       <p className="text-gray-300 mb-4">
         Query <code>minConfirmations</code>, <code>minInclusionHeight</code>, or both if you want mature inputs only. Example:
       </p>
-      <UniversalCopyCodeBlock code={`curl "http://127.0.0.1:9053/wallet/boxes/unspent?minConfirmations=10&limit=100" \
-  -H "accept: application/json" -H "api_key: hello"`} />
+      <CodeBlock language="typescript">{`curl "http://127.0.0.1:9053/wallet/boxes/unspent?minConfirmations=10&limit=100" \
+  -H "accept: application/json" -H "api_key: hello"`}</CodeBlock>
       <p className="text-gray-300 mb-2">Example request body:</p>
-      <UniversalCopyCodeBlock code={`{
+      <CodeBlock language="typescript">{`{
   "inputsRaw": [
     "8e7a…00",
     "d1f5…42"
@@ -121,7 +121,7 @@ export default function DustCollectionPage() {
       "value": 25123456789
     }
   ]
-}`} />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Make sure the fee plus the output value equals the sum of your inputs.</p>
 
       <h2 className="text-2xl font-bold mb-4 mt-8">Troubleshooting</h2>

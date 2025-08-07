@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MosaikDeploymentPage() {
   return (
@@ -26,47 +26,13 @@ export default function MosaikDeploymentPage() {
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Dockerizing the jar</h2>
       <p className="text-gray-300 mb-4"><a href="https://docs.docker.com/" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Docker</a> is an application to package and run your application within its own predefined container. You already know that you need a JRE to run the application. With Docker, you can build an image with an installed Java and your application, and with predefined commands to run your application. This is not aiming to end users: for end users it is better to download JRE and run your application manually. But on servers, it is very good to have an image defining what to spin up and how, and Docker is usually available. It is also prerequisite to host your application on <a href="https://runonflux.io/" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Flux</a>, which is a natural fit for dAps and Ergo is partnering with.</p>
       <p className="text-gray-300 mb-4">To dockerize your application, place a plain text file named <code>dockerfile</code> on the root level of your Mosaik app repo (next to <code>gradlew</code> and <code>build.gradle</code> files) with the following content:</p>
-      <UniversalCopyCodeBlock code={`# syntax=docker/dockerfile:1
+      <CodeBlock language="typescript">{`# syntax=docker/dockerfile:1
+
 FROM eclipse-temurin:17-jdk-jammy
 COPY build/libs/mosaikapp-0.0.1-SNAPSHOT.jar app.jar
 EXPOSE 8080
-ENTRYPOINT ["java","-jar","/app.jar"]`} />
+ENTRYPOINT ["java","-jar","/app.jar"]`}</CodeBlock>
       <p className="text-gray-300 mb-4">The first line is defining the docker file syntax and not interesting for us. The second line is the most powerful one: It defines that our Docker image will built up on the definitions of a Docker image called <code>eclipse-temurin:17-jdk-jammy</code> - it is an image shipping a Java 17 JDK. Find more information on the <a href="https://hub.docker.com/_/eclipse-temurin" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">project page</a>.</p>
       <p className="text-gray-300 mb-4">The third line copies our jar we've built before into the Docker image, and the last line defines running it is the "entry point" to the container image.</p>
       <p className="text-gray-300 mb-4">Our Spring Boot server runs on port 8080, so line 4 defines that this port is exposed when the image runs in a Docker container.</p>
       <p className="text-gray-300 mb-4">With this file, we can build a Docker image. You'll need to install Docker on your system for this. You'll find information how to do so on <a href="https://docs.docker.com/" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Docker Docs</a>. When Docker is installed, you can build the Docker image with a command like the following</p>
-      <UniversalCopyCodeBlock code={`docker build -t mosaikappexample:latest .`} />
-      <p className="text-gray-300 mb-4">Don't miss the last character (point), it defines that <code>docker build</code> runs in the current directory. The <code>-t ...</code> parameter define a name and version tag for our image. When the build completes, you can run your image from Docker Desktop or command line and verify that your application works the same as run directly on your system. You can now push this image to remote Docker repositories to run it on other machines. There is also an <a href="https://hub.docker.com/" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">official dockerhub repository</a> that you'll need to sign up for and push to to deploy on Flux.</p>
-      <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Deploy on Flux</h2>
-      <p className="text-gray-300 mb-4">You can deploy your jar or docker image on any hosting provider. We emphasize Flux here because it is decentralized, can be paid with the Flux cryptocurrency and is very inexpensive for a Mosaik app.</p>
-      <p className="text-gray-300 mb-4">Flux provides a <a href="https://jetpack2.app.runonflux.io/#/launch/details" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">step by step guide</a> how to deploy an example app on their service. Besides the Docker image from the step before, you'll need a Zel ID and around 1 USD in Flux.</p>
-      <p className="text-gray-300 mb-4">Follow the Flux guide to register your app, but take care on the following steps:</p>
-      <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Step 1</h3>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">App name</h4>
-      <p className="text-gray-300 mb-4">The app name defines on which URL your Mosaik app will be available later. Replace <code>127.0.0.1:8080</code> with this URL in your app source before building the Docker image.</p>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">Owner / Zel ID</h4>
-      <p className="text-gray-300 mb-4">Don't confuse Zel ID with your ZelCore log in name. You find your Zel ID on the Zel ID app.</p>
-      <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Step 2</h3>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">Run command</h4>
-      <p className="text-gray-300 mb-4">You can leave it blank, our Docker image already defines its run command.</p>
-      <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Step 3</h3>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">Public port</h4>
-      <p className="text-gray-300 mb-4">You must enter a port here. Just enter 31000.</p>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">Domains</h4>
-      <p className="text-gray-300 mb-4">Leave it blank</p>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">Private ports</h4>
-      <p className="text-gray-300 mb-4">Enter 8080 here, as this was the port our Spring Boot process is listening on.</p>
-      <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Step 4</h3>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">Instances</h4>
-      <p className="text-gray-300 mb-4">You can leave it at 3</p>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">Processors</h4>
-      <p className="text-gray-300 mb-4">Your Mosaik app will perform okay on 0.1 processors, but of course it will be three times faster with 0.3 processors. Go for 0.1 if you want it as cheap as possible, or more if you want a better performance.</p>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">RAM</h4>
-      <p className="text-gray-300 mb-4">The Java process will take around 300 MB of RAM, so give it 1000 here to be safe to not run into problems.</p>
-      <h4 className="text-lg font-semibold text-cyan-300 mb-2 mt-4">SSD space</h4>
-      <p className="text-gray-300 mb-4">Our image is around 750 MB in size, so give it 2 GB here to be safe.</p>
-      <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Deploy on other hosters</h2>
-      <p className="text-gray-300 mb-4">If you deployed to other hosters, feel free to enhance this guide.</p>
-    </>
-  );
-} 

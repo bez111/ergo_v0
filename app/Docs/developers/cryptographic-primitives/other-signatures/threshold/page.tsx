@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ThresholdSignaturesPage() {
   return (
@@ -78,7 +78,7 @@ export default function ThresholdSignaturesPage() {
 
         <h2 className="text-3xl font-bold mb-6 text-white">Conceptual Implementation</h2>
         <div className="mb-8">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={`val thresholdSignature = prove {
   atLeastKOutOfN(
     k = 3,  // Minimum signatures required

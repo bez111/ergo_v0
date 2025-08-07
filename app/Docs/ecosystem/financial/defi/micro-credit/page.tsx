@@ -5,7 +5,7 @@ import Link from "next/link";
 import { BookOpen, Users, Coins, ExternalLink, Info, Copy, Check, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function MicroCreditPage() {
   return (
@@ -73,7 +73,8 @@ export default function MicroCreditPage() {
         <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
           <BookOpen className="w-6 h-6 text-yellow-400" /> Main Voting Contract (ErgoScript)
         </h2>
-        <UniversalCopyCodeBlock code={`val votingSuccess  = atLeast(3, Array(pubkeyA, pubkeyB, pubkeyC, pubkeyD))
+        <CodeBlock language="scala">{`val votingSuccess  = atLeast(3, Array(pubkeyA, pubkeyB, pubkeyC, pubkeyD))
+
 val properSpending = OUTPUTS(0).value >= 5000L &&
                      blake2b256(OUTPUTS(0).propositionBytes) == spendingContract1Hash &&
                      OUTPUTS(1).value >= 2000L &&
@@ -86,14 +87,15 @@ val withdrawCondition = HEIGHT >= 1000L &&
                         OUTPUTS(3).value >= 2500L && OUTPUTS(3).propositionBytes == pubkeyD.propBytes 
 
 (votingSuccess && properSpending) || withdrawCondition
-`} />
+`}</CodeBlock>
         <p className="text-gray-400 text-sm mb-4">This contract enforces threshold voting, spending conditions, and a withdrawal fallback for the cooperatives.</p>
       </div>
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
           <BookOpen className="w-6 h-6 text-yellow-400" /> Equipment Spending Contract (ErgoScript)
         </h2>
-        <UniversalCopyCodeBlock code={`val spendingSuccess = (pubkeyTool1 || pubkeyTool2 || pubkeyTool3 || pubkeyTool4) && businessKey
+        <CodeBlock language="scala">{`val spendingSuccess = (pubkeyTool1 || pubkeyTool2 || pubkeyTool3 || pubkeyTool4) && businessKey
+
 
 val withdrawCondition = HEIGHT > 5000L &&
                         OUTPUTS(0).value >= 1250L && OUTPUTS(0).propositionBytes == pubkeyA.propBytes &&
@@ -102,14 +104,15 @@ val withdrawCondition = HEIGHT > 5000L &&
                         OUTPUTS(3).value >= 1250L && OUTPUTS(3).propositionBytes == pubkeyD.propBytes 
 
 spendingSuccess || withdrawCondition
-`} />
+`}</CodeBlock>
         <p className="text-gray-400 text-sm mb-4">This contract ensures equipment funds are spent with recognized sellers or returned to the co-ops if not used in time.</p>
       </div>
       <div className="mb-8">
         <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
           <BookOpen className="w-6 h-6 text-yellow-400" /> Construction Spending Contract (ErgoScript)
         </h2>
-        <UniversalCopyCodeBlock code={`val spendingSuccess = (pubkeyConstr1 || pubkeyConstr2 || pubkeyConstr3) && businessKey
+        <CodeBlock language="scala">{`val spendingSuccess = (pubkeyConstr1 || pubkeyConstr2 || pubkeyConstr3) && businessKey
+
 
 val withdrawCondition = HEIGHT > 5000L &&
                         OUTPUTS(0).value >= 500L && OUTPUTS(0).propositionBytes == pubkeyA.propBytes &&
@@ -118,7 +121,7 @@ val withdrawCondition = HEIGHT > 5000L &&
                         OUTPUTS(3).value >= 500L && OUTPUTS(3).propositionBytes == pubkeyD.propBytes 
 
 spendingSuccess || withdrawCondition
-`} />
+`}</CodeBlock>
         <p className="text-gray-400 text-sm mb-4">This contract ensures construction funds are spent with recognized builders or returned to the co-ops if not used in time.</p>
       </div>
       {/* Process explanation */}

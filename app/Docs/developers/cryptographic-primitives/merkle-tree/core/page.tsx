@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft, GitBranch, Code, Shield, Eye, Zap, Database, CheckCircle } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function CoreMerkleTreePage() {
   return (

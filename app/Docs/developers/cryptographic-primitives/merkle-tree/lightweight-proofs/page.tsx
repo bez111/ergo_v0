@@ -111,7 +111,7 @@ export default function LightweightProofsPage() {
             The following code demonstrates how to perform step 4b: verifying that a transaction is included in the block header using a Merkle proof.
           </p>
 
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`package org.ergoplatform.examples
 
 import org.ergoplatform.utils.ErgoPropertyTest

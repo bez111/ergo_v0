@@ -51,7 +51,7 @@ export default function FleetSdkRecipesPage() {
         <b>Important:</b> Directly constructing ErgoAddress from SSigmaProp is not the correct approach in Fleet SDK. Extract public key bytes first.
       </p>
       <h3 className="text-xl font-semibold mt-6 mb-2">Complete Example:</h3>
-      <UniversalCopyCodeBlock code={`import { Box, ErgoAddress } from "@fleet-sdk/core";
+      <CodeBlock language="typescript">{`import { Box, ErgoAddress } from "@fleet-sdk/core";
 import { deserialize } from "@fleet-sdk/serializer";
 
 function validateBoxOwnership(boxToValidate: Box, boxWithOwnerInfo: Box): boolean {
@@ -82,13 +82,13 @@ function validateBoxOwnership(boxToValidate: Box, boxWithOwnerInfo: Box): boolea
   } catch {
     return false;
   }
-}`} />
+}`}</CodeBlock>
 
       {/* 2. Working with Numeric Registers */}
       <h2 id="numeric-registers" className="text-2xl font-bold mt-10 mb-4">
         Working with Numeric Registers
       </h2>
-      <UniversalCopyCodeBlock code={`import { Box } from "@fleet-sdk/core";
+      <CodeBlock language="typescript">{`import { Box } from "@fleet-sdk/core";
 import { deserialize } from "@fleet-sdk/serializer";
 
 function getNumericFromRegister(box: Box, register: "R4" | "R5" | "R6" | "R7" | "R8" | "R9"): bigint | null {
@@ -105,13 +105,13 @@ function getNumericFromRegister(box: Box, register: "R4" | "R5" | "R6" | "R7" | 
   } catch {
     return null;
   }
-}`} />
+}`}</CodeBlock>
 
       {/* 3. Extracting Token IDs from Registers */}
       <h2 id="token-id-registers" className="text-2xl font-bold mt-10 mb-4">
         Extracting Token IDs from Registers
       </h2>
-      <UniversalCopyCodeBlock code={`import { Box } from "@fleet-sdk/core";
+      <CodeBlock language="typescript">{`import { Box } from "@fleet-sdk/core";
 import { deserialize } from "@fleet-sdk/serializer";
 import { Buffer } from "buffer";
 
@@ -127,13 +127,13 @@ function getTokenIdFromRegister(box: Box, register: "R4" | "R5" | "R6" | "R7" | 
   } catch {
     return null;
   }
-}`} />
+}`}</CodeBlock>
 
       {/* 4. Decoding Complex Types */}
       <h2 id="complex-types" className="text-2xl font-bold mt-10 mb-4">
         Decoding Complex Types (Tuples, Options, Collections)
       </h2>
-      <UniversalCopyCodeBlock code={`import { Box } from "@fleet-sdk/core";
+      <CodeBlock language="typescript">{`import { Box } from "@fleet-sdk/core";
 import { deserialize } from "@fleet-sdk/serializer";
 import { Buffer } from "buffer";
 
@@ -164,13 +164,13 @@ function decodeSigmaPropLongTuple(box: Box, register: "R4"|"R5"|"R6"|"R7"|"R8"|"
   } catch {
     return null;
   }
-}`} />
+}`}</CodeBlock>
 
       {/* 5. Compiling ErgoScript */}
       <h2 id="compile-ergotree" className="text-2xl font-bold mt-10 mb-4">
         Compiling ErgoScript to ErgoTree
       </h2>
-      <UniversalCopyCodeBlock code={`import { compile } from "@fleet-sdk/compiler";
+      <CodeBlock language="typescript">{`import { compile } from "@fleet-sdk/compiler";
 
 async function compileToErgoTree(script: string): Promise<string> {
   try {
@@ -180,14 +180,14 @@ async function compileToErgoTree(script: string): Promise<string> {
   } catch (error) {
     throw error;
   }
-}`} />
+}`}</CodeBlock>
 
       {/* 6. Troubleshooting */}
       <h2 id="troubleshooting" className="text-2xl font-bold mt-10 mb-4">
         Troubleshooting Common Issues
       </h2>
       <h3 className="text-xl font-semibold mt-6 mb-2">ErgoTree Comparison Failures</h3>
-      <UniversalCopyCodeBlock code={`function troubleshootErgoTreeComparison(ergoTree1: string, ergoTree2: string): string {
+      <CodeBlock language="typescript">{`function troubleshootErgoTreeComparison(ergoTree1: string, ergoTree2: string): string {
   if (ergoTree1 === ergoTree2) return "Exact Match: Trees are identical.";
   const p2pkPrefix = "0008cd";
   const tree1IsP2PK = ergoTree1.startsWith(p2pkPrefix);
@@ -205,10 +205,10 @@ async function compileToErgoTree(script: string): Promise<string> {
     }
     return "Mismatch: Neither seems standard P2PK, but lengths match.";
   }
-}`} />
+}`}</CodeBlock>
 
       <h3 className="text-xl font-semibold mt-6 mb-2">Unexpected Register Format</h3>
-      <UniversalCopyCodeBlock code={`function detectRegisterFormat(registerHex: string): string {
+      <CodeBlock language="typescript">{`function detectRegisterFormat(registerHex: string): string {
   if (!registerHex || registerHex.length < 2) return "Invalid or empty register value";
   const prefix = registerHex.substring(0, 2);
   const lengthByte = parseInt(registerHex.substring(2, 4), 16);
@@ -229,19 +229,19 @@ async function compileToErgoTree(script: string): Promise<string> {
   } else {
     return \`Unknown format starting with prefix \${prefix}\`;
   }
-}`} />
+}`}</CodeBlock>
 
       {/* 7. Relationship Diagram */}
       <h2 id="relationship-diagram" className="text-2xl font-bold mt-10 mb-4">
         Relationship Diagram
       </h2>
-      <UniversalCopyCodeBlock code={`graph TD
+      <CodeBlock language="typescript">{`graph TD
   A[Ergo Address String] -->|"ErgoAddress decode"| B[Public Key Bytes]
   B -->|"ErgoAddress fromPublicKey"| C[ErgoAddress Object]
   B -->|"SGroupElement"| D[SGroupElement Object]
   D -->|"SSigmaProp"| E[SSigmaProp Object]
   C -->|"address ergoTree"| F[ErgoTree Hex - P2PK Script]
-  E -->|"ErgoAddress sigmaProp ergoTree"| F`} />
+  E -->|"ErgoAddress sigmaProp ergoTree"| F`}</CodeBlock>
 
       {/* 8. Related Docs */}
       <h2 id="related-docs" className="text-2xl font-bold mt-10 mb-4">

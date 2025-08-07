@@ -1,7 +1,7 @@
 import React from "react";
 import { ArrowLeft, Database, Code, GitBranch, Shield, Eye, Zap } from "lucide-react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ExtensionBlockMerklePage() {
   return (
@@ -95,7 +95,7 @@ export default function ExtensionBlockMerklePage() {
                 <strong>Code Reference</strong>: The implementation of this Merkle Tree construction process is handled in the <a href="https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala" className="text-orange-400 hover:text-orange-300 underline">Extension.scala</a> file within the Ergo codebase. The relevant method for creating the Merkle Tree from key-value pairs is the <code className="bg-neutral-700 px-2 py-1 rounded">merkleTree</code> method within the <code className="bg-neutral-700 px-2 py-1 rounded">Extension</code> object.
               </p>
               <div className="mb-4">
-                <UniversalCopyCodeBlock
+                <CodeBlock language="typescript"
                   code={`def merkleTree: MerkleTree = {
   val leafData = keyValuePairs.map { case (key, value) =>
     hash(key ++ value)
@@ -138,7 +138,7 @@ export default function ExtensionBlockMerklePage() {
             Here's an example of how to verify a key-value pair using a Merkle proof:
           </p>
           <div className="mb-4">
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`import scorex.crypto.authds.merkle.MerkleProof
 import scorex.crypto.hash.{Blake2b256, Digest32}
 import scorex.util.encode.Base16

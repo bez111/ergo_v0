@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Gavel, ExternalLink } from 'lucide-react';
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function AuctionContractPage() {
   return (
@@ -67,7 +67,7 @@ export default function AuctionContractPage() {
 
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">The contract</h2>
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={String.raw`{
   // R4: The seller's ergo tree
   // R5: Current bidder's ergo tree

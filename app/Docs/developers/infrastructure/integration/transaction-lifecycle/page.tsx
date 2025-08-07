@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function TransactionLifecyclePage() {
   return (
@@ -69,16 +69,16 @@ export default function TransactionLifecyclePage() {
       </div>
       <p className="text-gray-300 mb-4">A withdrawal must target <b>P2PK</b>. Other types break audit logic and UX.</p>
       <p className="text-gray-300 mb-2 font-semibold">Path template</p>
-      <UniversalCopyCodeBlock code={`m / 44' / 429' / account' / chain / index`} />
+      <CodeBlock language="typescript">{`m / 44' / 429' / account' / chain / index`}</CodeBlock>
 
       <h3 className="text-xl font-bold mb-2 mt-6">1.2 Node wallet derivation</h3>
-      <UniversalCopyCodeBlock code={`curl "http://localhost:9053/wallet/deriveNextKey" \
+      <CodeBlock language="typescript">{`curl "http://localhost:9053/wallet/deriveNextKey" \
   -H "accept: application/json" \
-  -H "api_key: hello"`} />
-      <UniversalCopyCodeBlock code={`{
+  -H "api_key: hello"`}</CodeBlock>
+      <CodeBlock language="typescript">{`{
   "derivationPath": "m/44'/429'/0'/0/1",
   "address": "9gF9QP33MoPc8uekF95VHdosL4KzgSz7Ec7MLEtuhx4uPAd3eZs"
-}`} />
+}`}</CodeBlock>
 
       <h2 className="text-2xl font-bold mb-4 mt-8">2. Unsigned Composition</h2>
       <p className="text-gray-300 mb-4">A raw transaction selects inputs, defines outputs, and declares a fee. No cryptographic proof appears yet.</p>
@@ -88,12 +88,12 @@ export default function TransactionLifecyclePage() {
         <li>Local node: <code>GET /wallet/boxes/unspent</code></li>
       </ul>
       <h3 className="text-xl font-bold mb-2 mt-6">2.2 Binary bytes for each box</h3>
-      <UniversalCopyCodeBlock code={`curl http://localhost:9053/utxo/byIdBinary/{boxId}`} />
+      <CodeBlock language="typescript">{`curl http://localhost:9053/utxo/byIdBinary/{boxId}`}</CodeBlock>
       <p className="text-gray-300 mb-4">Use the resulting <code>bytes</code> in <code>inputsRaw</code>.</p>
       <h3 className="text-xl font-bold mb-2 mt-6">2.3 Mempool exclusion</h3>
-      <UniversalCopyCodeBlock code={`GET /transactions/unconfirmed/byErgoTree/{ergoTree}`} />
+      <CodeBlock language="typescript">{`GET /transactions/unconfirmed/byErgoTree/{ergoTree}`}</CodeBlock>
       <p className="text-gray-300 mb-2">or download the whole list:</p>
-      <UniversalCopyCodeBlock code={`GET /transactions/unconfirmed`} />
+      <CodeBlock language="typescript">{`GET /transactions/unconfirmed`}</CodeBlock>
       <h3 className="text-xl font-bold mb-2 mt-6">2.4 Batch withdrawals</h3>
       <ol className="list-decimal pl-6 text-gray-300 mb-4">
         <li>Collect pending payouts.</li>
@@ -118,7 +118,7 @@ export default function TransactionLifecyclePage() {
 
       <h2 className="text-2xl font-bold mb-4 mt-8">3. Signature</h2>
       <h3 className="text-xl font-bold mb-2 mt-6">3.1 One‑call node workflow</h3>
-      <UniversalCopyCodeBlock code={`POST /wallet/payment/send`} />
+      <CodeBlock language="typescript">{`POST /wallet/payment/send`}</CodeBlock>
       <p className="text-gray-300 mb-2">Parameters</p>
       <div className="overflow-x-auto mb-4">
         <table className="min-w-[400px] w-full text-sm text-left border border-neutral-700 rounded-xl">
@@ -148,16 +148,16 @@ export default function TransactionLifecyclePage() {
       <h2 className="text-2xl font-bold mb-4 mt-8">4. Broadcast & Confirmation Tracking</h2>
       <h3 className="text-xl font-bold mb-2 mt-6">4.1 Broadcast</h3>
       <p className="text-gray-300 mb-2">If you're using <b>Java (ergo‑appkit)</b>, serialize the signed transaction like this:</p>
-      <UniversalCopyCodeBlock code={`Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
-System.out.println(json.toString());`} />
+      <CodeBlock language="typescript">{`Json json = JsonCodecsWrapper.ergoLikeTransactionEncoder().apply(tx);
+System.out.println(json.toString());`}</CodeBlock>
       <p className="text-gray-300 mb-2"><b>Public explorer</b></p>
-      <UniversalCopyCodeBlock code={`curl -X POST https://api.ergoplatform.com/api/v0/transactions/send \
+      <CodeBlock language="typescript">{`curl -X POST https://api.ergoplatform.com/api/v0/transactions/send \
      -H "Content-Type: application/json" \
-     -d '{ ...signedTxJson... }'`} />
+     -d '{ ...signedTxJson... }'`}</CodeBlock>
       <p className="text-gray-300 mb-2"><b>Local node</b></p>
-      <UniversalCopyCodeBlock code={`curl -X POST http://localhost:9053/transactions \
+      <CodeBlock language="typescript">{`curl -X POST http://localhost:9053/transactions \
      -H "Content-Type: application/json" \
-     -d '{ ... }'`} />
+     -d '{ ... }'`}</CodeBlock>
       <h3 className="text-xl font-bold mb-2 mt-6">4.2 Monitor</h3>
       <ul className="list-disc pl-6 text-gray-300 mb-4">
         <li>Explorer: <code>GET /transactions/{'{txId}'}</code> → <code>numConfirmations</code></li>

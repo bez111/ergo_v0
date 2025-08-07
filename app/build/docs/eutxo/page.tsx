@@ -13,7 +13,7 @@ import {
   Globe,
 } from "lucide-react"
 import Link from "next/link"
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock"
+import { CodeBlock } from "@/components/ui"
 
 export default function EUTXOPage() {
   return (
@@ -145,7 +145,7 @@ export default function EUTXOPage() {
               <p className="text-gray-300 text-sm mb-4">
                 Consider a simple counter dApp. The current count would be stored in an Ergo box:
               </p>
-              <UniversalCopyCodeBlock
+              <CodeBlock language="typescript"
                 code={`Box {
   value: 1000000, // 0.001 ERG (minimum value)
   assets: [],
@@ -359,17 +359,17 @@ export default function EUTXOPage() {
               <div className="space-y-3">
                 <div className="bg-black border border-neutral-600 rounded-lg p-3">
                   <h4 className="font-semibold text-sm text-white mb-1">Simple Signature (Pay-to-Public-Key)</h4>
-                  <UniversalCopyCodeBlock code="pk.isValid" />
+                  <CodeBlock language="typescript">{""pk.isValid" />
                   <p className="text-gray-400 text-xs mt-1">Requires a valid signature from the public key `pk`.</p>
                 </div>
                 <div className="bg-black border border-neutral-600 rounded-lg p-3">
                   <h4 className="font-semibold text-sm text-white mb-1">Multi-Signature (Any-of-N)</h4>
-                  <UniversalCopyCodeBlock code="pk1.isValid || pk2.isValid" />
+                  <CodeBlock language="typescript">{""pk1.isValid || pk2.isValid" />
                   <p className="text-gray-400 text-xs mt-1">Requires a valid signature from either `pk1` OR `pk2`.</p>
                 </div>
                 <div className="bg-black border border-neutral-600 rounded-lg p-3">
                   <h4 className="font-semibold text-sm text-white mb-1">Time Lock (Absolute Height)</h4>
-                  <UniversalCopyCodeBlock code="HEIGHT > 1000000" />
+                  <CodeBlock language="typescript">{""HEIGHT > 1000000" />
                   <p className="text-gray-400 text-xs mt-1">The box can only be spent after block height 1,000,000.</p>
                 </div>
               </div>

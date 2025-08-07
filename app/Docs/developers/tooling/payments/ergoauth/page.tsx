@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function ErgoAuthPage() {
   return (
@@ -62,88 +62,3 @@ export default function ErgoAuthPage() {
       <div className="text-gray-300 mb-4 max-w-2xl">
         Wallet apps should be able to initiate ErgoAuth both by using URI schemes (clickable links) or QR codes.
       </div>
-      <UniversalCopyCodeBlock code={`ergoauth://<URL>`} className="mb-4" />
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        An URL is provided without the https prefix. http communication is not allowed except for IP addresses (in order to test within a local network).
-      </div>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        Examples:
-      </div>
-      <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
-        <li><code>ergoauth://sigmavalley.io/auth/2021-16b8-66c4-b800-6e52-8ce4</code> will make the wallet app request <code>https://sigmausd.io/auth/2021-16b8-66c4-b800-6e52-8ce4</code></li>
-        <li><code>ergoauth://192.168.0.1/auth</code> will make the wallet app request <code>http://192.168.0.1/auth</code></li>
-      </ul>
-
-      <h3 className="text-xl font-bold text-orange-400 mb-2">Response body: ErgoAuthRequest</h3>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        The wallet application should request URL and obtain the following data (json format):
-      </div>
-      <UniversalCopyCodeBlock code={`ErgoAuthRequest:
-  - signingMessage: String
-  - sigmaBoolean: String (base64 from serialized SigmaBoolean)
-  - userMessage: String (optional*)
-  - messageSeverity: String (optional) "INFORMATION", "WARNING"
-  - replyToUrl: String`} className="mb-4" />
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        The <strong>signingMessage</strong> is a String that is not user-friendly to read in general, as it might contain information the dApp adds to make it unique. If the signingMessage contains 0-byte character (unicode 0000), the part of the signingMessage before this sign is interpreted as the user prompt what he is going to sign for and must be shown to the user.
-      </div>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        After signing is performed, the wallet must POST the following data to the dApp using <strong>replyToUrl</strong> from the request (json format):
-      </div>
-      <UniversalCopyCodeBlock code={`ErgoAuthResponse:
-  - signedMessage: String
-  - proof: String (Base64)`} className="mb-4" />
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        <strong>signedMessage:</strong> Message containing the <code>signingMessage</code> sent by the dApp with additional bytes added by the wallet. The addition of random bytes is done to prevent letting the user signing a message that might be used for unwanted malicious tasks. Besides random based, the signed message must also contain the replyToUrl's hostname right after the original signing message.
-      </div>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        <strong>proof:</strong> Output of signing <code>signedMessage</code>
-      </div>
-      <div className="text-gray-300 mb-6 max-w-2xl">
-        In case there was an error building the ErgoAuthRequest on the dApp side, the dApp might reply with an <code>ErgoAuthRequestError</code> to inform the user about the error:
-      </div>
-      <UniversalCopyCodeBlock code={`ErgoAuthRequestError:
-  - userMessage: String`} className="mb-4" />
-
-      <h2 className="text-2xl font-bold text-cyan-400 mb-4">Cold wallet support</h2>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        Similar to EIP-0019 for signing transactions from devices not connected to the internet ("cold wallets"), ErgoAuth can be used to sign messages from cold wallets. This is transparent for dApps and handled by the wallet connected to the internet ("hot wallet").
-      </div>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        For this, the <code>ErgoAuthRequest</code> must be transferred to the cold wallet via files or QR codes and the <code>ErgoAuthResponse</code> must be transferred back the same way.
-      </div>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        The interchange format to transfer chunks between hot wallet and cold wallet is similar to the one defined in EIP-0019, with name "EARQ" for ErgoAuthRequest and "EARS" for ErgoAuthResponse. Examples:
-      </div>
-      <UniversalCopyCodeBlock code={`{"EARQ":"{\"signingMessage\":\"....\",\"sigmaBoolean\":\"...\",\"userMessage\":\"...\",...}"}
-
-{"EARS":"{\"signedMessage\":\"....\",\"proof\":\"...\"}`} className="mb-4" />
-      <div className="text-gray-300 mb-6 max-w-2xl">
-        The ErgoAuthRequest's <code>replyToUrl</code> field must be omitted to save data bandwidth. Chunking as described in EIP-0019 is supported as well.
-      </div>
-
-      <h2 className="text-2xl font-bold text-cyan-400 mb-4">Implementation</h2>
-      <h3 className="text-xl font-bold text-orange-400 mb-2">Implementation in wallet app</h3>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        <a href="https://github.com/ergoplatform/ergo-wallet-app/issues/112" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Wallet App #112</a>
-      </div>
-      <h3 className="text-xl font-bold text-orange-400 mb-2">Implementation in dApp</h3>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        <a href="https://github.com/ergoplatform/ergo-appkit/pull/157" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Appkit #157</a>
-      </div>
-      <div className="text-gray-300 mb-4 max-w-2xl">
-        dApp examples:
-      </div>
-      <ul className="list-disc pl-6 text-gray-300 mb-6 space-y-1">
-        <li><a href="https://github.com/MrStahlfelge/ergopay-server-example/commit/9271f0ef890d6c8e63789f6c82b65595efe8549a" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoPay backend example</a></li>
-        <li>Login to <a href="https://www.paideia.im/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">https://www.paideia.im/</a></li>
-      </ul>
-
-      <h2 className="text-2xl font-bold text-cyan-400 mb-4">Benefits for dApps</h2>
-      <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-1">
-        <li>A dApp or website don't need to handle user's secrets (mnemonic/private keys), but can safely validate if a user has access to certain Ergo addresses.</li>
-        <li>dApp's users don't need to worry about security of their private keys as the wallet guarantees they never leave the device. This is especially true if authentication is done with a cold device.</li>
-      </ul>
-    </>
-  );
-} 

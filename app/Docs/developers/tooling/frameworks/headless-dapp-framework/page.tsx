@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, AlertTriangle } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function HeadlessFrameworkPage() {
   return (
@@ -75,7 +75,7 @@ export default function HeadlessFrameworkPage() {
         </li>
         <li>
           <b>Clone the Repository:</b>
-          <UniversalCopyCodeBlock code={`git clone https://github.com/ergoplatform/ergo-headless-dapp-framework.git\ncd ergo-headless-dapp-framework`} />
+          <CodeBlock language="typescript">{`git clone https://github.com/ergoplatform/ergo-headless-dapp-framework.git\ncd ergo-headless-dapp-framework`}</CodeBlock>
         </li>
         <li><b>Explore Examples:</b> Review the example projects within the repository to understand usage patterns.</li>
         <li><b>Follow Tutorials:</b> Work through the official tutorials (linked below) to build your first headless dApp.</li>

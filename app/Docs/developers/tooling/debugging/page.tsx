@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Search, Code, Link2, Wrench } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function DebuggingPage() {
   return (
@@ -241,7 +241,7 @@ export default function DebuggingPage() {
               </p>
             </div>
 
-            <UniversalCopyCodeBlock
+            <CodeBlock language="typescript"
               code={`// Snippet from AssetsAtomicExchange - Breakpoint can be set inside this block
 lazy val buyerProp = proposition("buyer", { ctx: Context =>
   import ctx._
@@ -276,7 +276,7 @@ lazy val buyerProp = proposition("buyer", { ctx: Context =>
                     <code className="bg-gray-800 px-2 py-1 rounded text-cyan-400">AssetsAtomicExchangeTests.scala</code>
                   </a>, such as <code className="bg-gray-800 px-2 py-1 rounded text-cyan-400">property("atomic exchange spec")</code>.
                   
-                  <UniversalCopyCodeBlock
+                  <CodeBlock language="typescript"
                     code={`// Test method for atomic exchange in AssetsAtomicExchangeTests.scala
 property("atomic exchange spec") {
   // Test implementation details...

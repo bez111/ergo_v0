@@ -3,7 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Shield, Code, AlertTriangle, Users, Zap, FileText, ExternalLink } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function EIP17Page() {
   const contractCode = `{
@@ -158,7 +158,7 @@ export default function EIP17Page() {
           The below contract structure is proposed as an example for SigmaUSD minting operation:
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <UniversalCopyCodeBlock
+          <CodeBlock language="typescript"
             code={contractCode}
           />
         </div>

@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ChevronLeft, Info, Download, Terminal, ExternalLink } from "lucide-react";
-import { UniversalCopyCodeBlock } from "@/components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 const javaCommand = `java -jar -Xmx4G ergo-*.jar --testnet -c testnet.conf`;
 const testnetConf = `ergo {
@@ -41,7 +41,7 @@ export default function TestnetFullPage() {
           <p className="text-gray-300 mb-4">
             Download the <a href="https://github.com/ergoplatform/ergo/releases" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">latest Ergo protocol reference client</a> and launch using:
           </p>
-          <UniversalCopyCodeBlock code={javaCommand} />
+          <CodeBlock language="typescript" code={javaCommand} />
         </div>
 
         <div>
@@ -51,7 +51,7 @@ export default function TestnetFullPage() {
           <p className="text-gray-300 mb-4">
             A minimal <code className="bg-neutral-800 px-1 rounded">testnet.conf</code> would be:
           </p>
-          <UniversalCopyCodeBlock code={testnetConf} />
+          <CodeBlock language="typescript" code={testnetConf} />
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
