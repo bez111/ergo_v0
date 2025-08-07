@@ -1,7 +1,8 @@
 "use client"
 
+import { useState, useEffect } from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import {
   ArrowRight,
   Shield,
@@ -15,245 +16,334 @@ import {
   Puzzle,
   Wallet,
   Compass,
+  Network,
+  Zap,
+  Target,
+  CheckCircle,
+  BookOpen,
+  Rocket,
+  Terminal,
+  Database,
+  Fingerprint,
+  Globe,
+  Building,
+  Coins,
+  ChevronRight,
+  Award,
+  Info,
+  Brain,
+  Sparkles,
+  Code2
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-
-// Clean hex component (from UI Kit)
-const ErgoHex = ({ size = "w-5 h-5", className = "", glowing = false }: { 
-  size?: string; 
-  className?: string; 
-  glowing?: boolean;
-}) => (
-  <div className={`${size} ${className} relative`}>
-    <svg viewBox="0 0 24 24" className="w-full h-full" fill="none">
-      <polygon 
-        points="20,12 16,19 8,19 4,12 8,5 16,5" 
-        fill="none"
-        stroke="currentColor" 
-        strokeWidth="2"
-        className={glowing ? "drop-shadow-[0_0_8px_currentColor]" : ""}
-      />
-    </svg>
-  </div>
-)
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-}
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { 
+  HeroPattern, FeatureGrid, StatsGrid, FeatureCard, CodeSnippet,
+  type FeatureGridItem, type StatsGridItem 
+} from "@/components/ui-kit/patterns"
+import { 
+  MathematicalPattern, CryptographicVisualization, 
+  FloatingParticles, HexagonalGrid, GlitchHex, WatermarkHex
+} from "@/components/ui-kit/signature-effects"
+import { useIsMobile, usePrefersReducedMotion, getAnimationConfig } from "@/lib/theme-system"
 
 export default function IntroductionPage() {
-  const principles = [
+  const [hasMounted, setHasMounted] = useState(false)
+  const [isInitialized, setIsInitialized] = useState(false)
+  
+  // Responsive and accessibility hooks
+  const isMobile = useIsMobile()
+  const prefersReducedMotion = usePrefersReducedMotion()
+  const animationConfig = getAnimationConfig(isMobile, prefersReducedMotion)
+
+  // Prevent hydration mismatch
+  useEffect(() => {
+    setHasMounted(true)
+    const timer = setTimeout(() => {
+      setIsInitialized(true)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
+  // Prevent hydration issues by rendering simplified version on server
+  if (!hasMounted) {
+    return (
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
+          <div className="text-center py-24">
+            <h1 className="text-5xl font-bold text-white mb-4">
+              Introduction to <span className="text-brand-primary-400">Ergo</span>
+            </h1>
+            <p className="text-gray-400">Loading...</p>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  // Core principles data for FeatureGrid
+  const principlesGridItems: FeatureGridItem[] = [
     {
       icon: Users,
       title: "Decentralized First",
-      description: "Launched fairly with no premine or ICO. Ergo is community-driven and aims for maximum decentralization at all levels.",
-      color: "text-orange-400"
+      description: "Launched fairly with no premine or ICO. Community-driven for maximum decentralization.",
+      color: "text-brand-primary-400"
     },
     {
       icon: Shield,
       title: "Secure & Reliable",
-      description: "Built on the time-tested Proof-of-Work consensus (Autolykos) and the innovative eUTXO model for high security.",
-      color: "text-cyan-400"
+      description: "Built on Proof-of-Work consensus (Autolykos) and the innovative eUTXO model.",
+      color: "text-brand-secondary-400"
     },
     {
       icon: Code,
       title: "Powerful Contracts",
-      description: "ErgoScript enables complex, secure financial apps that are impossible on many other platforms.",
-      color: "text-purple-400"
+      description: "ErgoScript enables complex, secure financial apps impossible on other platforms.",
+      color: "text-status-success-500"
     },
     {
       icon: GitBranch,
       title: "Long-term Focus",
-      description: "Designed to be a long-term, resilient platform with a focus on real-world utility over speculation.",
-      color: "text-green-400"
-    },
+      description: "Designed for resilience with focus on real-world utility over speculation.",
+      color: "text-status-info-500"
+    }
   ]
 
+  // Technologies for feature cards
   const technologies = [
     {
       icon: Cpu,
       title: "Proof-of-Work (PoW)",
-      description: "Ensures maximum security and fair coin distribution. The Autolykos algorithm is ASIC-resistant, promoting wider participation.",
-      color: "text-orange-400"
+      subtitle: "Maximum security",
+      description: "Autolykos algorithm is ASIC-resistant, ensuring fair distribution and robust security.",
+      badge: "Autolykos"
     },
     {
       icon: Layers,
-      title: "Extended UTXO (eUTXO)",
-      description: "Allows for more complex and secure smart contracts with better scalability and predictable fees. It's like 'smart money' with built-in logic.",
-      color: "text-cyan-400"
+      title: "Extended UTXO",
+      subtitle: "Smart money",
+      description: "Allows complex smart contracts with better scalability and predictable fees.",
+      badge: "eUTXO"
     },
     {
       icon: Lock,
-      title: "Sigma Protocols (Σ-protocols)",
-      description: "Advanced cryptography enabling powerful privacy features like transaction mixing (ErgoMixer) and ring signatures at the protocol level.",
-      color: "text-purple-400"
-    },
-  ]
-  
-  const useCases = [
-    {
-      icon: TrendingUp,
-      title: "Decentralized Finance (DeFi)",
-      description: "Explore stablecoins, decentralized exchanges, lending platforms, and more.",
-      href: "/use/defi",
-      color: "text-orange-400"
-    },
-    {
-      icon: Puzzle,
-      title: "dApps & Ecosystem",
-      description: "Discover a growing ecosystem of applications for various use cases.",
-      href: "/ecosystem",
-      color: "text-cyan-400"
-    },
-    {
-      icon: Code,
-      title: "Build on Ergo",
-      description: "Access tools, SDKs, and documentation to build the next generation of dApps.",
-      href: "/build",
-      color: "text-purple-400"
-    },
+      title: "Sigma Protocols",
+      subtitle: "Advanced cryptography",
+      description: "Enables powerful privacy features like transaction mixing and ring signatures.",
+      badge: "Σ-protocols"
+    }
   ]
 
+  // Stats for StatsGrid
+  const statsItems: StatsGridItem[] = [
+    { value: "2019", label: "Launch Year", icon: Rocket, color: "text-brand-primary-400" },
+    { value: "100%", label: "Decentralized", icon: Network, color: "text-brand-primary-400" },
+    { value: "0%", label: "Premine", icon: Coins, color: "text-brand-primary-400" },
+    { value: "∞", label: "Possibilities", icon: Sparkles, color: "text-brand-primary-400" }
+  ]
+
+  // Animation variants
+  const fadeInUp = {
+    initial: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
+    animate: { 
+      opacity: 1, 
+      y: 0,
+      transition: { duration: prefersReducedMotion ? 0.1 : 0.6 }
+    }
+  }
+
+  const scaleOnHover = {
+    hover: { 
+      scale: prefersReducedMotion ? 1 : animationConfig.scale, 
+      transition: { duration: animationConfig.duration } 
+    },
+    tap: { scale: prefersReducedMotion ? 1 : 0.98 }
+  }
+
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Background Effects */}
+      {isInitialized && (
+        <>
+          <HexagonalGrid className="opacity-[0.02]" />
+          <FloatingParticles count={15} className="opacity-80" />
+          <MathematicalPattern className="opacity-[0.03]" />
+        </>
+      )}
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Clean Hero Section */}
-        <motion.section
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7 }}
-          className="text-center py-24 sm:py-32"
-        >
-          {/* Clean badge with hex */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full mb-6">
-            <ErgoHex size="w-4 h-4" className="text-orange-400" />
-            <span className="text-orange-300 text-sm font-medium tracking-widest">INTRODUCTION TO ERGO</span>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
+        
+        {/* Hero Section using HeroPattern */}
+        <section className="pb-20 relative">
+          <WatermarkHex className="opacity-[0.01] pointer-events-none" />
           
-          <div className="max-w-4xl mx-auto px-4">
-            <h1 className="text-5xl md:text-7xl font-extrabold mb-6">
-              <span className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                Decentralize Everything.
-              </span>
-              <br className="hidden md:block" />
-              <span className="text-white">
-                Build What Matters.
-              </span>
-            </h1>
-            <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto">
-              Ergo is a next-generation Proof-of-Work smart contract platform empowering anyone to launch new forms of digital value, experiment with economic logic, and own their assets—without permission.
-            </p>
-          </div>
-        </motion.section>
+          <HeroPattern
+            title="Introduction to"
+            highlight="Ergo"
+            subtitle="Decentralize Everything. Build What Matters."
+            description="A next-generation Proof-of-Work smart contract platform empowering anyone to launch new forms of digital value without permission."
+            primaryAction={{
+              text: "Get Started",
+              icon: Rocket,
+              onClick: () => window.location.href = '/wallet'
+            }}
+            secondaryAction={{
+              text: "Explore Ecosystem",
+              icon: Compass,
+              onClick: () => window.location.href = '/ecosystem'
+            }}
+          />
+        </section>
 
         {/* What is Ergo Section */}
         <motion.section 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          className="py-16 grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInitialized ? 1 : 0 }}
+          transition={{ duration: 0.6 }}
+          className="py-16"
         >
-          <motion.div variants={itemVariants}>
-            <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-              What is Ergo?
-            </h2>
-            <p className="text-gray-400 leading-relaxed mb-4">
-              Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. It builds on a decade of blockchain theory and development, combining established principles with new research.
-            </p>
-            <p className="text-gray-400 leading-relaxed">
-              Its mission is to provide the tools for truly decentralized and accessible financial systems, empowering ordinary people with economic freedom without intermediaries.
-            </p>
-          </motion.div>
-          <motion.div variants={itemVariants}>
-            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200">
-              <CardContent className="p-0">
-                <div className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center">
-                    <Cpu className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-xl text-white">Resilient Proof-of-Work</h3>
-                    <p className="text-gray-400 text-sm mt-1">
-                      Ergo uses its unique Autolykos algorithm, which is ASIC-resistant to ensure fair and wide distribution, providing robust security for the network.
-                    </p>
-                  </div>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <h2 className="text-3xl sm:text-4xl font-bold mb-6 flex items-center gap-3">
+                <Brain className="w-8 h-8 text-brand-primary-400" />
+                <span className="text-white">What is <span className="text-brand-primary-400">Ergo</span>?</span>
+              </h2>
+              <p className="text-gray-300 leading-relaxed mb-6">
+                Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. 
+                It builds on a decade of blockchain theory and development, combining established principles with new research.
+              </p>
+              <p className="text-gray-300 leading-relaxed mb-8">
+                Its mission is to provide the tools for truly decentralized and accessible financial systems, 
+                empowering ordinary people with economic freedom without intermediaries.
+              </p>
+              
+              {/* Alert with key info */}
+              <Alert className="border-brand-primary-500/30 bg-brand-primary-500/10 rounded-xl">
+                <Info className="w-4 h-4 text-brand-primary-400" />
+                <div className="ml-3">
+                  <h4 className="font-semibold text-brand-primary-400">Key Innovation</h4>
+                  <AlertDescription className="text-gray-300 text-sm">
+                    Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, 
+                    creating a unique platform for complex financial applications.
+                  </AlertDescription>
                 </div>
-              </CardContent>
-            </Card>
-          </motion.div>
+              </Alert>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="space-y-4"
+            >
+              {/* Cryptographic Visualization */}
+              <div className="relative">
+                <CryptographicVisualization className="absolute -top-8 -right-8 w-32 h-32 opacity-20" />
+                
+                {/* Feature highlights */}
+                {[
+                  { icon: Fingerprint, title: "Privacy First", desc: "Built-in privacy features at protocol level" },
+                  { icon: Database, title: "Storage Rent", desc: "Sustainable economic model for long-term viability" },
+                  { icon: Network, title: "Light Clients", desc: "Full node security on mobile devices" },
+                  { icon: Award, title: "Fair Launch", desc: "No premine, no ICO, community-driven" }
+                ].map((feature, index) => (
+                  <motion.div
+                    key={feature.title}
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                    whileHover={{ x: prefersReducedMotion ? 0 : 5 }}
+                    className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 backdrop-blur-sm hover:border-brand-primary-500/30 transition-all duration-300 cursor-pointer group"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="w-10 h-10 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                        <feature.icon className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white group-hover:text-brand-primary-400 transition-colors">
+                          {feature.title}
+                        </h4>
+                        <p className="text-gray-400 text-sm">{feature.desc}</p>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
         </motion.section>
 
-        {/* Core Principles Section */}
-        <motion.section 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+        {/* Core Principles using FeatureGrid */}
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInitialized ? 1 : 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
           className="py-24"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-            Our Core Principles
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            {principles.map((principle) => (
-              <motion.div variants={itemVariants} key={principle.title}>
-                <Card className="bg-neutral-900/50 border border-neutral-700 h-full p-6 text-center transition-all duration-300 hover:scale-105 rounded-xl">
-                  <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center mx-auto mb-4">
-                    <principle.icon className={`w-6 h-6 ${principle.color}`} />
-                  </div>
-                  <h3 className={`text-xl font-bold mb-2 ${principle.color}`}>{principle.title}</h3>
-                  <p className="text-sm text-gray-400">{principle.description}</p>
-                </Card>
-              </motion.div>
-            ))}
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Core <span className="text-brand-primary-400">Principles</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Built on fundamental values that ensure long-term sustainability and real-world utility
+            </p>
           </div>
+          
+          <FeatureGrid items={principlesGridItems} columns={4} />
         </motion.section>
 
         {/* Key Technologies Section */}
-        <motion.section 
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInitialized ? 1 : 0 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           className="py-16"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-            Key Technologies
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-            {technologies.map((tech) => (
-              <motion.div variants={itemVariants} key={tech.title} className="flex items-start gap-4">
-                 <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center">
-                    <tech.icon className={`w-6 h-6 ${tech.color}`}/>
-                </div>
-                <div>
-                  <h3 className={`text-xl font-bold ${tech.color}`}>{tech.title}</h3>
-                  <p className="text-gray-400 mt-1">{tech.description}</p>
-                </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              Key <span className="text-brand-primary-400">Technologies</span>
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Advanced cryptography and innovative consensus mechanisms power the Ergo platform
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {technologies.map((tech, index) => (
+              <motion.div
+                key={tech.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+              >
+                <FeatureCard
+                  icon={tech.icon}
+                  title={tech.title}
+                  subtitle={tech.subtitle}
+                  description={tech.description}
+                  badge={tech.badge}
+                  action={{
+                    text: "Learn More",
+                    icon: ArrowRight,
+                    onClick: () => console.log(`Learn more about ${tech.title}`)
+                  }}
+                />
               </motion.div>
             ))}
           </div>
-          <motion.div variants={itemVariants} className="mt-12">
-            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl overflow-hidden w-full max-w-3xl mx-auto">
-              <div className="bg-neutral-800/70 px-4 py-2 border-b border-neutral-700 flex items-center justify-between">
-                <span className="font-mono text-sm text-orange-400">ErgoScript Example: Simple Time-Locked Contract</span>
-                <div className="flex gap-2">
-                  <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                  <div className="w-3 h-3 rounded-full bg-green-500"></div>
-                </div>
-              </div>
-              <pre className="p-4 text-sm font-mono text-gray-300 overflow-x-auto bg-neutral-900/50"><code>{`{
+
+          {/* ErgoScript Code Example */}
+          <CodeSnippet
+            title="ErgoScript Example: Time-Locked Contract"
+            language="scala"
+            filename="TimeLock.ergo"
+            code={`{
   val deadline = SELF.R4[Long].get
   sigmaProp(
     if (HEIGHT >= deadline) {
@@ -264,35 +354,89 @@ export default function IntroductionPage() {
       senderPK
     }
   )
-}`}</code></pre>
-            </Card>
-          </motion.div>
+}`}
+          />
+        </motion.section>
+
+        {/* Stats Section */}
+        <motion.section
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInitialized ? 1 : 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="py-16"
+        >
+          <StatsGrid items={statsItems} columns={4} />
         </motion.section>
 
         {/* Use Cases Section */}
         <motion.section
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInitialized ? 1 : 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
           className="py-24"
         >
-          <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-            What Can You Do with Ergo?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {useCases.map((useCase) => (
-              <motion.div variants={itemVariants} key={useCase.title}>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              What Can You <span className="text-brand-primary-400">Build</span>?
+            </h2>
+            <p className="text-gray-400 max-w-2xl mx-auto">
+              Explore the endless possibilities of the Ergo ecosystem
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: TrendingUp,
+                title: "DeFi Applications",
+                description: "Build stablecoins, DEXs, lending platforms, and innovative financial instruments.",
+                href: "/use/defi",
+                badge: "Popular"
+              },
+              {
+                icon: Puzzle,
+                title: "dApps & Tools",
+                description: "Create decentralized applications for any use case with powerful smart contracts.",
+                href: "/ecosystem",
+                badge: "Growing"
+              },
+              {
+                icon: Code2,
+                title: "Developer Tools",
+                description: "Access comprehensive SDKs, libraries, and documentation to build on Ergo.",
+                href: "/Docs/developers",
+                badge: "Resources"
+              }
+            ].map((useCase, index) => (
+              <motion.div
+                key={useCase.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                whileHover="hover"
+                whileTap="tap"
+                variants={scaleOnHover}
+              >
                 <Link href={useCase.href}>
-                  <Card className="group bg-neutral-900/50 border border-neutral-700 text-left h-full p-6 transition-all duration-300 hover:scale-105 rounded-xl">
-                    <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center mb-4">
-                      <useCase.icon className={`w-6 h-6 ${useCase.color}`} />
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+                    <div className="flex items-start justify-between mb-4">
+                      <div className="w-12 h-12 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                        <useCase.icon className="w-6 h-6 text-brand-primary-400" />
+                      </div>
+                      <Badge className="bg-brand-primary-500/10 text-brand-primary-400 border border-brand-primary-500/30">
+                        {useCase.badge}
+                      </Badge>
                     </div>
-                    <h3 className={`text-xl font-bold mb-2 ${useCase.color}`}>{useCase.title}</h3>
-                    <p className="text-sm text-gray-400 mb-4">{useCase.description}</p>
-                    <span className="text-orange-400 font-semibold text-sm flex items-center group-hover:underline">
-                      Explore More <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                    </span>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-primary-400 transition-colors">
+                      {useCase.title}
+                    </h3>
+                    <p className="text-gray-400 text-sm mb-4">
+                      {useCase.description}
+                    </p>
+                    <div className="flex items-center text-brand-primary-400 text-sm font-semibold group-hover:gap-3 transition-all">
+                      Explore
+                      <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </Card>
                 </Link>
               </motion.div>
@@ -300,35 +444,87 @@ export default function IntroductionPage() {
           </div>
         </motion.section>
 
-        {/* Get Started CTA Section */}
+        {/* CTA Section with Glitch Effects */}
         <motion.section
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7 }}
-          className="py-16 text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+          className="py-16 text-center relative"
         >
-          <Card className="bg-gradient-to-r from-orange-500/10 to-cyan-500/10 border border-orange-500/30 rounded-xl p-8 md:p-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">Ready to Dive In?</h2>
+          <Card className="bg-gradient-to-br from-brand-primary-500/10 to-brand-secondary-500/10 border border-brand-primary-500/30 rounded-2xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden">
+            {/* Glitch Hex decoration */}
+            <div className="absolute top-8 right-8 w-16 h-16 opacity-20">
+              <GlitchHex size={64} />
+            </div>
+            
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+              Ready to <span className="text-brand-primary-400">Dive In</span>?
+            </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              Your journey into the Ergo ecosystem is just a few clicks away. Get a secure wallet and start exploring the future of finance.
+              Your journey into the Ergo ecosystem is just a few clicks away. 
+              Get a secure wallet and start exploring the future of finance.
             </p>
+            
             <div className="flex flex-wrap justify-center gap-4">
-              <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl transition-all duration-300 hover:scale-105">
-                <Link href="/wallet">
-                  <Wallet className="w-5 h-5 mr-2" />
-                  Get an Ergo Wallet
-                </Link>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
-                <Link href="/ecosystem">
-                  <Compass className="w-5 h-5 mr-2" />
-                  Explore the Ecosystem
-                </Link>
-              </Button>
+              <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
+                <Button 
+                  asChild 
+                  className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl shadow-lg"
+                >
+                  <Link href="/wallet">
+                    <Wallet className="w-5 h-5 mr-2" />
+                    Get an Ergo Wallet
+                  </Link>
+                </Button>
+              </motion.div>
+              
+              <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  className="border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white px-8 py-3 rounded-xl backdrop-blur-sm"
+                >
+                  <Link href="/ecosystem">
+                    <Compass className="w-5 h-5 mr-2" />
+                    Explore Ecosystem
+                  </Link>
+                </Button>
+              </motion.div>
+              
+              <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
+                <Button 
+                  asChild 
+                  variant="outline" 
+                  className="border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white px-8 py-3 rounded-xl backdrop-blur-sm"
+                >
+                  <Link href="/Docs">
+                    <BookOpen className="w-5 h-5 mr-2" />
+                    Documentation
+                  </Link>
+                </Button>
+              </motion.div>
+            </div>
+
+            {/* Quick Stats */}
+            <div className="mt-12 pt-8 border-t border-neutral-700 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {[
+                { label: "Active dApps", value: "50+", icon: Building },
+                { label: "Developers", value: "1000+", icon: Code },
+                { label: "Transactions", value: "2M+", icon: Zap },
+                { label: "Community", value: "Global", icon: Globe }
+              ].map((stat) => (
+                <div key={stat.label} className="text-center">
+                  <div className="flex items-center justify-center gap-2 mb-1">
+                    <stat.icon className="w-4 h-4 text-brand-primary-400" />
+                    <span className="text-2xl font-bold text-white">{stat.value}</span>
+                  </div>
+                  <span className="text-xs text-gray-400">{stat.label}</span>
+                </div>
+              ))}
             </div>
           </Card>
         </motion.section>
+
       </div>
     </div>
   )
