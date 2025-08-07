@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronRight, ChevronLeft, RotateCcw, ExternalLink, ArrowRight, CheckCircle } from "lucide-react"
+import { ChevronRight, ChevronLeft, RotateCcw, ExternalLink, ArrowRight, CheckCircle, Target, Brain, Rocket } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
@@ -533,14 +533,16 @@ export default function QuizPage() {
               <FadeIn>
                 <div className="text-center mb-16">
                   <div className="inline-flex items-center gap-4 mb-8">
-                    <h1 className="text-6xl md:text-8xl font-bold">ERGO PATH FINDER</h1>
+                    <h1 className="text-6xl md:text-8xl font-bold text-white">
+                      ERGO PATH FINDER
+                    </h1>
                   </div>
 
                   <div className="max-w-4xl mx-auto mb-12">
                     <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-                      <span className="text-primary">[</span>
+                      <span className="text-brand-primary-400">[</span>
                       DISCOVER YOUR PLACE IN THE ECOSYSTEM
-                      <span className="text-primary">]</span>
+                      <span className="text-brand-primary-400">]</span>
                     </h2>
                     <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
                       Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will
@@ -549,20 +551,20 @@ export default function QuizPage() {
                     </p>
                     <p className="text-lg text-gray-300 font-mono">
                       Answer a few simple questions to find your path: Are you a future{" "}
-                      <span className="text-primary">Investor</span>, <span className="text-primary">Developer</span>,{" "}
-                      <span className="text-primary">Miner</span>,{" "}
-                      <span className="text-primary">NFT Enthusiast</span>,{" "}
-                      <span className="text-primary">DeFi User</span>, or something else?
+                      <span className="text-brand-primary-400">Investor</span>, <span className="text-brand-primary-400">Developer</span>,{" "}
+                      <span className="text-brand-primary-400">Miner</span>,{" "}
+                      <span className="text-brand-primary-400">NFT Enthusiast</span>,{" "}
+                      <span className="text-brand-primary-400">DeFi User</span>, or something else?
                     </p>
                   </div>
 
                   <Button
                     onClick={handleStartQuiz}
                     size="lg"
-                    className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg hover:shadow-primary/25 font-mono uppercase tracking-wider px-12 py-6 text-xl"
+                    className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-mono uppercase tracking-wider px-12 py-6 text-xl focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
                   >
-                    <span className="mr-2">START QUIZ</span>
-                    <ChevronRight className="w-6 h-6" />
+                    <Rocket className="w-6 h-6 mr-2" />
+                    START QUIZ
                   </Button>
                 </div>
               </FadeIn>
@@ -583,16 +585,16 @@ export default function QuizPage() {
               {/* Progress Bar */}
               <div className="mb-12">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-primary font-mono text-sm">
+                  <span className="text-brand-primary-400 font-mono text-sm">
                     QUESTION {currentQuestion + 1} OF {quizQuestions.length}
                   </span>
                   <span className="text-gray-400 font-mono text-sm">{Math.round(progress)}% COMPLETE</span>
                 </div>
-                <Progress value={progress} className="h-2 bg-gray-800" />
+                <Progress value={progress} className="h-2 bg-neutral-800" />
               </div>
 
               {/* Question */}
-              <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
+              <Card className="bg-neutral-900/50 border-brand-primary-500/20 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <motion.div
                     key={currentQuestion}
@@ -600,7 +602,8 @@ export default function QuizPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 font-mono">
+                    <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 font-mono flex items-center gap-3">
+                      <Target className="w-6 h-6 text-brand-primary-400" />
                       {quizQuestions[currentQuestion].question}
                     </h2>
 
@@ -609,7 +612,7 @@ export default function QuizPage() {
                         <motion.button
                           key={index}
                           onClick={() => handleAnswerSelect(quizQuestions[currentQuestion].id, index)}
-                          className="w-full p-6 text-left border border-primary/20 rounded-lg hover:border-primary/50 hover:bg-primary/5 transition-all duration-300 group"
+                          className="w-full p-6 text-left border border-brand-primary-500/20 rounded-lg hover:border-brand-primary-500/50 hover:bg-brand-primary-500/5 transition-all duration-300 group"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
@@ -617,7 +620,7 @@ export default function QuizPage() {
                             <span className="text-lg text-gray-300 group-hover:text-white font-mono">
                               {option.text}
                             </span>
-                            <ChevronRight className="w-5 h-5 text-primary opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <ChevronRight className="w-5 h-5 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
                         </motion.button>
                       ))}
@@ -632,13 +635,17 @@ export default function QuizPage() {
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   variant="outline"
                   disabled={currentQuestion === 0}
-                  className="border-primary/50 text-primary hover:bg-primary/10"
+                  className="border-brand-primary-500/50 text-brand-primary-400 hover:bg-brand-primary-500/10"
                 >
                   <ChevronLeft className="w-4 h-4 mr-2" />
                   Previous
                 </Button>
 
-                <Button onClick={resetQuiz} variant="ghost" className="text-gray-400 hover:text-white">
+                <Button 
+                  onClick={resetQuiz} 
+                  variant="ghost" 
+                  className="text-gray-400 hover:text-white hover:bg-neutral-800"
+                >
                   <RotateCcw className="w-4 h-4 mr-2" />
                   Restart
                 </Button>
@@ -665,13 +672,13 @@ export default function QuizPage() {
                     transition={{ duration: 0.8 }}
                     className="mb-8"
                   >
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2">
+                    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white leading-snug pb-2">
                       YOUR ERGO PATH: {profiles[selectedProfile].name.toUpperCase()}
                     </h1>
                     <h2 className="text-2xl md:text-3xl text-gray-300 font-mono">
-                      <span className="text-primary">[</span>
+                      <span className="text-brand-primary-400">[</span>
                       {profiles[selectedProfile].title}
-                      <span className="text-primary">]</span>
+                      <span className="text-brand-primary-400">]</span>
                     </h2>
                   </motion.div>
 
@@ -690,17 +697,17 @@ export default function QuizPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.2 }}
                   >
-                    <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm h-full">
+                    <Card className="bg-neutral-900/50 border-brand-primary-500/20 backdrop-blur-sm h-full">
                       <CardContent className="p-8">
                         <h3 className="text-xl font-bold text-white mb-6 font-mono flex items-center gap-2">
-                          <CheckCircle className="w-5 h-5 text-primary" />
+                          <Brain className="w-5 h-5 text-brand-primary-400" />
                           {toolCategory.category}
                         </h3>
                         <div className="space-y-4">
                           {toolCategory.items.map((item, itemIndex) => (
-                            <div key={itemIndex} className="border-l-2 border-primary/30 pl-4">
-                              <Link href={item.link} className="block hover:text-primary transition-colors group">
-                                <h4 className="font-medium text-white group-hover:text-primary flex items-center gap-2">
+                            <div key={itemIndex} className="border-l-2 border-brand-primary-500/30 pl-4">
+                              <Link href={item.link} className="block hover:text-brand-primary-400 transition-colors group">
+                                <h4 className="font-medium text-white group-hover:text-brand-primary-400 flex items-center gap-2">
                                   {item.name}
                                   <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </h4>
@@ -728,7 +735,7 @@ export default function QuizPage() {
                     <Button
                       key={index}
                       asChild
-                      className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider h-auto py-4"
+                      className="bg-transparent border-2 border-brand-primary-500 text-brand-primary-400 hover:bg-brand-primary-500 hover:text-black font-mono uppercase tracking-wider h-auto py-4 transition-all duration-200"
                     >
                       <Link href={step.link}>
                         <ArrowRight className="w-4 h-4 mr-2" />
@@ -746,7 +753,7 @@ export default function QuizPage() {
                 transition={{ delay: 0.8 }}
                 className="mb-16"
               >
-                <Card className="bg-gradient-to-r from-primary/20 via-primary/10 to-primary/20 border-primary/40 backdrop-blur-sm">
+                <Card className="bg-gradient-to-r from-brand-primary-500/20 via-brand-primary-500/10 to-brand-primary-500/20 border-brand-primary-500/40 backdrop-blur-sm">
                   <CardContent className="p-8 text-center">
                     <h3 className="text-2xl font-bold text-white mb-4 font-mono">CONNECT WITH YOUR COMMUNITY</h3>
                     <p className="text-gray-300 mb-6">
@@ -758,7 +765,7 @@ export default function QuizPage() {
                           key={index}
                           asChild
                           variant="outline"
-                          className="border-primary/50 text-primary hover:bg-primary/10"
+                          className="border-brand-primary-500/50 text-brand-primary-400 hover:bg-brand-primary-500/10"
                         >
                           <Link href={channel.link} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4 mr-2" />
@@ -773,7 +780,7 @@ export default function QuizPage() {
 
               {/* General Learn More */}
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
-                <Card className="bg-gray-900/40 border-primary/20 backdrop-blur-sm">
+                <Card className="bg-neutral-900/40 border-brand-primary-500/20 backdrop-blur-sm">
                   <CardContent className="p-8 text-center">
                     <h3 className="text-xl font-bold text-white mb-6 font-mono">
                       WANT TO EXPLORE OTHER ASPECTS OF ERGO?
@@ -781,7 +788,7 @@ export default function QuizPage() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Button
                         asChild
-                        className="bg-gradient-to-r from-primary to-orange-500 text-black hover:shadow-lg font-mono uppercase tracking-wider"
+                        className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black hover:shadow-lg font-mono uppercase tracking-wider transition-all duration-200"
                       >
                         <Link href="/ecosystem">
                           <ArrowRight className="w-4 h-4 mr-2" />
@@ -791,7 +798,7 @@ export default function QuizPage() {
                       <Button
                         asChild
                         variant="outline"
-                        className="border-primary/50 text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
+                        className="border-brand-primary-500/50 text-brand-primary-400 hover:bg-brand-primary-500/10 font-mono uppercase tracking-wider"
                       >
                         <Link href="/start/faq">
                           <ArrowRight className="w-4 h-4 mr-2" />
@@ -801,7 +808,7 @@ export default function QuizPage() {
                       <Button
                         asChild
                         variant="outline"
-                        className="border-primary/50 text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
+                        className="border-brand-primary-500/50 text-brand-primary-400 hover:bg-brand-primary-500/10 font-mono uppercase tracking-wider"
                       >
                         <Link href="/community">
                           <ArrowRight className="w-4 h-4 mr-2" />
@@ -810,11 +817,11 @@ export default function QuizPage() {
                       </Button>
                     </div>
 
-                    <div className="mt-8 pt-8 border-t border-primary/20">
+                    <div className="mt-8 pt-8 border-t border-brand-primary-500/20">
                       <Button
                         onClick={resetQuiz}
                         variant="ghost"
-                        className="text-gray-400 hover:text-white font-mono"
+                        className="text-gray-400 hover:text-white hover:bg-neutral-800 font-mono"
                       >
                         <RotateCcw className="w-4 h-4 mr-2" />
                         Take Quiz Again

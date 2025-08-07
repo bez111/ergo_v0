@@ -136,14 +136,6 @@ export default function IntroductionPage() {
     }
   ]
 
-  // Stats for StatsGrid
-  const statsItems: StatsGridItem[] = [
-    { value: "2019", label: "Launch Year", icon: Rocket, color: "text-brand-primary-400" },
-    { value: "100%", label: "Decentralized", icon: Network, color: "text-brand-primary-400" },
-    { value: "0%", label: "Premine", icon: Coins, color: "text-brand-primary-400" },
-    { value: "∞", label: "Possibilities", icon: Sparkles, color: "text-brand-primary-400" }
-  ]
-
   // Animation variants
   const fadeInUp = {
     initial: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
@@ -165,45 +157,39 @@ export default function IntroductionPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background Effects */}
-      {isInitialized && (
-        <>
-          <HexagonalGrid className="opacity-[0.02]" />
-          <FloatingParticles count={15} className="opacity-80" />
-          <MathematicalPattern className="opacity-[0.03]" />
-        </>
-      )}
+      {!isMobile && <FloatingParticles count={prefersReducedMotion ? 10 : 30} />}
+      {!isMobile && !prefersReducedMotion && <HexagonalGrid className="opacity-[0.02]" />}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         
-        {/* Hero Section using HeroPattern */}
-        <section className="pb-20 relative">
-          <WatermarkHex className="opacity-[0.01] pointer-events-none" />
-          
-          <HeroPattern
-            title="Introduction to"
-            highlight="Ergo"
-            subtitle="Decentralize Everything. Build What Matters."
-            description="A next-generation Proof-of-Work smart contract platform empowering anyone to launch new forms of digital value without permission."
-            primaryAction={{
-              text: "Get Started",
-              icon: Rocket,
-              onClick: () => window.location.href = '/wallet'
-            }}
-            secondaryAction={{
-              text: "Explore Ecosystem",
-              icon: Compass,
-              onClick: () => window.location.href = '/ecosystem'
-            }}
-          />
-        </section>
-
         {/* What is Ergo Section */}
         <motion.section 
           initial={{ opacity: 0 }}
           animate={{ opacity: isInitialized ? 1 : 0 }}
           transition={{ duration: 0.6 }}
-          className="py-16"
+          className="py-16 pt-32"
         >
+          {/* Mission Statement - Hero Slogan */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
+              <span className="text-white">
+                Decentralize Everything.
+              </span>
+              <br />
+              <span className="text-brand-primary-400">
+                Build What Matters.
+              </span>
+            </h1>
+            <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
+              A next-generation Proof-of-Work smart contract platform empowering anyone to launch new forms of digital value without permission.
+            </p>
+          </motion.div>
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -321,19 +307,38 @@ export default function IntroductionPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                whileHover={{ scale: 1.02, y: -5 }}
+                whileTap={{ scale: 0.98 }}
+                className="h-full"
               >
-                <FeatureCard
-                  icon={tech.icon}
-                  title={tech.title}
-                  subtitle={tech.subtitle}
-                  description={tech.description}
-                  badge={tech.badge}
-                  action={{
-                    text: "Learn More",
-                    icon: ArrowRight,
-                    onClick: () => console.log(`Learn more about ${tech.title}`)
-                  }}
-                />
+                <Link href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`}>
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-brand-primary-500/50 hover:bg-neutral-900/80 transition-all duration-300 cursor-pointer group">
+                    {/* Icon */}
+                    <div className="w-12 h-12 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-brand-primary-500/20 transition-all duration-300">
+                      <tech.icon className="w-6 h-6 text-brand-primary-400" />
+                    </div>
+                    
+                    {/* Content */}
+                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-brand-primary-400 transition-colors">
+                      {tech.title}
+                    </h3>
+                    <p className="text-sm text-gray-400 mb-3">{tech.subtitle}</p>
+                    <p className="text-gray-300 text-sm mb-4 min-h-[3rem]">
+                      {tech.description}
+                    </p>
+                    
+                    {/* Footer */}
+                    <div className="flex items-center justify-between">
+                      <Badge className="bg-brand-primary-500/10 text-brand-primary-400 border border-brand-primary-500/30">
+                        {tech.badge}
+                      </Badge>
+                      <div className="flex items-center text-brand-primary-400 text-sm font-semibold">
+                        Learn More
+                        <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </div>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </div>
@@ -356,16 +361,6 @@ export default function IntroductionPage() {
   )
 }`}
           />
-        </motion.section>
-
-        {/* Stats Section */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInitialized ? 1 : 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="py-16"
-        >
-          <StatsGrid items={statsItems} columns={4} />
         </motion.section>
 
         {/* Use Cases Section */}

@@ -214,6 +214,7 @@ export interface FeatureCardProps {
     onClick?: () => void
   }
   className?: string
+  variant?: "default" | "compact"
 }
 
 export const FeatureCard: React.FC<FeatureCardProps> = ({
@@ -223,15 +224,17 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
   description,
   badge,
   action,
-  className = ""
+  className = "",
+  variant = "default",
 }) => {
+  const isCompact = variant === "compact"
   return (
     <motion.div 
       whileHover={{ y: -5, transition: { duration: 0.2 } }} 
       className={`group ${className}`}
     >
-      <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black h-full cursor-pointer">
-        <CardHeader>
+      <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black h-full cursor-pointer ${isCompact ? 'p-0' : ''}`}>
+        <CardHeader className={isCompact ? 'px-5 pt-5 pb-3' : undefined}>
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
               <Icon className="w-5 h-5 text-brand-primary-400" />
@@ -246,10 +249,12 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
             </div>
           </div>
         </CardHeader>
-        <CardContent>
-          <p className="text-gray-300 mb-4">
-            {description}
-          </p>
+        <CardContent className={isCompact ? 'px-5 pb-5 pt-0' : undefined}>
+          {!isCompact && (
+            <p className="text-gray-300 mb-4">
+              {description}
+            </p>
+          )}
           <div className="flex items-center justify-between">
             {badge && (
               <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
@@ -257,15 +262,25 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
               </Badge>
             )}
             {action && (
-              <Button 
-                size="sm" 
-                variant="ghost" 
-                className="text-brand-primary-400 hover:text-brand-primary-300 focus:ring-2 focus:ring-brand-primary-500"
-                onClick={action.onClick}
-              >
-                {action.text}
-                <action.icon className="w-4 h-4 ml-1" />
-              </Button>
+              isCompact ? (
+                <button 
+                  className="text-brand-primary-400 hover:text-brand-primary-300 text-sm inline-flex items-center"
+                  onClick={action.onClick}
+                >
+                  {action.text}
+                  <action.icon className="w-4 h-4 ml-1" />
+                </button>
+              ) : (
+                <Button 
+                  size="sm" 
+                  variant="ghost" 
+                  className="text-brand-primary-400 hover:text-brand-primary-300 focus:ring-2 focus:ring-brand-primary-500"
+                  onClick={action.onClick}
+                >
+                  {action.text}
+                  <action.icon className="w-4 h-4 ml-1" />
+                </Button>
+              )
             )}
           </div>
         </CardContent>

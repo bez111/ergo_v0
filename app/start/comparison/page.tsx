@@ -99,31 +99,6 @@ const simpleComparison = [
   }
 ]
 
-// Success stories - менее цветастый стиль
-const successStories = [
-  {
-    title: "DeFi Pioneer",
-    quote: "Ergo's eUTXO model made building our DEX predictable and secure",
-    author: "SigmaUSD Team",
-    icon: Coins,
-    color: "text-orange-400"
-  },
-  {
-    title: "Privacy Advocate", 
-    quote: "Native mixing and ring signatures - privacy by design",
-    author: "ErgoMixer Developer",
-    icon: Shield,
-    color: "text-orange-400"
-  },
-  {
-    title: "Smart Contract Dev",
-    quote: "ErgoScript just makes sense - no hidden gotchas",
-    author: "Community Developer",
-    icon: Brain,
-    color: "text-orange-400"
-  }
-]
-
 const getScoreColor = (score: string) => {
   switch (score) {
     case "excellent":
@@ -156,9 +131,6 @@ export default function ComparisonPage() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8 }}
                 >
-                  <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
-                    BLOCKCHAIN COMPARISON
-                  </Badge>
                   <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
                     Platform <span className="text-orange-400">Analysis</span>
                   </h1>
@@ -334,40 +306,92 @@ export default function ComparisonPage() {
             <h2 className="text-3xl font-bold text-center mb-12 text-white">
               What Makes <span className="text-orange-400">Ergo</span> Different
             </h2>
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {keyDifferentiators.map((item, index) => (
                 <motion.div
                   key={item.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200"
+                  className="relative group"
                 >
-                  <div className="flex items-center gap-3 mb-4">
-                    <div className="w-10 h-10 bg-neutral-800 rounded-lg flex items-center justify-center">
-                      <item.icon className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-orange-400">{item.title}</h3>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex items-start gap-2">
-                      <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <div className="font-medium text-white">Ergo:</div>
-                        <div className="text-gray-300 text-sm">{item.ergo}</div>
+                  {/* Main Card */}
+                  <div className="bg-gradient-to-br from-neutral-900 to-neutral-900/50 border border-neutral-700 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300">
+                    {/* Header */}
+                    <div className="flex items-start justify-between mb-6">
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                          <item.icon className="w-7 h-7 text-orange-400" />
+                        </div>
+                        <div>
+                          <h3 className="text-xl font-bold text-white">{item.title}</h3>
+                          <div className="text-xs text-gray-500 mt-1">Key Advantage</div>
+                        </div>
                       </div>
                     </div>
-                    <div className="flex items-start gap-2">
-                      <X className="w-4 h-4 text-neutral-400 mt-0.5 flex-shrink-0" />
-                      <div>
-                        <div className="font-medium text-gray-400">Others:</div>
-                        <div className="text-gray-400 text-sm">{item.others}</div>
+
+                    {/* Comparison Content */}
+                    <div className="space-y-4">
+                      {/* Ergo Advantage */}
+                      <div className="relative">
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-orange-600 rounded-full" />
+                        <div className="pl-6">
+                          <div className="flex items-center gap-2 mb-2">
+                            <CheckCircle className="w-5 h-5 text-orange-400" />
+                            <span className="text-sm font-semibold text-orange-400 uppercase tracking-wider">Ergo Advantage</span>
+                          </div>
+                          <p className="text-white font-medium">{item.ergo}</p>
+                        </div>
+                      </div>
+
+                      {/* Divider */}
+                      <div className="relative">
+                        <div className="absolute inset-0 flex items-center">
+                          <div className="w-full border-t border-neutral-700/50" />
+                        </div>
+                        <div className="relative flex justify-center">
+                          <span className="px-3 bg-gradient-to-br from-neutral-900 to-neutral-900/50 text-xs text-gray-500">VS</span>
+                        </div>
+                      </div>
+
+                      {/* Others Limitation */}
+                      <div className="relative opacity-60">
+                        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-neutral-600 to-neutral-700 rounded-full" />
+                        <div className="pl-6">
+                          <div className="flex items-center gap-2 mb-2">
+                            <X className="w-5 h-5 text-neutral-500" />
+                            <span className="text-sm font-semibold text-neutral-500 uppercase tracking-wider">Others</span>
+                          </div>
+                          <p className="text-gray-400">{item.others}</p>
+                        </div>
                       </div>
                     </div>
+
+                    {/* Hover Effect Gradient */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-orange-500/0 via-orange-500/0 to-orange-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </div>
                 </motion.div>
               ))}
             </div>
+
+            {/* Bottom CTA */}
+            <motion.div 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.5 }}
+              className="mt-12 text-center"
+            >
+              <p className="text-gray-400 mb-6">Experience the difference of building on a platform designed for the future</p>
+              <Button
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl"
+                asChild
+              >
+                <Link href="/technology">
+                  Explore Technology
+                  <ArrowRight className="w-4 h-4 ml-2" />
+                </Link>
+              </Button>
+            </motion.div>
           </section>
 
           {/* Platform Comparison Table - менее цветастый стиль */}
@@ -414,35 +438,6 @@ export default function ComparisonPage() {
             </div>
           </section>
 
-          {/* Success Stories - менее цветастый стиль */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold text-center mb-12 text-white">
-              <span className="text-orange-400">Developers</span> Already Building
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              {successStories.map((story, index) => (
-                <motion.div
-                  key={story.title}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1 }}
-                  className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200"
-                >
-                  <div className="flex items-center gap-3 mb-4">
-                    <story.icon className="w-8 h-8 text-orange-400" />
-                    <h3 className="text-lg font-semibold text-white">{story.title}</h3>
-                  </div>
-                  <blockquote className="text-gray-300 text-sm italic mb-3">
-                    "{story.quote}"
-                  </blockquote>
-                  <div className="text-sm font-medium text-orange-400">
-                    — {story.author}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </section>
-
           {/* Features Grid - менее цветастый стиль */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold text-center mb-12 text-white">
@@ -456,7 +451,7 @@ export default function ComparisonPage() {
               </div>
               <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-200">
                 <Users className="w-12 h-12 text-orange-400 mx-auto mb-4" />
-                <h3 className="text-lg font-semibold text-white mb-2">1000+ developers</h3>
+                <h3 className="text-lg font-semibold text-white mb-2">100+ developers</h3>
                 <p className="text-gray-400 text-sm">Growing active community</p>
               </div>
               <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center hover:scale-105 transition-transform duration-200">

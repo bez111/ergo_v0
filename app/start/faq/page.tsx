@@ -6,6 +6,7 @@ import { ChevronDown, Search, HelpCircle, Users, Shield, Code, Zap, Cpu } from "
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
+import { Card, CardContent } from "@/components/ui/card"
 
 const faqData = [
   // Basics
@@ -130,60 +131,82 @@ export default function FAQPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,136,0,0.3),rgba(255,255,255,0))]"></div>
-      
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         {/* Hero Section */}
-        <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }} className="text-center mb-16">
-          <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30">
-            FREQUENTLY ASKED QUESTIONS
-          </Badge>
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pb-4">
+        <motion.div 
+          initial={{ opacity: 0, y: -20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          transition={{ duration: 0.7 }} 
+          className="text-center mb-16"
+        >
+          <div className="flex items-center justify-center gap-3 mb-6">
+          </div>
+          <h1 className="text-5xl md:text-7xl font-bold text-white pb-4">
             Need Help?
           </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="mt-4 text-lg md:text-xl text-gray-400 max-w-3xl mx-auto">
             Find answers to common questions about Ergo, its technology, and the ecosystem. If you can't find what you're looking for, join our community channels.
           </p>
         </motion.div>
 
         {/* Search and Filters */}
-        <div className="sticky top-0 z-20 py-6 bg-black/80 backdrop-blur-md mb-12">
+        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm mb-12 sticky top-4 z-20">
+          <CardContent className="p-6">
             <div className="relative mb-6">
-                <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
-                <Input
-                    type="text"
-                    placeholder="Search questions..."
-                    value={searchTerm}
-                    onChange={e => setSearchTerm(e.target.value)}
-                    className="pl-12 w-full bg-gray-900/70 border-gray-700/50 h-12 text-base"
-                />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+              <Input
+                type="text"
+                placeholder="Search questions..."
+                value={searchTerm}
+                onChange={e => setSearchTerm(e.target.value)}
+                className="pl-12 w-full bg-neutral-800 border-neutral-600 h-12 text-base focus:ring-2 focus:ring-brand-primary-500 focus:border-brand-primary-500"
+              />
             </div>
             <div className="flex flex-wrap items-center justify-center gap-2">
-                {categories.map(category => (
-                    <Button
-                        key={category}
-                        variant={activeCategory === category ? "default" : "outline"}
-                        onClick={() => setActiveCategory(category)}
-                        className="rounded-full"
-                    >
-                        {category}
-                    </Button>
-                ))}
+              {categories.map(category => (
+                <Button
+                  key={category}
+                  variant={activeCategory === category ? "default" : "outline"}
+                  onClick={() => setActiveCategory(category)}
+                  className={activeCategory === category 
+                    ? "bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-mono transition-all duration-200" 
+                    : "border-neutral-500 text-neutral-400 hover:bg-neutral-500/10 font-mono transition-all duration-200"
+                  }
+                >
+                  {category}
+                </Button>
+              ))}
             </div>
-        </div>
+          </CardContent>
+        </Card>
         
         {/* FAQ List */}
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="space-y-4">
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((faq, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <div className="border border-gray-800 rounded-lg overflow-hidden bg-gray-900/50">
+                <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/30 transition-all duration-300">
                   <button
                     onClick={() => setExpanded(expanded === index ? null : index)}
-                    className="w-full p-5 flex justify-between items-center text-left"
+                    className="w-full p-6 flex justify-between items-start text-left group"
                   >
-                    <span className="text-lg font-medium text-white">{faq.q}</span>
-                    <motion.div animate={{ rotate: expanded === index ? 180 : 0 }}>
+                    <div className="flex items-start gap-3 flex-1">
+                      <div className="w-6 h-6 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0">
+                        <faq.icon className="w-3 h-3 text-brand-primary-400" />
+                      </div>
+                      <div className="flex-1">
+                        <span className="text-lg font-medium text-white group-hover:text-brand-primary-400 transition-colors">
+                          {faq.q}
+                        </span>
+                        <div className="text-xs text-gray-500 mt-1 uppercase tracking-wider">
+                          {faq.category}
+                        </div>
+                      </div>
+                    </div>
+                    <motion.div 
+                      animate={{ rotate: expanded === index ? 180 : 0 }}
+                      className="ml-4 mt-1"
+                    >
                       <ChevronDown className="w-5 h-5 text-gray-400" />
                     </motion.div>
                   </button>
@@ -195,18 +218,26 @@ export default function FAQPage() {
                         exit={{ height: 0, opacity: 0 }}
                         className="overflow-hidden"
                       >
-                        <div className="px-5 pb-5 text-gray-300">
-                          <p className="border-t border-gray-800 pt-4">{faq.a}</p>
+                        <div className="px-6 pb-6">
+                          <div className="ml-9 pt-2 border-t border-neutral-700">
+                            <p className="text-gray-300 leading-relaxed mt-4 whitespace-pre-line">
+                              {faq.a}
+                            </p>
+                          </div>
                         </div>
                       </motion.div>
                     )}
                   </AnimatePresence>
-                </div>
+                </Card>
               </motion.div>
             ))
           ) : (
-            <motion.div variants={itemVariants} className="text-center py-12">
-              <p className="text-gray-400 text-lg">No questions found. Try a different search or filter.</p>
+            <motion.div variants={itemVariants}>
+              <Card className="bg-neutral-900/50 border-neutral-700">
+                <CardContent className="text-center py-12">
+                  <p className="text-gray-400 text-lg">No questions found. Try a different search or filter.</p>
+                </CardContent>
+              </Card>
             </motion.div>
           )}
         </motion.div>

@@ -746,7 +746,7 @@ export default function MyComponent() {
                     whileHover={{ x: prefersReducedMotion ? 0 : 5, transition: { duration: 0.2 } }}
                   >
                   <div className="flex items-center justify-between mb-4">
-                      <Badge variant="outline" className="border-brand-primary-500/30 text-brand-primary-400">{type.tag}</Badge>
+                      <Badge variant="outline" className="border-neutral-500 text-neutral-400">{type.tag}</Badge>
                     <code className="text-gray-500 text-sm">{type.desc}</code>
                       <div className="opacity-0 group-hover:opacity-100 transition-opacity">
                         <CopyButton 
@@ -1078,18 +1078,7 @@ if (OUTPUTS.size > 0) result`}
                   All patterns include comprehensive TypeScript interfaces, usage examples, and auto-generated 
                   documentation. Props are automatically inferred and documented for better developer experience.
                 </p>
-                <div className="flex items-center gap-4">
-                  <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
-                    TypeScript
-                  </Badge>
-                  <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
-                    Auto-documented
-                  </Badge>
-                  <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
-                    Copy-paste ready
-                  </Badge>
               </div>
-            </div>
             </motion.div>
           </TabsContent>
 

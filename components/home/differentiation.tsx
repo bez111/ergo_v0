@@ -159,12 +159,7 @@ export function Differentiation() {
                     hoveredIndex === index ? "border-brand-primary-500/50 bg-brand-primary-500/5" : "",
                   )}
                 >
-                  {/* Glitch corner effect */}
-                  <div className="absolute top-0 right-0 w-12 h-12 overflow-hidden opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="absolute rotate-45 bg-brand-primary-500/20 text-brand-primary-400 font-mono text-[8px] py-0.5 px-4 font-bold -right-5 top-3">
-                      ERGO
-                    </div>
-                  </div>
+
 
                   <div
                     className={cn(
