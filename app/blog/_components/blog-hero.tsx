@@ -1,6 +1,5 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Eye, Heart, Clock, Star } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import Link from "next/link"
@@ -27,10 +26,7 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
   return (
     <section className="flex flex-col lg:flex-row gap-8 mb-12">
       {/* Featured Article */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
+      <div
         className="relative flex-1 bg-neutral-900/50 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm border border-neutral-700"
       >
         <div className="absolute inset-0">
@@ -47,10 +43,7 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
         </div>
 
         <div className="relative z-10 p-8 h-full flex flex-col justify-end min-h-[400px]">
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.2, duration: 0.6 }}
+          <div
             className="flex items-center gap-3 mb-4"
           >
             <span
@@ -62,30 +55,21 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
             <span className="px-3 py-1 rounded-xl bg-white/20 backdrop-blur-md text-white text-sm">
               {featuredPost.category.toUpperCase()}
             </span>
-          </motion.div>
+          </div>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3, duration: 0.6 }}
+          <h1
             className="text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg leading-tight"
           >
             {featuredPost.title}
-          </motion.h1>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4, duration: 0.6 }}
+          <p
             className="text-white/90 text-lg mb-6 leading-relaxed"
           >
             {featuredPost.description}
-          </motion.p>
+          </p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5, duration: 0.6 }}
+          <div
             className="flex items-center gap-4 mb-6"
           >
             {featuredPost.author.avatar && (
@@ -104,12 +88,9 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
                 {featuredPost.author.role} • {featuredPost.publishedAt}
               </div>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.6 }}
+          <div
             className="flex items-center gap-6 mb-8"
           >
             <div className="flex items-center gap-2 text-white/70">
@@ -124,36 +105,26 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
               <Clock className="w-4 h-4" />
               <span className="text-sm">{featuredPost.readTime} min read</span>
             </div>
-          </motion.div>
+          </div>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.7, duration: 0.6 }}
-          >
+          <div>
             <Link href={`/blog/${featuredPost.slug}`}>
               <button className="px-8 py-4 rounded-xl bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
                 Read Article
               </button>
             </Link>
-          </motion.div>
+          </div>
         </div>
-      </motion.div>
+      </div>
 
       {/* Trending Articles */}
-      <motion.div
-        initial={{ opacity: 0, x: 20 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ delay: 0.3, duration: 0.6 }}
+      <div
         className="flex flex-col gap-4 w-full lg:w-80"
       >
         <h3 className="text-xl font-bold text-white mb-2">Trending Now</h3>
         {trendingPosts.slice(0, 3).map((post, index) => (
-          <motion.div
+          <div
             key={post.id}
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
             className="group relative bg-neutral-900/50 backdrop-blur-md rounded-xl p-4 border border-neutral-700 hover:bg-neutral-900/80 hover:border-brand-primary-500/30 transition-all duration-300 hover:scale-105"
           >
             <Link href={`/blog/${post.slug}`}>
@@ -190,9 +161,9 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
                 </div>
               </div>
             </Link>
-          </motion.div>
+          </div>
         ))}
-      </motion.div>
+      </div>
     </section>
   )
 }

@@ -24,13 +24,10 @@ export default function BlogPage() {
   const featuredPost = blogPosts.find((post) => post.featured) || blogPosts[0]
   const trendingPosts = blogPosts.filter((post) => post.trending)
 
-  // Prevent hydration mismatch and add initialization delay
+  // Prevent hydration mismatch
   useEffect(() => {
     setHasMounted(true)
-    const timer = setTimeout(() => {
-      setIsInitialized(true)
-    }, 100)
-    return () => clearTimeout(timer)
+    setIsInitialized(true)
   }, [])
 
   const filteredPosts = useMemo(() => {
@@ -108,10 +105,7 @@ export default function BlogPage() {
 
           {/* Articles Grid */}
           <section className="mb-16">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
-              transition={{ duration: 0.6 }}
+            <div
               className="mb-8 bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm"
             >
               <div className="flex items-center justify-between">
@@ -127,7 +121,7 @@ export default function BlogPage() {
                   </span>
                 </div>
               </div>
-            </motion.div>
+            </div>
 
             {filteredPosts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -136,7 +130,7 @@ export default function BlogPage() {
                 ))}
               </div>
             ) : (
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center py-16">
+              <div className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No articles found</h3>
                 <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
@@ -146,7 +140,7 @@ export default function BlogPage() {
                 >
                   Clear Filters
                 </button>
-              </motion.div>
+              </div>
             )}
           </section>
 

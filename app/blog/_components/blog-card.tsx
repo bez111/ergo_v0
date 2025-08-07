@@ -16,7 +16,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
       href={`/blog/${post.slug}`}
       className={`group block ${featured ? 'col-span-full lg:col-span-2' : ''}`}
     >
-      <article className="relative h-full overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm transition-all duration-300 hover:border-brand-primary-500/30 hover:bg-neutral-900/80">
+      <article className="relative h-full overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm hover:border-brand-primary-500/30 hover:bg-neutral-900/80 transition-colors">
         
         {/* Image */}
         <div className="relative h-48 lg:h-56 overflow-hidden">
@@ -24,7 +24,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
             src={post.image || '/placeholder.svg'}
             alt={post.title}
             fill
-            className="object-cover transition-transform duration-500 group-hover:scale-110"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />
           
@@ -91,10 +91,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           )}
         </div>
         
-        {/* Hover effect - subtle glow */}
-        <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-brand-primary-500/10 to-brand-primary-500/5" />
-        </div>
+
       </article>
     </Link>
   )

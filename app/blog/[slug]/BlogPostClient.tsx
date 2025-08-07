@@ -80,10 +80,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
   // Prevent hydration mismatch
   useEffect(() => {
     setHasMounted(true)
-    const timer = setTimeout(() => {
-      setIsInitialized(true)
-    }, 100)
-    return () => clearTimeout(timer)
+    setIsInitialized(true)
   }, [])
 
   useEffect(() => {
