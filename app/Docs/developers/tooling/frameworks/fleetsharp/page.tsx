@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { UniversalCopyCodeBlock } from "../../../../../../components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function FleetSharpPage() {
   return (
@@ -41,7 +41,7 @@ var tx = new TransactionBuilder(currentHeight)
     .build().ToPlainObject();
 
 var signedTx = await node.SignTransaction(tx);
-var transactionId = await node.SubmitSignedTransaction(signedTx);`} className="mb-4" />
+var transactionId = await node.SubmitSignedTransaction(signedTx);`}</CodeBlock>
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Send a transaction with tokens</h3>
       <CodeBlock language="typescript">{`var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
 var currentHeight = await node.GetCurrentHeight();
@@ -62,7 +62,7 @@ var tx = new TransactionBuilder(currentHeight)
     .build().ToPlainObject();
 
 var signedTx = await node.SignTransaction(tx);
-var transactionId = await node.SubmitSignedTransaction(signedTx);`} className="mb-4" />
+var transactionId = await node.SubmitSignedTransaction(signedTx);`}</CodeBlock>
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Minting tokens</h3>
       <CodeBlock language="typescript">{`var unspentWalletBoxes = await node.GetAllUnspentBoxesInWallet(false);
 var currentHeight = await node.GetCurrentHeight();
@@ -85,7 +85,7 @@ var tx = new TransactionBuilder(currentHeight)
     .build().ToPlainObject();
 
 var signedTx = await node.SignTransaction(tx);
-var transactionId = await node.SubmitSignedTransaction(signedTx);`} className="mb-4" />
+var transactionId = await node.SubmitSignedTransaction(signedTx);`}</CodeBlock>
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Interacting with a contract and setting registers</h3>
       <CodeBlock language="typescript">{`using static FleetSharp.Sigma.ConstantSerializer;
 using static FleetSharp.Sigma.ISigmaCollection;
@@ -112,7 +112,7 @@ var tx = new TransactionBuilder(currentHeight)
     .build().ToPlainObject();
 
 var signedTx = await node.SignTransaction(tx);
-var transactionId = await node.SubmitSignedTransaction(signedTx);`} className="mb-4" />
+var transactionId = await node.SubmitSignedTransaction(signedTx);`}</CodeBlock>
       <h3 className="text-lg font-semibold text-orange-400 mb-2">Example: Reading registers from a box</h3>
       <CodeBlock language="typescript">{`using static FleetSharp.Sigma.ConstantSerializer;
 using static FleetSharp.Sigma.ISigmaCollection;
@@ -123,7 +123,7 @@ var box = await node.GetBox("07b1276dd8207767c320a76a0a7ba9c76feb1f414c58cb93358
 byte[] borrower = SParse(box.additionalRegisters.R4);
 long amount = SParse(box.additionalRegisters.R5);
 long repayment = SParse(box.additionalRegisters.R6);
-int maturityLength = SParse(box.additionalRegisters.R7);`} className="mb-8" />
+int maturityLength = SParse(box.additionalRegisters.R7);`}</CodeBlock>
     </>
   );
 } 

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Database, Box, Key, FileText, Info, AlertTriangle } from 'lucide-react';
-import { UniversalCopyCodeBlock } from '@/components/ui/UniversalCopyCodeBlock';
+import { CodeBlock } from "@/components/ui";
 
 export default function BoxRegistersPage() {
   return (

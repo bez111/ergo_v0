@@ -129,7 +129,7 @@ export default function DataModelApisPage() {
                   <BookOpen className="w-4 h-4" />
                   <span className="font-medium">Table of Contents</span>
                 </div>
-                <ChevronRight className={`w-4 h-4 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`}</CodeBlock>
+                <ChevronRight className={`w-4 h-4 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`} />
               </button>
               {isMobileMenuOpen && (
                 <div className="mt-2 p-3 bg-neutral-900/80 rounded-xl border border-neutral-800 backdrop-blur-sm animate-in slide-in-from-top-2 duration-200">
@@ -702,8 +702,7 @@ export default function DataModelApisPage() {
                 Consider the 'proof-of-no-premine' box from the Ergo genesis state. This box contains the last block IDs from Bitcoin and Ethereum at the launch time, as well as the latest news headlines:
               </p>
               <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-                <CodeBlock language="typescript"
-                  code={`{
+                <CodeBlock language="json">{`{
   "boxId": "b8ce8cfe331e5eadfb0783bdc375c94413433f65e1e45857d71550d42e4d83bd",
   "value": 1000000000,
   "ergoTree": "10010100d17300",
@@ -716,8 +715,7 @@ export default function DataModelApisPage() {
     "R7": "0e54e8bfb0e8af84efbc9ae5b9b3e8a1a1e38081e68c81e7bbade38081e58c85e5aeb9e28094e28094e696b0e697b6e4bba3e5ba94e5afb9e585a8e79083e58c96e68c91e68898e79a84e4b8ade59bbde4b98be98193",
     "R4": "0e4030303030303030303030303030303030303031346332653265376533336435316165376536366636636362363934326333343337313237623336633333373437"
   }
-}`}
-                />
+}`}</CodeBlock>
               </div>
             </div>
 
@@ -729,8 +727,7 @@ export default function DataModelApisPage() {
               
               <h3 className="text-xl font-semibold mb-3 text-orange-400">Example ErgoScript</h3>
               <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-                <CodeBlock language="typescript"
-                  code={`{ // Example ErgoScript using box properties
+                <CodeBlock language="scala">{`{ // Example ErgoScript using box properties
   // Retrieve the value and token multipliers from the registers of the current box (SELF)
   val valueMultiplier = SELF.R4[Int].get
   val tokenMultiplier = INPUTS(1).R4[Int].get // Accessing register of another input box
@@ -754,8 +751,7 @@ export default function DataModelApisPage() {
   }
 }
 // Context Variables used: SELF, INPUTS, OUTPUTS (See ../scs/blockchain-context.md)
-// Functions used: sigmaProp, PK (See ../scs/sigma.md)`}
-                />
+// Functions used: sigmaProp, PK (See ../scs/sigma.md)`}</CodeBlock>
               </div>
             </div>
 

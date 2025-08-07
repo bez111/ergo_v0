@@ -2,7 +2,7 @@
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, ExternalLink } from "lucide-react";
-import { UniversalCopyCodeBlock } from "../../../../../../../../components/ui/UniversalCopyCodeBlock";
+import { CodeBlock } from "@/components/ui";
 
 export default function LocalNodePage() {
   return (
@@ -29,7 +29,7 @@ export default function LocalNodePage() {
       <p className="text-gray-300 mb-4 max-w-2xl">
         Suppose we <a href="https://github.com/ergoplatform/ergo/wiki/Set-up-a-full-node" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">set up a full node</a> and started it using the following command.
       </p>
-      <CodeBlock language="typescript">{`$ java -jar -Xmx4G target/scala-2.12/ergo-4.0.8.jar --testnet -c ergo-testnet.conf`} className="mb-4" />
+      <CodeBlock language="bash">{`$ java -jar -Xmx4G target/scala-2.12/ergo-4.0.8.jar --testnet -c ergo-testnet.conf`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         We will need some configuration parameters which can be loaded from <code>ergotool.json</code> file
       </p>
@@ -49,7 +49,7 @@ export default function LocalNodePage() {
   "parameters": {
     "newBoxSpendingDelay": "30"
   }
-}`} className="mb-4" />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         Here <code>apiKey</code> is the secret key required for API authentication which can be obtained as described <Link href="/Docs/developers/tooling/swagger" className="text-cyan-400 hover:underline">here</Link>. And mnemonic is the secret phrase obtained during <Link href="/Docs/developers/tooling/wallet" className="text-cyan-400 hover:underline">setup of a new wallet</Link> or if you don't want to set up your node using ergo-tool's <a href="https://github.com/ergoplatform/ergo-tool#supported-commands" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">mnemonic</a> command.
       </p>
@@ -62,19 +62,19 @@ export default function LocalNodePage() {
     int newBoxSpendingDelay = Integer.parseInt(conf.getParameters().get("newBoxSpendingDelay"));
     // the rest of the code shown below 
     ...
-}`} className="mb-4" />
+}`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         Next, we connect to the running testnet node from our Java application by creating a <code>ErgoClient</code> instance.
       </p>
       <CodeBlock language="typescript">{`ErgoNodeConfig nodeConf = conf.getNode();
-ErgoClient ergoClient = RestApiErgoClient.create(nodeConf, null);`} className="mb-4" />
+ErgoClient ergoClient = RestApiErgoClient.create(nodeConf, null);`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         Using <code>ErgoClient</code> we can execute <code>lib-api/src/main/java/org/ergoplatform/appkit/ErgoClient.java</code> any block of code in the current blockchain context.
       </p>
       <CodeBlock language="typescript">{`String txJson = ergoClient.execute((BlockchainContext ctx) -> {
     // here we will use ctx to create and sign a new transaction
     // which then be sent to the node and also serialized into Json
-});`} className="mb-4" />
+});`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         The lambda passed to <code>execute</code> is called when the current blockchain context is loaded from the node. This is where we shall put our application logic.
       </p>
@@ -100,7 +100,7 @@ ErgoProver prover = ctx.newProverBuilder()
     .withMnemonic(
             SecretString.create(nodeConf.getWallet().getMnemonic()),
             SecretString.create(nodeConf.getWallet().getMnemonicPassword()))
-    .build();`} className="mb-4" />
+    .build();`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         Now that we have the input boxes to spend in the transaction, we need to create an output box with the requested <code>amountToPay</code> and the specific contract protecting that box.
       </p>
@@ -118,7 +118,7 @@ OutBox newBox = txB.outBoxBuilder()
                         .item("pkOwner", prover.getP2PKAddress().pubkey())
                         .build(),
                 "{ sigmaProp(HEIGHT > freezeDeadline) && pkOwner }"))
-        .build();`} className="mb-4" />
+        .build();`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         Note, in order to compile <code>ErgoContract</code> from source, the <code>compileContract</code> method requires us to provide values for named constants which are used in the script.
       </p>
@@ -137,13 +137,13 @@ UnsignedTransaction tx = txB.boxesToSpend(boxes.get())
         .outputs(newBox)
         .fee(Parameters.MinFee)
         .sendChangeTo(prover.getP2PKAddress()) // i.e. back to the wallet's pk
-        .build();`} className="mb-4" />
+        .build();`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         And finally, we use <code>prover</code> to sign the transaction, obtain a new <code>SignedTransaction</code> instance and use context to send it to the Ergo node. 
       </p>
       <CodeBlock language="typescript">{`SignedTransaction signed = prover.sign(tx);
 String txId = ctx.sendTransaction(signed);
-return signed.toJson(/*prettyPrint=*/true, /*formatJson=*/true);`} className="mb-4" />
+return signed.toJson(/*prettyPrint=*/true, /*formatJson=*/true);`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
         As the last step, we serialize signed transactions into Json with pretty printing turned-on. 
       </p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Shield, Code, Database, Eye, Zap } from 'lucide-react';
-import { UniversalCopyCodeBlock } from '@/components/ui/UniversalCopyCodeBlock';
+import { CodeBlock } from "@/components/ui";
 
 export default function LightweightProofsPage() {
   return (
