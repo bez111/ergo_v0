@@ -229,7 +229,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     "@context": "https://schema.org",
     "@graph": [
       articleSchema,
-      // breadcrumbSchema, // Hidden as per user request
+      breadcrumbSchema,
       faqSchema,
       webPageSchema,
       blogPostingSchema
