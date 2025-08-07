@@ -1,14 +1,12 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowLeft, ArrowUp, Eye, Heart, Clock, Twitter, Linkedin, Copy, Check, UserCircle, Calendar, Tag, BookOpen, MessageCircle, Share2, ChevronRight, Hash, AlertCircle, CheckCircle, RefreshCw, ExternalLink, Menu, X } from "lucide-react"
+import { ArrowLeft, ArrowUp, Eye, Heart, Clock, Twitter, Copy, Check, UserCircle, Calendar, MessageCircle, Share2, Hash, AlertCircle, CheckCircle, ExternalLink, Menu, X } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCard } from "../_components/blog-card"
 import { BlogBreadcrumbs } from "../_components/blog-breadcrumbs"
-import { BlogRating } from "../_components/blog-rating"
-import { BlogActions } from "../_components/blog-actions"
 import Link from "next/link"
-import { useState, MouseEvent, useEffect, useRef } from "react"
+import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
@@ -49,7 +47,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
     setLikes(prev => isLiked ? prev - 1 : prev + 1)
   }
 
-  const handleShare = async (platform: 'twitter' | 'linkedin' | 'copy' | 'telegram' | 'reddit') => {
+  const handleShare = async (platform: 'twitter' | 'copy') => {
     const url = window.location.href
     const text = `Check out this article: ${post.title}`
 
@@ -60,15 +58,9 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       return
     }
 
-    const shareUrls = {
-      twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
-      linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
-      telegram: `https://t.me/share/url?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
-      reddit: `https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(post.title)}`
-    }
-    
-    if (shareUrls[platform]) {
-      window.open(shareUrls[platform], '_blank', 'noopener,noreferrer')
+    if (platform === 'twitter') {
+      const shareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`
+      window.open(shareUrl, '_blank', 'noopener,noreferrer')
     }
   }
 
@@ -373,7 +365,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                       <Link 
                         key={tag}
                         href={`/blog?tag=${tag}`}
-                        className="px-3 py-1 bg-gray-900/30 rounded-full text-sm text-gray-400 hover:text-orange-400 hover:bg-orange-400/10 transition-all border border-gray-800"
+                        className="px-2 py-1 text-xs text-gray-500 hover:text-orange-400 transition-colors"
                       >
                         #{tag}
                       </Link>
@@ -382,70 +374,40 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                 </div>
               </div>
 
-              {/* Consolidated CTA Section */}
+              {/* Simple Engagement Section */}
               <motion.div 
                 variants={itemVariants}
-                className="mt-12 p-8 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-2xl border border-orange-500/20"
+                className="mt-12 flex flex-wrap items-center justify-between gap-4 p-6 bg-gray-900/30 rounded-xl border border-gray-800"
               >
-                <h3 className="text-2xl font-bold mb-4 text-white">Was this helpful?</h3>
-                <p className="text-gray-300 mb-6">
-                  Let us know what you think and stay updated with the latest from Ergo.
-                </p>
-                
-                {/* Like and Share */}
-                <div className="flex flex-wrap gap-4 mb-6">
+                <div className="flex items-center gap-4">
                   <button 
                     onClick={handleLike}
                     className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all ${
-                      isLiked ? 'bg-red-500 text-white' : 'bg-gray-800 hover:bg-gray-700'
+                      isLiked ? 'bg-orange-500 text-white' : 'bg-gray-800 hover:bg-gray-700'
                     }`}
                   >
                     <Heart className={`w-5 h-5 ${isLiked ? 'fill-current' : ''}`} />
-                    <span>{likes} likes</span>
+                    <span>{likes}</span>
                   </button>
                   
-                  <button 
-                    onClick={() => setShowComments(!showComments)}
-                    className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
-                  >
-                    <MessageCircle className="w-5 h-5" />
-                    <span>Comments</span>
-                  </button>
-
                   <div className="flex items-center gap-2">
-                    <button onClick={() => handleShare('twitter')} className="p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                    <button onClick={() => handleShare('twitter')} className="p-2 rounded-lg hover:bg-gray-800 transition-colors" title="Share on Twitter">
                       <Twitter className="w-4 h-4" />
                     </button>
-                    <button onClick={() => handleShare('linkedin')} className="p-2 rounded-lg hover:bg-gray-800 transition-colors">
-                      <Linkedin className="w-4 h-4" />
-                    </button>
-                    <button onClick={() => handleShare('copy')} className="p-2 rounded-lg hover:bg-gray-800 transition-colors">
+                    <button onClick={() => handleShare('copy')} className="p-2 rounded-lg hover:bg-gray-800 transition-colors" title="Copy link">
                       {copied ? <Check className="w-4 h-4 text-green-400" /> : <Copy className="w-4 h-4" />}
                     </button>
                   </div>
                 </div>
 
-                {/* Newsletter Signup */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <input 
-                    type="email" 
-                    placeholder="your@email.com"
-                    className="flex-1 px-4 py-2 bg-black/50 border border-gray-700 rounded-lg text-white placeholder-gray-500"
-                  />
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-white">
-                    Subscribe for Updates
-                  </Button>
-                </div>
+                <button 
+                  onClick={() => setShowComments(!showComments)}
+                  className="flex items-center gap-2 px-4 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors"
+                >
+                  <MessageCircle className="w-5 h-5" />
+                  <span>Comments</span>
+                </button>
               </motion.div>
-
-              {/* Rating */}
-              <div className="mt-8 no-print">
-                <BlogRating 
-                  postId={post.slug} 
-                  initialRating={4.5} 
-                  initialCount={23}
-                />
-              </div>
 
               {/* Comments Section */}
               {showComments && (
@@ -455,24 +417,22 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                 </div>
               )}
 
-              {/* More from Author */}
+              {/* More from Author - Simplified */}
               {authorArticles.length > 0 && (
-                <motion.section variants={itemVariants} className="mt-12">
-                  <h3 className="text-2xl font-bold mb-6 text-white">
+                <motion.section variants={itemVariants} className="mt-12 pt-8 border-t border-gray-800">
+                  <h3 className="text-lg font-semibold mb-4 text-gray-400">
                     More from {post.author.name}
                   </h3>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <div className="space-y-3">
                     {authorArticles.map((article) => (
                       <Link 
                         key={article.id} 
                         href={`/blog/${article.slug}`}
-                        className="block p-4 bg-gray-900/30 rounded-xl border border-gray-800 hover:border-orange-500/50 transition-all"
+                        className="block group"
                       >
-                        <h4 className="font-semibold text-white mb-2 line-clamp-2">{article.title}</h4>
-                        <p className="text-sm text-gray-400 mb-3 line-clamp-2">{article.description}</p>
-                        <div className="flex items-center gap-4 text-xs text-gray-500">
-                          <span>{article.publishedAt}</span>
-                          <span>{article.readTime} min read</span>
+                        <h4 className="text-white group-hover:text-orange-400 transition-colors mb-1">{article.title}</h4>
+                        <div className="text-xs text-gray-500">
+                          {article.publishedAt} · {article.readTime} min read
                         </div>
                       </Link>
                     ))}
@@ -483,7 +443,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             
             {/* Sidebar - Desktop */}
             <aside className="col-span-12 md:col-span-4 hidden md:block no-print">
-              <div className="sticky top-24 space-y-6">
+              <div className="sticky top-24">
                 {/* Table of Contents */}
                 {toc.length > 0 && (
                   <div className="p-6 rounded-xl bg-gray-900/30 border border-gray-800">
@@ -503,9 +463,6 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                     </nav>
                   </div>
                 )}
-
-                {/* Blog Actions */}
-                <BlogActions title={post.title} slug={post.slug} />
               </div>
             </aside>
 
@@ -546,9 +503,6 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                         </nav>
                       </div>
                     )}
-
-                    {/* Mobile Actions */}
-                    <BlogActions title={post.title} slug={post.slug} />
                   </div>
                 </motion.div>
               )}
@@ -558,12 +512,9 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
           {/* Related Articles */}
           {relatedPosts && relatedPosts.length > 0 && (
             <motion.section variants={itemVariants} className="mt-16 pt-12 border-t border-gray-800 no-print">
-              <div className="text-center mb-8">
-                <h2 className="text-3xl font-bold mb-2 text-white">
-                  Related Articles
-                </h2>
-                <p className="text-gray-400">Continue exploring with these recommended reads</p>
-              </div>
+              <h2 className="text-xl font-semibold mb-6 text-gray-400">
+                Related Articles
+              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 {relatedPosts.slice(0, 3).map((relatedPost) => (
                   <BlogCard key={relatedPost.id} post={relatedPost} />
