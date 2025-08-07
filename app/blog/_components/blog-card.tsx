@@ -16,13 +16,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
       href={`/blog/${post.slug}`}
       className={`group block ${featured ? 'col-span-full lg:col-span-2' : ''}`}
     >
-      <article className="relative h-full overflow-hidden rounded-lg border border-orange-500/20 bg-black/50 backdrop-blur-sm transition-all duration-300 hover:border-orange-500/50 hover:shadow-[0_0_30px_rgba(255,94,24,0.3)]">
-        {/* Cyberpunk corner accent */}
-        <div className="absolute top-0 right-0 w-16 h-16">
-          <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-orange-500/20 to-transparent" />
-          <div className="absolute top-0 right-0 w-12 h-[2px] bg-orange-500" />
-          <div className="absolute top-0 right-0 w-[2px] h-12 bg-orange-500" />
-        </div>
+      <article className="relative h-full overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm transition-all duration-300 hover:border-brand-primary-500/30 hover:bg-neutral-900/80">
         
         {/* Image */}
         <div className="relative h-48 lg:h-56 overflow-hidden">
@@ -36,14 +30,14 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           
           {/* Category badge */}
           <div className="absolute top-4 left-4">
-            <span className="px-3 py-1 text-xs font-mono uppercase tracking-wider bg-orange-500/90 text-black rounded">
+            <span className="px-3 py-1 text-xs font-semibold bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30 rounded-lg backdrop-blur-sm">
               {post.category}
             </span>
           </div>
           
           {featured && (
             <div className="absolute top-4 right-4">
-              <span className="px-3 py-1 text-xs font-mono uppercase tracking-wider bg-green-500/90 text-black rounded">
+              <span className="px-3 py-1 text-xs font-semibold bg-status-success-500/20 text-status-success-400 border border-status-success-500/30 rounded-lg backdrop-blur-sm">
                 Featured
               </span>
             </div>
@@ -52,32 +46,32 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
         
         {/* Content */}
         <div className="p-6">
-          <h3 className={`font-bold mb-3 text-white group-hover:text-orange-400 transition-colors ${
+          <h3 className={`font-bold mb-3 text-white group-hover:text-brand-primary-400 transition-colors ${
             featured ? 'text-2xl lg:text-3xl' : 'text-xl'
           }`}>
             {post.title}
           </h3>
           
-          <p className="text-gray-400 mb-4 line-clamp-2">
+          <p className="text-gray-300 mb-4 line-clamp-2">
             {post.description}
           </p>
           
           {/* Meta info */}
-          <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 font-mono">
+          <div className="flex flex-wrap items-center gap-4 text-xs text-gray-400">
             <div className="flex items-center gap-1">
-              <Calendar className="w-3 h-3" />
+              <Calendar className="w-3 h-3 text-gray-500" />
               <time dateTime={post.publishedAt}>
                 {post.publishedAt}
               </time>
             </div>
             
             <div className="flex items-center gap-1">
-              <Clock className="w-3 h-3" />
+              <Clock className="w-3 h-3 text-gray-500" />
               <span>{post.readTime} min read</span>
             </div>
             
             <div className="flex items-center gap-1">
-              <User className="w-3 h-3" />
+              <User className="w-3 h-3 text-gray-500" />
               <span>{post.author.name}</span>
             </div>
           </div>
@@ -88,7 +82,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               {post.tags.slice(0, 3).map(tag => (
                 <span
                   key={tag}
-                  className="px-2 py-1 text-xs font-mono text-orange-400 border border-orange-500/30 rounded"
+                  className="text-xs text-gray-500 hover:text-brand-primary-400 transition-colors"
                 >
                   #{tag}
                 </span>
@@ -97,8 +91,10 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           )}
         </div>
         
-        {/* Hover effect line */}
-        <div className="absolute bottom-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-orange-500 to-transparent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500" />
+        {/* Hover effect - subtle glow */}
+        <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+          <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-brand-primary-500/10 to-brand-primary-500/5" />
+        </div>
       </article>
     </Link>
   )

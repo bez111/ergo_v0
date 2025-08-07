@@ -14,14 +14,14 @@ interface BlogHeroProps {
 export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
   const getCategoryGradient = (category: string) => {
     const gradients = {
-      defi: "from-orange-500 to-red-500",
-      tech: "from-orange-400 to-amber-500",
-      guides: "from-amber-500 to-yellow-500",
-      development: "from-red-500 to-orange-500",
-      mining: "from-yellow-500 to-orange-500",
-      news: "from-orange-600 to-red-600",
+      defi: "from-brand-primary-500 to-brand-primary-600",
+      tech: "from-brand-primary-400 to-brand-primary-500",
+      guides: "from-brand-primary-500 to-brand-secondary-400",
+      development: "from-brand-primary-500 to-brand-primary-600",
+      mining: "from-brand-secondary-400 to-brand-primary-500",
+      news: "from-brand-primary-600 to-brand-primary-700",
     }
-    return gradients[category as keyof typeof gradients] || "from-orange-500 to-amber-500"
+    return gradients[category as keyof typeof gradients] || "from-brand-primary-500 to-brand-primary-600"
   }
 
   return (
@@ -31,7 +31,7 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="relative flex-1 bg-gradient-to-br from-orange-500/20 to-red-700/20 rounded-2xl overflow-hidden shadow-2xl backdrop-blur-sm border border-orange-500/20"
+        className="relative flex-1 bg-neutral-900/50 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm border border-neutral-700"
       >
         <div className="absolute inset-0">
           {featuredPost.image && (
@@ -132,7 +132,7 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
             transition={{ delay: 0.7, duration: 0.6 }}
           >
             <Link href={`/blog/${featuredPost.slug}`}>
-              <button className="px-8 py-4 rounded-xl bg-gradient-to-r from-orange-500 to-red-600 text-white font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
+              <button className="px-8 py-4 rounded-xl bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
                 Read Article
               </button>
             </Link>
@@ -154,7 +154,7 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 + index * 0.1, duration: 0.6 }}
-            className="group relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 hover:bg-orange-500/10 transition-all duration-300 hover:scale-105"
+            className="group relative bg-neutral-900/50 backdrop-blur-md rounded-xl p-4 border border-neutral-700 hover:bg-neutral-900/80 hover:border-brand-primary-500/30 transition-all duration-300 hover:scale-105"
           >
             <Link href={`/blog/${post.slug}`}>
               <div className="flex gap-4">
@@ -174,7 +174,7 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
                   >
                     {post.category.toUpperCase()}
                   </span>
-                  <h4 className="text-white font-medium text-sm leading-tight mb-2 group-hover:text-orange-300 transition-colors">
+                  <h4 className="text-white font-medium text-sm leading-tight mb-2 group-hover:text-brand-primary-400 transition-colors">
                     {post.title}
                   </h4>
                   <div className="flex items-center gap-3 text-white/60 text-xs">

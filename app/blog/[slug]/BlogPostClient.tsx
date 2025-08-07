@@ -9,6 +9,12 @@ import Link from "next/link"
 import { useState, useEffect, useRef } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { 
+  HexagonalGrid, 
+  FloatingParticles, 
+  MathematicalPattern,
+  WatermarkHex
+} from "@/components/ui-kit/signature-effects"
 
 interface BlogPostClientProps {
   post: BlogPost
@@ -39,6 +45,8 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
   const [showComments, setShowComments] = useState(false)
   const [showScrollTop, setShowScrollTop] = useState(false)
   const [showMobileSidebar, setShowMobileSidebar] = useState(false)
+  const [hasMounted, setHasMounted] = useState(false)
+  const [isInitialized, setIsInitialized] = useState(false)
   const [toc, setToc] = useState<Array<{ id: string; title: string; level: number }>>([])
   const contentRef = useRef<HTMLDivElement>(null)
 
@@ -69,8 +77,17 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
   }
 
   // Generate TOC from actual content
+  // Prevent hydration mismatch
   useEffect(() => {
-    if (contentRef.current) {
+    setHasMounted(true)
+    const timer = setTimeout(() => {
+      setIsInitialized(true)
+    }, 100)
+    return () => clearTimeout(timer)
+  }, [])
+
+  useEffect(() => {
+    if (contentRef.current && hasMounted) {
       const headings = contentRef.current.querySelectorAll('h2, h3')
       const tocItems = Array.from(headings).map((heading) => ({
         id: heading.id || heading.textContent?.toLowerCase().replace(/\s+/g, '-') || '',
@@ -79,7 +96,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       }))
       setToc(tocItems)
     }
-  }, [])
+  }, [hasMounted])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -119,12 +136,34 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
   // Get more articles from the same author
   const authorArticles = relatedPosts.filter(p => p.author.name === post.author.name && p.id !== post.id).slice(0, 2)
 
+  // Prevent hydration issues
+  if (!hasMounted) {
+    return (
+      <div className="min-h-screen bg-black text-white relative overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 py-8 relative z-10">
+          <div className="text-center py-20">
+            <h1 className="text-4xl font-bold text-white mb-4">Loading...</h1>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
   return (
-    <div className="min-h-screen bg-black text-white relative">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Background Effects - UI Kit style */}
+      {isInitialized && (
+        <>
+          <HexagonalGrid className="opacity-[0.02]" />
+          <FloatingParticles count={15} className="opacity-80" />
+          <MathematicalPattern className="opacity-[0.03]" />
+        </>
+      )}
+      
       {/* Reading Progress Bar */}
-      <div className="fixed top-0 left-0 w-full h-1 z-50 bg-gray-900">
+      <div className="fixed top-0 left-0 w-full h-1 z-50 bg-neutral-900">
         <div 
-          className="h-full bg-gradient-to-r from-orange-500 to-orange-600 transition-all duration-200"
+          className="h-full bg-gradient-to-r from-brand-primary-500 to-brand-primary-600 transition-all duration-200"
           style={{ width: `${readingProgress}%` }}
         />
       </div>
@@ -134,7 +173,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
         <Button 
           variant="ghost" 
           size="default"
-          className="bg-black/80 backdrop-blur-sm border border-gray-800 text-gray-400 hover:text-orange-400 hover:bg-orange-400/10 hover:border-orange-500/50 transition-all duration-200 group"
+          className="bg-neutral-900/80 backdrop-blur-sm border border-neutral-700 text-gray-400 hover:text-brand-primary-400 hover:bg-brand-primary-400/10 hover:border-brand-primary-500/30 transition-all duration-200 group"
           asChild
         >
           <Link href="/blog">
@@ -156,7 +195,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             <Button
               onClick={scrollToTop}
               size="icon"
-              className="bg-orange-500 hover:bg-orange-600 text-white shadow-lg"
+              className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black shadow-lg"
             >
               <ArrowUp className="w-5 h-5" />
             </Button>
@@ -169,7 +208,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
         <Button
           onClick={() => setShowMobileSidebar(!showMobileSidebar)}
           size="icon"
-          className="bg-gray-900 hover:bg-gray-800 text-white shadow-lg"
+          className="bg-neutral-900 hover:bg-neutral-800 text-white shadow-lg border border-neutral-700"
         >
           {showMobileSidebar ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </Button>
@@ -187,7 +226,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
           <motion.header variants={itemVariants} className="mb-8 blog-content">
             {/* Category Badge */}
             <div className="mb-4">
-              <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-orange-500/20 text-orange-400 border border-orange-500/30">
+              <span className="inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
                 {post.category}
               </span>
             </div>
