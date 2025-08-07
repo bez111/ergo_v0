@@ -610,13 +610,13 @@ export function LocalSearch() {
   const modalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
-  // Content type filters
+  // Content type filters - упрощенные иконки
   const contentTypes = [
     { id: 'all', label: 'All', icon: '📄', description: 'All content types' },
-    { id: 'documentation', label: 'Documentation', icon: '📚', description: 'Technical documentation and guides' },
-    { id: 'code', label: 'Code', icon: '💻', description: 'ErgoScript, Sigma, and code examples' },
-    { id: 'guides', label: 'Guides', icon: '📖', description: 'Tutorials and how-to guides' },
-    { id: 'api', label: 'API', icon: '🔧', description: 'API documentation and references' }
+    { id: 'documentation', label: 'Docs', icon: '📚', description: 'Technical documentation' },
+    { id: 'code', label: 'Code', icon: '💻', description: 'Code examples' },
+    { id: 'guides', label: 'Guides', icon: '📖', description: 'Tutorials' },
+    { id: 'api', label: 'API', icon: '🔧', description: 'API references' }
   ];
 
   // Code-related terms for enhanced search
@@ -669,6 +669,21 @@ export function LocalSearch() {
     'visualization': ['diagram', 'chart', 'graph', 'architecture'],
     'architecture': ['structure', 'design', 'model', 'diagram'],
     'flowchart': ['flow', 'process', 'diagram', 'visualization']
+  };
+
+  // Highlight search terms in text
+  const highlightText = (text: string, query: string): string => {
+    if (!query || !text) return text;
+    
+    const queryWords = query.toLowerCase().split(' ').filter(w => w.length > 0);
+    let highlightedText = text;
+    
+    queryWords.forEach(word => {
+      const regex = new RegExp(`(${word})`, 'gi');
+      highlightedText = highlightedText.replace(regex, '<mark class="bg-brand-primary-500/30 text-brand-primary-400">$1</mark>');
+    });
+    
+    return highlightedText;
   };
 
   // Initialize search index
@@ -1010,85 +1025,66 @@ export function LocalSearch() {
 
   return (
     <>
-      {/* Search Bar - Updated to match the image design */}
-      <div className="relative w-full max-w-2xl">
+      {/* Search Bar - минималистичный стиль согласно UI kit */}
+      <div className="relative w-full">
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" />
           <input
             type="text"
-            placeholder="Search articles..."
+            placeholder="Search docs..."
             onClick={() => setIsOpen(true)}
             readOnly
-            className="w-full pl-12 pr-4 py-3 bg-neutral-800 border border-neutral-700 rounded text-gray-300 placeholder-gray-400 focus:outline-none focus:border-cyan-400/60 transition-colors duration-200 cursor-pointer"
+            className="w-full pl-10 pr-20 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:border-brand-primary-500/50 transition-colors duration-200 cursor-pointer text-sm"
           />
           {/* Keyboard shortcut hint */}
-          <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-xs text-gray-500">
-            <kbd className="px-1.5 py-0.5 bg-neutral-700 rounded text-gray-300">⌘</kbd>
-            <kbd className="px-1.5 py-0.5 bg-neutral-700 rounded text-gray-300">K</kbd>
+          <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-xs text-gray-600">
+            <kbd className="px-1 py-0.5 bg-neutral-700 rounded text-gray-400 font-mono">⌘</kbd>
+            <kbd className="px-1 py-0.5 bg-neutral-700 rounded text-gray-400 font-mono">K</kbd>
           </div>
         </div>
       </div>
 
       {/* Error message */}
       {error && (
-        <div className="mt-4 p-4 bg-red-900 text-red-300 rounded-lg border border-red-700">
-          <b>Search error:</b> {error}
+        <div className="mt-2 p-2 bg-red-900/50 text-red-400 rounded-lg border border-red-700/50 text-sm">
+          <b>Error:</b> {error}
         </div>
       )}
 
-      {/* Search Modal */}
+      {/* Search Modal - минималистичный стиль */}
       {isOpen && !error && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-start justify-center pt-20 animate-in fade-in duration-200">
-          <div ref={modalRef} className="w-full max-w-4xl mx-4 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl max-h-[80vh] flex flex-col animate-in slide-in-from-bottom-4 duration-300">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-start justify-center pt-20">
+          <div ref={modalRef} className="w-full max-w-3xl mx-4 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl max-h-[75vh] flex flex-col">
             {/* Header */}
-            <div className="flex items-center justify-between p-6 border-b border-neutral-700">
+            <div className="flex items-center justify-between p-4 border-b border-neutral-700">
               <div className="flex items-center gap-3 flex-1 relative">
-                <Search className="w-5 h-5 text-gray-400" />
+                <Search className="w-5 h-5 text-gray-500" />
                 <input
                   ref={inputRef}
                   type="text"
                   value={query}
                   onChange={handleSearchChange}
                   onKeyDown={handleKeyDown}
-                  placeholder="Search documentation... (min 2 characters)"
-                  className="w-full bg-transparent text-white placeholder-gray-400 outline-none text-lg"
+                  placeholder="Search documentation..."
+                  className="w-full bg-transparent text-white placeholder-gray-500 outline-none text-base font-mono"
                   autoFocus
                 />
                 
-                {/* Autocomplete Suggestions */}
+                {/* Autocomplete Suggestions - упрощенный стиль */}
                 {showSuggestions && suggestions.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-1 bg-neutral-800 border border-neutral-600 rounded-lg shadow-lg z-10 max-h-64 overflow-y-auto">
+                  <div className="absolute top-full left-0 right-0 mt-2 bg-neutral-800 border border-neutral-700 rounded-lg shadow-lg z-10 max-h-48 overflow-y-auto">
                     {suggestions.map((suggestion, index) => (
-                      <div key={index} className="flex items-center justify-between">
-                        <button
-                          onClick={() => handleSuggestionClick(suggestion)}
-                          className={`flex-1 text-left px-4 py-3 hover:bg-neutral-700 transition-colors duration-150 ${
-                            index === selectedSuggestionIndex 
-                              ? 'bg-neutral-700 text-white' 
-                              : 'text-gray-300'
-                          }`}
-                        >
-                          <div className="flex items-center gap-3">
-                            <Search className="w-4 h-4 text-gray-500" />
-                            <span>{suggestion}</span>
-                            {searchHistory.includes(suggestion) && (
-                              <span className="ml-auto text-xs text-gray-500">Recent</span>
-                            )}
-                          </div>
-                        </button>
-                        {searchHistory.includes(suggestion) && (
-                          <button
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              removeFromHistory(suggestion);
-                            }}
-                            className="p-2 hover:bg-neutral-700 rounded-full transition-colors duration-200 mr-2"
-                            title="Remove from history"
-                          >
-                            <Trash2 className="w-3 h-3 text-gray-500 hover:text-red-400" />
-                          </button>
-                        )}
-                      </div>
+                      <button
+                        key={index}
+                        onClick={() => handleSuggestionClick(suggestion)}
+                        className={`w-full text-left px-4 py-2 hover:bg-neutral-700 transition-colors duration-150 text-sm font-mono ${
+                          index === selectedSuggestionIndex 
+                            ? 'bg-neutral-700 text-brand-primary-400' 
+                            : 'text-gray-300'
+                        }`}
+                      >
+                        {suggestion}
+                      </button>
                     ))}
                   </div>
                 )}
@@ -1098,43 +1094,42 @@ export function LocalSearch() {
                 className="p-2 hover:bg-neutral-800 rounded-lg transition-colors duration-200"
                 title="Close (Esc)"
               >
-                <X className="w-5 h-5 text-gray-400" />
+                <X className="w-5 h-5 text-gray-500" />
               </button>
             </div>
 
-            {/* Content Type Filters */}
-            <div className="px-6 py-3 border-b border-neutral-700">
+            {/* Content Type Filters - минималистичные кнопки */}
+            <div className="px-4 py-2 border-b border-neutral-700">
               <div className="flex flex-wrap gap-2">
                 {contentTypes.map((contentType) => (
                   <button
                     key={contentType.id}
                     onClick={() => handleContentTypeFilter(contentType.id)}
-                    className={`px-3 py-2 rounded-lg transition-colors duration-200 text-sm flex items-center gap-2 ${
+                    className={`px-3 py-1 rounded-lg transition-colors duration-200 text-xs font-mono ${
                       selectedContentType === contentType.id
-                        ? 'bg-cyan-600 text-white'
-                        : 'bg-neutral-700 text-gray-300 hover:bg-neutral-600'
+                        ? 'bg-brand-primary-500 text-black'
+                        : 'bg-neutral-800 text-gray-400 hover:bg-neutral-700'
                     }`}
                     title={contentType.description}
                   >
-                    <span>{contentType.icon}</span>
-                    <span>{contentType.label}</span>
+                    {contentType.label}
                   </button>
                 ))}
               </div>
             </div>
 
-            {/* Tag Filters */}
+            {/* Tag Filters - минималистичные теги */}
             {query && query.length >= 2 && allTags.length > 0 && (
-              <div className="px-6 py-3 border-b border-neutral-700">
+              <div className="px-4 py-2 border-b border-neutral-700">
                 <div className="flex flex-wrap gap-2">
-                  {allTags.slice(0, 10).map(tag => (
+                  {allTags.slice(0, 8).map(tag => (
                     <button
                       key={tag}
                       onClick={() => handleTagClick(tag)}
-                      className={`px-3 py-1 text-xs rounded-full transition-colors duration-200 ${
+                      className={`px-2 py-1 text-xs rounded transition-colors duration-200 font-mono ${
                         selectedTags.includes(tag)
-                          ? 'bg-cyan-600 text-white'
-                          : 'bg-neutral-700 text-gray-300 hover:bg-neutral-600'
+                          ? 'bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30'
+                          : 'bg-neutral-800 text-gray-500 border border-neutral-700 hover:border-neutral-600'
                       }`}
                     >
                       {tag}
@@ -1144,135 +1139,128 @@ export function LocalSearch() {
               </div>
             )}
 
-            {/* Results */}
-            <div className="flex-1 overflow-y-auto p-6">
-              {/* Search History (when no query or results) */}
+            {/* Results - минималистичный стиль */}
+            <div className="flex-1 overflow-y-auto p-4">
+              {/* Search History (when no query) */}
               {(!query || query.length < 2) && searchHistory.length > 0 && (
                 <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-400 mb-3">Recent searches</h3>
-                  <div className="space-y-2">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-sm font-mono text-gray-400">Recent searches</h3>
+                    <button
+                      onClick={clearAllHistory}
+                      className="text-xs text-gray-600 hover:text-red-400 transition-colors duration-200"
+                    >
+                      Clear all
+                    </button>
+                  </div>
+                  <div className="space-y-1">
                     {searchHistory.slice(0, 5).map((historyItem, index) => (
-                      <div key={index} className="flex items-center justify-between bg-neutral-800/50 rounded-lg hover:bg-neutral-800/70 transition-colors duration-200">
+                      <div key={index} className="flex items-center justify-between group">
                         <button
-                          onClick={() => handleHistoryClick(historyItem)}
-                          className="flex-1 text-left p-3 text-gray-300 hover:text-white transition-colors duration-200"
+                          onClick={() => {
+                            setQuery(historyItem);
+                            performSearch(historyItem);
+                          }}
+                          className="flex-1 text-left px-3 py-2 text-sm text-gray-400 hover:text-brand-primary-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono"
                         >
-                          <div className="flex items-center gap-2">
-                            <Search className="w-4 h-4 text-gray-500" />
-                            <span>{historyItem}</span>
-                          </div>
+                          {historyItem}
                         </button>
                         <button
-                          onClick={(e) => {
-                            e.stopPropagation();
-                            removeFromHistory(historyItem);
-                          }}
-                          className="p-2 hover:bg-neutral-700 rounded-full transition-colors duration-200 mr-2"
-                          title="Remove from history"
+                          onClick={() => removeFromHistory(historyItem)}
+                          className="opacity-0 group-hover:opacity-100 p-1 hover:text-red-400 transition-all duration-200"
                         >
-                          <Trash2 className="w-4 h-4 text-gray-500 hover:text-red-400" />
+                          <X className="w-3 h-3" />
                         </button>
                       </div>
                     ))}
-                    {searchHistory.length > 0 && (
-                      <button
-                        onClick={clearAllHistory}
-                        className="w-full text-center text-sm text-red-400 hover:text-red-300 transition-colors duration-200 py-2"
-                      >
-                        Clear All History
-                      </button>
+                  </div>
+                </div>
+              )}
+
+              {/* No results message */}
+              {query && query.length >= 2 && filteredResults.length === 0 && (
+                <div className="text-center py-12">
+                  <div className="text-gray-500 mb-2">No results found for</div>
+                  <div className="text-brand-primary-400 font-mono text-lg mb-4">"{query}"</div>
+                  <div className="text-sm text-gray-600">Try different keywords or check the spelling</div>
+                </div>
+              )}
+
+              {/* Search Results - упрощенный стиль карточек */}
+              {filteredResults.map((group, groupIndex) => (
+                <div key={group.pageUrl} className="mb-4">
+                  <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg overflow-hidden">
+                    <button
+                      onClick={() => handleExpandGroup(group.pageUrl)}
+                      className="w-full px-4 py-3 flex items-center justify-between hover:bg-neutral-800/70 transition-colors duration-200"
+                    >
+                      <div className="flex items-center gap-3">
+                        <ChevronRight className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
+                          expandedGroups.has(group.pageUrl) ? 'rotate-90' : ''
+                        }`} />
+                        <div className="text-left">
+                          <div className="text-sm font-semibold text-white font-mono">{group.pageTitle}</div>
+                          <div className="text-xs text-gray-500 font-mono">{group.pageSection}</div>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-xs text-gray-600 font-mono">{group.totalHits} results</span>
+                      </div>
+                    </button>
+                    
+                    {(expandedGroups.has(group.pageUrl) || groupIndex === 0) && (
+                      <div className="border-t border-neutral-700">
+                        {group.hits.slice(0, group.visibleHits).map((hit, hitIndex) => (
+                          <Link
+                            key={hit.objectID}
+                            href={hit.url}
+                            onClick={handleCloseModal}
+                            className="block px-4 py-3 hover:bg-neutral-800/50 transition-colors duration-200 border-b border-neutral-700/50 last:border-b-0"
+                          >
+                            <div className="flex items-start gap-3">
+                              <FileText className="w-4 h-4 text-gray-600 mt-0.5" />
+                              <div className="flex-1 min-w-0">
+                                <div className="text-sm font-medium text-brand-primary-400 mb-1">
+                                  {hit.title}
+                                </div>
+                                <div 
+                                  className="text-xs text-gray-400 line-clamp-2"
+                                  dangerouslySetInnerHTML={{ 
+                                    __html: highlightText(
+                                      hit._snippetResult?.content?.value || hit.content.substring(0, 150) + '...',
+                                      query
+                                    )
+                                  }}
+                                />
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                        
+                        {group.totalHits > group.visibleHits && (
+                          <button
+                            onClick={() => handleExpandGroup(group.pageUrl)}
+                            className="w-full px-4 py-2 text-xs text-brand-primary-400 hover:bg-neutral-800/50 transition-colors duration-200 font-mono"
+                          >
+                            Show {group.totalHits - group.visibleHits} more results
+                          </button>
+                        )}
+                      </div>
                     )}
                   </div>
                 </div>
-              )}
+              ))}
+            </div>
 
-              {/* Popular Queries (when no query) */}
-              {(!query || query.length < 2) && (
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-400 mb-3">Popular searches</h3>
-                  <div className="flex flex-wrap gap-2">
-                    {popularQueries.slice(0, 8).map((query, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleSuggestionClick(query)}
-                        className="px-3 py-2 bg-neutral-800/50 rounded-lg hover:bg-neutral-800/70 transition-colors duration-200 text-gray-300 hover:text-white text-sm"
-                      >
-                        {query}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
-              {query && query.length >= 2 && (
-                <div className="mb-4 text-sm text-gray-400">
-                  {filteredResults.length > 0 ? (
-                    `${filteredResults.reduce((sum, group) => sum + group.totalHits, 0)} matching documents`
-                  ) : (
-                    'No results found'
-                  )}
-                  {selectedContentType !== 'all' && (
-                    <span className="ml-2 text-cyan-400">
-                      • Filtered by {contentTypes.find(ct => ct.id === selectedContentType)?.label}
-                    </span>
-                  )}
-                </div>
-              )}
-
-              {/* Search Results */}
-              {query && query.length >= 2 && filteredResults.length > 0 && (
-                <div className="space-y-4">
-                  {filteredResults.map((group, groupIndex) => (
-                    <Link 
-                      key={group.pageUrl} 
-                      href={group.pageUrl}
-                      onClick={handleResultClick}
-                      className="block bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-800/70 transition-colors duration-200 cursor-pointer"
-                    >
-                      <h3 className="font-semibold text-white mb-2">
-                        {group.pageTitle}
-                      </h3>
-                      <p className="text-sm text-gray-400 mb-3">{group.pageSection}</p>
-                      
-                      {/* Tags */}
-                      <div className="flex flex-wrap gap-1 mb-3">
-                        {group.hits[0]?.tags.slice(0, 5).map(tag => (
-                          <span
-                            key={tag}
-                            className="px-2 py-1 text-xs bg-neutral-700 text-gray-300 rounded-full"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                      
-                      <div className="text-sm text-gray-300">
-                        {group.hits.slice(0, expandedGroups.has(group.pageUrl) ? group.totalHits : 3).map((hit, hitIndex) => (
-                          <div key={hitIndex} className="mb-2">
-                            <span dangerouslySetInnerHTML={{ __html: highlightText(hit.content, query) }} />
-                          </div>
-                        ))}
-                      </div>
-                      
-                      {/* Show more/less button */}
-                      {group.totalHits > 3 && (
-                        <button
-                          onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            handleExpandGroup(group.pageUrl);
-                          }}
-                          className="mt-3 text-cyan-400 hover:text-cyan-300 text-sm transition-colors duration-200"
-                        >
-                          {expandedGroups.has(group.pageUrl) 
-                            ? `Show less` 
-                            : `${group.totalHits - 3} more on this page`
-                          }
-                        </button>
-                      )}
-                    </Link>
-                  ))}
-                </div>
+            {/* Footer */}
+            <div className="px-4 py-2 border-t border-neutral-700 flex items-center justify-between text-xs text-gray-600">
+              <div className="flex items-center gap-4">
+                <span className="font-mono">↑↓ Navigate</span>
+                <span className="font-mono">↵ Select</span>
+                <span className="font-mono">ESC Close</span>
+              </div>
+              {query && filteredResults.length > 0 && (
+                <span className="font-mono">{filteredResults.length} results</span>
               )}
             </div>
           </div>
