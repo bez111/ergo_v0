@@ -13,6 +13,7 @@ import {
   HeroPattern, FeatureGrid, StatsGrid, FeatureCard, CodeSnippet,
   type FeatureGridItem, type StatsGridItem
 } from "@/components/ui-kit/patterns"
+import { CopyButton } from "@/components/ui/copy-button"
 import { 
   MathematicalPattern, CryptographicVisualization, 
   FloatingParticles, HexagonalGrid, GlitchHex, UndergroundManifesto, GlitchButton, WatermarkHex
@@ -22,7 +23,6 @@ import {
   Zap, 
   Shield, 
   Code, 
-  Check,
   X,
   Info,
   Download,
@@ -32,7 +32,6 @@ import {
   Rocket,
   Target,
   ArrowRight,
-  Copy,
   CheckCircle,
   XCircle,
   AlertTriangle,
@@ -78,8 +77,6 @@ import {
 
 export default function UIKitPage() {
   const [activeTab, setActiveTab] = useState("overview")
-  const [copiedComponent, setCopiedComponent] = useState<string | null>(null)
-
   const [visitedTabs, setVisitedTabs] = useState<Set<string>>(new Set(["overview"]))
   const [hasMounted, setHasMounted] = useState(false)
   const [isInitialized, setIsInitialized] = useState(false)
@@ -114,12 +111,6 @@ export default function UIKitPage() {
         </div>
       </div>
     )
-  }
-
-  const copyToClipboard = async (componentName: string, code: string) => {
-    await navigator.clipboard.writeText(code)
-    setCopiedComponent(componentName)
-    setTimeout(() => setCopiedComponent(null), 2000)
   }
 
   const handleTabChange = (newTab: string) => {
@@ -593,7 +584,7 @@ export default function MyComponent() {
                         <div className="grid sm:grid-cols-2 gap-3">
                           {principle.guidelines.map((guideline, guideIndex) => (
                             <div key={guideIndex} className="flex items-start gap-3">
-                              <Check className="w-4 h-4 text-brand-primary-400 mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-brand-primary-400 mt-0.5 flex-shrink-0" />
                               <span className="text-gray-400 text-sm">{guideline}</span>
                             </div>
                 ))}
@@ -649,34 +640,11 @@ export default function MyComponent() {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     whileHover={{ scale: prefersReducedMotion ? 1 : 1.05, transition: { duration: 0.2 } }}
                   >
-                    <div className={`w-full h-20 ${color.class} rounded-xl border border-neutral-700 relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black`}
-                         tabIndex={0}
-                         role="button"
-                         aria-label={`Copy ${color.name} color value`}
-                         onClick={() => copyToClipboard(color.name, color.hex)}
-                         onKeyDown={(e) => {
-                           if (e.key === 'Enter' || e.key === ' ') {
-                             e.preventDefault()
-                             copyToClipboard(color.name, color.hex)
-                           }
-                         }}
-                    >
+                    <div className={`w-full h-20 ${color.class} rounded-xl border border-neutral-700 relative overflow-hidden`}>
                       <div className="absolute inset-0 bg-gradient-to-br from-transparent to-black/10" />
-                      <AnimatePresence>
-                        {copiedComponent === color.name && (
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.8 }}
-                            className="absolute inset-0 bg-black/80 flex items-center justify-center"
-                          >
-                            <div className="flex items-center gap-2 text-white text-sm font-semibold">
-                              <Check className="w-4 h-4" />
-                              Copied!
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      <div className="absolute top-2 right-2">
+                        <CopyButton text={color.hex} size="sm" />
+                      </div>
                     </div>
                     <div>
                       <p className="text-white font-medium">{color.name}</p>
@@ -725,36 +693,13 @@ export default function MyComponent() {
                     transition={{ duration: 0.4, delay: index * 0.1 }}
                     whileHover={{ y: prefersReducedMotion ? 0 : -5, transition: { duration: 0.2 } }}
                   >
-                    <div className={`w-full h-20 ${color.class} rounded-xl relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black`}
-                         tabIndex={0}
-                         role="button"
-                         aria-label={`Copy ${color.name} color value`}
-                         onClick={() => copyToClipboard(`${color.name}-status`, color.hex)}
-                         onKeyDown={(e) => {
-                           if (e.key === 'Enter' || e.key === ' ') {
-                             e.preventDefault()
-                             copyToClipboard(`${color.name}-status`, color.hex)
-                           }
-                         }}
-                    >
+                    <div className={`w-full h-20 ${color.class} rounded-xl relative overflow-hidden`}>
                       <div className="absolute inset-0 flex items-center justify-center">
                         <color.icon className="w-6 h-6 text-black/20" />
                       </div>
-                      <AnimatePresence>
-                        {copiedComponent === `${color.name}-status` && (
-                          <motion.div
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.8 }}
-                            className="absolute inset-0 bg-black/80 flex items-center justify-center"
-                          >
-                            <div className="flex items-center gap-2 text-white text-sm font-semibold">
-                              <Check className="w-4 h-4" />
-                              Copied!
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      <div className="absolute top-2 right-2">
+                        <CopyButton text={color.hex} size="sm" />
+                      </div>
                     </div>
                     <div>
                       <p className="text-white font-medium">{color.name}</p>
@@ -803,39 +748,13 @@ export default function MyComponent() {
                   <div className="flex items-center justify-between mb-4">
                       <Badge variant="outline" className="border-brand-primary-500/30 text-brand-primary-400">{type.tag}</Badge>
                     <code className="text-gray-500 text-sm">{type.desc}</code>
-                      <Button
-                        size="sm"
-                        variant="ghost"
-                        className="opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 focus:ring-2 focus:ring-brand-primary-500"
-                        onClick={() => copyToClipboard(`typography-${type.tag}`, `className="${type.token}"`)}
-                        aria-label={`Copy ${type.tag} typography code`}
-                      >
-                        <AnimatePresence mode="wait">
-                          {copiedComponent === `typography-${type.tag}` ? (
-                            <motion.div
-                              key="check"
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              exit={{ scale: 0 }}
-                              className="flex items-center gap-1"
-                            >
-                              <Check className="w-3 h-3" />
-                              <span className="text-xs">Copied!</span>
-                            </motion.div>
-                          ) : (
-                            <motion.div
-                              key="copy"
-                              initial={{ scale: 0 }}
-                              animate={{ scale: 1 }}
-                              exit={{ scale: 0 }}
-                              className="flex items-center gap-1"
-                            >
-                              <Copy className="w-3 h-3" />
-                              <span className="text-xs">Copy</span>
-                            </motion.div>
-                          )}
-                        </AnimatePresence>
-                      </Button>
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                        <CopyButton 
+                          text={`className="${type.token}"`} 
+                          size="sm" 
+                          variant="inline"
+                        />
+                      </div>
                   </div>
                   <div className={`${type.size} ${type.weight} mb-2 text-white`}>
                     {type.sample}
@@ -852,33 +771,14 @@ export default function MyComponent() {
                 <Terminal className="w-5 h-5 text-brand-primary-400" />
                 Code Typography
               </h3>
-              <div className="bg-neutral-900 border border-neutral-700 rounded-xl p-6 group">
-                <div className="flex items-center justify-between mb-4">
-                  <h4 className="text-lg font-bold text-white flex items-center gap-2">
-                    <Code className="w-5 h-5 text-brand-primary-400" />
-                  ErgoScript Example
-                </h4>
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 focus:ring-2 focus:ring-brand-primary-500"
-                    onClick={() => copyToClipboard('ergoscript-example', 'val result = sigmaProp(true)\nif (OUTPUTS.size > 0) result')}
-                    aria-label="Copy ErgoScript code example"
-                  >
-                    <Copy className="w-4 h-4 mr-1" />
-                    Copy Code
-                  </Button>
-                </div>
-                <div className="bg-black rounded-xl p-4 font-mono text-sm">
-                  <div className="text-gray-400">// Smart contract validation</div>
-                  <div className="text-white">
-                    <span className="text-brand-primary-400">val</span> <span className="text-white">result</span> = sigmaProp(<span className="text-brand-primary-400">true</span>)
-                  </div>
-                  <div className="text-white">
-                    <span className="text-brand-primary-400">if</span> (OUTPUTS.<span className="text-white">size</span> {'>'} <span className="text-brand-primary-400">0</span>) result
-                  </div>
-                </div>
-              </div>
+              <CodeSnippet
+                title="ErgoScript Example"
+                language="scala"
+                filename="validation.ergo"
+                code={`// Smart contract validation
+val result = sigmaProp(true)
+if (OUTPUTS.size > 0) result`}
+              />
             </motion.div>
           </TabsContent>
 
@@ -910,7 +810,7 @@ export default function MyComponent() {
                   action={{
                     text: "Learn More",
                     icon: ArrowRight,
-                    onClick: () => copyToClipboard('feature-card-live', componentCode.featureCard)
+                    onClick: () => console.log('Learn more clicked')
                   }}
                 />
                 
@@ -972,16 +872,25 @@ export default function MyComponent() {
                   </Button>
                   </motion.div>
                   
-                  <Button
-                    size="sm"
-                    variant="ghost"
-                    className="opacity-0 group-hover:opacity-100 transition-opacity focus:opacity-100 text-brand-primary-400 hover:text-brand-primary-300 focus:ring-2 focus:ring-brand-primary-500"
-                    onClick={() => copyToClipboard('primary-button', componentCode.primaryButton)}
-                    aria-label="Copy primary button component code"
-                  >
-                    <Code2 className="w-4 h-4 mr-1" />
-                    Copy Button Code
-                  </Button>
+                  <div className="opacity-0 group-hover:opacity-100 transition-opacity">
+                    <Button
+                      size="sm"
+                      variant="ghost"
+                      className="text-brand-primary-400 hover:text-brand-primary-300 focus:ring-2 focus:ring-brand-primary-500"
+                      onClick={() => {
+                        const codeElement = document.createElement('textarea')
+                        codeElement.value = componentCode.primaryButton
+                        document.body.appendChild(codeElement)
+                        codeElement.select()
+                        document.execCommand('copy')
+                        document.body.removeChild(codeElement)
+                      }}
+                      aria-label="View component code in section below"
+                    >
+                      <Code2 className="w-4 h-4 mr-1" />
+                      View Code Below
+                    </Button>
+                  </div>
               </div>
 
                 <div className="space-y-4">

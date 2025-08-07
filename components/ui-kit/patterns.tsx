@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { LucideIcon } from "lucide-react"
+import { CopyButton } from "@/components/ui/copy-button"
 
 // Types для паттернов
 export interface FeatureGridItem {
@@ -289,15 +290,6 @@ export const CodeSnippet: React.FC<CodeSnippetProps> = ({
   filename,
   copyable = true
 }) => {
-  const [copied, setCopied] = React.useState(false)
-
-  const handleCopy = async () => {
-    if (!copyable) return
-    await navigator.clipboard.writeText(code)
-    setCopied(true)
-    setTimeout(() => setCopied(false), 2000)
-  }
-
   return (
     <div className="bg-neutral-900 border border-neutral-700 rounded-xl overflow-hidden">
       <div className="flex items-center justify-between p-4 border-b border-neutral-700">
@@ -308,14 +300,7 @@ export const CodeSnippet: React.FC<CodeSnippetProps> = ({
           )}
         </div>
         {copyable && (
-          <Button
-            size="sm"
-            variant="ghost"
-            onClick={handleCopy}
-            className="text-gray-400 hover:text-white"
-          >
-            {copied ? "Copied!" : "Copy"}
-          </Button>
+          <CopyButton text={code} size="md" />
         )}
       </div>
       <div className="p-4 bg-black">
