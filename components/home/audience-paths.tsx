@@ -249,15 +249,7 @@ export function AudiencePaths() {
                     </Button>
                   </CardFooter>
 
-                  {/* Border highlight on hover */}
-                  {hoveredIndex === index && (
-                    <div className="absolute inset-0 border border-brand-primary-500/50 rounded-lg pointer-events-none">
-                      <div className="absolute top-0 left-0 w-1 h-1 bg-brand-primary-500"></div>
-                      <div className="absolute top-0 right-0 w-1 h-1 bg-brand-primary-500"></div>
-                      <div className="absolute bottom-0 left-0 w-1 h-1 bg-brand-primary-500"></div>
-                      <div className="absolute bottom-0 right-0 w-1 h-1 bg-brand-primary-500"></div>
-                    </div>
-                  )}
+
                 </Card>
               </motion.div>
             ))}
