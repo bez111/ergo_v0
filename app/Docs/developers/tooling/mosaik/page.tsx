@@ -102,4 +102,9 @@ export default function MosaikPage() {
 }`}</CodeBlock>
       <p className="text-gray-300 mb-4">Now change the style to <code>HEADLINE1</code>. You’ll see the view immediately changing. (You can edit directly from within this view!)</p>
       <p className="text-gray-300 mb-4">The Mosaik repository ships with a Mosaik app that demonstrates all available view elements and actions. Remember that you are working in a desktop debugging tool when trying it out. Some actions and view elements make sense to be used from within an actual wallet application and are only implemented in a debugger style for you to tweak.</p>
-      <p className="text-gray-300 mb-4">You can fire up the view elements and actions demo by calling the following command from the Mosaik repo’s directory:</p>
+      <p className="text-gray-300 mb-4">You can fire up the view elements and actions demo by calling the following command from the Mosaik repo's directory:</p>
+      <CodeBlock language="bash">{`./gradlew ergo-mosaik:backend-demo-kotlin:bootRun`}</CodeBlock>
+      <p className="text-gray-300 mb-4">Then navigate to <code>http://localhost:8080</code> to access the demo.</p>
+    </>
+  );
+}

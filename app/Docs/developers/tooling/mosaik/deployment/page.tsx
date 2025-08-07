@@ -36,3 +36,6 @@ ENTRYPOINT ["java","-jar","/app.jar"]`}</CodeBlock>
       <p className="text-gray-300 mb-4">The third line copies our jar we've built before into the Docker image, and the last line defines running it is the "entry point" to the container image.</p>
       <p className="text-gray-300 mb-4">Our Spring Boot server runs on port 8080, so line 4 defines that this port is exposed when the image runs in a Docker container.</p>
       <p className="text-gray-300 mb-4">With this file, we can build a Docker image. You'll need to install Docker on your system for this. You'll find information how to do so on <a href="https://docs.docker.com/" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Docker Docs</a>. When Docker is installed, you can build the Docker image with a command like the following</p>
+    </>
+  );
+}
