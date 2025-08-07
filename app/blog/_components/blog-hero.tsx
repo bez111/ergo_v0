@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Eye, Heart, Clock, Star } from "lucide-react"
-import type { BlogPost } from "@/lib/blog-data"
+import type { BlogPost } from "../_lib/blog-data"
 import Link from "next/link"
 import Image from "next/image"
 

@@ -1,6 +1,6 @@
 "use client"
 import { FileText, Users, Eye, Heart } from "lucide-react"
-import { blogStats } from "@/lib/blog-data"
+import { blogStats } from "../_lib/blog-data"
 
 export function BlogStats() {
   const stats = [

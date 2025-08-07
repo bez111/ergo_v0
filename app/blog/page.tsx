@@ -2,11 +2,11 @@
 
 import { useState, useMemo } from "react"
 import { motion } from "framer-motion"
-import { BlogHero } from "@/components/blog/blog-hero"
-import { BlogFilters } from "@/components/blog/blog-filters"
-import { BlogCard } from "@/components/blog/blog-card"
-import { NewsletterSignup } from "@/components/blog/newsletter-signup"
-import { blogPosts, categories } from "@/lib/blog-data"
+import { BlogHero } from "./_components/blog-hero"
+import { BlogFilters } from "./_components/blog-filters"
+import { BlogCard } from "./_components/blog-card"
+import { NewsletterSignup } from "./_components/newsletter-signup"
+import { blogPosts, categories } from "./_lib/blog-data"
 
 export default function BlogPage() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -76,8 +76,8 @@ export default function BlogPage() {
 
             {filteredPosts.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map((post, index) => (
-                  <BlogCard key={post.id} post={post} index={index} />
+                {filteredPosts.map((post) => (
+                  <BlogCard key={post.id} post={post} />
                 ))}
               </div>
             ) : (

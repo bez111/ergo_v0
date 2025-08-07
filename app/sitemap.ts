@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { blogPosts } from './blog/_lib/blog-data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://ergoblockchain.org'
@@ -124,6 +125,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  // Blog posts
+  const blogPages = blogPosts.map(post => ({
+    url: `${baseUrl}/blog/${post.slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority: 0.7,
+  }))
+
   return [
     ...mainPages,
     ...technologyPages,
@@ -131,5 +140,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...useCasePages,
     ...buildPages,
     ...additionalPages,
+    ...blogPages,
   ]
 }

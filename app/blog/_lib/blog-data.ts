@@ -19,6 +19,7 @@ export interface BlogPost {
     }
   }
   publishedAt: string
+  updatedAt?: string
   readTime: number
   views: number
   likes: number
@@ -93,6 +94,7 @@ export const blogPosts: BlogPost[] = [
       },
     },
     publishedAt: "Dec 15, 2024",
+    updatedAt: "Dec 20, 2024",
     readTime: 8,
     views: 2341,
     likes: 89,

@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArrowRight } from 'lucide-react'
-import { BlogPost } from '@/lib/blog-utils'
+import { BlogPost } from '../_lib/blog-data'
 
 interface RelatedPostsProps {
   posts: BlogPost[]
@@ -29,7 +29,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
               {/* Image */}
               <div className="relative h-40 overflow-hidden">
                 <Image
-                  src={post.image}
+                  src={post.image || '/placeholder.svg'}
                   alt={post.title}
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -52,7 +52,7 @@ export function RelatedPosts({ posts }: RelatedPostsProps) {
                 </p>
                 
                 <div className="flex items-center justify-between text-xs text-gray-500">
-                  <span>{post.readingTime} min read</span>
+                  <span>{post.readTime} min read</span>
                   <ArrowRight className="w-4 h-4 text-orange-400 opacity-0 group-hover:opacity-100 transform -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
                 </div>
               </div>

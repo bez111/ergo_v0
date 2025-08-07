@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, Clock, User, Tag } from 'lucide-react'
-import { BlogPost } from '@/lib/blog-utils'
+import { BlogPost } from '../_lib/blog-data'
 
 interface BlogCardProps {
   post: BlogPost
@@ -27,7 +27,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
         {/* Image */}
         <div className="relative h-48 lg:h-56 overflow-hidden">
           <Image
-            src={post.image}
+            src={post.image || '/placeholder.svg'}
             alt={post.title}
             fill
             className="object-cover transition-transform duration-500 group-hover:scale-110"
@@ -66,23 +66,19 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           <div className="flex flex-wrap items-center gap-4 text-xs text-gray-500 font-mono">
             <div className="flex items-center gap-1">
               <Calendar className="w-3 h-3" />
-              <time dateTime={post.date}>
-                {new Date(post.date).toLocaleDateString('en-US', {
-                  month: 'short',
-                  day: 'numeric',
-                  year: 'numeric'
-                })}
+              <time dateTime={post.publishedAt}>
+                {post.publishedAt}
               </time>
             </div>
             
             <div className="flex items-center gap-1">
               <Clock className="w-3 h-3" />
-              <span>{post.readingTime} min read</span>
+              <span>{post.readTime} min read</span>
             </div>
             
             <div className="flex items-center gap-1">
               <User className="w-3 h-3" />
-              <span>{post.author}</span>
+              <span>{post.author.name}</span>
             </div>
           </div>
           

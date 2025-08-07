@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Search, X, Filter } from "lucide-react"
-import { categories } from "@/lib/blog-data"
+import { categories } from "../_lib/blog-data"
 
 interface BlogFiltersProps {
   searchQuery: string

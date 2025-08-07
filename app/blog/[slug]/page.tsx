@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import { notFound } from "next/navigation"
-import { blogPosts } from "@/lib/blog-data"
+import { blogPosts } from "../_lib/blog-data"
 import { BlogPostClient } from "./BlogPostClient"
 import { generateMetadata as generatePageMetadata } from '@/components/seo/page-metadata'
 import { PageMetadata } from '@/components/seo/page-metadata'
