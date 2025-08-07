@@ -1,9 +1,12 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowLeft, Eye, Heart, Clock, Twitter, Linkedin, Copy, Check, UserCircle, Calendar, Tag, BookOpen, MessageCircle, Share2, ChevronRight, Hash, AlertCircle, CheckCircle, RefreshCw } from "lucide-react"
+import { ArrowLeft, Eye, Heart, Clock, Twitter, Linkedin, Copy, Check, UserCircle, Calendar, Tag, BookOpen, MessageCircle, Share2, ChevronRight, Hash, AlertCircle, CheckCircle, RefreshCw, ExternalLink } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCard } from "../_components/blog-card"
+import { BlogBreadcrumbs } from "../_components/blog-breadcrumbs"
+import { BlogRating } from "../_components/blog-rating"
+import { BlogActions } from "../_components/blog-actions"
 import Link from "next/link"
 import { useState, MouseEvent, useEffect } from "react"
 import Image from "next/image"
@@ -89,6 +92,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
     { id: "implementation", title: "Step-by-Step Implementation", level: 2 },
     { id: "best-practices", title: "Best Practices", level: 3 },
     { id: "common-mistakes", title: "Common Mistakes", level: 3 },
+    { id: "external-resources", title: "External Resources", level: 2 },
     { id: "faq", title: "Frequently Asked Questions", level: 2 },
     { id: "conclusion", title: "Conclusion", level: 2 },
   ]
@@ -98,9 +102,32 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       const totalHeight = document.documentElement.scrollHeight - window.innerHeight
       const progress = (window.scrollY / totalHeight) * 100
       setReadingProgress(progress)
+
+      // Update active section for TOC
+      const sections = toc.map(item => document.getElementById(item.id))
+      const scrollPosition = window.scrollY + 100
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const section = sections[i]
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveSection(toc[i].id)
+          break
+        }
+      }
     }
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  // Track reading analytics
+  useEffect(() => {
+    const startTime = Date.now()
+    
+    return () => {
+      const timeSpent = Math.floor((Date.now() - startTime) / 1000)
+      // Here you would send analytics event
+      console.log(`User spent ${timeSpent} seconds on article`)
+    }
   }, [])
 
   return (
@@ -114,7 +141,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       </div>
 
       {/* Fixed Back to Blog Button */}
-      <div className="fixed top-20 left-4 z-40">
+      <div className="fixed top-20 left-4 z-40 no-print">
         <Button 
           variant="ghost" 
           size="default"
@@ -138,8 +165,13 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       <div className="relative z-10 max-w-5xl mx-auto px-4 py-8 sm:py-16">
         <motion.div initial="hidden" animate="visible" variants={containerVariants}>
           
+          {/* Breadcrumbs */}
+          <motion.div variants={itemVariants}>
+            <BlogBreadcrumbs title={post.title} category={post.category} />
+          </motion.div>
+
           {/* Hero Section */}
-          <motion.header variants={itemVariants} className="mb-12">
+          <motion.header variants={itemVariants} className="mb-12 blog-content">
             {/* Category Badge */}
             <div className="mb-4">
               <span className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r ${getCategoryGradient(post.category)} text-white`}>
@@ -200,7 +232,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
               </div>
 
               {/* Share Buttons */}
-              <div className="ml-auto flex items-center gap-2">
+              <div className="ml-auto flex items-center gap-2 no-print">
                 <button onClick={() => handleShare('twitter')} className="p-2 rounded-lg hover:bg-gray-800 transition-colors">
                   <Twitter className="w-4 h-4" />
                 </button>
@@ -216,6 +248,11 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
               </div>
             </div>
           </motion.header>
+
+          {/* Blog Actions (Print, PDF, etc.) */}
+          <motion.div variants={itemVariants} className="mb-8 no-print">
+            <BlogActions title={post.title} slug={post.slug} />
+          </motion.div>
 
           {/* Featured Image */}
           {post.image && (
@@ -258,9 +295,9 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
 
           <div className="grid grid-cols-12 gap-8">
             {/* Main Content */}
-            <motion.article variants={itemVariants} className="col-span-12 md:col-span-8">
+            <motion.article variants={itemVariants} className="col-span-12 md:col-span-8 blog-content">
               {/* Table of Contents Mobile */}
-              <div className="md:hidden mb-8 p-6 rounded-2xl bg-gray-900/70 border border-gray-800">
+              <div className="md:hidden mb-8 p-6 rounded-2xl bg-gray-900/70 border border-gray-800 no-print">
                 <h3 className="font-bold text-lg mb-4 text-white">Table of Contents</h3>
                 <nav className="space-y-2">
                   {toc.map((item) => (
@@ -328,6 +365,52 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                   </div>
                 </section>
 
+                {/* External Resources Section */}
+                <section id="external-resources" className="mb-12">
+                  <h2 className="text-3xl font-bold mb-6">External Resources</h2>
+                  <div className="space-y-4">
+                    <div className="p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+                      <h3 className="font-semibold mb-2 text-orange-400">Official Documentation</h3>
+                      <ul className="space-y-2">
+                        <li>
+                          <a href="https://docs.ergoplatform.com" target="_blank" rel="noopener noreferrer" 
+                             className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors">
+                            <ExternalLink className="w-4 h-4" />
+                            Ergo Platform Documentation
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer"
+                             className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors">
+                            <ExternalLink className="w-4 h-4" />
+                            Ergo GitHub Repository
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div className="p-4 bg-gray-900/50 rounded-lg border border-gray-800">
+                      <h3 className="font-semibold mb-2 text-orange-400">Related Articles</h3>
+                      <ul className="space-y-2">
+                        <li>
+                          <a href="https://medium.com/@ergoplatform" target="_blank" rel="noopener noreferrer"
+                             className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors">
+                            <ExternalLink className="w-4 h-4" />
+                            Ergo on Medium
+                          </a>
+                        </li>
+                        <li>
+                          <a href="https://cointelegraph.com/tags/ergo" target="_blank" rel="noopener noreferrer"
+                             className="flex items-center gap-2 text-gray-300 hover:text-orange-400 transition-colors">
+                            <ExternalLink className="w-4 h-4" />
+                            Ergo News on Cointelegraph
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+
                 {/* FAQ Section */}
                 <section id="faq" className="mb-12">
                   <h2 className="text-3xl font-bold mb-6">Frequently Asked Questions</h2>
@@ -337,7 +420,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                         What is the minimum requirement to get started?
                       </summary>
                       <p className="mt-3 text-gray-300">
-                        You'll need a basic understanding of blockchain concepts and...
+                        You'll need a basic understanding of blockchain concepts and an Ergo wallet to begin interacting with the ecosystem.
                       </p>
                     </details>
                     <details className="group bg-gray-900/50 rounded-lg p-4">
@@ -345,7 +428,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                         How long does the implementation typically take?
                       </summary>
                       <p className="mt-3 text-gray-300">
-                        The timeline depends on your specific requirements, but typically...
+                        The timeline depends on your specific requirements, but typically ranges from a few hours for simple integrations to several days for complex implementations.
                       </p>
                     </details>
                     <details className="group bg-gray-900/50 rounded-lg p-4">
@@ -353,7 +436,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                         Is this compatible with existing systems?
                       </summary>
                       <p className="mt-3 text-gray-300">
-                        Yes, the solution is designed to be interoperable with...
+                        Yes, the Ergo platform is designed to be interoperable with existing blockchain infrastructure through various bridges and integration tools.
                       </p>
                     </details>
                   </div>
@@ -413,8 +496,17 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                 </div>
               </div>
 
+              {/* Rating System */}
+              <div className="mb-8 no-print">
+                <BlogRating 
+                  postId={post.slug} 
+                  initialRating={4.5} 
+                  initialCount={23}
+                />
+              </div>
+
               {/* Engagement Section */}
-              <div className="flex items-center justify-between p-6 bg-gray-900/50 rounded-2xl mb-8">
+              <div className="flex items-center justify-between p-6 bg-gray-900/50 rounded-2xl mb-8 no-print">
                 <div className="flex items-center gap-4">
                   <button 
                     onClick={handleLike}
@@ -440,7 +532,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
 
               {/* Comments Section */}
               {showComments && (
-                <div className="mb-12 p-6 bg-gray-900/50 rounded-2xl">
+                <div className="mb-12 p-6 bg-gray-900/50 rounded-2xl no-print">
                   <h3 className="text-xl font-bold mb-4">Comments</h3>
                   <p className="text-gray-400">Comments integration coming soon...</p>
                 </div>
@@ -448,7 +540,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             </motion.article>
             
             {/* Sidebar */}
-            <aside className="col-span-12 md:col-span-4">
+            <aside className="col-span-12 md:col-span-4 no-print">
               <div className="sticky top-24 space-y-8">
                 {/* Table of Contents Desktop */}
                 <div className="hidden md:block p-6 rounded-2xl bg-gray-900/70 border border-gray-800">
@@ -487,7 +579,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
 
           {/* Related Articles - Enhanced */}
           {relatedPosts && relatedPosts.length > 0 && (
-            <motion.section variants={itemVariants} className="mt-20 pt-12 border-t border-gray-800">
+            <motion.section variants={itemVariants} className="mt-20 pt-12 border-t border-gray-800 no-print">
               <div className="text-center mb-12">
                 <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent">
                   Related Articles
