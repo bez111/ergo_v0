@@ -198,7 +198,7 @@ const projects = [
     id: 11,
     name: "ErgoPad",
     category: "DEFI",
-    status: "OPERATIONAL",
+    status: "TESTING",
     description:
       "A token launch (IDO) and fundraising platform on the Ergo blockchain. It gives token holders the opportunity to participate in IDOs.",
     icon: "🚀",
@@ -537,6 +537,60 @@ const featuredProjects = [
 const categories = ["ALL", "DEFI", "INFRASTRUCTURE", "PRIVACY", "NFT", "WALLETS", "DAO", "ORACLES", "TOOLS", "GAMING"]
 const statuses = ["ALL", "OPERATIONAL", "TESTING", "PROTOTYPE"]
 
+// Explicit sort order
+const categoryOrder: string[] = [
+  "DEFI",
+  "INFRASTRUCTURE",
+  "ORACLES",
+  "PRIVACY",
+  "NFT",
+  "WALLETS",
+  "DAO",
+  "GAMING",
+  "TOOLS",
+]
+const statusOrder: string[] = ["OPERATIONAL", "TESTING", "PROTOTYPE"]
+
+// Preferred project order within each category
+const categoryNameOrder: Record<string, string[]> = {
+  DEFI: [
+    "Spectrum Finance",
+    "SigmaUSD",
+    "DuckPools",
+    "ErgoPad",
+    "Mew Finance",
+    "SigmaFi",
+    "TokenJay",
+    "ErgoRaffle",
+    "Hodlbox",
+    "SigRSV",
+    "DexyGold",
+    "EXLE",
+    "Gluon",
+  ],
+  INFRASTRUCTURE: ["Rosen Bridge"],
+  ORACLES: ["Oracle Pools"],
+  PRIVACY: ["ErgoMixer"],
+  NFT: ["Ergo Auction House", "SkyHarbor"],
+  WALLETS: ["Nautilus Wallet", "SatErgo", "SAFEW", "Minotaur Wallet"],
+  DAO: ["Paideia"],
+  GAMING: ["CyberPixels", "Blitz TCG"],
+  TOOLS: [
+    "Ergo Explorer",
+    "ErgoWatch",
+    "GuapSwap",
+    "Sigmaverse",
+    "ErgOne",
+    "Lilium",
+    "Single Tx Swap",
+    "Crux Finance",
+    "Fleet SDK",
+    "AppKit",
+    "SigmaRust",
+    "ChainCash",
+  ],
+}
+
 const statusConfig = {
   OPERATIONAL: { icon: <CheckCircle className="w-4 h-4 text-green-400" />, color: "text-green-400" },
   TESTING: { icon: <Clock className="w-4 h-4 text-yellow-400" />, color: "text-yellow-400" },
@@ -583,7 +637,29 @@ export default function EcosystemPage() {
   }, [searchTerm])
 
   const filteredProjects = useMemo(() => {
-    return projects.filter(
+    const sorted = [...projects].sort((a, b) => {
+      const catA = categoryOrder.indexOf(a.category)
+      const catB = categoryOrder.indexOf(b.category)
+      if (catA !== catB) return catA - catB
+
+      const statA = statusOrder.indexOf(a.status)
+      const statB = statusOrder.indexOf(b.status)
+      if (statA !== statB) return statA - statB
+
+      // Prefer explicit order inside category if present
+      const orderForCat = categoryNameOrder[a.category] || []
+      const idxA = orderForCat.indexOf(a.name)
+      const idxB = orderForCat.indexOf(b.name)
+      if (idxA !== -1 || idxB !== -1) {
+        if (idxA === -1) return 1
+        if (idxB === -1) return -1
+        if (idxA !== idxB) return idxA - idxB
+      }
+
+      return a.name.localeCompare(b.name)
+    })
+
+    return sorted.filter(
       (project) =>
         project.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) &&
         (selectedCategory === "ALL" || project.category === selectedCategory) &&
@@ -758,7 +834,7 @@ export default function EcosystemPage() {
             </div>
 
             <div className="flex flex-wrap gap-2 justify-center mb-4" style={{ contain: "layout paint" }}>
-              {categories.map((category) => (
+              {["ALL", ...categoryOrder].map((category) => (
                 <Button
                   key={category}
                   variant="outline"
