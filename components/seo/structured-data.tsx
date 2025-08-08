@@ -43,7 +43,7 @@ export const schemas = {
     "contactPoint": {
       "@type": "ContactPoint",
       "contactType": "customer support",
-      "email": "team@ergoplatform.org",
+      "email": "team@ergoblockchain.org",
       "availableLanguage": ["English", "Russian", "Chinese", "Spanish"]
     }
   },
@@ -55,7 +55,7 @@ export const schemas = {
     "url": "https://ergoblockchain.org",
     "potentialAction": {
       "@type": "SearchAction",
-      "target": "https://ergoplatform.org/search?q={search_term_string}",
+      "target": "https://ergoblockchain.org/search?q={search_term_string}",
       "query-input": "required name=search_term_string"
     }
   },
@@ -109,13 +109,13 @@ export const schemas = {
     },
     "datePublished": article.datePublished,
     "dateModified": article.dateModified || article.datePublished,
-    "image": article.image || "https://ergoplatform.org/og-image.png",
+    "image": article.image || "https://ergoblockchain.org/og-image.png",
     "publisher": {
       "@type": "Organization",
       "name": "Ergo Platform",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://ergoplatform.org/logo.png"
+        "url": "https://ergoblockchain.org/logo.png"
       }
     }
   }),

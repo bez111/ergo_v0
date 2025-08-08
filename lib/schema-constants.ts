@@ -3,8 +3,8 @@ import { Organization, WebSite, SoftwareApplication, Product, Event, Person } fr
 export const ORGANIZATION_SCHEMA: Organization = {
   '@type': 'Organization',
   name: 'Ergo Platform',
-  url: 'https://ergoplatform.org',
-  logo: 'https://ergoplatform.org/logo.png',
+  url: 'https://ergoblockchain.org',
+  logo: 'https://ergoblockchain.org/logo.png',
   description: 'Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools.',
   sameAs: [
     'https://twitter.com/ergoplatformorg',
@@ -15,7 +15,7 @@ export const ORGANIZATION_SCHEMA: Organization = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
-    email: 'contact@ergoplatform.org',
+    email: 'contact@ergoblockchain.org',
     availableLanguage: ['English', 'Russian']
   }
 }
@@ -23,10 +23,10 @@ export const ORGANIZATION_SCHEMA: Organization = {
 export const WEBSITE_SCHEMA: WebSite = {
   '@type': 'WebSite',
   name: 'Ergo Platform',
-  url: 'https://ergoplatform.org',
+  url: 'https://ergoblockchain.org',
   potentialAction: {
     '@type': 'SearchAction',
-    target: 'https://ergoplatform.org/search?q={search_term_string}',
+    target: 'https://ergoblockchain.org/search?q={search_term_string}',
     'query-input': 'required name=search_term_string'
   }
 }
@@ -47,7 +47,7 @@ export const WALLET_SCHEMA: SoftwareApplication = {
   author: {
     '@type': 'Organization',
     name: 'Ergo Platform',
-    url: 'https://ergoplatform.org'
+    url: 'https://ergoblockchain.org'
   }
 }
 
@@ -55,7 +55,7 @@ export const ERG_TOKEN_SCHEMA: Product = {
   '@type': 'Product',
   name: 'ERG Token',
   description: 'The native cryptocurrency of the Ergo blockchain',
-  image: 'https://ergoplatform.org/erg-token.png',
+  image: 'https://ergoblockchain.org/erg-token.png',
   brand: {
     '@type': 'Brand',
     name: 'Ergo Platform'
@@ -86,7 +86,7 @@ export const ERGO_SUMMIT_SCHEMA: Event = {
   organizer: {
     '@type': 'Organization',
     name: 'Ergo Platform',
-    url: 'https://ergoplatform.org'
+    url: 'https://ergoblockchain.org'
   }
 }
 
@@ -95,8 +95,8 @@ export const TEAM_MEMBER_SCHEMA: Person = {
   name: 'Alexander Chepurnoy',
   jobTitle: 'Founder',
   description: 'Co-founder of Ergo Platform and experienced blockchain developer',
-  image: 'https://ergoplatform.org/team/alexander.jpg',
-  url: 'https://ergoplatform.org/team/alexander',
+  image: 'https://ergoblockchain.org/team/alexander.jpg',
+  url: 'https://ergoblockchain.org/team/alexander',
   sameAs: [
     'https://twitter.com/chepurnoy',
     'https://github.com/chepurnoy'
@@ -104,7 +104,7 @@ export const TEAM_MEMBER_SCHEMA: Person = {
   worksFor: {
     '@type': 'Organization',
     name: 'Ergo Platform',
-    url: 'https://ergoplatform.org'
+    url: 'https://ergoblockchain.org'
   }
 }
 

@@ -19,7 +19,7 @@ export function Breadcrumbs({ items, className = "" }: BreadcrumbsProps) {
       "@type": "ListItem" as const,
       position: index + 1,
       name: item.label,
-      item: `https://ergoplatform.org${item.href}`,
+      item: `https://ergoblockchain.org${item.href}`,
     })),
   }
 

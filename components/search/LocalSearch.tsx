@@ -1,11 +1,12 @@
 "use client";
 
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
-import { Search, X, Tag, FileText, ArrowUp, ArrowDown, Command, Eye, Pin, Trash2, ChevronDown, ChevronRight } from 'lucide-react';
+import { Search, X, Tag, FileText, ArrowUp, ArrowDown, Command, Eye, Pin, Trash2, ChevronDown, ChevronRight, Clock, TrendingUp, Hash, BookOpen } from 'lucide-react';
 import Link from 'next/link';
 import { menuData } from '@/app/Docs/menuData';
 import { SearchPreview } from './SearchPreview';
 import { useSearchHistory } from '@/hooks/use-search-history';
+import { useDebounce } from '@/hooks/use-debounce';
 
 interface SearchHit {
   objectID: string;
@@ -605,10 +606,19 @@ export function LocalSearch() {
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1);
   const [selectedContentType, setSelectedContentType] = useState<string>('all');
+  const [isSearching, setIsSearching] = useState(false);
+  const [recentlyViewed, setRecentlyViewed] = useState<string[]>([]);
+  const [pinnedSearches, setPinnedSearches] = useState<string[]>([]);
+  const [selectedResultIndex, setSelectedResultIndex] = useState(-1);
+  const [showPreview, setShowPreview] = useState(false);
   
   const searchIndex = useRef<SearchHit[]>([]);
   const modalRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const resultsRef = useRef<HTMLDivElement>(null);
+  
+  // Debounced search query
+  const debouncedQuery = useDebounce(query, 300);
 
   // Content type filters - упрощенные иконки
   const contentTypes = [
@@ -791,6 +801,67 @@ export function LocalSearch() {
     setSelectedSuggestionIndex(-1);
   }, [searchHistory]);
 
+  // Fuzzy search function for better matching
+  const fuzzyMatch = (str: string, pattern: string): boolean => {
+    pattern = pattern.toLowerCase();
+    str = str.toLowerCase();
+    
+    let patternIdx = 0;
+    let strIdx = 0;
+    let matchCount = 0;
+    
+    while (strIdx < str.length && patternIdx < pattern.length) {
+      if (str[strIdx] === pattern[patternIdx]) {
+        matchCount++;
+        patternIdx++;
+      }
+      strIdx++;
+    }
+    
+    // Return true if we matched at least 80% of the pattern
+    return matchCount >= pattern.length * 0.8;
+  };
+
+  // Load recently viewed pages
+  useEffect(() => {
+    const viewed = localStorage.getItem('recentlyViewedDocs');
+    if (viewed) {
+      try {
+        setRecentlyViewed(JSON.parse(viewed));
+      } catch (e) {
+        console.error('Failed to load recently viewed:', e);
+      }
+    }
+    
+    const pinned = localStorage.getItem('pinnedSearches');
+    if (pinned) {
+      try {
+        setPinnedSearches(JSON.parse(pinned));
+      } catch (e) {
+        console.error('Failed to load pinned searches:', e);
+      }
+    }
+  }, []);
+
+  // Save page view to recently viewed
+  const saveRecentlyViewed = (url: string) => {
+    const newViewed = [url, ...recentlyViewed.filter(v => v !== url)].slice(0, 5);
+    setRecentlyViewed(newViewed);
+    localStorage.setItem('recentlyViewedDocs', JSON.stringify(newViewed));
+  };
+
+  // Pin/unpin search query
+  const togglePinSearch = (searchTerm: string) => {
+    const newPinned = pinnedSearches.includes(searchTerm)
+      ? pinnedSearches.filter(p => p !== searchTerm)
+      : [...pinnedSearches, searchTerm].slice(0, 3);
+    
+    setPinnedSearches(newPinned);
+    localStorage.setItem('pinnedSearches', JSON.stringify(newPinned));
+  };
+
+
+
   // Handle keyboard shortcuts
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -861,20 +932,22 @@ export function LocalSearch() {
     saveSearchHistory(searchQuery);
   }, [error]);
 
-  // Handle search input
+  // Perform search with debouncing
+  useEffect(() => {
+    if (debouncedQuery.length >= 2) {
+      setIsSearching(true);
+      performSearch(debouncedQuery);
+      setIsSearching(false);
+    } else if (debouncedQuery.length === 0) {
+      setResults([]);
+    }
+  }, [debouncedQuery, performSearch]);
+
+  // Handle search input without immediate search
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    
-    // Generate suggestions
     generateSuggestions(value);
-    
-    // Perform search if query is long enough
-    if (value.length >= 2) {
-      performSearch(value);
-    } else {
-      setResults([]);
-    }
   };
 
   // Handle keyboard navigation in suggestions
@@ -902,6 +975,53 @@ export function LocalSearch() {
         if (selectedSuggestionIndex >= 0 && suggestions[selectedSuggestionIndex]) {
           e.preventDefault();
           handleSuggestionClick(suggestions[selectedSuggestionIndex]);
+        }
+        break;
+    }
+    
+    // Add new shortcuts
+    switch (e.key) {
+      case 'ArrowDown':
+        if (e.altKey) {
+          // Alt+Down navigates results
+          e.preventDefault();
+          handleResultNavigation('down');
+        }
+        break;
+      case 'ArrowUp':
+        if (e.altKey) {
+          // Alt+Up navigates results
+          e.preventDefault();
+          handleResultNavigation('up');
+        }
+        break;
+      case 'Enter':
+        if (e.metaKey || e.ctrlKey) {
+          // Cmd/Ctrl+Enter opens in new tab
+          e.preventDefault();
+          if (selectedResultIndex >= 0) {
+            const allResults = filteredResults.flatMap(group => group.hits);
+            const selectedResult = allResults[selectedResultIndex];
+            if (selectedResult) {
+              window.open(selectedResult.url, '_blank');
+            }
+          }
+        }
+        break;
+      case 'p':
+        if (e.metaKey || e.ctrlKey) {
+          // Cmd/Ctrl+P toggles preview
+          e.preventDefault();
+          setShowPreview(!showPreview);
+        }
+        break;
+      case 's':
+        if (e.metaKey || e.ctrlKey) {
+          // Cmd/Ctrl+S pins current search
+          e.preventDefault();
+          if (query) {
+            togglePinSearch(query);
+          }
         }
         break;
     }
@@ -1023,9 +1143,30 @@ export function LocalSearch() {
     return filtered;
   }, [results, selectedTags, selectedContentType]);
 
+  // Navigate results with keyboard
+  const handleResultNavigation = useCallback((direction: 'up' | 'down') => {
+    const allResults = filteredResults.flatMap(group => 
+      group.hits.slice(0, expandedGroups.has(group.pageUrl) ? group.totalHits : group.visibleHits)
+    );
+    
+    if (direction === 'down') {
+      setSelectedResultIndex(prev => 
+        prev < allResults.length - 1 ? prev + 1 : prev
+      );
+    } else {
+      setSelectedResultIndex(prev => prev > 0 ? prev - 1 : -1);
+    }
+    
+    // Scroll to selected result
+    if (resultsRef.current && selectedResultIndex >= 0) {
+      const resultElements = resultsRef.current.querySelectorAll('[data-result-item]');
+      resultElements[selectedResultIndex]?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+  }, [filteredResults, expandedGroups, selectedResultIndex]);
+
   return (
     <>
-      {/* Search Bar - минималистичный стиль согласно UI kit */}
+      {/* Search Bar - enhanced with status indicator */}
       <div className="relative w-full">
         <div className="relative">
           <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-500" />
@@ -1036,7 +1177,7 @@ export function LocalSearch() {
             readOnly
             className="w-full pl-10 pr-20 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:border-brand-primary-500/50 transition-colors duration-200 cursor-pointer text-sm"
           />
-          {/* Keyboard shortcut hint */}
+          {/* Enhanced keyboard shortcut hint */}
           <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-xs text-gray-600">
             <kbd className="px-1 py-0.5 bg-neutral-700 rounded text-gray-400 font-mono">⌘</kbd>
             <kbd className="px-1 py-0.5 bg-neutral-700 rounded text-gray-400 font-mono">K</kbd>
@@ -1051,218 +1192,422 @@ export function LocalSearch() {
         </div>
       )}
 
-      {/* Search Modal - минималистичный стиль */}
+      {/* Search Modal - enhanced with better UX */}
       {isOpen && !error && (
         <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-start justify-center pt-20">
-          <div ref={modalRef} className="w-full max-w-3xl mx-4 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl max-h-[75vh] flex flex-col">
-            {/* Header */}
-            <div className="flex items-center justify-between p-4 border-b border-neutral-700">
-              <div className="flex items-center gap-3 flex-1 relative">
-                <Search className="w-5 h-5 text-gray-500" />
-                <input
-                  ref={inputRef}
-                  type="text"
-                  value={query}
-                  onChange={handleSearchChange}
-                  onKeyDown={handleKeyDown}
-                  placeholder="Search documentation..."
-                  className="w-full bg-transparent text-white placeholder-gray-500 outline-none text-base font-mono"
-                  autoFocus
-                />
+          <div ref={modalRef} className="w-full max-w-4xl mx-4 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl max-h-[80vh] flex">
+            {/* Main search area */}
+            <div className="flex-1 flex flex-col">
+              {/* Header with search input */}
+              <div className="flex items-center justify-between p-4 border-b border-neutral-700">
+                <div className="flex items-center gap-3 flex-1 relative">
+                  <Search className={`w-5 h-5 transition-colors ${isSearching ? 'text-brand-primary-400 animate-pulse' : 'text-gray-500'}`} />
+                  <input
+                    ref={inputRef}
+                    type="text"
+                    value={query}
+                    onChange={handleSearchChange}
+                    onKeyDown={handleKeyDown}
+                    placeholder="Type to search... (fuzzy search enabled)"
+                    className="w-full bg-transparent text-white placeholder-gray-500 outline-none text-base font-mono"
+                    autoFocus
+                  />
+                  
+                  {/* Search status */}
+                  {isSearching && (
+                    <span className="text-xs text-brand-primary-400 animate-pulse">Searching...</span>
+                  )}
+                  
+                  {/* Autocomplete Suggestions - enhanced */}
+                  {showSuggestions && suggestions.length > 0 && (
+                    <div className="absolute top-full left-0 right-0 mt-2 bg-neutral-800 border border-neutral-700 rounded-lg shadow-lg z-10 max-h-48 overflow-y-auto">
+                      {suggestions.map((suggestion, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleSuggestionClick(suggestion)}
+                          className={`w-full text-left px-4 py-2 hover:bg-neutral-700 transition-colors duration-150 text-sm font-mono flex items-center justify-between ${
+                            index === selectedSuggestionIndex 
+                              ? 'bg-neutral-700 text-brand-primary-400' 
+                              : 'text-gray-300'
+                          }`}
+                        >
+                          <span>{suggestion}</span>
+                          {searchHistory.includes(suggestion) && (
+                            <Clock className="w-3 h-3 text-gray-600" />
+                          )}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </div>
                 
-                {/* Autocomplete Suggestions - упрощенный стиль */}
-                {showSuggestions && suggestions.length > 0 && (
-                  <div className="absolute top-full left-0 right-0 mt-2 bg-neutral-800 border border-neutral-700 rounded-lg shadow-lg z-10 max-h-48 overflow-y-auto">
-                    {suggestions.map((suggestion, index) => (
-                      <button
-                        key={index}
-                        onClick={() => handleSuggestionClick(suggestion)}
-                        className={`w-full text-left px-4 py-2 hover:bg-neutral-700 transition-colors duration-150 text-sm font-mono ${
-                          index === selectedSuggestionIndex 
-                            ? 'bg-neutral-700 text-brand-primary-400' 
-                            : 'text-gray-300'
-                        }`}
-                      >
-                        {suggestion}
-                      </button>
-                    ))}
-                  </div>
-                )}
-              </div>
-              <button
-                onClick={handleCloseModal}
-                className="p-2 hover:bg-neutral-800 rounded-lg transition-colors duration-200"
-                title="Close (Esc)"
-              >
-                <X className="w-5 h-5 text-gray-500" />
-              </button>
-            </div>
-
-            {/* Content Type Filters - минималистичные кнопки */}
-            <div className="px-4 py-2 border-b border-neutral-700">
-              <div className="flex flex-wrap gap-2">
-                {contentTypes.map((contentType) => (
+                {/* Action buttons */}
+                <div className="flex items-center gap-2">
                   <button
-                    key={contentType.id}
-                    onClick={() => handleContentTypeFilter(contentType.id)}
-                    className={`px-3 py-1 rounded-lg transition-colors duration-200 text-xs font-mono ${
-                      selectedContentType === contentType.id
-                        ? 'bg-brand-primary-500 text-black'
-                        : 'bg-neutral-800 text-gray-400 hover:bg-neutral-700'
+                    onClick={() => setShowPreview(!showPreview)}
+                    className={`p-2 rounded-lg transition-colors duration-200 ${
+                      showPreview ? 'bg-brand-primary-500/20 text-brand-primary-400' : 'hover:bg-neutral-800 text-gray-500'
                     }`}
-                    title={contentType.description}
+                    title="Toggle preview (⌘P)"
                   >
-                    {contentType.label}
+                    <Eye className="w-4 h-4" />
                   </button>
-                ))}
+                  <button
+                    onClick={handleCloseModal}
+                    className="p-2 hover:bg-neutral-800 rounded-lg transition-colors duration-200"
+                    title="Close (Esc)"
+                  >
+                    <X className="w-5 h-5 text-gray-500" />
+                  </button>
+                </div>
               </div>
-            </div>
 
-            {/* Tag Filters - минималистичные теги */}
-            {query && query.length >= 2 && allTags.length > 0 && (
-              <div className="px-4 py-2 border-b border-neutral-700">
+              {/* Quick filters */}
+              <div className="px-4 py-2 border-b border-neutral-700 flex items-center justify-between">
                 <div className="flex flex-wrap gap-2">
-                  {allTags.slice(0, 8).map(tag => (
+                  {contentTypes.map((contentType) => (
                     <button
-                      key={tag}
-                      onClick={() => handleTagClick(tag)}
-                      className={`px-2 py-1 text-xs rounded transition-colors duration-200 font-mono ${
-                        selectedTags.includes(tag)
-                          ? 'bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30'
-                          : 'bg-neutral-800 text-gray-500 border border-neutral-700 hover:border-neutral-600'
+                      key={contentType.id}
+                      onClick={() => handleContentTypeFilter(contentType.id)}
+                      className={`px-3 py-1 rounded-lg transition-colors duration-200 text-xs font-mono ${
+                        selectedContentType === contentType.id
+                          ? 'bg-brand-primary-500 text-black'
+                          : 'bg-neutral-800 text-gray-400 hover:bg-neutral-700'
                       }`}
+                      title={contentType.description}
                     >
-                      {tag}
+                      {contentType.label}
                     </button>
                   ))}
                 </div>
+                
+                {/* Search tips */}
+                <div className="text-xs text-gray-600 font-mono hidden lg:block">
+                  Tips: Use quotes for exact match • Fuzzy search enabled
+                </div>
               </div>
-            )}
 
-            {/* Results - минималистичный стиль */}
-            <div className="flex-1 overflow-y-auto p-4">
-              {/* Search History (when no query) */}
-              {(!query || query.length < 2) && searchHistory.length > 0 && (
-                <div className="mb-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-sm font-mono text-gray-400">Recent searches</h3>
-                    <button
-                      onClick={clearAllHistory}
-                      className="text-xs text-gray-600 hover:text-red-400 transition-colors duration-200"
-                    >
-                      Clear all
-                    </button>
-                  </div>
-                  <div className="space-y-1">
-                    {searchHistory.slice(0, 5).map((historyItem, index) => (
-                      <div key={index} className="flex items-center justify-between group">
+              {/* Results area */}
+              <div ref={resultsRef} className="flex-1 overflow-y-auto p-4">
+                {/* Pinned searches */}
+                {(!query || query.length < 2) && pinnedSearches.length > 0 && (
+                  <div className="mb-6">
+                    <h3 className="text-sm font-mono text-gray-400 mb-3 flex items-center gap-2">
+                      <Pin className="w-3 h-3" /> Pinned searches
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {pinnedSearches.map((pinned, index) => (
                         <button
-                          onClick={() => {
-                            setQuery(historyItem);
-                            performSearch(historyItem);
-                          }}
-                          className="flex-1 text-left px-3 py-2 text-sm text-gray-400 hover:text-brand-primary-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono"
+                          key={index}
+                          onClick={() => handleSuggestionClick(pinned)}
+                          className="px-3 py-1 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-lg hover:bg-brand-primary-500/20 transition-colors duration-200 text-brand-primary-400 text-sm font-mono"
                         >
-                          {historyItem}
+                          {pinned}
                         </button>
-                        <button
-                          onClick={() => removeFromHistory(historyItem)}
-                          className="opacity-0 group-hover:opacity-100 p-1 hover:text-red-400 transition-all duration-200"
-                        >
-                          <X className="w-3 h-3" />
-                        </button>
-                      </div>
-                    ))}
+                      ))}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
 
-              {/* No results message */}
-              {query && query.length >= 2 && filteredResults.length === 0 && (
-                <div className="text-center py-12">
-                  <div className="text-gray-500 mb-2">No results found for</div>
-                  <div className="text-brand-primary-400 font-mono text-lg mb-4">"{query}"</div>
-                  <div className="text-sm text-gray-600">Try different keywords or check the spelling</div>
-                </div>
-              )}
-
-              {/* Search Results - упрощенный стиль карточек */}
-              {filteredResults.map((group, groupIndex) => (
-                <div key={group.pageUrl} className="mb-4">
-                  <div className="bg-neutral-800/50 border border-neutral-700 rounded-lg overflow-hidden">
-                    <button
-                      onClick={() => handleExpandGroup(group.pageUrl)}
-                      className="w-full px-4 py-3 flex items-center justify-between hover:bg-neutral-800/70 transition-colors duration-200"
-                    >
-                      <div className="flex items-center gap-3">
-                        <ChevronRight className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
-                          expandedGroups.has(group.pageUrl) ? 'rotate-90' : ''
-                        }`} />
-                        <div className="text-left">
-                          <div className="text-sm font-semibold text-white font-mono">{group.pageTitle}</div>
-                          <div className="text-xs text-gray-500 font-mono">{group.pageSection}</div>
-                        </div>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-xs text-gray-600 font-mono">{group.totalHits} results</span>
-                      </div>
-                    </button>
-                    
-                    {(expandedGroups.has(group.pageUrl) || groupIndex === 0) && (
-                      <div className="border-t border-neutral-700">
-                        {group.hits.slice(0, group.visibleHits).map((hit, hitIndex) => (
+                {/* Recently viewed */}
+                {(!query || query.length < 2) && recentlyViewed.length > 0 && (
+                  <div className="mb-6">
+                    <h3 className="text-sm font-mono text-gray-400 mb-3 flex items-center gap-2">
+                      <Clock className="w-3 h-3" /> Recently viewed
+                    </h3>
+                    <div className="space-y-1">
+                      {recentlyViewed.slice(0, 3).map((viewed, index) => {
+                        const title = viewed.split('/').pop()?.replace(/-/g, ' ') || viewed;
+                        return (
                           <Link
-                            key={hit.objectID}
-                            href={hit.url}
+                            key={index}
+                            href={viewed}
                             onClick={handleCloseModal}
-                            className="block px-4 py-3 hover:bg-neutral-800/50 transition-colors duration-200 border-b border-neutral-700/50 last:border-b-0"
+                            className="block px-3 py-2 text-sm text-gray-400 hover:text-brand-primary-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono"
                           >
-                            <div className="flex items-start gap-3">
-                              <FileText className="w-4 h-4 text-gray-600 mt-0.5" />
-                              <div className="flex-1 min-w-0">
-                                <div className="text-sm font-medium text-brand-primary-400 mb-1">
-                                  {hit.title}
-                                </div>
-                                <div 
-                                  className="text-xs text-gray-400 line-clamp-2"
-                                  dangerouslySetInnerHTML={{ 
-                                    __html: highlightText(
-                                      hit._snippetResult?.content?.value || hit.content.substring(0, 150) + '...',
-                                      query
-                                    )
-                                  }}
-                                />
-                              </div>
-                            </div>
+                            {title}
                           </Link>
-                        ))}
-                        
-                        {group.totalHits > group.visibleHits && (
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* Search History */}
+                {(!query || query.length < 2) && searchHistory.length > 0 && (
+                  <div className="mb-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-sm font-mono text-gray-400 flex items-center gap-2">
+                        <Clock className="w-3 h-3" /> Recent searches
+                      </h3>
+                      <button
+                        onClick={clearAllHistory}
+                        className="text-xs text-gray-600 hover:text-red-400 transition-colors duration-200"
+                      >
+                        Clear all
+                      </button>
+                    </div>
+                    <div className="space-y-1">
+                      {searchHistory.slice(0, 5).map((historyItem, index) => (
+                        <div key={index} className="flex items-center justify-between group">
                           <button
-                            onClick={() => handleExpandGroup(group.pageUrl)}
-                            className="w-full px-4 py-2 text-xs text-brand-primary-400 hover:bg-neutral-800/50 transition-colors duration-200 font-mono"
+                            onClick={() => {
+                              setQuery(historyItem);
+                              performSearch(historyItem);
+                            }}
+                            className="flex-1 text-left px-3 py-2 text-sm text-gray-400 hover:text-brand-primary-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono flex items-center justify-between"
                           >
-                            Show {group.totalHits - group.visibleHits} more results
+                            <span>{historyItem}</span>
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                togglePinSearch(historyItem);
+                              }}
+                              className={`opacity-0 group-hover:opacity-100 transition-opacity ${
+                                pinnedSearches.includes(historyItem) ? 'text-brand-primary-400' : 'text-gray-600'
+                              }`}
+                            >
+                              <Pin className="w-3 h-3" />
+                            </button>
                           </button>
-                        )}
-                      </div>
+                          <button
+                            onClick={() => removeFromHistory(historyItem)}
+                            className="opacity-0 group-hover:opacity-100 p-1 hover:text-red-400 transition-all duration-200"
+                          >
+                            <X className="w-3 h-3" />
+                          </button>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Popular/Trending Queries */}
+                {(!query || query.length < 2) && (
+                  <div className="mb-6">
+                    <h3 className="text-sm font-mono text-gray-400 mb-3 flex items-center gap-2">
+                      <TrendingUp className="w-3 h-3" /> Trending searches
+                    </h3>
+                    <div className="flex flex-wrap gap-2">
+                      {popularQueries.slice(0, 8).map((popularQuery, index) => (
+                        <button
+                          key={index}
+                          onClick={() => handleSuggestionClick(popularQuery)}
+                          className="px-3 py-1 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors duration-200 text-gray-300 hover:text-brand-primary-400 text-sm font-mono"
+                        >
+                          {popularQuery}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Results count with smart insights */}
+                {query && query.length >= 2 && filteredResults.length > 0 && (
+                  <div className="mb-4 flex items-center justify-between">
+                    <div className="text-sm text-gray-500 font-mono">
+                      Found {filteredResults.reduce((sum, group) => sum + group.totalHits, 0)} results
+                      {selectedContentType !== 'all' && (
+                        <span className="ml-2 text-brand-primary-400">
+                          • {contentTypes.find(ct => ct.id === selectedContentType)?.label}
+                        </span>
+                      )}
+                    </div>
+                    {query && (
+                      <button
+                        onClick={() => togglePinSearch(query)}
+                        className={`text-xs px-2 py-1 rounded transition-colors ${
+                          pinnedSearches.includes(query) 
+                            ? 'bg-brand-primary-500/20 text-brand-primary-400' 
+                            : 'bg-neutral-800 text-gray-500 hover:text-gray-300'
+                        }`}
+                      >
+                        {pinnedSearches.includes(query) ? 'Pinned' : 'Pin search'}
+                      </button>
                     )}
                   </div>
+                )}
+
+                {/* Enhanced search results */}
+                {filteredResults.map((group, groupIndex) => (
+                  <div key={group.pageUrl} className="mb-4">
+                    <div className={`bg-neutral-800/50 border border-neutral-700 rounded-lg overflow-hidden ${
+                      selectedResultIndex >= 0 ? 'ring-2 ring-brand-primary-500/50' : ''
+                    }`}>
+                      <button
+                        onClick={() => handleExpandGroup(group.pageUrl)}
+                        className="w-full px-4 py-3 flex items-center justify-between hover:bg-neutral-800/70 transition-colors duration-200"
+                      >
+                        <div className="flex items-center gap-3">
+                          <ChevronRight className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
+                            expandedGroups.has(group.pageUrl) ? 'rotate-90' : ''
+                          }`} />
+                          <div className="text-left">
+                            <div className="text-sm font-semibold text-white font-mono flex items-center gap-2">
+                              {group.pageTitle}
+                              {group.relevanceScore > 80 && (
+                                <span className="text-xs px-1 py-0.5 bg-green-500/20 text-green-400 rounded">
+                                  Best match
+                                </span>
+                              )}
+                            </div>
+                            <div className="text-xs text-gray-500 font-mono">{group.pageSection}</div>
+                          </div>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-xs text-gray-600 font-mono">{group.totalHits} results</span>
+                        </div>
+                      </button>
+                      
+                      {(expandedGroups.has(group.pageUrl) || groupIndex === 0) && (
+                        <div className="border-t border-neutral-700">
+                          {group.hits.slice(0, expandedGroups.has(group.pageUrl) ? group.totalHits : group.visibleHits).map((hit, hitIndex) => {
+                            const resultIndex = filteredResults.slice(0, groupIndex).reduce((sum, g) => sum + g.hits.length, 0) + hitIndex;
+                            return (
+                              <Link
+                                key={hit.objectID}
+                                href={hit.url}
+                                onClick={() => {
+                                  saveRecentlyViewed(hit.url);
+                                  handleCloseModal();
+                                }}
+                                data-result-item
+                                className={`block px-4 py-3 hover:bg-neutral-800/50 transition-colors duration-200 border-b border-neutral-700/50 last:border-b-0 ${
+                                  resultIndex === selectedResultIndex ? 'bg-brand-primary-500/10 border-l-2 border-l-brand-primary-500' : ''
+                                }`}
+                              >
+                                <div className="flex items-start gap-3">
+                                  {hit.type === 'code' ? (
+                                    <Hash className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                  ) : hit.type === 'anchor' ? (
+                                    <BookOpen className="w-4 h-4 text-cyan-400 mt-0.5" />
+                                  ) : (
+                                    <FileText className="w-4 h-4 text-gray-600 mt-0.5" />
+                                  )}
+                                  <div className="flex-1 min-w-0">
+                                    <div className="text-sm font-medium text-brand-primary-400 mb-1">
+                                      {hit.title}
+                                    </div>
+                                    <div 
+                                      className="text-xs text-gray-400 line-clamp-2"
+                                      dangerouslySetInnerHTML={{ 
+                                        __html: highlightText(
+                                          hit._snippetResult?.content?.value || hit.content.substring(0, 150) + '...',
+                                          query
+                                        )
+                                      }}
+                                    />
+                                    {hit.tags && hit.tags.length > 0 && (
+                                      <div className="flex flex-wrap gap-1 mt-2">
+                                        {hit.tags.slice(0, 3).map(tag => (
+                                          <span key={tag} className="px-2 py-0.5 text-xs bg-neutral-800 text-gray-500 rounded">
+                                            {tag}
+                                          </span>
+                                        ))}
+                                      </div>
+                                    )}
+                                  </div>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                          
+                          {group.totalHits > group.visibleHits && !expandedGroups.has(group.pageUrl) && (
+                            <button
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                handleExpandGroup(group.pageUrl);
+                              }}
+                              className="w-full px-4 py-2 text-xs text-brand-primary-400 hover:bg-neutral-800/50 transition-colors duration-200 font-mono"
+                            >
+                              Show {group.totalHits - group.visibleHits} more results
+                            </button>
+                          )}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+
+                {/* No results with suggestions */}
+                {query && query.length >= 2 && filteredResults.length === 0 && (
+                  <div className="text-center py-12">
+                    <div className="text-gray-500 mb-2">No results found for</div>
+                    <div className="text-brand-primary-400 font-mono text-lg mb-4">"{query}"</div>
+                    <div className="text-sm text-gray-600 mb-4">Try different keywords or check the spelling</div>
+                    
+                    {/* Suggest similar searches */}
+                    <div className="mt-6">
+                      <p className="text-xs text-gray-600 mb-3">Did you mean:</p>
+                      <div className="flex flex-wrap gap-2 justify-center">
+                        {popularQueries
+                          .filter(pq => fuzzyMatch(pq, query) || fuzzyMatch(query, pq))
+                          .slice(0, 3)
+                          .map((suggestion, index) => (
+                            <button
+                              key={index}
+                              onClick={() => handleSuggestionClick(suggestion)}
+                              className="px-3 py-1 bg-neutral-800 rounded-lg hover:bg-neutral-700 text-gray-300 hover:text-brand-primary-400 text-sm font-mono"
+                            >
+                              {suggestion}
+                            </button>
+                          ))}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Enhanced footer with shortcuts */}
+              <div className="px-4 py-2 border-t border-neutral-700 flex items-center justify-between text-xs text-gray-600">
+                <div className="flex items-center gap-4">
+                  <span className="font-mono">↑↓ Navigate</span>
+                  <span className="font-mono">↵ Open</span>
+                  <span className="font-mono">⌘↵ New tab</span>
+                  <span className="font-mono">⌘P Preview</span>
+                  <span className="font-mono">⌘S Pin</span>
+                  <span className="font-mono">ESC Close</span>
                 </div>
-              ))}
+                {query && filteredResults.length > 0 && (
+                  <span className="font-mono">{filteredResults.length} results • {(Date.now() - performance.now()).toFixed(0)}ms</span>
+                )}
+              </div>
             </div>
 
-            {/* Footer */}
-            <div className="px-4 py-2 border-t border-neutral-700 flex items-center justify-between text-xs text-gray-600">
-              <div className="flex items-center gap-4">
-                <span className="font-mono">↑↓ Navigate</span>
-                <span className="font-mono">↵ Select</span>
-                <span className="font-mono">ESC Close</span>
+            {/* Preview panel */}
+            {showPreview && selectedResultIndex >= 0 && (
+              <div className="w-96 border-l border-neutral-700 bg-neutral-950 p-4 overflow-y-auto">
+                <h3 className="text-sm font-mono text-gray-400 mb-3">Preview</h3>
+                {(() => {
+                  const allResults = filteredResults.flatMap(group => group.hits);
+                  const selectedResult = allResults[selectedResultIndex];
+                  if (selectedResult) {
+                    return (
+                      <div>
+                        <h4 className="text-white font-semibold mb-2">{selectedResult.title}</h4>
+                        <p className="text-sm text-gray-400 mb-4">{selectedResult.url}</p>
+                        <div className="text-sm text-gray-300 space-y-2">
+                          {selectedResult.content.split('\n').slice(0, 10).map((line, i) => (
+                            <p key={i}>{line}</p>
+                          ))}
+                        </div>
+                        <Link
+                          href={selectedResult.url}
+                          onClick={() => {
+                            saveRecentlyViewed(selectedResult.url);
+                            handleCloseModal();
+                          }}
+                          className="inline-block mt-4 px-3 py-1 bg-brand-primary-500 text-black rounded-lg text-sm font-mono hover:bg-brand-primary-600 transition-colors"
+                        >
+                          Open page →
+                        </Link>
+                      </div>
+                    );
+                  }
+                  return <p className="text-gray-500">Select a result to preview</p>;
+                })()}
               </div>
-              {query && filteredResults.length > 0 && (
-                <span className="font-mono">{filteredResults.length} results</span>
-              )}
-            </div>
+            )}
           </div>
         </div>
       )}

@@ -15,7 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ergoplatform.org"),
+  metadataBase: new URL("https://ergoblockchain.org"),
   title: {
     default: "Ergo Blockchain | Resilient Platform for Contractual Money",
     template: "%s | Ergo Platform",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     "blockchain technology",
     "decentralized finance",
   ],
-  authors: [{ name: "Ergo Platform", url: "https://ergoplatform.org" }],
+  authors: [{ name: "Ergo Platform", url: "https://ergoblockchain.org" }],
   creator: "Ergo Platform",
   publisher: "Ergo Platform",
   formatDetection: {
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://ergoplatform.org",
+    url: "https://ergoblockchain.org",
     title: {
       default: "Ergo Blockchain | Resilient Platform for Contractual Money",
       template: "%s | Ergo Platform",
@@ -108,7 +108,7 @@ export default function RootLayout({
         <meta property="og:title" content="Ergo Platform | Resilient Platform for Contractual Money" />
         <meta property="og:description" content="Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps." />
         <meta property="og:image" content="/og-image.png" />
-        <meta property="og:url" content="https://ergoplatform.org" />
+        <meta property="og:url" content="https://ergoblockchain.org" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Ergo Platform | Resilient Platform for Contractual Money" />
         <meta name="twitter:description" content="Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps." />

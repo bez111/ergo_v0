@@ -1,145 +1,45 @@
 import { MetadataRoute } from 'next'
-import { blogPosts } from './blog/_lib/blog-data'
+import { menuData } from '@/app/Docs/menuData'
+import { blogPosts } from '@/app/blog/_lib/blog-data'
+
+const baseUrl = 'https://ergoblockchain.org'
+
+function flattenDocs(menu: any[]): string[] {
+  const links: string[] = []
+  const walk = (items: any[]) => {
+    for (const item of items) {
+      if (item.href) links.push(item.href)
+      if (item.items) walk(item.items)
+    }
+  }
+  walk(menu)
+  return Array.from(new Set(links))
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ergoblockchain.org'
-  const currentDate = new Date()
-  
-  // Main pages with highest priority
-  const mainPages = [
-    {
-      url: baseUrl,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/technology`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/ecosystem`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/start`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    },
-  ]
+  const staticRoutes: MetadataRoute.Sitemap = [
+    '',
+    '/start',
+    '/technology',
+    '/ecosystem',
+    '/use',
+    '/Docs',
+    '/blog',
+  ].map((path) => ({ url: `${baseUrl}${path}`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 }))
 
-  // Technology pages
-  const technologyPages = [
-    'eutxo-model',
-    'ergoscript',
-    'secure-pow',
-    'storage-rent',
-    'privacy-features',
-    'nipopows',
-    'sigma-protocols',
-    'autolykos',
-  ].map(page => ({
-    url: `${baseUrl}/technology/${page}`,
-    lastModified: currentDate,
-    changeFrequency: 'monthly' as const,
-    priority: 0.8,
+  const docsRoutes: MetadataRoute.Sitemap = flattenDocs(menuData).map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly',
+    priority: 0.6,
   }))
 
-  // Documentation pages
-  const docsPages = [
-    'introduction/glossary',
-    'introduction/eutxo',
-    'introduction/nipopows',
-    'introduction/storage-rent',
-    'developers',
-    'developers/tooling',
-    'developers/frameworks',
-    'ecosystem/infrastructure',
-    'ecosystem/wallets',
-    'ecosystem/defi',
-  ].map(page => ({
-    url: `${baseUrl}/Docs/${page}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }))
-
-  // Use case pages
-  const useCasePages = [
-    'defi',
-    'nft',
-    'dao',
-    'privacy',
-    'mining',
-    'get-erg',
-  ].map(page => ({
-    url: `${baseUrl}/use/${page}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }))
-
-  // Build pages
-  const buildPages = [
-    'docs',
-    'tools',
-    'grants',
-    'hackathons',
-  ].map(page => ({
-    url: `${baseUrl}/build/${page}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }))
-
-  // Additional important pages
-  const additionalPages = [
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: 'daily' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/wallet`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/learn`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/events`,
-      lastModified: currentDate,
-      changeFrequency: 'weekly' as const,
-      priority: 0.6,
-    },
-  ]
-
-  // Blog posts
-  const blogPages = blogPosts.map(post => ({
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
     url: `${baseUrl}/blog/${post.slug}`,
-    lastModified: currentDate,
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
+    lastModified: new Date(post.updatedAt || post.publishedAt || new Date().toISOString()),
+    changeFrequency: 'weekly',
+    priority: 0.6,
   }))
 
-  return [
-    ...mainPages,
-    ...technologyPages,
-    ...docsPages,
-    ...useCasePages,
-    ...buildPages,
-    ...additionalPages,
-    ...blogPages,
-  ]
+  return [...staticRoutes, ...docsRoutes, ...blogRoutes]
 }
