@@ -79,6 +79,11 @@ export const mainNavItems = [
         description: "One-stop catalog of dApps, services, and community projects with advanced search and filters.",
       },
       {
+        title: "Ecosystem Map",
+        href: "/ecosystem/map",
+        description: "Visual map of projects, tools, and teams with interactive clusters and filters.",
+      },
+      {
         title: "Mining Pools & Resources",
         href: "/ecosystem/mining",
         description: "List of mining pools and useful tools for miners.",

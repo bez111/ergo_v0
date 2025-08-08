@@ -1,548 +1,615 @@
 "use client"
 
 import { useState } from "react"
-import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
+import { motion, AnimatePresence } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { ArrowUpRight, ChevronRight, Info, ExternalLink, AlertTriangle } from "lucide-react"
-import Link from "next/link"
-import { FadeIn } from "@/components/animations/fade-in"
-import { SectionHeading } from "@/components/section-heading"
 import { Badge } from "@/components/ui/badge"
+import { Alert, AlertDescription } from "@/components/ui/alert"
+import { SectionHeading } from "@/components/section-heading"
+import { FadeIn } from "@/components/animations/fade-in"
+import { DigitalCounter } from "@/components/digital-counter"
+import { 
+  Server,
+  Users,
+  Activity,
+  TrendingUp,
+  ExternalLink,
+  Globe,
+  Shield,
+  Zap,
+  BarChart3,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  Cpu,
+  HardDrive,
+  Download,
+  Github,
+  Terminal,
+  Wrench,
+  Database,
+  Cloud,
+  ArrowUpRight,
+  Clock,
+  DollarSign,
+  Star,
+  Award,
+  MessageCircle,
+  HelpCircle,
+  ChevronRight,
+  Sparkles,
+  Coins,
+  Network,
+  ArrowRight
+} from "lucide-react"
+import Link from "next/link"
+import Script from "next/script"
+import { PoolCard, PoolCardSkeleton } from "@/components/mining/PoolCard"
 
-export default function MiningPage() {
-  const [hashrate, setHashrate] = useState("")
-  const [power, setPower] = useState("")
-  const [electricityCost, setElectricityCost] = useState("0.10")
-  const [gpuCount, setGpuCount] = useState("1")
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+    },
+  },
+}
 
-  const calculateProfitability = () => {
-    if (!hashrate || !power || !electricityCost || !gpuCount) return null
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+}
 
-    const totalHashrate = Number.parseFloat(hashrate) * Number.parseInt(gpuCount)
-    const totalPower = Number.parseFloat(power) * Number.parseInt(gpuCount)
+export default function MiningEcosystemPage() {
+  const [selectedFilter, setSelectedFilter] = useState<'all' | 'beginner' | 'low-fee' | 'decentralized'>('all')
+  const [hashrateClicked, setHashrateClicked] = useState(false)
 
-    // Simplified calculation for Ergo mining
-    const ergPerDay = totalHashrate * 0.00042 // Approximate ERG per MH/s per day
-    const dailyRevenue = ergPerDay * 3.85 // Assuming 1 ERG = $3.85
-    const dailyElectricityCost = (totalPower / 1000) * 24 * Number.parseFloat(electricityCost)
-    const dailyProfit = dailyRevenue - dailyElectricityCost
-
-    return {
-      ergPerDay: ergPerDay.toFixed(2),
-      dailyRevenue: dailyRevenue.toFixed(2),
-      dailyElectricityCost: dailyElectricityCost.toFixed(2),
-      dailyProfit: dailyProfit.toFixed(2),
-      monthlyProfit: (dailyProfit * 30).toFixed(2),
-      yearlyProfit: (dailyProfit * 365).toFixed(2),
+  // Mining Pools with real data
+  const miningPools = [
+    {
+      name: "GetBlok",
+      category: "large",
+      url: "https://ergo.getblok.io",
+      location: "Global",
+      fee: "1%",
+      paymentSystem: "PPLNS",
+      minPayout: "0.5 ERG",
+      hashrate: "45.2 TH/s",
+      miners: 2543,
+      poolShare: "21.5%",
+      uptime: "99.9%",
+      features: ["Auto-exchange", "Mobile app", "API access", "SSL/TLS"],
+      mainFeatures: ["24/7 Support", "Auto-exchange", "Mobile App"],
+      servers: ["EU", "US", "Asia"],
+      tags: ["beginner", "stable", "popular"]
+    },
+    {
+      name: "2Miners",
+      category: "large",
+      url: "https://2miners.com/erg-mining-pool",
+      location: "Global",
+      fee: "1%",
+      paymentSystem: "PPLNS",
+      minPayout: "0.1 ERG",
+      hashrate: "38.7 TH/s",
+      miners: 3218,
+      poolShare: "18.4%",
+      uptime: "99.8%",
+      features: ["24/7 Support", "Telegram bot", "Email alerts", "DDoS protection"],
+      mainFeatures: ["Telegram Bot", "Email Alerts", "24/7 Support"],
+      servers: ["EU", "US", "Asia", "RU"],
+      tags: ["beginner", "support"]
+    },
+    {
+      name: "HeroMiners",
+      category: "large",
+      url: "https://ergo.herominers.com",
+      location: "Global",
+      fee: "0.9%",
+      paymentSystem: "PROP",
+      minPayout: "0.5 ERG",
+      hashrate: "28.3 TH/s",
+      miners: 1847,
+      poolShare: "13.5%",
+      uptime: "99.7%",
+      features: ["SSL support", "Worker stats", "Profit calculator", "Discord bot"],
+      mainFeatures: ["Low Fee", "Discord Bot", "Profit Calc"],
+      servers: ["EU", "US", "Asia"],
+      tags: ["low-fee", "decentralized"]
+    },
+    {
+      name: "WoolyPooly",
+      category: "medium",
+      url: "https://woolypooly.com/en/coin/erg",
+      location: "Europe",
+      fee: "0.9%",
+      paymentSystem: "PPLNS",
+      minPayout: "0.5 ERG",
+      hashrate: "22.1 TH/s",
+      miners: 1234,
+      poolShare: "10.5%",
+      uptime: "99.6%",
+      features: ["Solo mining", "Telegram bot", "MEV rewards", "Low latency"],
+      mainFeatures: ["Solo Mining", "MEV Rewards", "Low Fee"],
+      servers: ["EU", "US"],
+      tags: ["low-fee", "decentralized"]
+    },
+    {
+      name: "F2Pool",
+      category: "large",
+      url: "https://www.f2pool.com",
+      location: "Asia",
+      fee: "2%",
+      paymentSystem: "PPS+",
+      minPayout: "1 ERG",
+      hashrate: "18.5 TH/s",
+      miners: 892,
+      poolShare: "8.8%",
+      uptime: "99.9%",
+      features: ["Mobile app", "Multi-coin", "Instant payments", "Chinese support"],
+      mainFeatures: ["Multi-coin", "Instant Pay", "Mobile App"],
+      servers: ["Asia", "US", "EU"],
+      tags: ["decentralized"]
+    },
+    {
+      name: "Kryptex Pool",
+      category: "medium",
+      url: "https://pool.kryptex.com/erg",
+      location: "Europe",
+      fee: "1%",
+      paymentSystem: "PPLNS",
+      minPayout: "0.5 ERG",
+      hashrate: "12.4 TH/s",
+      miners: 623,
+      poolShare: "5.9%",
+      uptime: "99.5%",
+      features: ["Mining OS", "Instant payouts", "Profit switching", "Dashboard"],
+      mainFeatures: ["Mining OS", "Profit Switch", "Dashboard"],
+      servers: ["EU", "US"],
+      tags: ["decentralized"]
+    },
+    {
+      name: "Nanopool",
+      category: "medium",
+      url: "https://ergo.nanopool.org",
+      location: "Global",
+      fee: "1%",
+      paymentSystem: "PPLNS",
+      minPayout: "1 ERG",
+      hashrate: "15.8 TH/s",
+      miners: 1456,
+      poolShare: "7.5%",
+      uptime: "99.7%",
+      features: ["Email notifications", "API", "Mobile app", "Multi-language"],
+      mainFeatures: ["API Access", "Multi-lang", "Mobile App"],
+      servers: ["EU", "US", "Asia", "AU"],
+      tags: ["decentralized"]
     }
-  }
+  ]
 
-  const profitability = calculateProfitability()
+  // Mining Software - simplified
+  const miningSoftware = [
+    {
+      name: "NBMiner",
+      gpus: ["NVIDIA", "AMD"],
+      fee: "2%",
+      beginnerFriendly: true,
+      recommended: "Best for mixed rigs",
+      download: "https://github.com/NebuTech/NBMiner/releases"
+    },
+    {
+      name: "T-Rex",
+      gpus: ["NVIDIA"],
+      fee: "1%",
+      beginnerFriendly: true,
+      recommended: "Best for NVIDIA cards",
+      download: "https://github.com/trexminer/T-Rex/releases"
+    },
+    {
+      name: "TeamRedMiner",
+      gpus: ["AMD"],
+      fee: "2%",
+      beginnerFriendly: false,
+      recommended: "Best for AMD cards",
+      download: "https://github.com/todxx/teamredminer/releases"
+    },
+    {
+      name: "lolMiner",
+      gpus: ["NVIDIA", "AMD"],
+      fee: "1%",
+      beginnerFriendly: false,
+      recommended: "Advanced users",
+      download: "https://github.com/Lolliedieb/lolMiner-releases/releases"
+    }
+  ]
 
-  // Network stats with animation
-  const [networkStats, setNetworkStats] = useState({
-    hashrate: "148.23",
-    difficulty: "2.89",
-    blockReward: "42",
-    blockTime: "2",
-    hashrateChange: "+5.3%",
-    difficultyChange: "+3.1%",
-  })
+  const filteredPools = selectedFilter === 'all' 
+    ? miningPools 
+    : miningPools.filter(pool => pool.tags.includes(selectedFilter))
+
+  const totalHashrate = miningPools.reduce((acc, pool) => acc + parseFloat(pool.hashrate), 0)
+  const totalMiners = miningPools.reduce((acc, pool) => acc + pool.miners, 0)
+
+  // Filter button configs with colors
+  const filterButtons = [
+    { 
+      key: 'all', 
+      label: 'All Pools', 
+      icon: null,
+      activeClass: 'bg-brand-primary-500 text-black hover:bg-brand-primary-600',
+      inactiveClass: 'border-neutral-700 text-neutral-300 hover:bg-neutral-900/60'
+    },
+    { 
+      key: 'beginner', 
+      label: 'For Beginners', 
+      icon: <Sparkles className="w-4 h-4 mr-1" />,
+      activeClass: 'bg-green-500 text-black hover:bg-green-600',
+      inactiveClass: 'border-green-500/30 text-green-400 hover:bg-green-500/10'
+    },
+    { 
+      key: 'low-fee', 
+      label: 'Lowest Fees', 
+      icon: <Coins className="w-4 h-4 mr-1" />,
+      activeClass: 'bg-orange-500 text-black hover:bg-orange-600',
+      inactiveClass: 'border-orange-500/30 text-orange-400 hover:bg-orange-500/10'
+    },
+    { 
+      key: 'decentralized', 
+      label: 'Decentralized', 
+      icon: <Network className="w-4 h-4 mr-1" />,
+      activeClass: 'bg-purple-500 text-white hover:bg-purple-600',
+      inactiveClass: 'border-purple-500/30 text-purple-400 hover:bg-purple-500/10'
+    }
+  ]
 
   return (
-    <div className="min-h-screen bg-black text-white relative">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
       <div className="relative z-10">
         {/* Hero Section */}
-        <FadeIn>
-          <section className="pt-32 pb-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">Mine Ergo</h1>
-                  <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">Secure the Network • Earn Today</p>
-                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Proof-of-Work keeps Ergo trust-minimised. Add your hash-power, collect block rewards, and underpin the ecosystem.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 px-8 py-3 rounded-xl">
-                      Start Mining Now
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm"
-                    >
-                      Why Mine Ergo?
-                    </Button>
-                  </div>
-                </div>
-                <motion.div
-                  className="relative"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8">
-                    <CardContent className="p-0">
-                      <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                        Network Overview
-                      </h3>
-                      <div className="grid grid-cols-2 gap-6">
-                        <div className="space-y-2">
-                                                    <div className="text-neutral-400">Network Hashrate</div>
-                          <div className="text-2xl font-bold text-white">{networkStats.hashrate} TH/s</div>
-                          <div className="text-sm text-green-500">▲ {networkStats.hashrateChange} (24h)</div>
-                        </div>
-                        <div className="space-y-2">
-                                                    <div className="text-neutral-400">Difficulty</div>
-                          <div className="text-2xl font-bold text-white">{networkStats.difficulty} PH</div>
-                          <div className="text-sm text-green-500">▲ {networkStats.difficultyChange} (24h)</div>
-                        </div>
-                        <div className="space-y-2">
-                                                    <div className="text-neutral-400">Block Reward</div>
-                          <div className="text-2xl font-bold text-white">{networkStats.blockReward} ERG</div>
-                        </div>
-                        <div className="space-y-2">
-                                                    <div className="text-neutral-400">Avg Block Time</div>
-                          <div className="text-2xl font-bold text-white">{networkStats.blockTime} min</div>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
-
-        {/* Why Mine Ergo Section */}
-        <FadeIn delay={0.2}>
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <SectionHeading
-                text="Why Mine Ergo"
-                subtitle="More Than Just Mining"
-                description="Ergo mining offers unique advantages beyond simple profit calculations"
-              />
-
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {[
-                  {
-                    title: "Earn ERG",
-                    description:
-                      "Receive block rewards and transaction fees. ERG fuels Ergo's innovative DeFi ecosystem, NFTs, and DAO tooling.",
-                    icon: "💰",
-                    color: "from-orange-500/20 to-orange-500/5",
-                  },
-                  {
-                    title: "Network Strength",
-                    description:
-                      "Every extra hash you contribute raises the cost of 51% attacks, making the Ergo network extremely resilient and ensuring transaction integrity.",
-                    icon: "🔒",
-                    color: "from-cyan-500/20 to-cyan-500/5",
-                  },
-                  {
-                    title: "Fair Distribution",
-                    description:
-                      "Ergo launched without an ICO or premine, adhering to true decentralization principles. Mining is the gateway to supply.",
-                    icon: "⚖️",
-                    color: "from-purple-500/20 to-purple-500/5",
-                  },
-                  {
-                    title: "Autolykos v2 (GPU-friendly)",
-                    description:
-                      "Memory-hard tweaks keep ASICs at bay. The latest research adds multi-path 'random twists' for enhanced resistance, favoring GPUs over specialized hardware.",
-                    icon: "🖥️",
-                    color: "from-orange-500/20 to-orange-500/5",
-                  },
-                  {
-                    title: "Storage-Rent Upside",
-                    description:
-                      "Dormant boxes are recycled, boosting miner income and supporting the network's long-term economic sustainability.",
-                    icon: "📦",
-                    color: "from-cyan-500/20 to-cyan-500/5",
-                  },
-                  {
-                    title: "Community Governance",
-                    description:
-                      "Miners have a voice in Ergo's future through on-chain governance mechanisms and community proposals.",
-                    icon: "🗣️",
-                    color: "from-purple-500/20 to-purple-500/5",
-                  },
-                ].map((benefit, index) => (
-                  <motion.div
-                    key={benefit.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    whileHover={{ scale: 1.05, rotateY: 5 }}
-                    className="group"
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="pt-28 pb-10 px-4"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                  Ergo Mining <span className="text-brand-primary-400">Ecosystem</span>
+                </h1>
+                <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
+                  Explore the complete mining infrastructure. {totalMiners.toLocaleString()} miners securing the network.
+                </p>
+                <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                  Fair launch, ASIC-resistant, truly decentralized. Find pools, software, and resources.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button asChild size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-6 py-3 rounded-xl border border-brand-primary-500/50 group">
+                    <Link href="/use/mining">
+                      <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
+                      I'm New - Start Here
+                    </Link>
+                  </Button>
+                  <Button 
+                    size="lg"
+                    variant="outline" 
+                    className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 px-6 py-3 rounded-xl transition-all group"
+                    onClick={() => document.getElementById('pools')?.scrollIntoView({ behavior: 'smooth' })}
                   >
-                                        <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200 h-full">
-                      <CardContent className="p-8 text-center">
-                        <div className="text-3xl mb-4">{benefit.icon}</div>
-                        <h3 className="text-xl font-semibold mb-4 text-white">{benefit.title}</h3>
-                        <p className="text-neutral-400 leading-relaxed">{benefit.description}</p>
-                      </CardContent>
-                    </Card>
+                    Browse Pools Directory
+                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </div>
+              </div>
+
+              {/* Network Stats Card with Easter Egg */}
+              <motion.div 
+                className="relative z-10" 
+                whileHover={{ scale: 1.02 }} 
+                transition={{ type: "spring", stiffness: 300, damping: 24 }}
+              >
+                <Card className="bg-neutral-900/50 border border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30 transition-colors">
+                  <CardContent className="p-0">
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">Network Overview</h3>
+                    <div className="grid grid-cols-2 gap-4">
+                      <motion.div 
+                        className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 cursor-pointer hover:border-brand-primary-500/50 transition-colors"
+                        onClick={() => setHashrateClicked(true)}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        <div className="flex items-center gap-3 mb-2">
+                          <Activity className="w-5 h-5 text-brand-primary-400" />
+                          <span className="text-sm text-neutral-400">Total Hashrate</span>
+                        </div>
+                        <DigitalCounter 
+                          value={totalHashrate} 
+                          suffix=" TH/s" 
+                          duration={3000} 
+                          className="text-lg font-mono text-white" 
+                        />
+                        <AnimatePresence>
+                          {hashrateClicked && (
+                            <motion.p
+                              initial={{ opacity: 0, y: -10 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              exit={{ opacity: 0 }}
+                              className="text-xs text-brand-primary-400 mt-1"
+                              onAnimationComplete={() => setTimeout(() => setHashrateClicked(false), 2000)}
+                            >
+                              Nice hashrate! 🚀
+                            </motion.p>
+                          )}
+                        </AnimatePresence>
+                      </motion.div>
+                      <div className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Users className="w-5 h-5 text-brand-primary-400" />
+                          <span className="text-sm text-neutral-400">Active Miners</span>
+                        </div>
+                        <DigitalCounter 
+                          value={totalMiners} 
+                          suffix="" 
+                          duration={3000} 
+                          className="text-lg font-mono text-white" 
+                        />
+                      </div>
+                      <div className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors">
+                        <div className="flex items-center gap-3 mb-2">
+                          <Award className="w-5 h-5 text-brand-primary-400" />
+                          <span className="text-sm text-neutral-400">Top Pool</span>
+                        </div>
+                        <p className="text-lg font-mono text-white">GetBlok</p>
+                      </div>
+                      <div className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors">
+                        <div className="flex items-center gap-3 mb-2">
+                          <DollarSign className="w-5 h-5 text-brand-primary-400" />
+                          <span className="text-sm text-neutral-400">Lowest Fee</span>
+                        </div>
+                        <p className="text-lg font-mono text-white">0.9%</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* Main Content */}
+        <section className="py-16 px-4">
+          <div className="max-w-7xl mx-auto">
+            {/* Mining Pools Section */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              id="pools"
+              className="mb-16"
+            >
+              <SectionHeading text="MINING POOLS DIRECTORY" />
+              
+              {/* Filter Section with colored badges */}
+              <div className="text-center mb-8">
+                <p className="text-neutral-400 mb-6">
+                  {selectedFilter === 'all' 
+                    ? "All verified and active Ergo mining pools" 
+                    : selectedFilter === 'beginner'
+                      ? "Best pools for beginners with good support"
+                      : selectedFilter === 'low-fee'
+                        ? "Pools with fees ≤ 1%"
+                        : "Smaller pools for better decentralization"}
+                </p>
+                
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {filterButtons.map((filter) => (
+                    <Button
+                      key={filter.key}
+                      variant={selectedFilter === filter.key ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setSelectedFilter(filter.key as any)}
+                      className={selectedFilter === filter.key 
+                        ? filter.activeClass 
+                        : filter.inactiveClass}
+                    >
+                      {filter.icon}
+                      {filter.label}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Pool Cards */}
+              <div className="grid lg:grid-cols-2 gap-6">
+                {filteredPools.map((pool, i) => (
+                  <motion.div key={pool.name} variants={itemVariants}>
+                    <PoolCard pool={pool as any} />
                   </motion.div>
                 ))}
               </div>
-            </div>
-          </section>
-        </FadeIn>
 
-        {/* Getting Started Guide */}
-        <FadeIn delay={0.4}>
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <SectionHeading
-                text="Getting Started Guide"
-                subtitle="From Rig to First ERG"
-                description="Everything you need to begin your mining journey"
+              {/* Example skeletons for future async data */}
+              {/* <div className="grid lg:grid-cols-2 gap-6 mt-6">
+                {[...Array(2)].map((_, i) => (
+                  <PoolCardSkeleton key={i} />
+                ))}
+              </div> */}
+
+              {filteredPools.length === 0 && (
+                <div className="text-center py-8">
+                  <p className="text-neutral-400">No pools match your criteria</p>
+                </div>
+              )}
+            </motion.div>
+
+            {/* Mining Software Section with recommendations */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className="mb-16"
+            >
+              <SectionHeading text="MINING SOFTWARE" />
+              
+              {/* Quick tip for beginners */}
+              <Alert className="mb-6 bg-brand-primary-500/10 border-brand-primary-500/30">
+                <Sparkles className="h-4 w-4" />
+                <AlertDescription>
+                  <strong>New to mining?</strong> Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.
+                </AlertDescription>
+              </Alert>
+              
+              <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
+                <CardContent className="p-0">
+                  <div className="overflow-x-auto">
+                    <table className="w-full" aria-label="Ergo mining software options">
+                      <thead>
+                        <tr className="border-b border-neutral-800">
+                          <th className="text-left p-4 text-sm font-medium text-neutral-400">Software</th>
+                          <th className="text-left p-4 text-sm font-medium text-neutral-400">GPU Support</th>
+                          <th className="text-left p-4 text-sm font-medium text-neutral-400">Dev Fee</th>
+                          <th className="text-left p-4 text-sm font-medium text-neutral-400">Best For</th>
+                          <th className="text-left p-4 text-sm font-medium text-neutral-400"></th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {miningSoftware.map((software, i) => (
+                          <tr key={software.name} className="border-b border-neutral-800 last:border-0 hover:bg-neutral-900/30 transition-colors group">
+                            <td className="p-4 font-medium text-white">{software.name}</td>
+                            <td className="p-4">
+                              <div className="flex gap-2">
+                                {software.gpus.map(gpu => (
+                                  <Badge key={gpu} variant="outline" className="border-neutral-700 text-xs">
+                                    {gpu}
+                                  </Badge>
+                                ))}
+                              </div>
+                            </td>
+                            <td className="p-4 text-sm text-neutral-300">{software.fee}</td>
+                            <td className="p-4 text-sm text-neutral-400">{software.recommended}</td>
+                            <td className="p-4">
+                              <Link href={software.download} target="_blank">
+                                <Button variant="ghost" size="sm" className="text-neutral-400 hover:text-brand-primary-400 group-hover:text-brand-primary-400 transition-colors">
+                                  <Download className="w-4 h-4" />
+                                </Button>
+                              </Link>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* SEO JSON-LD for software as FAQ-like list */}
+              <Script id="software-faq-jsonld" type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify({
+                  '@context': 'https://schema.org',
+                  '@type': 'FAQPage',
+                  mainEntity: miningSoftware.map((sw: any) => ({
+                    '@type': 'Question',
+                    name: `${sw.name} — supported GPUs and fee`,
+                    acceptedAnswer: {
+                      '@type': 'Answer',
+                      text: `GPUs: ${sw.gpus.join(', ')}. Dev fee: ${sw.fee}. Recommended: ${sw.recommended}.`
+                    }
+                  }))
+                }) }}
               />
+            </motion.div>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl" />
-                    <CardHeader className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
-                          <span className="text-2xl">🖥️</span>
-                        </div>
-                                                 <CardTitle className="text-2xl font-bold text-white">GPU Mining</CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="relative z-10">
-                                             <ul className="list-disc pl-5 space-y-2 text-neutral-300">
-                         <li>Recommendations: Nvidia RTX 30/40 or AMD RX 6000/7000 GPUs</li>
-                        <li>VRAM: Minimum 4GB (6GB+ recommended for Autolykos v2)</li>
-                        <li>Top performer: CMP 170 HX still tops hashrate charts at ~415 MH/s</li>
-                      </ul>
-                      <div className="mt-6 flex justify-end">
-                        <Button variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                          GPU Selection Guide
-                          <ArrowUpRight className="w-4 h-4 ml-2" />
-                        </Button>
-                      </div>
+            {/* Quick FAQ Section */}
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={containerVariants}
+              className="mb-16"
+            >
+              <SectionHeading text="QUICK ANSWERS" />
+              
+              <div className="grid md:grid-cols-3 gap-6">
+                <FadeIn>
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/30 transition-colors">
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold mb-2 text-brand-primary-400 flex items-center gap-2">
+                        <HelpCircle className="w-4 h-4" />
+                        How to choose a pool?
+                      </h3>
+                      <p className="text-sm text-neutral-400">
+                        Beginners: choose pools with good support. 
+                        Advanced: optimize for fees and server location.
+                      </p>
                     </CardContent>
                   </Card>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl" />
-                    <CardHeader className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                          <span className="text-2xl">⚡</span>
-                        </div>
-                        <CardTitle className="text-2xl font-bold text-white">CPU Mining</CardTitle>
-                      </div>
-                    </CardHeader>
-                    <CardContent className="relative z-10">
-                                             <ul className="list-disc pl-5 space-y-2 text-neutral-300">
-                         <li>CPU, Motherboard, RAM, PSU (Power Supply Unit), Storage (SSD/HDD)</li>
-                        <li>Mining Frame or Case with good airflow</li>
-                        <li>PCIe Risers for multi-GPU setups</li>
-                        <li>Cooling solutions (fans, adequate ventilation)</li>
-                      </ul>
+                </FadeIn>
+                <FadeIn delay={0.1}>
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/30 transition-colors">
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold mb-2 text-brand-primary-400 flex items-center gap-2">
+                        <Cpu className="w-4 h-4" />
+                        Minimum requirements?
+                      </h3>
+                      <p className="text-sm text-neutral-400">
+                        GPU with 4GB+ VRAM. RTX 3060 Ti or RX 6600 XT are popular choices.
+                      </p>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </FadeIn>
+                <FadeIn delay={0.2}>
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/30 transition-colors">
+                    <CardContent className="p-6">
+                      <h3 className="font-semibold mb-2 text-brand-primary-400 flex items-center gap-2">
+                        <DollarSign className="w-4 h-4" />
+                        Expected earnings?
+                      </h3>
+                      <p className="text-sm text-neutral-400">
+                        Depends on hashrate and electricity cost. 
+                        <Link href="/use/mining#calculator" className="text-brand-primary-400 hover:text-brand-primary-300"> Use calculator →</Link>
+                      </p>
+                    </CardContent>
+                  </Card>
+                </FadeIn>
               </div>
-            </div>
-          </section>
-        </FadeIn>
 
-        {/* Autolykos v2 Section */}
-        <section className="py-20 px-4 border-b border-neutral-800">
-          <div className="max-w-6xl mx-auto">
-                            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4 text-white">Autolykos v2 in 60 Seconds</h2>
-            </div>
-
-            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
-              <CardContent className="p-8">
-                <ul className="space-y-4">
-                  {[
-                    "Memory-Hard — > 4 GB VRAM required.",
-                    "Two-Phase Puzzle — generate & sort a 1 GiB mapping, then compute proof.",
-                    "ASIC Resistance 2.0 — 2025 tweak introduces four computation paths + mixed-precision maths to widen the gap between GPUs and custom silicon.",
-                    "Block time: 2 minutes ± 30 s.",
-                    "Difficulty retarget: every block via LWMA.",
-                  ].map((point, index) => (
-                    <li key={index} className="flex items-start gap-3">
-                                            <div className="text-brand-primary-400 font-bold">•</div>
-                      <div className="text-neutral-300">{point}</div>
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-6 text-center">
-                  <Button variant="link" className="text-brand-primary-400 hover:text-brand-primary-300">
-                    For the math lovers, read the March 2025 design note
-                    <ExternalLink className="w-4 h-4 ml-2" />
+              <div className="text-center mt-8">
+                <Link href="/learn/faq">
+                  <Button variant="ghost" className="text-neutral-400 hover:text-brand-primary-400 group">
+                    View all FAQs
+                    <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
+                </Link>
+              </div>
+            </motion.div>
 
-        {/* Profitability Calculator */}
-        <section className="py-20 px-4 border-b border-orange-500/20" id="calculator">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Profitability Calculator</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                Estimate your potential earnings from mining Ergo
-              </p>
-            </div>
-
-            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">GPU Hashrate (MH/s)</label>
-                                        <Input
-                      type="number"
-                      placeholder="100"
-                      value={hashrate}
-                      onChange={(e) => setHashrate(e.target.value)}
-                      className="bg-neutral-900/70 border-neutral-700"
-                    />
-                    <div className="text-xs text-neutral-400 mt-1">Hashrate per GPU in megahashes per second</div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Power Consumption (W)</label>
-                    <Input
-                      type="number"
-                      placeholder="150"
-                      value={power}
-                      onChange={(e) => setPower(e.target.value)}
-                      className="bg-neutral-900/70 border-neutral-700"
-                    />
-                    <div className="text-xs text-neutral-400 mt-1">Power usage per GPU in watts</div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Number of GPUs</label>
-                    <Input
-                      type="number"
-                      placeholder="1"
-                      value={gpuCount}
-                      onChange={(e) => setGpuCount(e.target.value)}
-                      className="bg-neutral-900/70 border-neutral-700"
-                    />
-                    <div className="text-xs text-neutral-400 mt-1">Total number of GPUs in your setup</div>
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Electricity Cost ($/kWh)</label>
-                    <Input
-                      type="number"
-                      step="0.01"
-                      placeholder="0.10"
-                      value={electricityCost}
-                      onChange={(e) => setElectricityCost(e.target.value)}
-                      className="bg-neutral-900/70 border-neutral-700"
-                    />
-                    <div className="text-xs text-neutral-400 mt-1">Your electricity cost per kilowatt-hour</div>
-                  </div>
-                </div>
-
-                {profitability ? (
-                  <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                    <Card className="bg-gray-800/50 border-gray-700">
-                      <CardContent className="p-4 text-center">
-                        <div className="text-sm text-gray-400 mb-1">ERG per Day</div>
-                        <div className="text-xl font-bold text-orange-500">{profitability.ergPerDay}</div>
-                      </CardContent>
-                    </Card>
-                    <Card className="bg-gray-800/50 border-gray-700">
-                      <CardContent className="p-4 text-center">
-                        <div className="text-sm text-gray-400 mb-1">Daily Revenue</div>
-                        <div className="text-xl font-bold text-green-500">${profitability.dailyRevenue}</div>
-                      </CardContent>
-                    </Card>
-                    <Card className="bg-gray-800/50 border-gray-700">
-                      <CardContent className="p-4 text-center">
-                        <div className="text-sm text-gray-400 mb-1">Daily Cost</div>
-                        <div className="text-xl font-bold text-red-500">${profitability.dailyElectricityCost}</div>
-                      </CardContent>
-                    </Card>
-                    <Card className="bg-gray-800/50 border-gray-700">
-                      <CardContent className="p-4 text-center">
-                        <div className="text-sm text-gray-400 mb-1">Daily Profit</div>
-                        <div className="text-xl font-bold text-blue-500">${profitability.dailyProfit}</div>
-                      </CardContent>
-                    </Card>
-                    <Card className="bg-gray-800/50 border-gray-700">
-                      <CardContent className="p-4 text-center">
-                        <div className="text-sm text-gray-400 mb-1">Monthly Profit</div>
-                        <div className="text-xl font-bold text-blue-500">${profitability.monthlyProfit}</div>
-                      </CardContent>
-                    </Card>
-                    <Card className="bg-gray-800/50 border-gray-700">
-                      <CardContent className="p-4 text-center">
-                        <div className="text-sm text-gray-400 mb-1">Yearly Profit</div>
-                        <div className="text-xl font-bold text-blue-500">${profitability.yearlyProfit}</div>
-                      </CardContent>
-                    </Card>
-                  </div>
-                ) : (
-                                      <div className="text-center text-neutral-400 py-4">
-                    Enter your mining parameters to calculate potential earnings
-                  </div>
-                )}
-
-                <div className="mt-6 bg-neutral-900/50 border border-neutral-700 rounded-lg p-4 flex items-start gap-3">
-                  <Info className="w-5 h-5 text-brand-primary-400 flex-shrink-0 mt-0.5" />
-                  <div className="text-sm text-neutral-300">
-                    <span className="font-medium text-brand-primary-400">Note:</span> Calculations are estimates based on current
-                    network difficulty and ERG price ($3.85). Actual earnings may vary due to difficulty changes, price
-                    fluctuations, and luck factors.
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Resources & Community */}
-        <section className="py-20 px-4 border-b border-neutral-800">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4 text-white">Resources & Community</h2>
-              <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-                Connect with experienced Ergo miners, get assistance with setup, and stay updated with the latest
-                developments.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200">
-                <CardHeader>
-                  <CardTitle>Comprehensive Mining Guide</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-neutral-300 mb-6">
-                    Everything you need to know about mining Ergo - from hardware selection to optimization techniques.
+            {/* Final CTA */}
+            <FadeIn>
+              <Card className="bg-gradient-to-r from-brand-primary-500/10 to-transparent border border-brand-primary-500/30 rounded-xl hover:border-brand-primary-500/50 transition-colors">
+                <CardContent className="p-8 text-center">
+                  <h3 className="text-2xl font-bold mb-4 text-white">Ready to Start Mining?</h3>
+                  <p className="text-neutral-400 mb-6 max-w-2xl mx-auto">
+                    Join thousands of miners securing the Ergo network. Fair, decentralized, and profitable.
                   </p>
-                  <Button variant="outline" className="w-full border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                    Read the Guide
-                    <ChevronRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200">
-                <CardHeader>
-                  <CardTitle>Community Support</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-neutral-300 mb-6">
-                    Join thousands of Ergo miners in active communities to share knowledge and get help.
-                  </p>
-                  <div className="space-y-3">
-                    <Button variant="outline" className="w-full border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                      Join Discord
-                      <ExternalLink className="w-4 h-4 ml-2" />
-                    </Button>
-                    <Button variant="outline" className="w-full border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                      Join Reddit
-                      <ExternalLink className="w-4 h-4 ml-2" />
-                    </Button>
+                  <div className="flex gap-4 justify-center">
+                    <Link href="/use/mining">
+                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold group">
+                        Step-by-Step Guide
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </Button>
+                    </Link>
+                    <Link href="https://discord.gg/ergo" target="_blank">
+                      <Button variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 transition-all">
+                        <MessageCircle className="w-4 h-4 mr-2" />
+                        Get Help
+                      </Button>
+                    </Link>
                   </div>
                 </CardContent>
               </Card>
-
-              <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200">
-                <CardHeader>
-                  <CardTitle>Additional Resources</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-3 text-neutral-300">
-                    <li className="flex items-center gap-2">
-                      <span className="text-brand-primary-400">•</span>
-                      <Link href="#" className="hover:text-brand-primary-400 transition-colors">
-                        Ergo Mining Blog Posts
-                      </Link>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-brand-primary-400">•</span>
-                      <Link href="#" className="hover:text-brand-primary-400 transition-colors">
-                        Ergo Mining Wiki
-                      </Link>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-brand-primary-400">•</span>
-                      <Link href="#" className="hover:text-brand-primary-400 transition-colors">
-                        Autolykos Algorithm Documentation
-                      </Link>
-                    </li>
-                    <li className="flex items-center gap-2">
-                      <span className="text-brand-primary-400">•</span>
-                      <Link href="#" className="hover:text-brand-primary-400 transition-colors">
-                        WhatToMine Profitability Calculator
-                      </Link>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-
-            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
-              <CardHeader>
-                <CardTitle className="text-white">Stay Updated</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-300 mb-4">
-                  Follow official Ergo channels for information on network upgrades, mining software updates, and other
-                  important news that may affect mining.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div className="flex items-center gap-3">
-                    <div className="text-xl">@ergo_platform</div>
-                    <div className="text-gray-400">Official Twitter</div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="text-xl">#announcements</div>
-                    <div className="text-gray-400">Discord Channel</div>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <div className="text-xl">Ergo Blog</div>
-                    <div className="text-gray-400">Official Updates</div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Footer CTA */}
-        <section className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="text-sm text-neutral-400 mb-8">
-              Page last updated: June 2, 2025 — Check release notes or suggest edits on GitHub.
-            </div>
-            <h2 className="text-3xl font-bold mb-4 text-white">Ready to contribute hash-power?</h2>
-            <p className="text-xl text-neutral-300 mb-8">
-              Start mining now and help secure a fair, research-driven financial future.
-            </p>
-            <Button size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl border border-brand-primary-500/50">
-              Start Mining Ergo
-            </Button>
+            </FadeIn>
           </div>
         </section>
       </div>

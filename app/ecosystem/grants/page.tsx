@@ -10,35 +10,7 @@ import { Clock, Mail, Zap, Users, Target, Lightbulb } from "lucide-react"
 import { FadeIn } from "@/components/animations/fade-in"
 import { SectionHeading } from "@/components/section-heading"
 import { Badge } from "@/components/ui/badge"
-
-// Simple binary rain background
-function BinaryRainBackground() {
-  const binaryChars = Array.from({ length: 100 }, (_, i) => ({
-    id: i,
-    char: Math.random() > 0.5 ? "1" : "0",
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    opacity: Math.random() * 0.5 + 0.1,
-  }))
-
-  return (
-    <div className="fixed inset-0 pointer-events-none overflow-hidden">
-      {binaryChars.map((item) => (
-        <div
-          key={item.id}
-          className="absolute text-orange-500 text-sm font-mono"
-          style={{
-            left: `${item.x}%`,
-            top: `${item.y}%`,
-            opacity: item.opacity,
-          }}
-        >
-          {item.char}
-        </div>
-      ))}
-    </div>
-  )
-}
+import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
 
 export default function GrantsPage() {
   const [email, setEmail] = useState("")
@@ -53,26 +25,25 @@ export default function GrantsPage() {
   }
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* subtle background grid */}
+      <HexagonalGrid className="opacity-[0.03]" />
       <div className="relative z-10">
         {/* Hero Section */}
         <FadeIn>
           <section className="pt-32 pb-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
-                GRANTS PROGRAM
-              </Badge>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block">
+              <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-snug pb-2">
                 Coming Soon
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
+              <p className="text-xl md:text-2xl text-neutral-300 mb-12 max-w-3xl mx-auto">
                 Empowering developers, researchers, and innovators to build the future of decentralized finance on Ergo
               </p>
 
               {/* Countdown */}
               <div className="flex justify-center items-center gap-4 mb-12">
-                <Clock className="w-6 h-6 text-orange-500" />
-                <span className="text-lg text-gray-300">Expected Launch: Q3 2025</span>
+                <Clock className="w-6 h-6 text-brand-primary-400" />
+                <span className="text-lg text-neutral-300">Expected Launch: Q3 2025</span>
               </div>
 
               {/* Email Subscription */}
@@ -84,10 +55,10 @@ export default function GrantsPage() {
                       placeholder="Enter your email for updates"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="bg-gray-900/50 border-orange-500/20 text-white placeholder-gray-400"
+                      className="bg-neutral-900/80 border-neutral-700 text-white placeholder-neutral-500"
                       required
                     />
-                    <Button type="submit" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button type="submit" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Notify Me
                     </Button>
                   </form>
@@ -117,25 +88,25 @@ export default function GrantsPage() {
                     icon: Zap,
                     title: "Developer Support",
                     description: "Funding for innovative dApps, tools, and infrastructure projects",
-                    color: "from-orange-500/20 to-orange-500/5",
+                    color: "",
                   },
                   {
                     icon: Target,
                     title: "Research Funding",
                     description: "Support for academic research and protocol improvements",
-                    color: "from-cyan-500/20 to-cyan-500/5",
+                    color: "",
                   },
                   {
                     icon: Users,
                     title: "Community Projects",
                     description: "Grants for community-driven initiatives and educational content",
-                    color: "from-purple-500/20 to-purple-500/5",
+                    color: "",
                   },
                   {
                     icon: Lightbulb,
                     title: "Innovation Grants",
                     description: "Special funding for breakthrough ideas and experimental projects",
-                    color: "from-orange-500/20 to-orange-500/5",
+                    color: "",
                   },
                 ].map((feature, index) => (
                   <motion.div
@@ -147,12 +118,12 @@ export default function GrantsPage() {
                     className="group"
                   >
                     <Card
-                      className={`bg-gradient-to-br ${feature.color} border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full`}
+                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-brand-primary-500/50 transition-all duration-300 rounded-xl h-full`}
                     >
                       <CardContent className="p-8 text-center">
-                        <feature.icon className="w-12 h-12 text-orange-500 mx-auto mb-4" />
+                        <feature.icon className="w-12 h-12 text-brand-primary-400 mx-auto mb-4" />
                         <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
-                        <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                        <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -166,19 +137,19 @@ export default function GrantsPage() {
         <FadeIn delay={0.4}>
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent leading-[1.1] pb-1">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white leading-[1.1] pb-1">
                 Ready to Build on Ergo?
               </h2>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-neutral-300 mb-8">
                 Start preparing your project proposal and join our community to stay updated
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                   Join Discord Community
                 </Button>
                 <Button
                   variant="outline"
-                  className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                  className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
                   Learn About Ergo
                 </Button>

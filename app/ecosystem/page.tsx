@@ -722,7 +722,7 @@ export default function EcosystemPage() {
                   size="icon"
                   onClick={() => setCurrentFeaturedIndex((p) => Math.max(0, p - 1))}
                   disabled={currentFeaturedIndex === 0}
-                  className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60"
+                  className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400"
                 >
                   <ChevronLeft className="w-4 h-4" />
                 </Button>
@@ -731,7 +731,7 @@ export default function EcosystemPage() {
                   size="icon"
                   onClick={() => setCurrentFeaturedIndex((p) => Math.min(featuredProjects.length - 3, p + 1))}
                   disabled={currentFeaturedIndex >= featuredProjects.length - 3}
-                  className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60"
+                  className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400"
                 >
                   <ChevronRight className="w-4 h-4" />
                 </Button>
@@ -766,7 +766,7 @@ export default function EcosystemPage() {
                         </div>
                       </div>
                       <p className="text-neutral-400 mb-6 flex-1">{project.description}</p>
-                      <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
+                      <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500 hover:text-brand-primary-400">
                         <Link href={project.url} target="_blank" className="flex items-center gap-2">
                           Visit Project
                           <ExternalLink className="w-4 h-4" />
@@ -816,7 +816,7 @@ export default function EcosystemPage() {
                     setViewMode("list")
                     localStorage.setItem("ecosystemViewMode", "list")
                   }}
-                  className={`h-12 w-12 border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 ${viewMode === "list" ? "bg-neutral-800 border-neutral-600 text-white" : ""}`}
+                  className={`h-12 w-12 border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400 ${viewMode === "list" ? "bg-neutral-800 border-neutral-600 text-white" : ""}`}
                 >
                   <List />
                 </Button>
@@ -826,7 +826,7 @@ export default function EcosystemPage() {
                     setViewMode("grid")
                     localStorage.setItem("ecosystemViewMode", "grid")
                   }}
-                  className={`h-12 w-12 border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 ${viewMode === "grid" ? "bg-neutral-800 border-neutral-600 text-white" : ""}`}
+                  className={`h-12 w-12 border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400 ${viewMode === "grid" ? "bg-neutral-800 border-neutral-600 text-white" : ""}`}
                 >
                   <LayoutGrid />
                 </Button>
@@ -834,14 +834,14 @@ export default function EcosystemPage() {
             </div>
 
             <div className="flex flex-wrap gap-2 justify-center mb-4" style={{ contain: "layout paint" }}>
-              {["ALL", ...categoryOrder].map((category) => (
+              {(["ALL", ...categoryOrder] as string[]).map((category) => (
                 <Button
                   key={category}
                   variant="outline"
                   onClick={() => setSelectedCategory(category)}
-                  className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 ${
+                  className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400 ${
                     selectedCategory === category 
-                      ? "bg-neutral-800 border-neutral-600 text-white" 
+                      ? "bg-orange-500/10 border-orange-500/50 text-orange-400" 
                       : ""
                   }`}
                 >
@@ -857,9 +857,9 @@ export default function EcosystemPage() {
                   key={status}
                   variant="outline"
                   onClick={() => setSelectedStatus(status)}
-                  className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 ${
+                  className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400 ${
                     selectedStatus === status 
-                      ? "bg-neutral-800 border-neutral-600 text-white" 
+                      ? "bg-orange-500/10 border-orange-500/50 text-orange-400" 
                       : ""
                   }`}
                 >
@@ -924,7 +924,7 @@ export default function EcosystemPage() {
                       </div>
                     </div>
                     <p className="text-neutral-400 mb-6 flex-1">{project.description}</p>
-                    <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
+                    <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500 hover:text-brand-primary-400">
                       <Link href={project.url} target="_blank" className="flex items-center gap-2">
                         Visit Project
                         <ExternalLink className="w-4 h-4" />
