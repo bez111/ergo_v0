@@ -67,7 +67,7 @@ export default function MiningPage() {
                     Proof-of-Work keeps Ergo trust-minimised. Add your hash-power, collect block rewards, and underpin the ecosystem.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl border border-brand-primary-500/50">
+                    <Button variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 px-8 py-3 rounded-xl">
                       Start Mining Now
                     </Button>
                     <Button
@@ -268,7 +268,7 @@ export default function MiningPage() {
         </FadeIn>
 
         {/* Autolykos v2 Section */}
-        <section className="py-20 px-4 border-b border-orange-500/20">
+        <section className="py-20 px-4 border-b border-neutral-800">
           <div className="max-w-6xl mx-auto">
                             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4 text-white">Autolykos v2 in 60 Seconds</h2>
@@ -420,7 +420,7 @@ export default function MiningPage() {
         </section>
 
         {/* Resources & Community */}
-        <section className="py-20 px-4 border-b border-orange-500/20">
+        <section className="py-20 px-4 border-b border-neutral-800">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold mb-4 text-white">Resources & Community</h2>
@@ -439,7 +439,7 @@ export default function MiningPage() {
                   <p className="text-neutral-300 mb-6">
                     Everything you need to know about mining Ergo - from hardware selection to optimization techniques.
                   </p>
-                  <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black border border-brand-primary-500/50">
+                  <Button variant="outline" className="w-full border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
                     Read the Guide
                     <ChevronRight className="w-4 h-4 ml-2" />
                   </Button>
@@ -455,11 +455,11 @@ export default function MiningPage() {
                     Join thousands of Ergo miners in active communities to share knowledge and get help.
                   </p>
                   <div className="space-y-3">
-                    <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl border border-brand-primary-500/50">
+                    <Button variant="outline" className="w-full border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
                       Join Discord
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
-                    <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl border border-brand-primary-500/50">
+                    <Button variant="outline" className="w-full border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
                       Join Reddit
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
