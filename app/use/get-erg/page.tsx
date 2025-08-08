@@ -104,44 +104,74 @@ const itemVariants = {
 
 export default function GetErgPage() {
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="absolute inset-0 z-0 opacity-20 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(255,136,0,0.3),rgba(255,255,255,0))]"></div>
-      <div className="relative z-10 max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-black text-white">
+      <div className="max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
         {/* Hero Section */}
         <motion.section
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-24"
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="pt-0 pb-10"
         >
-          <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30">GET ERG</Badge>
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pb-4">
-            Acquire ERG
-          </h1>
-          <p className="mt-4 text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
-            Your guide to obtaining ERG, the native currency of the Ergo ecosystem. Choose the method that best
-            suits you.
-          </p>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Acquire ERG</h1>
+              <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
+                Your guide to obtaining ERG, the native currency of the Ergo ecosystem. Choose the method that best suits you.
+              </p>
+              <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                Buy with fiat, trade on CEX, or swap on DEX — pick the way that’s right for you.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-6 py-3 rounded-xl border border-brand-primary-500/50">
+                  <Link href="#onramp">Buy with Fiat</Link>
+                </Button>
+                <Button asChild variant="outline" className="border-neutral-600 text-neutral-200 hover:bg-neutral-900/40 px-6 py-3 rounded-xl">
+                  <Link href="#cex">View Exchanges</Link>
+                </Button>
+              </div>
+            </div>
+            <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+              <Card className="bg-neutral-900/50 border border-neutral-700 backdrop-blur-sm p-8">
+                <CardContent className="p-0">
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">Ways to Get ERG</h3>
+                  <div className="space-y-3">
+                    {[
+                      { name: "Fiat On-Ramp (Banxa)", icon: CreditCard },
+                      { name: "Centralized Exchanges (CEX)", icon: Cpu },
+                      { name: "Decentralized Exchanges (DEX)", icon: RefreshCw },
+                    ].map((feature) => (
+                      <motion.div key={feature.name} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700" whileHover={{ scale: 1.01, x: 6 }} transition={{ type: "spring", stiffness: 400, damping: 30 }}>
+                        <div className="flex items-center gap-3">
+                          <div className="p-2.5 rounded-md bg-brand-primary-500/20 border border-brand-primary-500/30 text-brand-primary-400">
+                            <feature.icon className="w-5 h-5" />
+                          </div>
+                          <h4 className="font-semibold text-white">{feature.name}</h4>
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          </div>
         </motion.section>
 
         {/* On-Ramp Section */}
-        <motion.section variants={containerVariants} initial="hidden" animate="visible" className="mb-20">
-          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-4">
-            <span className="text-orange-400">1.</span> Buy with Fiat (On-Ramp)
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
-            The easiest way to get ERG is to buy it directly using fiat currency (e.g., USD, EUR) through an on-ramp
-            service.
+        <motion.section variants={containerVariants} initial="hidden" animate="visible" className="mb-20" id="onramp">
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-4 text-white">Buy with Fiat (On-Ramp)</motion.h2>
+          <motion.p variants={itemVariants} className="text-center text-neutral-400 mb-10 max-w-2xl mx-auto">
+            The easiest way to get ERG is to buy it directly using fiat currency through an on-ramp service.
           </motion.p>
-          <div className="flex flex-row justify-center gap-8">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {onRampServices.map((service) => (
-              <motion.div variants={itemVariants} key={service.name} className="w-full max-w-md">
-                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl transition-all duration-300 hover:border-orange-500/50">
-                  <CardContent className="p-6 text-center">
-                    <service.icon className="w-12 h-12 text-orange-400 mx-auto mb-4" />
+              <motion.div variants={itemVariants} key={service.name} className="h-full">
+                <Card className="h-full flex flex-col bg-neutral-900/50 border border-neutral-700 transition-all duration-200 hover:border-brand-primary-500/30">
+                  <CardContent className="p-6 text-center flex-1 flex flex-col">
+                    <service.icon className="w-12 h-12 text-brand-primary-400 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
-                    <p className="text-gray-400 mb-6">{service.description}</p>
-                    <Button asChild>
+                    <p className="text-neutral-400 mb-6 flex-1">{service.description}</p>
+                    <Button asChild className="mt-auto bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold rounded-xl border border-brand-primary-500/50">
                       <Link href={service.link} target="_blank" rel="noopener noreferrer">
                         Visit {service.name} <ExternalLink className="w-4 h-4 ml-2" />
                       </Link>
@@ -154,22 +184,20 @@ export default function GetErgPage() {
         </motion.section>
 
         {/* CEX Section */}
-        <motion.section variants={containerVariants} initial="hidden" animate="visible" className="mb-20">
-          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-4">
-            <span className="text-orange-400">2.</span> Buy on a Centralized Exchange (CEX)
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+        <motion.section variants={containerVariants} initial="hidden" animate="visible" className="mb-20" id="cex">
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-4 text-white">Buy on a Centralized Exchange (CEX)</motion.h2>
+          <motion.p variants={itemVariants} className="text-center text-neutral-400 mb-10 max-w-2xl mx-auto">
             Trade for ERG on established cryptocurrency exchanges. This usually requires creating an account and
             verifying your identity (KYC).
           </motion.p>
           <div className="flex flex-wrap justify-center gap-6">
             {centralizedExchanges.map((exchange) => (
               <motion.div variants={itemVariants} key={exchange.name} className="w-40">
-                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl flex flex-col items-center p-4 transition-all duration-300 hover:border-orange-500/50">
+                <Card className="bg-neutral-900/50 border border-neutral-700 flex flex-col items-center p-4 transition-all duration-200 hover:border-brand-primary-500/30">
                   <CardContent className="flex flex-col items-center p-0">
-                    <exchange.icon className="w-8 h-8 text-orange-400 mb-2" />
+                    <exchange.icon className="w-8 h-8 text-brand-primary-400 mb-2" />
                     <h3 className="text-base font-semibold text-white mb-2 text-center">{exchange.name}</h3>
-                    <Button asChild variant="outline" className="w-full text-xs py-1 px-2">
+                    <Button asChild variant="outline" className="w-full text-xs py-1 px-2 border-neutral-700 text-neutral-300 hover:bg-neutral-900/60">
                       <Link href={exchange.link} target="_blank" rel="noopener noreferrer">
                         Trade <ExternalLink className="w-3 h-3 ml-1" />
                       </Link>
@@ -183,22 +211,20 @@ export default function GetErgPage() {
 
         {/* DEX Section */}
         <motion.section variants={containerVariants} initial="hidden" animate="visible" className="mb-20">
-          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-4">
-            <span className="text-orange-400">3.</span> Swap on a Decentralized Exchange (DEX)
-          </motion.h2>
-          <motion.p variants={itemVariants} className="text-center text-gray-400 mb-10 max-w-2xl mx-auto">
+          <motion.h2 variants={itemVariants} className="text-3xl font-bold text-center mb-4 text-white">Swap on a Decentralized Exchange (DEX)</motion.h2>
+          <motion.p variants={itemVariants} className="text-center text-neutral-400 mb-10 max-w-2xl mx-auto">
             Use wrapped ERG (rsERG) on other blockchains to swap for assets on decentralized exchanges. This is a
             more advanced method that requires a compatible wallet.
           </motion.p>
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flex gap-4 overflow-x-auto px-1 py-2">
             {decentralizedExchanges.map((exchange) => (
-              <motion.div variants={itemVariants} key={exchange.name} className="h-full w-80">
-                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl h-64 flex flex-col transition-all duration-300 hover:border-orange-500/50">
-                  <CardContent className="p-6 text-center flex-1 flex flex-col">
-                    <exchange.icon className="w-10 h-10 text-orange-400 mx-auto mb-4" />
-                    <h3 className="text-xl font-bold text-white mb-2">{exchange.name}</h3>
-                    <p className="text-sm text-gray-400 flex-1 mb-4">{exchange.description}</p>
-                    <Button asChild variant="outline" className="mt-auto">
+              <motion.div variants={itemVariants} key={exchange.name} className="h-full min-w-[260px] w-[260px]">
+                <Card className="bg-neutral-900/50 border border-neutral-700 h-56 flex flex-col transition-all duration-200 hover:border-brand-primary-500/30">
+                  <CardContent className="p-5 text-center flex-1 flex flex-col">
+                    <exchange.icon className="w-7 h-7 text-brand-primary-400 mx-auto mb-3" />
+                    <h3 className="text-lg font-bold text-white mb-2">{exchange.name}</h3>
+                    <p className="text-xs text-neutral-400 flex-1 mb-3 leading-relaxed">{exchange.description}</p>
+                    <Button asChild size="sm" variant="outline" className="mt-auto border-neutral-700 text-neutral-300 hover:bg-neutral-900/60">
                       <Link href={exchange.link} target="_blank" rel="noopener noreferrer">
                         Go to swap <ExternalLink className="w-4 h-4 ml-2" />
                       </Link>
@@ -207,7 +233,7 @@ export default function GetErgPage() {
                 </Card>
               </motion.div>
             ))}
-          </div>
+           </div>
         </motion.section>
 
         {/* Security Note */}
@@ -217,15 +243,15 @@ export default function GetErgPage() {
           animate="visible"
           className="max-w-3xl mx-auto"
         >
-          <Card className="bg-gray-900/50 border-gray-800/50">
+          <Card className="bg-neutral-900/50 border border-neutral-700">
             <CardContent className="p-8 flex items-center gap-6">
-              <Shield className="w-12 h-12 text-green-500 flex-shrink-0" />
+              <Shield className="w-12 h-12 text-brand-primary-400 flex-shrink-0" />
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Always Be Secure</h3>
-                <p className="text-gray-400 text-sm">
+                <p className="text-neutral-400 text-sm">
                   After acquiring ERG on an exchange, it is crucial to withdraw it to a personal wallet where you
                   control the private keys. Remember the crypto mantra: "Not your keys, not your crypto."
-                  <Link href="/wallet" className="ml-2 text-orange-400 hover:underline">
+                  <Link href="/wallet" className="ml-2 text-brand-primary-400 hover:underline">
                     Find a secure wallet here <ArrowRight className="inline w-4 h-4" />
                   </Link>
                 </p>
