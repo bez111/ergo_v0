@@ -137,7 +137,7 @@ export default function GetErgPage() {
                   <h3 className="text-2xl font-bold mb-6 text-center text-white">Ways to Get ERG</h3>
                   <div className="space-y-3">
                     {[
-                      { name: "Fiat On-Ramp (Banxa)", icon: CreditCard },
+                      { name: "Fiat On-Ramp", icon: CreditCard },
                       { name: "Centralized Exchanges (CEX)", icon: Cpu },
                       { name: "Decentralized Exchanges (DEX)", icon: RefreshCw },
                     ].map((feature) => (

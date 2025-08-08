@@ -23,15 +23,6 @@ const iconMap = {
 // Карточки use cases — порядок для WOW
 const useCases = [
   {
-    id: "defi",
-    icon: "coins",
-    title: "Decentralized Finance",
-    subtitle: "Access to global, permissionless financial markets",
-    description: "Programmable DEXs, stablecoins, lending — built on secure eUTXO.",
-    tags: ["DEX", "Stablecoin", "Lending"],
-    supportedProjects: ["Spectrum Finance", "SigmaUSD", "Duckpools"],
-  },
-  {
     id: "stablecoins",
     icon: "trending-up",
     title: "Algorithmic Stablecoins",
@@ -111,45 +102,45 @@ const isComingSoon = (uc: any) => !uc.supportedProjects || uc.supportedProjects.
 export default function UsePage() {
   return (
     <div className="min-h-screen relative pb-24">
-      {/* Hero Section */}
+        {/* Hero Section */}
       <motion.section
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.7, ease: "easeOut" }}
         className="pt-28 pb-10 px-4"
       >
-        <div className="max-w-7xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                Ergo Use Cases
-              </h1>
+                    Ergo Use Cases
+                </h1>
               <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
                 Explore the full spectrum of financial, privacy, and social applications powered by Ergo.
-              </p>
+                </p>
               <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                 From DeFi and stablecoins to DAOs and the metaverse, discover how Ergo's technology is building a new era of digital sovereignty.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-6 py-3 rounded-xl border border-brand-primary-500/50">
                   <Link href="/ecosystem">Explore Ecosystem</Link>
-                </Button>
-                <Button
-                  asChild
-                  variant="outline"
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
                   className="border-neutral-600 text-neutral-200 hover:bg-neutral-900/40 px-6 py-3 rounded-xl"
-                >
+                  >
                   <Link href="/build">Start Building</Link>
-                </Button>
+                  </Button>
+                </div>
               </div>
-            </div>
-            <motion.div
-              className="relative z-10"
+                <motion.div
+                  className="relative z-10"
               whileHover={{ scale: 1.02 }}
               transition={{ type: "spring", stiffness: 300, damping: 24 }}
-            >
+                >
               <Card className="bg-neutral-900/50 border border-neutral-700 backdrop-blur-sm p-8">
-                <CardContent className="p-0">
+                    <CardContent className="p-0">
                   <h3 className="text-2xl font-bold mb-6 text-center text-white">Featured Use Cases</h3>
                   <div className="space-y-3">
                     {[
@@ -157,8 +148,8 @@ export default function UsePage() {
                       { name: "NFTs & Digital Assets", icon: iconMap.palette },
                       { name: "Privacy Applications", icon: iconMap.shield },
                     ].map((feature) => (
-                      <motion.div
-                        key={feature.name}
+                          <motion.div
+                            key={feature.name}
                         className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700"
                         whileHover={{ scale: 1.01, x: 6 }}
                         transition={{ type: "spring", stiffness: 400, damping: 30 }}
@@ -167,23 +158,23 @@ export default function UsePage() {
                           <div className="p-2.5 rounded-md bg-brand-primary-500/20 border border-brand-primary-500/30 text-brand-primary-400">
                             {feature.icon}
                           </div>
-                          <h4 className="font-semibold text-white">{feature.name}</h4>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
+                                <h4 className="font-semibold text-white">{feature.name}</h4>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+            </div>
           </div>
-        </div>
-      </motion.section>
+        </motion.section>
 
       {/* Use Cases Grid */}
       <div className="py-14 px-4 max-w-7xl mx-auto">
-        <motion.div
-          initial="hidden"
-          animate="visible"
+      <motion.div
+        initial="hidden"
+        animate="visible"
           variants={{
             hidden: { opacity: 0, y: 24 },
             visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.07 } },
@@ -193,8 +184,8 @@ export default function UsePage() {
           {useCases.map((uc) => (
             <motion.div
               key={uc.id}
-              variants={{
-                hidden: { opacity: 0, y: 30 },
+        variants={{
+          hidden: { opacity: 0, y: 30 },
                 visible: { opacity: 1, y: 0 },
               }}
               className="relative h-full"
@@ -250,9 +241,9 @@ export default function UsePage() {
                 </CardContent>
               </Card>
             </motion.div>
-          ))}
-        </motion.div>
-      </div>
+        ))}
+          </motion.div>
+        </div>
     </div>
   )
-}
+} 

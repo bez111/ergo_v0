@@ -65,35 +65,6 @@ export const categories: Category[] = [
 
 export const useCases: UseCase[] = [
   {
-    id: "defi",
-    title: "Decentralized Finance",
-    problemStatement: "Access to global, permissionless financial markets",
-    solution: "Programmable DEXs, stablecoins, and lending — built on secure eUTXO",
-    category: "defi",
-    tags: ["DEX", "Stablecoin", "Lending"],
-    icon: "coins",
-    featured: true,
-    supportedProjects: [
-      {
-        name: "Spectrum Finance",
-        url: "https://spectrum.fi",
-      },
-      {
-        name: "SigmaUSD",
-        url: "https://sigmausd.io",
-      },
-      {
-        name: "Duckpools",
-        url: "https://duckpools.io",
-      },
-    ],
-    story: {
-      title: "Cross-Border Remittance Without Banks",
-      description:
-        "See how Maria sends money from the US to her family in Mexico using Ergo's DeFi infrastructure, avoiding high fees and delays.",
-    },
-  },
-  {
     id: "privacy",
     title: "Privacy & Confidentiality",
     problemStatement: "Financial privacy in an increasingly surveilled world",

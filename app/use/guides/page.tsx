@@ -5,6 +5,8 @@ import { motion } from "framer-motion"
 import { GuidesFilters } from "@/components/guides/guides-filters"
 import { GuideCard } from "@/components/guides/guide-card"
 import { guidesData, categories } from "@/lib/guides-data"
+import { Button } from "@/components/ui/button"
+import { BookOpen } from "lucide-react"
 
 export default function GuidesPage() {
   const [searchQuery, setSearchQuery] = useState("")
@@ -30,23 +32,19 @@ export default function GuidesPage() {
   }
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 py-8">
-          {/* Header */}
-          <motion.section 
+          {/* Hero */}
+          <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="pt-32 pb-20 px-4"
+            transition={{ duration: 0.6 }}
+            className="pt-28 pb-10 px-4"
           >
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
-                  Ergo Guides
-                </span>
-              </h1>
-              <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Ergo Guides</h1>
+              <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-3xl mx-auto">
                 Master the Ergo ecosystem with comprehensive guides, from wallet setup to advanced smart contract development.
               </p>
             </div>
@@ -60,20 +58,23 @@ export default function GuidesPage() {
             setSelectedCategory={setSelectedCategory}
           />
 
+          {/* Header Card (like blog) */}
+          <div className="mb-8 bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm">
+            <div className="flex items-center gap-3">
+              <BookOpen className="w-6 h-6 text-brand-primary-400" />
+              <h2 className="text-2xl font-bold text-white">
+                {selectedCategory
+                  ? `${categories.find((cat) => cat.id === selectedCategory)?.name} Guides`
+                  : "All Guides"}
+              </h2>
+              <span className="px-3 py-1 bg-brand-primary-500/20 text-brand-primary-400 rounded-full text-sm font-semibold">
+                {filteredGuides.length}
+              </span>
+            </div>
+          </div>
+
           {/* Guides Grid */}
           <section className="mb-16">
-            <motion.h2
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6 }}
-              className="text-3xl font-bold text-white mb-8"
-            >
-              {selectedCategory
-                ? `${categories.find((cat) => cat.id === selectedCategory)?.name} Guides`
-                : "All Guides"}
-              <span className="text-white/60 text-lg ml-3">({filteredGuides.length})</span>
-            </motion.h2>
-
             {filteredGuides.length > 0 ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredGuides.map((guide, index) => (
@@ -87,12 +88,9 @@ export default function GuidesPage() {
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-bold text-white mb-2">No guides found</h3>
                 <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
-                <button
-                  onClick={clearFilters}
-                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold hover:scale-105 transition-transform"
-                >
+                <Button onClick={clearFilters} variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
                   Clear Filters
-                </button>
+                </Button>
               </motion.div>
             )}
           </section>
