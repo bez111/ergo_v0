@@ -8,7 +8,6 @@ export default function NotFound() {
     { title: "Technology", href: "/technology", description: "Core technical concepts" },
     { title: "Ecosystem", href: "/ecosystem", description: "Projects and applications" },
     { title: "Get Started", href: "/start", description: "Begin your Ergo journey" },
-    { title: "Build", href: "/build", description: "Developer resources" },
     { title: "Use Cases", href: "/use", description: "What you can build" },
     { title: "Blog", href: "/blog", description: "Latest updates and insights" },
   ]

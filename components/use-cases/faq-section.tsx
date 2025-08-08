@@ -9,7 +9,7 @@ const faqs = [
     question: "What if I want to build my own use case?",
     answer: "Start with our developer portal for documentation, tools, and community support.",
     cta: "Dev Portal",
-    link: "/build",
+    link: "/Docs",
   },
   {
     icon: DollarSign,

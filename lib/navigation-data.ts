@@ -90,39 +90,7 @@ export const mainNavItems = [
       },
     ],
   },
-  {
-    title: "Build",
-    href: "/build",
-    description: "Developer resources and documentation",
-    children: [
-      {
-        title: "Developer Portal",
-        href: "/build",
-        description: "The central hub for starting, supporting, and connecting as an Ergo developer.",
-      },
-      {
-        title: "Cookbook",
-        href: "/build/docs/cookbook",
-        description: "Ready-to-use code recipes and practical snippets for Ergo developers.",
-      },
-      {
-        title: "SDKs, Tools & Docs",
-        href: "/build/docs",
-        description:
-          "Download official SDKs, APIs, essential tools, and explore technical documentation for ErgoScript, eUTXO, nodes, and more.",
-      },
-      {
-        title: "Tutorials & Code Examples",
-        href: "/build/tutorials",
-        description: "Practical step-by-step tutorials and code samples.",
-      },
-      {
-        title: "Grants for Developers",
-        href: "/build/grants",
-        description: "Grants, bug bounties, and support for innovative solutions.",
-      },
-    ],
-  },
+  // Removed Build section to reduce top-level items and avoid duplication with DOCS
   {
     title: "Technology",
     href: "/technology",

@@ -58,10 +58,10 @@ export function AudiencePaths() {
       description: "Build innovative applications on Ergo",
       icon: Code,
       cta: "START BUILDING",
-      ctaLink: "/build",
+      ctaLink: "/Docs",
       links: [
-        { label: "Documentation", href: "/build/docs" },
-        { label: "Tutorials", href: "/build/tutorials" },
+        { label: "Documentation", href: "/Docs" },
+        { label: "Tutorials", href: "/Docs/developers/tutorials" },
         { label: "Grants", href: "/ecosystem/grants" },
       ],
     },

@@ -579,7 +579,7 @@ export default function EUTXOModelPage() {
                     asChild
                     className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
                   >
-                    <Link href="/build" className="flex items-center">
+                    <Link href="/Docs" className="flex items-center">
                       Start Building
                       <ArrowRight className="ml-2 w-4 h-4" />
                     </Link>

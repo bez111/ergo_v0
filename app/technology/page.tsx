@@ -204,7 +204,7 @@ const resources = [
   },
   {
     title: "Dev Tutorials",
-    href: "/build/tutorials",
+    href: "/Docs/developers/tutorials",
     icon: ArrowRight,
   },
 ]

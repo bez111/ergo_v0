@@ -53,7 +53,7 @@ export default function MiningPage() {
   })
 
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen bg-black text-white relative">
       <div className="relative z-10">
         {/* Hero Section */}
         <FadeIn>
@@ -61,24 +61,18 @@ export default function MiningPage() {
             <div className="max-w-6xl mx-auto">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
-                    MINING
-                  </Badge>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block">
-                    Mine Ergo
-                  </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Secure the Network • Earn Today</p>
-                  <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
-                    Proof-of-Work keeps Ergo trust-minimised. Add your hash-power, collect block rewards, and underpin the
-                    ecosystem.
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">Mine Ergo</h1>
+                  <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">Secure the Network • Earn Today</p>
+                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                    Proof-of-Work keeps Ergo trust-minimised. Add your hash-power, collect block rewards, and underpin the ecosystem.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl border border-brand-primary-500/50">
                       Start Mining Now
                     </Button>
                     <Button
                       variant="outline"
-                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                      className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm"
                     >
                       Why Mine Ergo?
                     </Button>
@@ -89,29 +83,29 @@ export default function MiningPage() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8">
                     <CardContent className="p-0">
-                      <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent leading-[1.1] pb-1">
+                      <h3 className="text-2xl font-bold mb-6 text-center text-white">
                         Network Overview
                       </h3>
                       <div className="grid grid-cols-2 gap-6">
                         <div className="space-y-2">
-                          <div className="text-gray-400">Network Hashrate</div>
-                          <div className="text-2xl font-bold">{networkStats.hashrate} TH/s</div>
+                                                    <div className="text-neutral-400">Network Hashrate</div>
+                          <div className="text-2xl font-bold text-white">{networkStats.hashrate} TH/s</div>
                           <div className="text-sm text-green-500">▲ {networkStats.hashrateChange} (24h)</div>
                         </div>
                         <div className="space-y-2">
-                          <div className="text-gray-400">Difficulty</div>
-                          <div className="text-2xl font-bold">{networkStats.difficulty} PH</div>
+                                                    <div className="text-neutral-400">Difficulty</div>
+                          <div className="text-2xl font-bold text-white">{networkStats.difficulty} PH</div>
                           <div className="text-sm text-green-500">▲ {networkStats.difficultyChange} (24h)</div>
                         </div>
                         <div className="space-y-2">
-                          <div className="text-gray-400">Block Reward</div>
-                          <div className="text-2xl font-bold">{networkStats.blockReward} ERG</div>
+                                                    <div className="text-neutral-400">Block Reward</div>
+                          <div className="text-2xl font-bold text-white">{networkStats.blockReward} ERG</div>
                         </div>
                         <div className="space-y-2">
-                          <div className="text-gray-400">Avg Block Time</div>
-                          <div className="text-2xl font-bold">{networkStats.blockTime} min</div>
+                                                    <div className="text-neutral-400">Avg Block Time</div>
+                          <div className="text-2xl font-bold text-white">{networkStats.blockTime} min</div>
                         </div>
                       </div>
                     </CardContent>
@@ -185,13 +179,11 @@ export default function MiningPage() {
                     whileHover={{ scale: 1.05, rotateY: 5 }}
                     className="group"
                   >
-                    <Card
-                      className={`bg-gradient-to-br ${benefit.color} border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full`}
-                    >
+                                        <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200 h-full">
                       <CardContent className="p-8 text-center">
                         <div className="text-3xl mb-4">{benefit.icon}</div>
                         <h3 className="text-xl font-semibold mb-4 text-white">{benefit.title}</h3>
-                        <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
+                        <p className="text-neutral-400 leading-relaxed">{benefit.description}</p>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -218,26 +210,28 @@ export default function MiningPage() {
                   transition={{ delay: 0.2 }}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <Card className="bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent border-orange-500/30 backdrop-blur-xl h-full relative overflow-hidden">
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl" />
                     <CardHeader className="relative z-10">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
                           <span className="text-2xl">🖥️</span>
                         </div>
-                        <CardTitle className="text-2xl font-bold text-orange-400">GPU Mining</CardTitle>
+                                                 <CardTitle className="text-2xl font-bold text-white">GPU Mining</CardTitle>
                       </div>
                     </CardHeader>
                     <CardContent className="relative z-10">
-                      <ul className="list-disc pl-5 space-y-2 text-gray-300">
-                        <li>Recommendations: Nvidia RTX 30/40 or AMD RX 6000/7000 GPUs</li>
+                                             <ul className="list-disc pl-5 space-y-2 text-neutral-300">
+                         <li>Recommendations: Nvidia RTX 30/40 or AMD RX 6000/7000 GPUs</li>
                         <li>VRAM: Minimum 4GB (6GB+ recommended for Autolykos v2)</li>
                         <li>Top performer: CMP 170 HX still tops hashrate charts at ~415 MH/s</li>
                       </ul>
-                      <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-500/10">
-                        GPU Selection Guide
-                        <ArrowUpRight className="w-4 h-4 ml-2" />
-                      </Button>
+                      <div className="mt-6 flex justify-end">
+                        <Button variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
+                          GPU Selection Guide
+                          <ArrowUpRight className="w-4 h-4 ml-2" />
+                        </Button>
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -248,19 +242,19 @@ export default function MiningPage() {
                   transition={{ delay: 0.4 }}
                   whileHover={{ scale: 1.02 }}
                 >
-                  <Card className="bg-gradient-to-br from-cyan-500/20 via-cyan-500/10 to-transparent border-cyan-500/30 backdrop-blur-xl h-full relative overflow-hidden">
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full relative overflow-hidden">
                     <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl" />
                     <CardHeader className="relative z-10">
                       <div className="flex items-center gap-3 mb-4">
                         <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
                           <span className="text-2xl">⚡</span>
                         </div>
-                        <CardTitle className="text-2xl font-bold text-cyan-400">CPU Mining</CardTitle>
+                        <CardTitle className="text-2xl font-bold text-white">CPU Mining</CardTitle>
                       </div>
                     </CardHeader>
                     <CardContent className="relative z-10">
-                      <ul className="list-disc pl-5 space-y-2 text-gray-300">
-                        <li>CPU, Motherboard, RAM, PSU (Power Supply Unit), Storage (SSD/HDD)</li>
+                                             <ul className="list-disc pl-5 space-y-2 text-neutral-300">
+                         <li>CPU, Motherboard, RAM, PSU (Power Supply Unit), Storage (SSD/HDD)</li>
                         <li>Mining Frame or Case with good airflow</li>
                         <li>PCIe Risers for multi-GPU setups</li>
                         <li>Cooling solutions (fans, adequate ventilation)</li>
@@ -276,11 +270,11 @@ export default function MiningPage() {
         {/* Autolykos v2 Section */}
         <section className="py-20 px-4 border-b border-orange-500/20">
           <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Autolykos v2 in 60 Seconds</h2>
+                            <div className="text-center mb-16">
+              <h2 className="text-3xl font-bold mb-4 text-white">Autolykos v2 in 60 Seconds</h2>
             </div>
 
-            <Card className="bg-gray-900/50 border-orange-500/20">
+            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
               <CardContent className="p-8">
                 <ul className="space-y-4">
                   {[
@@ -291,13 +285,13 @@ export default function MiningPage() {
                     "Difficulty retarget: every block via LWMA.",
                   ].map((point, index) => (
                     <li key={index} className="flex items-start gap-3">
-                      <div className="text-orange-500 font-bold">•</div>
-                      <div>{point}</div>
+                                            <div className="text-brand-primary-400 font-bold">•</div>
+                      <div className="text-neutral-300">{point}</div>
                     </li>
                   ))}
                 </ul>
                 <div className="mt-6 text-center">
-                  <Button variant="link" className="text-orange-500">
+                  <Button variant="link" className="text-brand-primary-400 hover:text-brand-primary-300">
                     For the math lovers, read the March 2025 design note
                     <ExternalLink className="w-4 h-4 ml-2" />
                   </Button>
@@ -317,19 +311,19 @@ export default function MiningPage() {
               </p>
             </div>
 
-            <Card className="bg-gray-900/50 border-orange-500/20">
+            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                   <div>
                     <label className="block text-sm font-medium mb-2">GPU Hashrate (MH/s)</label>
-                    <Input
+                                        <Input
                       type="number"
                       placeholder="100"
                       value={hashrate}
                       onChange={(e) => setHashrate(e.target.value)}
-                      className="bg-gray-800 border-gray-700"
+                      className="bg-neutral-900/70 border-neutral-700"
                     />
-                    <div className="text-xs text-gray-400 mt-1">Hashrate per GPU in megahashes per second</div>
+                    <div className="text-xs text-neutral-400 mt-1">Hashrate per GPU in megahashes per second</div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Power Consumption (W)</label>
@@ -338,9 +332,9 @@ export default function MiningPage() {
                       placeholder="150"
                       value={power}
                       onChange={(e) => setPower(e.target.value)}
-                      className="bg-gray-800 border-gray-700"
+                      className="bg-neutral-900/70 border-neutral-700"
                     />
-                    <div className="text-xs text-gray-400 mt-1">Power usage per GPU in watts</div>
+                    <div className="text-xs text-neutral-400 mt-1">Power usage per GPU in watts</div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Number of GPUs</label>
@@ -349,9 +343,9 @@ export default function MiningPage() {
                       placeholder="1"
                       value={gpuCount}
                       onChange={(e) => setGpuCount(e.target.value)}
-                      className="bg-gray-800 border-gray-700"
+                      className="bg-neutral-900/70 border-neutral-700"
                     />
-                    <div className="text-xs text-gray-400 mt-1">Total number of GPUs in your setup</div>
+                    <div className="text-xs text-neutral-400 mt-1">Total number of GPUs in your setup</div>
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-2">Electricity Cost ($/kWh)</label>
@@ -361,9 +355,9 @@ export default function MiningPage() {
                       placeholder="0.10"
                       value={electricityCost}
                       onChange={(e) => setElectricityCost(e.target.value)}
-                      className="bg-gray-800 border-gray-700"
+                      className="bg-neutral-900/70 border-neutral-700"
                     />
-                    <div className="text-xs text-gray-400 mt-1">Your electricity cost per kilowatt-hour</div>
+                    <div className="text-xs text-neutral-400 mt-1">Your electricity cost per kilowatt-hour</div>
                   </div>
                 </div>
 
@@ -407,15 +401,15 @@ export default function MiningPage() {
                     </Card>
                   </div>
                 ) : (
-                  <div className="text-center text-gray-400 py-4">
+                                      <div className="text-center text-neutral-400 py-4">
                     Enter your mining parameters to calculate potential earnings
                   </div>
                 )}
 
-                <div className="mt-6 bg-gray-800/50 border border-gray-700 rounded-lg p-4 flex items-start gap-3">
-                  <Info className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" />
-                  <div className="text-sm text-gray-300">
-                    <span className="font-medium text-blue-400">Note:</span> Calculations are estimates based on current
+                <div className="mt-6 bg-neutral-900/50 border border-neutral-700 rounded-lg p-4 flex items-start gap-3">
+                  <Info className="w-5 h-5 text-brand-primary-400 flex-shrink-0 mt-0.5" />
+                  <div className="text-sm text-neutral-300">
+                    <span className="font-medium text-brand-primary-400">Note:</span> Calculations are estimates based on current
                     network difficulty and ERG price ($3.85). Actual earnings may vary due to difficulty changes, price
                     fluctuations, and luck factors.
                   </div>
@@ -429,43 +423,43 @@ export default function MiningPage() {
         <section className="py-20 px-4 border-b border-orange-500/20">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold mb-4">Resources & Community</h2>
-              <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-4 text-white">Resources & Community</h2>
+              <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
                 Connect with experienced Ergo miners, get assistance with setup, and stay updated with the latest
                 developments.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-              <Card className="bg-gray-900/50 border-orange-500/20 hover:border-orange-500/50 transition-all duration-300">
+              <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200">
                 <CardHeader>
                   <CardTitle>Comprehensive Mining Guide</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-neutral-300 mb-6">
                     Everything you need to know about mining Ergo - from hardware selection to optimization techniques.
                   </p>
-                  <Button className="w-full bg-orange-500 hover:bg-orange-600">
+                  <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black border border-brand-primary-500/50">
                     Read the Guide
                     <ChevronRight className="w-4 h-4 ml-2" />
                   </Button>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gray-900/50 border-orange-500/20 hover:border-orange-500/50 transition-all duration-300">
+              <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200">
                 <CardHeader>
                   <CardTitle>Community Support</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-300 mb-6">
+                  <p className="text-neutral-300 mb-6">
                     Join thousands of Ergo miners in active communities to share knowledge and get help.
                   </p>
                   <div className="space-y-3">
-                    <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl border border-brand-primary-500/50">
                       Join Discord
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
-                    <Button className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl border border-brand-primary-500/50">
                       Join Reddit
                       <ExternalLink className="w-4 h-4 ml-2" />
                     </Button>
@@ -473,33 +467,33 @@ export default function MiningPage() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-gray-900/50 border-orange-500/20 hover:border-orange-500/50 transition-all duration-300">
+              <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200">
                 <CardHeader>
                   <CardTitle>Additional Resources</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <ul className="space-y-3 text-gray-300">
+                  <ul className="space-y-3 text-neutral-300">
                     <li className="flex items-center gap-2">
-                      <span className="text-orange-500">•</span>
-                      <Link href="#" className="hover:text-orange-500 transition-colors">
+                      <span className="text-brand-primary-400">•</span>
+                      <Link href="#" className="hover:text-brand-primary-400 transition-colors">
                         Ergo Mining Blog Posts
                       </Link>
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-orange-500">•</span>
-                      <Link href="#" className="hover:text-orange-500 transition-colors">
+                      <span className="text-brand-primary-400">•</span>
+                      <Link href="#" className="hover:text-brand-primary-400 transition-colors">
                         Ergo Mining Wiki
                       </Link>
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-orange-500">•</span>
-                      <Link href="#" className="hover:text-orange-500 transition-colors">
+                      <span className="text-brand-primary-400">•</span>
+                      <Link href="#" className="hover:text-brand-primary-400 transition-colors">
                         Autolykos Algorithm Documentation
                       </Link>
                     </li>
                     <li className="flex items-center gap-2">
-                      <span className="text-orange-500">•</span>
-                      <Link href="#" className="hover:text-orange-500 transition-colors">
+                      <span className="text-brand-primary-400">•</span>
+                      <Link href="#" className="hover:text-brand-primary-400 transition-colors">
                         WhatToMine Profitability Calculator
                       </Link>
                     </li>
@@ -508,9 +502,9 @@ export default function MiningPage() {
               </Card>
             </div>
 
-            <Card className="bg-gray-900/50 border-orange-500/20">
+            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
               <CardHeader>
-                <CardTitle>Stay Updated</CardTitle>
+                <CardTitle className="text-white">Stay Updated</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-300 mb-4">
@@ -539,14 +533,14 @@ export default function MiningPage() {
         {/* Footer CTA */}
         <section className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="text-sm text-gray-400 mb-8">
+            <div className="text-sm text-neutral-400 mb-8">
               Page last updated: June 2, 2025 — Check release notes or suggest edits on GitHub.
             </div>
-            <h2 className="text-3xl font-bold mb-4">Ready to contribute hash-power?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <h2 className="text-3xl font-bold mb-4 text-white">Ready to contribute hash-power?</h2>
+            <p className="text-xl text-neutral-300 mb-8">
               Start mining now and help secure a fair, research-driven financial future.
             </p>
-            <Button size="lg" className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+            <Button size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl border border-brand-primary-500/50">
               Start Mining Ergo
             </Button>
           </div>

@@ -60,7 +60,7 @@ export function HeroSection() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-24 lg:py-32">
       {/* Background elements */}
       <div className="absolute inset-0 bg-black z-0"></div>
-      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-20 bg-cover bg-center z-0"></div>
+      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-10 bg-cover bg-center z-0"></div>
 
       {/* Animated grid lines */}
       <motion.div
@@ -80,7 +80,7 @@ export function HeroSection() {
         className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] z-0"
         animate={{
           scale: [1, 1.2, 1],
-          opacity: [0.3, 0.6, 0.3],
+          opacity: [0.2, 0.4, 0.2],
         }}
         transition={{
           duration: 4,
@@ -92,7 +92,7 @@ export function HeroSection() {
         className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] z-0"
         animate={{
           scale: [1.2, 1, 1.2],
-          opacity: [0.6, 0.3, 0.6],
+          opacity: [0.3, 0.15, 0.3],
         }}
         transition={{
           duration: 4,
@@ -102,7 +102,7 @@ export function HeroSection() {
         }}
       ></motion.div>
 
-      <div className="container relative z-10 px-4 md:px-6" ref={containerRef}>
+      <div className="container relative z-20 px-4 md:px-6" ref={containerRef}>
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
           {/* Logo/Brand */}
           <FadeIn delay={0.2}>
@@ -111,7 +111,7 @@ export function HeroSection() {
                 className="text-7xl font-extrabold tracking-tighter text-primary"
                 whileHover={{
                   scale: 1.05,
-                  textShadow: "0 0 20px rgba(255, 136, 0, 0.8)",
+                  textShadow: "0 0 20px rgba(255, 136, 0, 0.75)",
                 }}
                 transition={{ duration: 0.3 }}
               >
@@ -176,9 +176,9 @@ export function HeroSection() {
                 className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
                 asChild
               >
-                <Link href="/build">
+                <Link href="/Docs">
                   <Code className="h-5 w-5" />
-                  Start Building
+                  Read Docs
                 </Link>
               </CyberButton>
             </StaggerItem>

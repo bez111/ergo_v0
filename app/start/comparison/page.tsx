@@ -475,7 +475,7 @@ export default function ComparisonPage() {
                   className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl"
                   asChild
                 >
-                  <Link href="/build">Start Building Today</Link>
+                  <Link href="/Docs">Start Building Today</Link>
                 </Button>
                 <Button 
                   size="lg" 

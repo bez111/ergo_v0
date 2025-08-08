@@ -130,7 +130,7 @@ export default function UsePage() {
                     variant="outline"
                   className="border-neutral-600 text-neutral-200 hover:bg-neutral-900/40 px-6 py-3 rounded-xl"
                   >
-                  <Link href="/build">Start Building</Link>
+                  <Link href="/Docs">Start Building</Link>
                   </Button>
                 </div>
               </div>

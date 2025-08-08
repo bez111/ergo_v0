@@ -536,13 +536,13 @@ export default function ErgoScriptPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent className="space-y-4">
-                    <Link href="/build/docs" target="_blank">
+                    <Link href="/Docs" target="_blank">
                       <Button variant="outline" className="w-full justify-between hover:bg-orange-500/10">
                         SDKs & APIs
                         <ExternalLink className="w-4 h-4" />
                       </Button>
                     </Link>
-                    <Link href="/build/tutorials" target="_blank">
+                    <Link href="/Docs/developers/tutorials" target="_blank">
                       <Button variant="outline" className="w-full justify-between hover:bg-orange-500/10">
                         Code Examples
                         <ExternalLink className="w-4 h-4" />
@@ -819,7 +819,7 @@ nSigs >= 2`}</pre>
                     Try Playground
                   </Button>
                 </Link>
-                <Link href="/build/docs">
+                <Link href="/Docs">
                   <Button
                     variant="outline"
                     className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"

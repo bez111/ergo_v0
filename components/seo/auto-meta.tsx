@@ -21,7 +21,7 @@ function generateDescription(title: string, path: string): string {
     '/Docs': 'Comprehensive Ergo documentation: Technical guides, tutorials, API references, and resources for developers, miners, and users.',
     '/blog': 'Latest Ergo news, updates, technical articles, community highlights, and insights into blockchain technology and DeFi innovations.',
     '/use': 'Real-world Ergo use cases: DeFi applications, privacy tools, oracle pools, NFT marketplaces, and innovative blockchain solutions.',
-    '/build': 'Build on Ergo: Developer resources, ErgoScript tutorials, SDK documentation, and tools for creating decentralized applications.',
+    // '/build' removed; use '/Docs' instead
   }
   
   // Return specific description or generate based on title
@@ -39,7 +39,7 @@ function generateKeywords(title: string, path: string): string[] {
     '/Docs': ['documentation', 'api', 'developer', 'reference', 'guide'],
     '/blog': ['news', 'updates', 'articles', 'community', 'insights'],
     '/use': ['use cases', 'applications', 'oracle', 'privacy', 'tools'],
-    '/build': ['developer', 'sdk', 'ergoscript', 'programming', 'dapp development'],
+    // '/build' removed; use '/Docs' keywords
   }
   
   const keywords = [...baseKeywords]
