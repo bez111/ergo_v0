@@ -415,16 +415,8 @@ export default function TechnologyPage() {
     return (
       <section aria-labelledby="faq-heading" className="max-w-5xl mx-auto">
         <Script id="faq-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-        <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Frequently Asked Questions</h2>
-        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-          <CardHeader className="pb-6">
-            <div className="flex items-center justify-end gap-3">
-              <Badge variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-300">{faqs.length} questions</Badge>
-            </div>
-            <p className="text-neutral-400 mt-2">Click any question below to expand the answer</p>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-4">
+        <h2 className="text-4xl font-bold text-center mb-4 md:mb-6 text-white">Frequently Asked Questions</h2>
+        <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <Card key={faq.id} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                   <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
@@ -459,11 +451,9 @@ export default function TechnologyPage() {
                 </a>
               </div>
             </div>
-          </CardContent>
-        </Card>
-      </section>
-    )
-  }
+          </section>
+        )
+      }
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -572,7 +562,7 @@ export default function TechnologyPage() {
 
         {/* Tabs Section */}
         <FadeIn>
-          <Tabs value={activeTab} onValueChange={handleTabChange} className="mb-20">
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="mb-8">
             <TabsList className="flex w-full gap-2 bg-transparent p-0">
               <TabsTrigger
                 value="usecases"
@@ -725,41 +715,36 @@ export default function TechnologyPage() {
               </Card>
             </TabsContent>
 
-            {/* Resources */}
+                        {/* Resources */}
               <TabsContent value="resources" className="m-0">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                  <CardHeader>
-                    <CardTitle className="text-white">
-                      Developer Resources
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-              <div className="grid md:grid-cols-2 gap-6">
-                      {resources.map((res) => (
-                        <Card key={res.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full flex flex-col">
-                          <CardHeader className="pb-4">
-                            <CardTitle className="text-white flex items-center gap-3 text-lg">
-                              <res.icon className="w-5 h-5 text-brand-primary-400" />
-                        {res.title}
-                      </CardTitle>
-                    </CardHeader>
-                          <CardContent className="flex-1 flex flex-col justify-end pt-0">
-                            <Link href={res.href} target="_blank" className="w-full">
-                        <Button
-                          variant="outline"
-                                className="w-full justify-between hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 text-neutral-200 border-neutral-700 transition-all duration-200 py-3"
-                        >
-                          {res.title}
-                          <ExternalLink className="w-4 h-4" />
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-                  </CardContent>
-                </Card>
-            </TabsContent>
+                {(() => {
+                  const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.2 } } }
+                  const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } } }
+                  return (
+                    <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
+                      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {resources.map((res) => (
+                          <motion.div key={res.title} variants={itemVariants}>
+                                                        <Link href={res.href} target="_blank" rel="noopener noreferrer" prefetch={false} className="group block focus-visible:outline-none">
+                              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/50 focus-visible:ring-2 focus-visible:ring-brand-primary-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
+                                <CardHeader className="pb-4">
+                                  <div className="flex items-center justify-between gap-3">
+                                    <div className="flex items-center gap-3">
+                                      <res.icon className="w-5 h-5 text-brand-primary-400" />
+                                      <CardTitle className="text-xl text-white">{res.title}</CardTitle>
+                                    </div>
+                                    <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-brand-primary-400 transition-colors" />
+                                  </div>
+                                </CardHeader>
+                              </Card>
+                            </Link>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )
+                })()}
+              </TabsContent>
             </div>
           </Tabs>
         </FadeIn>
