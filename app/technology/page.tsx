@@ -5,7 +5,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
 import { Badge } from "@/components/ui/badge"
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { FadeIn } from "@/components/animations/fade-in"
 import {
@@ -61,7 +60,7 @@ const techFeatures = [
     details: [
       { icon: Layers, title: "Parallelism", description: "No global state: every contract is self-contained." },
       { icon: LinkIcon, title: "Composability", description: "Compose complex dApps from simple outputs." },
-      { icon: Shield, title: "Double-spend resistance (UTXO-level)", description: "Inherits UTXO security model." },
+      { icon: Shield, title: "Inherits UTXO double-spend resistance", description: "Inherits UTXO security model." },
     ],
   },
   {
@@ -225,7 +224,6 @@ export default function TechnologyPage() {
 
   const [activeTab, setActiveTab] = useState("usecases")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
-  const [currentTabIndex, setCurrentTabIndex] = useState(0)
 
   // Prevent scroll when switching tabs
   const handleTabChange = (value: string) => {
@@ -235,22 +233,6 @@ export default function TechnologyPage() {
     setTimeout(() => {
       window.scrollTo(0, scrollPosition)
     }, 0)
-  }
-
-  const tabMeta: Record<string, { title: string; description: string }> = {
-    usecases: {
-      title: "Ergo Technology – Use Cases | ergoblockchain.org",
-      description: "Decentralize Everything. Build What Matters.",
-    },
-    architecture: {
-      title: "Ergo Technology – Architecture | ergoblockchain.org",
-      description: "Layered design delivering decentralization, composability, and privacy.",
-    },
-    // resources meta kept for backward-compatibility, not used as a tab anymore
-    resources: {
-      title: "Ergo Technology – Resources | ergoblockchain.org",
-      description: "Docs, repos and references to build on Ergo.",
-    },
   }
 
   // Removed techFaqTerms previously used to extend glossary
@@ -273,7 +255,7 @@ export default function TechnologyPage() {
           eUTXO splits the blockchain state into independent “boxes” (outputs), enabling <b>parallel smart
           contracts</b> without a global state and reducing reentrancy risks. DApps become <i>composable</i>: complex
           logic can be built from simple outputs. Learn more — {""}
-          <a href="/technology/eutxo-model" className="underline hover:opacity-80">eUTXO Model</a>.
+          <Link href="/technology/eutxo-model" className="underline hover:opacity-80">eUTXO Model</Link>.
         </>
       ),
     },
@@ -285,7 +267,7 @@ export default function TechnologyPage() {
         <>
           It’s Ergo’s contract language for “money with logic”: formally verifiable code, strict typing, and built-in
           cryptographic primitives. Contracts are <b>auditable and predictable</b>—design avoids global mutable state and typical reentrancy patterns. Start here: {""}
-          <a href="/technology/ergoscript" className="underline hover:opacity-80">ErgoScript</a>.
+          <Link href="/technology/ergoscript" className="underline hover:opacity-80">ErgoScript</Link>.
         </>
       ),
     },
@@ -297,7 +279,7 @@ export default function TechnologyPage() {
         <>
           Memory-hard and ASIC-resistant — fair for ordinary miners. Rewards favor <b>solo mining</b> and reduce pool
           dependence, keeping the network secure with moderate energy use. More details: {""}
-          <a href="/technology/secure-pow" className="underline hover:opacity-80">Autolykos PoW</a>.
+          <Link href="/technology/secure-pow" className="underline hover:opacity-80">Autolykos PoW</Link>.
         </>
       ),
     },
@@ -309,7 +291,7 @@ export default function TechnologyPage() {
         <>
           Unspent coins after ~4 years start paying “rent” — this is <b>state recycling</b>: prevents unlimited
           blockchain growth and ensures miners earn revenue even after emissions end. Learn more: {""}
-          <a href="/technology/storage-rent" className="underline hover:opacity-80">Storage Rent</a>.
+          <Link href="/technology/storage-rent" className="underline hover:opacity-80">Storage Rent</Link>.
         </>
       ),
     },
@@ -321,7 +303,7 @@ export default function TechnologyPage() {
         <>
           Sigma protocols provide native zero-knowledge proofs, ring signatures, <b>multisig/threshold</b> schemes, and
           private payments without external hacks. This simplifies building confidential dApps. See: {""}
-          <a href="/technology/privacy-features" className="underline hover:opacity-80">Privacy Features</a>.
+          <Link href="/technology/privacy-features" className="underline hover:opacity-80">Privacy Features</Link>.
         </>
       ),
     },
@@ -333,7 +315,7 @@ export default function TechnologyPage() {
         <>
           “Tiny” blockchain proofs that allow <b>light clients</b>, instant mobile sync, and trustless cross-chain
           bridges without full nodes. More: {""}
-          <a href="/technology/light-clients" className="underline hover:opacity-80">NIPoPoWs</a>.
+          <Link href="/technology/light-clients" className="underline hover:opacity-80">NIPoPoWs</Link>.
         </>
       ),
     },
@@ -345,7 +327,7 @@ export default function TechnologyPage() {
         <>
           Protocol-native, <b>composable</b> data feeds without a central operator — no single point of bribery or
           failure. Can be plugged into any contract. More: {""}
-          <a href="/technology" className="underline hover:opacity-80">Oracle Pools</a>.
+          <Link href="/technology" className="underline hover:opacity-80">Oracle Pools</Link>.
         </>
       ),
     },
@@ -368,7 +350,7 @@ export default function TechnologyPage() {
         <>
           Yes — issuance is native at the protocol layer, in a single transaction. <b>True native assets</b> are
           instantly composable with dApps. More: {""}
-          <a href="/technology" className="underline hover:opacity-80">Native Tokens</a>.
+          <Link href="/technology" className="underline hover:opacity-80">Native Tokens</Link>.
         </>
       ),
     },
@@ -415,7 +397,7 @@ export default function TechnologyPage() {
     return (
       <section aria-labelledby="faq-heading" className="max-w-5xl mx-auto">
         <Script id="faq-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-        <h2 className="text-4xl font-bold text-center mb-4 md:mb-6 text-white">Frequently Asked Questions</h2>
+        <h2 id="faq-heading" className="text-4xl font-bold text-center mb-4 md:mb-6 text-white">Frequently Asked Questions</h2>
         <div className="space-y-4">
               {faqs.map((faq, index) => (
                 <Card key={faq.id} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
@@ -441,14 +423,9 @@ export default function TechnologyPage() {
             </div>
             <div className="mt-8 pt-6 border-t border-neutral-800">
               <div className="flex justify-end">
-                <a href="/Docs">
-                  <Button 
-                    variant="outline" 
-                    className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 transition-all duration-200"
-                  >
-                    Go to Docs <ExternalLink className="h-4 w-4 ml-2" />
-                  </Button>
-                </a>
+                <Button asChild variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 transition-all duration-200">
+                  <Link href="/Docs">Go to Docs <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" /></Link>
+                </Button>
               </div>
             </div>
           </section>
@@ -458,10 +435,10 @@ export default function TechnologyPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       <Head>
-        <title>{tabMeta[activeTab]?.title}</title>
-        <meta name="description" content={tabMeta[activeTab]?.description} />
-        <meta property="og:title" content={tabMeta[activeTab]?.title} />
-        <meta property="og:description" content={tabMeta[activeTab]?.description} />
+        <title>Ergo Technology | ergoblockchain.org</title>
+        <meta name="description" content="Key technologies behind Ergo: eUTXO model, ErgoScript, Autolykos PoW, Storage Rent, Sigma Protocols and more." />
+        <meta property="og:title" content="Ergo Technology" />
+        <meta property="og:description" content="Explore Ergo's technology stack and how it differs from account-based systems." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ergoblockchain.org/technology" />
         <link rel="canonical" href="https://ergoblockchain.org/technology" />
@@ -502,16 +479,16 @@ export default function TechnologyPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.15 + idx * 0.05 }}
-                  whileHover={{ scale: 1.03, rotateY: 3 }}
-                  className="group"
+                  whileHover={{ scale: 1.03 }}
+                  className="group motion-reduce:transform-none motion-reduce:transition-none"
                 >
-                  <Link href={feature.href || "#"}>
+                  <Link href={feature.href || "#"} prefetch={false}>
                     <Card
                       className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-brand-primary-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
                     >
                       <CardHeader className="text-center">
                         <div className="w-16 h-16 bg-neutral-800 rounded-lg flex items-center justify-center mx-auto mb-6">
-                          <feature.icon className="w-8 h-8 text-brand-primary-400" />
+                          <feature.icon className="w-8 h-8 text-brand-primary-400" aria-hidden="true" />
                         </div>
                         <CardTitle className="text-2xl font-bold mb-2 text-white">
                           <div className="flex items-center justify-center gap-2 flex-wrap">
@@ -531,22 +508,22 @@ export default function TechnologyPage() {
                       </CardHeader>
                       <CardContent>
                         <div className="space-y-2 pt-4">
-                          {feature.details.map((d: any, i: number) => (
+                          {feature.details.map((d, i) => (
                             <motion.div
                               key={d.title}
                               initial={{ opacity: 0, x: 10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: 0.35 + i * 0.06 }}
-                              className="flex items-start gap-3 p-2 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-200"
+                              className="flex items-start gap-3 p-2 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none"
                             >
                               {d.icon ? (
-                                <d.icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                <d.icon className="w-4 h-4 text-brand-primary-400 mt-0.5" aria-hidden="true" />
                               ) : (
                                 <span className="text-lg">•</span>
                               )}
                               <div>
                                 <h4 className="font-semibold text-white mb-0">{d.title}</h4>
-                                <p className="text-neutral-400 text-xs">{d.description}</p>
+                                <p className="text-neutral-400 text-sm">{d.description}</p>
                               </div>
                             </motion.div>
                           ))}
@@ -723,23 +700,32 @@ export default function TechnologyPage() {
                   return (
                     <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }}>
                       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {resources.map((res) => (
-                          <motion.div key={res.title} variants={itemVariants}>
-                                                        <Link href={res.href} target="_blank" rel="noopener noreferrer" prefetch={false} className="group block focus-visible:outline-none">
-                              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/50 focus-visible:ring-2 focus-visible:ring-brand-primary-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
-                                <CardHeader className="pb-4">
-                                  <div className="flex items-center justify-between gap-3">
-                                    <div className="flex items-center gap-3">
-                                      <res.icon className="w-5 h-5 text-brand-primary-400" />
-                                      <CardTitle className="text-xl text-white">{res.title}</CardTitle>
+                        {resources.map((res) => {
+                          const isExternal = /^https?:\/\//.test(res.href)
+                          const Wrapper: any = isExternal ? 'a' : Link
+                          const wrapperProps = isExternal
+                            ? { href: res.href, target: "_blank", rel: "noopener noreferrer" }
+                            : { href: res.href }
+                          return (
+                            <motion.div key={res.title} variants={itemVariants}>
+                              <Wrapper {...wrapperProps} className="group block focus-visible:outline-none">
+                                <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/50 focus-visible:ring-2 focus-visible:ring-brand-primary-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
+                                  <CardHeader className="pb-4">
+                                    <div className="flex items-center justify-between gap-3">
+                                      <div className="flex items-center gap-3">
+                                        <res.icon className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
+                                        <CardTitle className="text-xl text-white">{res.title}</CardTitle>
+                                      </div>
+                                      {isExternal && (
+                                        <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-brand-primary-400 transition-colors" aria-hidden="true" />
+                                      )}
                                     </div>
-                                    <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-brand-primary-400 transition-colors" />
-                                  </div>
-                                </CardHeader>
-                              </Card>
-                            </Link>
-                          </motion.div>
-                        ))}
+                                  </CardHeader>
+                                </Card>
+                              </Wrapper>
+                            </motion.div>
+                          )
+                        })}
                       </div>
                     </motion.div>
                   )
@@ -770,14 +756,9 @@ export default function TechnologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 {ctas.map((cta) => (
-                  <Link href={cta.href} key={cta.label}>
-                    <Button
-                      className={cta.outline ? "border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm" : "bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl"}
-                      variant={cta.outline ? "outline" : "default"}
-                    >
-                      {cta.label}
-                    </Button>
-                  </Link>
+                  <Button key={cta.label} asChild className={cta.outline ? "border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm" : "bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl"} variant={cta.outline ? "outline" : "default"}>
+                    <Link href={cta.href} prefetch={false}>{cta.label}</Link>
+                  </Button>
                 ))}
               </div>
             </CardContent>
@@ -789,8 +770,9 @@ export default function TechnologyPage() {
   )
 } 
 
-// Resources list for the Resources tab
-const resources = [
+type Detail = { icon?: any; title: string; description: string }
+type TechFeature = { icon: any; title: string; description: string; href?: string; details: Detail[] }
+const resources: { title: string; href: string; icon: any }[] = [
   { title: "Ergo Docs", href: "/Docs", icon: Book },
   { title: "Whitepaper", href: "https://ergoplatform.org/docs/whitepaper.pdf", icon: ExternalLink },
   { title: "GitHub", href: "https://github.com/ergoplatform", icon: ExternalLink },

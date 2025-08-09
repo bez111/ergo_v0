@@ -1,7 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -13,6 +12,43 @@ import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCi
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+
+function CopyButton({ code, label }: { code: string; label: string }) {
+  const [copied, setCopied] = useState(false)
+
+  const onCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(code)
+      setCopied(true)
+    } catch {
+      const ta = document.createElement("textarea")
+      ta.value = code
+      document.body.appendChild(ta)
+      ta.select()
+      try {
+        document.execCommand("copy")
+        setCopied(true)
+      } finally {
+        document.body.removeChild(ta)
+      }
+    } finally {
+      setTimeout(() => setCopied(false), 1200)
+    }
+  }
+
+  return (
+    <button
+      aria-live="polite"
+      onClick={onCopy}
+      className="p-1 hover:bg-brand-primary-500/10 rounded transition-colors"
+      aria-label={`Copy ${label} code`}
+      title="Copy to clipboard"
+    >
+      <Copy className="w-4 h-4 text-neutral-400 hover:text-brand-primary-400" aria-hidden="true" />
+      <span className="sr-only">{copied ? "Copied" : "Copy"}</span>
+    </button>
+  )
+}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -133,12 +169,12 @@ export default function ErgoScriptPage() {
         data={{
           "@type": "FAQPage",
           mainEntity: faqs.map(faq => ({
-            "@type": "Question",
+              "@type": "Question",
             name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
+              acceptedAnswer: {
+                "@type": "Answer", 
               text: faq.answer
-            }
+              }
           }))
         }}
       />
@@ -159,7 +195,7 @@ export default function ErgoScriptPage() {
         </div>
 
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none">
-          {/* Hero Section */}
+        {/* Hero Section */}
           <motion.section 
             variants={itemVariants} 
             initial="hidden"
@@ -168,40 +204,40 @@ export default function ErgoScriptPage() {
             className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 motion-reduce:transform-none"
           >
             <div className="max-w-7xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-                    ErgoScript
-                  </h1>
+                  ErgoScript
+                </h1>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
                     Mathematical-by-design smart contracts on an eUTXO ledger
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                     No shared global state, first-class Sigma protocols, verifiable execution. Build secure applications that are predictable by design.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/Docs">
                       <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Start Building
-                      </Button>
+                      Start Building
+                  </Button>
                     </Link>
-                    <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
-                      <Button
-                        variant="outline"
+                    <a href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
-                      >
-                        View Examples
-                      </Button>
-                    </Link>
+                  >
+                      View Examples
+                                    </Button>
+                    </a>
                   </div>
-                </div>
-                <div className="relative">
+              </div>
+              <div className="relative">
                   <div className="relative z-10">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                      <CardContent className="p-0">
+                    <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
                           Quick Start
-                        </h3>
+                      </h3>
                         <div className="space-y-4">
                           {[
                             {
@@ -225,7 +261,7 @@ export default function ErgoScriptPage() {
                               link: "https://discord.gg/ergo",
                               external: true
                             },
-                          ].map((item, index) => (
+                          ].map((item) => (
                             <div key={item.name}>
                               {item.external ? (
                                 <a
@@ -233,15 +269,15 @@ export default function ErgoScriptPage() {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
+                            >
+                              <div className="flex items-center space-x-3">
                                     <div className="text-brand-primary-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
+                                </div>
                                     <ExternalLink className="w-4 h-4 text-neutral-400" />
-                                  </div>
+                              </div>
                                 </a>
                               ) : (
                                 <Link
@@ -260,13 +296,13 @@ export default function ErgoScriptPage() {
                               )}
                             </div>
                           ))}
-                        </div>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </CardContent>
+                  </Card>
                   </div>
-                </div>
               </div>
             </div>
+          </div>
           </motion.section>
 
           {/* Rest of the content */}
@@ -282,161 +318,161 @@ export default function ErgoScriptPage() {
               >
                 <div className="max-w-7xl mx-auto">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
-                    Key Features
-                  </h2>
+              Key Features
+            </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {features.map((feature, index) => (
-                    <motion.div
-                      key={feature.title}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: index * 0.1 }}
-                      whileHover={{ y: -5 }}
+              {features.map((feature, index) => (
+                  <motion.div
+                    key={feature.title}
+                    initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: index * 0.1 }}
+                        whileHover={{ y: -5 }}
                       className="motion-reduce:transform-none motion-reduce:transition-none"
-                    >
+                  >
                       <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50 transition-colors h-full">
                         <CardContent className="p-6">
                           <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center mb-4">
                             <feature.icon className="w-6 h-6 text-brand-primary-400" />
-                          </div>
+                      </div>
                           <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
                           <p className="text-neutral-200 leading-relaxed">{feature.description}</p>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              ))}
+            </div>
+          </div>
             </motion.section>
 
-              {/* Tabs Section */}
-              <FadeIn delay={0.6}>
+        {/* Tabs Section */}
+        <FadeIn delay={0.6}>
                 <Tabs value={activeTab} onValueChange={setActiveTab}>
                   <TabsList className="flex w-full gap-2 bg-transparent p-0 mb-6">
-                  <TabsTrigger
-                    value="features"
+              <TabsTrigger
+                value="features"
                     className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
-                  >
+              >
                     Deep Dive
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="usecases"
+              </TabsTrigger>
+              <TabsTrigger
+                value="usecases"
                     className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
-                  >
-                    Use Cases
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="resources"
+              >
+                Use Cases
+              </TabsTrigger>
+              <TabsTrigger
+                value="resources"
                     className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
-                  >
-                    Resources
-                  </TabsTrigger>
-                </TabsList>
+              >
+                Resources
+              </TabsTrigger>
+            </TabsList>
 
                 {/* Fixed container for all tab contents */}
                 <div className="mt-6 min-h-0 md:min-h-[420px]">
                   <TabsContent value="features" className="m-0">
                     <div className="grid lg:grid-cols-2 gap-6 h-full">
-                      {/* Security Features Card */}
+                {/* Security Features Card */}
                       <div>
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                                 <Shield className="w-6 h-6 text-brand-primary-400" />
-                              </div>
+                        </div>
                               <CardTitle className="text-2xl font-bold text-white">Security First</CardTitle>
-                            </div>
+                      </div>
                             <p className="text-neutral-300 leading-relaxed">
-                              Built from the ground up with security as the primary concern, eliminating entire classes of
-                              vulnerabilities.
-                            </p>
-                          </CardHeader>
+                        Built from the ground up with security as the primary concern, eliminating entire classes of
+                        vulnerabilities.
+                      </p>
+                    </CardHeader>
                           <CardContent className="pt-4">
                             <div className="space-y-3">
-                              {[
-                                {
-                                  title: "Formal Verification Support",
+                        {[
+                          {
+                            title: "Formal Verification Support",
                                   description: "Declarative constraints enable external verification tools and auditing",
                                   icon: Microscope,
-                                },
-                                {
+                          },
+                          {
                                   title: "eUTXO Security Model",
                                   description: "No shared global state eliminates reentrancy vulnerability class",
                                   icon: ShieldCheck,
-                                },
-                                {
+                          },
+                          {
                                   title: "Native Sigma Protocols",
                                   description: "First-class cryptographic primitives for multi-party signatures",
                                   icon: Zap,
-                                },
-                              ].map((feature, index) => (
+                          },
+                        ].map((feature) => (
                                 <div
-                                  key={feature.title}
+                            key={feature.title}
                                   className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-all duration-300"
-                                >
-                                  <feature.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
-                                  <div>
-                                    <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
+                          >
+                                  <feature.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" aria-hidden="true" />
+                            <div>
+                              <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
                                     <p className="text-neutral-400 text-sm">{feature.description}</p>
-                                  </div>
-                                </div>
-                              ))}
                             </div>
-                          </CardContent>
-                        </Card>
+                                </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
                       </div>
 
-                      {/* Developer Experience Card */}
+                {/* Developer Experience Card */}
                       <div>
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                                 <Code className="w-6 h-6 text-brand-primary-400" />
-                              </div>
+                        </div>
                               <CardTitle className="text-2xl font-bold text-white">Developer Experience</CardTitle>
-                            </div>
+                      </div>
                             <p className="text-neutral-300 leading-relaxed">
-                              Designed for clarity and ease of use, making complex cryptographic operations accessible to all
-                              developers.
-                            </p>
-                          </CardHeader>
+                        Designed for clarity and ease of use, making complex cryptographic operations accessible to all
+                        developers.
+                      </p>
+                    </CardHeader>
                           <CardContent className="pt-4">
                             <div className="space-y-3">
-                              {[
-                                {
+                        {[
+                          {
                                   title: "Interactive Playground",
                                   description: "Test contracts instantly in your browser without setup",
                                   icon: FileText,
-                                },
-                                {
+                          },
+                          {
                                   title: "Rich Tooling Ecosystem",
                                   description: "SDKs for Java, JavaScript, Python, and more",
                                   icon: KeyRound,
-                                },
-                                {
+                          },
+                          {
                                   title: "Extensive Examples",
                                   description: "Learn from production-ready contract templates",
                                   icon: Puzzle,
-                                },
-                              ].map((feature, index) => (
+                          },
+                        ].map((feature) => (
                                 <div
-                                  key={feature.title}
+                            key={feature.title}
                                   className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-all duration-300"
-                                >
-                                  <feature.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
-                                  <div>
-                                    <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
+                          >
+                                  <feature.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" aria-hidden="true" />
+                            <div>
+                              <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
                                     <p className="text-neutral-400 text-sm">{feature.description}</p>
-                                  </div>
-                                </div>
-                              ))}
                             </div>
-                          </CardContent>
-                        </Card>
+                                </div>
+                        ))}
                       </div>
+                    </CardContent>
+                  </Card>
+              </div>
                     </div>
                   </TabsContent>
 
@@ -454,7 +490,7 @@ export default function ErgoScriptPage() {
                             </div>
                             <p className="text-neutral-300 leading-relaxed">
                               Build secure financial applications with predictable costs and formal verification.
-                            </p>
+                    </p>
                           </CardHeader>
                           <CardContent className="pt-4">
                             <div className="space-y-2">
@@ -472,9 +508,9 @@ export default function ErgoScriptPage() {
                                   <span className="text-neutral-200 text-sm">{useCase.name}</span>
                                 </div>
                               ))}
-                            </div>
-                          </CardContent>
-                        </Card>
+                    </div>
+                  </CardContent>
+                </Card>
                       </div>
 
                       {/* Privacy & Governance Card */}
@@ -490,7 +526,7 @@ export default function ErgoScriptPage() {
                             <p className="text-neutral-300 leading-relaxed">
                               Leverage advanced cryptography for privacy-preserving and governance solutions.
                             </p>
-                          </CardHeader>
+                </CardHeader>
                           <CardContent className="pt-4">
                             <div className="space-y-2">
                               {[
@@ -502,17 +538,17 @@ export default function ErgoScriptPage() {
                                 <div
                                   key={useCase.name}
                                   className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
-                                >
+                      >
                                   <useCase.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
                                   <span className="text-neutral-200 text-sm">{useCase.name}</span>
                                 </div>
-                              ))}
-                            </div>
-                          </CardContent>
-                        </Card>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
                       </div>
                     </div>
-                  </TabsContent>
+            </TabsContent>
 
                   <TabsContent value="resources" className="m-0">
                     <div className="grid lg:grid-cols-2 gap-6 h-full">
@@ -529,7 +565,7 @@ export default function ErgoScriptPage() {
                             <p className="text-neutral-300 leading-relaxed">
                               Start your ErgoScript journey with interactive tutorials and comprehensive documentation.
                             </p>
-                          </CardHeader>
+                  </CardHeader>
                           <CardContent className="pt-4">
                             <div className="space-y-2">
                               {[
@@ -549,12 +585,12 @@ export default function ErgoScriptPage() {
                                         <ArrowRight className="w-4 h-4 text-neutral-400" />
                                       )}
                                     </div>
-                                  </Link>
+                    </Link>
                                 </div>
                               ))}
                             </div>
-                          </CardContent>
-                        </Card>
+                  </CardContent>
+                </Card>
                       </div>
 
                       {/* Developer Tools Card */}
@@ -570,7 +606,7 @@ export default function ErgoScriptPage() {
                             <p className="text-neutral-300 leading-relaxed">
                               Essential tools and SDKs for building with ErgoScript in your preferred environment.
                             </p>
-                          </CardHeader>
+                  </CardHeader>
                           <CardContent className="pt-4">
                             <div className="space-y-2">
                               {[
@@ -590,25 +626,25 @@ export default function ErgoScriptPage() {
                                         <ArrowRight className="w-4 h-4 text-neutral-400" />
                                       )}
                                     </div>
-                                  </Link>
+                    </Link>
                                 </div>
                               ))}
                             </div>
-                          </CardContent>
-                        </Card>
+                  </CardContent>
+                </Card>
                       </div>
-                    </div>
-                  </TabsContent>
+              </div>
+            </TabsContent>
                 </div>
-              </Tabs>
-            </FadeIn>
+          </Tabs>
+        </FadeIn>
 
-              {/* Comparison Section */}
-              <FadeIn delay={0.7}>
+        {/* Comparison Section */}
+        <FadeIn delay={0.7}>
                 <div className="max-w-7xl mx-auto">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
-                    How ErgoScript Compares
-                  </h2>
+              How ErgoScript Compares
+            </h2>
 
                   <div className="grid lg:grid-cols-2 gap-6 mb-12">
                   {/* ErgoScript's Key Advantages Card */}
@@ -635,7 +671,7 @@ export default function ErgoScriptPage() {
                             },
                             {
                               title: "No Shared State, No Global Variables",
-                              description: "No \"global storage\" as in Ethereum. This protects against most EVM bugs like reentrancy and frontrunning.",
+                              description: "Eliminates the reentrancy vulnerability class; mitigates some MEV patterns, but does not fully prevent frontrunning.",
                               icon: ShieldCheck
                             },
                             {
@@ -645,7 +681,7 @@ export default function ErgoScriptPage() {
                             },
                             {
                               title: "Predictable Execution Costs",
-                              description: "No gas wars or unpredictable fees. Know exactly what your transaction will cost before execution.",
+                              description: "Script execution cost is statically bounded; the final network fee is still market-driven (mempool conditions).",
                               icon: Zap
                             }
                           ].map((advantage, index) => (
@@ -653,7 +689,7 @@ export default function ErgoScriptPage() {
                               key={advantage.title}
                               className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
                             >
-                              <advantage.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                              <advantage.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" aria-hidden="true" />
                               <div>
                                 <h4 className="font-semibold text-white mb-1">{advantage.title}</h4>
                                 <p className="text-neutral-400 text-sm">{advantage.description}</p>
@@ -707,7 +743,7 @@ export default function ErgoScriptPage() {
                               key={concept.title}
                               className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
                             >
-                              <concept.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                              <concept.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" aria-hidden="true" />
                               <div>
                                 <h4 className="font-semibold text-white mb-1">{concept.title}</h4>
                                 <p className="text-neutral-400 text-sm">{concept.description}</p>
@@ -720,55 +756,56 @@ export default function ErgoScriptPage() {
                   </div>
                 </div>
 
-                {/* Comparison Table */}
+            {/* Comparison Table */}
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl mb-12 overflow-hidden">
-                  <CardHeader>
+              <CardHeader>
                     <CardTitle className="text-white text-center">
-                      ErgoScript vs. Other Smart Contract Languages
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="p-0">
-                    <div className="overflow-x-auto">
-                      <table className="w-full text-sm">
-                        <thead>
+                  ErgoScript vs. Other Smart Contract Languages
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm">
+                      <caption className="sr-only">Language comparison</caption>
+                    <thead>
                           <tr className="border-b border-neutral-700">
                             <th className="text-left p-4 font-semibold text-brand-primary-400">Feature</th>
                             <th className="text-left p-4 font-semibold text-brand-primary-400">ErgoScript (Ergo)</th>
-                            <th className="text-left p-4 font-semibold text-blue-400">Solidity (Ethereum)</th>
-                            <th className="text-left p-4 font-semibold text-purple-400">Plutus (Cardano)</th>
-                            <th className="text-left p-4 font-semibold text-yellow-400">Bitcoin Script</th>
-                            <th className="text-left p-4 font-semibold text-green-400">Move (Aptos/Sui)</th>
-                          </tr>
-                        </thead>
+                        <th className="text-left p-4 font-semibold text-blue-400">Solidity (Ethereum)</th>
+                        <th className="text-left p-4 font-semibold text-purple-400">Plutus (Cardano)</th>
+                        <th className="text-left p-4 font-semibold text-yellow-400">Bitcoin Script</th>
+                        <th className="text-left p-4 font-semibold text-green-400">Move (Aptos/Sui)</th>
+                      </tr>
+                    </thead>
                         <tbody className="text-neutral-300">
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Platform Type</td>
-                            <td className="p-4">eUTXO</td>
-                            <td className="p-4">Account-based (EVM)</td>
-                            <td className="p-4">eUTXO</td>
-                            <td className="p-4">UTXO</td>
-                            <td className="p-4">Account-based</td>
-                          </tr>
+                        <th scope="row" className="p-4 font-medium">Platform Type</th>
+                        <td className="p-4">eUTXO</td>
+                        <td className="p-4">Account-based (EVM)</td>
+                        <td className="p-4">eUTXO</td>
+                        <td className="p-4">UTXO</td>
+                        <td className="p-4">Account-based</td>
+                      </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Language Base</td>
-                            <td className="p-4">Sigma-based (Scala-like)</td>
-                            <td className="p-4">JS/C++-like</td>
-                            <td className="p-4">Haskell, DSL</td>
-                            <td className="p-4">Forth-like, stack-based</td>
-                            <td className="p-4">Rust-like</td>
-                          </tr>
+                        <th scope="row" className="p-4 font-medium">Language Base</th>
+                        <td className="p-4">Sigma-based (Scala-like)</td>
+                        <td className="p-4">JS/C++-like</td>
+                        <td className="p-4">Haskell, DSL</td>
+                        <td className="p-4">Forth-like, stack-based</td>
+                        <td className="p-4">Rust-like</td>
+                      </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Turing-complete</td>
-                            <td className="p-4">
+                        <th scope="row" className="p-4 font-medium">Turing-complete</th>
+                        <td className="p-4">
                               <span className="text-brand-primary-400">No (restricted for security)</span>
-                            </td>
-                            <td className="p-4">Yes (with gas limits)</td>
-                            <td className="p-4">No (highly restricted)</td>
-                            <td className="p-4">No</td>
-                            <td className="p-4">Yes</td>
-                          </tr>
+                        </td>
+                        <td className="p-4">Yes (with gas limits)</td>
+                        <td className="p-4">No (highly restricted)</td>
+                        <td className="p-4">No</td>
+                        <td className="p-4">Yes</td>
+                      </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Type Safety</td>
+                            <th scope="row" className="p-4 font-medium">Type Safety</th>
                             <td className="p-4">
                               <span className="text-green-400">Strong typing system</span>
                             </td>
@@ -786,50 +823,50 @@ export default function ErgoScriptPage() {
                             </td>
                           </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Security</td>
-                            <td className="p-4">
-                              <span className="text-green-400">High (no reentrancy, no shared state)</span>
-                            </td>
-                            <td className="p-4">
-                              <span className="text-red-400">Complex (reentrancy, overflows)</span>
-                            </td>
-                            <td className="p-4">
-                              <span className="text-green-400">Very high (strong types)</span>
-                            </td>
-                            <td className="p-4">
-                              <span className="text-green-400">Very high (minimal features)</span>
-                            </td>
-                            <td className="p-4">Above average</td>
-                          </tr>
+                        <th scope="row" className="p-4 font-medium">Security</th>
+                        <td className="p-4">
+                          <span className="text-green-400">High (no reentrancy, no shared state)</span>
+                        </td>
+                        <td className="p-4">
+                          <span className="text-red-400">Complex (reentrancy, overflows)</span>
+                        </td>
+                        <td className="p-4">
+                          <span className="text-green-400">Very high (strong types)</span>
+                        </td>
+                        <td className="p-4">
+                          <span className="text-green-400">Very high (minimal features)</span>
+                        </td>
+                        <td className="p-4">Above average</td>
+                      </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Custom Cryptography</td>
-                            <td className="p-4">
+                        <th scope="row" className="p-4 font-medium">Custom Cryptography</th>
+                        <td className="p-4">
                               <span className="text-green-400">Native Sigma protocols</span>
-                            </td>
-                            <td className="p-4">
+                        </td>
+                        <td className="p-4">
                               <span className="text-yellow-400">External libraries</span>
-                            </td>
-                            <td className="p-4">
+                        </td>
+                        <td className="p-4">
                               <span className="text-yellow-400">Limited support</span>
-                            </td>
+                        </td>
                             <td className="p-4">
                               <span className="text-red-400">Minimal</span>
                             </td>
                             <td className="p-4">
                               <span className="text-yellow-400">Moderate</span>
                             </td>
-                          </tr>
+                      </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Formal Verification</td>
-                            <td className="p-4">
+                            <th scope="row" className="p-4 font-medium">Formal Verification</th>
+                        <td className="p-4">
                               <span className="text-green-400">Strong support</span>
-                            </td>
-                            <td className="p-4">
+                        </td>
+                        <td className="p-4">
                               <span className="text-yellow-400">External tools</span>
-                            </td>
-                            <td className="p-4">
+                        </td>
+                        <td className="p-4">
                               <span className="text-green-400">Strong support</span>
-                            </td>
+                        </td>
                             <td className="p-4">
                               <span className="text-yellow-400">Limited</span>
                             </td>
@@ -838,7 +875,7 @@ export default function ErgoScriptPage() {
                             </td>
                           </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Learning Curve</td>
+                            <th scope="row" className="p-4 font-medium">Learning Curve</th>
                             <td className="p-4">
                               <span className="text-green-400">Gentle</span>
                             </td>
@@ -856,7 +893,7 @@ export default function ErgoScriptPage() {
                             </td>
                           </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
-                            <td className="p-4 font-medium">Transaction Costs</td>
+                            <th scope="row" className="p-4 font-medium">Transaction Costs</th>
                             <td className="p-4">
                               <span className="text-green-400">Predictable, low</span>
                             </td>
@@ -872,12 +909,12 @@ export default function ErgoScriptPage() {
                             <td className="p-4">
                               <span className="text-green-400">Low, predictable</span>
                             </td>
-                          </tr>
-                        </tbody>
-                      </table>
-                    </div>
-                  </CardContent>
-                </Card>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
 
                 {/* Code Example Comparison - Simplified */}
                 <motion.div
@@ -890,24 +927,18 @@ export default function ErgoScriptPage() {
                     <CardHeader className="text-center">
                       <CardTitle className="text-white">
                         Code Comparison: 2-of-3 Multisig
-                      </CardTitle>
+                  </CardTitle>
                       <p className="text-neutral-300 text-sm">
                         See how ErgoScript's mathematical approach compares to traditional smart contracts
                       </p>
-                    </CardHeader>
+                </CardHeader>
                     <CardContent className="p-0">
                       <div className="grid md:grid-cols-2">
                         <div className="p-6 border-r border-neutral-700">
                           <div className="flex items-center justify-between mb-3">
                             <h3 className="font-semibold text-orange-400">ErgoScript</h3>
-                            <button
-                              onClick={() => navigator.clipboard.writeText('atLeast(2, Coll(proveDlog(A), proveDlog(B), proveDlog(C)))')}
-                              className="p-1 hover:bg-brand-primary-500/10 rounded transition-colors"
-                              aria-label="Copy ErgoScript code"
-                            >
-                              <Copy className="w-4 h-4 text-neutral-400 hover:text-brand-primary-400" />
-                            </button>
-                          </div>
+                            <CopyButton code={'atLeast(2, Coll(proveDlog(A), proveDlog(B), proveDlog(C)))'} label="ErgoScript" />
+                  </div>
                           <pre className="bg-neutral-950/80 p-4 rounded-lg text-sm font-mono text-neutral-200 overflow-x-auto">
                             <code>atLeast(2, Coll(
   proveDlog(A),
@@ -917,46 +948,39 @@ export default function ErgoScriptPage() {
                           </pre>
                           <p className="text-xs text-neutral-400 mt-2 italic">
                             Mathematical proof: "At least 2 of these 3 signatures must be valid"
-                          </p>
-                        </div>
+                    </p>
+                  </div>
                         <div className="p-6">
                           <div className="flex items-center justify-between mb-3">
                             <h3 className="font-semibold text-blue-400">Solidity</h3>
-                            <button
-                              onClick={() => navigator.clipboard.writeText('require(validSignatures >= 2, "Need 2+ sigs");\nfor (uint i = 0; i < signers.length; i++) {\n  if (verify(signers[i], signature[i])) {\n    validSignatures++;\n  }\n}')}
-                              className="p-1 hover:bg-brand-primary-500/10 rounded transition-colors"
-                              aria-label="Copy Solidity code"
-                            >
-                              <Copy className="w-4 h-4 text-neutral-400 hover:text-brand-primary-400" />
-                            </button>
-                          </div>
+                            <CopyButton
+                              code={`require(validSignatures >= 2, "Need 2+ sigs");\nfor (uint i = 0; i < signers.length; i++) {\n  if (verify(signers[i], signature[i])) {\n    validSignatures++;\n  }\n}`}
+                              label="Solidity"
+                            />
+                  </div>
                           <pre className="bg-neutral-950/80 p-4 rounded-lg text-sm font-mono text-neutral-200 overflow-x-auto">
-                            <code dangerouslySetInnerHTML={{
-                              __html: `require(validSignatures >= 2, "Need 2+ sigs");
-for (uint i = 0; i < signers.length; i++) {
-  if (verify(signers[i], signature[i])) {
-    validSignatures++;
-  }
-}`
-                            }} />
+                            {(() => {
+                              const solidity = `require(validSignatures >= 2, "Need 2+ sigs");\nfor (uint i = 0; i < signers.length; i++) {\n  if (verify(signers[i], signature[i])) {\n    validSignatures++;\n  }\n}`;
+                              return <code>{solidity}</code>;
+                            })()}
                           </pre>
                           <p className="text-xs text-neutral-400 mt-2 italic">
                             Imperative logic with loops, state variables, and manual validation
-                          </p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                    </p>
+                  </div>
+                  </div>
+                </CardContent>
+              </Card>
                 </motion.div>
-              </div>
-            </FadeIn>
+          </div>
+        </FadeIn>
 
-              {/* FAQ Section */}
-              <FadeIn delay={0.9}>
+            {/* FAQ Section */}
+            <FadeIn delay={0.9}>
                 <div className="max-w-4xl mx-auto">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
-                    Frequently Asked Questions
-                  </h2>
+                  Frequently Asked Questions
+                </h2>
 
                 <div className="space-y-4">
                   {faqs.map((faq, index) => (
@@ -971,14 +995,14 @@ for (uint i = 0; i < signers.length; i++) {
                         <CollapsibleTrigger asChild>
                           <button className="w-full">
                             <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
-                              <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
-                              <ChevronDown
+                            <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                            <ChevronDown
                                 aria-hidden="true"
                                 className={`w-5 h-5 text-neutral-400 transition-transform ${
-                                  openFAQ === index ? "rotate-180" : ""
-                                }`}
-                              />
-                            </CardContent>
+                                openFAQ === index ? "rotate-180" : ""
+                              }`}
+                            />
+                          </CardContent>
                           </button>
                         </CollapsibleTrigger>
                         <CollapsibleContent>
@@ -993,38 +1017,38 @@ for (uint i = 0; i < signers.length; i++) {
               </div>
             </FadeIn>
 
-              {/* CTA */}
-              <FadeIn delay={0.8}>
+        {/* CTA */}
+        <FadeIn delay={0.8}>
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                   <CardContent className="text-center py-16">
                     <h3 className="text-4xl font-bold mb-6 text-white">
-                      Ready to Start Building?
-                    </h3>
+                Ready to Start Building?
+              </h3>
                     <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                      Explore ErgoScript and start developing secure smart contracts today.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                Explore ErgoScript and start developing secure smart contracts today.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
                         <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
-                          Try Playground
-                        </Button>
-                      </Link>
+                    Try Playground
+                  </Button>
+                </Link>
                       <Link href="/Docs">
-                        <Button
-                          variant="outline"
+                  <Button
+                    variant="outline"
                           className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
-                        >
-                          View Documentation
-                        </Button>
-                      </Link>
-                    </div>
-                  </CardContent>
-                </Card>
-              </FadeIn>
+                  >
+                    View Documentation
+                  </Button>
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+        </FadeIn>
             </div>
-          </div>
-        </motion.div>
       </div>
+        </motion.div>
+    </div>
     </>
   )
 }
