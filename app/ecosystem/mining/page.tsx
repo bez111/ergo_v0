@@ -276,7 +276,7 @@ export default function MiningEcosystemPage() {
         >
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
+                <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                   Ergo Mining <span className="text-brand-primary-400">Ecosystem</span>
                 </h1>
@@ -287,33 +287,33 @@ export default function MiningEcosystemPage() {
                   Fair launch, ASIC-resistant, truly decentralized. Find pools, software, and resources.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-6 py-3 rounded-xl border border-brand-primary-500/50 group">
                     <Link href="/use/mining">
                       <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
                       I'm New - Start Here
                     </Link>
-                  </Button>
-                  <Button 
+                    </Button>
+                    <Button
                     size="lg"
-                    variant="outline" 
+                      variant="outline"
                     className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 px-6 py-3 rounded-xl transition-all group"
                     onClick={() => document.getElementById('pools')?.scrollIntoView({ behavior: 'smooth' })}
-                  >
+                    >
                     Browse Pools Directory
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                    </Button>
+                  </div>
                 </div>
-              </div>
 
               {/* Network Stats Card with Easter Egg */}
-              <motion.div 
+                <motion.div
                 className="relative z-10" 
                 whileHover={{ scale: 1.02 }} 
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
               >
                 <Card className="bg-neutral-900/50 border border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30 transition-colors">
-                  <CardContent className="p-0">
+                    <CardContent className="p-0">
                     <h3 className="text-2xl font-bold mb-6 text-center text-white">Network Overview</h3>
                     <div className="grid grid-cols-2 gap-4">
                       <motion.div 
@@ -370,13 +370,13 @@ export default function MiningEcosystemPage() {
                           <span className="text-sm text-neutral-400">Lowest Fee</span>
                         </div>
                         <p className="text-lg font-mono text-white">0.9%</p>
+                        </div>
                       </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </div>
             </div>
-          </div>
         </motion.section>
 
         {/* Main Content */}
@@ -441,7 +441,7 @@ export default function MiningEcosystemPage() {
               {filteredPools.length === 0 && (
                 <div className="text-center py-8">
                   <p className="text-neutral-400">No pools match your criteria</p>
-                </div>
+            </div>
               )}
             </motion.div>
 
@@ -523,7 +523,7 @@ export default function MiningEcosystemPage() {
             </motion.div>
 
             {/* Quick FAQ Section */}
-            <motion.div
+                <motion.div
               initial="hidden"
               animate="visible"
               variants={containerVariants}
@@ -558,7 +558,7 @@ export default function MiningEcosystemPage() {
                       </p>
                     </CardContent>
                   </Card>
-                </FadeIn>
+        </FadeIn>
                 <FadeIn delay={0.2}>
                   <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/30 transition-colors">
                     <CardContent className="p-6">
@@ -570,10 +570,10 @@ export default function MiningEcosystemPage() {
                         Depends on hashrate and electricity cost. 
                         <Link href="/use/mining#calculator" className="text-brand-primary-400 hover:text-brand-primary-300"> Use calculator →</Link>
                       </p>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
                 </FadeIn>
-              </div>
+            </div>
 
               <div className="text-center mt-8">
                 <Link href="/learn/faq">
@@ -598,13 +598,13 @@ export default function MiningEcosystemPage() {
                       <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold group">
                         Step-by-Step Guide
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                      </Button>
+                    </Button>
                     </Link>
                     <Link href="https://discord.gg/ergo" target="_blank">
                       <Button variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 transition-all">
                         <MessageCircle className="w-4 h-4 mr-2" />
                         Get Help
-                      </Button>
+                    </Button>
                     </Link>
                   </div>
                 </CardContent>

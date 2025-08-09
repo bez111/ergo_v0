@@ -48,7 +48,6 @@ import Link from "next/link"
 // import { ERGO_GLOSSARY } from "@/lib/glossary-constants"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
 import { useState, useEffect, useMemo } from "react"
-import type { ReactNode } from "react"
 import Head from "next/head"
 
 const techFeatures = [
@@ -225,13 +224,6 @@ export default function TechnologyPage() {
   ] as const
 
   const [activeTab, setActiveTab] = useState("usecases")
-  const prefersReduced = typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches
-
-  useEffect(() => {
-    if (typeof document !== "undefined") {
-      document.title = tabMeta[activeTab]?.title
-    }
-  }, [activeTab])
 
   const tabMeta: Record<string, { title: string; description: string }> = {
     usecases: {
@@ -259,7 +251,7 @@ export default function TechnologyPage() {
   // }))
 
   // Local FAQ data for Technology page
-  const faqs: Array<{ id: string; q: string; a: ReactNode; tag?: string }> = [
+  const faqs: Array<{ id: string; q: string; a: React.ReactNode; tag?: string }> = [
     {
       id: "what-is-eutxo",
       q: "How is eUTXO on Ergo different from the account model?",
@@ -462,10 +454,8 @@ export default function TechnologyPage() {
             </div>
             <div className="mt-3 flex items-center gap-2">
               <div className="relative w-full">
-                <label htmlFor="faq-search" className="sr-only">Search</label>
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-500" aria-hidden />
                 <Input
-                  id="faq-search"
                   placeholder="Search the FAQ…"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
@@ -494,7 +484,6 @@ export default function TechnologyPage() {
                         </AccordionTrigger>
                         <div className="flex items-center gap-1">
                           <Button
-                            type="button"
                             variant="ghost"
                             size="icon"
                             aria-label="Copy link to question"
@@ -564,9 +553,9 @@ export default function TechnologyPage() {
           <div className="max-w-7xl mx-auto text-center">
             <FadeIn>
               <motion.div
-                initial={prefersReduced ? undefined : { opacity: 0, scale: 0.9 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
-                transition={prefersReduced ? undefined : { duration: 0.8 }}
+                transition={{ duration: 0.8 }}
                 className="mb-8"
               >
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-snug pb-2 align-baseline block text-center">
@@ -585,54 +574,53 @@ export default function TechnologyPage() {
           <div className="max-w-7xl mx-auto mb-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {techFeatures.map((feature, idx) => (
-                <div key={feature.title} className="group" style={{ perspective: 1000 }}>
-                  <motion.div
-                    initial={prefersReduced ? undefined : { opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={prefersReduced ? undefined : { delay: 0.15 + idx * 0.05 }}
-                    whileHover={prefersReduced ? undefined : { scale: 1.03, rotateY: 3 }}
-                    style={{ transformStyle: "preserve-3d" }}
-                  >
-                    <Link href={feature.href || "#"}>
-                      <Card
-                        className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-brand-primary-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
-                      >
-                        <CardHeader className="text-center">
-                          <div className="w-16 h-16 bg-neutral-800 rounded-lg flex items-center justify-center mx-auto mb-6">
-                            <feature.icon className="w-8 h-8 text-brand-primary-400" />
-                          </div>
-                          <CardTitle className="text-2xl font-bold mb-2 text-white">
-                            {feature.title}
-                          </CardTitle>
-                          <p className="text-neutral-300 leading-relaxed text-base min-h-[72px]">{feature.description}</p>
-                        </CardHeader>
-                        <CardContent>
-                          <div className="space-y-2 pt-4">
-                            {feature.details.map((d: any, i: number) => (
-                              <motion.div
-                                key={d.title}
-                                initial={prefersReduced ? undefined : { opacity: 0, x: 10 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={prefersReduced ? undefined : { delay: 0.35 + i * 0.06 }}
-                                className="flex items-start gap-3 p-2 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-200"
-                              >
-                                {d.icon ? (
-                                  <d.icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
-                                ) : (
-                                  <span className="text-lg">•</span>
-                                )}
-                                <div>
-                                  <h4 className="font-semibold text-white mb-0">{d.title}</h4>
-                                  <p className="text-neutral-400 text-xs">{d.description}</p>
-                                </div>
-                              </motion.div>
-                            ))}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </Link>
-                  </motion.div>
-                </div>
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.15 + idx * 0.05 }}
+                  whileHover={{ scale: 1.03, rotateY: 3 }}
+                  className="group"
+                >
+                  <Link href={feature.href || "#"}>
+                    <Card
+                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-brand-primary-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
+                    >
+                      <CardHeader className="text-center">
+                        <div className="w-16 h-16 bg-neutral-800 rounded-lg flex items-center justify-center mx-auto mb-6">
+                          <feature.icon className="w-8 h-8 text-brand-primary-400" />
+                        </div>
+                        <CardTitle className="text-2xl font-bold mb-2 text-white">
+                          {feature.title}
+                        </CardTitle>
+                        <p className="text-neutral-300 leading-relaxed text-base min-h-[72px]">{feature.description}</p>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-2 pt-4">
+                          {feature.details.map((d: any, i: number) => (
+                            <motion.div
+                              key={d.title}
+                              initial={{ opacity: 0, x: 10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: 0.35 + i * 0.06 }}
+                              className="flex items-start gap-3 p-2 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-200"
+                            >
+                              {d.icon ? (
+                                <d.icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                              ) : (
+                                <span className="text-lg">•</span>
+                              )}
+                              <div>
+                                <h4 className="font-semibold text-white mb-0">{d.title}</h4>
+                                <p className="text-neutral-400 text-xs">{d.description}</p>
+                              </div>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                </motion.div>
               ))}
             </div>
           </div>
@@ -664,7 +652,7 @@ export default function TechnologyPage() {
 
             {/* Use Cases */}
             <TabsContent value="usecases" className="mt-8">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                 <CardHeader>
                   <CardTitle className="text-white">
                     What Can You Build?
@@ -702,7 +690,7 @@ export default function TechnologyPage() {
 
             {/* Architecture */}
             <TabsContent value="architecture" className="mt-8">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                 <CardHeader>
                   <CardTitle className="text-white">
                     Ergo Tech Stack Overview
@@ -726,7 +714,7 @@ export default function TechnologyPage() {
                               <span>{label}</span>
                             </li>
                           ))}
-                        </ul>
+                      </ul>
                       </CardContent>
                     </Card>
 
@@ -743,7 +731,7 @@ export default function TechnologyPage() {
                               <span>{label}</span>
                             </li>
                           ))}
-                        </ul>
+                      </ul>
                       </CardContent>
                     </Card>
                   </div>
@@ -757,7 +745,7 @@ export default function TechnologyPage() {
             <TabsContent value="resources" className="mt-8">
               <div className="grid md:grid-cols-2 gap-6">
                 {resources.map((res) => (
-                  <Card key={res.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50">
+                  <Card key={res.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                     <CardHeader>
                       <CardTitle className="text-white flex items-center gap-2">
                         <res.icon className="w-5 h-5 text-brand-primary-400" />
@@ -765,7 +753,7 @@ export default function TechnologyPage() {
                       </CardTitle>
                     </CardHeader>
                     <CardContent>
-                      <Link href={res.href} target="_blank" rel="noopener noreferrer">
+                      <Link href={res.href} target="_blank">
                         <Button variant="outline" className="w-full justify-between hover:bg-orange-500/10 text-neutral-200 border-neutral-700">
                           {res.title}
                           <ExternalLink className="w-4 h-4" />
@@ -776,8 +764,8 @@ export default function TechnologyPage() {
                 ))}
               </div>
             </TabsContent>
-            </Tabs>
-          </FadeIn>
+          </Tabs>
+        </FadeIn>
 
           {/* CTA moved to bottom */}
 
@@ -817,7 +805,7 @@ export default function TechnologyPage() {
       </div>
     </div>
   )
-}
+} 
 
 // Resources list for the Resources tab
 const resources = [
