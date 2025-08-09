@@ -603,68 +603,86 @@ export default function TechnologyPage() {
             </TabsList>
 
             {/* Fixed container for all tab contents */}
-            <div className="mt-8 min-h-[500px]">
-            {/* Use Cases */}
+            <div className="mt-8 min-h-[420px]">
+              {/* Use Cases */}
               <TabsContent value="usecases" className="m-0">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                <CardHeader>
-                    <CardTitle className="text-white">
-                    What Can You Build?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-6">
-                    {[
-                      {
-                        title: "DeFi & Finance",
-                        items: [
-                          "Non-custodial DeFi protocols",
-                          "Custom multi-signature wallets", 
-                          "Stablecoins and native tokens",
-                          "Decentralized oracle networks"
-                        ]
-                      },
-                      {
-                        title: "Privacy & Governance",
-                        items: [
-                          "Decentralized mixers and privacy tools (check legal status)",
-                          "DAOs & governance systems"
-                        ]
-                      },
-                      {
-                        title: "Infrastructure & Apps",
-                        items: [
-                          "NFT marketplaces & composable dApps",
-                          "Scalable micropayments and instant settlement",
-                          "Cross-chain bridges & light wallets"
-                        ]
-                      }
-                    ].map((category, categoryIndex) => (
-                      <div key={category.title}>
-                        <h4 className="text-lg font-semibold text-white mb-3">{category.title}</h4>
-                        <div className="grid md:grid-cols-2 gap-3">
-                          {category.items.map((useCase, index) => (
-                            <motion.div
-                              key={useCase}
-                              initial={{ opacity: 0, x: -20 }}
-                              animate={{ opacity: 1, x: 0 }}
-                              transition={{ delay: (categoryIndex * 4 + index) * 0.08 }}
-                              className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
-                              whileHover={{ x: 10 }}
-                            >
-                              <ArrowRight className="w-4 h-4 text-brand-primary-400" />
-                              <span className="text-sm">{useCase}</span>
-                            </motion.div>
-                          ))}
-                        </div>
+                {(() => {
+                  const containerVariants = {
+                    hidden: { opacity: 0 },
+                    visible: {
+                      opacity: 1,
+                      transition: { staggerChildren: 0.1, delayChildren: 0.2 },
+                    },
+                  }
+                  const itemVariants = {
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
+                  }
+                  return (
+                    <motion.div
+                      variants={containerVariants}
+                      initial="hidden"
+                      whileInView="visible"
+                      viewport={{ once: true, amount: 0.2 }}
+                    >
+                      <div className="grid md:grid-cols-3 gap-8">
+                        {[
+                          {
+                            title: "DeFi & Finance",
+                            icon: Coins,
+                            items: [
+                              "Non-custodial DeFi protocols",
+                              "Custom multi-signature wallets",
+                              "Stablecoins and native tokens",
+                              "Decentralized oracle networks",
+                            ],
+                          },
+                          {
+                            title: "Privacy & Governance",
+                            icon: Lock,
+                            items: [
+                              "Decentralized mixers and privacy tools (check legal status)",
+                              "DAOs & governance systems",
+                            ],
+                          },
+                          {
+                            title: "Infrastructure & Apps",
+                            icon: Rocket,
+                            items: [
+                              "NFT marketplaces & composable dApps",
+                              "Scalable micropayments and instant settlement",
+                              "Cross-chain bridges & light wallets",
+                            ],
+                          },
+                        ].map((col) => (
+                          <motion.div key={col.title} variants={itemVariants}>
+                            <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
+                              <CardHeader className="pb-3">
+                                <div className="flex items-center gap-3">
+                                  <col.icon className="w-5 h-5 text-brand-primary-400" />
+                                  <CardTitle className="text-xl text-white">{col.title}</CardTitle>
+                                </div>
+                              </CardHeader>
+                              <CardContent className="pt-0">
+                                <ul className="space-y-2">
+                                  {col.items.map((t) => (
+                                    <li key={t} className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors">
+                                      <ArrowRight className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                      <span className="text-sm text-neutral-200">{t}</span>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </CardContent>
+                            </Card>
+                          </motion.div>
+                        ))}
                       </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
+                    </motion.div>
+                  )
+                })()}
+              </TabsContent>
 
-            {/* Architecture */}
+              {/* Architecture */}
               <TabsContent value="architecture" className="m-0">
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                 <CardHeader>
