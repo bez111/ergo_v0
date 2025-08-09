@@ -1,24 +1,25 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { SectionHeading } from "@/components/section-heading"
-import { FadeIn } from "@/components/animations/fade-in"
-import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCircle } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { FadeIn } from "@/components/animations/fade-in"
+import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCircle, Microscope, ShieldCheck, Layers, FileText, KeyRound, Puzzle, Copy, Coins, Eye, ArrowLeftRight, BookOpen, Terminal, Users } from "lucide-react"
+import Link from "next/link"
+import { useState } from "react"
+import React from "react"
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
+      duration: 0.6,
       staggerChildren: 0.1,
     },
   },
@@ -26,27 +27,45 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
 }
 
 const features = [
   {
-    icon: Shield,
     title: "Formal Verification",
-    description: "Mathematical proofs, not trust. Every condition is explicit and verifiable.",
-    color: "from-orange-500/20 to-orange-500/5",
+    description: "Mathematically prove your contracts are correct before deployment",
+    icon: Shield,
   },
   {
-    icon: Code,
-    title: "Logic-First Design",
-    description: "No hidden side-effects or gotchas. Clean, predictable smart contract execution.",
-    color: "from-cyan-500/20 to-cyan-500/5",
+    title: "No Reentrancy Attacks",
+    description: "eUTXO model eliminates a whole class of vulnerabilities",
+    icon: Lock,
   },
   {
+    title: "Predictable Costs",
+    description: "Know exactly what your contract will cost before execution",
     icon: Zap,
-    title: "Sigma Protocols",
-    description: "Native privacy features with ring signatures and zero-knowledge proofs.",
-    color: "from-purple-500/20 to-purple-500/5",
+  },
+  {
+    title: "Advanced Cryptography",
+    description: "Built-in support for Sigma protocols and zero-knowledge proofs",
+    icon: Code,
+  },
+  {
+    title: "Composability",
+    description: "Build complex systems from simple, reusable components",
+    icon: CheckCircle,
+  },
+  {
+    title: "Developer Friendly",
+    description: "Clean syntax that's easier to read and audit than alternatives",
+    icon: Code,
   },
 ]
 
@@ -59,17 +78,19 @@ const useCases = [
   "Advanced NFT contracts",
 ]
 
-const codeExample = `{
-  // Multi-signature wallet: 2 out of 3 keys required
-  sigmaProp(
-    (pkAlice && pkBob) || 
-    (pkAlice && pkCharlie) || 
-    (pkBob && pkCharlie)
-  )
-}`
-
 export default function ErgoScriptPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  const [activeTab, setActiveTab] = useState("features")
+
+  // Prevent scroll when switching tabs
+  const handleTabChange = (value: string) => {
+    const scrollPosition = window.scrollY
+    setActiveTab(value)
+    // Restore scroll position after state update
+    setTimeout(() => {
+      window.scrollTo(0, scrollPosition)
+    }, 0)
+  }
 
   const faqs = [
     {
@@ -92,40 +113,48 @@ export default function ErgoScriptPage() {
 
   return (
     <>
+      {/* BreadcrumbList Schema */}
       <SchemaOrg
-        type="FAQPage"
+        type="BreadcrumbList"
         data={{
-          "@type": "FAQPage",
-          mainEntity: [
+          "@type": "BreadcrumbList",
+          itemListElement: [
             {
-              "@type": "Question",
-              name: "What is ErgoScript?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "ErgoScript is a powerful smart contract language designed specifically for the eUTXO model. It provides formal verification capabilities, eliminates re-entrancy attacks, and includes advanced cryptographic primitives for building secure DeFi applications."
-              }
+              "@type": "ListItem",
+              position: 1,
+              name: "Technology",
+              item: "https://ergoblockchain.org/technology"
             },
             {
-              "@type": "Question", 
-              name: "How does ErgoScript prevent re-entrancy attacks?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "ErgoScript prevents re-entrancy attacks through its eUTXO model design. Each transaction consumes UTXOs and creates new ones, making it impossible for a contract to be called multiple times during execution. This eliminates a major security vulnerability common in account-based systems."
-              }
-            },
-            {
-              "@type": "Question",
-              name: "What are the advantages of ErgoScript over other smart contract languages?",
-              acceptedAnswer: {
-                "@type": "Answer", 
-                text: "ErgoScript offers formal verification capabilities, built-in re-entrancy protection, advanced cryptographic primitives, and is specifically designed for the eUTXO model. It enables parallel transaction processing and provides better security guarantees than traditional account-based smart contract languages."
-              }
+              "@type": "ListItem", 
+              position: 2,
+              name: "ErgoScript",
+              item: "https://ergoblockchain.org/technology/ergoscript"
             }
           ]
         }}
       />
+
+      {/* FAQPage Schema */}
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          "@type": "FAQPage",
+          mainEntity: faqs.map(faq => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: faq.answer
+            }
+          }))
+        }}
+      />
       
-      <div className="min-h-screen relative">
+      <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
+
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
@@ -137,637 +166,784 @@ export default function ErgoScriptPage() {
           />
         </div>
 
-        {/* Animated Background */}
-        <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-black to-cyan-500/10" />
-          <motion.div
-            className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl"
-            animate={{
-              x: [0, 100, 0],
-              y: [0, -50, 0],
-            }}
-            transition={{
-              duration: 20,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-          />
-          <motion.div
-            className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
-            animate={{
-              x: [0, -80, 0],
-              y: [0, 60, 0],
-            }}
-            transition={{
-              duration: 25,
-              repeat: Number.POSITIVE_INFINITY,
-              ease: "linear",
-            }}
-          />
-        </div>
-
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
-        {/* Hero Section */}
-          <motion.section variants={itemVariants} className="pt-32 pb-20 px-4">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none">
+          {/* Hero Section */}
+          <motion.section 
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="pt-32 pb-20 px-4 motion-reduce:transform-none"
+          >
             <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div>
-                  <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
-                    SMART CONTRACT LANGUAGE
-                  </Badge>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6">
-                    <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
-                  ErgoScript
-                    </span>
-                </h1>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+                    ErgoScript
+                  </h1>
+                  <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
                     Secure, Verifiable Smart Contracts
                   </p>
-                <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                     ErgoScript combines mathematical certainty with practical simplicity. Build DeFi applications that are secure by design, not by accident.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                      Start Building
-                  </Button>
-                  <Button
-                    variant="outline"
-                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                  >
-                      View Examples
-                  </Button>
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Link href="/Docs">
+                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                        Start Building
+                      </Button>
+                    </Link>
+                    <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
+                      <Button
+                        variant="outline"
+                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                      >
+                        View Examples
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
-              </div>
-              <div className="relative">
-                <motion.div
-                  className="relative z-10"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
-                    <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                          Key Features
-                      </h3>
+                <div className="relative">
+                  <div className="relative z-10">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
+                      <CardContent className="p-0">
+                        <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                          Quick Start
+                        </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "Formal Verification",
-                              description: "Mathematically prove your contracts are correct",
-                              icon: <Shield className="w-6 h-6" />,
-                              color: "from-orange-500/20 to-orange-500/5",
+                              name: "Try Online Playground",
+                              description: "Write and test ErgoScript in your browser",
+                              icon: <Terminal className="w-6 h-6" />,
+                              link: "https://scastie.scala-lang.org/ErgoPlayground",
+                              external: true
                             },
                             {
-                              name: "Zero-Knowledge Proofs",
-                              description: "Built-in support for advanced cryptography",
-                              icon: <Lock className="w-6 h-6" />,
-                              color: "from-cyan-500/20 to-cyan-500/5",
+                              name: "Read Documentation",
+                              description: "Comprehensive guides and API references",
+                              icon: <BookOpen className="w-6 h-6" />,
+                              link: "/Docs",
+                              external: false
                             },
                             {
-                              name: "No Re-entrancy",
-                              description: "Immune to common smart contract vulnerabilities",
-                              icon: <CheckCircle className="w-6 h-6" />,
-                              color: "from-purple-500/20 to-purple-500/5",
+                              name: "Join Community",
+                              description: "Get help from experienced developers",
+                              icon: <Users className="w-6 h-6" />,
+                              link: "https://discord.gg/ergo",
+                              external: true
                             },
-                          ].map((feature, index) => (
-                            <motion.div
-                              key={feature.name}
-                              className={`p-4 rounded-lg bg-gradient-to-r ${feature.color} border border-gray-700/50`}
-                              whileHover={{ scale: 1.02, x: 10 }}
-                              transition={{ type: "spring", stiffness: 400 }}
-                            >
-                              <div className="flex items-center space-x-3">
-                                <div className="text-orange-400">{feature.icon}</div>
-                                <div>
-                                  <h4 className="font-semibold text-white">{feature.name}</h4>
-                                  <p className="text-sm text-gray-400">{feature.description}</p>
-                                </div>
-                              </div>
-                            </motion.div>
+                          ].map((item, index) => (
+                            <div key={item.name}>
+                              {item.external ? (
+                                <a
+                                  href={item.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                >
+                                  <div className="flex items-center space-x-3">
+                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="flex-1">
+                                      <h4 className="font-semibold text-white">{item.name}</h4>
+                                      <p className="text-sm text-neutral-400">{item.description}</p>
+                                    </div>
+                                    <ExternalLink className="w-4 h-4 text-neutral-400" />
+                                  </div>
+                                </a>
+                              ) : (
+                                <Link
+                                  href={item.link}
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                >
+                                  <div className="flex items-center space-x-3">
+                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="flex-1">
+                                      <h4 className="font-semibold text-white">{item.name}</h4>
+                                      <p className="text-sm text-neutral-400">{item.description}</p>
+                                    </div>
+                                    <ArrowRight className="w-4 h-4 text-neutral-400" />
+                                  </div>
+                                </Link>
+                              )}
+                            </div>
                           ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
           </motion.section>
 
           {/* Rest of the content */}
-          <div className="container mx-auto px-4 py-16 relative z-10">
-        {/* Key Features */}
-        <FadeIn delay={0.4}>
-          <div className="max-w-6xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
-              Key Features
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {features.map((feature, index) => (
+          <div className="container mx-auto px-4 relative z-10">
+            {/* Key Features Section */}
+            <motion.section 
+              className="pb-24 px-4"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+              variants={itemVariants}
+            >
+              <div className="max-w-7xl mx-auto">
+                <h2 className="text-4xl font-bold text-center mb-16 text-white">
+                  Key Features
+                </h2>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {features.map((feature, index) => (
+                    <motion.div
+                      key={feature.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: index * 0.1 }}
+                      whileHover={{ y: -5 }}
+                      className="motion-reduce:transform-none motion-reduce:transition-none"
+                    >
+                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50 transition-colors h-full">
+                        <CardContent className="p-6">
+                          <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <feature.icon className="w-6 h-6 text-brand-primary-400" />
+                          </div>
+                          <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+                          <p className="text-neutral-200 leading-relaxed">{feature.description}</p>
+                        </CardContent>
+                      </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </div>
+            </motion.section>
+
+            {/* Tabs Section */}
+            <FadeIn delay={0.6}>
+              <Tabs value={activeTab} onValueChange={handleTabChange} className="mb-24">
+                <TabsList className="flex w-full gap-2 bg-transparent p-0 mb-8">
+                  <TabsTrigger
+                    value="features"
+                    className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
+                  >
+                    Deep Dive
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="usecases"
+                    className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
+                  >
+                    Use Cases
+                  </TabsTrigger>
+                  <TabsTrigger
+                    value="resources"
+                    className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
+                  >
+                    Resources
+                  </TabsTrigger>
+                </TabsList>
+
+                {/* Fixed container for all tab contents */}
+                <div className="mt-6 min-h-[400px]">
+                  <TabsContent value="features" className="m-0">
+                    <div className="grid lg:grid-cols-2 gap-6 h-full">
+                      {/* Security Features Card */}
+                      <div>
+                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
+                                <Shield className="w-6 h-6 text-brand-primary-400" />
+                              </div>
+                              <CardTitle className="text-2xl font-bold text-white">Security First</CardTitle>
+                            </div>
+                            <p className="text-neutral-300 leading-relaxed">
+                              Built from the ground up with security as the primary concern, eliminating entire classes of
+                              vulnerabilities.
+                            </p>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-3">
+                              {[
+                                {
+                                  title: "Static Analysis Tools",
+                                  description: "Built-in verification tools catch bugs at compile time",
+                                  icon: Microscope,
+                                },
+                                {
+                                  title: "Immutable Transaction Model",
+                                  description: "Transactions are atomic and cannot be modified mid-execution",
+                                  icon: ShieldCheck,
+                                },
+                                {
+                                  title: "Cryptographic Primitives",
+                                  description: "Native support for advanced cryptographic operations",
+                                  icon: Zap,
+                                },
+                              ].map((feature, index) => (
+                                <div
+                                  key={feature.title}
+                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-all duration-300"
+                                >
+                                  <feature.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                                  <div>
+                                    <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
+                                    <p className="text-neutral-400 text-sm">{feature.description}</p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+
+                      {/* Developer Experience Card */}
+                      <div>
+                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
+                                <Code className="w-6 h-6 text-brand-primary-400" />
+                              </div>
+                              <CardTitle className="text-2xl font-bold text-white">Developer Experience</CardTitle>
+                            </div>
+                            <p className="text-neutral-300 leading-relaxed">
+                              Designed for clarity and ease of use, making complex cryptographic operations accessible to all
+                              developers.
+                            </p>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-3">
+                              {[
+                                {
+                                  title: "Interactive Playground",
+                                  description: "Test contracts instantly in your browser without setup",
+                                  icon: FileText,
+                                },
+                                {
+                                  title: "Rich Tooling Ecosystem",
+                                  description: "SDKs for Java, JavaScript, Python, and more",
+                                  icon: KeyRound,
+                                },
+                                {
+                                  title: "Extensive Examples",
+                                  description: "Learn from production-ready contract templates",
+                                  icon: Puzzle,
+                                },
+                              ].map((feature, index) => (
+                                <div
+                                  key={feature.title}
+                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-all duration-300"
+                                >
+                                  <feature.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                                  <div>
+                                    <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
+                                    <p className="text-neutral-400 text-sm">{feature.description}</p>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+                  </TabsContent>
+
+                  <TabsContent value="usecases" className="m-0">
+                    <div className="grid lg:grid-cols-2 gap-6 h-full">
+                      {/* DeFi & Finance Card */}
+                      <div>
+                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
+                                <Coins className="w-6 h-6 text-brand-primary-400" />
+                              </div>
+                              <CardTitle className="text-2xl font-bold text-white">DeFi & Finance</CardTitle>
+                            </div>
+                            <p className="text-neutral-300 leading-relaxed">
+                              Build secure financial applications with predictable costs and formal verification.
+                            </p>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-2">
+                              {[
+                                { name: "Non-custodial DeFi protocols", icon: Shield },
+                                { name: "Custom multi-signature wallets", icon: KeyRound },
+                                { name: "Decentralized oracle networks", icon: Eye },
+                                { name: "Stablecoins and native tokens", icon: Coins },
+                              ].map((useCase, index) => (
+                                <div
+                                  key={useCase.name}
+                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
+                                >
+                                  <useCase.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                                  <span className="text-neutral-200 text-sm">{useCase.name}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+
+                      {/* Privacy & Governance Card */}
+                      <div>
+                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
+                                <Lock className="w-6 h-6 text-brand-primary-400" />
+                              </div>
+                              <CardTitle className="text-2xl font-bold text-white">Privacy & Governance</CardTitle>
+                            </div>
+                            <p className="text-neutral-300 leading-relaxed">
+                              Leverage advanced cryptography for privacy-preserving and governance solutions.
+                            </p>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-2">
+                              {[
+                                { name: "Privacy tools and mixers", icon: Eye },
+                                { name: "DAOs & governance systems", icon: Users },
+                                { name: "Advanced NFT contracts", icon: Puzzle },
+                                { name: "Cross-chain bridges", icon: ArrowLeftRight },
+                              ].map((useCase, index) => (
+                                <div
+                                  key={useCase.name}
+                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
+                                >
+                                  <useCase.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                                  <span className="text-neutral-200 text-sm">{useCase.name}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+                  </TabsContent>
+
+                  <TabsContent value="resources" className="m-0">
+                    <div className="grid lg:grid-cols-2 gap-6 h-full">
+                      {/* Learning Resources Card */}
+                      <div>
+                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
+                                <BookOpen className="w-6 h-6 text-brand-primary-400" />
+                              </div>
+                              <CardTitle className="text-2xl font-bold text-white">Learning Resources</CardTitle>
+                            </div>
+                            <p className="text-neutral-300 leading-relaxed">
+                              Start your ErgoScript journey with interactive tutorials and comprehensive documentation.
+                            </p>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-2">
+                              {[
+                                { name: "ErgoScript Playground", url: "https://scastie.scala-lang.org/ErgoPlayground", external: true },
+                                { name: "Official Documentation", url: "https://docs.ergoplatform.com/ergo-script/", external: true },
+                                { name: "Code Examples & Tutorials", url: "/Docs/developers/tutorials", external: false },
+                                { name: "Community Guides", url: "/learn/guides", external: false },
+                              ].map((resource, index) => (
+                                <div key={resource.name}>
+                                  <Link href={resource.url} {...(resource.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                                    <div className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors cursor-pointer">
+                                      <BookOpen className="w-5 h-5 text-brand-primary-400" />
+                                      <span className="text-neutral-200 text-sm flex-1">{resource.name}</span>
+                                      {resource.external ? (
+                                        <ExternalLink className="w-4 h-4 text-neutral-400" />
+                                      ) : (
+                                        <ArrowRight className="w-4 h-4 text-neutral-400" />
+                                      )}
+                                    </div>
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+
+                      {/* Developer Tools Card */}
+                      <div>
+                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                          <CardHeader>
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
+                                <Terminal className="w-6 h-6 text-brand-primary-400" />
+                              </div>
+                              <CardTitle className="text-2xl font-bold text-white">Developer Tools</CardTitle>
+                            </div>
+                            <p className="text-neutral-300 leading-relaxed">
+                              Essential tools and SDKs for building with ErgoScript in your preferred environment.
+                            </p>
+                          </CardHeader>
+                          <CardContent>
+                            <div className="space-y-2">
+                              {[
+                                { name: "Appkit for JVM & Android", url: "https://github.com/ergoplatform/ergo-appkit", external: true },
+                                { name: "ErgoScript Compiler", url: "https://github.com/ergoplatform/sigmastate-interpreter", external: true },
+                                { name: "SDKs & APIs", url: "/Docs/developers/tooling", external: false },
+                                { name: "Node.js Library", url: "https://github.com/ergoplatform/ergo-ts", external: true },
+                              ].map((tool, index) => (
+                                <div key={tool.name}>
+                                  <Link href={tool.url} {...(tool.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
+                                    <div className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors cursor-pointer">
+                                      <Terminal className="w-5 h-5 text-brand-primary-400" />
+                                      <span className="text-neutral-200 text-sm flex-1">{tool.name}</span>
+                                      {tool.external ? (
+                                        <ExternalLink className="w-4 h-4 text-neutral-400" />
+                                      ) : (
+                                        <ArrowRight className="w-4 h-4 text-neutral-400" />
+                                      )}
+                                    </div>
+                                  </Link>
+                                </div>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </div>
+                    </div>
+                  </TabsContent>
+                </div>
+              </Tabs>
+            </FadeIn>
+
+            {/* Comparison Section */}
+            <FadeIn delay={0.7}>
+              <div className="max-w-7xl mx-auto mb-32">
+                <h2 className="text-4xl font-bold text-center mb-16 text-white">
+                  How ErgoScript Compares
+                </h2>
+
+                <div className="grid lg:grid-cols-2 gap-6 mb-12">
+                  {/* ErgoScript's Key Advantages Card */}
+                  <div>
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                      <CardHeader>
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
+                            <Shield className="w-6 h-6 text-brand-primary-400" />
+                          </div>
+                          <CardTitle className="text-2xl font-bold text-white">ErgoScript's Key Advantages</CardTitle>
+                        </div>
+                        <p className="text-neutral-300 leading-relaxed">
+                          Built from the ground up with security and mathematical precision as core principles.
+                        </p>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: "eUTXO – Extended Bitcoin Model",
+                              description: "Like Bitcoin Script, works with outputs, not accounts. Unlike BTC, scripts are much more powerful for DeFi, DAO, and complex contracts.",
+                              icon: Layers
+                            },
+                            {
+                              title: "No Shared State, No Global Variables",
+                              description: "No \"global storage\" as in Ethereum. This protects against most EVM bugs like reentrancy and frontrunning.",
+                              icon: ShieldCheck
+                            },
+                            {
+                              title: "Cryptography-first Design",
+                              description: "Sigma protocols and zero-knowledge proofs are native. No need for external libraries or complex implementations.",
+                              icon: Lock
+                            },
+                            {
+                              title: "Predictable Execution Costs",
+                              description: "No gas wars or unpredictable fees. Know exactly what your transaction will cost before execution.",
+                              icon: Zap
+                            }
+                          ].map((advantage, index) => (
+                            <div
+                              key={advantage.title}
+                              className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
+                            >
+                              <advantage.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                              <div>
+                                <h4 className="font-semibold text-white mb-1">{advantage.title}</h4>
+                                <p className="text-neutral-400 text-sm">{advantage.description}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+
+                  {/* Philosophy & Design Card */}
+                  <div>
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                      <CardHeader>
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
+                            <Code className="w-6 h-6 text-brand-primary-400" />
+                          </div>
+                          <CardTitle className="text-2xl font-bold text-white">Philosophy & Design</CardTitle>
+                        </div>
+                        <p className="text-neutral-300 leading-relaxed">
+                          ErgoScript's design philosophy prioritizes safety, predictability, and mathematical rigor.
+                        </p>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="space-y-4">
+                          {[
+                            {
+                              title: "Restricted Computation",
+                              description: "Intentionally limited to prevent infinite loops and ensure all contracts terminate predictably.",
+                              icon: Shield
+                            },
+                            {
+                              title: "Declarative Scripting",
+                              description: "Express what you want to achieve rather than how to achieve it. More readable and less error-prone.",
+                              icon: FileText
+                            },
+                            {
+                              title: "\"Crypto Notepad\"",
+                              description: "Think of contracts as mathematical proofs rather than imperative programs. Safer and more verifiable.",
+                              icon: Puzzle
+                            },
+                            {
+                              title: "Mathematical Verification",
+                              description: "Formal methods and mathematical proofs ensure your contracts work exactly as intended.",
+                              icon: Microscope
+                            }
+                          ].map((concept, index) => (
+                            <div
+                              key={concept.title}
+                              className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
+                            >
+                              <concept.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                              <div>
+                                <h4 className="font-semibold text-white mb-1">{concept.title}</h4>
+                                <p className="text-neutral-400 text-sm">{concept.description}</p>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </div>
+
+                {/* Comparison Table */}
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl mb-12 overflow-hidden">
+                  <CardHeader>
+                    <CardTitle className="text-white text-center">
+                      ErgoScript vs. Other Smart Contract Languages
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="p-0">
+                    <div className="overflow-x-auto">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="border-b border-neutral-700">
+                            <th className="text-left p-4 font-semibold text-brand-primary-400">Feature</th>
+                            <th className="text-left p-4 font-semibold text-brand-primary-400">ErgoScript (Ergo)</th>
+                            <th className="text-left p-4 font-semibold text-blue-400">Solidity (Ethereum)</th>
+                            <th className="text-left p-4 font-semibold text-purple-400">Plutus (Cardano)</th>
+                            <th className="text-left p-4 font-semibold text-yellow-400">Bitcoin Script</th>
+                            <th className="text-left p-4 font-semibold text-green-400">Move (Aptos/Sui)</th>
+                          </tr>
+                        </thead>
+                        <tbody className="text-neutral-300">
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Platform Type</td>
+                            <td className="p-4">eUTXO</td>
+                            <td className="p-4">Account-based (EVM)</td>
+                            <td className="p-4">eUTXO</td>
+                            <td className="p-4">UTXO</td>
+                            <td className="p-4">Account-based</td>
+                          </tr>
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Language Base</td>
+                            <td className="p-4">Sigma-based (Scala-like)</td>
+                            <td className="p-4">JS/C++-like</td>
+                            <td className="p-4">Haskell, DSL</td>
+                            <td className="p-4">Forth-like, stack-based</td>
+                            <td className="p-4">Rust-like</td>
+                          </tr>
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Turing-complete</td>
+                            <td className="p-4">
+                              <span className="text-brand-primary-400">No (restricted for security)</span>
+                            </td>
+                            <td className="p-4">Yes (with gas limits)</td>
+                            <td className="p-4">No (highly restricted)</td>
+                            <td className="p-4">No</td>
+                            <td className="p-4">Yes</td>
+                          </tr>
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Security</td>
+                            <td className="p-4">
+                              <span className="text-green-400">High (no reentrancy, no shared state)</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-red-400">Complex (reentrancy, overflows)</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Very high (strong types)</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Very high (minimal features)</span>
+                            </td>
+                            <td className="p-4">Above average</td>
+                          </tr>
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Custom Cryptography</td>
+                            <td className="p-4">
+                              <span className="text-green-400">Native Sigma protocols</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">External libraries</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">Limited support</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-red-400">Minimal</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">Moderate</span>
+                            </td>
+                          </tr>
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Formal Verification</td>
+                            <td className="p-4">
+                              <span className="text-green-400">Built-in</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">External tools</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Strong support</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">Limited</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">Moderate</span>
+                            </td>
+                          </tr>
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Learning Curve</td>
+                            <td className="p-4">
+                              <span className="text-green-400">Gentle</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">Steep</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-red-400">Very steep</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Simple but limited</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">Moderate</span>
+                            </td>
+                          </tr>
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Transaction Costs</td>
+                            <td className="p-4">
+                              <span className="text-green-400">Predictable, low</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-red-400">Variable, can be high</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">Predictable, moderate</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Low, simple</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Low, predictable</span>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Code Example Comparison - Simplified */}
                 <motion.div
-                  key={feature.title}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.5 + index * 0.1 }}
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                  className="group"
+                  transition={{ delay: 0.8 }}
+                  className="mt-12"
                 >
-                  <Card
-                    className={`bg-gradient-to-br ${feature.color} border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full`}
-                  >
-                    <CardContent className="p-8 text-center">
-                      <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-6">
-                        <feature.icon className="w-8 h-8 text-primary" />
-                      </div>
-                      <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
-                      <p className="text-gray-400 leading-relaxed">{feature.description}</p>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </FadeIn>
-
-        {/* Tabs Section */}
-        <FadeIn delay={0.6}>
-          <Tabs defaultValue="features" className="mb-16">
-            <TabsList className="flex w-full gap-2 bg-transparent p-0">
-              <TabsTrigger
-                value="features"
-                className="flex-1 rounded-md bg-gray-800 px-4 py-2 text-gray-300 hover:bg-primary/20 data-[state=active]:bg-primary data-[state=active]:text-black"
-              >
-                Key Features
-              </TabsTrigger>
-              <TabsTrigger
-                value="usecases"
-                className="flex-1 rounded-md bg-gray-800 px-4 py-2 text-gray-300 hover:bg-primary/20 data-[state=active]:bg-primary data-[state=active]:text-black"
-              >
-                Use Cases
-              </TabsTrigger>
-              <TabsTrigger
-                value="resources"
-                className="flex-1 rounded-md bg-gray-800 px-4 py-2 text-gray-300 hover:bg-primary/20 data-[state=active]:bg-primary data-[state=active]:text-black"
-              >
-                Resources
-              </TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="features" className="mt-8">
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Security Features Card */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.2 }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <Card className="bg-gradient-to-br from-orange-500/20 via-orange-500/10 to-transparent border-orange-500/30 backdrop-blur-xl h-full relative overflow-hidden">
-                    <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/10 rounded-full blur-2xl" />
-                    <CardHeader className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
-                          <Shield className="w-6 h-6 text-orange-400" />
-                        </div>
-                        <CardTitle className="text-2xl font-bold text-orange-400">Security First</CardTitle>
-                      </div>
-                      <p className="text-gray-300 leading-relaxed">
-                        Built from the ground up with security as the primary concern, eliminating entire classes of
-                        vulnerabilities.
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl overflow-hidden">
+                    <CardHeader className="text-center">
+                      <CardTitle className="text-white">
+                        Code Comparison: 2-of-3 Multisig
+                      </CardTitle>
+                      <p className="text-neutral-300 text-sm">
+                        See how ErgoScript's mathematical approach compares to traditional smart contracts
                       </p>
                     </CardHeader>
-                    <CardContent className="relative z-10">
-                      <div className="space-y-4">
-                        {[
-                          {
-                            title: "Formal Verification Support",
-                            description: "Mathematical proofs ensure contract correctness",
-                            icon: "🔬",
-                          },
-                          {
-                            title: "No Reentrancy Attacks",
-                            description: "eUTXO model prevents state manipulation",
-                            icon: "🛡️",
-                          },
-                          {
-                            title: "Predictable Execution Costs",
-                            description: "No surprise gas fees or failed transactions",
-                            icon: "⚡",
-                          },
-                        ].map((feature, index) => (
-                          <motion.div
-                            key={feature.title}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.3 + index * 0.1 }}
-                            className="flex items-start gap-3 p-3 bg-black/20 rounded-lg hover:bg-orange-500/10 transition-all duration-300"
-                            whileHover={{ x: 5 }}
-                          >
-                            <span className="text-xl">{feature.icon}</span>
-                            <div>
-                              <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
-                              <p className="text-gray-400 text-sm">{feature.description}</p>
-                            </div>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-
-                {/* Developer Experience Card */}
-                <motion.div
-                  initial={{ opacity: 0, x: 20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.4 }}
-                  whileHover={{ scale: 1.02 }}
-                >
-                  <Card className="bg-gradient-to-br from-cyan-500/20 via-cyan-500/10 to-transparent border-cyan-500/30 backdrop-blur-xl h-full relative overflow-hidden">
-                    <div className="absolute top-0 left-0 w-32 h-32 bg-cyan-500/10 rounded-full blur-2xl" />
-                    <CardHeader className="relative z-10">
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-12 h-12 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                          <Code className="w-6 h-6 text-cyan-400" />
-                        </div>
-                        <CardTitle className="text-2xl font-bold text-cyan-400">Developer Experience</CardTitle>
-                      </div>
-                      <p className="text-gray-300 leading-relaxed">
-                        Designed for clarity and ease of use, making complex cryptographic operations accessible to all
-                        developers.
-                      </p>
-                    </CardHeader>
-                    <CardContent className="relative z-10">
-                      <div className="space-y-4">
-                        {[
-                          {
-                            title: "Clean, Readable Syntax",
-                            description: "Express complex logic in simple, mathematical terms",
-                            icon: "📝",
-                          },
-                          {
-                            title: "Built-in Privacy Features",
-                            description: "Native support for zero-knowledge proofs and ring signatures",
-                            icon: "🔐",
-                          },
-                          {
-                            title: "Composable Contracts",
-                            description: "Build complex applications from simple, reusable components",
-                            icon: "🧩",
-                          },
-                        ].map((feature, index) => (
-                          <motion.div
-                            key={feature.title}
-                            initial={{ opacity: 0, y: 10 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.5 + index * 0.1 }}
-                            className="flex items-start gap-3 p-3 bg-black/20 rounded-lg hover:bg-cyan-500/10 transition-all duration-300"
-                            whileHover={{ x: 5 }}
-                          >
-                            <span className="text-xl">{feature.icon}</span>
-                            <div>
-                              <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
-                              <p className="text-gray-400 text-sm">{feature.description}</p>
-                            </div>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              </div>
-
-              {/* Bottom Summary Card */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="mt-8"
-              >
-                <Card className="bg-gradient-to-r from-orange-500/10 via-purple-500/10 to-cyan-500/10 border-gradient-to-r border-orange-500/30 backdrop-blur-xl">
-                  <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                      The ErgoScript Advantage
-                    </h3>
-                    <p className="text-lg text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed">
-                      While other platforms force you to choose between security and functionality, ErgoScript delivers
-                      both. Build sophisticated financial applications with the confidence that comes from mathematical
-                      certainty.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                      {["Mathematically Secure", "Developer Friendly", "Privacy Native", "Cost Predictable"].map(
-                        (badge, index) => (
-                          <motion.div
-                            key={badge}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            transition={{ delay: 1 + index * 0.1 }}
-                            whileHover={{ scale: 1.05 }}
-                          >
-                            <Badge
-                              variant="outline"
-                              className="px-4 py-2 bg-black/30 border-primary/50 text-primary hover:bg-primary/10 transition-all duration-300"
+                    <CardContent className="p-0">
+                      <div className="grid md:grid-cols-2">
+                        <div className="p-6 border-r border-neutral-700">
+                          <div className="flex items-center justify-between mb-3">
+                            <h3 className="font-semibold text-orange-400">ErgoScript</h3>
+                            <button
+                              onClick={() => navigator.clipboard.writeText('atLeast(2, Coll(proveDlog(A), proveDlog(B), proveDlog(C)))')}
+                              className="p-1 hover:bg-brand-primary-500/10 rounded transition-colors"
+                              aria-label="Copy ErgoScript code"
                             >
-                              {badge}
-                            </Badge>
-                          </motion.div>
-                        ),
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            </TabsContent>
-
-            <TabsContent value="usecases" className="mt-8">
-              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
-                <CardHeader>
-                  <CardTitle className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                    What Can You Build?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {useCases.map((useCase, index) => (
-                      <motion.div
-                        key={useCase}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="flex items-center gap-3 p-3 bg-black/30 rounded-lg hover:bg-orange-500/10 transition-colors"
-                        whileHover={{ x: 10 }}
-                      >
-                        <ArrowRight className="w-4 h-4 text-primary" />
-                        <span>{useCase}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="resources" className="mt-8">
-              <div className="grid md:grid-cols-2 gap-6">
-                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
-                  <CardHeader>
-                    <CardTitle className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                      Learning Resources
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank">
-                      <Button variant="outline" className="w-full justify-between hover:bg-orange-500/10">
-                        ErgoScript Playground
-                        <ExternalLink className="w-4 h-4" />
-                      </Button>
-                    </Link>
-                    <Link href="https://docs.ergoplatform.com/ergo-script/" target="_blank">
-                      <Button variant="outline" className="w-full justify-between hover:bg-orange-500/10">
-                        Official Documentation
-                        <ExternalLink className="w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
-
-                <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
-                  <CardHeader>
-                    <CardTitle className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                      Developer Tools
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="space-y-4">
-                    <Link href="/Docs" target="_blank">
-                      <Button variant="outline" className="w-full justify-between hover:bg-orange-500/10">
-                        SDKs & APIs
-                        <ExternalLink className="w-4 h-4" />
-                      </Button>
-                    </Link>
-                    <Link href="/Docs/developers/tutorials" target="_blank">
-                      <Button variant="outline" className="w-full justify-between hover:bg-orange-500/10">
-                        Code Examples
-                        <ExternalLink className="w-4 h-4" />
-                      </Button>
-                    </Link>
-                  </CardContent>
-                </Card>
+                              <Copy className="w-4 h-4 text-neutral-400 hover:text-brand-primary-400" />
+                            </button>
+                          </div>
+                          <pre className="bg-neutral-950/80 p-4 rounded-lg text-sm font-mono text-neutral-200 overflow-x-auto">
+                            <code>atLeast(2, Coll(
+  proveDlog(A),
+  proveDlog(B), 
+  proveDlog(C)
+))</code>
+                          </pre>
+                          <p className="text-xs text-neutral-400 mt-2 italic">
+                            Mathematical proof: "At least 2 of these 3 signatures must be valid"
+                          </p>
+                        </div>
+                        <div className="p-6">
+                          <div className="flex items-center justify-between mb-3">
+                            <h3 className="font-semibold text-blue-400">Solidity</h3>
+                            <button
+                              onClick={() => navigator.clipboard.writeText('require(validSignatures >= 2, "Need 2+ sigs");\nfor (uint i = 0; i < signers.length; i++) {\n  if (verify(signers[i], signature[i])) {\n    validSignatures++;\n  }\n}')}
+                              className="p-1 hover:bg-brand-primary-500/10 rounded transition-colors"
+                              aria-label="Copy Solidity code"
+                            >
+                              <Copy className="w-4 h-4 text-neutral-400 hover:text-brand-primary-400" />
+                            </button>
+                          </div>
+                          <pre className="bg-neutral-950/80 p-4 rounded-lg text-sm font-mono text-neutral-200 overflow-x-auto">
+                            <code dangerouslySetInnerHTML={{
+                              __html: `require(validSignatures >= 2, "Need 2+ sigs");
+for (uint i = 0; i < signers.length; i++) {
+  if (verify(signers[i], signature[i])) {
+    validSignatures++;
+  }
+}`
+                            }} />
+                          </pre>
+                          <p className="text-xs text-neutral-400 mt-2 italic">
+                            Imperative logic with loops, state variables, and manual validation
+                          </p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               </div>
-            </TabsContent>
-          </Tabs>
-        </FadeIn>
-
-        {/* Comparison Section */}
-        <FadeIn delay={0.7}>
-          <div className="max-w-7xl mx-auto mb-16">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
-              How ErgoScript Compares
-            </h2>
-
-            {/* Comparison Table */}
-            <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl mb-12 overflow-hidden">
-              <CardHeader>
-                <CardTitle className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent text-center">
-                  ErgoScript vs. Other Smart Contract Languages
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="p-0">
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm">
-                    <thead>
-                      <tr className="border-b border-gray-700">
-                        <th className="text-left p-4 font-semibold text-primary">Feature</th>
-                        <th className="text-left p-4 font-semibold text-orange-400">ErgoScript (Ergo)</th>
-                        <th className="text-left p-4 font-semibold text-blue-400">Solidity (Ethereum)</th>
-                        <th className="text-left p-4 font-semibold text-purple-400">Plutus (Cardano)</th>
-                        <th className="text-left p-4 font-semibold text-yellow-400">Bitcoin Script</th>
-                        <th className="text-left p-4 font-semibold text-green-400">Move (Aptos/Sui)</th>
-                      </tr>
-                    </thead>
-                    <tbody className="text-gray-300">
-                      <tr className="border-b border-gray-800 hover:bg-gray-800/30">
-                        <td className="p-4 font-medium">Platform Type</td>
-                        <td className="p-4">eUTXO</td>
-                        <td className="p-4">Account-based (EVM)</td>
-                        <td className="p-4">eUTXO</td>
-                        <td className="p-4">UTXO</td>
-                        <td className="p-4">Account-based</td>
-                      </tr>
-                      <tr className="border-b border-gray-800 hover:bg-gray-800/30">
-                        <td className="p-4 font-medium">Language Base</td>
-                        <td className="p-4">Sigma-based (Scala-like)</td>
-                        <td className="p-4">JS/C++-like</td>
-                        <td className="p-4">Haskell, DSL</td>
-                        <td className="p-4">Forth-like, stack-based</td>
-                        <td className="p-4">Rust-like</td>
-                      </tr>
-                      <tr className="border-b border-gray-800 hover:bg-gray-800/30">
-                        <td className="p-4 font-medium">Turing-complete</td>
-                        <td className="p-4">
-                          <span className="text-orange-400">No (restricted for security)</span>
-                        </td>
-                        <td className="p-4">Yes (with gas limits)</td>
-                        <td className="p-4">No (highly restricted)</td>
-                        <td className="p-4">No</td>
-                        <td className="p-4">Yes</td>
-                      </tr>
-                      <tr className="border-b border-gray-800 hover:bg-gray-800/30">
-                        <td className="p-4 font-medium">Security</td>
-                        <td className="p-4">
-                          <span className="text-green-400">High (no reentrancy, no shared state)</span>
-                        </td>
-                        <td className="p-4">
-                          <span className="text-red-400">Complex (reentrancy, overflows)</span>
-                        </td>
-                        <td className="p-4">
-                          <span className="text-green-400">Very high (strong types)</span>
-                        </td>
-                        <td className="p-4">
-                          <span className="text-green-400">Very high (minimal features)</span>
-                        </td>
-                        <td className="p-4">Above average</td>
-                      </tr>
-                      <tr className="border-b border-gray-800 hover:bg-gray-800/30">
-                        <td className="p-4 font-medium">Custom Cryptography</td>
-                        <td className="p-4">
-                          <span className="text-green-400">Easy (Sigma, ZKPs, ring sigs)</span>
-                        </td>
-                        <td className="p-4">
-                          <span className="text-red-400">Very hard</span>
-                        </td>
-                        <td className="p-4">Possible but complex</td>
-                        <td className="p-4">
-                          <span className="text-red-400">Nearly impossible</span>
-                        </td>
-                        <td className="p-4">Possible</td>
-                      </tr>
-                      <tr className="border-b border-gray-800 hover:bg-gray-800/30">
-                        <td className="p-4 font-medium">Resource/Gas Cost</td>
-                        <td className="p-4">
-                          <span className="text-green-400">Predictable (restricted execution)</span>
-                        </td>
-                        <td className="p-4">
-                          <span className="text-red-400">Can be huge</span>
-                        </td>
-                        <td className="p-4">Capped (script units)</td>
-                        <td className="p-4">
-                          <span className="text-green-400">Very cheap</span>
-                        </td>
-                        <td className="p-4">Predictable</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Key Differences */}
-            <div className="grid lg:grid-cols-2 gap-8 mb-12">
-              <Card className="bg-gradient-to-br from-orange-500/10 to-orange-500/5 border-orange-500/30 backdrop-blur-xl">
-                <CardHeader>
-                  <CardTitle className="text-orange-400 flex items-center gap-2">
-                    <Shield className="w-5 h-5" />
-                    ErgoScript's Key Advantages
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-2 text-white">eUTXO – Extended Bitcoin Model</h4>
-                    <p className="text-gray-300 text-sm">
-                      Like Bitcoin Script, works with outputs, not accounts. Unlike BTC, scripts are much more powerful
-                      for DeFi, DAO, and complex contracts.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-white">No Shared State, No Global Variables</h4>
-                    <p className="text-gray-300 text-sm">
-                      No "global storage" as in Ethereum. This protects against most EVM bugs like reentrancy and
-                      frontrunning.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-white">Cryptography-first Approach</h4>
-                    <p className="text-gray-300 text-sm">
-                      Built-in Sigma protocols, zero-knowledge proofs, ring signatures. Build private DEXs and mixers
-                      natively.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 border-cyan-500/30 backdrop-blur-xl">
-                <CardHeader>
-                  <CardTitle className="text-cyan-400 flex items-center gap-2">
-                    <Code className="w-5 h-5" />
-                    Philosophy & Design
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div>
-                    <h4 className="font-semibold mb-2 text-white">Restricted Computation for Security</h4>
-                    <p className="text-gray-300 text-sm">
-                      Not Turing-complete; no infinite loops. Safer for users and the network—no "ran out of gas"
-                      disasters.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-white">Declarative Scripting</h4>
-                    <p className="text-gray-300 text-sm">
-                      Describe what must be true for transactions to pass. No loops or tricky state—just logic and
-                      cryptography.
-                    </p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-2 text-white">"Crypto Notepad" Philosophy</h4>
-                    <p className="text-gray-300 text-sm">
-                      Not a "world computer" but a secure way to prove logic with mathematics, not just code.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Code Example Comparison */}
-            <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
-              <CardHeader>
-                <CardTitle className="bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                  Code Comparison: 2-of-3 Multisig
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="grid lg:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="font-semibold mb-3 text-orange-400">ErgoScript</h4>
-                    <div className="bg-black/50 rounded-lg p-4 font-mono text-sm">
-                      <pre className="text-green-400">{`// Simple 2-of-3 multisig
-sigmas = proveDlog(A) || proveDlog(B) || proveDlog(C)
-val nSigs = (if proveDlog(A) then 1 else 0) + 
-            (if proveDlog(B) then 1 else 0) + 
-            (if proveDlog(C) then 1 else 0)
-nSigs >= 2`}</pre>
-                    </div>
-                    <p className="text-gray-400 mt-2 text-sm italic">Concise, mathematical, and secure</p>
-                  </div>
-                  <div>
-                    <h4 className="font-semibold mb-3 text-blue-400">Solidity Equivalent</h4>
-                    <div className="bg-black/50 rounded-lg p-4 font-mono text-sm">
-                      <pre className="text-green-400">{`// Would require a long function with:
-// - require() statements
-// - loops for signature verification
-// - potential reentrancy guards
-// - gas optimization considerations
-// - 50+ lines of code`}</pre>
-                    </div>
-                    <p className="text-gray-400 mt-2 text-sm italic">Complex, verbose, and error-prone</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </FadeIn>
+            </FadeIn>
 
             {/* FAQ Section */}
             <FadeIn delay={0.9}>
-              <div className="max-w-4xl mx-auto mb-16">
-                <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              <div className="max-w-4xl mx-auto mb-32">
+                <h2 className="text-4xl font-bold text-center mb-16 text-white">
                   Frequently Asked Questions
                 </h2>
 
@@ -775,25 +951,28 @@ nSigs >= 2`}</pre>
                   {faqs.map((faq, index) => (
                     <Card
                       key={index}
-                      className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                      className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
                     >
                       <Collapsible
                         open={openFAQ === index}
-                        onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                        onOpenChange={(open) => setOpenFAQ(open ? index : null)}
                       >
-                        <CollapsibleTrigger className="w-full">
-                          <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
-                            <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
-                            <ChevronDown
-                              className={`w-5 h-5 text-gray-400 transition-transform ${
-                                openFAQ === index ? "rotate-180" : ""
-                              }`}
-                            />
-                          </CardContent>
+                        <CollapsibleTrigger asChild>
+                          <button className="w-full">
+                            <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
+                              <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                              <ChevronDown
+                                aria-hidden="true"
+                                className={`w-5 h-5 text-neutral-400 transition-transform ${
+                                  openFAQ === index ? "rotate-180" : ""
+                                }`}
+                              />
+                            </CardContent>
+                          </button>
                         </CollapsibleTrigger>
                         <CollapsibleContent>
                           <CardContent className="px-6 pb-6 pt-0">
-                            <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                            <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
                           </CardContent>
                         </CollapsibleContent>
                       </Collapsible>
@@ -803,37 +982,37 @@ nSigs >= 2`}</pre>
               </div>
             </FadeIn>
 
-        {/* CTA */}
-        <FadeIn delay={0.8}>
-          <Card className="bg-gradient-to-r from-orange-500/20 to-cyan-500/20 border-orange-500/30 backdrop-blur-xl">
-            <CardContent className="text-center py-12">
-              <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                Ready to Start Building?
-              </h3>
-              <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Explore ErgoScript and start developing secure smart contracts today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank">
-                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                    Try Playground
-                  </Button>
-                </Link>
-                <Link href="/Docs">
-                  <Button
-                    variant="outline"
-                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                  >
-                    View Documentation
-                  </Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-        </FadeIn>
-      </div>
+            {/* CTA */}
+            <FadeIn delay={0.8}>
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl mb-16">
+                <CardContent className="text-center py-16">
+                  <h3 className="text-4xl font-bold mb-6 text-white">
+                    Ready to Start Building?
+                  </h3>
+                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
+                    Explore ErgoScript and start developing secure smart contracts today.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
+                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                        Try Playground
+                      </Button>
+                    </Link>
+                    <Link href="/Docs">
+                      <Button
+                        variant="outline"
+                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                      >
+                        View Documentation
+                      </Button>
+                    </Link>
+                  </div>
+                </CardContent>
+              </Card>
+            </FadeIn>
+          </div>
         </motion.div>
-    </div>
+      </div>
     </>
   )
 }
