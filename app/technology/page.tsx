@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
+
 import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -37,10 +37,7 @@ import {
   BarChart3,
   TrendingUp,
   Book,
-  Search,
 
-  Check,
-  Hash,
 } from "lucide-react"
 import Link from "next/link"
 // Removed glossary imports
@@ -224,6 +221,17 @@ export default function TechnologyPage() {
   ] as const
 
   const [activeTab, setActiveTab] = useState("usecases")
+  const [currentTabIndex, setCurrentTabIndex] = useState(0)
+
+  // Prevent scroll when switching tabs
+  const handleTabChange = (value: string) => {
+    const scrollPosition = window.scrollY
+    setActiveTab(value)
+    // Restore scroll position after state update
+    setTimeout(() => {
+      window.scrollTo(0, scrollPosition)
+    }, 0)
+  }
 
   const tabMeta: Record<string, { title: string; description: string }> = {
     usecases: {
@@ -374,25 +382,9 @@ export default function TechnologyPage() {
     },
   ]
 
-  function useCopy() {
-    const [copied, setCopied] = useState<string | null>(null)
-    useEffect(() => {
-      if (!copied) return
-      const t = setTimeout(() => setCopied(null), 1200)
-      return () => clearTimeout(t)
-    }, [copied])
-    return {
-      copied,
-      copy: async (text: string, id: string) => {
-        await navigator.clipboard.writeText(text)
-        setCopied(id)
-      },
-    }
-  }
+
 
   function FAQSection() {
-    const [query, setQuery] = useState("")
-    const { copy, copied } = useCopy()
 
     // helpers
     function nodeToPlainText(node: React.ReactNode): string {
@@ -405,19 +397,6 @@ export default function TechnologyPage() {
       }
       return ""
     }
-
-    const filtered = useMemo(() => {
-      const q = query.trim().toLowerCase()
-      if (!q) return faqs
-      return faqs.filter((f) => {
-        const inQ = f.q.toLowerCase().includes(q)
-        const inA =
-          typeof f.a === "string"
-            ? f.a.toLowerCase().includes(q)
-            : nodeToPlainText(f.a).toLowerCase().includes(q)
-        return inQ || inA || (f.tag?.toLowerCase().includes(q) ?? false)
-      })
-    }, [query])
 
     const faqJsonLd = useMemo(() => {
       const items = faqs.map((f) => ({
@@ -447,84 +426,58 @@ export default function TechnologyPage() {
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
         </Head>
         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-          <CardHeader className="pb-2">
+          <CardHeader className="pb-6">
             <div className="flex items-center justify-between gap-3">
-              <CardTitle id="faq-heading" className="text-white">FAQ — Ergo Technology</CardTitle>
-              <Badge variant="outline" className="border-neutral-700 text-neutral-300">{faqs.length} questions</Badge>
+              <CardTitle id="faq-heading" className="text-2xl font-bold text-white">FAQ — Ergo Technology</CardTitle>
+              <Badge variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-300">{faqs.length} questions</Badge>
             </div>
-            <div className="mt-3 flex items-center gap-2">
-              <div className="relative w-full">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-neutral-500" aria-hidden />
-                <Input
-                  placeholder="Search the FAQ…"
-                  value={query}
-                  onChange={(e) => setQuery(e.target.value)}
-                  className="pl-9 bg-neutral-900/70 border-neutral-700 text-neutral-200 placeholder:text-neutral-500"
-                  aria-label="Search FAQ"
-                />
-              </div>
-            </div>
+            <p className="text-neutral-400 mt-2">Click any question below to expand the answer</p>
           </CardHeader>
-          <CardContent>
-            {filtered.length === 0 ? (
-              <div className="text-neutral-400 py-8 text-center">No matches found.</div>
-            ) : (
-              <Accordion type="single" collapsible className="w-full">
-                {filtered.map((item, i) => (
-                  <motion.div key={item.id} id={item.id} initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.02 * i }} className="rounded-lg border border-neutral-800/80 bg-neutral-900/40 mb-3">
-                    <AccordionItem value={item.id} className="border-none">
-                      <div className="flex items-center justify-between pr-2">
-                        <AccordionTrigger className="px-4 py-3 text-left hover:no-underline">
-                          <div className="flex items-center gap-2">
-                            {item.tag && (
-                              <Badge className="bg-orange-500/10 text-orange-400 border border-orange-500/30">{item.tag}</Badge>
-                            )}
-                            <span className="text-white">{item.q}</span>
-                          </div>
-                        </AccordionTrigger>
-                        <div className="flex items-center gap-1">
-                          <Button
-                            variant="ghost"
-                            size="icon"
-                            aria-label="Copy link to question"
-                            className="h-8 w-8 text-neutral-400 hover:text-orange-400"
-                            onClick={() => {
-                              const url = `${window.location.origin}${window.location.pathname}#${item.id}`
-                              window.history.replaceState(null, "", `#${item.id}`)
-                              copy(url, item.id)
-                            }}
-                          >
-                            {copied === item.id ? <Check className="h-4 w-4" /> : <LinkIcon className="h-4 w-4" />}
-                          </Button>
-                          <div aria-live="polite" className="sr-only">{copied ? "Link copied" : ""}</div>
+          <CardContent className="pt-0">
+            <div className="space-y-3">
+              {faqs.map((item, i) => (
+                <motion.div 
+                  key={item.id} 
+                  id={item.id} 
+                  initial={{ opacity: 0, y: 8 }} 
+                  animate={{ opacity: 1, y: 0 }} 
+                  transition={{ delay: 0.02 * i }}
+                  className="group"
+                >
+                  <Accordion type="single" collapsible className="w-full">
+                    <AccordionItem 
+                      value={item.id} 
+                      className="border border-neutral-800 bg-neutral-900/40 rounded-xl hover:border-neutral-700 hover:bg-neutral-900/60 transition-all duration-200"
+                    >
+                      <AccordionTrigger className="px-6 py-4 text-left hover:no-underline group-hover:text-white transition-colors">
+                        <div className="flex items-center gap-3 w-full">
+                          {item.tag && (
+                            <Badge className="bg-brand-primary-500/10 text-brand-primary-400 border border-brand-primary-500/30 text-xs font-medium">{item.tag}</Badge>
+                          )}
+                          <span className="text-neutral-200 font-medium">{item.q}</span>
                         </div>
-                      </div>
-                      <AccordionContent className="px-4 pb-4 pt-0 text-neutral-300 leading-relaxed">
-                        <div className="[&>a]:underline [&>a]:hover:opacity-80">{item.a}</div>
+                      </AccordionTrigger>
+                      <AccordionContent className="px-6 pb-6 pt-0">
+                        <div className="text-neutral-300 leading-relaxed [&>a]:text-brand-primary-400 [&>a]:underline [&>a]:hover:text-brand-primary-300 [&>b]:text-white [&>i]:text-neutral-200">
+                          {item.a}
+                        </div>
                       </AccordionContent>
                     </AccordionItem>
-                  </motion.div>
-                ))}
-              </Accordion>
-            )}
-            <div className="mt-6 flex flex-wrap gap-2">
-              {Array.from(new Set(faqs.map((f) => f.tag).filter(Boolean) as string[])).map((t) => (
-                <button
-                  key={t}
-                  onClick={() => setQuery(t!)}
-                  className="group"
-                  aria-label={`Filter by ${t}`}
-                >
-                  <Badge variant="outline" className="border-neutral-700 text-neutral-300 group-hover:border-orange-500/50 group-hover:text-orange-400 transition-colors">
-                    <Hash className="h-3 w-3 mr-1" /> {t}
-                  </Badge>
-                </button>
+                  </Accordion>
+                </motion.div>
               ))}
-              <a href="/Docs" className="ml-auto">
-                <Button variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-orange-500/10">
-                  Go to Docs <ExternalLink className="h-4 w-4 ml-2" />
-                </Button>
-              </a>
+            </div>
+            <div className="mt-8 pt-6 border-t border-neutral-800">
+              <div className="flex justify-end">
+                <a href="/Docs">
+                  <Button 
+                    variant="outline" 
+                    className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 transition-all duration-200"
+                  >
+                    Go to Docs <ExternalLink className="h-4 w-4 ml-2" />
+                  </Button>
+                </a>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -628,7 +581,7 @@ export default function TechnologyPage() {
 
         {/* Tabs Section */}
         <FadeIn>
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-20">
+          <Tabs value={activeTab} onValueChange={handleTabChange} className="mb-20">
             <TabsList className="flex w-full gap-2 bg-transparent p-0">
               <TabsTrigger
                 value="usecases"
@@ -650,120 +603,133 @@ export default function TechnologyPage() {
               </TabsTrigger>
             </TabsList>
 
-            {/* Use Cases */}
-            <TabsContent value="usecases" className="mt-8">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                <CardHeader>
-                  <CardTitle className="text-white">
-                    What Can You Build?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-4">
-                    {[
-                      "Non-custodial DeFi protocols",
-                      "Custom multi-signature wallets",
-                      "Stablecoins and native tokens",
-                      "Decentralized mixers and privacy tools",
-                      "DAOs & governance systems",
-                      "Decentralized oracle networks",
-                      "NFT marketplaces & composable dApps",
-                      "Scalable micropayments and instant settlement",
-                      "Cross-chain bridges & light wallets",
-                    ].map((useCase, index) => (
-                      <motion.div
-                        key={useCase}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: index * 0.08 }}
-                        className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
-                        whileHover={{ x: 10 }}
-                      >
-                        <ArrowRight className="w-4 h-4 text-brand-primary-400" />
-                        <span>{useCase}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
+            {/* Fixed container for all tab contents */}
+            <div className="mt-8 min-h-[500px]">
+              {/* Use Cases */}
+              <TabsContent value="usecases" className="m-0">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white">
+                      What Can You Build?
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      {[
+                        "Non-custodial DeFi protocols",
+                        "Custom multi-signature wallets",
+                        "Stablecoins and native tokens",
+                        "Decentralized mixers and privacy tools",
+                        "DAOs & governance systems",
+                        "Decentralized oracle networks",
+                        "NFT marketplaces & composable dApps",
+                        "Scalable micropayments and instant settlement",
+                        "Cross-chain bridges & light wallets",
+                      ].map((useCase, index) => (
+                        <motion.div
+                          key={useCase}
+                          initial={{ opacity: 0, x: -20 }}
+                          animate={{ opacity: 1, x: 0 }}
+                          transition={{ delay: index * 0.08 }}
+                          className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
+                          whileHover={{ x: 10 }}
+                        >
+                          <ArrowRight className="w-4 h-4 text-brand-primary-400" />
+                          <span>{useCase}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
 
-            {/* Architecture */}
-            <TabsContent value="architecture" className="mt-8">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                <CardHeader>
-                  <CardTitle className="text-white">
-                    Ergo Tech Stack Overview
-                  </CardTitle>
-                  <p className="text-sm text-neutral-400 mt-1">
-                    <span className="font-semibold text-white">Ergo's architecture</span> delivers decentralization, composability, and built-in privacy—without tradeoffs.
-                  </p>
-                </CardHeader>
-                <CardContent>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Layer 1 */}
-                    <Card className="bg-neutral-900/60 border-neutral-700 rounded-xl">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-brand-primary-400 text-xl">Layer 1</CardTitle>
-                      </CardHeader>
-                      <CardContent className="pt-0">
-                        <ul className="space-y-2 text-neutral-300">
-                          {layer1.map(({ label, icon: Icon }) => (
-                            <li key={label} className="flex items-start gap-3">
-                              <Icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
-                              <span>{label}</span>
-                            </li>
-                          ))}
-                      </ul>
-                      </CardContent>
-                    </Card>
+              {/* Architecture */}
+              <TabsContent value="architecture" className="m-0">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white">
+                      Ergo Tech Stack Overview
+                    </CardTitle>
+                    <p className="text-sm text-neutral-400 mt-1">
+                      <span className="font-semibold text-white">Ergo's architecture</span> delivers decentralization, composability, and built-in privacy—without tradeoffs.
+                    </p>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {/* Layer 1 */}
+                      <Card className="bg-neutral-900/60 border-neutral-700 rounded-xl">
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-brand-primary-400 text-xl">Layer 1</CardTitle>
+                        </CardHeader>
+                        <CardContent className="pt-0">
+                          <ul className="space-y-2 text-neutral-300">
+                            {layer1.map(({ label, icon: Icon }) => (
+                              <li key={label} className="flex items-start gap-3">
+                                <Icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                <span>{label}</span>
+                              </li>
+                            ))}
+                        </ul>
+                        </CardContent>
+                      </Card>
 
-                    {/* Layer 2 / Extensions */}
-                    <Card className="bg-neutral-900/60 border-neutral-700 rounded-xl">
-                      <CardHeader className="pb-2">
-                        <CardTitle className="text-brand-primary-400 text-xl">Layer 2 / Extensions</CardTitle>
-                      </CardHeader>
-                      <CardContent className="pt-0">
-                        <ul className="space-y-2 text-neutral-300">
-                          {layer2.map(({ label, icon: Icon }) => (
-                            <li key={label} className="flex items-start gap-3">
-                              <Icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
-                              <span>{label}</span>
-                            </li>
-                          ))}
-                      </ul>
-                      </CardContent>
-                    </Card>
-                  </div>
+                      {/* Layer 2 / Extensions */}
+                      <Card className="bg-neutral-900/60 border-neutral-700 rounded-xl">
+                        <CardHeader className="pb-2">
+                          <CardTitle className="text-brand-primary-400 text-xl">Layer 2 / Extensions</CardTitle>
+                        </CardHeader>
+                        <CardContent className="pt-0">
+                          <ul className="space-y-2 text-neutral-300">
+                            {layer2.map(({ label, icon: Icon }) => (
+                              <li key={label} className="flex items-start gap-3">
+                                <Icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                <span>{label}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
 
-                  {/* Removed bottom caption; moved to CardHeader */}
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            {/* Resources */}
-            <TabsContent value="resources" className="mt-8">
-              <div className="grid md:grid-cols-2 gap-6">
-                {resources.map((res) => (
-                  <Card key={res.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                    <CardHeader>
-                      <CardTitle className="text-white flex items-center gap-2">
-                        <res.icon className="w-5 h-5 text-brand-primary-400" />
-                        {res.title}
-                      </CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <Link href={res.href} target="_blank">
-                        <Button variant="outline" className="w-full justify-between hover:bg-orange-500/10 text-neutral-200 border-neutral-700">
-                          {res.title}
-                          <ExternalLink className="w-4 h-4" />
-                        </Button>
-                      </Link>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </TabsContent>
+              {/* Resources */}
+              <TabsContent value="resources" className="m-0">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                  <CardHeader>
+                    <CardTitle className="text-white">
+                      Developer Resources
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="grid md:grid-cols-2 gap-6">
+                      {resources.map((res) => (
+                        <Card key={res.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full flex flex-col">
+                          <CardHeader className="pb-4">
+                            <CardTitle className="text-white flex items-center gap-3 text-lg">
+                              <res.icon className="w-5 h-5 text-brand-primary-400" />
+                              {res.title}
+                            </CardTitle>
+                          </CardHeader>
+                          <CardContent className="flex-1 flex flex-col justify-end pt-0">
+                            <Link href={res.href} target="_blank" className="w-full">
+                              <Button 
+                                variant="outline" 
+                                className="w-full justify-between hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 text-neutral-200 border-neutral-700 transition-all duration-200 py-3"
+                              >
+                                {res.title}
+                                <ExternalLink className="w-4 h-4" />
+                              </Button>
+                            </Link>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </TabsContent>
+            </div>
           </Tabs>
         </FadeIn>
 
@@ -811,7 +777,6 @@ export default function TechnologyPage() {
 const resources = [
   { title: "Ergo Docs", href: "/Docs", icon: Book },
   { title: "Whitepaper", href: "https://ergoplatform.org/docs/whitepaper.pdf", icon: ExternalLink },
-  { title: "Protocol Docs", href: "https://docs.ergoplatform.com/", icon: ExternalLink },
   { title: "GitHub", href: "https://github.com/ergoplatform", icon: ExternalLink },
   { title: "Dev Tutorials", href: "/Docs/developers/tutorials", icon: ArrowRight },
 ] as const 
