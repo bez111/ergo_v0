@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useMemo } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Code, Shield, Zap, Layers } from "lucide-react"
@@ -9,18 +9,22 @@ import { StaggerContainer, StaggerItem } from "@/components/animations/stagger-c
 import { CyberButton } from "@/components/animations/cyber-button"
 import { GlitchText } from "@/components/animations/glitch-text"
 
+// Stable messages to avoid re-creating the array on every render
+const HERO_MESSAGES: readonly string[] = [
+  "Decentralized Money for a Free Society",
+  "Global neutral settlement layer",
+  "Territory of digital freedom",
+  "Join the Resistance",
+] as const
+
 export function HeroSection() {
   const [typedText, setTypedText] = useState("")
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
   const containerRef = useRef<HTMLDivElement>(null)
 
-  const texts = [
-    "Decentralized Money for a Free Society",
-    "Global neutral settlement layer",
-    "Territory of digital freedom",
-    "Join the Resistance",
-  ]
+  // Backward compatibility if we ever need to compute messages
+  const texts = useMemo(() => HERO_MESSAGES, [])
 
   useEffect(() => {
     let timeout: NodeJS.Timeout
@@ -47,7 +51,8 @@ export function HeroSection() {
     }
 
     return () => clearTimeout(timeout)
-  }, [typedText, isTyping, currentTextIndex, texts])
+    // Do NOT depend on `texts` reference to avoid effect resets
+  }, [typedText, isTyping, currentTextIndex])
 
   const features = [
     { icon: Shield, label: "Secure PoW" },
@@ -59,47 +64,20 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-24 lg:py-32">
       {/* Background elements */}
-      <div className="absolute inset-0 bg-black z-0"></div>
-      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-10 bg-cover bg-center z-0"></div>
+      <div className="absolute inset-0 bg-neutral-950 z-0 pointer-events-none"></div>
 
-      {/* Animated grid lines */}
-      <motion.div
-        className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.05)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)] z-0"
-        animate={{
-          backgroundPosition: ["0px 0px", "40px 40px"],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "linear",
-        }}
-      ></motion.div>
+      {/* Subtle base texture (existing asset) */}
+      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] bg-cover bg-center opacity-10 z-0 pointer-events-none"></div>
 
-      {/* Glowing elements */}
+      {/* Cyberpunk color glows (very subtle) */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(34,211,238,0.12)_0%,transparent_60%)] z-0 pointer-events-none"></div>
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(236,72,153,0.12)_0%,transparent_60%)] z-0 pointer-events-none"></div>
+
+      {/* Low-contrast animated grid lines with cyan/magenta tint */}
       <motion.div
-        className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] z-0"
-        animate={{
-          scale: [1, 1.2, 1],
-          opacity: [0.2, 0.4, 0.2],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-        }}
-      ></motion.div>
-      <motion.div
-        className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-primary/10 rounded-full blur-[100px] z-0"
-        animate={{
-          scale: [1.2, 1, 1.2],
-          opacity: [0.3, 0.15, 0.3],
-        }}
-        transition={{
-          duration: 4,
-          repeat: Number.POSITIVE_INFINITY,
-          ease: "easeInOut",
-          delay: 2,
-        }}
+        className="absolute inset-0 bg-[linear-gradient(0deg,rgba(147,51,234,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.04)_1px,transparent_1px)] bg-[size:40px_40px] z-0"
+        animate={{ backgroundPosition: ["0px 0px", "40px 40px"] }}
+        transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
       ></motion.div>
 
       <div className="container relative z-20 px-4 md:px-6" ref={containerRef}>
@@ -144,7 +122,7 @@ export function HeroSection() {
                 </span>
               </h1>
               <motion.p
-                className="text-xl md:text-2xl text-gray-400 font-mono max-w-3xl mx-auto"
+                className="text-xl md:text-2xl text-neutral-300 font-mono max-w-3xl mx-auto"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.8, duration: 0.6 }}
@@ -187,7 +165,7 @@ export function HeroSection() {
           {/* Feature Icons */}
           <FadeIn delay={1.2}>
             <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 w-full max-w-3xl">
-              {features.map((feature, index) => (
+              {features.map((feature) => (
                 <StaggerItem key={feature.label}>
                   <motion.div
                     className="flex flex-col items-center gap-2 text-center"
@@ -208,6 +186,10 @@ export function HeroSection() {
                       <feature.icon className="h-6 w-6 text-primary" />
                     </motion.div>
                     <p className="text-sm text-gray-400 font-mono uppercase tracking-wider">{feature.label}</p>
+                    {/* brighten labels */}
+                    <style jsx>{`
+                      p { color: rgb(212 212 212); }
+                    `}</style>
                   </motion.div>
                 </StaggerItem>
               ))}

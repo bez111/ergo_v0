@@ -140,3 +140,8 @@ export default function TrustlessLETSPage() {
         </p>
         <div className="bg-neutral-800/50 rounded-lg p-4 mb-4 overflow-x-auto relative">
           <h4 className="font-bold text-orange-400 mb-2 flex items-center gap-2"><Code className="w-5 h-5" /> Token Box Script (ErgoScript)</h4>
+        </div>
+      </div>
+    </>
+  );
+}

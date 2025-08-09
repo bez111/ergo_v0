@@ -30,3 +30,6 @@ export default function ErgoPayTutorialPage() {
       <div className="text-gray-300 mb-4 max-w-2xl">
         Start your application with Gradle:
       </div>
+    </>
+  );
+}

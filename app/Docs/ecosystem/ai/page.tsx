@@ -103,7 +103,7 @@ export default function EcosystemAIPage() {
               <BookOpen className="w-4 h-4" />
               <span className="font-medium">On this page</span>
             </div>
-            <ChevronRight className={`w-4 h-4 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`}</CodeBlock>
+            <ChevronRight className={`w-4 h-4 transition-transform ${isMobileMenuOpen ? 'rotate-90' : ''}`} />
           </button>
           
           {isMobileMenuOpen && (
@@ -702,3 +702,10 @@ export default function EcosystemAIPage() {
               <p className="text-sm text-gray-400 mb-3">
                 This fundamental smart contract demonstrates securing funds controlled by an AEI agent. It locks funds in a box, requiring a valid signature from the agent's public key to spend them.
               </p>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}

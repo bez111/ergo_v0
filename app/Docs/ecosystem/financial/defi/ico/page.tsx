@@ -172,3 +172,7 @@ properTreeModification && valuesCorrect && selfOutputCorrect && tokensPreserved`
       {/* Funding Stage Code */}
       <div className="bg-neutral-900/50 border border-orange-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-orange-400">Funding Stage Contract</h3>
+      </div>
+    </div>
+  );
+}

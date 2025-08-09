@@ -62,3 +62,6 @@ export default function ErgoAuthPage() {
       <div className="text-gray-300 mb-4 max-w-2xl">
         Wallet apps should be able to initiate ErgoAuth both by using URI schemes (clickable links) or QR codes.
       </div>
+    </>
+  );
+}

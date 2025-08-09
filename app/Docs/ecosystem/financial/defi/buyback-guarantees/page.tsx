@@ -59,3 +59,7 @@ export default function BuyBackGuaranteesPage() {
       {/* Buyback Contract Code */}
       <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 mb-8">
         <h3 className="text-lg font-bold mb-2 text-cyan-400">Buyback Contract Example</h3>
+      </div>
+    </>
+  );
+}
