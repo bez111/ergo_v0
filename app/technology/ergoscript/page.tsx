@@ -38,33 +38,33 @@ const itemVariants = {
 
 const features = [
   {
-    title: "Formal Verification",
-    description: "Mathematically prove your contracts are correct before deployment",
+    title: "Formal Verification Support",
+    description: "Supports formal verification and auditability via declarative constraints and first-class crypto primitives",
     icon: Shield,
   },
   {
-    title: "No Reentrancy Attacks",
-    description: "eUTXO model eliminates a whole class of vulnerabilities",
+    title: "eUTXO Security Model",
+    description: "The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO",
     icon: Lock,
   },
   {
-    title: "Predictable Costs",
-    description: "Know exactly what your contract will cost before execution",
+    title: "Deterministic Execution",
+    description: "Computational complexity is predictable, though network fees are market-driven",
     icon: Zap,
   },
   {
-    title: "Advanced Cryptography",
-    description: "Built-in support for Sigma protocols and zero-knowledge proofs",
+    title: "Native Sigma Protocols",
+    description: "First-class support for multi-signature, threshold, and ring-signature constructions",
     icon: Code,
   },
   {
-    title: "Composability",
-    description: "Build complex systems from simple, reusable components",
+    title: "UTXO Concurrency",
+    description: "Parallel transaction processing with batcher patterns for high-contention scenarios",
     icon: CheckCircle,
   },
   {
-    title: "Developer Friendly",
-    description: "Clean syntax that's easier to read and audit than alternatives",
+    title: "Restricted Computation",
+    description: "Non-Turing-complete within scripts for safety, yet sequences can express complex behaviors",
     icon: Code,
   },
 ]
@@ -82,32 +82,24 @@ export default function ErgoScriptPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("features")
 
-  // Prevent scroll when switching tabs
-  const handleTabChange = (value: string) => {
-    const scrollPosition = window.scrollY
-    setActiveTab(value)
-    // Restore scroll position after state update
-    setTimeout(() => {
-      window.scrollTo(0, scrollPosition)
-    }, 0)
-  }
+
 
   const faqs = [
     {
-      question: "What is ErgoScript's main advantage over other languages like Solidity?",
-      answer: "Predictability and security. ErgoScript is designed to eliminate entire classes of vulnerabilities that have plagued other platforms (like re-entrancy attacks). There are no hidden traps or unexpected behaviors in the code. It's a language where what you see is exactly what you get.",
+      question: "How does ErgoScript prevent re-entrancy attacks?",
+      answer: "The eUTXO model removes the class of re-entrancy found in account systems; each transaction consumes specific UTXOs and cannot be 're-entered'. There's no shared global state that can be manipulated during execution.",
     },
     {
-      question: "Do I need to be a coding guru to build with ErgoScript?",
-      answer: "Not at all. If you understand \"if-then\" logic, you're already halfway there. ErgoScript is intentionally made to be simpler and more logical. It helps developers avoid mistakes rather than creating new opportunities for them to make them. It's the shortest path from an idea to a working and secure dApp.",
+      question: "Is ErgoScript Turing-complete like Solidity?",
+      answer: "ErgoScript is intentionally not Turing-complete within individual scripts (no loops or recursion) for safety and predictability. However, Turing-complete behaviors are possible through sequences of transactions that can self-reproduce and evolve.",
     },
     {
-      question: "Why not just use Solidity since it's so popular?",
-      answer: "Solidity's popularity comes at a price—complexity that has led to billions of dollars in hacks. ErgoScript is the seatbelt for your smart contracts. It deliberately limits certain features to prevent catastrophic errors. Fewer \"footguns,\" more peace of mind in the code's reliability.",
+      question: "What about throughput and scaling for high-demand applications?",
+      answer: "The eUTXO model enables parallel transaction processing. For high-contention scenarios like DEXs, batcher/aggregator patterns can collect multiple orders and execute them in batches, effectively scaling throughput while maintaining the security guarantees.",
     },
     {
-      question: "Can I build complex projects like DeFi and NFTs with ErgoScript?",
-      answer: "Absolutely. ErgoScript is powerful enough to create the most sophisticated financial instruments, including DEXs, stablecoins, lending protocols, and complex NFT projects. Its eUTXO model allows for unique and efficient solutions that are difficult or impossible to build on other platforms.",
+      question: "Can I build complex DeFi applications with ErgoScript?",
+      answer: "Yes. ErgoScript supports sophisticated financial instruments including DEXs, stablecoins, lending protocols, and advanced NFT contracts. The declarative model and native cryptographic primitives often make complex protocols simpler to implement and audit than on account-based systems.",
     },
   ]
 
@@ -173,7 +165,7 @@ export default function ErgoScriptPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="pt-32 pb-20 px-4 motion-reduce:transform-none"
+            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 motion-reduce:transform-none"
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -182,10 +174,10 @@ export default function ErgoScriptPage() {
                     ErgoScript
                   </h1>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    Secure, Verifiable Smart Contracts
+                    Mathematical-by-design smart contracts on an eUTXO ledger
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    ErgoScript combines mathematical certainty with practical simplicity. Build DeFi applications that are secure by design, not by accident.
+                    No shared global state, first-class Sigma protocols, verifiable execution. Build secure applications that are predictable by design.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/Docs">
@@ -279,18 +271,19 @@ export default function ErgoScriptPage() {
 
           {/* Rest of the content */}
           <div className="container mx-auto px-4 relative z-10">
-            {/* Key Features Section */}
-            <motion.section 
-              className="pb-24 px-4"
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              variants={itemVariants}
-            >
-              <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-16 text-white">
-                  Key Features
-                </h2>
+            <div className="flex flex-col gap-16 md:gap-24">
+              {/* Key Features Section */}
+              <motion.section 
+                className="px-4"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
+                variants={itemVariants}
+              >
+                <div className="max-w-7xl mx-auto">
+                  <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+                    Key Features
+                  </h2>
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                   {features.map((feature, index) => (
                     <motion.div
@@ -317,10 +310,10 @@ export default function ErgoScriptPage() {
               </div>
             </motion.section>
 
-            {/* Tabs Section */}
-            <FadeIn delay={0.6}>
-              <Tabs value={activeTab} onValueChange={handleTabChange} className="mb-24">
-                <TabsList className="flex w-full gap-2 bg-transparent p-0 mb-8">
+              {/* Tabs Section */}
+              <FadeIn delay={0.6}>
+                <Tabs value={activeTab} onValueChange={setActiveTab}>
+                  <TabsList className="flex w-full gap-2 bg-transparent p-0 mb-6">
                   <TabsTrigger
                     value="features"
                     className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
@@ -342,14 +335,14 @@ export default function ErgoScriptPage() {
                 </TabsList>
 
                 {/* Fixed container for all tab contents */}
-                <div className="mt-6 min-h-[400px]">
+                <div className="mt-6 min-h-0 md:min-h-[420px]">
                   <TabsContent value="features" className="m-0">
                     <div className="grid lg:grid-cols-2 gap-6 h-full">
                       {/* Security Features Card */}
                       <div>
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                          <CardHeader>
-                            <div className="flex items-center gap-3 mb-4">
+                          <CardHeader className="pb-2">
+                            <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                                 <Shield className="w-6 h-6 text-brand-primary-400" />
                               </div>
@@ -360,22 +353,22 @@ export default function ErgoScriptPage() {
                               vulnerabilities.
                             </p>
                           </CardHeader>
-                          <CardContent>
+                          <CardContent className="pt-4">
                             <div className="space-y-3">
                               {[
                                 {
-                                  title: "Static Analysis Tools",
-                                  description: "Built-in verification tools catch bugs at compile time",
+                                  title: "Formal Verification Support",
+                                  description: "Declarative constraints enable external verification tools and auditing",
                                   icon: Microscope,
                                 },
                                 {
-                                  title: "Immutable Transaction Model",
-                                  description: "Transactions are atomic and cannot be modified mid-execution",
+                                  title: "eUTXO Security Model",
+                                  description: "No shared global state eliminates reentrancy vulnerability class",
                                   icon: ShieldCheck,
                                 },
                                 {
-                                  title: "Cryptographic Primitives",
-                                  description: "Native support for advanced cryptographic operations",
+                                  title: "Native Sigma Protocols",
+                                  description: "First-class cryptographic primitives for multi-party signatures",
                                   icon: Zap,
                                 },
                               ].map((feature, index) => (
@@ -398,8 +391,8 @@ export default function ErgoScriptPage() {
                       {/* Developer Experience Card */}
                       <div>
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                          <CardHeader>
-                            <div className="flex items-center gap-3 mb-4">
+                          <CardHeader className="pb-2">
+                            <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                                 <Code className="w-6 h-6 text-brand-primary-400" />
                               </div>
@@ -410,7 +403,7 @@ export default function ErgoScriptPage() {
                               developers.
                             </p>
                           </CardHeader>
-                          <CardContent>
+                          <CardContent className="pt-4">
                             <div className="space-y-3">
                               {[
                                 {
@@ -452,8 +445,8 @@ export default function ErgoScriptPage() {
                       {/* DeFi & Finance Card */}
                       <div>
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                          <CardHeader>
-                            <div className="flex items-center gap-3 mb-4">
+                          <CardHeader className="pb-2">
+                            <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                                 <Coins className="w-6 h-6 text-brand-primary-400" />
                               </div>
@@ -463,7 +456,7 @@ export default function ErgoScriptPage() {
                               Build secure financial applications with predictable costs and formal verification.
                             </p>
                           </CardHeader>
-                          <CardContent>
+                          <CardContent className="pt-4">
                             <div className="space-y-2">
                               {[
                                 { name: "Non-custodial DeFi protocols", icon: Shield },
@@ -487,8 +480,8 @@ export default function ErgoScriptPage() {
                       {/* Privacy & Governance Card */}
                       <div>
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                          <CardHeader>
-                            <div className="flex items-center gap-3 mb-4">
+                          <CardHeader className="pb-2">
+                            <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                                 <Lock className="w-6 h-6 text-brand-primary-400" />
                               </div>
@@ -498,13 +491,13 @@ export default function ErgoScriptPage() {
                               Leverage advanced cryptography for privacy-preserving and governance solutions.
                             </p>
                           </CardHeader>
-                          <CardContent>
+                          <CardContent className="pt-4">
                             <div className="space-y-2">
                               {[
-                                { name: "Privacy tools and mixers", icon: Eye },
+                                { name: "Privacy tools and mixers (check legal status in your jurisdiction)", icon: Eye },
                                 { name: "DAOs & governance systems", icon: Users },
                                 { name: "Advanced NFT contracts", icon: Puzzle },
-                                { name: "Cross-chain bridges", icon: ArrowLeftRight },
+                                { name: "SPV/NIPoPoW-based protocols", icon: ArrowLeftRight },
                               ].map((useCase, index) => (
                                 <div
                                   key={useCase.name}
@@ -526,8 +519,8 @@ export default function ErgoScriptPage() {
                       {/* Learning Resources Card */}
                       <div>
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                          <CardHeader>
-                            <div className="flex items-center gap-3 mb-4">
+                          <CardHeader className="pb-2">
+                            <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                                 <BookOpen className="w-6 h-6 text-brand-primary-400" />
                               </div>
@@ -537,7 +530,7 @@ export default function ErgoScriptPage() {
                               Start your ErgoScript journey with interactive tutorials and comprehensive documentation.
                             </p>
                           </CardHeader>
-                          <CardContent>
+                          <CardContent className="pt-4">
                             <div className="space-y-2">
                               {[
                                 { name: "ErgoScript Playground", url: "https://scastie.scala-lang.org/ErgoPlayground", external: true },
@@ -567,8 +560,8 @@ export default function ErgoScriptPage() {
                       {/* Developer Tools Card */}
                       <div>
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                          <CardHeader>
-                            <div className="flex items-center gap-3 mb-4">
+                          <CardHeader className="pb-2">
+                            <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                                 <Terminal className="w-6 h-6 text-brand-primary-400" />
                               </div>
@@ -578,7 +571,7 @@ export default function ErgoScriptPage() {
                               Essential tools and SDKs for building with ErgoScript in your preferred environment.
                             </p>
                           </CardHeader>
-                          <CardContent>
+                          <CardContent className="pt-4">
                             <div className="space-y-2">
                               {[
                                 { name: "Appkit for JVM & Android", url: "https://github.com/ergoplatform/ergo-appkit", external: true },
@@ -610,19 +603,19 @@ export default function ErgoScriptPage() {
               </Tabs>
             </FadeIn>
 
-            {/* Comparison Section */}
-            <FadeIn delay={0.7}>
-              <div className="max-w-7xl mx-auto mb-32">
-                <h2 className="text-4xl font-bold text-center mb-16 text-white">
-                  How ErgoScript Compares
-                </h2>
+              {/* Comparison Section */}
+              <FadeIn delay={0.7}>
+                <div className="max-w-7xl mx-auto">
+                  <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+                    How ErgoScript Compares
+                  </h2>
 
-                <div className="grid lg:grid-cols-2 gap-6 mb-12">
+                  <div className="grid lg:grid-cols-2 gap-6 mb-12">
                   {/* ErgoScript's Key Advantages Card */}
                   <div>
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                      <CardHeader>
-                        <div className="flex items-center gap-3 mb-4">
+                      <CardHeader className="pb-2">
+                        <div className="flex items-center gap-3">
                           <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                             <Shield className="w-6 h-6 text-brand-primary-400" />
                           </div>
@@ -632,8 +625,8 @@ export default function ErgoScriptPage() {
                           Built from the ground up with security and mathematical precision as core principles.
                         </p>
                       </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
+                      <CardContent className="pt-4">
+                        <div className="space-y-3">
                           {[
                             {
                               title: "eUTXO – Extended Bitcoin Model",
@@ -675,8 +668,8 @@ export default function ErgoScriptPage() {
                   {/* Philosophy & Design Card */}
                   <div>
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                      <CardHeader>
-                        <div className="flex items-center gap-3 mb-4">
+                      <CardHeader className="pb-2">
+                        <div className="flex items-center gap-3">
                           <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
                             <Code className="w-6 h-6 text-brand-primary-400" />
                           </div>
@@ -686,8 +679,8 @@ export default function ErgoScriptPage() {
                           ErgoScript's design philosophy prioritizes safety, predictability, and mathematical rigor.
                         </p>
                       </CardHeader>
-                      <CardContent>
-                        <div className="space-y-4">
+                      <CardContent className="pt-4">
+                        <div className="space-y-3">
                           {[
                             {
                               title: "Restricted Computation",
@@ -775,6 +768,24 @@ export default function ErgoScriptPage() {
                             <td className="p-4">Yes</td>
                           </tr>
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                            <td className="p-4 font-medium">Type Safety</td>
+                            <td className="p-4">
+                              <span className="text-green-400">Strong typing system</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-yellow-400">Good, but pitfalls remain</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Very high (Haskell-based)</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Simple but safe</span>
+                            </td>
+                            <td className="p-4">
+                              <span className="text-green-400">Very high (Rust-based)</span>
+                            </td>
+                          </tr>
+                          <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
                             <td className="p-4 font-medium">Security</td>
                             <td className="p-4">
                               <span className="text-green-400">High (no reentrancy, no shared state)</span>
@@ -811,7 +822,7 @@ export default function ErgoScriptPage() {
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
                             <td className="p-4 font-medium">Formal Verification</td>
                             <td className="p-4">
-                              <span className="text-green-400">Built-in</span>
+                              <span className="text-green-400">Strong support</span>
                             </td>
                             <td className="p-4">
                               <span className="text-yellow-400">External tools</span>
@@ -940,12 +951,12 @@ for (uint i = 0; i < signers.length; i++) {
               </div>
             </FadeIn>
 
-            {/* FAQ Section */}
-            <FadeIn delay={0.9}>
-              <div className="max-w-4xl mx-auto mb-32">
-                <h2 className="text-4xl font-bold text-center mb-16 text-white">
-                  Frequently Asked Questions
-                </h2>
+              {/* FAQ Section */}
+              <FadeIn delay={0.9}>
+                <div className="max-w-4xl mx-auto">
+                  <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+                    Frequently Asked Questions
+                  </h2>
 
                 <div className="space-y-4">
                   {faqs.map((faq, index) => (
@@ -982,34 +993,35 @@ for (uint i = 0; i < signers.length; i++) {
               </div>
             </FadeIn>
 
-            {/* CTA */}
-            <FadeIn delay={0.8}>
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl mb-16">
-                <CardContent className="text-center py-16">
-                  <h3 className="text-4xl font-bold mb-6 text-white">
-                    Ready to Start Building?
-                  </h3>
-                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                    Explore ErgoScript and start developing secure smart contracts today.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Try Playground
-                      </Button>
-                    </Link>
-                    <Link href="/Docs">
-                      <Button
-                        variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
-                      >
-                        View Documentation
-                      </Button>
-                    </Link>
-                  </div>
-                </CardContent>
-              </Card>
-            </FadeIn>
+              {/* CTA */}
+              <FadeIn delay={0.8}>
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                  <CardContent className="text-center py-16">
+                    <h3 className="text-4xl font-bold mb-6 text-white">
+                      Ready to Start Building?
+                    </h3>
+                    <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
+                      Explore ErgoScript and start developing secure smart contracts today.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
+                        <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                          Try Playground
+                        </Button>
+                      </Link>
+                      <Link href="/Docs">
+                        <Button
+                          variant="outline"
+                          className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                        >
+                          View Documentation
+                        </Button>
+                      </Link>
+                    </div>
+                  </CardContent>
+                </Card>
+              </FadeIn>
+            </div>
           </div>
         </motion.div>
       </div>

@@ -52,51 +52,51 @@ const techFeatures = [
     icon: Layers,
     title: "eUTXO Model",
     description:
-      "Next-generation Unspent Transaction Output model. Enables parallel smart contracts, eliminates double-spending, and supports composable DeFi at the protocol layer.",
+      "Extended UTXO model enabling parallel execution and composable DeFi. Reduces reentrancy classes inherent to account systems; Bitcoin-grade double-spend resistance.",
     color: "",
     href: "/technology/eutxo-model",
     details: [
       { icon: Layers, title: "Parallelism", description: "No global state: every contract is self-contained." },
       { icon: LinkIcon, title: "Composability", description: "Compose complex dApps from simple outputs." },
-      { icon: Shield, title: "No Double-Spend", description: "Bitcoin security with DeFi power." },
+      { icon: Shield, title: "Double-spend resistance (UTXO-level)", description: "Inherits UTXO security model." },
     ],
   },
   {
     icon: Code,
     title: "ErgoScript",
     description:
-      "A secure, flexible language for programmable money. Privacy-by-design, mathematical certainty, and formal verification for all contracts.",
+      "A secure, declarative language for programmable money. First-class Sigma protocols and strict typing; supports formal methods and predictable execution.",
     color: "",
     href: "/technology/ergoscript",
     details: [
-      { icon: ShieldCheck, title: "Mathematical Security", description: "All logic is provable and auditable." },
-      { icon: Lock, title: "Native Privacy", description: "Zero-knowledge proofs, ring signatures built-in." },
-      { icon: Code, title: "Clean Syntax", description: "No surprise bugs or reentrancy." },
+      { icon: ShieldCheck, title: "Auditability & formal methods", description: "Supports formal verification via declarative constraints." },
+      { icon: Lock, title: "Native Privacy", description: "Sigma protocols for ZK-friendly proofs; ring-signature–style schemes available." },
+      { icon: Code, title: "Declarative constraints, no shared global state", description: "Minimizes typical traps (reentrancy, hidden side-effects)." },
     ],
   },
   {
     icon: Cpu,
     title: "Autolykos PoW",
     description:
-      "ASIC-resistant, memory-hard mining. Designed for decentralization and sustainable security. Low energy, poolless by design.",
+      "Memory-hard PoW aimed at broad participation and sustainable security. Reduces specialized-hardware advantage and keeps the solo path viable.",
     color: "",
     href: "/technology/secure-pow",
     details: [
-      { icon: Zap, title: "Energy-Efficient", description: "Low-power mining, eco-friendly by default." },
-      { icon: Users, title: "Poolless Mining", description: "Solo miners are always rewarded." },
-      { icon: Shield, title: "ASIC-Resistant", description: "Keeps mining fair and accessible." },
+      { icon: Zap, title: "Memory-bound, moderates hardware arms race", description: "Reduces advantage of specialized equipment." },
+      { icon: Users, title: "Lower reliance on pools; keeps solo mining feasible", description: "Encourages solo mining participation." },
+      { icon: Shield, title: "ASIC-resistant (not ASIC-proof)", description: "Maintains broad accessibility." },
     ],
   },
   {
     icon: Database,
     title: "Storage Rent",
     description:
-      "Unique blockchain rent system: unused coins pay rent after 4 years. Keeps chain clean and incentivizes miners—forever.",
+      "Boxes unspent for ~4 years may pay storage rent (if value < min box value, miners can claim the difference). Encourages state cleanup and provides long-term miner incentives.",
     color: "",
     href: "/technology/storage-rent",
     details: [
-      { icon: RefreshCw, title: "State Recycling", description: "Old boxes recycled, state never bloats." },
-      { icon: CircleDollarSign, title: "Passive Revenue", description: "Miner rewards continue after emissions end." },
+      { icon: RefreshCw, title: "State cleanup incentives (slows growth)", description: "Encourages UTXO recycling and cleanup." },
+      { icon: CircleDollarSign, title: "Long-term miner incentives", description: "Provides revenue stream beyond block rewards." },
       { icon: Monitor, title: "Lightweight", description: "Runs on modest hardware." },
     ],
   },
@@ -104,7 +104,7 @@ const techFeatures = [
     icon: Lock,
     title: "Sigma Protocols",
     description:
-      "Native zero-knowledge, ring signatures, multi-sig. Ergo contracts can include privacy and advanced cryptography natively.",
+      "Native Sigma protocols (threshold/multisig, ZK proofs) enable privacy and advanced cryptography without external gimmicks.",
     color: "",
     href: "/technology/privacy-features",
     details: [
@@ -117,73 +117,73 @@ const techFeatures = [
     icon: InfinityIcon,
     title: "NIPoPoWs",
     description:
-      "Tiny proofs of the full chain: build trustless light wallets, fast syncing, cross-chain bridges—without trusted third parties.",
+      "Succinct proofs of chain work for trust-minimized light clients and, where applicable, cross-chain protocols (no trusted relays).",
     color: "",
     href: "/technology/light-clients",
     details: [
-      { icon: Smartphone, title: "Light Clients", description: "Mobile sync in seconds, not hours." },
-      { icon: LinkIcon, title: "Cross-Chain Bridges", description: "Move assets between blockchains natively." },
-      { icon: ShieldCheck, title: "No Trusted Parties", description: "Verifiable everywhere." },
+      { icon: Smartphone, title: "Light Clients", description: "Mobile sync in seconds to minutes." },
+      { icon: LinkIcon, title: "Cross-chain (where applicable)", description: "For compatible chains; depends on bridge design." },
+      { icon: ShieldCheck, title: "Client-verifiable", description: "Verifiable by light clients." },
     ],
   },
   {
     icon: Rocket,
-    title: "Subblocks",
+    title: "Subblocks (Research/In development)",
     description:
-      "On-chain scaling: blocks split into fast sub-blocks for instant settlement. Instant finality, no trusted sequencers.",
+      "On-chain throughput experiments: faster perceived confirmations without trusted sequencers; finality follows base consensus.",
     color: "",
     details: [
-      { icon: Timer, title: "1-Second Confirmations", description: "Pay and go—DeFi at speed of light." },
-      { icon: Lock, title: "Secure Scaling", description: "No L2 hacks, all on mainnet." },
-      { icon: Globe, title: "Decentralized", description: "No validators, just blockchain." },
+      { icon: Timer, title: "Fast Confirmations", description: "Faster perceived settlement." },
+      { icon: Lock, title: "Experimental Scaling", description: "Research into on-chain throughput." },
+      { icon: Globe, title: "Base Consensus", description: "Finality through main blockchain." },
     ],
   },
   {
     icon: Box,
     title: "Native Tokens & NFTs",
     description:
-      "Any user can issue tokens or NFTs at the base layer. No smart contract required. Fully programmable and composable.",
+      "Issue tokens/NFTs at L1 without contracts or wrapping. Fully programmable and composable.",
     color: "",
     details: [
       { icon: Coins, title: "Token Creation", description: "Issue tokens, stablecoins, or NFTs in 1 tx." },
       { icon: Layers, title: "Composable", description: "Tokens & NFTs interact natively with dApps." },
-      { icon: Zap, title: "Zero Gas Wrappers", description: "Native tokens, not fakes or wrapped." },
+      { icon: Zap, title: "Native at L1 (no wrapping)", description: "Native tokens, not fakes or wrapped." },
     ],
   },
   {
     icon: Eye,
     title: "Oracle Pools",
     description:
-      "First protocol-native oracle system. Decentralized, composable data feeds for DeFi and dApps—no single point of failure.",
+      "Protocol-native oracle design with minimized trust and composability for DeFi and dApps.",
     color: "",
     details: [
-      { icon: BarChart3, title: "Reliable Data", description: "No central operator, no bribes." },
+      { icon: BarChart3, title: "Reliable Data", description: "Incentive-aligned aggregation (no central operator)." },
       { icon: Layers, title: "Composability", description: "Oracles can power any contract." },
-      { icon: ShieldCheck, title: "Secure by Design", description: "No rug pulls, no admin keys." },
+      { icon: ShieldCheck, title: "Minimized Trust", description: "No central operator; minimizes single points of failure." },
     ],
   },
   {
     icon: Settings,
     title: "Velvet Forks",
     description:
-      "Upgrade the protocol with no chain splits. New features work even if not all nodes upgrade—secure, evolutionary growth.",
+      "Optional, backward-compatible extensions (velvet). New features can coexist with non-upgraded nodes; security depends on the specific proposal.",
     color: "",
     details: [
       { icon: RefreshCw, title: "Backward Compatible", description: "No forced upgrades, no chain wars." },
       { icon: TrendingUp, title: "Future Proof", description: "Adopt innovations at your own pace." },
-      { icon: Timer, title: "Zero Downtime", description: "Seamless, safe upgrades." },
+      { icon: Timer, title: "Gradual Adoption", description: "Evolutionary, not revolutionary changes." },
     ],
   },
   {
     icon: CircleDollarSign,
     title: "Adaptive Emission & Governance",
     description:
-      "Block rewards and network economics can be tuned on-chain via community consensus and economic signals.",
+      "Consensus-driven tuning of economic parameters (e.g., miner voting) with community input.",
     color: "",
     details: [
-      { icon: CircleDollarSign, title: "Decentralized Funding", description: "Fund new features or dApps." },
-      { icon: TrendingUp, title: "Economic Flexibility", description: "Adapt to changing needs." },
-      { icon: Users, title: "Governance by Users", description: "Protocol upgrades are democratic." },
+      { icon: CircleDollarSign, title: "Parameter Tuning", description: "Economic variables can be adjusted." },
+      { icon: TrendingUp, title: "Economic Flexibility", description: "Adapt to changing network needs." },
+      { icon: Users, title: "Community Input", description: "Discussions and decisions involve the community." },
     ],
   },
 ]
@@ -236,7 +236,7 @@ export default function TechnologyPage() {
   const tabMeta: Record<string, { title: string; description: string }> = {
     usecases: {
       title: "Ergo Technology – Use Cases | ergoblockchain.org",
-      description: "Innovations. Security. Real Decentralization.",
+      description: "Decentralize Everything. Build What Matters.",
     },
     architecture: {
       title: "Ergo Technology – Architecture | ergoblockchain.org",
@@ -280,8 +280,7 @@ export default function TechnologyPage() {
       a: (
         <>
           It’s Ergo’s contract language for “money with logic”: formally verifiable code, strict typing, and built-in
-          cryptographic primitives. Contracts are <b>auditable and predictable</b>, with no hidden side effects or
-          reentrancy bugs. Start here: {""}
+          cryptographic primitives. Contracts are <b>auditable and predictable</b>—design avoids global mutable state and typical reentrancy patterns. Start here: {""}
           <a href="/technology/ergoscript" className="underline hover:opacity-80">ErgoScript</a>.
         </>
       ),
@@ -353,30 +352,19 @@ export default function TechnologyPage() {
       a: (
         <>
           Splitting blocks into fast “sub-blocks” speeds up payment and dApp confirmation without trusted sequencers.
-          <b>Layer-1 scaling</b> with faster finality and no L2 risks.
+          <b>Layer-1 scaling</b> with faster perceived confirmations; finality follows base consensus.
         </>
       ),
     },
     {
       id: "tokens-nfts",
       q: "Can I issue tokens and NFTs without a smart contract?",
-      tag: "Tokens & NFT",
+      tag: "Tokens & NFTs",
       a: (
         <>
           Yes — issuance is native at the protocol layer, in a single transaction. <b>True native assets</b> are
           instantly composable with dApps. More: {""}
           <a href="/technology" className="underline hover:opacity-80">Native Tokens</a>.
-        </>
-      ),
-    },
-    {
-      id: "governance",
-      q: "What is Adaptive Emission & Governance?",
-      tag: "Governance",
-      a: (
-        <>
-          Block rewards and network economics can <b>adapt</b> based on community consensus, ensuring sustainable
-          growth, ecosystem funding, and long-term viability.
         </>
       ),
     },
@@ -544,7 +532,18 @@ export default function TechnologyPage() {
                           <feature.icon className="w-8 h-8 text-brand-primary-400" />
                         </div>
                         <CardTitle className="text-2xl font-bold mb-2 text-white">
-                          {feature.title}
+                          <div className="flex items-center justify-center gap-2 flex-wrap">
+                            {feature.title.includes("Research/In development") ? (
+                              <>
+                                {feature.title.replace(" (Research/In development)", "")}
+                                <Badge className="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-medium">
+                                  Research
+                                </Badge>
+                              </>
+                            ) : (
+                              feature.title
+                            )}
+                          </div>
                         </CardTitle>
                         <p className="text-neutral-300 leading-relaxed text-base min-h-[72px]">{feature.description}</p>
                       </CardHeader>
@@ -605,56 +604,78 @@ export default function TechnologyPage() {
 
             {/* Fixed container for all tab contents */}
             <div className="mt-8 min-h-[500px]">
-              {/* Use Cases */}
+            {/* Use Cases */}
               <TabsContent value="usecases" className="m-0">
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                  <CardHeader>
+                <CardHeader>
                     <CardTitle className="text-white">
-                      What Can You Build?
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="grid md:grid-cols-2 gap-4">
-                      {[
-                        "Non-custodial DeFi protocols",
-                        "Custom multi-signature wallets",
-                        "Stablecoins and native tokens",
-                        "Decentralized mixers and privacy tools",
-                        "DAOs & governance systems",
-                        "Decentralized oracle networks",
-                        "NFT marketplaces & composable dApps",
-                        "Scalable micropayments and instant settlement",
-                        "Cross-chain bridges & light wallets",
-                      ].map((useCase, index) => (
-                        <motion.div
-                          key={useCase}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          transition={{ delay: index * 0.08 }}
-                          className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
-                          whileHover={{ x: 10 }}
-                        >
-                          <ArrowRight className="w-4 h-4 text-brand-primary-400" />
-                          <span>{useCase}</span>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
+                    What Can You Build?
+                  </CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6">
+                    {[
+                      {
+                        title: "DeFi & Finance",
+                        items: [
+                          "Non-custodial DeFi protocols",
+                          "Custom multi-signature wallets", 
+                          "Stablecoins and native tokens",
+                          "Decentralized oracle networks"
+                        ]
+                      },
+                      {
+                        title: "Privacy & Governance",
+                        items: [
+                          "Decentralized mixers and privacy tools (check legal status)",
+                          "DAOs & governance systems"
+                        ]
+                      },
+                      {
+                        title: "Infrastructure & Apps",
+                        items: [
+                          "NFT marketplaces & composable dApps",
+                          "Scalable micropayments and instant settlement",
+                          "Cross-chain bridges & light wallets"
+                        ]
+                      }
+                    ].map((category, categoryIndex) => (
+                      <div key={category.title}>
+                        <h4 className="text-lg font-semibold text-white mb-3">{category.title}</h4>
+                        <div className="grid md:grid-cols-2 gap-3">
+                          {category.items.map((useCase, index) => (
+                            <motion.div
+                              key={useCase}
+                              initial={{ opacity: 0, x: -20 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ delay: (categoryIndex * 4 + index) * 0.08 }}
+                              className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
+                              whileHover={{ x: 10 }}
+                            >
+                              <ArrowRight className="w-4 h-4 text-brand-primary-400" />
+                              <span className="text-sm">{useCase}</span>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
 
-              {/* Architecture */}
+            {/* Architecture */}
               <TabsContent value="architecture" className="m-0">
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
-                  <CardHeader>
+                <CardHeader>
                     <CardTitle className="text-white">
-                      Ergo Tech Stack Overview
-                    </CardTitle>
+                    Ergo Tech Stack Overview
+                  </CardTitle>
                     <p className="text-sm text-neutral-400 mt-1">
                       <span className="font-semibold text-white">Ergo's architecture</span> delivers decentralization, composability, and built-in privacy—without tradeoffs.
                     </p>
-                  </CardHeader>
-                  <CardContent>
+                </CardHeader>
+                <CardContent>
                     <div className="grid md:grid-cols-2 gap-6">
                       {/* Layer 1 */}
                       <Card className="bg-neutral-900/60 border-neutral-700 rounded-xl">
@@ -669,7 +690,7 @@ export default function TechnologyPage() {
                                 <span>{label}</span>
                               </li>
                             ))}
-                        </ul>
+                      </ul>
                         </CardContent>
                       </Card>
 
@@ -686,15 +707,15 @@ export default function TechnologyPage() {
                                 <span>{label}</span>
                               </li>
                             ))}
-                          </ul>
+                      </ul>
                         </CardContent>
                       </Card>
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
+                  </div>
+                </CardContent>
+              </Card>
+            </TabsContent>
 
-              {/* Resources */}
+            {/* Resources */}
               <TabsContent value="resources" className="m-0">
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                   <CardHeader>
@@ -703,32 +724,32 @@ export default function TechnologyPage() {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid md:grid-cols-2 gap-6">
+              <div className="grid md:grid-cols-2 gap-6">
                       {resources.map((res) => (
                         <Card key={res.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full flex flex-col">
                           <CardHeader className="pb-4">
                             <CardTitle className="text-white flex items-center gap-3 text-lg">
                               <res.icon className="w-5 h-5 text-brand-primary-400" />
-                              {res.title}
-                            </CardTitle>
-                          </CardHeader>
+                        {res.title}
+                      </CardTitle>
+                    </CardHeader>
                           <CardContent className="flex-1 flex flex-col justify-end pt-0">
                             <Link href={res.href} target="_blank" className="w-full">
-                              <Button 
-                                variant="outline" 
+                        <Button
+                          variant="outline"
                                 className="w-full justify-between hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 text-neutral-200 border-neutral-700 transition-all duration-200 py-3"
-                              >
-                                {res.title}
-                                <ExternalLink className="w-4 h-4" />
-                              </Button>
-                            </Link>
-                          </CardContent>
-                        </Card>
-                      ))}
-                    </div>
+                        >
+                          {res.title}
+                          <ExternalLink className="w-4 h-4" />
+                        </Button>
+                      </Link>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
                   </CardContent>
                 </Card>
-              </TabsContent>
+            </TabsContent>
             </div>
           </Tabs>
         </FadeIn>
