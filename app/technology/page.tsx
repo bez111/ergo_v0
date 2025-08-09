@@ -664,7 +664,7 @@ export default function TechnologyPage() {
 
             {/* Use Cases */}
             <TabsContent value="usecases" className="mt-8">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50">
                 <CardHeader>
                   <CardTitle className="text-white">
                     What Can You Build?
@@ -702,7 +702,7 @@ export default function TechnologyPage() {
 
             {/* Architecture */}
             <TabsContent value="architecture" className="mt-8">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50">
                 <CardHeader>
                   <CardTitle className="text-white">
                     Ergo Tech Stack Overview
@@ -757,7 +757,7 @@ export default function TechnologyPage() {
             <TabsContent value="resources" className="mt-8">
               <div className="grid md:grid-cols-2 gap-6">
                 {resources.map((res) => (
-                  <Card key={res.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                  <Card key={res.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50">
                     <CardHeader>
                       <CardTitle className="text-white flex items-center gap-2">
                         <res.icon className="w-5 h-5 text-brand-primary-400" />
