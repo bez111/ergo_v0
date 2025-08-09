@@ -37,6 +37,7 @@ import {
   BarChart3,
   TrendingUp,
   Book,
+  ChevronDown,
 
 } from "lucide-react"
 import Link from "next/link"
@@ -46,6 +47,8 @@ import Link from "next/link"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
 import { useState, useEffect, useMemo } from "react"
 import Head from "next/head"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import Script from "next/script"
 
 const techFeatures = [
   {
@@ -221,6 +224,7 @@ export default function TechnologyPage() {
   ] as const
 
   const [activeTab, setActiveTab] = useState("usecases")
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [currentTabIndex, setCurrentTabIndex] = useState(0)
 
   // Prevent scroll when switching tabs
@@ -410,49 +414,37 @@ export default function TechnologyPage() {
 
     return (
       <section aria-labelledby="faq-heading" className="max-w-5xl mx-auto">
-        <Head>
-          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-        </Head>
+        <Script id="faq-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Frequently Asked Questions</h2>
         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
           <CardHeader className="pb-6">
-            <div className="flex items-center justify-between gap-3">
-              <CardTitle id="faq-heading" className="text-2xl font-bold text-white">FAQ — Ergo Technology</CardTitle>
+            <div className="flex items-center justify-end gap-3">
               <Badge variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-300">{faqs.length} questions</Badge>
             </div>
             <p className="text-neutral-400 mt-2">Click any question below to expand the answer</p>
           </CardHeader>
-          <CardContent className="pt-0">
-            <div className="space-y-3">
-              {faqs.map((item, i) => (
-                <motion.div 
-                  key={item.id} 
-                  id={item.id} 
-                  initial={{ opacity: 0, y: 8 }} 
-                  animate={{ opacity: 1, y: 0 }} 
-                  transition={{ delay: 0.02 * i }}
-                  className="group"
-                >
-                  <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem 
-                      value={item.id} 
-                      className="border border-neutral-800 bg-neutral-900/40 rounded-xl hover:border-neutral-700 hover:bg-neutral-900/60 transition-all duration-200"
-                    >
-                      <AccordionTrigger className="px-6 py-4 text-left hover:no-underline group-hover:text-white transition-colors">
-                        <div className="flex items-center gap-3 w-full">
-                          {item.tag && (
-                            <Badge className="bg-brand-primary-500/10 text-brand-primary-400 border border-brand-primary-500/30 text-xs font-medium">{item.tag}</Badge>
-                          )}
-                          <span className="text-neutral-200 font-medium">{item.q}</span>
-                        </div>
-                      </AccordionTrigger>
-                      <AccordionContent className="px-6 pb-6 pt-0">
+          <CardContent>
+            <div className="space-y-4">
+              {faqs.map((faq, index) => (
+                <Card key={faq.id} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                  <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
+                    <CollapsibleTrigger asChild>
+                      <button className="w-full">
+                        <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
+                          <h3 className="text-lg font-semibold text-left text-white">{faq.q}</h3>
+                          <ChevronDown aria-hidden="true" className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} />
+                        </CardContent>
+                      </button>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <CardContent className="px-6 pb-6 pt-0">
                         <div className="text-neutral-300 leading-relaxed [&>a]:text-brand-primary-400 [&>a]:underline [&>a]:hover:text-brand-primary-300 [&>b]:text-white [&>i]:text-neutral-200">
-                          {item.a}
+                          {faq.a}
                         </div>
-                      </AccordionContent>
-                    </AccordionItem>
-                  </Accordion>
-                </motion.div>
+                      </CardContent>
+                    </CollapsibleContent>
+                  </Collapsible>
+                </Card>
               ))}
             </div>
             <div className="mt-8 pt-6 border-t border-neutral-800">
