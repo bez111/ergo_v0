@@ -198,7 +198,7 @@ export default function EUTXOModelPage() {
       <main>
         <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none">
         {/* Hero Section */}
-        <motion.section variants={itemVariants} className="pt-32 pb-20 px-4">
+        <motion.section variants={itemVariants} className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -231,14 +231,14 @@ export default function EUTXOModelPage() {
                 >
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30 transition-colors">
                     <CardContent className="p-0">
-                      <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                      <h3 className="text-2xl font-bold mb-6 text-center text-white">
                         eUTXO Box Structure
                       </h3>
                       <div className="space-y-4">
                         {boxComponents.map((component, index) => (
                           <motion.div
                             key={component.name}
-                            className={`p-4 rounded-lg bg-gradient-to-r ${component.color} border border-gray-700/50`}
+                            className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700"
                             whileHover={{ scale: 1.02, x: 10 }}
                             transition={{ type: "spring", stiffness: 400 }}
                           >
@@ -265,7 +265,7 @@ export default function EUTXOModelPage() {
           <div className="max-w-4xl mx-auto">
             <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30 transition-colors">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
                   Introduction
                 </h2>
                 <p className="text-gray-300 text-lg leading-relaxed mb-6">
@@ -286,14 +286,14 @@ export default function EUTXOModelPage() {
         {/* Model Comparison */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               Blockchain Ledger Models: UTXO vs. Account
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* UTXO Model */}
-              <motion.div whileHover={{ scale: 1.02, rotateY: 5 }} transition={{ type: "spring", stiffness: 300 }} className="motion-reduce:transform-none motion-reduce:transition-none">
-                <Card className="bg-gradient-to-br from-orange-500/20 to-orange-500/5 border-orange-500/30 backdrop-blur-xl h-full">
+              <motion.div whileHover={{ scale: 1.03 }} transition={{ type: "spring", stiffness: 300 }} className="motion-reduce:transform-none motion-reduce:transition-none">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold mb-4 text-orange-400">UTXO Model (Bitcoin-style)</h3>
                     <p className="text-gray-300 mb-4">No global balances — only a collection of unspent outputs.</p>
@@ -321,8 +321,8 @@ export default function EUTXOModelPage() {
               </motion.div>
 
               {/* Account Model */}
-              <motion.div whileHover={{ scale: 1.02, rotateY: -5 }} transition={{ type: "spring", stiffness: 300 }} className="motion-reduce:transform-none motion-reduce:transition-none">
-                <Card className="bg-gradient-to-br from-cyan-500/20 to-cyan-500/5 border-cyan-500/30 backdrop-blur-xl h-full">
+              <motion.div whileHover={{ scale: 1.03 }} transition={{ type: "spring", stiffness: 300 }} className="motion-reduce:transform-none motion-reduce:transition-none">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Account Model (Ethereum-style)</h3>
                     <p className="text-gray-300 mb-4">
@@ -359,7 +359,7 @@ export default function EUTXOModelPage() {
         {/* Transaction Flow */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               How eUTXO Transactions Work
             </h2>
 
@@ -372,10 +372,10 @@ export default function EUTXOModelPage() {
                   whileHover={{ x: 10 }}
                   transition={{ type: "spring", stiffness: 400 }}
                 >
-                  <div className="flex-shrink-0 w-16 h-16 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-full flex items-center justify-center text-black font-bold text-xl">
+                  <div className="flex-shrink-0 w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center text-white font-bold text-xl">
                     {step.step}
                   </div>
-                  <Card className="flex-1 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
+                  <Card className="flex-1 bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30">
                     <CardContent className="p-6">
                       <div className="flex items-center space-x-4">
                         <span aria-hidden="true" className="text-orange-400">{step.icon}</span>
@@ -396,16 +396,16 @@ export default function EUTXOModelPage() {
         {/* Key Differences Table */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               eUTXO vs. Account Model — Key Differences
             </h2>
 
-            <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl overflow-hidden">
+            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl overflow-hidden">
               <CardContent className="p-0">
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <caption className="sr-only">Key differences between eUTXO and account models</caption>
-                    <thead className="bg-gradient-to-r from-gray-800/80 to-gray-700/80">
+                    <thead className="bg-neutral-900/60">
                       <tr>
                         <th scope="col" className="px-6 py-4 text-left text-cyan-400 font-semibold">Aspect</th>
                         <th scope="col" className="px-6 py-4 text-left text-orange-400 font-semibold">eUTXO</th>
@@ -447,7 +447,7 @@ export default function EUTXOModelPage() {
         {/* Use Cases */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               eUTXO in Action — When It Shines
             </h2>
 
@@ -461,7 +461,7 @@ export default function EUTXOModelPage() {
                   transition={{ type: "spring", stiffness: 300 }}
                 >
                   <Card
-                    className={`bg-gradient-to-br ${useCase.color} border-gray-700/50 backdrop-blur-xl h-full hover:border-orange-500/50 transition-all duration-300`}
+                    className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30 transition-all duration-300`}
                   >
                     <CardContent className="p-8">
                       <div className="flex items-start space-x-4 mb-4">
@@ -498,7 +498,7 @@ export default function EUTXOModelPage() {
         {/* FAQ Section */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               Frequently Asked Questions
             </h2>
 
@@ -506,7 +506,7 @@ export default function EUTXOModelPage() {
               {faqs.map((faq, index) => (
                 <Card
                   key={index}
-                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                  className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
                 >
                   <Collapsible
                     open={openFAQ === index}
@@ -540,9 +540,9 @@ export default function EUTXOModelPage() {
         {/* Conclusion */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Card className="bg-gradient-to-r from-orange-500/20 to-cyan-500/20 border-orange-500/30 backdrop-blur-xl">
+            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
               <CardContent className="p-12">
-                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                <h2 className="text-4xl font-bold mb-6 text-white">
                   Conclusion: The Future is eUTXO
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 leading-relaxed">
@@ -554,7 +554,7 @@ export default function EUTXOModelPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
+                    className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl"
                   >
                     <Link href="/Docs" className="flex items-center">
                       Start Building
