@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { 
   ChevronRight, Wallet, Key, Lock, Unlock, 
   Settings, ExternalLink, FileText, AlertCircle,
@@ -45,10 +46,11 @@ export default function WalletInitializePage() {
               Click on <strong>Initialize wallet</strong> (or execute the <code className="bg-neutral-800 px-2 py-1 rounded text-cyan-400">/wallet/init</code> or <code className="bg-neutral-800 px-2 py-1 rounded text-cyan-400">/wallet/restore</code> endpoint). A pop-up or response will appear depending on the method used. You have two main options:
             </p>
             <div className="mb-6">
-              <img 
+              <Image 
                 src="https://user-images.githubusercontent.com/23208922/69916579-b7ca1680-1482-11ea-880e-251c8139a613.png" 
-                alt="Set API key" 
-                className="w-full rounded-lg border border-neutral-600"
+                alt="Setting API key in Swagger UI" 
+                width={1280} height={720}
+                className="w-full rounded-lg border border-neutral-600 h-auto"
               />
               <p className="text-gray-400 text-sm mt-2 text-center">Setting API key in Swagger UI</p>
             </div>
@@ -84,18 +86,20 @@ export default function WalletInitializePage() {
               In the pop-up form (or API request body for <code className="bg-neutral-800 px-2 py-1 rounded text-cyan-400">/wallet/init</code>), enter a secure password for encrypting your wallet file. The 'Mnemonic password' (BIP-39 passphrase) field is optional but adds extra security. After clicking 'Send' (or executing the request), the API response will contain the generated mnemonic sentence.
             </p>
             <div className="mb-6">
-              <img 
+              <Image 
                 src="https://user-images.githubusercontent.com/23208922/69916584-d4fee500-1482-11ea-838c-e8aba9f41c76.png" 
-                alt="Initialize wallet" 
-                className="w-full rounded-lg border border-neutral-600"
+                alt="Initialize wallet form in Swagger UI" 
+                width={1280} height={720}
+                className="w-full rounded-lg border border-neutral-600 h-auto"
               />
               <p className="text-gray-400 text-sm mt-2 text-center">Initialize wallet form</p>
             </div>
             <div className="mb-6">
-              <img 
+              <Image 
                 src="https://user-images.githubusercontent.com/23208922/69916693-2360b380-1484-11ea-9366-1bf9eb0f8b30.png" 
-                alt="Mnemonic sentence" 
-                className="w-full rounded-lg border border-neutral-600"
+                alt="Generated mnemonic sentence output" 
+                width={1280} height={720}
+                className="w-full rounded-lg border border-neutral-600 h-auto"
               />
               <p className="text-gray-400 text-sm mt-2 text-center">Generated mnemonic sentence</p>
             </div>
@@ -121,18 +125,20 @@ export default function WalletInitializePage() {
               To restore an existing wallet, paste your previously saved mnemonic sentence into the 'Mnemonic' field in the Restore-wallet form (or the <code className="bg-neutral-800 px-2 py-1 rounded text-cyan-400">mnemonic</code> field in the <code className="bg-neutral-800 px-2 py-1 rounded text-cyan-400">/wallet/restore</code> API request). Enter a secure password to encrypt the restored wallet file. Leave the 'Mnemonic password' field empty unless your original mnemonic was created with a BIP-39 passphrase; in that case, enter the passphrase here.
             </p>
             <div className="mb-6">
-              <img 
+              <Image 
                 src="https://user-images.githubusercontent.com/23208922/71127599-66a37c00-2211-11ea-9b9e-9a69ac80c306.png" 
-                alt="Restore wallet" 
-                className="w-full rounded-lg border border-neutral-600"
+                alt="Restore wallet form in Swagger UI" 
+                width={1280} height={720}
+                className="w-full rounded-lg border border-neutral-600 h-auto"
               />
               <p className="text-gray-400 text-sm mt-2 text-center">Restore wallet form</p>
             </div>
             <div className="mb-6">
-              <img 
+              <Image 
                 src="https://user-images.githubusercontent.com/23208922/71127600-673c1280-2211-11ea-95eb-7c775c59180d.png" 
-                alt="Successfully restored confirmation" 
-                className="w-full rounded-lg border border-neutral-600"
+                alt="Successfully restored confirmation screen" 
+                width={1280} height={720}
+                className="w-full rounded-lg border border-neutral-600 h-auto"
               />
               <p className="text-gray-400 text-sm mt-2 text-center">Successfully restored confirmation</p>
             </div>
@@ -158,10 +164,11 @@ export default function WalletInitializePage() {
               To verify the wallet is initialized or restored correctly, you can retrieve its addresses. Using the Swagger UI panel, navigate to the <strong>Wallet</strong> section and execute the <code className="bg-neutral-800 px-2 py-1 rounded text-cyan-400">/wallet/addresses</code> endpoint. The response should list at least one derived address if the wallet setup was successful.
             </p>
             <div className="mb-4">
-              <img 
+              <Image 
                 src="https://user-images.githubusercontent.com/23208922/69978955-5b82f780-1553-11ea-85b6-413c63a46334.png" 
-                alt="Get addresses" 
-                className="w-full rounded-lg border border-neutral-600"
+                alt="Get wallet addresses response screenshot" 
+                width={1280} height={720}
+                className="w-full rounded-lg border border-neutral-600 h-auto"
               />
               <p className="text-gray-400 text-sm mt-2 text-center">Get wallet addresses</p>
             </div>
@@ -178,10 +185,11 @@ export default function WalletInitializePage() {
               Once the node is fully synchronized with the blockchain, you can check your wallet balance using the <code className="bg-neutral-800 px-2 py-1 rounded text-cyan-400">/wallet/balances</code> endpoint in the Swagger UI.
             </p>
             <div className="mb-4">
-              <img 
+              <Image 
                 src="https://user-images.githubusercontent.com/23208922/71127598-66a37c00-2211-11ea-9d53-f6d7738d1726.png" 
-                alt="Check balance" 
-                className="w-full rounded-lg border border-neutral-600"
+                alt="Check wallet balance response screenshot" 
+                width={1280} height={720}
+                className="w-full rounded-lg border border-neutral-600 h-auto"
               />
               <p className="text-gray-400 text-sm mt-2 text-center">Check wallet balance</p>
             </div>
@@ -198,10 +206,11 @@ export default function WalletInitializePage() {
               If your wallet has a non-zero balance, you can initiate transactions (e.g., sending ERG) using endpoints like <code className="bg-neutral-800 px-2 py-1 rounded text-cyan-400">/wallet/payment/send</code> via the Swagger UI or other API clients.
             </p>
             <div className="mb-4">
-              <img 
+              <Image 
                 src="https://user-images.githubusercontent.com/23208922/71129066-a28c1080-2214-11ea-9806-7d768059980a.png" 
-                alt="Send ERGs" 
-                className="w-full rounded-lg border border-neutral-600"
+                alt="Send ERGs transaction request screenshot" 
+                width={1280} height={720}
+                className="w-full rounded-lg border border-neutral-600 h-auto"
               />
               <p className="text-gray-400 text-sm mt-2 text-center">Send ERGs transaction</p>
             </div>

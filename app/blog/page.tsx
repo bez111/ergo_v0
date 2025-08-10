@@ -1,151 +1,164 @@
-"use client"
-
-import { useState, useMemo, useEffect } from "react"
-import { motion } from "framer-motion"
-import { BlogHero } from "./_components/blog-hero"
-import { BlogFilters } from "./_components/blog-filters"
-import { BlogCard } from "./_components/blog-card"
-import { NewsletterSignup } from "./_components/newsletter-signup"
 import { blogPosts, categories } from "./_lib/blog-data"
-import { 
-  HexagonalGrid, 
-  FloatingParticles, 
-  MathematicalPattern,
-  WatermarkHex
-} from "@/components/ui-kit/signature-effects"
-import { BookOpen, TrendingUp, Clock, Users } from "lucide-react"
+import { BlogHero } from "./_components/blog-hero"
+import BlogClient from "./_components/blog-client"
+import type { Metadata } from "next"
+import { notFound, redirect } from "next/navigation"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 
-export default function BlogPage() {
-  const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("")
-  const [hasMounted, setHasMounted] = useState(false)
-  const [isInitialized, setIsInitialized] = useState(false)
+export const revalidate = 300
 
-  const featuredPost = blogPosts.find((post) => post.featured) || blogPosts[0]
-  const trendingPosts = blogPosts.filter((post) => post.trending)
+export function generateMetadata({ searchParams }: { searchParams?: { page?: string } }): Metadata {
+  const pageParam = searchParams?.page
+  const page = Math.max(1, Number(pageParam ?? 1) || 1)
+  const baseUrl = "https://ergoblockchain.org/blog"
+  const canonical = page > 1 ? `${baseUrl}?page=${page}` : baseUrl
+  const title = page > 1 ? `Ergo Blog — Page ${page}` : `Ergo Blog — news, research, guides`
 
-  // Prevent hydration mismatch
-  useEffect(() => {
-    setHasMounted(true)
-    setIsInitialized(true)
-  }, [])
+  const prev = page > 2 ? `${baseUrl}?page=${page - 1}` : page === 2 ? baseUrl : undefined
 
-  const filteredPosts = useMemo(() => {
-    return blogPosts.filter((post) => {
-      const matchesSearch =
-        searchQuery === "" ||
-        post.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.author.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        post.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+  return {
+    title,
+    description: "Latest updates, deep-dives and how-tos from the Ergo ecosystem.",
+    alternates: { canonical, types: { "application/rss+xml": "/blog/rss.xml" } },
+    openGraph: {
+      type: "website",
+      siteName: "Ergo",
+      locale: "en_US",
+      url: canonical,
+      title,
+      description: "News, research and guides.",
+      images: [{ url: "/og/blog.png", width: 1200, height: 630, alt: "Ergo Blog" }],
+    },
+    twitter: { card: "summary_large_image", site: "@ergoplatform", creator: "@ergoplatform" },
+    robots: { index: true, follow: true, googleBot: { "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+    other: {
+      ...(prev ? { "link:prev": prev } : {}),
+    },
+  }
+}
 
-      const matchesCategory = selectedCategory === "" || post.category === selectedCategory
+export default function BlogPage({ searchParams }: { searchParams?: { page?: string } }) {
+  const pageSize = 12
+  const currentPage = Math.max(1, Number(searchParams?.page ?? 1) || 1)
 
-      return matchesSearch && matchesCategory && !post.featured
-    })
-  }, [searchQuery, selectedCategory])
-
-  const activeFilters = useMemo(() => {
-    const filters = []
-    if (searchQuery) filters.push(`Search: "${searchQuery}"`)
-    if (selectedCategory) {
-      const category = categories.find((cat) => cat.id === selectedCategory)
-      if (category) filters.push(`Category: ${category.name}`)
-    }
-    return filters
-  }, [searchQuery, selectedCategory])
-
-  const clearFilters = () => {
-    setSearchQuery("")
-    setSelectedCategory("")
+  if (searchParams && "page" in searchParams && currentPage === 1) {
+    redirect("/blog")
   }
 
-  // Prevent hydration issues by rendering simplified version on server
-  if (!hasMounted) {
-    return (
-      <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 py-8 relative z-10">
-          <div className="text-center py-20">
-            <h1 className="text-4xl font-bold text-white mb-4">
-              <span className="text-brand-primary-400">Ergo</span> Blog
-            </h1>
-            <p className="text-gray-400">Loading...</p>
-          </div>
-        </div>
-      </div>
-    )
+  const featuredPost = blogPosts.find((post) => post.featured) || blogPosts[0]
+  const trendingPosts = blogPosts
+    .filter((post) => post.trending)
+    .filter((post) => post.id !== featuredPost.id)
+
+  const allNonFeatured = blogPosts.filter((p) => !p.featured)
+  const total = allNonFeatured.length
+  const start = (currentPage - 1) * pageSize
+  const end = start + pageSize
+
+  if (start >= total && total > 0) {
+    return notFound()
+  }
+
+  const initialList = allNonFeatured.slice(start, end)
+  const hasMore = end < total
+
+  const topForSchema = allNonFeatured.slice(0, 12)
+
+  const blogId = "https://ergoblockchain.org/blog#blog"
+  const listId = `https://ergoblockchain.org/blog#list-${currentPage}`
+
+  const blogJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "@id": blogId,
+    name: "Ergo Blog",
+    url: "https://ergoblockchain.org/blog",
+    inLanguage: "en",
+    isPartOf: { "@type": "WebSite", "@id": "https://ergoblockchain.org#website" },
+    blogPost: topForSchema.map((p) => ({
+      "@type": "BlogPosting",
+      headline: p.title,
+      description: p.description,
+      image: p.image ? [{ "@type": "ImageObject", url: p.image, width: 1200, height: 630 }] : undefined,
+      url: `https://ergoblockchain.org/blog/${p.slug}`,
+      mainEntityOfPage: `https://ergoblockchain.org/blog/${p.slug}`,
+      datePublished: p.publishedAt,
+      dateModified: p.updatedAt || p.publishedAt,
+      inLanguage: "en",
+      keywords: p.tags?.join(", "),
+      articleSection: categories.find((c) => c.id === p.category)?.name || p.category,
+      author: { "@type": "Person", name: p.author.name },
+      publisher: {
+        "@type": "Organization",
+        name: "ergoblockchain.org",
+        logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+      },
+    })),
+  }
+
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": listId,
+    itemListOrder: "Ascending",
+    numberOfItems: initialList.length,
+    itemListElement: initialList.map((p, index) => ({
+      "@type": "ListItem",
+      position: start + index + 1,
+      item: {
+        "@type": "BlogPosting",
+        "@id": `https://ergoblockchain.org/blog/${p.slug}`,
+        name: p.title,
+        url: `https://ergoblockchain.org/blog/${p.slug}`,
+      },
+    })),
+  }
+
+  const collectionPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": `https://ergoblockchain.org/blog?page=${currentPage}#collection`,
+    name: "Ergo Blog",
+    url: "https://ergoblockchain.org/blog",
+    isPartOf: { "@type": "Blog", "@id": blogId },
+    inLanguage: "en",
+  }
+
+  const breadcrumbsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": "https://ergoblockchain.org/blog#breadcrumbs",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://ergoblockchain.org/" },
+      { "@type": "ListItem", position: 2, name: "Blog", item: "https://ergoblockchain.org/blog" },
+    ],
   }
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background Effects - UI Kit style */}
-      {isInitialized && (
-        <>
-          <HexagonalGrid className="opacity-[0.02]" />
-          <FloatingParticles count={15} className="opacity-80" />
-          <MathematicalPattern className="opacity-[0.03]" />
-        </>
-      )}
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
+
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-          {/* Hero Section with watermark */}
+          <div className="mb-4">
+            <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog", href: "/blog" }]} />
+          </div>
+          <h1 className="sr-only">Ergo Blog</h1>
           <div className="relative">
-            <WatermarkHex className="opacity-[0.01] pointer-events-none" />
             <BlogHero featuredPost={featuredPost} trendingPosts={trendingPosts} />
           </div>
 
-          {/* Filters & Search */}
-          <BlogFilters
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
+          <BlogClient
+            posts={initialList}
+            categories={categories}
+            page={currentPage}
+            pageSize={pageSize}
+            total={total}
+            hasMore={hasMore}
           />
-
-          {/* Articles Grid */}
-          <section className="mb-16">
-            <div
-              className="mb-8 bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <BookOpen className="w-6 h-6 text-brand-primary-400" />
-                  <h2 className="text-2xl font-bold text-white">
-                    {selectedCategory
-                      ? `${categories.find((cat) => cat.id === selectedCategory)?.name} Articles`
-                      : "Latest Articles"}
-                  </h2>
-                  <span className="px-3 py-1 bg-brand-primary-500/20 text-brand-primary-400 rounded-full text-sm font-semibold">
-                    {filteredPosts.length}
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {filteredPosts.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredPosts.map((post) => (
-                  <BlogCard key={post.id} post={post} />
-                ))}
-              </div>
-            ) : (
-              <div className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No articles found</h3>
-                <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
-                <button
-                  onClick={clearFilters}
-                  className="px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold hover:scale-105 transition-transform"
-                >
-                  Clear Filters
-                </button>
-              </div>
-            )}
-          </section>
-
-          {/* Newsletter Signup */}
-          <NewsletterSignup />
         </div>
       </div>
     </div>

@@ -24,6 +24,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
             src={post.image || '/placeholder.svg'}
             alt={post.title}
             fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent" />

@@ -27,6 +27,7 @@ import {
   Clock,
 } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AutolykosPage() {
   return (
@@ -476,7 +477,7 @@ export default function AutolykosPage() {
         {/* Pseudocode Illustration */}
         <div className="bg-neutral-800/80 rounded-lg p-4 mb-8">
           <div className="font-bold text-blue-400 mb-2">Autolykos Block Mining Pseudocode</div>
-          <img src="https://storage.googleapis.com/ergo-cms-media/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a.png" alt="Autolykos pseudocode" className="rounded-lg border border-neutral-700 mb-2" />
+          <Image src="https://storage.googleapis.com/ergo-cms-media/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a/Screenshot_2022_06_01_at_23_41_49_b2cdf73a2a.png" alt="Autolykos pseudocode" width={1200} height={750} sizes="(max-width: 768px) 100vw, 1200px" className="rounded-lg border border-neutral-700 mb-2 h-auto w-full" />
         </div>
         {/* Cyclic Group Prerequisites */}
         <div className="bg-neutral-100/10 rounded-xl p-6 mb-8">
@@ -486,7 +487,7 @@ export default function AutolykosPage() {
         {/* Cyclic Group Illustration */}
         <div className="bg-neutral-900/80 rounded-xl p-4 mb-8 flex justify-center">
           <div className="bg-white rounded-lg p-2">
-            <img src="https://storage.googleapis.com/ergo-cms-media/unnamed_1_44d138eaaf/unnamed_1_44d138eaaf.png" alt="Cyclic group example" className="rounded-md border border-neutral-300" />
+            <Image src="https://storage.googleapis.com/ergo-cms-media/unnamed_1_44d138eaaf/unnamed_1_44d138eaaf.png" alt="Cyclic group example" width={800} height={500} sizes="(max-width: 768px) 100vw, 800px" className="rounded-md border border-neutral-300 h-auto w-full" />
           </div>
         </div>
         {/* Input Section */}
@@ -522,7 +523,7 @@ export default function AutolykosPage() {
           <div className="font-mono text-orange-300 mb-2">i = takeRight(8, H(m||nonce)) mod N</div>
           <div className="font-mono text-orange-300 mb-2">e = takeRight(31, H(i||h||M))</div>
           <p className="text-gray-300 mb-2">Use <span className="font-mono">genIndexes(e, m, nonce)</span> to get <span className="font-mono">k</span> indexes in <span className="font-mono">[0, N)</span>.</p>
-          <img src="https://storage.googleapis.com/ergo-cms-media/unnamed_6_987fcaba80/unnamed_6_987fcaba80.png" alt="genIndexes function" className="rounded-lg border border-neutral-700 mb-2" />
+          <Image src="https://storage.googleapis.com/ergo-cms-media/unnamed_6_987fcaba80/unnamed_6_987fcaba80.png" alt="genIndexes function diagram" width={1200} height={700} sizes="(max-width: 768px) 100vw, 1200px" className="rounded-lg border border-neutral-700 mb-2 h-auto w-full" />
           <div className="bg-neutral-900/80 rounded-lg p-4 mt-2">
             <div className="font-bold text-cyan-400 mb-1">Python Example (slicing and mod N)</div>
             <pre className="text-xs text-orange-300 overflow-x-auto"><code>{`for i in range(8):

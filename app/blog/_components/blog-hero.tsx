@@ -31,14 +31,16 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
       >
         <div className="absolute inset-0">
           {featuredPost.image && (
-            <Image
-              src={featuredPost.image}
-              alt={featuredPost.title}
-              fill
-              className="w-full h-full object-cover opacity-30"
-              loading="lazy"
-            />
-          )}
+              <Image
+                src={featuredPost.image}
+                alt={featuredPost.title}
+                fill
+                priority
+                sizes="(max-width: 1024px) 100vw, 66vw"
+                decoding="async"
+                className="w-full h-full object-cover opacity-30"
+              />
+            )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
         </div>
 
@@ -57,11 +59,11 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
             </span>
           </div>
 
-          <h1
+          <h2
             className="text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg leading-tight"
           >
             {featuredPost.title}
-          </h1>
+          </h2>
 
           <p
             className="text-white/90 text-lg mb-6 leading-relaxed"
@@ -79,6 +81,7 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
                 width={48}
                 height={48}
                 className="w-12 h-12 rounded-full border-2 border-white/50"
+                decoding="async"
                 loading="lazy"
               />
             )}
@@ -136,6 +139,8 @@ export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
                     width={64}
                     height={64}
                     className="w-16 h-16 rounded-lg object-cover"
+                    sizes="64px"
+                    decoding="async"
                     loading="lazy"
                   />
                 )}

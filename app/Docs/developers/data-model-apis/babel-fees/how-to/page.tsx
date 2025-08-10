@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 
 export default function BabelFeesHowToPage() {
@@ -72,10 +73,11 @@ export default function BabelFeesHowToPage() {
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-4 mb-4">
-          <img 
+          <Image 
             src="https://storage.googleapis.com/ergo-cms-media/babel_liquidity_1_adbeccffe1/babel_liquidity_1_adbeccffe1.png" 
-            alt="Babel Liquidity Setup" 
-            className="w-full h-auto rounded-lg"
+            alt="Babel Liquidity Setup screenshot" 
+            width={1280} height={720}
+            className="w-full h-auto rounded-lg" 
           />
         </div>
 
@@ -92,10 +94,11 @@ export default function BabelFeesHowToPage() {
         </p>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-4 mb-4">
-          <img 
+          <Image 
             src="https://storage.googleapis.com/ergo-cms-media/babel_nautilius_1_0203d2c22a/babel_nautilius_1_0203d2c22a.png" 
-            alt="Babel Fees in Nautilus Wallet" 
-            className="w-full h-auto rounded-lg"
+            alt="Babel Fees in Nautilus Wallet screenshot" 
+            width={1280} height={720}
+            className="w-full h-auto rounded-lg" 
           />
         </div>
       </div>

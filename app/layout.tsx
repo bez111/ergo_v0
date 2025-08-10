@@ -7,11 +7,14 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/lib/schema-constants"
+import { GoogleAnalytics } from "@/components/analytics/google-analytics"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"], weight: ["400", "700"], display: "swap" })
 const jetbrainsMono = JetBrains_Mono({ 
   subsets: ["latin"],
-  variable: "--font-mono"
+  weight: ["400", "700"],
+  variable: "--font-mono",
+  display: "swap",
 })
 
 export const metadata: Metadata = {
@@ -86,8 +89,8 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-site-verification",
-    yandex: "your-yandex-verification",
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || undefined,
   },
 }
 
@@ -104,16 +107,6 @@ export default function RootLayout({
         <meta name="theme-color" content="#ff8800" />
         <SchemaOrg type="Organization" data={ORGANIZATION_SCHEMA} />
         <SchemaOrg type="WebSite" data={WEBSITE_SCHEMA} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ergo Platform | Resilient Platform for Contractual Money" />
-        <meta property="og:description" content="Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps." />
-        <meta property="og:image" content="/og-image.png" />
-        <meta property="og:url" content="https://ergoblockchain.org" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Ergo Platform | Resilient Platform for Contractual Money" />
-        <meta name="twitter:description" content="Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps." />
-        <meta name="twitter:image" content="/og-image.png" />
-        <meta name="twitter:site" content="@ErgoPlatform" />
       </head>
       <body className={`${inter.className} ${jetbrainsMono.variable}`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
@@ -125,6 +118,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <GoogleAnalytics id={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
       </body>
     </html>
   )

@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import NextImage from 'next/image';
 import { ArrowLeft, Database, AlertTriangle, Info, FileText, ExternalLink, Image, History, Code } from 'lucide-react';
 
 export default function OnChainNFTPage() {
@@ -98,7 +99,7 @@ export default function OnChainNFTPage() {
               </ul>
               <div className="bg-neutral-700 rounded-lg p-4">
                 <p className="text-sm text-gray-400 mb-2">VectorMinimalism</p>
-                <img src="https://github.com/ergoplatform/ergodocs/assets/99899807/10efaf86-a7ba-46ec-a620-db9a4f59a29a" alt="VectorMinimalism" className="max-w-full h-auto" />
+                <NextImage src="https://github.com/ergoplatform/ergodocs/assets/99899807/10efaf86-a7ba-46ec-a620-db9a4f59a29a" alt="Vector Minimalism sample preview" width={800} height={450} sizes="(max-width: 768px) 100vw, 800px" className="w-full h-auto" />
               </div>
             </div>
 
@@ -111,7 +112,7 @@ export default function OnChainNFTPage() {
               <p className="text-gray-300 mb-4">The SVG contains pure text:</p>
               <div className="bg-neutral-700 rounded-lg p-4">
                 <p className="text-sm text-gray-400 mb-2">svgASCII</p>
-                <img src="https://github.com/ergoplatform/ergodocs/assets/99899807/02b1142b-a25d-4cc4-8092-c6026baa046c" alt="svgASCII" className="max-w-full h-auto" />
+                <NextImage src="https://github.com/ergoplatform/ergodocs/assets/99899807/02b1142b-a25d-4cc4-8092-c6026baa046c" alt="Tokenart ASCII in SVG preview" width={800} height={450} sizes="(max-width: 768px) 100vw, 800px" className="w-full h-auto" />
               </div>
             </div>
           </div>
@@ -166,17 +167,17 @@ export default function OnChainNFTPage() {
             <li><strong>NFT minting transaction</strong> on Ergo explorer: <a href="https://explorer.ergoplatform.com/en/transactions/153051163bdaeae8ff31dab0ea15e48bfe97b2f60e57fe30de08d9e102389df9" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Tx</a></li>
             <li><strong>NFT name</strong> stored in register <code className="bg-neutral-700 px-2 py-1 rounded">R4</code>:
               <div className="bg-neutral-700 rounded-lg p-4 mt-2">
-                <img src="https://github.com/ergoplatform/ergodocs/assets/99899807/ad99a442-6569-4f66-b3e2-3c0279bc28ec" alt="NFT_R4" className="max-w-full h-auto" />
+                <NextImage src="https://github.com/ergoplatform/ergodocs/assets/99899807/ad99a442-6569-4f66-b3e2-3c0279bc28ec" alt="Explorer view of R4 register with NFT name" width={800} height={450} sizes="(max-width: 768px) 100vw, 800px" className="w-full h-auto" />
               </div>
             </li>
             <li><strong>NFT description</strong> stored in register <code className="bg-neutral-700 px-2 py-1 rounded">R5</code>:
               <div className="bg-neutral-700 rounded-lg p-4 mt-2">
-                <img src="https://github.com/ergoplatform/ergodocs/assets/99899807/59e3428b-2ed5-45dc-aca3-29c77dbd3a05" alt="NFT_R5" className="max-w-full h-auto" />
+                <NextImage src="https://github.com/ergoplatform/ergodocs/assets/99899807/59e3428b-2ed5-45dc-aca3-29c77dbd3a05" alt="Explorer view of R5 register with NFT description" width={800} height={450} sizes="(max-width: 768px) 100vw, 800px" className="w-full h-auto" />
               </div>
             </li>
             <li><strong>NFT image URL</strong> stored in register <code className="bg-neutral-700 px-2 py-1 rounded">R9</code>:
               <div className="bg-neutral-700 rounded-lg p-4 mt-2">
-                <img src="https://github.com/ergoplatform/ergodocs/assets/99899807/5f5838ca-ae99-43eb-aab4-d2d774c3ff83" alt="NFT_R9" className="max-w-full h-auto" />
+                <NextImage src="https://github.com/ergoplatform/ergodocs/assets/99899807/5f5838ca-ae99-43eb-aab4-d2d774c3ff83" alt="Explorer view of R9 register with NFT image URL" width={800} height={450} sizes="(max-width: 768px) 100vw, 800px" className="w-full h-auto" />
               </div>
             </li>
           </ul>

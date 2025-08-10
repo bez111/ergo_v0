@@ -60,26 +60,26 @@ export default function ErgoScriptPage() {
     {
       title: "Secure by Design",
       description: "Built-in security and formal verifiability, minimizing smart contract risks",
-      icon: <Shield className="w-6 h-6" />,
-      color: "from-orange-500/20 to-orange-500/5",
+      icon: <Shield className="w-6 h-6" aria-hidden="true" focusable="false" />,
+      color: "",
     },
     {
       title: "Powerful & Expressive",
       description: "Enables complex DeFi, multi-stage protocols, and unique dApps",
-      icon: <Zap className="w-6 h-6" />,
-      color: "from-cyan-500/20 to-cyan-500/5",
+      icon: <Zap className="w-6 h-6" aria-hidden="true" focusable="false" />,
+      color: "",
     },
     {
       title: "Leverage eUTXO",
       description: "Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability",
-      icon: <Database className="w-6 h-6" />,
-      color: "from-purple-500/20 to-purple-500/5",
+      icon: <Database className="w-6 h-6" aria-hidden="true" focusable="false" />,
+      color: "",
     },
     {
       title: "Built-in Cryptography",
       description: "Native support for Sigma-protocols, privacy, and advanced access schemes",
-      icon: <Code className="w-6 h-6" />,
-      color: "from-green-500/20 to-green-500/5",
+      icon: <Code className="w-6 h-6" aria-hidden="true" focusable="false" />,
+      color: "",
     },
   ]
 
@@ -87,30 +87,30 @@ export default function ErgoScriptPage() {
     {
       title: "New to Smart Contracts",
       description: "Step-by-step explanations of core blockchain and smart contract concepts",
-      icon: <Users className="w-8 h-8" />,
+      icon: <Users className="w-8 h-8" aria-hidden="true" focusable="false" />,
       examples: ["Blockchain basics", "Smart contract fundamentals", "eUTXO introduction"],
-      color: "from-orange-500/20 to-orange-500/5",
+      color: "",
     },
     {
       title: "Experienced Blockchain Developers",
       description: "Discover eUTXO, new safe patterns, and advanced contract design",
-      icon: <Code className="w-8 h-8" />,
+      icon: <Code className="w-8 h-8" aria-hidden="true" focusable="false" />,
       examples: ["eUTXO patterns", "Security best practices", "Advanced cryptography"],
-      color: "from-cyan-500/20 to-cyan-500/5",
+      color: "",
     },
     {
       title: "Scala/Functional Programmers",
       description: "ErgoScript's syntax and philosophy will feel familiar—apply your skills easily",
-      icon: <Layers className="w-8 h-8" />,
+      icon: <Layers className="w-8 h-8" aria-hidden="true" focusable="false" />,
       examples: ["Functional paradigms", "Type safety", "Immutable data structures"],
-      color: "from-purple-500/20 to-purple-500/5",
+      color: "",
     },
     {
       title: "DeFi Enthusiasts",
       description: "Build the next generation of decentralized financial applications",
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Zap className="w-8 h-8" aria-hidden="true" focusable="false" />,
       examples: ["DEX protocols", "Lending platforms", "Algorithmic stablecoins"],
-      color: "from-green-500/20 to-green-500/5",
+      color: "",
     },
   ]
 
@@ -227,33 +227,9 @@ export default function ErgoScriptPage() {
 
   return (
     <div className="min-h-screen relative">
-      {/* Animated Background */}
+      {/* Background simplified to match technology style */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-black to-cyan-500/10" />
-        <motion.div
-          className="absolute top-20 left-20 w-72 h-72 bg-orange-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
-          }}
-        />
-        <motion.div
-          className="absolute bottom-20 right-20 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"
-          animate={{
-            x: [0, -80, 0],
-            y: [0, 60, 0],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Number.POSITIVE_INFINITY,
-            ease: "linear",
-          }}
-        />
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" />
       </div>
 
       <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
@@ -262,53 +238,46 @@ export default function ErgoScriptPage() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
-                  LEARN ERGOSCRIPT
-                </Badge>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
                   ErgoScript Tutorial Series
                 </h1>
-                <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
+                <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
                   Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo
                 </p>
-                <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                   Step-by-step tutorials covering everything from basics to advanced DeFi protocols, designed for
                   developers of all experience levels.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
+                  <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                     Start Learning
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl backdrop-blur-sm"
                   >
                     View Documentation
                   </Button>
                 </div>
               </div>
               <div className="relative">
-                <motion.div
-                  className="relative z-10"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
+                <div className="relative z-10">
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl">
                     <CardContent className="p-0">
-                      <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                      <h3 className="text-2xl font-bold mb-6 text-center text-white">
                         Your First ErgoScript Contract
                       </h3>
-                      <div className="bg-gray-900 rounded-lg p-4 font-mono text-sm">
+                      <div className="bg-neutral-950/80 rounded-lg p-4 font-mono text-sm">
                         <div className="flex items-center justify-between mb-2">
                           <div className="flex items-center gap-2">
                             <div className="w-3 h-3 rounded-full bg-red-500"></div>
                             <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
                             <div className="w-3 h-3 rounded-full bg-green-500"></div>
                           </div>
-                          <div className="text-xs text-gray-400">contract.es</div>
+                          <div className="text-xs text-neutral-400">contract.es</div>
                         </div>
-                        <pre className="text-cyan-400">
-                          {`{
+                        <pre className="text-neutral-300">
+{`{
   val verifyInput = INPUTS(0).propositionBytes == 
                     SELF.propositionBytes
   val heightIncreased = HEIGHT > SELF.creationInfo._1
@@ -318,7 +287,7 @@ export default function ErgoScriptPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>
@@ -327,29 +296,25 @@ export default function ErgoScriptPage() {
         {/* Why Learn ErgoScript */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">
               Why Learn ErgoScript?
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {whyLearnFeatures.map((feature, index) => (
-                <motion.div
-                  key={feature.title}
-                  whileHover={{ scale: 1.02, rotateY: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Card className={`bg-gradient-to-br ${feature.color} border-gray-700/50 backdrop-blur-xl h-full`}>
+              {whyLearnFeatures.map((feature) => (
+                <div key={feature.title}>
+                  <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-brand-primary-500/50 transition-colors`}>
                     <CardContent className="p-8">
                       <div className="flex items-start space-x-4">
                         <div className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{feature.icon}</div>
                         <div>
                           <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
-                          <p className="text-gray-400">{feature.description}</p>
+                          <p className="text-neutral-400">{feature.description}</p>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -358,39 +323,31 @@ export default function ErgoScriptPage() {
         {/* Target Audience */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">
               Who Is This Tutorial Series For?
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              {targetAudience.map((audience, index) => (
-                <motion.div
-                  key={audience.title}
-                  variants={itemVariants}
-                  className="group"
-                  whileHover={{ scale: 1.05, rotateY: 5 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
-                  <Card
-                    className={`bg-gradient-to-br ${audience.color} border-gray-700/50 backdrop-blur-xl h-full hover:border-orange-500/50 transition-all duration-300`}
-                  >
+              {targetAudience.map((audience) => (
+                <div key={audience.title} className="group">
+                  <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-brand-primary-500/50 transition-colors`}>
                     <CardContent className="p-8">
                       <div className="flex items-start space-x-4 mb-4">
                         <div className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{audience.icon}</div>
                         <div>
                           <h3 className="text-xl font-semibold mb-2 text-white">{audience.title}</h3>
-                          <p className="text-gray-400 mb-4">{audience.description}</p>
+                          <p className="text-neutral-400 mb-4">{audience.description}</p>
                         </div>
                       </div>
 
                       <div className="space-y-2">
-                        <p className="text-sm font-medium text-cyan-400 mb-2">You'll learn:</p>
+                        <p className="text-sm font-medium text-orange-400 mb-2">You'll learn:</p>
                         <div className="flex flex-wrap gap-2">
                           {audience.examples.map((example) => (
                             <Badge
                               key={example}
                               variant="outline"
-                              className="border-gray-600 text-gray-300 hover:border-orange-500/50"
+                              className="border-neutral-700 text-neutral-300 hover:border-brand-primary-500/50"
                             >
                               {example}
                             </Badge>
@@ -399,7 +356,7 @@ export default function ErgoScriptPage() {
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -408,39 +365,39 @@ export default function ErgoScriptPage() {
         {/* Curriculum Overview */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
+            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
               <CardContent className="p-8">
-                <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                <h2 className="text-3xl font-bold mb-6 text-white">
                   What You Will Learn
                 </h2>
-                <p className="text-xl text-gray-300 mb-6">Your Path to ErgoScript Mastery</p>
+                <p className="text-xl text-neutral-300 mb-6">Your Path to ErgoScript Mastery</p>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <ul className="space-y-3 text-gray-300">
+                  <ul className="space-y-3 text-neutral-300">
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
                       <span>ErgoScript language fundamentals</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
                       <span>eUTXO model and box management</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
                       <span>Advanced contract logic patterns</span>
                     </li>
                   </ul>
-                  <ul className="space-y-3 text-gray-300">
+                  <ul className="space-y-3 text-neutral-300">
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
                       <span>Tokens, NFTs, and Sigma-protocols</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
                       <span>Multi-stage dApps and DeFi</span>
                     </li>
                     <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
                       <span>Testing and security best practices</span>
                     </li>
                   </ul>
@@ -472,7 +429,7 @@ export default function ErgoScriptPage() {
         {/* Module Structure */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">
               Tutorial Series Structure
             </h2>
 
@@ -480,20 +437,20 @@ export default function ErgoScriptPage() {
               {modules.map((module, index) => (
                 <Card
                   key={index}
-                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                  className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
                 >
                   <Collapsible open={expandedModule === index} onOpenChange={() => toggleModule(index)}>
                     <CollapsibleTrigger className="w-full">
-                      <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                      <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
                         <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-full flex items-center justify-center text-black font-bold text-lg">
+                          <div className="w-12 h-12 bg-brand-primary-500/20 rounded-full flex items-center justify-center text-black font-bold text-lg">
                             {module.number}
                           </div>
                           <div className="text-left">
                             <h3 className="text-xl font-semibold text-white">{module.title}</h3>
-                            <div className="flex items-center space-x-4 text-sm text-gray-400">
+                            <div className="flex items-center space-x-4 text-sm text-neutral-400">
                               <span className="flex items-center space-x-1">
-                                <Clock className="w-4 h-4" />
+                                <Clock className="w-4 h-4" aria-hidden="true" focusable="false" />
                                 <span>{module.totalDuration}</span>
                               </span>
                               <span>{module.lessons.length} lessons</span>
@@ -501,9 +458,11 @@ export default function ErgoScriptPage() {
                           </div>
                         </div>
                         <ChevronDown
-                          className={`w-5 h-5 text-gray-400 transition-transform ${
+                          className={`w-5 h-5 text-neutral-400 transition-transform ${
                             expandedModule === index ? "rotate-180" : ""
                           }`}
+                          aria-hidden="true"
+                          focusable="false"
                         />
                       </CardContent>
                     </CollapsibleTrigger>
@@ -513,17 +472,17 @@ export default function ErgoScriptPage() {
                           {module.lessons.map((lesson, lessonIndex) => (
                             <div
                               key={lessonIndex}
-                              className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-gray-800/50 rounded-lg hover:bg-gray-800 transition-colors"
+                              className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-neutral-900/60 rounded-lg hover:bg-neutral-800 transition-colors"
                             >
                               <div className="flex items-center gap-2 mb-2 sm:mb-0">
-                                <span className="text-gray-400">
+                                <span className="text-neutral-400">
                                   {module.number}.{lessonIndex + 1}
                                 </span>
                                 <span>{lesson.title}</span>
                               </div>
                               <div className="flex items-center gap-3">
-                                <div className="flex items-center gap-1 text-gray-400">
-                                  <Clock className="w-4 h-4" />
+                                <div className="flex items-center gap-1 text-neutral-400">
+                                  <Clock className="w-4 h-4" aria-hidden="true" focusable="false" />
                                   <span className="text-sm">{lesson.duration}</span>
                                 </div>
                                 <Badge className={difficultyColors[lesson.level as keyof typeof difficultyColors]}>
@@ -545,7 +504,7 @@ export default function ErgoScriptPage() {
         {/* FAQ Section */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">
               Frequently Asked Questions
             </h2>
 
@@ -553,11 +512,11 @@ export default function ErgoScriptPage() {
               {faqs.map((faq, index) => (
                 <Card
                   key={index}
-                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                  className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
                 >
                   <CardContent className="p-6">
                     <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
-                    <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                    <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -568,12 +527,12 @@ export default function ErgoScriptPage() {
         {/* Conclusion */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <Card className="bg-gradient-to-r from-orange-500/20 to-cyan-500/20 border-orange-500/30 backdrop-blur-xl">
+            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
               <CardContent className="p-12">
-                <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                <h2 className="text-4xl font-bold mb-6 text-white">
                   Ready to Master ErgoScript?
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
                   Join our community of developers building the future of decentralized applications on Ergo. Start your
                   journey from beginner to expert with our comprehensive tutorial series.
                 </p>
@@ -581,21 +540,21 @@ export default function ErgoScriptPage() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
-                    className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
+                    className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl"
                   >
                     <Link href="#" className="flex items-center">
                       Start Learning Now
-                      <ArrowRight className="ml-2 w-4 h-4" />
+                      <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" focusable="false" />
                     </Link>
                   </Button>
                   <Button
                     asChild
                     variant="outline"
-                    className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                   >
                     <Link href="#" className="flex items-center">
                       Join Community
-                      <ExternalLink className="ml-2 w-4 h-4" />
+                      <ExternalLink className="ml-2 w-4 h-4" aria-hidden="true" focusable="false" />
                     </Link>
                   </Button>
                 </div>

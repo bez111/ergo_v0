@@ -185,6 +185,11 @@ export interface TechArticle {
     }
   }
   mainEntityOfPage?: string
+  // extended optional fields for richer JSON-LD
+  '@id'?: string
+  keywords?: string
+  about?: Array<{ '@type': string; name: string }>
+  isPartOf?: { '@type': string; url?: string; '@id'?: string }
 }
 
 export interface Course {

@@ -14,8 +14,7 @@ export default function robots(): MetadataRoute.Robots {
           '/private/',
           '/_next/',
           '/static/',
-          '/*.json$',
-          '/*?*', // Block URLs with query parameters for crawlers
+          '/search', // block internal search result pages
         ],
       },
       {

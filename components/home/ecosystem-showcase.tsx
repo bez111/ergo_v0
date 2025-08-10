@@ -112,7 +112,7 @@ export function EcosystemShowcase() {
       {/* Animated circuit lines */}
       <motion.div
         className="absolute inset-0"
-        initial={{ opacity: 0 }}
+        initial={false}
         animate={{ opacity: 0.4 }}
         transition={{ duration: 2 }}
       >
@@ -170,7 +170,7 @@ export function EcosystemShowcase() {
           <FadeIn delay={0.2}>
             <motion.div
               key={activeCategory}
-              initial={{ opacity: 0, y: 20 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
               className="grid lg:grid-cols-2 gap-8 bg-black/60 backdrop-blur-sm border border-primary/30 rounded-lg overflow-hidden"
@@ -193,11 +193,13 @@ export function EcosystemShowcase() {
                 {/* Animated elements */}
                 <motion.div
                   className="absolute top-4 right-4 w-2 h-2 bg-primary rounded-full"
+                  initial={false}
                   animate={{ opacity: [1, 0.3, 1] }}
                   transition={{ duration: 2, repeat: Number.POSITIVE_INFINITY }}
                 />
                 <motion.div
                   className="absolute bottom-4 left-4 w-1 h-1 bg-primary rounded-full"
+                  initial={false}
                   animate={{ opacity: [0.3, 1, 0.3] }}
                   transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY, delay: 0.5 }}
                 />

@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Network, Copy, Check } from "lucide-react";
 
 export default function TransactionTreesPage() {
@@ -56,12 +57,14 @@ export default function TransactionTreesPage() {
             </p>
             
                           <div className="flex justify-center my-6">
-                <img 
-                  src="/tx-tree.png" 
-                  alt="Transaction tree with branching" 
-                  className="rounded-lg max-w-full"
-                />
-              </div>
+              <Image 
+                src="/tx-tree.png" 
+                alt="Transaction tree with branching" 
+                width={1200} height={675}
+                className="rounded-lg max-w-full h-auto"
+                priority
+              />
+            </div>
 
             <p>
               Conditional branching using an <code className="bg-neutral-700 px-2 py-0.5 rounded">if</code> statement within a script is handled conceptually as follows:

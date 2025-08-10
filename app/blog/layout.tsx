@@ -2,43 +2,31 @@ import { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: {
-    default: 'Blog | Ergo Platform',
+    default: 'Ergo Blog — latest updates, research, and guides',
     template: '%s | Ergo Blog'
   },
-  description: 'Latest news, updates, and insights from Ergo Platform - exploring blockchain technology, DeFi innovations, and smart contract development.',
-  keywords: [
-    'ergo blog',
-    'blockchain news',
-    'cryptocurrency updates',
-    'defi insights',
-    'ergoscript tutorials',
-    'smart contracts',
-    'proof-of-work',
-    'blockchain technology'
-  ],
+  description: 'News, research deep-dives, and how-tos from the Ergo ecosystem.',
   openGraph: {
-    title: 'Ergo Platform Blog',
-    description: 'Stay updated with the latest developments in the Ergo ecosystem',
+    title: 'Ergo Blog',
+    description: 'News, research deep-dives, and how-tos from the Ergo ecosystem.',
     type: 'website',
     locale: 'en_US',
     url: 'https://ergoblockchain.org/blog',
     siteName: 'Ergo Platform',
     images: [
       {
-        url: '/og-blog.png',
+        url: '/og/blog.png',
         width: 1200,
         height: 630,
-        alt: 'Ergo Platform Blog'
+        alt: 'Ergo Blog'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ergo Platform Blog',
-    description: 'Latest news and insights from Ergo Platform',
-    site: '@ergoplatform',
-    creator: '@ergoplatform',
-    images: ['/og-blog.png']
+    title: 'Ergo Blog',
+    description: 'News, research deep-dives, and how-tos from the Ergo ecosystem.',
+    images: ['/og/blog.png']
   },
   alternates: {
     canonical: 'https://ergoblockchain.org/blog',
@@ -66,15 +54,15 @@ export default function BlogLayout({
 }) {
   return (
     <>
-      {/* JSON-LD structured data for blog */}
+      {/* JSON-LD structured data for blog container */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Blog',
-            name: 'Ergo Platform Blog',
-            description: 'Latest news and insights from Ergo Platform',
+            name: 'Ergo Blog',
+            description: 'News, research deep-dives, and how-tos from the Ergo ecosystem.',
             url: 'https://ergoblockchain.org/blog',
             publisher: {
               '@type': 'Organization',
@@ -84,7 +72,6 @@ export default function BlogLayout({
                 url: 'https://ergoblockchain.org/logo.png'
               }
             },
-            blogPost: [],
             mainEntityOfPage: {
               '@type': 'WebPage',
               '@id': 'https://ergoblockchain.org/blog'

@@ -19,7 +19,7 @@ export function FadeIn({ children, delay = 0, direction = "up" }: FadeInProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, ...directions[direction].initial }}
+      initial={false}
       animate={{ opacity: 1, ...directions[direction].animate }}
       transition={{ duration: 0.5, delay }}
     >

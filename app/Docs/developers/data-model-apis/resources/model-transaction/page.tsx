@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Database, Box, RefreshCw, Info, AlertTriangle } from "lucide-react";
 
 export default function ModelTransactionPage() {
@@ -29,9 +30,10 @@ export default function ModelTransactionPage() {
         
         {/* First Image */}
         <div className="mt-6 flex justify-center">
-          <img 
+          <Image 
             src="https://lh6.googleusercontent.com/qxEWrauKaD8yEXAjwXFzlikSNAXFeAxSPwuxUolS410Xf5HgOzJh_1vCL6YOfFfOyWnBhxLVIWZ0scz4BbIF9w4Tm_9aywTKo3EIrvG0zSPhCIPvLoyrlwgvZCHWHqEfXZb43klV=s0" 
             alt="UTXO Model Diagram" 
+            width={1280} height={720}
             className="max-w-full h-auto rounded-lg border border-neutral-700 shadow-lg"
           />
         </div>
@@ -100,9 +102,10 @@ export default function ModelTransactionPage() {
         
         {/* Second Image */}
         <div className="mb-6 flex justify-center">
-          <img 
+          <Image 
             src="https://lh5.googleusercontent.com/HOFhlYx5l3wvUzET-wa9E4dhU8az4srODa_4n09qZm3y-gWQz1L9Obw5qobgQM5Bthokn8SYMuO13cLDNEW5fqbboSj3qAwf2rzYH1rHkyvaoDsIMSDa3zwJU31s5XLEc_n5VbZ0=s0" 
             alt="Transaction Breakdown Diagram" 
+            width={1280} height={720}
             className="max-w-full h-auto rounded-lg border border-neutral-700 shadow-lg"
           />
         </div>
@@ -169,9 +172,10 @@ export default function ModelTransactionPage() {
           
           {/* Third Image */}
           <div className="flex justify-center">
-            <img 
+            <Image 
               src="https://lh6.googleusercontent.com/wK-uprlqrj6wKt74AODkxBt6xR5Dey_qGB4kclXm5OuhWz2nfIuBTZm412oFA1h0OHXRi_oGcx6y7jR6A6kRcgpAUU7vSaQrfAMY6lKzdzy8THl2Hh2uEMzHjs5M5Sdlly6DO8f4=s0" 
-              alt="Token List Example" 
+              alt="Token List Example screenshot" 
+              width={1280} height={720}
               className="max-w-full h-auto rounded-lg border border-neutral-700 shadow-lg"
             />
           </div>

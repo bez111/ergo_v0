@@ -1,159 +1,72 @@
 "use client"
 
-import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { Link2, Smartphone, Zap, Shield, ArrowRight, ExternalLink, Network, CheckCircle, ChevronDown } from "lucide-react"
 import Link from "next/link"
-import { useState } from "react"
+import { useState, type ReactNode } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
+// Types and hoisted data
+type UseCase = {
+  title: string
+  description: string
+  example: string
+  icon: ReactNode
+  href?: string
+  external?: boolean
 }
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
-}
+const benefits = [
+  { icon: <Link2 className="w-8 h-8" aria-hidden="true" />, title: "Interoperability", description: "Enables SPV/NIPoPoW-style protocols and trust-minimized cross-chain interactions." },
+  { icon: <Smartphone className="w-8 h-8" aria-hidden="true" />, title: "Light Clients", description: "Secure verification on mobile or web without downloading the full blockchain." },
+  { icon: <Zap className="w-8 h-8" aria-hidden="true" />, title: "Fast Verification", description: "Verify chain work in seconds using compact proofs instead of full syncs." },
+  { icon: <Shield className="w-8 h-8" aria-hidden="true" />, title: "Trustless", description: "No trusted relays or validators; verification follows PoW assumptions." },
+] as const
+
+const useCases: UseCase[] = [
+  { title: "Cross-Chain Protocols", description: "Trust-minimized bridges and SPV-style interoperability.", example: "Rosen Bridge", icon: <Link2 className="w-8 h-8" aria-hidden="true" />, href: "https://rosen.tech", external: true },
+  { title: "Mobile Wallets", description: "Light wallets that prove chain work with succinct proofs.", example: "Ergo Mobile", icon: <Smartphone className="w-8 h-8" aria-hidden="true" />, href: "/wallet", external: false },
+  { title: "Oracle Systems", description: "Efficient verification of external chain data.", example: "Oracle Pools", icon: <Network className="w-8 h-8" aria-hidden="true" />, href: "/learn/guides/oracle-pool", external: false },
+  { title: "Sidechains", description: "Sidechains can verify L1 succinctly for security and liveness.", example: "Research", icon: <Zap className="w-8 h-8" aria-hidden="true" />, href: "/Docs/introduction/research-whitepapers", external: false },
+]
+
+const comparisonData = [
+  { aspect: "Verification Time", traditional: "Hours to days (full sync)", nipopows: "Seconds to minutes", advantage: "NIPoPoWs" },
+  { aspect: "Data Required", traditional: "Entire blockchain history", nipopows: "Small cryptographic proof", advantage: "NIPoPoWs" },
+  { aspect: "Trust Requirements", traditional: "Trust full nodes or validators", nipopows: "Trustless cryptographic verification", advantage: "NIPoPoWs" },
+  { aspect: "Mobile Compatibility", traditional: "Impractical due to size", nipopows: "Optimized for mobile devices", advantage: "NIPoPoWs" },
+  { aspect: "Security model", traditional: "Varies by design", nipopows: "Preserves PoW assumptions", advantage: "NIPoPoWs" },
+  { aspect: "Finality handling", traditional: "Implementation-specific", nipopows: "Observe window; new proof can supersede", advantage: "NIPoPoWs" },
+  { aspect: "State access", traditional: "Full state on device", nipopows: "Event/work proof only (no full state)", advantage: "Depends" },
+]
+
+const workingSteps = [
+  { step: 1, title: "Event Occurs", description: "A transaction or block appears on Ergo.", icon: <Zap className="w-6 h-6" aria-hidden="true" /> },
+  { step: 2, title: "Proof Generation", description: "A succinct proof is built from sampled headers.", icon: <Shield className="w-6 h-6" aria-hidden="true" /> },
+  { step: 3, title: "Verification", description: "Anyone verifies the proof quickly and trustlessly.", icon: <CheckCircle className="w-6 h-6" aria-hidden="true" /> },
+]
+
+const baseFaqs = [
+  { question: "How do NIPoPoWs enable light clients?", answer: "They let devices verify chain work using compact proofs rather than the full history, providing fast sync and security on mobile/web." },
+  { question: "Is security comparable to a full node?", answer: "Security follows PoW assumptions; cheating requires breaking underlying cryptography or majority work." },
+  { question: "What new apps does this unlock?", answer: "Trust-minimized bridges, instant mobile onboarding, and efficient oracle/sidechain designs." },
+  { question: "Do I need crypto expertise to use it?", answer: "No. Users see faster, lighter wallets; developers integrate proofs via libraries and docs." },
+]
+
+const extraFaqs = [
+  { question: "How do NIPoPoWs behave under reorgs?", answer: "Light clients should observe a finality window. If a reorg occurs within that window, a new proof can supersede the previous one." },
+  { question: "Do NIPoPoWs require special headers or parameters?", answer: "Implementations rely on header data and protocol-specific structures defined in the docs. Use libraries that match current network parameters." },
+  { question: "Can a malicious party forge a proof?", answer: "Not without violating PoW assumptions or cryptographic primitives. Security follows the underlying consensus model." },
+]
+
+const allFaqs = [...baseFaqs, ...extraFaqs]
 
 export default function NIPOPOWsPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
-
-  const benefits = [
-    {
-      icon: <Link2 className="w-8 h-8" />,
-      title: "Interoperability",
-      description: "Enables trustless bridges with other blockchains like Cardano, Ethereum, Bitcoin, and BSC.",
-      color: "from-orange-500/20 to-orange-500/5",
-    },
-    {
-      icon: <Smartphone className="w-8 h-8" />,
-      title: "Light Clients",
-      description: "Use Ergo securely on mobile devices or in browsers without downloading the full blockchain.",
-      color: "from-cyan-500/20 to-cyan-500/5",
-    },
-    {
-      icon: <Zap className="w-8 h-8" />,
-      title: "Scalability",
-      description: "New chains can verify Ergo's history in seconds, not hours or days.",
-      color: "from-purple-500/20 to-purple-500/5",
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Trustless Verification",
-      description: "No need for trusted third parties or centralized relays — pure cryptographic proofs.",
-      color: "from-green-500/20 to-green-500/5",
-    },
-  ]
-
-  const useCases = [
-    {
-      title: "Cross-Chain Bridges",
-      description: "Trustless asset transfers between Ergo and other blockchains",
-      example: "Rosen Bridge",
-      icon: <Link2 className="w-8 h-8" />,
-      color: "from-orange-500/20 to-orange-500/5",
-    },
-    {
-      title: "Mobile Wallets",
-      description: "Lightweight wallets that can verify transactions without full node",
-      example: "Ergo Mobile Wallet",
-      icon: <Smartphone className="w-8 h-8" />,
-      color: "from-cyan-500/20 to-cyan-500/5",
-    },
-    {
-      title: "Oracle Systems",
-      description: "Efficient verification of blockchain data for external systems",
-      example: "Oracle Pools",
-      icon: <Network className="w-8 h-8" />,
-      color: "from-purple-500/20 to-purple-500/5",
-    },
-    {
-      title: "Sidechains",
-      description: "Enable sidechains to efficiently verify main chain state",
-      example: "Layer 2 Solutions",
-      icon: <Zap className="w-8 h-8" />,
-      color: "from-green-500/20 to-green-500/5",
-    },
-  ]
-
-  const comparisonData = [
-    {
-      aspect: "Verification Time",
-      traditional: "Hours to days (full sync)",
-      nipopows: "Seconds to minutes",
-      advantage: "NIPoPoWs",
-    },
-    {
-      aspect: "Data Required",
-      traditional: "Entire blockchain history",
-      nipopows: "Small cryptographic proof",
-      advantage: "NIPoPoWs",
-    },
-    {
-      aspect: "Trust Requirements",
-      traditional: "Trust full nodes or validators",
-      nipopows: "Trustless cryptographic verification",
-      advantage: "NIPoPoWs",
-    },
-    {
-      aspect: "Mobile Compatibility",
-      traditional: "Impractical due to size",
-      nipopows: "Perfect for mobile devices",
-      advantage: "NIPoPoWs",
-    },
-  ]
-
-  const workingSteps = [
-    {
-      step: 1,
-      title: "Event Occurs",
-      description: "A transaction, block, or other event happens on the Ergo blockchain.",
-      icon: <Zap className="w-6 h-6" />,
-    },
-    {
-      step: 2,
-      title: "Proof Generation",
-      description:
-        "A cryptographic proof is created that demonstrates the event occurred, using only a small subset of blocks.",
-      icon: <Shield className="w-6 h-6" />,
-    },
-    {
-      step: 3,
-      title: "Verification",
-      description: "Anyone can verify the proof quickly and trustlessly, even on another blockchain or mobile device.",
-      icon: <CheckCircle className="w-6 h-6" />,
-    },
-  ]
-
-  const faqs = [
-    {
-      question: "How do NiPoPoWs let my phone wallet work instantly instead of waiting for hours?",
-      answer: "Instead of downloading the entire multi-gigabyte blockchain history, NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) allow your device to verify it using a tiny cryptographic proof. It's like reading a book's summary and being certain of the plot without reading every word. The result: syncing and security validation take seconds, not hours.",
-    },
-    {
-      question: "How secure is this \"light\" verification compared to a full node?",
-      answer: "It is cryptographically ironclad. NiPoPoWs are based on the same mathematical principles as the blockchain itself. Cheating the system is as difficult as breaking Bitcoin's underlying cryptography. You get the security of a full node without the need to store hundreds of gigabytes of data.",
-    },
-    {
-      question: "What does this enable in practice that wasn't possible before?",
-      answer: "This opens the door for truly decentralized mobile applications. Imagine DeFi protocols that don't drain your battery, instant cross-chain bridges right from your phone, and wallets that are ready to use immediately after installation. This is the technology that makes blockchain practical for everyday use.",
-    },
-    {
-      question: "Do I need to understand cryptography to use this?",
-      answer: "Not at all. You don't need to understand how an engine works to drive a car. For users, it simply means speed and convenience. For developers, it's a powerful tool that works \"out of the box,\" allowing them to focus on building their product, not on complex math.",
-    },
-  ]
 
   return (
     <>
@@ -161,212 +74,194 @@ export default function NIPOPOWsPage() {
         type="FAQPage"
         data={{
           "@type": "FAQPage",
-          mainEntity: [
-            {
-              "@type": "Question",
-              name: "What are NIPoPoWs?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) are compact proofs that allow light clients to verify blockchain state without downloading the entire blockchain. They provide efficient verification for mobile and IoT devices."
-              }
-            },
-            {
-              "@type": "Question",
-              name: "How do NIPoPoWs improve scalability?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "NIPoPoWs enable light clients to verify blockchain state with minimal data transfer. This reduces bandwidth requirements, improves mobile wallet performance, and enables blockchain verification on resource-constrained devices."
-              }
-            },
-            {
-              "@type": "Question",
-              name: "What are the benefits of NIPoPoWs?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "NIPoPoWs provide efficient blockchain verification, reduce bandwidth usage, enable mobile and IoT blockchain applications, improve user experience for light clients, and maintain security without full node requirements."
-              }
-            }
-          ]
+          mainEntity: allFaqs.map(f => ({ "@type": "Question", name: f.question, acceptedAnswer: { "@type": "Answer", text: f.answer } })),
         }}
       />
-      
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Technology", item: "https://ergoblockchain.org/technology" },
+            { "@type": "ListItem", position: 2, name: "NIPoPoWs", item: "https://ergoblockchain.org/technology/nipopows" },
+          ],
+        }}
+      />
+      <SchemaOrg
+        type="TechArticle"
+        data={{
+          "@type": "TechArticle",
+          "@id": "https://ergoblockchain.org/technology/nipopows#article",
+          headline: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) on Ergo — Light Clients & Cross-Chain",
+          description: "Verify Ergo on mobile/web with compact PoW proofs. NIPoPoWs enable light clients, bridges, and efficient oracles.",
+          image: "https://ergoblockchain.org/og/nipopows.png",
+          datePublished: "2023-11-10",
+          dateModified: "2025-08-10",
+          mainEntityOfPage: "https://ergoblockchain.org/technology/nipopows",
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          publisher: {
+            "@type": "Organization",
+            name: "ergoblockchain.org",
+            url: "https://ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+          },
+          keywords: "NIPoPoWs, Non-Interactive Proofs of Proof-of-Work, SPV, light clients, succinct proofs, cross-chain, Ergo",
+          about: [
+            { "@type": "Thing", name: "NIPoPoW" },
+            { "@type": "Thing", name: "Light client" },
+            { "@type": "Thing", name: "Cross-chain bridge" },
+            { "@type": "Thing", name: "Proof-of-Work" },
+          ],
+          isPartOf: { "@type": "WebPage", "@id": "https://ergoblockchain.org/technology" },
+        }}
+      />
+
+      <div className="min-h-screen bg-black text-white">
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
-            items={[
-              { label: "Technology", href: "/technology" },
-              { label: "NIPoPoWs", href: "/technology/nipopows" }
-            ]}
+            items={[{ label: "Technology", href: "/technology" }, { label: "NIPoPoWs", href: "/technology/nipopows" }]}
             className="mb-8"
           />
         </div>
 
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
-          {/* What are NIPoPoWs */}
-          <motion.section variants={itemVariants} className="pt-32 pb-20 px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                  <Badge className="mb-6 bg-orange-500/20 text-orange-400 border-orange-500/30 backdrop-blur-sm">
-                    INTEROPERABILITY
-                  </Badge>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                    <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
-                      How NIPoPoWs Work
-                    </span>
-                  </h2>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">
-                    Lightweight, Trustless Proofs for Blockchain Interoperability
-                  </p>
-                  <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
-                    NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) let anyone prove facts about Ergo's blockchain —
-                    without downloading the full chain.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                      Learn More
-                    </Button>
-                    <Button
-                      variant="outline"
-                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                    >
-                      View Applications
-                    </Button>
-                  </div>
+        <div className="relative z-10">
+          {/* Hero */}
+          <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">NIPoPoWs — Non-Interactive Proofs of Proof-of-Work</h1>
+                <p className="text-xl md:text-2xl text-neutral-300 mb-6">Succinct proofs of chain work for trust-minimized verification.</p>
+                <p className="text-lg text-neutral-400 mb-8">Verify Ergo from mobile, browsers, or other chains using compact proofs instead of full sync. Learn how PoW works in <Link href="/technology/secure-pow" className="underline hover:opacity-80">Secure PoW</Link>.</p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="learn-more">
+                    <Link href="#what">Learn More</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl" data-cta="view-docs">
+                    <Link href="https://docs.ergoplatform.com/protocol/nipopows/" target="_blank" rel="noopener noreferrer">View Docs</Link>
+                  </Button>
                 </div>
-                <div className="relative">
-                  <motion.div
-                    className="relative z-10"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
-                      <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                          Process Overview
-                        </h3>
-                        <div className="space-y-4">
-                          {workingSteps.map((step, index) => (
-                            <motion.div
-                              key={step.step}
-                              className="p-4 rounded-lg bg-gradient-to-r from-gray-800/50 to-gray-700/50 border border-gray-700/50"
-                              whileHover={{ scale: 1.02, x: 10 }}
-                              transition={{ type: "spring", stiffness: 400 }}
-                            >
-                              <div className="flex items-center space-x-3">
-                                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-cyan-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
-                                  {step.step}
-                                </div>
-                                <div className="text-orange-400">{step.icon}</div>
-                                <div>
-                                  <h4 className="font-semibold text-white">{step.title}</h4>
-                                  <p className="text-sm text-gray-400">{step.description}</p>
-                                </div>
-                              </div>
-                            </motion.div>
-                          ))}
+                <nav aria-label="Section navigation" className="mt-4 text-sm text-neutral-400 space-x-3">
+                  <Link href="#what" data-cta="anchor-what" className="underline hover:opacity-80">What</Link><span>·</span>
+                  <Link href="#why" data-cta="anchor-why" className="underline hover:opacity-80">Why</Link><span>·</span>
+                  <Link href="#comparison" data-cta="anchor-comparison" className="underline hover:opacity-80">Comparison</Link><span>·</span>
+                  <Link href="#use-cases" data-cta="anchor-use-cases" className="underline hover:opacity-80">Use cases</Link><span>·</span>
+                  <Link href="#faq" data-cta="anchor-faq" className="underline hover:opacity-80">FAQ</Link>
+                </nav>
+                <p className="text-xs text-neutral-500 mt-3">Last updated: 2025-08-10</p>
+                <section aria-labelledby="at-a-glance" className="mt-6">
+                  <h2 id="at-a-glance" className="sr-only">At a glance</h2>
+                  <dl className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
+                    <div><dt className="text-neutral-500">Proof size</dt><dd className="text-white font-semibold">Logarithmic</dd></div>
+                    <div><dt className="text-neutral-500">Security</dt><dd className="text-white font-semibold">PoW assumptions</dd></div>
+                    <div><dt className="text-neutral-500">Devices</dt><dd className="text-white font-semibold">Mobile/Web/Sidechains</dd></div>
+                    <div><dt className="text-neutral-500">Finality</dt><dd className="text-white font-semibold">Observe window</dd></div>
+                  </dl>
+                </section>
+              </div>
+              <div>
+                <Card className="bg-neutral-900/50 border-neutral-700 p-8 rounded-xl">
+                  <CardContent className="p-0">
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">Process Overview</h3>
+                    <div className="space-y-4">
+                      {workingSteps.map(step => (
+                        <div key={step.step} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 rounded-full bg-brand-primary-500 text-black font-bold grid place-items-center">{step.step}</div>
+                            <div className="text-brand-primary-400" aria-hidden="true">{step.icon}</div>
+                            <div>
+                              <h4 className="font-semibold text-white">{step.title}</h4>
+                              <p className="text-sm text-neutral-400">{step.description}</p>
+                            </div>
+                          </div>
                         </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                </div>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
-          </motion.section>
+          </section>
 
-          {/* What are NIPoPoWs */}
-          <motion.section variants={itemVariants} className="py-20 px-4">
+          {/* What */}
+          <section id="what" className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
+              <Card className="bg-neutral-900/50 border-neutral-700">
                 <CardContent className="p-8">
-                  <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                    What are NIPoPoWs?
-                  </h2>
-                  <p className="text-gray-300 text-lg leading-relaxed mb-6">
-                    NIPoPoWs are cryptographic proofs that allow you to verify blockchain events without needing to
-                    download or process the entire blockchain history. Think of them as "blockchain receipts" that prove
-                    something happened on Ergo.
-                  </p>
-                  <p className="text-gray-300 text-lg leading-relaxed">
-                    These proofs are logarithmically smaller than the full blockchain, making them perfect for mobile
-                    devices, cross-chain bridges, and any application that needs to verify blockchain data efficiently.
-                  </p>
+                  <h2 className="text-3xl font-bold mb-6 text-white">What are NIPoPoWs?</h2>
+                  <p className="text-neutral-300 text-lg leading-relaxed mb-6">NIPoPoWs are cryptographic proofs that let you verify blockchain events without downloading the entire chain — ideal for mobile and cross-chain use.</p>
+                  <p className="text-neutral-300 text-lg leading-relaxed mb-4">Proof size and verification grow <strong>logarithmically</strong> with chain length via sampling of <strong>superblocks</strong> from headers.</p>
+                  <p className="text-neutral-300 text-lg leading-relaxed">Compared with classic SPV, NIPoPoWs give formal guarantees to compare competing chains by accumulated work without full state.</p>
+                  <ul className="list-disc list-inside text-neutral-400 mt-4">
+                    <li>Requires observing a finality window for short reorgs</li>
+                    <li>Proofs depend on current network parameters/headers</li>
+                  </ul>
                 </CardContent>
               </Card>
             </div>
-          </motion.section>
+          </section>
 
-          {/* Why It Matters */}
-          <motion.section variants={itemVariants} className="py-20 px-4">
+          {/* Why it matters */}
+          <section id="why" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
-                Why NIPoPoWs Matter
-              </h2>
-
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">Why NIPoPoWs Matter</h2>
               <div className="grid md:grid-cols-2 gap-8">
-                {benefits.map((benefit, index) => (
-                  <motion.div
-                    key={benefit.title}
-                    variants={itemVariants}
-                    className="group"
-                    whileHover={{ scale: 1.05, rotateY: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Card
-                      className={`bg-gradient-to-br ${benefit.color} border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full`}
-                    >
-                      <CardContent className="p-8">
-                        <div className="flex items-start space-x-4">
-                          <div className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{benefit.icon}</div>
-                          <div>
-                            <h3 className="text-xl font-semibold mb-3 text-white">{benefit.title}</h3>
-                            <p className="text-gray-400 leading-relaxed">{benefit.description}</p>
-                          </div>
+                {benefits.map((benefit) => (
+                  <Card key={benefit.title} className="bg-neutral-900/50 border-neutral-700 h-full">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4">
+                        <div className="p-3 bg-neutral-800 rounded-lg text-brand-primary-400" aria-hidden="true">{benefit.icon}</div>
+                        <div>
+                          <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
+                          <p className="text-neutral-400 leading-relaxed">{benefit.description}</p>
                         </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 ))}
+                <Card className="bg-neutral-900/50 border-neutral-700 h-full">
+                  <CardContent className="p-8">
+                    <div className="flex items-start gap-4">
+                      <div className="p-3 bg-neutral-800 rounded-lg text-brand-primary-400" aria-hidden="true"><Shield className="w-8 h-8" /></div>
+                      <div>
+                        <h3 className="text-xl font-semibold mb-2 text-white">Reorg-resilience & finality windows</h3>
+                        <p className="text-neutral-400 leading-relaxed">Light clients should observe a finality window; new proofs can supersede earlier ones if a short reorg occurs.</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
               </div>
             </div>
-          </motion.section>
+          </section>
 
-          {/* Comparison Table */}
-          <motion.section variants={itemVariants} className="py-20 px-4">
+          {/* Comparison */}
+          <section id="comparison" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
-                NIPoPoWs vs Traditional Verification
-              </h2>
-
-              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl overflow-hidden">
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">NIPoPoWs vs Traditional Verification</h2>
+              <p id="comparison-desc" className="text-neutral-300 text-center max-w-3xl mx-auto mb-6">NIPoPoWs preserve PoW security assumptions while cutting verification data from full history to compact proofs.</p>
+              <Card className="bg-neutral-900/50 border-neutral-700 overflow-hidden">
                 <CardContent className="p-0">
                   <div className="overflow-x-auto">
-                    <table className="w-full">
-                      <thead className="bg-gradient-to-r from-gray-800/80 to-gray-700/80">
+                    <table aria-describedby="comparison-desc" className="w-full">
+                      <caption className="sr-only">Comparison of verification properties</caption>
+                      <thead className="bg-neutral-900">
                         <tr>
-                          <th className="px-6 py-4 text-left text-cyan-400 font-semibold">Aspect</th>
-                          <th className="px-6 py-4 text-left text-red-400 font-semibold">Traditional</th>
-                          <th className="px-6 py-4 text-left text-orange-400 font-semibold">NIPoPoWs</th>
-                          <th className="px-6 py-4 text-left text-green-400 font-semibold">Advantage</th>
+                          <th scope="col" className="px-6 py-4 text-left text-neutral-300 font-semibold">Aspect</th>
+                          <th scope="col" className="px-6 py-4 text-left text-neutral-300 font-semibold">Traditional</th>
+                          <th scope="col" className="px-6 py-4 text-left text-neutral-300 font-semibold">NIPoPoWs</th>
+                          <th scope="col" className="px-6 py-4 text-left text-neutral-300 font-semibold">Advantage</th>
                         </tr>
                       </thead>
                       <tbody>
                         {comparisonData.map((row, index) => (
-                          <motion.tr
-                            key={row.aspect}
-                            className={index % 2 === 0 ? "bg-gray-800/20" : ""}
-                            whileHover={{ backgroundColor: "rgba(255, 136, 0, 0.1)" }}
-                          >
-                            <td className="px-6 py-4 font-medium text-white">{row.aspect}</td>
-                            <td className="px-6 py-4 text-gray-300 text-sm">{row.traditional}</td>
-                            <td className="px-6 py-4 text-gray-300 text-sm">{row.nipopows}</td>
+                          <tr key={row.aspect} className={index % 2 === 0 ? "bg-neutral-900/30" : undefined}>
+                            <th scope="row" className="px-6 py-4 font-medium text-white text-left">{row.aspect}</th>
+                            <td className="px-6 py-4 text-neutral-300 text-sm">{row.traditional}</td>
+                            <td className="px-6 py-4 text-neutral-300 text-sm">{row.nipopows}</td>
                             <td className="px-6 py-4">
-                              <Badge className="bg-green-500/20 text-green-400 border-green-500/30">
-                                {row.advantage}
-                              </Badge>
+                              <Badge variant="outline" className="text-neutral-300 border-neutral-600">{row.advantage}</Badge>
                             </td>
-                          </motion.tr>
+                          </tr>
                         ))}
                       </tbody>
                     </table>
@@ -374,76 +269,79 @@ export default function NIPOPOWsPage() {
                 </CardContent>
               </Card>
             </div>
-          </motion.section>
+          </section>
 
-          {/* Real Use Cases */}
-          <motion.section variants={itemVariants} className="py-20 px-4">
+          {/* Real use cases */}
+          <section id="use-cases" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                Real Use Cases
-              </h2>
-
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">Real Use Cases</h2>
               <div className="grid md:grid-cols-2 gap-8">
-                {useCases.map((useCase, index) => (
-                  <motion.div
-                    key={useCase.title}
-                    variants={itemVariants}
-                    className="group"
-                    whileHover={{ scale: 1.05, rotateY: 5 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Card
-                      className={`bg-gradient-to-br ${useCase.color} border-gray-700/50 backdrop-blur-xl hover:border-cyan-500/50 transition-all duration-300 h-full`}
-                    >
-                      <CardContent className="p-8">
-                        <div className="flex items-start space-x-4 mb-4">
-                          <div className="p-3 bg-cyan-500/20 rounded-lg text-cyan-400">{useCase.icon}</div>
-                          <div>
-                            <h3 className="text-xl font-semibold mb-2 text-white">{useCase.title}</h3>
-                            <p className="text-gray-400 mb-4">{useCase.description}</p>
-                            <Badge variant="outline" className="border-orange-500/50 text-orange-400">
-                              {useCase.example}
-                            </Badge>
-                          </div>
+                {useCases.map((useCase) => (
+                  <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 h-full">
+                    <CardContent className="p-8">
+                      <div className="flex items-start gap-4 mb-4">
+                        <div className="p-3 bg-neutral-800 rounded-lg text-brand-primary-400" aria-hidden="true">{useCase.icon}</div>
+                        <div>
+                          <h3 className="text-xl font-semibold mb-2 text-white">{useCase.title}</h3>
+                          <p className="text-neutral-400 mb-4">{useCase.description}</p>
+                          {useCase.href ? (
+                            useCase.external ? (
+                              <a href={`${useCase.href}${useCase.href.includes('?') ? '&' : '?'}utm_source=site&utm_medium=referral&utm_campaign=nipopows`} target="_blank" rel="noopener noreferrer" aria-label={`${useCase.example} (opens in a new tab)`} className="inline-flex items-center gap-1 underline hover:opacity-80">
+                                {useCase.example} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                              </a>
+                            ) : (
+                              <Link href={useCase.href} className="inline-flex items-center gap-1 underline hover:opacity-80">
+                                {useCase.example} <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                              </Link>
+                            )
+                          ) : null}
                         </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 ))}
               </div>
+              {/* Developer quick-start */}
+              <div className="max-w-6xl mx-auto mt-8">
+                <Card className="bg-neutral-900/50 border-neutral-700">
+                  <CardContent className="p-6">
+                    <h3 className="text-xl font-bold text-white mb-3">Developer quick-start</h3>
+                    <pre className="text-sm text-neutral-200 overflow-x-auto bg-neutral-950/60 rounded p-4"><code className="language-ts">{`// TypeScript pseudo: verify NiPoPoW proof against best header
+import { verifyProof } from "@ergo/nipopow"; // replace with actual lib
+
+const proof = await fetch("/api/proof?txId=...").then(r => r.json());
+const headers = await fetch("/api/headers?from=...").then(r => r.json());
+
+const ok = verifyProof(proof, headers);
+if (!ok) throw new Error("Invalid proof");
+// continue: accept event / show confirmed state
+`}</code></pre>
+                    <div className="mt-3 text-sm text-neutral-500">Library names/endpoints are illustrative — see docs/SDK.</div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
-          </motion.section>
+          </section>
 
-          {/* FAQ Section */}
-          <motion.section variants={itemVariants} className="py-20 px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                Frequently Asked Questions
-              </h2>
-
+          {/* FAQ */}
+          <section className="py-20 px-4" id="faq">
+            <div className="max-w-4xl mx-auto" aria-live="polite">
+              <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Frequently Asked Questions</h2>
               <div className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <Card
-                    key={index}
-                    className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
-                  >
-                    <Collapsible
-                      open={openFAQ === index}
-                      onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
-                    >
-                      <CollapsibleTrigger className="w-full">
-                        <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
-                          <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
-                          <ChevronDown
-                            className={`w-5 h-5 text-gray-400 transition-transform ${
-                              openFAQ === index ? "rotate-180" : ""
-                            }`}
-                          />
-                        </CardContent>
+                {allFaqs.map((faq, index) => (
+                  <Card key={index} className="bg-neutral-900/50 border-neutral-700 rounded-xl">
+                    <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
+                      <CollapsibleTrigger asChild>
+                        <button className="w-full" aria-expanded={openFAQ === index} aria-controls={`faq-panel-${index}`} id={`faq-trigger-${index}`}>
+                          <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
+                            <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                            <ChevronDown className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} aria-hidden="true" />
+                          </CardContent>
+                        </button>
                       </CollapsibleTrigger>
-                      <CollapsibleContent>
+                      <CollapsibleContent id={`faq-panel-${index}`} aria-labelledby={`faq-trigger-${index}`}>
                         <CardContent className="px-6 pb-6 pt-0">
-                          <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                          <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
                         </CardContent>
                       </CollapsibleContent>
                     </Collapsible>
@@ -451,38 +349,25 @@ export default function NIPOPOWsPage() {
                 ))}
               </div>
             </div>
-          </motion.section>
+          </section>
 
-          {/* Learn More */}
-          <motion.section variants={itemVariants} className="py-20 px-4">
+          {/* CTA */}
+          <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-gradient-to-r from-orange-500/20 to-cyan-500/20 border-orange-500/30 backdrop-blur-xl">
+              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
                 <CardContent className="p-12">
-                  <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                    The Future of Blockchain Interoperability
-                  </h2>
-                  <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                    NIPoPoWs enable a new generation of lightweight, trustless applications that can interact with Ergo
-                    from anywhere — mobile devices, other blockchains, or web browsers.
-                  </p>
-
+                  <h2 className="text-4xl font-bold mb-6 text-white">The Future of Interoperability</h2>
+                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">NIPoPoWs enable a new generation of lightweight, trust-minimized applications across devices and chains.</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button
-                      asChild
-                      className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
-                    >
+                    <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="explore-apps">
                       <Link href="/ecosystem" className="flex items-center">
-                        <ArrowRight className="mr-2 w-4 h-4" />
+                        <ArrowRight className="mr-2 w-4 h-4" aria-hidden="true" />
                         Explore Applications
                       </Link>
                     </Button>
-                    <Button
-                      asChild
-                      variant="outline"
-                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                    >
-                      <Link href="https://docs.ergoplatform.com/protocol/nipopows/" className="flex items-center">
-                        <ExternalLink className="mr-2 w-4 h-4" />
+                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl" data-cta="docs">
+                      <Link href="https://docs.ergoplatform.com/protocol/nipopows/" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <ExternalLink className="mr-2 w-4 h-4" aria-hidden="true" />
                         Technical Documentation
                       </Link>
                     </Button>
@@ -490,8 +375,8 @@ export default function NIPOPOWsPage() {
                 </CardContent>
               </Card>
             </div>
-          </motion.section>
-        </motion.div>
+          </section>
+        </div>
       </div>
     </>
   )

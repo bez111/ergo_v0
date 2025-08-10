@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   Info, BookOpen, Code, Users, ExternalLink, Zap, Key, Layers, Shield, Wrench, ChevronRight, Cpu, Globe, FileText, Terminal, Book, MessageCircle
 } from "lucide-react";
@@ -140,7 +141,7 @@ export default function DevelopersGuide() {
         <p className="text-gray-300 mb-2">Ergo adopts a transactional approach similar to Bitcoin's UTXO model. In this model, transactions utilize and produce single-use entities known as <b>boxes</b>. Every transaction in Ergo represents an atomic state transition, consuming boxes from the state and creating new ones in their place. The eUTXO model allows each UTXO to carry arbitrary data and be protected by an arbitrary predicate (or <b>spending condition</b>). The data can represent various tokens or smart contract states.</p>
         <div className="flex flex-col items-center my-4">
           <a href="/assets/ergo-model.png" target="_blank" rel="noopener noreferrer">
-            <img src="/assets/ergo-model.png" alt="Ergo Model" className="rounded-lg border border-neutral-700 max-w-xs mx-auto" />
+            <Image src="/assets/ergo-model.png" alt="Diagram of Ergo eUTXO transactional model" width={600} height={360} sizes="(max-width: 768px) 100vw, 600px" className="rounded-lg border border-neutral-700 max-w-xs mx-auto h-auto" />
           </a>
           <span className="text-xs text-gray-500 mt-2">This image illustrates the structure and process flow of a blockchain transaction on the Ergo platform using its <b>extended UTXO model</b> (eUTXO).</span>
         </div>

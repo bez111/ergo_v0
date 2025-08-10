@@ -1,5 +1,6 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { CodeBlock } from "@/components/ui";
 
@@ -27,7 +28,7 @@ export default function MosaikSimpleUIPage() {
       <p className="text-gray-300 mb-4">To set up a Spring Boot project, visit the Spring Initializr on <a href="https://start.spring.io/" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">start.spring.io</a>. Change project to “Gradle project”, language to “Kotlin”, “Java” to “11”, and set the names as you want.</p>
       <p className="text-gray-300 mb-4">As dependencies, choose “Spring Web”.</p>
       <p className="text-gray-300 mb-4">You should end up with something like this:</p>
-      <img src="../../../assets/img/mosaik/tutorial2-1.png" alt="Spring Initializr" className="rounded-xl border border-neutral-700 mb-6" />
+      <Image src="../../../assets/img/mosaik/tutorial2-1.png" alt="Spring Initializr" width={1200} height={675} className="rounded-xl border border-neutral-700 mb-6 h-auto w-full" />
       <p className="text-gray-300 mb-4">Generate the project, extract the zip file and open the directory with the IDE of your choice. Using IntelliJ or another Gradle-compatible IDE will sync some time to download and index all dependencies.</p>
       <p className="text-gray-300 mb-4">To start the Spring Boot application, you can use the Terminal command</p>
       <CodeBlock language="python">{`@RestController
@@ -112,7 +113,7 @@ fun getMainPage(): MosaikApp {
    }
 }`}</CodeBlock>
       <p className="text-gray-300 mb-4">Start the Spring Boot server and use the desktop demo application to run your MosaikApp. It will look like this:</p>
-      <img src="../../../assets/img/mosaik/tutorial2-3.png" alt="Mosaik simple UI" className="rounded-xl border border-neutral-700 mb-6" />
+      <Image src="../../../assets/img/mosaik/tutorial2-3.png" alt="Mosaik simple UI" width={1200} height={675} className="rounded-xl border border-neutral-700 mb-6 h-auto w-full" />
       <p className="text-gray-300 mb-4">We see the app name, a somehow expected screen content, and we can also see how our viewtree looks like in JSON. Let’s spice this up a lot.</p>
       <CodeBlock language="typescript">{`// define the view here
 
@@ -128,7 +129,7 @@ card {
    }
 }`}</CodeBlock>
       <p className="text-gray-300 mb-4">Running it results in this view, and the button works and presents a message.</p>
-      <img src="../../../assets/img/mosaik/tutorial2-4.png" alt="Mosaik UI with button" className="rounded-xl border border-neutral-700 mb-6" />
+      <Image src="../../../assets/img/mosaik/tutorial2-4.png" alt="Mosaik UI with button" width={1200} height={675} className="rounded-xl border border-neutral-700 mb-6 h-auto w-full" />
       <p className="text-gray-300 mb-4">For the first part, we improved the layout by adding padding between the card outline and the card contents. The padding is declared on the new column element, not the card element. This might be surprising for people used to web design as they probably would expect that declaring padding on the card would be the better way to do this. But this would not work here: Paddings in Mosaik are always added on the outer side of the element. If you now think that a better name would be margin because, in web design, spacing on the outer side of an element is called margin, you are not quite right. Unlike web element’s margins and like web element’s paddings, paddings in Mosaik will always add spacing for neighboring elements.</p>
       <p className="text-gray-300 mb-4">The column element lays out its child elements vertically and linearly so that the button is added below the label, which now has a better suiting style.</p>
       <p className="text-gray-300 mb-4">The box element between the label and the button has no content and simply adds spacing between the label and button.</p>

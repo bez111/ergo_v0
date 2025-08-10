@@ -12,7 +12,7 @@ interface StaggerContainerProps {
 export function StaggerContainer({ children, className, staggerDelay = 0.1 }: StaggerContainerProps) {
   return (
     <motion.div
-      initial="hidden"
+      initial={false}
       animate="visible"
       variants={{
         hidden: { opacity: 0 },
@@ -33,6 +33,7 @@ export function StaggerContainer({ children, className, staggerDelay = 0.1 }: St
 export function StaggerItem({ children, className }: { children: React.ReactNode; className?: string }) {
   return (
     <motion.div
+      initial={false}
       variants={{
         hidden: { opacity: 0, y: 20 },
         visible: {

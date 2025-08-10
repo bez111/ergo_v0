@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, Network, Copy, Check } from "lucide-react";
 
 export default function TransactionGraphsPage() {
@@ -46,17 +47,16 @@ export default function TransactionGraphsPage() {
               Transaction graphs are useful for modeling complex transaction flows and dependencies, particularly in the context of smart contracts and advanced blockchain applications. They provide a more flexible and nuanced view of transaction sequences, enabling the representation of sophisticated relationships and dependencies.
             </p>
             <p>
-              Transaction graphs are a powerful conceptual tool for understanding complex blockchain interactions. They can help analyze the efficiency, scalability, and security of blockchain-based systems, especially in the context of advanced smart contracts and decentralized applications (dApps).
-            </p>
-            <p>
               Ergo's eUTXO model inherently supports the formation of transaction graphs. Furthermore, ErgoScript allows contracts to reference each other (e.g., by checking the script hash of an output), enabling the construction of protocols where the graph structure can even involve cycles in these contract references, as illustrated below.
             </p>
             
             <div className="flex justify-center my-6">
-              <img 
+              <Image 
                 src="/tx-graph.png" 
                 alt="Transaction graph with multiple nodes and connections"
-                className="rounded-lg max-w-full"
+                width={1200} height={675}
+                className="rounded-lg max-w-full h-auto"
+                priority
               />
             </div>
             

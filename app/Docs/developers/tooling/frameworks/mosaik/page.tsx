@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft } from "lucide-react";
 import { CodeBlock } from "@/components/ui";
 import {
@@ -59,7 +60,7 @@ export default function MosaikPage() {
       <p className="text-gray-300 mb-4">Let’s take a real look at Mosaik to get a feeling for the system. Clone the repository from <a href="https://github.com/MrStahlfelge/mosaik" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">https://github.com/MrStahlfelge/mosaik</a> to your local system. You’ll need Java 11 or newer installed for the next steps. Start the Mosaik Desktop Executor (which also serves as a debugging tool) by invoking the following command.</p>
       <CodeBlock language="typescript">{`./gradlew desktop-demo:run`}</CodeBlock>
       <p className="text-gray-300 mb-4">(or <code>gradlew desktop-demo:run</code> on Windows). Once downloading the necessary dependencies and compiling is done, you will be presented with the following window:</p>
-      <img src="../../../assets/img/mosaik/tutorial1-1.png" alt="Mosaik 1" className="rounded-xl border border-neutral-700 mb-6" />
+      <Image src="../../../assets/img/mosaik/tutorial1-1.png" alt="Mosaik 1" width={1200} height={675} className="rounded-xl border border-neutral-700 mb-6 h-auto w-full" />
       <p className="text-gray-300 mb-4">The column on the right gives you info on the input values that the current view holds, as well as the JSON model that is currently shown. Most space is reserved for the actual Mosaik app that is running. The debugger shows a simple built-in app demonstrating a few view elements and actions. Let’s take a closer look at the JSON on the right-hand side. If you copy it in a better-suited editor, you’ll see that its outermost object contains two properties:</p>
       <CodeBlock language="typescript">{`{
   "actions": [...],
@@ -78,7 +79,7 @@ export default function MosaikPage() {
  "onClick": "replaceLabel"
 }`}</CodeBlock>
       <p className="text-gray-300 mb-4">If you click this label in the desktop application, you will see that the view changes:</p>
-      <img src="../../../assets/img/mosaik/tutorial1-2.png" alt="Mosaik 2" className="rounded-xl border border-neutral-700 mb-6" />
+      <Image src="../../../assets/img/mosaik/tutorial1-2.png" alt="Mosaik 2" width={1200} height={675} className="rounded-xl border border-neutral-700 mb-6 h-auto w-full" />
       <p className="text-gray-300 mb-4">This was caused by the onClick attribute defined on the JSON above. It references “replaceLabel”. When you look at the list of defined actions, you’ll find this action declared as follows:</p>
       <CodeBlock language="typescript">{`{
  "type": "ChangeSiteAction",
@@ -110,11 +111,11 @@ export default function MosaikPage() {
       <p className="text-gray-300 mb-4">After some compiling, the app is waiting to get fetched on port 8080:</p>
       <CodeBlock language="typescript">{`Tomcat started on port(s): 8080 (http) with context path ''`}</CodeBlock>
       <p className="text-gray-300 mb-4">Navigate to localhost:8080 by entering this into the navigation bar and hit enter:</p>
-      <img src="../../../assets/img/mosaik/tutorial1-3.png" alt="Mosaik 3" className="rounded-xl border border-neutral-700 mb-6" />
+      <Image src="../../../assets/img/mosaik/tutorial1-3.png" alt="Mosaik 3" width={1200} height={675} className="rounded-xl border border-neutral-700 mb-6 h-auto w-full" />
       <p className="text-gray-300 mb-4">Mosaik automatically determines that the actual Mosaik app is served from the path /appselect/ and presents a chooser. Let’s ignore the “typical errors” demo for now (it is meant to be checked by Mosaik executor developers) and make your choice!</p>
       <p className="text-gray-300 mb-4">As this demo is not a built-in into the desktop debugger, it can be launched from an other existing Mosaik executor, the Ergo Wallet App for Android, as well:</p>
-      <img src="../../../assets/img/mosaik/tutorial1-4.png" alt="Mosaik 4" className="rounded-xl border border-neutral-700 mb-6" />
-      <img src="../../../assets/img/mosaik/tutorial1-5.png" alt="Mosaik 5" className="rounded-xl border border-neutral-700 mb-6" />
+      <Image src="../../../assets/img/mosaik/tutorial1-4.png" alt="Mosaik 4" width={1200} height={675} className="rounded-xl border border-neutral-700 mb-6 h-auto w-full" />
+      <Image src="../../../assets/img/mosaik/tutorial1-5.png" alt="Mosaik 5" width={1200} height={675} className="rounded-xl border border-neutral-700 mb-6 h-auto w-full" />
       <p className="text-gray-300 mb-4">Other existing Mosaik executors are Ergo Wallet App for Desktop and the <a href="https://github.com/MrStahlfelge/mosaik-kt-js" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Mosaik web executor</a> to run Mosaik apps in browser.</p>
       <p className="text-gray-300 mb-4">Check out the view elements and actions provided, and feel free to check out the JSON shown in the desktop debugger.</p>
       <p className="text-gray-300 mb-4">The JSON is not meant to be generated manually, and Mosaik provides a robust abstraction layer. You will find a link to the page's source code if you visit the demo. We will take a look at this code in the following tutorials.</p>
