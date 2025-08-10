@@ -39,7 +39,7 @@ export default function EUTXOModelPage() {
     },
     {
       aspect: "Security",
-      utxo: "No re-entrancy attacks, predictable costs",
+      utxo: "Reentrancy-класс из аккаунт-модели отсутствует; стоимость исполнения скрипта ограничена (сборы зависят от мемпула)",
       account: "Vulnerable to re-entrancy, unpredictable gas",
       advantage: "eUTXO",
     },
@@ -83,14 +83,14 @@ export default function EUTXOModelPage() {
       color: "from-cyan-500/20 to-cyan-500/5",
     },
     {
-      name: "Registers (R0-R9)",
-      description: "Typed fields for custom data storage",
+      name: "Registers (R0–R9)",
+      description: "User-defined: R4–R9 (R0–R3 are protocol-reserved)",
       icon: <Box className="w-6 h-6" />,
       color: "from-purple-500/20 to-purple-500/5",
     },
     {
       name: "Metadata",
-      description: "Creation height, transaction ID, box ID",
+      description: "Creation height, boxId (derived from creating tx)",
       icon: <Code className="w-6 h-6" />,
       color: "from-green-500/20 to-green-500/5",
     },
@@ -238,15 +238,14 @@ export default function EUTXOModelPage() {
                         {boxComponents.map((component, index) => (
                           <motion.div
                             key={component.name}
-                            className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700"
-                            whileHover={{ scale: 1.02, x: 10 }}
+                            className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:translate-x-2 transition-transform"
                             transition={{ type: "spring", stiffness: 400 }}
                           >
                             <div className="flex items-center space-x-3">
                               <span aria-hidden="true" className="text-orange-400">{component.icon}</span>
                               <div>
                                 <h4 className="font-semibold text-white">{component.name}</h4>
-                                <p className="text-sm text-gray-400">{component.description}</p>
+                                <p className="text-sm text-neutral-400">{component.description}</p>
                               </div>
                             </div>
                           </motion.div>
@@ -268,12 +267,12 @@ export default function EUTXOModelPage() {
                 <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
                   Introduction
                 </h2>
-                <p className="text-gray-300 text-lg leading-relaxed mb-6">
+                <p className="text-neutral-300 text-lg leading-relaxed mb-6">
                   Every blockchain's heart is its ledger model: it defines how assets and data move. The two dominant
                   models are UTXO (pioneered by Bitcoin) and account-based (popularized by Ethereum). Each has unique
                   trade-offs.
                 </p>
-                <p className="text-gray-300 text-lg leading-relaxed">
+                <p className="text-neutral-300 text-lg leading-relaxed">
                   Ergo's eUTXO (extended UTXO) model fuses the security, parallelism, and simplicity of UTXO with the
                   expressive power needed for complex smart contracts. Here's how it works, why it matters, and how it
                   stands apart.
@@ -296,8 +295,8 @@ export default function EUTXOModelPage() {
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold mb-4 text-orange-400">UTXO Model (Bitcoin-style)</h3>
-                    <p className="text-gray-300 mb-4">No global balances — only a collection of unspent outputs.</p>
-                    <p className="text-gray-400 mb-6 italic">
+                    <p className="text-neutral-300 mb-4">No global balances — only a collection of unspent outputs.</p>
+                    <p className="text-neutral-400 mb-6 italic">
                       Analogy: Like having cash bills/coins. Each transaction spends some bills, creates new ones.
                     </p>
 
@@ -307,13 +306,13 @@ export default function EUTXOModelPage() {
                           <CheckCircle className="w-4 h-4 mr-2" aria-hidden="true" />
                           Strengths:
                         </h4>
-                        <p className="text-gray-300 text-sm">
+                        <p className="text-neutral-300 text-sm">
                           Simplicity, privacy, parallel processing, easier audit trails.
                         </p>
                       </div>
                       <div>
                         <h4 className="font-semibold text-red-400 mb-2">Weakness:</h4>
-                        <p className="text-gray-300 text-sm">Not naturally suited for stateful dApps.</p>
+                        <p className="text-neutral-300 text-sm">Not naturally suited for stateful dApps.</p>
                       </div>
                     </div>
                   </CardContent>
@@ -325,10 +324,10 @@ export default function EUTXOModelPage() {
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Account Model (Ethereum-style)</h3>
-                    <p className="text-gray-300 mb-4">
+                    <p className="text-neutral-300 mb-4">
                       Global state: Each account has a balance and (for contracts) its own data storage.
                     </p>
-                    <p className="text-gray-400 mb-6 italic">
+                    <p className="text-neutral-400 mb-6 italic">
                       Analogy: Like a bank account — all assets tracked in one place.
                     </p>
 
@@ -338,13 +337,13 @@ export default function EUTXOModelPage() {
                           <CheckCircle className="w-4 h-4 mr-2" aria-hidden="true" />
                           Strengths:
                         </h4>
-                        <p className="text-gray-300 text-sm">
+                        <p className="text-neutral-300 text-sm">
                           Intuitive, flexible for stateful apps, natural for Turing-complete contracts.
                         </p>
                       </div>
                       <div>
                         <h4 className="font-semibold text-red-400 mb-2">Weaknesses:</h4>
-                        <p className="text-gray-300 text-sm">
+                        <p className="text-neutral-300 text-sm">
                           Potential for re-entrancy bugs, unpredictable gas, global state bloat.
                         </p>
                       </div>
@@ -368,8 +367,7 @@ export default function EUTXOModelPage() {
                 <motion.div
                   key={step.step}
                   variants={itemVariants}
-                  className="flex items-center space-x-6 motion-reduce:transform-none motion-reduce:transition-none"
-                  whileHover={{ x: 10 }}
+                  className="flex items-center space-x-6 motion-reduce:transform-none motion-reduce:transition-none hover:translate-x-2 transition-transform"
                   transition={{ type: "spring", stiffness: 400 }}
                 >
                   <div className="flex-shrink-0 w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center text-white font-bold text-xl">
@@ -381,12 +379,12 @@ export default function EUTXOModelPage() {
                         <span aria-hidden="true" className="text-orange-400">{step.icon}</span>
                         <div>
                           <h3 className="text-xl font-semibold mb-2 text-orange-400">{step.title}</h3>
-                          <p className="text-gray-300">{step.description}</p>
+                          <p className="text-neutral-300">{step.description}</p>
                         </div>
                       </div>
                     </CardContent>
                   </Card>
-                  {index < transactionSteps.length - 1 && <ArrowRight className="w-6 h-6 text-gray-400" />}
+                  {index < transactionSteps.length - 1 && <ArrowRight className="w-6 h-6 text-neutral-400" />}
                 </motion.div>
               ))}
             </div>
@@ -414,15 +412,14 @@ export default function EUTXOModelPage() {
                       </tr>
                     </thead>
                     <tbody>
-                      {modelComparison.map((row, index) => (
-                        <motion.tr
+                      {modelComparison.map((row) => (
+                        <tr
                           key={row.aspect}
-                          className={index % 2 === 0 ? "bg-gray-800/20" : ""}
-                          whileHover={{ backgroundColor: "rgba(255, 136, 0, 0.1)" }}
+                          className="odd:bg-neutral-800/20 hover:bg-orange-500/10 transition-colors"
                         >
                           <th scope="row" className="px-6 py-4 font-medium text-white text-left">{row.aspect}</th>
-                          <td className="px-6 py-4 text-gray-300 text-sm">{row.utxo}</td>
-                          <td className="px-6 py-4 text-gray-300 text-sm">{row.account}</td>
+                          <td className="px-6 py-4 text-neutral-300 text-sm">{row.utxo}</td>
+                          <td className="px-6 py-4 text-neutral-300 text-sm">{row.account}</td>
                           <td className="px-6 py-4">
                             <Badge
                               className={
@@ -434,7 +431,7 @@ export default function EUTXOModelPage() {
                               {row.advantage}
                             </Badge>
                           </td>
-                        </motion.tr>
+                        </tr>
                       ))}
                     </tbody>
                   </table>
@@ -468,7 +465,7 @@ export default function EUTXOModelPage() {
                         <span aria-hidden="true" className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{useCase.icon}</span>
                         <div>
                           <h3 className="text-xl font-semibold mb-2 text-white">{useCase.title}</h3>
-                          <p className="text-gray-400 mb-4">{useCase.description}</p>
+                          <p className="text-neutral-400 mb-4">{useCase.description}</p>
                         </div>
                       </div>
 
@@ -476,14 +473,14 @@ export default function EUTXOModelPage() {
                         <p className="text-sm font-medium text-cyan-400 mb-2">Examples:</p>
                         <div className="flex flex-wrap gap-2">
                           {useCase.examples.map((example) => (
-                            <a key={example} href="#" className="inline-block">
-                              <Badge
-                                variant="outline"
-                                className="border-gray-600 text-gray-300 hover:border-orange-500/50"
-                              >
-                                {example}
-                              </Badge>
-                            </a>
+                            <span key={example} className="inline-block">
+                  <Badge
+                    variant="outline"
+                    className="border-neutral-700 text-neutral-300 hover:border-brand-primary-500/50"
+                  >
+                    {example}
+                  </Badge>
+                </span>
                           ))}
                         </div>
                       </div>
@@ -503,9 +500,12 @@ export default function EUTXOModelPage() {
             </h2>
 
             <div className="space-y-4">
-              {faqs.map((faq, index) => (
+              {faqs.map((faq, index) => {
+                const id = faq.question.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
+                return (
                 <Card
-                  key={index}
+                  id={id}
+                  key={id}
                   className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
                 >
                   <Collapsible
@@ -517,7 +517,7 @@ export default function EUTXOModelPage() {
                         <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
                           <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
                           <ChevronDown
-                            className={`w-5 h-5 text-gray-400 transition-transform ${
+                            className={`w-5 h-5 text-neutral-400 transition-transform ${
                               openFAQ === index ? "rotate-180" : ""
                             }`}
                             aria-hidden="true"
@@ -527,12 +527,12 @@ export default function EUTXOModelPage() {
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <CardContent className="px-6 pb-6 pt-0">
-                        <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                        <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
                       </CardContent>
                     </CollapsibleContent>
                   </Collapsible>
                 </Card>
-              ))}
+              )})}
             </div>
           </div>
         </motion.section>
@@ -545,7 +545,7 @@ export default function EUTXOModelPage() {
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Conclusion: The Future is eUTXO
                 </h2>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
+                <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
                   The eUTXO model is a quantum leap: it keeps UTXO's clarity, security, and scalability while unlocking
                   true programmability. For developers who want robust, auditable, and future-proof dApps — Ergo's
                   approach is both powerful and elegant.
@@ -586,6 +586,7 @@ export default function EUTXOModelPage() {
           mainEntity: faqs.map((faq) => ({
             '@type': 'Question',
             name: faq.question,
+            url: `https://ergoblockchain.org/technology/eutxo-model#${faq.question.toLowerCase().replace(/\s+/g,'-').replace(/[^a-z0-9\-]/g,'')}`,
             acceptedAnswer: {
               '@type': 'Answer',
               text: faq.answer,
@@ -614,9 +615,7 @@ export default function EUTXOModelPage() {
           dateModified: '2024-01-01',
           author: { '@type': 'Organization', name: 'Ergo Foundation', url: 'https://ergoblockchain.org' },
           publisher: { '@type': 'Organization', name: 'Ergo Platform', url: 'https://ergoblockchain.org', logo: { '@type': 'ImageObject', url: 'https://ergoblockchain.org/icon-512x512.png' } },
-          dependencies: [],
-          proficiencyLevel: 'Beginner',
-          articleSection: 'Technology',
+          mainEntityOfPage: 'https://ergoblockchain.org/technology/eutxo-model',
         }}
       />
     </div>

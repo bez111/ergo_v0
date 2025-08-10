@@ -179,9 +179,7 @@ export interface TechArticle {
       url: string
     }
   }
-  dependencies: string[]
-  proficiencyLevel: string
-  articleSection: string
+  mainEntityOfPage?: string
 }
 
 export interface Course {
