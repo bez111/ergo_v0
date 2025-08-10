@@ -82,6 +82,11 @@ export interface HowTo {
     text: string
     image?: string
   }[]
+  tool?: { '@type': 'HowToTool'; name: string }[]
+  supply?: { '@type': 'HowToSupply'; name: string }[]
+  totalTime?: string
+  estimatedCost?: { '@type': 'MonetaryAmount'; currency: string; value: string }
+  image?: string
 }
 
 export interface SoftwareApplication {

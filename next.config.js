@@ -9,6 +9,15 @@ const nextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/start/introduction/',
+        destination: '/start/introduction',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 const withMDX = require('@next/mdx')();

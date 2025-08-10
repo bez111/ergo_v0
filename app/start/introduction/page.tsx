@@ -1,8 +1,9 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
+import dynamic from "next/dynamic"
 import {
   ArrowRight,
   Shield,
@@ -43,45 +44,24 @@ import {
   HeroPattern, FeatureGrid, StatsGrid, FeatureCard, CodeSnippet,
   type FeatureGridItem, type StatsGridItem 
 } from "@/components/ui-kit/patterns"
-import { 
-  MathematicalPattern, CryptographicVisualization, 
-  FloatingParticles, HexagonalGrid, GlitchHex, WatermarkHex
-} from "@/components/ui-kit/signature-effects"
+import { SchemaOrg } from "@/components/seo/schema-org"
+// Dynamic, client-only signature effects for performance/SSR
+const FloatingParticles = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.FloatingParticles), { ssr: false })
+const HexagonalGrid = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.HexagonalGrid), { ssr: false })
+const CryptographicVisualization = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.CryptographicVisualization), { ssr: false })
+const GlitchHex = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.GlitchHex), { ssr: false })
 import { useIsMobile, usePrefersReducedMotion, getAnimationConfig } from "@/lib/theme-system"
 
 export default function IntroductionPage() {
-  const [hasMounted, setHasMounted] = useState(false)
-  const [isInitialized, setIsInitialized] = useState(false)
+  const [isInitialized] = useState(true)
+  const isoDate = new Date().toISOString().slice(0, 10)
   
   // Responsive and accessibility hooks
   const isMobile = useIsMobile()
   const prefersReducedMotion = usePrefersReducedMotion()
   const animationConfig = getAnimationConfig(isMobile, prefersReducedMotion)
 
-  // Prevent hydration mismatch
-  useEffect(() => {
-    setHasMounted(true)
-    const timer = setTimeout(() => {
-      setIsInitialized(true)
-    }, 100)
-    return () => clearTimeout(timer)
-  }, [])
-
-  // Prevent hydration issues by rendering simplified version on server
-  if (!hasMounted) {
-    return (
-      <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
-          <div className="text-center py-24">
-            <h1 className="text-5xl font-bold text-white mb-4">
-              Introduction to <span className="text-brand-primary-400">Ergo</span>
-            </h1>
-            <p className="text-gray-400">Loading...</p>
-          </div>
-        </div>
-      </div>
-    )
-  }
+  // SSR full content; heavy effects render client-only via dynamic()
 
   // Core principles data for FeatureGrid
   const principlesGridItems: FeatureGridItem[] = [
@@ -100,7 +80,7 @@ export default function IntroductionPage() {
     {
       icon: Code,
       title: "Powerful Contracts",
-      description: "ErgoScript enables complex, secure financial apps impossible on other platforms.",
+      description: "ErgoScript enables secure financial apps that are hard to implement safely in account-based models.",
       color: "text-status-success-500"
     },
     {
@@ -131,7 +111,7 @@ export default function IntroductionPage() {
       icon: Lock,
       title: "Sigma Protocols",
       subtitle: "Advanced cryptography",
-      description: "Enables powerful privacy features like transaction mixing and ring signatures.",
+      description: "Enables privacy and advanced crypto primitives (threshold/multisig, ring-like constructions).",
       badge: "Σ-protocols"
     }
   ]
@@ -156,18 +136,84 @@ export default function IntroductionPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Schema.org JSON-LD */}
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://ergoblockchain.org/" },
+            { "@type": "ListItem", position: 2, name: "Introduction", item: "https://ergoblockchain.org/start/introduction" },
+          ],
+        }}
+      />
+      <SchemaOrg
+        type="TechArticle"
+        data={{
+          "@type": "TechArticle",
+          headline: "Ergo — PoW smart‑contract platform (eUTXO & Sigma Protocols)",
+          description:
+            "Introduction to Ergo: ASIC-resistant PoW, eUTXO smart contracts, Sigma (ZK) protocols, storage rent, NIPoPoWs.",
+          image: "https://ergoblockchain.org/og/intro.png",
+          datePublished: isoDate,
+          dateModified: isoDate,
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          publisher: {
+            "@type": "Organization",
+            name: "ergoblockchain.org",
+            url: "https://ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+          },
+          mainEntityOfPage: "https://ergoblockchain.org/start/introduction",
+        }}
+      />
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          "@type": "FAQPage",
+          mainEntity: [
+            {
+              "@type": "Question",
+              name: "What is the eUTXO model?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "eUTXO is an extension of Bitcoin's UTXO enabling expressive, parallelizable smart contracts with predictable execution costs.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "What are Sigma protocols on Ergo?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "Sigma protocols are native cryptographic proofs enabling threshold/multisig and privacy without trusted setup.",
+              },
+            },
+            {
+              "@type": "Question",
+              name: "Why Proof‑of‑Work for Ergo?",
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: "PoW (Autolykos) keeps mining accessible (ASIC‑resistant), supports decentralization, and has a robust security track record.",
+              },
+            },
+          ],
+        }}
+      />
       {/* Background Effects */}
       {!isMobile && <FloatingParticles count={prefersReducedMotion ? 10 : 30} />}
       {!isMobile && !prefersReducedMotion && <HexagonalGrid className="opacity-[0.02]" />}
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         
+        {/* Removed jump links per request */}
+
         {/* What is Ergo Section */}
         <motion.section 
           initial={{ opacity: 0 }}
           animate={{ opacity: isInitialized ? 1 : 0 }}
           transition={{ duration: 0.6 }}
           className="py-16 pt-32"
+          id="what-is-ergo"
         >
           {/* Mission Statement - Hero Slogan */}
           <motion.div
@@ -176,17 +222,11 @@ export default function IntroductionPage() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4">
-              <span className="text-white">
-                Decentralize Everything.
-              </span>
-              <br />
-              <span className="text-brand-primary-400">
-                Build What Matters.
-              </span>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">
+              Ergo — PoW smart‑contract platform with eUTXO & Sigma Protocols
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-              A next-generation Proof-of-Work smart contract platform empowering anyone to launch new forms of digital value without permission.
+              A next‑generation, ASIC‑resistant Proof‑of‑Work platform with predictable, auditable smart contracts and native privacy.
             </p>
           </motion.div>
 
@@ -197,7 +237,7 @@ export default function IntroductionPage() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 flex items-center gap-3">
-                <Brain className="w-8 h-8 text-brand-primary-400" />
+                <Brain className="w-8 h-8 text-brand-primary-400" aria-hidden="true" />
                 <span className="text-white">What is <span className="text-brand-primary-400">Ergo</span>?</span>
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
@@ -205,9 +245,22 @@ export default function IntroductionPage() {
                 It builds on a decade of blockchain theory and development, combining established principles with new research.
               </p>
               <p className="text-gray-300 leading-relaxed mb-8">
-                Its mission is to provide the tools for truly decentralized and accessible financial systems, 
-                empowering ordinary people with economic freedom without intermediaries.
+                Its mission is to provide tools for decentralized and accessible financial systems — empowering people with economic freedom without intermediaries. Learn about the
+                <Link href="/technology/eutxo-model" className="underline hover:opacity-80 ml-1">eUTXO smart‑contract model</Link>,
+                <Link href="/technology/secure-pow" className="underline hover:opacity-80 ml-1">Autolykos (ASIC‑resistant PoW)</Link>,
+                <Link href="/technology/storage-rent" className="underline hover:opacity-80 ml-1">Storage Rent</Link>, and
+                <Link href="/technology/privacy-features" className="underline hover:opacity-80 ml-1">Sigma‑powered privacy</Link>.
               </p>
+              {/* Why Ergo (keywords) */}
+              <div className="mb-6">
+                <h3 className="text-white font-semibold mb-2">Why Ergo?</h3>
+                <ul className="list-disc list-inside text-gray-300 text-sm space-y-1">
+                  <li>eUTXO smart contracts with predictable execution</li>
+                  <li>Sigma (ZK) protocols for threshold/multisig and privacy</li>
+                  <li>Autolykos — ASIC‑resistant, GPU‑friendly PoW</li>
+                  <li>Storage Rent and NIPoPoWs (succinct proofs)</li>
+                </ul>
+              </div>
               
               {/* Alert with key info */}
               <Alert className="border-brand-primary-500/30 bg-brand-primary-500/10 rounded-xl">
@@ -220,6 +273,10 @@ export default function IntroductionPage() {
                   </AlertDescription>
                 </div>
               </Alert>
+              <div className="mt-4 text-xs text-neutral-500">
+                References: <a href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Autolykos v2</a> ·
+                <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80 ml-2">ergo (GitHub)</a>
+              </div>
             </motion.div>
 
             <motion.div
@@ -233,33 +290,35 @@ export default function IntroductionPage() {
                 <CryptographicVisualization className="absolute -top-8 -right-8 w-32 h-32 opacity-20" />
                 
                 {/* Feature highlights */}
-                {[
-                  { icon: Fingerprint, title: "Privacy First", desc: "Built-in privacy features at protocol level" },
-                  { icon: Database, title: "Storage Rent", desc: "Sustainable economic model for long-term viability" },
-                  { icon: Network, title: "Light Clients", desc: "Full node security on mobile devices" },
-                  { icon: Award, title: "Fair Launch", desc: "No premine, no ICO, community-driven" }
-                ].map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                    whileHover={{ x: prefersReducedMotion ? 0 : 5 }}
-                    className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 backdrop-blur-sm hover:border-brand-primary-500/30 transition-all duration-300 cursor-pointer group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <feature.icon className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform" />
+                <ul className="space-y-4">
+                  {[
+                    { icon: Fingerprint, title: "Privacy First", desc: "Built-in privacy at the protocol level" },
+                    { icon: Database, title: "Storage Rent", desc: "Sustainable economic model for long-term viability" },
+                    { icon: Network, title: "Light Clients", desc: "Succinct proofs (NIPoPoWs), near full-node guarantees" },
+                    { icon: Award, title: "Fair Launch", desc: "No premine, no ICO, community-driven" }
+                  ].map((feature, index) => (
+                    <motion.li
+                      key={feature.title}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
+                      transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
+                      whileHover={{ x: prefersReducedMotion ? 0 : 5 }}
+                      className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 backdrop-blur-sm hover:border-brand-primary-500/30 transition-all duration-300"
+                    >
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <feature.icon className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white">
+                            {feature.title}
+                          </h4>
+                          <p className="text-gray-400 text-sm">{feature.desc}</p>
+                        </div>
                       </div>
-                      <div>
-                        <h4 className="font-semibold text-white group-hover:text-brand-primary-400 transition-colors">
-                          {feature.title}
-                        </h4>
-                        <p className="text-gray-400 text-sm">{feature.desc}</p>
-                      </div>
-                    </div>
-                  </motion.div>
-                ))}
+                    </motion.li>
+                  ))}
+                </ul>
               </div>
             </motion.div>
           </div>
@@ -271,6 +330,7 @@ export default function IntroductionPage() {
           animate={{ opacity: isInitialized ? 1 : 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
           className="py-24"
+          id="core-principles"
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -290,6 +350,7 @@ export default function IntroductionPage() {
           animate={{ opacity: isInitialized ? 1 : 0 }}
           transition={{ duration: 0.6, delay: 0.3 }}
           className="py-16"
+          id="key-technologies"
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -311,11 +372,11 @@ export default function IntroductionPage() {
                 whileTap={{ scale: 0.98 }}
                 className="h-full"
               >
-                <Link href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`}>
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-brand-primary-500/50 hover:bg-neutral-900/80 transition-all duration-300 cursor-pointer group">
+                <Link href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-400 rounded-xl">
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-brand-primary-500/50 hover:bg-neutral-900/80 transition-all duration-300 cursor-pointer">
                     {/* Icon */}
                     <div className="w-12 h-12 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-brand-primary-500/20 transition-all duration-300">
-                      <tech.icon className="w-6 h-6 text-brand-primary-400" />
+                      <tech.icon className="w-6 h-6 text-brand-primary-400" aria-hidden="true" />
                     </div>
                     
                     {/* Content */}
@@ -369,6 +430,7 @@ export default function IntroductionPage() {
           animate={{ opacity: isInitialized ? 1 : 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className="py-24"
+          id="what-to-build"
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
@@ -412,11 +474,11 @@ export default function IntroductionPage() {
                 whileTap="tap"
                 variants={scaleOnHover}
               >
-                <Link href={useCase.href}>
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+                <Link href={useCase.href} prefetch={false} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-400 rounded-xl">
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-brand-primary-500/30 transition-all duration-300 cursor-pointer">
                     <div className="flex items-start justify-between mb-4">
                       <div className="w-12 h-12 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                        <useCase.icon className="w-6 h-6 text-brand-primary-400" />
+                        <useCase.icon className="w-6 h-6 text-brand-primary-400" aria-hidden="true" />
                       </div>
                       <Badge className="bg-brand-primary-500/10 text-brand-primary-400 border border-brand-primary-500/30">
                         {useCase.badge}
@@ -439,6 +501,30 @@ export default function IntroductionPage() {
           </div>
         </motion.section>
 
+        {/* Visible mini-FAQ matching JSON-LD */}
+        <section className="py-16">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">FAQ</h2>
+            <div className="space-y-4">
+              {[{
+                q: "What is the eUTXO model?",
+                a: "eUTXO is an extension of Bitcoin's UTXO enabling expressive, parallelizable smart contracts with predictable execution costs.",
+              }, {
+                q: "What are Sigma protocols on Ergo?",
+                a: "Sigma protocols are native cryptographic proofs enabling threshold/multisig and privacy without trusted setup.",
+              }, {
+                q: "Why Proof‑of‑Work for Ergo?",
+                a: "PoW (Autolykos) keeps mining accessible (ASIC‑resistant), supports decentralization, and has a robust security track record.",
+              }].map(item => (
+                <div key={item.q} className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4">
+                  <h3 className="text-lg font-semibold text-white mb-1">{item.q}</h3>
+                  <p className="text-neutral-300 text-sm">{item.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section with Glitch Effects */}
         <motion.section
           initial={{ opacity: 0, y: 20 }}
@@ -446,7 +532,7 @@ export default function IntroductionPage() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="py-16 text-center relative"
         >
-          <Card className="bg-gradient-to-br from-brand-primary-500/10 to-brand-secondary-500/10 border border-brand-primary-500/30 rounded-2xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden">
+          <Card className="bg-neutral-900/50 border border-neutral-700 rounded-2xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden hover:border-brand-primary-500/30">
             {/* Glitch Hex decoration */}
             <div className="absolute top-8 right-8 w-16 h-16 opacity-20">
               <GlitchHex size={64} />
@@ -467,7 +553,7 @@ export default function IntroductionPage() {
                   className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl shadow-lg"
                 >
                   <Link href="/wallet">
-                    <Wallet className="w-5 h-5 mr-2" />
+                    <Wallet className="w-5 h-5 mr-2" aria-hidden="true" />
                     Get an Ergo Wallet
                   </Link>
                 </Button>
@@ -479,8 +565,8 @@ export default function IntroductionPage() {
                   variant="outline" 
                   className="border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
-                  <Link href="/ecosystem">
-                    <Compass className="w-5 h-5 mr-2" />
+                  <Link href="/ecosystem" prefetch={false}>
+                    <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
                     Explore Ecosystem
                   </Link>
                 </Button>
@@ -492,13 +578,14 @@ export default function IntroductionPage() {
                   variant="outline" 
                   className="border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
-                  <Link href="/Docs">
-                    <BookOpen className="w-5 h-5 mr-2" />
+                  <Link href="/Docs" prefetch={false}>
+                    <BookOpen className="w-5 h-5 mr-2" aria-hidden="true" />
                     Documentation
                   </Link>
                 </Button>
               </motion.div>
             </div>
+            <p className="text-xs text-neutral-500 mt-6">Last updated: 2025-08-10</p>
           </Card>
         </motion.section>
 

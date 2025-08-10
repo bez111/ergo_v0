@@ -39,7 +39,7 @@ export default function EUTXOModelPage() {
     },
     {
       aspect: "Security",
-      utxo: "Reentrancy-класс из аккаунт-модели отсутствует; стоимость исполнения скрипта ограничена (сборы зависят от мемпула)",
+      utxo: "The reentrancy vulnerability class common to account-based systems is absent in eUTXO; script execution cost is bounded (fees depend on mempool conditions)",
       account: "Vulnerable to re-entrancy, unpredictable gas",
       advantage: "eUTXO",
     },
@@ -224,11 +224,7 @@ export default function EUTXOModelPage() {
                 </div>
               </div>
               <div className="relative">
-                <motion.div
-                  className="relative z-10 motion-reduce:transform-none motion-reduce:transition-none"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <div className="relative z-10">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30 transition-colors">
                     <CardContent className="p-0">
                       <h3 className="text-2xl font-bold mb-6 text-center text-white">
@@ -236,10 +232,9 @@ export default function EUTXOModelPage() {
                       </h3>
                       <div className="space-y-4">
                         {boxComponents.map((component, index) => (
-                          <motion.div
+                          <div
                             key={component.name}
-                            className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:translate-x-2 transition-transform"
-                            transition={{ type: "spring", stiffness: 400 }}
+                            className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700"
                           >
                             <div className="flex items-center space-x-3">
                               <span aria-hidden="true" className="text-orange-400">{component.icon}</span>
@@ -248,12 +243,12 @@ export default function EUTXOModelPage() {
                                 <p className="text-sm text-neutral-400">{component.description}</p>
                               </div>
                             </div>
-                          </motion.div>
+                          </div>
                         ))}
                       </div>
                     </CardContent>
                   </Card>
-                </motion.div>
+                </div>
               </div>
             </div>
           </div>
@@ -285,13 +280,13 @@ export default function EUTXOModelPage() {
         {/* Model Comparison */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+            <h2 id="ledger-models" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               Blockchain Ledger Models: UTXO vs. Account
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               {/* UTXO Model */}
-              <motion.div whileHover={{ scale: 1.03 }} transition={{ type: "spring", stiffness: 300 }} className="motion-reduce:transform-none motion-reduce:transition-none">
+              <div className="motion-reduce:transform-none motion-reduce:transition-none">
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold mb-4 text-orange-400">UTXO Model (Bitcoin-style)</h3>
@@ -317,10 +312,10 @@ export default function EUTXOModelPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
 
               {/* Account Model */}
-              <motion.div whileHover={{ scale: 1.03 }} transition={{ type: "spring", stiffness: 300 }} className="motion-reduce:transform-none motion-reduce:transition-none">
+              <div className="motion-reduce:transform-none motion-reduce:transition-none">
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30">
                   <CardContent className="p-8">
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Account Model (Ethereum-style)</h3>
@@ -350,7 +345,7 @@ export default function EUTXOModelPage() {
                     </div>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </div>
             </div>
           </div>
         </motion.section>
@@ -358,7 +353,7 @@ export default function EUTXOModelPage() {
         {/* Transaction Flow */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+            <h2 id="transaction-flow" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               How eUTXO Transactions Work
             </h2>
 
@@ -394,7 +389,7 @@ export default function EUTXOModelPage() {
         {/* Key Differences Table */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+            <h2 id="key-differences" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               eUTXO vs. Account Model — Key Differences
             </h2>
 
@@ -444,7 +439,7 @@ export default function EUTXOModelPage() {
         {/* Use Cases */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+            <h2 id="use-cases" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               eUTXO in Action — When It Shines
             </h2>
 
@@ -495,7 +490,7 @@ export default function EUTXOModelPage() {
         {/* FAQ Section */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+            <h2 id="faq" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               Frequently Asked Questions
             </h2>
 
@@ -514,7 +509,7 @@ export default function EUTXOModelPage() {
                   >
                     <CollapsibleTrigger asChild>
                       <button className="w-full">
-                        <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                        <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
                           <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
                           <ChevronDown
                             className={`w-5 h-5 text-neutral-400 transition-transform ${
@@ -542,7 +537,7 @@ export default function EUTXOModelPage() {
           <div className="max-w-4xl mx-auto text-center">
             <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
               <CardContent className="p-12">
-                <h2 className="text-4xl font-bold mb-6 text-white">
+                <h2 id="conclusion" className="text-4xl font-bold mb-6 text-white">
                   Conclusion: The Future is eUTXO
                 </h2>
                 <p className="text-xl text-neutral-300 mb-8 leading-relaxed">

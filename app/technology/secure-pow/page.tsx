@@ -8,7 +8,7 @@ import { Progress } from "@/components/ui/progress"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
-import { Shield, Cpu, Zap, Users, ExternalLink, CheckCircle, TrendingUp, ChevronDown } from "lucide-react"
+import { Shield, Cpu, Zap, Users, ExternalLink, CheckCircle, TrendingUp, ChevronDown, Link as LinkIcon, BookOpen, Copy } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
@@ -18,19 +18,21 @@ const features = [
   {
     icon: Shield,
     title: "ASIC-Resistant",
-    description: "Anyone with a GPU can mine; no hardware monopoly or centralization.",
+    description:
+      "ASIC-resistant (not ASIC-proof): specialized-hardware edge is limited; commodity GPUs remain competitive.",
     color: "from-orange-500/20 to-orange-500/5",
   },
   {
     icon: Zap,
     title: "Energy Efficient",
-    description: "Lower power consumption compared to traditional PoW algorithms.",
+    description:
+      "Memory-hardness dampens the hash-per-watt arms race and extends GPU lifecycles, reducing e-waste.",
     color: "from-cyan-500/20 to-cyan-500/5",
   },
   {
     icon: Users,
     title: "Fair Launch",
-    description: "No premine, no ICO, no early insiders. Pure decentralization.",
+    description: "No premine, no ICO, no VC allocation.",
     color: "from-purple-500/20 to-purple-500/5",
   },
 ]
@@ -43,33 +45,58 @@ const networkStats = [
 ]
 
 const benefits = [
-  "Decentralization is preserved",
-  "Attacks are costly and impractical",
-  "Security is simple and battle-tested",
-  "Open to all participants",
-  "No specialized hardware required",
-  "Sustainable long-term economics",
+  "Decentralization by design: a wide GPU set stays competitive.",
+  "Higher capture cost: renting/buying 51% hash is harder.",
+  "Battle-tested PoW with an ASIC-resistant twist.",
+  "Open to all participants.",
+  "Competitive on commodity GPUs.",
+  "Sustainable long-term economics.",
 ]
 
 export default function SecurePowPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  const [copied, setCopied] = useState(false)
+  const exampleCmd = `./miner --algo autolykos2 --pool <pool_url> --wallet <your_ergo_address> --worker <rig_name>`
+
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1, transition: { staggerChildren: 0.08, when: "beforeChildren" } },
+  }
+  const itemVariants = {
+    hidden: { opacity: 0, y: 8 },
+    show: { opacity: 1, y: 0, transition: { duration: 0.25 } },
+  }
 
   const faqs = [
     {
-      question: "Isn't all Proof-of-Work the same? What's so \"secure\" about Ergo's PoW?",
-      answer: "Not all PoW is created equal. Ergo's algorithm, Autolykos v2, is specifically designed to resist centralization. While other networks can be dominated by specialized hardware manufacturers (ASICs), Ergo remains accessible for mining on standard graphics cards (GPUs). This means more people can participate in securing the network, keeping it decentralized.",
+      question: "What is Autolykos v2?",
+      answer:
+        "Autolykos v2 is Ergo's memory-hard, GPU-friendly Proof-of-Work algorithm designed to keep mining decentralized and accessible.",
     },
     {
-      question: "Does this mean it's completely \"ASIC-resistant\"?",
-      answer: "It means that creating an ASIC for Ergo is economically unviable. The algorithm is \"memory-hard,\" making performance dependent on memory speed, not just raw processing power. This gives standard GPUs a long-term advantage and prevents the monopolization of mining.",
+      question: "Is Ergo's PoW completely ASIC-proof?",
+      answer:
+        "No. It's ASIC-resistant (not ASIC-proof). By making memory bandwidth/latency the bottleneck, specialized-hardware advantages are limited and GPUs remain competitive.",
     },
     {
-      question: "Is this approach \"greener\"?",
-      answer: "The biggest environmental impact of PoW comes from the constant \"arms race,\" where new, more powerful hardware quickly becomes obsolete and is discarded. By keeping GPUs competitive, Ergo reduces this race and the constant hardware turnover. This promotes long-term energy efficiency and reduces electronic waste.",
+      question: "Which miner software works with Autolykos v2?",
+      answer:
+        "See the Mining Guide for current tooling and setup steps. It covers supported miners, configuration basics, and troubleshooting.",
     },
     {
-      question: "How protected is the network from attacks?",
-      answer: "By maintaining mining decentralization, Secure PoW significantly increases the cost and difficulty of a \"51% attack.\" An attacker can't simply turn on a warehouse of ASICs; they would have to acquire a massive number of GPUs, which is much harder and more expensive. More miners around the world means more security for everyone.",
+      question: "Pool or solo mining?",
+      answer:
+        "Both are possible. Pools smooth rewards; solo depends on luck and has higher variance. Choose based on your risk tolerance and expected uptime.",
+    },
+    {
+      question: "Typical hashrate/watt ranges?",
+      answer:
+        "They vary by GPU model, drivers, and settings. Start with stock settings, ensure stability and thermals, and consult community resources for optimization.",
+    },
+    {
+      question: "Is this approach greener?",
+      answer:
+        "Memory-hardness dampens the hardware arms race and extends useful GPU lifecycles, which helps reduce e-waste and unnecessary upgrades.",
     },
   ]
 
@@ -79,36 +106,96 @@ export default function SecurePowPage() {
         type="FAQPage"
         data={{
           "@type": "FAQPage",
-          mainEntity: [
+          mainEntity: faqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: { "@type": "Answer", text: f.answer },
+          })),
+        }}
+      />
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Technology", item: "https://ergoblockchain.org/technology" },
+            { "@type": "ListItem", position: 2, name: "Secure PoW", item: "https://ergoblockchain.org/technology/secure-pow" },
+          ],
+        }}
+      />
+      <SchemaOrg
+        type="TechArticle"
+        data={{
+          "@type": "TechArticle",
+          headline: "Autolykos v2 — Secure, Memory-Hard Proof-of-Work",
+          description:
+            "Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible.",
+          image: "https://ergoblockchain.org/og/secure-pow.png",
+          datePublished: "2025-08-10",
+          dateModified: "2025-08-10",
+          author: { "@type": "Organization", name: "ergoblockchain.org", url: "https://ergoblockchain.org" },
+          publisher: {
+            "@type": "Organization",
+            name: "ergoblockchain.org",
+            url: "https://ergoblockchain.org",
+            logo: { "@type": "ImageObject", url: "https://ergoblockchain.org/favicon.ico" },
+          },
+          mainEntityOfPage: "https://ergoblockchain.org/technology/secure-pow",
+        }}
+      />
+      <SchemaOrg
+        type="HowTo"
+        data={{
+          "@type": "HowTo",
+          name: "Start Mining Ergo",
+          description: "Quick steps to begin mining Ergo with a GPU.",
+          totalTime: "PT30M",
+          estimatedCost: { "@type": "MonetaryAmount", currency: "USD", value: "0" },
+          image: "https://ergoblockchain.org/og/secure-pow.png",
+          tool: [
+            { "@type": "HowToTool", name: "GPU-enabled computer" },
+            { "@type": "HowToTool", name: "Autolykos v2 miner software" },
+          ],
+          supply: [
+            { "@type": "HowToSupply", name: "Ergo wallet address" },
+            { "@type": "HowToSupply", name: "Pool URL (optional)" },
+          ],
+          step: [
             {
-              "@type": "Question",
-              name: "What is Autolykos v2?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Autolykos v2 is Ergo's ASIC-resistant Proof-of-Work consensus algorithm. It uses memory-hard functions to ensure that mining remains accessible to standard GPUs, promoting decentralization and preventing the concentration of mining power."
-              }
+              "@type": "HowToStep",
+              position: 1,
+              name: "Install a wallet",
+              text: "Set up a compatible Ergo wallet and secure your seed phrase.",
             },
             {
-              "@type": "Question",
-              name: "How does Autolykos v2 prevent ASIC mining?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Autolykos v2 uses memory-hard functions that require significant amounts of RAM to compute. This makes ASIC development economically unfeasible while keeping mining accessible to standard GPUs, ensuring a more decentralized mining ecosystem."
-              }
+              "@type": "HowToStep",
+              position: 2,
+              name: "Pick miner software",
+              text: "Choose supported miner software for Autolykos v2 and download from its official source.",
             },
             {
-              "@type": "Question",
-              name: "What are the benefits of Autolykos v2?",
-              acceptedAnswer: {
-                "@type": "Answer",
-                text: "Autolykos v2 promotes decentralization by keeping mining accessible to individual miners, reduces energy consumption compared to traditional PoW algorithms, and provides long-term network security through its memory-hard design."
-              }
-            }
-          ]
+              "@type": "HowToStep",
+              position: 3,
+              name: "Choose a pool or go solo",
+              text: "Pools smooth rewards; solo mining has higher variance. Configure according to your preference.",
+            },
+            {
+              "@type": "HowToStep",
+              position: 4,
+              name: "Launch with your address",
+              text: "Run the miner with your wallet address and pool URL if applicable.",
+            },
+            {
+              "@type": "HowToStep",
+              position: 5,
+              name: "Test stability & thermals",
+              text: "Start at stock settings, monitor temperatures, and avoid aggressive memory overclocks on day one.",
+            },
+          ],
         }}
       />
       
-      <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
+      <div className="min-h-screen bg-black text-white">
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
@@ -126,92 +213,82 @@ export default function SecurePowPage() {
             <div className="max-w-7xl mx-auto mb-16">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h2 className="text-4xl md:text-5xl font-bold mb-6">
-                    <span className="bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent pr-4">
-                      Autolykos v2
-                    </span>
-                  </h2>
-                  <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl">Secure Proof-of-Work</p>
-                  <p className="text-lg text-gray-400 mb-8 max-w-2xl leading-relaxed">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">Autolykos v2 — Secure, Memory-Hard Proof-of-Work</h1>
+                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                     Ergo is committed to fair, transparent, and sustainable decentralization. That's why we use
                     Proof-of-Work (PoW), but with a modern twist: Autolykos v2.
                   </p>
+                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                    Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible.
+                  </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                      Start Mining
+                    <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Link href="/use/mining">Start Mining</Link>
                     </Button>
-                    <Button
-                      variant="outline"
-                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                    >
-                      Read Whitepaper
+                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
+                      <Link href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer">Read Whitepaper</Link>
                     </Button>
                   </div>
+                  {/* Removed inline links per request */}
                 </div>
                 <div className="relative">
-                  <motion.div
-                    className="relative z-10"
-                    whileHover={{ scale: 1.05 }}
-                    transition={{ type: "spring", stiffness: 300 }}
-                  >
-                    <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl p-8">
+                  <div className="relative z-10">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30 transition-colors">
                       <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                        <h3 className="text-2xl font-bold mb-6 text-center text-white">
                           Live Network Statistics
                         </h3>
                         <div className="grid grid-cols-2 gap-4">
                           {networkStats.map((stat, index) => (
-                            <motion.div
+                            <div
                               key={stat.label}
-                              initial={{ opacity: 0, scale: 0.9 }}
-                              animate={{ opacity: 1, scale: 1 }}
-                              transition={{ delay: 0.3 + index * 0.1 }}
-                              className="text-center p-4 bg-black/30 rounded-lg"
+                              className="text-center p-4 bg-neutral-900/60 rounded-lg"
                             >
-                              <div className="text-xl font-bold text-primary mb-1">{stat.value}</div>
-                              <div className="text-xs text-gray-400 mb-2">{stat.label}</div>
+                              <div className="text-xl font-bold text-brand-primary-400 mb-1">{stat.value}</div>
+                              <div className="text-xs text-neutral-400 mb-2">{stat.label}</div>
                               <Badge variant={stat.change.includes("+") ? "default" : "secondary"} className="text-xs">
                                 {stat.change}
                               </Badge>
-                            </motion.div>
+                            </div>
                           ))}
                         </div>
+                        <p className="text-xs text-neutral-500 mt-4 text-center">
+                          Example metrics. Updated: 2025-08-10 · Source: explorer · 24h avg
+                        </p>
                       </CardContent>
                     </Card>
-                  </motion.div>
+                  </div>
                 </div>
               </div>
             </div>
           </FadeIn>
 
+          {/* Removed on-page anchor nav per request */}
+
           {/* Key Features */}
           <FadeIn delay={0.4}>
             <div className="max-w-6xl mx-auto mb-16">
-              <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-cyan-400 to-orange-400 bg-clip-text text-transparent">
+              <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
                 Why Proof-of-Work?
               </h2>
               <div className="grid md:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
-                  <motion.div
+                  <div
                     key={feature.title}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 + index * 0.1 }}
-                    whileHover={{ scale: 1.05, rotateY: 5 }}
                     className="group"
                   >
                     <Card
-                      className={`bg-gradient-to-br ${feature.color} border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 h-full`}
+                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30 transition-colors h-full`}
                     >
                       <CardContent className="p-8 text-center">
-                        <div className="w-16 h-16 bg-primary/20 rounded-lg flex items-center justify-center mx-auto mb-6">
-                          <feature.icon className="w-8 h-8 text-primary" />
+                        <div className="w-16 h-16 bg-brand-primary-500/20 rounded-lg flex items-center justify-center mx-auto mb-6">
+                          <feature.icon className="w-8 h-8 text-brand-primary-400" aria-hidden="true" />
                         </div>
                         <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
-                        <p className="text-gray-400 leading-relaxed">{feature.description}</p>
+                        <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
                       </CardContent>
                     </Card>
-                  </motion.div>
+                  </div>
                 ))}
               </div>
             </div>
@@ -219,56 +296,73 @@ export default function SecurePowPage() {
 
           {/* What is Autolykos v2 */}
           <FadeIn delay={0.6}>
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
-              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
+            <div id="what-is-autolykos" className="grid md:grid-cols-2 gap-8 mb-16">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                 <CardHeader>
-                  <CardTitle className="text-xl bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                  <CardTitle className="text-xl text-white">
                     What is Autolykos v2?
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-300">
+                  <p className="text-neutral-300">
                     Autolykos is Ergo's unique, ASIC-resistant mining algorithm designed to maintain network
                     decentralization and security.
                   </p>
+                  <p className="text-neutral-300 text-sm">
+                    Learn more about the <Link href="/technology/eutxo-model" className="underline hover:opacity-80">eUTXO model</Link> and
+                    how <Link href="/technology/storage-rent" className="underline hover:opacity-80 ml-1">Storage Rent</Link> supports sustainable network economics.
+                  </p>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3">
-                      <Cpu className="w-5 h-5 text-primary" />
+                      <Cpu className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
                       <span className="text-sm">Memory-hard algorithm</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Shield className="w-5 h-5 text-primary" />
+                      <Shield className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
                       <span className="text-sm">ASIC-resistant design</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Zap className="w-5 h-5 text-primary" />
+                      <Zap className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
                       <span className="text-sm">GPU-friendly mining</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Cpu className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
+                      <span className="text-sm">Performance bound by memory bandwidth/latency</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Shield className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
+                      <span className="text-sm">Large pseudo-random data structures blunt ASIC gains</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Users className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
+                      <span className="text-sm">No pool dependency (encourages solo/small pools)</span>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
+              <Card id="security-benefits" className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                 <CardHeader>
-                  <CardTitle className="text-xl bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                  <CardTitle className="text-xl text-white">
                     Security Benefits
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-3">
                     {benefits.map((benefit, index) => (
-                      <motion.div
+                      <div
                         key={benefit}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.7 + index * 0.1 }}
                         className="flex items-center gap-3"
-                        whileHover={{ x: 10 }}
                       >
                         <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm text-gray-300">{benefit}</span>
-                      </motion.div>
+                        <span className="text-sm text-neutral-300">{benefit}</span>
+                      </div>
                     ))}
+                  </div>
+                  <div className="mt-6 border-t border-neutral-800 pt-4 space-y-2">
+                    <h4 className="text-sm font-semibold text-white">Threat model (mini)</h4>
+                    <p className="text-sm text-neutral-300">Memory bandwidth is the bottleneck, limiting single-vendor ASIC dominance.</p>
+                    <p className="text-sm text-neutral-300">Broader GPU participation raises the bar for renting/buying the majority of hashpower.</p>
                   </div>
                 </CardContent>
               </Card>
@@ -277,13 +371,13 @@ export default function SecurePowPage() {
 
           {/* Mining Progress */}
           <FadeIn delay={0.8}>
-            <Card className="mb-16 bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl">
+            <Card className="mb-16 bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
               <CardHeader>
-                <CardTitle className="text-xl bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5" />
+                <CardTitle className="text-xl text-white flex items-center gap-2">
+                  <TrendingUp className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
                   Mining Decentralization
                 </CardTitle>
-                <CardDescription>Distribution of mining power across the network</CardDescription>
+                <CardDescription>Distribution of mining power across the network (weekly refresh)</CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
                 <div className="space-y-4">
@@ -307,17 +401,102 @@ export default function SecurePowPage() {
                   </div>
                   <Progress value={30} className="h-2" />
                 </div>
-                <p className="text-sm text-gray-400 mt-4">
-                  Healthy distribution ensures no single entity can control the network
+                <p className="text-sm text-neutral-400 mt-4">
+                  Healthy distribution ensures no single entity can control the network. Top-5 &lt; 50% — healthy concentration.
                 </p>
               </CardContent>
             </Card>
           </FadeIn>
 
+          {/* Quick Start */}
+          <FadeIn delay={0.85}>
+            <div id="quick-start" className="max-w-5xl mx-auto mb-16">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                <CardHeader>
+                  <CardTitle className="text-xl text-white">Quick Start: Mining Ergo</CardTitle>
+                  <CardDescription>Five steps to begin — see the full guide for details.</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <motion.ol
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="show"
+                    viewport={{ once: true, margin: "-20%" }}
+                    className="list-decimal list-inside space-y-2 text-sm text-neutral-300 motion-reduce:transform-none motion-reduce:transition-none"
+                  >
+                    {[
+                      "Install and secure an Ergo wallet.",
+                      "Pick supported miner software for Autolykos v2.",
+                      "Choose a pool (or solo) and note the connection URL.",
+                      "Launch with your address and pool URL if applicable.",
+                      "Test stability and thermals; avoid aggressive memory OC on day one.",
+                    ].map((step) => (
+                      <motion.li
+                        key={step}
+                        variants={itemVariants}
+                        className="rounded px-1 -mx-1 hover:bg-neutral-800/30 transition-colors"
+                      >
+                        {step}
+                      </motion.li>
+                    ))}
+                  </motion.ol>
+                  <div className="mt-4 text-sm text-neutral-300">
+                    <p className="font-semibold mb-2">Common pitfalls</p>
+                    <motion.ul
+                      variants={containerVariants}
+                      initial="hidden"
+                      whileInView="show"
+                      viewport={{ once: true, margin: "-20%" }}
+                      className="list-disc list-inside space-y-1 motion-reduce:transform-none motion-reduce:transition-none"
+                    >
+                      {["Don't start with aggressive memory overclocks.", "Monitor VRAM temperatures and power limits.", "Avoid running laptops 24/7 for mining."].map(
+                        (pitfall) => (
+                          <motion.li
+                            key={pitfall}
+                            variants={itemVariants}
+                            className="rounded px-1 -mx-1 hover:bg-neutral-800/30 transition-colors"
+                          >
+                            {pitfall}
+                          </motion.li>
+                        )
+                      )}
+                    </motion.ul>
+                  </div>
+                  <div className="mt-4">
+                    <div className="flex items-center justify-between mb-2">
+                      <span className="text-xs text-neutral-400">Sample command</span>
+                      <button
+                        onClick={async () => {
+                          try {
+                            await navigator.clipboard.writeText(exampleCmd)
+                            setCopied(true)
+                            setTimeout(() => setCopied(false), 1500)
+                          } catch {}
+                        }}
+                        className="inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-brand-primary-400 transition-colors p-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-400"
+                        aria-label="Copy sample command"
+                        title="Copy"
+                      >
+                        <Copy className="w-3.5 h-3.5" aria-hidden="true" />
+                        {copied ? "Copied" : "Copy"}
+                      </button>
+                    </div>
+                    <pre className="bg-neutral-950/80 p-3 rounded-lg text-sm font-mono text-neutral-200 overflow-x-auto"><code>{exampleCmd}</code></pre>
+                  </div>
+                  <div className="mt-4">
+                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 rounded-xl">
+                      <Link href="/use/mining">Open Mining Guide</Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </FadeIn>
+
           {/* FAQ Section */}
           <FadeIn delay={0.9}>
-            <div className="max-w-4xl mx-auto mb-16">
-              <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+            <div id="faq" className="max-w-4xl mx-auto mb-16">
+              <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
                 Frequently Asked Questions
               </h2>
 
@@ -325,25 +504,26 @@ export default function SecurePowPage() {
                 {faqs.map((faq, index) => (
                   <Card
                     key={index}
-                    className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl"
+                    className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
                   >
                     <Collapsible
                       open={openFAQ === index}
-                      onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                      onOpenChange={(open) => setOpenFAQ(open ? index : null)}
                     >
-                      <CollapsibleTrigger className="w-full">
-                        <CardContent className="p-6 flex items-center justify-between hover:bg-gray-800/30 transition-colors">
+                      <CollapsibleTrigger asChild>
+                        <button className="w-full">
+                        <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
                           <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
                           <ChevronDown
-                            className={`w-5 h-5 text-gray-400 transition-transform ${
-                              openFAQ === index ? "rotate-180" : ""
-                            }`}
+                            className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`}
+                            aria-hidden="true"
                           />
                         </CardContent>
+                        </button>
                       </CollapsibleTrigger>
                       <CollapsibleContent>
                         <CardContent className="px-6 pb-6 pt-0">
-                          <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
+                          <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
                         </CardContent>
                       </CollapsibleContent>
                     </Collapsible>
@@ -355,30 +535,29 @@ export default function SecurePowPage() {
 
           {/* CTA */}
           <FadeIn delay={1.0}>
-            <Card className="bg-gradient-to-r from-orange-500/20 to-cyan-500/20 border-orange-500/30 backdrop-blur-xl">
+            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
               <CardContent className="text-center py-12">
-                <h3 className="text-4xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+                <h3 className="text-4xl font-bold mb-6 text-white">
                   Start Mining Ergo
                 </h3>
-                <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                  Join thousands of miners securing the Ergo network with your GPU.
+                <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
+                  Join thousands of GPU miners securing Ergo — start in minutes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link href="/use/mining">
-                    <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                      Mining Guide
-                    </Button>
-                  </Link>
-                  <Link href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank">
-                    <Button
-                      variant="outline"
-                      className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm gap-2"
-                    >
+                  <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Link href="/use/mining">Mining Guide</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm gap-2">
+                    <Link href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer">
                       Whitepaper
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  </Link>
+                      <ExternalLink className="w-4 h-4" aria-hidden="true" />
+                    </Link>
+                  </Button>
                 </div>
+                <p className="text-sm text-neutral-400 mt-6">
+                  Related: <Link href="/technology/storage-rent" className="underline hover:opacity-80">Storage Rent</Link> ·
+                  <Link href="/technology#adaptive-emission-governance" className="underline hover:opacity-80 ml-2">Adaptive Emission & Governance</Link>
+                </p>
               </CardContent>
             </Card>
           </FadeIn>

@@ -434,15 +434,7 @@ export default function TechnologyPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <Head>
-        <title>Ergo Technology | ergoblockchain.org</title>
-        <meta name="description" content="Key technologies behind Ergo: eUTXO model, ErgoScript, Autolykos PoW, Storage Rent, Sigma Protocols and more." />
-        <meta property="og:title" content="Ergo Technology" />
-        <meta property="og:description" content="Explore Ergo's technology stack and how it differs from account-based systems." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ergoblockchain.org/technology" />
-        <link rel="canonical" href="https://ergoblockchain.org/technology" />
-      </Head>
+      {/* Metadata moved to App Router layout metadata */}
 
       {/* Background */}
       <HexagonalGrid className="opacity-[0.03]" />
