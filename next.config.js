@@ -25,6 +25,11 @@ const nextConfig = {
       },
     ]
   },
+  async rewrites() {
+    return [
+      { source: '/blog/rss.xml', destination: '/api/rss' },
+    ]
+  },
 }
 
 const withMDX = require('@next/mdx')();

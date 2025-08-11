@@ -17,9 +17,10 @@ const HERO_MESSAGES: readonly string[] = [
 ] as const
 
 export function HeroSection() {
-  const [typedText, setTypedText] = useState("")
+  // Initialize with first text immediately visible
+  const [typedText, setTypedText] = useState(HERO_MESSAGES[0])
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const [isTyping, setIsTyping] = useState(true)
+  const [isTyping, setIsTyping] = useState(false)
   const [animationsEnabled, setAnimationsEnabled] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
 
@@ -30,9 +31,17 @@ export function HeroSection() {
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
     if (prefersReducedMotion) {
       setAnimationsEnabled(false)
+      // Text is already set in initial state
       return
     }
-    const start = () => setAnimationsEnabled(true)
+    
+    // Start typing animation after a short delay
+    const start = () => {
+      setAnimationsEnabled(true)
+      setTypedText("")  // Clear text to start typing animation
+      setIsTyping(true)
+    }
+    
     if ("requestIdleCallback" in window) {
       ;(window as any).requestIdleCallback(start, { timeout: 800 })
     } else {

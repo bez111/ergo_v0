@@ -141,23 +141,7 @@ export default function NIPOPOWsPage() {
                     <Link href="https://docs.ergoplatform.com/protocol/nipopows/" target="_blank" rel="noopener noreferrer">View Docs</Link>
                   </Button>
                 </div>
-                <nav aria-label="Section navigation" className="mt-4 text-sm text-neutral-400 space-x-3">
-                  <Link href="#what" data-cta="anchor-what" className="underline hover:opacity-80">What</Link><span>·</span>
-                  <Link href="#why" data-cta="anchor-why" className="underline hover:opacity-80">Why</Link><span>·</span>
-                  <Link href="#comparison" data-cta="anchor-comparison" className="underline hover:opacity-80">Comparison</Link><span>·</span>
-                  <Link href="#use-cases" data-cta="anchor-use-cases" className="underline hover:opacity-80">Use cases</Link><span>·</span>
-                  <Link href="#faq" data-cta="anchor-faq" className="underline hover:opacity-80">FAQ</Link>
-                </nav>
-                <p className="text-xs text-neutral-500 mt-3">Last updated: 2025-08-10</p>
-                <section aria-labelledby="at-a-glance" className="mt-6">
-                  <h2 id="at-a-glance" className="sr-only">At a glance</h2>
-                  <dl className="grid grid-cols-2 md:grid-cols-4 gap-3 text-sm">
-                    <div><dt className="text-neutral-500">Proof size</dt><dd className="text-white font-semibold">Logarithmic</dd></div>
-                    <div><dt className="text-neutral-500">Security</dt><dd className="text-white font-semibold">PoW assumptions</dd></div>
-                    <div><dt className="text-neutral-500">Devices</dt><dd className="text-white font-semibold">Mobile/Web/Sidechains</dd></div>
-                    <div><dt className="text-neutral-500">Finality</dt><dd className="text-white font-semibold">Observe window</dd></div>
-                  </dl>
-                </section>
+
               </div>
               <div>
                 <Card className="bg-neutral-900/50 border-neutral-700 p-8 rounded-xl">

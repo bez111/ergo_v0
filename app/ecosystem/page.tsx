@@ -4,8 +4,9 @@ import { projects as allProjects, sortProjectsForListing } from "./_data"
 
 export const revalidate = 600
 
-export function generateMetadata({ searchParams }: { searchParams?: Record<string, string | string[]> }): Metadata {
-  const hasQueries = !!searchParams && Object.keys(searchParams).length > 0
+export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[]>> }): Promise<Metadata> {
+  const sp = await searchParams
+  const hasQueries = !!sp && Object.keys(sp).length > 0
   const canonical = "https://ergoblockchain.org/ecosystem"
   return {
     title: "Ergo Ecosystem — dApps, wallets, tools, DeFi",

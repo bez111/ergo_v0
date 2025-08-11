@@ -532,7 +532,7 @@ export default function CypherpunkUIKitPage() {
                   <span className="text-green-400/70 text-xs font-mono ml-2">ergo-shell v2.1.7</span>
                 </div>
                 <div className="bg-black p-4 font-mono text-sm">
-                  <div className="text-green-400/70">// Σ-Protocol smart contract</div>
+                  <div className="text-green-400/70">{'// Σ-Protocol smart contract'}</div>
                   <div className="text-green-400">
                     <span className="text-cyan-400">val</span> <span className="text-yellow-400">sigmaProof</span> = <span className="text-purple-400">proveDlog</span>(pubKey)
                   </div>

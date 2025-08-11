@@ -1,17 +1,13 @@
 "use client"
 
 import { useEffect, useMemo, useState, useDeferredValue } from "react"
-import dynamic from "next/dynamic"
 import { useRouter, useSearchParams } from "next/navigation"
 import { BookOpen, TrendingUp, Clock, Users, X } from "lucide-react"
 import { BlogCard } from "./blog-card"
 import { NewsletterSignup } from "./newsletter-signup"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogFilters } from "./blog-filters"
-
-const HexagonalGrid = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.HexagonalGrid), { ssr: false })
-const FloatingParticles = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.FloatingParticles), { ssr: false })
-const MathematicalPattern = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.MathematicalPattern), { ssr: false })
+import { HexagonalGrid, FloatingParticles, MathematicalPattern } from "@/components/ui-kit/signature-effects"
 
 interface BlogClientProps {
   posts: BlogPost[]
@@ -20,16 +16,22 @@ interface BlogClientProps {
   pageSize: number
   total: number
   hasMore: boolean
+  children?: React.ReactNode
 }
 
-type SortKey = "newest" | "trending" | "readtime"
+type SortKey = "newest" | "trending" | "readtime" | "popular"
 
-export default function BlogClient({ posts, categories, page, pageSize, total, hasMore }: BlogClientProps) {
+export default function BlogClient({ posts, categories, page, pageSize, total, hasMore, children }: BlogClientProps) {
+  const [hydrated, setHydrated] = useState(false)
+  useEffect(() => { setHydrated(true) }, [])
+
+  // Hydration gate handled in render to preserve hook order
   const router = useRouter()
   const params = useSearchParams()
 
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")
+  const [selectedTag, setSelectedTag] = useState("")
   const [sortBy, setSortBy] = useState<SortKey>("newest")
   const [effectsReady, setEffectsReady] = useState(false)
 
@@ -41,9 +43,11 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
   useEffect(() => {
     const q = params.get("q") || ""
     const cat = params.get("cat") || ""
+    const tag = params.get("tag") || ""
     const s = (params.get("sort") as SortKey) || "newest"
     setSearchQuery(q)
     setSelectedCategory(cat)
+    setSelectedTag(tag)
     setSortBy(s)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
@@ -53,13 +57,15 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
     const url = new URL(window.location.href)
     const q = searchQuery.trim()
     const cat = selectedCategory
+    const tag = selectedTag
     const s = sortBy
     if (q) url.searchParams.set("q", q); else url.searchParams.delete("q")
     if (cat) url.searchParams.set("cat", cat); else url.searchParams.delete("cat")
+    if (tag) url.searchParams.set("tag", tag); else url.searchParams.delete("tag")
     if (s && s !== "newest") url.searchParams.set("sort", s); else url.searchParams.delete("sort")
     // Do not add or modify the page param here; preserve whatever is present
     router.replace(url.pathname + (url.search ? `?${url.searchParams.toString()}` : ""), { scroll: false })
-  }, [searchQuery, selectedCategory, sortBy, router])
+  }, [searchQuery, selectedCategory, selectedTag, sortBy, router])
 
   const deferredQuery = useDeferredValue(searchQuery.trim().toLowerCase())
   const isFiltering = deferredQuery !== searchQuery.trim().toLowerCase()
@@ -88,9 +94,10 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
             .some((s) => s.includes(q))
 
       const matchesCategory = !selectedCategory || post.category === selectedCategory
-      return matchesSearch && matchesCategory
+      const matchesTag = !selectedTag || post.tags.includes(selectedTag)
+      return matchesSearch && matchesCategory && matchesTag
     })
-  }, [posts, deferredQuery, selectedCategory, sortBy])
+  }, [posts, deferredQuery, selectedCategory, selectedTag, sortBy])
 
   const activeFilters = useMemo(() => {
     const chips: { key: string; label: string; clear: () => void }[] = []
@@ -100,14 +107,17 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
       const cat = categories.find((c) => c.id === selectedCategory)
       chips.push({ key: "cat", label: `Category: ${cat?.name || selectedCategory}`, clear: () => setSelectedCategory("") })
     }
+    if (selectedTag)
+      chips.push({ key: "tag", label: `Tag: ${selectedTag}`, clear: () => setSelectedTag("") })
     if (sortBy !== "newest")
       chips.push({ key: "sort", label: `Sort: ${sortBy}`, clear: () => setSortBy("newest") })
     return chips
-  }, [searchQuery, selectedCategory, sortBy, categories])
+  }, [searchQuery, selectedCategory, selectedTag, sortBy, categories])
 
   const clearAll = () => {
     setSearchQuery("")
     setSelectedCategory("")
+    setSelectedTag("")
     setSortBy("newest")
   }
 
@@ -143,51 +153,7 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
         setSelectedCategory={setSelectedCategory}
       />
 
-      {/* Controls row */}
-      <div className="mb-8 bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-          <div className="flex items-center gap-3">
-            <BookOpen className="w-6 h-6 text-brand-primary-400" />
-            <h2 className="text-2xl font-bold text-white">Latest Articles</h2>
-            <span className="px-3 py-1 bg-brand-primary-500/20 text-brand-primary-400 rounded-full text-sm font-semibold">
-              {filteredPosts.length}
-            </span>
-            <p aria-live="polite" className="sr-only">{filteredPosts.length} results</p>
-          </div>
-
-          <div className="flex items-center gap-2">
-            {/* Sorting dropdown */}
-            <label htmlFor="sort" className="sr-only">Sort</label>
-            <select
-              id="sort"
-              className="bg-neutral-900/80 border border-neutral-700 rounded-lg px-3 py-2 text-sm"
-              value={sortBy}
-              onChange={(e) => setSortBy(e.target.value as SortKey)}
-            >
-              <option value="newest">Newest</option>
-              <option value="trending">Trending</option>
-              <option value="readtime">Reading time</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Active filter chips */}
-        {activeFilters.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-2">
-            {activeFilters.map((chip) => (
-              <button
-                key={chip.key}
-                onClick={chip.clear}
-                className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-neutral-800 text-neutral-200 text-xs border border-neutral-700 hover:bg-neutral-700"
-              >
-                <X className="w-3 h-3" aria-hidden="true" />
-                {chip.label}
-              </button>
-            ))}
-            <button onClick={clearAll} className="ml-2 text-sm underline">Clear all</button>
-          </div>
-        )}
-      </div>
+      {/* Removed header toolbar (title, count, sort) */}
 
       {/* Articles Grid as semantic list */}
       <section aria-labelledby="articles">

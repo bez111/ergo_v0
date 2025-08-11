@@ -1,174 +1,144 @@
 "use client"
 
-import { Eye, Heart, Clock, Star } from "lucide-react"
-import type { BlogPost } from "../_lib/blog-data"
 import Link from "next/link"
 import Image from "next/image"
+import type { BlogPost } from "../_lib/blog-data"
+import { Calendar, Clock, User } from "lucide-react"
 
 interface BlogHeroProps {
-  featuredPost: BlogPost
-  trendingPosts: BlogPost[]
+  featuredPost: BlogPost | null
 }
 
-export function BlogHero({ featuredPost, trendingPosts }: BlogHeroProps) {
-  const getCategoryGradient = (category: string) => {
-    const gradients = {
-      defi: "from-brand-primary-500 to-brand-primary-600",
-      tech: "from-brand-primary-400 to-brand-primary-500",
-      guides: "from-brand-primary-500 to-brand-secondary-400",
-      development: "from-brand-primary-500 to-brand-primary-600",
-      mining: "from-brand-secondary-400 to-brand-primary-500",
-      news: "from-brand-primary-600 to-brand-primary-700",
-    }
-    return gradients[category as keyof typeof gradients] || "from-brand-primary-500 to-brand-primary-600"
+export function BlogHero({ featuredPost }: BlogHeroProps) {
+  if (!featuredPost) {
+    return null
   }
 
+  const post = featuredPost
+
   return (
-    <section className="flex flex-col lg:flex-row gap-8 mb-12">
-      {/* Featured Article */}
-      <div
-        className="relative flex-1 bg-neutral-900/50 rounded-xl overflow-hidden shadow-xl backdrop-blur-sm border border-neutral-700"
-      >
-        <div className="absolute inset-0">
-          {featuredPost.image && (
-              <Image
-                src={featuredPost.image}
-                alt={featuredPost.title}
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, 66vw"
-                decoding="async"
-                className="w-full h-full object-cover opacity-30"
-              />
-            )}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
-        </div>
+    <article
+      className="relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900/60 backdrop-blur-sm p-6 h-full flex flex-col justify-between hover:border-brand-primary-500/30 transition-all duration-300 focus-within:border-brand-primary-500/50 focus-within:ring-2 focus-within:ring-brand-primary-400/20"
+      itemScope
+      itemType="https://schema.org/BlogPosting"
+      aria-labelledby={`feat-${post.id}`}
+      role="article"
+    >
+      {/* Badges */}
+      <div className="flex gap-2 mb-4" role="group" aria-label="Article tags">
+        <span 
+          className="px-3 py-1 text-xs font-semibold bg-status-success-500/20 text-status-success-400 border border-status-success-500/30 rounded-lg backdrop-blur-sm"
+          aria-label="Featured article"
+        >
+          Featured
+        </span>
+        <span 
+          className="px-3 py-1 text-xs font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-lg backdrop-blur-sm"
+          aria-label={`Category: ${post.category || 'DEFI'}`}
+        >
+          {post.category?.toUpperCase() || 'DEFI'}
+        </span>
+      </div>
 
-        <div className="relative z-10 p-8 h-full flex flex-col justify-end min-h-[400px]">
-          <div
-            className="flex items-center gap-3 mb-4"
+      {/* Content */}
+      <div className="flex-1">
+        <h2 id={`feat-${post.id}`} className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+          <Link 
+            href={`/blog/${post.slug}`} 
+            className="hover:text-brand-primary-400 focus:text-brand-primary-400 focus:outline-none focus:underline transition-colors"
+            aria-describedby={`feat-desc-${post.id}`}
           >
-            <span
-              className={`inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-gradient-to-r ${getCategoryGradient(featuredPost.category)} text-white text-sm font-medium backdrop-blur-md`}
-            >
-              <Star className="w-3 h-3" />
-              Featured
-            </span>
-            <span className="px-3 py-1 rounded-xl bg-white/20 backdrop-blur-md text-white text-sm">
-              {featuredPost.category.toUpperCase()}
-            </span>
+            {post.title}
+          </Link>
+        </h2>
+        
+        <p id={`feat-desc-${post.id}`} className="text-neutral-300 text-base leading-relaxed mb-4">
+          {post.description}
+        </p>
+      </div>
+
+      {/* Enhanced Footer */}
+      <div className="flex items-center justify-between pt-4 border-t border-neutral-700/50">
+        <div className="flex items-center gap-3">
+          <div 
+            className="w-10 h-10 rounded-full bg-neutral-700 flex items-center justify-center"
+            aria-hidden="true"
+          >
+            <span className="text-white font-medium">{post.author.name.charAt(0)}</span>
           </div>
-
-          <h2
-            className="text-4xl lg:text-5xl font-bold text-white mb-4 drop-shadow-lg leading-tight"
-          >
-            {featuredPost.title}
-          </h2>
-
-          <p
-            className="text-white/90 text-lg mb-6 leading-relaxed"
-          >
-            {featuredPost.description}
-          </p>
-
-          <div
-            className="flex items-center gap-4 mb-6"
-          >
-            {featuredPost.author.avatar && (
-              <Image
-                src={featuredPost.author.avatar}
-                alt={featuredPost.author.name}
-                width={48}
-                height={48}
-                className="w-12 h-12 rounded-full border-2 border-white/50"
-                decoding="async"
-                loading="lazy"
-              />
-            )}
-            <div>
-              <div className="text-white font-medium">{featuredPost.author.name}</div>
-              <div className="text-white/70 text-sm">
-                {featuredPost.author.role} • {featuredPost.publishedAt}
-              </div>
-            </div>
-          </div>
-
-          <div
-            className="flex items-center gap-6 mb-8"
-          >
-            <div className="flex items-center gap-2 text-white/70">
-              <Eye className="w-4 h-4" />
-              <span className="text-sm">{featuredPost.views.toLocaleString()}</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/70">
-              <Heart className="w-4 h-4" />
-              <span className="text-sm">{featuredPost.likes}</span>
-            </div>
-            <div className="flex items-center gap-2 text-white/70">
-              <Clock className="w-4 h-4" />
-              <span className="text-sm">{featuredPost.readTime} min read</span>
-            </div>
-          </div>
-
           <div>
-            <Link href={`/blog/${featuredPost.slug}`}>
-              <button className="px-8 py-4 rounded-xl bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300">
-                Read Article
-              </button>
-            </Link>
+            <p className="text-white font-medium text-sm">{post.author.name}</p>
+            <p className="text-neutral-400 text-xs">
+              <span className="sr-only">Author role:</span>
+              {post.author.role} • 
+              <time 
+                dateTime={post.publishedAt} 
+                className="ml-1"
+                title={`Published on ${new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                  weekday: 'long',
+                  year: 'numeric', 
+                  month: 'long', 
+                  day: 'numeric' 
+                })}`}
+              >
+                {new Date(post.publishedAt).toLocaleDateString('en-US', { 
+                  month: 'short', 
+                  day: 'numeric', 
+                  year: 'numeric' 
+                })}
+              </time>
+            </p>
           </div>
+        </div>
+
+        <div className="flex items-center gap-4 text-neutral-400 text-sm" role="group" aria-label="Article statistics">
+          <span className="flex items-center gap-1" title={`${post.views?.toLocaleString()} views`}>
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+              <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+            </svg>
+            <span aria-label={`${post.views?.toLocaleString()} views`}>
+              {post.views?.toLocaleString()}
+            </span>
+          </span>
+          <span className="flex items-center gap-1" title={`${post.likes} likes`}>
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"/>
+            </svg>
+            <span aria-label={`${post.likes} likes`}>
+              {post.likes}
+            </span>
+          </span>
+          <span className="flex items-center gap-1" title={`${post.readTime} minute read`}>
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
+            </svg>
+            <span aria-label={`${post.readTime} minute read`}>
+              {post.readTime} min read
+            </span>
+          </span>
         </div>
       </div>
 
-      {/* Trending Articles */}
-      <div
-        className="flex flex-col gap-4 w-full lg:w-80"
-      >
-        <h3 className="text-xl font-bold text-white mb-2">Trending Now</h3>
-        {trendingPosts.slice(0, 3).map((post, index) => (
-          <div
-            key={post.id}
-            className="group relative bg-neutral-900/50 backdrop-blur-md rounded-xl p-4 border border-neutral-700 hover:bg-neutral-900/80 hover:border-brand-primary-500/30 transition-all duration-300 hover:scale-105"
+      {/* Enhanced CTA Button */}
+      <div className="mt-4">
+        <Link
+          href={`/blog/${post.slug}`}
+          className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 hover:scale-105 active:scale-95"
+          aria-label={`Read full article: ${post.title}`}
+        >
+          <span>Read Article</span>
+          <svg 
+            className="w-4 h-4 ml-2" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24" 
+            aria-hidden="true"
           >
-            <Link href={`/blog/${post.slug}`}>
-              <div className="flex gap-4">
-                {post.image && (
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    width={64}
-                    height={64}
-                    className="w-16 h-16 rounded-lg object-cover"
-                    sizes="64px"
-                    decoding="async"
-                    loading="lazy"
-                  />
-                )}
-                <div className="flex-1">
-                  <span
-                    className={`inline-block px-2 py-1 rounded-lg bg-gradient-to-r ${getCategoryGradient(post.category)} text-white text-xs font-medium mb-2`}
-                  >
-                    {post.category.toUpperCase()}
-                  </span>
-                  <h4 className="text-white font-medium text-sm leading-tight mb-2 group-hover:text-brand-primary-400 transition-colors">
-                    {post.title}
-                  </h4>
-                  <div className="flex items-center gap-3 text-white/60 text-xs">
-                    <div className="flex items-center gap-1">
-                      <Eye className="w-3 h-3" />
-                      <span>{post.views.toLocaleString()}</span>
-                    </div>
-                    <div className="flex items-center gap-1">
-                      <Heart className="w-3 h-3" />
-                      <span>{post.likes}</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
-        ))}
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </Link>
       </div>
-    </section>
+    </article>
   )
 }
