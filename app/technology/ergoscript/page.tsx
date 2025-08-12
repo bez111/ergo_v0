@@ -139,6 +139,8 @@ export default function ErgoScriptPage() {
     },
   ]
 
+  const lastUpdated = new Date().toISOString().slice(0, 10)
+
   return (
     <>
       {/* BreadcrumbList Schema */}
@@ -194,7 +196,7 @@ export default function ErgoScriptPage() {
           />
         </div>
 
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none pb-24">
         {/* Hero Section */}
           <motion.section 
             variants={itemVariants} 
@@ -206,9 +208,10 @@ export default function ErgoScriptPage() {
             <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
                   ErgoScript
                 </h1>
+                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
                     Mathematical-by-design smart contracts on an eUTXO ledger
                   </p>
@@ -221,7 +224,7 @@ export default function ErgoScriptPage() {
                       Start Building
                   </Button>
                     </Link>
-                    <a href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
+                    <a href="https://wallet.plutomonkey.com/p2s/" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
@@ -230,6 +233,13 @@ export default function ErgoScriptPage() {
                                     </Button>
                     </a>
                   </div>
+                  <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
+                    <ul className="flex flex-wrap gap-4">
+                      <li><a href="#features" className="hover:text-brand-primary-400">Key features</a></li>
+                      <li><a href="#comparison" className="hover:text-brand-primary-400">Comparison</a></li>
+                      <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                    </ul>
+                  </nav>
               </div>
               <div className="relative">
                   <div className="relative z-10">
@@ -244,7 +254,7 @@ export default function ErgoScriptPage() {
                               name: "Try Online Playground",
                               description: "Write and test ErgoScript in your browser",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "https://scastie.scala-lang.org/ErgoPlayground",
+                              link: "https://wallet.plutomonkey.com/p2s/",
                               external: true
                             },
                             {
@@ -310,6 +320,7 @@ export default function ErgoScriptPage() {
             <div className="flex flex-col gap-16 md:gap-24">
               {/* Key Features Section */}
               <motion.section 
+                id="features"
                 className="px-4"
                 initial="hidden"
                 whileInView="visible"
@@ -569,7 +580,7 @@ export default function ErgoScriptPage() {
                           <CardContent className="pt-4">
                             <div className="space-y-2">
                               {[
-                                { name: "ErgoScript Playground", url: "https://scastie.scala-lang.org/ErgoPlayground", external: true },
+                                { name: "ErgoScript Playground", url: "https://wallet.plutomonkey.com/p2s/", external: true },
                                 { name: "Official Documentation", url: "https://docs.ergoplatform.com/ergo-script/", external: true },
                                 { name: "Code Examples & Tutorials", url: "/Docs/developers/tutorials", external: false },
                                 { name: "Community Guides", url: "/learn/guides", external: false },
@@ -641,7 +652,7 @@ export default function ErgoScriptPage() {
 
         {/* Comparison Section */}
         <FadeIn delay={0.7}>
-                <div className="max-w-7xl mx-auto">
+                <div id="comparison" className="max-w-7xl mx-auto">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
               How ErgoScript Compares
             </h2>
@@ -977,7 +988,7 @@ export default function ErgoScriptPage() {
 
             {/* FAQ Section */}
             <FadeIn delay={0.9}>
-                <div className="max-w-4xl mx-auto">
+                <div id="faq" className="max-w-4xl mx-auto">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
                   Frequently Asked Questions
                 </h2>
@@ -1028,12 +1039,12 @@ export default function ErgoScriptPage() {
                 Explore ErgoScript and start developing secure smart contracts today.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Link href="https://scastie.scala-lang.org/ErgoPlayground" target="_blank" rel="noopener noreferrer">
+                      <Link href="https://wallet.plutomonkey.com/p2s/?source=bXkgPSBzaWdtYVByb3AocHJvcGVyVGFibGVJZCkNCg0KLy8gZXhhbXBsZSBzcGVuZGluZyBjb25kaXRpb24NCm15VmFsaWRhdGlvbiA9IGZhbHNl" target="_blank" rel="noopener noreferrer">
                         <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                     Try Playground
                   </Button>
                 </Link>
-                      <Link href="/Docs">
+                      <Link href="/Docs/developers/ergoscript-languages">
                   <Button
                     variant="outline"
                           className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"

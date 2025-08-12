@@ -294,7 +294,7 @@ export async function GET(request: NextRequest) {
             }}
           >
             <div style={{ color: '#ff8800', fontSize: '24px', marginBottom: '20px' }}>
-              // {category}
+              {/* {category} */}
             </div>
             <div
               style={{

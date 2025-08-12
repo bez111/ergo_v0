@@ -296,73 +296,116 @@ export default function SecurePowPage() {
 
           {/* What is Autolykos v2 */}
           <FadeIn delay={0.6}>
-            <div id="what-is-autolykos" className="grid md:grid-cols-2 gap-8 mb-16">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                <CardHeader>
-                  <CardTitle className="text-xl text-white">
-                    What is Autolykos v2?
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <p className="text-neutral-300">
+            <div id="what-is-autolykos" className="space-y-8 mb-16">
+              <Card className="bg-gradient-to-br from-neutral-900/90 to-neutral-900/50 border border-orange-500/20 backdrop-blur-sm rounded-xl overflow-hidden relative group hover:border-orange-500/40 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <CardHeader className="relative z-10 pb-3">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                      <Cpu className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <CardTitle className="text-2xl font-bold text-white">
+                      What is Autolykos v2?
+                    </CardTitle>
+                  </div>
+                  <p className="text-neutral-300 text-lg leading-relaxed">
                     Autolykos is Ergo's unique, ASIC-resistant mining algorithm designed to maintain network
                     decentralization and security.
                   </p>
-                  <p className="text-neutral-300 text-sm">
-                    Learn more about the <Link href="/technology/eutxo-model" className="underline hover:opacity-80">eUTXO model</Link> and
-                    how <Link href="/technology/storage-rent" className="underline hover:opacity-80 ml-1">Storage Rent</Link> supports sustainable network economics.
-                  </p>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-3">
-                      <Cpu className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
-                      <span className="text-sm">Memory-hard algorithm</span>
+                </CardHeader>
+                <CardContent className="relative z-10 space-y-6">
+                  <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-700/50">
+                    <p className="text-neutral-300 text-sm">
+                      Learn more about the <Link href="/technology/eutxo-model" className="text-orange-400 hover:text-orange-300 underline transition-colors">eUTXO model</Link> and
+                      how <Link href="/technology/storage-rent" className="text-orange-400 hover:text-orange-300 underline transition-colors ml-1">Storage Rent</Link> supports sustainable network economics.
+                    </p>
+                  </div>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3 p-3 bg-neutral-800/30 rounded-lg border border-neutral-700/30">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                          <Cpu className="w-4 h-4 text-orange-400" />
+                        </div>
+                        <span className="text-sm font-medium text-white">Memory-hard algorithm</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-3 bg-neutral-800/30 rounded-lg border border-neutral-700/30">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                          <Shield className="w-4 h-4 text-orange-400" />
+                        </div>
+                        <span className="text-sm font-medium text-white">ASIC-resistant design</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-3 bg-neutral-800/30 rounded-lg border border-neutral-700/30">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                          <Zap className="w-4 h-4 text-orange-400" />
+                        </div>
+                        <span className="text-sm font-medium text-white">GPU-friendly mining</span>
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Shield className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
-                      <span className="text-sm">ASIC-resistant design</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Zap className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
-                      <span className="text-sm">GPU-friendly mining</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Cpu className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
-                      <span className="text-sm">Performance bound by memory bandwidth/latency</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Shield className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
-                      <span className="text-sm">Large pseudo-random data structures blunt ASIC gains</span>
-                    </div>
-                    <div className="flex items-center gap-3">
-                      <Users className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
-                      <span className="text-sm">No pool dependency (encourages solo/small pools)</span>
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3 p-3 bg-neutral-800/30 rounded-lg border border-neutral-700/30">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                          <Cpu className="w-4 h-4 text-orange-400" />
+                        </div>
+                        <span className="text-sm font-medium text-white">Memory bandwidth bound</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-3 bg-neutral-800/30 rounded-lg border border-neutral-700/30">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                          <Shield className="w-4 h-4 text-orange-400" />
+                        </div>
+                        <span className="text-sm font-medium text-white">Blunts ASIC advantages</span>
+                      </div>
+                      <div className="flex items-center gap-3 p-3 bg-neutral-800/30 rounded-lg border border-neutral-700/30">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
+                          <Users className="w-4 h-4 text-orange-400" />
+                        </div>
+                        <span className="text-sm font-medium text-white">Encourages decentralization</span>
+                      </div>
                     </div>
                   </div>
                 </CardContent>
               </Card>
 
-              <Card id="security-benefits" className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                <CardHeader>
-                  <CardTitle className="text-xl text-white">
-                    Security Benefits
-                  </CardTitle>
+              <Card id="security-benefits" className="bg-gradient-to-br from-neutral-900/90 to-neutral-900/50 border border-green-500/20 backdrop-blur-sm rounded-xl overflow-hidden relative group hover:border-green-500/40 transition-all duration-300">
+                <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <CardHeader className="relative z-10 pb-3">
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                      <Shield className="w-6 h-6 text-green-400" />
+                    </div>
+                    <CardTitle className="text-2xl font-bold text-white">
+                      Security Benefits
+                    </CardTitle>
+                  </div>
                 </CardHeader>
-                <CardContent>
-                  <div className="space-y-3">
+                <CardContent className="relative z-10">
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
                     {benefits.map((benefit, index) => (
                       <div
                         key={benefit}
-                        className="flex items-center gap-3"
+                        className="flex items-start gap-3 p-4 bg-neutral-800/30 rounded-lg border border-neutral-700/30 hover:bg-neutral-800/50 transition-colors"
                       >
-                        <CheckCircle className="w-4 h-4 text-green-400 flex-shrink-0" />
-                        <span className="text-sm text-neutral-300">{benefit}</span>
+                        <div className="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                        </div>
+                        <span className="text-sm text-neutral-200 leading-relaxed">{benefit}</span>
                       </div>
                     ))}
                   </div>
-                  <div className="mt-6 border-t border-neutral-800 pt-4 space-y-2">
-                    <h4 className="text-sm font-semibold text-white">Threat model (mini)</h4>
-                    <p className="text-sm text-neutral-300">Memory bandwidth is the bottleneck, limiting single-vendor ASIC dominance.</p>
-                    <p className="text-sm text-neutral-300">Broader GPU participation raises the bar for renting/buying the majority of hashpower.</p>
+                  <div className="bg-gradient-to-r from-neutral-800/50 to-neutral-700/30 rounded-lg p-6 border border-neutral-700/50">
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
+                        <Shield className="w-5 h-5 text-red-400" />
+                      </div>
+                      <h4 className="text-lg font-semibold text-white">Threat Model</h4>
+                    </div>
+                    <div className="space-y-3">
+                      <p className="text-sm text-neutral-300 leading-relaxed">
+                        <span className="font-medium text-white">Memory bandwidth bottleneck:</span> Limits single-vendor ASIC dominance by making memory access the primary constraint.
+                      </p>
+                      <p className="text-sm text-neutral-300 leading-relaxed">
+                        <span className="font-medium text-white">Broader participation:</span> GPU accessibility raises the bar for renting/buying majority hashpower.
+                      </p>
+                    </div>
                   </div>
                 </CardContent>
               </Card>

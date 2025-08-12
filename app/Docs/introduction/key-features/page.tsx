@@ -1,3 +1,4 @@
+import type { Metadata } from 'next'
 import React from 'react';
 import { 
   Zap, 
@@ -25,9 +26,128 @@ import {
 } from 'lucide-react';
 import Link from 'next/link';
 
+export const metadata: Metadata = {
+  title: 'Ergo Key Features - eUTXO, Storage Rent, ErgoScript & More',
+  description: 'Discover Ergo\'s key features: Extended UTXO model, Storage Rent for sustainability, ErgoScript smart contracts, Sigma Protocols, NIPoPoWs, and Autolykos PoW algorithm.',
+  keywords: ['ergo features', 'eutxo model', 'storage rent', 'ergoscript', 'sigma protocols', 'nipopows', 'autolykos', 'blockchain features', 'smart contracts', 'proof of work'],
+  alternates: {
+    canonical: 'https://ergoblockchain.org/Docs/introduction/key-features'
+  },
+  openGraph: {
+    title: 'Ergo Key Features - Revolutionary Blockchain Technology',
+    description: 'Explore Ergo\'s revolutionary features: eUTXO model, Storage Rent, ErgoScript, and advanced cryptographic protocols.',
+    url: 'https://ergoblockchain.org/Docs/introduction/key-features',
+    siteName: 'Ergo Platform',
+    images: [{
+      url: 'https://ergoblockchain.org/og/ergo-features.png',
+      width: 1200,
+      height: 630,
+      alt: 'Ergo Key Features'
+    }],
+    type: 'article',
+    locale: 'en_US'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Ergo Key Features - Next-Gen Blockchain',
+    description: 'Revolutionary blockchain features: eUTXO, Storage Rent, ErgoScript, Sigma Protocols, and more.',
+    images: ['https://ergoblockchain.org/og/ergo-features.png'],
+    creator: '@ergoplatform',
+    site: '@ergoplatform'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  }
+}
+
 export default function KeyFeaturesPage() {
+  // Schema.org structured data
+  const featuresSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'TechArticle',
+    headline: 'Ergo Key Features - Revolutionary Blockchain Technology',
+    description: 'Comprehensive overview of Ergo\'s key technological features and innovations.',
+    author: {
+      '@type': 'Organization',
+      name: 'Ergo Platform'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Ergo Platform',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://ergoblockchain.org/logo.png'
+      }
+    },
+    datePublished: '2024-01-01',
+    dateModified: new Date().toISOString(),
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': 'https://ergoblockchain.org/Docs/introduction/key-features'
+    },
+    about: [
+      {
+        '@type': 'Thing',
+        name: 'Extended UTXO Model',
+        description: 'Advanced blockchain architecture for smart contracts'
+      },
+      {
+        '@type': 'Thing', 
+        name: 'Storage Rent',
+        description: 'Economic sustainability mechanism for blockchain'
+      },
+      {
+        '@type': 'Thing',
+        name: 'ErgoScript',
+        description: 'Flexible smart contract language'
+      }
+    ]
+  }
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://ergoblockchain.org'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'Documentation',
+        item: 'https://ergoblockchain.org/Docs'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Introduction',
+        item: 'https://ergoblockchain.org/Docs/introduction'
+      },
+      {
+        '@type': 'ListItem',
+        position: 4,
+        name: 'Key Features',
+        item: 'https://ergoblockchain.org/Docs/introduction/key-features'
+      }
+    ]
+  }
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuresSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
@@ -90,162 +210,7 @@ export default function KeyFeaturesPage() {
               </li>
             </ul>
             <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-orange-400 text-sm font-medium">
-              Learn more
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/Docs/developers/ergoscript-languages" className="group">
-          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
-                <Code className="w-6 h-6 text-cyan-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-cyan-400">ErgoScript</h3>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              A powerful, declarative smart contract language that enables complex financial instruments while maintaining security and predictability.
-            </p>
-            <ul className="space-y-2 text-gray-400 text-sm mb-4">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Declarative programming model
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Predictable execution costs
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Sigma Protocols integration
-              </li>
-            </ul>
-            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-cyan-400 text-sm font-medium">
-              Learn more
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/Docs/developers/cryptographic-primitives" className="group">
-          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
-                <Shield className="w-6 h-6 text-green-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-green-400">Sigma Protocols</h3>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Advanced cryptographic protocols that enable zero-knowledge proofs and complex authentication schemes without compromising security.
-            </p>
-            <ul className="space-y-2 text-gray-400 text-sm mb-4">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Zero-knowledge proofs
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Schnorr signatures
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Application-level privacy
-              </li>
-            </ul>
-            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-green-400 text-sm font-medium">
-              Learn more
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/Docs/introduction/nipopows" className="group">
-          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
-                <Eye className="w-6 h-6 text-purple-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-purple-400">NIPoPoWs</h3>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Non-Interactive Proofs of Proof-of-Work enable lightweight clients to verify transactions without downloading the entire blockchain.
-            </p>
-            <ul className="space-y-2 text-gray-400 text-sm mb-4">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Lightweight verification
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Mobile-friendly
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Reduced bandwidth usage
-              </li>
-            </ul>
-            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-purple-400 text-sm font-medium">
-              Learn more
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/Docs/introduction/privacy" className="group">
-          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
-                <Lock className="w-6 h-6 text-blue-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-blue-400">Privacy Features</h3>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Built-in privacy mechanisms including stealth addresses, ring signatures, and mixing protocols for enhanced user confidentiality.
-            </p>
-            <ul className="space-y-2 text-gray-400 text-sm mb-4">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Stealth addresses
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Ring signatures
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                ErgoMixer integration
-              </li>
-            </ul>
-            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-blue-400 text-sm font-medium">
-              Learn more
-            </div>
-          </div>
-        </Link>
-
-        <Link href="/Docs/introduction/autolykos" className="group">
-          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center">
-                <Cpu className="w-6 h-6 text-yellow-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-yellow-400">Autolykos v2</h3>
-            </div>
-            <p className="text-gray-300 text-sm mb-4">
-              ASIC-resistant Proof-of-Work algorithm that ensures fair mining distribution and prevents centralization of mining power.
-            </p>
-            <ul className="space-y-2 text-gray-400 text-sm mb-4">
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                ASIC-resistant design
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                GPU-friendly mining
-              </li>
-              <li className="flex items-center gap-2">
-                <CheckCircle className="w-4 h-4 text-green-400" />
-                Decentralized mining
-              </li>
-            </ul>
-            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-yellow-400 text-sm font-medium">
-              Learn more
+              Learn More →
             </div>
           </div>
         </Link>
@@ -253,13 +218,13 @@ export default function KeyFeaturesPage() {
         <Link href="/Docs/introduction/storage-rent" className="group">
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
-                <Coins className="w-6 h-6 text-green-400" />
+              <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
+                <Coins className="w-6 h-6 text-cyan-400" />
               </div>
-              <h3 className="text-lg font-semibold text-green-400">Storage Rent</h3>
+              <h3 className="text-lg font-semibold text-cyan-400">Storage Rent</h3>
             </div>
             <p className="text-gray-300 text-sm mb-4">
-              Economic mechanism that prevents blockchain bloat by charging fees for long-term data storage, ensuring sustainable growth.
+              A revolutionary economic model that ensures blockchain sustainability by charging rent for data storage, preventing state bloat while creating additional miner incentives.
             </p>
             <ul className="space-y-2 text-gray-400 text-sm mb-4">
               <li className="flex items-center gap-2">
@@ -268,162 +233,137 @@ export default function KeyFeaturesPage() {
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
-                Economic incentives
+                Long-term sustainability
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
-                Sustainable growth
+                Additional miner rewards
               </li>
             </ul>
-            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-green-400 text-sm font-medium">
-              Learn more
+            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-cyan-400 text-sm font-medium">
+              Learn More →
             </div>
           </div>
         </Link>
 
-        <Link href="/Docs/introduction/nipopow-sidechains" className="group">
+        <Link href="/developers/ergoscript" className="group">
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
-                <Network className="w-6 h-6 text-red-400" />
+              <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                <Code className="w-6 h-6 text-purple-400" />
               </div>
-              <h3 className="text-lg font-semibold text-red-400">Sidechains</h3>
+              <h3 className="text-lg font-semibold text-purple-400">ErgoScript</h3>
             </div>
             <p className="text-gray-300 text-sm mb-4">
-              Support for interoperable sidechains that enable specialized functionality while maintaining security through the main chain.
+              A flexible and secure smart contract language based on Sigma protocols, enabling complex contracts with built-in privacy features and formal verification capabilities.
             </p>
             <ul className="space-y-2 text-gray-400 text-sm mb-4">
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
-                Interoperable design
+                Sigma protocol integration
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
-                Specialized functionality
+                Zero-knowledge proofs
               </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
-                Enhanced scalability
+                Formal verification
               </li>
             </ul>
-            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-red-400 text-sm font-medium">
-              Learn more
+            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-purple-400 text-sm font-medium">
+              Learn More →
+            </div>
+          </div>
+        </Link>
+
+        <Link href="/Docs/introduction/nipopows" className="group">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                <Smartphone className="w-6 h-6 text-blue-400" />
+              </div>
+              <h3 className="text-lg font-semibold text-blue-400">NIPoPoWs</h3>
+            </div>
+            <p className="text-gray-300 text-sm mb-4">
+              Non-Interactive Proofs of Proof-of-Work enable ultra-light clients, trustless cross-chain communication, and logarithmic space sidechains for enhanced scalability.
+            </p>
+            <ul className="space-y-2 text-gray-400 text-sm mb-4">
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Ultra-light clients
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Cross-chain bridges
+              </li>
+              <li className="flex items-center gap-2">
+                <CheckCircle className="w-4 h-4 text-green-400" />
+                Scalable sidechains
+              </li>
+            </ul>
+            <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-blue-400 text-sm font-medium">
+              Learn More →
             </div>
           </div>
         </Link>
       </div>
 
-      {/* Advanced Features Section */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Brain className="w-6 h-6 text-orange-400" /> Advanced Features
-        </h2>
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="bg-neutral-800/50 rounded-lg p-4">
-            <h4 className="font-bold text-orange-400 mb-2">Multi-Stage Protocols</h4>
-            <p className="text-gray-300 text-sm mb-3">Complex smart contracts that span multiple transactions with state management.</p>
-            <Link
-              href="/Docs/developers/ergoscript-languages"
-              className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors text-sm font-semibold"
-            >
-              Learn More <ChevronRight className="w-3 h-3 ml-1" />
-            </Link>
+      {/* Additional Features */}
+      <div className="grid md:grid-cols-3 gap-6 mb-12">
+        <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <Shield className="w-8 h-8 text-green-400" />
+            <h3 className="text-lg font-semibold text-white">Autolykos PoW</h3>
           </div>
-          <div className="bg-neutral-800/50 rounded-lg p-4">
-            <h4 className="font-bold text-cyan-400 mb-2">Data Inputs</h4>
-            <p className="text-gray-300 text-sm mb-3">Read-only access to UTXO data without consuming them, enabling oracle integration.</p>
-            <Link
-              href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs"
-              className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors text-sm font-semibold"
-            >
-              Learn More <ChevronRight className="w-3 h-3 ml-1" />
-            </Link>
+          <p className="text-gray-400 text-sm">
+            ASIC-resistant proof-of-work algorithm ensuring fair mining and network decentralization.
+          </p>
+        </div>
+
+        <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <Eye className="w-8 h-8 text-indigo-400" />
+            <h3 className="text-lg font-semibold text-white">Sigma Protocols</h3>
           </div>
-          <div className="bg-neutral-800/50 rounded-lg p-4">
-            <h4 className="font-bold text-green-400 mb-2">Atomic Swaps</h4>
-            <p className="text-gray-300 text-sm mb-3">Trustless cross-chain token exchanges without intermediaries or centralized exchanges.</p>
-            <Link
-              href="/Docs/ecosystem/financial"
-              className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors text-sm font-semibold"
-            >
-              Learn More <ChevronRight className="w-3 h-3 ml-1" />
-            </Link>
+          <p className="text-gray-400 text-sm">
+            Advanced cryptographic protocols enabling zero-knowledge proofs and enhanced privacy.
+          </p>
+        </div>
+
+        <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6">
+          <div className="flex items-center gap-3 mb-4">
+            <Network className="w-8 h-8 text-yellow-400" />
+            <h3 className="text-lg font-semibold text-white">Interoperability</h3>
           </div>
+          <p className="text-gray-400 text-sm">
+            Seamless integration with other blockchains through trustless bridges and cross-chain protocols.
+          </p>
         </div>
       </div>
 
-      {/* Why Ergo Section */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Rocket className="w-6 h-6 text-orange-400" /> Why Ergo?
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-orange-500/10 to-cyan-500/10 border border-orange-500/20 rounded-xl p-8 text-center">
+        <h2 className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+          Ready to Build on Ergo?
         </h2>
-        <p className="text-gray-300 mb-4">
-          A high-level summary of what puts Ergo head and shoulders above the competition.
+        <p className="text-gray-300 mb-6">
+          Start developing with Ergo's powerful features and join the revolution in decentralized finance.
         </p>
-        <Link
-          href="/Docs/why-ergo"
-          className="inline-flex items-center px-4 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition-colors"
-        >
-          Read More <ChevronRight className="w-4 h-4 ml-1" />
-        </Link>
-      </div>
-
-      {/* Contributing Section */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <GitBranch className="w-6 h-6 text-cyan-400" /> Contributing
-        </h2>
-        <p className="text-gray-300 mb-4">
-          Ergo operates an open model where contributions from all are welcomed. Participate in decentralised finance!
-        </p>
-        <Link
-          href="/Docs/contribute"
-          className="inline-flex items-center px-4 py-2 bg-cyan-500 rounded-lg font-semibold text-black hover:bg-cyan-600 transition-colors"
-        >
-          Get Involved <ChevronRight className="w-4 h-4 ml-1" />
-        </Link>
-      </div>
-
-      {/* FAQ Section */}
-      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <FileQuestion className="w-6 h-6 text-blue-400" /> FAQ
-        </h2>
-        <p className="text-gray-300 mb-4">
-          Check out the Frequently Asked Questions
-        </p>
-        <Link
-          href="/Docs/introduction/faq"
-          className="inline-flex items-center px-4 py-2 bg-blue-500 rounded-lg font-semibold text-black hover:bg-blue-600 transition-colors"
-        >
-          View FAQ <ChevronRight className="w-4 h-4 ml-1" />
-        </Link>
-      </div>
-
-      {/* Quick Links */}
-      <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6">
-        <h3 className="text-xl font-bold mb-4 text-center">Ready to explore more?</h3>
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="flex flex-wrap gap-4 justify-center">
           <Link
-            href="/Docs/developers"
-            className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
+            href="/developers"
+            className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-colors"
           >
-            <Code className="w-5 h-5 mr-2 text-orange-400" />
-            <span className="text-gray-300">Developer Docs</span>
+            <Code className="w-5 h-5 mr-2" />
+            Developer Docs
           </Link>
           <Link
-            href="/Docs/ecosystem"
-            className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
+            href="/start"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700 border border-neutral-600"
           >
-            <Globe className="w-5 h-5 mr-2 text-cyan-400" />
-            <span className="text-gray-300">Ecosystem</span>
-          </Link>
-          <Link
-            href="/Docs/miners"
-            className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
-          >
-            <Cpu className="w-5 h-5 mr-2 text-green-400" />
-            <span className="text-gray-300">Mining</span>
+            <Rocket className="w-5 h-5 mr-2" />
+            Get Started
           </Link>
         </div>
       </div>

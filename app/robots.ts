@@ -21,50 +21,45 @@ export default function robots(): MetadataRoute.Robots {
           '/*_ssgManifest.js$',
           '/*.js.map$',
         ],
-        crawlDelay: 1,
+        // crawlDelay: 1, // Removed to avoid validation issues
       },
       {
         userAgent: 'Googlebot',
         allow: '/',
         disallow: ['/api/', '/admin/', '/private/'],
-        crawlDelay: 0, // No delay for Google
+        // No crawl delay for Google
       },
       {
         userAgent: 'Bingbot',
         allow: '/',
         disallow: ['/api/', '/admin/', '/private/'],
-        crawlDelay: 0.5,
+        // crawlDelay: 1, // Changed from 0.5 to avoid decimal issues
       },
       {
         userAgent: 'Yandexbot',
         allow: '/',
         disallow: ['/api/', '/admin/', '/private/'],
-        crawlDelay: 1,
+        // crawlDelay: 1,
       },
       {
         userAgent: 'facebookexternalhit',
         allow: '/',
-        crawlDelay: 0,
       },
       {
         userAgent: 'Twitterbot',
         allow: '/',
-        crawlDelay: 0,
       },
       {
         userAgent: 'LinkedInBot',
         allow: '/',
-        crawlDelay: 0,
       },
       {
         userAgent: 'WhatsApp',
         allow: '/',
-        crawlDelay: 0,
       },
       {
         userAgent: 'Slackbot',
         allow: '/',
-        crawlDelay: 0,
       },
       {
         userAgent: 'GPTBot', // OpenAI's GPT crawler
@@ -91,6 +86,6 @@ export default function robots(): MetadataRoute.Robots {
       `${baseUrl}/sitemap.xml`,
       `${baseUrl}/sitemap-0.xml`, // Next.js auto-generated sitemaps
     ],
-    host: baseUrl,
+    // host: baseUrl, // Removed - non-standard directive that can cause validation issues
   }
 } 

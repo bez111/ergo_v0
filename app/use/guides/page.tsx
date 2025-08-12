@@ -1,101 +1,128 @@
-"use client"
+import type { Metadata } from "next"
+import GuidesClient from "./GuidesClient"
+import { SchemaTypes } from "@/lib/schema-ultimate"
+import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
-import { useState, useMemo } from "react"
-import { motion } from "framer-motion"
-import { GuidesFilters } from "@/components/guides/guides-filters"
-import { GuideCard } from "@/components/guides/guide-card"
-import { guidesData, categories } from "@/lib/guides-data"
-import { Button } from "@/components/ui/button"
-import { BookOpen } from "lucide-react"
+export const metadata: Metadata = {
+  title: "Ergo User Guides | Wallets, DeFi, Mining & Trading Tutorials",
+  description: "Complete collection of Ergo user guides. Learn how to use wallets, trade on DEXs, mine ERG, stake tokens, and navigate the ecosystem. Step-by-step tutorials for all levels.",
+  keywords: ["ergo guides", "ergo tutorials", "how to use ergo", "ergo wallet guide", "defi tutorial", "mining guide", "trading guide", "blockchain tutorials"],
+  alternates: {
+    canonical: "https://ergoblockchain.org/use/guides"
+  },
+  openGraph: {
+    title: "Ergo User Guides - Complete Tutorial Collection",
+    description: "Master Ergo with our comprehensive guides. Wallets, DeFi, mining, and more.",
+    url: "https://ergoblockchain.org/use/guides",
+    siteName: "Ergo Platform",
+    images: [{
+      url: "https://ergoblockchain.org/og/guides.png",
+      width: 1200,
+      height: 630,
+      alt: "Ergo User Guides"
+    }],
+    type: "website",
+    locale: "en_US"
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ergo Guides | Learn to Use Ergo Ecosystem",
+    description: "Step-by-step tutorials for wallets, DeFi, mining, and trading on Ergo.",
+    images: ["https://ergoblockchain.org/og/guides.png"],
+    creator: "@ergoplatform",
+    site: "@ergoplatform"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true
+    }
+  }
+}
 
 export default function GuidesPage() {
-  const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("")
-
-  const filteredGuides = useMemo(() => {
-    return guidesData.filter((guide) => {
-      const matchesSearch =
-        searchQuery === "" ||
-        guide.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        guide.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        guide.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
-
-      const matchesCategory = selectedCategory === "" || guide.category === selectedCategory
-
-      return matchesSearch && matchesCategory
-    })
-  }, [searchQuery, selectedCategory])
-
-  const clearFilters = () => {
-    setSearchQuery("")
-    setSelectedCategory("")
+  // SEO схемы для Guides
+  const guidesCollectionSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://ergoblockchain.org/use/guides",
+    name: "Ergo User Guides Collection",
+    description: "Comprehensive collection of tutorials for using Ergo blockchain",
+    hasPart: [
+      {
+        "@type": "HowTo",
+        name: "Wallet Setup Guide",
+        description: "How to set up and use Ergo wallets"
+      },
+      {
+        "@type": "HowTo",
+        name: "DeFi Trading Guide",
+        description: "How to trade on Ergo DEXs"
+      },
+      {
+        "@type": "HowTo",
+        name: "Mining Setup Guide",
+        description: "How to start mining ERG"
+      },
+      {
+        "@type": "HowTo",
+        name: "NFT Guide",
+        description: "How to buy and sell NFTs on Ergo"
+      }
+    ]
   }
-
+  
+  const faqSchema = SchemaTypes.FAQSchema([
+    {
+      question: "What guides are available for Ergo?",
+      answer: "We offer comprehensive guides for wallet setup, DeFi trading, mining, NFT marketplaces, governance participation, and developer tools."
+    },
+    {
+      question: "Are the guides suitable for beginners?",
+      answer: "Yes, our guides cater to all levels with clear step-by-step instructions, screenshots, and video tutorials where applicable."
+    },
+    {
+      question: "How often are guides updated?",
+      answer: "Guides are regularly updated to reflect the latest features, protocols, and best practices in the Ergo ecosystem."
+    },
+    {
+      question: "Where can I get help if I'm stuck?",
+      answer: "Join our Discord or Telegram communities for real-time support, or check the FAQ section in each guide."
+    }
+  ])
+  
+  const learningResourceSchema = {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    name: "Ergo User Guide Library",
+    description: "Educational resources for using Ergo blockchain applications",
+    learningResourceType: "Guide",
+    educationalLevel: "Beginner to Advanced",
+    teaches: [
+      "Cryptocurrency Wallets",
+      "DeFi Trading",
+      "Blockchain Mining",
+      "NFT Trading",
+      "Smart Contract Interaction"
+    ],
+    provider: {
+      "@type": "Organization",
+      name: "Ergo Platform"
+    }
+  }
+  
+  const knowledgeGraph = generateKnowledgeGraph('guides')
+  
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-8">
-          {/* Hero */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="pt-28 pb-10 px-4"
-          >
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Ergo Guides</h1>
-              <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-3xl mx-auto">
-                Master the Ergo ecosystem with comprehensive guides, from wallet setup to advanced smart contract development.
-              </p>
-            </div>
-          </motion.section>
-
-          {/* Filters & Search */}
-          <GuidesFilters
-            searchQuery={searchQuery}
-            setSearchQuery={setSearchQuery}
-            selectedCategory={selectedCategory}
-            setSelectedCategory={setSelectedCategory}
-          />
-
-          {/* Header Card (like blog) */}
-          <div className="mb-8 bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm">
-            <div className="flex items-center gap-3">
-              <BookOpen className="w-6 h-6 text-brand-primary-400" />
-              <h2 className="text-2xl font-bold text-white">
-                {selectedCategory
-                  ? `${categories.find((cat) => cat.id === selectedCategory)?.name} Guides`
-                  : "All Guides"}
-              </h2>
-              <span className="px-3 py-1 bg-brand-primary-500/20 text-brand-primary-400 rounded-full text-sm font-semibold">
-                {filteredGuides.length}
-              </span>
-            </div>
-          </div>
-
-          {/* Guides Grid */}
-          <section className="mb-16">
-            {filteredGuides.length > 0 ? (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredGuides.map((guide, index) => (
-                  <div key={guide.id}>
-                    <GuideCard guide={guide} index={index} />
-                  </div>
-                ))}
-              </div>
-            ) : (
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center py-16">
-                <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No guides found</h3>
-                <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
-                <Button onClick={clearFilters} variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                  Clear Filters
-                </Button>
-              </motion.div>
-            )}
-          </section>
-        </div>
-      </div>
-    </div>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(guidesCollectionSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
+      
+      <GuidesClient />
+    </>
   )
 } 

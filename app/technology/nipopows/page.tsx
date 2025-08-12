@@ -67,6 +67,7 @@ const allFaqs = [...baseFaqs, ...extraFaqs]
 
 export default function NIPOPOWsPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  const lastUpdated = new Date().toISOString().slice(0, 10)
 
   return (
     <>
@@ -130,7 +131,8 @@ export default function NIPOPOWsPage() {
           <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">NIPoPoWs — Non-Interactive Proofs of Proof-of-Work</h1>
+                <h1 className="text-5xl md:text-6xl font-bold mb-2 text-white">NIPoPoWs — Non-Interactive Proofs of Proof-of-Work</h1>
+                <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
                 <p className="text-xl md:text-2xl text-neutral-300 mb-6">Succinct proofs of chain work for trust-minimized verification.</p>
                 <p className="text-lg text-neutral-400 mb-8">Verify Ergo from mobile, browsers, or other chains using compact proofs instead of full sync. Learn how PoW works in <Link href="/technology/secure-pow" className="underline hover:opacity-80">Secure PoW</Link>.</p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -141,6 +143,14 @@ export default function NIPOPOWsPage() {
                     <Link href="https://docs.ergoplatform.com/protocol/nipopows/" target="_blank" rel="noopener noreferrer">View Docs</Link>
                   </Button>
                 </div>
+                <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
+                  <ul className="flex flex-wrap gap-4">
+                    <li><a href="#what" className="hover:text-brand-primary-400">What are NIPoPoWs</a></li>
+                    <li><a href="#benefits" className="hover:text-brand-primary-400">Benefits</a></li>
+                    <li><a href="#use-cases" className="hover:text-brand-primary-400">Use cases</a></li>
+                    <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                  </ul>
+                </nav>
 
               </div>
               <div>
@@ -186,7 +196,7 @@ export default function NIPOPOWsPage() {
           </section>
 
           {/* Why it matters */}
-          <section id="why" className="py-20 px-4">
+          <section id="benefits" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-white">Why NIPoPoWs Matter</h2>
               <div className="grid md:grid-cols-2 gap-8">

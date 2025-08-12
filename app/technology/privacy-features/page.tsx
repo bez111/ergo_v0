@@ -124,6 +124,7 @@ export const FAQS = [
 export default function PrivacyFeaturesPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const prefersReduced = useReducedMotion()
+  const lastUpdated = new Date().toISOString().slice(0, 10)
 
   return (
     <>
@@ -254,7 +255,8 @@ export default function PrivacyFeaturesPage() {
               <div className="max-w-7xl mx-auto">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <div>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-4 text-white">Privacy Features</h1>
+                    <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">Privacy Features</h1>
+                    <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
                     <p className="lead text-xl md:text-2xl text-neutral-300 mb-6 max-w-2xl">Privacy by choice and selective disclosure</p>
                     <p className="text-lg text-neutral-400 mb-6 max-w-2xl leading-relaxed">
                       Financial freedom and privacy go hand in hand. Ergo bakes privacy features directly into its core — not as an afterthought.
