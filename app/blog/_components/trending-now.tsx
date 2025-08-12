@@ -21,7 +21,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
       <h2 id="trending" className="text-xl font-bold text-white mb-4">
         Trending Now
       </h2>
-      <div className="grid grid-rows-3 gap-4 h-full min-h-0" role="list" aria-label="Trending articles">
+      <div className="space-y-4 h-full min-h-0" role="list" aria-label="Trending articles">
         {posts.map((p, index) => (
           <motion.div
             key={p.id}
@@ -38,7 +38,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
               className="h-full flex flex-col min-h-0"
             >
               <div className="flex items-start gap-4 flex-1 min-h-0">
-                <div className="relative w-16 h-16 shrink-0 rounded-lg overflow-hidden bg-neutral-800/60 border border-neutral-700 group-hover:border-orange-500/30 transition-colors">
+                <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-neutral-800/60 border border-neutral-700 group-hover:border-orange-500/30 transition-colors">
                   <Image 
                     src={p.image || "/placeholder.svg"} 
                     alt={`Article image for ${p.title}`} 

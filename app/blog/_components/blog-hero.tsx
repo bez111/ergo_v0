@@ -18,7 +18,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
 
   return (
     <article
-      className="relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900/60 backdrop-blur-sm p-6 h-full flex flex-col justify-between hover:border-brand-primary-500/30 transition-all duration-300 focus-within:border-brand-primary-500/50 focus-within:ring-2 focus-within:ring-brand-primary-400/20"
+      className="relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900/60 backdrop-blur-sm p-8 h-full min-h-[400px] flex flex-col justify-between hover:border-brand-primary-500/30 transition-all duration-300 focus-within:border-brand-primary-500/50 focus-within:ring-2 focus-within:ring-brand-primary-400/20"
       itemScope
       itemType="https://schema.org/BlogPosting"
       aria-labelledby={`feat-${post.id}`}
@@ -42,7 +42,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
 
       {/* Content */}
       <div className="flex-1">
-        <h2 id={`feat-${post.id}`} className="text-2xl md:text-3xl font-bold text-white mb-3 leading-tight">
+        <h2 id={`feat-${post.id}`} className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
           <Link 
             href={`/blog/${post.slug}`} 
             className="hover:text-brand-primary-400 focus:text-brand-primary-400 focus:outline-none focus:underline transition-colors"
@@ -52,7 +52,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
           </Link>
         </h2>
         
-        <p id={`feat-desc-${post.id}`} className="text-neutral-300 text-base leading-relaxed mb-4">
+        <p id={`feat-desc-${post.id}`} className="text-lg text-neutral-300 leading-relaxed mb-6">
           {post.description}
         </p>
       </div>
@@ -63,7 +63,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-3">
             <div 
-              className="w-8 h-8 rounded-full bg-neutral-700 flex items-center justify-center"
+              className="w-12 h-12 rounded-full bg-neutral-700 flex items-center justify-center"
               aria-hidden="true"
             >
               <span className="text-white font-medium text-sm">{post.author.name.charAt(0)}</span>
@@ -122,7 +122,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         <div className="flex justify-end">
           <Link
             href={`/blog/${post.slug}`}
-            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 hover:scale-105 active:scale-95"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 hover:scale-105 active:scale-95"
             aria-label={`Read full article: ${post.title}`}
           >
             <span>Read Article</span>

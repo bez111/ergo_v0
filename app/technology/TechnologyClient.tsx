@@ -54,114 +54,114 @@ const techFeatures = [
     icon: Layers,
     title: "eUTXO Model",
     description:
-      "Extended UTXO model enabling parallel execution and composable DeFi. Reduces reentrancy classes inherent to account systems; Bitcoin-grade double-spend resistance.",
+      "Extended UTXO model that enables parallel smart contract execution and composable DeFi applications. Eliminates reentrancy attacks while maintaining Bitcoin's proven security model.",
     color: "",
     href: "/technology/eutxo-model",
     details: [
-      { icon: Layers, title: "Parallelism", description: "No global state: every contract is self-contained." },
-      { icon: LinkIcon, title: "Composability", description: "Compose complex dApps from simple outputs." },
-      { icon: Shield, title: "Inherits UTXO double-spend resistance", description: "Inherits UTXO security model." },
+      { icon: Layers, title: "Parallel Execution", description: "Smart contracts run independently without global state conflicts." },
+      { icon: LinkIcon, title: "Composability", description: "Build complex DeFi applications from simple, reusable components." },
+      { icon: Shield, title: "Bitcoin-Level Security", description: "Inherits UTXO's battle-tested double-spend protection." },
     ],
   },
   {
     icon: Code,
     title: "ErgoScript",
     description:
-      "A secure, declarative language for programmable money. First-class Sigma protocols and strict typing; supports formal methods and predictable execution.",
+      "Powerful smart contract language designed for security and flexibility. Features built-in Sigma protocols for zero-knowledge proofs and formal verification support for bulletproof contracts.",
     color: "",
     href: "/technology/ergoscript",
     details: [
-      { icon: ShieldCheck, title: "Auditability & formal methods", description: "Supports formal verification via declarative constraints." },
-      { icon: Lock, title: "Native Privacy", description: "Sigma protocols for ZK-friendly proofs; ring-signature–style schemes available." },
-      { icon: Code, title: "Declarative constraints, no shared global state", description: "Minimizes typical traps (reentrancy, hidden side-effects)." },
+      { icon: ShieldCheck, title: "Formal Verification", description: "Mathematically prove your smart contracts are secure and bug-free." },
+      { icon: Lock, title: "Built-in Privacy", description: "Native zero-knowledge proofs and ring signatures for confidential transactions." },
+      { icon: Code, title: "Safe by Design", description: "Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors." },
     ],
   },
   {
     icon: Cpu,
     title: "Autolykos PoW",
     description:
-      "Memory-hard PoW aimed at broad participation and sustainable security. Reduces specialized-hardware advantage and keeps the solo path viable.",
+      "Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.",
     color: "",
     href: "/technology/secure-pow",
     details: [
-      { icon: Zap, title: "Memory-bound, moderates hardware arms race", description: "Reduces advantage of specialized equipment." },
-      { icon: Users, title: "Lower reliance on pools; keeps solo mining feasible", description: "Encourages solo mining participation." },
-      { icon: Shield, title: "ASIC-resistant (not ASIC-proof)", description: "Maintains broad accessibility." },
+      { icon: Zap, title: "Energy Efficient", description: "Memory-hard algorithm reduces power consumption compared to traditional PoW." },
+      { icon: Users, title: "Solo Mining Friendly", description: "Low barrier to entry enables individual miners to participate profitably." },
+      { icon: Shield, title: "ASIC Resistant", description: "Optimized for consumer GPUs to prevent mining centralization." },
     ],
   },
   {
     icon: Database,
     title: "Storage Rent",
     description:
-      "Boxes unspent for ~4 years may pay storage rent (if value < min box value, miners can claim the difference). Encourages state cleanup and provides long-term miner incentives.",
+      "Revolutionary economic model that prevents blockchain bloat. Inactive coins pay minimal rent after 4 years, ensuring sustainable blockchain size and permanent miner rewards.",
     color: "",
     href: "/technology/storage-rent",
     details: [
-      { icon: RefreshCw, title: "State cleanup incentives (slows growth)", description: "Encourages UTXO recycling and cleanup." },
-      { icon: CircleDollarSign, title: "Long-term miner incentives", description: "Provides revenue stream beyond block rewards." },
-      { icon: Monitor, title: "Lightweight", description: "Runs on modest hardware." },
+      { icon: RefreshCw, title: "Sustainable Blockchain", description: "Automatic cleanup of unused data keeps the blockchain lean and efficient." },
+      { icon: CircleDollarSign, title: "Perpetual Security", description: "Miners receive rewards forever, ensuring long-term network security." },
+      { icon: Monitor, title: "Resource Efficient", description: "Maintains lightweight blockchain that runs on modest hardware." },
     ],
   },
   {
     icon: Lock,
     title: "Sigma Protocols",
     description:
-      "Native Sigma protocols (threshold/multisig, ZK proofs) enable privacy and advanced cryptography without external gimmicks.",
+      "Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.",
     color: "",
     href: "/technology/privacy-features",
     details: [
-      { icon: Eye, title: "Privacy Built-In", description: "Mixers, stealth payments, confidential dApps." },
-      { icon: ShieldCheck, title: "Threshold Security", description: "Multisig and secret voting." },
-      { icon: Sparkles, title: "Easy ZKPs", description: "Add privacy to any dApp in a few lines." },
+      { icon: Eye, title: "Optional Privacy", description: "Choose between transparent or confidential transactions as needed." },
+      { icon: ShieldCheck, title: "Advanced Security", description: "Multi-signature wallets, threshold signatures, and secure voting systems." },
+      { icon: Sparkles, title: "Developer Friendly", description: "Simple APIs to add privacy features to any application." },
     ],
   },
   {
     icon: InfinityIcon,
     title: "NIPoPoWs",
     description:
-      "Succinct proofs of chain work for trust-minimized light clients and, where applicable, cross-chain protocols (no trusted relays).",
+      "Non-Interactive Proofs of Proof-of-Work enable ultra-light clients and trustless cross-chain communication. Sync mobile wallets in seconds, not hours.",
     color: "",
     href: "/technology/light-clients",
     details: [
-      { icon: Smartphone, title: "Light Clients", description: "Mobile sync in seconds to minutes." },
-      { icon: LinkIcon, title: "Cross-chain (where applicable)", description: "For compatible chains; depends on bridge design." },
-      { icon: ShieldCheck, title: "Client-verifiable", description: "Verifiable by light clients." },
+      { icon: Smartphone, title: "Instant Mobile Sync", description: "Full security with minimal data - sync in seconds on any device." },
+      { icon: LinkIcon, title: "Trustless Bridges", description: "Connect to other blockchains without centralized validators." },
+      { icon: ShieldCheck, title: "Cryptographic Security", description: "Mathematical proofs ensure full node-level security for light clients." },
     ],
   },
   {
     icon: Rocket,
-    title: "Subblocks (Research/In development)",
+    title: "Subblocks (In Development)",
     description:
-      "On-chain throughput experiments: faster perceived confirmations without trusted sequencers; finality follows base consensus.",
+      "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations without sacrificing decentralization or security.",
     color: "",
     details: [
-      { icon: Timer, title: "Fast Confirmations", description: "Faster perceived settlement." },
-      { icon: Lock, title: "Experimental Scaling", description: "Research into on-chain throughput." },
-      { icon: Globe, title: "Base Consensus", description: "Finality through main blockchain." },
+      { icon: Timer, title: "Sub-Second Confirmations", description: "Near-instant transaction finality for improved user experience." },
+      { icon: Lock, title: "Layer 1 Security", description: "Full blockchain security without trusted intermediaries." },
+      { icon: Globe, title: "Seamless Integration", description: "Works with existing infrastructure - no bridges or sidechains needed." },
     ],
   },
   {
     icon: Box,
     title: "Native Tokens & NFTs",
     description:
-      "Issue tokens/NFTs at L1 without contracts or wrapping. Fully programmable and composable.",
+      "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.",
     color: "",
     details: [
-      { icon: Coins, title: "Token Creation", description: "Issue tokens, stablecoins, or NFTs in 1 tx." },
-      { icon: Layers, title: "Composable", description: "Tokens & NFTs interact natively with dApps." },
-      { icon: Zap, title: "Native at L1 (no wrapping)", description: "Native tokens, not fakes or wrapped." },
+      { icon: Coins, title: "One-Click Creation", description: "Issue tokens, stablecoins, or NFTs in a single transaction." },
+      { icon: Layers, title: "DeFi Ready", description: "Native integration with all Ergo applications and protocols." },
+      { icon: Zap, title: "True Native Assets", description: "First-class tokens with protocol-level security guarantees." },
     ],
   },
   {
     icon: Eye,
     title: "Oracle Pools",
     description:
-      "Protocol-native oracle design with minimized trust and composability for DeFi and dApps.",
+      "Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.",
     color: "",
     details: [
-      { icon: BarChart3, title: "Reliable Data", description: "Incentive-aligned aggregation (no central operator)." },
-      { icon: Layers, title: "Composability", description: "Oracles can power any contract." },
-      { icon: ShieldCheck, title: "Minimized Trust", description: "No central operator; minimizes single points of failure." },
+      { icon: BarChart3, title: "Reliable Price Feeds", description: "Consensus-based data aggregation ensures accurate, manipulation-resistant prices." },
+      { icon: Layers, title: "Universal Compatibility", description: "Any smart contract can access oracle data without special integrations." },
+      { icon: ShieldCheck, title: "Fully Decentralized", description: "No central authority or single point of failure in the data pipeline." },
     ],
   },
   {
@@ -248,7 +248,7 @@ export default function TechnologyPage() {
   const faqs: Array<{ id: string; q: string; a: React.ReactNode; tag?: string }> = [
     {
       id: "what-is-eutxo",
-      q: "How is eUTXO on Ergo different from the account model?",
+      q: "What makes Ergo's eUTXO model superior to account-based blockchains?",
       tag: "eUTXO",
       a: (
         <>
@@ -261,7 +261,7 @@ export default function TechnologyPage() {
     },
     {
       id: "what-is-ergoscript",
-      q: "What is ErgoScript and why is it secure?",
+      q: "How does ErgoScript prevent smart contract vulnerabilities?",
       tag: "ErgoScript",
       a: (
         <>
@@ -285,7 +285,7 @@ export default function TechnologyPage() {
     },
     {
       id: "storage-rent",
-      q: "What is Storage Rent and why does it matter?",
+      q: "How does Storage Rent solve blockchain sustainability?",
       tag: "Storage",
       a: (
         <>
@@ -297,7 +297,7 @@ export default function TechnologyPage() {
     },
     {
       id: "sigma-protocols",
-      q: "What privacy and multisig features are built in?",
+      q: "What privacy features does Ergo offer natively?",
       tag: "Privacy",
       a: (
         <>
@@ -309,7 +309,7 @@ export default function TechnologyPage() {
     },
     {
       id: "nipopows",
-      q: "What do NIPoPoWs enable?",
+      q: "How do NIPoPoWs enable instant mobile wallet sync?",
       tag: "Light clients",
       a: (
         <>
@@ -321,7 +321,7 @@ export default function TechnologyPage() {
     },
     {
       id: "oracle-pools",
-      q: "How are Oracle Pools different from traditional oracles?",
+      q: "Why are Ergo's Oracle Pools more secure than Chainlink?",
       tag: "Oracles",
       a: (
         <>
@@ -333,7 +333,7 @@ export default function TechnologyPage() {
     },
     {
       id: "subblocks",
-      q: "What are Subblocks and why use them?",
+      q: "How do Subblocks achieve sub-second transaction confirmations?",
       tag: "Scaling",
       a: (
         <>
@@ -344,7 +344,7 @@ export default function TechnologyPage() {
     },
     {
       id: "tokens-nfts",
-      q: "Can I issue tokens and NFTs without a smart contract?",
+      q: "How to create tokens and NFTs on Ergo without smart contracts?",
       tag: "Tokens & NFTs",
       a: (
         <>
@@ -454,7 +454,7 @@ export default function TechnologyPage() {
                   ERGO TECHNOLOGY
                 </h1>
                 <p className="text-xl md:text-2xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-                  Innovations. Security. Real Decentralization.
+                  Advanced blockchain infrastructure for scalable DeFi, secure smart contracts, and true decentralization.
                 </p>
               </motion.div>
             </FadeIn>

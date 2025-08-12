@@ -36,7 +36,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
       onKeyDown={handleKeyDown}
     >
       {/* Image */}
-      <div className="relative h-48 lg:h-56 overflow-hidden">
+      <div className="relative h-48 overflow-hidden">
         <Link href={`/blog/${post.slug}`} prefetch={false} className="block w-full h-full">
           <Image
             src={post.image || '/placeholder.svg'}
@@ -53,7 +53,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
         {/* Category badge */}
         <div className="absolute top-4 left-4">
           {post.category && (
-            <Link prefetch={false} href={`/blog/category/${encodeURIComponent(post.category)}`} className="px-3 py-1 text-xs font-semibold bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30 rounded-lg backdrop-blur-sm">
+            <Link prefetch={false} href={`/blog/category/${encodeURIComponent(post.category)}`} className="px-3 py-1 text-xs font-semibold bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30 rounded-xl backdrop-blur-sm hover:bg-brand-primary-500/30 transition-colors">
               {post.category}
             </Link>
           )}
@@ -70,15 +70,13 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
 
       {/* Content */}
       <div className="p-6">
-        <h3 className={`font-bold mb-3 text-white hover:text-brand-primary-400 transition-colors ${
-          featured ? 'text-2xl lg:text-3xl' : 'text-xl'
-        }`}>
+        <h3 className="text-xl font-bold mb-3 text-white hover:text-brand-primary-400 transition-colors">
           <Link href={`/blog/${post.slug}`} prefetch={false} className="inline-block">
             {post.title}
           </Link>
         </h3>
 
-        <p className="text-gray-300 mb-4 line-clamp-2">
+        <p className="text-sm text-gray-300 mb-4 line-clamp-2">
           {post.description}
         </p>
 
@@ -97,26 +95,14 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           </div>
 
           <div className="flex items-center gap-1">
-            <User className="w-3 h-3 text-gray-500" />
+            <div className="w-8 h-8 rounded-full bg-neutral-700 flex items-center justify-center">
+              <span className="text-white font-medium text-sm">{post.author.name.charAt(0)}</span>
+            </div>
             <span>{post.author.name}</span>
           </div>
         </div>
 
-        {/* Tags */}
-        {post.tags.length > 0 && (
-          <div className="flex flex-wrap gap-2 mt-4">
-            {post.tags.slice(0, 3).map(tag => (
-              <Link
-                key={tag}
-                href={`/blog/tag/${encodeURIComponent(tag)}`}
-                prefetch={false}
-                className="text-xs text-gray-500 hover:text-brand-primary-400 transition-colors"
-              >
-                #{tag}
-              </Link>
-            ))}
-          </div>
-        )}
+
       </div>
     </article>
   )

@@ -5,9 +5,9 @@ import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
 import { targetQuestions } from '@/lib/featured-snippets-optimizer'
 
 export const metadata: Metadata = {
-  title: 'Ergo Technology - eUTXO, ErgoScript, Sigma Protocols',
-  description: 'Explore Ergo\'s innovative technology: eUTXO model for parallel execution, ErgoScript for secure contracts, Sigma protocols for privacy, and memory-hard Autolykos PoW.',
-  keywords: ['eUTXO', 'ErgoScript', 'Sigma protocols', 'Autolykos', 'blockchain technology', 'smart contracts', 'NIPoPoWs', 'storage rent', 'proof of work', 'decentralized finance'],
+  title: 'Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma Protocols',
+  description: 'Discover Ergo\'s advanced blockchain technology: eUTXO model for parallel smart contracts, ErgoScript programming language, Sigma protocols for zero-knowledge proofs, and ASIC-resistant Autolykos mining.',
+  keywords: ['eUTXO blockchain', 'ErgoScript smart contracts', 'Sigma protocols', 'Autolykos mining', 'blockchain technology', 'smart contract programming', 'NIPoPoWs', 'storage rent', 'proof of work', 'DeFi infrastructure'],
   alternates: {
     canonical: 'https://ergoblockchain.org/technology'
   },

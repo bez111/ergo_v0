@@ -3,8 +3,8 @@ import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 export const metadata: Metadata = {
-  title: "ErgoScript - Secure Smart Contract Language | Ergo Platform",
-  description: "Explore ErgoScript, a powerful smart contract language built for the eUTXO model. Features formal verification, re-entrancy protection, and advanced cryptographic primitives.",
+  title: "ErgoScript Smart Contract Language | Zero-Knowledge Proofs & Formal Verification",
+  description: "Learn ErgoScript programming for secure DeFi applications. Build unhackable smart contracts with built-in Sigma protocols, formal verification, and no reentrancy vulnerabilities.",
   keywords: [
     "ErgoScript",
     "smart contract language",

@@ -236,7 +236,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <main id="main" className="relative z-10" role="main">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8">
 
 
           {/* Enhanced HERO SECTION */}
@@ -252,16 +252,16 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           </header>
 
           {/* Enhanced FEATURED + TRENDING SECTION */}
-          <section className="pb-6" aria-labelledby="content-heading">
+          <section className="mb-12" aria-labelledby="content-heading">
             <h2 id="content-heading" className="sr-only">Featured article and trending posts</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              <div className="lg:col-span-9" role="region" aria-labelledby="featured-heading">
+            <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex-1" role="region" aria-labelledby="featured-heading">
                 <h3 id="featured-heading" className="sr-only">Featured article</h3>
-                <div className="relative">
+                <div className="relative min-h-[400px]">
                   <BlogHero featuredPost={featuredPost} />
                 </div>
               </div>
-              <aside className="lg:col-span-3" aria-labelledby="trending" role="complementary">
+              <aside className="w-full lg:w-80" aria-labelledby="trending" role="complementary">
                 <TrendingNow posts={trendingPosts.slice(0, 3)} categories={categories} />
               </aside>
             </div>

@@ -189,10 +189,13 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
             <p className="text-neutral-400">Try adjusting your filters or search terms.</p>
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredPosts.map((post) => (
-              <BlogCard key={post.id} post={post} />
-            ))}
+          <div className="mb-16">
+            <h3 className="text-3xl font-bold text-white mb-8">Latest Articles</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.map((post) => (
+                <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
           </div>
         )}
       </section>

@@ -3,9 +3,9 @@ import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 export const metadata: Metadata = {
-  title: "Autolykos v2: ASIC-Resistant, GPU-Friendly PoW | Ergo",
+  title: "Autolykos Mining Algorithm | ASIC-Resistant GPU Mining on Ergo",
   description:
-    "Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible. Learn how to start mining and why it matters.",
+    "Mine Ergo with GPUs using Autolykos v2 - the energy-efficient, ASIC-resistant algorithm. Start solo mining ERG profitably with consumer hardware. Complete mining guide included.",
   alternates: { canonical: "https://ergoblockchain.org/technology/secure-pow" },
   openGraph: {
     type: "article",
