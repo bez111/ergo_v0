@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import EcosystemClient from "./EcosystemClient"
 import { projects as allProjects, sortProjectsForListing } from "./_data"
+import { SchemaTypes } from "@/lib/schema-ultimate"
+import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 export const revalidate = 600
 
@@ -67,12 +69,47 @@ export default function EcosystemPage() {
       { "@type": "ListItem", position: 2, name: "Ecosystem", item: "https://ergoblockchain.org/ecosystem" },
     ],
   }
+  
+  // Добавляем продвинутые SEO схемы
+  const knowledgeGraph = generateKnowledgeGraph('ecosystem')
+  
+  const faqSchema = SchemaTypes.FAQSchema([
+    {
+      question: "What is the Ergo ecosystem?",
+      answer: "The Ergo ecosystem consists of DeFi protocols, NFT marketplaces, developer tools, wallets, and community projects built on the Ergo blockchain."
+    },
+    {
+      question: "What DeFi projects are on Ergo?",
+      answer: "Key DeFi projects include SigmaUSD (algorithmic stablecoin), ErgoDEX (DEX), lending protocols, and oracle pools."
+    },
+    {
+      question: "Which wallets support Ergo?",
+      answer: "Popular Ergo wallets include Nautilus (browser extension), Satergo (desktop), SAFEW (mobile), and Ergo Wallet (mobile)."
+    },
+    {
+      question: "Are there NFT marketplaces on Ergo?",
+      answer: "Yes, Ergo has NFT marketplaces like SkyHarbor for minting and trading NFTs with low fees."
+    }
+  ])
+  
+  const speakableSchema = SchemaTypes.SpeakableSchema({
+    headline: "Ergo Ecosystem Directory",
+    summary: "Complete directory of dApps, wallets, and tools built on Ergo blockchain",
+    url: "https://ergoblockchain.org/ecosystem"
+  })
 
   return (
     <>
+      {/* Существующие схемы */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
+      
+      {/* Новые продвинутые схемы */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      
       <EcosystemClient />
     </>
   )

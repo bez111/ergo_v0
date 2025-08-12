@@ -17,29 +17,73 @@ function flattenDocs(menu: any[]): string[] {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes: MetadataRoute.Sitemap = [
-    '',
-    '/start',
-    '/technology',
-    '/ecosystem',
-    '/use',
-    '/Docs',
-    '/blog',
-  ].map((path) => ({ url: `${baseUrl}${path}`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 }))
+  // High priority pages - updated frequently, critical for SEO
+  const criticalRoutes: MetadataRoute.Sitemap = [
+    { 
+      url: baseUrl, 
+      lastModified: new Date(), 
+      changeFrequency: 'daily', 
+      priority: 1.0 
+    },
+    { 
+      url: `${baseUrl}/start`, 
+      lastModified: new Date(), 
+      changeFrequency: 'weekly', 
+      priority: 0.9 
+    },
+    { 
+      url: `${baseUrl}/wallet`, 
+      lastModified: new Date(), 
+      changeFrequency: 'weekly', 
+      priority: 0.9 
+    },
+    { 
+      url: `${baseUrl}/use/get-erg`, 
+      lastModified: new Date(), 
+      changeFrequency: 'daily', 
+      priority: 0.9 
+    },
+  ]
+  
+  // Important content pages
+  const importantRoutes: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/technology`, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/ecosystem`, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/blog`, changeFrequency: 'daily' as const, priority: 0.8 },
+    { url: `${baseUrl}/learn`, changeFrequency: 'weekly' as const, priority: 0.8 },
+    { url: `${baseUrl}/learn/faq`, changeFrequency: 'monthly' as const, priority: 0.8 },
+    { url: `${baseUrl}/Docs`, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/use`, changeFrequency: 'weekly' as const, priority: 0.7 },
+    { url: `${baseUrl}/use/mining`, changeFrequency: 'weekly' as const, priority: 0.7 },
+  ].map(route => ({ ...route, lastModified: new Date() }))
+  
+  // Secondary pages
+  const secondaryRoutes: MetadataRoute.Sitemap = [
+    { url: `${baseUrl}/events`, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/learn/ergoscript`, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${baseUrl}/learn/research`, changeFrequency: 'monthly' as const, priority: 0.5 },
+    { url: `${baseUrl}/ecosystem/mining`, changeFrequency: 'weekly' as const, priority: 0.6 },
+    { url: `${baseUrl}/ecosystem/grants`, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${baseUrl}/technology/eutxo`, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${baseUrl}/technology/ergoscript`, changeFrequency: 'monthly' as const, priority: 0.6 },
+    { url: `${baseUrl}/technology/nipopows`, changeFrequency: 'monthly' as const, priority: 0.6 },
+  ].map(route => ({ ...route, lastModified: new Date() }))
 
+  // Documentation pages with lower priority
   const docsRoutes: MetadataRoute.Sitemap = flattenDocs(menuData).map((path) => ({
     url: `${baseUrl}${path}`,
     lastModified: new Date(),
-    changeFrequency: 'weekly',
-    priority: 0.6,
+    changeFrequency: 'monthly' as const,
+    priority: path.includes('/developers') ? 0.6 : 0.5,
   }))
 
-  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post) => ({
+  // Blog posts - higher priority for recent posts
+  const blogRoutes: MetadataRoute.Sitemap = blogPosts.map((post, index) => ({
     url: `${baseUrl}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt || post.publishedAt || new Date().toISOString()),
-    changeFrequency: 'weekly',
-    priority: 0.6,
+    changeFrequency: index < 5 ? 'weekly' as const : 'monthly' as const,
+    priority: index < 5 ? 0.7 : 0.5,
   }))
 
-  return [...staticRoutes, ...docsRoutes, ...blogRoutes]
+  return [...criticalRoutes, ...importantRoutes, ...secondaryRoutes, ...docsRoutes, ...blogRoutes]
 }

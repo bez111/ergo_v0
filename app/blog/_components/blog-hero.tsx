@@ -58,22 +58,21 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
       </div>
 
       {/* Enhanced Footer */}
-      <div className="flex items-center justify-between pt-4 border-t border-neutral-700/50">
-        <div className="flex items-center gap-3">
-          <div 
-            className="w-10 h-10 rounded-full bg-neutral-700 flex items-center justify-center"
-            aria-hidden="true"
-          >
-            <span className="text-white font-medium">{post.author.name.charAt(0)}</span>
-          </div>
-          <div>
-            <p className="text-white font-medium text-sm">{post.author.name}</p>
-            <p className="text-neutral-400 text-xs">
-              <span className="sr-only">Author role:</span>
-              {post.author.role} • 
+      <div className="pt-4 border-t border-neutral-700/50">
+        {/* Author and Meta in one line */}
+        <div className="flex items-center justify-between mb-3">
+          <div className="flex items-center gap-3">
+            <div 
+              className="w-8 h-8 rounded-full bg-neutral-700 flex items-center justify-center"
+              aria-hidden="true"
+            >
+              <span className="text-white font-medium text-sm">{post.author.name.charAt(0)}</span>
+            </div>
+            <div className="flex items-center gap-2 text-sm text-neutral-300">
+              <span className="font-medium text-white">{post.author.name}</span>
+              <span className="text-neutral-500">•</span>
               <time 
                 dateTime={post.publishedAt} 
-                className="ml-1"
                 title={`Published on ${new Date(post.publishedAt).toLocaleDateString('en-US', { 
                   weekday: 'long',
                   year: 'numeric', 
@@ -87,57 +86,57 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
                   year: 'numeric' 
                 })}
               </time>
-            </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-4 text-neutral-400 text-sm" role="group" aria-label="Article statistics">
+            <span className="flex items-center gap-1" title={`${post.views?.toLocaleString()} views`}>
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+              </svg>
+              <span aria-label={`${post.views?.toLocaleString()} views`}>
+                {post.views?.toLocaleString()}
+              </span>
+            </span>
+            <span className="flex items-center gap-1" title={`${post.likes} likes`}>
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"/>
+              </svg>
+              <span aria-label={`${post.likes} likes`}>
+                {post.likes}
+              </span>
+            </span>
+            <span className="flex items-center gap-1" title={`${post.readTime} minute read`}>
+              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
+              </svg>
+              <span aria-label={`${post.readTime} minute read`}>
+                {post.readTime} min read
+              </span>
+            </span>
           </div>
         </div>
 
-        <div className="flex items-center gap-4 text-neutral-400 text-sm" role="group" aria-label="Article statistics">
-          <span className="flex items-center gap-1" title={`${post.views?.toLocaleString()} views`}>
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-              <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
-            </svg>
-            <span aria-label={`${post.views?.toLocaleString()} views`}>
-              {post.views?.toLocaleString()}
-            </span>
-          </span>
-          <span className="flex items-center gap-1" title={`${post.likes} likes`}>
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"/>
-            </svg>
-            <span aria-label={`${post.likes} likes`}>
-              {post.likes}
-            </span>
-          </span>
-          <span className="flex items-center gap-1" title={`${post.readTime} minute read`}>
-            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-            </svg>
-            <span aria-label={`${post.readTime} minute read`}>
-              {post.readTime} min read
-            </span>
-          </span>
-        </div>
-      </div>
-
-      {/* Enhanced CTA Button */}
-      <div className="mt-4">
-        <Link
-          href={`/blog/${post.slug}`}
-          className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 hover:scale-105 active:scale-95"
-          aria-label={`Read full article: ${post.title}`}
-        >
-          <span>Read Article</span>
-          <svg 
-            className="w-4 h-4 ml-2" 
-            fill="none" 
-            stroke="currentColor" 
-            viewBox="0 0 24 24" 
-            aria-hidden="true"
+        {/* CTA Button */}
+        <div className="flex justify-end">
+          <Link
+            href={`/blog/${post.slug}`}
+            className="inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 hover:scale-105 active:scale-95"
+            aria-label={`Read full article: ${post.title}`}
           >
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-          </svg>
-        </Link>
+            <span>Read Article</span>
+            <svg 
+              className="w-4 h-4 ml-2" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24" 
+              aria-hidden="true"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
       </div>
     </article>
   )

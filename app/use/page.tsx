@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import UseClient from "./UseClient"
 import { useCases } from "./_data"
+import { SchemaTypes } from "@/lib/schema-ultimate"
+import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 export const revalidate = 600
 
@@ -81,12 +83,47 @@ export default function UsePage() {
       { "@type": "ListItem", position: 2, name: "Use Cases", item: base },
     ],
   }
+  
+  // Добавляем продвинутые SEO схемы
+  const knowledgeGraph = generateKnowledgeGraph('use')
+  
+  const faqSchema = SchemaTypes.FAQSchema([
+    {
+      question: "What can I do with Ergo?",
+      answer: "Ergo enables DeFi applications, NFT minting and trading, privacy-preserving transactions, DAOs, oracle pools, algorithmic stablecoins like SigmaUSD, and cross-chain bridges."
+    },
+    {
+      question: "What DeFi protocols exist on Ergo?",
+      answer: "Ergo has SigmaUSD (stablecoin), ErgoDEX (decentralized exchange), lending protocols, yield farming, oracle pools, and various DeFi primitives for building complex financial applications."
+    },
+    {
+      question: "Can I create NFTs on Ergo?",
+      answer: "Yes, Ergo supports native NFT minting with low fees. You can create, trade, and auction NFTs on marketplaces like SkyHarbor without smart contracts."
+    },
+    {
+      question: "How does privacy work on Ergo?",
+      answer: "Ergo uses Sigma protocols for optional privacy features including ErgoMixer for transaction mixing, stealth addresses, and zero-knowledge proofs for confidential transactions."
+    }
+  ])
+  
+  const speakableSchema = SchemaTypes.SpeakableSchema({
+    headline: "Ergo Use Cases",
+    summary: "Explore real-world applications: DeFi protocols, NFT marketplaces, privacy tools, DAOs, and cross-chain bridges built on Ergo",
+    url: base
+  })
 
   return (
     <>
+      {/* Существующие схемы */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
+      
+      {/* Новые продвинутые схемы */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      
       <UseClient />
     </>
   )

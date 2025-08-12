@@ -15,7 +15,56 @@ export default function robots(): MetadataRoute.Robots {
           '/_next/',
           '/static/',
           '/search', // block internal search result pages
+          '/*.json$',
+          '/*_buildManifest.js$',
+          '/*_middlewareManifest.js$',
+          '/*_ssgManifest.js$',
+          '/*.js.map$',
         ],
+        crawlDelay: 1,
+      },
+      {
+        userAgent: 'Googlebot',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+        crawlDelay: 0, // No delay for Google
+      },
+      {
+        userAgent: 'Bingbot',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+        crawlDelay: 0.5,
+      },
+      {
+        userAgent: 'Yandexbot',
+        allow: '/',
+        disallow: ['/api/', '/admin/', '/private/'],
+        crawlDelay: 1,
+      },
+      {
+        userAgent: 'facebookexternalhit',
+        allow: '/',
+        crawlDelay: 0,
+      },
+      {
+        userAgent: 'Twitterbot',
+        allow: '/',
+        crawlDelay: 0,
+      },
+      {
+        userAgent: 'LinkedInBot',
+        allow: '/',
+        crawlDelay: 0,
+      },
+      {
+        userAgent: 'WhatsApp',
+        allow: '/',
+        crawlDelay: 0,
+      },
+      {
+        userAgent: 'Slackbot',
+        allow: '/',
+        crawlDelay: 0,
       },
       {
         userAgent: 'GPTBot', // OpenAI's GPT crawler
@@ -38,7 +87,10 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: [
+      `${baseUrl}/sitemap.xml`,
+      `${baseUrl}/sitemap-0.xml`, // Next.js auto-generated sitemaps
+    ],
     host: baseUrl,
   }
 } 

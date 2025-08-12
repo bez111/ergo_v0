@@ -22,7 +22,7 @@ export function BlogFilters({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: 0.2 }}
-      className="my-12"
+      className="my-6"
     >
       <div className="flex flex-col md:flex-row gap-4 items-center">
         <div className="relative w-full md:flex-1">

@@ -6,6 +6,9 @@ import TrendingNow from "./_components/trending-now"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
 import Link from "next/link"
+import { NewsletterSignup } from "./_components/newsletter-signup"
+import { SchemaTypes } from "@/lib/schema-ultimate"
+import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 
 export const revalidate = 300
@@ -187,6 +190,30 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       "query-input": "required name=query",
     },
   }
+  
+  // Добавляем продвинутые SEO схемы
+  const knowledgeGraph = generateKnowledgeGraph('blog')
+  
+  const faqSchema = SchemaTypes.FAQSchema([
+    {
+      question: "What is the Ergo blog about?",
+      answer: "The Ergo blog covers blockchain technology updates, DeFi developments, technical guides, ecosystem news, and research insights about the Ergo platform."
+    },
+    {
+      question: "How often is new content published?",
+      answer: "New articles are published regularly, covering technical updates, ecosystem developments, and educational content about Ergo blockchain."
+    },
+    {
+      question: "Who writes for the Ergo blog?",
+      answer: "Content is created by Ergo core developers, community contributors, ecosystem projects, and technical writers passionate about decentralized technology."
+    }
+  ])
+  
+  const speakableSchema = SchemaTypes.SpeakableSchema({
+    headline: "Ergo Blog - Latest Updates",
+    summary: "News, research, technical guides and ecosystem updates from Ergo blockchain",
+    url: "https://ergoblockchain.org/blog"
+  })
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -196,52 +223,21 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       >
         Skip to main content
       </a>
+      {/* Существующие схемы */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSearchJsonLd) }} />
+      
+      {/* Новые продвинутые схемы */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
       <main id="main" className="relative z-10" role="main">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-          {/* Enhanced breadcrumbs + actions */}
-          <div className="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <nav aria-label="Breadcrumb navigation" className="text-sm text-neutral-400">
-              <ol className="flex gap-2" role="list">
-                <li role="listitem">
-                  <Link 
-                    href="/" 
-                    className="hover:text-brand-primary-400 focus:text-brand-primary-400 focus:outline-none focus:underline transition-colors"
-                    aria-label="Go to homepage"
-                  >
-                    Home
-                  </Link>
-                </li>
-                <li role="presentation" className="text-neutral-500" aria-hidden="true">/</li>
-                <li role="listitem" aria-current="page" className="text-neutral-200 font-medium">
-                  Blog
-                </li>
-              </ol>
-            </nav>
-            <div className="flex items-center gap-3" role="group" aria-label="Blog actions">
-              <Link 
-                href="/newsletter" 
-                className="text-sm text-neutral-200 hover:text-brand-primary-400 focus:text-brand-primary-400 underline underline-offset-4 focus:outline-none focus:ring-2 focus:ring-brand-primary-400 focus:ring-offset-2 focus:ring-offset-black rounded px-1 transition-colors"
-                aria-label="Subscribe to newsletter"
-              >
-                Subscribe
-              </Link>
-              <a 
-                href="/blog/rss.xml" 
-                rel="alternate noopener noreferrer" 
-                className="text-sm text-neutral-400 hover:text-brand-primary-400 focus:text-brand-primary-400 focus:outline-none focus:ring-2 focus:ring-brand-primary-400 focus:ring-offset-2 focus:ring-offset-black rounded px-1 transition-colors"
-                aria-label="RSS feed"
-                type="application/rss+xml"
-              >
-                RSS
-              </a>
-            </div>
-          </div>
+
 
           {/* Enhanced HERO SECTION */}
           <header className="pt-4 pb-6" role="banner">
@@ -282,55 +278,6 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
             <BlogListSSR posts={initialList} categories={categories} />
           </BlogClient>
 
-          {/* Enhanced SSR Pagination */}
-          <nav aria-label="Blog pagination" className="mt-8 flex items-center justify-center gap-2" role="navigation">
-            <div className="flex items-center gap-2">
-              {currentPage > 1 && (
-                <Link 
-                  rel="prev" 
-                  href={currentPage === 2 ? "/blog" : `/blog?page=${currentPage - 1}`}
-                  className="flex items-center px-4 py-2 rounded-lg border border-neutral-700 hover:border-brand-primary-500/50 focus:border-brand-primary-500 focus:outline-none focus:ring-2 focus:ring-brand-primary-400 focus:ring-offset-2 focus:ring-offset-black text-neutral-200 hover:text-white transition-all"
-                  aria-label={`Go to previous page, page ${currentPage - 1}`}
-                >
-                  <span aria-hidden="true">←</span>
-                  <span className="ml-2">Previous</span>
-                </Link>
-              )}
-              
-              <div className="flex items-center gap-1" role="list" aria-label="Page numbers">
-                {Array.from({ length: Math.min(5, totalPages) }, (_, i) => i + Math.max(1, currentPage - 2))
-                  .filter((p) => p >= 1 && p <= totalPages)
-                  .map((p) => (
-                    <Link 
-                      key={p} 
-                      href={p === 1 ? "/blog" : `/blog?page=${p}`}
-                      aria-current={p === currentPage ? "page" : undefined}
-                      className={`px-3 py-2 rounded-lg border transition-all focus:outline-none focus:ring-2 focus:ring-brand-primary-400 focus:ring-offset-2 focus:ring-offset-black ${
-                        p === currentPage 
-                          ? "border-brand-primary-500 text-brand-primary-400 bg-brand-primary-500/10 font-medium" 
-                          : "border-neutral-700 hover:border-brand-primary-500/50 text-neutral-200 hover:text-white"
-                      }`}
-                      aria-label={p === currentPage ? `Current page, page ${p}` : `Go to page ${p}`}
-                      role="listitem"
-                    >
-                      {p}
-                    </Link>
-                  ))}
-              </div>
-              
-              {currentPage < totalPages && (
-                <Link 
-                  rel="next" 
-                  href={`/blog?page=${currentPage + 1}`}
-                  className="flex items-center px-4 py-2 rounded-lg border border-neutral-700 hover:border-brand-primary-500/50 focus:border-brand-primary-500 focus:outline-none focus:ring-2 focus:ring-brand-primary-400 focus:ring-offset-2 focus:ring-offset-black text-neutral-200 hover:text-white transition-all"
-                  aria-label={`Go to next page, page ${currentPage + 1}`}
-                >
-                  <span className="mr-2">Next</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-              )}
-            </div>
-          </nav>
         </div>
       </main>
     </div>

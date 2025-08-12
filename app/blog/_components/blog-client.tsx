@@ -23,186 +23,208 @@ type SortKey = "newest" | "trending" | "readtime" | "popular"
 
 export default function BlogClient({ posts, categories, page, pageSize, total, hasMore, children }: BlogClientProps) {
   const [hydrated, setHydrated] = useState(false)
+  const [loadedPosts, setLoadedPosts] = useState(posts)
+  const [loading, setLoading] = useState(false)
+  const [currentPage, setCurrentPage] = useState(page)
+  
   useEffect(() => { setHydrated(true) }, [])
 
   // Hydration gate handled in render to preserve hook order
   const router = useRouter()
   const params = useSearchParams()
 
-  const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("")
-  const [selectedTag, setSelectedTag] = useState("")
+  const [search, setSearch] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState<string>("all")
+  const [selectedTag, setSelectedTag] = useState<string>("all")
   const [sortBy, setSortBy] = useState<SortKey>("newest")
-  const [effectsReady, setEffectsReady] = useState(false)
 
-  useEffect(() => {
-    setEffectsReady(true)
-  }, [])
+  const deferredSearch = useDeferredValue(search)
 
-  // Init from URL
+  // Initialize filters from URL on hydration
   useEffect(() => {
-    const q = params.get("q") || ""
-    const cat = params.get("cat") || ""
-    const tag = params.get("tag") || ""
-    const s = (params.get("sort") as SortKey) || "newest"
-    setSearchQuery(q)
-    setSelectedCategory(cat)
+    if (!hydrated) return
+    const category = params.get("category") || "all"
+    const tag = params.get("tag") || "all"
+    const sort = (params.get("sort") as SortKey) || "newest"
+    const searchQuery = params.get("q") || ""
+    
+    setSelectedCategory(category)
     setSelectedTag(tag)
-    setSortBy(s)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+    setSortBy(sort)
+    setSearch(searchQuery)
+  }, [hydrated, params])
 
-  // Sync URL on changes (do not introduce page=1)
-  useEffect(() => {
-    const url = new URL(window.location.href)
-    const q = searchQuery.trim()
-    const cat = selectedCategory
-    const tag = selectedTag
-    const s = sortBy
-    if (q) url.searchParams.set("q", q); else url.searchParams.delete("q")
-    if (cat) url.searchParams.set("cat", cat); else url.searchParams.delete("cat")
-    if (tag) url.searchParams.set("tag", tag); else url.searchParams.delete("tag")
-    if (s && s !== "newest") url.searchParams.set("sort", s); else url.searchParams.delete("sort")
-    // Do not add or modify the page param here; preserve whatever is present
-    router.replace(url.pathname + (url.search ? `?${url.searchParams.toString()}` : ""), { scroll: false })
-  }, [searchQuery, selectedCategory, selectedTag, sortBy, router])
+  // Load more posts
+  const loadMore = async () => {
+    if (loading || !hasMore) return
+    
+    setLoading(true)
+    try {
+      const nextPage = currentPage + 1
+      const response = await fetch(`/api/blog?page=${nextPage}&pageSize=${pageSize}`)
+      const data = await response.json()
+      
+      if (data.posts && data.posts.length > 0) {
+        setLoadedPosts(prev => [...prev, ...data.posts])
+        setCurrentPage(nextPage)
+      }
+    } catch (error) {
+      console.error('Failed to load more posts:', error)
+    } finally {
+      setLoading(false)
+    }
+  }
 
-  const deferredQuery = useDeferredValue(searchQuery.trim().toLowerCase())
-  const isFiltering = deferredQuery !== searchQuery.trim().toLowerCase()
-
+  // Filter and sort posts
   const filteredPosts = useMemo(() => {
-    const sorted = [...posts]
-    switch (sortBy) {
-      case "trending":
-        sorted.sort((a, b) => Number(b.trending) - Number(a.trending))
-        break
-      case "readtime":
-        sorted.sort((a, b) => a.readTime - b.readTime)
-        break
-      case "newest":
-      default:
-        sorted.sort((a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime())
+    let filtered = loadedPosts
+
+    // Search filter
+    if (deferredSearch.trim()) {
+      const query = deferredSearch.toLowerCase()
+      filtered = filtered.filter(
+        (post) =>
+          post.title.toLowerCase().includes(query) ||
+          post.description.toLowerCase().includes(query) ||
+          post.tags?.some((tag) => tag.toLowerCase().includes(query))
+      )
     }
 
-    return sorted.filter((post) => {
-      const q = deferredQuery
-      const matchesSearch = !q
-        ? true
-        : [post.title, post.description, post.author.name, ...post.tags]
-            .filter(Boolean)
-            .map((s) => s.toLowerCase())
-            .some((s) => s.includes(q))
+    // Category filter
+    if (selectedCategory !== "all") {
+      filtered = filtered.filter((post) => post.category === selectedCategory)
+    }
 
-      const matchesCategory = !selectedCategory || post.category === selectedCategory
-      const matchesTag = !selectedTag || post.tags.includes(selectedTag)
-      return matchesSearch && matchesCategory && matchesTag
+    // Tag filter
+    if (selectedTag !== "all") {
+      filtered = filtered.filter((post) => post.tags?.includes(selectedTag))
+    }
+
+    // Sort
+    filtered = [...filtered].sort((a, b) => {
+      switch (sortBy) {
+        case "trending":
+          return (b.views || 0) - (a.views || 0)
+        case "popular":
+          return (b.likes || 0) - (a.likes || 0)
+        case "readtime":
+          return (a.readTime || 0) - (b.readTime || 0)
+        case "newest":
+        default:
+          return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      }
     })
-  }, [posts, deferredQuery, selectedCategory, selectedTag, sortBy])
 
-  const activeFilters = useMemo(() => {
-    const chips: { key: string; label: string; clear: () => void }[] = []
-    if (searchQuery)
-      chips.push({ key: "q", label: `Search: "${searchQuery}"`, clear: () => setSearchQuery("") })
-    if (selectedCategory) {
-      const cat = categories.find((c) => c.id === selectedCategory)
-      chips.push({ key: "cat", label: `Category: ${cat?.name || selectedCategory}`, clear: () => setSelectedCategory("") })
-    }
-    if (selectedTag)
-      chips.push({ key: "tag", label: `Tag: ${selectedTag}`, clear: () => setSelectedTag("") })
-    if (sortBy !== "newest")
-      chips.push({ key: "sort", label: `Sort: ${sortBy}`, clear: () => setSortBy("newest") })
-    return chips
-  }, [searchQuery, selectedCategory, selectedTag, sortBy, categories])
+    return filtered
+  }, [loadedPosts, deferredSearch, selectedCategory, selectedTag, sortBy])
 
-  const clearAll = () => {
-    setSearchQuery("")
-    setSelectedCategory("")
-    setSelectedTag("")
-    setSortBy("newest")
-  }
-
-  const totalPages = Math.max(1, Math.ceil(total / pageSize))
-  const startIndex = (page - 1) * pageSize
-
-  const goToPage = (nextPage: number) => {
+  const updateUrl = (newParams: Record<string, string | null>) => {
+    if (!hydrated) return
+    
     const url = new URL(window.location.href)
-    if (nextPage <= 1) {
-      url.searchParams.delete("page")
-    } else {
-      url.searchParams.set("page", String(nextPage))
+    
+    Object.entries(newParams).forEach(([key, value]) => {
+      if (value && value !== "all" && value !== "") {
+        url.searchParams.set(key, value)
+      } else {
+        url.searchParams.delete(key)
+      }
+    })
+    
+    // Always remove page param when filtering
+    if (Object.keys(newParams).some(key => key !== 'page')) {
+      url.searchParams.delete('page')
     }
-    router.replace(url.pathname + (url.searchParams.toString() ? `?${url.searchParams.toString()}` : ""))
+    
+    router.push(url.pathname + url.search, { scroll: false })
   }
+
+  const handleSearch = (value: string) => {
+    setSearch(value)
+    updateUrl({ q: value })
+  }
+
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category)
+    updateUrl({ category })
+  }
+
+  const handleTagChange = (tag: string) => {
+    setSelectedTag(tag)
+    updateUrl({ tag })
+  }
+
+  const handleSortChange = (sort: SortKey) => {
+    setSortBy(sort)
+    updateUrl({ sort })
+  }
+
+  // Return children (SSR content) until hydrated, then show interactive list
+  if (!hydrated) {
+    return <>{children}</>
+  }
+
+  const hasMoreToShow = hasMore && currentPage * pageSize < total
 
   return (
     <>
-      {/* Background Effects */}
-      {effectsReady && (
-        <div className="pointer-events-none" aria-hidden role="presentation">
-          <HexagonalGrid className="opacity-[0.02]" />
-          <FloatingParticles count={15} className="opacity-80" />
-          <MathematicalPattern className="opacity-[0.03]" />
-        </div>
-      )}
-
       {/* Filters */}
       <BlogFilters
-        searchQuery={searchQuery}
-        setSearchQuery={setSearchQuery}
+        searchQuery={search}
+        setSearchQuery={handleSearch}
         selectedCategory={selectedCategory}
-        setSelectedCategory={setSelectedCategory}
+        setSelectedCategory={handleCategoryChange}
       />
 
-      {/* Removed header toolbar (title, count, sort) */}
-
-      {/* Articles Grid as semantic list */}
-      <section aria-labelledby="articles">
-        <h2 id="articles" className="sr-only">Articles</h2>
-        {filteredPosts.length > 0 ? (
-          <ol start={startIndex + 1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" itemScope itemType="https://schema.org/ItemList" aria-busy={isFiltering ? "true" : "false"}>
-            {filteredPosts.map((post, i) => (
-              <li key={post.id} itemProp="itemListElement" itemScope itemType="https://schema.org/ListItem">
-                <meta itemProp="position" content={(startIndex + i + 1).toString()} />
-                <BlogCard post={post} />
-              </li>
-            ))}
-          </ol>
+      {/* Results Grid */}
+      <section className="mt-4" aria-labelledby="blog-results">
+        <h2 id="blog-results" className="sr-only">
+          Blog posts results
+        </h2>
+        
+        {filteredPosts.length === 0 ? (
+          <div className="text-center py-8">
+            <BookOpen className="mx-auto h-12 w-12 text-neutral-400 mb-4" />
+            <h3 className="text-xl font-medium text-neutral-200 mb-2">No posts found</h3>
+            <p className="text-neutral-400">Try adjusting your filters or search terms.</p>
+          </div>
         ) : (
-          <div className="text-center py-16">
-            <div className="text-6xl mb-4">🔍</div>
-            <h3 className="text-2xl font-bold text-white mb-2">No articles found</h3>
-            <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
-            <button
-              onClick={clearAll}
-              className="px-6 py-3 rounded-xl bg-gradient-to-r from-orange-500 to-red-500 text-white font-semibold hover:scale-105 transition-transform"
-            >
-              Clear Filters
-            </button>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredPosts.map((post) => (
+              <BlogCard key={post.id} post={post} />
+            ))}
           </div>
         )}
       </section>
 
-      {/* Pagination controls */}
-      <nav aria-label="Pagination" className="mt-10 flex items-center justify-center gap-4">
-        <button
-          disabled={page <= 1}
-          onClick={() => goToPage(page - 1)}
-          className="px-4 py-2 rounded-lg border border-neutral-700 disabled:opacity-50"
-        >
-          Previous
-        </button>
-        <span className="text-sm text-neutral-400">Page {page} of {totalPages}</span>
-        <button
-          disabled={!hasMore}
-          onClick={() => goToPage(page + 1)}
-          className="px-4 py-2 rounded-lg border border-neutral-700 disabled:opacity-50"
-        >
-          Next
-        </button>
-      </nav>
-
-      {/* Newsletter Signup */}
-      <NewsletterSignup />
+      {/* Load More Button */}
+      {hasMoreToShow && (
+        <div className="mt-8 text-center">
+          <button
+            onClick={loadMore}
+            disabled={loading}
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+            aria-label="Load more blog posts"
+          >
+            {loading ? (
+              <>
+                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                Loading...
+              </>
+            ) : (
+              <>
+                <span>Load More Articles</span>
+                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </>
+            )}
+          </button>
+        </div>
+      )}
     </>
   )
 } 

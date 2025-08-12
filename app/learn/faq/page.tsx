@@ -95,7 +95,7 @@ export default function LearnFAQPage() {
               <section key={q.id} id={slug(q.question)}>
                 <h3 className="text-xl font-semibold text-white">{q.question}</h3>
                 <p className="text-neutral-300">{q.answer}</p>
-              </section>
+        </section>
             ))}
           </div>
         </noscript>
