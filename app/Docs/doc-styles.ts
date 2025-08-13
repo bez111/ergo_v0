@@ -21,22 +21,22 @@ export const docStyles = {
   link: "text-brand-primary-400 hover:text-brand-primary-300 transition-colors",
   
   // Buttons - Плоский дизайн
-  buttonPrimary: "inline-flex items-center px-6 py-3 bg-brand-primary-500 rounded-xl font-semibold text-black hover:bg-brand-primary-600 transition-all duration-200",
-  buttonSecondary: "inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700 transition-all duration-200",
-  buttonOutline: "inline-flex items-center px-6 py-3 border border-neutral-700 rounded-xl font-semibold text-white hover:bg-neutral-800/50 transition-all duration-200",
+  buttonPrimary: "inline-flex items-center px-6 py-3 bg-brand-primary-500 text-black font-semibold rounded-lg hover:bg-brand-primary-400 transition-colors",
+  buttonSecondary: "inline-flex items-center px-6 py-3 bg-neutral-800 text-white font-semibold rounded-lg hover:bg-neutral-700 transition-colors border border-neutral-700",
+  buttonOutline: "inline-flex items-center px-6 py-3 border border-brand-primary-500 text-brand-primary-400 font-semibold rounded-lg hover:bg-brand-primary-500/10 transition-colors",
   
-  // Cards - Минималистичный стиль
-  card: "bg-neutral-900/50 border border-neutral-700 rounded-xl p-6",
-  cardHover: "bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/50 hover:bg-neutral-800/50 transition-all duration-300",
+  // Cards - Обновленный дизайн как на скриншоте
+  card: "bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-all",
+  cardHighlight: "bg-gradient-to-br from-neutral-900 to-neutral-800 border border-brand-primary-500/20 rounded-2xl p-6",
   
-  // Sections
-  section: "mb-12",
-  sectionTitle: "text-2xl font-bold text-white mb-6 flex items-center gap-2",
-  
-  // Grid
+  // Grids
   grid2: "grid md:grid-cols-2 gap-6",
   grid3: "grid md:grid-cols-3 gap-6",
   grid4: "grid md:grid-cols-2 lg:grid-cols-4 gap-6",
+  
+  // Sections
+  section: "mb-12",
+  sectionTitle: "text-2xl font-bold text-white mb-4 flex items-center gap-3",
   
   // Lists
   list: "space-y-2",
@@ -75,20 +75,14 @@ export const docStyles = {
   // Dividers
   divider: "border-t border-neutral-800 my-8",
   
-  // Feature Cards (для главных разделов)
-  featureCard: "group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/50 hover:bg-neutral-800/50 transition-all duration-300 block",
+  // Feature Cards (для главных разделов) - обновленный стиль как на скриншоте
+  featureCard: "group relative bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 flex items-start gap-4 cursor-pointer overflow-hidden",
   
-  featureIcon: "w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300",
-  
-  featureTitle: "text-lg font-semibold text-white group-hover:text-brand-primary-400 transition-colors duration-300 mb-2",
-  
-  featureDescription: "text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300",
-  
-  // Chevron for links
-  chevron: "w-5 h-5 text-gray-500 group-hover:text-brand-primary-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
+  // Chevron icon
+  chevron: "w-5 h-5 text-gray-500 group-hover:text-brand-primary-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 absolute right-6 top-1/2 -translate-y-1/2",
 }
 
-// Helper function to combine styles
-export const cn = (...classes: (string | undefined | null | false)[]) => {
+// Helper function for combining classes
+export function cn(...classes: (string | undefined | null | false)[]) {
   return classes.filter(Boolean).join(' ')
 } 

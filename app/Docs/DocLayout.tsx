@@ -52,39 +52,47 @@ interface DocCardProps {
   title: string
   description?: string
   icon?: React.ReactNode
-  children?: React.ReactNode
   className?: string
   onClick?: () => void
 }
 
-export function DocCard({ href, title, description, icon, children, className, onClick }: DocCardProps) {
+export function DocCard({ href, title, description, icon, className, onClick }: DocCardProps) {
   const content = (
-    <div className="flex items-start gap-4">
+    <>
+      {/* Icon container */}
       {icon && (
-        <div className="flex-shrink-0">
-          <div className={docStyles.featureIcon}>
-            {icon}
-          </div>
+        <div className="w-12 h-12 bg-neutral-800 rounded-xl flex items-center justify-center flex-shrink-0">
+          {icon}
         </div>
       )}
-      <div className="flex-1 min-w-0">
-        <h3 className={docStyles.featureTitle}>
+      
+      {/* Text content */}
+      <div className="flex-1">
+        <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-orange-400 transition-colors">
           {title}
         </h3>
         {description && (
-          <p className={docStyles.featureDescription}>
+          <p className="text-sm text-gray-500 leading-relaxed">
             {description}
           </p>
         )}
-        {children}
       </div>
-      {href && <ChevronRight className={docStyles.chevron} />}
-    </div>
+      
+      {/* Arrow icon */}
+      {href && (
+        <ChevronRight className="w-5 h-5 text-gray-600 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
+      )}
+    </>
   )
 
   if (href) {
     return (
-      <Link href={href} className={cn(docStyles.featureCard, className)}>
+      <Link href={href} className={cn(
+        "group relative bg-neutral-900 border border-neutral-800 rounded-2xl p-5",
+        "hover:border-orange-500/50 transition-all duration-300",
+        "flex items-center gap-4",
+        className
+      )}>
         {content}
       </Link>
     )
@@ -92,14 +100,23 @@ export function DocCard({ href, title, description, icon, children, className, o
 
   if (onClick) {
     return (
-      <button onClick={onClick} className={cn(docStyles.featureCard, className)}>
+      <button onClick={onClick} className={cn(
+        "group relative bg-neutral-900 border border-neutral-800 rounded-2xl p-5",
+        "hover:border-orange-500/50 transition-all duration-300",
+        "flex items-center gap-4 w-full text-left",
+        className
+      )}>
         {content}
       </button>
     )
   }
 
   return (
-    <div className={cn(docStyles.card, className)}>
+    <div className={cn(
+      "relative bg-neutral-900 border border-neutral-800 rounded-2xl p-5",
+      "flex items-center gap-4",
+      className
+    )}>
       {content}
     </div>
   )

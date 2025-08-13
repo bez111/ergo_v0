@@ -105,7 +105,7 @@ export default function DocsPage() {
             href="/Docs/introduction/eutxo"
             title="eUTxO Model"
             description="Extended UTXO model for advanced smart contracts"
-            icon={<Database className="w-6 h-6 text-cyan-400" />}
+            icon={<Database className="w-6 h-6 text-orange-400" />}
           />
           <DocCard
             href="/Docs/introduction/nipopows"
@@ -150,13 +150,13 @@ export default function DocsPage() {
             href="/Docs/developers"
             title="Developer Hub"
             description="Unified developer portal with all resources"
-            icon={<Rocket className="w-6 h-6 text-yellow-400" />}
+            icon={<Rocket className="w-6 h-6 text-orange-400" />}
           />
           <DocCard
             href="/Docs/developers/ergoscript-languages"
             title="ErgoScript"
             description="Smart contract language and compiler"
-            icon={<Code className="w-6 h-6 text-yellow-400" />}
+            icon={<Code className="w-6 h-6 text-gray-400" />}
           />
           <DocCard
             href="/Docs/developers/tooling"
@@ -195,25 +195,25 @@ export default function DocsPage() {
             href="/Docs/ecosystem"
             title="Overview"
             description="Complete ecosystem map"
-            icon={<Globe className="w-6 h-6 text-green-400" />}
+            icon={<Globe className="w-6 h-6 text-orange-400" />}
           />
           <DocCard
             href="/Docs/ecosystem/applications"
             title="Applications"
             description="dApps built on Ergo"
-            icon={<Building className="w-6 h-6 text-green-400" />}
+            icon={<Building className="w-6 h-6 text-gray-400" />}
           />
           <DocCard
             href="/Docs/ecosystem/financial"
             title="DeFi"
             description="Financial protocols"
-            icon={<BarChart3 className="w-6 h-6 text-green-400" />}
+            icon={<BarChart3 className="w-6 h-6 text-gray-400" />}
           />
           <DocCard
             href="/Docs/ecosystem/privacy"
             title="Privacy"
             description="Privacy solutions"
-            icon={<Eye className="w-6 h-6 text-green-400" />}
+            icon={<Eye className="w-6 h-6 text-gray-400" />}
           />
           <DocCard
             href="/Docs/ecosystem/nfts"
@@ -231,7 +231,7 @@ export default function DocsPage() {
             href="/Docs/ecosystem/tooling"
             title="Tooling"
             description="Development tools"
-            icon={<Settings className="w-6 h-6 text-green-400" />}
+            icon={<Settings className="w-6 h-6 text-yellow-400" />}
           />
           <DocCard
             href="/Docs/ecosystem/daos"
@@ -258,13 +258,13 @@ export default function DocsPage() {
             href="/Docs/miners/Miner-Tooling"
             title="Mining Software"
             description="Mining software and configuration guides"
-            icon={<Settings className="w-6 h-6 text-purple-400" />}
+            icon={<Settings className="w-6 h-6 text-yellow-400" />}
           />
           <DocCard
             href="/Docs/miners/resources"
             title="Mining Resources"
             description="Pools, calculators, and community resources"
-            icon={<Database className="w-6 h-6 text-purple-400" />}
+            icon={<Database className="w-6 h-6 text-gray-400" />}
           />
         </DocGrid>
       </DocSection>
@@ -336,7 +336,7 @@ export default function DocsPage() {
             href="/Docs/introduction/roadmap"
             title="Roadmap"
             description="Future development plans"
-            icon={<Target className="w-6 h-6 text-orange-400" />}
+            icon={<Target className="w-6 h-6 text-gray-400" />}
           />
           <DocCard
             href="/Docs/introduction/wallets"
@@ -354,7 +354,7 @@ export default function DocsPage() {
             href="/Docs/introduction/misconceptions"
             title="Misconceptions"
             description="Common myths debunked"
-            icon={<FileQuestion className="w-6 h-6 text-orange-400" />}
+            icon={<FileQuestion className="w-6 h-6 text-gray-400" />}
           />
         </DocGrid>
       </DocSection>
