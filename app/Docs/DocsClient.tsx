@@ -167,7 +167,7 @@ export default function DocsPage() {
         <p className="text-gray-300 mb-6">
           Deep dive into Ergo's technical foundations and innovative features that set it apart from other blockchain platforms.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Link 
             href="/Docs/introduction/eutxo"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
@@ -286,7 +286,7 @@ export default function DocsPage() {
         <p className="text-gray-300 mb-6">
           Complete resources for developers building on Ergo. From smart contracts to full-stack applications.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Link 
             href="/Docs/developers"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
@@ -405,7 +405,7 @@ export default function DocsPage() {
         <p className="text-gray-300 mb-6">
           Explore the growing ecosystem of applications, tools, and services built on Ergo.
         </p>
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Link 
             href="/Docs/ecosystem"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
@@ -560,7 +560,7 @@ export default function DocsPage() {
         <p className="text-gray-300 mb-6">
           Everything you need to know about mining Ergo, from hardware setup to pool selection.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Link 
             href="/Docs/miners"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
@@ -625,7 +625,7 @@ export default function DocsPage() {
         <p className="text-gray-300 mb-6">
           Learn about Ergo's governance structure and how to get involved in the community.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Link 
             href="/Docs/introduction/ergo-foundation"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
@@ -744,7 +744,7 @@ export default function DocsPage() {
         <p className="text-gray-300 mb-6">
           Research papers, whitepapers, and additional learning materials.
         </p>
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6">
           <Link 
             href="/Docs/introduction/research-whitepapers"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
