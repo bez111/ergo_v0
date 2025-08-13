@@ -426,7 +426,7 @@ export default function MinersResourcesPage() {
           </h2>
           <div className="grid md:grid-cols-3 gap-4">
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">< 2%</div>
+              <div className="text-3xl font-bold text-white mb-2">&lt; 2%</div>
               <p className="text-gray-400 text-sm">Recommended pool fee</p>
             </div>
             <div className="text-center">
@@ -434,7 +434,7 @@ export default function MinersResourcesPage() {
               <p className="text-gray-400 text-sm">Fair reward system</p>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-white mb-2">< 30%</div>
+              <div className="text-3xl font-bold text-white mb-2">&lt; 30%</div>
               <p className="text-gray-400 text-sm">Max network hashrate</p>
             </div>
           </div>
