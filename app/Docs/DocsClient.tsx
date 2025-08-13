@@ -87,90 +87,74 @@ export default function DocsPage() {
         <div className="grid md:grid-cols-2 gap-6">
           <Link 
             href="/Docs/why-ergo"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Target className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Why Ergo
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Discover what makes Ergo unique and why it matters in the blockchain ecosystem
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Target className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Why Ergo
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Discover what makes Ergo unique and why it matters in the blockchain ecosystem
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/key-features"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Zap className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Key Features
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Explore Ergo's core technological innovations and capabilities
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Zap className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Key Features
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Explore Ergo's core technological innovations and capabilities
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/glossary"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Glossary
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Comprehensive blockchain and Ergo terminology guide
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <BookOpen className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Glossary
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Comprehensive blockchain and Ergo terminology guide
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/faq"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <HelpCircle className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  FAQ
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Find answers to commonly asked questions about Ergo
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <HelpCircle className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                FAQ
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Find answers to commonly asked questions about Ergo
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
         </div>
       </div>
@@ -186,134 +170,110 @@ export default function DocsPage() {
         <div className="grid md:grid-cols-3 gap-6">
           <Link 
             href="/Docs/introduction/eutxo"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-cyan-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Database className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  eUTxO Model
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Extended UTXO model for advanced smart contracts
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Database className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                eUTxO Model
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Extended UTXO model for advanced smart contracts
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/nipopows"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-6 h-6 text-cyan-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  NIPoPoWs
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Non-Interactive Proofs of Proof-of-Work
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Shield className="w-6 h-6 text-cyan-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                NIPoPoWs
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Non-Interactive Proofs of Proof-of-Work
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/storage-rent"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Coins className="w-6 h-6 text-cyan-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Storage Rent
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Economic model for sustainable blockchain
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Coins className="w-6 h-6 text-cyan-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Storage Rent
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Economic model for sustainable blockchain
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/autolykos"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Cpu className="w-6 h-6 text-cyan-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Autolykos
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Memory-hard proof-of-work algorithm
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Cpu className="w-6 h-6 text-cyan-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Autolykos
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Memory-hard proof-of-work algorithm
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/privacy"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Lock className="w-6 h-6 text-cyan-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Privacy Features
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Advanced privacy and confidentiality tools
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Lock className="w-6 h-6 text-cyan-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Privacy Features
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Advanced privacy and confidentiality tools
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/light-clients"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Smartphone className="w-6 h-6 text-cyan-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Light Clients
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Lightweight blockchain verification
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Smartphone className="w-6 h-6 text-cyan-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Light Clients
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Lightweight blockchain verification
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
         </div>
       </div>
@@ -329,134 +289,110 @@ export default function DocsPage() {
         <div className="grid md:grid-cols-3 gap-6">
           <Link 
             href="/Docs/developers"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-yellow-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Rocket className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Developer Hub
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Unified developer portal with all resources
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Rocket className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Developer Hub
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Unified developer portal with all resources
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/developers/ergoscript-languages"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Code className="w-6 h-6 text-gray-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  ErgoScript
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Smart contract language and compiler
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Code className="w-6 h-6 text-gray-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                ErgoScript
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Smart contract language and compiler
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/developers/tooling"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Settings className="w-6 h-6 text-yellow-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Developer Tools
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  SDKs, libraries, and development tools
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Settings className="w-6 h-6 text-yellow-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Developer Tools
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                SDKs, libraries, and development tools
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/developers/data-model-apis"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Network className="w-6 h-6 text-yellow-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  APIs & Data
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  REST APIs and data model documentation
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Network className="w-6 h-6 text-yellow-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                APIs & Data
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                REST APIs and data model documentation
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/developers/tutorials"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <GraduationCap className="w-6 h-6 text-yellow-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Tutorials
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Step-by-step guides and examples
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <GraduationCap className="w-6 h-6 text-yellow-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Tutorials
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Step-by-step guides and examples
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/developers/box"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Database className="w-6 h-6 text-yellow-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Box Model
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Understanding Ergo's box-based architecture
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Database className="w-6 h-6 text-yellow-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Box Model
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Understanding Ergo's box-based architecture
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
         </div>
       </div>
@@ -472,178 +408,146 @@ export default function DocsPage() {
         <div className="grid md:grid-cols-4 gap-6">
           <Link 
             href="/Docs/ecosystem"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-green-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Globe className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Overview
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Complete ecosystem map
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Globe className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Overview
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Complete ecosystem map
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/ecosystem/applications"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Building className="w-6 h-6 text-gray-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Applications
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  dApps built on Ergo
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Building className="w-6 h-6 text-gray-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Applications
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                dApps built on Ergo
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/ecosystem/financial"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <BarChart3 className="w-6 h-6 text-gray-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  DeFi
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Financial protocols
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <BarChart3 className="w-6 h-6 text-gray-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                DeFi
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Financial protocols
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/ecosystem/privacy"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Eye className="w-6 h-6 text-gray-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Privacy
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Privacy solutions
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Eye className="w-6 h-6 text-gray-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Privacy
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Privacy solutions
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/ecosystem/nfts"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Star className="w-6 h-6 text-green-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  NFTs
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  NFT platforms
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Star className="w-6 h-6 text-green-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                NFTs
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                NFT platforms
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/ecosystem/infrastructure"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Network className="w-6 h-6 text-green-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Infrastructure
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Core infrastructure
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Network className="w-6 h-6 text-green-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Infrastructure
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Core infrastructure
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/ecosystem/tooling"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Settings className="w-6 h-6 text-yellow-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Tooling
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Development tools
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Settings className="w-6 h-6 text-yellow-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Tooling
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Development tools
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/ecosystem/daos"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-emerald-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Users2 className="w-6 h-6 text-green-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  DAOs
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Governance systems
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Users2 className="w-6 h-6 text-green-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                DAOs
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Governance systems
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
         </div>
       </div>
@@ -659,68 +563,56 @@ export default function DocsPage() {
         <div className="grid md:grid-cols-3 gap-6">
           <Link 
             href="/Docs/miners"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Pickaxe className="w-6 h-6 text-purple-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Mining Guide
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Complete mining documentation with setup instructions
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Pickaxe className="w-6 h-6 text-purple-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Mining Guide
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Complete mining documentation with setup instructions
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/miners/Miner-Tooling"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Settings className="w-6 h-6 text-yellow-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Mining Software
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Mining software and configuration guides
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Settings className="w-6 h-6 text-yellow-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Mining Software
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Mining software and configuration guides
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/miners/resources"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Database className="w-6 h-6 text-gray-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Mining Resources
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Pools, calculators, and community resources
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Database className="w-6 h-6 text-gray-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Mining Resources
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Pools, calculators, and community resources
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
         </div>
       </div>
@@ -736,134 +628,110 @@ export default function DocsPage() {
         <div className="grid md:grid-cols-3 gap-6">
           <Link 
             href="/Docs/introduction/ergo-foundation"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Building className="w-6 h-6 text-blue-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Ergo Foundation
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  The organization behind Ergo
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Building className="w-6 h-6 text-blue-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Ergo Foundation
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                The organization behind Ergo
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/devdao"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Users className="w-6 h-6 text-blue-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  DevDao
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Developer DAO for ecosystem growth
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Users className="w-6 h-6 text-blue-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                DevDao
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Developer DAO for ecosystem growth
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/sigmanauts"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Award className="w-6 h-6 text-blue-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Sigmanauts
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Community ambassador program
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Award className="w-6 h-6 text-blue-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Sigmanauts
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Community ambassador program
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/social-contract"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <FileText className="w-6 h-6 text-blue-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Social Contract
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Ergo's principles and values
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <FileText className="w-6 h-6 text-blue-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Social Contract
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Ergo's principles and values
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/events"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Calendar className="w-6 h-6 text-blue-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Events
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Conferences and meetups
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Calendar className="w-6 h-6 text-blue-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Events
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Conferences and meetups
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/contribute"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-indigo-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <GitBranch className="w-6 h-6 text-blue-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Contribute
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  How to contribute to Ergo
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <GitBranch className="w-6 h-6 text-blue-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Contribute
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                How to contribute to Ergo
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
         </div>
       </div>
@@ -879,134 +747,110 @@ export default function DocsPage() {
         <div className="grid md:grid-cols-3 gap-6">
           <Link 
             href="/Docs/introduction/research-whitepapers"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <FileText className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Research Papers
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Academic papers and technical research
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <FileText className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Research Papers
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Academic papers and technical research
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/resources"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <BookOpen className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Learning Resources
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Videos, articles, and tutorials
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <BookOpen className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Learning Resources
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Videos, articles, and tutorials
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/roadmap"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Target className="w-6 h-6 text-gray-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Roadmap
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Future development plans
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Target className="w-6 h-6 text-gray-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Roadmap
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Future development plans
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/wallets"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Wallet className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Wallets
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Wallet options and setup guides
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Wallet className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Wallets
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Wallet options and setup guides
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/audit"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-6 h-6 text-orange-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Security Audits
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Security audit reports
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Shield className="w-6 h-6 text-orange-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Security Audits
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Security audit reports
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
 
           <Link 
             href="/Docs/introduction/misconceptions"
-            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300"
+            className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
-            <div className="flex items-start gap-4">
-              <div className="flex-shrink-0">
-                <div className="w-12 h-12 bg-gradient-to-br from-gray-500/20 to-gray-600/20 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <FileQuestion className="w-6 h-6 text-gray-400" />
-                </div>
-              </div>
-              <div className="flex-1 min-w-0">
-                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
-                  Misconceptions
-                </h3>
-                <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
-                  Common myths debunked
-                </p>
-              </div>
-              <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300" />
+            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+              <FileQuestion className="w-6 h-6 text-gray-400" />
             </div>
+            <div className="flex-1 min-w-0">
+              <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-300 mb-2">
+                Misconceptions
+              </h3>
+              <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">
+                Common myths debunked
+              </p>
+            </div>
+            <ChevronRight className="w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0" />
           </Link>
         </div>
       </div>
