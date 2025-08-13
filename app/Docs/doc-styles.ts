@@ -76,40 +76,19 @@ export const docStyles = {
   divider: "border-t border-neutral-800 my-8",
   
   // Feature Cards (для главных разделов)
-  featureCard: `
-    group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 
-    hover:border-brand-primary-500/50 hover:bg-neutral-800/50 
-    transition-all duration-300
-  `,
+  featureCard: "group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/50 hover:bg-neutral-800/50 transition-all duration-300 block",
   
-  featureIcon: `
-    w-12 h-12 bg-neutral-800 rounded-lg 
-    flex items-center justify-center 
-    group-hover:scale-110 transition-transform duration-300
-  `,
+  featureIcon: "w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform duration-300",
   
-  featureTitle: `
-    text-lg font-semibold text-white 
-    group-hover:text-brand-primary-400 
-    transition-colors duration-300 mb-2
-  `,
+  featureTitle: "text-lg font-semibold text-white group-hover:text-brand-primary-400 transition-colors duration-300 mb-2",
   
-  featureDescription: `
-    text-sm text-gray-400 
-    group-hover:text-gray-300 
-    transition-colors duration-300
-  `,
+  featureDescription: "text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300",
   
   // Chevron for links
-  chevron: `
-    w-5 h-5 text-gray-500 
-    group-hover:text-brand-primary-400 
-    group-hover:translate-x-1 
-    transition-all duration-300
-  `
+  chevron: "w-5 h-5 text-gray-500 group-hover:text-brand-primary-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0"
 }
 
 // Helper function to combine styles
-export const cn = (...classes: string[]) => {
+export const cn = (...classes: (string | undefined | null | false)[]) => {
   return classes.filter(Boolean).join(' ')
 } 
