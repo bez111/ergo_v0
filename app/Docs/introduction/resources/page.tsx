@@ -1,192 +1,163 @@
-import type { Metadata } from 'next'
 import React from "react";
 import Link from "next/link";
-import {
-  Shield, FileText, CheckCircle, AlertTriangle, EyeOff, Globe
-} from "lucide-react";
-
-export const metadata: Metadata = {
-  title: 'Ergo Resources - Essential Information & Documentation',
-  description: 'Essential Ergo resources including social contract, security audit, privacy guide, and common misconceptions. Learn about Ergo\'s governance and security.',
-  keywords: ['ergo resources', 'social contract', 'security audit', 'privacy guide', 'howey test', 'ergo governance', 'blockchain security'],
-  alternates: {
-    canonical: 'https://ergoblockchain.org/Docs/introduction/resources'
-  },
-  openGraph: {
-    title: 'Ergo Resources - Documentation',
-    description: 'Essential information about Ergo including governance, security, and privacy resources.',
-    url: 'https://ergoblockchain.org/Docs/introduction/resources',
-    siteName: 'Ergo Platform',
-    images: [{
-      url: 'https://ergoblockchain.org/og/docs-resources.png',
-      width: 1200,
-      height: 630,
-      alt: 'Ergo Resources Documentation'
-    }],
-    type: 'article',
-    locale: 'en_US'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Ergo Resources & Documentation',
-    description: 'Essential resources for understanding Ergo governance, security, and privacy.',
-    images: ['https://ergoblockchain.org/og/docs-resources.png'],
-    creator: '@ergoplatform',
-    site: '@ergoplatform'
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
-    }
-  }
-}
-
-const resources = [
-  {
-    title: "Social Contract",
-    href: "/Docs/introduction/social-contract",
-    icon: <Shield className="w-6 h-6 text-orange-400" />,
-    description:
-      "The main principles and values that define the Ergo protocol and its community governance.",
-  },
-  {
-    title: "Security Audit",
-    href: "/Docs/introduction/audit",
-    icon: <CheckCircle className="w-6 h-6 text-green-400" />,
-    description:
-      "Summary and results of the independent security audit of Ergo's core components.",
-  },
-  {
-    title: "The Howey Test",
-    href: "/Docs/introduction/howey-test",
-    icon: <FileText className="w-6 h-6 text-cyan-400" />,
-    description:
-      "Analysis of the Howey Test and its application to ERG tokens and the Ergo platform.",
-  },
-  {
-    title: "Privacy Guide",
-    href: "/Docs/introduction/privacy-guide",
-    icon: <EyeOff className="w-6 h-6 text-orange-400" />,
-    description:
-      "A practical guide to privacy and security for blockchain users, with tips and best practices.",
-  },
-  {
-    title: "Common Misconceptions",
-    href: "/Docs/introduction/misconceptions",
-    icon: <AlertTriangle className="w-6 h-6 text-yellow-400" />,
-    description:
-      "Clarifications and facts addressing frequent myths and misunderstandings about Ergo.",
-  },
-  {
-    title: "A CBDC For All",
-    href: "/Docs/introduction/cbdc",
-    icon: <Globe className="w-6 h-6 text-green-400" />,
-    description:
-      "How Ergo can serve as a decentralized, programmable, and privacy-focused digital currency for everyone.",
-  },
-];
+import { Shield, FileText, AlertTriangle, EyeOff, Globe, ChevronRight } from "lucide-react";
 
 export default function ResourcesPage() {
-  // Schema.org structured data
-  const resourcesSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Article',
-    headline: 'Ergo Resources & Documentation',
-    description: 'Essential resources for understanding Ergo governance, security, and privacy.',
-    author: {
-      '@type': 'Organization',
-      name: 'Ergo Platform'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Ergo Platform',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://ergoblockchain.org/logo.png'
-      }
-    },
-    datePublished: '2024-01-01',
-    dateModified: new Date().toISOString(),
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': 'https://ergoblockchain.org/Docs/introduction/resources'
-    }
-  }
-
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://ergoblockchain.org'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Documentation',
-        item: 'https://ergoblockchain.org/Docs'
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Introduction',
-        item: 'https://ergoblockchain.org/Docs/introduction'
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'Resources',
-        item: 'https://ergoblockchain.org/Docs/introduction/resources'
-      }
-    ]
-  }
-
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(resourcesSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-8 leading-tight pb-1">
+        Essential Resources
+      </h1>
+      <p className="text-lg text-gray-400 mb-10">
+        Core documents and guides that define Ergo's principles, security standards, and community practices.
+      </p>
       
-      <div className="max-w-4xl mx-auto px-6 py-12">
-        <div className="mb-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent leading-tight pb-1">
-            Ergo Resources
-          </h1>
-          <p className="text-lg text-gray-400 leading-relaxed">
-            Essential information and documentation about Ergo's governance, security, and community resources.
-          </p>
+      <div className="grid gap-6">
+        {/* Social Contract */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div className="flex items-center gap-4">
+            <FileText className="w-10 h-10 text-orange-400" />
+            <div>
+              <h2 className="text-2xl font-bold mb-1 bg-gradient-to-r from-orange-300 to-orange-100 bg-clip-text text-transparent">
+                Social Contract
+              </h2>
+              <p className="text-gray-400 text-sm max-w-md">
+                The foundational principles and commitments that guide Ergo's development and community governance.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/Docs/introduction/social-contract"
+            className="inline-flex items-center px-4 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition-colors mt-2 sm:mt-0"
+          >
+            Read More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-6">
-          {resources.map((resource, index) => (
-            <Link
-              key={index}
-              href={resource.href}
-              className="group relative bg-neutral-900/30 border border-orange-500/20 rounded-xl p-6 hover:border-orange-500/40 hover:bg-neutral-900/50 transition-all duration-300 hover:shadow-xl hover:shadow-orange-500/10"
-            >
-              <div className="flex items-start gap-4">
-                <div className="flex-shrink-0 p-3 bg-neutral-800/50 rounded-lg group-hover:bg-neutral-800/70 transition-colors">
-                  {resource.icon}
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">
-                    {resource.title}
-                  </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed">
-                    {resource.description}
-                  </p>
-                </div>
-              </div>
-            </Link>
-          ))}
+        {/* Security Audit */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div className="flex items-center gap-4">
+            <Shield className="w-10 h-10 text-cyan-400" />
+            <div>
+              <h2 className="text-2xl font-bold mb-1 bg-gradient-to-r from-cyan-300 to-blue-100 bg-clip-text text-transparent">
+                Security Audit
+              </h2>
+              <p className="text-gray-400 text-sm max-w-md">
+                Comprehensive security analysis and audit reports ensuring the robustness of Ergo's protocol.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/Docs/introduction/audit"
+            className="inline-flex items-center px-4 py-2 bg-cyan-500 rounded-lg font-semibold text-black hover:bg-cyan-600 transition-colors mt-2 sm:mt-0"
+          >
+            View Audit <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
+        </div>
+
+        {/* Privacy Guide */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div className="flex items-center gap-4">
+            <EyeOff className="w-10 h-10 text-purple-400" />
+            <div>
+              <h2 className="text-2xl font-bold mb-1 bg-gradient-to-r from-purple-300 to-pink-100 bg-clip-text text-transparent">
+                Privacy Guide
+              </h2>
+              <p className="text-gray-400 text-sm max-w-md">
+                Best practices and tools for maintaining privacy while using the Ergo blockchain.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/Docs/introduction/privacy-guide"
+            className="inline-flex items-center px-4 py-2 bg-purple-500 rounded-lg font-semibold text-black hover:bg-purple-600 transition-colors mt-2 sm:mt-0"
+          >
+            Learn More <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
+        </div>
+
+        {/* Howey Test */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div className="flex items-center gap-4">
+            <Shield className="w-10 h-10 text-green-400" />
+            <div>
+              <h2 className="text-2xl font-bold mb-1 bg-gradient-to-r from-green-300 to-emerald-100 bg-clip-text text-transparent">
+                Howey Test Analysis
+              </h2>
+              <p className="text-gray-400 text-sm max-w-md">
+                Legal analysis demonstrating why ERG is not a security under U.S. regulations.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/Docs/introduction/howey-test"
+            className="inline-flex items-center px-4 py-2 bg-green-500 rounded-lg font-semibold text-black hover:bg-green-600 transition-colors mt-2 sm:mt-0"
+          >
+            Read Analysis <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
+        </div>
+
+        {/* Misconceptions */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div className="flex items-center gap-4">
+            <AlertTriangle className="w-10 h-10 text-yellow-400" />
+            <div>
+              <h2 className="text-2xl font-bold mb-1 bg-gradient-to-r from-yellow-300 to-orange-100 bg-clip-text text-transparent">
+                Common Misconceptions
+              </h2>
+              <p className="text-gray-400 text-sm max-w-md">
+                Clarifying common misunderstandings and myths about Ergo and its technology.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/Docs/introduction/misconceptions"
+            className="inline-flex items-center px-4 py-2 bg-yellow-400 rounded-lg font-semibold text-black hover:bg-yellow-500 transition-colors mt-2 sm:mt-0"
+          >
+            Get Facts <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
+        </div>
+
+        {/* Research Papers */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div className="flex items-center gap-4">
+            <FileText className="w-10 h-10 text-indigo-400" />
+            <div>
+              <h2 className="text-2xl font-bold mb-1 bg-gradient-to-r from-indigo-300 to-blue-100 bg-clip-text text-transparent">
+                Research & Whitepapers
+              </h2>
+              <p className="text-gray-400 text-sm max-w-md">
+                Academic papers and technical documentation underlying Ergo's innovations.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/Docs/introduction/research-whitepapers"
+            className="inline-flex items-center px-4 py-2 bg-indigo-500 rounded-lg font-semibold text-black hover:bg-indigo-600 transition-colors mt-2 sm:mt-0"
+          >
+            View Papers <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
+        </div>
+
+        {/* Roadmap */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 justify-between">
+          <div className="flex items-center gap-4">
+            <Globe className="w-10 h-10 text-teal-400" />
+            <div>
+              <h2 className="text-2xl font-bold mb-1 bg-gradient-to-r from-teal-300 to-cyan-100 bg-clip-text text-transparent">
+                Development Roadmap
+              </h2>
+              <p className="text-gray-400 text-sm max-w-md">
+                Future plans and milestones for Ergo's protocol development and ecosystem growth.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/Docs/introduction/roadmap"
+            className="inline-flex items-center px-4 py-2 bg-teal-500 rounded-lg font-semibold text-black hover:bg-teal-600 transition-colors mt-2 sm:mt-0"
+          >
+            Explore Future <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
         </div>
       </div>
     </>
