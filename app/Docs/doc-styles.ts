@@ -4,7 +4,7 @@
 export const docStyles = {
   // Page Layout
   page: "min-h-screen bg-black text-white",
-  container: "max-w-6xl mx-auto px-4 sm:px-6 py-8",
+  container: "max-w-6xl mx-auto px-4 sm:px-6 pt-0 pb-8",
   
   // Typography - БЕЗ ГРАДИЕНТОВ!
   h1: "text-4xl sm:text-5xl font-bold text-white mb-4", // Чистый белый
