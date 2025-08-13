@@ -4,15 +4,16 @@
 "use client";
 
 import React from "react";
-import { Pickaxe, Zap, Layers, Link as LinkIcon, ExternalLink, Users, Database, TrendingUp, Shield } from "lucide-react";
+import { Pickaxe, Zap, Layers, Users, Database, TrendingUp, Shield, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function MinerToolingPage() {
   return (
     <div className="space-y-10">
       {/* Hero Section */}
       <div className="mb-10">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-yellow-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1 flex items-center gap-3">
-          <Pickaxe className="w-8 h-8 text-yellow-400" /> Miner Tooling
+        <h1 className="text-4xl font-bold text-white mb-4 leading-tight pb-1 flex items-center gap-3">
+          <Pickaxe className="w-8 h-8 text-brand-primary-400" /> Miner Tooling
         </h1>
         <p className="text-xl text-gray-400 mb-6 max-w-2xl">
           Explore decentralized apps and innovations designed to empower miners in the Ergo ecosystem. These tools promote decentralization, efficiency, and new opportunities for both miners and the broader network.
@@ -21,80 +22,103 @@ export default function MinerToolingPage() {
       {/* Decentralised Apps Section */}
       <div className="mb-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Zap className="w-6 h-6 text-yellow-400" /> Decentralised Apps
+          <Zap className="w-6 h-6 text-brand-primary-400" /> Decentralised Apps
         </h2>
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 gap-6">
           {/* GuapSwap */}
-          <div className="bg-neutral-900/50 border border-cyan-700 rounded-xl p-6 hover:border-cyan-400/60 transition-all duration-300 flex flex-col justify-between min-h-[180px]">
-            <div>
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Layers className="w-6 h-6 text-cyan-400" /> GuapSwap
-              </h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                GuapSwap allows miners to swap mined ERG for native tokens, providing flexibility and liquidity for mining rewards.
-              </p>
+          <Link href="/Docs/miners/Miner-Tooling/guapswap" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Layers className="w-6 h-6 text-brand-primary-400" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-brand-primary-400 transition-colors">GuapSwap</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  GuapSwap allows miners to swap mined ERG for native tokens, providing flexibility and liquidity for mining rewards.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
+              </div>
             </div>
-            {/* Add link if available */}
-            <span className="inline-flex items-center text-cyan-400 font-semibold mt-auto opacity-60 pointer-events-none">More</span>
-          </div>
+          </Link>
           {/* Lithos */}
-          <div className="bg-neutral-900/50 border border-green-700 rounded-xl p-6 hover:border-green-400/60 transition-all duration-300 flex flex-col justify-between min-h-[180px]">
-            <div>
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Shield className="w-6 h-6 text-green-400" /> Lithos
-              </h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                Lithos is building decentralized mining pool infrastructure. It enables lenders to earn yield on ERG by providing collateral to mining pools, and allows miners to directly insert transactions into blocks in a trustless way. Lithos recently completed collateral contracts and demonstrated direct transaction insertion at ERGOHACK VI.
-              </p>
+          <Link href="/Docs/miners/Miner-Tooling/lithos" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Shield className="w-6 h-6 text-brand-primary-400" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-brand-primary-400 transition-colors">Lithos</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Lithos is building decentralized mining pool infrastructure. It enables lenders to earn yield on ERG by providing collateral to mining pools, and allows miners to directly insert transactions into blocks in a trustless way. Lithos recently completed collateral contracts and demonstrated direct transaction insertion at ERGOHACK VI.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
+              </div>
             </div>
-            <span className="inline-flex items-center text-green-400 font-semibold mt-auto opacity-60 pointer-events-none">More</span>
-          </div>
+          </Link>
           {/* CYTI */}
-          <div className="bg-neutral-900/50 border border-pink-700 rounded-xl p-6 hover:border-pink-400/60 transition-all duration-300 flex flex-col justify-between min-h-[180px]">
-            <div>
-              <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-                <Database className="w-6 h-6 text-pink-400" /> CYTI
-              </h3>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                CYTI (Choose Your Token ID) helps miners mint tokens with a specific character sequence at the start of the token ID. Miners use CYTI software to generate the right ID and receive a fee when successful.
-              </p>
+          <Link href="/Docs/miners/Miner-Tooling/cyti" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Database className="w-6 h-6 text-brand-primary-400" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-brand-primary-400 transition-colors">CYTI</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  CYTI (Choose Your Token ID) helps miners mint tokens with a specific character sequence at the start of the token ID. Miners use CYTI software to generate the right ID and receive a fee when successful.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
+              </div>
             </div>
-            <span className="inline-flex items-center text-pink-400 font-semibold mt-auto opacity-60 pointer-events-none">More</span>
-          </div>
+          </Link>
+          {/* Log-Space Mining */}
+          <Link href="/Docs/miners/Miner-Tooling/log-space-mining" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Database className="w-6 h-6 text-brand-primary-400" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-brand-primary-400 transition-colors">Log-Space Mining</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  Log-Space Mining enables miners to operate more efficiently by allowing smart contracts to retain historical data. New light miners can mine online without carrying old blockchain data, and as they mine, they help bootstrap others.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
+              </div>
+            </div>
+          </Link>
+          {/* Smartpools */}
+          <Link href="/Docs/miners/Miner-Tooling/smartpools" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                <Users className="w-6 h-6 text-brand-primary-400" />
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-brand-primary-400 transition-colors">Smartpools</h3>
+                <p className="text-gray-300 leading-relaxed">
+                  SmartPools are decentralized, on-chain alternatives to traditional mining pools, using autonomous smart contracts. Watch Lithos Protocol for the next generation of SmartPools.
+                </p>
+                <span className="mt-4 inline-flex items-center gap-1 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
+              </div>
+            </div>
+          </Link>
         </div>
       </div>
       {/* Innovations in Mining Section */}
-      <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 mb-8">
+      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <TrendingUp className="w-6 h-6 text-cyan-400" /> Innovations in Mining
+          <TrendingUp className="w-6 h-6 text-brand-primary-400" /> Innovations in Mining
         </h2>
         <div className="space-y-6">
-          {/* Log-Space Mining */}
-          <div>
-            <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-              <Database className="w-5 h-5 text-yellow-400" /> Log-Space Mining
-            </h3>
-            <p className="text-gray-300">
-              Log-Space Mining enables miners to operate more efficiently by allowing smart contracts to retain historical data. New light miners can mine online without carrying old blockchain data, and as they mine, they help bootstrap others. This reduces the need for storing historical data and supports lighter mining.
-            </p>
-          </div>
-          {/* Smartpools */}
-          <div>
-            <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-              <Users className="w-5 h-5 text-cyan-400" /> Smartpools
-            </h3>
-            <p className="text-gray-300">
-              SmartPools are decentralized, on-chain alternatives to traditional mining pools, using autonomous smart contracts. Watch Lithos Protocol for the next generation of SmartPools.
-            </p>
-          </div>
           {/* Subpooling */}
-          <div>
-            <h3 className="text-xl font-bold mb-2 flex items-center gap-2">
-              <Layers className="w-5 h-5 text-pink-400" /> Subpooling
-            </h3>
-            <p className="text-gray-300">
-              Subpooling lets groups of miners pool their hash rates via smart contracts, earning rewards faster and more fairly. It encourages decentralization and supports small miners who may not get block rewards quickly in normal pools.
-            </p>
+          <div className="flex items-start gap-4">
+            <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
+              <Layers className="w-5 h-5 text-brand-primary-400" />
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold mb-2 text-white">Subpooling</h3>
+              <p className="text-gray-300">
+                Subpooling lets groups of miners pool their hash rates via smart contracts, earning rewards faster and more fairly. It encourages decentralization and supports small miners who may not get block rewards quickly in normal pools.
+              </p>
+            </div>
           </div>
         </div>
       </div>

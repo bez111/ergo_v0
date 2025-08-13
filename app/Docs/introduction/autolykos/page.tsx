@@ -150,57 +150,7 @@ export default function AutolykosPage() {
           <p className="text-gray-400 text-sm">(Note: Test vectors for N values are provided in the Autolykos paper).</p>
         </div>
         {/* Navigation Cards Section */}
-        <div className="grid md:grid-cols-3 gap-4">
-          <Link
-            href="#"
-            className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
-          >
-            <Wallet className="w-5 h-5 text-orange-400" />
-            <span className="font-semibold text-orange-300 hover:underline text-base">Start Mining</span>
-            <ArrowRight className="w-4 h-4 ml-auto text-gray-400" />
-          </Link>
-          <Link
-            href="#"
-            className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
-          >
-            <Code className="w-5 h-5 text-cyan-400" />
-            <span className="font-semibold text-orange-300 hover:underline text-base">Algorithm</span>
-            <ArrowRight className="w-4 h-4 ml-auto text-gray-400" />
-          </Link>
-          <Link
-            href="#"
-            className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
-          >
-            <Star className="w-5 h-5 text-yellow-400" />
-            <span className="font-semibold text-orange-300 hover:underline text-base">Governance</span>
-            <ArrowRight className="w-4 h-4 ml-auto text-gray-400" />
-          </Link>
-          <Link
-            href="#"
-            className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
-          >
-            <Database className="w-5 h-5 text-green-400" />
-            <span className="font-semibold text-orange-300 hover:underline text-base">Storage Rent</span>
-            <ArrowRight className="w-4 h-4 ml-auto text-gray-400" />
-          </Link>
-          <Link
-            href="#"
-            className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
-          >
-            <Repeat className="w-5 h-5 text-blue-400" />
-            <span className="font-semibold text-orange-300 hover:underline text-base">Difficulty Adjustment</span>
-            <ArrowRight className="w-4 h-4 ml-auto text-gray-400" />
-          </Link>
-          <Link
-            href="#"
-            className="flex items-center gap-3 bg-neutral-800 rounded-lg p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
-          >
-            <Coins className="w-5 h-5 text-cyan-400" />
-            <span className="font-semibold text-orange-300 hover:underline text-base">Emission</span>
-            <ArrowRight className="w-4 h-4 ml-auto text-gray-400" />
-          </Link>
-        </div>
-      </TabsContent>
+        </TabsContent>
 
       {/* Emission Tab */}
       <TabsContent value="emission">

@@ -84,47 +84,11 @@ export const menuData = [
       {
         title: "Autolykos",
         href: "/Docs/introduction/autolykos",
-        items: [
-          {
-            title: "Algorithm",
-            items: [
-              {
-                title: "Emission",
-                items: [
-                  { title: "EFYT" },
-                ],
-              },
-              { title: "Difficulty Adjustment" },
-              { title: "Solution Verification" },
-              { title: "Technical Breakdown" },
-            ],
-          },
-          {
-            title: "Storage Rent",
-            items: [
-              { title: "Fees" },
-              { title: "Tokens" },
-              { title: "Spending" },
-              { title: "State Growth" },
-            ],
-          },
-          { title: "ASIC Resistance" },
-          {
-            title: "Resources",
-            items: [
-              { title: "CPU vs GPU" },
-              {
-                title: "EIPs",
-                items: [
-                  { title: "Emission Retargeting Soft-Fork" },
-                  { title: "Tweaking Difficulty Adjustment Algorithm" },
-                ],
-              },
-            ],
-          },
-        ],
       },
-      { title: "Mining" },
+      { 
+        title: "Storage Rent",
+        href: "/Docs/introduction/storage-rent",
+      },
       {
         title: "Start Mining",
         items: [
@@ -156,39 +120,15 @@ export const menuData = [
       },
       {
         title: "Governance",
-        items: [
-          { title: "Voting" },
-          {
-            title: "Forking",
-            items: [
-              { title: "Soft Forks" },
-              { title: "Velvet Forks" },
-              { title: "Hard Forks" },
-            ],
-          },
-        ],
+        href:"/Docs/miners/governance",
       },
-      { title: "Revenue" },
+      { 
+        title: "Revenue", 
+        href: "/Docs/miners/Revenue",
+      },
       {
         title: "Tooling",
-        items: [
-          { title: "GuapSwap" },
-          {
-            title: "Lithos",
-            items: [
-              { title: "Lithos" },
-              { title: "SNISPs" },
-            ],
-          },
-          { title: "CYTI" },
-          { title: "Log-Space Mining" },
-          {
-            title: "Smartpools",
-            items: [
-              { title: "Subpooling" },
-            ],
-          },
-        ],
+        href: "/Docs/miners/Miner-Tooling",        
       },
       { title: "Resources", href: "/Docs/miners/resources" },
     ],

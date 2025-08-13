@@ -511,11 +511,158 @@ export default function MinersResourcesPage() {
 
       {/* Emission Tab */}
       <TabsContent value="emission">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
-          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Coins className="w-6 h-6 text-green-400" /> Emission Update
-          </h2>
-          <p className="text-gray-400">Content coming soon...</p>
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold text-white mb-4">Ergo Emission Schedule</h1>
+          <p className="text-lg text-gray-400 mb-6">
+            Ergo's journey, which began in 2017, saw the successful launch of its mainnet in July 2019.
+          </p>
+
+          {/* Admonition: Ergo-First-Year-Token */}
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 mb-8">
+            <h3 className="text-lg font-semibold text-white mb-2">Ergo-First-Year-Token</h3>
+            <p className="text-gray-400 text-sm">
+              Prior to the mainnet, '<span className="italic">Ergo-First-Year-Token</span>' (EFYT) was in circulation and swapped with the treasury on launch. For comprehensive insights into EFYT, including its tokenomics and distribution strategy, please visit
+              {" "}
+              <a href="efyt.md" className="text-orange-400 hover:text-orange-300 underline-offset-4 hover:underline">this page</a>.
+            </p>
+          </div>
+
+          <h2 className="text-2xl font-bold text-white mb-4">Total Supply and Allocation</h2>
+          <p className="text-gray-300 mb-4">
+            Ergo's total supply is capped at <span className="font-semibold">97,739,925 ERGs</span> and distributed as follows:
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
+            <li>
+              <span className="font-semibold">Genesis State Inclusions</span>: Includes 1 ERG for proof-of-no-premine and 4,330,791.5 ERGs for the
+              {" "}
+              <a href="https://explorer.ergoplatform.com/en/addresses/4L1ktFSzm3SH1UioDuUf5hyaraHird4D2dEACwQ1qHGjSKtA6KaNvSzRCZXZGf9jkfNAEC1SrYaZmCuvb2BKiXk5zW9xuvrXFT7FdNe2KqbymiZvo5UQLAm5jQY8ZBRhTZ4AFtZa1UF5nd4aofwPiL7YkJuyiL5hDHMZL1ZnyL746tHmRYMjAhCgE7d698dRhkdSeVy" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Foundation Treasury</a>.
+            </li>
+            <li>
+              <span className="font-semibold">Miner Rewards</span>: 93,409,132 ERGs, designated for 2,080,800 blocks, as per the emission schedule (
+              <a href="https://explorer.ergoplatform.com/en/addresses/2Z4YBkDsDvQj8BX7xiySFewjitqp2ge9c99jfes2whbtKitZTxdBYqbrVZUvZvKv6aqn9by4kp3LE1c26LCyosFnVnm6b6U1JYvWpYmL2ZnixJbXLjWAWuBThV1D6dLpqZJYQHYDznJCk49g5TUiS4q8khpag2aNmHwREV7JSsypHdHLgJT7MGaw51aJfNubyzSKxZ4AJXFS27EfXwyCLzW1K6GVqwkJtCoPvrcLqmqwacAWJPkmh78nke9H4oT88XmSbRt2n9aWZjosiZCafZ4osUDxmZcc5QVEeTWn8drSraY3eFKe8Mu9MSCcVU" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Miner Reward Box</a>).
+            </li>
+          </ul>
+          <p className="text-gray-300 mb-8">
+            The Treasury's funds were governed by a smart contract that released ERGs gradually over the first 2.5 years, without exceeding 10% of the circulating supply.
+          </p>
+
+          <h2 className="text-2xl font-bold text-white mb-4">Ergo Foundation</h2>
+          <p className="text-gray-300 mb-8">
+            The Ergo Foundation is dedicated to protocol development, ecosystem growth, promoting the use of Ergo for social good, supporting decentralized infrastructure, and upholding privacy rights. The Foundation's Treasury, which received 4.43% of the total ERG emission, is utilized to support a wide range of initiatives. For more detailed information, refer to the
+            {" "}
+            <a href="ergo-foundation-2022.md" className="text-orange-400 hover:text-orange-300">transparency report</a>.
+          </p>
+
+          <h2 className="text-2xl font-bold text-white mb-4">Mining and Emission Duration</h2>
+          <p className="text-gray-300 mb-6">
+            Ergo's block reward decreases by 3 ERG per block every quarter until 2026 and stabilizes at 3 ERG per block thereafter. The mining process is projected to continue until around 2045, extended from the original 2027 timeline with the passage of the
+            {" "}
+            <a href="eip27.md" className="text-orange-400 hover:text-orange-300">EIP27</a>
+            {" "}
+            soft-fork. For a visual overview, see the emission schedule on
+            {" "}
+            <a href="https://ergo.watch/emission" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">ergo.watch</a>.
+          </p>
+
+          {/* Details-like note */}
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 mb-8">
+            <h3 className="text-lg font-semibold text-white mb-2">Sustaining Ergo Mining: Revenue Streams Beyond Emissions</h3>
+            <p className="text-gray-400 text-sm">
+              As Ergo's emission schedule is set to conclude around the year 2045, questions naturally arise about the mechanisms that will incentivize miners to continue securing the network. Fortunately, Ergo's architecture includes support for a variety of revenue streams designed to promote both network growth and long-term sustainability. See
+              {" "}
+              <a href="revenue.md" className="text-orange-400 hover:text-orange-300">this page</a>
+              {" "}
+              for more information.
+            </p>
+          </div>
+
+          <h2 className="text-2xl font-bold text-white mb-4">Unique Aspects of Ergo's Emission</h2>
+
+          <h3 className="text-lg font-semibold text-white mb-2">Proof of No Premine</h3>
+          <p className="text-gray-300 mb-6">
+            Ergo includes Bitcoin and Ethereum block hashes and headlines from The Guardian, Vedomosti, and Xinhua in its pre-genesis state for verification purposes. This is detailed in the
+            {" "}
+            <a href="https://github.com/ergoplatform/ergo/blob/1935c95560a30b19cdb52c1a291e8a389ba63c97/src/main/resources/mainnet.conf#L11" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">mainnet.conf</a>
+            {" "}
+            file.
+          </p>
+
+          <h3 className="text-lg font-semibold text-white mb-2">Verification Process</h3>
+          <p className="text-gray-300 mb-6">
+            Ergo's emission logic underwent rigorous verification using the Stainless formal verification tool, ensuring accuracy and validity. Details can be found in
+            {" "}
+            <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/pull/580/files#diff-18d3c92c2086c9ddd9b462191b55cf5e8438a29b0e786c6ab541f7def8330808" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">this code section</a>.
+          </p>
+
+          <h3 className="text-lg font-semibold text-white mb-2">No Out-of-Thin-Air Emission</h3>
+          <p className="text-gray-300 mb-10">
+            Ergo's "coinbase" transaction, the first transaction in each block, does not create new tokens out of thin air. This policy ensures traceability of every coin or token from a legitimate source, enhancing the integrity and scarcity of Ergo's native currency, and contributing to economic stability.
+          </p>
+
+          <h1 className="text-2xl font-bold text-white mb-4">Ergo-First-Year-Token (EFYT)</h1>
+          <p className="text-gray-300 mb-6">
+            EFYT was systematically airdropped and then listed on the Waves DEX in May 2017, with an initial supply of 100,000 tokens. This launch aimed to build an early community around the platform and raise capital for development and marketing before launching the mainnet.
+          </p>
+
+          {/* Warning Admonition */}
+          <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-xl p-4 mb-8">
+            <h4 className="text-base font-semibold text-yellow-400 mb-1">EFYT vs ERG</h4>
+            <p className="text-gray-300 text-sm">
+              EFYT, which was issued on the Waves Platform, is a separate entity from ERG, the native token of the Ergo blockchain. ERG became available after the launch of the Ergo mainnet and could only be obtained through mining. For more information on Ergo's emission see
+              {" "}
+              <a href="emission.md" className="text-orange-400 hover:text-orange-300">this page</a>.
+            </p>
+          </div>
+
+          <h2 className="text-2xl font-bold text-white mb-4">Distribution and Allocation</h2>
+
+          <h3 className="text-lg font-semibold text-white mb-2">Total Supply</h3>
+          <p className="text-gray-300 mb-3">
+            The maximum supply of EFYT is capped at 1,970,945.0, mirroring 10% of Ergo's first-year token emission which corresponds to the amount of ERGs the
+            {" "}
+            <a href="ergo-foundation-2022.md" className="text-orange-400 hover:text-orange-300">Ergo Foundation</a>
+            {" "}
+            recieved in this same period.
+          </p>
+          <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
+            <li>
+              <a href="http://pywaves.org/assets/725Yv9oceWsB4GsYwyy4A52kEwyVrL5avubkeChSnL46" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">EFYT token distribution on Pywaves</a>
+            </li>
+            <li>
+              <a href="https://www.livecoinwatch.com/price/ErgoFirstYearToken-EFYT" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">EFYT market and price tracking on livecoinwatch</a>
+            </li>
+          </ul>
+
+          <h3 className="text-lg font-semibold text-white mb-2">Redemption Process</h3>
+          <p className="text-gray-300 mb-6">
+            EFYT holders could exchange their tokens for ERG at a 1:1 rate via the Waves gateway. This option was available until July 1st, 2021, with unclaimed EFYT tokens totaling 188,330 by the end of the offer. Overall, the Treasury exchanged 1,782,615 ERG for EFYT.
+          </p>
+
+          <h3 className="text-lg font-semibold text-white mb-2">Compensation and Expenses</h3>
+          <p className="text-gray-300 mb-6">
+            Initially, EFYT was used for team and external contributor compensation, and operational costs like server and integration expenses. In 2018, approximately 150,000 EFYT was allocated for compensation for developers.
+          </p>
+
+          <h3 className="text-lg font-semibold text-white mb-2">Investors</h3>
+          <p className="text-gray-300 mb-8">
+            The project avoided a traditional ICO, opting for minimal private investment and focusing on accredited angel investors to align with regulatory standards. In total, 500,000 EFYT was sold to {" "}
+            <a href="https://t.me/ergoplatform/3354" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">three private investors</a>.
+          </p>
+
+          <h2 className="text-2xl font-bold text-white mb-4">Resources</h2>
+          <ul className="list-disc list-inside space-y-2 text-gray-300">
+            <li>
+              <a href="https://t.me/ergoplatform/3354" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">Kushti discussing EFYT in 2018</a>
+            </li>
+            <li>
+              The team's hot wallet: {" "}
+              <a href="https://wavesexplorer.com/assets/3P3yFxqAeFGnTDvCjeCEyMnMZevJxurKZne" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">3P3yFxqAeFGnTDvCjeCEyMnMZevJxurKZne</a>
+            </li>
+            <li>
+              Background on EFYT: {" "}
+              <a href="https://ergoplatform.org/en/blog/2019_05_20-curve/" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">The Ergo Emission Schedule (2019)</a>
+            </li>
+          </ul>
         </div>
       </TabsContent>
 
