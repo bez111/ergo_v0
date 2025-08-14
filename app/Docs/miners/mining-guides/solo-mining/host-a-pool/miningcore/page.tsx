@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowLeft, Database, Download, Settings, Server, Terminal, Network, CheckCircle, AlertTriangle, Info, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import { CopyButton } from "@/components/ui/copy-button";
 
 export default function MiningCorePage() {
   return (
@@ -91,7 +92,12 @@ export default function MiningCorePage() {
         <div className="space-y-6">
           <div>
             <h3 className="text-xl font-semibold text-white mb-3">Login to PostgreSQL</h3>
-            <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+            <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+              <CopyButton 
+                text="sudo -u postgres psql"
+                size="sm"
+                className="absolute top-2 right-2 z-10"
+              />
               <code className="text-green-400 font-mono text-sm">
                 sudo -u postgres psql
               </code>
@@ -101,7 +107,13 @@ export default function MiningCorePage() {
           <div>
             <h3 className="text-xl font-semibold text-white mb-3">Create Role and Database</h3>
             <p className="text-gray-300 mb-3">Replace <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">'your-secure-password'</code> with a strong password:</p>
-            <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+            <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+              <CopyButton 
+                text={`CREATE ROLE miningcore WITH LOGIN ENCRYPTED PASSWORD 'your-secure-password';
+CREATE DATABASE miningcore OWNER miningcore;`}
+                size="sm"
+                className="absolute top-2 right-2 z-10"
+              />
               <pre className="text-green-400 font-mono text-sm overflow-x-auto">
 {`CREATE ROLE miningcore WITH LOGIN ENCRYPTED PASSWORD 'your-secure-password';
 CREATE DATABASE miningcore OWNER miningcore;`}
@@ -130,14 +142,24 @@ CREATE DATABASE miningcore OWNER miningcore;`}
           
           <div>
             <p className="text-gray-300 mb-3">As the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">postgres</code> user, run:</p>
-            <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 mb-4">
+            <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 mb-4">
+              <CopyButton 
+                text="psql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb.sql"
+                size="sm"
+                className="absolute top-2 right-2 z-10"
+              />
               <code className="text-green-400 font-mono text-sm">
                 psql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb.sql
               </code>
             </div>
             
             <p className="text-gray-300 mb-3">Then apply the partitioning script:</p>
-            <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+            <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+              <CopyButton 
+                text="psql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb_postgresql_11_appendix.sql"
+                size="sm"
+                className="absolute top-2 right-2 z-10"
+              />
               <code className="text-green-400 font-mono text-sm">
                 psql -d miningcore -f miningcore/src/Miningcore/Persistence/Postgres/Scripts/createdb_postgresql_11_appendix.sql
               </code>
@@ -156,7 +178,12 @@ CREATE DATABASE miningcore OWNER miningcore;`}
         <div className="space-y-4">
           <p className="text-gray-300">Run the following command <strong>once per pool</strong> you set up:</p>
           
-          <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+          <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+            <CopyButton 
+              text="CREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');"
+              size="sm"
+              className="absolute top-2 right-2 z-10"
+            />
             <code className="text-green-400 font-mono text-sm">
               CREATE TABLE shares_mypool1 PARTITION OF shares FOR VALUES IN ('mypool1');
             </code>
@@ -205,14 +232,71 @@ CREATE DATABASE miningcore OWNER miningcore;`}
                 </ul>
               </div>
               
-              <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 max-h-96 overflow-y-auto">
+              <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 max-h-96 overflow-y-auto">
+                <CopyButton 
+                  text={`{
+    "logging": {
+        "level": "info",
+        "enableConsoleLog": true,
+        "enableConsoleColors": true,
+        "logFile": "core.log",
+        "apiLogFile": "api.log",
+        "logBaseDirectory": "/path/to/logs",
+        "perPoolLogFile": false
+    },
+    "banning": {
+        "manager": "Integrated",
+        "banOnJunkReceive": true,
+        "banOnInvalidShares": false
+    },
+    "persistence": {
+        "postgres": {
+            "host": "127.0.0.1",
+            "port": 5432,
+            "user": "miningcore",
+            "password": "YOURPOSTGRESQL_PASSWORD_GOES_HERE",
+            "database": "miningcore"
+        }
+    },
+    "pools": [
+        {
+            "id": "ergo1",
+            "enabled": true,
+            "coin": "ergo",
+            "address": "YOUR_REWARD_ADDR_GOES_HERE",
+            "ports": {
+                "3052": {
+                    "listenAddress": "0.0.0.0",
+                    "difficulty": 0.02,
+                    "varDiff": {
+                        "minDiff": 0.01,
+                        "maxDiff": null,
+                        "targetTime": 15,
+                        "retargetTime": 90,
+                        "variancePercent": 30
+                    }
+                }
+            },
+            "daemons": [
+                {
+                    "host": "127.0.0.1",
+                    "port": 9052,
+                    "user": "",
+                    "password": ""
+                }
+            ]
+        }
+    ]
+}`}
+                  size="sm"
+                  className="absolute top-2 right-2 z-10"
+                />
                 <pre className="text-green-400 font-mono text-xs overflow-x-auto">
 {`{
     "logging": {
         "level": "info",
         "enableConsoleLog": true,
         "enableConsoleColors": true,
-        // Log file configuration
         "logFile": "core.log",
         "apiLogFile": "api.log",
         "logBaseDirectory": "/path/to/logs",
@@ -279,7 +363,13 @@ CREATE DATABASE miningcore OWNER miningcore;`}
         <div className="space-y-4">
           <p className="text-gray-300">You should configure your pool to auto-start using a startup script.</p>
           
-          <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+          <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+            <CopyButton 
+              text={`cd build
+Miningcore -c <your-config>.json`}
+              size="sm"
+              className="absolute top-2 right-2 z-10"
+            />
             <pre className="text-green-400 font-mono text-sm">
 {`cd build
 Miningcore -c <your-config>.json`}
@@ -311,7 +401,13 @@ Miningcore -c <your-config>.json`}
         <div className="space-y-6">
           <div>
             <h3 className="text-lg font-semibold text-green-400 mb-2">🟢 Node Online and Synced</h3>
-            <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+            <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+              <CopyButton 
+                text={`[2022-03-16 14:26:12.9080] [I] [ergo1] All daemons online
+[2022-03-16 14:26:12.9345] [I] [ergo1] Daemon is synced with blockchain`}
+                size="sm"
+                className="absolute top-2 right-2 z-10"
+              />
               <pre className="text-green-400 font-mono text-sm">
 {`[2022-03-16 14:26:12.9080] [I] [ergo1] All daemons online
 [2022-03-16 14:26:12.9345] [I] [ergo1] Daemon is synced with blockchain`}
@@ -321,7 +417,12 @@ Miningcore -c <your-config>.json`}
           
           <div>
             <h3 className="text-lg font-semibold text-green-400 mb-2">🟢 Pool Online</h3>
-            <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+            <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600">
+              <CopyButton 
+                text="[2022-03-16 14:26:14.4346] [I] [ergo1] Pool Online"
+                size="sm"
+                className="absolute top-2 right-2 z-10"
+              />
               <pre className="text-green-400 font-mono text-sm">
 {`[2022-03-16 14:26:14.4346] [I] [ergo1] Pool Online`}
               </pre>
