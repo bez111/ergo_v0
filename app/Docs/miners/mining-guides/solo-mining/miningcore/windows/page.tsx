@@ -5,17 +5,6 @@ import { CopyButton } from "@/components/ui/copy-button";
 export default function MiningCoreWindowsPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Back Button */}
-      <div className="container mx-auto px-4 py-6">
-        <Link 
-          href="/Docs/miners/mining-guides/solo-mining/miningcore"
-          className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to MiningCore Setup
-        </Link>
-      </div>
-
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-12">
         <div className="text-center mb-16">
@@ -25,6 +14,17 @@ export default function MiningCoreWindowsPage() {
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             This guide walks you through setting up MiningCore on a Windows 10 machine step-by-step.
           </p>
+        </div>
+
+        {/* Back Button */}
+        <div className="mb-12 text-center">
+          <Link 
+            href="/Docs/miners/mining-guides/solo-mining/miningcore"
+            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+          >
+            <ArrowLeft className="w-4 h-4" />
+            Back to MiningCore Setup
+          </Link>
         </div>
 
         {/* Steps */}
