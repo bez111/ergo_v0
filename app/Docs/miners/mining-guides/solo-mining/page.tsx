@@ -26,26 +26,26 @@ export default function SoloMiningPage() {
         {/* Overview Tab */}
         <TabsContent value="overview">
           <div className="space-y-8">
-            {/* Hero Section */}
-            <div className="mb-8">
+      {/* Hero Section */}
+      <div className="mb-8">
               <h1 className="text-3xl font-bold text-white mb-4">
                 Solo Mining
-              </h1>
+        </h1>
               <p className="text-lg text-gray-400 mb-6">
                 Mine independently with your own node setup. Complete guide from configuration to withdrawing rewards.
-              </p>
-            </div>
+        </p>
+      </div>
 
-            {/* Back Button */}
-            <div className="mb-6">
-              <Link 
-                href="/Docs/miners/mining-guides" 
+      {/* Back Button */}
+      <div className="mb-6">
+        <Link 
+          href="/Docs/miners/mining-guides" 
                 className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                Back to Mining Guides
-              </Link>
-            </div>
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Mining Guides
+        </Link>
+      </div>
 
             {/* Description */}
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -662,8 +662,8 @@ scorex {
               <div className="bg-purple-900/20 border border-purple-700/50 rounded-lg p-4">
                 <p className="text-purple-300">
                   <strong>Tip:</strong> Then, you can check block headers (<code className="bg-neutral-800 px-2 py-1 rounded text-purple-400">pk</code> field) for this public key.
-                </p>
-              </div>
+        </p>
+      </div>
             </div>
 
             {/* FAQ 4: Mining Solution API */}
