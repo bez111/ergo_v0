@@ -82,41 +82,16 @@ export const menuData = [
     title: "Miners",
     items: [
       {
+        title: "Mining Guides",
+        href: "/Docs/miners/mining-guides",
+      },
+      {
         title: "Autolykos",
         href: "/Docs/introduction/autolykos",
       },
       { 
         title: "Storage Rent",
         href: "/Docs/introduction/storage-rent",
-      },
-      {
-        title: "Start Mining",
-        items: [
-          { title: "Software" },
-          { title: "Operating Systems" },
-          { title: "Overclocking" },
-          { title: "Pools" },
-          {
-            title: "Solo Mining",
-            items: [
-              { title: "Node Configuration" },
-              { title: "Withdraw" },
-              { title: "FAQ" },
-            ],
-          },
-          {
-            title: "Host a Pool",
-            items: [
-              { title: "Stratum" },
-              {
-                title: "MiningCore",
-                items: [
-                  { title: "Windows" },
-                ],
-              },
-            ],
-          },
-        ],
       },
       {
         title: "Governance",
@@ -142,27 +117,9 @@ export const menuData = [
   {
     title: "Developers",
     items: [
-      { title: "Developer Resources", href: "/Docs/developers/developers-resources" },
-      { title: "Getting Started", href: "/Docs/developers/getting-started" },
       {
         title: "Tutorials",
         href: "/Docs/developers/tutorials",
-        items: [],
-      },
-      { title: "Bounties & Grants", href: "/Docs/developers/bounties-grants" },
-      {
-        title: "Data Model & APIs",
-        href: "/Docs/developers/data-model-apis",
-        items: [],
-      },
-      {
-        title: "Infrastructure",
-        href: "/Docs/developers/infrastructure",
-        items: [],
-      },
-      {
-        title: "Tooling",
-        href: "/Docs/developers/tooling",
         items: [],
       },
       {
@@ -171,11 +128,27 @@ export const menuData = [
         items: [],
       },
       {
+        title: "Data Model & APIs",
+        href: "/Docs/developers/data-model-apis",
+        items: [],
+      },
+      {
+        title: "Tooling",
+        href: "/Docs/developers/tooling",
+        items: [],
+      },
+      {
+        title: "Infrastructure",
+        href: "/Docs/developers/infrastructure",
+        items: [],
+      },
+      {
         title: "Cryptographic Primitives",
         href: "/Docs/developers/cryptographic-primitives",
         items: [],
       },
       { title: "Students", href: "/Docs/developers/students" },
+      { title: "Bounties & Grants", href: "/Docs/developers/bounties-grants" },
       { title: "Community & Support", href: "/Docs/developers/community-support" },
     ],
   },

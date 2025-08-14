@@ -14,6 +14,11 @@ export function Header() {
   const [scrolled, setScrolled] = useState(false)
   const [glitchActive, setGlitchActive] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,6 +30,7 @@ export function Header() {
   }, [])
 
   useEffect(() => {
+    if (!isMounted) return
     // Random glitch effect
     const glitchInterval = setInterval(() => {
       if (Math.random() > 0.7) {

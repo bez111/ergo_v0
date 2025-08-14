@@ -8,13 +8,27 @@ import { Footer } from "@/components/footer"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/lib/schema-constants"
 import { GoogleAnalytics } from "@/components/analytics/google-analytics"
+import { PerformanceOptimizer } from "@/components/seo/performance-optimizer"
+import { CoreWebVitalsDashboard } from "@/components/seo/core-web-vitals-dashboard"
 
-const inter = Inter({ subsets: ["latin"], weight: ["400", "700"], display: "swap" })
+// Optimized font loading for Core Web Vitals
+const inter = Inter({ 
+  subsets: ["latin"], 
+  weight: ["400", "500", "600", "700"], 
+  display: "swap",
+  preload: true,
+  fallback: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+  adjustFontFallback: true,
+})
+
 const jetbrainsMono = JetBrains_Mono({ 
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-mono",
   display: "swap",
+  preload: true,
+  fallback: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
@@ -92,6 +106,10 @@ export const metadata: Metadata = {
     google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
     yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || undefined,
   },
+  // Additional Core Web Vitals optimizations
+  other: {
+    'google-site-verification': process.env.NEXT_PUBLIC_GSC_VERIFICATION || '',
+  },
 }
 
 export default function RootLayout({
@@ -102,23 +120,63 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
+        {/* Critical resource hints for Core Web Vitals */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        
+        {/* Preload critical assets */}
+        <link rel="preload" href="/og-image.png" as="image" type="image/png" />
+        <link rel="preload" href="/logo.png" as="image" type="image/png" />
+        <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
+        
         <link rel="icon" href="/favicon.ico" />
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#ff8800" />
+        <meta name="color-scheme" content="dark light" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        
+        {/* Performance hints */}
+        <meta httpEquiv="x-dns-prefetch-control" content="on" />
+        
         <SchemaOrg type="Organization" data={ORGANIZATION_SCHEMA} />
         <SchemaOrg type="WebSite" data={WEBSITE_SCHEMA} />
       </head>
-      <body className={`${inter.className} ${jetbrainsMono.variable}`}>
+      <body className={`${inter.className} ${jetbrainsMono.variable} antialiased`}>
+            {/* Performance Optimization Component */}
+    <PerformanceOptimizer
+      preloadUrls={[
+        '/logo.png',
+        '/og-image.png',
+        // Add critical CSS and JS files
+      ]}
+      prefetchUrls={[
+        '/Docs',
+        '/ecosystem',
+        '/technology',
+        '/wallet',
+      ]}
+      criticalCSS={[]}
+      enableWebVitalsTracking={true}
+    />
+
+    {/* Core Web Vitals Dashboard (development only) */}
+    <CoreWebVitalsDashboard showInProduction={false} />
+        
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <div className="flex min-h-screen flex-col">
             <Header />
-            <main className="flex-1 relative overflow-hidden">
+            <main className="flex-1 relative overflow-hidden" id="main-content">
               {children}
             </main>
             <Footer />
           </div>
         </ThemeProvider>
-        <GoogleAnalytics id={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || ""} />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
+          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
+        )}
       </body>
     </html>
   )

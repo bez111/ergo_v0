@@ -167,7 +167,7 @@ const journeys: Record<Journey, {
         title: "Hello World",
         description: "Your first ErgoScript contract",
         icon: Code,
-        href: "/Docs/developers/getting-started",
+        href: "/Docs/developers",
         duration: "15 min"
       },
       {

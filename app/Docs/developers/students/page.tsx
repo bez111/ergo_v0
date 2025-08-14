@@ -130,7 +130,7 @@ export default function Students() {
           <li><Link href="/Docs/why-ergo" className="text-cyan-400 hover:underline">Why Ergo?</Link>: Get a concise overview of Ergo, its standout features, and the technology and decisions that power it.</li>
           <li><Link href="/Docs/developers" className="text-cyan-400 hover:underline">Ergo Platform Overview</Link>: Explore the key features of Ergo, including ErgoScript, the eUTXO model, Autolykos, NiPoPoWs, and more.</li>
           <li><Link href="/Docs/introduction/faq" className="text-cyan-400 hover:underline">FAQ</Link>: Find answers to the most common questions about Ergo.</li>
-          <li>Introductory Resources: Check out the recommended introductory videos, courses, and resources in the <Link href="/Docs/developers/developers-resources" className="text-cyan-400 hover:underline">Developer Resources</Link> section.</li>
+                      <li>Introductory Resources: Check out the recommended introductory videos, courses, and resources in the <Link href="/Docs/developers" className="text-cyan-400 hover:underline">Developer Resources</Link> section.</li>
           <li>Chatbots: Try the <a href="https://ergobot.io/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">General Ergo Chatbot</a> or <a href="https://ergoscriptbot.io/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoScript Chatbot</a> for quick info. For complex queries, refer to docs or the community.</li>
         </ul>
       </div>

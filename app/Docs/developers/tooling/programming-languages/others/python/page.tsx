@@ -73,7 +73,7 @@ export default function PythonPage() {
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">ErgoPad & Related Tools</h2>
       <div className="text-gray-300 mb-4 max-w-2xl">
-        <Link href="/Docs/developers/tooling/ergopad" className="text-cyan-400 hover:underline">ErgoPad</Link> provides a set of Docker containers for rapid Ergo dApp development: a React/MaterialUI <Link href="/Docs/developers/getting-started" className="text-cyan-400 hover:underline">frontend</Link>, <Link href="/Docs/developers/tooling/api" className="text-cyan-400 hover:underline">REST API</Link> backend, <Link href="/Docs/developers/tooling/assembler" className="text-cyan-400 hover:underline">assembler</Link> for smart contract interaction, and support services such as <Link href="/Docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">ergonode</Link>, Redis, and Postgres.
+        <Link href="/Docs/developers/tooling/ergopad" className="text-cyan-400 hover:underline">ErgoPad</Link> provides a set of Docker containers for rapid Ergo dApp development: a React/MaterialUI <Link href="/Docs/developers" className="text-cyan-400 hover:underline">frontend</Link>, <Link href="/Docs/developers/tooling/api" className="text-cyan-400 hover:underline">REST API</Link> backend, <Link href="/Docs/developers/tooling/assembler" className="text-cyan-400 hover:underline">assembler</Link> for smart contract interaction, and support services such as <Link href="/Docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">ergonode</Link>, Redis, and Postgres.
       </div>
       <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-1">
         <li>

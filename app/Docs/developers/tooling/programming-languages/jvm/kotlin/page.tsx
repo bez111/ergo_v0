@@ -20,7 +20,7 @@ export default function KotlinPage() {
         Given that Kotlin is predominantly used as a <Link href="/Docs/developers/tooling/programming-languages/jvm" className="text-cyan-400 hover:underline">JVM</Link> language, please refer to our <Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit Guide</Link> for additional resources.
       </p>
       <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-        We also offer <Link href="/Docs/developers/tooling/mosaik" className="text-cyan-400 hover:underline">Mosaik</Link>, which provides a Kotlin DSL User Interface Tutorial to help you understand and create <Link href="/Docs/developers/getting-started" className="text-cyan-400 hover:underline">user interfaces</Link> effectively. (See the full <Link href="/Docs/developers/tooling/mosaik" className="text-cyan-400 hover:underline">Mosaik Intro</Link>).
+        We also offer <Link href="/Docs/developers/tooling/mosaik" className="text-cyan-400 hover:underline">Mosaik</Link>, which provides a Kotlin DSL User Interface Tutorial to help you understand and create <Link href="/Docs/developers" className="text-cyan-400 hover:underline">user interfaces</Link> effectively. (See the full <Link href="/Docs/developers/tooling/mosaik" className="text-cyan-400 hover:underline">Mosaik Intro</Link>).
       </p>
       <p className="text-lg text-gray-300 mb-6 max-w-2xl">
         For a practical demonstration of how to utilize <Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit</Link> in Kotlin, consider reviewing the {" "}

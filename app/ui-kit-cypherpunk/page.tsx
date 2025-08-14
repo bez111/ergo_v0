@@ -69,9 +69,15 @@ export default function CypherpunkUIKitPage() {
   const [copiedComponent, setCopiedComponent] = useState<string | null>(null)
   const [glitchText, setGlitchText] = useState("ERGO UI KIT")
   const [isOnline, setIsOnline] = useState(true)
+  const [isMounted, setIsMounted] = useState(false)
+
+  useEffect(() => {
+    setIsMounted(true)
+  }, [])
 
   // Glitch effect for title
   useEffect(() => {
+    if (!isMounted) return
     const glitchChars = "ΣЭЯГОΞΨΩΦΧΔΛΠΘΡΤΥΙΟΠΑΣΔΦΓΗΞΚΛΖΧΨΩ0123456789!@#$%^&*"
     const originalText = "ERGO UI KIT"
     
@@ -95,6 +101,7 @@ export default function CypherpunkUIKitPage() {
 
   // Network status effect
   useEffect(() => {
+    if (!isMounted) return
     const interval = setInterval(() => {
       setIsOnline(Math.random() > 0.1)
     }, 3000)
