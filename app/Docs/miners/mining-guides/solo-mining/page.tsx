@@ -238,18 +238,24 @@ scorex {
                 After configuring your node, you'll need to set up a mining server. You have two main options:
               </p>
               <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Ergo Stratum</h3>
-                  <p className="text-gray-400 text-sm">
+                <Link 
+                  href="/Docs/miners/mining-guides/host-a-pool/stratum"
+                  className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4 hover:bg-neutral-700/50 hover:border-orange-500/50 transition-all cursor-pointer group"
+                >
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">Ergo Stratum</h3>
+                  <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">
                     Official Ergo stratum mining server for connecting miners to your node.
                   </p>
-                </div>
-                <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
-                  <h3 className="text-lg font-semibold text-white mb-2">Mining Core</h3>
-                  <p className="text-gray-400 text-sm">
+                </Link>
+                <Link 
+                  href="/Docs/miners/mining-guides/host-a-pool/miningcore"
+                  className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4 hover:bg-neutral-700/50 hover:border-orange-500/50 transition-all cursor-pointer group"
+                >
+                  <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">Mining Core</h3>
+                  <p className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors">
                     Cross-platform mining pool server that supports Ergo mining.
                   </p>
-                </div>
+                </Link>
               </div>
             </div>
 
