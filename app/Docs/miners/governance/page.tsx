@@ -22,6 +22,17 @@ import Link from 'next/link';
 export default function GovernancePage() {
   return (
     <>
+      {/* Back Button */}
+      <div className="mb-8">
+        <Link
+          href="/Docs/miners"
+          className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors"
+        >
+          <span>←</span>
+          <span>Back to Miners</span>
+        </Link>
+      </div>
+
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
@@ -30,26 +41,30 @@ export default function GovernancePage() {
         <p className="text-xl text-gray-400 mb-6">
           Ergo's decentralized governance model empowers miners to guide network evolution through transparent voting mechanisms. This ensures long-term economic stability, adaptability, and community-driven decision making without compromising network security.
         </p>
-        <div className="flex flex-wrap gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/Docs/miners/governance/voting"
-            className="inline-flex items-center px-6 py-3 bg-purple-500 rounded-xl font-semibold text-black hover:bg-purple-600 transition-transform hover:scale-105"
+            className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors justify-center"
           >
-            <Vote className="w-5 h-5 mr-2" /> Voting Process
+            <Vote className="w-5 h-5" />
+            Voting Process
           </Link>
           <Link
             href="/Docs/miners/governance/forking"
-            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors justify-center"
           >
-            <GitBranch className="w-5 h-5 mr-2" /> Forking Mechanisms
+            <GitBranch className="w-5 h-5" />
+            Forking Mechanisms
+          </Link>
+          <Link
+            href="/Docs/miners/resources"
+            className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors justify-center"
+          >
+            <BarChart3 className="w-5 h-5" />
+            Miner Resources
           </Link>
         </div>
       </div>
-
-      {/* Back Button */}
-      <Link href="/Docs/miners" className="inline-flex items-center px-4 py-2 border border-neutral-700 rounded-lg text-white hover:border-purple-500/30 hover:text-purple-400 transition-colors mb-8">
-        <span className="mr-2">←</span> Back to Miners
-      </Link>
 
       {/* Governance Philosophy */}
       <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6 mb-8">
