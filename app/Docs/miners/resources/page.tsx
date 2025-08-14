@@ -7,6 +7,7 @@ import {
   Repeat,
   Code,
   FileText,
+  ExternalLink,
 } from "lucide-react";
 
 export default function MinersResourcesPage() {
@@ -483,11 +484,244 @@ export default function MinersResourcesPage() {
 
       {/* Adaptive Difficulty Tab */}
       <TabsContent value="difficulty">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            EIP37: Tweaking Difficulty Adjustment Algorithm
+          </h1>
+          <p className="text-lg text-gray-400 mb-6">
+            A comprehensive improvement to Ergo's difficulty adjustment algorithm that enhances stability and responsiveness while maintaining the 120-second average block time target.
+          </p>
+        </div>
+
+        {/* Overview Card */}
+        <div className="bg-blue-400/10 border border-blue-400/20 rounded-xl p-6 mb-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Repeat className="w-6 h-6 text-blue-400" /> Adaptive Difficulty
+            <FileText className="w-6 h-6 text-blue-400" />
+            Overview
           </h2>
-          <p className="text-gray-400">Content coming soon...</p>
+          <div className="grid md:grid-cols-2 gap-6 mb-4">
+            <div className="space-y-3">
+              <div className="bg-neutral-800/50 rounded-lg p-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-blue-400 font-semibold">Author</span>
+                  <span className="text-white">kushti</span>
+                </div>
+              </div>
+              <div className="bg-neutral-800/50 rounded-lg p-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-green-400 font-semibold">Status</span>
+                  <span className="text-green-300 font-bold">✓ Implemented</span>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-3">
+              <div className="bg-neutral-800/50 rounded-lg p-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-purple-400 font-semibold">Created</span>
+                  <span className="text-white">Sep 23, 2022</span>
+                </div>
+              </div>
+              <div className="bg-neutral-800/50 rounded-lg p-3">
+                <div className="flex justify-between items-center">
+                  <span className="text-orange-400 font-semibold">Type</span>
+                  <span className="text-orange-300">Hard Fork Required</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-neutral-800/50 rounded-lg p-4">
+            <p className="text-gray-300 mb-2">
+              📖 <strong>Full Documentation:</strong>
+            </p>
+            <a
+              href="https://github.com/ergoplatform/eips/blob/ddbca24fef5e91e0c80c6881fc31d8831ae69768/eip-0037.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1"
+            >
+              GitHub EIP-0037 Documentation <ExternalLink className="w-3 h-3" />
+            </a>
+          </div>
+        </div>
+
+        {/* Why Important */}
+        <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Repeat className="w-6 h-6 text-yellow-400" />
+            Why Is This Important?
+          </h2>
+          <p className="text-gray-300 mb-4">
+            The goal of a difficulty adjustment algorithm is to stabilize the time it takes to produce a new block, based on how fast blocks are being mined. In Ergo, we aim for a 120-second average block time.
+          </p>
+          <div className="bg-neutral-800/50 rounded-lg p-4">
+            <h3 className="font-semibold text-yellow-400 mb-2">Key Challenges:</h3>
+            <ul className="space-y-1 text-gray-300">
+              <li>• <strong>Bitcoin's Limitations:</strong> Works well in certain conditions but struggles with fluctuating mining environments</li>
+              <li>• <strong>Coin Hopping:</strong> Miners switching between coins to maximize profits affects stability</li>
+              <li>• <strong>Ergo's Previous Issues:</strong> Prone to erratic difficulty changes despite good performance</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Background Analysis */}
+        <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <BookOpen className="w-6 h-6 text-green-400" />
+            Background and Comparative Analysis
+          </h2>
+          <p className="text-gray-300 mb-4">
+            Bitcoin uses a relatively simple adjustment algorithm, but it can struggle with issues like "coin hopping," where miners switch between coins to maximize profits. Ergo previously used a predictive method to anticipate such behaviors.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-orange-400 mb-2">Bitcoin Classic</h4>
+              <p className="text-sm text-gray-300">Simple algorithm with known limitations in fluctuating environments</p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-blue-400 mb-2">Ergo Previous</h4>
+              <p className="text-sm text-gray-300">Predictive method to anticipate miner behavior patterns</p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-green-400 mb-2">EIP37 Solution</h4>
+              <p className="text-sm text-gray-300">Blends Bitcoin classic with Ergo's predictive model</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Changes */}
+        <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Code className="w-6 h-6 text-purple-400" />
+            Key Proposed Changes
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+                <div>
+                  <h4 className="font-semibold text-purple-400 mb-1">Shorter Epoch Length</h4>
+                  <p className="text-gray-300 text-sm">Reducing epoch length to 128 blocks, making the system more responsive to mining changes.</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+                <div>
+                  <h4 className="font-semibold text-blue-400 mb-1">Dual Calculations</h4>
+                  <p className="text-gray-300 text-sm">Use both predictive method (last eight epochs) and classic Bitcoin-style calculation method.</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+                <div>
+                  <h4 className="font-semibold text-green-400 mb-1">Predictive Limits</h4>
+                  <p className="text-gray-300 text-sm">Cap predictive difficulty changes to maximum 50% per epoch for stability.</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <div className="flex items-start gap-3">
+                <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm">4</div>
+                <div>
+                  <h4 className="font-semibold text-orange-400 mb-1">Overall Limits</h4>
+                  <p className="text-gray-300 text-sm">Average both calculated difficulties and limit final changes to maximum 50% per epoch.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Simulation Results */}
+        <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Coins className="w-6 h-6 text-cyan-400" />
+            Simulation Results
+          </h2>
+          <p className="text-gray-300 mb-4">
+            We've simulated various scenarios including price fluctuations, consistent growth, and coin hopping. The proposed changes consistently result in lower errors and delays compared to the existing algorithms.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4">
+            <div className="bg-neutral-800/50 rounded-lg p-4 text-center">
+              <h4 className="font-semibold text-cyan-400 mb-2">Price Fluctuations</h4>
+              <div className="text-2xl font-bold text-green-400 mb-1">✓ Lower Errors</div>
+              <p className="text-sm text-gray-300">Better stability during market volatility</p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4 text-center">
+              <h4 className="font-semibold text-blue-400 mb-2">Consistent Growth</h4>
+              <div className="text-2xl font-bold text-green-400 mb-1">✓ Reduced Delays</div>
+              <p className="text-sm text-gray-300">Faster adaptation to network changes</p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4 text-center">
+              <h4 className="font-semibold text-purple-400 mb-2">Coin Hopping</h4>
+              <div className="text-2xl font-bold text-green-400 mb-1">✓ More Robust</div>
+              <p className="text-sm text-gray-300">Better handling of miner migrations</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Activation Criteria */}
+        <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <FileText className="w-6 h-6 text-orange-400" />
+            Activation Criteria
+          </h2>
+          <div className="space-y-4">
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-orange-400 font-semibold">Activation Window</span>
+                <span className="text-white font-mono">Block #843,776 - #851,969</span>
+              </div>
+              <p className="text-gray-300 text-sm">Specific block range during which the upgrade can be activated</p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-green-400 font-semibold">Vote Requirement</span>
+                <span className="text-white">At least 232 votes (of 256 blocks)</span>
+              </div>
+              <p className="text-gray-300 text-sm">Minimum consensus threshold for activation</p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <div className="flex justify-between items-center mb-2">
+                <span className="text-blue-400 font-semibold">Vote Checking</span>
+                <span className="text-white">Every 128 blocks</span>
+              </div>
+              <p className="text-gray-300 text-sm">Frequency of voting status verification</p>
+            </div>
+          </div>
+        </div>
+
+        {/* Upgrade Instructions */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Code className="w-6 h-6 text-green-400" />
+            How To Upgrade
+          </h2>
+          <p className="text-gray-300 mb-4">
+            To adopt these changes, please update to the Ergo reference protocol client version 4.0.100 or newer.
+          </p>
+          <div className="bg-green-400/20 border border-green-400/30 rounded-lg p-4">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                <span className="text-white text-sm font-bold">✓</span>
+              </div>
+              <span className="text-green-200 font-semibold">Upgrade Available</span>
+            </div>
+            <p className="text-green-200 text-sm mb-3">
+              Download the latest Ergo reference client to ensure compatibility with EIP37 improvements.
+            </p>
+            <a
+              href="https://github.com/ergoplatform/ergo/releases"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-green-300 hover:text-green-200 underline"
+            >
+              <ExternalLink className="w-4 h-4" />
+              Download from GitHub Releases
+            </a>
+          </div>
         </div>
       </TabsContent>
     </Tabs>
