@@ -279,11 +279,205 @@ export default function MinersResourcesPage() {
 
       {/* Emission Update Tab */}
       <TabsContent value="emission">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+        <div className="mb-8">
+          <h1 className="text-3xl font-bold bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+            EIP27: Emission Retargeting Soft-Fork
+          </h1>
+          <p className="text-lg text-gray-400 mb-6">
+            A comprehensive overview of Ergo's tokenomics evolution and the community-driven emission schedule adjustment that ensures long-term network sustainability.
+          </p>
+        </div>
+
+        {/* Ergo Tokenomics Overview */}
+        <div className="bg-blue-400/10 border border-blue-400/20 rounded-xl p-6 mb-8">
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Coins className="w-6 h-6 text-green-400" /> Emission Update
+            <Coins className="w-6 h-6 text-blue-400" />
+            Ergo Tokenomics and Emission
           </h2>
-          <p className="text-gray-400">Content coming soon...</p>
+          <p className="text-gray-300 mb-4">
+            As a Proof of Work blockchain, Ergo has a defined emission schedule for the release of ERG tokens. When Ergo launched in 2019, there was no ICO (initial coin offering), no pre-mine and no pre-allocation of tokens to any founders or venture capitalists.
+          </p>
+          <div className="grid md:grid-cols-3 gap-4 mb-4">
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-blue-400 mb-2">Total Supply</h4>
+              <p className="text-2xl font-bold text-white mb-1">97,739,925</p>
+              <p className="text-sm text-gray-300">ERG tokens (fixed supply)</p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-green-400 mb-2">Foundation Share</h4>
+              <p className="text-2xl font-bold text-white mb-1">4.43%</p>
+              <p className="text-sm text-gray-300">Received over 2.5 years</p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-purple-400 mb-2">Block Time</h4>
+              <p className="text-2xl font-bold text-white mb-1">2 minutes</p>
+              <p className="text-sm text-gray-300">Average mining interval</p>
+            </div>
+          </div>
+          <p className="text-gray-300">
+            Once the mainnet was activated, Ergo's emission schedule was set to be completed within eight years. After two and a half years, the Ergo Foundation ceased to receive any rewards from the mining protocol.
+          </p>
+        </div>
+
+        {/* Original Emission Schedule */}
+        <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <FileText className="w-6 h-6 text-orange-400" />
+            The Original Emission Schedule
+          </h2>
+          <p className="text-gray-300 mb-4">
+            Ergo currently mines blocks every two minutes. For the first two years, each block was set to release 75 ERG into circulation. At the end of the 2nd year, the emission rate was set to drop by 3 ERG/block with a schedule that would see block rewards further reduced by 3 ERG every three months.
+          </p>
+          <div className="bg-neutral-800/50 rounded-lg p-4">
+            <h3 className="font-semibold text-orange-400 mb-3">Original Schedule Timeline:</h3>
+            <div className="space-y-2 text-gray-300">
+              <p>• <strong>Years 1-2:</strong> 75 ERG per block</p>
+              <p>• <strong>After Year 2:</strong> Reduction of 3 ERG every 3 months</p>
+              <p>• <strong>After 8 years:</strong> Complete emission, reliance on fees + Storage Rent</p>
+            </div>
+          </div>
+        </div>
+
+        {/* EIP27 Proposal */}
+        <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Code className="w-6 h-6 text-purple-400" />
+            EIP27 and the Adjustment of Ergo's Emission Schedule
+          </h2>
+          <p className="text-gray-300 mb-4">
+            Recently, the Ergo Foundation undertook the initiative to ensure the long-term sustainability of the mining protocol by proposing an amendment to the emission schedule. As the blockchain is still in the early stages of focusing on promotion and development, there was a concern that the ecosystem may need more time before the end of the eight-year emission schedule.
+          </p>
+          <div className="grid md:grid-cols-2 gap-6 mb-4">
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-purple-400 mb-2">The Problem</h4>
+              <p className="text-gray-300 text-sm">
+                If there are not enough dApps and users in the ecosystem at the end of the original emission schedule, there may not be enough transactions to incentivize miners to maintain the network.
+              </p>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-green-400 mb-2">The Solution</h4>
+              <p className="text-gray-300 text-sm">
+                EIP27 extends Ergo emissions by approximately 17.38 years, offering time to develop the necessary crypto-economic security for the blockchain until approximately 2045.
+              </p>
+            </div>
+          </div>
+          <p className="text-gray-300">
+            Ergo's co-founder, Alex Chepurnoy, proposed this solution. The plan alters the amount of the block rewards so that a portion of the supply can be put into a remission contract that will release block rewards until approximately 2045.
+          </p>
+        </div>
+
+        {/* Community Voting */}
+        <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <BookOpen className="w-6 h-6 text-green-400" />
+            Community Consensus and Implementation
+          </h2>
+          <p className="text-gray-300 mb-4">
+            On Ergo, miners enjoy the ability to suggest and vote on proposed changes to the network. With EIP27, the proposal required a 90% pass vote in order to be scheduled for implementation.
+          </p>
+          <div className="bg-neutral-800/50 rounded-lg p-4 mb-4">
+            <div className="flex items-center justify-between mb-2">
+              <span className="text-green-400 font-semibold">Voting Results</span>
+              <span className="text-white font-bold">✓ PASSED</span>
+            </div>
+            <div className="w-full bg-neutral-700 rounded-full h-3 mb-2">
+              <div className="bg-green-500 h-3 rounded-full" style={{width: '92%'}}></div>
+            </div>
+            <div className="flex justify-between text-sm text-gray-300">
+              <span>Required: 90%</span>
+              <span>Achieved: 92%+</span>
+            </div>
+          </div>
+          <p className="text-gray-300">
+            The mining community voted over 90% in favor of this proposal and after successful testnet implementation, the new emission schedule is slated for deployment with block #777217.
+          </p>
+        </div>
+
+        {/* Technical Implementation */}
+        <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Repeat className="w-6 h-6 text-yellow-400" />
+            Remission Contract Rules
+          </h2>
+          <p className="text-gray-300 mb-4">
+            Chepurnoy provided the following breakdown of the remission in a recent EIP27 update on an Ergo Forum post:
+          </p>
+          <div className="space-y-4">
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-yellow-400 mb-2">Rule 1: High Block Rewards</h4>
+              <p className="text-gray-300 text-sm mb-2">
+                "If block reward is not less than 15 ERG, send 12 ERG from it to the remission contract"
+              </p>
+              <div className="bg-neutral-700/50 rounded p-2">
+                <span className="text-green-400 font-mono text-sm">Block Reward ≥ 15 ERG → Remission = 12 ERG</span>
+              </div>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-4">
+              <h4 className="font-semibold text-blue-400 mb-2">Rule 2: Low Block Rewards</h4>
+              <p className="text-gray-300 text-sm mb-2">
+                "Otherwise, block reward R is less than 15 ERG, send R - 3 ERG from it to the remission contract"
+              </p>
+              <div className="bg-neutral-700/50 rounded p-2">
+                <span className="text-blue-400 font-mono text-sm">Block Reward &lt; 15 ERG → Remission = R - 3 ERG</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Implementation Timeline */}
+        <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <FileText className="w-6 h-6 text-cyan-400" />
+            Implementation Timeline and Schedule
+          </h2>
+          <p className="text-gray-300 mb-4">
+            These new emission rules will be integrated with the original emission schedule of the Whitepaper. Currently, block rewards are reduced every three months by 3 ERG/block - this will still be the case after EIP27 is activated.
+          </p>
+          <div className="space-y-3">
+            <div className="bg-neutral-800/50 rounded-lg p-3">
+              <div className="flex justify-between items-center">
+                <span className="text-cyan-400 font-semibold">Activation Block</span>
+                <span className="text-white font-mono">#777217</span>
+              </div>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-3">
+              <div className="flex justify-between items-center">
+                <span className="text-green-400 font-semibold">Initial Block Reward</span>
+                <span className="text-white font-mono">51 ERG/block</span>
+              </div>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-3">
+              <div className="flex justify-between items-center">
+                <span className="text-purple-400 font-semibold">Reduction Schedule</span>
+                <span className="text-white">3 ERG every 3 months</span>
+              </div>
+            </div>
+            <div className="bg-neutral-800/50 rounded-lg p-3">
+              <div className="flex justify-between items-center">
+                <span className="text-orange-400 font-semibold">Minimum Reward</span>
+                <span className="text-white font-mono">3 ERG/block</span>
+              </div>
+            </div>
+          </div>
+          <p className="text-gray-300 mt-4">
+            Block rewards will remain steady at 3 ERG/block until the remission contract has been depleted.
+          </p>
+        </div>
+
+        {/* Conclusion */}
+        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <BookOpen className="w-6 h-6 text-green-400" />
+            Long-term Sustainability Commitment
+          </h2>
+          <p className="text-gray-300 mb-4">
+            EIP27 is a commitment to ensuring the long-term and sustained growth of Ergo. Since changes in the emission schedule can not be implemented without consensus within the mining community (90% pass is required), EIP27 represents the collaborative spirit of the Ergo community to collectively build a better blockchain for everyone.
+          </p>
+          <div className="bg-green-400/20 border border-green-400/30 rounded-lg p-4">
+            <p className="text-green-200 text-sm">
+              <strong>Community-Driven Decision:</strong> This emission adjustment demonstrates Ergo's commitment to decentralized governance, where miners have the power to shape the network's future through consensus-based voting mechanisms.
+            </p>
+          </div>
         </div>
       </TabsContent>
 
