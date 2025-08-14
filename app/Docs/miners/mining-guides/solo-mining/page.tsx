@@ -546,13 +546,177 @@ scorex {
 
         {/* FAQ Tab */}
         <TabsContent value="faq">
-          <div className="space-y-6">
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 text-center">
-              <HelpCircle className="w-16 h-16 text-orange-400 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-white mb-2">FAQ Coming Soon</h2>
-              <p className="text-gray-400">
+          <div className="space-y-8">
+            {/* Header */}
+            <div className="mb-8">
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Solo Mining FAQ
+              </h1>
+              <p className="text-lg text-gray-400">
                 Frequently asked questions about solo mining, troubleshooting, and best practices.
               </p>
+            </div>
+
+            {/* FAQ 1: Funds Not Visible */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <HelpCircle className="w-6 h-6 text-blue-400" />
+                Why Aren't My Funds Visible in My Wallet?
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                When you mine, the rewards are initially linked to a <em>time-and-pubkey lock script</em>, not your standard P2PK address. To make these funds visible in your wallet, you need to transfer all the funds to your own address in the node wallet.
+              </p>
+
+              <div className="bg-blue-900/20 border border-blue-700/50 rounded-lg p-4">
+                <p className="text-blue-300">
+                  <strong>Solution:</strong> Once the transfer is confirmed on the chain, the Explorer will display them.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 2: Rewards Go to Different Address */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Calculator className="w-6 h-6 text-green-400" />
+                Why Do My Rewards Go to a Different Address?
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                Mining rewards are initially directed to UTXOs (Unspent Transaction Outputs) associated with specific scripts. These scripts lock the rewards to the miner's public keys for <strong>720 blocks</strong>.
+              </p>
+
+              <p className="text-gray-300 mb-4">
+                You can see an example of such a script <a href="https://explorer.ergoplatform.com/en/addresses/88dhgzEuTXaQ3tvkG8KeHesmXdvVomxHoHK5ExawGuxhs3nwBKkoQTxZogna6Dx9Jbu7KG2Wor22Uy73" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1">
+                  here <ExternalLink className="w-3 h-3" />
+                </a>.
+              </p>
+
+              <div className="space-y-3 text-gray-300">
+                <p>Key points:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• These UTXOs are not part of the node wallet before the locking height, so they are not included in your balance</li>
+                  <li>• However, they are stored in a special node application with <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">id = 9</code> (wallet application id = 10)</li>
+                  <li>• You can locate them via the <code className="bg-neutral-800 px-2 py-1 rounded text-green-400">/scan/unspentBoxes/9</code> API endpoint</li>
+                </ul>
+              </div>
+
+              <div className="bg-green-900/20 border border-green-700/50 rounded-lg p-4 mt-4">
+                <p className="text-green-300">
+                  <strong>Note:</strong> After 720 confirmations, the wallet will display the mined rewards, even if they are still associated with long scripts instead of short P2PK addresses.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 3: Verify Block Mined by Me */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Network className="w-6 h-6 text-purple-400" />
+                How Do I Verify If a Block Is Mined by Me?
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                You can obtain your mining rewards address with the <code className="bg-neutral-800 px-2 py-1 rounded text-green-400">/mining/rewardAddress</code> API call. The response should look something like this:
+              </p>
+
+              <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 mb-4">
+                <CopyButton 
+                  text={`{
+  "rewardAddress": "mPdcmQkPPvyMGoCDNg9oiasLyPpKJhHjgjpt89uJZE1oN9PJ9fKbdKDcfomtWoy3d1E7RFLTUbXbt1AS"
+}`}
+                  size="sm"
+                  className="absolute top-2 right-2 z-10"
+                />
+                <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+{`{
+  "rewardAddress": "mPdcmQkPPvyMGoCDNg9oiasLyPpKJhHjgjpt89uJZE1oN9PJ9fKbdKDcfomtWoy3d1E7RFLTUbXbt1AS"
+}`}
+                </pre>
+              </div>
+
+              <p className="text-gray-300 mb-4">
+                You can then verify your rewards on the <a href="https://explorer.ergoplatform.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1">
+                  Ergo Explorer <ExternalLink className="w-3 h-3" />
+                </a>.
+              </p>
+
+              <p className="text-gray-300 mb-4">
+                You can also obtain your "raw" public key via the <code className="bg-neutral-800 px-2 py-1 rounded text-green-400">/mining/rewardPublicKey</code> endpoint:
+              </p>
+
+              <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 mb-4">
+                <CopyButton 
+                  text={`{
+  "rewardPubkey": "03aa53abda9e6c958ed6046e6092b901662a26a01a2029c417b1c3f29b4b1c2799"
+}`}
+                  size="sm"
+                  className="absolute top-2 right-2 z-10"
+                />
+                <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+{`{
+  "rewardPubkey": "03aa53abda9e6c958ed6046e6092b901662a26a01a2029c417b1c3f29b4b1c2799"
+}`}
+                </pre>
+              </div>
+
+              <div className="bg-purple-900/20 border border-purple-700/50 rounded-lg p-4">
+                <p className="text-purple-300">
+                  <strong>Tip:</strong> Then, you can check block headers (<code className="bg-neutral-800 px-2 py-1 rounded text-purple-400">pk</code> field) for this public key.
+                </p>
+              </div>
+            </div>
+
+            {/* FAQ 4: Mining Solution API */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Terminal className="w-6 h-6 text-cyan-400" />
+                /mining/solution API Endpoint
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                The mining solution API endpoint returns the following format:
+              </p>
+
+              <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 mb-4">
+                <CopyButton 
+                  text={`{
+  "pk": "0350e25cee8562697d55275c96bb01b34228f9bd68fd9933f2a25ff195526864f5",
+  "w": "0366ea253123dfdb8d6d9ca2cb9ea98629e8f34015b1e4ba942b1d88badfcc6a12",
+  "n": "0000000000000000",
+  "d": 987654321
+}`}
+                  size="sm"
+                  className="absolute top-2 right-2 z-10"
+                />
+                <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+{`{
+  "pk": "0350e25cee8562697d55275c96bb01b34228f9bd68fd9933f2a25ff195526864f5",
+  "w": "0366ea253123dfdb8d6d9ca2cb9ea98629e8f34015b1e4ba942b1d88badfcc6a12",
+  "n": "0000000000000000",
+  "d": 987654321
+}`}
+                </pre>
+              </div>
+
+              <div className="space-y-3">
+                <h3 className="text-lg font-semibold text-white">Field Explanations:</h3>
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+                    <h4 className="font-semibold text-cyan-400 mb-2">pk</h4>
+                    <p className="text-gray-300 text-sm">The public key <em>in binary format</em></p>
+                  </div>
+
+                  <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+                    <h4 className="font-semibold text-cyan-400 mb-2">n</h4>
+                    <p className="text-gray-300 text-sm">The nonce</p>
+                  </div>
+
+                  <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+                    <h4 className="font-semibold text-red-400 mb-2">w & d</h4>
+                    <p className="text-gray-300 text-sm">No longer used in Autolykos2 and are <strong>constant</strong></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </TabsContent>
