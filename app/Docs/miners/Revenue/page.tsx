@@ -1,58 +1,323 @@
-import React from "react"
+import React from 'react';
+import { 
+  Coins, 
+  TrendingUp, 
+  Server, 
+  Layers, 
+  Settings, 
+  ExternalLink,
+  CheckCircle, 
+  DollarSign,
+  ArrowUpRight,
+  Zap,
+  Database,
+  GitBranch,
+  Clock,
+  Users,
+  ChevronRight
+} from 'lucide-react';
+import Link from 'next/link';
 
 export default function RevenuePage() {
   return (
     <>
-      <h1 className="text-3xl font-bold text-white mb-6">Sustaining Ergo Mining: Revenue Streams Beyond Emissions</h1>
-      <p className="text-lg text-gray-300 mb-8">
-        As Ergo's emission schedule is set to conclude around the year 2045, ensuring the continued incentivization of miners to secure the network is of paramount importance. Ergo's architecture is designed to support a diverse range of revenue streams, promoting both network growth and long-term sustainability.
-      </p>
-
-      <h2 className="text-2xl font-bold text-white mb-4">Transaction Fees</h2>
-      <p className="text-gray-300 mb-8">
-        Transaction fees represent a crucial revenue source for miners. While currently modest in size, the potential for front-running transactions offers additional financial incentives. This cost can be adjusted by miners through on-chain voting, allowing for dynamic adjustments to align with network demands and market conditions.
-      </p>
-
-      <h2 className="text-2xl font-bold text-white mb-4">Storage Rent / 'Demurrage'</h2>
-      <p className="text-gray-300 mb-8">
-        The Storage Rent mechanism, also known as 'demurrage,' is already active and providing a small but steady income stream for miners. This innovative approach incentivizes the efficient use of blockchain storage by imposing a fee on unspent transaction outputs (UTXOs) that remain idle for an extended period. By validating transactions and managing the storage of UTXOs, miners play a vital role in maintaining the network's efficiency and earn rewards in the process. For more details, refer to the <a href="rent.md" className="text-orange-400 hover:text-orange-300">Storage Rent</a> page.
-      </p>
-
-      <h2 className="text-2xl font-bold text-white mb-4">Layer 2 Infrastructure</h2>
-      <p className="text-gray-300 mb-6">
-        Layer 2 (L2) solutions, such as state channels and sidechains, enhance scalability and improve transaction throughput on the Ergo blockchain. These solutions enable faster and more cost-effective transactions through off-chain processing. Miners can maintain and operate L2 infrastructure, ensuring the smooth functioning of these off-chain solutions and earning fees for their services. By supporting L2 infrastructure, miners contribute to the scalability and efficiency of the Ergo network, attracting more users and generating additional revenue opportunities.
-      </p>
-      <p className="text-gray-300 mb-6">
-        Sigma Chains, with their support for various sidechain constructions, can serve as a robust foundation for Layer 2 solutions. Miners can leverage their expertise in securing Sigma Chains to provide and maintain L2 infrastructure, further diversifying their revenue streams.
-      </p>
-
-      <h3 className="text-xl font-semibold text-white mb-3">Sidechain Rewards</h3>
-      <p className="text-gray-300 mb-6">
-        Ergo's sidechain architecture provides a robust platform for developers to deploy their decentralized applications (dApps) and blockchain solutions. Miners can secure these sidechains and earn rewards for their contributions. By validating transactions and maintaining the security of sidechain operations, miners play a crucial role in the Ergo ecosystem and generate additional income.
-      </p>
-      <p className="text-gray-300 mb-6">
-        A recent post on the forum, <a href="https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/5" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">'A Scalability Plan for Ergo'</a>, highlights the potential of sidechain rewards:
-      </p>
-      <blockquote className="border-l-2 border-neutral-700 pl-4 text-gray-300 italic mb-6">
-        For incentivizing weak blocks reporting, they can commit to sidechains, thus making fast sidechains possible and miners will get rewards from that.
-      </blockquote>
-      <p className="text-gray-300 mb-8">
-        With the introduction of Sigma Chains, miners will have even more opportunities to secure and earn rewards from various sidechains. Sigma Chains offer different sidechain constructions, including <a href="sigma-chains.md#sidechain-constructions" className="text-orange-400 hover:text-orange-300">merged-mined sidechains</a>, <a href="sigma-chains.md#sidechain-constructions" className="text-orange-400 hover:text-orange-300">double merged-mined sidechains</a>, and <a href="sigma-chains.md#sidechain-constructions" className="text-orange-400 hover:text-orange-300">sidechains with dedicated mining algorithms</a>. By participating in the mining and security of these sidechains, miners can diversify their revenue streams and benefit from the growth of the Sigma Chain ecosystem.
-      </p>
-
-      <h2 className="text-2xl font-bold text-white mb-4">Adjusting the Re-emission Schedule</h2>
-      <p className="text-gray-300 mb-6">
-        As outlined in the paper <a href="https://eprint.iacr.org/2021/577.pdf" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">"Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks"</a>, Ergo's emission schedule can be adjusted through on-chain voting and soft forks. This flexibility allows the Ergo community to re-evaluate and potentially extend the emission schedule if deemed necessary to ensure a smooth transition from mining rewards to the alternative revenue streams mentioned above. By opting to re-adjust the re-emission schedule, the community can maintain an optimal balance between mining incentives and the adoption of these new revenue mechanisms, ensuring the long-term sustainability of the Ergo network.
-      </p>
-      <p className="text-gray-300 mb-8">
-        As Ergo continues to evolve and attract a broader user base, the potential for diverse and innovative revenue streams for miners will continue to expand. By actively engaging in these revenue-generating activities, miners not only secure the network but also contribute to the overall growth and success of Ergo and the Sigma Chain ecosystem. For more information on the Ergo Foundation's vision and plans for the future, please refer to the <a href="ef-future.md" className="text-orange-400 hover:text-orange-300">ef-future.md</a> page.
-      </p>
-
-      <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4">
-        <p className="text-gray-300">
-          <strong>Note:</strong> Stay tuned for updates and announcements from the Ergo community regarding new and emerging revenue streams. These opportunities will be shared to enable miners to make informed decisions and maximize their earning potential.
+      {/* Hero Section */}
+      <div className="mb-12">
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-green-400 to-blue-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
+          Miner Revenue Streams
+        </h1>
+        <p className="text-xl text-gray-400 mb-6">
+          As Ergo's emission schedule concludes around 2045, ensuring continued miner incentivization is paramount. Ergo's architecture supports diverse revenue streams, promoting network growth and long-term sustainability beyond traditional block rewards.
         </p>
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href="/Docs/introduction/storage-rent"
+            className="inline-flex items-center px-6 py-3 bg-green-500 rounded-xl font-semibold text-black hover:bg-green-600 transition-transform hover:scale-105"
+          >
+            <Database className="w-5 h-5 mr-2" /> Learn Storage Rent
+          </Link>
+          <Link
+            href="/Docs/miners/mining-guides"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
+          >
+            <Settings className="w-5 h-5 mr-2" /> Mining Guides
+          </Link>
+        </div>
+      </div>
+
+      {/* Overview Section */}
+      <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <TrendingUp className="w-6 h-6 text-green-400" /> Revenue Sustainability Vision
+        </h2>
+        <p className="text-gray-300 mb-4">
+          Ergo's transition from emission-based rewards to sustainable revenue models ensures long-term network security. Our multi-faceted approach combines proven mechanisms with innovative blockchain economics to maintain miner incentives well beyond the emission period.
+        </p>
+        <div className="bg-neutral-800/50 rounded-lg p-4">
+          <div className="flex items-center gap-2 mb-2">
+            <Clock className="w-5 h-5 text-green-400" />
+            <span className="font-semibold text-green-400">Timeline: Emission ends ~2045</span>
+          </div>
+          <p className="text-gray-300 text-sm">
+            Transition period allows gradual adoption of alternative revenue streams while maintaining network security.
+          </p>
+        </div>
+      </div>
+
+      {/* Revenue Streams Grid */}
+      <div className="grid md:grid-cols-2 gap-6 mb-12">
+        
+        {/* Transaction Fees */}
+        <div className="bg-blue-400/10 border border-blue-400/20 rounded-xl p-6">
+          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+            <DollarSign className="w-5 h-5 text-blue-400" /> Transaction Fees
+          </h3>
+          <p className="text-gray-300 mb-4">
+            Dynamic fee structure with miner-adjustable parameters through on-chain voting. Potential for MEV (Maximum Extractable Value) opportunities through transaction ordering.
+          </p>
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              On-chain governance for fee adjustments
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Front-running revenue opportunities
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Market-responsive pricing mechanisms
+            </li>
+          </ul>
+          <div className="bg-neutral-800/50 rounded-lg p-3">
+            <span className="text-blue-400 font-semibold text-sm">Status:</span>
+            <span className="text-white text-sm ml-2">Active & Growing</span>
+          </div>
+        </div>
+
+        {/* Storage Rent */}
+        <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6">
+          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
+            <Database className="w-5 h-5 text-purple-400" /> Storage Rent
+          </h3>
+          <p className="text-gray-300 mb-4">
+            Already active demurrage system providing steady income. Encourages efficient UTXO management while generating continuous revenue for miners.
+          </p>
+          <ul className="space-y-2 text-gray-400 text-sm mb-4">
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Continuous revenue stream
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Network efficiency incentives
+            </li>
+            <li className="flex items-center gap-2">
+              <CheckCircle className="w-4 h-4 text-green-400" />
+              Automatic UTXO cleanup
+            </li>
+          </ul>
+          <div className="bg-neutral-800/50 rounded-lg p-3">
+            <span className="text-purple-400 font-semibold text-sm">Status:</span>
+            <span className="text-green-300 text-sm ml-2">✓ Implemented</span>
+          </div>
+        </div>
+
+      </div>
+
+      {/* Layer 2 Infrastructure */}
+      <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <Layers className="w-6 h-6 text-cyan-400" /> Layer 2 Infrastructure
+        </h2>
+        <p className="text-gray-300 mb-6">
+          Layer 2 solutions enhance scalability through off-chain processing. Miners can operate L2 infrastructure, earning fees while contributing to network efficiency and user experience.
+        </p>
+        
+        <div className="grid md:grid-cols-2 gap-4 mb-6">
+          <div className="bg-neutral-800/50 rounded-lg p-4">
+            <h4 className="font-semibold text-cyan-400 mb-2">State Channels</h4>
+            <p className="text-gray-300 text-sm mb-2">High-throughput off-chain transaction processing</p>
+            <ul className="space-y-1 text-gray-400 text-xs">
+              <li>• Instant transaction finality</li>
+              <li>• Reduced on-chain congestion</li>
+              <li>• Operator fee opportunities</li>
+            </ul>
+          </div>
+          <div className="bg-neutral-800/50 rounded-lg p-4">
+            <h4 className="font-semibold text-cyan-400 mb-2">Sidechains</h4>
+            <p className="text-gray-300 text-sm mb-2">Specialized blockchain networks for specific use cases</p>
+            <ul className="space-y-1 text-gray-400 text-xs">
+              <li>• Application-specific optimizations</li>
+              <li>• Cross-chain asset transfers</li>
+              <li>• Validation rewards</li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="bg-neutral-800/50 rounded-lg p-4">
+          <h4 className="font-semibold text-cyan-400 mb-2">Sigma Chains Integration</h4>
+          <p className="text-gray-300 text-sm">
+            Leverage Sigma Chain expertise to provide robust L2 infrastructure, supporting various sidechain constructions and earning diverse revenue streams.
+          </p>
+        </div>
+      </div>
+
+      {/* Sidechain Rewards */}
+      <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <GitBranch className="w-6 h-6 text-orange-400" /> Sidechain Rewards
+        </h2>
+        <p className="text-gray-300 mb-6">
+          Ergo's sidechain architecture provides platforms for dApp deployment. Miners secure these chains, earning rewards while supporting ecosystem growth.
+        </p>
+
+        {/* Quote */}
+        <div className="bg-neutral-800/50 border-l-4 border-orange-400 rounded-lg p-4 mb-6">
+          <blockquote className="text-gray-300 italic mb-2">
+            "For incentivizing weak blocks reporting, they can commit to sidechains, thus making fast sidechains possible and miners will get rewards from that."
+          </blockquote>
+          <p className="text-gray-400 text-sm">
+            — <a 
+              href="https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/5" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-orange-400 hover:text-orange-300 inline-flex items-center gap-1"
+            >
+              A Scalability Plan for Ergo <ExternalLink className="w-3 h-3" />
+            </a>
+          </p>
+        </div>
+
+        {/* Sidechain Types */}
+        <div className="space-y-4">
+          <div className="bg-neutral-800/50 rounded-lg p-4">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-8 h-8 bg-orange-500 text-white rounded-full flex items-center justify-center font-bold text-sm">1</div>
+              <h4 className="font-semibold text-orange-400">Merged-Mined Sidechains</h4>
+            </div>
+            <p className="text-gray-300 text-sm">Secure multiple chains simultaneously using existing mining infrastructure</p>
+          </div>
+          <div className="bg-neutral-800/50 rounded-lg p-4">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-8 h-8 bg-blue-500 text-white rounded-full flex items-center justify-center font-bold text-sm">2</div>
+              <h4 className="font-semibold text-blue-400">Double Merged-Mined Sidechains</h4>
+            </div>
+            <p className="text-gray-300 text-sm">Enhanced security model with dual mining commitments</p>
+          </div>
+          <div className="bg-neutral-800/50 rounded-lg p-4">
+            <div className="flex items-center gap-3 mb-2">
+              <div className="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center font-bold text-sm">3</div>
+              <h4 className="font-semibold text-green-400">Dedicated Algorithm Sidechains</h4>
+            </div>
+            <p className="text-gray-300 text-sm">Specialized mining algorithms for specific use cases and applications</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Emission Schedule Adjustment */}
+      <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <Settings className="w-6 h-6 text-yellow-400" /> Emission Schedule Flexibility
+        </h2>
+        <p className="text-gray-300 mb-4">
+          Ergo's governance model allows emission schedule adjustments through on-chain voting and soft forks, ensuring smooth transitions between reward mechanisms.
+        </p>
+        
+        <div className="bg-neutral-800/50 rounded-lg p-4 mb-4">
+          <h4 className="font-semibold text-yellow-400 mb-2">Adaptive Governance</h4>
+          <p className="text-gray-300 text-sm mb-3">
+            Community-driven decisions on emission policy based on network conditions and revenue stream adoption.
+          </p>
+          <a 
+            href="https://eprint.iacr.org/2021/577.pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="text-yellow-400 hover:text-yellow-300 text-sm inline-flex items-center gap-1"
+          >
+            📄 "Soft Power: Upgrading Chain Macroeconomic Policy" <ExternalLink className="w-3 h-3" />
+          </a>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-4">
+          <div className="bg-neutral-800/50 rounded-lg p-3 text-center">
+            <Zap className="w-6 h-6 text-yellow-400 mx-auto mb-2" />
+            <h5 className="font-semibold text-yellow-400 text-sm">Soft Forks</h5>
+            <p className="text-gray-300 text-xs">Non-disruptive policy updates</p>
+          </div>
+          <div className="bg-neutral-800/50 rounded-lg p-3 text-center">
+            <Users className="w-6 h-6 text-blue-400 mx-auto mb-2" />
+            <h5 className="font-semibold text-blue-400 text-sm">Community Voting</h5>
+            <p className="text-gray-300 text-xs">Democratic decision making</p>
+          </div>
+          <div className="bg-neutral-800/50 rounded-lg p-3 text-center">
+            <TrendingUp className="w-6 h-6 text-green-400 mx-auto mb-2" />
+            <h5 className="font-semibold text-green-400 text-sm">Smooth Transition</h5>
+            <p className="text-gray-300 text-xs">Gradual revenue adoption</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Future Opportunities */}
+      <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <ArrowUpRight className="w-6 h-6 text-purple-400" /> Future Revenue Opportunities
+        </h2>
+        <p className="text-gray-300 mb-6">
+          As Ergo evolves and attracts broader adoption, new revenue streams will emerge. Active participation in these opportunities ensures network security while contributing to ecosystem growth.
+        </p>
+
+        <div className="space-y-4">
+          <div className="flex items-start gap-4 bg-neutral-800/30 rounded-lg p-4">
+            <Server className="w-6 h-6 text-blue-400 mt-1" />
+            <div>
+              <h4 className="font-semibold text-blue-400 mb-1">Infrastructure Services</h4>
+              <p className="text-gray-300 text-sm">Oracle operations, data feeds, and decentralized services</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4 bg-neutral-800/30 rounded-lg p-4">
+            <Coins className="w-6 h-6 text-green-400 mt-1" />
+            <div>
+              <h4 className="font-semibold text-green-400 mb-1">DeFi Protocol Rewards</h4>
+              <p className="text-gray-300 text-sm">Liquidity provision, yield farming, and protocol governance</p>
+            </div>
+          </div>
+          <div className="flex items-start gap-4 bg-neutral-800/30 rounded-lg p-4">
+            <GitBranch className="w-6 h-6 text-purple-400 mt-1" />
+            <div>
+              <h4 className="font-semibold text-purple-400 mb-1">Cross-Chain Bridges</h4>
+              <p className="text-gray-300 text-sm">Validator roles in interoperability protocols</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Call to Action */}
+      <div className="bg-gradient-to-r from-green-500/10 to-blue-500/10 border border-green-500/20 rounded-xl p-6">
+        <div className="flex items-center gap-3 mb-4">
+          <div className="w-10 h-10 bg-green-500 rounded-full flex items-center justify-center">
+            <CheckCircle className="w-6 h-6 text-white" />
+          </div>
+          <h3 className="text-xl font-bold text-white">Stay Informed</h3>
+        </div>
+        <p className="text-gray-300 mb-4">
+          Monitor Ergo community announcements for emerging revenue opportunities. Strategic participation in these streams maximizes earning potential while securing the network's future.
+        </p>
+        <div className="flex flex-wrap gap-3">
+          <Link
+            href="/Docs/introduction/entities"
+            className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300 hover:bg-green-500/30 transition-colors text-sm"
+          >
+            Ergo Foundation <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
+          <Link
+            href="/Docs/miners/governance"
+            className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-lg text-blue-300 hover:bg-blue-500/30 transition-colors text-sm"
+          >
+            Mining Governance <ChevronRight className="w-4 h-4 ml-1" />
+          </Link>
+        </div>
       </div>
     </>
-  )
+  );
 } 
