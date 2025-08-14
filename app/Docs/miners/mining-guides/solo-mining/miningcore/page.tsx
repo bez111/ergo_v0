@@ -24,15 +24,17 @@ export default function MiningCorePage() {
           </div>
         </div>
 
-        <div className="mb-6">
-          <Link 
-            href="/Docs/miners/mining-guides/solo-mining" 
-            className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Back to Solo Mining
-          </Link>
-        </div>
+      </div>
+
+      {/* Back Button */}
+      <div className="mb-6">
+        <Link 
+          href="/Docs/miners/mining-guides/solo-mining" 
+          className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+        >
+          <ArrowLeft className="w-4 h-4" />
+          Back to Solo Mining
+        </Link>
       </div>
 
       {/* Step 1: Download MiningCore */}
