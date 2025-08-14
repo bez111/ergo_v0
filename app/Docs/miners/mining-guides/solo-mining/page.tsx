@@ -239,7 +239,7 @@ scorex {
               </p>
               <div className="grid md:grid-cols-2 gap-4">
                 <Link 
-                  href="/Docs/miners/mining-guides/solo-mining/host-a-pool/stratum"
+                  href="/Docs/miners/mining-guides/solo-mining/stratum"
                   className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4 hover:bg-neutral-700/50 hover:border-orange-500/50 transition-all cursor-pointer group"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">Ergo Stratum</h3>
