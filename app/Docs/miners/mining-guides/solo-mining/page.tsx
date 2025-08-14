@@ -294,12 +294,251 @@ scorex {
 
         {/* Withdraw Tab */}
         <TabsContent value="withdraw">
-          <div className="space-y-6">
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 text-center">
-              <Wallet className="w-16 h-16 text-orange-400 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-white mb-2">Withdraw Guide Coming Soon</h2>
-              <p className="text-gray-400">
-                Instructions on how to withdraw your mined ERG from your node wallet to your personal wallet.
+          <div className="space-y-8">
+            {/* Header */}
+            <div className="mb-8">
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Spending Mining Rewards
+              </h1>
+              <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-lg p-4 mb-6">
+                <div className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-yellow-300 mb-2">Keep in mind</h3>
+                    <p className="text-yellow-200">
+                      Please note this page contains information that pre-dates <a href="/Docs/introduction/eip27" className="text-yellow-400 hover:text-yellow-300 underline">EIP-27</a>.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <p className="text-lg text-gray-400">
+                This section guides miners on how to withdraw funds they have mined.
+              </p>
+            </div>
+
+            {/* Introduction */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <p className="text-gray-300">
+                Many users have launched both a node and a miner, with the miner's <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">pubkeyHex</code> embedded in the node's configuration. This information explains how to identify the coins that have been mined and transfer them to another address.
+              </p>
+            </div>
+
+            {/* Keys Overview */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Calculator className="w-6 h-6 text-blue-400" />
+                Keys Overview
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                Miners may encounter various keys in different formats. Here are the key formats commonly encountered:
+              </p>
+
+              <div className="space-y-4">
+                <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-white mb-2">1. Base16-encoded raw public key</h3>
+                  <p className="text-gray-300">
+                    Mining software and mining support in the node use this format, represented as a serialized point on an elliptic curve. Miners can use this key without the need for Base58 encoding or address formation.
+                  </p>
+                </div>
+
+                <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-white mb-2">2. Pay-To-Public-Key (P2PK) addresses</h3>
+                  <p className="text-gray-300">
+                    These addresses are displayed in the node wallet and start with "9." In addition to the elliptic curve point, P2PK addresses also include the network prefix and a checksum, similar to Bitcoin's P2PK and P2PKH addresses.
+                  </p>
+                </div>
+
+                <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-white mb-2">3. Mining/rewardAddress API method</h3>
+                  <p className="text-gray-300 mb-2">
+                    This method is intended for external tools that generate block candidates. It displays a special encoded script, such as:
+                  </p>
+                  <code className="text-green-400 bg-neutral-800 px-2 py-1 rounded text-sm break-all">
+                    88dhgzEuTXaSfKEbxfa6vghvEGdBH39sn9h7As2Y2Z6SGd8bKXCXmRLY5JtU4g4RYBP4WcZWb3JwjXDK
+                  </code>
+                  <p className="text-gray-300 mt-2">used to pay a miner.</p>
+                </div>
+              </div>
+
+              <div className="bg-blue-900/20 border border-blue-700/50 rounded-lg p-4 mt-4">
+                <p className="text-blue-300">
+                  <strong>Note:</strong> As long as you have entered the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">pubkeyHex</code> from your miner into your node, you don't need to worry about the different keys you encounter.
+                </p>
+              </div>
+            </div>
+
+            {/* Viewing Balance */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Wallet className="w-6 h-6 text-green-400" />
+                Viewing Your Balance and Withdrawing Funds
+              </h2>
+              
+              <div className="bg-yellow-900/20 border border-yellow-700/50 rounded-lg p-4 mb-6">
+                <p className="text-yellow-200">
+                  After initializing your wallet, you may not see the mined coins if the initialization occurred after the corresponding blocks were mined. It's important to note that the node does not scan blocks retrospectively; it only scans new blocks after initialization.
+                </p>
+              </div>
+
+              <p className="text-gray-300 mb-4">
+                To find mined coins in this situation, you need to perform a full blockchain rescan (or launch another node on a different machine or with different ports configured in the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">scorex.restApi.bindAddress</code> and <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">scorex.network.bindAddress</code> fields of the config). We recommend using version 3.0.1 for easier configuration.
+              </p>
+            </div>
+
+            {/* Step 1 */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Terminal className="w-6 h-6 text-red-400" />
+                Step 1: Clear Node State (if stopping the node)
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                If you intend to stop your node, you must clear its state. To do this, stop the node and remove all contents of the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">.ergo</code> directory.
+              </p>
+
+              <div className="bg-blue-900/20 border border-blue-700/50 rounded-lg p-4">
+                <p className="text-blue-300">
+                  <strong>Note:</strong> On Mac and Linux, you may need to use the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">ls -a</code> command in the directory where you ran the node to view the hidden directory.
+                </p>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Settings className="w-6 h-6 text-purple-400" />
+                Step 2: Restoring a Local Wallet from the Autolykos Miner's Seed Phrase
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                Retrieve the mnemonic sentence you set in the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">config.json</code> when configuring your Autolykos miner. You need to restore the built-in wallet using this phrase.
+              </p>
+
+              <p className="text-gray-300 mb-4">
+                To restore your wallet, start the node again and send a POST request to <code className="bg-neutral-800 px-2 py-1 rounded text-green-400">http://[your_node_ip]:9053/wallet/restore</code> with the following <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">application/json</code> content-type body:
+              </p>
+
+              <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 mb-4">
+                <CopyButton 
+                  text={`{
+  "pass": "your_wallet_pass",
+  "mnemonic": "mnemonic_sentence_from_your_miner",
+  "mnemonicPass": "mnemonic_pass_if_set"
+}`}
+                  size="sm"
+                  className="absolute top-2 right-2 z-10"
+                />
+                <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+{`{
+  "pass": "your_wallet_pass",
+  "mnemonic": "mnemonic_sentence_from_your_miner",
+  "mnemonicPass": "mnemonic_pass_if_set"
+}`}
+                </pre>
+              </div>
+
+              <div className="space-y-3 text-gray-300">
+                <p>In the request:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• Provide a new, unique <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">pass</code> to encrypt the wallet data on your local disk</li>
+                  <li>• The <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">mnemonic</code> field should contain the mnemonic phrase copied from your Autolykos miner's config</li>
+                  <li>• Pay attention to the optional <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">mnemonicPass</code> field - include this only if your mnemonic phrase is protected by a password</li>
+                </ul>
+              </div>
+
+              <div className="bg-red-900/20 border border-red-700/50 rounded-lg p-4 mt-4">
+                <div className="flex items-start gap-3">
+                  <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
+                  <div>
+                    <h3 className="text-lg font-semibold text-red-300 mb-2">ATTENTION</h3>
+                    <p className="text-red-200">
+                      To allow the wallet to scan all blocks from the genesis, restore the wallet before your node starts downloading full blocks. You can check the <code className="bg-neutral-800 px-2 py-1 rounded text-red-400">fullHeight</code> value in the response of the <code className="bg-neutral-800 px-2 py-1 rounded text-red-400">/info</code> API method. If <code className="bg-neutral-800 px-2 py-1 rounded text-red-400">fullHeight</code> is <code className="bg-neutral-800 px-2 py-1 rounded text-red-400">null</code>, it means your node hasn't started downloading full blocks yet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Calculator className="w-6 h-6 text-cyan-400" />
+                Step 3: Checking Your Balance
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                Once your node is synchronized with the network, check the <code className="bg-neutral-800 px-2 py-1 rounded text-green-400">/wallet/balances</code> API method. The response should resemble the following:
+              </p>
+
+              <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 mb-4">
+                <CopyButton 
+                  text={`{
+  "height": 3560,
+  "balance": 67500000000,
+  "assets": {}
+}`}
+                  size="sm"
+                  className="absolute top-2 right-2 z-10"
+                />
+                <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+{`{
+  "height": 3560,
+  "balance": 67500000000,
+  "assets": {}
+}`}
+                </pre>
+              </div>
+
+              <div className="space-y-3 text-gray-300">
+                <p>Pay attention to:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• The <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">height</code> field, which should be equal to the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">fullHeight</code> displayed by the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">/info</code> API route</li>
+                  <li>• The <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">balance</code> field represents the confirmed balance discovered by your wallet</li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Network className="w-6 h-6 text-yellow-400" />
+                Step 4: Making a Transaction to Spend Your Reward
+              </h2>
+              
+              <p className="text-gray-300 mb-4">
+                To withdraw a reward from your wallet, create a new payment transaction using the <code className="bg-neutral-800 px-2 py-1 rounded text-green-400">/wallet/payment/send</code> API route. Send a POST request with the following <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">application/json</code> content-type body:
+              </p>
+
+              <div className="relative bg-neutral-800/50 rounded-lg p-4 border border-neutral-600 mb-4">
+                <CopyButton 
+                  text={`{
+  "address": "your_address",
+  "value": 10000000
+}`}
+                  size="sm"
+                  className="absolute top-2 right-2 z-10"
+                />
+                <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+{`{
+  "address": "your_address",
+  "value": 10000000
+}`}
+                </pre>
+              </div>
+
+              <div className="space-y-3 text-gray-300 mb-4">
+                <p>In the request:</p>
+                <ul className="space-y-2 ml-4">
+                  <li>• Specify the <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">address</code> where you want to move your funds</li>
+                  <li>• The <code className="bg-neutral-800 px-2 py-1 rounded text-blue-400">value</code> represents the amount of nanoERGs you wish to transfer</li>
+                </ul>
+              </div>
+
+              <p className="text-gray-300">
+                After sending the request, the node will return the transaction ID in the response. You can use the <a href="https://explorer.ergoplatform.com" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300 underline inline-flex items-center gap-1">
+                  explorer <ExternalLink className="w-3 h-3" />
+                </a> to track the progress of your transaction until it gets added to a block.
               </p>
             </div>
           </div>
