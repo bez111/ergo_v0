@@ -19,7 +19,7 @@ export default function MiningCorePage() {
           <div className="flex items-start gap-3">
             <Info className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
             <p className="text-blue-300">
-              💡 If you're using <strong>Windows 10</strong>, see the <Link href="/Docs/miners/mining-guides/host-a-pool/miningcore/windows" className="text-blue-400 hover:text-blue-300 underline">Windows Tutorial</Link>
+              💡 If you're using <strong>Windows 10</strong>, see the <Link href="/Docs/miners/mining-guides/solo-mining/miningcore/windows" className="text-blue-400 hover:text-blue-300 underline">Windows Tutorial</Link>
             </p>
           </div>
         </div>

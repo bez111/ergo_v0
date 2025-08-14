@@ -8,7 +8,7 @@ export default function MiningCoreWindowsPage() {
       {/* Back Button */}
       <div className="container mx-auto px-4 py-6">
         <Link 
-          href="/Docs/miners/mining-guides/host-a-pool/miningcore"
+          href="/Docs/miners/mining-guides/solo-mining/miningcore"
           className="inline-flex items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors mb-8"
         >
           <ArrowLeft className="w-4 h-4" />

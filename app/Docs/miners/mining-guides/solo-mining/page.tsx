@@ -248,7 +248,7 @@ scorex {
                   </p>
                 </Link>
                 <Link 
-                  href="/Docs/miners/mining-guides/solo-mining/host-a-pool/miningcore"
+                  href="/Docs/miners/mining-guides/solo-mining/miningcore"
                   className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4 hover:bg-neutral-700/50 hover:border-orange-500/50 transition-all cursor-pointer group"
                 >
                   <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">Mining Core</h3>
