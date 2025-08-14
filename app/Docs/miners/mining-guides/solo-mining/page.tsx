@@ -1,5 +1,6 @@
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { CopyButton } from "@/components/ui/copy-button";
 import { ArrowLeft, Server, Settings, Terminal, Network, HelpCircle, Wallet, Calculator, AlertTriangle, ExternalLink } from "lucide-react";
 import Link from "next/link";
 
@@ -156,10 +157,15 @@ export default function SoloMiningPage() {
                 <Terminal className="w-6 h-6 text-orange-400" />
                 Run Command
               </h2>
-              <div className="bg-black/50 rounded-lg p-4 border border-neutral-600">
+              <div className="bg-black/50 rounded-lg p-4 border border-neutral-600 relative">
                 <code className="text-green-400 font-mono text-sm">
                   java -Xmx4g -jar ergo-5.0.4.jar --mainnet -c ergo.conf
                 </code>
+                <CopyButton 
+                  text="java -Xmx4g -jar ergo-5.0.4.jar --mainnet -c ergo.conf" 
+                  className="absolute top-2 right-2" 
+                  size="sm" 
+                />
               </div>
             </div>
 
@@ -169,7 +175,7 @@ export default function SoloMiningPage() {
                 <Settings className="w-6 h-6 text-orange-400" />
                 ergo.conf
               </h2>
-              <div className="bg-black/50 rounded-lg p-4 border border-neutral-600">
+              <div className="bg-black/50 rounded-lg p-4 border border-neutral-600 relative">
                 <pre className="text-green-400 font-mono text-sm overflow-x-auto">
 {`ergo {
   node {
@@ -195,6 +201,33 @@ scorex {
   }
 }`}
                 </pre>
+                <CopyButton 
+                  text={`ergo {
+  node {
+    mining = true
+  }
+  chain {
+    reemission {
+      checkReemissionRules = true
+    }
+  }
+  wallet {
+    checkEIP27 = true
+  }
+}
+
+scorex {
+  restApi {
+    ## Hex-encoded Blake2b256 hash of an API key. 
+    ## Should be 64-chars long Base16 string.
+    ## below is the hash of the string 'hello'
+    ## replace with your actual hash generated from within swagger. 
+    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
+  }
+}`} 
+                  className="absolute top-2 right-2" 
+                  size="sm" 
+                />
               </div>
             </div>
 
