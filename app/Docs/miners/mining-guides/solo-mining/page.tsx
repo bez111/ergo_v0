@@ -6,28 +6,7 @@ import Link from "next/link";
 export default function SoloMiningPage() {
   return (
     <div>
-      {/* Hero Section */}
-      <div className="mb-8">
-        <h1 className="text-3xl font-bold text-white mb-4">
-          Solo Mining
-        </h1>
-        <p className="text-lg text-gray-400 mb-6">
-          Mine independently with your own node setup. Complete guide from configuration to withdrawing rewards.
-        </p>
-      </div>
-
-      {/* Back Button */}
-      <div className="mb-6">
-        <Link 
-          href="/Docs/miners/mining-guides" 
-          className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back to Mining Guides
-        </Link>
-      </div>
-
-      <Tabs defaultValue="overview" className="w-full">
+      <Tabs defaultValue="overview" className="w-full mb-8">
         <TabsList className="grid w-full grid-cols-4 mb-8 bg-neutral-900/50 border border-neutral-700/50">
           <TabsTrigger value="overview" className="flex items-center gap-2 justify-center">
             <Server className="w-4 h-4" /> Overview
@@ -46,6 +25,27 @@ export default function SoloMiningPage() {
         {/* Overview Tab */}
         <TabsContent value="overview">
           <div className="space-y-8">
+            {/* Hero Section */}
+            <div className="mb-8">
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Solo Mining
+              </h1>
+              <p className="text-lg text-gray-400 mb-6">
+                Mine independently with your own node setup. Complete guide from configuration to withdrawing rewards.
+              </p>
+            </div>
+
+            {/* Back Button */}
+            <div className="mb-6">
+              <Link 
+                href="/Docs/miners/mining-guides" 
+                className="inline-flex items-center gap-2 text-orange-400 hover:text-orange-300 transition-colors"
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Back to Mining Guides
+              </Link>
+            </div>
+
             {/* Description */}
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h2 className="text-2xl font-bold text-white mb-4">What is Solo Mining?</h2>
