@@ -127,13 +127,128 @@ export default function SoloMiningPage() {
 
         {/* Node Configuration Tab */}
         <TabsContent value="configuration">
-          <div className="space-y-6">
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 text-center">
-              <Settings className="w-16 h-16 text-orange-400 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-white mb-2">Node Configuration Coming Soon</h2>
-              <p className="text-gray-400">
-                Detailed instructions for configuring your Ergo node for solo mining, including EIP-27 rules and optimization settings.
+          <div className="space-y-8">
+            <div className="mb-8">
+              <h1 className="text-3xl font-bold text-white mb-4">
+                Solo Node Configuration
+              </h1>
+              <p className="text-lg text-gray-400">
+                Configure your Ergo node for solo mining with proper EIP-27 support and optimization settings.
               </p>
+            </div>
+
+            {/* EIP-27 Warning */}
+            <div className="bg-yellow-900/20 border border-yellow-600/30 rounded-xl p-6">
+              <div className="flex items-start gap-3">
+                <AlertTriangle className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
+                <div>
+                  <h3 className="text-lg font-semibold text-yellow-300 mb-2">Important: EIP-27 Rules Required</h3>
+                  <p className="text-yellow-100">
+                    To be able to spend any ERG mined this way, you will need to include the EIP27 rules in your <code className="bg-yellow-800/30 px-2 py-1 rounded text-yellow-200">ergo.conf</code> file which you run with the <code className="bg-yellow-800/30 px-2 py-1 rounded text-yellow-200">.jar</code> as such:
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Run Command */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Terminal className="w-6 h-6 text-orange-400" />
+                Run Command
+              </h2>
+              <div className="bg-black/50 rounded-lg p-4 border border-neutral-600">
+                <code className="text-green-400 font-mono text-sm">
+                  java -Xmx4g -jar ergo-5.0.4.jar --mainnet -c ergo.conf
+                </code>
+              </div>
+            </div>
+
+            {/* Configuration File */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold text-white mb-4 flex items-center gap-2">
+                <Settings className="w-6 h-6 text-orange-400" />
+                ergo.conf
+              </h2>
+              <div className="bg-black/50 rounded-lg p-4 border border-neutral-600">
+                <pre className="text-green-400 font-mono text-sm overflow-x-auto">
+{`ergo {
+  node {
+    mining = true
+  }
+  chain {
+    reemission {
+      checkReemissionRules = true
+    }
+  }
+  wallet {
+    checkEIP27 = true
+  }
+}
+
+scorex {
+  restApi {
+    ## Hex-encoded Blake2b256 hash of an API key. 
+    ## Should be 64-chars long Base16 string.
+    ## below is the hash of the string 'hello'
+    ## replace with your actual hash generated from within swagger. 
+    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
+  }
+}`}
+                </pre>
+              </div>
+            </div>
+
+            {/* Next Steps */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold text-white mb-4">Next Steps</h2>
+              <p className="text-gray-300 mb-4">
+                After configuring your node, you'll need to set up a mining server. You have two main options:
+              </p>
+              <div className="grid md:grid-cols-2 gap-4">
+                <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-white mb-2">Ergo Stratum</h3>
+                  <p className="text-gray-400 text-sm">
+                    Official Ergo stratum mining server for connecting miners to your node.
+                  </p>
+                </div>
+                <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
+                  <h3 className="text-lg font-semibold text-white mb-2">Mining Core</h3>
+                  <p className="text-gray-400 text-sm">
+                    Cross-platform mining pool server that supports Ergo mining.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Resources */}
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+              <h2 className="text-2xl font-bold text-white mb-4">Resources</h2>
+              <div className="space-y-3">
+                <Link 
+                  href="https://www.youtube.com/watch?v=_1M8dGpfKjU" 
+                  className="flex items-center gap-2 text-orange-400 hover:text-orange-300 underline"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Ergo Node + Stratum Server mining tutorial
+                </Link>
+                <Link 
+                  href="https://www.youtube.com/watch?v=ubov4oweA20" 
+                  className="flex items-center gap-2 text-orange-400 hover:text-orange-300 underline"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Youtube: Mine Ergo from your own Node
+                </Link>
+                <Link 
+                  href="https://www.ergoforum.org/t/q-a-on-mining-for-pool-operators-and-solo-miners/587" 
+                  className="flex items-center gap-2 text-orange-400 hover:text-orange-300 underline"
+                  target="_blank" rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  ErgoForum: Q&A on mining (for pool operators and solo miner)
+                </Link>
+              </div>
             </div>
           </div>
         </TabsContent>
