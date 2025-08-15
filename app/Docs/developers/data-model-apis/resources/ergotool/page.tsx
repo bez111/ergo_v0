@@ -50,7 +50,7 @@ export default function ErgoToolPage() {
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh help     
+            children={`$ ./ergo-tool.sh help     
 the command name is not specified (run ergo-tool without arguments to list commands)
 
 Command Name: help
@@ -77,7 +77,7 @@ Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/er
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh mnemonic          
+            children={`$ ./ergo-tool.sh mnemonic          
 bird harbor wheat innocent business disease busy quick yellow trust time oil enter situate moon`}
           />
         </div>
@@ -108,7 +108,7 @@ bird harbor wheat innocent business disease busy quick yellow trust time oil ent
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh help createStorage
+            children={`$ ./ergo-tool.sh help createStorage
 
 Command Name: createStorage
 Usage Syntax: ergo-tool createStorage [<storageDir>="storage"] [<storageFileName>="secret.json"]
@@ -151,7 +151,7 @@ Storage File: storage/secret.json`}
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh help extractStorage
+            children={`$ ./ergo-tool.sh help extractStorage
 
 Command Name: extractStorage
 Usage Syntax: ergo-tool extractStorage <storage file> address|masterKey|publicKey|secretKey mainnet|testnet
@@ -171,7 +171,7 @@ Storage password>
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh extractStorage storage/secret.json secretKey mainnet
+            children={`$ ./ergo-tool.sh extractStorage storage/secret.json secretKey mainnet
 Storage password> 
 55dfde63c9b6b4f47683592e85ee997ba2e93507f38ba3f9c82933bcfbc677ca
 
@@ -195,7 +195,7 @@ Storage password>
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh listAddressBoxes 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v                                                                
+            children={`$ ./ergo-tool.sh listAddressBoxes 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v                                                                
 BoxId                                                             NanoERGs          
 4840cb6facc20b765085db0ad24768ed0c5e7afd413e8e58e597c33a993f8119  4987000000`}
           />
@@ -205,7 +205,7 @@ BoxId                                                             NanoERGs
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh listAddressBoxes --print-json 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v
+            children={`$ ./ergo-tool.sh listAddressBoxes --print-json 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v
 [{"boxId":"4840cb6facc20b765085db0ad24768ed0c5e7afd413e8e58e597c33a993f8119","value":4987000000,"ergoTree":"0008cd02472963123ce32c057907c7a7268bc09f45d9ca57819d3327b9e7497d7b1cc347","creationHeight":125646,"assets":[],"additionalRegisters":{},"transactionId":"820c688f4b9d709924ba0186ee930a7df374d8852920bc769fc1f1d0b313e5ab","index":2}]`}
           />
         </div>
@@ -224,7 +224,7 @@ BoxId                                                             NanoERGs
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`./ergo-tool.sh help send                                     
+            children={`./ergo-tool.sh help send                                     
 
 Command Name: send
 Usage Syntax: ergo-tool send <storageFile> <recipientAddr> <amountToSend>
@@ -238,7 +238,7 @@ Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/er
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh send --dry-run storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000
+            children={`$ ./ergo-tool.sh send --dry-run storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000
 Storage password>
 Creating prover... Ok
 Loading unspent boxes from at address 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v... Ok
@@ -298,7 +298,7 @@ Tx: {
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh send storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000          
+            children={`$ ./ergo-tool.sh send storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000          
 Storage password>
 Creating prover... Ok
 Loading unspent boxes from at address 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v... Ok
@@ -315,7 +315,7 @@ Server returned tx id: "c5710af17f5124a232a5ef731fdf94a493025334c2a7d5a79e992321
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`$ ./ergo-tool.sh listAddressBoxes 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K                      
+            children={`$ ./ergo-tool.sh listAddressBoxes 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K                      
 BoxId                                                             NanoERGs          
 252c5ce38fc367001ea48fa6813e6252ebc169288d9b5392c572edb55380b3cd  5000000
 6df9dbf08b4859b7e280afbd0822dcf20dba5bf8e3e33b78fe278df6597276f1  2000000

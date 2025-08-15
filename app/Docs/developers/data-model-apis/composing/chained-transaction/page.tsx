@@ -36,7 +36,7 @@ export default function ChainedTransactionPage() {
           </p>
           
           <CodeBlock language="typescript"
-            code={`# Assign the node URL
+            children={`# Assign the node URL
 node_url: str = "http://213.239.193.208:9052/"
 
 # Establish the connection
@@ -51,7 +51,7 @@ ergo = appkit.ErgoAppKit(node_url=node_url)`}
           </p>
           
           <CodeBlock language="typescript"
-            code={`# Define the wallet mnemonic
+            children={`# Define the wallet mnemonic
 wallet_mnemonic = "decline reward asthma enter three clean borrow repeat identify wisdom horn pull entire adapt neglect."
 
 # Specify receiver addresses
@@ -85,7 +85,7 @@ genesis_receiver = [""]`}
           </p>
           
           <CodeBlock language="typescript"
-            code={`# Generate a signed transaction
+            children={`# Generate a signed transaction
 genesis_tx = helper_functions.simple_send(ergo=ergo, amount=genesis_amount, wallet_mnemonic=wallet_mnemonic,
                                           receiver_addresses=genesis_receiver, return_signed=True)
 # Get the genesis outbox
@@ -100,7 +100,7 @@ genesis_outbox = appkit.get_outputs_to_spend(genesis_tx, 0)`}
           </p>
           
           <CodeBlock language="typescript"
-            code={`# Print the transaction ID of the genesis transaction
+            children={`# Print the transaction ID of the genesis transaction
 print(ergo.txId(genesis_tx))  
 
 outBox_list = []

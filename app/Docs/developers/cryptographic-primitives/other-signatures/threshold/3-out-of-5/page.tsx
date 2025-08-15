@@ -35,7 +35,7 @@ export default function ThreeOutOfFiveThresholdPage() {
 
         <div className="mb-8">
           <CodeBlock language="typescript"
-            code={`val ringScript = s"""
+            children={`val ringScript = s"""
 {
 atLeast(
   3, 

@@ -54,7 +54,7 @@ export default function MerkleBatchProofsTestingPage() {
           </p>
 
           <CodeBlock language="typescript"
-            code={String.raw`#[cfg(test)]
+            children={String.raw`#[cfg(test)]
 mod tests {
     use sigma_merkle_tree::merkletree::MerkleTree;
     use sigma_merkle_tree::MerkleNode;
@@ -144,7 +144,7 @@ mod tests {
           </p>
 
           <CodeBlock language="typescript"
-            code={String.raw`import org.scalatest.flatspec.AnyFlatSpec
+            children={String.raw`import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import scorex.crypto.authds.merkle.{MerkleTree, BatchMerkleProof}
 import scorex.crypto.authds.merkle.serialization.BatchMerkleProofSerializer

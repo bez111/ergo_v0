@@ -95,7 +95,7 @@ export default function MiningGuidesPage() {
             className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
           >
             Explore Software Options <ArrowRight className="w-4 h-4 ml-1" />
-          </Link>
+                </Link>
         </div>
 
         {/* Operating Systems */}
@@ -151,7 +151,7 @@ export default function MiningGuidesPage() {
             >
               Learn Overclocking <ExternalLink className="w-3 h-3" />
             </Link>
-          </div>
+                </div>
           <div className="bg-neutral-800/50 rounded-lg p-4">
             <h4 className="font-semibold text-purple-400 mb-2 flex items-center gap-2">
               <Users className="w-4 h-4" /> Pool Mining

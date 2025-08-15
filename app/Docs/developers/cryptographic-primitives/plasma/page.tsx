@@ -48,7 +48,7 @@ export default function PlasmaPage() {
 
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`import io.getblok.getblok_plasma.PlasmaParameters
+              children={`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.PlasmaMap
 import org.ergoplatform.appkit.ErgoId
 import sigmastate.{AvlTreeFlags, Values}
@@ -63,7 +63,7 @@ val plasmaMap = new PlasmaMap[ErgoId, Values.ErgoTree](AvlTreeFlags.AllOperation
 
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`import io.getblok.getblok_plasma.ByteConversion
+              children={`import io.getblok.getblok_plasma.ByteConversion
 import org.ergoplatform.appkit.ErgoId
 import sigmastate.Values
 import sigmastate.serialization.ErgoTreeSerializer
@@ -89,7 +89,7 @@ implicit val convertsErgoTree: ByteConversion[Values.ErgoTree] = new ByteConvers
 
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`import com.google.common.primitives.{Ints, Longs}
+              children={`import com.google.common.primitives.{Ints, Longs}
 import io.getblok.getblok_plasma.ByteConversion
 import org.bouncycastle.util.encoders.Hex
 import org.ergoplatform.appkit.{ErgoType, ErgoValue}
@@ -124,7 +124,7 @@ def getPaid(byte: Byte): Boolean = {
 
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`import io.getblok.getblok_plasma.PlasmaParameters
+              children={`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.{OpResult, PlasmaMap, Proof, ProvenResult}
 import io.getblok.getblok_plasma.ByteConversion.convertsLongVal
 import org.ergoplatform.appkit.ErgoId
@@ -147,7 +147,7 @@ val proof: Proof = result.proof`}
 
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`import io.getblok.getblok_plasma.collections.{PlasmaMap, Proof}
+              children={`import io.getblok.getblok_plasma.collections.{PlasmaMap, Proof}
 import org.ergoplatform.appkit.{ErgoClient, ErgoContract, ErgoId, Parameters}
 
 implicit val ergoClient: ErgoClient
@@ -179,7 +179,7 @@ ergoClient.execute {
 
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`import io.getblok.getblok_plasma.PlasmaParameters
+              children={`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.LocalPlasmaMap
 import io.getblok.getblok_plasma.ByteConversion.convertsLongKey
 import scorex.crypto.authds.avltree.batch.VersionedLDBAVLStorage
@@ -212,7 +212,7 @@ val localMap = new LocalPlasmaMap[Long, Values.ErgoTree](avlStorage, AvlTreeFlag
 
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`import io.getblok.getblok_plasma.PlasmaParameters
+              children={`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.{LocalPlasmaMap, ProxyPlasmaMap}
 import org.ergoplatform.appkit.ErgoId
 import scorex.crypto.authds.avltree.batch.VersionedLDBAVLStorage

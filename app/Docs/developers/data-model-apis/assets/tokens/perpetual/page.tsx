@@ -41,7 +41,7 @@ export default function PerpetualTokensPage() {
           </p>
 
           <CodeBlock language="typescript"
-            code={String.raw`{
+            children={String.raw`{
   val isPerpetual = {(b: Box) =>
     b.propositionBytes == SELF.propositionBytes && b.tokens == SELF.tokens
   }
@@ -79,7 +79,7 @@ export default function PerpetualTokensPage() {
           </p>
 
           <CodeBlock language="typescript"
-            code={String.raw`hash(OUTPUTS(0).propositionBytes) == script2Hash`}
+            children={String.raw`hash(OUTPUTS(0).propositionBytes) == script2Hash`}
           />
 
           <p className="text-gray-300 mt-4 mb-4">
@@ -91,7 +91,7 @@ export default function PerpetualTokensPage() {
           </p>
 
           <CodeBlock language="typescript"
-            code={String.raw`hash(OUTPUTS(0).propositionBytes) == script1Hash`}
+            children={String.raw`hash(OUTPUTS(0).propositionBytes) == script1Hash`}
           />
 
           <p className="text-gray-300 mt-4 mb-4">

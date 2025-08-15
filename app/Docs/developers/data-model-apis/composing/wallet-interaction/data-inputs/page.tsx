@@ -78,7 +78,7 @@ export default function DataInputsPage() {
           </p>
           
           <CodeBlock language="typescript"
-            code="INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000"
+            children="INPUTS(0).value > 10000 && OUTPUTS(1).value > 20000"
           />
           
           <p className="text-gray-300 mt-4">

@@ -68,7 +68,7 @@ export default function TestnetResourcesPage() {
             <li>
               <b>Public Peer Lists:</b>
               <ul className="list-disc list-inside ml-6">
-                <li>Mainnet peers: <CodeBlock language="typescript" code={peerListMainnet} /></li>
+                <li>Mainnet peers: <CodeBlock language="typescript" children={peerListMainnet} /></li>
                 <li>Testnet peers: Use the same list but swap the port numbers (mainnet uses 9053, testnet uses 9052)</li>
               </ul>
             </li>
@@ -77,7 +77,7 @@ export default function TestnetResourcesPage() {
         <section>
           <h2 className="text-xl font-bold mb-3 flex items-center gap-2"><Server className="w-5 h-5 text-cyan-400" /> Node Configuration</h2>
           <p className="text-gray-300 mb-2">Below is an example configuration for a testnet node:</p>
-          <CodeBlock language="typescript" code={nodeConf} />
+          <CodeBlock language="typescript" children={nodeConf} />
           <h3 className="font-semibold text-orange-300 mb-2 mt-4">Important Configuration Options</h3>
           <ul className="list-disc list-inside text-gray-300 mb-4">
             <li><b>knownPeers</b>: Manually specify testnet peers to connect to</li>
@@ -128,7 +128,7 @@ export default function TestnetResourcesPage() {
         <section>
           <h2 className="text-xl font-bold mb-3">Development Tools</h2>
           <p className="text-gray-300 mb-2">When configuring dApps for testnet, update these settings:</p>
-          <CodeBlock language="typescript" code={devToolsConf} />
+          <CodeBlock language="typescript" children={devToolsConf} />
           <p className="text-gray-300 mt-4">For detailed documentation on node setup and development, refer to the <a href="https://docs.ergoplatform.com/documents/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">official Ergo documentation</a>.</p>
         </section>
       </div>

@@ -155,7 +155,7 @@ export default function InterlinkVectorsPage() {
 
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`use sigma_merkle_tree::batchmerkleproof::BatchMerkleProof;
+              children={`use sigma_merkle_tree::batchmerkleproof::BatchMerkleProof;
 use sigma_merkle_tree::merkletree::MerkleTree;
 use sigma_merkle_tree::MerkleNode;
 

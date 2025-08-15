@@ -112,7 +112,7 @@ export default function LightweightProofsPage() {
           </p>
 
           <CodeBlock language="typescript"
-            code={String.raw`package org.ergoplatform.examples
+            children={String.raw`package org.ergoplatform.examples
 
 import org.ergoplatform.utils.ErgoPropertyTest
 import scorex.crypto.authds.merkle.MerkleProof

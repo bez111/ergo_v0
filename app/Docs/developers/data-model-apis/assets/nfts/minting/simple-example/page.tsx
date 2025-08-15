@@ -63,7 +63,7 @@ export default function SimpleExamplePage() {
           </p>
           
           <CodeBlock language="typescript"
-            code={String.raw`from ergo_python_appkit import ErgoAppKit
+            children={String.raw`from ergo_python_appkit import ErgoAppKit
 from org.ergoplatform.appkit import ErgoContract
 
 # Initialize ErgoAppKit instance

@@ -55,7 +55,7 @@ export default function MineYourOwnChainPage() {
       <p className="text-gray-300 mb-4">
         Here’s an updated configuration for your <code className="bg-neutral-800 px-1 rounded">testnet.conf</code> file:
       </p>
-      <CodeBlock language="typescript" code={conf} />
+      <CodeBlock language="typescript" children={conf} />
       <h2 className="text-xl font-bold mb-4 mt-8">Steps to Run the Node</h2>
       <ol className="list-decimal list-inside text-gray-300 mb-8 space-y-4">
         <li>
@@ -65,13 +65,13 @@ export default function MineYourOwnChainPage() {
         <li>
           <b>Compile the Node:</b>
           <p className="text-sm mb-2">Use the following command to compile the Ergo node:</p>
-          <CodeBlock language="typescript" code={sbtCmd} />
+          <CodeBlock language="typescript" children={sbtCmd} />
           <p className="text-sm">This will generate an <code className="bg-neutral-800 px-1 rounded">ergo.jar</code> file at <code className="bg-neutral-800 px-1 rounded">/target/scala*/ergo-*.jar</code>.</p>
         </li>
         <li>
           <b>Run the Node:</b>
           <p className="text-sm mb-2">Start the node using the command:</p>
-          <CodeBlock language="typescript" code={javaCmd} />
+          <CodeBlock language="typescript" children={javaCmd} />
         </li>
         <li>
           <b>Initialize and Unlock the Wallet:</b>

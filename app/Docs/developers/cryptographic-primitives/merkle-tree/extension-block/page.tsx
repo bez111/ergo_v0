@@ -96,7 +96,7 @@ export default function ExtensionBlockMerklePage() {
               </p>
               <div className="mb-4">
                 <CodeBlock language="typescript"
-                  code={`def merkleTree: MerkleTree = {
+                  children={`def merkleTree: MerkleTree = {
   val leafData = keyValuePairs.map { case (key, value) =>
     hash(key ++ value)
   }
@@ -139,7 +139,7 @@ export default function ExtensionBlockMerklePage() {
           </p>
           <div className="mb-4">
             <CodeBlock language="typescript"
-              code={`import scorex.crypto.authds.merkle.MerkleProof
+              children={`import scorex.crypto.authds.merkle.MerkleProof
 import scorex.crypto.hash.{Blake2b256, Digest32}
 import scorex.util.encode.Base16
 

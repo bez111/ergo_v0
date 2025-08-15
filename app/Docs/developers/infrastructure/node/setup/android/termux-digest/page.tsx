@@ -69,26 +69,26 @@ export default function TermuxDigestPage() {
         <div>
           <h2 className="text-xl font-bold mb-2">1. Update Termux Packages</h2>
           <p className="text-gray-300 mb-2">Open Termux and run:</p>
-          <CodeBlock language="typescript" code={bash1} />
+          <CodeBlock language="typescript" children={bash1} />
           <p className="text-gray-400 text-xs">Answer default prompts if asked.</p>
         </div>
         <div>
           <h2 className="text-xl font-bold mb-2">2. Install Dependencies</h2>
           <p className="text-gray-300 mb-2">Install Java (OpenJDK 17 recommended) and <code>wget</code>:</p>
-          <CodeBlock language="typescript" code={bash2} />
+          <CodeBlock language="typescript" children={bash2} />
         </div>
         <div>
           <h2 className="text-xl font-bold mb-2">3. Download Ergo Node JAR</h2>
           <p className="text-gray-300 mb-2">For <code>stateType="digest"</code>, the standard Ergo node JAR (without <code>-rocksdb</code> suffix) is usually sufficient. Use <code>wget</code> to download the latest release:</p>
-          <CodeBlock language="typescript" code={bash3} />
+          <CodeBlock language="typescript" children={bash3} />
           <p className="text-gray-400 text-xs">(Verify the downloaded URL or manually find the correct URL on the <a href="https://github.com/ergoplatform/ergo/releases" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Releases</a> page if the script fails).</p>
         </div>
         <div>
           <h2 className="text-xl font-bold mb-2">4. Create Configuration File (<code>ergo.conf</code>)</h2>
           <p className="text-gray-300 mb-2">Create the file using <code>nano</code>:</p>
-          <CodeBlock language="typescript" code={bash4} />
+          <CodeBlock language="typescript" children={bash4} />
           <p className="text-gray-300 mb-2">Paste the following configuration, suitable for mobile digest mode:</p>
-          <CodeBlock language="typescript" code={conf} />
+          <CodeBlock language="typescript" children={conf} />
           <ul className="list-disc list-inside text-gray-400 text-xs mb-2">
             <li><b>stateType = "digest"</b>: Enables the lightweight digest mode.</li>
             <li><b>blocksToKeep = 1440</b>: Keeps roughly the last day's worth of full blocks. Adjust based on storage/needs. Lower values save space but limit historical data access via API.</li>
@@ -99,7 +99,7 @@ export default function TermuxDigestPage() {
         <div>
           <h2 className="text-xl font-bold mb-2">5. Launch the Node</h2>
           <p className="text-gray-300 mb-2">Run the node, allocating memory with <code>-Xmx</code>. Start with 1GB or 1.5GB:</p>
-          <CodeBlock language="typescript" code={bash5} />
+          <CodeBlock language="typescript" children={bash5} />
           <p className="text-gray-400 text-xs">Adjust <code>-Xmx1536M</code> (1.5GB) based on your device. If it crashes, try <code>-Xmx1G</code> or increase if you have more RAM available, e.g., <code>-Xmx2G</code>.</p>
         </div>
         <div>

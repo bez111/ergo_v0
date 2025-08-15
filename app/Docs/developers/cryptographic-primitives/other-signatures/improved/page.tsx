@@ -47,7 +47,7 @@ export default function ImprovedDistributedSignaturesPage() {
           
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`{
+              children={`{
   // Retrieve GroupElement pkA, pkB, and pkC from the register R4, R5, and R6 respectively.
   val pkA  = SELF.R4[GroupElement].get
   val pkB  = SELF.R5[GroupElement].get
@@ -69,7 +69,7 @@ export default function ImprovedDistributedSignaturesPage() {
           
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`{
+              children={`{
   "requests": [
     {
       "address": "4MQyML64GnzMxZgm",
@@ -98,7 +98,7 @@ export default function ImprovedDistributedSignaturesPage() {
           
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`{
+              children={`{
   "secretHints": {
     "0": [
       {
@@ -148,7 +148,7 @@ export default function ImprovedDistributedSignaturesPage() {
           
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`{
+              children={`{
   "tx": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
   "inputs": [
@@ -229,7 +229,7 @@ export default function ImprovedDistributedSignaturesPage() {
           
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`{
+              children={`{
   "transaction": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
   "inputs": [
@@ -294,7 +294,7 @@ export default function ImprovedDistributedSignaturesPage() {
           
           <div className="mb-6">
             <CodeBlock language="typescript"
-              code={`{
+              children={`{
   "tx": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
   "inputs": [

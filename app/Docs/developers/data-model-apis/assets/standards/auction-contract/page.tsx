@@ -68,7 +68,7 @@ export default function AuctionContractPage() {
         <section>
           <h2 className="text-2xl font-bold text-white mb-4">The contract</h2>
           <CodeBlock language="typescript"
-            code={String.raw`{
+            children={String.raw`{
   // R4: The seller's ergo tree
   // R5: Current bidder's ergo tree
   // R6: (Minimum bid, minimum step)

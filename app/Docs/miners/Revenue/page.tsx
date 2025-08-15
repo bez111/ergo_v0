@@ -130,7 +130,7 @@ export default function RevenuePage() {
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Layers className="w-6 h-6 text-cyan-400" /> Layer 2 Infrastructure
         </h2>
-        <p className="text-gray-300 mb-6">
+      <p className="text-gray-300 mb-6">
           Layer 2 solutions enhance scalability through off-chain processing. Miners can operate L2 infrastructure, earning fees while contributing to network efficiency and user experience.
         </p>
         
@@ -168,7 +168,7 @@ export default function RevenuePage() {
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <GitBranch className="w-6 h-6 text-orange-400" /> Sidechain Rewards
         </h2>
-        <p className="text-gray-300 mb-6">
+      <p className="text-gray-300 mb-6">
           Ergo's sidechain architecture provides platforms for dApp deployment. Miners secure these chains, earning rewards while supporting ecosystem growth.
         </p>
 
@@ -176,7 +176,7 @@ export default function RevenuePage() {
         <div className="bg-neutral-800/50 border-l-4 border-orange-400 rounded-lg p-4 mb-6">
           <blockquote className="text-gray-300 italic mb-2">
             "For incentivizing weak blocks reporting, they can commit to sidechains, thus making fast sidechains possible and miners will get rewards from that."
-          </blockquote>
+      </blockquote>
           <p className="text-gray-400 text-sm">
             — <a 
               href="https://www.ergoforum.org/t/a-scalability-plan-for-ergo/226/5" 
@@ -263,7 +263,7 @@ export default function RevenuePage() {
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <ArrowUpRight className="w-6 h-6 text-purple-400" /> Future Revenue Opportunities
         </h2>
-        <p className="text-gray-300 mb-6">
+      <p className="text-gray-300 mb-6">
           As Ergo evolves and attracts broader adoption, new revenue streams will emerge. Active participation in these opportunities ensures network security while contributing to ecosystem growth.
         </p>
 

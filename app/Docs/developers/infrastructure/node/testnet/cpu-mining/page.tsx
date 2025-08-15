@@ -72,17 +72,17 @@ export default function CpuMiningPage() {
       <p className="text-gray-300 mb-4">
         To CPU mine on the testnet, your <code className="bg-neutral-800 px-1 rounded">testnet.conf</code> should look like this:
       </p>
-      <CodeBlock language="typescript" code={conf} />
+      <CodeBlock language="typescript" children={conf} />
       <p className="text-gray-300 mb-4">Then run:</p>
-      <CodeBlock language="typescript" code={javaCmd} />
+      <CodeBlock language="typescript" children={javaCmd} />
       <p className="text-gray-300 mb-4">
         Make sure your wallet is initialised and unlocked, providing you're fully synchronised you should see an output like this indicating that you are mining.
       </p>
-      <CodeBlock language="typescript" code={miningLog} />
+      <CodeBlock language="typescript" children={miningLog} />
       <p className="text-gray-300 mb-4">
         Your rewards will be sent to your <code className="bg-neutral-800 px-1 rounded">rewardPublicKey</code>, which is different from your wallet address.
       </p>
-      <CodeBlock language="typescript" code={curlCmd} />
+      <CodeBlock language="typescript" children={curlCmd} />
       <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 mt-8 flex items-start">
         <Info className="w-6 h-6 text-cyan-400 mr-3 mt-1" />
         <div>

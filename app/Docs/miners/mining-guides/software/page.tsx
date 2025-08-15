@@ -369,8 +369,8 @@ export default function SoftwarePage() {
           >
             Optimize Performance <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
-        </div>
       </div>
+    </div>
     </>
   );
 } 

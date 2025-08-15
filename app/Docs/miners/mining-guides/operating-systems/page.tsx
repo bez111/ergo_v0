@@ -84,7 +84,7 @@ export default function OperatingSystemsPage() {
     <>
       {/* Back Button */}
       <div className="mb-8">
-        <Link
+        <Link 
           href="/Docs/miners/mining-guides"
           className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
         >
@@ -349,7 +349,7 @@ export default function OperatingSystemsPage() {
           <h3 className="text-lg font-semibold text-white mb-2">Mining Pools</h3>
           <p className="text-gray-400 text-sm">Choose the best pool for consistent Ergo payouts</p>
         </Link>
-      </div>
+    </div>
     </>
   );
 } 

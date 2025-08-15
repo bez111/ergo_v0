@@ -76,7 +76,7 @@ export default function EIP25Page() {
         
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto mb-6">
           <CodeBlock language="typescript"
-            code={`ergourn        = "ergo:" ergoaddress [ "?" ergoparams ]
+            children={`ergourn        = "ergo:" ergoaddress [ "?" ergoparams ]
 ergoaddress    = *base58
 ergoparams     = ergoparam [ "&" ergoparams ]
 ergoparam      = [ amountparam / labelparam / messageparam / tokenparam ]

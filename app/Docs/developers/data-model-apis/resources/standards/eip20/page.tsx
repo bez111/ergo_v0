@@ -250,7 +250,7 @@ export default function EIP20Page() {
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`ErgoPaySigningRequest:
+            children={`ErgoPaySigningRequest:
   - transaction: ReducedTransaction (optional*)
   - address: String (optional)
   - message: String (optional*)

@@ -40,7 +40,7 @@ export default function GovernancePage() {
         </h1>
         <p className="text-xl text-gray-400 mb-6">
           Ergo's decentralized governance model empowers miners to guide network evolution through transparent voting mechanisms. This ensures long-term economic stability, adaptability, and community-driven decision making without compromising network security.
-        </p>
+      </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/Docs/miners/governance/voting"
@@ -62,7 +62,7 @@ export default function GovernancePage() {
           >
             <BarChart3 className="w-5 h-5" />
             Miner Resources
-          </Link>
+      </Link>
         </div>
       </div>
 
@@ -151,7 +151,7 @@ export default function GovernancePage() {
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Settings className="w-6 h-6 text-yellow-400" /> Adjustable Parameters
         </h2>
-        <p className="text-gray-300 mb-6">
+      <p className="text-gray-300 mb-6">
           Miners can vote to modify specific protocol parameters while maintaining network integrity. These adjustments allow Ergo to adapt to changing conditions without fundamental protocol changes.
         </p>
         
@@ -216,7 +216,7 @@ export default function GovernancePage() {
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <BarChart3 className="w-6 h-6 text-cyan-400" /> Governance Process
         </h2>
-        <p className="text-gray-300 mb-6">
+      <p className="text-gray-300 mb-6">
           The governance process follows a structured approach to ensure thorough evaluation and broad consensus before implementing changes.
         </p>
 
@@ -265,7 +265,7 @@ export default function GovernancePage() {
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Target className="w-6 h-6 text-orange-400" /> Consensus Requirements
         </h2>
-        <div className="grid md:grid-cols-2 gap-6">
+      <div className="grid md:grid-cols-2 gap-6">
           <div>
             <h3 className="text-lg font-semibold text-orange-400 mb-3">High-Impact Changes</h3>
             <div className="bg-neutral-800/50 rounded-lg p-4 mb-4">

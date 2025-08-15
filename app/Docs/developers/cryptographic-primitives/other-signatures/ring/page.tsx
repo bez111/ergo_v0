@@ -61,7 +61,7 @@ export default function RingSignaturesPage() {
         <h3 className="text-2xl font-bold mb-4 text-white">Example Scenario</h3>
         <div className="mb-8">
           <CodeBlock language="typescript"
-            code={`// Simplified conceptual representation
+            children={`// Simplified conceptual representation
 val ringSignature = prove {
   atLeastOneOf(
     List(

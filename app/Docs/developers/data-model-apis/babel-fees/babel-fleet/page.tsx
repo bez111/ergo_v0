@@ -88,13 +88,13 @@ export default function BabelFleetPage() {
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`npm install @fleet-sdk/babel-fees-plugin`}
+            children={`npm install @fleet-sdk/babel-fees-plugin`}
           />
         </div>
         <p className="text-gray-300 mt-4 mb-2">The core Fleet SDK is also required:</p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`npm install @fleet-sdk/core`}
+            children={`npm install @fleet-sdk/core`}
           />
         </div>
         <p className="text-gray-300 mt-4">
@@ -110,7 +110,7 @@ export default function BabelFleetPage() {
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`import { TransactionBuilder } from '@fleet-sdk/core';
+            children={`import { TransactionBuilder } from '@fleet-sdk/core';
 import { BabelSwapPlugin } from '@fleet-sdk/babel-fees-plugin';
 
 const tx = new TransactionBuilder(1000000) // Replace with current block height
@@ -171,7 +171,7 @@ console.log(tx);`}
                 <li><strong>Usage:</strong>
                   <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 mt-2 overflow-x-auto">
                     <CodeBlock language="typescript"
-                      code={`BabelSwapPlugin(babelBox, {
+                      children={`BabelSwapPlugin(babelBox, {
   tokenId: "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04",
   amount: "50"
 });`}
@@ -192,7 +192,7 @@ console.log(tx);`}
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Calculates and returns the price of a single token unit in nanoERG based on a specific Babel Box.</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
                   <CodeBlock language="typescript"
-                    code={`const price = getTokenPrice(babelBox);
+                    children={`const price = getTokenPrice(babelBox);
 console.log(\`Price per token: \${price}\`);`}
                   />
                 </div>
@@ -205,7 +205,7 @@ console.log(\`Price per token: \${price}\`);`}
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Generates the ErgoTree (contract script) for a Babel Box using a specified token ID.</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
                   <CodeBlock language="typescript"
-                    code={`const contract = buildBabelContract(tokenId);`}
+                    children={`const contract = buildBabelContract(tokenId);`}
                   />
                 </div>
               </div>
@@ -217,7 +217,7 @@ console.log(\`Price per token: \${price}\`);`}
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Determines if a given box is a valid Babel Box.</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
                   <CodeBlock language="typescript"
-                    code={`const isValid = isValidBabelBox(myBox);
+                    children={`const isValid = isValidBabelBox(myBox);
 if (isValid) {
     console.log('This is a valid babel box');
 }`}
@@ -232,7 +232,7 @@ if (isValid) {
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Extracts the token ID from a Babel Fee contract script (ErgoTree).</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
                   <CodeBlock language="typescript"
-                    code={`const tokenId = extractTokenIdFromBabelContract(ergoTree);`}
+                    children={`const tokenId = extractTokenIdFromBabelContract(ergoTree);`}
                   />
                 </div>
               </div>
@@ -244,7 +244,7 @@ if (isValid) {
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Validates if an ErgoTree matches the Babel Fee contract for a specific token ID.</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
                   <CodeBlock language="typescript"
-                    code={`const isForToken = isBabelContractForTokenId(ergoTree, tokenId);`}
+                    children={`const isForToken = isBabelContractForTokenId(ergoTree, tokenId);`}
                   />
                 </div>
               </div>
@@ -262,7 +262,7 @@ if (isValid) {
         <p className="text-gray-300 mb-4">The hexadecimal representation of the Babel Fees contract:</p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`}
+            children={`100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`}
           />
         </div>
         <p className="text-gray-300 mt-4 mb-4">
@@ -274,7 +274,7 @@ if (isValid) {
         <p className="text-gray-300 mb-4"><strong>Example of Fetching a Babel Box:</strong></p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={`const fetchBabelBox = async (ergoTree: string) => {
+            children={`const fetchBabelBox = async (ergoTree: string) => {
   try {
     const response = await fetch(\`https://api.ergoplatform.com/api/v1/boxes/unspent/byErgoTree/\${ergoTree}\`);
     const json = await response.json();

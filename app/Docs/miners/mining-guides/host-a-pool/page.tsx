@@ -197,8 +197,8 @@ export default function HostAPoolPage() {
     <>
       {/* Back Button */}
       <div className="mb-8">
-        <Link
-          href="/Docs/miners/mining-guides"
+        <Link 
+          href="/Docs/miners/mining-guides" 
           className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -496,7 +496,7 @@ export default function HostAPoolPage() {
           <h3 className="text-lg font-semibold text-white mb-2">Miner Governance</h3>
           <p className="text-gray-400 text-sm">Learn about Ergo's governance mechanisms</p>
         </Link>
-      </div>
+    </div>
     </>
   );
 } 

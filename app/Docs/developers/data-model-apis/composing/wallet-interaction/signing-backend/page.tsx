@@ -38,7 +38,7 @@ export default function SigningBackendPage() {
           </p>
           
           <CodeBlock language="typescript"
-            code={`import SignerWallet from '../src/services/WalletFromMnemonics';
+            children={`import SignerWallet from '../src/services/WalletFromMnemonics';
 
 // Example transaction
 const unsignedTx = {
@@ -61,7 +61,7 @@ const signedTx = wallet.sign(unsignedTx);
           </p>
           
           <CodeBlock language="typescript"
-            code={`import SignerWallet from '../src/services/WalletFromMnemonics';
+            children={`import SignerWallet from '../src/services/WalletFromMnemonics';
 
 // Example transaction
 const unsignedTx = {

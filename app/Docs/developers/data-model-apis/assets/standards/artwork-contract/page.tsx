@@ -99,7 +99,7 @@ export default function ArtworkContractPage() {
             The following specifies the structure for traits.
           </p>
           <CodeBlock language="typescript"
-            code={String.raw`( // properties
+            children={String.raw`( // properties
   Coll[(  
     Coll[Byte],  // key
     Coll[Byte]   // value

@@ -58,7 +58,7 @@ export default function FeesPage() {
           </p>
           
           <CodeBlock language="typescript"
-            code={`# Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
+            children={`# Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
 mempoolSorting = "random"`}
           />
           
@@ -81,7 +81,7 @@ mempoolSorting = "random"`}
           </p>
           
           <CodeBlock language="typescript"
-            code={`/**
+            children={`/**
    * This proposition allows sending coins to a box protected by the following proposition:
    * prove the discrete logarithm of the miner's public key and that the height is at least \`delta\` blocks greater than the current one.
    */
@@ -104,7 +104,7 @@ def feeProposition(delta: Int = 720): ErgoTree = {
           </p>
           
           <CodeBlock language="typescript"
-            code={`private def extractFee(tx: ErgoTransaction): Long = {
+            children={`private def extractFee(tx: ErgoTransaction): Long = {
   tx.outputs
     .filter(_.ergoTree == settings.chainSettings.monetary.feeProposition)
     .map(_.value)

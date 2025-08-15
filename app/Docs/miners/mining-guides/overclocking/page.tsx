@@ -131,7 +131,7 @@ export default function OverclockingPage() {
     <>
       {/* Back Button */}
       <div className="mb-8">
-        <Link
+        <Link 
           href="/Docs/miners/mining-guides"
           className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
         >
@@ -407,7 +407,7 @@ export default function OverclockingPage() {
           <h3 className="text-lg font-semibold text-white mb-2">Solo Mining</h3>
           <p className="text-gray-400 text-sm">Advanced setup for mining directly to your node</p>
         </Link>
-      </div>
+    </div>
     </>
   );
 } 

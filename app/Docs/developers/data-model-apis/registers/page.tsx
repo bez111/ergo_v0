@@ -182,7 +182,7 @@ export default function BoxRegistersPage() {
           <p className="text-gray-300 mb-4">For instance,</p>
 
           <CodeBlock language="typescript"
-            code={String.raw`// Assign the value of the R4 register of the current box (SELF) to the variable x
+            children={String.raw`// Assign the value of the R4 register of the current box (SELF) to the variable x
 // The script expects R4 to contain an Int.
 val x = SELF.R4[Int]`}
           />
@@ -204,7 +204,7 @@ val x = SELF.R4[Int]`}
           </p>
 
           <CodeBlock language="typescript"
-            code={String.raw`// Example using R5 as a type tag for data in R4
+            children={String.raw`// Example using R5 as a type tag for data in R4
 val tagOpt = SELF.R5[Int] // Retrieve the value of the register R5 of type Int and assign it to the variable \`tagOpt\`
 val res = if (tagOpt.isDefined) { // Check if \`tagOpt\` is not empty
   val tag = tagOpt.get // Obtain the value of \`tagOpt\` and assign it to the variable \`tag\`

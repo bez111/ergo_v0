@@ -63,7 +63,7 @@ export default function AddressValidationPage() {
           <div className="mb-4">
             <p className="text-gray-400 text-sm mb-2">Base58 Address:</p>
             <CodeBlock language="typescript"
-              code="88dhgzEuTXaRxf1rbqBRZ6Zbw9iigdB4PCdjyFKLrk22gnmjKcxZBe53vqJVetRa4tTNF9oowQWPp2c6"
+              children="88dhgzEuTXaRxf1rbqBRZ6Zbw9iigdB4PCdjyFKLrk22gnmjKcxZBe53vqJVetRa4tTNF9oowQWPp2c6"
             />
           </div>
 
@@ -72,7 +72,7 @@ export default function AddressValidationPage() {
           <div>
             <p className="text-gray-400 text-sm mb-2">Hex representation:</p>
             <CodeBlock language="typescript"
-              code="03 10 02 04 a0 0b 08 cd 02 a1 f5 67 16 cb 8d f4 fe b9 37 14 37 90 4b 91 25 b8 2d b9 39 23 8c d7 d9 48 78 6d b3 3d e3 13 9f ea 02 d1 92 a3 9a 8c c7 a7 01 73 00 73 01 8c 23 55 af"
+              children="03 10 02 04 a0 0b 08 cd 02 a1 f5 67 16 cb 8d f4 fe b9 37 14 37 90 4b 91 25 b8 2d b9 39 23 8c d7 d9 48 78 6d b3 3d e3 13 9f ea 02 d1 92 a3 9a 8c c7 a7 01 73 00 73 01 8c 23 55 af"
             />
           </div>
           

@@ -78,7 +78,7 @@ export default function BabelFeesImplementationPage() {
             <h3 className="text-xl font-semibold mb-3 text-purple-300">3. Server Setup</h3>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
               <CodeBlock language="typescript"
-                code={`# Update system
+                children={`# Update system
 sudo apt-get update
 sudo apt-get upgrade
 
@@ -111,7 +111,7 @@ npm install @fleet-sdk/babel-fees-plugin`}
             <p className="text-gray-300 mb-4">Create webpack configuration (<code className="bg-neutral-700 px-1 py-0.5 rounded">webpack.config.js</code>):</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
               <CodeBlock language="typescript"
-                code={`const path = require('path');
+                children={`const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -145,7 +145,7 @@ module.exports = {
             <p className="text-gray-300 mt-4 mb-4">Create TypeScript configuration (<code className="bg-neutral-700 px-1 py-0.5 rounded">tsconfig.json</code>):</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
               <CodeBlock language="typescript"
-                code={`{
+                children={`{
     "compilerOptions": {
         "outDir": "./dist/",
         "sourceMap": true,
@@ -169,7 +169,7 @@ module.exports = {
             <p className="text-gray-300 mb-4">Create the main implementation file (<code className="bg-neutral-700 px-1 py-0.5 rounded">src/index.ts</code>):</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
               <CodeBlock language="typescript"
-                code={`import { OutputBuilder, TransactionBuilder } from '@fleet-sdk/core';
+                children={`import { OutputBuilder, TransactionBuilder } from '@fleet-sdk/core';
 import { BabelSwapPlugin } from '@fleet-sdk/babel-fees-plugin'; 
 
 // Configuration - Replace with your values
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p className="text-gray-300 mb-4">Create <code className="bg-neutral-700 px-1 py-0.5 rounded">babelfees.html</code>:</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
               <CodeBlock language="typescript"
-                code={`<html lang="en">
+                children={`<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -288,7 +288,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <p className="text-gray-300 mb-4">Compile the TypeScript code:</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
               <CodeBlock language="typescript"
-                code={`cd /var/www/html/fleetsdk
+                children={`cd /var/www/html/fleetsdk
 npx webpack`}
               />
             </div>
@@ -344,7 +344,7 @@ npx webpack`}
             <p className="text-gray-300 mb-4">The hexadecimal representation of the Babel Fees contract is:</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
               <CodeBlock language="typescript"
-                code={`100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`}
+                children={`100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`}
               />
             </div>
             <p className="text-gray-300 mt-4">

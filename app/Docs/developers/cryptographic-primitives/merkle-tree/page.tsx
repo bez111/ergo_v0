@@ -292,7 +292,7 @@ export default function MerkleTreePage() {
                   </p>
                   <div className="mb-4">
                     <CodeBlock language="typescript"
-                      code={`val leafData = Base16.decode(txId).get
+                      children={`val leafData = Base16.decode(txId).get
 val leafHash = Blake2b256(0.toByte +: leafData)`}
                     />
                   </div>
@@ -315,7 +315,7 @@ val leafHash = Blake2b256(0.toByte +: leafData)`}
                   </p>
                   <div className="mb-4">
                     <CodeBlock language="typescript"
-                      code={`val levels = Seq("0139b79af823a92aa72ced2c6d9e7f7f4687de5b5af7fab0ad205d3e54bda3f3ae")
+                      children={`val levels = Seq("0139b79af823a92aa72ced2c6d9e7f7f4687de5b5af7fab0ad205d3e54bda3f3ae")
 val computedHash = levels.foldLeft(leafHash) { case (hash, level) =>
     val bytes = Base16.decode(level).get
     val prefix = bytes.head
@@ -346,7 +346,7 @@ val computedHash = levels.foldLeft(leafHash) { case (hash, level) =>
                   </p>
                   <div className="mb-4">
                     <CodeBlock language="typescript"
-                      code={`assert(computedHash == expectedMerkleRoot)`}
+                      children={`assert(computedHash == expectedMerkleRoot)`}
                     />
                   </div>
                 </div>
@@ -385,7 +385,7 @@ val computedHash = levels.foldLeft(leafHash) { case (hash, level) =>
               </p>
               <div className="mb-4">
                 <CodeBlock language="typescript"
-                  code={`import scorex.crypto.authds.merkle.MerkleProof
+                  children={`import scorex.crypto.authds.merkle.MerkleProof
 import scorex.crypto.authds.{LeafData, Side}
 import scorex.crypto.hash.{Blake2b256, Digest32}
 import scorex.util.encode.Base16

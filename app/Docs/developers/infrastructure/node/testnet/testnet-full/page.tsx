@@ -41,7 +41,7 @@ export default function TestnetFullPage() {
           <p className="text-gray-300 mb-4">
             Download the <a href="https://github.com/ergoplatform/ergo/releases" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">latest Ergo protocol reference client</a> and launch using:
           </p>
-          <CodeBlock language="typescript" code={javaCommand} />
+          <CodeBlock language="typescript" children={javaCommand} />
         </div>
 
         <div>
@@ -51,7 +51,7 @@ export default function TestnetFullPage() {
           <p className="text-gray-300 mb-4">
             A minimal <code className="bg-neutral-800 px-1 rounded">testnet.conf</code> would be:
           </p>
-          <CodeBlock language="typescript" code={testnetConf} />
+          <CodeBlock language="typescript" children={testnetConf} />
         </div>
 
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">

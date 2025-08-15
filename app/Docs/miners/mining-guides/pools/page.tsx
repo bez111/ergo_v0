@@ -162,7 +162,7 @@ export default function PoolsPage() {
     <>
       {/* Back Button */}
       <div className="mb-8">
-        <Link
+        <Link 
           href="/Docs/miners/mining-guides"
           className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
         >
@@ -439,7 +439,7 @@ export default function PoolsPage() {
           <h3 className="text-lg font-semibold text-white mb-2">Mining Revenue</h3>
           <p className="text-gray-400 text-sm">Learn about future revenue streams beyond block rewards</p>
         </Link>
-      </div>
+    </div>
     </>
   );
 } 

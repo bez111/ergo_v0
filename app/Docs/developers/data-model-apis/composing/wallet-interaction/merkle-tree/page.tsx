@@ -56,7 +56,7 @@ export default function MerkleTreePage() {
             </li>
             <li><b>Leaf Construction</b>: The leaf for the <code className="bg-neutral-700 px-2 py-1 rounded">i</code>-th transaction in the block is constructed as:
               <CodeBlock language="typescript"
-                code="hash(0 || pos || data)"
+                children="hash(0 || pos || data)"
                 className="mt-2"
               />
               where <code className="bg-neutral-700 px-2 py-1 rounded">pos</code> is the position of the transaction in the block, and <code className="bg-neutral-700 px-2 py-1 rounded">data</code> is the 64-byte data block. A prefix of <code className="bg-neutral-700 px-2 py-1 rounded">0</code> is used for domain separation.
@@ -67,7 +67,7 @@ export default function MerkleTreePage() {
           <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300 mb-4">
             <li><b>Node Construction</b>: Internal nodes in the Merkle Tree are constructed by hashing the concatenation of their child nodes:
               <CodeBlock language="typescript"
-                code="hash(1 || left_child || right_child)"
+                children="hash(1 || left_child || right_child)"
                 className="mt-2"
               />
               where <code className="bg-neutral-700 px-2 py-1 rounded">1</code> is a prefix added for domain separation. If both children are empty, the node is considered empty (<code className="bg-neutral-700 px-2 py-1 rounded">null</code>).

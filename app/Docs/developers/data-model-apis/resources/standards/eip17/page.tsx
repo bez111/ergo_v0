@@ -159,7 +159,7 @@ export default function EIP17Page() {
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
           <CodeBlock language="typescript"
-            code={contractCode}
+            children={contractCode}
           />
         </div>
       </div>

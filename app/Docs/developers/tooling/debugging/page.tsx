@@ -242,7 +242,7 @@ export default function DebuggingPage() {
             </div>
 
             <CodeBlock language="typescript"
-              code={`// Snippet from AssetsAtomicExchange - Breakpoint can be set inside this block
+              children={`// Snippet from AssetsAtomicExchange - Breakpoint can be set inside this block
 lazy val buyerProp = proposition("buyer", { ctx: Context =>
   import ctx._
   (HEIGHT > deadline && pkA) || { // Breakpoint here
@@ -277,7 +277,7 @@ lazy val buyerProp = proposition("buyer", { ctx: Context =>
                   </a>, such as <code className="bg-gray-800 px-2 py-1 rounded text-cyan-400">property("atomic exchange spec")</code>.
                   
                   <CodeBlock language="typescript"
-                    code={`// Test method for atomic exchange in AssetsAtomicExchangeTests.scala
+                    children={`// Test method for atomic exchange in AssetsAtomicExchangeTests.scala
 property("atomic exchange spec") {
   // Test implementation details...
   // This code sets up the context and attempts the transaction
