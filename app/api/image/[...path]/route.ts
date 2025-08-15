@@ -10,10 +10,11 @@ const imageCache = new Map<string, Buffer>()
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { path: string[] } }
+  { params }: { params: Promise<{ path: string[] }> }
 ) {
   try {
-    const imagePath = params.path.join('/')
+    const resolvedParams = await params
+    const imagePath = resolvedParams.path.join('/')
     const searchParams = request.nextUrl.searchParams
     
     // Get query parameters
@@ -120,19 +121,4 @@ export async function GET(
   }
 }
 
-// Preload critical images
-export async function warmupCache() {
-  const criticalImages = [
-    '/logo.png',
-    '/hero-bg.jpg',
-    '/ergo-icon.svg',
-  ]
-  
-  for (const img of criticalImages) {
-    try {
-      await fetch(`https://ergoblockchain.org/api/image/${img}?f=webp&q=85`)
-    } catch (error) {
-      console.error(`Failed to preload ${img}:`, error)
-    }
-  }
-} 
+// Cache warmup moved to separate utility if needed 

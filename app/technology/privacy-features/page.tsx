@@ -29,7 +29,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
-export const TECHNOLOGIES = [
+const TECHNOLOGIES = [
   {
     icon: <Shield className="w-8 h-8" aria-hidden="true" focusable="false" />,
     title: "Sigma Protocols",
