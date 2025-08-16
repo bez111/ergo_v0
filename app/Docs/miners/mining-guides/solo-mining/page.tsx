@@ -27,11 +27,16 @@ import {
   GitBranch,
   Database,
   Lock,
-  HelpCircle
+  HelpCircle,
+  Calculator,
+  Key,
+  Wallet,
+  Info,
+  BookOpen
 } from 'lucide-react';
 import Link from 'next/link';
 
-// Стандартный компонент копирования кода
+// Component Code
 const CopyButton = ({ text }: { text: string }) => {
   const [copied, setCopied] = React.useState(false);
 
@@ -67,515 +72,487 @@ const CodeBlock = ({ children, language = "bash" }: { children: string; language
   );
 };
 
+// Mining Calculator Component
+const MiningCalculator = () => {
+  const [myHashrate, setMyHashrate] = React.useState("160");
+  const [power, setPower] = React.useState("130");
+  const [cost, setCost] = React.useState("0.10");
+  const [netHashrate, setNetHashrate] = React.useState("170");
+  const [blockReward, setBlockReward] = React.useState("48");
+  const [result, setResult] = React.useState("0");
+
+  const calculate = React.useCallback(() => {
+    const myHashrateNum = parseFloat(myHashrate) || 0;
+    const powerNum = parseFloat(power) || 0;
+    const costNum = parseFloat(cost) || 0;
+    const netHashrateNum = (parseFloat(netHashrate) || 0) * 1000 * 1000;
+    const blockRewardNum = parseFloat(blockReward) || 0;
+    
+    const kwh = (powerNum * 24) / 1000;
+    const dailyReward = 720 * blockRewardNum;
+    const breakEven = kwh * costNum;
+    const rewardPerMh = dailyReward / netHashrateNum;
+    const targetPrice = breakEven / (rewardPerMh * myHashrateNum);
+    
+    setResult((Math.round(targetPrice * 100) / 100).toFixed(2));
+  }, [myHashrate, power, cost, netHashrate, blockReward]);
+
+  React.useEffect(() => {
+    calculate();
+  }, [calculate]);
+
+  return (
+    <div className="bg-indigo-400/10 border border-indigo-400/20 rounded-xl p-6 mb-8">
+      <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+        <Calculator className="w-6 h-6 text-indigo-400" /> Mining Profitability Calculator
+      </h2>
+      <p className="text-gray-400 text-sm mb-6">
+        Calculate your breakeven ERG price based on your mining setup and electricity costs.
+      </p>
+      
+      <div className="grid md:grid-cols-2 gap-6 mb-6">
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
+              My Hashrate (MH/s)
+            </label>
+            <input
+              type="text"
+              value={myHashrate}
+              onChange={(e) => setMyHashrate(e.target.value)}
+              className="w-full px-4 py-2 bg-black/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-indigo-400 transition-colors"
+              placeholder="160"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
+              Power Consumption (W)
+            </label>
+            <input
+              type="text"
+              value={power}
+              onChange={(e) => setPower(e.target.value)}
+              className="w-full px-4 py-2 bg-black/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-indigo-400 transition-colors"
+              placeholder="130"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
+              Power Cost (USD/kWh)
+            </label>
+            <input
+              type="text"
+              value={cost}
+              onChange={(e) => setCost(e.target.value)}
+              className="w-full px-4 py-2 bg-black/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-indigo-400 transition-colors"
+              placeholder="0.10"
+            />
+          </div>
+        </div>
+        
+        <div className="space-y-4">
+          <div>
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
+              Network Hashrate (TH/s)
+            </label>
+            <input
+              type="text"
+              value={netHashrate}
+              onChange={(e) => setNetHashrate(e.target.value)}
+              className="w-full px-4 py-2 bg-black/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-indigo-400 transition-colors"
+              placeholder="170"
+            />
+          </div>
+          
+          <div>
+            <label className="block text-sm font-semibold text-gray-300 mb-2">
+              Block Reward (ERG)
+            </label>
+            <input
+              type="text"
+              value={blockReward}
+              onChange={(e) => setBlockReward(e.target.value)}
+              className="w-full px-4 py-2 bg-black/50 border border-gray-700 rounded-lg text-white focus:outline-none focus:border-indigo-400 transition-colors"
+              placeholder="48"
+            />
+          </div>
+          
+          <div className="mt-6 p-4 bg-indigo-500/20 border border-indigo-400/30 rounded-lg">
+            <div className="text-sm text-gray-400 mb-1">Minimum ERG Price for Breakeven:</div>
+            <div className="text-3xl font-bold text-indigo-300">
+              ${result}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div className="flex items-center gap-2 text-xs text-gray-500">
+        <Info className="w-3 h-3" />
+        <span>Calculator assumes 720 blocks per day average</span>
+      </div>
+    </div>
+  );
+};
+
 export default function SoloMiningPage() {
   return (
     <>
-      {/* Back Button */}
-      <div className="mb-8">
-        <Link
-          href="/Docs/miners/mining-guides"
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Mining Guides</span>
-        </Link>
-      </div>
-
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-          Solo Mining Ergo
+          Solo Mining
         </h1>
         <p className="text-xl text-gray-400 mb-6">
-          Mine Ergo independently without pools. Run your own node and keep 100% of block rewards while supporting network decentralization.
+          Solo mining is a method where you mine Ergo independently, without joining a mining pool. This approach can be more rewarding if you have significant mining power, but it also comes with higher variance in rewards.
         </p>
         <div className="flex flex-wrap gap-4">
-          <Link
-            href="/Docs/miners/mining-guides/pools"
-            className="inline-flex items-center px-6 py-3 bg-purple-500 rounded-xl font-semibold text-white hover:bg-purple-600 transition-transform hover:scale-105"
-          >
-            <Users className="w-5 h-5 mr-2" /> Pool Mining
-          </Link>
-          <Link
-            href="/Docs/miners/mining-guides/software"
+          <a
+            href="https://miningpoolstats.stream/ergo"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
-            <Download className="w-5 h-5 mr-2" /> Mining Software
+            <BarChart3 className="w-5 h-5 mr-2" /> Pool Stats
+          </a>
+          <Link
+            href="/Docs/miners/mining-guides"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" /> Back to Mining Guides
           </Link>
         </div>
       </div>
 
-      {/* Overview Section */}
+      {/* Decision Section */}
       <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Shield className="w-6 h-6 text-purple-400" /> What is Solo Mining?
+          <Target className="w-6 h-6 text-purple-400" /> Before You Start
         </h2>
-        <p className="text-gray-300 mb-4">
-          Solo mining means operating your own Ergo node and mining directly without joining a pool. 
-          When you find a block, you receive the full reward (~67.5 ERG) plus transaction fees, 
-          but blocks may be infrequent depending on your hashrate.
+        <p className="text-gray-300 mb-6">
+          Before you decide to solo mine, you might want to use the calculator above to evaluate if solo mining is the right choice for you. If you decide to proceed with solo mining, you have two options:
         </p>
-        <div className="grid md:grid-cols-2 gap-4 mt-6">
-          <div className="bg-green-400/10 border border-green-400/20 rounded-lg p-4">
-            <h3 className="font-semibold text-green-400 mb-2">Best For</h3>
-            <ul className="text-sm text-gray-400 space-y-1">
-              <li>• Large mining operations (50+ GH/s)</li>
-              <li>• Technical users comfortable with nodes</li>
-              <li>• Long-term network supporters</li>
-              <li>• Privacy-conscious miners</li>
-            </ul>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+              <Users className="w-5 h-5 text-blue-400" /> Option 1: Use a Mining Pool's Solo Port
+            </h3>
+            <p className="text-gray-400 text-sm mb-4">
+              Some mining pools offer a solo port for miners who prefer to work independently. You can find a list of such pools on Mining Pool Stats.
+            </p>
+            <div className="flex items-center gap-2 text-green-400 text-sm">
+              <CheckCircle className="w-4 h-4" />
+              <span>Easier setup</span>
+            </div>
+            <div className="flex items-center gap-2 text-green-400 text-sm mt-2">
+              <CheckCircle className="w-4 h-4" />
+              <span>No node management</span>
+            </div>
           </div>
-          <div className="bg-orange-400/10 border border-orange-400/20 rounded-lg p-4">
-            <h3 className="font-semibold text-orange-400 mb-2">Consider Pool Mining If</h3>
-            <ul className="text-sm text-gray-400 space-y-1">
-              <li>• You have less than 50 GH/s</li>
-              <li>• You prefer steady income</li>
-              <li>• Technical setup seems complex</li>
-              <li>• You're just starting mining</li>
-            </ul>
+
+          <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
+            <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+              <Server className="w-5 h-5 text-purple-400" /> Option 2: Host Your Own Pool
+            </h3>
+            <p className="text-gray-400 text-sm mb-4">
+              If you prefer to have complete control over your mining process, you can set up and host your own mining pool.
+            </p>
+            <div className="flex items-center gap-2 text-green-400 text-sm">
+              <CheckCircle className="w-4 h-4" />
+              <span>Complete control</span>
+            </div>
+            <div className="flex items-center gap-2 text-green-400 text-sm mt-2">
+              <CheckCircle className="w-4 h-4" />
+              <span>No third parties</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Advantages & Requirements */}
-      <div className="grid md:grid-cols-2 gap-6 mb-12">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-            <CheckCircle className="w-5 h-5 text-green-400" /> Advantages
-          </h3>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-3">
-              <Shield className="w-5 h-5 text-green-400 mt-0.5" />
-              <div>
-                <div className="font-semibold text-white">Full Control</div>
-                <div className="text-sm text-gray-400">Complete control over mining operations and node configuration</div>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <DollarSign className="w-5 h-5 text-green-400 mt-0.5" />
-              <div>
-                <div className="font-semibold text-white">No Pool Fees</div>
-                <div className="text-sm text-gray-400">Keep 100% of block rewards without pool commission</div>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <Network className="w-5 h-5 text-green-400 mt-0.5" />
-              <div>
-                <div className="font-semibold text-white">Network Support</div>
-                <div className="text-sm text-gray-400">Directly contribute to Ergo network decentralization</div>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <Lock className="w-5 h-5 text-green-400 mt-0.5" />
-              <div>
-                <div className="font-semibold text-white">Privacy</div>
-                <div className="text-sm text-gray-400">No need to share hashrate data with third parties</div>
-              </div>
-            </li>
-          </ul>
-        </div>
+      {/* Mining Calculator */}
+      <MiningCalculator />
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-            <AlertTriangle className="w-5 h-5 text-orange-400" /> Requirements
-          </h3>
-          <ul className="space-y-3">
-            <li className="flex items-start gap-3">
-              <Zap className="w-5 h-5 text-red-400 mt-0.5" />
-              <div>
-                <div className="font-semibold text-white">High Hashrate</div>
-                <div className="text-sm text-gray-400">Typically need 50+ GH/s for reasonable block finding frequency</div>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <Settings className="w-5 h-5 text-red-400 mt-0.5" />
-              <div>
-                <div className="font-semibold text-white">Technical Knowledge</div>
-                <div className="text-sm text-gray-400">Understanding of node operation and troubleshooting</div>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <Server className="w-5 h-5 text-yellow-400 mt-0.5" />
-              <div>
-                <div className="font-semibold text-white">Stable Infrastructure</div>
-                <div className="text-sm text-gray-400">Reliable internet, power, and hardware setup</div>
-              </div>
-            </li>
-            <li className="flex items-start gap-3">
-              <HardDrive className="w-5 h-5 text-yellow-400 mt-0.5" />
-              <div>
-                <div className="font-semibold text-white">Storage Space</div>
-                <div className="text-sm text-gray-400">At least 50GB for blockchain data and growing</div>
-              </div>
-            </li>
-          </ul>
-        </div>
+      {/* EIP-27 Warning */}
+      <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-6 mb-8">
+        <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+          <AlertTriangle className="w-5 h-5 text-yellow-400" /> Remember EIP-27!
+        </h3>
+        <p className="text-gray-300">
+          To be able to spend any ERG mined via the reference client, you will need to include the EIP27 rules in your <code className="bg-black/50 px-2 py-1 rounded text-green-400">ergo.conf</code>. See the configuration section below for more information.
+        </p>
       </div>
 
-      {/* Node Configuration Section */}
+      {/* Solo Node Configuration */}
       <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Terminal className="w-6 h-6 text-orange-400" /> Node Configuration
+          <Terminal className="w-6 h-6 text-orange-400" /> Solo Node Configuration
         </h2>
-        
+        <p className="text-gray-300 mb-6">
+          To be able to spend any ERG mined this way, you will need to include the EIP27 rules in your <code className="bg-black/50 px-2 py-1 rounded text-green-400">ergo.conf</code> file which you run with the <code className="bg-black/50 px-2 py-1 rounded text-green-400">.jar</code> as such:
+        </p>
+
         <div className="space-y-6">
           <div>
-            <h3 className="text-lg font-semibold mb-3">1. Download Ergo Node</h3>
-            <p className="text-gray-400 text-sm mb-3">Download the latest Ergo reference client</p>
+            <h3 className="text-lg font-semibold mb-3">Run Command</h3>
             <CodeBlock language="bash">
-{`wget https://github.com/ergoplatform/ergo/releases/latest/download/ergo-*.jar`}
+{`java -Xmx4g -jar ergo-5.0.4.jar --mainnet -c ergo.conf`}
             </CodeBlock>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-3">2. Create Configuration</h3>
-            <p className="text-gray-400 text-sm mb-3">Configure your node for mining operations</p>
-            <CodeBlock language="hocon">
+            <h3 className="text-lg font-semibold mb-3">ergo.conf Configuration</h3>
+            <CodeBlock language="bash">
 {`ergo {
   node {
     mining = true
-    miningPubKeyHex = "YOUR_MINING_ADDRESS_HEX"
-    
-    state {
-      type = "utxo"
+  }
+  chain {
+    reemission {
+      checkReemissionRules = true
     }
   }
-  
   wallet {
-    secretStorage {
-      secretDir = \${ergo.node.dataDir}"/wallet/keystore"
-    }
+    checkEIP27 = true
+  }
+}
+
+scorex {
+  restApi {
+    ## Hex-encoded Blake2b256 hash of an API key. 
+    ## Should be 64-chars long Base16 string.
+    ## below is the hash of the string 'hello'
+    ## replace with your actual hash generated from within swagger. 
+    apiKeyHash = "324dcf027dd4a30a932c441f365a25e86b173defa4b8e58948253471b81b72cf"
   }
 }`}
             </CodeBlock>
           </div>
 
-          <div>
-            <h3 className="text-lg font-semibold mb-3">3. Start Node</h3>
-            <p className="text-gray-400 text-sm mb-3">Launch your Ergo node with mining enabled</p>
-            <CodeBlock language="bash">
-{`java -jar ergo-*.jar --mainnet -c application.conf`}
-            </CodeBlock>
-          </div>
+          <p className="text-gray-400 text-sm">
+            You'll then either want to use the <Link href="/Docs/miners/mining-guides/solo-mining/stratum" className="text-blue-400 hover:text-blue-300">Ergo Stratum</Link> mining server or <Link href="/Docs/miners/mining-guides/solo-mining/miningcore" className="text-purple-400 hover:text-purple-300">Mining Core</Link>.
+          </p>
         </div>
       </div>
 
-      {/* Stratum Server Options */}
-      <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 mb-8">
-        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Server className="w-6 h-6 text-cyan-400" /> Stratum Server Options
-        </h2>
-        <p className="text-gray-300 mb-6">
-          Choose a stratum server to connect your mining hardware to your Ergo node:
-        </p>
-        <div className="grid md:grid-cols-2 gap-6">
-          <Link
-            href="/Docs/miners/mining-guides/solo-mining/stratum"
-            className="group bg-neutral-900/50 border border-neutral-700 hover:border-cyan-600/50 rounded-lg p-6 transition-all"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <Terminal className="w-8 h-8 text-cyan-400" />
-              <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Ergo Stratum</h3>
-            <p className="text-gray-400 text-sm">Official Ergo stratum server implementation</p>
-            <div className="mt-3 flex items-center gap-2">
-              <span className="bg-green-600 text-white text-xs px-2 py-1 rounded">Recommended</span>
-              <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded">Official</span>
-            </div>
-          </Link>
-
-          <Link
-            href="/Docs/miners/mining-guides/solo-mining/miningcore"
-            className="group bg-neutral-900/50 border border-neutral-700 hover:border-purple-600/50 rounded-lg p-6 transition-all"
-          >
-            <div className="flex items-center justify-between mb-4">
-              <Database className="w-8 h-8 text-purple-400" />
-              <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
-            </div>
-            <h3 className="text-lg font-semibold text-white mb-2">Mining Core</h3>
-            <p className="text-gray-400 text-sm">Multi-currency mining pool/stratum software</p>
-            <div className="mt-3 flex items-center gap-2">
-              <span className="bg-purple-600 text-white text-xs px-2 py-1 rounded">Advanced</span>
-              <span className="bg-yellow-600 text-black text-xs px-2 py-1 rounded">Multi-coin</span>
-            </div>
-          </Link>
-        </div>
-      </div>
-
-      {/* Expected Block Times */}
+      {/* Resources Section */}
       <div className="bg-blue-400/10 border border-blue-400/20 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <BarChart3 className="w-6 h-6 text-blue-400" /> Expected Block Times
+          <BookOpen className="w-6 h-6 text-blue-400" /> Resources
         </h2>
-        <p className="text-gray-300 mb-6">
-          Estimated time to find a block based on your hashrate and current network difficulty:
-        </p>
-        <div className="overflow-x-auto">
-          <table className="w-full">
-            <thead>
-              <tr className="border-b border-gray-700">
-                <th className="text-left py-3 px-4 font-semibold text-white">Hashrate</th>
-                <th className="text-left py-3 px-4 font-semibold text-white">Network Share</th>
-                <th className="text-left py-3 px-4 font-semibold text-white">Expected Block Time</th>
-                <th className="text-left py-3 px-4 font-semibold text-white">Monthly Blocks</th>
-              </tr>
-            </thead>
-            <tbody className="text-gray-300">
-              <tr className="border-b border-gray-800">
-                <td className="py-3 px-4">10 GH/s</td>
-                <td className="py-3 px-4">~0.01%</td>
-                <td className="py-3 px-4">~7 days</td>
-                <td className="py-3 px-4">~4 blocks</td>
-              </tr>
-              <tr className="border-b border-gray-800">
-                <td className="py-3 px-4">50 GH/s</td>
-                <td className="py-3 px-4">~0.05%</td>
-                <td className="py-3 px-4">~1.5 days</td>
-                <td className="py-3 px-4">~20 blocks</td>
-              </tr>
-              <tr className="border-b border-gray-800">
-                <td className="py-3 px-4">100 GH/s</td>
-                <td className="py-3 px-4">~0.1%</td>
-                <td className="py-3 px-4">~18 hours</td>
-                <td className="py-3 px-4">~40 blocks</td>
-              </tr>
-              <tr>
-                <td className="py-3 px-4">500 GH/s</td>
-                <td className="py-3 px-4">~0.5%</td>
-                <td className="py-3 px-4">~3.6 hours</td>
-                <td className="py-3 px-4">~200 blocks</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-sm text-gray-400 mt-4">
-          * Based on current network hashrate of ~100 TH/s. Block times are statistical averages.
-        </p>
+        <ul className="space-y-3">
+          <li>
+            <a href="https://www.youtube.com/watch?v=_1M8dGpfKjU" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+              <ExternalLink className="w-4 h-4 text-blue-400" />
+              Ergo Node + Stratum Server mining tutorial
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/watch?v=ubov4oweA20" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+              <ExternalLink className="w-4 h-4 text-blue-400" />
+              Youtube: Mine Ergo from your own Node
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ergoforum.org/t/q-a-on-mining-for-pool-operators-and-solo-miners/587" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+              <ExternalLink className="w-4 h-4 text-blue-400" />
+              ErgoForum: Q&A on mining (for pool operators and solo miner)
+            </a>
+          </li>
+        </ul>
       </div>
 
-      {/* Withdrawing Rewards */}
+      {/* Spending Mining Rewards */}
       <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <DollarSign className="w-6 h-6 text-green-400" /> Withdrawing Your Mining Rewards
+          <Wallet className="w-6 h-6 text-green-400" /> Spending Mining Rewards
         </h2>
-        <p className="text-gray-300 mb-6">
-          When you successfully mine a block, the rewards (currently ~67.5 ERG plus fees) are automatically 
-          added to your node's wallet. Here's how to access and withdraw these funds:
-        </p>
         
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">1</div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Access Wallet API</h3>
-                <p className="text-gray-400 text-sm">Connect to your node's wallet API on port 9053</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">2</div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Unlock Wallet</h3>
-                <p className="text-gray-400 text-sm">Use your wallet password to unlock for transactions</p>
-              </div>
-            </div>
-          </div>
-          <div className="space-y-4">
-            <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">3</div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Create Transaction</h3>
-                <p className="text-gray-400 text-sm">Send mined ERG to your preferred address</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center text-white font-bold">4</div>
-              <div>
-                <h3 className="font-semibold text-white mb-1">Broadcast</h3>
-                <p className="text-gray-400 text-sm">Submit transaction to the network</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="mt-6 p-4 bg-yellow-400/10 border border-yellow-400/20 rounded-lg">
+        <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-lg p-4 mb-6">
           <div className="flex items-start gap-3">
             <AlertTriangle className="w-5 h-5 text-yellow-400 mt-0.5" />
             <div>
-              <h3 className="font-semibold text-yellow-300 mb-1">Security Note</h3>
+              <h3 className="font-semibold text-yellow-300 mb-1">Keep in mind</h3>
               <p className="text-yellow-100 text-sm">
-                Always backup your wallet seed phrase before withdrawing funds. 
-                Consider using a hardware wallet for large amounts of ERG.
+                Please note this page contains information that pre-dates EIP-27.
               </p>
             </div>
           </div>
         </div>
+
+        <p className="text-gray-300 mb-6">
+          This section guides miners on how to withdraw funds they have mined. Many users have launched both a node and a miner, with the miner's <code className="bg-black/50 px-2 py-1 rounded text-green-400">pubkeyHex</code> embedded in the node's configuration.
+        </p>
+
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold mb-3 flex items-center gap-2">
+              <Key className="w-5 h-5 text-green-400" /> Keys Overview
+            </h3>
+            <div className="space-y-3 text-gray-400 text-sm">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-white mb-2">1. Base16-encoded raw public key</h4>
+                <p>Mining software and mining support in the node use this format, represented as a serialized point on an elliptic curve.</p>
+              </div>
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-white mb-2">2. Pay-To-Public-Key (P2PK) addresses</h4>
+                <p>These addresses are displayed in the node wallet and start with "9." They include the elliptic curve point, network prefix and a checksum.</p>
+              </div>
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-4">
+                <h4 className="font-semibold text-white mb-2">3. Mining/rewardAddress API method</h4>
+                <p>Displays a special encoded script used to pay a miner, such as <code className="bg-black/50 px-2 py-1 rounded text-green-400">88dhgzEuTXaSfKEbxfa6vghvEGdBH39sn9h7As2Y2Z6SGd8bKXCXmRLY5JtU4g4RYBP4WcZWb3JwjXDK</code></p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Viewing Your Balance and Withdrawing Funds</h3>
+            <p className="text-gray-400 text-sm mb-4">
+              After initializing your wallet, you may not see the mined coins if the initialization occurred after the corresponding blocks were mined. The node does not scan blocks retrospectively; it only scans new blocks after initialization.
+            </p>
+          </div>
+        </div>
       </div>
 
-      {/* Wallet Management */}
-      <div className="grid md:grid-cols-2 gap-6 mb-12">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-            <Lock className="w-5 h-5 text-green-400" /> Security Measures
-          </h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              Backup your wallet seed phrase securely
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              Use strong passwords for wallet encryption
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              Regular wallet backups to multiple locations
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-green-400" />
-              Consider hardware wallet for large amounts
-            </li>
-          </ul>
-        </div>
+      {/* Step by Step Guide */}
+      <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 mb-8">
+        <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+          <Settings className="w-6 h-6 text-cyan-400" /> Step-by-Step Withdrawal Guide
+        </h2>
 
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-            <Settings className="w-5 h-5 text-blue-400" /> Operational Tips
-          </h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-400" />
-              Monitor node sync status regularly
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-400" />
-              Keep sufficient ERG for transaction fees
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-400" />
-              Test small transactions before large withdrawals
-            </li>
-            <li className="flex items-center gap-2">
-              <CheckCircle className="w-4 h-4 text-blue-400" />
-              Maintain node uptime for optimal performance
-            </li>
-          </ul>
+        <div className="space-y-6">
+          <div className="border-l-4 border-cyan-400 pl-4">
+            <h3 className="text-lg font-semibold mb-2">Step 1: Clear Node State (if stopping the node)</h3>
+            <p className="text-gray-400 text-sm mb-3">
+              If you intend to stop your node, you must clear its state. Stop the node and remove all contents of the <code className="bg-black/50 px-2 py-1 rounded text-green-400">.ergo</code> directory.
+            </p>
+          </div>
+
+          <div className="border-l-4 border-cyan-400 pl-4">
+            <h3 className="text-lg font-semibold mb-2">Step 2: Restoring a Local Wallet</h3>
+            <p className="text-gray-400 text-sm mb-3">
+              Retrieve the mnemonic sentence from your Autolykos miner's <code className="bg-black/50 px-2 py-1 rounded text-green-400">config.json</code>. Send a POST request to restore your wallet:
+            </p>
+            <CodeBlock language="json">
+{`{
+  "pass": "your_wallet_pass",
+  "mnemonic": "mnemonic_sentence_from_your_miner",
+  "mnemonicPass": "mnemonic_pass_if_set"
+}`}
+            </CodeBlock>
+            <p className="text-yellow-400 text-sm mt-3">
+              <strong>ATTENTION:</strong> Restore the wallet before your node starts downloading full blocks to allow scanning from genesis.
+            </p>
+          </div>
+
+          <div className="border-l-4 border-cyan-400 pl-4">
+            <h3 className="text-lg font-semibold mb-2">Step 3: Checking Your Balance</h3>
+            <p className="text-gray-400 text-sm mb-3">
+              Once synchronized, check the <code className="bg-black/50 px-2 py-1 rounded text-green-400">/wallet/balances</code> API method:
+            </p>
+            <CodeBlock language="json">
+{`{
+  "height": 3560,
+  "balance": 67500000000,
+  "assets": {}
+}`}
+            </CodeBlock>
+          </div>
+
+          <div className="border-l-4 border-cyan-400 pl-4">
+            <h3 className="text-lg font-semibold mb-2">Step 4: Making a Transaction</h3>
+            <p className="text-gray-400 text-sm mb-3">
+              To withdraw rewards, create a payment transaction using <code className="bg-black/50 px-2 py-1 rounded text-green-400">/wallet/payment/send</code>:
+            </p>
+            <CodeBlock language="json">
+{`{
+  "address": "your_address",
+  "value": 10000000
+}`}
+            </CodeBlock>
+          </div>
         </div>
       </div>
 
       {/* FAQ Section */}
       <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6 mb-8">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <HelpCircle className="w-6 h-6 text-purple-400" /> Frequently Asked Questions
+          <HelpCircle className="w-6 h-6 text-purple-400" /> Solo Mining FAQ
         </h2>
         <div className="space-y-4">
           <div className="border-b border-gray-700 pb-4">
-            <h3 className="text-lg font-semibold mb-2">How long until I find a block?</h3>
+            <h3 className="text-lg font-semibold mb-2">Why Aren't My Funds Visible in My Wallet?</h3>
             <p className="text-gray-400">
-              With current network difficulty, you need significant hashrate (50+ GH/s) to find blocks regularly. 
-              Smaller operations might wait weeks or months between blocks.
+              Mining rewards are initially linked to a time-and-pubkey lock script, not your standard P2PK address. You need to transfer all funds to your own address in the node wallet to make them visible.
             </p>
           </div>
+          
           <div className="border-b border-gray-700 pb-4">
-            <h3 className="text-lg font-semibold mb-2">Can I use a mining pool's solo port?</h3>
+            <h3 className="text-lg font-semibold mb-2">Why Do My Rewards Go to a Different Address?</h3>
             <p className="text-gray-400">
-              Yes, many pools offer solo mining ports that handle the technical setup while you keep full block rewards. 
-              This is easier than running your own node.
+              Mining rewards are directed to UTXOs with specific scripts that lock the rewards to the miner's public keys for 720 blocks. After 720 confirmations, the wallet will display the mined rewards.
             </p>
           </div>
+          
           <div className="border-b border-gray-700 pb-4">
-            <h3 className="text-lg font-semibold mb-2">What hardware do I need?</h3>
-            <p className="text-gray-400">
-              A modern computer with at least 8GB RAM, 50GB+ storage, and stable internet. 
-              The mining hardware connects separately to your node.
+            <h3 className="text-lg font-semibold mb-2">How Do I Verify If a Block Is Mined by Me?</h3>
+            <p className="text-gray-400 mb-3">
+              You can obtain your mining rewards address with the <code className="bg-black/50 px-2 py-1 rounded text-green-400">/mining/rewardAddress</code> API call:
+            </p>
+            <CodeBlock language="json">
+{`{
+  "rewardAddress": "mPdcmQkPPvyMGoCDNg9oiasLyPpKJhHjgjpt89uJZE1oN9PJ9fKbdKDcfomtWoy3d1E7RFLTUbXbt1AS"
+}`}
+            </CodeBlock>
+            <p className="text-gray-400 text-sm mt-3">
+              You can then verify your rewards on the <a href="https://explorer.ergoplatform.com/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">Ergo Explorer</a>.
             </p>
           </div>
+
           <div>
-            <h3 className="text-lg font-semibold mb-2">Is solo mining profitable?</h3>
-            <p className="text-gray-400">
-              Solo mining is generally only profitable for large operations due to variance in block finding. 
-              Pool mining provides more consistent returns for smaller miners.
-            </p>
+            <h3 className="text-lg font-semibold mb-2">​/mining​/solution API Endpoint</h3>
+            <p className="text-gray-400 mb-3">The mining solution endpoint returns:</p>
+            <CodeBlock language="json">
+{`{
+  "pk": "0350e25cee8562697d55275c96bb01b34228f9bd68fd9933f2a25ff195526864f5",
+  "w": "0366ea253123dfdb8d6d9ca2cb9ea98629e8f34015b1e4ba942b1d88badfcc6a12",
+  "n": "0000000000000000",
+  "d": 987654321
+}`}
+            </CodeBlock>
+            <ul className="text-gray-400 text-sm mt-3 space-y-1">
+              <li>• <strong>pk</strong> is the public key in binary format</li>
+              <li>• <strong>n</strong> is the nonce</li>
+              <li>• <strong>w</strong> and <strong>d</strong> are no longer used in Autolykos2 and are constant</li>
+            </ul>
           </div>
-        </div>
-      </div>
-
-      {/* Additional Resources */}
-      <div className="grid md:grid-cols-2 gap-6 mb-12">
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-            <Users className="w-5 h-5 text-orange-400" /> Community Support
-          </h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li className="flex items-center gap-2">
-              <Network className="w-4 h-4 text-orange-400" />
-              Ergo Discord mining channel
-            </li>
-            <li className="flex items-center gap-2">
-              <Users className="w-4 h-4 text-orange-400" />
-              r/ergonauts subreddit
-            </li>
-            <li className="flex items-center gap-2">
-              <Terminal className="w-4 h-4 text-orange-400" />
-              Ergo node documentation
-            </li>
-            <li className="flex items-center gap-2">
-              <GitBranch className="w-4 h-4 text-orange-400" />
-              GitHub discussions
-            </li>
-          </ul>
-        </div>
-
-        <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
-          <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-cyan-400" /> Monitoring Tools
-          </h3>
-          <ul className="space-y-2 text-gray-400 text-sm">
-            <li className="flex items-center gap-2">
-              <BarChart3 className="w-4 h-4 text-cyan-400" />
-              Network statistics dashboards
-            </li>
-            <li className="flex items-center gap-2">
-              <TrendingUp className="w-4 h-4 text-cyan-400" />
-              Mining profitability calculators
-            </li>
-            <li className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-cyan-400" />
-              Block explorer for tracking rewards
-            </li>
-            <li className="flex items-center gap-2">
-              <Database className="w-4 h-4 text-cyan-400" />
-              Node monitoring solutions
-            </li>
-          </ul>
         </div>
       </div>
 
       {/* Next Steps */}
       <div className="grid md:grid-cols-2 gap-6">
         <Link
-          href="/Docs/miners/mining-guides/pools"
-          className="group bg-neutral-900/50 border border-neutral-700 hover:border-blue-600/50 rounded-xl p-6 transition-all"
+          href="/Docs/miners/mining-guides/solo-mining/stratum"
+          className="group bg-neutral-900/50 border border-neutral-700 hover:border-cyan-600/50 rounded-xl p-6 transition-all"
         >
           <div className="flex items-center justify-between mb-4">
-            <Users className="w-8 h-8 text-blue-400" />
-            <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
+            <Terminal className="w-8 h-8 text-cyan-400" />
+            <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-cyan-400 transition-colors" />
           </div>
-          <h3 className="text-lg font-semibold text-white mb-2">Pool Mining</h3>
-          <p className="text-gray-400 text-sm">Join a pool for more consistent rewards</p>
+          <h3 className="text-lg font-semibold text-white mb-2">Ergo Stratum</h3>
+          <p className="text-gray-400 text-sm">Official Ergo stratum server implementation</p>
         </Link>
 
         <Link
-          href="/Docs/miners/mining-guides/host-a-pool"
-          className="group bg-neutral-900/50 border border-neutral-700 hover:border-green-600/50 rounded-xl p-6 transition-all"
+          href="/Docs/miners/mining-guides/solo-mining/miningcore"
+          className="group bg-neutral-900/50 border border-neutral-700 hover:border-purple-600/50 rounded-xl p-6 transition-all"
         >
           <div className="flex items-center justify-between mb-4">
-            <Server className="w-8 h-8 text-green-400" />
-            <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors" />
+            <Database className="w-8 h-8 text-purple-400" />
+            <ChevronRight className="w-5 h-5 text-gray-400 group-hover:text-purple-400 transition-colors" />
           </div>
-          <h3 className="text-lg font-semibold text-white mb-2">Host a Pool</h3>
-          <p className="text-gray-400 text-sm">Learn how to set up your own mining pool</p>
+          <h3 className="text-lg font-semibold text-white mb-2">Mining Core</h3>
+          <p className="text-gray-400 text-sm">Multi-currency mining pool/stratum software</p>
         </Link>
       </div>
     </>

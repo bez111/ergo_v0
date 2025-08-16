@@ -22,17 +22,6 @@ import Link from 'next/link';
 export default function GovernancePage() {
   return (
     <>
-      {/* Back Button */}
-      <div className="mb-8">
-        <Link
-          href="/Docs/miners"
-          className="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white px-6 py-3 rounded-lg transition-colors"
-        >
-          <span>←</span>
-          <span>Back to Miners</span>
-        </Link>
-      </div>
-
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
@@ -57,12 +46,12 @@ export default function GovernancePage() {
             Forking Mechanisms
           </Link>
           <Link
-            href="/Docs/miners/resources"
+            href="/Docs/miners"
             className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors justify-center"
           >
-            <BarChart3 className="w-5 h-5" />
-            Miner Resources
-      </Link>
+            <span>←</span>
+            Back to Miners
+          </Link>
         </div>
       </div>
 

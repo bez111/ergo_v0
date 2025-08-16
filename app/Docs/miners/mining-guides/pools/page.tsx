@@ -160,17 +160,6 @@ export default function PoolsPage() {
 
   return (
     <>
-      {/* Back Button */}
-      <div className="mb-8">
-        <Link 
-          href="/Docs/miners/mining-guides"
-          className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          <span>Back to Mining Guides</span>
-        </Link>
-      </div>
-
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
@@ -193,6 +182,13 @@ export default function PoolsPage() {
           >
             <Shield className="w-5 h-5" />
             Solo Mining
+          </Link>
+          <Link
+            href="/Docs/miners/mining-guides"
+            className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5" />
+            Back to Mining Guides
           </Link>
         </div>
       </div>
