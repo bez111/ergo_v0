@@ -299,7 +299,7 @@ export default function DataModelApisPage() {
                     <ul className="list-disc list-inside ml-6 mt-2">
                       <li>R0: Monetary Value (in nanoERGs)</li>
                       <li>R1: Protection Script (<Link href="/Docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">Smart Contract</Link>)</li>
-                      <li>R2: Assets/<Link href="/Docs/ecosystem/Standards/eip4" className="text-orange-400 hover:underline">Tokens</Link></li>
+                      <li>R2: Assets/Tokens</li>
                       <li>R3: Creation Details</li>
                       <li>R4-R9: Flexible, Typed Custom Data Storage</li>
                     </ul>
@@ -346,7 +346,7 @@ export default function DataModelApisPage() {
                 <ul className="list-disc list-inside ml-4">
                   <li><Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline">Data Inputs (Read-Only Inputs)</Link>: Access additional data in transactions without spending boxes.</li>
                   <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/fees" className="text-orange-400 hover:underline">Transaction Fees</Link>: Understanding fee structures, ensuring that <Link href="/Docs/miners" className="text-orange-400 hover:underline">miners</Link> are incentivized.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> and <Link href="/Docs/ecosystem/tooling/babel-fleet" className="text-orange-400 hover:underline">Babel Fees Plugin</Link>: Innovative mechanisms allowing fees to be paid in alternative <Link href="/Docs/ecosystem/Standards/eip4" className="text-orange-400 hover:underline">tokens</Link>.</li>
+                  <li><Link href="/Docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> and <Link href="/Docs/ecosystem/tooling/babel-fleet" className="text-orange-400 hover:underline">Babel Fees Plugin</Link>: Innovative mechanisms allowing fees to be paid in alternative tokens.</li>
                 </ul>
               </div>
             </section>
@@ -360,16 +360,16 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <p>
-                  Ergo supports a rich ecosystem of assets, from fungible <Link href="/Docs/ecosystem/Standards/eip4" className="text-orange-400 hover:underline">tokens</Link> to <Link href="/Docs/ecosystem/nfts" className="text-orange-400 hover:underline">NFTs</Link>, enabling complex economic models.
+                  Ergo supports a rich ecosystem of assets, from fungible tokens to <Link href="/Docs/ecosystem/nfts" className="text-orange-400 hover:underline">NFTs</Link>, enabling complex economic models.
                 </p>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">6.1 Fungible Tokens</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/ecosystem/Standards/eip4" className="text-orange-400 hover:underline">Token Basics</Link>: Introduction to tokens within the Ergo ecosystem and their fundamental characteristics.</li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip4" className="text-orange-400 hover:underline">Asset Standard (EIP-4)</Link>: Standard for creating and managing tokens in Ergo.</li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip21" className="text-orange-400 hover:underline">Token Verification (EIP-21)</Link>: Ensuring token authenticity and integrity.</li>
+                  <li><b>Token Basics</b>: Introduction to tokens within the Ergo ecosystem and their fundamental characteristics.</li>
+                  <li><b>Asset Standard (EIP-4)</b>: Standard for creating and managing tokens in Ergo.</li>
+                  <li><b>Token Verification (EIP-21)</b>: Ensuring token authenticity and integrity.</li>
                 </ul>
               </div>
 
