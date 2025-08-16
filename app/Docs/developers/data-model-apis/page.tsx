@@ -377,10 +377,10 @@ export default function DataModelApisPage() {
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
                   <li><Link href="/Docs/ecosystem/nfts" className="text-orange-400 hover:underline">NFT Overview</Link>: Comprehensive introduction to NFTs on Ergo.</li>
-                  <li><Link href="/Docs/ecosystem/nfts/create-nft" className="text-orange-400 hover:underline">NFT Creation</Link>: Guide to minting NFTs.</li>
-                  <li><Link href="/Docs/ecosystem/nfts/nft-v1-v2" className="text-orange-400 hover:underline">NFT Versions (V1 vs V2)</Link>: Comparison of different NFT implementation standards.</li>
-                  <li><Link href="/Docs/ecosystem/nfts/on-chain-nft" className="text-orange-400 hover:underline">On-Chain NFTs</Link>: Storing NFT data directly on the blockchain.</li>
-                  <li><Link href="/Docs/ecosystem/nfts/royalties" className="text-orange-400 hover:underline">NFT Royalties</Link>: Mechanisms for continuous compensation to creators.</li>
+                  <li><b>NFT Creation</b>: Guide to minting NFTs using Ergo's flexible token system.</li>
+                  <li><b>NFT Versions (V1 vs V2)</b>: Comparison of different NFT implementation standards.</li>
+                  <li><b>On-Chain NFTs</b>: Storing NFT data directly on the blockchain.</li>
+                  <li><b>NFT Royalties</b>: Mechanisms for continuous compensation to creators.</li>
                 </ul>
               </div>
 
