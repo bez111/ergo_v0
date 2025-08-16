@@ -567,7 +567,6 @@ export default function RoadmapPage() {
                 </div>
               </div>
           </div>
-
           {/* Statistics */}
           <div className="mt-8 bg-brand-primary-400/10 border border-brand-primary-400/20 rounded-xl p-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
