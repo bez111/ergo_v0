@@ -335,9 +335,9 @@ export default function DataModelApisPage() {
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
                   <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/chained-transactions" className="text-orange-400 hover:underline">Chained Transactions</Link>: Explore how sequentially dependent transactions can be composed.</li>
-                  <li><Link href="/Docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">Merkle Tree in Transactions</Link>: Understanding how <Link href="/Docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">Merkle trees</Link> provide data integrity and facilitate efficient proofs.</li>
-                  <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Transaction Signing</Link> and <Link href="/Docs/developers/ergoscript-languages/wallet-interaction/signing-backend" className="text-orange-400 hover:underline">Backend Signing</Link>: Cryptographic principles and implementations for authenticating transactions.</li>
-                  <li><Link href="/Docs/developers/ergoscript-languages/validation" className="text-orange-400 hover:underline">Transaction Validation</Link>: Comprehensive overview of on-chain verification processes that ensure correctness and adherence to protocol rules.</li>
+                  <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Tree in Transactions</Link>: Understanding how <Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle trees</Link> provide data integrity and facilitate efficient proofs.</li>
+                  <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Transaction Signing</Link> and <Link href="/Docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Backend Signing</Link>: Cryptographic principles and implementations for authenticating transactions.</li>
+                  <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/validation" className="text-orange-400 hover:underline">Transaction Validation</Link>: Comprehensive overview of on-chain verification processes that ensure correctness and adherence to protocol rules.</li>
                 </ul>
               </div>
 
@@ -481,9 +481,9 @@ export default function DataModelApisPage() {
                 </p>
                 <ul className="list-disc list-inside ml-4">
                   <li><b>Transaction Construction & Signing:</b> See <Link href="/Docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Composition</Link>, <Link href="/Docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">Transaction Format</Link>, and <Link href="/Docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Signing</Link>.</li>
-                  <li><b>On-Chain Verification:</b> <Link href="/Docs/developers/ergoscript-languages/validation" className="text-orange-400 hover:underline">Transaction Validation</Link> and <Link href="/Docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">Merkle Proofs</Link>.</li>
-                  <li><b>Script Validation:</b> Detailed in <Link href="/Docs/developers/ergoscript-languages/validation" className="text-orange-400 hover:underline">ErgoTree Script Validation</Link> and the <Link href="/Docs/developers/ergoscript-languages/lang-spec" className="text-orange-400 hover:underline">ErgoScript Language Specification</Link>.</li>
-                  <li><b>Execution Environment:</b> Access blockchain state via <Link href="/Docs/developers/ergoscript-languages/blockchain-context" className="text-orange-400 hover:underline">Context Variables</Link>, ensure deterministic <Link href="/Docs/developers/ergoscript-languages/evaluation" className="text-orange-400 hover:underline">evaluation</Link>, and apply <Link href="/Docs/developers/ergoscript-languages/jitc" className="text-orange-400 hover:underline">cost constraints</Link>.</li>
+                  <li><b>On-Chain Verification:</b> <Link href="/Docs/developers/ergoscript-languages/wallet-interaction/validation" className="text-orange-400 hover:underline">Transaction Validation</Link> and <Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Proofs</Link>.</li>
+                  <li><b>Script Validation:</b> Detailed in <Link href="/Docs/developers/ergoscript-languages/script-validation" className="text-orange-400 hover:underline">ErgoTree Script Validation</Link> and the <Link href="/Docs/developers/ergoscript-languages/language-description" className="text-orange-400 hover:underline">ErgoScript Language Specification</Link>.</li>
+                  <li><b>Execution Environment:</b> Access blockchain state via <Link href="/Docs/developers/ergoscript-languages/blockchain-context" className="text-orange-400 hover:underline">Context Variables</Link>, ensure deterministic <Link href="/Docs/developers/ergoscript-languages/evaluation" className="text-orange-400 hover:underline">evaluation</Link>, and apply cost constraints.</li>
                 </ul>
               </div>
 
@@ -505,7 +505,7 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/tooling/frameworks/sigmajs/data-structures" className="text-orange-400 hover:underline">General Data Structures</Link></li>
+                  <li><Link href="/Docs/developers/ergoscript-languages/predefined-types" className="text-orange-400 hover:underline">General Data Structures</Link></li>
                   <li><Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">Proof of Proof-of-Work (PoPow)</Link>: Consensus mechanism enhancement for light clients, related to <Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">NIPoPoWs</Link>.</li>
                 </ul>
               </div>
@@ -513,14 +513,14 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">11.1 Authenticated Data Structures</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">Merkle Trees</Link> for efficient state commitment.
+                  <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Trees</Link> for efficient state commitment.
                     <ul className="list-disc list-inside ml-6 mt-2">
-                      <li><Link href="/Docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">Merkle Batch Proof</Link></li>
-                      <li><Link href="/Docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">Merkle Extension</Link></li>
-                      <li><Link href="/Docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">Merkle Light Proof</Link></li>
+                      <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree/batch-proofs" className="text-orange-400 hover:underline">Merkle Batch Proof</Link></li>
+                      <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree/extension-block" className="text-orange-400 hover:underline">Merkle Extension</Link></li>
+                      <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree/lightweight-proofs" className="text-orange-400 hover:underline">Merkle Light Proof</Link></li>
                     </ul>
                   </li>
-                  <li><Link href="/Docs/developers/tooling/frameworks/sigmajs/avl-tree" className="text-orange-400 hover:underline">AVL+ Trees</Link> for authenticated key-value storage.</li>
+                  <li>AVL+ Trees for authenticated key-value storage.</li>
                   <li><Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">Interlink Vectors</Link>: Lightweight blockchain verification.</li>
                   <li><Link href="/Docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">AD Proofs</Link>: Supporting stateless clients.</li>
                 </ul>
@@ -531,7 +531,7 @@ export default function DataModelApisPage() {
                 <ul className="list-disc list-inside ml-4">
                   <li>Parallel transaction validation inherent in the <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTXO model</Link>.</li>
                   <li>Stateless validation reduces computational and storage overhead.</li>
-                  <li><Link href="/Docs/developers/ergoscript-languages/jitc" className="text-orange-400 hover:underline">Just-in-time costing</Link> ensures resource use is always checked.</li>
+                  <li>Just-in-time costing ensures resource use is always checked.</li>
                 </ul>
                 <p className="mt-3">
                   For more information see the <Link href="/Docs/ecosystem/infrastructure" className="text-orange-400 hover:underline">scaling</Link> section.
