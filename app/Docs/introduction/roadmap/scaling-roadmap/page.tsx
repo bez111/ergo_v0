@@ -7,17 +7,6 @@ import { ArrowLeft } from "lucide-react";
 export default function RoadmapDiscussionsPage() {
   return (
     <div className="min-h-screen bg-black text-white">
-      {/* Back Button */}
-      <div className="mb-8">
-        <Link
-          href="/Docs/introduction/roadmap"
-          className="inline-flex items-center px-4 py-2 bg-neutral-800 rounded-lg font-medium text-white hover:bg-neutral-700 transition-colors"
-        >
-          <ArrowLeft className="w-4 h-4 mr-2" />
-          Back to Roadmap
-        </Link>
-      </div>
-
       {/* Hero Section */}
       <div className="mb-12">
         <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
@@ -26,6 +15,17 @@ export default function RoadmapDiscussionsPage() {
         <p className="text-xl text-gray-400 mb-6">
           Join our discussions on scaling on <a href="https://t.me/ErgoLayer2" className="text-blue-400 hover:text-blue-300 underline">Telegram</a> or <a href="https://discord.gg/nr4JRnhAyV" className="text-blue-400 hover:text-blue-300 underline">#layer2 on discord</a>. We welcome all insights and contributions.
         </p>
+        
+        {/* Hero Buttons */}
+        <div className="flex flex-wrap gap-4">
+          <Link
+            href="/Docs/introduction/roadmap"
+            className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-lg font-semibold text-white hover:bg-neutral-700 transition-colors"
+          >
+            <ArrowLeft className="w-5 h-5 mr-2" />
+            Back to Roadmap
+          </Link>
+        </div>
       </div>
 
       {/* Main Content */}
