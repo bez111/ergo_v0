@@ -121,7 +121,7 @@ const techFeatures = [
     description:
       "Non-Interactive Proofs of Proof-of-Work enable ultra-light clients and trustless cross-chain communication. Sync mobile wallets in seconds, not hours.",
     color: "",
-    href: "/technology/light-clients",
+    href: "/technology/nipopows",
     details: [
       { icon: Smartphone, title: "Instant Mobile Sync", description: "Full security with minimal data - sync in seconds on any device." },
       { icon: LinkIcon, title: "Trustless Bridges", description: "Connect to other blockchains without centralized validators." },
@@ -134,6 +134,7 @@ const techFeatures = [
     description:
       "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations without sacrificing decentralization or security.",
     color: "",
+    href: "/technology/subblocks",
     details: [
       { icon: Timer, title: "Sub-Second Confirmations", description: "Near-instant transaction finality for improved user experience." },
       { icon: Lock, title: "Layer 1 Security", description: "Full blockchain security without trusted intermediaries." },
@@ -146,6 +147,7 @@ const techFeatures = [
     description:
       "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.",
     color: "",
+    href: "/technology/native-tokens",
     details: [
       { icon: Coins, title: "One-Click Creation", description: "Issue tokens, stablecoins, or NFTs in a single transaction." },
       { icon: Layers, title: "DeFi Ready", description: "Native integration with all Ergo applications and protocols." },
@@ -158,6 +160,7 @@ const techFeatures = [
     description:
       "Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.",
     color: "",
+    href: "/technology/oracle-pools",
     details: [
       { icon: BarChart3, title: "Reliable Price Feeds", description: "Consensus-based data aggregation ensures accurate, manipulation-resistant prices." },
       { icon: Layers, title: "Universal Compatibility", description: "Any smart contract can access oracle data without special integrations." },
@@ -170,6 +173,7 @@ const techFeatures = [
     description:
       "Optional, backward-compatible extensions (velvet). New features can coexist with non-upgraded nodes; security depends on the specific proposal.",
     color: "",
+    href: "/technology/velvet-forks",
     details: [
       { icon: RefreshCw, title: "Backward Compatible", description: "No forced upgrades, no chain wars." },
       { icon: TrendingUp, title: "Future Proof", description: "Adopt innovations at your own pace." },
@@ -182,6 +186,7 @@ const techFeatures = [
     description:
       "Consensus-driven tuning of economic parameters (e.g., miner voting) with community input.",
     color: "",
+    href: "/technology/adaptive-emission",
     details: [
       { icon: CircleDollarSign, title: "Parameter Tuning", description: "Economic variables can be adjusted." },
       { icon: TrendingUp, title: "Economic Flexibility", description: "Adapt to changing network needs." },
@@ -315,7 +320,7 @@ export default function TechnologyPage() {
         <>
           “Tiny” blockchain proofs that allow <b>light clients</b>, instant mobile sync, and trustless cross-chain
           bridges without full nodes. More: {""}
-          <Link href="/technology/light-clients" className="underline hover:opacity-80">NIPoPoWs</Link>.
+                      <Link href="/technology/nipopows" className="underline hover:opacity-80">NIPoPoWs</Link>.
         </>
       ),
     },
@@ -474,7 +479,7 @@ export default function TechnologyPage() {
                   whileHover={{ scale: 1.03 }}
                   className="group motion-reduce:transform-none motion-reduce:transition-none"
                 >
-                  <Link href={feature.href || "#"} prefetch={false}>
+                  <Link href={feature.href || "/technology"} prefetch={false}>
                     <Card
                       className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-brand-primary-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
                     >
