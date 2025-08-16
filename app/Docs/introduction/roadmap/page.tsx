@@ -566,7 +566,6 @@ export default function RoadmapPage() {
                   </div>
                 </div>
               </div>
-            </div>
           </div>
 
           {/* Statistics */}
@@ -591,7 +590,6 @@ export default function RoadmapPage() {
             </div>
           </div>
         </section>
-
 
       </TabsContent>
 
