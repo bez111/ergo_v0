@@ -448,20 +448,7 @@ export default function RoadmapPage() {
           </div>
         </section>
 
-        {/* References Section */}
-        <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">References</h2>
-          <div className="bg-gray-800/50 rounded-xl p-6">
-            <h3 className="text-lg font-bold text-white mb-4">Key Documents</h3>
-            <ul className="text-gray-300 space-y-2">
-              <li>• <Link href="#" className="text-blue-400 hover:text-blue-300">(Nov 22) A Scalability Plan for Ergo</Link></li>
-              <li>• <Link href="#" className="text-blue-400 hover:text-blue-300">(Dec 21) Ergo protocol research and client development roadmap</Link></li>
-              <li>• <Link href="#" className="text-blue-400 hover:text-blue-300">(Sep 21) Long-term vision for Ergo</Link></li>
-              <li>• <Link href="#" className="text-blue-400 hover:text-blue-300">(Jul 21) Network congestion on Jul 10th, 2021</Link></li>
-              <li>• <Link href="#" className="text-blue-400 hover:text-blue-300">(May 20) Protecting mempool from computationally heavy transactions</Link></li>
-            </ul>
-          </div>
-        </section>
+
       </TabsContent>
 
       <TabsContent value="scaling">
