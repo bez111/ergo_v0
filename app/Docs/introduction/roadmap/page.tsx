@@ -370,273 +370,222 @@ export default function RoadmapPage() {
 
         {/* DeFi Ecosystem Section */}
         <section className="mb-12">
-          {/* Header with gradient background */}
-          <div className="bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20 rounded-2xl p-8 mb-8 border border-purple-500/20">
-            <div className="flex items-center gap-4 mb-4">
-              <div className="p-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl">
-                <Coins className="w-8 h-8 text-white" />
-              </div>
-              <div>
-                <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
-                  DeFi Ecosystem
-                </h2>
-                <div className="flex items-center gap-2 mt-1">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-sm font-medium">Growing Ecosystem</span>
-                </div>
-              </div>
-            </div>
-            <p className="text-gray-300 text-lg leading-relaxed">
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
+              <Coins className="w-6 h-6 text-brand-primary-400" />
+              DeFi Ecosystem
+            </h2>
+            <p className="text-gray-400 max-w-3xl mx-auto">
               Every new addition to our growing DeFi ecosystem contributes to the expansion of trustless collateral, the decentralized monetary base, and the supply of derivative assets.
             </p>
           </div>
           
-          {/* Enhanced grid with better visual hierarchy */}
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
-            {/* Decentralized Exchanges */}
-            <div className="group bg-gradient-to-br from-blue-500/10 via-blue-400/5 to-transparent rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
-                  <ArrowRight className="w-5 h-5 text-blue-400" />
-                </div>
-                <h3 className="text-xl font-bold text-blue-400">Decentralized Exchanges</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">ErgoDex (AMM + Yield Farming)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">ErgoAuctionHouse (P2P auctions)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">SkyHarbor (NFT Market)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">single-tx-swap (trustless P2P swaps)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">TokenJay (P2P escrow)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Crooks Finance</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <div className="w-4 h-4 bg-yellow-500/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+          {/* Cards in rows of 2 */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Decentralized Exchanges */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <ArrowRight className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <span className="text-sm">PalmyraComDex (Alpha live)</span>
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                    Decentralized Exchanges
+                  </h3>
                 </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">ErgoDex</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
                   </div>
-                  <span className="text-sm">Crystal Pool</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">ErgoAuctionHouse</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
                   </div>
-                  <span className="text-sm">Machina Finance</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Mew Finance</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">SkyHarbor</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">TokenJay</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">PalmyraComDex</span>
+                    <span className="px-2 py-1 bg-yellow-500/20 text-yellow-400 text-xs rounded-full border border-yellow-500/30">Alpha</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Stablecoins */}
-            <div className="group bg-gradient-to-br from-green-500/10 via-green-400/5 to-transparent rounded-2xl p-6 border border-green-400/20 hover:border-green-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 bg-green-500/20 rounded-lg group-hover:bg-green-500/30 transition-colors">
-                  <Shield className="w-5 h-5 text-green-400" />
-                </div>
-                <h3 className="text-xl font-bold text-green-400">Stablecoins</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">SigmaUSD stablecoin (Djed protocol)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+              {/* Stablecoins */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <span className="text-sm">SigmaUSD v2</span>
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                    Stablecoins
+                  </h3>
                 </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Gluon (gold stablecoin)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">SigmaUSD</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
                   </div>
-                  <span className="text-sm">DexyGold (seigniorage stablecoin)</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">Gluon</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">SigmaUSD v2</span>
+                    <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Planned</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">DexyGold</span>
+                    <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Planned</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Lending and Borrowing */}
-            <div className="group bg-gradient-to-br from-purple-500/10 via-purple-400/5 to-transparent rounded-2xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
-                  <TrendingUp className="w-5 h-5 text-purple-400" />
+              {/* Lending and Borrowing */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                    Lending & Borrowing
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-purple-400">Lending and Borrowing</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">SigmaFi</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">Duckpools</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">optionPools</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">EXLE</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">SigmaFi (P2P loans via bonds)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Duckpools (lending pools)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">optionPools (option markets)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">EXLE (uncollateralized lending)</span>
-                </div>
-              </div>
-            </div>
 
-            {/* Gaming and Metaverse */}
-            <div className="group bg-gradient-to-br from-orange-500/10 via-orange-400/5 to-transparent rounded-2xl p-6 border border-orange-400/20 hover:border-orange-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 bg-orange-500/20 rounded-lg group-hover:bg-orange-500/30 transition-colors">
-                  <Trophy className="w-5 h-5 text-orange-400" />
+              {/* Gaming and Metaverse */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <Trophy className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                    Gaming & Metaverse
+                  </h3>
                 </div>
-                <h3 className="text-xl font-bold text-orange-400">Gaming and Metaverse</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">BlitzTCG</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">CyberVerse</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">Cyberverse Multiplayer</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                </div>
               </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">BlitzTCG (trading card game)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">CyberVerse (metaverse gaming)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Cyberverse Multiplayer</span>
-                </div>
-              </div>
-            </div>
 
-            {/* Derivatives and Synthetics */}
-            <div className="group bg-gradient-to-br from-cyan-500/10 via-cyan-400/5 to-transparent rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
-                  <BarChart3 className="w-5 h-5 text-cyan-400" />
-                </div>
-                <h3 className="text-xl font-bold text-cyan-400">Derivatives and Synthetics</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">SigmaO (trustless options)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">HodlCoin (trustless ERG derivative)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">AuctionCoin (emission via auctions)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Hodlbox (long-term locking)</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+              {/* Derivatives */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <BarChart3 className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <span className="text-sm">OptionCoin</span>
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                    Derivatives
+                  </h3>
                 </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">SigmaO</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
                   </div>
-                  <span className="text-sm">ChainCash</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">HodlCoin</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">AuctionCoin</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">OptionCoin</span>
+                    <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Planned</span>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Interoperability */}
-            <div className="group bg-gradient-to-br from-indigo-500/10 via-indigo-400/5 to-transparent rounded-2xl p-6 border border-indigo-400/20 hover:border-indigo-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/10">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="p-2 bg-indigo-500/20 rounded-lg group-hover:bg-indigo-500/30 transition-colors">
-                  <Network className="w-5 h-5 text-indigo-400" />
-                </div>
-                <h3 className="text-xl font-bold text-indigo-400">Interoperability</h3>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Oracle Pools</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">Rosen Bridge</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">ADA Bridge</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">BTC Bridge</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
-                  <CheckCircle className="w-4 h-4 text-green-500" />
-                  <span className="text-sm">EVM Bridge</span>
-                </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+              {/* Interoperability */}
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <Network className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <span className="text-sm">Sigma Chains</span>
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                    Interoperability
+                  </h3>
                 </div>
-                <div className="flex items-center gap-2 text-gray-400">
-                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">Oracle Pools</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
                   </div>
-                  <span className="text-sm">Trustless Relays</span>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">Rosen Bridge</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">ADA Bridge</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">BTC Bridge</span>
+                    <span className="px-2 py-1 bg-green-500/20 text-green-400 text-xs rounded-full border border-green-500/30">Live</span>
+                  </div>
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-300 text-sm">Sigma Chains</span>
+                    <span className="px-2 py-1 bg-gray-500/20 text-gray-400 text-xs rounded-full border border-gray-500/30">Planned</span>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Statistics Footer */}
-          <div className="mt-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-xl p-6 border border-gray-700/50">
+          {/* Statistics */}
+          <div className="mt-8 bg-brand-primary-400/10 border border-brand-primary-400/20 rounded-xl p-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-2xl font-bold text-green-400">25+</div>
+                <div className="text-2xl font-bold text-brand-primary-400">25+</div>
                 <div className="text-sm text-gray-400">Live Projects</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-blue-400">6</div>
+                <div className="text-2xl font-bold text-brand-primary-400">6</div>
                 <div className="text-sm text-gray-400">Categories</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-purple-400">15+</div>
+                <div className="text-2xl font-bold text-brand-primary-400">15+</div>
                 <div className="text-sm text-gray-400">In Development</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-orange-400">100%</div>
+                <div className="text-2xl font-bold text-brand-primary-400">100%</div>
                 <div className="text-sm text-gray-400">Decentralized</div>
               </div>
             </div>
