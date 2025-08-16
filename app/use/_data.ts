@@ -10,7 +10,7 @@ export type UseCase = {
 
 export const useCases: UseCase[] = [
   {
-    id: "stablecoins",
+    id: "algorithmic-stablecoins",
     icon: "trending-up",
     title: "Algorithmic Stablecoins",
     subtitle: "Stable value storage without centralized control",
@@ -19,7 +19,7 @@ export const useCases: UseCase[] = [
     supportedProjects: ["SigmaUSD", "SigmaRSV"],
   },
   {
-    id: "privacy",
+    id: "privacy-confidentiality",
     icon: "shield",
     title: "Privacy & Confidentiality",
     subtitle: "Financial privacy in an increasingly surveilled world",
@@ -28,7 +28,7 @@ export const useCases: UseCase[] = [
     supportedProjects: ["ErgoMixer"],
   },
   {
-    id: "bridges",
+    id: "cross-chain-bridges",
     icon: "link",
     title: "Cross-Chain Bridges",
     subtitle: "Secure, trustless value transfer between blockchains",
@@ -37,7 +37,7 @@ export const useCases: UseCase[] = [
     supportedProjects: ["Rosen Bridge"],
   },
   {
-    id: "daos",
+    id: "daos-alternative-economies",
     icon: "users",
     title: "DAOs & Alternative Economies",
     subtitle: "Community governance and alternative economic systems",
@@ -46,7 +46,7 @@ export const useCases: UseCase[] = [
     supportedProjects: ["Paideia"],
   },
   {
-    id: "nfts",
+    id: "nfts-digital-assets",
     icon: "palette",
     title: "NFTs & Digital Assets",
     subtitle: "True digital ownership, dynamic properties",
@@ -55,7 +55,7 @@ export const useCases: UseCase[] = [
     supportedProjects: ["SkyHarbor", "Auction House", "Lilium"],
   },
   {
-    id: "oracles",
+    id: "oracles-data-feeds",
     icon: "eye",
     title: "Oracles & Data Feeds",
     subtitle: "Bringing real-world data on-chain",
@@ -64,7 +64,7 @@ export const useCases: UseCase[] = [
     supportedProjects: ["Oracle Pools", "Ergo Oracle Core"],
   },
   {
-    id: "identity",
+    id: "identity-reputation",
     icon: "brain",
     title: "Identity & Reputation",
     subtitle: "Self-sovereign identity & Web3 reputation",
@@ -73,7 +73,7 @@ export const useCases: UseCase[] = [
     supportedProjects: [],
   },
   {
-    id: "gaming",
+    id: "gaming-metaverse",
     icon: "gamepad",
     title: "Gaming & Metaverse",
     subtitle: "Next-gen gaming assets & digital worlds",
