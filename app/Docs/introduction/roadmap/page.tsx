@@ -370,80 +370,275 @@ export default function RoadmapPage() {
 
         {/* DeFi Ecosystem Section */}
         <section className="mb-12">
-          <h2 className="text-2xl font-bold text-white mb-6">DeFi Ecosystem</h2>
-          <p className="text-gray-300 mb-6">
-            Every new addition to our growing DeFi ecosystem contributes to the expansion of trustless collateral, the decentralized monetary base, and the supply of derivative assets.
-          </p>
+          {/* Header with gradient background */}
+          <div className="bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-cyan-900/20 rounded-2xl p-8 mb-8 border border-purple-500/20">
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl">
+                <Coins className="w-8 h-8 text-white" />
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">
+                  DeFi Ecosystem
+                </h2>
+                <div className="flex items-center gap-2 mt-1">
+                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                  <span className="text-green-400 text-sm font-medium">Growing Ecosystem</span>
+                </div>
+              </div>
+            </div>
+            <p className="text-gray-300 text-lg leading-relaxed">
+              Every new addition to our growing DeFi ecosystem contributes to the expansion of trustless collateral, the decentralized monetary base, and the supply of derivative assets.
+            </p>
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div className="bg-blue-400/10 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-blue-400 mb-4">Decentralized Exchanges</h3>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• ErgoDex (AMM + Yield Farming) ✓</li>
-                <li>• ErgoAuctionHouse (P2P auctions) ✓</li>
-                <li>• SkyHarbor (NFT Market) ✓</li>
-                <li>• single-tx-swap (trustless P2P swaps) ✓</li>
-                <li>• TokenJay (P2P escrow) ✓</li>
-                <li>• Crooks Finance ✓</li>
-                <li>• PalmyraComDex (Alpha live)</li>
-                <li>• Crystal Pool</li>
-                <li>• Machina Finance</li>
-                <li>• Mew Finance ✓</li>
-              </ul>
+          {/* Enhanced grid with better visual hierarchy */}
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {/* Decentralized Exchanges */}
+            <div className="group bg-gradient-to-br from-blue-500/10 via-blue-400/5 to-transparent rounded-2xl p-6 border border-blue-400/20 hover:border-blue-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 bg-blue-500/20 rounded-lg group-hover:bg-blue-500/30 transition-colors">
+                  <ArrowRight className="w-5 h-5 text-blue-400" />
+                </div>
+                <h3 className="text-xl font-bold text-blue-400">Decentralized Exchanges</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">ErgoDex (AMM + Yield Farming)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">ErgoAuctionHouse (P2P auctions)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">SkyHarbor (NFT Market)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">single-tx-swap (trustless P2P swaps)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">TokenJay (P2P escrow)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">Crooks Finance</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <div className="w-4 h-4 bg-yellow-500/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">PalmyraComDex (Alpha live)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">Crystal Pool</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">Machina Finance</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">Mew Finance</span>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-green-400/10 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-green-400 mb-4">Stablecoins</h3>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• SigmaUSD stablecoin (Djed protocol) ✓</li>
-                <li>• SigmaUSD v2</li>
-                <li>• Gluon (gold stablecoin) ✓</li>
-                <li>• DexyGold (seigniorage stablecoin)</li>
-              </ul>
+            {/* Stablecoins */}
+            <div className="group bg-gradient-to-br from-green-500/10 via-green-400/5 to-transparent rounded-2xl p-6 border border-green-400/20 hover:border-green-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-green-500/10">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 bg-green-500/20 rounded-lg group-hover:bg-green-500/30 transition-colors">
+                  <Shield className="w-5 h-5 text-green-400" />
+                </div>
+                <h3 className="text-xl font-bold text-green-400">Stablecoins</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">SigmaUSD stablecoin (Djed protocol)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">SigmaUSD v2</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">Gluon (gold stablecoin)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">DexyGold (seigniorage stablecoin)</span>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-purple-400/10 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-purple-400 mb-4">Lending and Borrowing</h3>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• SigmaFi (P2P loans via bonds) ✓</li>
-                <li>• Duckpools (lending pools) ✓</li>
-                <li>• optionPools (option markets) ✓</li>
-                <li>• EXLE (uncollateralized lending) ✓</li>
-              </ul>
+            {/* Lending and Borrowing */}
+            <div className="group bg-gradient-to-br from-purple-500/10 via-purple-400/5 to-transparent rounded-2xl p-6 border border-purple-400/20 hover:border-purple-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 bg-purple-500/20 rounded-lg group-hover:bg-purple-500/30 transition-colors">
+                  <TrendingUp className="w-5 h-5 text-purple-400" />
+                </div>
+                <h3 className="text-xl font-bold text-purple-400">Lending and Borrowing</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">SigmaFi (P2P loans via bonds)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">Duckpools (lending pools)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">optionPools (option markets)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">EXLE (uncollateralized lending)</span>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-orange-400/10 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-orange-400 mb-4">Gaming and Metaverse</h3>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• BlitzTCG (trading card game) ✓</li>
-                <li>• CyberVerse (metaverse gaming) ✓</li>
-                <li>• Cyberverse Multiplayer ✓</li>
-              </ul>
+            {/* Gaming and Metaverse */}
+            <div className="group bg-gradient-to-br from-orange-500/10 via-orange-400/5 to-transparent rounded-2xl p-6 border border-orange-400/20 hover:border-orange-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 bg-orange-500/20 rounded-lg group-hover:bg-orange-500/30 transition-colors">
+                  <Trophy className="w-5 h-5 text-orange-400" />
+                </div>
+                <h3 className="text-xl font-bold text-orange-400">Gaming and Metaverse</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">BlitzTCG (trading card game)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">CyberVerse (metaverse gaming)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">Cyberverse Multiplayer</span>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-cyan-400/10 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-cyan-400 mb-4">Derivatives and Synthetics</h3>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• SigmaO (trustless options) ✓</li>
-                <li>• HodlCoin (trustless ERG derivative) ✓</li>
-                <li>• AuctionCoin (emission via auctions) ✓</li>
-                <li>• Hodlbox (long-term locking) ✓</li>
-                <li>• OptionCoin</li>
-                <li>• ChainCash</li>
-              </ul>
+            {/* Derivatives and Synthetics */}
+            <div className="group bg-gradient-to-br from-cyan-500/10 via-cyan-400/5 to-transparent rounded-2xl p-6 border border-cyan-400/20 hover:border-cyan-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/10">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 bg-cyan-500/20 rounded-lg group-hover:bg-cyan-500/30 transition-colors">
+                  <BarChart3 className="w-5 h-5 text-cyan-400" />
+                </div>
+                <h3 className="text-xl font-bold text-cyan-400">Derivatives and Synthetics</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">SigmaO (trustless options)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">HodlCoin (trustless ERG derivative)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">AuctionCoin (emission via auctions)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">Hodlbox (long-term locking)</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">OptionCoin</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">ChainCash</span>
+                </div>
+              </div>
             </div>
 
-            <div className="bg-indigo-400/10 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-indigo-400 mb-4">Interoperability</h3>
-              <ul className="text-gray-300 space-y-2 text-sm">
-                <li>• Oracle Pools ✓</li>
-                <li>• Rosen Bridge ✓</li>
-                <li>• ADA Bridge ✓</li>
-                <li>• BTC Bridge ✓</li>
-                <li>• EVM Bridge ✓</li>
-                <li>• Sigma Chains</li>
-                <li>• Trustless Relays</li>
-              </ul>
+            {/* Interoperability */}
+            <div className="group bg-gradient-to-br from-indigo-500/10 via-indigo-400/5 to-transparent rounded-2xl p-6 border border-indigo-400/20 hover:border-indigo-400/40 transition-all duration-300 hover:shadow-lg hover:shadow-indigo-500/10">
+              <div className="flex items-center gap-3 mb-5">
+                <div className="p-2 bg-indigo-500/20 rounded-lg group-hover:bg-indigo-500/30 transition-colors">
+                  <Network className="w-5 h-5 text-indigo-400" />
+                </div>
+                <h3 className="text-xl font-bold text-indigo-400">Interoperability</h3>
+              </div>
+              <div className="space-y-3">
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">Oracle Pools</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">Rosen Bridge</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">ADA Bridge</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">BTC Bridge</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+                  <CheckCircle className="w-4 h-4 text-green-500" />
+                  <span className="text-sm">EVM Bridge</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">Sigma Chains</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-400">
+                  <div className="w-4 h-4 bg-gray-600/20 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
+                  </div>
+                  <span className="text-sm">Trustless Relays</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Statistics Footer */}
+          <div className="mt-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50 rounded-xl p-6 border border-gray-700/50">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+              <div>
+                <div className="text-2xl font-bold text-green-400">25+</div>
+                <div className="text-sm text-gray-400">Live Projects</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-blue-400">6</div>
+                <div className="text-sm text-gray-400">Categories</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-purple-400">15+</div>
+                <div className="text-sm text-gray-400">In Development</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-orange-400">100%</div>
+                <div className="text-sm text-gray-400">Decentralized</div>
+              </div>
             </div>
           </div>
         </section>
