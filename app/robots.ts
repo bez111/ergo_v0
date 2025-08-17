@@ -15,13 +15,23 @@ export default function robots(): MetadataRoute.Robots {
           '/_next/',
           '/static/',
           '/search', // block internal search result pages
+          '/*?sort=*', // block sort parameters
+          '/*?filter=*', // block filter parameters
+          '/*?view=*', // block view parameters
+          '/*?ref=*', // block referrer parameters
+          '/*?utm_*', // block UTM parameters
+          '/*?page=6', // block deep pagination
+          '/*?page=7',
+          '/*?page=8',
+          '/*?page=9',
+          '/*?page=1*', // block page=10+
+          '/*?page=2*', // block page=20+
           '/*.json$',
           '/*_buildManifest.js$',
           '/*_middlewareManifest.js$',
           '/*_ssgManifest.js$',
           '/*.js.map$',
         ],
-        // crawlDelay: 1, // Removed to avoid validation issues
       },
       {
         userAgent: 'Googlebot',
@@ -84,8 +94,12 @@ export default function robots(): MetadataRoute.Robots {
     ],
     sitemap: [
       `${baseUrl}/sitemap.xml`,
-      `${baseUrl}/sitemap-0.xml`, // Next.js auto-generated sitemaps
+      `${baseUrl}/sitemap-pages.xml`,
+      `${baseUrl}/sitemap-blog.xml`,
+      `${baseUrl}/sitemap-docs.xml`,
+      `${baseUrl}/sitemap-use-cases.xml`,
+      `${baseUrl}/sitemap-technology.xml`,
     ],
-    // host: baseUrl, // Removed - non-standard directive that can cause validation issues
+    host: baseUrl,
   }
 } 
