@@ -399,7 +399,7 @@ export default function AlgorithmicStablecoinsPage() {
                             <ul className="space-y-2 text-neutral-400 text-sm">
                               <li>• Pegged to $1 USD</li>
                               <li>• Backed by ERG reserves</li>
-                              <li>• Mintable when reserve ratio &gt; 400%</li>
+                              <li>• Mintable when reserve ratio {'>'} 400%</li>
                               <li>• Redeemable for $1 worth of ERG</li>
                             </ul>
                           </div>
