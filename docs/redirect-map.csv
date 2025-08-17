@@ -1,0 +1,33 @@
+from,to,code,reason
+/Docs,/docs,301,URL normalization - lowercase
+/Docs/introduction,/docs/introduction,301,URL normalization - lowercase
+/Docs/ecosystem,/docs/ecosystem,301,URL normalization - lowercase
+/Docs/developers,/docs/developers,301,URL normalization - lowercase
+/Docs/miners,/docs/miners,301,URL normalization - lowercase
+/Docs/contribute,/docs/contribute,301,URL normalization - lowercase
+/Docs/why-ergo,/docs/why-ergo,301,URL normalization - lowercase
+/Docs/ecosystem/Standards,/docs/ecosystem/standards,301,URL normalization - lowercase
+/Docs/introduction/key-features,/docs/introduction/key-features,301,URL normalization - lowercase
+/Docs/introduction/roadmap,/docs/introduction/roadmap,301,URL normalization - lowercase
+/Docs/introduction/research-whitepapers,/docs/introduction/research-whitepapers,301,URL normalization - lowercase
+/Docs/introduction/entities,/docs/introduction/entities,301,URL normalization - lowercase
+/Docs/introduction/wallets,/docs/introduction/wallets,301,URL normalization - lowercase
+/Docs/introduction/resources,/docs/introduction/resources,301,URL normalization - lowercase
+/Docs/introduction/events,/docs/introduction/events,301,URL normalization - lowercase
+/Docs/introduction/glossary,/docs/introduction/glossary,301,URL normalization - lowercase
+/Docs/introduction/faq,/docs/introduction/faq,301,URL normalization - lowercase
+/use/use-cases,/use/cases,301,URL simplification
+/use/use-cases/algorithmic-stablecoins,/use/cases/stablecoins,301,URL simplification
+/use/use-cases/privacy-confidentiality,/use/cases/privacy,301,URL simplification
+/use/use-cases/cross-chain-bridges,/use/cases/bridges,301,URL simplification
+/use/use-cases/daos-alternative-economies,/use/cases/daos,301,URL simplification
+/use/use-cases/nfts-digital-assets,/use/cases/nfts,301,URL simplification
+/use/use-cases/oracles-data-feeds,/use/cases/oracles,301,URL simplification
+/use/use-cases/identity-reputation,/use/cases/identity,301,URL simplification
+/use/use-cases/gaming-metaverse,/use/cases/gaming,301,URL simplification
+/blog/page/1,/blog,301,Remove page=1 parameter
+/ecosystem/page/1,/ecosystem,301,Remove page=1 parameter
+/docs/page/1,/docs,301,Remove page=1 parameter
+/technology/page/1,/technology,301,Remove page=1 parameter
+/learn/page/1,/learn,301,Remove page=1 parameter
+/use/page/1,/use,301,Remove page=1 parameter 
