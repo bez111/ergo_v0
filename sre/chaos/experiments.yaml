@@ -1,0 +1,215 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: chaos-testing
+
+---
+# Experiment 1: Random Pod Failure
+apiVersion: chaos-mesh.org/v1alpha1
+kind: PodChaos
+metadata:
+  name: pod-failure
+  namespace: chaos-testing
+spec:
+  action: pod-kill
+  mode: random-max-percent
+  value: "30"
+  duration: "60s"
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: ergo-web
+  scheduler:
+    cron: "@daily"
+
+---
+# Experiment 2: Network Latency
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: network-latency
+  namespace: chaos-testing
+spec:
+  action: delay
+  mode: all
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: ergo-web
+  delay:
+    latency: "300ms"
+    correlation: "25"
+    jitter: "100ms"
+  duration: "5m"
+  scheduler:
+    cron: "0 */6 * * *"
+
+---
+# Experiment 3: Database Connection Loss
+apiVersion: chaos-mesh.org/v1alpha1
+kind: NetworkChaos
+metadata:
+  name: db-partition
+  namespace: chaos-testing
+spec:
+  action: partition
+  mode: all
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: postgres
+  direction: both
+  target:
+    selector:
+      namespaces:
+        - production
+      labelSelectors:
+        app: ergo-web
+  duration: "30s"
+
+---
+# Experiment 4: CPU Stress
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: cpu-stress
+  namespace: chaos-testing
+spec:
+  mode: one
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: ergo-web
+  stressors:
+    cpu:
+      workers: 2
+      load: 80
+  duration: "3m"
+
+---
+# Experiment 5: Memory Pressure
+apiVersion: chaos-mesh.org/v1alpha1
+kind: StressChaos
+metadata:
+  name: memory-stress
+  namespace: chaos-testing
+spec:
+  mode: random-max-percent
+  value: "50"
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: ergo-web
+  stressors:
+    memory:
+      workers: 1
+      size: "512Mi"
+  duration: "2m"
+
+---
+# Experiment 6: Disk I/O Stress
+apiVersion: chaos-mesh.org/v1alpha1
+kind: IOChaos
+metadata:
+  name: io-delay
+  namespace: chaos-testing
+spec:
+  action: latency
+  mode: all
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: postgres
+  volumePath: /var/lib/postgresql/data
+  path: "*"
+  delay: "100ms"
+  percent: 50
+  duration: "1m"
+
+---
+# Experiment 7: DNS Chaos
+apiVersion: chaos-mesh.org/v1alpha1
+kind: DNSChaos
+metadata:
+  name: dns-failure
+  namespace: chaos-testing
+spec:
+  action: error
+  mode: all
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: ergo-web
+  patterns:
+    - "postgres.*"
+    - "redis.*"
+  duration: "30s"
+
+---
+# Experiment 8: Time Drift
+apiVersion: chaos-mesh.org/v1alpha1
+kind: TimeChaos
+metadata:
+  name: time-skew
+  namespace: chaos-testing
+spec:
+  mode: random-max-percent
+  value: "25"
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: ergo-web
+  timeOffset: "300s"
+  duration: "5m"
+
+---
+# Experiment 9: HTTP Chaos
+apiVersion: chaos-mesh.org/v1alpha1
+kind: HTTPChaos
+metadata:
+  name: http-abort
+  namespace: chaos-testing
+spec:
+  mode: all
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      app: ergo-web
+  target: Request
+  port: 3000
+  method: GET
+  path: "/api/*"
+  abort: true
+  duration: "1m"
+  scheduler:
+    cron: "0 2 * * 6"  # Saturday 2 AM
+
+---
+# Experiment 10: Kernel Panic
+apiVersion: chaos-mesh.org/v1alpha1
+kind: KernelChaos
+metadata:
+  name: kernel-panic
+  namespace: chaos-testing
+spec:
+  mode: one
+  selector:
+    namespaces:
+      - production
+    labelSelectors:
+      chaos-testing: "enabled"
+  failKernRequest:
+    failtype: 0
+    headers:
+      - "Accept"
+    probability: 10
+  duration: "1m" 

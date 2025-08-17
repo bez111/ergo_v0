@@ -5,6 +5,9 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['@phosphor-icons/react', 'lucide-react'],
     optimizeCss: true,
+    // Memory optimization
+    workerThreads: false,
+    cpus: 1,
   },
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',

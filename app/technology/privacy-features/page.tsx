@@ -61,7 +61,7 @@ const TECHNOLOGIES = [
   },
 ] as const
 
-export const ADVANTAGES = [
+const ADVANTAGES = [
   "No trusted setup needed — pure cryptographic security",
   "Flexible privacy features usable in dApps, DeFi, and NFTs",
   "Open-source, peer-reviewed cryptography",

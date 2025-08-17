@@ -165,8 +165,8 @@ export default function Home() {
         Skip to main content
       </a>
       
-      <main id="main-content" className="flex flex-col bg-black text-white relative">
-        <header role="banner">
+      <main className="flex flex-col bg-black text-white relative">
+        <header>
           <HeroSection />
         </header>
         

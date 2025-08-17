@@ -1,7 +1,53 @@
 {
-  "extends": "next/core-web-vitals",
+  "extends": [
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "unused-imports"],
   "rules": {
+    // Запрет console.log в production
+    "no-console": ["warn", { "allow": ["warn", "error", "info"] }],
+    
+    // Неиспользуемые импорты
+    "unused-imports/no-unused-imports": "error",
+    "unused-imports/no-unused-vars": [
+      "error",
+      {
+        "vars": "all",
+        "varsIgnorePattern": "^_",
+        "args": "after-used",
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    
+    // TypeScript правила
+    "@typescript-eslint/no-unused-vars": ["error", {
+      "argsIgnorePattern": "^_",
+      "varsIgnorePattern": "^_"
+    }],
+    "@typescript-eslint/no-explicit-any": "warn",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-empty-function": "warn",
+    
+    // Качество кода
+    "no-debugger": "error",
+    "no-alert": "error",
+    "prefer-const": "error",
+    "no-var": "error",
+    "eqeqeq": ["error", "always"],
+    "no-duplicate-imports": "error",
+    
+    // React/Next.js
     "react/no-unescaped-entities": "off",
-    "@next/next/no-page-custom-font": "off"
-  }
+    "react-hooks/exhaustive-deps": "warn",
+    "@next/next/no-img-element": "error"
+  },
+  "overrides": [
+    {
+      "files": ["*.js", "*.jsx"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
 } 

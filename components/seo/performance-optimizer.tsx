@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import { logger } from "@/lib/logger"
 
 // Declare gtag type for Google Analytics
 declare global {
@@ -140,7 +141,9 @@ function initAdvancedWebVitalsTracking() {
 
       // Track LCP element for optimization insights
       const lcpElement = lastEntry.element
-      console.log('🎯 LCP:', lcp, 'Element:', lcpElement?.tagName, lcpElement?.className)
+      // Log LCP element
+      logger.perf('LCP', lcp, 2500)
+      logger.log('LCP Element:', lcpElement?.tagName, lcpElement?.className)
 
       // Send to analytics
       if (typeof window.gtag !== 'undefined') {
@@ -159,7 +162,9 @@ function initAdvancedWebVitalsTracking() {
       const entries = list.getEntries()
       entries.forEach((entry: any) => {
         const fid = entry.processingStart - entry.startTime
-        console.log('⚡ FID:', fid, 'Event:', entry.name)
+        // Log FID
+        logger.perf('FID', fid, 100)
+        logger.log('FID Event:', entry.name)
 
         if (typeof window.gtag !== 'undefined') {
           window.gtag('event', 'web_vitals', {
@@ -186,7 +191,8 @@ function initAdvancedWebVitalsTracking() {
         }
       }
 
-      console.log('📐 CLS:', clsValue, 'Entries:', clsEntries.length)
+      // Log CLS
+      logger.metric('CLS', { value: clsValue, entries: clsEntries.length })
 
       if (typeof window.gtag !== 'undefined') {
         window.gtag('event', 'web_vitals', {
@@ -208,7 +214,12 @@ function initAdvancedWebVitalsTracking() {
         const domContentLoaded = navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart
         const loadComplete = navigation.loadEventEnd - navigation.loadEventStart
 
-        console.log('🚀 TTFB:', ttfb, 'DCL:', domContentLoaded, 'Load:', loadComplete)
+        // Log performance timing
+        logger.metric('Performance Timing', {
+          TTFB: ttfb,
+          DCL: domContentLoaded,
+          Load: loadComplete
+        })
 
         if (typeof window.gtag !== 'undefined') {
           window.gtag('event', 'timing_complete', {
@@ -224,14 +235,14 @@ function initAdvancedWebVitalsTracking() {
   if ('PerformanceObserver' in window) {
     const resourceObserver = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry: any) => {
-        // Flag slow resources
+        // Slow resources warning
         if (entry.duration > 1000) {
-          console.warn('🐌 Slow resource:', entry.name, entry.duration + 'ms')
+          logger.warn('🐌 Slow resource:', entry.name, entry.duration + 'ms')
         }
 
-        // Flag large resources
-        if (entry.transferSize > 1000000) { // 1MB
-          console.warn('📦 Large resource:', entry.name, (entry.transferSize / 1024 / 1024).toFixed(2) + 'MB')
+        // Large resources warning
+        if (entry.transferSize > 500000) {
+          logger.warn('📦 Large resource:', entry.name, (entry.transferSize / 1024 / 1024).toFixed(2) + 'MB')
         }
       })
     })
