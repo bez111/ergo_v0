@@ -4,7 +4,8 @@ const nextConfig = {
   // Performance optimizations for Core Web Vitals
   experimental: {
     optimizePackageImports: ['@phosphor-icons/react', 'lucide-react'],
-    optimizeCss: true,
+    // Отключаю optimizeCss из-за проблем с памятью
+    // optimizeCss: true,
     // Memory optimization
     workerThreads: false,
     cpus: 1,
