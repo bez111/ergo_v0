@@ -1350,38 +1350,31 @@ export function LocalSearch() {
                     <div className="space-y-1">
                       {searchHistory.slice(0, 5).map((historyItem, index) => (
                         <div key={index} className="flex items-center justify-between group">
-                          <div
+                          <button
                             onClick={() => {
                               setQuery(historyItem);
                               performSearch(historyItem);
                             }}
-                            className="flex-1 text-left px-3 py-2 text-sm text-gray-400 hover:text-brand-primary-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono flex items-center justify-between cursor-pointer"
-                            role="button"
-                            tabIndex={0}
-                            onKeyDown={(e) => {
-                              if (e.key === 'Enter' || e.key === ' ') {
-                                setQuery(historyItem);
-                                performSearch(historyItem);
-                              }
-                            }}
+                            className="flex-1 text-left px-3 py-2 text-sm text-gray-400 hover:text-brand-primary-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono flex items-center justify-between"
                           >
                             <span>{historyItem}</span>
-                            <button
+                            <span
                               onClick={(e) => {
                                 e.stopPropagation();
                                 togglePinSearch(historyItem);
                               }}
-                              className={`opacity-0 group-hover:opacity-100 transition-opacity ${
+                              className={`opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer ${
                                 pinnedSearches.includes(historyItem) ? 'text-brand-primary-400' : 'text-gray-600'
                               }`}
                               aria-label={`Pin search: ${historyItem}`}
                             >
                               <Pin className="w-3 h-3" />
-                            </button>
-                          </div>
+                            </span>
+                          </button>
                           <button
                             onClick={() => removeFromHistory(historyItem)}
                             className="opacity-0 group-hover:opacity-100 p-1 hover:text-red-400 transition-all duration-200"
+                            aria-label={`Remove ${historyItem} from history`}
                           >
                             <X className="w-3 h-3" />
                           </button>
