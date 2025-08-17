@@ -11,11 +11,74 @@ const nextConfig = {
   },
   poweredByHeader: false,
   generateEtags: false,
+  // Bundle optimization
+  webpack: (config, { dev, isServer }) => {
+    // Optimize bundle splitting
+    if (!dev && !isServer) {
+      config.optimization = {
+        ...config.optimization,
+        splitChunks: {
+          chunks: 'all',
+          cacheGroups: {
+            default: false,
+            vendors: false,
+            // Vendor chunk
+            vendor: {
+              name: 'vendor',
+              chunks: 'all',
+              test: /node_modules/,
+              priority: 20,
+            },
+            // Common components
+            common: {
+              name: 'common',
+              minChunks: 2,
+              chunks: 'all',
+              priority: 10,
+              reuseExistingChunk: true,
+              enforce: true,
+            },
+            // UI components
+            ui: {
+              name: 'ui',
+              test: /components\/ui/,
+              chunks: 'all',
+              priority: 15,
+            },
+            // React/Next.js framework
+            framework: {
+              name: 'framework',
+              test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
+              chunks: 'all',
+              priority: 30,
+            },
+          },
+        },
+        runtimeChunk: {
+          name: 'runtime',
+        },
+      }
+    }
+
+    // Tree shaking for production
+    if (!dev) {
+      config.optimization.usedExports = true
+      config.optimization.sideEffects = false
+    }
+
+    return config
+  },
+
+  // Optimize production build
+  productionBrowserSourceMaps: false,
+  compress: true,
+
+  // Optimize images
   images: {
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    formats: ['image/avif', 'image/webp'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 31536000, // 1 year
+    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: false,
@@ -79,9 +142,68 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Old use case URLs to new structure
       {
-        source: '/start/introduction/',
-        destination: '/start/introduction',
+        source: '/use/use-cases/privacy',
+        destination: '/use/use-cases/privacy-confidentiality',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/stablecoins',
+        destination: '/use/use-cases/algorithmic-stablecoins',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/bridges',
+        destination: '/use/use-cases/cross-chain-bridges',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/daos',
+        destination: '/use/use-cases/daos-alternative-economies',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/nfts',
+        destination: '/use/use-cases/nfts-digital-assets',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/oracles',
+        destination: '/use/use-cases/oracles-data-feeds',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/identity',
+        destination: '/use/use-cases/identity-reputation',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/gaming',
+        destination: '/use/use-cases/gaming-metaverse',
+        permanent: true,
+      },
+      // Old Docs URLs
+      {
+        source: '/Docs/developers/developers-resources',
+        destination: '/Docs/developers',
+        permanent: true,
+      },
+      {
+        source: '/Docs/developers/getting-started',
+        destination: '/Docs/developers/tutorials',
+        permanent: true,
+      },
+      // Redirect index.html to clean URLs
+      {
+        source: '/:path*/index.html',
+        destination: '/:path*',
+        permanent: true,
+      },
+      // Remove trailing slashes
+      {
+        source: '/:path+/',
+        destination: '/:path+',
         permanent: true,
       },
     ]
