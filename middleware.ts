@@ -1,54 +1,73 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
-import { checkSoftRedirect } from './lib/soft-redirects'
+import urlManager from './lib/url-manager'
 
 export function middleware(request: NextRequest) {
-  const response = NextResponse.next()
-  const url = request.nextUrl
+  const { pathname, search } = request.nextUrl
+  const searchParams = new URLSearchParams(search)
   
-  // === ФАЗА 2: Мягкие редиректы для новых страниц ===
-  const softRedirect = checkSoftRedirect(url.pathname)
-  if (softRedirect.shouldRedirect && softRedirect.destination) {
-    const redirectUrl = new URL(softRedirect.destination, request.url)
-    redirectUrl.search = url.search // Сохраняем параметры
-    return NextResponse.redirect(redirectUrl, softRedirect.statusCode)
-  }
-  
-  // === ФАЗА 1: Очистка параметров ===
-  const searchParams = new URLSearchParams(url.search)
-  let needsRedirect = false
-  
-  // 1. Удаляем page=1
-  if (searchParams.get('page') === '1') {
-    searchParams.delete('page')
-    needsRedirect = true
-  }
-  
-  // 2. Удаляем UTM и tracking параметры
-  const noiseParams = [
-    'utm_source', 'utm_medium', 'utm_campaign', 
-    'utm_term', 'utm_content', 'utm_id',
-    'ref', 'fbclid', 'gclid', 'msclkid',
-    'mc_cid', 'mc_eid', '_ga', '_gl'
-  ]
-  
-  for (const param of noiseParams) {
-    if (searchParams.has(param)) {
-      searchParams.delete(param)
-      needsRedirect = true
+  // ============================================
+  // 1. CHECK REDIRECTS
+  // ============================================
+  const redirect = urlManager.utils.checkRedirect(pathname)
+  if (redirect.shouldRedirect) {
+    if (redirect.statusCode === 410) {
+      return new NextResponse('This page has been permanently removed', { status: 410 })
+    }
+    if (redirect.destination) {
+      const url = request.nextUrl.clone()
+      url.pathname = redirect.destination
+      urlManager.utils.logUrlEvent({
+        type: 'redirect',
+        from: pathname,
+        to: redirect.destination,
+        statusCode: redirect.statusCode
+      })
+      return NextResponse.redirect(url, redirect.statusCode!)
     }
   }
   
-  // Если нужен редирект - делаем его
-  if (needsRedirect) {
-    const cleanUrl = new URL(url.pathname, request.url)
-    cleanUrl.search = searchParams.toString()
-    return NextResponse.redirect(cleanUrl, 301)
+  // ============================================
+  // 2. NORMALIZE URL
+  // ============================================
+  const normalizedPath = urlManager.utils.normalizeUrl(pathname)
+  if (normalizedPath !== pathname) {
+    const url = request.nextUrl.clone()
+    url.pathname = normalizedPath
+    urlManager.utils.logUrlEvent({
+      type: 'normalize',
+      from: pathname,
+      to: normalizedPath
+    })
+    return NextResponse.redirect(url, 301)
   }
+  
+  // ============================================
+  // 3. CLEAN QUERY PARAMETERS
+  // ============================================
+  const cleanedParams = urlManager.utils.cleanQueryParams(searchParams)
+  const originalParamsString = searchParams.toString()
+  const cleanedParamsString = cleanedParams.toString()
+  
+  if (originalParamsString !== cleanedParamsString) {
+    const url = request.nextUrl.clone()
+    url.search = cleanedParamsString
+    urlManager.utils.logUrlEvent({
+      type: 'clean',
+      from: `${pathname}?${originalParamsString}`,
+      to: `${pathname}${cleanedParamsString ? `?${cleanedParamsString}` : ''}`
+    })
+    return NextResponse.redirect(url, 301)
+  }
+  
+  // ============================================
+  // 4. CREATE RESPONSE WITH HEADERS
+  // ============================================
+  const response = NextResponse.next()
   
   // Security Headers
   response.headers.set('X-DNS-Prefetch-Control', 'on')
-  response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')
+  response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload')
   response.headers.set('X-Frame-Options', 'SAMEORIGIN')
   response.headers.set('X-Content-Type-Options', 'nosniff')
   response.headers.set('X-XSS-Protection', '1; mode=block')
@@ -74,32 +93,27 @@ export function middleware(request: NextRequest) {
   
   response.headers.set('Content-Security-Policy', csp)
   
-  // Handle pagination redirects (legacy support)
-  if (url.pathname.endsWith('/page/1')) {
-    const cleanUrl = url.pathname.replace('/page/1', '')
-    return NextResponse.redirect(new URL(cleanUrl || '/', request.url), 301)
-  }
-  
-  // Remove trailing slashes (except for root)
-  if (url.pathname !== '/' && url.pathname.endsWith('/')) {
-    const cleanUrl = url.pathname.slice(0, -1)
-    return NextResponse.redirect(new URL(cleanUrl, request.url), 301)
-  }
-  
-  // Block crawlers from certain paths
-  if (url.pathname.startsWith('/api/') || 
-      url.pathname.startsWith('/admin/') ||
-      url.pathname.startsWith('/_next/')) {
+  // SEO Headers
+  if (urlManager.utils.shouldNoIndex(pathname)) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow')
+  } else {
+    response.headers.set('X-Robots-Tag', 'index, follow')
   }
   
-  // Add canonical URL header
-  const baseUrl = 'https://ergoblockchain.org'
-  const canonical = `${baseUrl}${url.pathname}${url.search ? `?${searchParams.toString()}` : ''}`
-  response.headers.set('Link', `<${canonical}>; rel="canonical"`)
+  // Canonical URL
+  if (urlManager.utils.shouldHaveCanonical(pathname)) {
+    const canonical = urlManager.utils.getCanonicalUrl(pathname, cleanedParams)
+    response.headers.set('Link', `<${canonical}>; rel="canonical"`)
+    urlManager.utils.logUrlEvent({
+      type: 'canonical',
+      from: pathname,
+      to: canonical
+    })
+  }
   
   // Performance hints
-  response.headers.set('X-Robots-Tag', 'all')
+  response.headers.set('X-Content-Type-Options', 'nosniff')
+  response.headers.set('X-Powered-By', 'Ergo Platform')
   
   return response
 }
@@ -107,11 +121,12 @@ export function middleware(request: NextRequest) {
 export const config = {
   matcher: [
     /*
-     * Match all request paths except for the ones starting with:
+     * Match all request paths except:
      * - _next/static (static files)
-     * - _next/image (image optimization files)
-     * - favicon.ico (favicon file)
+     * - _next/image (image optimization)
+     * - favicon.ico, robots.txt, sitemap.xml
+     * - images, fonts
      */
-    '/((?!_next/static|_next/image|favicon.ico).*)',
+    '/((?!_next/static|_next/image|favicon.ico|robots.txt|sitemap.xml|.*\\.(?:jpg|jpeg|gif|png|svg|ico|webp|woff|woff2|ttf|otf|eot)).*)',
   ],
 } 
