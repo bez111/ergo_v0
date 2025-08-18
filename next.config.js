@@ -14,7 +14,7 @@ const nextConfig = {
     removeConsole: process.env.NODE_ENV === 'production',
   },
   poweredByHeader: false,
-  generateEtags: false,
+  generateEtags: true, // Включаем ETags для лучшего кеширования
   // Bundle optimization
   webpack: (config, { dev, isServer }) => {
     // Optimize bundle splitting
@@ -100,19 +100,25 @@ const nextConfig = {
       { protocol: 'https', hostname: 'badge.fury.io' },
     ],
   },
-  // Headers for performance
+  
+  // SRE-уровень заголовков для performance и security
   async headers() {
     return [
+      // HTML страницы - оптимизированное кеширование
       {
-        source: '/(.*)',
+        source: '/((?!api|_next/static|_next/image|favicon.ico).*)',
         headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=300, stale-while-revalidate=1800, stale-if-error=600'
+          },
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on'
           },
           {
             key: 'Strict-Transport-Security',
-            value: 'max-age=63072000; includeSubDomains; preload'
+            value: 'max-age=31536000; includeSubDomains; preload'
           },
           {
             key: 'X-Frame-Options',
@@ -121,24 +127,90 @@ const nextConfig = {
           {
             key: 'X-Content-Type-Options',
             value: 'nosniff'
+          },
+          {
+            key: 'Content-Security-Policy',
+            value: "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://vitals.vercel-insights.com; frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com; media-src 'self' https:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'self'; upgrade-insecure-requests"
+          },
+          {
+            key: 'Permissions-Policy',
+            value: 'camera=(), microphone=(), geolocation=()'
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin'
+          },
+          {
+            key: 'X-Powered-By',
+            value: 'Ergo Platform'
+          },
+          {
+            key: 'X-Robots-Tag',
+            value: 'index, follow'
+          },
+          {
+            key: 'X-XSS-Protection',
+            value: '1; mode=block'
+          },
+          {
+            key: 'Vary',
+            value: 'Accept-Encoding'
           }
         ],
       },
+      // API кешируемые GET запросы
       {
-        source: '/api/(.*)',
+        source: '/api/(rss|sitemap|search)',
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
+            value: 'public, s-maxage=120, stale-while-revalidate=600, stale-if-error=300'
+          },
+          {
+            key: 'Vary',
+            value: 'Accept-Encoding'
           }
         ]
       },
+      // Статические ресурсы - максимальное кеширование
       {
         source: '/_next/static/(.*)',
         headers: [
           {
             key: 'Cache-Control',
             value: 'public, max-age=31536000, immutable'
+          },
+          {
+            key: 'Cross-Origin-Resource-Policy',
+            value: 'cross-origin'
+          }
+        ]
+      },
+      // Изображения - длительное кеширование
+      {
+        source: '/_next/image(.*)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, s-maxage=2592000, stale-while-revalidate=2592000'
+          },
+          {
+            key: 'Accept-Ranges',
+            value: 'bytes'
+          }
+        ]
+      },
+      // Шрифты и иконки
+      {
+        source: '/(.*)\\.(woff|woff2|ttf|otf|eot|ico|png|jpg|jpeg|svg|gif|webp|avif)',
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable'
+          },
+          {
+            key: 'Cross-Origin-Resource-Policy',
+            value: 'cross-origin'
           }
         ]
       }
@@ -146,56 +218,56 @@ const nextConfig = {
   },
   async redirects() {
     return [
-      // Old use case URLs to new structure
+      // ИСПРАВЛЕННЫЕ use case URLs - теперь правильная структура
       {
-        source: '/use/use-cases/privacy',
-        destination: '/use/use-cases/privacy-confidentiality',
+        source: '/use/use-cases/privacy-confidentiality',
+        destination: '/use/cases/privacy',
         permanent: true,
       },
       {
-        source: '/use/use-cases/stablecoins',
-        destination: '/use/use-cases/algorithmic-stablecoins',
+        source: '/use/use-cases/algorithmic-stablecoins',
+        destination: '/use/cases/stablecoins',
         permanent: true,
       },
       {
-        source: '/use/use-cases/bridges',
-        destination: '/use/use-cases/cross-chain-bridges',
+        source: '/use/use-cases/cross-chain-bridges',
+        destination: '/use/cases/bridges',
         permanent: true,
       },
       {
-        source: '/use/use-cases/daos',
-        destination: '/use/use-cases/daos-alternative-economies',
+        source: '/use/use-cases/daos-alternative-economies',
+        destination: '/use/cases/daos',
         permanent: true,
       },
       {
-        source: '/use/use-cases/nfts',
-        destination: '/use/use-cases/nfts-digital-assets',
+        source: '/use/use-cases/nfts-digital-assets',
+        destination: '/use/cases/nfts',
         permanent: true,
       },
       {
-        source: '/use/use-cases/oracles',
-        destination: '/use/use-cases/oracles-data-feeds',
+        source: '/use/use-cases/oracles-data-feeds',
+        destination: '/use/cases/oracles',
         permanent: true,
       },
       {
-        source: '/use/use-cases/identity',
-        destination: '/use/use-cases/identity-reputation',
+        source: '/use/use-cases/identity-reputation',
+        destination: '/use/cases/identity',
         permanent: true,
       },
       {
-        source: '/use/use-cases/gaming',
-        destination: '/use/use-cases/gaming-metaverse',
+        source: '/use/use-cases/gaming-metaverse',
+        destination: '/use/cases/gaming',
         permanent: true,
       },
       // Old Docs URLs
       {
         source: '/Docs/developers/developers-resources',
-        destination: '/Docs/developers',
+        destination: '/docs/developers',
         permanent: true,
       },
       {
         source: '/Docs/developers/getting-started',
-        destination: '/Docs/developers/tutorials',
+        destination: '/docs/developers/tutorials',
         permanent: true,
       },
       // Redirect index.html to clean URLs

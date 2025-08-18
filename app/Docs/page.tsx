@@ -4,7 +4,7 @@ import Script from 'next/script'
 import { generateDocsSchema } from './docs-schema'
 
 export const metadata: Metadata = {
-  title: 'Documentation | Ergo Platform',
+  title: 'Documentation',
   description: 'Comprehensive documentation for Ergo Platform. Learn about blockchain technology, smart contracts, development tools, and ecosystem applications.',
   keywords: 'Ergo documentation, blockchain docs, smart contracts, ErgoScript, development guide, API reference, mining guide, wallet setup',
   openGraph: {

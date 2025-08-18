@@ -52,9 +52,9 @@ export default function UsePage() {
       position: i + 1,
       item: {
         "@type": "WebPage",
-        "@id": `${base}/use-cases/${u.id}`,
+        "@id": `${base}/cases/${u.id}`,
         name: u.title,
-        url: `${base}/use-cases/${u.id}`,
+        url: `${base}/cases/${u.id}`,
         description: u.description,
         inLanguage: "en",
         keywords: (u.tags || []).join(", "),
