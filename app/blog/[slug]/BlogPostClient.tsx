@@ -282,7 +282,10 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                 className="w-full h-auto object-cover"
                 priority
                 fetchPriority="high"
-                decoding="async"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1200px"
+                quality={90}
+                placeholder={post.blurDataURL ? "blur" : "empty"}
+                blurDataURL={post.blurDataURL}
                 style={{ aspectRatio: '1200/630' }}
               />
             </motion.div>

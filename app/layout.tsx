@@ -9,6 +9,7 @@ import { SchemaOrg } from "@/components/seo/schema-org"
 import { ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/lib/schema-constants"
 import { GoogleAnalytics } from "@/components/analytics/google-analytics"
 // import { WebVitalsRUM } from "@/components/analytics/web-vitals-rum"
+import { RUMProvider } from "@/app/_components/rum-provider"
 import { PerformanceOptimizer } from "@/components/seo/performance-optimizer"
 import { CoreWebVitalsDashboard } from "@/components/seo/core-web-vitals-dashboard"
 
@@ -178,6 +179,7 @@ export default function RootLayout({
         
         {/* Web Vitals RUM tracking */}
         {/* <WebVitalsRUM /> */}
+        <RUMProvider />
       </body>
     </html>
   )

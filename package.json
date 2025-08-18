@@ -13,6 +13,11 @@
     "clean": "rm -rf .next node_modules package-lock.json && npm install",
     "audit:deps": "npx depcheck",
     "audit:bundle": "npx @next/bundle-analyzer",
+    "lighthouse": "lhci autorun",
+    "lighthouse:mobile": "lhci autorun --collect.settings.preset=mobile",
+    "lighthouse:desktop": "lhci autorun --collect.settings.preset=desktop",
+    "perf:test": "npm run build && npm run lighthouse",
+    "perf:analyze": "ANALYZE=true next build",
     "build:search": "node scripts/build-search-index.js",
     "search:index": "npm run build:search && echo 'Search index built successfully'"
   },

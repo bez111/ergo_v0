@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  compress: true, // Включаем gzip/brotli сжатие
   // Performance optimizations for Core Web Vitals
   experimental: {
-    optimizePackageImports: ['@phosphor-icons/react', 'lucide-react'],
+    optimizePackageImports: ['@phosphor-icons/react', 'lucide-react', 'framer-motion'],
     // Отключаю optimizeCss из-за проблем с памятью
     // optimizeCss: true,
     // Memory optimization
@@ -11,7 +12,9 @@ const nextConfig = {
     cpus: 1,
   },
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
+    removeConsole: process.env.NODE_ENV === 'production' ? {
+      exclude: ['error', 'warn'] // Оставляем error и warn в production
+    } : false,
   },
   poweredByHeader: false,
   generateEtags: true, // Включаем ETags для лучшего кеширования
@@ -77,12 +80,12 @@ const nextConfig = {
   productionBrowserSourceMaps: false,
   compress: true,
 
-  // Optimize images
+  // Optimize images for Core Web Vitals
   images: {
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60 * 60 * 24 * 365, // 1 year
+    minimumCacheTTL: 31536000, // 1 year in seconds
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: false,
@@ -110,11 +113,19 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, s-maxage=300, stale-while-revalidate=1800, stale-if-error=600'
+            value: 'public, s-maxage=60, stale-while-revalidate=600, stale-if-error=86400'
           },
           {
             key: 'X-DNS-Prefetch-Control',
             value: 'on'
+          },
+          {
+            key: 'Timing-Allow-Origin',
+            value: '*'
+          },
+          {
+            key: 'Server-Timing',
+            value: 'edge;desc="Edge Time";dur=1.0'
           },
           {
             key: 'Strict-Transport-Security',
