@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-08-18T00:38:57.301Z",
+  "summary": {
+    "total": 6,
+    "passed": 4,
+    "failed": 1,
+    "skipped": 1
+  },
+  "results": [
+    {
+      "name": "Remove page=1 parameter",
+      "from": "/?page=1",
+      "expected": "/",
+      "expectedCode": 301,
+      "actualCode": 301,
+      "actualLocation": "/",
+      "passed": true
+    },
+    {
+      "name": "Remove UTM parameters",
+      "from": "/blog?utm_source=test&utm_medium=email",
+      "expected": "/blog",
+      "expectedCode": 301,
+      "actualCode": 301,
+      "actualLocation": "/blog",
+      "passed": true
+    },
+    {
+      "name": "Remove multiple tracking parameters",
+      "from": "/ecosystem?fbclid=123&gclid=456&ref=twitter",
+      "expected": "/ecosystem",
+      "expectedCode": 301,
+      "actualCode": 301,
+      "actualLocation": "/ecosystem",
+      "passed": true
+    },
+    {
+      "name": "Remove trailing slash",
+      "from": "/technology/",
+      "expected": "/technology",
+      "expectedCode": 301,
+      "actualCode": 308,
+      "actualLocation": "/technology",
+      "passed": false
+    },
+    {
+      "name": "Legacy pagination redirect",
+      "from": "/blog/page/1",
+      "expected": "/blog",
+      "expectedCode": 301,
+      "actualCode": 301,
+      "actualLocation": "/blog",
+      "passed": true
+    }
+  ],
+  "phases": {
+    "phase1": {
+      "name": "Parameter Cleaning",
+      "status": "active",
+      "tests": [
+        {
+          "name": "Remove page=1 parameter",
+          "from": "/?page=1",
+          "expected": "/",
+          "expectedCode": 301,
+          "actualCode": 301,
+          "actualLocation": "/",
+          "passed": true
+        },
+        {
+          "name": "Remove UTM parameters",
+          "from": "/blog?utm_source=test&utm_medium=email",
+          "expected": "/blog",
+          "expectedCode": 301,
+          "actualCode": 301,
+          "actualLocation": "/blog",
+          "passed": true
+        },
+        {
+          "name": "Remove multiple tracking parameters",
+          "from": "/ecosystem?fbclid=123&gclid=456&ref=twitter",
+          "expected": "/ecosystem",
+          "expectedCode": 301,
+          "actualCode": 301,
+          "actualLocation": "/ecosystem",
+          "passed": true
+        }
+      ]
+    },
+    "phase2": {
+      "name": "Soft Redirects",
+      "status": "pending",
+      "tests": []
+    },
+    "phase3": {
+      "name": "Lowercase Migration",
+      "status": "planned",
+      "tests": []
+    }
+  }
+}

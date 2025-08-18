@@ -1,9 +1,50 @@
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
+import { checkSoftRedirect } from './lib/soft-redirects'
 
 export function middleware(request: NextRequest) {
   const response = NextResponse.next()
   const url = request.nextUrl
+  
+  // === ФАЗА 2: Мягкие редиректы для новых страниц ===
+  const softRedirect = checkSoftRedirect(url.pathname)
+  if (softRedirect.shouldRedirect && softRedirect.destination) {
+    const redirectUrl = new URL(softRedirect.destination, request.url)
+    redirectUrl.search = url.search // Сохраняем параметры
+    return NextResponse.redirect(redirectUrl, softRedirect.statusCode)
+  }
+  
+  // === ФАЗА 1: Очистка параметров ===
+  const searchParams = new URLSearchParams(url.search)
+  let needsRedirect = false
+  
+  // 1. Удаляем page=1
+  if (searchParams.get('page') === '1') {
+    searchParams.delete('page')
+    needsRedirect = true
+  }
+  
+  // 2. Удаляем UTM и tracking параметры
+  const noiseParams = [
+    'utm_source', 'utm_medium', 'utm_campaign', 
+    'utm_term', 'utm_content', 'utm_id',
+    'ref', 'fbclid', 'gclid', 'msclkid',
+    'mc_cid', 'mc_eid', '_ga', '_gl'
+  ]
+  
+  for (const param of noiseParams) {
+    if (searchParams.has(param)) {
+      searchParams.delete(param)
+      needsRedirect = true
+    }
+  }
+  
+  // Если нужен редирект - делаем его
+  if (needsRedirect) {
+    const cleanUrl = new URL(url.pathname, request.url)
+    cleanUrl.search = searchParams.toString()
+    return NextResponse.redirect(cleanUrl, 301)
+  }
   
   // Security Headers
   response.headers.set('X-DNS-Prefetch-Control', 'on')
@@ -33,7 +74,7 @@ export function middleware(request: NextRequest) {
   
   response.headers.set('Content-Security-Policy', csp)
   
-  // Handle pagination redirects
+  // Handle pagination redirects (legacy support)
   if (url.pathname.endsWith('/page/1')) {
     const cleanUrl = url.pathname.replace('/page/1', '')
     return NextResponse.redirect(new URL(cleanUrl || '/', request.url), 301)
@@ -46,9 +87,16 @@ export function middleware(request: NextRequest) {
   }
   
   // Block crawlers from certain paths
-  if (url.pathname.startsWith('/api/') || url.pathname.startsWith('/admin/')) {
+  if (url.pathname.startsWith('/api/') || 
+      url.pathname.startsWith('/admin/') ||
+      url.pathname.startsWith('/_next/')) {
     response.headers.set('X-Robots-Tag', 'noindex, nofollow')
   }
+  
+  // Add canonical URL header
+  const baseUrl = 'https://ergoblockchain.org'
+  const canonical = `${baseUrl}${url.pathname}${url.search ? `?${searchParams.toString()}` : ''}`
+  response.headers.set('Link', `<${canonical}>; rel="canonical"`)
   
   // Performance hints
   response.headers.set('X-Robots-Tag', 'all')
