@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
+import { rateLimit, apiLimiter } from '@/lib/rate-limiter'
 
 // API endpoint для Real User Monitoring метрик
 export async function POST(request: NextRequest) {
+  // Применяем rate limiting
+  const rateLimitResult = await rateLimit(request, apiLimiter)
+  if (rateLimitResult) return rateLimitResult
+  
   try {
     const data = await request.json()
     

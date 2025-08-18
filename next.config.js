@@ -211,20 +211,8 @@ const nextConfig = {
           }
         ]
       },
-      // Шрифты и иконки
-      {
-        source: '/:path*\\.(woff|woff2|ttf|otf|eot|ico|png|jpg|jpeg|svg|gif|webp|avif)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
-          },
-          {
-            key: 'Cross-Origin-Resource-Policy',
-            value: 'cross-origin'
-          }
-        ]
-      }
+      // Удалено: проблемный regex pattern для статических файлов
+      // В production используйте CDN для оптимального кеширования
     ]
   },
   async redirects() {

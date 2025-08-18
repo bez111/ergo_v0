@@ -19,7 +19,12 @@
     "perf:test": "npm run build && npm run lighthouse",
     "perf:analyze": "ANALYZE=true next build",
     "build:search": "node scripts/build-search-index.js",
-    "search:index": "npm run build:search && echo 'Search index built successfully'"
+    "search:index": "npm run build:search && echo 'Search index built successfully'",
+    "test": "playwright test",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:report": "playwright show-report"
   },
   "dependencies": {
     "@algolia/autocomplete-plugin-algolia-insights": "^1.19.2",
@@ -84,6 +89,8 @@
     "eslint": "^8.56.0",
     "eslint-config-next": "14.0.4",
     "eslint-plugin-unused-imports": "^4.1.4",
+    "@playwright/test": "^1.40.1",
+    "axe-playwright": "^2.0.1",
     "postcss": "^8.5",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
