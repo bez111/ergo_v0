@@ -24,7 +24,9 @@
     "test:ui": "playwright test --ui",
     "test:debug": "playwright test --debug",
     "test:headed": "playwright test --headed",
-    "test:report": "playwright show-report"
+    "test:report": "playwright show-report",
+    "health": "node scripts/health-check.js",
+    "health:prod": "BASE_URL=https://ergoblockchain.org node scripts/health-check.js"
   },
   "dependencies": {
     "@algolia/autocomplete-plugin-algolia-insights": "^1.19.2",
