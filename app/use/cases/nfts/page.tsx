@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation'
+// Импортируем оригинальный компонент вместо редиректа
+import NFTsDigitalAssetsPage from '@/app/use/use-cases/nfts-digital-assets/page'
 
-// Временный редирект на существующую страницу
-// В будущем здесь будет полноценная страница
-export default function NFTsPage() {
-  redirect('/use/use-cases/nfts-digital-assets')
-} 
+// Используем тот же компонент для новой URL структуры
+export default NFTsDigitalAssetsPage 

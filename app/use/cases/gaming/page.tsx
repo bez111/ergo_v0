@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation'
+// Импортируем оригинальный компонент вместо редиректа
+import GamingMetaversePage from '@/app/use/use-cases/gaming-metaverse/page'
 
-// Временный редирект на существующую страницу
-// В будущем здесь будет полноценная страница
-export default function GamingPage() {
-  redirect('/use/use-cases/gaming-metaverse')
-} 
+// Используем тот же компонент для новой URL структуры
+export default GamingMetaversePage 

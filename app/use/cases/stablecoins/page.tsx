@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation'
+// Импортируем оригинальный компонент вместо редиректа
+import AlgorithmicStablecoinsPage from '@/app/use/use-cases/algorithmic-stablecoins/page'
 
-// Временный редирект на существующую страницу
-// В будущем здесь будет полноценная страница
-export default function StablecoinsPage() {
-  redirect('/use/use-cases/algorithmic-stablecoins')
-} 
+// Используем тот же компонент для новой URL структуры
+export default AlgorithmicStablecoinsPage 

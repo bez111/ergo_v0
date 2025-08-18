@@ -1,0 +1,352 @@
+import React from "react";
+import { ArrowLeft, Code, Database, GitBranch, BookOpen, Download, CheckCircle } from "lucide-react";
+import Link from "next/link";
+import { CodeBlock } from "@/components/ui";
+
+export default function MerkleBatchProofsImplementationPage() {
+  return (
+    <div className="min-h-screen bg-neutral-900 text-white">
+      <div className="container mx-auto px-4 py-8">
+        {/* HERO Section */}
+        <section className="mb-8">
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 bg-blue-500/20 rounded-xl flex items-center justify-center">
+              <Code className="w-8 h-8 text-blue-400" />
+            </div>
+            <div>
+              <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
+                Using Merkle Batch Proofs on Ergo
+              </h1>
+              <p className="text-lg text-gray-300 mt-2">
+                Comprehensive guide for implementing Merkle Batch Proofs in Ergo applications
+              </p>
+            </div>
+          </div>
+          
+          <div className="mb-6">
+            <Link
+              href="/Docs/developers/cryptographic-primitives/merkle-tree/batch-proofs"
+              className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
+            >
+              <ArrowLeft className="w-5 h-5 mr-2" />
+              Back to Merkle Batch Proofs
+            </Link>
+          </div>
+        </section>
+
+        {/* Overview Section */}
+        <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <BookOpen className="w-6 h-6 text-green-400" />
+            Overview
+          </h2>
+          <p className="text-gray-300 mb-6">
+            While full support for Merkle Trees and Batch Proofs is available in the <code className="bg-neutral-700 px-2 py-1 rounded">sigma-rust</code> library, which is extensively used in Rust-based Ergo applications, integration into the core JVM-based <code className="bg-neutral-700 px-2 py-1 rounded">sigmastate-interpreter</code> for direct use within ErgoScript remains in progress. There is an open issue in the <code className="bg-neutral-700 px-2 py-1 rounded">sigmastate-interpreter</code> repository to support Merkle Trees natively, which would allow for direct handling of static data within ErgoScript, enhancing efficiency in various blockchain operations, such as proof-of-transaction and securing extension block data.
+          </p>
+          <p className="text-gray-300 mb-6">
+            Until this feature is fully integrated into <code className="bg-neutral-700 px-2 py-1 rounded">sigmastate-interpreter</code>, developers working in JVM-based environments can leverage <code className="bg-neutral-700 px-2 py-1 rounded">scrypto</code>, which provides essential cryptographic functionalities, including Merkle Tree management and Batch Proof generation and verification.
+          </p>
+          <p className="text-gray-300 mb-6">
+            For more details on the ongoing integration efforts, you can refer to the <a href="https://github.com/ergoplatform/ergo/issues/296" className="text-blue-400 hover:text-blue-300 underline">GitHub issue #296</a> in the Ergo repository.
+          </p>
+          <p className="text-gray-300">
+            Now, let's delve into the practical steps of using Merkle Batch Proofs in Ergo.
+          </p>
+        </section>
+
+        {/* Sigma-Rust Section */}
+        <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Database className="w-6 h-6 text-orange-400" />
+            Using Sigma-Rust for Rust-based Applications
+          </h2>
+          <p className="text-gray-300 mb-6">
+            The <code className="bg-neutral-700 px-2 py-1 rounded">sigma-rust</code> library provides comprehensive tools to create, manage, and verify Merkle Batch Proofs in Rust-based Ergo applications. Below is a step-by-step guide with code examples.
+          </p>
+
+          <div className="space-y-8">
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 1: Setting Up the Environment</h3>
+              <p className="text-gray-300 mb-4">
+                Before you begin working with Merkle Batch Proofs in <code className="bg-neutral-700 px-2 py-1 rounded">sigma-rust</code>, ensure your environment is properly set up:
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-green-400">1. Clone the Sigma-Rust Repository</h4>
+                  <CodeBlock language="typescript"
+                    children={`git clone https://github.com/ergoplatform/sigma-rust.git
+cd sigma-rust`}
+                  />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-green-400">2. Install Rust</h4>
+                  <p className="text-gray-300 mb-2">
+                    Follow the instructions on <a href="https://rust-lang.org/tools/install" className="text-blue-400 hover:text-blue-300 underline">rust-lang.org</a> to install Rust if you haven't done so.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-green-400">3. Build the Project</h4>
+                  <CodeBlock language="typescript"
+                    children={`cargo build`}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 2: Creating a Merkle Tree</h3>
+              <p className="text-gray-300 mb-4">
+                First, create a Merkle tree using the <code className="bg-neutral-700 px-2 py-1 rounded">MerkleTree</code> structure provided by the <code className="bg-neutral-700 px-2 py-1 rounded">sigma-rust</code> library.
+              </p>
+              <CodeBlock language="typescript"
+                children={`use sigma_merkle_tree::merkletree::MerkleTree;
+use sigma_merkle_tree::MerkleNode;
+
+fn create_merkle_tree() {
+    let data_1 = [1u8; 32];
+    let data_2 = [2u8; 32];
+    let data_3 = [3u8; 32];
+
+    let node_1 = MerkleNode::from_bytes(data_1);
+    let node_2 = MerkleNode::from_bytes(data_2);
+    let node_3 = MerkleNode::from_bytes(data_3);
+
+    let tree = MerkleTree::new(vec![node_1, node_2, node_3]);
+    println!("Merkle Root: {:?}", tree.root_hash());
+}`}
+              />
+              <p className="text-gray-300 mt-4">
+                <strong>Code Reference</strong>: The <code className="bg-neutral-700 px-2 py-1 rounded">MerkleTree</code> structure is implemented in the <a href="https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/merkletree.rs" className="text-orange-400 hover:text-orange-300 underline">merkletree.rs</a> file.
+              </p>
+            </div>
+
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 3: Generating a Batch Merkle Proof</h3>
+              <p className="text-gray-300 mb-4">
+                Once the Merkle tree is created, you can generate a batch Merkle proof for specific leaves. This proof can be used to verify the inclusion of multiple elements.
+              </p>
+              <CodeBlock language="typescript"
+                children={`use sigma_merkle_tree::batchmerkleproof::BatchMerkleProof;
+
+fn generate_batch_merkle_proof(tree: &MerkleTree) {
+    let proof = tree.proof_by_indices(&[0, 2]).unwrap();
+    println!("Batch Merkle Proof: {:?}", proof);
+}`}
+              />
+              <p className="text-gray-300 mt-4">
+                <strong>Code Reference</strong>: The <code className="bg-neutral-700 px-2 py-1 rounded">BatchMerkleProof</code> structure and its methods are implemented in the <a href="https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs" className="text-orange-400 hover:text-orange-300 underline">batchmerkleproof.rs</a> file.
+              </p>
+            </div>
+
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 4: Verifying the Batch Merkle Proof</h3>
+              <p className="text-gray-300 mb-4">
+                The generated proof can be verified against the Merkle root to ensure that the specified leaves are indeed part of the tree.
+              </p>
+              <CodeBlock language="typescript"
+                children={`fn verify_batch_merkle_proof(tree: &MerkleTree, proof: &BatchMerkleProof) {
+    assert!(proof.valid(tree.root_hash().as_ref()));
+    println!("Proof is valid.");
+}`}
+              />
+            </div>
+
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 5: Serialization and Deserialization</h3>
+              <p className="text-gray-300 mb-4">
+                Merkle batch proofs can be serialized and deserialized for storage or transmission, which is crucial for many blockchain applications where proofs are shared between nodes or stored for future verification.
+              </p>
+              <CodeBlock language="typescript"
+                children={`use sigma_ser::ScorexSerializable;
+
+fn serialize_and_deserialize_proof(proof: &BatchMerkleProof) {
+    let serialized_proof = proof.scorex_serialize_bytes().unwrap();
+    let deserialized_proof = BatchMerkleProof::scorex_parse_bytes(&serialized_proof).unwrap();
+    
+    assert_eq!(proof, &deserialized_proof);
+    println!("Serialization and deserialization successful.");
+}`}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Scrypto Section */}
+        <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <GitBranch className="w-6 h-6 text-purple-400" />
+            Using Scrypto for JVM-based Applications
+          </h2>
+          <p className="text-gray-300 mb-6">
+            For JVM-based applications, <code className="bg-neutral-700 px-2 py-1 rounded">scrypto</code> provides similar functionalities to <code className="bg-neutral-700 px-2 py-1 rounded">sigma-rust</code>. It works closely with the <code className="bg-neutral-700 px-2 py-1 rounded">sigmastate-interpreter</code> to handle cryptographic operations, including Merkle Trees and Batch Proofs.
+          </p>
+
+          <div className="space-y-8">
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 1: Setting Up the Environment</h3>
+              <p className="text-gray-300 mb-4">
+                To work with <code className="bg-neutral-700 px-2 py-1 rounded">scrypto</code>, follow these steps:
+              </p>
+              <div className="space-y-4">
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-green-400">1. Clone the Scrypto Repository</h4>
+                  <CodeBlock language="typescript"
+                    children={`git clone https://github.com/input-output-hk/scrypto.git
+cd scrypto`}
+                  />
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-green-400">2. Ensure Scala and SBT Are Installed</h4>
+                  <p className="text-gray-300 mb-2">
+                    You can install Scala and SBT by following the instructions on <a href="https://www.scala-lang.org/download/" className="text-blue-400 hover:text-blue-300 underline">scala-lang.org</a>.
+                  </p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold mb-2 text-green-400">3. Build the Project</h4>
+                  <CodeBlock language="typescript"
+                    children={`sbt compile`}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 2: Creating a Merkle Tree</h3>
+              <p className="text-gray-300 mb-4">
+                The Merkle Tree can be constructed using the <code className="bg-neutral-700 px-2 py-1 rounded">MerkleTree</code> class in Scrypto, similarly to how it's done in Rust.
+              </p>
+              <CodeBlock language="typescript"
+                children={String.raw`import scorex.crypto.authds.merkle.MerkleTree
+import scorex.crypto.authds.LeafData
+import scorex.crypto.hash.Blake2b256
+
+implicit val hf = Blake2b256
+
+val leafData = Seq.fill(5)(LeafData @@ scorex.utils.Random.randomBytes(32))
+val tree = MerkleTree(leafData)
+println(s"Merkle Root: \${tree.rootHash}")`}
+              />
+              <p className="text-gray-300 mt-4">
+                <strong>Code Reference</strong>: The <code className="bg-neutral-700 px-2 py-1 rounded">MerkleTree</code> class is implemented in the <a href="https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala" className="text-orange-400 hover:text-orange-300 underline">MerkleTree.scala</a> file.
+              </p>
+            </div>
+
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 3: Generating a Batch Merkle Proof</h3>
+              <p className="text-gray-300 mb-4">
+                In Scrypto, you can generate a batch Merkle proof by specifying the indices of the leaves you want to prove.
+              </p>
+              <CodeBlock language="typescript"
+                children={String.raw`import scorex.crypto.authds.merkle.{BatchMerkleProof, Leaf}
+
+val batchProof = tree.proofByIndices(Seq(0, 2)).get
+println(s"Batch Merkle Proof: \${batchProof}")`}
+              />
+              <p className="text-gray-300 mt-4">
+                <strong>Code Reference</strong>: The <code className="bg-neutral-700 px-2 py-1 rounded">BatchMerkleProof</code> class and its methods are implemented in the <a href="https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala" className="text-orange-400 hover:text-orange-300 underline">BatchMerkleProof.scala</a> file.
+              </p>
+            </div>
+
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 4: Verifying the Batch Merkle Proof</h3>
+              <p className="text-gray-300 mb-4">
+                You can then verify the generated proof to ensure that the elements are part of the Merkle tree.
+              </p>
+              <CodeBlock language="typescript"
+                children={String.raw`val isValid = batchProof.valid(tree.rootHash)
+println(s"Batch Merkle Proof is valid: \${isValid}")`}
+              />
+            </div>
+
+            <div className="bg-neutral-900/50 rounded-lg p-6">
+              <h3 className="text-xl font-bold mb-4 text-cyan-400">Step 5: Serialization and Deserialization</h3>
+              <p className="text-gray-300 mb-4">
+                To serialize and deserialize the proof, Scrypto provides dedicated classes and methods, ensuring the proof can be efficiently stored or transmitted.
+              </p>
+              <CodeBlock language="typescript"
+                children={String.raw`import scorex.crypto.authds.merkle.serialization.BatchMerkleProofSerializer
+
+val serializer = new BatchMerkleProofSerializer[Digest32, Blake2b256.type]
+val serializedProof = serializer.serialize(batchProof)
+val deserializedProof = serializer.deserialize(serializedProof).get
+
+assert(batchProof == deserializedProof)
+println("Serialization and deserialization successful.")`}
+              />
+              <p className="text-gray-300 mt-4">
+                <strong>Code Reference</strong>: The <code className="bg-neutral-700 px-2 py-1 rounded">BatchMerkleProofSerializer</code> class is implemented in the <a href="https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala" className="text-orange-400 hover:text-orange-300 underline">BatchMerkleProofSerializer.scala</a> file.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Example Section */}
+        <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700 mb-8">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <CheckCircle className="w-6 h-6 text-green-400" />
+            Example: End-to-End Workflow in Scrypto
+          </h2>
+          <p className="text-gray-300 mb-6">
+            Here's an example tying together all the steps in Scrypto:
+          </p>
+          <CodeBlock language="typescript"
+            children={String.raw`import scorex.crypto.authds.merkle.{MerkleTree, Leaf, BatchMerkleProof}
+import scorex.crypto.authds.merkle.serialization.BatchMerkleProofSerializer
+import scorex.crypto.hash.Blake2b256
+import scorex.crypto.hash.Digest32
+
+implicit val hf = Blake2b256
+
+// Create the Merkle tree
+val leafData = Seq.fill(5)(LeafData @@ scorex.utils.Random.randomBytes(32))
+val tree = MerkleTree(leafData)
+
+// Generate the batch Merkle proof
+val batchProof = tree.proofByIndices(Seq(0, 2)).get
+
+// Verify the proof
+val isValid = batchProof.valid(tree.rootHash)
+println(s"Batch Merkle Proof is valid: \${isValid}")
+
+// Serialize and deserialize the proof
+val serializer = new BatchMerkleProofSerializer[Digest32, Blake2b256.type]
+val serializedProof = serializer.serialize(batchProof)
+val deserializedProof = serializer.deserialize(serializedProof).get
+
+assert(batchProof == deserializedProof)
+println("Serialization and deserialization successful.")`}
+          />
+        </section>
+
+        {/* References */}
+        <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
+          <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
+            <Download className="w-6 h-6 text-blue-400" />
+            Implementation References
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="bg-neutral-900/50 rounded-lg p-4">
+              <h3 className="text-lg font-bold mb-3 text-cyan-400">Sigma-Rust Libraries</h3>
+              <ul className="text-gray-300 space-y-2">
+                <li>• <a href="https://github.com/ergoplatform/sigma-rust" className="text-orange-400 hover:text-orange-300 underline">sigma-rust Repository</a></li>
+                <li>• <a href="https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/merkletree.rs" className="text-orange-400 hover:text-orange-300 underline">MerkleTree Implementation</a></li>
+                <li>• <a href="https://github.com/ergoplatform/sigma-rust/blob/develop/ergo-merkle-tree/src/batchmerkleproof.rs" className="text-orange-400 hover:text-orange-300 underline">BatchMerkleProof Implementation</a></li>
+              </ul>
+            </div>
+            
+            <div className="bg-neutral-900/50 rounded-lg p-4">
+              <h3 className="text-lg font-bold mb-3 text-cyan-400">Scrypto Libraries</h3>
+              <ul className="text-gray-300 space-y-2">
+                <li>• <a href="https://github.com/input-output-hk/scrypto" className="text-orange-400 hover:text-orange-300 underline">scrypto Repository</a></li>
+                <li>• <a href="https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/MerkleTree.scala" className="text-orange-400 hover:text-orange-300 underline">MerkleTree.scala</a></li>
+                <li>• <a href="https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala" className="text-orange-400 hover:text-orange-300 underline">BatchMerkleProof.scala</a></li>
+                <li>• <a href="https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/serialization/BatchMerkleProofSerializer.scala" className="text-orange-400 hover:text-orange-300 underline">BatchMerkleProofSerializer.scala</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  );
+} 

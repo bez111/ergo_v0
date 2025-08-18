@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation'
+// Импортируем оригинальный компонент вместо редиректа
+import IdentityReputationPage from '@/app/use/use-cases/identity-reputation/page'
 
-// Временный редирект на существующую страницу
-// В будущем здесь будет полноценная страница
-export default function IdentityPage() {
-  redirect('/use/use-cases/identity-reputation')
-} 
+// Используем тот же компонент для новой URL структуры
+export default IdentityReputationPage 

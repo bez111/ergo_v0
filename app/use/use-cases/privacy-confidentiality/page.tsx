@@ -203,7 +203,7 @@ export default function PrivacyConfidentialityPage() {
                         Try ErgoMixer
                       </Button>
                     </a>
-                    <Link href="/Docs/introduction/privacy">
+                    <Link href="/docs/introduction/privacy">
                       <Button
                         variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
@@ -625,7 +625,7 @@ export default function PrivacyConfidentialityPage() {
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
-                <Link href="/Docs/introduction/privacy">
+                <Link href="/docs/introduction/privacy">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400">
                     Privacy Guide
                     <ArrowRight className="ml-2 w-4 h-4" />

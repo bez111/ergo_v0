@@ -90,7 +90,7 @@ export const URL_PATTERNS = {
   // Паттерны для canonical
   canonical: [
     /^\/blog\//,
-    /^\/Docs\//,
+    /^\/docs\//,
     /^\/use\//,
     /^\/technology\//,
     /^\/ecosystem\//
@@ -100,7 +100,7 @@ export const URL_PATTERNS = {
   sitemap: {
     include: [
       /^\/$/,
-      /^\/Docs/,
+      /^\/docs/,
       /^\/use/,
       /^\/technology/,
       /^\/ecosystem/,

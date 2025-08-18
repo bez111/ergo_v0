@@ -416,10 +416,10 @@ export default function StorageRentPage() {
                   </ul>
                   <div className="mt-3 flex gap-3">
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-4 py-2 rounded-xl" data-cta="design-patterns">
-                      <Link href="/Docs/developers" >Design patterns</Link>
+                      <Link href="/docs/developers" >Design patterns</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-4 py-2 rounded-xl" data-cta="sdk-snippet">
-                      <Link href="/Docs/developers/tutorials">SDK snippet</Link>
+                      <Link href="/docs/developers/tutorials">SDK snippet</Link>
                     </Button>
                   </div>
                 </CardContent>

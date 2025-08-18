@@ -19,7 +19,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/Docs`,
+      url: `${baseUrl}/docs`,
       lastModified: currentDate,
       changeFrequency: 'weekly' as const,
       priority: 0.9,
@@ -142,7 +142,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: 'ecosystem/tooling', priority: 0.6 },
     { path: 'ecosystem/Standards', priority: 0.6 },
   ].map(({ path, priority }) => ({
-    url: `${baseUrl}/Docs/${path}`,
+    url: `${baseUrl}/docs/${path}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority,

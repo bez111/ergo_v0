@@ -225,7 +225,7 @@ export default function AdaptiveEmissionPage() {
                     Community input and miner voting enable flexible economic policy without hard forks.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/Docs/miners/governance">
+                    <Link href="/docs/miners/governance">
                       <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Governance Docs
                   </Button>
@@ -723,7 +723,7 @@ export default function AdaptiveEmissionPage() {
                 Join the community and help shape Ergo's economic future through adaptive governance.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/Docs/miners/governance">
+                <Link href="/docs/miners/governance">
                   <Button size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold">
                     Learn Governance
                     <ArrowRight className="ml-2 w-4 h-4" />

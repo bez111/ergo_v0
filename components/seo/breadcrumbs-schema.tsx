@@ -74,7 +74,7 @@ export const breadcrumbPatterns = {
   ],
   docs: [
     { name: 'Home', href: '/' },
-    { name: 'Documentation', href: '/Docs' }
+          { name: 'Documentation', href: '/docs' }
   ],
   blog: [
     { name: 'Home', href: '/' },

@@ -7,7 +7,7 @@ export function middleware(request: NextRequest) {
   const searchParams = new URLSearchParams(search)
   
   // ============================================
-  // 1. CHECK REDIRECTS
+  // CHECK REDIRECTS FROM URL MANAGER
   // ============================================
   const redirect = urlManager.utils.checkRedirect(pathname)
   if (redirect.shouldRedirect) {
@@ -17,13 +17,15 @@ export function middleware(request: NextRequest) {
     if (redirect.destination) {
       const url = request.nextUrl.clone()
       url.pathname = redirect.destination
-      urlManager.utils.logUrlEvent({
-        type: 'redirect',
-        from: pathname,
-        to: redirect.destination,
-        statusCode: redirect.statusCode
-      })
-      return NextResponse.redirect(url, redirect.statusCode!)
+      if (redirect.statusCode) {
+        urlManager.utils.logUrlEvent({
+          type: 'redirect',
+          from: pathname,
+          to: redirect.destination,
+          statusCode: redirect.statusCode
+        })
+      }
+      return NextResponse.redirect(url, redirect.statusCode || 302)
     }
   }
   

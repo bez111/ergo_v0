@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation'
+// Импортируем оригинальный компонент вместо редиректа
+import CrossChainBridgesPage from '@/app/use/use-cases/cross-chain-bridges/page'
 
-// Временный редирект на существующую страницу
-// В будущем здесь будет полноценная страница
-export default function BridgesPage() {
-  redirect('/use/use-cases/cross-chain-bridges')
-} 
+// Используем тот же компонент для новой URL структуры
+export default CrossChainBridgesPage 

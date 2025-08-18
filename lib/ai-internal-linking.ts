@@ -2,7 +2,7 @@
 // Automatically creates contextual links between related content
 
 import { blogPosts } from '@/app/blog/_lib/blog-data'
-import { menuData } from '@/app/Docs/menuData'
+import { menuData } from '@/app/docs/menuData'
 
 interface ContentNode {
   id: string
@@ -208,10 +208,10 @@ export function generateLinkSuggestions(
     { text: 'nipopows', url: '/technology/nipopows', weight: 8 },
     { text: 'defi', url: '/ecosystem', weight: 7 },
     { text: 'ecosystem', url: '/ecosystem', weight: 7 },
-    { text: 'documentation', url: '/Docs', weight: 6 },
+    { text: 'documentation', url: '/docs', weight: 6 },
     { text: 'getting started', url: '/start', weight: 8 },
-    { text: 'sigma protocols', url: '/Docs/introduction/privacy', weight: 8 },
-    { text: 'smart contracts', url: '/Docs/developers/ergoscript', weight: 8 },
+    { text: 'sigma protocols', url: '/docs/introduction/privacy', weight: 8 },
+    { text: 'smart contracts', url: '/docs/developers/ergoscript', weight: 8 },
   ]
   
   // Check for priority terms

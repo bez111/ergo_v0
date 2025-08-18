@@ -219,7 +219,7 @@ export default function ErgoScriptPage() {
                     No shared global state, first-class Sigma protocols, verifiable execution. Build secure applications that are predictable by design.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/Docs">
+                    <Link href="/docs">
                       <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Start Building
                   </Button>
@@ -1044,7 +1044,7 @@ export default function ErgoScriptPage() {
                     Try Playground
                   </Button>
                 </Link>
-                      <Link href="/Docs/developers/ergoscript-languages">
+                      <Link href="/docs/developers/ergoscript-languages">
                   <Button
                     variant="outline"
                           className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"

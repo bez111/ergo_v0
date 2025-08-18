@@ -165,7 +165,7 @@ export function HeroSection() {
                 className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
                 asChild
               >
-                <Link href="/Docs">
+                <Link href="/docs">
                   <Code className="h-5 w-5" />
                   Read Docs
                 </Link>

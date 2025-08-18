@@ -85,7 +85,7 @@ export function Footer() {
           <div className="grid grid-cols-1 gap-4">
             <div className="font-medium font-mono text-primary">RESOURCES</div>
             <nav className="flex flex-col gap-2 text-sm">
-              <Link href="/Docs" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
+              <Link href="/docs" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
                 <ExternalLink className="h-3 w-3" />
                 Documentation
               </Link>

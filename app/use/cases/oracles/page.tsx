@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation'
+// Импортируем оригинальный компонент вместо редиректа
+import OraclesDataFeedsPage from '@/app/use/use-cases/oracles-data-feeds/page'
 
-// Временный редирект на существующую страницу
-// В будущем здесь будет полноценная страница
-export default function OraclesPage() {
-  redirect('/use/use-cases/oracles-data-feeds')
-} 
+// Используем тот же компонент для новой URL структуры
+export default OraclesDataFeedsPage 

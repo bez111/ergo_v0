@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { Search, X, Tag, FileText, ArrowUp, ArrowDown, Command, Eye, Pin, Trash2, ChevronDown, ChevronRight, Clock, TrendingUp, Hash, BookOpen } from 'lucide-react';
 import Link from 'next/link';
-import { menuData } from '@/app/Docs/menuData';
+import { menuData } from '@/app/docs/menuData';
 import { SearchPreview } from './SearchPreview';
 import { useSearchHistory } from '@/hooks/use-search-history';
 import { useDebounce } from '@/hooks/use-debounce';

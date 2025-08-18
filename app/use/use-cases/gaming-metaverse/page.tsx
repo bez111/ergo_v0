@@ -200,7 +200,7 @@ export default function GamingMetaversePage() {
                         Explore Games
                       </Button>
                     </Link>
-                    <Link href="/Docs/developers">
+                    <Link href="/docs/developers">
                       <Button
                         variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
@@ -596,7 +596,7 @@ export default function GamingMetaversePage() {
                 Create blockchain games and metaverse experiences on Ergo.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/Docs/developers">
+                <Link href="/docs/developers">
                   <Button size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold">
                     Start Building
                     <ArrowRight className="ml-2 w-4 h-4" />

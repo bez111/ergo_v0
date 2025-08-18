@@ -154,12 +154,12 @@ export default function ComparisonClient() {
                     Ergo combines the security and predictability of the eUTXO model with the programmability needed for complex smart contracts, and supports light clients via NIPoPoWs.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" asChild>
-                      <Link href="/Docs">
-                        <Rocket className="w-5 h-5 mr-2" aria-hidden="true" />
-                        Start Building
-                      </Link>
-                    </Button>
+                                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" asChild>
+                    <Link href="/docs">
+                      <Rocket className="w-5 h-5 mr-2" aria-hidden="true" />
+                      Start Building
+                    </Link>
+                  </Button>
                     <Button
                       variant="outline"
                       className="border-neutral-500 text-neutral-400 hover:bg-neutral-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
@@ -545,7 +545,7 @@ export default function ComparisonClient() {
                   className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl"
                   asChild
                 >
-                  <Link href="/Docs">Start Building Today</Link>
+                  <Link href="/docs">Start Building Today</Link>
                 </Button>
                 <Button 
                   size="lg" 
@@ -553,7 +553,7 @@ export default function ComparisonClient() {
                   className="border-neutral-500 text-neutral-400 hover:bg-neutral-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                   asChild
                 >
-                  <Link href="/Docs/ecosystem">Explore Ecosystem</Link>
+                  <Link href="/docs/ecosystem">Explore Ecosystem</Link>
                 </Button>
               </div>
               <p className="text-xs text-neutral-500 mt-6">Last updated: {isoDate}. Sources: <a href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Autolykos v2</a> · <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">ergo (GitHub)</a></p>

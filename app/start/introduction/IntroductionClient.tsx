@@ -578,7 +578,7 @@ export default function IntroductionClient() {
                   variant="outline" 
                   className="border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
-                  <Link href="/Docs" prefetch={false}>
+                  <Link href="/docs" prefetch={false}>
                     <BookOpen className="w-5 h-5 mr-2" aria-hidden="true" />
                     Documentation
                   </Link>

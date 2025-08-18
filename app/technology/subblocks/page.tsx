@@ -217,12 +217,12 @@ export default function SubblocksPage() {
                     Subblocks enable near-instant transaction finality without sacrificing decentralization or security. Experience blockchain speed that matches traditional payment systems.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/Docs">
+                    <Link href="/docs">
                       <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Learn More
                   </Button>
                     </Link>
-                    <Link href="/Docs/introduction/roadmap/sub-blocks">
+                    <Link href="/docs/introduction/roadmap/sub-blocks">
                   <Button
                     variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
@@ -510,7 +510,7 @@ export default function SubblocksPage() {
                 Join the future of blockchain technology with subblocks - where speed meets security
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/Docs/introduction/roadmap/sub-blocks">
+                <Link href="/docs/introduction/roadmap/sub-blocks">
                   <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                     Read Technical Details
                   </Button>

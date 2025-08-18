@@ -52,7 +52,7 @@ export const docsearchConfig = {
   index_name: "ergo-docs",
   start_urls: [
     {
-      url: "https://your-domain.com/Docs/",
+                url: "https://your-domain.com/docs/",
       tags: ["docs"]
     }
   ],

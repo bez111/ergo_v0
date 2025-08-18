@@ -396,7 +396,7 @@ export default function StartPage() {
             secondaryAction={{
               text: "Skip to Docs",
               icon: BookOpen,
-              onClick: () => window.location.href = "/Docs"
+              onClick: () => window.location.href = "/docs"
             }}
           />
         </section>
@@ -660,7 +660,7 @@ export default function StartPage() {
                         variant="outline"
                         className="border-neutral-600"
                       >
-                        <Link href="/Docs">
+                        <Link href="/docs">
                           Explore Docs
                           <ArrowRight className="w-4 h-4 ml-2" />
                         </Link>

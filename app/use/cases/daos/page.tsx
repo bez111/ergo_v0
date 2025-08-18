@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation'
+// Импортируем оригинальный компонент вместо редиректа
+import DAOsAlternativeEconomiesPage from '@/app/use/use-cases/daos-alternative-economies/page'
 
-// Временный редирект на существующую страницу
-// В будущем здесь будет полноценная страница
-export default function DAOsPage() {
-  redirect('/use/use-cases/daos-alternative-economies')
-} 
+// Используем тот же компонент для новой URL структуры
+export default DAOsAlternativeEconomiesPage 

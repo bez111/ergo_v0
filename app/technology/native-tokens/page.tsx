@@ -198,7 +198,7 @@ export default function NativeTokensPage() {
                     No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/Docs/ecosystem/nfts">
+                    <Link href="/docs/ecosystem/nfts">
                       <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Explore NFT Ecosystem
                   </Button>

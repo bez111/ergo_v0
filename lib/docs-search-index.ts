@@ -1,4 +1,4 @@
-import { menuData } from "../app/Docs/menuData";
+import { menuData } from "../app/docs/menuData";
 
 export type DocsSearchIndexItem = {
   title: string;

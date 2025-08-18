@@ -89,10 +89,10 @@ export default function EutxoClient() {
                   <p className="text-lg text-neutral-400 mb-6 max-w-2xl leading-relaxed">Ergo's eUTXO model fuses the security, parallelism, and simplicity of UTXO with the expressive power needed for complex smart contracts.</p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
-                      <Link href="/Docs">Learn More</Link>
+                                                  <Link href="/docs">Learn More</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
-                      <Link href="/Docs/developers/tutorials">View Examples</Link>
+                      <Link href="/docs/developers/tutorials">View Examples</Link>
                     </Button>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
@@ -321,7 +321,7 @@ export default function EutxoClient() {
                   <p className="text-xl text-neutral-300 mb-8 leading-relaxed">The eUTXO model is a quantum leap: it keeps UTXO's clarity, security, and scalability while unlocking true programmability. For developers who want robust, auditable, and future-proof dApps — Ergo's approach is both powerful and elegant.</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
-                      <Link href="/Docs" className="flex items-center">Start Building<ArrowRight className="ml-2 w-4 h-4" /></Link>
+                        <Link href="/docs" className="flex items-center">Start Building<ArrowRight className="ml-2 w-4 h-4" /></Link>
                     </Button>
                     <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
                       <Link href="/ecosystem" className="flex items-center">Explore Ecosystem<ExternalLink className="ml-2 w-4 h-4" /></Link>

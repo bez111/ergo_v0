@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
-import { menuData } from "../app/Docs/menuData"
+import { menuData } from "../app/docs/menuData"
 import { usePathname, useRouter } from "next/navigation"
 import { LocalSearch } from "./search/LocalSearch"
 
@@ -58,17 +58,17 @@ function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: num
 }
 
 const sectionTabs = [
-  { key: "Introduction", label: "Introduction", href: "/Docs" },
-  { key: "Ecosystem", label: "Ecosystem", href: "/Docs/ecosystem" },
-  { key: "Developers", label: "Developers", href: "/Docs/developers" },
-  { key: "Miners", label: "Miners", href: "/Docs/miners" },
+  { key: "Introduction", label: "Introduction", href: "/docs" },
+  { key: "Ecosystem", label: "Ecosystem", href: "/docs/ecosystem" },
+  { key: "Developers", label: "Developers", href: "/docs/developers" },
+  { key: "Miners", label: "Miners", href: "/docs/miners" },
 ];
 
 function getSectionKeyByPath(pathname: string) {
-  if (pathname === "/Docs" || pathname.startsWith("/Docs/introduction")) return "Introduction";
-  if (pathname.startsWith("/Docs/ecosystem")) return "Ecosystem";
-  if (pathname.startsWith("/Docs/developers")) return "Developers";
-  if (pathname.startsWith("/Docs/miners")) return "Miners";
+  if (pathname === "/docs" || pathname.startsWith("/docs/introduction")) return "Introduction";
+  if (pathname.startsWith("/docs/ecosystem")) return "Ecosystem";
+  if (pathname.startsWith("/docs/developers")) return "Developers";
+  if (pathname.startsWith("/docs/miners")) return "Miners";
   return "Introduction";
 }
 

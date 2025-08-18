@@ -198,7 +198,7 @@ const techFeatures = [
 const ctas = [
   {
     label: "Dive into Ergo Docs",
-    href: "/Docs",
+          href: "/docs",
     color: "from-orange-500 to-orange-600",
     outline: false,
   },
@@ -429,7 +429,7 @@ export default function TechnologyPage() {
             <div className="mt-8 pt-6 border-t border-neutral-800">
               <div className="flex justify-end">
                 <Button asChild variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 transition-all duration-200">
-                  <Link href="/Docs">Go to Docs <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" /></Link>
+                  <Link href="/docs">Go to Docs <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" /></Link>
                 </Button>
               </div>
             </div>
@@ -770,7 +770,7 @@ export default function TechnologyPage() {
 type Detail = { icon?: any; title: string; description: string }
 type TechFeature = { icon: any; title: string; description: string; href?: string; details: Detail[] }
 const resources: { title: string; href: string; icon: any }[] = [
-  { title: "Ergo Docs", href: "/Docs", icon: Book },
+      { title: "Ergo Docs", href: "/docs", icon: Book },
   { title: "Whitepaper", href: "https://ergoplatform.org/docs/whitepaper.pdf", icon: ExternalLink },
   { title: "GitHub", href: "https://github.com/ergoplatform", icon: ExternalLink },
   { title: "Dev Tutorials", href: "/Docs/developers/tutorials", icon: ArrowRight },

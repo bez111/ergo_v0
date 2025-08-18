@@ -202,10 +202,10 @@ export default function NFTsDigitalAssetsPage() {
                       <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
                         Explore SkyHarbor
                       </Button>
-                    </a>
-                    <Link href="/Docs/ecosystem/nfts">
-                      <Button
-                        variant="outline"
+                                      </a>
+                  <Link href="/docs/ecosystem/nfts">
+                    <Button
+                      variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
                       >
                         NFT Guide
@@ -612,7 +612,7 @@ export default function NFTsDigitalAssetsPage() {
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
-                <Link href="/Docs/ecosystem/nfts">
+                                    <Link href="/docs/ecosystem/nfts">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400">
                     NFT Guide
                     <ArrowRight className="ml-2 w-4 h-4" />

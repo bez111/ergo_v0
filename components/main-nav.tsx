@@ -73,7 +73,7 @@ export function MainNav() {
           <NavigationMenuItem>
             <NavigationMenuLink asChild>
               <Link
-                href="/Docs"
+                href="/docs"
                 style={{ caretColor: "transparent", userSelect: "none" }}
                 className={cn(
                   navigationMenuTriggerStyle(),

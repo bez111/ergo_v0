@@ -623,7 +623,7 @@ export default function OraclesDataFeedsPage() {
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
-                <Link href="/Docs/developers">
+                <Link href="/docs/developers">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400">
                     Developer Docs
                     <ArrowRight className="ml-2 w-4 h-4" />

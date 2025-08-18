@@ -1,7 +1,5 @@
-import { redirect } from 'next/navigation'
+// Импортируем оригинальный компонент вместо редиректа
+import PrivacyConfidentialityPage from '@/app/use/use-cases/privacy-confidentiality/page'
 
-// Временный редирект на существующую страницу
-// В будущем здесь будет полноценная страница
-export default function PrivacyPage() {
-  redirect('/use/use-cases/privacy-confidentiality')
-} 
+// Используем тот же компонент для новой URL структуры
+export default PrivacyConfidentialityPage 

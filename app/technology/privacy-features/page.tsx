@@ -263,7 +263,7 @@ export default function PrivacyFeaturesPage() {
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        <Link href="/Docs">Explore Privacy</Link>
+                        <Link href="/docs">Explore Privacy</Link>
                       </Button>
                       <Button
                         asChild
@@ -368,7 +368,7 @@ export default function PrivacyFeaturesPage() {
                               {tech.title === "Sigma Protocols" && (
                                 <>
                                   {" "}
-                                  <Link href="/Docs/developers/ergoscript-languages/sigma/intro" className="underline text-neutral-400 hover:text-neutral-300">(docs)</Link>
+                                  <Link href="/docs/developers/ergoscript-languages/sigma/intro" className="underline text-neutral-400 hover:text-neutral-300">(docs)</Link>
                                 </>
                               )}
                             </h3>
