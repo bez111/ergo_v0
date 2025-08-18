@@ -113,36 +113,125 @@ aside .sticky-toc {
     @apply bg-background text-foreground;
   }
   
-  /* Предотвращаем появление курсора в нежелательных местах */
-  body, main, section, div:not([contenteditable]):not(input):not(textarea) {
-    caret-color: transparent !important;
-    user-select: none !important;
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
+  /* ✅ КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Proper focus indicators */
+  :focus-visible {
+    outline: 2px solid #f59e0b !important; /* brand-primary-500 */
+    outline-offset: 2px;
+    border-radius: 4px;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
   }
-  
-  /* Разрешаем курсор только в явно разрешенных элементах */
-  input, textarea, [contenteditable="true"], [contenteditable="plaintext-only"] {
-    user-select: text !important;
-    -webkit-user-select: text !important;
-    -moz-user-select: text !important;
-    -ms-user-select: text !important;
-    caret-color: currentColor !important;
+
+  /* ✅ Skip link стили */
+  .skip-link {
+    position: absolute !important;
+    left: -9999px !important;
+    top: -9999px !important;
+    width: 1px !important;
+    height: 1px !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px) !important;
+    white-space: nowrap !important;
   }
-  
-  /* Отключаем курсор для всех кликабельных элементов, кроме форм */
-  button, a, [role="button"], [tabindex] {
-    caret-color: transparent !important;
+
+  .skip-link:focus {
+    position: fixed !important;
+    left: 16px !important;
+    top: 16px !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+    z-index: 999999 !important;
+    padding: 12px 16px !important;
+    background: #f59e0b !important; /* brand-primary-500 */
+    color: #000 !important;
+    text-decoration: none !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 14px !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05) !important;
+    border: 2px solid #000 !important;
   }
-  
-  /* Принудительно отключаем курсор для body и html */
-  html, body {
-    caret-color: transparent !important;
-    user-select: none !important;
-    -webkit-user-select: none !important;
-    -moz-user-select: none !important;
-    -ms-user-select: none !important;
+
+  /* ✅ Улучшенные состояния для интерактивных элементов */
+  button:focus-visible,
+  a:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid #f59e0b !important;
+    outline-offset: 2px !important;
+    box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1) !important;
+  }
+  /* ✅ Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* ✅ High contrast mode support */
+  @media (prefers-contrast: high) {
+    :focus-visible {
+      outline: 3px solid currentColor !important;
+      outline-offset: 3px !important;
+    }
+    
+    .border-neutral-700 {
+      border-color: #666 !important;
+    }
+    
+    .text-neutral-400 {
+      color: #999 !important;
+    }
+  }
+
+  /* ✅ Screen reader only utility */
+  .sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+  }
+
+  /* ✅ Улучшенные стили для loading states */
+  [aria-busy="true"] {
+    cursor: wait;
+    opacity: 0.7;
+  }
+
+  [aria-busy="true"] * {
+    pointer-events: none;
+  }
+
+  /* ✅ Live region стили */
+  [aria-live] {
+    position: relative;
+  }
+
+  [aria-live="polite"][aria-busy="true"]::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(245, 158, 11, 0.1), transparent);
+    animation: loading-sweep 1.5s ease-in-out infinite;
+  }
+
+  @keyframes loading-sweep {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
   }
 }
 

@@ -3,6 +3,7 @@ import { BlogHero } from "./_components/blog-hero"
 // import { BlogToolbar } from "./_components/blog-toolbar"
 import BlogListSSR from "./_components/blog-list-ssr"
 import TrendingNow from "./_components/trending-now"
+import { BlogPagination } from "./_components/blog-pagination"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
 import Link from "next/link"
@@ -217,9 +218,10 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* ✅ КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Proper skip-link */}
       <a 
         href="#main" 
-        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 bg-brand-primary-600 text-white px-4 py-2 rounded-lg font-medium focus:outline-none focus:ring-2 focus:ring-brand-primary-400 focus:ring-offset-2 focus:ring-offset-black"
+        className="skip-link"
       >
         Skip to main content
       </a>
@@ -267,8 +269,26 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
             </div>
           </section>
 
-          {/* Server-side rendered list */}
-          <BlogListSSR posts={initialList} categories={categories} />
+          {/* ✅ КРИТИЧЕСКОЕ ИЗМЕНЕНИЕ: ARIA Live Region для динамических обновлений */}
+          <section 
+            aria-labelledby="blog-posts"
+            aria-live="polite"
+            aria-busy="false"
+            className="transition-opacity duration-200"
+          >
+            <h2 id="blog-posts" className="sr-only">
+              {currentPage > 1 ? `Blog posts page ${currentPage}` : 'All blog posts'}
+            </h2>
+            
+            <BlogListSSR posts={initialList} categories={categories} />
+            
+            {/* ✅ НОВОЕ: Proper pagination component */}
+            <BlogPagination 
+              currentPage={currentPage}
+              totalPages={totalPages}
+              baseUrl="/blog"
+            />
+          </section>
 
         </div>
       </main>
