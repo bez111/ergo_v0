@@ -8,6 +8,7 @@ import { Footer } from "@/components/footer"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/lib/schema-constants"
 import { GoogleAnalytics } from "@/components/analytics/google-analytics"
+// import { WebVitalsRUM } from "@/components/analytics/web-vitals-rum"
 import { PerformanceOptimizer } from "@/components/seo/performance-optimizer"
 import { CoreWebVitalsDashboard } from "@/components/seo/core-web-vitals-dashboard"
 
@@ -121,11 +122,8 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning className="dark">
       <head>
         {/* Critical resource hints for Core Web Vitals */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//www.google-analytics.com" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+        <link rel="preconnect" href="https://www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//vitals.vercel-insights.com" />
         
         {/* Preload critical assets */}
         <link rel="preload" href="/og-image.png" as="image" type="image/png" />
@@ -177,6 +175,9 @@ export default function RootLayout({
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <GoogleAnalytics id={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         )}
+        
+        {/* Web Vitals RUM tracking */}
+        {/* <WebVitalsRUM /> */}
       </body>
     </html>
   )

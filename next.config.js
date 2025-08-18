@@ -202,7 +202,7 @@ const nextConfig = {
       },
       // Шрифты и иконки
       {
-        source: '/(.*)\\.(woff|woff2|ttf|otf|eot|ico|png|jpg|jpeg|svg|gif|webp|avif)',
+        source: '/:path*\\.(woff|woff2|ttf|otf|eot|ico|png|jpg|jpeg|svg|gif|webp|avif)',
         headers: [
           {
             key: 'Cache-Control',

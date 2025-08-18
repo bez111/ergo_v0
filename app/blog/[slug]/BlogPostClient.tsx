@@ -280,6 +280,10 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
                 width={1200}
                 height={630}
                 className="w-full h-auto object-cover"
+                priority
+                fetchPriority="high"
+                decoding="async"
+                style={{ aspectRatio: '1200/630' }}
               />
             </motion.div>
           )}

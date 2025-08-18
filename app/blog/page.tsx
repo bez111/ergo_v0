@@ -1,6 +1,6 @@
 import { blogPosts, categories } from "./_lib/blog-data"
 import { BlogHero } from "./_components/blog-hero"
-import BlogClient from "./_components/blog-client"
+// import { BlogToolbar } from "./_components/blog-toolbar"
 import BlogListSSR from "./_components/blog-list-ssr"
 import TrendingNow from "./_components/trending-now"
 import type { Metadata } from "next"
@@ -267,16 +267,8 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
             </div>
           </section>
 
-          <BlogClient
-            posts={initialList}
-            categories={categories}
-            page={currentPage}
-            pageSize={pageSize}
-            total={total}
-            hasMore={hasMore}
-          >
-            <BlogListSSR posts={initialList} categories={categories} />
-          </BlogClient>
+          {/* Server-side rendered list */}
+          <BlogListSSR posts={initialList} categories={categories} />
 
         </div>
       </main>

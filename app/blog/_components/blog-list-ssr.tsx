@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import type { BlogPost } from "../_lib/blog-data"
 
 export default function BlogListSSR({ posts, categories }: { posts: BlogPost[]; categories: { id: string; name: string }[] }) {
@@ -14,17 +15,19 @@ export default function BlogListSSR({ posts, categories }: { posts: BlogPost[]; 
               className="rounded-xl border border-neutral-800 bg-neutral-900/40 p-4"
             >
               {p.image && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img 
-                  itemProp="image" 
-                  src={p.image} 
-                  alt={p.title} 
-                  width="300" 
-                  height="200" 
-                  loading="lazy" 
-                  decoding="async" 
-                  className="rounded-lg mb-3 w-full h-auto" 
-                />
+                <div className="relative w-full h-48 mb-3 rounded-lg overflow-hidden">
+                  <Image 
+                    itemProp="image" 
+                    src={p.image} 
+                    alt={p.title} 
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    loading="lazy" 
+                    decoding="async" 
+                    className="object-cover" 
+                    style={{ aspectRatio: '16/9' }}
+                  />
+                </div>
               )}
               <div className="text-xs uppercase tracking-wide text-orange-400 mb-2">
                 {categories.find((c) => c.id === p.category)?.name ?? p.category}
