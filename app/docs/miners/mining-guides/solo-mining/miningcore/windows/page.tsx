@@ -16,7 +16,7 @@ export default function MiningCoreWindowsPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/miners/mining-guides/solo-mining/miningcore"
+            href="/docs/miners/mining-guides/solo-mining/miningcore"
             className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-black hover:bg-blue-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" /> Back to MiningCore Setup

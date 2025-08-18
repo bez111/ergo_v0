@@ -461,7 +461,7 @@ export default function IntroductionClient() {
                 icon: Code2,
                 title: "Developer Tools",
                 description: "Access comprehensive SDKs, libraries, and documentation to build on Ergo.",
-                href: "/Docs/developers",
+                href: "/docs/developers",
                 badge: "Resources"
               }
             ].map((useCase, index) => (

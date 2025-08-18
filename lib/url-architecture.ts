@@ -244,16 +244,16 @@ export const INTERLINKING_MATRIX = {
  */
 export const REDIRECT_MAP: Record<string, { to: string; code: 301 | 302 | 410 }> = {
   // Исправляем капитализацию
-  '/Docs': { to: '/docs', code: 301 },
-  '/Docs/introduction': { to: '/docs/introduction', code: 301 },
-  '/Docs/ecosystem': { to: '/docs/ecosystem', code: 301 },
-  '/Docs/developers': { to: '/docs/developers', code: 301 },
-  '/Docs/miners': { to: '/docs/miners', code: 301 },
-  '/Docs/contribute': { to: '/docs/contribute', code: 301 },
-  '/Docs/why-ergo': { to: '/docs/why-ergo', code: 301 },
+  '/docs': { to: '/docs', code: 301 },
+  '/docs/introduction': { to: '/docs/introduction', code: 301 },
+  '/docs/ecosystem': { to: '/docs/ecosystem', code: 301 },
+  '/docs/developers': { to: '/docs/developers', code: 301 },
+  '/docs/miners': { to: '/docs/miners', code: 301 },
+  '/docs/contribute': { to: '/docs/contribute', code: 301 },
+  '/docs/why-ergo': { to: '/docs/why-ergo', code: 301 },
   
   // Исправляем Standards -> standards
-  '/Docs/ecosystem/Standards': { to: '/docs/ecosystem/standards', code: 301 },
+  '/docs/ecosystem/Standards': { to: '/docs/ecosystem/standards', code: 301 },
   
   // Упрощаем use-cases
   '/use/use-cases': { to: '/use/cases', code: 301 },

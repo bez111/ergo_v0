@@ -38,7 +38,7 @@ export default function ModifiersPage() {
 
         <div className="mb-6">
           <Link
-            href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
+            href="/docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
             className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
           >
             <ChevronLeft className="w-5 h-5 mr-2" />
@@ -53,7 +53,7 @@ export default function ModifiersPage() {
               Ergo Block Structure
             </h2>
             <p className="text-gray-300 mb-6 leading-relaxed">
-              The <a href="/Docs/developers/infrastructure/node/protocol/block-p2p" className="text-cyan-400 hover:underline">Ergo block</a>, a critical structure in the Ergo blockchain, differs from many other blockchain systems by comprising four distinct sections (modifiers):
+              The <a href="/docs/developers/infrastructure/node/protocol/block-p2p" className="text-cyan-400 hover:underline">Ergo block</a>, a critical structure in the Ergo blockchain, differs from many other blockchain systems by comprising four distinct sections (modifiers):
             </p>
             
             <div className="grid md:grid-cols-2 gap-6 mb-6">
@@ -83,7 +83,7 @@ export default function ModifiersPage() {
               <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
                 <h3 className="text-lg font-bold text-purple-300 mb-3">Extension</h3>
                 <p className="text-gray-300 text-sm">
-                  Holds supplementary information. This includes <a href="/Docs/introduction/nipopows" className="text-purple-400 hover:underline">interlinks</a> (for NiPoPoWs) and, for blocks at the end of a voting epoch, the blockchain parameters resulting from miner voting.
+                  Holds supplementary information. This includes <a href="/docs/introduction/nipopows" className="text-purple-400 hover:underline">interlinks</a> (for NiPoPoWs) and, for blocks at the end of a voting epoch, the blockchain parameters resulting from miner voting.
                 </p>
               </div>
             </div>
@@ -225,7 +225,7 @@ export default function ModifiersPage() {
                 <div>
                   <h4 className="font-semibold text-purple-200 mb-2">Interlinks (0x01 prefix)</h4>
                   <p className="text-gray-300 text-sm">
-                    Keys starting with <code className="bg-neutral-800 px-2 py-1 rounded">0x01</code> are used for storing the <a href="/Docs/introduction/nipopows" className="text-purple-400 hover:underline">NiPoPoW interlinks vector</a>. The second byte indicates the level <code className="bg-neutral-800 px-2 py-1 rounded">k</code> of the link. The value contains the actual block ID (32 bytes) representing the link at that level.
+                    Keys starting with <code className="bg-neutral-800 px-2 py-1 rounded">0x01</code> are used for storing the <a href="/docs/introduction/nipopows" className="text-purple-400 hover:underline">NiPoPoW interlinks vector</a>. The second byte indicates the level <code className="bg-neutral-800 px-2 py-1 rounded">k</code> of the link. The value contains the actual block ID (32 bytes) representing the link at that level.
                   </p>
                 </div>
               </div>

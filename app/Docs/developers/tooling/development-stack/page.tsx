@@ -9,25 +9,25 @@ const justGettingStartedCards = [
     title: "Introduction",
     content: "Overview of Ergo development and ecosystem.",
     icon: <BookOpen className="w-10 h-10 text-cyan-400" />,
-    url: "/Docs/developers/tooling/introduction"
+    url: "/docs/developers/tooling/introduction"
   },
   {
     title: "Beginner",
     content: "Just testing the waters? Not sure where to start?",
     icon: <User className="w-10 h-10 text-cyan-400" />,
-    url: "/Docs/developers/tooling/beginner"
+    url: "/docs/developers/tooling/beginner"
   },
   {
     title: "Starter Tutorial",
     content: "Step-by-step guide for your first Ergo dApp.",
     icon: <Rocket className="w-10 h-10 text-orange-400" />,
-    url: "/Docs/developers/tooling/starter-tutorial"
+    url: "/docs/developers/tooling/starter-tutorial"
   },
   {
     title: "Basics Tutorial",
     content: "Generate keys and address, send and receive payments.",
     icon: <Key className="w-10 h-10 text-yellow-400" />,
-    url: "/Docs/developers/tooling/basics-tutorial"
+    url: "/docs/developers/tooling/basics-tutorial"
   },
 ];
 const frameworksToolsCards = [
@@ -35,13 +35,13 @@ const frameworksToolsCards = [
     title: "Starter Tutorial",
     content: "Step-by-step guide for your first Ergo dApp.",
     icon: <Rocket className="w-10 h-10 text-orange-400" />,
-    url: "/Docs/developers/tooling/starter-tutorial"
+    url: "/docs/developers/tooling/starter-tutorial"
   },
   {
     title: "Frameworks",
     content: "Jump straight to an overview of all frameworks",
     icon: <Wrench className="w-10 h-10 text-orange-400" />,
-    url: "/Docs/developers/tooling/frameworks"
+    url: "/docs/developers/tooling/frameworks"
   }
 ];
 const deployCards = [
@@ -49,25 +49,25 @@ const deployCards = [
     title: "Browser",
     content: "Interact with users in browser",
     icon: <Globe className="w-10 h-10 text-orange-400" />,
-    url: "/Docs/developers/tooling/browser"
+    url: "/docs/developers/tooling/browser"
   },
   {
     title: "Desktop",
     content: "Create a local application.",
     icon: <Monitor className="w-10 h-10 text-blue-400" />,
-    url: "/Docs/developers/tooling/desktop"
+    url: "/docs/developers/tooling/desktop"
   },
   {
     title: "Mobile",
     content: "Creating a mobile app for Android or iOS.",
     icon: <Smartphone className="w-10 h-10 text-green-400" />,
-    url: "/Docs/developers/tooling/mobile"
+    url: "/docs/developers/tooling/mobile"
   },
   {
     title: "Server",
     content: "Interact with the blockchain locally or via a remote server.",
     icon: <Server className="w-10 h-10 text-cyan-400" />,
-    url: "/Docs/developers/tooling/server"
+    url: "/docs/developers/tooling/server"
   },
 ];
 function Card({ title, content, icon, url }: { title: string; content: string; icon: React.ReactNode; url: string }) {
@@ -158,17 +158,17 @@ const courses = [
   }
 ];
 const frameworks = [
-  { title: "AppKit", content: "JVM-based SDK for building Ergo dApps in Scala, Java, or Kotlin. Provides full blockchain and transaction access.", icon: <Cpu className="w-8 h-8 text-blue-400" />, url: "/Docs/developers/tooling/appkit" },
-  { title: "Fleet", content: "Modern TypeScript/JavaScript library for creating and signing Ergo transactions in web and Node.js apps.", icon: <Code className="w-8 h-8 text-green-400" />, url: "/Docs/developers/tooling/fleet" },
-  { title: "Mosaik", content: "JSON-based UI framework for building cross-platform dApps, rendered natively in supported wallets.", icon: <Layers className="w-8 h-8 text-orange-400" />, url: "/Docs/developers/tooling/mosaik" },
-  { title: "Headless dApp Framework", content: "Rust toolkit for building backend-only (headless) dApps and off-chain logic.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/Docs/developers/tooling/headless" },
-  { title: "RustKit", content: "(WIP) High-level Rust library for composing and signing Ergo transactions, built on sigma-rust.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/Docs/developers/tooling/rustkit" },
-  { title: "JDE", content: "JSON dApp Environment: a lightweight environment for running JSON-based dApps.", icon: <FileText className="w-8 h-8 text-cyan-400" />, url: "/Docs/developers/tooling/jde" }
+  { title: "AppKit", content: "JVM-based SDK for building Ergo dApps in Scala, Java, or Kotlin. Provides full blockchain and transaction access.", icon: <Cpu className="w-8 h-8 text-blue-400" />, url: "/docs/developers/tooling/appkit" },
+  { title: "Fleet", content: "Modern TypeScript/JavaScript library for creating and signing Ergo transactions in web and Node.js apps.", icon: <Code className="w-8 h-8 text-green-400" />, url: "/docs/developers/tooling/fleet" },
+  { title: "Mosaik", content: "JSON-based UI framework for building cross-platform dApps, rendered natively in supported wallets.", icon: <Layers className="w-8 h-8 text-orange-400" />, url: "/docs/developers/tooling/mosaik" },
+  { title: "Headless dApp Framework", content: "Rust toolkit for building backend-only (headless) dApps and off-chain logic.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/docs/developers/tooling/headless" },
+  { title: "RustKit", content: "(WIP) High-level Rust library for composing and signing Ergo transactions, built on sigma-rust.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/docs/developers/tooling/rustkit" },
+  { title: "JDE", content: "JSON dApp Environment: a lightweight environment for running JSON-based dApps.", icon: <FileText className="w-8 h-8 text-cyan-400" />, url: "/docs/developers/tooling/jde" }
 ];
 const interpreters = [
-  { title: "sigmastate-interpreter", content: "Reference JVM implementation of ErgoScript and ErgoTree, used in the core node and AppKit.", icon: <Cpu className="w-8 h-8 text-blue-400" />, url: "/Docs/developers/tooling/programming-languages/jvm" },
-  { title: "Sigma-Rust", content: "Alternative Rust implementation of ErgoTree interpreter and transaction tools. Useful for cross-platform and WASM.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/Docs/developers/tooling/sigma-rust" },
-  { title: "Sigma.JS", content: "JavaScript/TypeScript library for parsing and working with ErgoTree scripts in web apps.", icon: <Code className="w-8 h-8 text-green-400" />, url: "/Docs/developers/tooling/sigmajs" }
+  { title: "sigmastate-interpreter", content: "Reference JVM implementation of ErgoScript and ErgoTree, used in the core node and AppKit.", icon: <Cpu className="w-8 h-8 text-blue-400" />, url: "/docs/developers/tooling/programming-languages/jvm" },
+  { title: "Sigma-Rust", content: "Alternative Rust implementation of ErgoTree interpreter and transaction tools. Useful for cross-platform and WASM.", icon: <Wrench className="w-8 h-8 text-yellow-400" />, url: "/docs/developers/tooling/sigma-rust" },
+  { title: "Sigma.JS", content: "JavaScript/TypeScript library for parsing and working with ErgoTree scripts in web apps.", icon: <Code className="w-8 h-8 text-green-400" />, url: "/docs/developers/tooling/sigmajs" }
 ];
 const libraries = [
   { title: "GetBlok Plasma", content: "AppKit-based library for integrating AVL Trees (Plasma) into off-chain code for scalable data storage.", url: "../lib/plasma.md" },
@@ -251,7 +251,7 @@ export default function DevelopmentStackPage() {
       </p>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling"
+          href="/docs/developers/tooling"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>

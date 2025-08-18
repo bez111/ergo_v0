@@ -104,8 +104,8 @@ const TESTS = {
     name: 'Phase 3: Migration Readiness',
     tests: [
       {
-        name: '/Docs still accessible',
-        url: '/Docs',
+        name: '/docs still accessible',
+        url: '/docs',
         expectedCode: 200,
         expectedPath: null // No redirect expected
       },

@@ -62,7 +62,7 @@ export default function StratumPage() {
       {/* Back Button */}
       <div className="mb-8">
         <Link
-          href="/Docs/miners/mining-guides/solo-mining"
+          href="/docs/miners/mining-guides/solo-mining"
           className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -88,7 +88,7 @@ export default function StratumPage() {
             <GitBranch className="w-5 h-5 mr-2" /> View on GitHub
           </a>
           <Link
-            href="/Docs/miners/mining-guides/solo-mining/miningcore"
+            href="/docs/miners/mining-guides/solo-mining/miningcore"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Server className="w-5 h-5 mr-2" /> Mining Core Alternative
@@ -108,7 +108,7 @@ export default function StratumPage() {
             <div>
               <h3 className="font-semibold text-white mb-2">Setup Ergo Node</h3>
               <p className="text-gray-400">
-                Setup a <Link href="/Docs/miners/mining-guides/solo-mining" className="text-blue-400 hover:text-blue-300">
+                Setup a <Link href="/docs/miners/mining-guides/solo-mining" className="text-blue-400 hover:text-blue-300">
                   Ergo Node for solo mining
                 </Link>, making sure to include the EIP27 rules.
               </p>
@@ -226,7 +226,7 @@ export default function StratumPage() {
                 <h3 className="font-semibold text-yellow-300 mb-2">Common Issues</h3>
                 <ul className="space-y-2 text-gray-400 text-sm">
                   <li>• Have you tried turning it off and on again?</li>
-                  <li>• Is your <Link href="/Docs/miners/mining-guides/solo-mining" className="text-blue-400 hover:text-blue-300">ergo.conf</Link> configured correctly?</li>
+                  <li>• Is your <Link href="/docs/miners/mining-guides/solo-mining" className="text-blue-400 hover:text-blue-300">ergo.conf</Link> configured correctly?</li>
                   <li>• You can rescan from swagger</li>
                   <li>• The Node needs to be fully synchronized. Make sure your wallet is also unlocked.</li>
                   <li>• Try adjusting difficulty in start.js if you're getting <code className="bg-neutral-800 px-2 py-1 rounded text-red-400">No new blocks</code> debug errors.</li>
@@ -323,7 +323,7 @@ export default function StratumPage() {
       {/* Next Steps */}
       <div className="grid md:grid-cols-2 gap-6">
         <Link
-          href="/Docs/miners/mining-guides/solo-mining/miningcore"
+          href="/docs/miners/mining-guides/solo-mining/miningcore"
           className="group bg-neutral-900/50 border border-neutral-700 hover:border-purple-600/50 rounded-xl p-6 transition-all"
         >
           <div className="flex items-center justify-between mb-4">
@@ -335,7 +335,7 @@ export default function StratumPage() {
         </Link>
 
         <Link
-          href="/Docs/miners/mining-guides/host-a-pool"
+          href="/docs/miners/mining-guides/host-a-pool"
           className="group bg-neutral-900/50 border border-neutral-700 hover:border-green-600/50 rounded-xl p-6 transition-all"
         >
           <div className="flex items-center justify-between mb-4">

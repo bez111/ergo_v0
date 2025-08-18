@@ -38,7 +38,7 @@ export default function BuyBackGuaranteesPage() {
           Explore decentralized token sale scenarios where the seller provides buyback guarantees. These mechanisms enable programmable, trustless buybacks and composable DEX logic on Ergo.
         </p>
         <Link
-          href="/Docs/ecosystem/financial/defi"
+          href="/docs/ecosystem/financial/defi"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105 mb-4"
         >
           ← Back to DeFi

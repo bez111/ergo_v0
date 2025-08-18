@@ -69,7 +69,7 @@ export default function DexPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <a
-            href="/Docs/ecosystem/financial"
+            href="/docs/ecosystem/financial"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -103,14 +103,14 @@ export default function DexPage() {
         {dexList.map((dex, idx) => {
           // Определяем внутреннюю ссылку для More
           let moreLink = null;
-          if (dex.name === "Spectrum Finance") moreLink = "/Docs/ecosystem/financial/dex/spectrum";
-          if (dex.name === "Trade House") moreLink = "/Docs/ecosystem/financial/dex/trade-house";
-          if (dex.name === "Palmyra ComDEX") moreLink = "/Docs/ecosystem/financial/dex/palmyra";
-          if (dex.name === "Crystal Pool") moreLink = "/Docs/ecosystem/financial/dex/crystal-pool";
-          if (dex.name === "Machina Finance") moreLink = "/Docs/ecosystem/financial/dex/machina";
-          if (dex.name === "Mew Finance") moreLink = "/Docs/ecosystem/financial/dex/mew";
-          if (dex.name === "GuapSwap") moreLink = "/Docs/ecosystem/financial/dex/guapswap";
-          if (dex.name === "Token Jay") moreLink = "/Docs/ecosystem/financial/dex/token-jay";
+          if (dex.name === "Spectrum Finance") moreLink = "/docs/ecosystem/financial/dex/spectrum";
+          if (dex.name === "Trade House") moreLink = "/docs/ecosystem/financial/dex/trade-house";
+          if (dex.name === "Palmyra ComDEX") moreLink = "/docs/ecosystem/financial/dex/palmyra";
+          if (dex.name === "Crystal Pool") moreLink = "/docs/ecosystem/financial/dex/crystal-pool";
+          if (dex.name === "Machina Finance") moreLink = "/docs/ecosystem/financial/dex/machina";
+          if (dex.name === "Mew Finance") moreLink = "/docs/ecosystem/financial/dex/mew";
+          if (dex.name === "GuapSwap") moreLink = "/docs/ecosystem/financial/dex/guapswap";
+          if (dex.name === "Token Jay") moreLink = "/docs/ecosystem/financial/dex/token-jay";
           // Можно добавить другие moreLink при появлении внутренних страниц
 
           return (
@@ -186,7 +186,7 @@ export default function DexPage() {
             </p>
             <div className="flex flex-row justify-between items-center gap-2 mt-auto">
               <a
-                href="/Docs/ecosystem/financial/dex/token-jay"
+                href="/docs/ecosystem/financial/dex/token-jay"
                 className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 transition-colors duration-150 focus:outline-none focus:underline"
               >
                 More
@@ -209,7 +209,7 @@ export default function DexPage() {
             </p>
             <div className="flex flex-row justify-between items-center gap-2 mt-auto">
               <a
-                href="/Docs/ecosystem/financial/dex/analog-ergo"
+                href="/docs/ecosystem/financial/dex/analog-ergo"
                 className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 transition-colors duration-150 focus:outline-none focus:underline"
               >
                 More
@@ -232,7 +232,7 @@ export default function DexPage() {
             </p>
             <div className="flex flex-row justify-between items-center gap-2 mt-auto">
               <a
-                href="/Docs/ecosystem/financial/dex/single-tx-swap"
+                href="/docs/ecosystem/financial/dex/single-tx-swap"
                 className="inline-flex items-center text-cyan-400 font-semibold text-base hover:text-cyan-300 transition-colors duration-150 focus:outline-none focus:underline"
               >
                 More

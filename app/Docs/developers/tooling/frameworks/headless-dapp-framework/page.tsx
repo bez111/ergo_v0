@@ -10,20 +10,20 @@ export default function HeadlessFrameworkPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">Ergo Headless dApp Framework (HDF)</h1>
       <div className="mb-6 flex flex-wrap gap-4">
         <Link
-          href="/Docs/developers/tooling/frameworks"
+          href="/docs/developers/tooling/frameworks"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back
         </Link>
         <Link
-          href="/Docs/developers/tooling/frameworks/headless-dapp-framework/modules"
+          href="/docs/developers/tooling/frameworks/headless-dapp-framework/modules"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           Modules
         </Link>
       </div>
-      <p className="text-gray-300 mb-4">The <a href="https://github.com/ergoplatform/ergo-headless-dapp-framework" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Ergo Headless dApp Framework (HDF)</a> is a powerful <b>Rust framework</b> designed for developing portable and reusable off-chain logic for Ergo dApps, often referred to as "Headless dApps". It provides developers with the first portable <a href="/Docs/developers/intro/eutxo" className="text-cyan-400 hover:underline">UTXO</a>-based headless dApp development framework on any blockchain.</p>
+      <p className="text-gray-300 mb-4">The <a href="https://github.com/ergoplatform/ergo-headless-dapp-framework" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Ergo Headless dApp Framework (HDF)</a> is a powerful <b>Rust framework</b> designed for developing portable and reusable off-chain logic for Ergo dApps, often referred to as "Headless dApps". It provides developers with the first portable <a href="/docs/developers/intro/eutxo" className="text-cyan-400 hover:underline">UTXO</a>-based headless dApp development framework on any blockchain.</p>
       <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-xl p-6 mb-8 flex items-start gap-3">
         <AlertTriangle className="w-6 h-6 text-yellow-400 mt-1 flex-shrink-0" />
         <div>
@@ -34,7 +34,7 @@ export default function HeadlessFrameworkPage() {
         </div>
       </div>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">What Are Headless dApps?</h2>
-      <p className="text-gray-300 mb-4">Headless dApps represent a novel approach to dApp development, focusing on creating pure, portable, self-contained logic for interacting with on-chain <a href="/Docs/developers/intro/scs/smart-contracts-overview" className="text-cyan-400 hover:underline">smart contract protocols</a>.</p>
+      <p className="text-gray-300 mb-4">Headless dApps represent a novel approach to dApp development, focusing on creating pure, portable, self-contained logic for interacting with on-chain <a href="/docs/developers/intro/scs/smart-contracts-overview" className="text-cyan-400 hover:underline">smart contract protocols</a>.</p>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-1">
         <li><b>Separation of Concerns:</b> They separate the core dApp logic (reading blockchain state, constructing transactions) from the user interface (frontend). The HDF <i>is</i> the "backend" logic, but without a built-in frontend (hence "headless").</li>
         <li><b>Portability:</b> Because they are self-contained logic (often compiled to WebAssembly or native libraries), headless dApps built with the HDF can run anywhere  desktop OS, mobile OS, browsers, servers, bots, etc.</li>
@@ -70,7 +70,7 @@ export default function HeadlessFrameworkPage() {
           <ul className="list-disc pl-6 mt-1 space-y-1">
             <li>Install the <a href="https://www.rust-lang.org/tools/install" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Rust toolchain</a>.</li>
             <li>Basic understanding of Rust programming.</li>
-            <li>Familiarity with Ergo's <a href="/Docs/developers/intro/eutxo" className="text-cyan-400 hover:underline">eUTXO model</a> and <a href="/Docs/developers/intro/scs/ergoscript" className="text-cyan-400 hover:underline">ErgoScript</a> concepts.</li>
+            <li>Familiarity with Ergo's <a href="/docs/developers/intro/eutxo" className="text-cyan-400 hover:underline">eUTXO model</a> and <a href="/docs/developers/intro/scs/ergoscript" className="text-cyan-400 hover:underline">ErgoScript</a> concepts.</li>
           </ul>
         </li>
         <li>

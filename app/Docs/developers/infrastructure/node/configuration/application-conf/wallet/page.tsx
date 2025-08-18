@@ -36,7 +36,7 @@ export default function WalletConfigPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node/configuration/application-conf?tab=ergo-node"
+            href="/docs/developers/infrastructure/node/configuration/application-conf?tab=ergo-node"
             className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Node Configuration

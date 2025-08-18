@@ -23,7 +23,7 @@ export default function BoxAssetsPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis"
+            href="/docs/developers/data-model-apis"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -42,7 +42,7 @@ export default function BoxAssetsPage() {
         {/* Asset Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Tokens Card */}
-          <Link href="/Docs/developers/data-model-apis/assets/tokens" className="group">
+          <Link href="/docs/developers/data-model-apis/assets/tokens" className="group">
             <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 relative h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -65,7 +65,7 @@ export default function BoxAssetsPage() {
           </Link>
 
           {/* Non-Fungible Tokens Card */}
-          <Link href="/Docs/developers/data-model-apis/assets/nfts" className="group">
+          <Link href="/docs/developers/data-model-apis/assets/nfts" className="group">
             <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 relative h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
@@ -88,7 +88,7 @@ export default function BoxAssetsPage() {
           </Link>
 
           {/* Singletons Card */}
-          <Link href="/Docs/developers/data-model-apis/assets/singletons" className="group">
+          <Link href="/docs/developers/data-model-apis/assets/singletons" className="group">
             <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 relative h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
@@ -111,7 +111,7 @@ export default function BoxAssetsPage() {
           </Link>
 
           {/* Standards Card */}
-          <Link href="/Docs/developers/data-model-apis/assets/standards" className="group">
+          <Link href="/docs/developers/data-model-apis/assets/standards" className="group">
             <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 relative h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">

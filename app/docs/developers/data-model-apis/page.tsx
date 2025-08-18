@@ -173,7 +173,7 @@ export default function DataModelApisPage() {
                   "Ergo's data model represents a paradigm shift in blockchain architecture, combining the best of UTXO with programmable state." 
                 </span>
                 <p>
-                  This document provides a comprehensive and in-depth exploration of Ergo's unique data model, based on the <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO (Unspent Transaction Output)</Link> model, enhanced with powerful <Link href="/Docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">smart contract</Link> capabilities (<Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTXO</Link>).
+                  This document provides a comprehensive and in-depth exploration of Ergo's unique data model, based on the <Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO (Unspent Transaction Output)</Link> model, enhanced with powerful <Link href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">smart contract</Link> capabilities (<Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTXO</Link>).
                 </p>
                 <p className="mt-2">
                   Unlike traditional blockchain architectures, Ergo's model introduces programmable state transitions, stateless verification, and deterministic execution - creating a foundation for truly scalable and secure decentralized applications.
@@ -195,11 +195,11 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">2.1 Computational Model Evolution & UTXO vs. Account Model</h3>
               <div className="mb-6 text-gray-300">
                 <p>
-                  Ergo represents a significant advancement in blockchain computational models, extending the traditional Unspent Transaction Output (UTXO) paradigm through its enhanced <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTXO (Extended UTXO)</Link> model. Unlike conventional blockchain architectures, Ergo's model introduces:
+                  Ergo represents a significant advancement in blockchain computational models, extending the traditional Unspent Transaction Output (UTXO) paradigm through its enhanced <Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTXO (Extended UTXO)</Link> model. Unlike conventional blockchain architectures, Ergo's model introduces:
                 </p>
                 <ul className="list-disc list-inside ml-4 mt-3">
-                  <li><b>Programmable State Transitions:</b> Enabling complex computational logic within <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">transaction outputs</Link>. This contrasts with the account-based model used in other blockchains (like Ethereum), where state is globally mutable. See <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO vs Account Model Comparison</Link> for a comparison of Ergo's model in terms of parallelism, <Link href="/Docs/introduction/privacy" className="text-orange-400 hover:underline">privacy</Link>, and <Link href="/Docs/introduction/roadmap" className="text-orange-400 hover:underline">scalability</Link>.</li>
-                  <li><b>Stateless Verification:</b> Allowing efficient validation without maintaining complete blockchain state, facilitated by technologies like <Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">NIPoPoWs</Link>.</li>
+                  <li><b>Programmable State Transitions:</b> Enabling complex computational logic within <Link href="/docs/developers/box" className="text-orange-400 hover:underline">transaction outputs</Link>. This contrasts with the account-based model used in other blockchains (like Ethereum), where state is globally mutable. See <Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO vs Account Model Comparison</Link> for a comparison of Ergo's model in terms of parallelism, <Link href="/docs/introduction/privacy" className="text-orange-400 hover:underline">privacy</Link>, and <Link href="/docs/introduction/roadmap" className="text-orange-400 hover:underline">scalability</Link>.</li>
+                  <li><b>Stateless Verification:</b> Allowing efficient validation without maintaining complete blockchain state, facilitated by technologies like <Link href="/docs/introduction/nipopows" className="text-orange-400 hover:underline">NIPoPoWs</Link>.</li>
                   <li><b>Deterministic Execution:</b> Ensuring predictable and verifiable transaction outcomes.</li>
                 </ul>
                 
@@ -240,8 +240,8 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">2.2 Fundamental Design Principles</h3>
               <div className="mb-6 text-gray-300">
                 <ol className="list-decimal list-inside ml-4">
-                  <li><b>Computational Completeness:</b> Supporting Turing-complete smart contract execution within strict cryptographic constraints via <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/multi-stage-transactions" className="text-orange-400 hover:underline">multi-stage contracts</Link>.</li>
-                  <li><b>Cryptographic Composability:</b> Enabling complex cryptographic protocols through <Link href="/Docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Sigma Protocols</Link>.</li>
+                  <li><b>Computational Completeness:</b> Supporting Turing-complete smart contract execution within strict cryptographic constraints via <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/multi-stage-transactions" className="text-orange-400 hover:underline">multi-stage contracts</Link>.</li>
+                  <li><b>Cryptographic Composability:</b> Enabling complex cryptographic protocols through <Link href="/docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Sigma Protocols</Link>.</li>
                   <li><b>Scalable State Management:</b> Designing a model that supports parallel transaction processing and efficient state verification.</li>
                 </ol>
               </div>
@@ -256,18 +256,18 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <p>
-                  A solid understanding of the blockchain structure lays the groundwork for exploring Ergo's data model. Ergo <Link href="/Docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">blocks</Link> contain critical metadata, <Link href="/Docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transactions</Link>, and proofs.
+                  A solid understanding of the blockchain structure lays the groundwork for exploring Ergo's data model. Ergo <Link href="/docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">blocks</Link> contain critical metadata, <Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transactions</Link>, and proofs.
                 </p>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">3.1 Block Components</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">Block Overview</Link>: Comprehensive introduction to block structure in Ergo, detailing how blocks aggregate transactions, references, and proofs.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">Block Header</Link>: Detailed examination of block header components, which include references to previous blocks, <Link href="/Docs/introduction/autolykos" className="text-orange-400 hover:underline">difficulty</Link>, and other crucial metadata.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">Block Transactions</Link>: Understanding how transactions are organized within a block to form the ledger state.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">AD Proofs</Link>: Authenticated Data Proofs enable efficient <Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">stateless client</Link> verification by providing cryptographic proofs of state transitions.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">Extension Section</Link>: An exploration of Ergo's flexible data storage section that can hold additional metadata and information beyond basic transactions.</li>
+                  <li><Link href="/docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">Block Overview</Link>: Comprehensive introduction to block structure in Ergo, detailing how blocks aggregate transactions, references, and proofs.</li>
+                  <li><Link href="/docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">Block Header</Link>: Detailed examination of block header components, which include references to previous blocks, <Link href="/docs/introduction/autolykos" className="text-orange-400 hover:underline">difficulty</Link>, and other crucial metadata.</li>
+                  <li><Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">Block Transactions</Link>: Understanding how transactions are organized within a block to form the ledger state.</li>
+                  <li><Link href="/docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">AD Proofs</Link>: Authenticated Data Proofs enable efficient <Link href="/docs/introduction/nipopows" className="text-orange-400 hover:underline">stateless client</Link> verification by providing cryptographic proofs of state transitions.</li>
+                  <li><Link href="/docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">Extension Section</Link>: An exploration of Ergo's flexible data storage section that can hold additional metadata and information beyond basic transactions.</li>
                 </ul>
               </div>
             </section>
@@ -281,7 +281,7 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <p>
-                  At the core of Ergo's data model is the <b>"<Link href="/Docs/developers/box" className="text-orange-400 hover:underline">Box</Link>,"</b> which is Ergo's implementation and extension of the <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO (Unspent Transaction Output)</Link> concept. While traditional UTXOs simply track unspent coins, Ergo's Boxes enhance this model with additional programmable capabilities.
+                  At the core of Ergo's data model is the <b>"<Link href="/docs/developers/box" className="text-orange-400 hover:underline">Box</Link>,"</b> which is Ergo's implementation and extension of the <Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO (Unspent Transaction Output)</Link> concept. While traditional UTXOs simply track unspent coins, Ergo's Boxes enhance this model with additional programmable capabilities.
                 </p>
                 <span className="block mt-2 px-4 py-2 border-l-4 border-orange-400 bg-neutral-900 text-orange-200 italic">
                   <Quote className="inline w-5 h-5 mb-1 text-orange-300" /> "Boxes are smart UTXOs - they carry not just value, but programmable logic and rich data structures."
@@ -291,20 +291,20 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">4.1 The Box Concept</h3>
               <div className="mb-6 text-gray-300">
                 <p>
-                  A <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">Box</Link> is essentially a "smart UTXO" - it serves the same role as a UTXO in tracking unspent value, but extends this with sophisticated computational features. Like a UTXO, a Box is created when value is sent in a <Link href="/Docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">transaction</Link> and is consumed (spent) when that value is transferred elsewhere. However, Boxes add the following capabilities that go beyond basic UTXOs:
+                  A <Link href="/docs/developers/box" className="text-orange-400 hover:underline">Box</Link> is essentially a "smart UTXO" - it serves the same role as a UTXO in tracking unspent value, but extends this with sophisticated computational features. Like a UTXO, a Box is created when value is sent in a <Link href="/docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">transaction</Link> and is consumed (spent) when that value is transferred elsewhere. However, Boxes add the following capabilities that go beyond basic UTXOs:
                 </p>
                 <ul className="list-disc list-inside ml-4 mt-3">
                   <li><b>Immutable State:</b> Each box represents an atomic, immutable state unit that cannot be modified after creation.</li>
-                  <li><b>Typed Registers:</b> Boxes contain 10 <Link href="/Docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link> (R0-R9) with specific purposes and rich computational potential:
+                  <li><b>Typed Registers:</b> Boxes contain 10 <Link href="/docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link> (R0-R9) with specific purposes and rich computational potential:
                     <ul className="list-disc list-inside ml-6 mt-2">
                       <li>R0: Monetary Value (in nanoERGs)</li>
-                      <li>R1: Protection Script (<Link href="/Docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">Smart Contract</Link>)</li>
+                      <li>R1: Protection Script (<Link href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">Smart Contract</Link>)</li>
                       <li>R2: Assets/Tokens</li>
                       <li>R3: Creation Details</li>
                       <li>R4-R9: Flexible, Typed Custom Data Storage</li>
                     </ul>
                   </li>
-                  <li><b>Programmable Spending Conditions:</b> Each box specifies precise conditions under which it can be spent, enabling complex logic through <Link href="/Docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">ErgoScript</Link>. See <Link href="/Docs/developers/box/modelling" className="text-orange-400 hover:underline">Box Modeling</Link> and <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">Box Overview</Link> for detailed exploration.</li>
+                  <li><b>Programmable Spending Conditions:</b> Each box specifies precise conditions under which it can be spent, enabling complex logic through <Link href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">ErgoScript</Link>. See <Link href="/docs/developers/box/modelling" className="text-orange-400 hover:underline">Box Modeling</Link> and <Link href="/docs/developers/box" className="text-orange-400 hover:underline">Box Overview</Link> for detailed exploration.</li>
                 </ul>
               </div>
             </section>
@@ -318,35 +318,35 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <p>
-                  <Link href="/Docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transactions</Link> define how <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">boxes</Link> are created, transformed, and consumed, and are central to Ergo's dynamic state evolution.
+                  <Link href="/docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transactions</Link> define how <Link href="/docs/developers/box" className="text-orange-400 hover:underline">boxes</Link> are created, transformed, and consumed, and are central to Ergo's dynamic state evolution.
                 </p>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">5.1 Transaction Foundations</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Overview</Link>: Fundamental principles of how transactions work in Ergo.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Composition</Link>: Detailed guide to constructing complex transactions off-chain before submitting them on-chain.</li>
-                  <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">Transaction Format</Link>: Technical specification of transaction structure, ensuring interoperability and standardization.</li>
+                  <li><Link href="/docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Overview</Link>: Fundamental principles of how transactions work in Ergo.</li>
+                  <li><Link href="/docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Composition</Link>: Detailed guide to constructing complex transactions off-chain before submitting them on-chain.</li>
+                  <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">Transaction Format</Link>: Technical specification of transaction structure, ensuring interoperability and standardization.</li>
                 </ul>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">5.2 Advanced Transaction Mechanisms</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/chained-transactions" className="text-orange-400 hover:underline">Chained Transactions</Link>: Explore how sequentially dependent transactions can be composed.</li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Tree in Transactions</Link>: Understanding how <Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle trees</Link> provide data integrity and facilitate efficient proofs.</li>
-                  <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Transaction Signing</Link> and <Link href="/Docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Backend Signing</Link>: Cryptographic principles and implementations for authenticating transactions.</li>
-                  <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/validation" className="text-orange-400 hover:underline">Transaction Validation</Link>: Comprehensive overview of on-chain verification processes that ensure correctness and adherence to protocol rules.</li>
+                  <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction/chained-transactions" className="text-orange-400 hover:underline">Chained Transactions</Link>: Explore how sequentially dependent transactions can be composed.</li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Tree in Transactions</Link>: Understanding how <Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle trees</Link> provide data integrity and facilitate efficient proofs.</li>
+                  <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Transaction Signing</Link> and <Link href="/docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Backend Signing</Link>: Cryptographic principles and implementations for authenticating transactions.</li>
+                  <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction/validation" className="text-orange-400 hover:underline">Transaction Validation</Link>: Comprehensive overview of on-chain verification processes that ensure correctness and adherence to protocol rules.</li>
                 </ul>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">5.3 Specialized Transaction Features</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline">Data Inputs (Read-Only Inputs)</Link>: Access additional data in transactions without spending boxes.</li>
-                  <li><Link href="/Docs/developers/ergoscript-languages/wallet-interaction/fees" className="text-orange-400 hover:underline">Transaction Fees</Link>: Understanding fee structures, ensuring that <Link href="/Docs/miners" className="text-orange-400 hover:underline">miners</Link> are incentivized.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> and <Link href="/Docs/ecosystem/tooling/babel-fleet" className="text-orange-400 hover:underline">Babel Fees Plugin</Link>: Innovative mechanisms allowing fees to be paid in alternative tokens.</li>
+                  <li><Link href="/docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline">Data Inputs (Read-Only Inputs)</Link>: Access additional data in transactions without spending boxes.</li>
+                  <li><Link href="/docs/developers/ergoscript-languages/wallet-interaction/fees" className="text-orange-400 hover:underline">Transaction Fees</Link>: Understanding fee structures, ensuring that <Link href="/docs/miners" className="text-orange-400 hover:underline">miners</Link> are incentivized.</li>
+                  <li><Link href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees</Link> and <Link href="/docs/ecosystem/tooling/babel-fleet" className="text-orange-400 hover:underline">Babel Fees Plugin</Link>: Innovative mechanisms allowing fees to be paid in alternative tokens.</li>
                 </ul>
               </div>
             </section>
@@ -360,7 +360,7 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <p>
-                  Ergo supports a rich ecosystem of assets, from fungible tokens to <Link href="/Docs/ecosystem/nfts" className="text-orange-400 hover:underline">NFTs</Link>, enabling complex economic models.
+                  Ergo supports a rich ecosystem of assets, from fungible tokens to <Link href="/docs/ecosystem/nfts" className="text-orange-400 hover:underline">NFTs</Link>, enabling complex economic models.
                 </p>
               </div>
 
@@ -376,7 +376,7 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">6.2 Non-Fungible Tokens (NFTs)</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/ecosystem/nfts" className="text-orange-400 hover:underline">NFT Overview</Link>: Comprehensive introduction to NFTs on Ergo.</li>
+                  <li><Link href="/docs/ecosystem/nfts" className="text-orange-400 hover:underline">NFT Overview</Link>: Comprehensive introduction to NFTs on Ergo.</li>
                   <li><b>NFT Creation</b>: Guide to minting NFTs using Ergo's flexible token system.</li>
                   <li><b>NFT Versions (V1 vs V2)</b>: Comparison of different NFT implementation standards.</li>
                   <li><b>On-Chain NFTs</b>: Storing NFT data directly on the blockchain.</li>
@@ -387,11 +387,11 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">6.3 Special Token Concepts</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/data-model-apis/assets/tokens/perpetual" className="text-orange-400 hover:underline">Perpetual Tokens</Link>: Tokens designed to exist indefinitely.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/assets/tokens/burning" className="text-orange-400 hover:underline">Token Burning</Link>: Permanently removing tokens from circulation.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/assets/tokens/singletons" className="text-orange-400 hover:underline">Singletons</Link>: Unique tokens with special properties.</li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip22" className="text-orange-400 hover:underline">Auction Contract (EIP-22)</Link>: Standard auction contract implementation details.</li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip24" className="text-orange-400 hover:underline">Artwork Contract (EIP-24)</Link>: Specialized standard for managing digital artwork tokens.</li>
+                  <li><Link href="/docs/developers/data-model-apis/assets/tokens/perpetual" className="text-orange-400 hover:underline">Perpetual Tokens</Link>: Tokens designed to exist indefinitely.</li>
+                  <li><Link href="/docs/developers/data-model-apis/assets/tokens/burning" className="text-orange-400 hover:underline">Token Burning</Link>: Permanently removing tokens from circulation.</li>
+                  <li><Link href="/docs/developers/data-model-apis/assets/tokens/singletons" className="text-orange-400 hover:underline">Singletons</Link>: Unique tokens with special properties.</li>
+                  <li><Link href="/docs/ecosystem/Standards/eip22" className="text-orange-400 hover:underline">Auction Contract (EIP-22)</Link>: Standard auction contract implementation details.</li>
+                  <li><Link href="/docs/ecosystem/Standards/eip24" className="text-orange-400 hover:underline">Artwork Contract (EIP-24)</Link>: Specialized standard for managing digital artwork tokens.</li>
                 </ul>
               </div>
             </section>
@@ -405,12 +405,12 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <p>
-                  Ergo uses an <Link href="/Docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">address</Link> system that ensures security, privacy, and flexibility.
+                  Ergo uses an <Link href="/docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">address</Link> system that ensures security, privacy, and flexibility.
                 </p>
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Basics</Link>: Fundamental concepts of Ergo addresses, including encoding, format, and usage.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Types</Link>: Detailed overview of Pay-to-Public-Key (P2PK), Pay-to-Script-Hash (P2SH), and Pay-to-Script (P2S) address types.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/address_validation" className="text-orange-400 hover:underline">Address Validation</Link>: Methods and best practices for validating Ergo addresses, including checksum verification and format validation.</li>
+                  <li><Link href="/docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Basics</Link>: Fundamental concepts of Ergo addresses, including encoding, format, and usage.</li>
+                  <li><Link href="/docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Types</Link>: Detailed overview of Pay-to-Public-Key (P2PK), Pay-to-Script-Hash (P2SH), and Pay-to-Script (P2S) address types.</li>
+                  <li><Link href="/docs/developers/data-model-apis/address_validation" className="text-orange-400 hover:underline">Address Validation</Link>: Methods and best practices for validating Ergo addresses, including checksum verification and format validation.</li>
                 </ul>
               </div>
             </section>
@@ -424,12 +424,12 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <p>
-                  Ergo defines protocols to streamline user interactions with <Link href="/Docs/introduction/wallets" className="text-orange-400 hover:underline">wallets</Link> and applications.
+                  Ergo defines protocols to streamline user interactions with <Link href="/docs/introduction/wallets" className="text-orange-400 hover:underline">wallets</Link> and applications.
                 </p>
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/ecosystem/Standards/eip20" className="text-orange-400 hover:underline">ErgoPay Protocol (EIP-20)</Link>: Interaction protocol for mobile wallets and dApps.</li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip25" className="text-orange-400 hover:underline">Payment Request URI (EIP-25)</Link>: Standard format for payment requests.</li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip17" className="text-orange-400 hover:underline">Proxy Contracts (EIP-17)</Link>: Mechanisms to manage funds and logic via intermediary contracts.</li>
+                  <li><Link href="/docs/ecosystem/Standards/eip20" className="text-orange-400 hover:underline">ErgoPay Protocol (EIP-20)</Link>: Interaction protocol for mobile wallets and dApps.</li>
+                  <li><Link href="/docs/ecosystem/Standards/eip25" className="text-orange-400 hover:underline">Payment Request URI (EIP-25)</Link>: Standard format for payment requests.</li>
+                  <li><Link href="/docs/ecosystem/Standards/eip17" className="text-orange-400 hover:underline">Proxy Contracts (EIP-17)</Link>: Mechanisms to manage funds and logic via intermediary contracts.</li>
                 </ul>
               </div>
             </section>
@@ -443,25 +443,25 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <p>
-                  Ergo's <Link href="/Docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">cryptographic</Link> design ensures robust security, privacy, and flexibility.
+                  Ergo's <Link href="/docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">cryptographic</Link> design ensures robust security, privacy, and flexibility.
                 </p>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">9.1 Sigma Protocols</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/cryptographic-primitives/zerojoin" className="text-orange-400 hover:underline">Non-interactive Zero-Knowledge Proofs</Link>: Private transaction verification without revealing sensitive data.</li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Flexible Signature Schemes</Link>: Supporting multiple signature types via Sigma Protocols.</li>
-                  <li><Link href="/Docs/introduction/privacy" className="text-orange-400 hover:underline">Privacy-Preserving Mechanisms</Link>: Advanced features to protect user privacy.</li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/zerojoin" className="text-orange-400 hover:underline">Non-interactive Zero-Knowledge Proofs</Link>: Private transaction verification without revealing sensitive data.</li>
+                  <li><Link href="/docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Flexible Signature Schemes</Link>: Supporting multiple signature types via Sigma Protocols.</li>
+                  <li><Link href="/docs/introduction/privacy" className="text-orange-400 hover:underline">Privacy-Preserving Mechanisms</Link>: Advanced features to protect user privacy.</li>
                 </ul>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">9.2 Cryptographic Primitives</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/cryptographic-primitives/schnorr" className="text-orange-400 hover:underline">Discrete Logarithm Proofs</Link>: Foundational to signature verification (Schnorr).</li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:underline">Ring Signatures</Link>: Enhanced privacy through signer ambiguity.</li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:underline">Threshold Signatures</Link>: Enabling multi-party computational scenarios.</li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/schnorr" className="text-orange-400 hover:underline">Discrete Logarithm Proofs</Link>: Foundational to signature verification (Schnorr).</li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:underline">Ring Signatures</Link>: Enhanced privacy through signer ambiguity.</li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:underline">Threshold Signatures</Link>: Enabling multi-party computational scenarios.</li>
                 </ul>
               </div>
             </section>
@@ -480,18 +480,18 @@ export default function DataModelApisPage() {
                   Ergo employs a robust, stateless transaction validation approach:
                 </p>
                 <ul className="list-disc list-inside ml-4">
-                  <li><b>Transaction Construction & Signing:</b> See <Link href="/Docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Composition</Link>, <Link href="/Docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">Transaction Format</Link>, and <Link href="/Docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Signing</Link>.</li>
-                  <li><b>On-Chain Verification:</b> <Link href="/Docs/developers/ergoscript-languages/wallet-interaction/validation" className="text-orange-400 hover:underline">Transaction Validation</Link> and <Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Proofs</Link>.</li>
-                  <li><b>Script Validation:</b> Detailed in <Link href="/Docs/developers/ergoscript-languages/script-validation" className="text-orange-400 hover:underline">ErgoTree Script Validation</Link> and the <Link href="/Docs/developers/ergoscript-languages/language-description" className="text-orange-400 hover:underline">ErgoScript Language Specification</Link>.</li>
-                  <li><b>Execution Environment:</b> Access blockchain state via <Link href="/Docs/developers/ergoscript-languages/blockchain-context" className="text-orange-400 hover:underline">Context Variables</Link>, ensure deterministic <Link href="/Docs/developers/ergoscript-languages/evaluation" className="text-orange-400 hover:underline">evaluation</Link>, and apply cost constraints.</li>
+                  <li><b>Transaction Construction & Signing:</b> See <Link href="/docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Composition</Link>, <Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">Transaction Format</Link>, and <Link href="/docs/developers/ergoscript-languages/wallet-interaction/signing" className="text-orange-400 hover:underline">Signing</Link>.</li>
+                  <li><b>On-Chain Verification:</b> <Link href="/docs/developers/ergoscript-languages/wallet-interaction/validation" className="text-orange-400 hover:underline">Transaction Validation</Link> and <Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Proofs</Link>.</li>
+                  <li><b>Script Validation:</b> Detailed in <Link href="/docs/developers/ergoscript-languages/script-validation" className="text-orange-400 hover:underline">ErgoTree Script Validation</Link> and the <Link href="/docs/developers/ergoscript-languages/language-description" className="text-orange-400 hover:underline">ErgoScript Language Specification</Link>.</li>
+                  <li><b>Execution Environment:</b> Access blockchain state via <Link href="/docs/developers/ergoscript-languages/blockchain-context" className="text-orange-400 hover:underline">Context Variables</Link>, ensure deterministic <Link href="/docs/developers/ergoscript-languages/evaluation" className="text-orange-400 hover:underline">evaluation</Link>, and apply cost constraints.</li>
                 </ul>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">10.2 Consensus Algorithm & Storage Rent</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><b><Link href="/Docs/introduction/autolykos" className="text-orange-400 hover:underline">Difficulty Adjustment</Link>:</b> A dynamic mechanism that adjusts mining difficulty every epoch to maintain a target block time of approximately 2 minutes, ensuring network stability and predictable block creation despite fluctuations in mining power.</li>
-                  <li><b><Link href="/Docs/introduction/storage-rent" className="text-orange-400 hover:underline">Storage Rent Mechanism</Link>:</b> A novel approach that prevents blockchain bloat and ensures long-term sustainability by requiring users to pay rent for storing data on-chain. See the linked page for implementation, fees, and economic incentives.</li>
+                  <li><b><Link href="/docs/introduction/autolykos" className="text-orange-400 hover:underline">Difficulty Adjustment</Link>:</b> A dynamic mechanism that adjusts mining difficulty every epoch to maintain a target block time of approximately 2 minutes, ensuring network stability and predictable block creation despite fluctuations in mining power.</li>
+                  <li><b><Link href="/docs/introduction/storage-rent" className="text-orange-400 hover:underline">Storage Rent Mechanism</Link>:</b> A novel approach that prevents blockchain bloat and ensures long-term sustainability by requiring users to pay rent for storing data on-chain. See the linked page for implementation, fees, and economic incentives.</li>
                 </ul>
               </div>
             </section>
@@ -505,36 +505,36 @@ export default function DataModelApisPage() {
               </h2>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/ergoscript-languages/predefined-types" className="text-orange-400 hover:underline">General Data Structures</Link></li>
-                  <li><Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">Proof of Proof-of-Work (PoPow)</Link>: Consensus mechanism enhancement for light clients, related to <Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">NIPoPoWs</Link>.</li>
+                  <li><Link href="/docs/developers/ergoscript-languages/predefined-types" className="text-orange-400 hover:underline">General Data Structures</Link></li>
+                  <li><Link href="/docs/introduction/nipopows" className="text-orange-400 hover:underline">Proof of Proof-of-Work (PoPow)</Link>: Consensus mechanism enhancement for light clients, related to <Link href="/docs/introduction/nipopows" className="text-orange-400 hover:underline">NIPoPoWs</Link>.</li>
                 </ul>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">11.1 Authenticated Data Structures</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Trees</Link> for efficient state commitment.
+                  <li><Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Trees</Link> for efficient state commitment.
                     <ul className="list-disc list-inside ml-6 mt-2">
-                      <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree/batch-proofs" className="text-orange-400 hover:underline">Merkle Batch Proof</Link></li>
-                      <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree/extension-block" className="text-orange-400 hover:underline">Merkle Extension</Link></li>
-                      <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree/lightweight-proofs" className="text-orange-400 hover:underline">Merkle Light Proof</Link></li>
+                      <li><Link href="/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs" className="text-orange-400 hover:underline">Merkle Batch Proof</Link></li>
+                      <li><Link href="/docs/developers/cryptographic-primitives/merkle-tree/extension-block" className="text-orange-400 hover:underline">Merkle Extension</Link></li>
+                      <li><Link href="/docs/developers/cryptographic-primitives/merkle-tree/lightweight-proofs" className="text-orange-400 hover:underline">Merkle Light Proof</Link></li>
                     </ul>
                   </li>
                   <li>AVL+ Trees for authenticated key-value storage.</li>
-                  <li><Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">Interlink Vectors</Link>: Lightweight blockchain verification.</li>
-                  <li><Link href="/Docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">AD Proofs</Link>: Supporting stateless clients.</li>
+                  <li><Link href="/docs/introduction/nipopows" className="text-orange-400 hover:underline">Interlink Vectors</Link>: Lightweight blockchain verification.</li>
+                  <li><Link href="/docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">AD Proofs</Link>: Supporting stateless clients.</li>
                 </ul>
               </div>
 
               <h3 className="text-xl font-semibold mb-3">11.2 Scalability and Efficiency</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li>Parallel transaction validation inherent in the <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTXO model</Link>.</li>
+                  <li>Parallel transaction validation inherent in the <Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTXO model</Link>.</li>
                   <li>Stateless validation reduces computational and storage overhead.</li>
                   <li>Just-in-time costing ensures resource use is always checked.</li>
                 </ul>
                 <p className="mt-3">
-                  For more information see the <Link href="/Docs/ecosystem/infrastructure" className="text-orange-400 hover:underline">scaling</Link> section.
+                  For more information see the <Link href="/docs/ecosystem/infrastructure" className="text-orange-400 hover:underline">scaling</Link> section.
                 </p>
               </div>
             </section>
@@ -550,7 +550,7 @@ export default function DataModelApisPage() {
               <h3 className="text-xl font-semibold mb-3">12.1 Multi-Stage Transactions</h3>
               <div className="mb-6 text-gray-300">
                 <ul className="list-disc list-inside ml-4">
-                  <li><Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/multi-stage-transactions" className="text-orange-400 hover:underline">Multi-Stage Transactions</Link>: Understanding how to design and implement complex, multi-step transaction flows using the eUTXO model.</li>
+                  <li><Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/multi-stage-transactions" className="text-orange-400 hover:underline">Multi-Stage Transactions</Link>: Understanding how to design and implement complex, multi-step transaction flows using the eUTXO model.</li>
                 </ul>
               </div>
             </section>
@@ -612,7 +612,7 @@ export default function DataModelApisPage() {
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <Link href="/Docs/developers/data-model-apis/registers" className="group">
+            <Link href="/docs/developers/data-model-apis/registers" className="group">
               <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -629,7 +629,7 @@ export default function DataModelApisPage() {
               </div>
             </Link>
 
-            <Link href="/Docs/developers/box/lifecycle" className="group">
+            <Link href="/docs/developers/box/lifecycle" className="group">
               <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
@@ -646,7 +646,7 @@ export default function DataModelApisPage() {
               </div>
             </Link>
 
-            <Link href="/Docs/developers/box/assets" className="group">
+            <Link href="/docs/developers/box/assets" className="group">
               <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
@@ -663,7 +663,7 @@ export default function DataModelApisPage() {
               </div>
             </Link>
 
-            <Link href="/Docs/developers/box/modelling" className="group">
+            <Link href="/docs/developers/box/modelling" className="group">
               <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -687,11 +687,11 @@ export default function DataModelApisPage() {
               <h2 className="text-2xl font-bold mb-4 text-blue-400">Key Points</h2>
               <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
                 <li>A box is an immutable unit, which can be created or removed, but never altered.</li>
-                <li>The box is not just a simple coin; it houses data, code, and <Link href="/Docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link>, with all of its contents exclusively stored in the registers.</li>
-                <li>Four pre-defined registers contain the box's monetary value, its protection script (the <Link href="/Docs/developers/ergoscript-languages/ergoscript-vs-ergotree" className="text-orange-400 hover:underline">ErgoTree</Link>), and the ID of the transaction that created the box.</li>
+                <li>The box is not just a simple coin; it houses data, code, and <Link href="/docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link>, with all of its contents exclusively stored in the registers.</li>
+                <li>Four pre-defined registers contain the box's monetary value, its protection script (the <Link href="/docs/developers/ergoscript-languages/ergoscript-vs-ergotree" className="text-orange-400 hover:underline">ErgoTree</Link>), and the ID of the transaction that created the box.</li>
                 <li>Each box has a unique ID, derived from the unique contents of the box, including the data of the transaction that created it.</li>
-                <li>Boxes are integral to the Ergo <Link href="/Docs/developers/infrastructure" className="text-orange-400 hover:underline">protocol</Link>. The active box set (UTXO set) is authenticated through a <Link href="/Docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">hash-based data structure</Link>, facilitating the development of <Link href="/Docs/introduction/light-clients" className="text-orange-400 hover:underline">lightweight full nodes</Link>, as detailed in <a href="https://eprint.iacr.org/2016/994" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">this paper</a>.</li>
-                <li>A box can hold up to six additional <Link href="/Docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link> (R4-R9) with typed data, accessible by the script.</li>
+                <li>Boxes are integral to the Ergo <Link href="/docs/developers/infrastructure" className="text-orange-400 hover:underline">protocol</Link>. The active box set (UTXO set) is authenticated through a <Link href="/docs/developers/tooling/frameworks/sigmajs/merkle-tree" className="text-orange-400 hover:underline">hash-based data structure</Link>, facilitating the development of <Link href="/docs/introduction/light-clients" className="text-orange-400 hover:underline">lightweight full nodes</Link>, as detailed in <a href="https://eprint.iacr.org/2016/994" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">this paper</a>.</li>
+                <li>A box can hold up to six additional <Link href="/docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link> (R4-R9) with typed data, accessible by the script.</li>
                 <li>Transactions consist of both <em>input</em> and <em>output</em> boxes.</li>
               </ul>
             </div>
@@ -722,7 +722,7 @@ export default function DataModelApisPage() {
             <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
               <h2 className="text-2xl font-bold mb-4 text-purple-400">Additional Box Functions</h2>
               <p className="text-gray-300 mb-4">
-                Besides the <Link href="/Docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link>, each box features a unique identification hash that can be referenced using the <code className="bg-neutral-700 px-2 py-1 rounded">id</code> function in <Link href="/Docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">ErgoScript</Link>. Box ids are computed by applying the <code className="bg-neutral-700 px-2 py-1 rounded">blake2b256</code> hash function to the box's content.
+                Besides the <Link href="/docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link>, each box features a unique identification hash that can be referenced using the <code className="bg-neutral-700 px-2 py-1 rounded">id</code> function in <Link href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">ErgoScript</Link>. Box ids are computed by applying the <code className="bg-neutral-700 px-2 py-1 rounded">blake2b256</code> hash function to the box's content.
               </p>
               
               <h3 className="text-xl font-semibold mb-3 text-orange-400">Example ErgoScript</h3>
@@ -758,10 +758,10 @@ export default function DataModelApisPage() {
             <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
               <h2 className="text-2xl font-bold mb-4 text-blue-400">Additional Resources</h2>
               <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-                <li>See the <Link href="/Docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">Transaction Format</Link> page for details on how boxes are serialized within transactions.</li>
+                <li>See the <Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">Transaction Format</Link> page for details on how boxes are serialized within transactions.</li>
                 <li>For the box type description in the <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md#box-type" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ErgoScript language specification</a>.</li>
                 <li>Visit <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/ec71a6f988f7412bc36199f46e7ad8db643478c7/sigmastate/src/main/scala/org/ergoplatform/ErgoAddress.scala" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ErgoAddress.scala</a>, <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBoxCandidate.scala#L24-L43" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ErgoBoxCandidate</a>, and <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/interpreter/shared/src/main/scala/org/ergoplatform/ErgoBox.scala#L22-L59" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ErgoBox</a> in the reference client codebase.</li>
-                <li>For an in-depth explanation on Ergo box modeling, see <Link href="/Docs/developers/box/modelling" className="text-orange-400 hover:underline">this page</Link>.</li>
+                <li>For an in-depth explanation on Ergo box modeling, see <Link href="/docs/developers/box/modelling" className="text-orange-400 hover:underline">this page</Link>.</li>
               </ul>
             </div>
           </div>
@@ -777,22 +777,22 @@ export default function DataModelApisPage() {
           <div className="space-y-6">
             <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
               <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-                <li>Addresses in Ergo are short strings that correspond to specific scripts and serve as a means to protect a <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">box</Link>.</li>
-                <li>Unlike Bitcoin (BTC), where addresses store a single amount, in Ergo's <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTxO</Link> model, a box contains <Link href="/Docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link> that can store various values, including its native tokens.</li>
-                <li>So, each <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">box</Link> has an ERG amount and may or may not have a bunch of <code className="bg-neutral-700 px-2 py-1 rounded">{`{tokenid, token amount}`}</code> pairs, all in the UTXO model.</li>
+                <li>Addresses in Ergo are short strings that correspond to specific scripts and serve as a means to protect a <Link href="/docs/developers/box" className="text-orange-400 hover:underline">box</Link>.</li>
+                <li>Unlike Bitcoin (BTC), where addresses store a single amount, in Ergo's <Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">eUTxO</Link> model, a box contains <Link href="/docs/developers/data-model-apis/registers" className="text-orange-400 hover:underline">registers</Link> that can store various values, including its native tokens.</li>
+                <li>So, each <Link href="/docs/developers/box" className="text-orange-400 hover:underline">box</Link> has an ERG amount and may or may not have a bunch of <code className="bg-neutral-700 px-2 py-1 rounded">{`{tokenid, token amount}`}</code> pairs, all in the UTXO model.</li>
                 <li>Unlike account-based models like eth, ergo tokens are <em>native</em> and are not smart contracts.</li>
               </ul>
             </div>
 
             {/* Hero Buttons */}
             <div className="flex gap-4">
-              <Link href="/Docs/developers/data-model-apis/address_types" className="group">
+              <Link href="/docs/developers/data-model-apis/address_types" className="group">
                 <button className="px-6 py-3 bg-green-500/10 border border-green-500/20 rounded-xl hover:bg-green-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
                   <Key className="w-5 h-5 text-green-400" />
                   <span className="text-green-400 font-semibold">Types</span>
                 </button>
               </Link>
-              <Link href="/Docs/developers/data-model-apis/address_validation" className="group">
+              <Link href="/docs/developers/data-model-apis/address_validation" className="group">
                 <button className="px-6 py-3 bg-teal-500/10 border border-teal-500/20 rounded-xl hover:bg-teal-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
                   <Shield className="w-5 h-5 text-teal-400" />
                   <span className="text-teal-400 font-semibold">Validation</span>
@@ -803,14 +803,14 @@ export default function DataModelApisPage() {
             <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6">
               <h2 className="text-2xl font-bold mb-4">Address Types</h2>
               <p className="text-gray-300">
-                Learn about the different types of addresses used in Ergo and their corresponding address types by visiting the <Link href="/Docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Types</Link> page.
+                Learn about the different types of addresses used in Ergo and their corresponding address types by visiting the <Link href="/docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Types</Link> page.
               </p>
             </div>
 
             <div className="bg-teal-400/10 border border-teal-400/20 rounded-xl p-6">
               <h2 className="text-2xl font-bold mb-4">Address Validation</h2>
               <p className="text-gray-300">
-                Learn how to validate Ergo addresses by visiting the <Link href="/Docs/developers/data-model-apis/address_validation" className="text-orange-400 hover:underline">Address Validation</Link> page, which provides essential insights and methods for verifying P2S, P2SH, and P2PK addresses.
+                Learn how to validate Ergo addresses by visiting the <Link href="/docs/developers/data-model-apis/address_validation" className="text-orange-400 hover:underline">Address Validation</Link> page, which provides essential insights and methods for verifying P2S, P2SH, and P2PK addresses.
               </p>
             </div>
 
@@ -832,25 +832,25 @@ export default function DataModelApisPage() {
           
           <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
             <p className="text-gray-300">
-              Each Ergo transaction is an <b>atomic state transition operation</b>, which means that it <em>destroys</em> a <Link href="/Docs/developers/box" className="text-orange-400 hover:underline">box</Link> from the state and creates new ones.
+              Each Ergo transaction is an <b>atomic state transition operation</b>, which means that it <em>destroys</em> a <Link href="/docs/developers/box" className="text-orange-400 hover:underline">box</Link> from the state and creates new ones.
             </p>
           </div>
 
           {/* Hero Buttons */}
           <div className="flex flex-wrap gap-4">
-            <Link href="/Docs/developers/data-model-apis/composing" className="group">
+            <Link href="/docs/developers/data-model-apis/composing" className="group">
               <button className="px-6 py-3 bg-purple-500/10 border border-purple-500/20 rounded-xl hover:bg-purple-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
                 <Network className="w-5 h-5 text-purple-400" />
                 <span className="text-purple-400 font-semibold">Composing Transactions</span>
               </button>
             </Link>
-            <Link href="/Docs/developers/data-model-apis/babel-fees" className="group">
+            <Link href="/docs/developers/data-model-apis/babel-fees" className="group">
               <button className="px-6 py-3 bg-pink-500/10 border border-pink-500/20 rounded-xl hover:bg-pink-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
                 <Coins className="w-5 h-5 text-pink-400" />
                 <span className="text-pink-400 font-semibold">Babel Fees</span>
               </button>
             </Link>
-            <Link href="/Docs/developers/data-model-apis/resources" className="group">
+            <Link href="/docs/developers/data-model-apis/resources" className="group">
               <button className="px-6 py-3 bg-cyan-500/10 border border-cyan-500/20 rounded-xl hover:bg-cyan-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
                 <BookOpen className="w-5 h-5 text-cyan-400" />
                 <span className="text-cyan-400 font-semibold">Resources</span>
@@ -901,7 +901,7 @@ export default function DataModelApisPage() {
           <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 text-cyan-400">Data Inputs</h3>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-              <li><Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline"><b>Data inputs</b></Link> are a unique concept created by Ergo, which were added to Cardano with the <em>Vasil</em> Hardfork. These allow multiple transactions to share a data-input box, storing only a single reference to the box in the block.</li>
+              <li><Link href="/docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline"><b>Data inputs</b></Link> are a unique concept created by Ergo, which were added to Cardano with the <em>Vasil</em> Hardfork. These allow multiple transactions to share a data-input box, storing only a single reference to the box in the block.</li>
             </ul>
           </div>
 
@@ -935,7 +935,7 @@ export default function DataModelApisPage() {
 
           <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
             <p className="text-gray-300 mb-4">
-              <Link href="/Docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link> is a consensus mechanism that requires <Link href="/Docs/miners" className="text-orange-400 hover:underline">miners</Link> to solve complex mathematical problems to add new blocks to the blockchain. This process, known as "<Link href="/Docs/miners" className="text-orange-400 hover:underline">mining</Link>," involves significant computational effort, ensuring the security and immutability of the blockchain.
+              <Link href="/docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link> is a consensus mechanism that requires <Link href="/docs/miners" className="text-orange-400 hover:underline">miners</Link> to solve complex mathematical problems to add new blocks to the blockchain. This process, known as "<Link href="/docs/miners" className="text-orange-400 hover:underline">mining</Link>," involves significant computational effort, ensuring the security and immutability of the blockchain.
             </p>
             <p className="text-gray-300">
               Ergo, like other Proof-of-Work (PoW) blockchains such as Bitcoin, uses blocks to record transactions and ensure the integrity of the network. However, Ergo's block structure is more sophisticated, offering enhanced functionality and efficiency.
@@ -945,7 +945,7 @@ export default function DataModelApisPage() {
           <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-xl p-6">
             <h2 className="text-2xl font-bold mb-4 text-yellow-400">Block Creation & Rewards</h2>
             <p className="text-gray-300 mb-4">
-              In Ergo, a new block is created approximately every <b>two minutes</b>. Initially, each block rewarded miners with 75 ERG, which were distributed among them and the <Link href="/Docs/introduction/entities" className="text-orange-400 hover:underline">Ergo Foundation Treasury</Link>. This <Link href="/Docs/ecosystem/infrastructure" className="text-orange-400 hover:underline">emission schedule</Link> applied for the first two years of the network's operation.
+              In Ergo, a new block is created approximately every <b>two minutes</b>. Initially, each block rewarded miners with 75 ERG, which were distributed among them and the <Link href="/docs/introduction/entities" className="text-orange-400 hover:underline">Ergo Foundation Treasury</Link>. This <Link href="/docs/ecosystem/infrastructure" className="text-orange-400 hover:underline">emission schedule</Link> applied for the first two years of the network's operation.
             </p>
           </div>
 
@@ -958,7 +958,7 @@ export default function DataModelApisPage() {
 
           {/* Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <Link href="/Docs/developers/data-model-apis/block-header" className="group">
+            <Link href="/docs/developers/data-model-apis/block-header" className="group">
               <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center">
@@ -975,7 +975,7 @@ export default function DataModelApisPage() {
               </div>
             </Link>
 
-            <Link href="/Docs/developers/data-model-apis/block-transactions" className="group">
+            <Link href="/docs/developers/data-model-apis/block-transactions" className="group">
               <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -992,7 +992,7 @@ export default function DataModelApisPage() {
               </div>
             </Link>
 
-            <Link href="/Docs/developers/data-model-apis/block-adproofs" className="group">
+            <Link href="/docs/developers/data-model-apis/block-adproofs" className="group">
               <div className="bg-red-500/10 border border-red-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
@@ -1009,7 +1009,7 @@ export default function DataModelApisPage() {
               </div>
             </Link>
 
-            <Link href="/Docs/developers/data-model-apis/extension-section" className="group">
+            <Link href="/docs/developers/data-model-apis/extension-section" className="group">
               <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 pb-12 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
@@ -1035,19 +1035,19 @@ export default function DataModelApisPage() {
               <h2 className="text-2xl font-bold mb-4 text-cyan-400">Related Concepts</h2>
               <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
                 <li><b>Ergo Modifiers:</b> In Ergo's peer-to-peer network protocol, blocks and transactions are referred to as "modifiers." These modifiers are exchanged between nodes to keep the network synchronized.</li>
-                <li><b>Superblock Clients:</b> Ergo supports "superblock clients," which provide an additional layer of efficiency and flexibility for specific use cases, related to <Link href="/Docs/introduction/nipopows" className="text-orange-400 hover:underline">logarithmic space mining</Link>.</li>
+                <li><b>Superblock Clients:</b> Ergo supports "superblock clients," which provide an additional layer of efficiency and flexibility for specific use cases, related to <Link href="/docs/introduction/nipopows" className="text-orange-400 hover:underline">logarithmic space mining</Link>.</li>
               </ul>
             </div>
 
             <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
               <h2 className="text-2xl font-bold mb-4 text-green-400">Additional Resources</h2>
               <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-                <li><Link href="/Docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">Block Header</Link>: Detailed examination of block header components</li>
-                <li><Link href="/Docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">Block Transactions</Link>: Understanding how transactions are organized within a block</li>
-                <li><Link href="/Docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">AD Proofs</Link>: Authenticated Data Proofs for stateless client verification</li>
-                <li><Link href="/Docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">Extension Section</Link>: Flexible data storage section for additional metadata</li>
-                <li><Link href="/Docs/miners" className="text-orange-400 hover:underline">Mining Overview</Link>: Understanding the mining process and block creation</li>
-                <li><Link href="/Docs/ecosystem/infrastructure" className="text-orange-400 hover:underline">Emission Schedule</Link>: Details about ERG distribution and rewards</li>
+                <li><Link href="/docs/developers/data-model-apis/block-header" className="text-orange-400 hover:underline">Block Header</Link>: Detailed examination of block header components</li>
+                <li><Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">Block Transactions</Link>: Understanding how transactions are organized within a block</li>
+                <li><Link href="/docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">AD Proofs</Link>: Authenticated Data Proofs for stateless client verification</li>
+                <li><Link href="/docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">Extension Section</Link>: Flexible data storage section for additional metadata</li>
+                <li><Link href="/docs/miners" className="text-orange-400 hover:underline">Mining Overview</Link>: Understanding the mining process and block creation</li>
+                <li><Link href="/docs/ecosystem/infrastructure" className="text-orange-400 hover:underline">Emission Schedule</Link>: Details about ERG distribution and rewards</li>
               </ul>
             </div>
           </div>
@@ -1103,9 +1103,9 @@ export default function DataModelApisPage() {
                 </div>
                 <p className="text-gray-300 text-sm min-h-[5rem]">
                   Related cryptographic protocols: 
-                  <Link href="/Docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline font-semibold">Sigma Protocols</Link>, 
-                  <Link href="/Docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:underline font-semibold">Threshold Signatures</Link>, 
-                  <Link href="/Docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:underline font-semibold">Ring Signatures</Link>.
+                  <Link href="/docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline font-semibold">Sigma Protocols</Link>, 
+                  <Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:underline font-semibold">Threshold Signatures</Link>, 
+                  <Link href="/docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:underline font-semibold">Ring Signatures</Link>.
                 </p>
                 <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-green-400 text-sm font-medium">
                   Learn more
@@ -1142,12 +1142,12 @@ proveDlog(pubKey)`}
           <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6">
             <h2 className="text-2xl font-bold mb-4 text-green-400">Practical Examples</h2>
             <div className="space-y-4">
-              <Link href="/Docs/developers/cryptographic-primitives/schnorr" className="group block">
+              <Link href="/docs/developers/cryptographic-primitives/schnorr" className="group block">
                 <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
                   <span className="font-semibold text-green-300 group-hover:underline">Schnorr Signature Verification</span>
                 </div>
               </Link>
-              <Link href="/Docs/developers/cryptographic-primitives/other-signatures" className="group block">
+              <Link href="/docs/developers/cryptographic-primitives/other-signatures" className="group block">
                 <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
                   <span className="font-semibold text-green-300 group-hover:underline">Public Key Cryptography</span>
                 </div>
@@ -1167,12 +1167,12 @@ proveDlog(pubKey)`}
           <div className="bg-pink-400/10 border border-pink-400/20 rounded-xl p-6">
             <h2 className="text-2xl font-bold mb-4 text-pink-400">Advanced Applications</h2>
             <div className="space-y-4">
-              <Link href="/Docs/developers/cryptographic-primitives" className="group block">
+              <Link href="/docs/developers/cryptographic-primitives" className="group block">
                 <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
                   <span className="font-semibold text-pink-300 group-hover:underline">Cryptographic Foundations</span>
                 </div>
               </Link>
-              <Link href="/Docs/developers/cryptographic-primitives/zerojoin" className="group block">
+              <Link href="/docs/developers/cryptographic-primitives/zerojoin" className="group block">
                 <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
                   <span className="font-semibold text-pink-300 group-hover:underline">ZeroJoin Privacy Protocol</span>
                 </div>
@@ -1183,8 +1183,8 @@ proveDlog(pubKey)`}
           <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6">
             <h2 className="text-2xl font-bold mb-4 text-purple-400">References</h2>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-              <li><Link href="/Docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Cryptographic Primitives</Link></li>
-              <li><Link href="/Docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">ErgoScript</Link></li>
+              <li><Link href="/docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Cryptographic Primitives</Link></li>
+              <li><Link href="/docs/developers/ergoscript-languages" className="text-orange-400 hover:underline">ErgoScript</Link></li>
             </ul>
           </div>
         </div>

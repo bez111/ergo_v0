@@ -62,7 +62,7 @@ export default function ExplorerPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure"
+            href="/docs/developers/infrastructure"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Infrastructure
@@ -87,7 +87,7 @@ export default function ExplorerPage() {
               Set up your own local Ergo explorer instance for development and testing purposes.
             </p>
             <Link 
-              href="/Docs/developers/infrastructure/explorer/local-setup"
+              href="/docs/developers/infrastructure/explorer/local-setup"
               className="inline-flex items-center text-blue-400 hover:text-blue-300 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
               Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -104,7 +104,7 @@ export default function ExplorerPage() {
               Lightweight blockchain explorer optimized for resource-constrained devices like Raspberry Pi.
             </p>
             <Link 
-              href="/Docs/developers/infrastructure/explorer/pi-explorer"
+              href="/docs/developers/infrastructure/explorer/pi-explorer"
               className="inline-flex items-center text-green-400 hover:text-green-300 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
               Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -121,7 +121,7 @@ export default function ExplorerPage() {
               Explore Ergo blockchain data using GraphQL APIs for efficient querying and data retrieval.
             </p>
             <Link 
-              href="/Docs/developers/infrastructure/explorer/graphql"
+              href="/docs/developers/infrastructure/explorer/graphql"
               className="inline-flex items-center text-purple-400 hover:text-purple-300 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
             >
               Learn More <ChevronRight className="w-4 h-4 ml-1" />

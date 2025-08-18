@@ -73,28 +73,28 @@ const governanceData = [
     title: "Emission Schedule",
     description: "Declining emission with periodic reductions and post-emission sustainability through storage rent and transaction fees.",
     icon: DollarSign,
-    link: "/Docs/miners/governance",
+    link: "/docs/miners/governance",
     linkText: "Learn about governance →",
   },
   {
     title: "Storage Rent Economics",
     description: "UTXOs unspent for 4+ years pay storage fees, providing sustainable miner revenue and preventing state bloat.",
     icon: Coins,
-    link: "/Docs/introduction/storage-rent",
+    link: "/docs/introduction/storage-rent",
     linkText: "Storage rent details →",
   },
   {
     title: "Miner Voting Process",
     description: "Community proposals, 1024-epoch voting period, 90% threshold requirement, and gradual activation.",
     icon: Vote,
-    link: "/Docs/miners/governance/voting",
+    link: "/docs/miners/governance/voting",
     linkText: "Voting mechanism →",
   },
   {
     title: "Economic Parameters",
     description: "Adjustable parameters include block size, storage fee factor, min fee, and computational cost limits.",
     icon: Settings,
-    link: "/Docs/miners/governance",
+    link: "/docs/miners/governance",
     linkText: "Parameter details →",
   },
 ]
@@ -260,7 +260,7 @@ export default function AdaptiveEmissionPage() {
                               name: "Governance Docs",
                               description: "Learn about Ergo's governance system",
                               icon: <BookOpen className="w-6 h-6" />,
-                              link: "/Docs/miners/governance",
+                              link: "/docs/miners/governance",
                               external: false
                             },
                             {

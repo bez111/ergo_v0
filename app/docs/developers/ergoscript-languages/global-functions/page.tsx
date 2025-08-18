@@ -44,7 +44,7 @@ export default function GlobalFunctionsPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -318,22 +318,22 @@ export default function GlobalFunctionsPage() {
         <h2 className="text-2xl font-bold text-cyan-400 mb-4">Related Resources</h2>
         <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-1">
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
               ErgoScript Language Description
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/sigma-propositions" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/sigma-propositions" className="text-cyan-400 hover:underline">
               Sigma Propositions
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/accessing-boxes" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/accessing-boxes" className="text-cyan-400 hover:underline">
               Boxes and Registers
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/blockchain-context" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/blockchain-context" className="text-cyan-400 hover:underline">
               The Blockchain Context
             </Link>
           </li>

@@ -52,7 +52,7 @@ export default function BuildFromSourcePage() {
         {/* Navigation Buttons */}
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node/setup"
+            href="/docs/developers/infrastructure/node/setup"
             className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Setup
@@ -147,7 +147,7 @@ export default function BuildFromSourcePage() {
             Some versions may require building SNAPSHOT dependencies locally.
           </p>
           <Link
-            href="/Docs/developers/infrastructure/node/setup/dependencies"
+            href="/docs/developers/infrastructure/node/setup/dependencies"
             className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
           >
             <ExternalLink className="w-4 h-4 mr-1" />
@@ -280,7 +280,7 @@ git checkout v6.0.0-RC2`}
               <div className="flex justify-between items-center mb-2">
                 <span className="text-sm text-gray-400">Dependencies Guide</span>
                 <Link
-                  href="/Docs/developers/infrastructure/node/setup/dependencies"
+                  href="/docs/developers/infrastructure/node/setup/dependencies"
                   className="flex items-center gap-1 text-xs text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   <ExternalLink className="w-3 h-3" />
@@ -423,7 +423,7 @@ git checkout v6.0.0-RC2`}
             <p className="text-gray-400 text-sm">Download pre-compiled JAR files for stable releases</p>
           </a>
           <Link
-            href="/Docs/developers/infrastructure/node/setup/docker"
+            href="/docs/developers/infrastructure/node/setup/docker"
             className="block p-4 bg-neutral-800 hover:bg-neutral-700 rounded-lg border border-neutral-600 hover:border-neutral-500 transition-colors"
           >
             <h3 className="font-semibold text-white mb-2 flex items-center gap-2">
@@ -433,7 +433,7 @@ git checkout v6.0.0-RC2`}
             <p className="text-gray-400 text-sm">Alternative: Build and run using Docker containers</p>
           </Link>
           <Link
-            href="/Docs/developers/infrastructure/node/setup/manual"
+            href="/docs/developers/infrastructure/node/setup/manual"
             className="block p-4 bg-neutral-800 hover:bg-neutral-700 rounded-lg border border-neutral-600 hover:border-neutral-500 transition-colors"
           >
             <h3 className="font-semibold text-white mb-2 flex items-center gap-2">

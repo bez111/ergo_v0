@@ -7,7 +7,7 @@ const cards = [
   {
     title: "Sync from scratch",
     content: "Start syncing with the testnet from genesis",
-    url: "/Docs/developers/infrastructure/node/testnet/testnet-full"
+    url: "/docs/developers/infrastructure/node/testnet/testnet-full"
   },
   {
     title: "Use a presynced node",
@@ -17,17 +17,17 @@ const cards = [
   {
     title: "Mine with CPU",
     content: "Use your CPU to mine blocks on the testnet",
-    url: "/Docs/developers/infrastructure/node/testnet/cpu-mining"
+    url: "/docs/developers/infrastructure/node/testnet/cpu-mining"
   },
   {
     title: "Launch a custom chain",
     content: "Fork Ergo with your own parameters",
-    url: "/Docs/developers/infrastructure/node/testnet/mine-your-own-chain"
+    url: "/docs/developers/infrastructure/node/testnet/mine-your-own-chain"
   },
   {
     title: "Testnet Resources",
     content: "All port numbers, bookmarks, and tools in one place",
-    url: "/Docs/developers/infrastructure/node/testnet/testnet-resources"
+    url: "/docs/developers/infrastructure/node/testnet/testnet-resources"
   }
 ];
 
@@ -50,7 +50,7 @@ export default function TestnetPage() {
       </div>
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node"
+          href="/docs/developers/infrastructure/node"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronLeft className="w-5 h-5 mr-2" /> Back to Node

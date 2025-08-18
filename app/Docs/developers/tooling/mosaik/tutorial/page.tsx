@@ -16,7 +16,7 @@ export default function MosaikTutorialPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">Mosaik Tutorial</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik"
+          href="/docs/developers/tooling/pathways/mosaik"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -26,7 +26,7 @@ export default function MosaikTutorialPage() {
       {/* Mosaik Feature Cards */}
       <div className="grid md:grid-cols-2 gap-6 mb-12">
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik/simple-ui"
+          href="/docs/developers/tooling/pathways/mosaik/simple-ui"
           className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
         >
           <div>
@@ -43,7 +43,7 @@ export default function MosaikTutorialPage() {
           </div>
         </Link>
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik/processing-data"
+          href="/docs/developers/tooling/pathways/mosaik/processing-data"
           className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
         >
           <div>
@@ -60,7 +60,7 @@ export default function MosaikTutorialPage() {
           </div>
         </Link>
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik/ergopay"
+          href="/docs/developers/tooling/pathways/mosaik/ergopay"
           className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
         >
           <div>
@@ -77,7 +77,7 @@ export default function MosaikTutorialPage() {
           </div>
         </Link>
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik/web-ui"
+          href="/docs/developers/tooling/pathways/mosaik/web-ui"
           className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
         >
           <div>
@@ -94,7 +94,7 @@ export default function MosaikTutorialPage() {
           </div>
         </Link>
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik/deployment"
+          href="/docs/developers/tooling/pathways/mosaik/deployment"
           className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
         >
           <div>
@@ -111,7 +111,7 @@ export default function MosaikTutorialPage() {
           </div>
         </Link>
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik/examples"
+          href="/docs/developers/tooling/pathways/mosaik/examples"
           className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
         >
           <div>

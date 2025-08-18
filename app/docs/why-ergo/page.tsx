@@ -31,13 +31,13 @@ export default function WhyErgoPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/introduction/key-features"
+            href="/docs/introduction/key-features"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <Rocket className="w-5 h-5 mr-2" /> Explore Key Features
           </Link>
           <Link
-            href="/Docs/developers"
+            href="/docs/developers"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Code className="w-5 h-5 mr-2" /> Start Building
@@ -267,7 +267,7 @@ export default function WhyErgoPage() {
               Notable contributor Alexander kushti Chepurnoy co-founded smartcontract.com (now Chainlink), served as a core developer at NXT, and was among the first employees at IOHK.
             </p>
             <Link
-              href="/Docs/introduction/entities"
+              href="/docs/introduction/entities"
               className="inline-flex items-center text-orange-400 hover:text-orange-300"
             >
               Learn More <ChevronRight className="w-4 h-4 ml-1" />

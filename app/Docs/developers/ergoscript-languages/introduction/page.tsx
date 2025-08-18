@@ -13,7 +13,7 @@ export default function ErgoTreeIntroductionPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -23,7 +23,7 @@ export default function ErgoTreeIntroductionPage() {
 
       <div className="text-lg text-gray-300 mb-8 space-y-6">
         <p>
-          This section describes the <strong>typed abstract syntax</strong> of the ErgoTree language, which is used to define logical propositions protecting <Link href="/Docs/developers/ergoscript-languages/accessing-boxes" className="text-cyan-400 hover:underline">boxes</Link> in the Ergo blockchain.
+          This section describes the <strong>typed abstract syntax</strong> of the ErgoTree language, which is used to define logical propositions protecting <Link href="/docs/developers/ergoscript-languages/accessing-boxes" className="text-cyan-400 hover:underline">boxes</Link> in the Ergo blockchain.
         </p>
 
         <p>
@@ -32,7 +32,7 @@ export default function ErgoTreeIntroductionPage() {
 
         <div className="bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 mb-6">
           <p className="text-blue-200">
-            <strong>Note:</strong> Most Ergo users do not use ErgoTree directly, as they typically develop contracts in a higher-level language, such as <Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript</Link>, which is then compiled into ErgoTree.
+            <strong>Note:</strong> Most Ergo users do not use ErgoTree directly, as they typically develop contracts in a higher-level language, such as <Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript</Link>, which is then compiled into ErgoTree.
           </p>
         </div>
 
@@ -96,7 +96,7 @@ export default function ErgoTreeIntroductionPage() {
 
         <ul className="list-disc pl-6 space-y-2 text-gray-300">
           <li>
-            It has a complementary frontend language called <Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript</Link>, whose syntax is inspired by Scala/Kotlin and shares a common subset with Java and C#; thus, if you are proficient in any of these languages, you will likely feel comfortable using ErgoScript as well.
+            It has a complementary frontend language called <Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript</Link>, whose syntax is inspired by Scala/Kotlin and shares a common subset with Java and C#; thus, if you are proficient in any of these languages, you will likely feel comfortable using ErgoScript as well.
           </li>
           <li>
             ErgoScript aims to address a large audience of programmers with minimum surprise and a low <a href="https://www.itworld.com/article/2833252/the-most-wtf-y-programming-languages.html" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">WTF <ExternalLink className="w-4 h-4 inline ml-1" /></a> ratio.

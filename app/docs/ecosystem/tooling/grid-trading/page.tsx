@@ -44,7 +44,7 @@ export default function GridTradingPage() {
           <b>Off the Grid</b> is a decentralized application (dApp) that builds on the grid trading contract proposed by kushti. It includes an execution bot/batcher for automating order matching without user interaction.
         </p>
         <Link
-          href="/Docs/ecosystem/tooling/off-the-grid"
+          href="/docs/ecosystem/tooling/off-the-grid"
           className="inline-flex items-center text-blue-400 font-semibold hover:underline mt-auto"
         >
           Learn more about Off the Grid <ChevronRight className="w-4 h-4 ml-1" />
@@ -60,7 +60,7 @@ export default function GridTradingPage() {
           <b>Machina Finance</b> is another project on Ergo that is exploring the concept of grid trading. It is developing a decentralized exchange (DEX) that utilizes grid order contracts for peer-to-peer trading.
         </p>
         <Link
-          href="/Docs/ecosystem/financial/dex/machina"
+          href="/docs/ecosystem/financial/dex/machina"
           className="inline-flex items-center text-orange-400 font-semibold hover:underline mt-auto"
         >
           Learn more about Machina Finance <ChevronRight className="w-4 h-4 ml-1" />

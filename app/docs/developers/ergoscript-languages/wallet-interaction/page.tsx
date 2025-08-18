@@ -11,7 +11,7 @@ export default function WalletInteractionPage() {
         "ErgoScript transaction format and structure. Learn how wallet interactions are formatted and processed in the Ergo blockchain.",
       icon: FileText,
       color: "text-blue-400",
-      link: "/Docs/developers/ergoscript-languages/wallet-interaction/format"
+      link: "/docs/developers/ergoscript-languages/wallet-interaction/format"
     },
     {
       title: "Merkle Tree",
@@ -19,7 +19,7 @@ export default function WalletInteractionPage() {
         "Merkle tree structures for efficient verification. Understanding cryptographic proofs and tree-based verification in wallet operations.",
       icon: GitBranch,
       color: "text-green-400",
-      link: "/Docs/developers/ergoscript-languages/wallet-interaction/merkle-tree"
+      link: "/docs/developers/ergoscript-languages/wallet-interaction/merkle-tree"
     },
     {
       title: "Signing",
@@ -27,7 +27,7 @@ export default function WalletInteractionPage() {
         "Digital signature mechanisms for secure transactions. Explore how wallets generate and verify cryptographic signatures.",
       icon: Shield,
       color: "text-purple-400",
-      link: "/Docs/developers/ergoscript-languages/wallet-interaction/signing"
+      link: "/docs/developers/ergoscript-languages/wallet-interaction/signing"
     },
     {
       title: "Signing Backend",
@@ -35,7 +35,7 @@ export default function WalletInteractionPage() {
         "Backend infrastructure for signature generation. Learn about secure key management and signing service architectures.",
       icon: Server,
       color: "text-orange-400",
-      link: "/Docs/developers/ergoscript-languages/wallet-interaction/signing-backend"
+      link: "/docs/developers/ergoscript-languages/wallet-interaction/signing-backend"
     },
     {
       title: "Validation",
@@ -43,7 +43,7 @@ export default function WalletInteractionPage() {
         "Transaction and script validation processes. Understanding how wallets validate ErgoScript contracts and transaction integrity.",
       icon: CheckCircle,
       color: "text-cyan-400",
-      link: "/Docs/developers/ergoscript-languages/wallet-interaction/validation"
+      link: "/docs/developers/ergoscript-languages/wallet-interaction/validation"
     },
     {
       title: "Data Inputs",
@@ -51,7 +51,7 @@ export default function WalletInteractionPage() {
         "Data input handling in wallet transactions. Learn how wallets process and validate data inputs for smart contracts.",
       icon: Database,
       color: "text-pink-400",
-      link: "/Docs/developers/ergoscript-languages/wallet-interaction/data-inputs"
+      link: "/docs/developers/ergoscript-languages/wallet-interaction/data-inputs"
     },
     {
       title: "Fees",
@@ -59,7 +59,7 @@ export default function WalletInteractionPage() {
         "Transaction fee calculation and management. Understanding fee structures, optimization, and wallet fee handling strategies.",
       icon: DollarSign,
       color: "text-yellow-400",
-      link: "/Docs/developers/ergoscript-languages/wallet-interaction/fees"
+      link: "/docs/developers/ergoscript-languages/wallet-interaction/fees"
     },
     {
       title: "Unified Transactions",
@@ -67,7 +67,7 @@ export default function WalletInteractionPage() {
         "Unified transaction formats and cross-chain compatibility. Explore standardized transaction structures across different implementations.",
       icon: Link2,
       color: "text-red-400",
-      link: "/Docs/developers/ergoscript-languages/wallet-interaction/unified-transactions"
+      link: "/docs/developers/ergoscript-languages/wallet-interaction/unified-transactions"
     }
   ];
 
@@ -78,7 +78,7 @@ export default function WalletInteractionPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -251,22 +251,22 @@ export default function WalletInteractionPage() {
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-12">Related Resources</h2>
       <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-1">
         <li>
-          <Link href="/Docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
             ErgoScript Language Description
           </Link>
         </li>
         <li>
-          <Link href="/Docs/developers/ergoscript-languages/blockchain-context" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/ergoscript-languages/blockchain-context" className="text-cyan-400 hover:underline">
             The Blockchain Context
           </Link>
         </li>
         <li>
-          <Link href="/Docs/developers/ergoscript-languages/sigmaboolean" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/ergoscript-languages/sigmaboolean" className="text-cyan-400 hover:underline">
             SigmaBoolean
           </Link>
         </li>
         <li>
-          <Link href="/Docs/developers/ergoscript-languages/global-functions" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/ergoscript-languages/global-functions" className="text-cyan-400 hover:underline">
             Global Functions
           </Link>
         </li>

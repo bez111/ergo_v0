@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react"
 export default function VelvetForksPage() {
   return (
     <>
-      <Link href="/Docs/miners/governance/forking/" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-primary-400 mb-6">
+      <Link href="/docs/miners/governance/forking/" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-primary-400 mb-6">
         <ArrowLeft className="w-4 h-4" />
         Back
       </Link>

@@ -42,7 +42,7 @@ export default function EutxoPage() {
           Furthermore, Ergo's Multi-Stage UTXO model, as detailed in this peer-reviewed paper, enables the implementation of Turing-complete smart contracts. (Note: ErgoScript itself is not Turing-complete by design for security, but the model allows for Turing-complete computations via multi-stage protocols).
         </p>
         <p className="text-gray-300">
-          You can see a comparison between Ergo's eUTXO model and the Account-Based model <Link href="/Docs/introduction/utxo-vs-account" className="text-orange-400 hover:text-orange-300 underline">here</Link>.
+          You can see a comparison between Ergo's eUTXO model and the Account-Based model <Link href="/docs/introduction/utxo-vs-account" className="text-orange-400 hover:text-orange-300 underline">here</Link>.
         </p>
       </div>
 

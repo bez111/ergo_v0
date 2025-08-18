@@ -12,7 +12,7 @@ const resources = [
     title: 'Getting Started',
     description: 'Begin your journey with Ergo development',
     icon: Rocket,
-    href: '/Docs/developers/tutorials',
+    href: '/docs/developers/tutorials',
     items: [
       'Quick start guide',
       'Development environment setup',
@@ -24,7 +24,7 @@ const resources = [
     title: 'ErgoScript & Languages',
     description: 'Master smart contract development',
     icon: Code,
-    href: '/Docs/developers/ergoscript-languages',
+    href: '/docs/developers/ergoscript-languages',
     items: [
       'ErgoScript fundamentals',
       'Sigma protocols',
@@ -36,7 +36,7 @@ const resources = [
     title: 'APIs & Data Models',
     description: 'Integrate with Ergo blockchain',
     icon: GitBranch,
-    href: '/Docs/developers/data-model-apis',
+    href: '/docs/developers/data-model-apis',
     items: [
       'Node API reference',
       'Explorer API',
@@ -48,7 +48,7 @@ const resources = [
     title: 'Developer Tools',
     description: 'Essential tools for building on Ergo',
     icon: Wrench,
-    href: '/Docs/developers/tooling',
+    href: '/docs/developers/tooling',
     items: [
       'SDKs and libraries',
       'Development frameworks',
@@ -60,7 +60,7 @@ const resources = [
     title: 'Infrastructure',
     description: 'Deploy and scale your applications',
     icon: BookOpen,
-    href: '/Docs/developers/infrastructure',
+    href: '/docs/developers/infrastructure',
     items: [
       'Node operation',
       'Oracle pools',
@@ -72,7 +72,7 @@ const resources = [
     title: 'Community & Support',
     description: 'Get help and contribute',
     icon: Users,
-    href: '/Docs/developers/community-support',
+    href: '/docs/developers/community-support',
     items: [
       'Discord community',
       'GitHub repositories',
@@ -86,21 +86,21 @@ const relatedContent = [
   {
     title: 'Bounties & Grants',
     description: 'Get funding for your Ergo project',
-    href: '/Docs/developers/bounties-grants',
+    href: '/docs/developers/bounties-grants',
     type: 'article' as const,
     readTime: 5
   },
   {
     title: 'Student Resources',
     description: 'Academic resources and research opportunities',
-    href: '/Docs/developers/students',
+    href: '/docs/developers/students',
     type: 'guide' as const,
     readTime: 10
   },
   {
     title: 'Cryptographic Primitives',
     description: 'Deep dive into Ergo\'s cryptography',
-    href: '/Docs/developers/cryptographic-primitives',
+    href: '/docs/developers/cryptographic-primitives',
     type: 'technology' as const,
     readTime: 15
   }
@@ -126,12 +126,12 @@ export default function DeveloperResourcesHub() {
           
           <div className="flex justify-center gap-4 mb-12">
             <Button asChild size="lg">
-              <Link href="/Docs/developers/tutorials">
+              <Link href="/docs/developers/tutorials">
                 Quick Start <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="/Docs/developers/ergoscript-languages">
+              <Link href="/docs/developers/ergoscript-languages">
                 Learn ErgoScript
               </Link>
             </Button>
@@ -179,22 +179,22 @@ export default function DeveloperResourcesHub() {
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-2xl font-bold mb-8">Quick Links</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link href="/Docs/developers/tutorials/quick-start" 
+            <Link href="/docs/developers/tutorials/quick-start" 
               className="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <div className="font-medium">Quick Start Guide</div>
               <div className="text-sm text-neutral-400 mt-1">Get started in 5 minutes</div>
             </Link>
-            <Link href="/Docs/developers/ergoscript-languages/basics" 
+            <Link href="/docs/developers/ergoscript-languages/basics" 
               className="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <div className="font-medium">ErgoScript Basics</div>
               <div className="text-sm text-neutral-400 mt-1">Learn the fundamentals</div>
             </Link>
-            <Link href="/Docs/developers/data-model-apis/node-api" 
+            <Link href="/docs/developers/data-model-apis/node-api" 
               className="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <div className="font-medium">API Reference</div>
               <div className="text-sm text-neutral-400 mt-1">Complete API documentation</div>
             </Link>
-            <Link href="/Docs/developers/tooling/sdks" 
+            <Link href="/docs/developers/tooling/sdks" 
               className="p-4 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors">
               <div className="font-medium">SDKs & Libraries</div>
               <div className="text-sm text-neutral-400 mt-1">Tools for every language</div>

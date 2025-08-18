@@ -26,7 +26,7 @@ export default function PaymentsPage() {
       </div>
 
       {/* Back Button */}
-      <Link href="/Docs/developers/data-model-apis/resources" className="inline-block">
+      <Link href="/docs/developers/data-model-apis/resources" className="inline-block">
         <button className="px-6 py-3 bg-orange-500/10 border border-orange-500/20 rounded-xl hover:bg-orange-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
           <ArrowLeft className="w-5 h-5 text-orange-400" />
           <span className="text-orange-400 font-semibold">Back to Resources</span>
@@ -176,7 +176,7 @@ export default function PaymentsPage() {
               <li>Offline wallet support</li>
             </ul>
             <div className="mt-4">
-              <a href="/Docs/developers/eip20" className="text-orange-400 hover:underline">Learn more about ErgoPay →</a>
+              <a href="/docs/developers/eip20" className="text-orange-400 hover:underline">Learn more about ErgoPay →</a>
             </div>
           </div>
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-4">
@@ -188,7 +188,7 @@ export default function PaymentsPage() {
               <li>Parameterized transactions</li>
             </ul>
             <div className="mt-4">
-              <a href="/Docs/developers/eip25" className="text-orange-400 hover:underline">Learn more about Payment URIs →</a>
+              <a href="/docs/developers/eip25" className="text-orange-400 hover:underline">Learn more about Payment URIs →</a>
             </div>
           </div>
         </div>
@@ -224,10 +224,10 @@ export default function PaymentsPage() {
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-300">Related Documentation</h3>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-              <li><a href="/Docs/developers/eip20" className="text-orange-400 hover:underline">ErgoPay Protocol (EIP-20)</a></li>
-              <li><a href="/Docs/developers/eip25" className="text-orange-400 hover:underline">Payment Request URI (EIP-25)</a></li>
-              <li><a href="/Docs/developers/eip17" className="text-orange-400 hover:underline">Proxy Contracts (EIP-17)</a></li>
-              <li><a href="/Docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees (EIP-31)</a></li>
+              <li><a href="/docs/developers/eip20" className="text-orange-400 hover:underline">ErgoPay Protocol (EIP-20)</a></li>
+              <li><a href="/docs/developers/eip25" className="text-orange-400 hover:underline">Payment Request URI (EIP-25)</a></li>
+              <li><a href="/docs/developers/eip17" className="text-orange-400 hover:underline">Proxy Contracts (EIP-17)</a></li>
+              <li><a href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees (EIP-31)</a></li>
             </ul>
           </div>
           <div>

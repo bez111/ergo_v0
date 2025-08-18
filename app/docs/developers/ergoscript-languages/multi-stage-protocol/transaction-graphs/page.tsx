@@ -26,7 +26,7 @@ export default function TransactionGraphsPage() {
 
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages/multi-stage-protocol"
+          href="/docs/developers/ergoscript-languages/multi-stage-protocol"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -38,7 +38,7 @@ export default function TransactionGraphsPage() {
         <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
           <div className="text-gray-300 space-y-4">
             <p>
-              A transaction graph represents a set of related transactions more flexibly and dynamically than a <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/transaction-trees" className="text-cyan-400 hover:underline">transaction tree</Link>. While a transaction tree is a hierarchical structure depicting a sequence of transactions with specific linear dependencies, a transaction graph is a more general representation allowing for complex and flexible dependencies between transactions.
+              A transaction graph represents a set of related transactions more flexibly and dynamically than a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-trees" className="text-cyan-400 hover:underline">transaction tree</Link>. While a transaction tree is a hierarchical structure depicting a sequence of transactions with specific linear dependencies, a transaction graph is a more general representation allowing for complex and flexible dependencies between transactions.
             </p>
             <p>
               In a transaction graph, each transaction can be visualized as a node, with directed edges connecting nodes to represent dependencies (i.e., an edge from Tx A to Tx B means Tx B spends an output created by Tx A). Unlike a transaction tree's fixed hierarchy, a transaction graph permits more intricate relationships, such as multiple dependencies (a transaction spending outputs from several previous transactions) and complex branching (a transaction creating outputs spent by multiple subsequent transactions).

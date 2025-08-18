@@ -34,7 +34,7 @@ export default function GuapSwapPage() {
           GuapSwap is a fully decentralized smart contract profit swapping service on the Ergo blockchain. GuapSwap allows any miner to get paid out in any token of their choice instead of ERG, this in turn reduces the total taxable events for the user.
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
-          <Link href="/Docs/ecosystem/financial/dex" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
+          <Link href="/docs/ecosystem/financial/dex" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
             <ChevronRight className="w-5 h-5 mr-2" /> Back to DEX
           </Link>
           <a href="https://github.com/guapswap" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">

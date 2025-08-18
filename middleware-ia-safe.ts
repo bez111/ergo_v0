@@ -3,7 +3,7 @@ import type { NextRequest } from 'next/server'
 
 /**
  * Безопасный middleware для IA оптимизации
- * Работает с существующей структурой, не ломает /Docs
+ * Работает с существующей структурой, не ломает /docs
  */
 export function iaMiddleware(request: NextRequest) {
   const { pathname, search } = request.nextUrl

@@ -56,19 +56,19 @@ export default function DocsPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/why-ergo"
+            href="/docs/why-ergo"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <BookOpen className="w-5 h-5 mr-2" /> Why Ergo?
           </Link>
           <Link
-            href="/Docs/introduction/glossary"
+            href="/docs/introduction/glossary"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Search className="w-5 h-5 mr-2" /> Glossary
           </Link>
           <Link
-            href="/Docs/developers"
+            href="/docs/developers"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Code className="w-5 h-5 mr-2" /> Developer Hub
@@ -86,7 +86,7 @@ export default function DocsPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <Link 
-            href="/Docs/why-ergo"
+            href="/docs/why-ergo"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -104,7 +104,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/key-features"
+            href="/docs/introduction/key-features"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -122,7 +122,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/glossary"
+            href="/docs/introduction/glossary"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -140,7 +140,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/faq"
+            href="/docs/introduction/faq"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -169,7 +169,7 @@ export default function DocsPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <Link 
-            href="/Docs/introduction/eutxo"
+            href="/docs/introduction/eutxo"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -187,7 +187,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/nipopows"
+            href="/docs/introduction/nipopows"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -205,7 +205,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/storage-rent"
+            href="/docs/introduction/storage-rent"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -223,7 +223,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/autolykos"
+            href="/docs/introduction/autolykos"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -241,7 +241,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/privacy"
+            href="/docs/introduction/privacy"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -259,7 +259,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/light-clients"
+            href="/docs/introduction/light-clients"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -288,7 +288,7 @@ export default function DocsPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <Link 
-            href="/Docs/developers"
+            href="/docs/developers"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -306,7 +306,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/developers/ergoscript-languages"
+            href="/docs/developers/ergoscript-languages"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -324,7 +324,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/developers/tooling"
+            href="/docs/developers/tooling"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -342,7 +342,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/developers/data-model-apis"
+            href="/docs/developers/data-model-apis"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -360,7 +360,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/developers/tutorials"
+            href="/docs/developers/tutorials"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -378,7 +378,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/developers/box"
+            href="/docs/developers/box"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -407,7 +407,7 @@ export default function DocsPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <Link 
-            href="/Docs/ecosystem"
+            href="/docs/ecosystem"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -425,7 +425,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/ecosystem/applications"
+            href="/docs/ecosystem/applications"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -443,7 +443,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/ecosystem/financial"
+            href="/docs/ecosystem/financial"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -461,7 +461,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/ecosystem/privacy"
+            href="/docs/ecosystem/privacy"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -479,7 +479,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/ecosystem/nfts"
+            href="/docs/ecosystem/nfts"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -497,7 +497,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/ecosystem/infrastructure"
+            href="/docs/ecosystem/infrastructure"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -515,7 +515,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/ecosystem/tooling"
+            href="/docs/ecosystem/tooling"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -533,7 +533,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/ecosystem/daos"
+            href="/docs/ecosystem/daos"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -562,7 +562,7 @@ export default function DocsPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <Link 
-            href="/Docs/miners"
+            href="/docs/miners"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -580,7 +580,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/miners/Miner-Tooling"
+            href="/docs/miners/Miner-Tooling"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -598,7 +598,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/miners/resources"
+            href="/docs/miners/resources"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -627,7 +627,7 @@ export default function DocsPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <Link 
-            href="/Docs/introduction/ergo-foundation"
+            href="/docs/introduction/ergo-foundation"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -645,7 +645,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/devdao"
+            href="/docs/introduction/devdao"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -663,7 +663,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/sigmanauts"
+            href="/docs/introduction/sigmanauts"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -681,7 +681,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/social-contract"
+            href="/docs/introduction/social-contract"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -699,7 +699,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/events"
+            href="/docs/introduction/events"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -717,7 +717,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/contribute"
+            href="/docs/contribute"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -746,7 +746,7 @@ export default function DocsPage() {
         </p>
         <div className="grid md:grid-cols-2 gap-6">
           <Link 
-            href="/Docs/introduction/research-whitepapers"
+            href="/docs/introduction/research-whitepapers"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -764,7 +764,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/resources"
+            href="/docs/introduction/resources"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -782,7 +782,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/roadmap"
+            href="/docs/introduction/roadmap"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -800,7 +800,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/wallets"
+            href="/docs/introduction/wallets"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -818,7 +818,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/audit"
+            href="/docs/introduction/audit"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -836,7 +836,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/Docs/introduction/misconceptions"
+            href="/docs/introduction/misconceptions"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -866,7 +866,7 @@ export default function DocsPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-4">
           <Link 
-            href="/Docs/developers"
+            href="/docs/developers"
             className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-600 text-black px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
           >
             <Code className="w-4 h-4" />

@@ -7,22 +7,22 @@ const frameworks = [
   {
     title: "Fleet",
     content: "Lets you easily create Ergo transactions with a pure JS library.",
-    url: "/Docs/developers/tooling/fleet"
+    url: "/docs/developers/tooling/fleet"
   },
   {
     title: "Sigma.JS",
     content: "JavaScript port of the sigmastate-interpreter",
-    url: "/Docs/developers/tooling/sigmajs"
+    url: "/docs/developers/tooling/sigmajs"
   },
   {
     title: "AppKit",
     content: "Can be configured to run JavaScript under GraalVM.",
-    url: "/Docs/developers/tooling/frameworks/appkit"
+    url: "/docs/developers/tooling/frameworks/appkit"
   },
   {
     title: "sigma-rust (via WASM)",
     content: "Core Rust library with JS/TS bindings available via WebAssembly.",
-    url: "/Docs/developers/tooling/frameworks/sigmarust"
+    url: "/docs/developers/tooling/frameworks/sigmarust"
   }
 ];
 
@@ -42,7 +42,7 @@ const tutorials = [
   {
     title: "📹 Video Tutorial",
     content: "NightOwl dApp Connector React Package",
-    url: "/Docs/developers/tooling/dApp",
+    url: "/docs/developers/tooling/dApp",
     external: false
   },
   {
@@ -111,7 +111,7 @@ export default function JavascriptPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">JavaScript &amp; TypeScript</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/programming-languages"
+          href="/docs/developers/tooling/programming-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -119,13 +119,13 @@ export default function JavascriptPage() {
         </Link>
       </div>
       <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-        JavaScript and TypeScript developers can interact with the Ergo blockchain using various libraries and frameworks. Notably, <Link href="/Docs/developers/tooling/sigma-rust#bindings" className="text-cyan-400 hover:underline">JS/TS bindings for sigma-rust</Link> (via WebAssembly) provide core blockchain interaction capabilities.
+        JavaScript and TypeScript developers can interact with the Ergo blockchain using various libraries and frameworks. Notably, <Link href="/docs/developers/tooling/sigma-rust#bindings" className="text-cyan-400 hover:underline">JS/TS bindings for sigma-rust</Link> (via WebAssembly) provide core blockchain interaction capabilities.
       </p>
       <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-        <Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">Appkit</Link> was designed as an abstraction layer on top of <Link href="/Docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Sigma</Link>. This gives a lot of freedom on the core level in Sigma, while keeping <Link href="/Docs/developers/tooling/api" className="text-cyan-400 hover:underline">dApp-facing APIs</Link> stable.
+        <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">Appkit</Link> was designed as an abstraction layer on top of <Link href="/docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Sigma</Link>. This gives a lot of freedom on the core level in Sigma, while keeping <Link href="/docs/developers/tooling/api" className="text-cyan-400 hover:underline">dApp-facing APIs</Link> stable.
       </p>
       <p className="text-lg text-gray-300 mb-6 max-w-2xl">
-        With the availability of <Link href="/Docs/developers/tooling/sigmajs" className="text-cyan-400 hover:underline">Sigma.js</Link>, <Link href="/Docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link> can play the same role for JS/TS.
+        With the availability of <Link href="/docs/developers/tooling/sigmajs" className="text-cyan-400 hover:underline">Sigma.js</Link>, <Link href="/docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link> can play the same role for JS/TS.
       </p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Frameworks</h2>
       <CardGrid items={frameworks} />

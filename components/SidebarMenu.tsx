@@ -12,7 +12,7 @@ function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: num
   const fullPath = item.href || parentPath;
   const isActive = item.href && pathname === item.href;
   const shouldForceOpen =
-    (item.title === "Tooling" && pathname.startsWith("/Docs/miners/Miner-Tooling")) ||
+    (item.title === "Tooling" && pathname.startsWith("/docs/miners/Miner-Tooling")) ||
     (hasChildren && item.items?.some((child: any) => child.href && pathname === child.href));
   const baseClass = level === 0
     ? `font-medium text-base text-gray-200 hover:text-orange-400${isActive ? " text-orange-400" : ""}`

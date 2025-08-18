@@ -18,7 +18,7 @@ const monetaryList: Array<{
     category: "Stablecoins",
     description: "Algorithmic stablecoin protocol providing decentralized, collateral-backed stable assets.",
     link: "https://sigmausd.io/",
-    more: "/Docs/ecosystem/financial/monetary-systems/sigmausd"
+    more: "/docs/ecosystem/financial/monetary-systems/sigmausd"
   },
   {
     name: "DexyGold",
@@ -26,7 +26,7 @@ const monetaryList: Array<{
     category: "Stablecoins",
     description: "Gold-backed stable asset protocol for the Ergo blockchain.",
     link: null,
-    more: "/Docs/ecosystem/financial/monetary-systems/dexygold"
+    more: "/docs/ecosystem/financial/monetary-systems/dexygold"
   },
   {
     name: "ChainCash",
@@ -34,7 +34,7 @@ const monetaryList: Array<{
     category: "Experimental",
     description: "Experimental stablecoin protocol designed for the Ergo blockchain.",
     link: null,
-    more: "/Docs/ecosystem/financial/monetary-systems/chaincash"
+    more: "/docs/ecosystem/financial/monetary-systems/chaincash"
   },
   {
     name: "Gluon",
@@ -42,7 +42,7 @@ const monetaryList: Array<{
     category: "Experimental",
     description: "Research project exploring new models for stable value on Ergo.",
     link: null,
-    more: "/Docs/ecosystem/financial/monetary-systems/gluon"
+    more: "/docs/ecosystem/financial/monetary-systems/gluon"
   },
   {
     name: "LETS (Local Exchange Trading Systems)",
@@ -50,10 +50,10 @@ const monetaryList: Array<{
     category: "LETS",
     description: "Community-based monetary systems enabling local, trustless exchange of value.",
     link: null,
-    more: "/Docs/ecosystem/financial/monetary-systems/lets",
+    more: "/docs/ecosystem/financial/monetary-systems/lets",
     subpages: [
-      { name: "Basic Implementation", href: "/Docs/ecosystem/financial/monetary-systems/basic-implementation" },
-      { name: "Trustless LETS", href: "/Docs/ecosystem/financial/monetary-systems/trustless-lets" }
+      { name: "Basic Implementation", href: "/docs/ecosystem/financial/monetary-systems/basic-implementation" },
+      { name: "Trustless LETS", href: "/docs/ecosystem/financial/monetary-systems/trustless-lets" }
     ]
   }
 ];
@@ -83,7 +83,7 @@ export default function MonetarySystemsPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <a
-            href="/Docs/ecosystem/financial"
+            href="/docs/ecosystem/financial"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>

@@ -24,7 +24,7 @@ export default function PerpetualTokensPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets/tokens"
+            href="/docs/developers/data-model-apis/assets/tokens"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -99,7 +99,7 @@ export default function PerpetualTokensPage() {
           </p>
 
           <p className="text-gray-300 mb-4">
-            To overcome this, we can store <code className="bg-neutral-700 px-2 py-1 rounded">script1Hash</code> in a register of the <Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">box</Link> that contains <code className="bg-neutral-700 px-2 py-1 rounded">script2</code>. We also need to modify <code className="bg-neutral-700 px-2 py-1 rounded">script1</code> to ensure that the corresponding register of any box containing <code className="bg-neutral-700 px-2 py-1 rounded">script2</code> equals <code className="bg-neutral-700 px-2 py-1 rounded">hash(SELF.propositionBytes)</code>.
+            To overcome this, we can store <code className="bg-neutral-700 px-2 py-1 rounded">script1Hash</code> in a register of the <Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">box</Link> that contains <code className="bg-neutral-700 px-2 py-1 rounded">script2</code>. We also need to modify <code className="bg-neutral-700 px-2 py-1 rounded">script1</code> to ensure that the corresponding register of any box containing <code className="bg-neutral-700 px-2 py-1 rounded">script2</code> equals <code className="bg-neutral-700 px-2 py-1 rounded">hash(SELF.propositionBytes)</code>.
           </p>
 
           <p className="text-gray-300 mt-6">

@@ -22,7 +22,7 @@ export default function NodeConfigurationPage() {
 
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node"
+          href="/docs/developers/infrastructure/node"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronRight className="w-5 h-5 mr-2" /> Back to Node Infrastructure
@@ -54,7 +54,7 @@ export default function NodeConfigurationPage() {
             <AccordionContent className="px-6 pb-6">
               <div className="grid grid-cols-1 gap-4">
                 <Link 
-                  href="/Docs/developers/infrastructure/node/configuration/wallet/initialize"
+                  href="/docs/developers/infrastructure/node/configuration/wallet/initialize"
                   className="relative bg-gradient-to-br from-green-500/10 to-green-600/5 border border-green-500/20 rounded-xl p-4 hover:border-green-400/40 hover:from-green-500/20 hover:to-green-600/10 transition-all duration-300 group overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 w-16 h-16 bg-green-500/5 rounded-full -translate-y-8 translate-x-8 group-hover:scale-150 transition-transform duration-500"></div>
@@ -77,7 +77,7 @@ export default function NodeConfigurationPage() {
                   </div>
                 </Link>
                 <Link 
-                  href="/Docs/developers/infrastructure/node/configuration/wallet/hierarchical"
+                  href="/docs/developers/infrastructure/node/configuration/wallet/hierarchical"
                   className="relative bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 border border-cyan-500/20 rounded-xl p-4 hover:border-cyan-400/40 hover:from-cyan-500/20 hover:to-cyan-600/10 transition-all duration-300 group overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 w-16 h-16 bg-cyan-500/5 rounded-full -translate-y-8 translate-x-8 group-hover:scale-150 transition-transform duration-500"></div>
@@ -100,7 +100,7 @@ export default function NodeConfigurationPage() {
                   </div>
                 </Link>
                 <Link 
-                  href="/Docs/developers/infrastructure/node/configuration/wallet/setup"
+                  href="/docs/developers/infrastructure/node/configuration/wallet/setup"
                   className="relative bg-gradient-to-br from-orange-500/10 to-orange-600/5 border border-orange-500/20 rounded-xl p-4 hover:border-orange-400/40 hover:from-orange-500/20 hover:to-orange-600/10 transition-all duration-300 group overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 w-16 h-16 bg-orange-500/5 rounded-full -translate-y-8 translate-x-8 group-hover:scale-150 transition-transform duration-500"></div>
@@ -155,7 +155,7 @@ export default function NodeConfigurationPage() {
                 {/* Main Cards */}
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <Link 
-                    href="/Docs/developers/infrastructure/node/configuration/swagger-ui"
+                    href="/docs/developers/infrastructure/node/configuration/swagger-ui"
                     className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-blue-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
                   >
                     <h4 className="text-lg font-bold mb-3 flex items-center gap-2">
@@ -481,7 +481,7 @@ export default function NodeConfigurationPage() {
             <AccordionContent className="px-6 pb-6">
               <div className="grid md:grid-cols-1 gap-6">
                 <Link 
-                  href="/Docs/developers/infrastructure/node/configuration/indexed-node-api"
+                  href="/docs/developers/infrastructure/node/configuration/indexed-node-api"
                   className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-blue-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
                 >
                   <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -510,7 +510,7 @@ export default function NodeConfigurationPage() {
             <AccordionContent className="px-6 pb-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <Link 
-                  href="/Docs/developers/infrastructure/node/configuration/application-conf"
+                  href="/docs/developers/infrastructure/node/configuration/application-conf"
                   className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
                 >
                   <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -525,7 +525,7 @@ export default function NodeConfigurationPage() {
                   </div>
                 </Link>
                 <Link 
-                  href="/Docs/developers/infrastructure/node/configuration/testnet-conf"
+                  href="/docs/developers/infrastructure/node/configuration/testnet-conf"
                   className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
                 >
                   <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -576,7 +576,7 @@ export default function NodeConfigurationPage() {
                   </ul>
                 </div>
                 <Link 
-                  href="/Docs/developers/infrastructure/node/configuration/tor"
+                  href="/docs/developers/infrastructure/node/configuration/tor"
                   className="relative bg-gradient-to-br from-purple-500/10 to-purple-600/5 border border-purple-500/20 rounded-2xl p-6 hover:border-purple-400/40 hover:from-purple-500/20 hover:to-purple-600/10 transition-all duration-300 group overflow-hidden"
                 >
                   <div className="absolute top-0 right-0 w-20 h-20 bg-purple-500/5 rounded-full -translate-y-10 translate-x-10 group-hover:scale-150 transition-transform duration-500"></div>

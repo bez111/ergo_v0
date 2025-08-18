@@ -23,21 +23,21 @@ export default function NFTsPage() {
         
         <div className="flex flex-wrap gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets"
+            href="/docs/developers/data-model-apis/assets"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Assets
           </Link>
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts/minting"
+            href="/docs/developers/data-model-apis/assets/nfts/minting"
             className="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/20 hover:bg-blue-500/30 text-blue-400 rounded-xl transition-colors duration-200"
           >
             <Palette className="w-4 h-4" />
             Minting a NFT
           </Link>
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts/royalties"
+            href="/docs/developers/data-model-apis/assets/nfts/royalties"
             className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 text-green-400 rounded-xl transition-colors duration-200"
           >
             <DollarSign className="w-4 h-4" />
@@ -74,7 +74,7 @@ export default function NFTsPage() {
                 How do I mint a NFT?
               </summary>
               <p className="text-gray-300 mt-3">
-                Minting a NFT on Ergo is a straightforward process that can be done programmatically or using resources listed in our guide. Learn more about it <Link href="/Docs/developers/data-model-apis/assets/nfts/minting" className="text-cyan-400 hover:underline">here</Link>.
+                Minting a NFT on Ergo is a straightforward process that can be done programmatically or using resources listed in our guide. Learn more about it <Link href="/docs/developers/data-model-apis/assets/nfts/minting" className="text-cyan-400 hover:underline">here</Link>.
               </p>
             </details>
 
@@ -85,7 +85,7 @@ export default function NFTsPage() {
                 How do royalties work?
               </summary>
               <p className="text-gray-300 mt-3">
-                Royalties in Ergo are integrated into the minting metadata and can be accessed via smart contracts, allowing marketplaces to include royalties in their sale contracts. Find out more <Link href="/Docs/developers/data-model-apis/assets/nfts/royalties" className="text-cyan-400 hover:underline">here</Link>.
+                Royalties in Ergo are integrated into the minting metadata and can be accessed via smart contracts, allowing marketplaces to include royalties in their sale contracts. Find out more <Link href="/docs/developers/data-model-apis/assets/nfts/royalties" className="text-cyan-400 hover:underline">here</Link>.
               </p>
             </details>
           </div>
@@ -110,7 +110,7 @@ export default function NFTsPage() {
           <div>
             <h3 className="text-xl font-semibold text-purple-400 mb-4">UTXO NFTs</h3>
             <p className="text-gray-300 mb-4">
-              One interesting feature is that Ergo can be used to create <Link href="/Docs/developers/data-model-apis/assets/nfts/pow-tokens" className="text-cyan-400 hover:underline">PoW-backed NFTs</Link>. For most NFTs, a user simply generates a UTXO with the token contract attached. But it's also possible for miners to create special NFTs, where the id of the newly minted token is the id of a coinbase transaction. This has all kinds of potential use cases, but the core idea is that a miner has the opportunity to create a special NFT when they mine a block. While any number of NFTs can be created via a regular smart contract, a finite number of these PoW-backed NFTs can exist.
+              One interesting feature is that Ergo can be used to create <Link href="/docs/developers/data-model-apis/assets/nfts/pow-tokens" className="text-cyan-400 hover:underline">PoW-backed NFTs</Link>. For most NFTs, a user simply generates a UTXO with the token contract attached. But it's also possible for miners to create special NFTs, where the id of the newly minted token is the id of a coinbase transaction. This has all kinds of potential use cases, but the core idea is that a miner has the opportunity to create a special NFT when they mine a block. While any number of NFTs can be created via a regular smart contract, a finite number of these PoW-backed NFTs can exist.
             </p>
             <p className="text-gray-300">
               There are other applications of NFTs that use the extended UTXO model, including facilitating a new generation of complex dApps. For example, a dApp creator can generate an NFT associated with an address and smart contract. While anyone can use that contract, and even create a transaction using the private key of that address, the NFT owner can still maintain administrative rights or other privileges.

@@ -280,21 +280,21 @@ export default function NipopowsPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Explore NIPoPoW Applications</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/nipopows?tab=light-clients"
+              href="/docs/introduction/nipopows?tab=light-clients"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Zap className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">Light Clients</span>
             </Link>
             <Link
-              href="/Docs/introduction/nipopows?tab=light-miners"
+              href="/docs/introduction/nipopows?tab=light-miners"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Layers className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Light Miners</span>
             </Link>
             <Link
-              href="/Docs/introduction/nipopows?tab=sidechains"
+              href="/docs/introduction/nipopows?tab=sidechains"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <ArrowRightLeft className="w-5 h-5 mr-2 text-green-400" />
@@ -502,21 +502,21 @@ export default function NipopowsPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Explore More About NIPoPoWs</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/nipopows?tab=light-miners"
+              href="/docs/introduction/nipopows?tab=light-miners"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Layers className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">Light Miners</span>
             </Link>
             <Link
-              href="/Docs/introduction/nipopows?tab=sidechains"
+              href="/docs/introduction/nipopows?tab=sidechains"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <ArrowRightLeft className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Sidechains</span>
             </Link>
             <Link
-              href="/Docs/introduction/eutxo"
+              href="/docs/introduction/eutxo"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Code className="w-5 h-5 mr-2 text-green-400" />
@@ -721,21 +721,21 @@ export default function NipopowsPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Explore More About NIPoPoWs</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/nipopows?tab=light-clients"
+              href="/docs/introduction/nipopows?tab=light-clients"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Zap className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">Light Clients</span>
             </Link>
             <Link
-              href="/Docs/introduction/nipopows?tab=sidechains"
+              href="/docs/introduction/nipopows?tab=sidechains"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <ArrowRightLeft className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Sidechains</span>
             </Link>
             <Link
-              href="/Docs/introduction/eutxo"
+              href="/docs/introduction/eutxo"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Code className="w-5 h-5 mr-2 text-green-400" />
@@ -991,21 +991,21 @@ export default function NipopowsPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Explore More About NIPoPoWs</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/nipopows?tab=light-clients"
+              href="/docs/introduction/nipopows?tab=light-clients"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Zap className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">Light Clients</span>
             </Link>
             <Link
-              href="/Docs/introduction/nipopows?tab=light-miners"
+              href="/docs/introduction/nipopows?tab=light-miners"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Layers className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Light Miners</span>
             </Link>
             <Link
-              href="/Docs/introduction/eutxo"
+              href="/docs/introduction/eutxo"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Code className="w-5 h-5 mr-2 text-green-400" />

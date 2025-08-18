@@ -16,15 +16,15 @@ const foundational = [
   { title: "Multi-stage Contracts in the UTXO Model", url: "https://ergoplatform.org/docs/paper_26.pdf" },
   { title: "EDRAX: A Cryptocurrency with Stateless Transaction Validation", url: "https://eprint.iacr.org/2018/968.pdf" },
   { title: "Revisiting Difficulty Control for Blockchain Systems", url: "https://eprint.iacr.org/2017/731.pdf" },
-  { title: "Storage Rent: A Systematic Approach To Cryptocurrency Fees", url: "/Docs/introduction/storage-rent" },
+  { title: "Storage Rent: A Systematic Approach To Cryptocurrency Fees", url: "/docs/introduction/storage-rent" },
   { title: "ZeroJoin: Combining ZeroCoin and CoinJoin", url: "https://eprint.iacr.org/2020/560.pdf" },
   { title: "Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks", url: "https://eprint.iacr.org/2021/577.pdf" },
 ];
 const postMainnet = [
   { title: "Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts", url: "https://eprint.iacr.org/2020/044.pdf" },
   { title: "Ergo Hackathon: Crowdfunded Smart Contract Pools Research and Conceptualization", url: "https://eprint.iacr.org/2021/846" },
-  { title: "Succinct, Non-Interactive Share Proofs (See Lithos Protocol)", url: "/Docs/introduction/lithos" },
-  { title: "Dexy (See Dexy)", url: "/Docs/introduction/dexy" },
+  { title: "Succinct, Non-Interactive Share Proofs (See Lithos Protocol)", url: "/docs/introduction/lithos" },
+  { title: "Dexy (See Dexy)", url: "/docs/introduction/dexy" },
   { title: "Sigmajoin", url: "https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf" },
   { title: "ChainCash", url: "https://github.com/kushti/chaincash/blob/master/paper/chaincash.pdf" },
   { title: "KYA - A Treatise On Assumptions in Cryptocurrencies and Defi", url: "https://github.com/kushti/kya/blob/master/kya.pdf" },
@@ -53,7 +53,7 @@ function ResourceCards({ items, icon }: { items: { title: string; url: string }[
   return (
     <div className="grid md:grid-cols-2 gap-4 mb-6">
       {items.map((item) => (
-        item.url.startsWith("/Docs") ? (
+        item.url.startsWith("/docs") ? (
           <Link
             key={item.title}
             href={item.url}

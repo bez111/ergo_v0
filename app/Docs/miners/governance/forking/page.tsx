@@ -12,7 +12,7 @@ export default function ForkingPage() {
         Ergo's view is that disruptive hard forks should be avoided unless absolutely critical. Ergo implements various measures to
         prevent hard forks, such as pushing complexity to the application layer and enabling many things to be implemented via soft-forks.
       </p>
-      <Link href="/Docs/miners/governance" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-primary-400 mb-6">
+      <Link href="/docs/miners/governance" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-primary-400 mb-6">
         <ArrowLeft className="w-4 h-4" />
         Back
       </Link>
@@ -24,7 +24,7 @@ export default function ForkingPage() {
       {/* Fork type cards placed after Overview */}
       <div className="grid grid-cols-1 gap-6 mb-8">
         {/* Velvet Forks */}
-        <Link href="/Docs/miners/governance/forking/velvet-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+        <Link href="/docs/miners/governance/forking/velvet-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
               <GitBranch className="w-6 h-6 text-brand-primary-400" />
@@ -40,7 +40,7 @@ export default function ForkingPage() {
         </Link>
 
         {/* Soft Forks */}
-        <Link href="/Docs/miners/governance/forking/soft-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+        <Link href="/docs/miners/governance/forking/soft-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
               <GitBranch className="w-6 h-6 text-brand-primary-400" />
@@ -56,7 +56,7 @@ export default function ForkingPage() {
         </Link>
 
         {/* Hard Forks */}
-        <Link href="/Docs/miners/governance/forking/hard-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+        <Link href="/docs/miners/governance/forking/hard-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
               <GitBranch className="w-6 h-6 text-brand-primary-400" />

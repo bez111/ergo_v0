@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import DocsClient from './DocsClient'
+import DocsClient from './docsClient'
 import Script from 'next/script'
 import { generateDocsSchema } from './docs-schema'
 
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: 'Ergo Documentation Hub',
     description: 'Your complete guide to understanding, using, and building on Ergo Platform',
     type: 'website',
-    url: 'https://ergoblockchain.org/Docs',
+    url: 'https://ergoblockchain.org/docs',
     images: [{
       url: '/og-docs.png',
       width: 1200,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: 'https://ergoblockchain.org/Docs'
+    canonical: 'https://ergoblockchain.org/docs'
   }
 }
 

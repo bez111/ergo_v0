@@ -16,7 +16,7 @@ export default function EvaluationPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -103,7 +103,7 @@ export default function EvaluationPage() {
               are the denotations of values of the type <InlineMath math="A" />.
             </p>
             <p>
-              Thus the type <Link href="/Docs/developers/ergoscript-languages/predefined-types#boolean" className="text-blue-400 hover:text-blue-300 underline">
+              Thus the type <Link href="/docs/developers/ergoscript-languages/predefined-types#boolean" className="text-blue-400 hover:text-blue-300 underline">
               <InlineMath math="\mathrm{Boolean}" /></Link> denotes the 2-element set <InlineMath math="\{\mathrm{true},\mathrm{false}\}" />, 
               because there are two values of type <InlineMath math="\mathrm{Boolean}" />. Likewise the type <InlineMath math="(T_1,\dots,T_n)" /> 
               denotes <InlineMath math="([\![T_1]\!],\dots,[\![T_n]\!])" /> because a value of type <InlineMath math="(T_1,\dots,T_n)" /> 

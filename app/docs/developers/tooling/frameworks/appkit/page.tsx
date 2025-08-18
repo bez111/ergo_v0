@@ -7,12 +7,12 @@ import { ExternalLink, ArrowLeft } from "lucide-react";
 const tutorials = [
   {
     title: "General Example",
-    url: "/Docs/developers/tooling/appkit/frameworks/appkit/tutorial",
+    url: "/docs/developers/tooling/appkit/frameworks/appkit/tutorial",
     content: "Step-by-step walkthrough for building and sending a transaction using Appkit."
   },
   {
     title: "Interacting with a local Node",
-    url: "/Docs/developers/tooling/appkit/frameworks/appkit/local-node",
+    url: "/docs/developers/tooling/appkit/frameworks/appkit/local-node",
     content: "How to connect Appkit to a local Ergo Node and perform basic operations."
   },
   {
@@ -29,12 +29,12 @@ const tutorials = [
   },
   {
     title: "ErgoPay Example",
-    url: "/Docs/developers/tooling/wallet/payments/ergopay/ergo-pay",
+    url: "/docs/developers/tooling/wallet/payments/ergopay/ergo-pay",
     content: "How to use ErgoPay for secure dApp-to-wallet connections and transactions."
   },
   {
     title: "Gradle",
-    url: "/Docs/developers/tooling/frameworks/appkit/gradle",
+    url: "/docs/developers/tooling/frameworks/appkit/gradle",
     content: "How to set up Appkit in your Java, Kotlin, or Android project using Gradle."
   },
 ];
@@ -127,7 +127,7 @@ export default function AppKitPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">AppKit</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/frameworks/"
+          href="/docs/developers/tooling/frameworks/"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

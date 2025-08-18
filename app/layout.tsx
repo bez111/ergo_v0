@@ -153,7 +153,7 @@ export default function RootLayout({
         // Add critical CSS and JS files
       ]}
       prefetchUrls={[
-        '/Docs',
+        '/docs',
         '/ecosystem',
         '/technology',
         '/wallet',

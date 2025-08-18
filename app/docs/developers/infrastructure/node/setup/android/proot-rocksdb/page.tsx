@@ -51,7 +51,7 @@ export default function ProotRocksdbPage() {
       </p>
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node/setup/android"
+          href="/docs/developers/infrastructure/node/setup/android"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <ChevronLeft className="w-5 h-5 mr-2" /> Back to Android Guide
@@ -76,14 +76,14 @@ export default function ProotRocksdbPage() {
           <Info className="w-6 h-6 text-cyan-400" /> Disclaimer
         </h2>
         <p className="text-gray-300">
-          This is a more complex setup than the <Link href="/Docs/developers/infrastructure/node/setup/android/termux-digest" className="text-cyan-400 hover:underline">direct Termux method</Link> and adds overhead. It's primarily required for specific use cases needing RocksDB/UTXO mode. For most mobile users, the direct Termux setup with <code className="bg-neutral-800 px-1 rounded">stateType="digest"</code> is recommended.
+          This is a more complex setup than the <Link href="/docs/developers/infrastructure/node/setup/android/termux-digest" className="text-cyan-400 hover:underline">direct Termux method</Link> and adds overhead. It's primarily required for specific use cases needing RocksDB/UTXO mode. For most mobile users, the direct Termux setup with <code className="bg-neutral-800 px-1 rounded">stateType="digest"</code> is recommended.
         </p>
       </div>
 
       <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
         <h2 className="text-xl font-bold mb-4">Prerequisites</h2>
         <ul className="list-disc list-inside text-gray-300 text-base space-y-2">
-          <li>Android device meeting the <Link href="/Docs/developers/infrastructure/node/setup/android#device-requirements" className="text-cyan-400 hover:underline">requirements</Link> (Note: UTXO mode requires significantly more storage than digest mode).</li>
+          <li>Android device meeting the <Link href="/docs/developers/infrastructure/node/setup/android#device-requirements" className="text-cyan-400 hover:underline">requirements</Link> (Note: UTXO mode requires significantly more storage than digest mode).</li>
           <li>Termux installed from <a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">F-Droid</a>.</li>
         </ul>
       </div>
@@ -160,7 +160,7 @@ export default function ProotRocksdbPage() {
       </div>
 
       <div className="mt-12 text-gray-400 text-sm">
-        Refer back to the <Link href="/Docs/developers/infrastructure/node/setup/android" className="text-cyan-400 hover:underline">main Android guide</Link> for general tips, disk space clarification, and troubleshooting. Remember this method adds complexity and resource overhead compared to the direct Termux approach.
+        Refer back to the <Link href="/docs/developers/infrastructure/node/setup/android" className="text-cyan-400 hover:underline">main Android guide</Link> for general tips, disk space clarification, and troubleshooting. Remember this method adds complexity and resource overhead compared to the direct Termux approach.
       </div>
     </>
   );

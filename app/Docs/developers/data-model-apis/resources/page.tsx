@@ -13,7 +13,7 @@ export default function DataModelApisResourcesPage() {
       </h1>
 
       {/* Back Button */}
-      <Link href="/Docs/developers/data-model-apis" className="inline-block">
+      <Link href="/docs/developers/data-model-apis" className="inline-block">
         <button className="px-6 py-3 bg-orange-500/10 border border-orange-500/20 rounded-xl hover:bg-orange-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
           <ArrowLeft className="w-5 h-5 text-orange-400" />
           <span className="text-orange-400 font-semibold">Back to Data Model & APIs</span>
@@ -23,7 +23,7 @@ export default function DataModelApisResourcesPage() {
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* ErgoTool Card */}
-        <Link href="/Docs/developers/data-model-apis/resources/ergotool" className="group">
+        <Link href="/docs/developers/data-model-apis/resources/ergotool" className="group">
           <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -41,7 +41,7 @@ export default function DataModelApisResourcesPage() {
         </Link>
 
         {/* Model Transaction Card */}
-        <Link href="/Docs/developers/data-model-apis/resources/model-transaction" className="group">
+        <Link href="/docs/developers/data-model-apis/resources/model-transaction" className="group">
           <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
@@ -59,7 +59,7 @@ export default function DataModelApisResourcesPage() {
         </Link>
 
         {/* Payments Card */}
-        <Link href="/Docs/developers/data-model-apis/resources/payments" className="group">
+        <Link href="/docs/developers/data-model-apis/resources/payments" className="group">
           <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
@@ -77,7 +77,7 @@ export default function DataModelApisResourcesPage() {
         </Link>
 
         {/* Standards Card */}
-        <Link href="/Docs/developers/data-model-apis/resources/standards" className="group">
+        <Link href="/docs/developers/data-model-apis/resources/standards" className="group">
           <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">

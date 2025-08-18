@@ -6,7 +6,7 @@ const matter = require('gray-matter');
 const { extractTags, getContentType } = require('../lib/algolia-config');
 
 // Configuration
-const DOCS_DIR = path.join(__dirname, '../app/Docs');
+const DOCS_DIR = path.join(__dirname, '../app/docs');
 const OUTPUT_FILE = path.join(__dirname, '../public/search-index.json');
 
 // Extract content from MDX files
@@ -85,7 +85,7 @@ function buildSearchIndexFromFiles() {
     
     // Build URL from file path
     const relativePath = path.relative(DOCS_DIR, filePath);
-    const url = `/Docs/${relativePath.replace(/\.(mdx|md)$/, '')}`;
+    const url = `/docs/${relativePath.replace(/\.(mdx|md)$/, '')}`;
     
     // Build section path
     const section = buildSectionPath(filePath);

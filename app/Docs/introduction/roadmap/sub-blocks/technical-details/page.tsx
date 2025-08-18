@@ -19,7 +19,7 @@ export default function SubBlocksTechnicalDetailsPage() {
         {/* Hero Button */}
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/introduction/roadmap/sub-blocks"
+            href="/docs/introduction/roadmap/sub-blocks"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-lg font-medium text-white hover:bg-neutral-700 transition-colors"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />

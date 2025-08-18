@@ -167,7 +167,7 @@ const journeys: Record<Journey, {
         title: "Hello World",
         description: "Your first ErgoScript contract",
         icon: Code,
-        href: "/Docs/developers",
+        href: "/docs/developers",
         duration: "15 min"
       },
       {
@@ -175,7 +175,7 @@ const journeys: Record<Journey, {
         title: "Try Playground",
         description: "Interactive contract editor",
         icon: TestTube,
-        href: "/Docs/developers/playground",
+        href: "/docs/developers/playground",
         duration: "10 min"
       },
       {
@@ -183,7 +183,7 @@ const journeys: Record<Journey, {
         title: "SDKs & Tools",
         description: "Libraries for your language",
         icon: Zap,
-        href: "/Docs/developers/tooling",
+        href: "/docs/developers/tooling",
         duration: "Browse"
       },
       {
@@ -232,7 +232,7 @@ const journeys: Record<Journey, {
         title: "Run a Node",
         description: "Advanced: full node setup",
         icon: Shield,
-        href: "/Docs/developers/infrastructure",
+        href: "/docs/developers/infrastructure",
         duration: "30 min"
       }
     ]
@@ -249,7 +249,7 @@ const journeys: Record<Journey, {
         title: "Ecosystem Map",
         description: "What's built on Ergo",
         icon: Zap,
-        href: "/Docs/ecosystem",
+        href: "/docs/ecosystem",
         duration: "15 min"
       },
       {
@@ -257,7 +257,7 @@ const journeys: Record<Journey, {
         title: "Tokenomics",
         description: "Supply, distribution, governance",
         icon: LineChart,
-        href: "/Docs/introduction/resources",
+        href: "/docs/introduction/resources",
         duration: "10 min"
       },
       {

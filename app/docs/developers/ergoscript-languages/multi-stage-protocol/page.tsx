@@ -14,7 +14,7 @@ export default function MultiStageProtocolsPage() {
 
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -26,7 +26,7 @@ export default function MultiStageProtocolsPage() {
         <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
           <div className="text-gray-300 space-y-4">
             <p>
-              Unspent Transaction Outputs (UTXOs) are known for their scalability and reduced error rates. However, Ethereum's account model offers the advantages of persistent storage and a shared global context. <em>Multi-Stage Contracts</em> utilize a technique involving <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/tx-tree" className="text-cyan-400 hover:underline"><em>transaction trees</em></Link> to mimic persistent storage in UTXO-based systems. This is achieved by interlinking multiple UTXOs, each containing snippets of code, to create extensive multi-stage protocols. This approach introduces <em>on-chain computations</em> and enables the <strong>execution of parallel actions within smart contracts</strong>.
+              Unspent Transaction Outputs (UTXOs) are known for their scalability and reduced error rates. However, Ethereum's account model offers the advantages of persistent storage and a shared global context. <em>Multi-Stage Contracts</em> utilize a technique involving <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/tx-tree" className="text-cyan-400 hover:underline"><em>transaction trees</em></Link> to mimic persistent storage in UTXO-based systems. This is achieved by interlinking multiple UTXOs, each containing snippets of code, to create extensive multi-stage protocols. This approach introduces <em>on-chain computations</em> and enables the <strong>execution of parallel actions within smart contracts</strong>.
             </p>
             <p>
               This method offers functionality akin to Ethereum's accounts but without the associated overhead.
@@ -41,7 +41,7 @@ export default function MultiStageProtocolsPage() {
           <h2 className="text-2xl font-bold text-cyan-400 mb-4">Examples</h2>
           <div className="text-gray-300">
             <p>
-              The concept is illustrated through various examples, including contracts for a <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/rock-paper-scissor" className="text-cyan-400 hover:underline">Rock Paper Scissors game with provable fairness</Link>, a <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/reversible-address" className="text-cyan-400 hover:underline">Reversible Address with anti-theft features</Link>, and a <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/ico" className="text-cyan-400 hover:underline">comprehensive ICO</Link>.
+              The concept is illustrated through various examples, including contracts for a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/rock-paper-scissor" className="text-cyan-400 hover:underline">Rock Paper Scissors game with provable fairness</Link>, a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/reversible-address" className="text-cyan-400 hover:underline">Reversible Address with anti-theft features</Link>, and a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/ico" className="text-cyan-400 hover:underline">comprehensive ICO</Link>.
             </p>
           </div>
         </section>
@@ -71,7 +71,7 @@ export default function MultiStageProtocolsPage() {
           <h2 className="text-2xl font-bold text-cyan-400 mb-6">Key Concepts</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <Link
-              href="/Docs/developers/ergoscript-languages/multi-stage-protocol/transaction-chains"
+              href="/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-chains"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -89,7 +89,7 @@ export default function MultiStageProtocolsPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/multi-stage-protocol/transaction-trees"
+              href="/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-trees"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -107,7 +107,7 @@ export default function MultiStageProtocolsPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/multi-stage-protocol/transaction-graphs"
+              href="/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-graphs"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -125,7 +125,7 @@ export default function MultiStageProtocolsPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/multi-stage-protocol/context-enrichment"
+              href="/docs/developers/ergoscript-languages/multi-stage-protocol/context-enrichment"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -143,7 +143,7 @@ export default function MultiStageProtocolsPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/multi-stage-protocol/multi-stage-transactions"
+              href="/docs/developers/ergoscript-languages/multi-stage-protocol/multi-stage-transactions"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>
@@ -161,7 +161,7 @@ export default function MultiStageProtocolsPage() {
             </Link>
 
             <Link
-              href="/Docs/developers/ergoscript-languages/multi-stage-protocol/examples"
+              href="/docs/developers/ergoscript-languages/multi-stage-protocol/examples"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[180px] cursor-pointer group relative"
             >
               <div>

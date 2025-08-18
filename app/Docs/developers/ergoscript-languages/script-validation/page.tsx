@@ -15,7 +15,7 @@ export default function ErgoTreeScriptValidationPage() {
           Understanding the process and performance requirements for validating ErgoTree scripts in blockchain transactions.
         </p>
         <Link 
-          href="/Docs/developers/ergoscript-languages" 
+          href="/docs/developers/ergoscript-languages" 
           className="inline-flex items-center px-6 py-3 bg-emerald-500 rounded-xl font-semibold text-black hover:bg-emerald-600 transition-transform hover:scale-105 gap-2"
         >
           <ArrowLeft className="w-5 h-5" />

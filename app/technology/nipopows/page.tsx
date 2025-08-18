@@ -31,7 +31,7 @@ const useCases: UseCase[] = [
   { title: "Cross-Chain Protocols", description: "Trust-minimized bridges and SPV-style interoperability.", example: "Rosen Bridge", icon: <Link2 className="w-8 h-8" aria-hidden="true" />, href: "https://rosen.tech", external: true },
   { title: "Mobile Wallets", description: "Light wallets that prove chain work with succinct proofs.", example: "Ergo Mobile", icon: <Smartphone className="w-8 h-8" aria-hidden="true" />, href: "/wallet", external: false },
   { title: "Oracle Systems", description: "Efficient verification of external chain data.", example: "Oracle Pools", icon: <Network className="w-8 h-8" aria-hidden="true" />, href: "/learn/guides/oracle-pool", external: false },
-  { title: "Sidechains", description: "Sidechains can verify L1 succinctly for security and liveness.", example: "Research", icon: <Zap className="w-8 h-8" aria-hidden="true" />, href: "/Docs/introduction/research-whitepapers", external: false },
+  { title: "Sidechains", description: "Sidechains can verify L1 succinctly for security and liveness.", example: "Research", icon: <Zap className="w-8 h-8" aria-hidden="true" />, href: "/docs/introduction/research-whitepapers", external: false },
 ]
 
 const comparisonData = [

@@ -27,7 +27,7 @@ export default function ResourcesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/social-contract"
+            href="/docs/introduction/social-contract"
             className="inline-flex items-center px-4 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition-colors mt-2 sm:mt-0"
           >
             Read More <ChevronRight className="w-4 h-4 ml-1" />
@@ -48,7 +48,7 @@ export default function ResourcesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/audit"
+            href="/docs/introduction/audit"
             className="inline-flex items-center px-4 py-2 bg-cyan-500 rounded-lg font-semibold text-black hover:bg-cyan-600 transition-colors mt-2 sm:mt-0"
           >
             View Audit <ChevronRight className="w-4 h-4 ml-1" />
@@ -69,7 +69,7 @@ export default function ResourcesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/privacy-guide"
+            href="/docs/introduction/privacy-guide"
             className="inline-flex items-center px-4 py-2 bg-purple-500 rounded-lg font-semibold text-black hover:bg-purple-600 transition-colors mt-2 sm:mt-0"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -90,7 +90,7 @@ export default function ResourcesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/howey-test"
+            href="/docs/introduction/howey-test"
             className="inline-flex items-center px-4 py-2 bg-green-500 rounded-lg font-semibold text-black hover:bg-green-600 transition-colors mt-2 sm:mt-0"
           >
             Read Analysis <ChevronRight className="w-4 h-4 ml-1" />
@@ -111,7 +111,7 @@ export default function ResourcesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/misconceptions"
+            href="/docs/introduction/misconceptions"
             className="inline-flex items-center px-4 py-2 bg-yellow-400 rounded-lg font-semibold text-black hover:bg-yellow-500 transition-colors mt-2 sm:mt-0"
           >
             Get Facts <ChevronRight className="w-4 h-4 ml-1" />
@@ -132,7 +132,7 @@ export default function ResourcesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/research-whitepapers"
+            href="/docs/introduction/research-whitepapers"
             className="inline-flex items-center px-4 py-2 bg-indigo-500 rounded-lg font-semibold text-black hover:bg-indigo-600 transition-colors mt-2 sm:mt-0"
           >
             View Papers <ChevronRight className="w-4 h-4 ml-1" />
@@ -153,7 +153,7 @@ export default function ResourcesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/roadmap"
+            href="/docs/introduction/roadmap"
             className="inline-flex items-center px-4 py-2 bg-teal-500 rounded-lg font-semibold text-black hover:bg-teal-600 transition-colors mt-2 sm:mt-0"
           >
             Explore Future <ChevronRight className="w-4 h-4 ml-1" />

@@ -15,7 +15,7 @@ export default function InsurancePage() {
           The insurance sector is a significant part of the finance industry, helping manage the risk of losing assets due to unexpected or expected events. Decentralized insurance protocols on Ergo can provide transparent, programmable, and community-driven risk management.
         </p>
         <Link
-          href="/Docs/ecosystem/financial/defi"
+          href="/docs/ecosystem/financial/defi"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105 mb-4"
         >
           ← Back to DeFi

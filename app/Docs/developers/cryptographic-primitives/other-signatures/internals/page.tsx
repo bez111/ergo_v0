@@ -13,7 +13,7 @@ export default function SignatureInternalsPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/cryptographic-primitives/other-signatures"
+          href="/docs/developers/cryptographic-primitives/other-signatures"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

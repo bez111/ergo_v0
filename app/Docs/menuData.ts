@@ -2,41 +2,41 @@ export const menuData = [
   {
     title: "Introduction",
     items: [
-      { title: "Why Ergo", href: "/Docs/why-ergo" },
+      { title: "Why Ergo", href: "/docs/why-ergo" },
       {
         title: "Key Features",
-        href: "/Docs/introduction/key-features",
+        href: "/docs/introduction/key-features",
       },
       {
         title: "Roadmap",
-        href: "/Docs/introduction/roadmap"
+        href: "/docs/introduction/roadmap"
       },
       {
         title: "Research & Whitepapers",
-        href: "/Docs/introduction/research-whitepapers"
+        href: "/docs/introduction/research-whitepapers"
       },
       {
         title: "Entities",
-        href: "/Docs/introduction/entities"
+        href: "/docs/introduction/entities"
       },
-      { title: "Wallets", href: "/Docs/introduction/wallets" },
+      { title: "Wallets", href: "/docs/introduction/wallets" },
       {
         title: "Resources",
-        href: "/Docs/introduction/resources"
+        href: "/docs/introduction/resources"
       },
       {
         title: "Contribute",
-        href: "/Docs/contribute"
+        href: "/docs/contribute"
       },
       {
         title: "Events",
-        href: "/Docs/introduction/events",
+        href: "/docs/introduction/events",
       },
       { 
-        title: "Glossary", href: "/Docs/introduction/glossary" 
+        title: "Glossary", href: "/docs/introduction/glossary" 
       },
       { 
-        title: "FAQ", href: "/Docs/introduction/faq" 
+        title: "FAQ", href: "/docs/introduction/faq" 
       },
     ],
   },
@@ -45,36 +45,36 @@ export const menuData = [
     items: [
       {
         title: "Infrastructure",
-        href: "/Docs/ecosystem/infrastructure",
+        href: "/docs/ecosystem/infrastructure",
       },
       {
         title: "Financial",
-        href: "/Docs/ecosystem/financial",
+        href: "/docs/ecosystem/financial",
       },
       {
         title: "Privacy",
-        href: "/Docs/ecosystem/privacy",
+        href: "/docs/ecosystem/privacy",
       },
       {
         title: "NFTs & Gaming",
-        href: "/Docs/ecosystem/nfts",
+        href: "/docs/ecosystem/nfts",
       },
-      { title: "Artificial Intelligence", href: "/Docs/ecosystem/ai" },
+      { title: "Artificial Intelligence", href: "/docs/ecosystem/ai" },
       {
         title: "DAO",
-        href: "/Docs/ecosystem/daos",
+        href: "/docs/ecosystem/daos",
       },
       {
         title: "Applications",
-        href: "/Docs/ecosystem/applications",
+        href: "/docs/ecosystem/applications",
       },
       {
         title: "Tooling",
-        href: "/Docs/ecosystem/tooling",
+        href: "/docs/ecosystem/tooling",
       },
       {
         title: "Standards",
-        href: "/Docs/ecosystem/Standards",
+        href: "/docs/ecosystem/Standards",
       },
     ],
   },
@@ -83,29 +83,29 @@ export const menuData = [
     items: [
       {
         title: "Mining Guides",
-        href: "/Docs/miners/mining-guides",
+        href: "/docs/miners/mining-guides",
       },
       {
         title: "Autolykos",
-        href: "/Docs/introduction/autolykos",
+        href: "/docs/introduction/autolykos",
       },
       { 
         title: "Storage Rent",
-        href: "/Docs/introduction/storage-rent",
+        href: "/docs/introduction/storage-rent",
       },
       {
         title: "Governance",
-        href:"/Docs/miners/governance",
+        href:"/docs/miners/governance",
       },
       { 
         title: "Revenue", 
-        href: "/Docs/miners/Revenue",
+        href: "/docs/miners/Revenue",
       },
       {
         title: "Tooling",
-        href: "/Docs/miners/Miner-Tooling",        
+        href: "/docs/miners/Miner-Tooling",        
       },
-      { title: "Resources", href: "/Docs/miners/resources" },
+      { title: "Resources", href: "/docs/miners/resources" },
     ],
   },
   {
@@ -119,37 +119,37 @@ export const menuData = [
     items: [
       {
         title: "Tutorials",
-        href: "/Docs/developers/tutorials",
+        href: "/docs/developers/tutorials",
         items: [],
       },
       {
         title: "ErgoScript & Languages",
-        href: "/Docs/developers/ergoscript-languages",
+        href: "/docs/developers/ergoscript-languages",
         items: [],
       },
       {
         title: "Data Model & APIs",
-        href: "/Docs/developers/data-model-apis",
+        href: "/docs/developers/data-model-apis",
         items: [],
       },
       {
         title: "Tooling",
-        href: "/Docs/developers/tooling",
+        href: "/docs/developers/tooling",
         items: [],
       },
       {
         title: "Infrastructure",
-        href: "/Docs/developers/infrastructure",
+        href: "/docs/developers/infrastructure",
         items: [],
       },
       {
         title: "Cryptographic Primitives",
-        href: "/Docs/developers/cryptographic-primitives",
+        href: "/docs/developers/cryptographic-primitives",
         items: [],
       },
-      { title: "Students", href: "/Docs/developers/students" },
-      { title: "Bounties & Grants", href: "/Docs/developers/bounties-grants" },
-      { title: "Community & Support", href: "/Docs/developers/community-support" },
+      { title: "Students", href: "/docs/developers/students" },
+      { title: "Bounties & Grants", href: "/docs/developers/bounties-grants" },
+      { title: "Community & Support", href: "/docs/developers/community-support" },
     ],
   },
 ]; 

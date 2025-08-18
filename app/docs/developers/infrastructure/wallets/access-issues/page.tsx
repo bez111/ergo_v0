@@ -15,7 +15,7 @@ export default function AccessIssuesPage() {
         This page provides solutions to common access issues that users may encounter with their Ergo wallets. It covers scenarios where you have your seed phrase but the restored wallet doesn't contain any ERG or shows a different address, and situations where you do not have your seed phrase. It also provides instructions on deriving additional addresses and best practices for storing your seed securely.
       </p>
       <Link
-        href="/Docs/developers/infrastructure/wallets"
+        href="/docs/developers/infrastructure/wallets"
         className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105 mb-8"
       >
         <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -30,7 +30,7 @@ export default function AccessIssuesPage() {
           </AccordionTrigger>
           <AccordionContent>
             <p className="text-gray-300">
-              A wallet is simply an <em>interface</em> for the blockchain. If you have your seed phrase, simply restore in one of our <Link href="/Docs/developers/infrastructure/wallets" className="text-blue-400 hover:underline">wallets</Link>.
+              A wallet is simply an <em>interface</em> for the blockchain. If you have your seed phrase, simply restore in one of our <Link href="/docs/developers/infrastructure/wallets" className="text-blue-400 hover:underline">wallets</Link>.
             </p>
           </AccordionContent>
         </AccordionItem>

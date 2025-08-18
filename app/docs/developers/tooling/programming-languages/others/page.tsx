@@ -7,17 +7,17 @@ const languages = [
   {
     title: "Python",
     content: "Popular language for scripting, automation, and data science. Explore how to interact with Ergo from Python.",
-    url: "/Docs/developers/tooling/programming-languages/others/python"
+    url: "/docs/developers/tooling/programming-languages/others/python"
   },
   {
     title: "C#",
     content: "Modern, object-oriented language for .NET developers. Learn about C# tools and bindings for Ergo.",
-    url: "/Docs/developers/tooling/programming-languages/others/csharp"
+    url: "/docs/developers/tooling/programming-languages/others/csharp"
   },
   {
     title: "Go",
     content: "Efficient, statically typed language for backend and blockchain development. See Go bindings for Ergo.",
-    url: "/Docs/developers/tooling/programming-languages/others/go"
+    url: "/docs/developers/tooling/programming-languages/others/go"
   }
 ];
 
@@ -49,7 +49,7 @@ export default function OtherLanguagesPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">Other Languages</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/programming-languages"
+          href="/docs/developers/tooling/programming-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

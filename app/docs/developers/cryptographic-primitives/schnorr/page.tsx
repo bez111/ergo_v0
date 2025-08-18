@@ -21,7 +21,7 @@ export default function SchnorrPage() {
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
           <Link
-            href="/Docs/developers/cryptographic-primitives"
+            href="/docs/developers/cryptographic-primitives"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" /> Back to Cryptographic Primitives
@@ -160,7 +160,7 @@ export default function SchnorrPage() {
 
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
           <li><strong>Schnorr-based signing function</strong>: <a href="https://github.com/ErgoGravity/gateway-proxy/blob/9cbf72b934b08e258457367e366050a1734f1050/app/gateway/Adaptor.scala#L391" className="text-orange-400 hover:text-orange-300">Sign function based on Schnorr protocol</a>.</li>
-          <li><strong>Generalized Schnorr proofs</strong>: Learn how <strong>SigmaBoolean</strong> is used to create advanced cryptographic conditions on the Ergo blockchain in the <a href="/Docs/developers/cryptographic-primitives/sigmaboolean" className="text-orange-400 hover:text-orange-300">SigmaBoolean Documentation</a>.</li>
+          <li><strong>Generalized Schnorr proofs</strong>: Learn how <strong>SigmaBoolean</strong> is used to create advanced cryptographic conditions on the Ergo blockchain in the <a href="/docs/developers/cryptographic-primitives/sigmaboolean" className="text-orange-400 hover:text-orange-300">SigmaBoolean Documentation</a>.</li>
         </ul>
 
         <hr className="border-neutral-700 my-8" />
@@ -182,7 +182,7 @@ export default function SchnorrPage() {
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
           <li><a href="https://eprint.iacr.org/2018/068" className="text-orange-400 hover:text-orange-300">MuSig paper</a></li>
           <li><a href="https://eprint.iacr.org/2018/123.pdf" className="text-orange-400 hover:text-orange-300">Adaptor Signatures</a></li>
-          <li><a href="/Docs/developers/cryptographic-primitives/sigmaboolean" className="text-orange-400 hover:text-orange-300">SigmaBoolean Documentation</a></li>
+          <li><a href="/docs/developers/cryptographic-primitives/sigmaboolean" className="text-orange-400 hover:text-orange-300">SigmaBoolean Documentation</a></li>
         </ul>
       </div>
     </>

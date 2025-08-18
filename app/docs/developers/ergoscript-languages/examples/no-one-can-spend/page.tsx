@@ -46,7 +46,7 @@ export default function NoOneCanSpendPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages/examples"
+          href="/docs/developers/ergoscript-languages/examples"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -57,7 +57,7 @@ export default function NoOneCanSpendPage() {
       <div className="space-y-6">
         <div className="text-gray-300 mb-6 max-w-3xl">
           On the other end of the spectrum from{' '}
-          <Link href="/Docs/developers/ergoscript-languages/examples/anyone-can-spend" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/ergoscript-languages/examples/anyone-can-spend" className="text-cyan-400 hover:underline">
             anyone-can-spend.md
           </Link>, we have scripts that always evaluate to <code className="bg-neutral-800 px-1 rounded">false</code>, making the associated boxes permanently unspendable.
         </div>

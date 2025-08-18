@@ -134,7 +134,7 @@ const useCases = [
   {
     title: "Lending Protocols",
     description: "Collateralized lending using oracle prices for liquidation thresholds",
-    link: "/Docs/ecosystem/financial",
+    link: "/docs/ecosystem/financial",
     icon: Shield,
   },
 ]

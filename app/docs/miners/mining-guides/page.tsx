@@ -32,13 +32,13 @@ export default function MiningGuidesPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/miners/mining-guides/software"
+            href="/docs/miners/mining-guides/software"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <Download className="w-5 h-5 mr-2" /> Get Started
           </Link>
           <Link
-            href="/Docs/introduction/autolykos"
+            href="/docs/introduction/autolykos"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <BookOpen className="w-5 h-5 mr-2" /> Learn Autolykos
@@ -91,7 +91,7 @@ export default function MiningGuidesPage() {
             </li>
           </ul>
           <Link
-            href="/Docs/miners/mining-guides/software"
+            href="/docs/miners/mining-guides/software"
             className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors"
           >
             Explore Software Options <ArrowRight className="w-4 h-4 ml-1" />
@@ -121,7 +121,7 @@ export default function MiningGuidesPage() {
             </li>
           </ul>
           <Link
-            href="/Docs/miners/mining-guides/operating-systems"
+            href="/docs/miners/mining-guides/operating-systems"
             className="inline-flex items-center text-green-400 hover:text-green-300 transition-colors"
           >
             Setup Your System <ArrowRight className="w-4 h-4 ml-1" />
@@ -146,7 +146,7 @@ export default function MiningGuidesPage() {
             </h4>
             <p className="text-gray-300 text-sm mb-2">Maximize performance through overclocking and power management</p>
             <Link
-              href="/Docs/miners/mining-guides/overclocking"
+              href="/docs/miners/mining-guides/overclocking"
               className="text-yellow-400 hover:text-yellow-300 text-sm inline-flex items-center gap-1"
             >
               Learn Overclocking <ExternalLink className="w-3 h-3" />
@@ -158,7 +158,7 @@ export default function MiningGuidesPage() {
             </h4>
             <p className="text-gray-300 text-sm mb-2">Join mining pools for steady rewards and reduced variance</p>
             <Link
-              href="/Docs/miners/mining-guides/pools"
+              href="/docs/miners/mining-guides/pools"
               className="text-purple-400 hover:text-purple-300 text-sm inline-flex items-center gap-1"
             >
               Find Pools <ExternalLink className="w-3 h-3" />
@@ -189,7 +189,7 @@ export default function MiningGuidesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/miners/mining-guides/solo-mining"
+            href="/docs/miners/mining-guides/solo-mining"
             className="inline-flex items-center text-red-400 hover:text-red-300 transition-colors"
           >
             Setup Solo Mining <ArrowRight className="w-4 h-4 ml-1" />
@@ -215,7 +215,7 @@ export default function MiningGuidesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/miners/mining-guides/host-a-pool"
+            href="/docs/miners/mining-guides/host-a-pool"
             className="inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors"
           >
             Build Your Pool <ArrowRight className="w-4 h-4 ml-1" />
@@ -260,13 +260,13 @@ export default function MiningGuidesPage() {
         </div>
         <div className="flex flex-wrap gap-3 mt-6">
           <Link
-            href="/Docs/miners/mining-guides/software"
+            href="/docs/miners/mining-guides/software"
             className="inline-flex items-center px-4 py-2 bg-orange-500/20 border border-orange-500/30 rounded-lg text-orange-300 hover:bg-orange-500/30 transition-colors text-sm"
           >
             Start Mining <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
           <Link
-            href="/Docs/miners"
+            href="/docs/miners"
             className="inline-flex items-center px-4 py-2 bg-cyan-500/20 border border-cyan-500/30 rounded-lg text-cyan-300 hover:bg-cyan-500/30 transition-colors text-sm"
           >
             Back to Miners <ChevronRight className="w-4 h-4 ml-1" />

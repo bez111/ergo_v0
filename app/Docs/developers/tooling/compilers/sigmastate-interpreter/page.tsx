@@ -45,7 +45,7 @@ export default function SigmastateInterpreterPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/compilers"
+          href="/docs/developers/tooling/compilers"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -61,7 +61,7 @@ export default function SigmastateInterpreterPage() {
               sigmastate-interpreter
             </a>{' '}
             repository contains the core implementations of the ErgoScript compiler and ErgoTree Interpreter. These tools are part of a broader framework that supports a family of Sigma-protocol based authentication languages, collectively known as the{' '}
-            <Link href="/Docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
               <em>Sigma Language</em>
             </Link>.
           </p>
@@ -175,7 +175,7 @@ export default function SigmastateInterpreterPage() {
               <ul className="list-disc pl-6 mt-2">
                 <li>
                   A more accessible alternative for JVM-based development (Java/Scala/Kotlin) is{' '}
-                  <Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">
+                  <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">
                     AppKit
                   </Link>, a thin wrapper around the core components provided by the ErgoScript interpreter and Ergo protocol implementations.
                 </li>
@@ -205,7 +205,7 @@ export default function SigmastateInterpreterPage() {
 
           <p>
             For more advanced usage and direct interaction with the ErgoTree and Sigma protocols, refer to the detailed{' '}
-            <Link href="/Docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
               Sigma Language documentation
             </Link>.
           </p>

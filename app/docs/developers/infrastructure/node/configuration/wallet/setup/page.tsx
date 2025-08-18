@@ -17,7 +17,7 @@ export default function WalletSetupPage() {
 
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node/configuration"
+          href="/docs/developers/infrastructure/node/configuration"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronRight className="w-5 h-5 mr-2" /> Back to Node Configuration
@@ -51,7 +51,7 @@ export default function WalletSetupPage() {
             </p>
             <p className="text-gray-300 text-sm mt-3">
               All wallet interactions with the node are performed through its REST API. Before proceeding, ensure you have{' '}
-              <Link href="/Docs/developers/infrastructure/node/configuration#rest-api-settings" 
+              <Link href="/docs/developers/infrastructure/node/configuration#rest-api-settings" 
                     className="text-cyan-400 hover:underline">
                 set an API key hash
               </Link> in your node's configuration file to protect sensitive API calls.
@@ -268,7 +268,7 @@ export default function WalletSetupPage() {
           </h2>
           <div className="grid md:grid-cols-2 gap-4">
             <Link
-              href="/Docs/developers/infrastructure/node/configuration/wallet/initialize"
+              href="/docs/developers/infrastructure/node/configuration/wallet/initialize"
               className="flex items-center p-4 bg-orange-500/10 border border-orange-500/20 rounded-lg hover:bg-orange-500/20 transition-colors"
             >
               <Wallet className="w-5 h-5 mr-3 text-orange-400" />
@@ -278,7 +278,7 @@ export default function WalletSetupPage() {
               </div>
             </Link>
             <Link
-              href="/Docs/developers/infrastructure/node/configuration/wallet/hierarchical"
+              href="/docs/developers/infrastructure/node/configuration/wallet/hierarchical"
               className="flex items-center p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg hover:bg-blue-500/20 transition-colors"
             >
               <Key className="w-5 h-5 mr-3 text-blue-400" />

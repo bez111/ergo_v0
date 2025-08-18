@@ -31,14 +31,14 @@ export default function TechnicalDetailsPage() {
         {/* Navigation Buttons */}
         <div className="flex flex-wrap gap-4">
           <Link 
-            href="/Docs/developers/infrastructure/node/modes/archival-node"
+            href="/docs/developers/infrastructure/node/modes/archival-node"
             className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
             Back to Archival Node
           </Link>
           <Link 
-            href="/Docs/developers/infrastructure/node/modes"
+            href="/docs/developers/infrastructure/node/modes"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <ChevronRight className="w-5 h-5 mr-2" />
@@ -285,7 +285,7 @@ export default function TechnicalDetailsPage() {
             <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <ul className="space-y-2 text-gray-300">
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/protocol/modifiers-processing" 
+                  <a href="/docs/developers/infrastructure/node/protocol/modifiers-processing" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     Bootstrapping section of modifiers processing
                   </a>

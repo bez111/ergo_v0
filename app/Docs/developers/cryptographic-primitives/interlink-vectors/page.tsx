@@ -13,7 +13,7 @@ export default function InterlinkVectorsPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/cryptographic-primitives/popow"
+          href="/docs/developers/cryptographic-primitives/popow"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -28,10 +28,10 @@ export default function InterlinkVectorsPage() {
             Overview
           </h2>
           <p className="text-gray-300 mb-6">
-            Interlink vectors are a fundamental component of the <a href="/Docs/developers/cryptographic-primitives/popow" className="text-blue-400 hover:text-blue-300 underline">Proof-of-Proof-of-Work (PoPow) protocol</a> in the Ergo blockchain. These vectors allow lightweight clients to verify the correctness of the blockchain without needing to download and validate the entire chain. By storing references to previous block headers at varying heights, interlink vectors create a hierarchical structure that supports efficient validation and compression of blockchain data, making them particularly useful for devices with limited resources such as mobile phones or IoT devices.
+            Interlink vectors are a fundamental component of the <a href="/docs/developers/cryptographic-primitives/popow" className="text-blue-400 hover:text-blue-300 underline">Proof-of-Proof-of-Work (PoPow) protocol</a> in the Ergo blockchain. These vectors allow lightweight clients to verify the correctness of the blockchain without needing to download and validate the entire chain. By storing references to previous block headers at varying heights, interlink vectors create a hierarchical structure that supports efficient validation and compression of blockchain data, making them particularly useful for devices with limited resources such as mobile phones or IoT devices.
           </p>
           <p className="text-gray-300 mb-6">
-            Interlink vectors work in conjunction with <a href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle trees</a> and PoPow proofs to ensure that the blockchain follows the longest chain rule, which is critical for maintaining the security and integrity of the network.
+            Interlink vectors work in conjunction with <a href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle trees</a> and PoPow proofs to ensure that the blockchain follows the longest chain rule, which is critical for maintaining the security and integrity of the network.
           </p>
         </section>
 

@@ -25,7 +25,7 @@ export default function ExtensionBlockMerklePage() {
           
           <div className="mb-6">
             <Link
-              href="/Docs/developers/cryptographic-primitives/merkle-tree"
+              href="/docs/developers/cryptographic-primitives/merkle-tree"
               className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
@@ -220,9 +220,9 @@ assert(proof.valid(Digest32 @@ root))`}
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="text-lg font-bold mb-3 text-cyan-400">Related Documentation</h3>
               <ul className="text-gray-300 space-y-2">
-                <li>• <a href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Trees Overview</a></li>
-                <li>• <a href="/Docs/developers/cryptographic-primitives/merkle-tree/core" className="text-blue-400 hover:text-blue-300 underline">Core Merkle Tree</a></li>
-                <li>• <a href="/Docs/developers/cryptographic-primitives/merkle-tree/validation" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a></li>
+                <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Trees Overview</a></li>
+                <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree/core" className="text-blue-400 hover:text-blue-300 underline">Core Merkle Tree</a></li>
+                <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree/validation" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a></li>
               </ul>
             </div>
           </div>

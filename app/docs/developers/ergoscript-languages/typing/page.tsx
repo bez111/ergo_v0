@@ -16,7 +16,7 @@ export default function TypingPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -136,8 +136,8 @@ export default function TypingPage() {
                  rel="noopener noreferrer">
                 addition
               </a> has the signature <InlineMath math="+~:~ (T,T) \to T" /> where <InlineMath math="T" /> is 
-              a <Link href="/Docs/developers/ergoscript-languages/predefined-types" className="text-blue-400 hover:text-blue-300 underline">numeric type</Link>. 
-              Function <InlineMath math="ptype" />, defined in <Link href="/Docs/developers/ergoscript-languages/predefined-functions" className="text-blue-400 hover:text-blue-300 underline">primops</Link>, 
+              a <Link href="/docs/developers/ergoscript-languages/predefined-types" className="text-blue-400 hover:text-blue-300 underline">numeric type</Link>. 
+              Function <InlineMath math="ptype" />, defined in <Link href="/docs/developers/ergoscript-languages/predefined-functions" className="text-blue-400 hover:text-blue-300 underline">primops</Link>, 
               returns a type of primitive operation specialized for concrete types of its arguments, 
               for example, <InlineMath math="ptype(+,Int, Int) = (Int, Int) \to Int" />.
             </p>

@@ -11,19 +11,19 @@ export default function IntegrationGuidePage() {
       </h1>
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/infrastructure"
+          href="/docs/developers/infrastructure"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           Back to Infrastructure
         </Link>
         <Link
-          href="/Docs/developers/infrastructure/integration/transaction-lifecycle"
+          href="/docs/developers/infrastructure/integration/transaction-lifecycle"
           className="inline-flex items-center px-6 py-3 bg-cyan-700 rounded-xl font-semibold text-white hover:bg-cyan-800 transition-transform hover:scale-105"
         >
           Transaction Lifecycle
         </Link>
         <Link
-          href="/Docs/developers/infrastructure/integration/dust-collection"
+          href="/docs/developers/infrastructure/integration/dust-collection"
           className="inline-flex items-center px-6 py-3 bg-yellow-600 rounded-xl font-semibold text-black hover:bg-yellow-700 transition-transform hover:scale-105"
         >
           Dust Collection

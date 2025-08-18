@@ -15,21 +15,21 @@ const applications = [
     description: "Point-of-sale solution for merchants in the Ergo ecosystem. (Description coming soon)",
     icon: Store,
     color: "text-orange-400",
-    link: "/Docs/ecosystem/applications/tabbypos"
+    link: "/docs/ecosystem/applications/tabbypos"
   },
   {
     title: "ZenGate Global",
     description: "Global trade and supply chain dApp leveraging Ergo. (Description coming soon)",
     icon: Globe,
     color: "text-green-400",
-    link: "/Docs/ecosystem/applications/zenGateGlobal"
+    link: "/docs/ecosystem/applications/zenGateGlobal"
   },
   {
     title: "Blockchain Access via Email",
     description: "A protocol for using Ergo (and other blockchains) via email or other low-bandwidth channels when the Internet is blocked. Enables secure transactions even under censorship or outages.",
     icon: Globe,
     color: "text-pink-400",
-    link: "/Docs/ecosystem/applications/email-client"
+    link: "/docs/ecosystem/applications/email-client"
   },
 ];
 

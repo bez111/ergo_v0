@@ -85,7 +85,7 @@ export default function TroubleshootingPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node/setup"
+            href="/docs/developers/infrastructure/node/setup"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Setup
@@ -200,7 +200,7 @@ rm -rf .ergo/history`}</pre>
             <h4 className="font-bold text-orange-400 mb-2">Correct Address/Balance Not Displayed</h4>
             <ol className="list-decimal list-inside text-gray-300 text-sm space-y-1">
               <li>Ensure the wallet is synchronized.</li>
-              <li>Derive new addresses as per <a href="/Docs/developers/infrastructure/node/setup/swagger" className="text-cyan-400 hover:underline">swagger</a> instructions.</li>
+              <li>Derive new addresses as per <a href="/docs/developers/infrastructure/node/setup/swagger" className="text-cyan-400 hover:underline">swagger</a> instructions.</li>
               <li>Derive additional addresses during sync.</li>
               <li>If issues persist, restore the wallet on a different client.</li>
             </ol>

@@ -2,14 +2,14 @@ import React from "react";
 import Link from "next/link";
 
 const standards = [
-  { title: "Identity & Security", href: "/Docs/ecosystem/Standards/Identity-Security" },
-  { title: "Development Standards", href: "/Docs/ecosystem/Standards/Development" },
-  { title: "Community Administration", href: "/Docs/ecosystem/Standards/Community-Admin" },
-  { title: "Chat Bridge Setup", href: "/Docs/ecosystem/Standards/Chat-Bridge" },
-  { title: "ErgoTipper & Rewards Bots", href: "/Docs/ecosystem/Standards/ErgoTipper" },
-  { title: "KYA (Know Your Assumptions)", href: "/Docs/ecosystem/Standards/KYA" },
-  { title: "Community Guidelines", href: "/Docs/ecosystem/Standards/Community-Guidelines" },
-  { title: "Analytics & Developer Contributions", href: "/Docs/ecosystem/Standards/Analytics" },
+  { title: "Identity & Security", href: "/docs/ecosystem/Standards/Identity-Security" },
+  { title: "Development Standards", href: "/docs/ecosystem/Standards/Development" },
+  { title: "Community Administration", href: "/docs/ecosystem/Standards/Community-Admin" },
+  { title: "Chat Bridge Setup", href: "/docs/ecosystem/Standards/Chat-Bridge" },
+  { title: "ErgoTipper & Rewards Bots", href: "/docs/ecosystem/Standards/ErgoTipper" },
+  { title: "KYA (Know Your Assumptions)", href: "/docs/ecosystem/Standards/KYA" },
+  { title: "Community Guidelines", href: "/docs/ecosystem/Standards/Community-Guidelines" },
+  { title: "Analytics & Developer Contributions", href: "/docs/ecosystem/Standards/Analytics" },
 ];
 
 export default function EcosystemStandardsPage() {

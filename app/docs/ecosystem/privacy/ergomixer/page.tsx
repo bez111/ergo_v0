@@ -60,7 +60,7 @@ export default function ErgoMixerPage() {
           </p>
           <div className="flex flex-wrap gap-4 mb-2">
             <Link
-              href="/Docs/ecosystem/privacy"
+              href="/docs/ecosystem/privacy"
               className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
             >
               <ChevronRight className="w-5 h-5 mr-2" /> Back to Privacy
@@ -186,7 +186,7 @@ export default function ErgoMixerPage() {
             Stealth Addresses create a unique, one-time address for every transaction, even between the same parties. This feature is invaluable for situations where users wish to publicly display an address for receiving multiple transactions. In Ergo, this is facilitated through a variant of the Diffie-Hellman key exchange.
           </p>
           <p className="text-gray-400">
-            See the <Link href="/Docs/ecosystem/privacy/stealth-addresses" className="text-cyan-400 hover:underline">Stealth Addresses</Link> page for more information.
+            See the <Link href="/docs/ecosystem/privacy/stealth-addresses" className="text-cyan-400 hover:underline">Stealth Addresses</Link> page for more information.
           </p>
         </div>
 

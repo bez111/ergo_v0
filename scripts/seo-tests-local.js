@@ -7,7 +7,7 @@ const BASE_URL = process.env.SITE_URL || 'http://localhost:3000';
 const CRITICAL_PAGES = [
   '/',
   '/use',
-  '/Docs',
+  '/docs',
   '/technology',
   '/ecosystem',
   '/wallet'

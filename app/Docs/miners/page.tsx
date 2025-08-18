@@ -178,7 +178,7 @@ export default function MinersResourcesPage() {
 
         {/* Getting Started Cards */}
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/Docs/miners/Miner-Tooling" className="group">
+          <Link href="/docs/miners/Miner-Tooling" className="group">
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-all">
               <h3 className="text-lg font-semibold text-white mb-2 flex items-center gap-2 group-hover:text-orange-400">
                 <Settings className="w-5 h-5" /> Mining Software
@@ -187,7 +187,7 @@ export default function MinersResourcesPage() {
               <p className="text-gray-400 text-sm">Explore mining software, pools, and profitability calculators</p>
             </div>
           </Link>
-          <Link href="/Docs/introduction/autolykos" className="group">
+          <Link href="/docs/introduction/autolykos" className="group">
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/50 transition-all">
               <h3 className="text-lg font-semibold text-white mb-2 flex items-center gap-2 group-hover:text-orange-400">
                 <Shield className="w-5 h-5" /> Autolykos Algorithm

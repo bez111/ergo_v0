@@ -688,7 +688,7 @@ export default function StorageRentPage() {
 
         {/* 3D Fee Model Image Section */}
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8 flex flex-col items-center">
-          <Image src="/Docs/introduction/storage-rent/fee-3d.png" alt="3D Fee Model: Space, Time, Computation" width={800} height={600} sizes="(max-width: 768px) 100vw, 800px" className="max-w-lg w-full rounded-xl border border-neutral-700 shadow-lg mb-2 h-auto" />
+          <Image src="/docs/introduction/storage-rent/fee-3d.png" alt="3D Fee Model: Space, Time, Computation" width={800} height={600} sizes="(max-width: 768px) 100vw, 800px" className="max-w-lg w-full rounded-xl border border-neutral-700 shadow-lg mb-2 h-auto" />
           <span className="text-sm text-gray-400 italic">A 3-dimensional scale for cryptocurrency fees: space (storage), computation, and network load.</span>
         </div>
 

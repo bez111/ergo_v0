@@ -31,7 +31,7 @@ export default function LocalSetupPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/explorer"
+            href="/docs/developers/infrastructure/explorer"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Explorer
@@ -167,7 +167,7 @@ export default function LocalSetupPage() {
               How to setup the Chain-Grabber module on a Raspberry Pi device
             </p>
             <Link
-              href="/Docs/developers/infrastructure/explorer/rpi-blockchain-explorer"
+              href="/docs/developers/infrastructure/explorer/rpi-blockchain-explorer"
               className="text-blue-400 hover:text-blue-300 underline text-sm"
             >
               View Guide

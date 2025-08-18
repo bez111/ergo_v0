@@ -15,7 +15,7 @@ export default function AddressValidationPage() {
       {/* Back Button */}
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/data-model-apis"
+          href="/docs/developers/data-model-apis"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -27,7 +27,7 @@ export default function AddressValidationPage() {
         <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4 text-teal-400">Validation Resources</h2>
           <p className="text-gray-300 mb-4">
-            <a href="https://github.com/kushti/ergo-simple-addresses" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ergo-simple-addresses</a> contains few zero-dependencies Java-friendly utils for working with addresses. The <Link href="/Docs/developers/guide" className="text-orange-400 hover:underline">Integration Guide for Exchanges</Link> may also be relevant. There is also a simple method in <a href="https://github.com/fleet-sdk/fleet/blob/master/packages/core/src/models/ergoAddress.ts#L164" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Fleet</a>.
+            <a href="https://github.com/kushti/ergo-simple-addresses" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">ergo-simple-addresses</a> contains few zero-dependencies Java-friendly utils for working with addresses. The <Link href="/docs/developers/guide" className="text-orange-400 hover:underline">Integration Guide for Exchanges</Link> may also be relevant. There is also a simple method in <a href="https://github.com/fleet-sdk/fleet/blob/master/packages/core/src/models/ergoAddress.ts#L164" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Fleet</a>.
           </p>
         </div>
 

@@ -8,25 +8,25 @@ const cards = [
     title: "JVM",
     icon: <Layers className="w-8 h-8 text-cyan-400 mb-2" />,
     description: "Scala, Java, Kotlin — build on the JVM for full power and compatibility.",
-    url: "/Docs/developers/tooling/programming-languages/jvm"
+    url: "/docs/developers/tooling/programming-languages/jvm"
   },
   {
     title: "JavaScript",
     icon: <Globe className="w-8 h-8 text-cyan-400 mb-2" />,
     description: "Use JavaScript and TypeScript for web, Node.js, and cross-platform dApps.",
-    url: "/Docs/developers/tooling/programming-languages/javascript"
+    url: "/docs/developers/tooling/programming-languages/javascript"
   },
   {
     title: "Rust",
     icon: <Terminal className="w-8 h-8 text-cyan-400 mb-2" />,
     description: "Rust for high-performance, safety, and cross-platform development.",
-    url: "/Docs/developers/tooling/programming-languages/rust"
+    url: "/docs/developers/tooling/programming-languages/rust"
   },
   {
     title: "Others",
     icon: <Cpu className="w-8 h-8 text-cyan-400 mb-2" />,
     description: "Python, C#, Go — leverage a variety of languages for integration and tooling.",
-    url: "/Docs/developers/tooling/programming-languages/others"
+    url: "/docs/developers/tooling/programming-languages/others"
   }
 ];
 
@@ -36,7 +36,7 @@ export default function ProgrammingLanguagesPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">Programming Languages</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling"
+          href="/docs/developers/tooling"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

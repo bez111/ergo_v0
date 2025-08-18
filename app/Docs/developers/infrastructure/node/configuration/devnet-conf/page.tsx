@@ -34,13 +34,13 @@ export default function DevnetConfPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node/configuration"
+            href="/docs/developers/infrastructure/node/configuration"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Node Configuration
           </Link>
           <Link
-            href="/Docs/developers/infrastructure/node/configuration/testnet-conf"
+            href="/docs/developers/infrastructure/node/configuration/testnet-conf"
             className="inline-flex items-center px-6 py-3 bg-green-500 rounded-xl font-semibold text-white hover:bg-green-600 transition-transform hover:scale-105"
           >
             <Settings className="w-5 h-5 mr-2" /> Testnet Configuration

@@ -133,10 +133,10 @@ export default function UtxoStatePage() {
         </p>
         <ul className="list-disc pl-6 text-gray-300 mb-2">
           <li>
-            Learn more: <Link href="/Docs/introduction/ergo-vs-cardano" className="text-orange-400 hover:text-orange-300 underline">Ergo vs Cardano</Link>
+            Learn more: <Link href="/docs/introduction/ergo-vs-cardano" className="text-orange-400 hover:text-orange-300 underline">Ergo vs Cardano</Link>
           </li>
           <li>
-            Explore cryptography: <Link href="/Docs/introduction/ergoscript-whitepaper" className="text-orange-400 hover:text-orange-300 underline">Sigma Protocols</Link>
+            Explore cryptography: <Link href="/docs/introduction/ergoscript-whitepaper" className="text-orange-400 hover:text-orange-300 underline">Sigma Protocols</Link>
           </li>
         </ul>
       </div>

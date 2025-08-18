@@ -16,7 +16,7 @@ export default function ErgoTreeEncodingPage() {
           A comprehensive guide to ErgoTree's binary formatting system for storage, transfer, and cross-platform operation of contracts.
         </p>
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-6 py-3 bg-indigo-500 rounded-xl font-semibold text-black hover:bg-indigo-600 transition-transform hover:scale-105 gap-2"
         >
           <ArrowLeft className="w-5 h-5" />

@@ -33,7 +33,7 @@ export default function ContributePage() {
                   <b>Code Contributions:</b> Help build and improve Ergo's core protocol, node software, SDKs, tooling, and ecosystem projects.
                 </li>
                 <li>
-                  <b>Getting Started:</b> Check out the <Link href="/Docs/developers/overview" className="text-cyan-400 hover:underline">Developer Contribution Overview</Link> and the <Link href="/Docs/developers/guidelines" className="text-cyan-400 hover:underline">Technical Contribution Guidelines</Link>.
+                  <b>Getting Started:</b> Check out the <Link href="/docs/developers/overview" className="text-cyan-400 hover:underline">Developer Contribution Overview</Link> and the <Link href="/docs/developers/guidelines" className="text-cyan-400 hover:underline">Technical Contribution Guidelines</Link>.
                 </li>
                 <li>
                   <b>Finding Tasks:</b> Look for issues tagged <span className="text-orange-400">good first issue</span> or <span className="text-orange-400">help wanted</span> in core repositories like <a href="https://github.com/ergoplatform/ergo" target="_blank" className="text-cyan-400 hover:underline">ergo</a>, <a href="https://github.com/ScorexFoundation/sigmastate-interpreter" target="_blank" className="text-cyan-400 hover:underline">sigmastate-interpreter</a>, <a href="https://github.com/ergoplatform/sigma-rust" target="_blank" className="text-cyan-400 hover:underline">sigma-rust</a>, <a href="https://github.com/ergoplatform/ergo-appkit" target="_blank" className="text-cyan-400 hover:underline">ergo-appkit</a>.
@@ -56,7 +56,7 @@ export default function ContributePage() {
                   <b>Improve ErgoDocs:</b> Help enhance this documentation site by fixing errors, improving clarity, adding examples, translating content, or writing new guides.
                 </li>
                 <li>
-                  <b>Guide:</b> <Link href="/Docs/contribute" className="text-cyan-400 hover:underline">Contributing to the Docs</Link>
+                  <b>Guide:</b> <Link href="/docs/contribute" className="text-cyan-400 hover:underline">Contributing to the Docs</Link>
                 </li>
                 <li>
                   <b>Repository:</b> <a href="https://github.com/ergoplatform/ergodocs" target="_blank" className="text-cyan-400 hover:underline">ergodocs on GitHub</a> (Submit issues or Pull Requests here!)
@@ -70,7 +70,7 @@ export default function ContributePage() {
                   <b>Spread the Word:</b> Help raise awareness about Ergo through social media, content creation (articles, videos), community engagement, and organizing local meetups.
                 </li>
                 <li>
-                  <b>Guide:</b> <Link href="/Docs/introduction/marketing" className="text-cyan-400 hover:underline">Marketing Contributions</Link>
+                  <b>Guide:</b> <Link href="/docs/introduction/marketing" className="text-cyan-400 hover:underline">Marketing Contributions</Link>
                 </li>
               </ul>
             </div>
@@ -240,7 +240,7 @@ export default function ContributePage() {
                 <li><b>Infographics and Memes:</b> Create infographics that explain complex concepts or memes to generate buzz and engagement on social media.</li>
                 <li><b>Videos:</b> Produce videos explaining what Ergo is, its unique features, and updates. Share these on YouTube, TikTok, or other video platforms to reach a broader audience.</li>
                 <li><b>Blog Posts and Articles:</b> Share your knowledge and insights by writing blog posts or articles about Ergo. Publish them on your own blog, Medium, or other platforms.</li>
-                <li><b>Paid Contributors Program:</b> We offer a paid contributors program for writers. Technical writers are in high demand, and your contributions can be rewarded. Check out the <a href="/Docs/contribute" className="text-cyan-400 hover:underline">Ergo Documentation</a> for more information.</li>
+                <li><b>Paid Contributors Program:</b> We offer a paid contributors program for writers. Technical writers are in high demand, and your contributions can be rewarded. Check out the <a href="/docs/contribute" className="text-cyan-400 hover:underline">Ergo Documentation</a> for more information.</li>
               </ul>
             </div>
             <div>

@@ -15,11 +15,11 @@ export default function BlockHeaderPage() {
 
       <div className="text-gray-300 space-y-6">
         <p className="text-lg">
-          The <b>block header</b> in Ergo serves as a concise summary of a <Link href="/Docs/developers/data-model-apis" className="text-orange-400 hover:underline">block's</Link> critical information. It plays a vital role in maintaining the integrity and security of the blockchain.
+          The <b>block header</b> in Ergo serves as a concise summary of a <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">block's</Link> critical information. It plays a vital role in maintaining the integrity and security of the blockchain.
         </p>
 
         <div className="mb-8">
-          <Link href="/Docs/developers/data-model-apis" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 rounded-lg transition-colors text-orange-400">
+          <Link href="/docs/developers/data-model-apis" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 rounded-lg transition-colors text-orange-400">
             <span>←</span>
             <span>Back to Data Model & APIs</span>
           </Link>
@@ -32,13 +32,13 @@ export default function BlockHeaderPage() {
           </h2>
           <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300">
             <li>
-              <b>Chain Synchronization:</b> Headers enable efficient synchronization between <Link href="/Docs/developers/install" className="text-orange-400 hover:underline">nodes</Link> on the network. By exchanging and validating headers, nodes can quickly agree on the current state of the blockchain without downloading every full block.
+              <b>Chain Synchronization:</b> Headers enable efficient synchronization between <Link href="/docs/developers/install" className="text-orange-400 hover:underline">nodes</Link> on the network. By exchanging and validating headers, nodes can quickly agree on the current state of the blockchain without downloading every full block.
             </li>
             <li>
-              <b><Link href="/Docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work</Link> Validation:</b> The header contains information necessary to verify the miner's Proof-of-Work (PoW) solution, ensuring that the block meets the network's <Link href="/Docs/developers/difficulty" className="text-orange-400 hover:underline">difficulty</Link> requirements.
+              <b><Link href="/docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work</Link> Validation:</b> The header contains information necessary to verify the miner's Proof-of-Work (PoW) solution, ensuring that the block meets the network's <Link href="/docs/developers/difficulty" className="text-orange-400 hover:underline">difficulty</Link> requirements.
             </li>
             <li>
-              <b>Block Integrity:</b> Headers include hashes that link to other sections of the block (<Link href="/Docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transactions</Link>, <Link href="/Docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">proofs</Link>, <Link href="/Docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">extension</Link>), guaranteeing the integrity of the entire block. Any tampering with the block's content would result in a mismatch of these hashes.
+              <b>Block Integrity:</b> Headers include hashes that link to other sections of the block (<Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transactions</Link>, <Link href="/docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">proofs</Link>, <Link href="/docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">extension</Link>), guaranteeing the integrity of the entire block. Any tampering with the block's content would result in a mismatch of these hashes.
             </li>
           </ul>
         </div>
@@ -65,17 +65,17 @@ export default function BlockHeaderPage() {
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">ADProofsRoot</h3>
-              <p className="text-gray-300 text-sm">A cryptographic digest of the <Link href="/Docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">ADProofs</Link> that validate changes to the <Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO set</Link>.</p>
+              <p className="text-gray-300 text-sm">A cryptographic digest of the <Link href="/docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">ADProofs</Link> that validate changes to the <Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO set</Link>.</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">stateRoot</h3>
-              <p className="text-gray-300 text-sm">A digest representing the root of the <Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle tree</Link> that captures the state of the UTXO set after this block is applied.</p>
+              <p className="text-gray-300 text-sm">A digest representing the root of the <Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle tree</Link> that captures the state of the UTXO set after this block is applied.</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">transactionsRoot</h3>
-              <p className="text-gray-300 text-sm">A digest of the Merkle root of all <Link href="/Docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transactions</Link> included in the block.</p>
+              <p className="text-gray-300 text-sm">A digest of the Merkle root of all <Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transactions</Link> included in the block.</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
@@ -85,17 +85,17 @@ export default function BlockHeaderPage() {
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">nBits</h3>
-              <p className="text-gray-300 text-sm">Represents the <Link href="/Docs/developers/difficulty" className="text-orange-400 hover:underline">difficulty</Link> target for the block, determining how hard it was to mine.</p>
+              <p className="text-gray-300 text-sm">Represents the <Link href="/docs/developers/difficulty" className="text-orange-400 hover:underline">difficulty</Link> target for the block, determining how hard it was to mine.</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">height</h3>
-              <p className="text-gray-300 text-sm">The block's height in the blockchain (<Link href="/Docs/developers/emission" className="text-orange-400 hover:underline">genesis block</Link> has height 0 or 1 depending on convention, Ergo starts at 1).</p>
+              <p className="text-gray-300 text-sm">The block's height in the blockchain (<Link href="/docs/developers/emission" className="text-orange-400 hover:underline">genesis block</Link> has height 0 or 1 depending on convention, Ergo starts at 1).</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">extensionRoot</h3>
-              <p className="text-gray-300 text-sm">A digest of the Merkle root of the <Link href="/Docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">extension section</Link>, which can contain arbitrary data.</p>
+              <p className="text-gray-300 text-sm">A digest of the Merkle root of the <Link href="/docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">extension section</Link>, which can contain arbitrary data.</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
@@ -105,7 +105,7 @@ export default function BlockHeaderPage() {
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">votes</h3>
-              <p className="text-gray-300 text-sm">Votes cast by miners to signal preferences for changes to <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">consensus parameters</Link>.</p>
+              <p className="text-gray-300 text-sm">Votes cast by miners to signal preferences for changes to <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">consensus parameters</Link>.</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
@@ -127,13 +127,13 @@ export default function BlockHeaderPage() {
           </h2>
           <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300">
             <li>
-              <b><Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Tree</Link>:</b> A data structure used extensively in blockchains to efficiently verify data integrity. It allows for quick verification that a particular piece of data is included in a larger set.
+              <b><Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-orange-400 hover:underline">Merkle Tree</Link>:</b> A data structure used extensively in blockchains to efficiently verify data integrity. It allows for quick verification that a particular piece of data is included in a larger set.
             </li>
             <li>
-              <b><Link href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO (Unspent Transaction Output) Set</Link>:</b> The record of all unspent transaction outputs on the blockchain, representing the current distribution of the cryptocurrency.
+              <b><Link href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">UTXO (Unspent Transaction Output) Set</Link>:</b> The record of all unspent transaction outputs on the blockchain, representing the current distribution of the cryptocurrency.
             </li>
             <li>
-              <b><Link href="/Docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link>:</b> A consensus mechanism that requires miners to solve a computationally intensive puzzle to add blocks to the blockchain. This ensures the security and immutability of the chain.
+              <b><Link href="/docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link>:</b> A consensus mechanism that requires miners to solve a computationally intensive puzzle to add blocks to the blockchain. This ensures the security and immutability of the chain.
             </li>
           </ul>
         </div>

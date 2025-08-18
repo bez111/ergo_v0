@@ -14,7 +14,7 @@ export default function EIP25Page() {
       </h1>
 
       {/* Back Button */}
-      <Link href="/Docs/developers/data-model-apis/resources/standards" className="inline-block">
+      <Link href="/docs/developers/data-model-apis/resources/standards" className="inline-block">
         <button className="px-6 py-3 bg-orange-500/10 border border-orange-500/20 rounded-xl hover:bg-orange-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
           <ArrowLeft className="w-5 h-5 text-orange-400" />
           <span className="text-orange-400 font-semibold">Back to Standards</span>
@@ -60,7 +60,7 @@ export default function EIP25Page() {
         <div className="bg-purple-500/10 border border-purple-500/20 rounded-lg p-4">
           <h3 className="text-lg font-semibold mb-2 text-purple-300">Key Difference from ErgoPay</h3>
           <p className="text-gray-300">
-            In difference to <a href="/Docs/developers/data-model-apis/resources/standards/eip20" className="text-orange-400 hover:underline">Ergo Pay (EIP-0020)</a>, this URI scheme does not contain a prepared transaction that the wallet should sign or discard. Instead, it contains the data that the wallet application should use to fill its payment form. The user can change the details when needed. The wallet will build the transaction, so this scheme is easier to handle on static websites or in e-mails.
+            In difference to <a href="/docs/developers/data-model-apis/resources/standards/eip20" className="text-orange-400 hover:underline">Ergo Pay (EIP-0020)</a>, this URI scheme does not contain a prepared transaction that the wallet should sign or discard. Instead, it contains the data that the wallet application should use to fill its payment form. The user can change the details when needed. The wallet will build the transaction, so this scheme is easier to handle on static websites or in e-mails.
           </p>
         </div>
       </div>
@@ -246,9 +246,9 @@ tokenparam     = "token-" qchar *qchar "=" *digit [ "." *digit ]`}
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-300">Related EIPs</h3>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-              <li><a href="/Docs/developers/data-model-apis/resources/standards/eip20" className="text-orange-400 hover:underline">EIP-0020: ErgoPay Protocol</a></li>
-              <li><a href="/Docs/developers/data-model-apis/resources/standards/eip17" className="text-orange-400 hover:underline">EIP-0017: Proxy Contracts</a></li>
-              <li><a href="/Docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Types</a></li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards/eip20" className="text-orange-400 hover:underline">EIP-0020: ErgoPay Protocol</a></li>
+              <li><a href="/docs/developers/data-model-apis/resources/standards/eip17" className="text-orange-400 hover:underline">EIP-0017: Proxy Contracts</a></li>
+              <li><a href="/docs/developers/data-model-apis/address_types" className="text-orange-400 hover:underline">Address Types</a></li>
             </ul>
           </div>
           <div>

@@ -11,7 +11,7 @@ export default function UtxoSetScanningWalletApiPage() {
         EIP-0001: UTXO-Set Scanning Wallet API
       </h1>
       <Link
-        href="/Docs/developers/infrastructure/wallets/standards"
+        href="/docs/developers/infrastructure/wallets/standards"
         className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105 mb-8"
       >
         Back to Standards

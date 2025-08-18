@@ -773,5 +773,5 @@ const resources: { title: string; href: string; icon: any }[] = [
       { title: "Ergo Docs", href: "/docs", icon: Book },
   { title: "Whitepaper", href: "https://ergoplatform.org/docs/whitepaper.pdf", icon: ExternalLink },
   { title: "GitHub", href: "https://github.com/ergoplatform", icon: ExternalLink },
-  { title: "Dev Tutorials", href: "/Docs/developers/tutorials", icon: ArrowRight },
+  { title: "Dev Tutorials", href: "/docs/developers/tutorials", icon: ArrowRight },
 ] as const 

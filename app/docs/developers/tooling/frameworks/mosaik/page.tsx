@@ -20,14 +20,14 @@ export default function MosaikPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">Ergo Mosaik: A UI system for Ergo dApps</h1>
       <div className="mb-6 flex gap-4">
         <Link
-          href="/Docs/developers/tooling"
+          href="/docs/developers/tooling"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           <span className="font-bold">Back</span>
         </Link>
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik/tutorial"
+          href="/docs/developers/tooling/pathways/mosaik/tutorial"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <span className="font-bold">Tutorial</span>

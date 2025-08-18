@@ -10,7 +10,7 @@ export default function LocalNodePage() {
       <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">Interacting with a local node</h1>
       <div className="mb-6 flex items-center gap-3">
         <Link
-          href="/Docs/developers/tooling/frameworks/appkit"
+          href="/docs/developers/tooling/frameworks/appkit"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -51,7 +51,7 @@ export default function LocalNodePage() {
   }
 }`}</CodeBlock>
       <p className="text-gray-300 mb-4 max-w-2xl">
-        Here <code>apiKey</code> is the secret key required for API authentication which can be obtained as described <Link href="/Docs/developers/tooling/swagger" className="text-cyan-400 hover:underline">here</Link>. And mnemonic is the secret phrase obtained during <Link href="/Docs/developers/tooling/wallet" className="text-cyan-400 hover:underline">setup of a new wallet</Link> or if you don't want to set up your node using ergo-tool's <a href="https://github.com/ergoplatform/ergo-tool#supported-commands" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">mnemonic</a> command.
+        Here <code>apiKey</code> is the secret key required for API authentication which can be obtained as described <Link href="/docs/developers/tooling/swagger" className="text-cyan-400 hover:underline">here</Link>. And mnemonic is the secret phrase obtained during <Link href="/docs/developers/tooling/wallet" className="text-cyan-400 hover:underline">setup of a new wallet</Link> or if you don't want to set up your node using ergo-tool's <a href="https://github.com/ergoplatform/ergo-tool#supported-commands" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">mnemonic</a> command.
       </p>
       <p className="text-gray-300 mb-4 max-w-2xl">
         Our example app also reads the amount of NanoErg to put into a new box from command line arguments

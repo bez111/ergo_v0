@@ -247,7 +247,7 @@ export default function CrossChainBridgesPage() {
                               name: "Developer Guide",
                               description: "Build bridge applications",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "/Docs/developers",
+                              link: "/docs/developers",
                               external: false
                             },
                           ].map((item) => (

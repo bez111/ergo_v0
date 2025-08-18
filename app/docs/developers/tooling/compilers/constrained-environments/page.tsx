@@ -12,7 +12,7 @@ export default function ConstrainedEnvironmentsPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/compilers/sigma-rust"
+          href="/docs/developers/tooling/compilers/sigma-rust"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -24,7 +24,7 @@ export default function ConstrainedEnvironmentsPage() {
         <div className="text-gray-300">
           <p className="mb-6">
             The standard{' '}
-            <Link href="/Docs/developers/tooling/compilers/sigma-rust" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/tooling/compilers/sigma-rust" className="text-cyan-400 hover:underline">
               <code className="bg-neutral-800 px-2 py-1 rounded">sigma-rust</code>
             </Link>{' '}
             library provides comprehensive tools for working with Ergo protocols and data structures in Rust. However, environments like hardware wallets or embedded systems often have strict limitations on code size, memory usage, and available libraries (especially the standard library, <code className="bg-neutral-800 px-2 py-1 rounded">std</code>).

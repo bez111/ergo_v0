@@ -33,7 +33,7 @@ export default function PrivacyPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/introduction/privacy-features"
+            href="/docs/introduction/privacy-features"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <Shield className="w-5 h-5 mr-2" /> Explore Privacy Features
@@ -207,21 +207,21 @@ export default function PrivacyPage() {
         <h3 className="text-xl font-bold mb-4 text-center">Ready to explore more?</h3>
         <div className="grid md:grid-cols-3 gap-4">
           <Link
-            href="/Docs/introduction/eutxo"
+            href="/docs/introduction/eutxo"
             className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
           >
             <Layers className="w-5 h-5 mr-2 text-orange-400" />
             <span className="text-gray-300">eUTXO Model</span>
           </Link>
           <Link
-            href="/Docs/introduction/nipopows"
+            href="/docs/introduction/nipopows"
             className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
           >
             <Zap className="w-5 h-5 mr-2 text-cyan-400" />
             <span className="text-gray-300">NIPoPoWs</span>
           </Link>
           <Link
-            href="/Docs/introduction/atomic-swaps"
+            href="/docs/introduction/atomic-swaps"
             className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
           >
             <Globe className="w-5 h-5 mr-2 text-green-400" />

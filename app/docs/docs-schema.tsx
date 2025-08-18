@@ -6,10 +6,10 @@ export function generateDocsSchema() {
     {
       '@context': 'https://schema.org',
       '@type': 'CollectionPage',
-      '@id': `${baseUrl}/Docs`,
+      '@id': `${baseUrl}/docs`,
       name: 'Ergo Documentation Hub',
       description: 'Comprehensive documentation for Ergo Platform covering blockchain technology, development, mining, and ecosystem.',
-      url: `${baseUrl}/Docs`,
+      url: `${baseUrl}/docs`,
       isPartOf: {
         '@type': 'WebSite',
         '@id': `${baseUrl}`,
@@ -29,7 +29,7 @@ export function generateDocsSchema() {
             '@type': 'ListItem',
             position: 2,
             name: 'Documentation',
-            item: `${baseUrl}/Docs`
+            item: `${baseUrl}/docs`
           }
         ]
       },
@@ -42,42 +42,42 @@ export function generateDocsSchema() {
             '@type': 'ListItem',
             position: 1,
             name: 'Getting Started',
-            url: `${baseUrl}/Docs/why-ergo`,
+            url: `${baseUrl}/docs/why-ergo`,
             description: 'Essential resources for newcomers to Ergo'
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Introduction',
-            url: `${baseUrl}/Docs/introduction`,
+            url: `${baseUrl}/docs/introduction`,
             description: 'Deep dive into Ergo philosophy and features'
           },
           {
             '@type': 'ListItem',
             position: 3,
             name: 'Ecosystem',
-            url: `${baseUrl}/Docs/ecosystem`,
+            url: `${baseUrl}/docs/ecosystem`,
             description: 'Applications and services built on Ergo'
           },
           {
             '@type': 'ListItem',
             position: 4,
             name: 'Development',
-            url: `${baseUrl}/Docs/developers`,
+            url: `${baseUrl}/docs/developers`,
             description: 'Resources for developers building on Ergo'
           },
           {
             '@type': 'ListItem',
             position: 5,
             name: 'Mining',
-            url: `${baseUrl}/Docs/miners`,
+            url: `${baseUrl}/docs/miners`,
             description: 'Mining guides and pool information'
           },
           {
             '@type': 'ListItem',
             position: 6,
             name: 'Resources',
-            url: `${baseUrl}/Docs/introduction/resources`,
+            url: `${baseUrl}/docs/introduction/resources`,
             description: 'Additional learning materials and references'
           }
         ]
@@ -87,8 +87,8 @@ export function generateDocsSchema() {
     {
       '@context': 'https://schema.org',
       '@type': 'WebPage',
-      '@id': `${baseUrl}/Docs#webpage`,
-      url: `${baseUrl}/Docs`,
+      '@id': `${baseUrl}/docs#webpage`,
+      url: `${baseUrl}/docs`,
       name: 'Ergo Documentation | Complete Guide',
       description: 'Your comprehensive guide to understanding, using, and building on Ergo Platform.',
       publisher: {

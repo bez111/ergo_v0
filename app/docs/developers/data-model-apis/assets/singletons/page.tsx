@@ -23,7 +23,7 @@ export default function SingletonsPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets"
+            href="/docs/developers/data-model-apis/assets"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -55,7 +55,7 @@ export default function SingletonsPage() {
             Oracle Example
           </h2>
           <p className="text-gray-300 mb-4">
-            One specific example of a singular token is an <Link href="/Docs/developers/data-model-apis/assets/singletons/oracles" className="text-cyan-400 hover:underline">oracle</Link>. For instance, a token can be created to act as an ERG/EUR exchange rates oracle.
+            One specific example of a singular token is an <Link href="/docs/developers/data-model-apis/assets/singletons/oracles" className="text-cyan-400 hover:underline">oracle</Link>. For instance, a token can be created to act as an ERG/EUR exchange rates oracle.
           </p>
           <p className="text-gray-300 mb-6">
             A box that contains this token would encode the exchange rate in a specific register. Since the oracle is a long-lived account, contracts can know the oracle token identifier beforehand and refer to it.

@@ -23,7 +23,7 @@ export default function RoyaltiesPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts"
+            href="/docs/developers/data-model-apis/assets/nfts"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -73,10 +73,10 @@ export default function RoyaltiesPage() {
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li>
-              <Link href="/Docs/developers/data-model-apis/assets/nfts/eip22" className="text-cyan-400 hover:underline">EIP-0022: Auction Contract</Link>
+              <Link href="/docs/developers/data-model-apis/assets/nfts/eip22" className="text-cyan-400 hover:underline">EIP-0022: Auction Contract</Link>
             </li>
             <li>
-              <Link href="/Docs/developers/data-model-apis/assets/nfts/eip24" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>
+              <Link href="/docs/developers/data-model-apis/assets/nfts/eip24" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>
             </li>
           </ul>
         </div>

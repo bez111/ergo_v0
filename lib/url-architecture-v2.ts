@@ -6,7 +6,7 @@
 export const URL_ARCHITECTURE = {
   // Текущая структура (как есть сейчас)
   current: {
-    docs: '/Docs',           // Оставляем как есть для совместимости
+    docs: '/docs',           // Оставляем как есть для совместимости
     blog: '/blog',
     ecosystem: '/ecosystem',
     technology: '/technology',
@@ -54,7 +54,7 @@ export function validateUrl(url: string): {
   const recommendations: string[] = []
   
   // Проверка на заглавные буквы (кроме Docs для совместимости)
-  if (!url.startsWith('/Docs') && url !== url.toLowerCase()) {
+  if (!url.startsWith('/docs') && url !== url.toLowerCase()) {
     issues.push('URL contains uppercase letters')
     recommendations.push(`Consider using: ${url.toLowerCase()}`)
   }
@@ -100,7 +100,7 @@ export function safeNormalizeUrl(url: string): string {
   let normalized = url
   
   // Сохраняем Docs как есть
-  if (!normalized.startsWith('/Docs')) {
+  if (!normalized.startsWith('/docs')) {
     // Для всех остальных - lowercase
     normalized = normalized.toLowerCase()
   }
@@ -124,12 +124,12 @@ export function safeNormalizeUrl(url: string): string {
  */
 export const INTERLINKING_MATRIX = {
   hubs: {
-    '/Docs': {
+    '/docs': {
       children: [
-        '/Docs/introduction',
-        '/Docs/ecosystem', 
-        '/Docs/developers',
-        '/Docs/miners'
+        '/docs/introduction',
+        '/docs/ecosystem', 
+        '/docs/developers',
+        '/docs/miners'
       ],
       related: ['/technology', '/learn', '/use']
     },
@@ -148,7 +148,7 @@ export const INTERLINKING_MATRIX = {
         '/technology/nipopows',
         '/technology/storage-rent'
       ],
-      related: ['/Docs', '/learn']
+      related: ['/docs', '/learn']
     },
     '/learn': {
       children: [
@@ -157,7 +157,7 @@ export const INTERLINKING_MATRIX = {
         '/learn/research',
         '/learn/ergoscript'
       ],
-      related: ['/start', '/Docs']
+      related: ['/start', '/docs']
     },
     '/use': {
       children: [
@@ -184,7 +184,7 @@ export function checkOrphanStatus(
   // Главные страницы не могут быть orphan
   const mainPages = [
     '/',
-    '/Docs',  // С заглавной!
+    '/docs',  // С заглавной!
     '/blog',
     '/ecosystem',
     '/technology',
@@ -216,7 +216,7 @@ export const MIGRATION_PLAN = {
   phase1: {
     description: 'Подготовка без breaking changes',
     tasks: [
-      'Добавить алиасы для /docs → /Docs',
+      'Добавить алиасы для /docs → /docs',
       'Обновить внутренние ссылки в новых компонентах',
       'Создать редиректы для внешних ссылок'
     ]

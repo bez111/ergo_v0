@@ -52,7 +52,7 @@ export const speakableContent: Record<string, { cssSelector: string[], summary: 
     cssSelector: ['h1', '.overview', '.how-it-works', '.benefits'],
     summary: 'Algorithmic stablecoins on Ergo use the AgeUSD protocol to maintain stable value through over-collateralization.'
   },
-  '/Docs': {
+  '/docs': {
     cssSelector: ['h1', '.doc-intro', '.getting-started'],
     summary: 'Comprehensive documentation for developers building on Ergo blockchain platform.'
   }

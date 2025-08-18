@@ -13,14 +13,14 @@ export default function SigmaRustPage() {
       
       <div className="mb-6 flex flex-wrap gap-4">
         <Link
-          href="/Docs/developers/tooling/compilers"
+          href="/docs/developers/tooling/compilers"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back to Compilers
         </Link>
         <Link
-          href="/Docs/developers/tooling/compilers/constrained-environments"
+          href="/docs/developers/tooling/compilers/constrained-environments"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           Constrained Environments
@@ -31,7 +31,7 @@ export default function SigmaRustPage() {
         <div className="text-gray-300">
           <p className="mb-6">
             Rust implementation of{' '}
-            <Link href="/Docs/developers/tooling/compilers/sigmastate-interpreter" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/tooling/compilers/sigmastate-interpreter" className="text-cyan-400 hover:underline">
               ErgoScript (sigmastate-interpreter)
             </Link>{' '}
             cryptocurrency scripting language.
@@ -260,7 +260,7 @@ export default function SigmaRustPage() {
                 </li>
                 <li>
                   See also:{' '}
-                  <Link href="/Docs/developers/tooling/programming-languages/others/python/ergo-lib-python" className="text-cyan-400 hover:underline">
+                  <Link href="/docs/developers/tooling/programming-languages/others/python/ergo-lib-python" className="text-cyan-400 hover:underline">
                     ergo-lib-python docs
                   </Link>
                 </li>

@@ -18,10 +18,10 @@ function generateDescription(title: string, path: string): string {
     '/technology': 'Explore Ergo\'s innovative technology stack: UTXO model, ErgoScript, Sigma protocols, NIPoPoWs, and storage rent for blockchain sustainability.',
     '/ecosystem': 'Discover the Ergo ecosystem: DeFi protocols, NFT platforms, developer tools, wallets, and community projects building on Ergo blockchain.',
     '/start': 'Get started with Ergo: Set up wallets, acquire ERG, explore DeFi, start mining, or build dApps on the most advanced UTXO blockchain.',
-    '/Docs': 'Comprehensive Ergo documentation: Technical guides, tutorials, API references, and resources for developers, miners, and users.',
+    '/docs': 'Comprehensive Ergo documentation: Technical guides, tutorials, API references, and resources for developers, miners, and users.',
     '/blog': 'Latest Ergo news, updates, technical articles, community highlights, and insights into blockchain technology and DeFi innovations.',
     '/use': 'Real-world Ergo use cases: DeFi applications, privacy tools, oracle pools, NFT marketplaces, and innovative blockchain solutions.',
-    // '/build' removed; use '/Docs' instead
+    // '/build' removed; use '/docs' instead
   }
   
   // Return specific description or generate based on title
@@ -36,10 +36,10 @@ function generateKeywords(title: string, path: string): string[] {
     '/technology': ['ergoscript', 'utxo', 'sigma protocols', 'nipopows', 'storage rent', 'proof of work'],
     '/ecosystem': ['dapps', 'sigmausd', 'spectrum', 'ergopad', 'nautilus', 'nft'],
     '/start': ['wallet', 'mining', 'autolykos', 'getting started', 'tutorial'],
-    '/Docs': ['documentation', 'api', 'developer', 'reference', 'guide'],
+    '/docs': ['documentation', 'api', 'developer', 'reference', 'guide'],
     '/blog': ['news', 'updates', 'articles', 'community', 'insights'],
     '/use': ['use cases', 'applications', 'oracle', 'privacy', 'tools'],
-    // '/build' removed; use '/Docs' keywords
+    // '/build' removed; use '/docs' keywords
   }
   
   const keywords = [...baseKeywords]

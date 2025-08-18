@@ -29,7 +29,7 @@ export default function OffTheGridTutorialPage() {
         </p>
         <div className="flex flex-wrap gap-4 mb-2">
           <Link
-            href="/Docs/ecosystem/tooling"
+            href="/docs/ecosystem/tooling"
             className="inline-flex items-center px-6 py-3 bg-purple-400 rounded-xl font-semibold text-black text-lg hover:bg-purple-500 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Tooling

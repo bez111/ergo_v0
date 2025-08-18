@@ -14,7 +14,7 @@ export default function PlasmaPage() {
       <div className="space-y-8">
         <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
           <p className="text-gray-300 mb-6">
-            <a href="https://github.com/GetBlok-io/GetBlok-Plasma" className="text-blue-400 hover:text-blue-300 underline">GetBlok Plasma</a> is a library on top of Ergo <a href="/Docs/developers/appkit" className="text-blue-400 hover:text-blue-300 underline">Appkit</a> that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code. The goal is to give developers an easy way to use this Layer-2 scaling solution in contracts, off-chain code, and distributed systems managing the Plasma itself. GetBlok Plasma uses the default versioned storage implementation powered by LevelDB, with another SwayDB implementation in the works. <strong>This allows for distributed systems to keep track of the key-value pairs held in digests stored on-chain.</strong>
+            <a href="https://github.com/GetBlok-io/GetBlok-Plasma" className="text-blue-400 hover:text-blue-300 underline">GetBlok Plasma</a> is a library on top of Ergo <a href="/docs/developers/appkit" className="text-blue-400 hover:text-blue-300 underline">Appkit</a> that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code. The goal is to give developers an easy way to use this Layer-2 scaling solution in contracts, off-chain code, and distributed systems managing the Plasma itself. GetBlok Plasma uses the default versioned storage implementation powered by LevelDB, with another SwayDB implementation in the works. <strong>This allows for distributed systems to keep track of the key-value pairs held in digests stored on-chain.</strong>
           </p>
           
           <p className="text-gray-300 mb-6">
@@ -29,7 +29,7 @@ export default function PlasmaPage() {
 
         <div className="mb-6">
           <Link
-            href="/Docs/developers/cryptographic-primitives"
+            href="/docs/developers/cryptographic-primitives"
             className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />

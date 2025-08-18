@@ -244,7 +244,7 @@ export default function GamingMetaversePage() {
                               name: "Developer Docs",
                               description: "Build blockchain games",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "/Docs/developers",
+                              link: "/docs/developers",
                               external: false
                             },
                           ].map((item) => (

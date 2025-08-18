@@ -16,7 +16,7 @@ export default function SerializationPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -78,13 +78,13 @@ export default function SerializationPage() {
           <h2 className="text-2xl font-bold mb-4">Overview</h2>
           <div className="space-y-4 text-gray-300">
             <p>
-              The terms of the <Link href="/Docs/developers/ergoscript-languages" className="text-blue-400 hover:text-blue-300 underline">ErgoTree language</Link> can 
+              The terms of the <Link href="/docs/developers/ergoscript-languages" className="text-blue-400 hover:text-blue-300 underline">ErgoTree language</Link> can 
               be serialized into an array of bytes for storage in the Ergo blockchain (e.g., in the <code className="bg-neutral-800 px-2 py-1 rounded">propositionBytes</code> field of a <code className="bg-neutral-800 px-2 py-1 rounded">Box</code>).
             </p>
             <p>
               When the guarding script of a transaction's input box is validated, the <code className="bg-neutral-800 px-2 py-1 rounded">propositionBytes</code> array 
               is deserialized into an <strong>ErgoTree Intermediate Representation (IR)</strong> (represented by the <code className="bg-neutral-800 px-2 py-1 rounded">ErgoTree</code> class 
-              in the reference implementation), which can then be <Link href="/Docs/developers/ergoscript-languages/evaluation" className="text-blue-400 hover:text-blue-300 underline">evaluated</Link>.
+              in the reference implementation), which can then be <Link href="/docs/developers/ergoscript-languages/evaluation" className="text-blue-400 hover:text-blue-300 underline">evaluated</Link>.
             </p>
             <p>
               The serialization procedure is specified in general terms. The serialization format for ErgoTree types 

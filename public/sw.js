@@ -42,7 +42,7 @@ const CACHE_STRATEGIES = {
     '/wallet',
     '/technology',
     '/ecosystem',
-    '/Docs',
+    '/docs',
     '/learn',
   ]
 };

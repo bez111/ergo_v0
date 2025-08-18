@@ -15,7 +15,7 @@ export default function ErgoTreeTemplatesPage() {
           Understanding how constants are segregated from ErgoTree scripts to enable efficient caching and optimization.
         </p>
         <Link 
-          href="/Docs/developers/ergoscript-languages" 
+          href="/docs/developers/ergoscript-languages" 
           className="inline-flex items-center px-6 py-3 bg-teal-500 rounded-xl font-semibold text-black hover:bg-teal-600 transition-transform hover:scale-105 gap-2"
         >
           <ArrowLeft className="w-5 h-5" />

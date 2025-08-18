@@ -16,7 +16,7 @@ export default function RingSignaturesPage() {
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
           <Link
-            href="/Docs/developers/cryptographic-primitives/other-signatures"
+            href="/docs/developers/cryptographic-primitives/other-signatures"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" /> Back to Other Signatures
@@ -42,8 +42,8 @@ export default function RingSignaturesPage() {
           <li><strong>Anonymous Transactions:</strong> Enabling privacy in blockchain transactions</li>
           <li><strong>Decentralized Mixers:</strong>
             <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-              <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/mixer" className="text-orange-400 hover:text-orange-300">ErgoMixer Privacy Protocol</Link></li>
-              <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/zerojoin" className="text-orange-400 hover:text-orange-300">ZeroJoin Privacy Mechanism</Link></li>
+              <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/mixer" className="text-orange-400 hover:text-orange-300">ErgoMixer Privacy Protocol</Link></li>
+              <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/zerojoin" className="text-orange-400 hover:text-orange-300">ZeroJoin Privacy Mechanism</Link></li>
             </ul>
           </li>
           <li><strong>Confidential Voting:</strong> Where the voter's identity must remain secret</li>
@@ -76,9 +76,9 @@ val ringSignature = prove {
 
         <h2 className="text-3xl font-bold mb-6 text-white">Related Cryptographic Concepts</h2>
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-8">
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/dlog" className="text-orange-400 hover:text-orange-300">Discrete Logarithm Proofs</Link></li>
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:text-orange-300">Threshold Signatures</Link></li>
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/sigma" className="text-orange-400 hover:text-orange-300">Sigma Protocols Overview</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/dlog" className="text-orange-400 hover:text-orange-300">Discrete Logarithm Proofs</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/threshold" className="text-orange-400 hover:text-orange-300">Threshold Signatures</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/sigma" className="text-orange-400 hover:text-orange-300">Sigma Protocols Overview</Link></li>
         </ul>
 
         <h2 className="text-3xl font-bold mb-6 text-white">Privacy Mechanisms</h2>
@@ -89,9 +89,9 @@ val ringSignature = prove {
 
         <h2 className="text-3xl font-bold mb-6 text-white">Advanced Applications</h2>
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-8">
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/crypto" className="text-orange-400 hover:text-orange-300">Cryptographic Foundations in Ergo</Link></li>
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/schnorr" className="text-orange-400 hover:text-orange-300">Schnorr Signatures and Privacy</Link></li>
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/sigma-chains" className="text-orange-400 hover:text-orange-300">Sidechains and Interoperability</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/crypto" className="text-orange-400 hover:text-orange-300">Cryptographic Foundations in Ergo</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/schnorr" className="text-orange-400 hover:text-orange-300">Schnorr Signatures and Privacy</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/sigma-chains" className="text-orange-400 hover:text-orange-300">Sidechains and Interoperability</Link></li>
         </ul>
 
         <h2 className="text-3xl font-bold mb-6 text-white">Security Considerations</h2>

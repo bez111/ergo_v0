@@ -313,7 +313,7 @@ export default function BountiesPage() {
                 Access comprehensive documentation, tutorials, and code examples to accelerate your development.
               </p>
               <Link 
-                href="/Docs/developers" 
+                href="/docs/developers" 
                 className="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 text-sm font-medium"
               >
                 Explore Docs <ChevronRight className="w-4 h-4" />

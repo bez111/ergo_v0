@@ -67,7 +67,7 @@ export default function SoftwarePage() {
             <Download className="w-5 h-5 mr-2" /> Download T-Rex
           </a>
           <Link
-            href="/Docs/miners/mining-guides"
+            href="/docs/miners/mining-guides"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <ArrowLeft className="w-5 h-5 mr-2" /> Back to Guides
@@ -358,13 +358,13 @@ export default function SoftwarePage() {
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/Docs/miners/mining-guides/pools"
+            href="/docs/miners/mining-guides/pools"
             className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-lg text-blue-300 hover:bg-blue-500/30 transition-colors text-sm"
           >
             Find Mining Pools <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
           <Link
-            href="/Docs/miners/mining-guides/overclocking"
+            href="/docs/miners/mining-guides/overclocking"
             className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300 hover:bg-green-500/30 transition-colors text-sm"
           >
             Optimize Performance <ChevronRight className="w-4 h-4 ml-1" />

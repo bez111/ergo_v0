@@ -7,27 +7,27 @@ import Link from "next/link";
 const standards = [
   {
     title: "UTXO-Set Scanning Wallet API",
-    href: "/Docs/developers/infrastructure/wallets/utxo-set-scanning-wallet-api",
+    href: "/docs/developers/infrastructure/wallets/utxo-set-scanning-wallet-api",
     description: "API standard for scanning the UTXO set in Ergo wallets."
   },
   {
     title: "Deterministic Wallet Standard",
-    href: "/Docs/developers/infrastructure/wallets/deterministic-wallet-standard",
+    href: "/docs/developers/infrastructure/wallets/deterministic-wallet-standard",
     description: "Standard for deterministic wallet generation and management."
   },
   {
     title: "Cold Wallet",
-    href: "/Docs/developers/infrastructure/wallets/cold-wallet",
+    href: "/docs/developers/infrastructure/wallets/cold-wallet",
     description: "Guidelines and standards for cold (offline) wallets."
   },
   {
     title: "EIP Standards Overview",
-    href: "/Docs/developers/infrastructure/wallets/eip-standards-overview",
+    href: "/docs/developers/infrastructure/wallets/eip-standards-overview",
     description: "Overview of Ergo Improvement Proposals (EIPs) relevant to wallets."
   },
   {
     title: "EIP-0005",
-    href: "/Docs/developers/infrastructure/wallets/eip-0005",
+    href: "/docs/developers/infrastructure/wallets/eip-0005",
     description: "EIP-0005: Deterministic Wallets for Ergo."
   }
 ];
@@ -40,7 +40,7 @@ export default function WalletStandardsPage() {
         Wallet Standards
       </h1>
       <Link
-        href="/Docs/developers/infrastructure/wallets"
+        href="/docs/developers/infrastructure/wallets"
         className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105 mb-8"
       >
         Back to Wallets

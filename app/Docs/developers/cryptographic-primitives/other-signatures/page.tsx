@@ -15,7 +15,7 @@ export default function OtherSignaturesPage() {
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
           <Link
-            href="/Docs/developers/cryptographic-primitives"
+            href="/docs/developers/cryptographic-primitives"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" /> Back to Cryptographic Primitives
@@ -33,7 +33,7 @@ export default function OtherSignaturesPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {/* Ring Signatures */}
           <Link
-            href="/Docs/developers/cryptographic-primitives/other-signatures/ring"
+            href="/docs/developers/cryptographic-primitives/other-signatures/ring"
             className="group block p-6 bg-neutral-800/50 border border-neutral-700/50 rounded-xl hover:bg-neutral-700/50 transition-all duration-300 hover:scale-105 relative overflow-hidden"
           >
             <div className="flex items-center mb-4">
@@ -52,7 +52,7 @@ export default function OtherSignaturesPage() {
 
           {/* Threshold Signatures */}
           <Link
-            href="/Docs/developers/cryptographic-primitives/other-signatures/threshold"
+            href="/docs/developers/cryptographic-primitives/other-signatures/threshold"
             className="group block p-6 bg-neutral-800/50 border border-neutral-700/50 rounded-xl hover:bg-neutral-700/50 transition-all duration-300 hover:scale-105 relative overflow-hidden"
           >
             <div className="flex items-center mb-4">
@@ -71,7 +71,7 @@ export default function OtherSignaturesPage() {
 
           {/* Distributed Signatures */}
           <Link
-            href="/Docs/developers/cryptographic-primitives/other-signatures/distributed"
+            href="/docs/developers/cryptographic-primitives/other-signatures/distributed"
             className="group block p-6 bg-neutral-800/50 border border-neutral-700/50 rounded-xl hover:bg-neutral-700/50 transition-all duration-300 hover:scale-105 relative overflow-hidden"
           >
             <div className="flex items-center mb-4">
@@ -90,7 +90,7 @@ export default function OtherSignaturesPage() {
 
           {/* Signature Scheme Internals */}
           <Link
-            href="/Docs/developers/cryptographic-primitives/other-signatures/internals"
+            href="/docs/developers/cryptographic-primitives/other-signatures/internals"
             className="group block p-6 bg-neutral-800/50 border border-neutral-700/50 rounded-xl hover:bg-neutral-700/50 transition-all duration-300 hover:scale-105 relative overflow-hidden"
           >
             <div className="flex items-center mb-4">
@@ -109,7 +109,7 @@ export default function OtherSignaturesPage() {
 
           {/* Improved Signatures */}
           <Link
-            href="/Docs/developers/cryptographic-primitives/other-signatures/improved"
+            href="/docs/developers/cryptographic-primitives/other-signatures/improved"
             className="group block p-6 bg-neutral-800/50 border border-neutral-700/50 rounded-xl hover:bg-neutral-700/50 transition-all duration-300 hover:scale-105 relative overflow-hidden"
           >
             <div className="flex items-center mb-4">

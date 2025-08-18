@@ -73,7 +73,7 @@ export default function OffTheGridPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/ecosystem/tooling"
+            href="/docs/ecosystem/tooling"
             className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-black hover:bg-blue-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Tooling
@@ -87,7 +87,7 @@ export default function OffTheGridPage() {
             <ExternalLink className="w-5 h-5 mr-2" /> GitHub Repository
           </a>
           <Link
-            href="/Docs/ecosystem/tooling/tutorial"
+            href="/docs/ecosystem/tooling/tutorial"
             className="inline-flex items-center px-6 py-3 bg-green-500 rounded-xl font-semibold text-black hover:bg-green-600 transition-transform hover:scale-105"
           >
             <BookOpen className="w-5 h-5 mr-2" /> Getting Started Guide
@@ -381,7 +381,7 @@ export default function OffTheGridPage() {
                 <a href="https://www.ergoforum.org/t/decentralized-grid-trading-on-ergo/3750" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">ErgoForum Discussion</a>
               </li>
               <li className="flex items-center gap-2">
-                <Link href="/Docs/ecosystem/tooling/tutorial" className="text-blue-400 hover:text-blue-300">Getting Started Guide</Link>
+                <Link href="/docs/ecosystem/tooling/tutorial" className="text-blue-400 hover:text-blue-300">Getting Started Guide</Link>
               </li>
               <li className="flex items-center gap-2">
                 <ExternalLink className="w-4 h-4 text-blue-400" />

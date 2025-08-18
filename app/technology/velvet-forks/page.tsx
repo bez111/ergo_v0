@@ -94,7 +94,7 @@ const useCases = [
     title: "Consensus Improvements",
     description: "Optimizations to block validation, mining algorithms, or network protocols can be tested and adopted gradually.",
     icon: RefreshCw,
-    link: "/Docs/introduction/autolykos",
+    link: "/docs/introduction/autolykos",
     linkText: "About Autolykos →",
   },
 ]
@@ -255,7 +255,7 @@ export default function VelvetForksPage() {
                               name: "Developer Resources",
                               description: "Technical documentation and guides",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "/Docs",
+                              link: "/docs",
                               external: false
                             },
                           ].map((item) => (

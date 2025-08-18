@@ -52,7 +52,7 @@ export default function TermuxDigestPage() {
       </p>
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node/setup/android"
+          href="/docs/developers/infrastructure/node/setup/android"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <ChevronLeft className="w-5 h-5 mr-2" /> Back to Android Guide
@@ -61,8 +61,8 @@ export default function TermuxDigestPage() {
       <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 mb-8">
         <h2 className="text-xl font-bold mb-4">Prerequisites</h2>
         <ul className="list-disc list-inside text-gray-300 text-base space-y-2">
-          <li>Android device meeting the <Link href="/Docs/developers/infrastructure/node/setup/android#device-requirements" className="text-cyan-400 hover:underline">requirements</Link>.</li>
-          <li>Termux installed from <a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">F-Droid</a> (see <Link href="/Docs/developers/infrastructure/node/setup/android#direct-termux-setup-digest-mode" className="text-cyan-400 hover:underline">main Android guide</Link>).</li>
+          <li>Android device meeting the <Link href="/docs/developers/infrastructure/node/setup/android#device-requirements" className="text-cyan-400 hover:underline">requirements</Link>.</li>
+          <li>Termux installed from <a href="https://f-droid.org/packages/com.termux/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">F-Droid</a> (see <Link href="/docs/developers/infrastructure/node/setup/android#direct-termux-setup-digest-mode" className="text-cyan-400 hover:underline">main Android guide</Link>).</li>
         </ul>
       </div>
       <div className="space-y-8">
@@ -108,7 +108,7 @@ export default function TermuxDigestPage() {
         </div>
       </div>
       <div className="mt-12 text-gray-400 text-sm">
-        Refer back to the <Link href="/Docs/developers/infrastructure/node/setup/android#direct-termux-setup-digest-mode" className="text-cyan-400 hover:underline">main Android guide</Link> for general tips, disk space clarification, and troubleshooting.
+        Refer back to the <Link href="/docs/developers/infrastructure/node/setup/android#direct-termux-setup-digest-mode" className="text-cyan-400 hover:underline">main Android guide</Link> for general tips, disk space clarification, and troubleshooting.
       </div>
     </>
   );

@@ -23,7 +23,7 @@ export default function V1V2Page() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts/minting"
+            href="/docs/developers/data-model-apis/assets/nfts/minting"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -37,7 +37,7 @@ export default function V1V2Page() {
         {/* Overview Section */}
         <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-8">
           <p className="text-lg text-gray-300 mb-6">
-            <Link href="/Docs/developers/data-model-apis/assets/nfts/eip24" className="text-cyan-400 hover:underline">EIP-0024</Link> offers two design versions for artwork issuance: V1 and V2. Both designs involve two important boxes in the issuance process: the issuance box and the issuer box. The main difference between V1 and V2 lies in the issuer box.
+            <Link href="/docs/developers/data-model-apis/assets/nfts/eip24" className="text-cyan-400 hover:underline">EIP-0024</Link> offers two design versions for artwork issuance: V1 and V2. Both designs involve two important boxes in the issuance process: the issuance box and the issuer box. The main difference between V1 and V2 lies in the issuer box.
           </p>
         </div>
 

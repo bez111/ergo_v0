@@ -40,7 +40,7 @@ export const SOFT_REDIRECTS: Record<string, { to: string; permanent: boolean }> 
   },
   
   // Создаем алиасы для будущей миграции (пока не активны)
-  // '/docs': { to: '/Docs', permanent: false }, // Для обратной совместимости
+  // '/docs': { to: '/docs', permanent: false }, // Для обратной совместимости
 }
 
 /**

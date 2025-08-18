@@ -19,7 +19,7 @@ export default function FAQPage() {
       {/* Back Button */}
       <div className="mb-6">
         <Link 
-          href="/Docs/miners/mining-guides" 
+          href="/docs/miners/mining-guides" 
           className="inline-flex items-center gap-2 text-brand-primary-400 hover:text-brand-primary-300 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />

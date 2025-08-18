@@ -242,7 +242,7 @@ export default function AlgorithmicStablecoinsPage() {
                               name: "Developer Docs",
                               description: "Build your own stablecoin",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "/Docs/developers",
+                              link: "/docs/developers",
                               external: false
                             },
                           ].map((item) => (

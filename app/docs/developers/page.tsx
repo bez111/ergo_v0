@@ -108,7 +108,7 @@ export default function DevelopersGuide() {
               <p className="text-gray-300 text-sm mb-4">
                 Extended UTXO model enabling complex smart contracts with better scalability and privacy.
               </p>
-              <Link href="/Docs/introduction/eutxo" className="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
+              <Link href="/docs/introduction/eutxo" className="text-blue-400 hover:text-blue-300 text-sm flex items-center gap-1">
                 Learn more <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -119,7 +119,7 @@ export default function DevelopersGuide() {
               <p className="text-gray-300 text-sm mb-4">
                 Advanced cryptographic primitives for zero-knowledge proofs and privacy-preserving applications.
               </p>
-              <Link href="/Docs/developers/cryptographic-primitives" className="text-green-400 hover:text-green-300 text-sm flex items-center gap-1">
+              <Link href="/docs/developers/cryptographic-primitives" className="text-green-400 hover:text-green-300 text-sm flex items-center gap-1">
                 Explore crypto <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -130,7 +130,7 @@ export default function DevelopersGuide() {
               <p className="text-gray-300 text-sm mb-4">
                 Innovative approach to blockchain sustainability by preventing state bloat and ensuring long-term viability.
               </p>
-              <Link href="/Docs/introduction/storage-rent" className="text-purple-400 hover:text-purple-300 text-sm flex items-center gap-1">
+              <Link href="/docs/introduction/storage-rent" className="text-purple-400 hover:text-purple-300 text-sm flex items-center gap-1">
                 Understanding storage <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
@@ -146,19 +146,19 @@ export default function DevelopersGuide() {
                 <p className="text-gray-400 text-sm">See "Getting Started" tab</p>
               </div>
               
-              <Link href="/Docs/developers/tutorials" className="group bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 hover:bg-blue-500/20 transition-colors">
+              <Link href="/docs/developers/tutorials" className="group bg-blue-500/10 border border-blue-500/20 rounded-lg p-4 hover:bg-blue-500/20 transition-colors">
                 <BookOpen className="w-6 h-6 text-blue-400 mb-2" />
                 <h3 className="font-semibold text-white mb-1">Tutorials</h3>
                 <p className="text-gray-400 text-sm">Step-by-step guides</p>
               </Link>
               
-              <Link href="/Docs/developers/tooling" className="group bg-green-500/10 border border-green-500/20 rounded-lg p-4 hover:bg-green-500/20 transition-colors">
+              <Link href="/docs/developers/tooling" className="group bg-green-500/10 border border-green-500/20 rounded-lg p-4 hover:bg-green-500/20 transition-colors">
                 <Wrench className="w-6 h-6 text-green-400 mb-2" />
                 <h3 className="font-semibold text-white mb-1">Tools & SDKs</h3>
                 <p className="text-gray-400 text-sm">Development toolkit</p>
               </Link>
               
-              <Link href="/Docs/developers/bounties-grants" className="group bg-purple-500/10 border border-purple-500/20 rounded-lg p-4 hover:bg-purple-500/20 transition-colors">
+              <Link href="/docs/developers/bounties-grants" className="group bg-purple-500/10 border border-purple-500/20 rounded-lg p-4 hover:bg-purple-500/20 transition-colors">
                 <Users className="w-6 h-6 text-purple-400 mb-2" />
                 <h3 className="font-semibold text-white mb-1">Grants</h3>
                 <p className="text-gray-400 text-sm">Get funding</p>
@@ -199,16 +199,16 @@ export default function DevelopersGuide() {
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                <li><Link href="/Docs/developers" className="text-cyan-400 hover:underline">Developer Docs Home</Link></li>
-                <li><Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript Reference</Link></li>
-                <li><Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">API & SDK Overview</Link></li>
-                <li><Link href="/Docs/developers/tutorials" className="text-cyan-400 hover:underline">Sample Projects & Starter Kits</Link></li>
+                <li><Link href="/docs/developers" className="text-cyan-400 hover:underline">Developer Docs Home</Link></li>
+                <li><Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript Reference</Link></li>
+                <li><Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">API & SDK Overview</Link></li>
+                <li><Link href="/docs/developers/tutorials" className="text-cyan-400 hover:underline">Sample Projects & Starter Kits</Link></li>
               </ul>
               <ul className="list-disc pl-6 text-gray-300 space-y-2">
                 <li><a href="https://escript.online/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Playground (Online IDE) <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
-                <li><Link href="/Docs/developers/box" className="text-cyan-400 hover:underline">Understanding Boxes (UTXO)</Link></li>
-                <li><Link href="/Docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Cryptographic Primitives</Link></li>
-                <li><Link href="/Docs/introduction/eutxo" className="text-cyan-400 hover:underline">eUTXO Model</Link></li>
+                <li><Link href="/docs/developers/box" className="text-cyan-400 hover:underline">Understanding Boxes (UTXO)</Link></li>
+                <li><Link href="/docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Cryptographic Primitives</Link></li>
+                <li><Link href="/docs/introduction/eutxo" className="text-cyan-400 hover:underline">eUTXO Model</Link></li>
               </ul>
             </div>
           </div>
@@ -222,7 +222,7 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold text-orange-300 mb-3">Core Infrastructure</h3>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><strong>Node:</strong> <Link href="/Docs/developers/infrastructure" className="text-cyan-400 hover:underline">How to run an Ergo node</Link></li>
+                  <li><strong>Node:</strong> <Link href="/docs/developers/infrastructure" className="text-cyan-400 hover:underline">How to run an Ergo node</Link></li>
                   <li><strong>Wallet:</strong> <a href="https://nautiluswallet.io/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Nautilus Wallet (dev use) <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
                   <li><strong>Testnet Faucet:</strong> <a href="https://testnet.ergofaucet.org/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Get test ERG here <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
                 </ul>
@@ -230,8 +230,8 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold text-blue-300 mb-3">Development Tools</h3>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit Framework</Link></li>
-                  <li><Link href="/Docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust SDK</Link></li>
+                  <li><Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit Framework</Link></li>
+                  <li><Link href="/docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust SDK</Link></li>
                   <li><a href="https://github.com/capt-nemo429/fleet" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Fleet (JavaScript) <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
                 </ul>
               </div>
@@ -247,16 +247,16 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold text-orange-300 mb-3">Learning Path</h3>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">Quick Intro to ErgoScript</Link></li>
-                  <li><Link href="/Docs/developers/tutorials" className="text-cyan-400 hover:underline">Hello, World Contract Tutorial</Link></li>
-                  <li><Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">Interacting with the Blockchain</Link></li>
+                  <li><Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">Quick Intro to ErgoScript</Link></li>
+                  <li><Link href="/docs/developers/tutorials" className="text-cyan-400 hover:underline">Hello, World Contract Tutorial</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">Interacting with the Blockchain</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-green-300 mb-3">Deployment & Testing</h3>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/Docs/developers/infrastructure" className="text-cyan-400 hover:underline">Deploy & Test on Testnet</Link></li>
-                  <li><Link href="/Docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools & Frameworks</Link></li>
+                  <li><Link href="/docs/developers/infrastructure" className="text-cyan-400 hover:underline">Deploy & Test on Testnet</Link></li>
+                  <li><Link href="/docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools & Frameworks</Link></li>
                   <li><a href="https://thierrym1212.github.io/txbuilder/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Transaction Builder <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
                 </ul>
               </div>
@@ -273,16 +273,16 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold text-purple-300 mb-3">Expand Your Knowledge</h3>
                 <ul className="list-disc pl-6 text-cyan-400 space-y-2">
-                  <li><Link href="/Docs/developers/ergoscript-languages" className="hover:underline">Deep-dive into ErgoScript & Languages</Link></li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives" className="hover:underline">Learn about Cryptographic Primitives</Link></li>
-                  <li><Link href="/Docs/developers/tutorials" className="hover:underline">Explore Community Tutorials</Link></li>
+                  <li><Link href="/docs/developers/ergoscript-languages" className="hover:underline">Deep-dive into ErgoScript & Languages</Link></li>
+                  <li><Link href="/docs/developers/cryptographic-primitives" className="hover:underline">Learn about Cryptographic Primitives</Link></li>
+                  <li><Link href="/docs/developers/tutorials" className="hover:underline">Explore Community Tutorials</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold text-green-300 mb-3">Community & Support</h3>
                 <ul className="list-disc pl-6 text-cyan-400 space-y-2">
-                  <li><Link href="/Docs/developers/community-support" className="hover:underline">Join Developer Community</Link></li>
-                  <li><Link href="/Docs/developers/bounties-grants" className="hover:underline">Apply for Grants & Bounties</Link></li>
+                  <li><Link href="/docs/developers/community-support" className="hover:underline">Join Developer Community</Link></li>
+                  <li><Link href="/docs/developers/bounties-grants" className="hover:underline">Apply for Grants & Bounties</Link></li>
                   <li><a href="https://discord.gg/ergo-platform-668903786361651200" target="_blank" rel="noopener noreferrer" className="hover:underline">Discord #dev-support <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
                 </ul>
               </div>
@@ -290,7 +290,7 @@ export default function DevelopersGuide() {
             <div className="mt-4 p-4 bg-neutral-800/50 rounded-lg">
               <p className="text-gray-400 text-sm">
                 💡 <strong>Pro Tip:</strong> If you're new to blockchain development, start with the{" "}
-                <Link href="/Docs/developers/tutorials" className="text-cyan-400 hover:underline">tutorial section</Link>
+                <Link href="/docs/developers/tutorials" className="text-cyan-400 hover:underline">tutorial section</Link>
                 {" "}and don't hesitate to ask questions in our community channels!
               </p>
             </div>
@@ -299,7 +299,7 @@ export default function DevelopersGuide() {
           {/* Call to Action */}
           <div className="flex justify-center">
             <Link
-              href="/Docs/developers/tutorials"
+              href="/docs/developers/tutorials"
               className="bg-gradient-to-r from-orange-500 to-cyan-500 hover:from-orange-600 hover:to-cyan-600 text-black font-bold py-3 px-8 rounded-xl flex items-center gap-2 text-lg shadow-lg transition-all duration-300 transform hover:scale-105"
             >
               <Rocket className="w-5 h-5" />
@@ -336,10 +336,10 @@ export default function DevelopersGuide() {
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-cyan-300 mb-4">Getting Started</h3>
               <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                <li><Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript Documentation</Link></li>
+                <li><Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript Documentation</Link></li>
                 <li><a href="https://escript.online/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Try ErgoScript Online <ExternalLink className="inline w-4 h-4 ml-1" /></a></li>
-                <li><Link href="/Docs/developers/tutorials" className="text-cyan-400 hover:underline">Step-by-step Tutorials</Link></li>
-                <li><Link href="/Docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
+                <li><Link href="/docs/developers/tutorials" className="text-cyan-400 hover:underline">Step-by-step Tutorials</Link></li>
+                <li><Link href="/docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
               </ul>
             </div>
           </div>
@@ -353,15 +353,15 @@ export default function DevelopersGuide() {
               <div>
                 <h4 className="text-lg font-semibold text-orange-300 mb-3">Java/Scala</h4>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit Framework</Link></li>
-                  <li><Link href="/Docs/developers/tooling/jde" className="text-cyan-400 hover:underline">JDE (Java Dev Environment)</Link></li>
+                  <li><Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit Framework</Link></li>
+                  <li><Link href="/docs/developers/tooling/jde" className="text-cyan-400 hover:underline">JDE (Java Dev Environment)</Link></li>
                 </ul>
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-blue-300 mb-3">Rust</h4>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/Docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust SDK</Link></li>
-                  <li><Link href="/Docs/developers/tooling/headless" className="text-cyan-400 hover:underline">Headless dApp Framework</Link></li>
+                  <li><Link href="/docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust SDK</Link></li>
+                  <li><Link href="/docs/developers/tooling/headless" className="text-cyan-400 hover:underline">Headless dApp Framework</Link></li>
                 </ul>
               </div>
               <div>
@@ -383,9 +383,9 @@ export default function DevelopersGuide() {
               <div>
                 <h4 className="text-lg font-semibold text-cyan-300 mb-3">Documentation</h4>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">Complete ErgoScript Guide</Link></li>
-                  <li><Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">Data Model Reference</Link></li>
-                  <li><Link href="/Docs/developers/box" className="text-cyan-400 hover:underline">Understanding Boxes</Link></li>
+                  <li><Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">Complete ErgoScript Guide</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">Data Model Reference</Link></li>
+                  <li><Link href="/docs/developers/box" className="text-cyan-400 hover:underline">Understanding Boxes</Link></li>
                 </ul>
               </div>
               <div>
@@ -413,31 +413,31 @@ export default function DevelopersGuide() {
 
           {/* Main Tools Grid */}
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <Link href="/Docs/developers/tooling/appkit" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-colors">
+            <Link href="/docs/developers/tooling/appkit" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-colors">
               <Code className="w-8 h-8 text-orange-400 mb-3" />
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-orange-300">AppKit</h3>
               <p className="text-gray-300 text-sm">Java-based development framework for building Ergo applications</p>
             </Link>
 
-            <Link href="/Docs/developers/tooling/sigma-rust" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-red-500/30 transition-colors">
+            <Link href="/docs/developers/tooling/sigma-rust" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-red-500/30 transition-colors">
               <Terminal className="w-8 h-8 text-red-400 mb-3" />
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-red-300">Sigma-Rust</h3>
               <p className="text-gray-300 text-sm">Rust SDK for ErgoScript development and transaction building</p>
             </Link>
 
-            <Link href="/Docs/developers/tooling/headless" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-purple-500/30 transition-colors">
+            <Link href="/docs/developers/tooling/headless" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-purple-500/30 transition-colors">
               <Globe className="w-8 h-8 text-purple-400 mb-3" />
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-300">Headless dApp</h3>
               <p className="text-gray-300 text-sm">Framework for building decentralized applications without UI</p>
             </Link>
 
-            <Link href="/Docs/developers/tooling/mosaik" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-500/30 transition-colors">
+            <Link href="/docs/developers/tooling/mosaik" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-500/30 transition-colors">
               <Layers className="w-8 h-8 text-cyan-400 mb-3" />
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-300">Mosaik</h3>
               <p className="text-gray-300 text-sm">UI toolkit for building user interfaces for Ergo dApps</p>
             </Link>
 
-            <Link href="/Docs/developers/tooling/jde" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-green-500/30 transition-colors">
+            <Link href="/docs/developers/tooling/jde" className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-green-500/30 transition-colors">
               <Database className="w-8 h-8 text-green-400 mb-3" />
               <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-green-300">JDE</h3>
               <p className="text-gray-300 text-sm">Java Development Environment for Ergo smart contracts</p>
@@ -461,9 +461,9 @@ export default function DevelopersGuide() {
               <div>
                 <h4 className="text-lg font-semibold text-blue-300 mb-3">Testing Frameworks</h4>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/Docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools Overview</Link></li>
-                  <li><Link href="/Docs/developers/tooling/debugging" className="text-cyan-400 hover:underline">Debugging Techniques</Link></li>
-                  <li><Link href="/Docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
+                  <li><Link href="/docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools Overview</Link></li>
+                  <li><Link href="/docs/developers/tooling/debugging" className="text-cyan-400 hover:underline">Debugging Techniques</Link></li>
+                  <li><Link href="/docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
                 </ul>
               </div>
               <div>
@@ -500,8 +500,8 @@ export default function DevelopersGuide() {
               <div>
                 <h4 className="text-lg font-semibold text-purple-300 mb-3">Node Setup</h4>
                 <ul className="list-disc pl-6 text-gray-300 space-y-2">
-                  <li><Link href="/Docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">Node Configuration</Link></li>
-                  <li><Link href="/Docs/developers/infrastructure" className="text-cyan-400 hover:underline">Infrastructure Guide</Link></li>
+                  <li><Link href="/docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">Node Configuration</Link></li>
+                  <li><Link href="/docs/developers/infrastructure" className="text-cyan-400 hover:underline">Infrastructure Guide</Link></li>
                 </ul>
               </div>
             </div>
@@ -555,30 +555,30 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-blue-300">Fundamentals</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/developers/box" className="text-cyan-400 hover:underline">Boxes (UTXO)</Link></li>
-                  <li><Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">Data Model & APIs</Link></li>
-                  <li><Link href="/Docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript Languages</Link></li>
-                  <li><Link href="/Docs/developers/tutorials" className="text-cyan-400 hover:underline">Tutorials & Examples</Link></li>
-                  <li><Link href="/Docs/introduction/eutxo" className="text-cyan-400 hover:underline">eUTXO Model</Link></li>
+                  <li><Link href="/docs/developers/box" className="text-cyan-400 hover:underline">Boxes (UTXO)</Link></li>
+                  <li><Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">Data Model & APIs</Link></li>
+                  <li><Link href="/docs/developers/ergoscript-languages" className="text-cyan-400 hover:underline">ErgoScript Languages</Link></li>
+                  <li><Link href="/docs/developers/tutorials" className="text-cyan-400 hover:underline">Tutorials & Examples</Link></li>
+                  <li><Link href="/docs/introduction/eutxo" className="text-cyan-400 hover:underline">eUTXO Model</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-green-300">Cryptography</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Cryptographic Primitives</Link></li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives/schnorr" className="text-cyan-400 hover:underline">Schnorr Signatures</Link></li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-cyan-400 hover:underline">Merkle Trees</Link></li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives/avl" className="text-cyan-400 hover:underline">AVL+ Trees</Link></li>
-                  <li><Link href="/Docs/developers/cryptographic-primitives/zerojoin" className="text-cyan-400 hover:underline">ZeroJoin Mixer</Link></li>
+                  <li><Link href="/docs/developers/cryptographic-primitives" className="text-cyan-400 hover:underline">Cryptographic Primitives</Link></li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/schnorr" className="text-cyan-400 hover:underline">Schnorr Signatures</Link></li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-cyan-400 hover:underline">Merkle Trees</Link></li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/avl" className="text-cyan-400 hover:underline">AVL+ Trees</Link></li>
+                  <li><Link href="/docs/developers/cryptographic-primitives/zerojoin" className="text-cyan-400 hover:underline">ZeroJoin Mixer</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-purple-300">Infrastructure</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/developers/infrastructure" className="text-cyan-400 hover:underline">Infrastructure Overview</Link></li>
-                  <li><Link href="/Docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">Node Setup & Config</Link></li>
-                  <li><Link href="/Docs/developers/infrastructure/mining" className="text-cyan-400 hover:underline">Mining Integration</Link></li>
-                  <li><Link href="/Docs/miners" className="text-cyan-400 hover:underline">Miners Resources</Link></li>
+                  <li><Link href="/docs/developers/infrastructure" className="text-cyan-400 hover:underline">Infrastructure Overview</Link></li>
+                  <li><Link href="/docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">Node Setup & Config</Link></li>
+                  <li><Link href="/docs/developers/infrastructure/mining" className="text-cyan-400 hover:underline">Mining Integration</Link></li>
+                  <li><Link href="/docs/miners" className="text-cyan-400 hover:underline">Miners Resources</Link></li>
                 </ul>
               </div>
             </div>
@@ -593,11 +593,11 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-orange-300">Official SDKs</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit (Java)</Link></li>
-                  <li><Link href="/Docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust</Link></li>
-                  <li><Link href="/Docs/developers/tooling/headless" className="text-cyan-400 hover:underline">Headless dApp Framework</Link></li>
-                  <li><Link href="/Docs/developers/tooling/mosaik" className="text-cyan-400 hover:underline">Mosaik UI Toolkit</Link></li>
-                  <li><Link href="/Docs/developers/tooling/jde" className="text-cyan-400 hover:underline">JDE (Java)</Link></li>
+                  <li><Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit (Java)</Link></li>
+                  <li><Link href="/docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">Sigma-Rust</Link></li>
+                  <li><Link href="/docs/developers/tooling/headless" className="text-cyan-400 hover:underline">Headless dApp Framework</Link></li>
+                  <li><Link href="/docs/developers/tooling/mosaik" className="text-cyan-400 hover:underline">Mosaik UI Toolkit</Link></li>
+                  <li><Link href="/docs/developers/tooling/jde" className="text-cyan-400 hover:underline">JDE (Java)</Link></li>
                 </ul>
               </div>
               <div>
@@ -611,9 +611,9 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-green-300">Testing & Analysis</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
-                  <li><Link href="/Docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools</Link></li>
-                  <li><Link href="/Docs/developers/tooling/debugging" className="text-cyan-400 hover:underline">Debugging Guide</Link></li>
+                  <li><Link href="/docs/developers/tooling/ergoscript-by-example" className="text-cyan-400 hover:underline">ErgoScript by Example</Link></li>
+                  <li><Link href="/docs/developers/tooling/testing" className="text-cyan-400 hover:underline">Testing Tools</Link></li>
+                  <li><Link href="/docs/developers/tooling/debugging" className="text-cyan-400 hover:underline">Debugging Guide</Link></li>
                   <li><a href="https://thierrym1212.github.io/txbuilder/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Transaction Builder <ExternalLink className="inline w-3 h-3 ml-1" /></a></li>
                 </ul>
               </div>
@@ -638,7 +638,7 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-green-300">Development Environment</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">Node Configuration</Link></li>
+                  <li><Link href="/docs/developers/infrastructure/node" className="text-cyan-400 hover:underline">Node Configuration</Link></li>
                   <li><a href="https://testnet.ergofaucet.org/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Testnet Faucet <ExternalLink className="inline w-3 h-3 ml-1" /></a></li>
                   <li><a href="https://nautiluswallet.io/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Nautilus Wallet <ExternalLink className="inline w-3 h-3 ml-1" /></a></li>
                 </ul>
@@ -663,24 +663,24 @@ export default function DevelopersGuide() {
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-purple-300">Token Standards</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/ecosystem/Standards/eip-0004" className="text-cyan-400 hover:underline">EIP-4: Asset Standard</Link></li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip-0021" className="text-cyan-400 hover:underline">EIP-21: Token Verification</Link></li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip-0022" className="text-cyan-400 hover:underline">EIP-22: Auction Contract</Link></li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip-0024" className="text-cyan-400 hover:underline">EIP-24: Artwork Contract</Link></li>
+                  <li><Link href="/docs/ecosystem/Standards/eip-0004" className="text-cyan-400 hover:underline">EIP-4: Asset Standard</Link></li>
+                  <li><Link href="/docs/ecosystem/Standards/eip-0021" className="text-cyan-400 hover:underline">EIP-21: Token Verification</Link></li>
+                  <li><Link href="/docs/ecosystem/Standards/eip-0022" className="text-cyan-400 hover:underline">EIP-22: Auction Contract</Link></li>
+                  <li><Link href="/docs/ecosystem/Standards/eip-0024" className="text-cyan-400 hover:underline">EIP-24: Artwork Contract</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-green-300">Payment Standards</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/ecosystem/Standards/eip-0020" className="text-cyan-400 hover:underline">EIP-20: ErgoPay</Link></li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip-0025" className="text-cyan-400 hover:underline">EIP-25: Payment URI</Link></li>
-                  <li><Link href="/Docs/ecosystem/Standards/eip-0017" className="text-cyan-400 hover:underline">EIP-17: Proxy Contracts</Link></li>
+                  <li><Link href="/docs/ecosystem/Standards/eip-0020" className="text-cyan-400 hover:underline">EIP-20: ErgoPay</Link></li>
+                  <li><Link href="/docs/ecosystem/Standards/eip-0025" className="text-cyan-400 hover:underline">EIP-25: Payment URI</Link></li>
+                  <li><Link href="/docs/ecosystem/Standards/eip-0017" className="text-cyan-400 hover:underline">EIP-17: Proxy Contracts</Link></li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-3 text-orange-300">All Standards</h3>
                 <ul className="space-y-2 text-gray-300">
-                  <li><Link href="/Docs/ecosystem/Standards" className="text-cyan-400 hover:underline">Browse All EIP Standards</Link></li>
+                  <li><Link href="/docs/ecosystem/Standards" className="text-cyan-400 hover:underline">Browse All EIP Standards</Link></li>
                   <li><a href="https://github.com/ergoplatform/eips" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">EIPs Repository <ExternalLink className="inline w-3 h-3 ml-1" /></a></li>
                 </ul>
               </div>
@@ -759,9 +759,9 @@ export default function DevelopersGuide() {
             <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
               <h3 className="text-xl font-semibold text-green-300 mb-4">Support & Funding</h3>
               <ul className="space-y-3 text-gray-300">
-                <li><Link href="/Docs/developers/bounties-grants" className="text-cyan-400 hover:underline">Bounties & Grants Program</Link></li>
-                <li><Link href="/Docs/developers/community-support" className="text-cyan-400 hover:underline">Community Support Resources</Link></li>
-                <li><Link href="/Docs/developers/students" className="text-cyan-400 hover:underline">Students & Beginners Guide</Link></li>
+                <li><Link href="/docs/developers/bounties-grants" className="text-cyan-400 hover:underline">Bounties & Grants Program</Link></li>
+                <li><Link href="/docs/developers/community-support" className="text-cyan-400 hover:underline">Community Support Resources</Link></li>
+                <li><Link href="/docs/developers/students" className="text-cyan-400 hover:underline">Students & Beginners Guide</Link></li>
                 <li><a href="https://ergonaut.space/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergonaut Space Community</a></li>
               </ul>
             </div>
@@ -810,7 +810,7 @@ export default function DevelopersGuide() {
             </h3>
             <p className="text-gray-300 mb-4">Explore what the community is building and get inspired for your next project.</p>
             <div className="grid md:grid-cols-2 gap-4">
-              <Link href="/Docs/ecosystem" className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4 hover:border-cyan-500/30 transition-colors">
+              <Link href="/docs/ecosystem" className="bg-neutral-800/50 border border-neutral-700 rounded-lg p-4 hover:border-cyan-500/30 transition-colors">
                 <h4 className="font-semibold text-cyan-300 mb-2">Ecosystem Directory</h4>
                 <p className="text-gray-400 text-sm">Browse all projects built on Ergo</p>
               </Link>

@@ -23,7 +23,7 @@ export default function GenuineTokenVerificationPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets/standards"
+            href="/docs/developers/data-model-apis/assets/standards"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -69,7 +69,7 @@ export default function GenuineTokenVerificationPage() {
           <h2 className="text-2xl font-bold text-green-400">Ergo tokens background</h2>
           
           <p className="text-gray-300">
-            <Link href="/Docs/developers/data-model-apis/assets/standards/asset-standard" className="text-green-400 hover:text-green-300 underline">
+            <Link href="/docs/developers/data-model-apis/assets/standards/asset-standard" className="text-green-400 hover:text-green-300 underline">
               See EIP-4
             </Link>: Ergo supports custom tokens as first-class citizens. A transaction can create out-of-thin-air tokens in its outputs if the token identifier is equal to the identifier of the first input box of the transaction.
           </p>

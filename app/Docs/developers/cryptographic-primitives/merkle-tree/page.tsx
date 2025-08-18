@@ -42,16 +42,16 @@ export default function MerkleTreePage() {
                 Overview
               </h2>
               <p className="text-gray-300 mb-6">
-                <strong>Merkle Trees</strong> are a fundamental <a href="/Docs/developers/cryptographic-primitives/data-structures" className="text-blue-400 hover:text-blue-300 underline">data structure</a> in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying <a href="/Docs/developers/transactions" className="text-blue-400 hover:text-blue-300 underline">transactions</a> within <a href="/Docs/developers/block" className="text-blue-400 hover:text-blue-300 underline">blocks</a> to securing additional metadata in the <a href="/Docs/developers/extension-section" className="text-blue-400 hover:text-blue-300 underline">Extension Block</a>. While similar to the Merkle Tree implementation in Bitcoin—where trees are constructed for block transactions and transaction witnesses (introduced with <a href="https://en.bitcoin.it/wiki/Segregated_Witness" className="text-blue-400 hover:text-blue-300 underline">SegWit</a>)—Ergo extends this concept by combining transactions and their corresponding <a href="/Docs/developers/signing" className="text-blue-400 hover:text-blue-300 underline">spending proofs</a> into a single Merkle Tree.
+                <strong>Merkle Trees</strong> are a fundamental <a href="/docs/developers/cryptographic-primitives/data-structures" className="text-blue-400 hover:text-blue-300 underline">data structure</a> in the Ergo blockchain, ensuring the integrity and authenticity of data. They play a crucial role in various blockchain operations, from verifying <a href="/docs/developers/transactions" className="text-blue-400 hover:text-blue-300 underline">transactions</a> within <a href="/docs/developers/block" className="text-blue-400 hover:text-blue-300 underline">blocks</a> to securing additional metadata in the <a href="/docs/developers/extension-section" className="text-blue-400 hover:text-blue-300 underline">Extension Block</a>. While similar to the Merkle Tree implementation in Bitcoin—where trees are constructed for block transactions and transaction witnesses (introduced with <a href="https://en.bitcoin.it/wiki/Segregated_Witness" className="text-blue-400 hover:text-blue-300 underline">SegWit</a>)—Ergo extends this concept by combining transactions and their corresponding <a href="/docs/developers/signing" className="text-blue-400 hover:text-blue-300 underline">spending proofs</a> into a single Merkle Tree.
               </p>
               <p className="text-gray-300 mb-6">
-                The Merkle Tree format in Ergo follows a specific structure and encoding scheme that is essential for developers working with Merkle proofs and validating data inclusion. For detailed information on the Merkle Tree format, leaf nodes, internal nodes, and the process of validating Merkle proofs, refer to the <a href="/Docs/developers/merkle-format" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Format</a> and <a href="/Docs/developers/merkle-validation" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a> sections.
+                The Merkle Tree format in Ergo follows a specific structure and encoding scheme that is essential for developers working with Merkle proofs and validating data inclusion. For detailed information on the Merkle Tree format, leaf nodes, internal nodes, and the process of validating Merkle proofs, refer to the <a href="/docs/developers/merkle-format" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Format</a> and <a href="/docs/developers/merkle-validation" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a> sections.
               </p>
             </section>
 
             <div className="mb-6">
               <Link
-                href="/Docs/developers/cryptographic-primitives"
+                href="/docs/developers/cryptographic-primitives"
                 className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
               >
                 <ArrowLeft className="w-5 h-5 mr-2" />
@@ -86,7 +86,7 @@ export default function MerkleTreePage() {
                 <li className="flex items-start gap-2">
                   <span className="text-green-400 mt-1">•</span>
                   <div>
-                    <strong>Pregenesis State</strong>: Ergo's deterministic pregenesis state, configured at the blockchain's inception, facilitates seamless restoration and verification of state transitions by comparing them with the hashes stored in the <a href="/Docs/developers/block-header" className="text-blue-400 hover:text-blue-300 underline">block header</a>.
+                    <strong>Pregenesis State</strong>: Ergo's deterministic pregenesis state, configured at the blockchain's inception, facilitates seamless restoration and verification of state transitions by comparing them with the hashes stored in the <a href="/docs/developers/block-header" className="text-blue-400 hover:text-blue-300 underline">block header</a>.
                   </div>
                 </li>
               </ul>
@@ -102,7 +102,7 @@ export default function MerkleTreePage() {
                 <div className="bg-neutral-900/50 rounded-lg p-4">
                   <h3 className="text-xl font-bold mb-3 text-green-400">Transaction Merkle Tree</h3>
                   <p className="text-gray-300 mb-4">
-                    The <a href="/Docs/developers/tx-merkle" className="text-blue-400 hover:text-blue-300 underline">Transaction Merkle Tree</a> is a core component of Ergo, combining all transactions and their corresponding spending proofs into a single Merkle Tree. This structure provides a cryptographic guarantee that the transaction data has not been tampered with, playing a critical role in the <a href="/Docs/developers/autolykos" className="text-blue-400 hover:text-blue-300 underline">Proof-of-Work (PoW)</a> mechanism. The Merkle Root, derived from this tree, is included in the <a href="/Docs/developers/block-header" className="text-blue-400 hover:text-blue-300 underline">block header</a>, ensuring that any change to a transaction within the block results in a different Merkle Root.
+                    The <a href="/docs/developers/tx-merkle" className="text-blue-400 hover:text-blue-300 underline">Transaction Merkle Tree</a> is a core component of Ergo, combining all transactions and their corresponding spending proofs into a single Merkle Tree. This structure provides a cryptographic guarantee that the transaction data has not been tampered with, playing a critical role in the <a href="/docs/developers/autolykos" className="text-blue-400 hover:text-blue-300 underline">Proof-of-Work (PoW)</a> mechanism. The Merkle Root, derived from this tree, is included in the <a href="/docs/developers/block-header" className="text-blue-400 hover:text-blue-300 underline">block header</a>, ensuring that any change to a transaction within the block results in a different Merkle Root.
                   </p>
                   <div className="bg-neutral-800/50 rounded p-3">
                     <p className="text-sm text-gray-400 mb-1">Code Reference:</p>
@@ -115,7 +115,7 @@ export default function MerkleTreePage() {
                 <div className="bg-neutral-900/50 rounded-lg p-4">
                   <h3 className="text-xl font-bold mb-3 text-green-400">Extension Block Merkle Tree</h3>
                   <p className="text-gray-300 mb-4">
-                    The <a href="/Docs/developers/merkle-extension" className="text-blue-400 hover:text-blue-300 underline">Extension Block Merkle Tree</a> secures key-value data like <a href="/Docs/developers/governance" className="text-blue-400 hover:text-blue-300 underline">miner votes</a> and <a href="/Docs/developers/governance" className="text-blue-400 hover:text-blue-300 underline">protocol parameters</a>. It organizes this data into a binary Merkle Tree, with leaf nodes containing key-value pair hashes and non-leaf nodes containing child node hashes. The root hash is included in the block header, cryptographically committing to the <a href="/Docs/developers/extension-section" className="text-blue-400 hover:text-blue-300 underline">Extension Block</a> data. Merkle proofs allow efficient verification of specific key-value pairs without downloading the entire block. This tree ensures data integrity and enables secure storage of auxiliary blockchain information.
+                    The <a href="/docs/developers/merkle-extension" className="text-blue-400 hover:text-blue-300 underline">Extension Block Merkle Tree</a> secures key-value data like <a href="/docs/developers/governance" className="text-blue-400 hover:text-blue-300 underline">miner votes</a> and <a href="/docs/developers/governance" className="text-blue-400 hover:text-blue-300 underline">protocol parameters</a>. It organizes this data into a binary Merkle Tree, with leaf nodes containing key-value pair hashes and non-leaf nodes containing child node hashes. The root hash is included in the block header, cryptographically committing to the <a href="/docs/developers/extension-section" className="text-blue-400 hover:text-blue-300 underline">Extension Block</a> data. Merkle proofs allow efficient verification of specific key-value pairs without downloading the entire block. This tree ensures data integrity and enables secure storage of auxiliary blockchain information.
                   </p>
                   <div className="bg-neutral-800/50 rounded p-3">
                     <p className="text-sm text-gray-400 mb-1">Code Reference:</p>
@@ -128,14 +128,14 @@ export default function MerkleTreePage() {
                 <div className="bg-neutral-900/50 rounded-lg p-4">
                   <h3 className="text-xl font-bold mb-3 text-green-400">Merkle Batch Proofs</h3>
                   <p className="text-gray-300 mb-4">
-                    <a href="/Docs/developers/merkle-batch-proof" className="text-blue-400 hover:text-blue-300 underline">Merkle Batch Proofs</a> are an advanced application that allows for efficient verification of multiple data elements within a Merkle Tree, reducing computational overhead. These proofs build on the foundational Merkle Trees used in transactions and the Extension Block.
+                    <a href="/docs/developers/merkle-batch-proof" className="text-blue-400 hover:text-blue-300 underline">Merkle Batch Proofs</a> are an advanced application that allows for efficient verification of multiple data elements within a Merkle Tree, reducing computational overhead. These proofs build on the foundational Merkle Trees used in transactions and the Extension Block.
                   </p>
                 </div>
 
                 <div className="bg-neutral-900/50 rounded-lg p-4">
                   <h3 className="text-xl font-bold mb-3 text-green-400">State Proofs</h3>
                   <p className="text-gray-300 mb-4">
-                    Merkle Trees are also used to create compact proofs of state transitions (related to <a href="/Docs/developers/block-adproofs" className="text-blue-400 hover:text-blue-300 underline">AD Proofs</a>). These proofs allow for efficient verification of the blockchain state without requiring a <a href="/Docs/developers/archival-node" className="text-blue-400 hover:text-blue-300 underline">full node</a>, which is crucial for <a href="/Docs/developers/light-spv-node" className="text-blue-400 hover:text-blue-300 underline">lightweight clients</a> to securely participate in the network. An example of how a lite client can check a Merkle-tree-based membership proof is detailed in the <a href="/Docs/developers/merkle-light-proof" className="text-blue-400 hover:text-blue-300 underline">Lite Client Checking Merkle Proof</a> documentation.
+                    Merkle Trees are also used to create compact proofs of state transitions (related to <a href="/docs/developers/block-adproofs" className="text-blue-400 hover:text-blue-300 underline">AD Proofs</a>). These proofs allow for efficient verification of the blockchain state without requiring a <a href="/docs/developers/archival-node" className="text-blue-400 hover:text-blue-300 underline">full node</a>, which is crucial for <a href="/docs/developers/light-spv-node" className="text-blue-400 hover:text-blue-300 underline">lightweight clients</a> to securely participate in the network. An example of how a lite client can check a Merkle-tree-based membership proof is detailed in the <a href="/docs/developers/merkle-light-proof" className="text-blue-400 hover:text-blue-300 underline">Lite Client Checking Merkle Proof</a> documentation.
                   </p>
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function MerkleTreePage() {
           <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
             <h3 className="text-xl font-bold mb-4 text-green-400">Validation</h3>
             <p className="text-gray-300 mb-4">
-              For details on the validation process for Merkle proofs, including examples and step-by-step instructions, please refer to the <a href="/Docs/developers/cryptographic-primitives/merkle-tree#validation" className="text-orange-400 hover:text-orange-300 underline">Merkle Validation</a> tab.
+              For details on the validation process for Merkle proofs, including examples and step-by-step instructions, please refer to the <a href="/docs/developers/cryptographic-primitives/merkle-tree#validation" className="text-orange-400 hover:text-orange-300 underline">Merkle Validation</a> tab.
             </p>
           </section>
         </div>
@@ -474,7 +474,7 @@ assert(merkleProof.valid(Digest32 @@ txsRoot))`}
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Link href="/Docs/developers/cryptographic-primitives/merkle-tree/extension-block" className="block group">
+            <Link href="/docs/developers/cryptographic-primitives/merkle-tree/extension-block" className="block group">
               <div className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700 hover:border-purple-500/50 transition-colors cursor-pointer relative">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
@@ -503,7 +503,7 @@ assert(merkleProof.valid(Digest32 @@ txsRoot))`}
               </div>
             </Link>
 
-            <Link href="/Docs/developers/cryptographic-primitives/merkle-tree/core" className="block group">
+            <Link href="/docs/developers/cryptographic-primitives/merkle-tree/core" className="block group">
               <div className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700 hover:border-green-500/50 transition-colors cursor-pointer relative">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
@@ -532,7 +532,7 @@ assert(merkleProof.valid(Digest32 @@ txsRoot))`}
               </div>
             </Link>
 
-            <Link href="/Docs/developers/cryptographic-primitives/merkle-tree/batch-proofs" className="block group">
+            <Link href="/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs" className="block group">
               <div className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700 hover:border-blue-500/50 transition-colors cursor-pointer relative">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -561,7 +561,7 @@ assert(merkleProof.valid(Digest32 @@ txsRoot))`}
               </div>
             </Link>
 
-            <Link href="/Docs/developers/cryptographic-primitives/merkle-tree/lightweight-proofs" className="block group">
+            <Link href="/docs/developers/cryptographic-primitives/merkle-tree/lightweight-proofs" className="block group">
               <div className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700 hover:border-orange-500/50 transition-colors cursor-pointer relative">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -605,10 +605,10 @@ assert(merkleProof.valid(Digest32 @@ txsRoot))`}
               <div className="bg-neutral-900/50 rounded-lg p-4">
                 <h4 className="text-lg font-bold mb-3 text-cyan-400">Related Documentation</h4>
                 <ul className="text-gray-300 space-y-2">
-                  <li>• <a href="/Docs/developers/merkle-format" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Format</a></li>
-                  <li>• <a href="/Docs/developers/merkle-validation" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a></li>
-                  <li>• <a href="/Docs/developers/merkle-batch-proof" className="text-blue-400 hover:text-blue-300 underline">Merkle Batch Proofs</a></li>
-                  <li>• <a href="/Docs/developers/merkle-light-proof" className="text-blue-400 hover:text-blue-300 underline">Lite Client Checking Merkle Proof</a></li>
+                  <li>• <a href="/docs/developers/merkle-format" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Format</a></li>
+                  <li>• <a href="/docs/developers/merkle-validation" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a></li>
+                  <li>• <a href="/docs/developers/merkle-batch-proof" className="text-blue-400 hover:text-blue-300 underline">Merkle Batch Proofs</a></li>
+                  <li>• <a href="/docs/developers/merkle-light-proof" className="text-blue-400 hover:text-blue-300 underline">Lite Client Checking Merkle Proof</a></li>
                 </ul>
               </div>
             </div>

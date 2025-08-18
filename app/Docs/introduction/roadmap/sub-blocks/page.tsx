@@ -19,14 +19,14 @@ export default function SubBlocksPage() {
         {/* Hero Buttons */}
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/introduction/roadmap/sub-blocks/technical-details"
+            href="/docs/introduction/roadmap/sub-blocks/technical-details"
             className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg font-semibold text-white hover:from-blue-600 hover:to-cyan-600 transition-all duration-200 shadow-lg hover:shadow-xl"
           >
             <FileText className="w-5 h-5 mr-2" />
             Technical Details
           </Link>
           <Link
-            href="/Docs/introduction/roadmap"
+            href="/docs/introduction/roadmap"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-lg font-medium text-white hover:bg-neutral-700 transition-colors"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
@@ -128,7 +128,7 @@ export default function SubBlocksPage() {
               Ergo's renaming and introduction of sub-blocks (input blocks) paired with ordering blocks significantly improves transaction processing speed and reliability. These changes provide users with near-instant confirmations and faster failure detection, thereby offering a smoother and more efficient experience on the network.
             </p>
             <p className="text-gray-300">
-              For a deep dive into the technical details behind these changes, see the <Link href="/Docs/introduction/roadmap/sub-blocks/technical-details" className="text-blue-400 hover:text-blue-300 underline">technical details</Link>.
+              For a deep dive into the technical details behind these changes, see the <Link href="/docs/introduction/roadmap/sub-blocks/technical-details" className="text-blue-400 hover:text-blue-300 underline">technical details</Link>.
             </p>
           </div>
         </section>

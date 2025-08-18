@@ -214,7 +214,7 @@ function OverviewContent() {
         <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 rounded-xl p-6">
           <h2 className="text-3xl font-bold mb-3 flex items-center gap-2"><FileText className="w-7 h-7 text-orange-400" /> Spendings & Transparency</h2>
           <p className="text-gray-300 mb-2">
-            Full, regularly updated breakdowns of Foundation expenditure are available in the <a href="/Docs/introduction/foundation/treasury" className="text-orange-400 hover:underline">Treasury section</a>.
+            Full, regularly updated breakdowns of Foundation expenditure are available in the <a href="/docs/introduction/foundation/treasury" className="text-orange-400 hover:underline">Treasury section</a>.
           </p>
       </div>
       </section>

@@ -32,7 +32,7 @@ export default function TradeHousePage() {
           The Ergo Auction House lets you buy and sell collectible tokens, art, and much more. The first open-source NFT marketplace on the Ergo blockchain with innovative solutions for efficient smart contracts, various auction types, and flexible royalty systems.
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
-          <Link href="/Docs/ecosystem/financial/dex" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
+          <Link href="/docs/ecosystem/financial/dex" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
             <ChevronRight className="w-5 h-5 mr-2" /> Back to DEX
           </Link>
           <a href="https://github.com/ergo-auction-house" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">

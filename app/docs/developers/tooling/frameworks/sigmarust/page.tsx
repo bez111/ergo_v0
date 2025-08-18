@@ -9,14 +9,14 @@ export default function SigmaRustPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">Sigma Rust</h1>
       <div className="mb-6 flex items-center gap-3">
         <Link
-          href="/Docs/developers/tooling/frameworks"
+          href="/docs/developers/tooling/frameworks"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back
         </Link>
         <Link
-          href="/Docs/developers/tooling/frameworks/sigmarust/constrained-environments"
+          href="/docs/developers/tooling/frameworks/sigmarust/constrained-environments"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           Constrained Environments
@@ -52,7 +52,7 @@ export default function SigmaRustPage() {
         <li><b>C:</b> <a href="https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-c" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergo-lib-c</a> [<a href="https://crates.io/crates/ergo-lib-c" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Crates.io</a>] [<a href="https://docs.rs/crate/ergo-lib-c" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Docs</a>]</li>
         <li><b>Go:</b> <a href="https://github.com/ergoplatform/ergo-lib-go" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergo-lib-go</a> [<a href="https://pkg.go.dev/github.com/ergoplatform/ergo-lib-go" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Go Reference</a>] <span className="text-gray-400">(Community maintained)</span></li>
         <li><b>Ruby:</b> <a href="https://github.com/thedlop/sigma_rb" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">sigma_rb</a> [<a href="https://badge.fury.io/rb/sigma_rb" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Gem</a>] <span className="text-gray-400">(Community maintained)</span></li>
-        <li><b>Python:</b> <a href="https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergo-lib-python</a> [<a href="https://badge.fury.io/py/ergo-lib" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">PyPI</a>] [<a href="https://docs.rs/crate/ergo-lib" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Docs</a>] <span className="text-gray-400">(Uses ergo-lib crate docs)</span> | <Link href="/Docs/developers/tooling/sigma-rust/ergo-lib-python" className="text-cyan-400 hover:underline">ergo-lib-python docs</Link></li>
+        <li><b>Python:</b> <a href="https://github.com/ergoplatform/sigma-rust/tree/develop/bindings/ergo-lib-python" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergo-lib-python</a> [<a href="https://badge.fury.io/py/ergo-lib" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">PyPI</a>] [<a href="https://docs.rs/crate/ergo-lib" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Docs</a>] <span className="text-gray-400">(Uses ergo-lib crate docs)</span> | <Link href="/docs/developers/tooling/sigma-rust/ergo-lib-python" className="text-cyan-400 hover:underline">ergo-lib-python docs</Link></li>
       </ul>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Usage Examples</h2>
       <p className="text-gray-300 mb-2">To get better understanding on how to use it in your project check out how its being used in the following projects:</p>

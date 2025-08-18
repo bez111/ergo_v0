@@ -8,7 +8,7 @@ export default function OpenAPISpecPage() {
         {/* Header */}
         <div className="mb-8">
           <Link 
-            href="/Docs/developers/infrastructure/node/configuration"
+            href="/docs/developers/infrastructure/node/configuration"
             className="inline-flex items-center text-blue-400 hover:text-blue-300 transition-colors mb-4"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />

@@ -23,7 +23,7 @@ export default function AssetStandardPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets/standards"
+            href="/docs/developers/data-model-apis/assets/standards"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -103,7 +103,7 @@ export default function AssetStandardPage() {
           </ul>
 
           <p className="text-gray-300">
-            <Link href="/Docs/introduction/storage-rent" className="text-blue-400 hover:text-blue-300 underline">
+            <Link href="/docs/introduction/storage-rent" className="text-blue-400 hover:text-blue-300 underline">
               Storage rent
             </Link> component allows a miner to collect (or burn) all the tokens inside a box if it is expired, and there are not enough Ergs in the box to pay the storage rent fee.
           </p>
@@ -157,7 +157,7 @@ export default function AssetStandardPage() {
           </div>
 
           <p className="text-gray-300">
-            Note, that additional <Link href="/Docs/developers/data-model-apis/registers" className="text-blue-400 hover:text-blue-300 underline">registers</Link> (R4-R6) are encoded as <strong>Coll[Byte]</strong> type of ErgoScript and their encoded representation is received as <code className="bg-neutral-700 px-2 py-1 rounded text-sm">'\x0e' + intToVlq(byteArray.length) + byteArray</code> where <code className="bg-neutral-700 px-2 py-1 rounded text-sm">byteArray</code> is UTF-8 representation of the original string.
+            Note, that additional <Link href="/docs/developers/data-model-apis/registers" className="text-blue-400 hover:text-blue-300 underline">registers</Link> (R4-R6) are encoded as <strong>Coll[Byte]</strong> type of ErgoScript and their encoded representation is received as <code className="bg-neutral-700 px-2 py-1 rounded text-sm">'\x0e' + intToVlq(byteArray.length) + byteArray</code> where <code className="bg-neutral-700 px-2 py-1 rounded text-sm">byteArray</code> is UTF-8 representation of the original string.
           </p>
 
           <p className="text-gray-300">

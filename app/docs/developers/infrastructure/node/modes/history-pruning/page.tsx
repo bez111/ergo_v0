@@ -30,14 +30,14 @@ export default function HistoryPruningPage() {
       {/* Navigation Buttons */}
       <div className="flex flex-wrap gap-6 mb-12">
         <Link 
-          href="/Docs/developers/infrastructure/node/modes"
+          href="/docs/developers/infrastructure/node/modes"
           className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
         >
           <ChevronRight className="w-5 h-5 mr-2" />
           Back to Node Modes
         </Link>
         <Link 
-          href="/Docs/developers/infrastructure/node/modes/digest-state"
+          href="/docs/developers/infrastructure/node/modes/digest-state"
           className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
         >
           <BookOpen className="w-5 h-5 mr-2" />
@@ -119,19 +119,19 @@ export default function HistoryPruningPage() {
             <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <ul className="space-y-2 text-gray-300">
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/modes/digest-state" 
+                  <a href="/docs/developers/infrastructure/node/modes/digest-state" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     Digest State Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/modes/pruned-full-node" 
+                  <a href="/docs/developers/infrastructure/node/modes/pruned-full-node" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     Pruned Full-Node Mode
                   </a>
                 </li>
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/configuration" 
+                  <a href="/docs/developers/infrastructure/node/configuration" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     Node Configuration
                   </a>

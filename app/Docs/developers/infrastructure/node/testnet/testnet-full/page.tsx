@@ -27,7 +27,7 @@ export default function TestnetFullPage() {
       </p>
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node/testnet"
+          href="/docs/developers/infrastructure/node/testnet"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronLeft className="w-5 h-5 mr-2" /> Back to Testnet
@@ -75,7 +75,7 @@ export default function TestnetFullPage() {
             <Info className="w-6 h-6 text-cyan-400" /> Mining
           </h2>
           <p className="text-gray-300">
-            If you want to help mine the testnet, you can do so by following the steps outlined on <Link href="/Docs/developers/infrastructure/node/testnet/cpu-mining" className="text-cyan-400 hover:underline">CPU Mining</Link>.
+            If you want to help mine the testnet, you can do so by following the steps outlined on <Link href="/docs/developers/infrastructure/node/testnet/cpu-mining" className="text-cyan-400 hover:underline">CPU Mining</Link>.
           </p>
         </div>
       </div>

@@ -83,7 +83,7 @@ function ApplicationConfContent() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/Docs/developers/infrastructure/node/configuration"
+              href="/docs/developers/infrastructure/node/configuration"
               className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
             >
               <ChevronRight className="w-5 h-5 mr-2" /> Back to Node Configuration
@@ -147,23 +147,23 @@ function ApplicationConfContent() {
                     <div className="ml-6 space-y-2">
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
-                        <Link href="/Docs/developers/infrastructure/node/configuration/application-conf/node" className="text-blue-400 hover:text-blue-300">node</Link>: Configures node-specific parameters
+                        <Link href="/docs/developers/infrastructure/node/configuration/application-conf/node" className="text-blue-400 hover:text-blue-300">node</Link>: Configures node-specific parameters
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
-                        <Link href="/Docs/developers/infrastructure/node/configuration/application-conf/cache" className="text-blue-400 hover:text-blue-300">cache</Link>: Handles cache-related settings
+                        <Link href="/docs/developers/infrastructure/node/configuration/application-conf/cache" className="text-blue-400 hover:text-blue-300">cache</Link>: Handles cache-related settings
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
-                        <Link href="/Docs/developers/infrastructure/node/configuration/application-conf/chain" className="text-blue-400 hover:text-blue-300">chain</Link>: Manages blockchain-related settings
+                        <Link href="/docs/developers/infrastructure/node/configuration/application-conf/chain" className="text-blue-400 hover:text-blue-300">chain</Link>: Manages blockchain-related settings
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
-                        <Link href="/Docs/developers/infrastructure/node/configuration/application-conf/wallet" className="text-blue-400 hover:text-blue-300">wallet</Link>: Sets up wallet parameters
+                        <Link href="/docs/developers/infrastructure/node/configuration/application-conf/wallet" className="text-blue-400 hover:text-blue-300">wallet</Link>: Sets up wallet parameters
                       </div>
                       <div className="flex items-center gap-2">
                         <CheckCircle className="w-4 h-4 text-green-400" />
-                        <Link href="/Docs/developers/infrastructure/node/configuration/application-conf/voting" className="text-blue-400 hover:text-blue-300">voting</Link>: Oversees voting-related configurations
+                        <Link href="/docs/developers/infrastructure/node/configuration/application-conf/voting" className="text-blue-400 hover:text-blue-300">voting</Link>: Oversees voting-related configurations
                       </div>
                     </div>
                   </div>
@@ -488,7 +488,7 @@ function ApplicationConfContent() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {/* Node Card */}
           <Link 
-            href="/Docs/developers/infrastructure/node/configuration/application-conf/node"
+            href="/docs/developers/infrastructure/node/configuration/application-conf/node"
             className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
           >
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -505,7 +505,7 @@ function ApplicationConfContent() {
 
           {/* Cache Card */}
           <Link 
-            href="/Docs/developers/infrastructure/node/configuration/application-conf/cache"
+            href="/docs/developers/infrastructure/node/configuration/application-conf/cache"
             className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-blue-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
           >
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -522,7 +522,7 @@ function ApplicationConfContent() {
 
           {/* Chain Card */}
           <Link 
-            href="/Docs/developers/infrastructure/node/configuration/application-conf/chain"
+            href="/docs/developers/infrastructure/node/configuration/application-conf/chain"
             className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-green-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
           >
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -539,7 +539,7 @@ function ApplicationConfContent() {
 
           {/* Wallet Card */}
           <Link 
-            href="/Docs/developers/infrastructure/node/configuration/application-conf/wallet"
+            href="/docs/developers/infrastructure/node/configuration/application-conf/wallet"
             className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-purple-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
           >
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -556,7 +556,7 @@ function ApplicationConfContent() {
 
           {/* Voting Card */}
           <Link 
-            href="/Docs/developers/infrastructure/node/configuration/application-conf/voting"
+            href="/docs/developers/infrastructure/node/configuration/application-conf/voting"
             className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-cyan-400/40 hover:bg-neutral-800/50 transition-all duration-300 group"
           >
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">

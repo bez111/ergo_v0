@@ -44,7 +44,7 @@ export default function SimpleSyntaxPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -219,7 +219,7 @@ val computeAsVal: Int => Int = {
             : A detailed guide on writing ErgoScript.
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
               ErgoScript Language Description
             </Link>
             : Complete language specification with all types and functions.

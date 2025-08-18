@@ -10,7 +10,7 @@ export default function ErgoPayTutorialPage() {
       <h1 className="text-3xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">ErgoPay Tutorial: Backend Integration</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/payments/ergopay"
+          href="/docs/developers/tooling/payments/ergopay"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

@@ -240,14 +240,14 @@ export default function DAOsAlternativeEconomiesPage() {
                               name: "DAO Guide",
                               description: "Learn DAO best practices",
                               icon: <BookOpen className="w-6 h-6" />,
-                              link: "/Docs/ecosystem/daos",
+                              link: "/docs/ecosystem/daos",
                               external: false
                             },
                             {
                               name: "Developer Docs",
                               description: "Build DAO applications",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "/Docs/developers",
+                              link: "/docs/developers",
                               external: false
                             },
                           ].map((item) => (

@@ -16,7 +16,7 @@ export default function AsALanguagePage() {
 
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -85,7 +85,7 @@ export default function AsALanguagePage() {
                   <td className="py-3 px-4"><InlineMath math="\mathcal{T} \ni T" /></td>
                   <td className="py-3 px-4"><strong>P</strong></td>
                   <td className="py-3 px-4"><strong>SPredefType</strong></td>
-                  <td className="py-3 px-4">See <Link href="/Docs/developers/ergoscript-languages/predefined-types" className="text-blue-400 hover:text-blue-300 underline">Types</Link></td>
+                  <td className="py-3 px-4">See <Link href="/docs/developers/ergoscript-languages/predefined-types" className="text-blue-400 hover:text-blue-300 underline">Types</Link></td>
                 </tr>
                 <tr className="border-b border-neutral-700">
                   <td className="py-3 px-4"></td>
@@ -192,7 +192,7 @@ export default function AsALanguagePage() {
         <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
           <div className="space-y-4 text-gray-300">
             <p>
-              The terms in ErgoTree are assigned types according to the typing rules specified in <Link href="/Docs/developers/ergoscript-languages/typing" className="text-blue-400 hover:text-blue-300 underline">Typing</Link>.
+              The terms in ErgoTree are assigned types according to the typing rules specified in <Link href="/docs/developers/ergoscript-languages/typing" className="text-blue-400 hover:text-blue-300 underline">Typing</Link>.
             </p>
             
             <ul className="list-disc pl-6 space-y-3">
@@ -217,7 +217,7 @@ export default function AsALanguagePage() {
                 <strong>Method invocation</strong> allows the application of functions defined as methods of types. If an 
                 expression <InlineMath math="e" /> has type <InlineMath math="T" />, and a method <InlineMath math="m" /> is 
                 declared in type <InlineMath math="T" />, the method invocation <InlineMath math="e.m(args)" /> is valid. 
-                For more information on types and their methods, refer to <Link href="/Docs/developers/ergoscript-languages/predefined-types" className="text-blue-400 hover:text-blue-300 underline">Types</Link>.
+                For more information on types and their methods, refer to <Link href="/docs/developers/ergoscript-languages/predefined-types" className="text-blue-400 hover:text-blue-300 underline">Types</Link>.
               </li>
               <li>
                 <strong>Conditional expressions</strong> in ErgoTree evaluate the condition strictly and the branches lazily. 
@@ -242,7 +242,7 @@ export default function AsALanguagePage() {
             <p>
               Each <strong>method</strong> in ErgoTree can be parameterized by type variables, which are used in the method 
               signature. Since ErgoTree only supports monomorphic values, each method call is monomorphic, and all type 
-              variables are assigned concrete types (see the MethodCall typing rule in <Link href="/Docs/developers/ergoscript-languages/typing" className="text-blue-400 hover:text-blue-300 underline">typing</Link>).
+              variables are assigned concrete types (see the MethodCall typing rule in <Link href="/docs/developers/ergoscript-languages/typing" className="text-blue-400 hover:text-blue-300 underline">typing</Link>).
             </p>
             
             <p>
@@ -344,7 +344,7 @@ export default function AsALanguagePage() {
             
             <p>
               Syntactic blocks in ErgoTree are eliminated and translated into nested lambda expressions, which unambiguously 
-              specify the evaluation semantics of blocks. The evaluation semantics of Core-λ are specified in <Link href="/Docs/developers/ergoscript-languages/evaluation" className="text-blue-400 hover:text-blue-300 underline">evaluation</Link>.
+              specify the evaluation semantics of blocks. The evaluation semantics of Core-λ are specified in <Link href="/docs/developers/ergoscript-languages/evaluation" className="text-blue-400 hover:text-blue-300 underline">evaluation</Link>.
             </p>
             
             <p>

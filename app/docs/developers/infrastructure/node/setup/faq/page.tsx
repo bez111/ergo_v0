@@ -45,7 +45,7 @@ export default function FAQPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node/setup"
+            href="/docs/developers/infrastructure/node/setup"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Setup
@@ -119,7 +119,7 @@ sdk install java 11.0.13.8.1-amzn`}</pre>
           <div>
             <h3 className="text-lg font-bold text-orange-400 mb-3">Hardware</h3>
             <p className="text-gray-300 mb-3">
-              The only hardware requirements are ~20GB of storage for the blockchain and ~8GB of RAM for handling the sync. The node utilizes Java, so it should work across all operating systems. You can even run it on a <Link href="/Docs/developers/infrastructure/node/setup/pi" className="text-cyan-400 hover:underline">Raspberry Pi</Link>.
+              The only hardware requirements are ~20GB of storage for the blockchain and ~8GB of RAM for handling the sync. The node utilizes Java, so it should work across all operating systems. You can even run it on a <Link href="/docs/developers/infrastructure/node/setup/pi" className="text-cyan-400 hover:underline">Raspberry Pi</Link>.
             </p>
             <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-lg p-4">
               <div className="flex items-start gap-2">
@@ -180,7 +180,7 @@ kill -9 $(lsof -t -i:9030)`}</pre>
                 </div>
                 
                 <p className="text-gray-400 text-xs">
-                  Please refer to the section on <Link href="/Docs/developers/infrastructure/node/setup/swagger" className="text-cyan-400 hover:underline">swagger</Link> for more information.
+                  Please refer to the section on <Link href="/docs/developers/infrastructure/node/setup/swagger" className="text-cyan-400 hover:underline">swagger</Link> for more information.
                 </p>
               </div>
             </div>

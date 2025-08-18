@@ -14,7 +14,7 @@ export default function DataInputsPage() {
       {/* Back Button */}
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/data-model-apis/composing/wallet-interaction"
+          href="/docs/developers/data-model-apis/composing/wallet-interaction"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -110,7 +110,7 @@ export default function DataInputsPage() {
             <li><a href="https://github.com/Emurgo/Emurgo-Research/blob/master/smart-contracts/Unlocking%20The%20Potential%20Of%20The%20UTXO%20Model.md" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Unlocking The Potential Of The UTXO Model</a></li>
             <li><a href="https://www.ergoforum.org/t/building-a-portable-and-reusable-par-utxo-dapp-standard/441" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Building A Portable And Reusable (PaR) UTXO dApp Standard</a></li>
             <li><a href="https://www.ergoforum.org/t/data-inputs-semantics/654" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Data Inputs Semantics</a></li>
-            <li><Link href="/Docs/developers/data-model-apis/model-tx" className="text-orange-400 hover:underline">Model Transaction Example</Link></li>
+            <li><Link href="/docs/developers/data-model-apis/model-tx" className="text-orange-400 hover:underline">Model Transaction Example</Link></li>
           </ul>
         </div>
 

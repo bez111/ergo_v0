@@ -32,21 +32,21 @@ export default function GovernancePage() {
       </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
-            href="/Docs/miners/governance/voting"
+            href="/docs/miners/governance/voting"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors justify-center"
           >
             <Vote className="w-5 h-5" />
             Voting Process
           </Link>
           <Link
-            href="/Docs/miners/governance/forking"
+            href="/docs/miners/governance/forking"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors justify-center"
           >
             <GitBranch className="w-5 h-5" />
             Forking Mechanisms
           </Link>
           <Link
-            href="/Docs/miners"
+            href="/docs/miners"
             className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors justify-center"
           >
             <span>←</span>
@@ -303,7 +303,7 @@ export default function GovernancePage() {
 
       {/* Governance Tools */}
       <div className="grid md:grid-cols-2 gap-6 mb-8">
-        <Link href="/Docs/miners/governance/voting" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group cursor-pointer">
+        <Link href="/docs/miners/governance/voting" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-purple-500/30 transition-all duration-300 group cursor-pointer">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-purple-500/20 border border-purple-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
               <Vote className="w-6 h-6 text-purple-400" />
@@ -324,7 +324,7 @@ export default function GovernancePage() {
           </div>
         </Link>
 
-        <Link href="/Docs/miners/governance/forking" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-green-500/30 transition-all duration-300 group cursor-pointer">
+        <Link href="/docs/miners/governance/forking" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-green-500/30 transition-all duration-300 group cursor-pointer">
           <div className="flex items-start gap-4">
             <div className="w-12 h-12 bg-green-500/20 border border-green-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
               <GitBranch className="w-6 h-6 text-green-400" />
@@ -359,13 +359,13 @@ export default function GovernancePage() {
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/Docs/miners/governance/voting"
+            href="/docs/miners/governance/voting"
             className="inline-flex items-center px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-lg text-purple-300 hover:bg-purple-500/30 transition-colors text-sm"
           >
             Start Voting <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
           <Link
-            href="/Docs/miners"
+            href="/docs/miners"
             className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-lg text-blue-300 hover:bg-blue-500/30 transition-colors text-sm"
           >
             Back to Miners <ChevronRight className="w-4 h-4 ml-1" />

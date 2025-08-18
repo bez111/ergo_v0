@@ -12,7 +12,7 @@ export default function FinancialPage() {
         "Lending, borrowing, derivatives, and crowdfunding — all on a secure, decentralized blockchain. Dive into Ergo’s DeFi protocols.",
       icon: Layers,
       color: "text-green-400",
-      link: "/Docs/ecosystem/financial/defi"
+      link: "/docs/ecosystem/financial/defi"
     },
     {
       title: "Decentralized Exchanges",
@@ -20,7 +20,7 @@ export default function FinancialPage() {
         "Non-custodial, permissionless trading platforms and liquidity protocols on Ergo. Explore DEXs, cross-chain swaps, and more.",
       icon: TrendingUp,
       color: "text-cyan-400",
-      link: "/Docs/ecosystem/financial/dex"
+      link: "/docs/ecosystem/financial/dex"
     },
     {
       title: "Monetary Systems",
@@ -28,7 +28,7 @@ export default function FinancialPage() {
         "Stablecoins, experimental protocols, and local exchange trading systems. Discover how Ergo enables decentralized, community-driven value transfer.",
       icon: Coins,
       color: "text-orange-400",
-      link: "/Docs/ecosystem/financial/monetary-systems"
+      link: "/docs/ecosystem/financial/monetary-systems"
     },
     {
       title: "Degenerate Finance",
@@ -36,7 +36,7 @@ export default function FinancialPage() {
         "High-risk, high-reward protocols and experimental financial games. For the bold and curious — explore the world of DegFi on Ergo.",
       icon: Flame,
       color: "text-orange-500",
-      link: "/Docs/ecosystem/financial/degenerate-finance"
+      link: "/docs/ecosystem/financial/degenerate-finance"
     },
   ];
 

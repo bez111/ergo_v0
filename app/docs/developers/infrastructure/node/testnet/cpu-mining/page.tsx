@@ -50,7 +50,7 @@ export default function CpuMiningPage() {
       </h1>
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node/testnet"
+          href="/docs/developers/infrastructure/node/testnet"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronLeft className="w-5 h-5 mr-2" /> Back to Testnet
@@ -67,7 +67,7 @@ export default function CpuMiningPage() {
       </div>
       <h2 className="text-xl font-bold mb-2 mt-8">Getting Set-up</h2>
       <p className="text-gray-300 mb-4">
-        Please refer to <Link href="/Docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">node</Link> for basic node set-up up to this point.
+        Please refer to <Link href="/docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">node</Link> for basic node set-up up to this point.
       </p>
       <p className="text-gray-300 mb-4">
         To CPU mine on the testnet, your <code className="bg-neutral-800 px-1 rounded">testnet.conf</code> should look like this:

@@ -73,14 +73,14 @@ export default function PrunedFullNodePage() {
         {/* Navigation Buttons */}
         <div className="flex flex-wrap gap-4">
           <Link 
-            href="/Docs/developers/infrastructure/node/modes"
+            href="/docs/developers/infrastructure/node/modes"
             className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" />
             Back to Node Modes
           </Link>
           <Link 
-            href="/Docs/developers/infrastructure/node/modes/pruned-full-node/technical-details"
+            href="/docs/developers/infrastructure/node/modes/pruned-full-node/technical-details"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Code className="w-5 h-5 mr-2" />
@@ -477,13 +477,13 @@ scorex {
             <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <ul className="space-y-2 text-gray-300">
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/modes/pruned-full-node/technical-details" 
+                  <a href="/docs/developers/infrastructure/node/modes/pruned-full-node/technical-details" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     Technical Implementation Details
                   </a>
                 </li>
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/protocol/nipopows" 
+                  <a href="/docs/developers/infrastructure/node/protocol/nipopows" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     NiPoPoWS Documentation
                   </a>

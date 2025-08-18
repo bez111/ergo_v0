@@ -15,7 +15,7 @@ export default function ComposingTransactionsPage() {
       {/* Back Button */}
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/data-model-apis"
+          href="/docs/developers/data-model-apis"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -26,7 +26,7 @@ export default function ComposingTransactionsPage() {
       <div className="space-y-8">
         <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
           <p className="text-gray-300">
-            Each Ergo transaction represents an <b>atomic state transition operation</b>. This operation <em>destroys</em> an existing <Link href="/Docs/developers/data-model-apis" className="text-orange-400 hover:underline">box</Link> from the state and generates new ones.
+            Each Ergo transaction represents an <b>atomic state transition operation</b>. This operation <em>destroys</em> an existing <Link href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">box</Link> from the state and generates new ones.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ export default function ComposingTransactionsPage() {
 
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <Link href="/Docs/developers/data-model-apis/composing/chained-transaction" className="group">
+          <Link href="/docs/developers/data-model-apis/composing/chained-transaction" className="group">
             <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
@@ -85,7 +85,7 @@ export default function ComposingTransactionsPage() {
             </div>
           </Link>
 
-          <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction" className="group">
+          <Link href="/docs/developers/data-model-apis/composing/wallet-interaction" className="group">
             <div className="bg-pink-500/10 border border-pink-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-pink-500/20 rounded-lg flex items-center justify-center">
@@ -106,7 +106,7 @@ export default function ComposingTransactionsPage() {
         <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6">
           <h3 className="text-xl font-bold mb-3 text-cyan-400">Data Inputs</h3>
           <p className="text-gray-300 mb-4">
-            <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline">Data inputs</Link> are a unique feature introduced by Ergo and later adopted by Cardano with the <em>Vasil</em> Hardfork. This concept allows multiple transactions to share a data-input box, storing only a single reference to the box in the block.
+            <Link href="/docs/developers/data-model-apis/composing/wallet-interaction/data-inputs" className="text-orange-400 hover:underline">Data inputs</Link> are a unique feature introduced by Ergo and later adopted by Cardano with the <em>Vasil</em> Hardfork. This concept allows multiple transactions to share a data-input box, storing only a single reference to the box in the block.
           </p>
           
           <p className="text-gray-300 mb-4">
@@ -141,13 +141,13 @@ export default function ComposingTransactionsPage() {
                 </a>
               </div>
             </li>
-            <li>Refer to this <Link href="/Docs/developers/data-model-apis/basics#sending-payments" className="text-orange-400 hover:underline">basic tutorial for sending a transaction</Link> for an introduction.</li>
+            <li>Refer to this <Link href="/docs/developers/data-model-apis/basics#sending-payments" className="text-orange-400 hover:underline">basic tutorial for sending a transaction</Link> for an introduction.</li>
           </ul>
         </div>
 
         <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
           <p className="text-gray-300">
-            Ergo also supports <Link href="/Docs/developers/data-model-apis/chained" className="text-orange-400 hover:underline">'<em>Chained transactions</em>'</Link> (spending outputs of off-chain transactions).
+            Ergo also supports <Link href="/docs/developers/data-model-apis/chained" className="text-orange-400 hover:underline">'<em>Chained transactions</em>'</Link> (spending outputs of off-chain transactions).
           </p>
         </div>
       </div>

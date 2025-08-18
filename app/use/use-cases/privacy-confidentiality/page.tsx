@@ -240,14 +240,14 @@ export default function PrivacyConfidentialityPage() {
                               name: "Privacy Guide",
                               description: "Learn privacy best practices",
                               icon: <BookOpen className="w-6 h-6" />,
-                              link: "/Docs/introduction/privacy-guide",
+                              link: "/docs/introduction/privacy-guide",
                               external: false
                             },
                             {
                               name: "Developer Docs",
                               description: "Build privacy applications",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "/Docs/developers",
+                              link: "/docs/developers",
                               external: false
                             },
                           ].map((item) => (

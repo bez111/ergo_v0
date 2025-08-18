@@ -24,7 +24,7 @@ export default function BoxLifecyclePage() {
           
           <div className="flex gap-4">
             <Link 
-              href="/Docs/developers/data-model-apis"
+              href="/docs/developers/data-model-apis"
               className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
             >
               <ArrowLeft className="w-4 h-4" />

@@ -31,13 +31,13 @@ export default function RevenuePage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/introduction/storage-rent"
+            href="/docs/introduction/storage-rent"
             className="inline-flex items-center px-6 py-3 bg-green-500 rounded-xl font-semibold text-black hover:bg-green-600 transition-transform hover:scale-105"
           >
             <Database className="w-5 h-5 mr-2" /> Learn Storage Rent
           </Link>
           <Link
-            href="/Docs/miners/mining-guides"
+            href="/docs/miners/mining-guides"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Settings className="w-5 h-5 mr-2" /> Mining Guides
@@ -305,13 +305,13 @@ export default function RevenuePage() {
         </p>
         <div className="flex flex-wrap gap-3">
           <Link
-            href="/Docs/introduction/entities"
+            href="/docs/introduction/entities"
             className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-lg text-green-300 hover:bg-green-500/30 transition-colors text-sm"
           >
             Ergo Foundation <ChevronRight className="w-4 h-4 ml-1" />
           </Link>
           <Link
-            href="/Docs/miners/governance"
+            href="/docs/miners/governance"
             className="inline-flex items-center px-4 py-2 bg-blue-500/20 border border-blue-500/30 rounded-lg text-blue-300 hover:bg-blue-500/30 transition-colors text-sm"
           >
             Mining Governance <ChevronRight className="w-4 h-4 ml-1" />

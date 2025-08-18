@@ -26,7 +26,7 @@ export default function StealthAddressesPage() {
         </p>
         <div className="flex flex-wrap gap-4 mb-2">
           <Link
-            href="/Docs/ecosystem/privacy"
+            href="/docs/ecosystem/privacy"
             className="inline-flex items-center px-6 py-3 bg-pink-500 rounded-xl font-semibold text-black hover:bg-pink-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Privacy
@@ -56,7 +56,7 @@ export default function StealthAddressesPage() {
           <Info className="w-6 h-6 text-pink-400" /> What Are Stealth Addresses?
         </h2>
         <p className="text-gray-300">
-          With the advent of <Link href="/Docs/ecosystem/privacy/ergomixer" className="text-cyan-400 hover:underline">ErgoMixer</Link> v4.4.0, support for Stealth Addresses has been rolled out. ErgoMixer assists in the creation and management of your Stealth Addresses for receiving payments. Note: Stealth Addresses aren’t directly payable. The sender must use the <a href="https://ergomixer.github.io/stealth/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Stealth Address Tool</a> to generate a Stealth Payment Address, which can then be used like any standard address.
+          With the advent of <Link href="/docs/ecosystem/privacy/ergomixer" className="text-cyan-400 hover:underline">ErgoMixer</Link> v4.4.0, support for Stealth Addresses has been rolled out. ErgoMixer assists in the creation and management of your Stealth Addresses for receiving payments. Note: Stealth Addresses aren’t directly payable. The sender must use the <a href="https://ergomixer.github.io/stealth/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Stealth Address Tool</a> to generate a Stealth Payment Address, which can then be used like any standard address.
         </p>
       </div>
 

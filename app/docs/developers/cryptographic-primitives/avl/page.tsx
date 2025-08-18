@@ -13,7 +13,7 @@ export default function AVLTreesPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/cryptographic-primitives"
+          href="/docs/developers/cryptographic-primitives"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -24,7 +24,7 @@ export default function AVLTreesPage() {
       <div className="space-y-8">
         <section className="bg-neutral-800/50 rounded-xl p-6 border border-neutral-700">
           <p className="text-gray-300 mb-6">
-            AVL trees, a type of highly efficient authenticated <a href="/Docs/developers/cryptographic-primitives/data-structures" className="text-blue-400 hover:text-blue-300 underline">data structure</a>, are natively supported in Ergo. They offer numerous advantages, such as the ability to authenticate data properties without the need to access the entire dataset. This document provides a comprehensive overview of AVL trees, their integration with Ergo, and their performance metrics.
+            AVL trees, a type of highly efficient authenticated <a href="/docs/developers/cryptographic-primitives/data-structures" className="text-blue-400 hover:text-blue-300 underline">data structure</a>, are natively supported in Ergo. They offer numerous advantages, such as the ability to authenticate data properties without the need to access the entire dataset. This document provides a comprehensive overview of AVL trees, their integration with Ergo, and their performance metrics.
           </p>
         </section>
 
@@ -44,7 +44,7 @@ export default function AVLTreesPage() {
             Integrating AVL Trees with Ergo Using GetBlok Plasma
           </h2>
           <p className="text-gray-300 mb-6">
-            Developers can effortlessly integrate AVL trees into their Ergo applications with the help of the <a href="/Docs/developers/cryptographic-primitives/plasma" className="text-blue-400 hover:text-blue-300 underline">GetBlok Plasma</a> library, which is built on the <a href="/Docs/developers/appkit" className="text-blue-400 hover:text-blue-300 underline">Ergo Appkit</a>. This library streamlines the integration process by offering an abstraction layer that aids in incorporating AVL trees (also referred to as Plasma) into <a href="/Docs/developers/off-chain" className="text-blue-400 hover:text-blue-300 underline">off-chain code</a>. It provides developers with a convenient method to utilize AVL trees as a <a href="/Docs/developers/layer2" className="text-blue-400 hover:text-blue-300 underline">Layer-2 scaling solution</a> in <a href="/Docs/developers/ergoscript" className="text-blue-400 hover:text-blue-300 underline">smart contracts</a>, off-chain code, and distributed systems that manage the Plasma infrastructure.
+            Developers can effortlessly integrate AVL trees into their Ergo applications with the help of the <a href="/docs/developers/cryptographic-primitives/plasma" className="text-blue-400 hover:text-blue-300 underline">GetBlok Plasma</a> library, which is built on the <a href="/docs/developers/appkit" className="text-blue-400 hover:text-blue-300 underline">Ergo Appkit</a>. This library streamlines the integration process by offering an abstraction layer that aids in incorporating AVL trees (also referred to as Plasma) into <a href="/docs/developers/off-chain" className="text-blue-400 hover:text-blue-300 underline">off-chain code</a>. It provides developers with a convenient method to utilize AVL trees as a <a href="/docs/developers/layer2" className="text-blue-400 hover:text-blue-300 underline">Layer-2 scaling solution</a> in <a href="/docs/developers/ergoscript" className="text-blue-400 hover:text-blue-300 underline">smart contracts</a>, off-chain code, and distributed systems that manage the Plasma infrastructure.
           </p>
         </section>
 
@@ -54,7 +54,7 @@ export default function AVLTreesPage() {
             Efficiency and Proof Size of AVL Trees
           </h2>
           <p className="text-gray-300 mb-6">
-            The compact proof sizes of AVL trees significantly contribute to their efficiency. AVL trees in Ergo provide succinct and effective authentication proofs, ensuring streamlined storage and verification processes within the <a href="/Docs/protocol-overview" className="text-blue-400 hover:text-blue-300 underline">Ergo blockchain</a>.
+            The compact proof sizes of AVL trees significantly contribute to their efficiency. AVL trees in Ergo provide succinct and effective authentication proofs, ensuring streamlined storage and verification processes within the <a href="/docs/protocol-overview" className="text-blue-400 hover:text-blue-300 underline">Ergo blockchain</a>.
           </p>
 
           <div className="space-y-6">

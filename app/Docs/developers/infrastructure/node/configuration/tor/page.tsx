@@ -16,7 +16,7 @@ export default function TorConfigurationPage() {
 
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node/configuration"
+          href="/docs/developers/infrastructure/node/configuration"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronRight className="w-5 h-5 mr-2" /> Back to Node Configuration
@@ -224,7 +224,7 @@ scorex {
               </div>
             </a>
             <Link
-              href="/Docs/developers/infrastructure/node/configuration"
+              href="/docs/developers/infrastructure/node/configuration"
               className="flex items-center p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg hover:bg-blue-500/20 transition-colors"
             >
               <Settings className="w-5 h-5 mr-3 text-blue-400" />

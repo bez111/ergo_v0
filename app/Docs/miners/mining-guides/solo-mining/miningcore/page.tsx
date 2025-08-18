@@ -64,7 +64,7 @@ export default function MiningCorePage() {
       {/* Back Button */}
       <div className="mb-8">
         <Link
-          href="/Docs/miners/mining-guides/solo-mining"
+          href="/docs/miners/mining-guides/solo-mining"
           className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
@@ -90,7 +90,7 @@ export default function MiningCorePage() {
             <GitBranch className="w-5 h-5 mr-2" /> View on GitHub
           </a>
           <Link
-            href="/Docs/miners/mining-guides/solo-mining/miningcore/windows"
+            href="/docs/miners/mining-guides/solo-mining/miningcore/windows"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Server className="w-5 h-5 mr-2" /> Windows Tutorial
@@ -103,7 +103,7 @@ export default function MiningCorePage() {
         <div className="flex items-start gap-3">
           <Info className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
           <p className="text-blue-300">
-            💡 If you're using <strong>Windows 10</strong>, see the <Link href="/Docs/miners/mining-guides/solo-mining/miningcore/windows" 
+            💡 If you're using <strong>Windows 10</strong>, see the <Link href="/docs/miners/mining-guides/solo-mining/miningcore/windows" 
               className="text-blue-400 hover:text-blue-300">Windows Tutorial</Link> for platform-specific instructions.
           </p>
         </div>
@@ -479,7 +479,7 @@ Miningcore -c <your-config>.json`}
       {/* Next Steps */}
       <div className="grid md:grid-cols-2 gap-6">
         <Link
-          href="/Docs/miners/mining-guides/solo-mining/stratum"
+          href="/docs/miners/mining-guides/solo-mining/stratum"
           className="group bg-neutral-900/50 border border-neutral-700 hover:border-cyan-600/50 rounded-xl p-6 transition-all"
         >
           <div className="flex items-center justify-between mb-4">
@@ -491,7 +491,7 @@ Miningcore -c <your-config>.json`}
         </Link>
 
         <Link
-          href="/Docs/miners/mining-guides/host-a-pool"
+          href="/docs/miners/mining-guides/host-a-pool"
           className="group bg-neutral-900/50 border border-neutral-700 hover:border-green-600/50 rounded-xl p-6 transition-all"
         >
           <div className="flex items-center justify-between mb-4">

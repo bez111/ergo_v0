@@ -65,7 +65,7 @@ export default function NodeProtocolPage() {
       </h1>
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node"
+          href="/docs/developers/infrastructure/node"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronLeft className="w-5 h-5 mr-2" /> Back to Node Overview
@@ -145,7 +145,7 @@ export default function NodeProtocolPage() {
       <div className="grid md:grid-cols-2 gap-6 mb-12">
         {/* P2P Card */}
         <Link
-          href="/Docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
+          href="/docs/developers/infrastructure/node/protocol/p2p-protocol-overview"
           className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] cursor-pointer group relative"
         >
           <div>
@@ -163,7 +163,7 @@ export default function NodeProtocolPage() {
         </Link>
         {/* EIPs Card */}
         <Link
-          href="/Docs/developers/infrastructure/node/protocol/eips"
+          href="/docs/developers/infrastructure/node/protocol/eips"
           className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[200px] cursor-pointer group relative"
         >
           <div>

@@ -23,28 +23,28 @@ export default function MintingNFTPage() {
         
         <div className="flex flex-wrap gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts"
+            href="/docs/developers/data-model-apis/assets/nfts"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to NFTs
           </Link>
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts/minting/v1-v2"
+            href="/docs/developers/data-model-apis/assets/nfts/minting/v1-v2"
             className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/20 hover:bg-purple-500/30 text-purple-400 rounded-xl transition-colors duration-200"
           >
             <GitBranch className="w-4 h-4" />
             V1 v V2
           </Link>
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts/minting/simple-example"
+            href="/docs/developers/data-model-apis/assets/nfts/minting/simple-example"
             className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 text-green-400 rounded-xl transition-colors duration-200"
           >
             <Zap className="w-4 h-4" />
             Simple Example
           </Link>
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts/minting/on-chain"
+            href="/docs/developers/data-model-apis/assets/nfts/minting/on-chain"
             className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-500/20 hover:bg-cyan-500/30 text-cyan-400 rounded-xl transition-colors duration-200"
           >
             <Database className="w-4 h-4" />
@@ -75,7 +75,7 @@ export default function MintingNFTPage() {
             Creating an NFT programmatically
           </h2>
           <p className="text-gray-300">
-            See <Link href="/Docs/developers/data-model-apis/assets/nfts/nft-examples" className="text-cyan-400 hover:underline">this page</Link> for some simple examples that demonstrate how to programmatically mint a NFT on the Ergo Blockchain.
+            See <Link href="/docs/developers/data-model-apis/assets/nfts/nft-examples" className="text-cyan-400 hover:underline">this page</Link> for some simple examples that demonstrate how to programmatically mint a NFT on the Ergo Blockchain.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function MintingNFTPage() {
             Standard
           </h2>
           <p className="text-gray-300 mb-4">
-            The standard for artwork issuance on Ergo is <Link href="/Docs/developers/data-model-apis/assets/nfts/eip24" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>. This standard outlines the process of issuing NFTs, including the two different design versions, <Link href="/Docs/developers/data-model-apis/assets/nfts/v1v2" className="text-cyan-400 hover:underline">V1 and V2</Link>, and the importance of artist identity. V2 offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information.
+            The standard for artwork issuance on Ergo is <Link href="/docs/developers/data-model-apis/assets/nfts/eip24" className="text-cyan-400 hover:underline">EIP-0024: Artwork Contract</Link>. This standard outlines the process of issuing NFTs, including the two different design versions, <Link href="/docs/developers/data-model-apis/assets/nfts/v1v2" className="text-cyan-400 hover:underline">V1 and V2</Link>, and the importance of artist identity. V2 offers more flexibility and features, such as handling multiple royalty recipients, detailed artwork traits, and additional information.
           </p>
         </div>
 
@@ -108,7 +108,7 @@ export default function MintingNFTPage() {
                 <a href="https://ergoauctions.org/#/auction/active?type=all" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergoauctions.org</a> Allows NFT minting. (<a href="https://ergoplatform.org/en/blog/2022-03-08-how-to-minting-a-non-fungible-token-nft-on-the-ergo-blockchain/" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">HowTo</a>)
               </li>
               <li>
-                <Link href="/Docs/developers/data-model-apis/assets/nfts/lilium" className="text-cyan-400 hover:underline">Lilium</Link> is a tool for artists to mint and sell their collections.
+                <Link href="/docs/developers/data-model-apis/assets/nfts/lilium" className="text-cyan-400 hover:underline">Lilium</Link> is a tool for artists to mint and sell their collections.
               </li>
             </ul>
           </div>

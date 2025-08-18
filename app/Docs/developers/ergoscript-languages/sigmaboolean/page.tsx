@@ -44,7 +44,7 @@ export default function SigmaBooleanPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -54,11 +54,11 @@ export default function SigmaBooleanPage() {
 
       <div className="space-y-6">
         <div className="text-lg text-gray-300 mb-6 max-w-2xl">
-          SigmaBoolean is a crucial data type in ErgoScript that represents propositions proven using Sigma protocols. It is derived from the base type <Link href="/Docs/developers/ergoscript-languages/language-description#predefined-global-functions" className="text-cyan-400 hover:underline"><code className="bg-neutral-800 px-1 rounded">ProveDlog</code></Link>, which is used for discrete logarithm proofs. What sets SigmaBoolean apart is its dual functionality - it is used by the prover to construct the proof and by the verifier to check the proof. This dual role makes SigmaBoolean a key player in creating and verifying proofs within ErgoScript.
+          SigmaBoolean is a crucial data type in ErgoScript that represents propositions proven using Sigma protocols. It is derived from the base type <Link href="/docs/developers/ergoscript-languages/language-description#predefined-global-functions" className="text-cyan-400 hover:underline"><code className="bg-neutral-800 px-1 rounded">ProveDlog</code></Link>, which is used for discrete logarithm proofs. What sets SigmaBoolean apart is its dual functionality - it is used by the prover to construct the proof and by the verifier to check the proof. This dual role makes SigmaBoolean a key player in creating and verifying proofs within ErgoScript.
         </div>
 
         <div className="text-gray-300 mb-6 max-w-2xl">
-          As an algebraic data type in SigmaScript and SigmaDsl, SigmaBoolean allows developers to use boolean-like logic when working with <Link href="/Docs/developers/ergoscript-languages/sigma-propositions" className="text-cyan-400 hover:underline">Sigma Propositions</Link>. It's worth noting that SigmaBoolean is a recursive data structure, which adds complexity to the parsing process.
+          As an algebraic data type in SigmaScript and SigmaDsl, SigmaBoolean allows developers to use boolean-like logic when working with <Link href="/docs/developers/ergoscript-languages/sigma-propositions" className="text-cyan-400 hover:underline">Sigma Propositions</Link>. It's worth noting that SigmaBoolean is a recursive data structure, which adds complexity to the parsing process.
         </div>
 
         <h2 className="text-2xl font-bold text-cyan-400 mb-4">Exploring SigmaBoolean Structure</h2>
@@ -118,7 +118,7 @@ const sigmaBoolean = Buffer.from(combinedBytes).toString('base64');`}</CodeBlock
 
         <h3 className="text-xl font-bold text-cyan-400 mb-3">Serialization using Fleet (TypeScript)</h3>
         <div className="text-gray-300 mb-4 max-w-2xl">
-          Here's how you can serialize SigmaBoolean using <Link href="/Docs/developers/tooling/frameworks/fleet" className="text-cyan-400 hover:underline">Fleet</Link> in TypeScript:
+          Here's how you can serialize SigmaBoolean using <Link href="/docs/developers/tooling/frameworks/fleet" className="text-cyan-400 hover:underline">Fleet</Link> in TypeScript:
         </div>
 
         <CodeBlock language="typescript">{`// Extract the public key from the encoded address
@@ -138,22 +138,22 @@ const encodedProp = SSigmaProp(SGroupElement(pk)).toHex();`}</CodeBlock>
         <h2 className="text-2xl font-bold text-cyan-400 mb-4">Related Resources</h2>
         <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-1">
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/sigma-propositions" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/sigma-propositions" className="text-cyan-400 hover:underline">
               Sigma Propositions
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/simple-syntax" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/simple-syntax" className="text-cyan-400 hover:underline">
               ErgoScript Syntax
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
               ErgoScript Language Description
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/tooling/frameworks/fleet" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/tooling/frameworks/fleet" className="text-cyan-400 hover:underline">
               Fleet Framework
             </Link>
           </li>

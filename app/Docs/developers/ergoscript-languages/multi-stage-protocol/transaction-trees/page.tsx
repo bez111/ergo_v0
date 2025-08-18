@@ -26,7 +26,7 @@ export default function TransactionTreesPage() {
 
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages/multi-stage-protocol"
+          href="/docs/developers/ergoscript-languages/multi-stage-protocol"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -41,7 +41,7 @@ export default function TransactionTreesPage() {
               A <em>transaction tree</em> represents a sequence of related transactions hierarchically. Each transaction in the tree can have one or more child transactions dependent on its successful execution.
             </p>
             <p>
-              A transaction tree can be seen as a more complex version of a <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/transaction-chains" className="text-cyan-400 hover:underline">transaction chain</Link>. In a chain, each transaction typically leads to a single next transaction. In a tree, however, a transaction might create multiple outputs, each potentially initiating a separate branch or sequence of subsequent transactions. This creates a branching structure resembling a tree, with the initial transaction at the root and subsequent transactions forming the branches.
+              A transaction tree can be seen as a more complex version of a <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-chains" className="text-cyan-400 hover:underline">transaction chain</Link>. In a chain, each transaction typically leads to a single next transaction. In a tree, however, a transaction might create multiple outputs, each potentially initiating a separate branch or sequence of subsequent transactions. This creates a branching structure resembling a tree, with the initial transaction at the root and subsequent transactions forming the branches.
             </p>
             <p>
               Transaction trees are useful for representing complex transaction sequences and dependencies, especially within smart contracts and advanced blockchain applications. They help ensure transactions execute in the correct order with appropriate dependencies while offering a detailed and flexible view of the overall transaction flow, including conditional branching.
@@ -133,7 +133,7 @@ export default function TransactionTreesPage() {
             </p>
             
             <p className="mt-6">
-              Next, we will examine <Link href="/Docs/developers/ergoscript-languages/multi-stage-protocol/transaction-graphs" className="text-cyan-400 hover:underline">Transaction Graphs</Link>, which allow for even more complex structures, including cycles.
+              Next, we will examine <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-graphs" className="text-cyan-400 hover:underline">Transaction Graphs</Link>, which allow for even more complex structures, including cycles.
             </p>
           </div>
         </section>

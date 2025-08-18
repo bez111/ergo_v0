@@ -26,7 +26,7 @@ export default function PoPowPage() {
 
         <div className="mb-6 flex gap-4">
           <Link
-            href="/Docs/developers/cryptographic-primitives"
+            href="/docs/developers/cryptographic-primitives"
             className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
@@ -34,7 +34,7 @@ export default function PoPowPage() {
           </Link>
           
           <Link
-            href="/Docs/developers/cryptographic-primitives/interlink-vectors"
+            href="/docs/developers/cryptographic-primitives/interlink-vectors"
             className="inline-flex items-center px-5 py-2 bg-green-500 rounded-xl font-semibold text-black hover:bg-green-600 transition-transform hover:scale-105"
           >
             <LinkIcon className="w-5 h-5 mr-2" />

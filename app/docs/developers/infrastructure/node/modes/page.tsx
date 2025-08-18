@@ -31,11 +31,11 @@ export default function NodeModesPage() {
           Node Modes of Operation
         </h1>
         <p className="text-xl text-gray-400 mb-6">
-          The <a href="/Docs/developers/infrastructure/node" className="text-blue-400 hover:text-blue-300">Ergo node</a> offers several modes of operation, allowing users to balance resource requirements (disk space, memory, bandwidth) with security assumptions and desired functionality. Choosing the right mode depends on your specific use case, such as running a backend for a dApp, securing personal funds, or simply verifying transactions.
+          The <a href="/docs/developers/infrastructure/node" className="text-blue-400 hover:text-blue-300">Ergo node</a> offers several modes of operation, allowing users to balance resource requirements (disk space, memory, bandwidth) with security assumptions and desired functionality. Choosing the right mode depends on your specific use case, such as running a backend for a dApp, securing personal funds, or simply verifying transactions.
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node"
+            href="/docs/developers/infrastructure/node"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Node
@@ -73,7 +73,7 @@ export default function NodeModesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/developers/infrastructure/node/modes/archival-node"
+            href="/docs/developers/infrastructure/node/modes/archival-node"
             className="inline-flex items-center mt-4 text-blue-400 hover:text-blue-300 text-sm font-medium"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -108,7 +108,7 @@ export default function NodeModesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/developers/infrastructure/node/modes/pruned-full-node"
+            href="/docs/developers/infrastructure/node/modes/pruned-full-node"
             className="inline-flex items-center mt-4 text-green-400 hover:text-green-300 text-sm font-medium"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -143,7 +143,7 @@ export default function NodeModesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/developers/infrastructure/node/modes/light-full-node"
+            href="/docs/developers/infrastructure/node/modes/light-full-node"
             className="inline-flex items-center mt-4 text-purple-400 hover:text-purple-300 text-sm font-medium"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -178,7 +178,7 @@ export default function NodeModesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/developers/infrastructure/node/modes/light-spv-node"
+            href="/docs/developers/infrastructure/node/modes/light-spv-node"
             className="inline-flex items-center mt-4 text-orange-400 hover:text-orange-300 text-sm font-medium"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -361,19 +361,19 @@ export default function NodeModesPage() {
             <h2 className="text-2xl font-semibold text-emerald-400">Further Reading</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-4">
-            <Link href="/Docs/developers/infrastructure/node/configuration" className="text-blue-400 hover:text-blue-300">
+            <Link href="/docs/developers/infrastructure/node/configuration" className="text-blue-400 hover:text-blue-300">
               • Configuration File
             </Link>
-            <Link href="/Docs/developers/infrastructure/node/modes/pruned-full-node" className="text-blue-400 hover:text-blue-300">
+            <Link href="/docs/developers/infrastructure/node/modes/pruned-full-node" className="text-blue-400 hover:text-blue-300">
               • Pruned Full Node Details
             </Link>
-            <Link href="/Docs/developers/infrastructure/node/modes/light-full-node" className="text-blue-400 hover:text-blue-300">
+            <Link href="/docs/developers/infrastructure/node/modes/light-full-node" className="text-blue-400 hover:text-blue-300">
               • Light Full (Digest) Node Details
             </Link>
-            <Link href="/Docs/developers/infrastructure/node/modes/light-spv-node" className="text-blue-400 hover:text-blue-300">
+            <Link href="/docs/developers/infrastructure/node/modes/light-spv-node" className="text-blue-400 hover:text-blue-300">
               • Light SPV Clients / NiPoPoWs
             </Link>
-            <Link href="/Docs/developers/infrastructure/node/modes/history-pruning" className="text-blue-400 hover:text-blue-300">
+            <Link href="/docs/developers/infrastructure/node/modes/history-pruning" className="text-blue-400 hover:text-blue-300">
               • History Pruning (blocksToKeep)
             </Link>
           </div>

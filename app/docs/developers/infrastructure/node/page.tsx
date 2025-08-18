@@ -9,35 +9,35 @@ export default function NodePage() {
       description: "Install and configure your Ergo node with step-by-step guides for different platforms and deployment methods.",
       icon: Settings,
       color: "text-cyan-400",
-      link: "/Docs/developers/infrastructure/node/setup"
+      link: "/docs/developers/infrastructure/node/setup"
     },
     {
       title: "Testnet",
       description: "Get started with Ergo testnet for development and testing. Access testnet resources and configuration.",
       icon: TestTube,
       color: "text-orange-400",
-      link: "/Docs/developers/infrastructure/node/testnet"
+      link: "/docs/developers/infrastructure/node/testnet"
     },
     {
       title: "Protocol",
       description: "Learn about the Ergo network protocol, P2P communication, and blockchain validation mechanisms.",
       icon: Network,
       color: "text-green-400",
-      link: "/Docs/developers/infrastructure/node/protocol"
+      link: "/docs/developers/infrastructure/node/protocol"
     },
     {
       title: "Configuration",
       description: "Configure your node settings, optimize performance, and customize node behavior for your needs.",
       icon: Cog,
       color: "text-cyan-300",
-      link: "/Docs/developers/infrastructure/node/configuration"
+      link: "/docs/developers/infrastructure/node/configuration"
     },
     {
       title: "Modes of Operation",
       description: "Explore different node operation modes: full archival, pruned full node, and light full node.",
       icon: Layers,
       color: "text-orange-300",
-      link: "/Docs/developers/infrastructure/node/modes"
+      link: "/docs/developers/infrastructure/node/modes"
     },
   ];
 
@@ -51,7 +51,7 @@ export default function NodePage() {
       {/* Back Button */}
       <div className="mb-6">
         <Link
-          href="/Docs/developers/infrastructure"
+          href="/docs/developers/infrastructure"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronLeft className="w-5 h-5 mr-2" />
@@ -114,7 +114,7 @@ export default function NodePage() {
           </ul>
           <p className="text-gray-400">
             To set up your own node please see {" "}
-            <Link href="/Docs/developers/infrastructure/install" className="text-cyan-400 hover:underline">this page</Link>.
+            <Link href="/docs/developers/infrastructure/install" className="text-cyan-400 hover:underline">this page</Link>.
           </p>
         </div>
       </section>
@@ -155,7 +155,7 @@ sdk install java 11.0.13.8.1-amzn`}
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">Modes of Operation</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <Link href="/Docs/developers/infrastructure/node/manual" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-cyan-400/40 transition-all duration-300 cursor-pointer">
+          <Link href="/docs/developers/infrastructure/node/manual" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-cyan-400/40 transition-all duration-300 cursor-pointer">
             <h3 className="text-xl font-bold mb-3 text-cyan-400">Full Archival Node</h3>
             <p className="text-gray-300 mb-4">
               This mode stores the entire blockchain history. To install from scratch, refer to the manual install page for detailed instructions.
@@ -164,7 +164,7 @@ sdk install java 11.0.13.8.1-amzn`}
               Learn more
             </div>
           </Link>
-          <Link href="/Docs/developers/infrastructure/node/pruned" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-orange-400/40 transition-all duration-300 cursor-pointer">
+          <Link href="/docs/developers/infrastructure/node/pruned" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-orange-400/40 transition-all duration-300 cursor-pointer">
             <h3 className="text-xl font-bold mb-3 text-orange-400">Pruned Full Node</h3>
             <p className="text-gray-300 mb-4">
               Bootstrap a pruned full node using a verified UTXO set snapshot and NiPoPoWs. Achieve full node security on standard hardware within minutes.
@@ -173,7 +173,7 @@ sdk install java 11.0.13.8.1-amzn`}
               Learn more
             </div>
           </Link>
-          <Link href="/Docs/developers/infrastructure/node/light" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-green-400/40 transition-all duration-300 cursor-pointer">
+          <Link href="/docs/developers/infrastructure/node/light" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-green-400/40 transition-all duration-300 cursor-pointer">
             <h3 className="text-xl font-bold mb-3 text-green-400">Light Full Node</h3>
             <p className="text-gray-300 mb-4">
               This mode only holds the root digest of the state dictionary and checks full blocks or a suffix of the blockchain.
@@ -189,7 +189,7 @@ sdk install java 11.0.13.8.1-amzn`}
       <section className="mb-10">
         <h2 className="text-2xl font-bold mb-4">Per Device</h2>
         <div className="grid md:grid-cols-2 gap-6">
-          <Link href="/Docs/developers/infrastructure/node/android" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-orange-400/40 transition-all duration-300 cursor-pointer">
+          <Link href="/docs/developers/infrastructure/node/android" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-orange-400/40 transition-all duration-300 cursor-pointer">
             <h3 className="text-xl font-bold mb-3 text-orange-400">Android</h3>
             <p className="text-gray-300 mb-4">
               Sync the entire Ergo blockchain on your mobile device!
@@ -198,7 +198,7 @@ sdk install java 11.0.13.8.1-amzn`}
               Learn more
             </div>
           </Link>
-          <Link href="/Docs/developers/infrastructure/node/pi" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-cyan-400/40 transition-all duration-300 cursor-pointer">
+          <Link href="/docs/developers/infrastructure/node/pi" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-cyan-400/40 transition-all duration-300 cursor-pointer">
             <h3 className="text-xl font-bold mb-3 text-cyan-400">Raspberry Pi</h3>
             <p className="text-gray-300 mb-4">
               Run a node on a Raspberry Pi!
@@ -226,7 +226,7 @@ sdk install java 11.0.13.8.1-amzn`}
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 group relative hover:border-orange-400/40 transition-all duration-300">
             <h3 className="text-xl font-bold mb-3 text-orange-400">Toolkits</h3>
             <ul className="text-gray-300 space-y-2">
-              <li>• <a href="/Docs/developers/infrastructure/explorer" className="text-cyan-400 hover:underline">Explorer & Node Bundles</a></li>
+              <li>• <a href="/docs/developers/infrastructure/explorer" className="text-cyan-400 hover:underline">Explorer & Node Bundles</a></li>
               <li>• <a href="https://ergosphere.cloud/" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Ergosphere</a> (Umbrel-like solution)</li>
               <li>• <a href="https://github.com/ross-weir/ergode" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Ergode</a> (TypeScript implementation)</li>
             </ul>
@@ -243,11 +243,11 @@ sdk install java 11.0.13.8.1-amzn`}
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
           <ul className="text-gray-300 space-y-2">
             <li>• <a href="http://ergonodes.net" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">ergonodes.net</a> - Overview of live nodes</li>
-            <li>• <Link href="/Docs/developers/infrastructure/node/faq" className="text-cyan-400 hover:underline">Node Frequently Asked Questions</Link></li>
-            <li>• <Link href="/Docs/developers/infrastructure/node/modes" className="text-cyan-400 hover:underline">Modes of Operation</Link></li>
-            <li>• <Link href="/Docs/developers/infrastructure/node/api" className="text-cyan-400 hover:underline">Node APIs</Link></li>
-            <li>• <Link href="/Docs/developers/infrastructure/node/conf" className="text-cyan-400 hover:underline">Node Configuration</Link></li>
-            <li>• <Link href="/Docs/developers/infrastructure/node/protocol" className="text-cyan-400 hover:underline">Node Protocol Details</Link></li>
+            <li>• <Link href="/docs/developers/infrastructure/node/faq" className="text-cyan-400 hover:underline">Node Frequently Asked Questions</Link></li>
+            <li>• <Link href="/docs/developers/infrastructure/node/modes" className="text-cyan-400 hover:underline">Modes of Operation</Link></li>
+            <li>• <Link href="/docs/developers/infrastructure/node/api" className="text-cyan-400 hover:underline">Node APIs</Link></li>
+            <li>• <Link href="/docs/developers/infrastructure/node/conf" className="text-cyan-400 hover:underline">Node Configuration</Link></li>
+            <li>• <Link href="/docs/developers/infrastructure/node/protocol" className="text-cyan-400 hover:underline">Node Protocol Details</Link></li>
           </ul>
         </div>
       </section>

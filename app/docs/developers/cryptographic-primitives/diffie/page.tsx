@@ -21,7 +21,7 @@ export default function DiffiePage() {
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
           <Link
-            href="/Docs/developers/cryptographic-primitives"
+            href="/docs/developers/cryptographic-primitives"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" /> Back to Cryptographic Primitives
@@ -72,7 +72,7 @@ export default function DiffiePage() {
         </p>
 
         <p className="text-gray-300 mb-6">
-          In ErgoScript, this transformation is implemented as <strong><a href="/Docs/developers/ergoscript-languages/global-functions#provedhtuple" className="text-orange-400 hover:text-orange-300">proveDHTuple</a>(g, h, u, v)</strong>, allowing users to generate non-interactive proofs of Diffie-Hellman tuples.
+          In ErgoScript, this transformation is implemented as <strong><a href="/docs/developers/ergoscript-languages/global-functions#provedhtuple" className="text-orange-400 hover:text-orange-300">proveDHTuple</a>(g, h, u, v)</strong>, allowing users to generate non-interactive proofs of Diffie-Hellman tuples.
         </p>
 
         <hr className="border-neutral-700 my-8" />
@@ -112,7 +112,7 @@ export default function DiffiePage() {
         </div>
 
         <p className="text-gray-300 mb-6">
-          For more information, see <a href="/Docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</a>.
+          For more information, see <a href="/docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</a>.
         </p>
 
         <h3 className="text-2xl font-bold mb-4 text-white">Stealth Addresses</h3>
@@ -127,7 +127,7 @@ export default function DiffiePage() {
         </ul>
 
         <p className="text-gray-300 mb-6">
-          For more details, refer to the <a href="/Docs/developers/cryptographic-primitives/stealth-address" className="text-orange-400 hover:text-orange-300">Stealth Addresses</a> page.
+          For more details, refer to the <a href="/docs/developers/cryptographic-primitives/stealth-address" className="text-orange-400 hover:text-orange-300">Stealth Addresses</a> page.
         </p>
 
         <hr className="border-neutral-700 my-8" />
@@ -211,8 +211,8 @@ export default function DiffiePage() {
         </p>
 
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-6">
-          <li><a href="/Docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</a></li>
-          <li><a href="/Docs/developers/cryptographic-primitives/stealth-address" className="text-orange-400 hover:text-orange-300">Stealth Addresses</a></li>
+          <li><a href="/docs/developers/cryptographic-primitives/ergomixer" className="text-orange-400 hover:text-orange-300">ErgoMixer</a></li>
+          <li><a href="/docs/developers/cryptographic-primitives/stealth-address" className="text-orange-400 hover:text-orange-300">Stealth Addresses</a></li>
         </ul>
       </div>
     </>

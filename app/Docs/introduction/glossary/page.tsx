@@ -256,7 +256,7 @@ export default function GlossaryPage() {
 
   const breadcrumbs = [
     { label: { en: "Home", ru: "Главная", zh: "首页", ko: "홈", ja: "ホーム", tr: "Ana Sayfa", pt: "Início", de: "Startseite", es: "Inicio" }, href: "/" },
-    { label: { en: "Glossary", ru: "Глоссарий", zh: "术语表", ko: "용어집", ja: "用語集", tr: "Sözlük", pt: "Glossário", de: "Glossar", es: "Glosario" }, href: "/Docs/introduction/glossary" }
+    { label: { en: "Glossary", ru: "Глоссарий", zh: "术语表", ko: "용어집", ja: "用語集", tr: "Sözlük", pt: "Glossário", de: "Glossar", es: "Glosario" }, href: "/docs/introduction/glossary" }
   ];
 
   // Функция для сохранения предложения
@@ -353,7 +353,7 @@ export default function GlossaryPage() {
         <meta property="og:title" content="Ergo Blockchain Glossary - Complete Crypto & Blockchain Terms Dictionary" />
         <meta property="og:description" content="Comprehensive Ergo blockchain glossary with 200+ crypto terms, definitions, and examples. Available in 9 languages." />
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://ergo.org/Docs/introduction/glossary" />
+        <meta property="og:url" content="https://ergo.org/docs/introduction/glossary" />
         <meta property="og:site_name" content="Ergo Blockchain" />
         <meta property="og:locale" content="en_US" />
         
@@ -363,18 +363,18 @@ export default function GlossaryPage() {
         <meta name="twitter:description" content="200+ crypto terms explained in 9 languages" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href="https://ergo.org/Docs/introduction/glossary" />
+        <link rel="canonical" href="https://ergo.org/docs/introduction/glossary" />
         
         {/* Language alternates */}
-        <link rel="alternate" hrefLang="en" href="https://ergo.org/Docs/introduction/glossary" />
-        <link rel="alternate" hrefLang="zh" href="https://ergo.org/Docs/introduction/glossary?lang=zh" />
-        <link rel="alternate" hrefLang="ru" href="https://ergo.org/Docs/introduction/glossary?lang=ru" />
-        <link rel="alternate" hrefLang="ko" href="https://ergo.org/Docs/introduction/glossary?lang=ko" />
-        <link rel="alternate" hrefLang="ja" href="https://ergo.org/Docs/introduction/glossary?lang=ja" />
-        <link rel="alternate" hrefLang="tr" href="https://ergo.org/Docs/introduction/glossary?lang=tr" />
-        <link rel="alternate" hrefLang="pt" href="https://ergo.org/Docs/introduction/glossary?lang=pt" />
-        <link rel="alternate" hrefLang="de" href="https://ergo.org/Docs/introduction/glossary?lang=de" />
-        <link rel="alternate" hrefLang="es" href="https://ergo.org/Docs/introduction/glossary?lang=es" />
+        <link rel="alternate" hrefLang="en" href="https://ergo.org/docs/introduction/glossary" />
+        <link rel="alternate" hrefLang="zh" href="https://ergo.org/docs/introduction/glossary?lang=zh" />
+        <link rel="alternate" hrefLang="ru" href="https://ergo.org/docs/introduction/glossary?lang=ru" />
+        <link rel="alternate" hrefLang="ko" href="https://ergo.org/docs/introduction/glossary?lang=ko" />
+        <link rel="alternate" hrefLang="ja" href="https://ergo.org/docs/introduction/glossary?lang=ja" />
+        <link rel="alternate" hrefLang="tr" href="https://ergo.org/docs/introduction/glossary?lang=tr" />
+        <link rel="alternate" hrefLang="pt" href="https://ergo.org/docs/introduction/glossary?lang=pt" />
+        <link rel="alternate" hrefLang="de" href="https://ergo.org/docs/introduction/glossary?lang=de" />
+        <link rel="alternate" hrefLang="es" href="https://ergo.org/docs/introduction/glossary?lang=es" />
         
         <script type="application/ld+json" dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -389,7 +389,7 @@ export default function GlossaryPage() {
               "@type": "DefinedTerm",
               "name": typeof term.title === "string" ? term.title : ((term.title as Record<string, string>)[lang] || (term.title as Record<string, string>).en || (term.title && Object.values(term.title)[0]) || ""),
               "description": typeof term.definition === "string" ? term.definition : ((term.definition as Record<string, string>)[lang] || (term.definition as Record<string, string>).en || (term.definition && Object.values(term.definition)[0]) || ""),
-              "url": typeof window !== 'undefined' ? `${window.location.origin}/Docs/introduction/glossary#${term.anchor}` : `#${term.anchor}`,
+              "url": typeof window !== 'undefined' ? `${window.location.origin}/docs/introduction/glossary#${term.anchor}` : `#${term.anchor}`,
               "identifier": term.anchor,
               "inDefinedTermSet": {
                 "@type": "DefinedTermSet",

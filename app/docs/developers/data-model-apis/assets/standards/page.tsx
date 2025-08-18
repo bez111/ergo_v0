@@ -23,7 +23,7 @@ export default function StandardsPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets"
+            href="/docs/developers/data-model-apis/assets"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -37,7 +37,7 @@ export default function StandardsPage() {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Asset Standard Card */}
-          <Link href="/Docs/developers/data-model-apis/assets/standards/asset-standard" className="group">
+          <Link href="/docs/developers/data-model-apis/assets/standards/asset-standard" className="group">
             <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6 h-full hover:bg-neutral-700/50 transition-all duration-200 relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -55,7 +55,7 @@ export default function StandardsPage() {
           </Link>
 
           {/* Genuine Token Verification Card */}
-          <Link href="/Docs/developers/data-model-apis/assets/standards/genuine-token-verification" className="group">
+          <Link href="/docs/developers/data-model-apis/assets/standards/genuine-token-verification" className="group">
             <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6 h-full hover:bg-neutral-700/50 transition-all duration-200 relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
@@ -73,7 +73,7 @@ export default function StandardsPage() {
           </Link>
 
           {/* Auction Contract Card */}
-          <Link href="/Docs/developers/data-model-apis/assets/standards/auction-contract" className="group">
+          <Link href="/docs/developers/data-model-apis/assets/standards/auction-contract" className="group">
             <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6 h-full hover:bg-neutral-700/50 transition-all duration-200 relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -91,7 +91,7 @@ export default function StandardsPage() {
           </Link>
 
           {/* Artwork Contract Card */}
-          <Link href="/Docs/developers/data-model-apis/assets/standards/artwork-contract" className="group">
+          <Link href="/docs/developers/data-model-apis/assets/standards/artwork-contract" className="group">
             <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6 h-full hover:bg-neutral-700/50 transition-all duration-200 relative">
               <div className="flex items-center gap-3 mb-4">
                 <div className="w-10 h-10 bg-pink-500/20 rounded-lg flex items-center justify-center">

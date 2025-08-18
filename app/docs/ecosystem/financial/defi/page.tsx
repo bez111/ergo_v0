@@ -21,7 +21,7 @@ const defiList: Array<{
     category: "Lending",
     description: "Decentralized lending pools on Ergo.",
     link: "https://duckpools.io/",
-    more: "/Docs/ecosystem/financial/defi/duckpools",
+    more: "/docs/ecosystem/financial/defi/duckpools",
     highlight: false,
   },
   {
@@ -30,7 +30,7 @@ const defiList: Array<{
     category: "Lending",
     description: "P2P DeFi bond market for collateralized loans on Ergo.",
     link: "https://github.com/SigmaFi/",
-    more: "/Docs/ecosystem/financial/defi/sigmafi",
+    more: "/docs/ecosystem/financial/defi/sigmafi",
     highlight: false,
   },
   {
@@ -39,7 +39,7 @@ const defiList: Array<{
     category: "Lending",
     description: "Experimental lending engine for DeFi.",
     link: "https://github.com/ergo-pad",
-    more: "/Docs/ecosystem/financial/defi/exle",
+    more: "/docs/ecosystem/financial/defi/exle",
     highlight: false,
   },  
   {
@@ -48,7 +48,7 @@ const defiList: Array<{
     category: "Lending",
     description: "Micro-loans for individuals and small businesses — expand access to DeFi on Ergo.",
     link: null,
-    more: "/Docs/ecosystem/financial/defi/micro-credit",
+    more: "/docs/ecosystem/financial/defi/micro-credit",
   },
   {
     name: "Flash Loans",
@@ -56,7 +56,7 @@ const defiList: Array<{
     category: "Lending",
     description: "Instant, collateral-free loans for advanced DeFi strategies and arbitrage on Ergo.",
     link: null,
-    more: "/Docs/ecosystem/financial/defi/flash-loans",
+    more: "/docs/ecosystem/financial/defi/flash-loans",
   },
   {
     name: "Mutual Credit",
@@ -64,7 +64,7 @@ const defiList: Array<{
     category: "Lending",
     description: "Peer-to-peer credit protocols for trustless, decentralized borrowing and lending circles.",
     link: null,
-    more: "/Docs/ecosystem/financial/defi/mutual-credit",
+    more: "/docs/ecosystem/financial/defi/mutual-credit",
   },
   // Synthetics & Derivatives
   {
@@ -73,7 +73,7 @@ const defiList: Array<{
     category: "Synthetics & Derivatives",
     description: "Advanced options and derivatives protocol.",
     link: "https://github.com/SigmaO/",
-    more: "/Docs/ecosystem/financial/defi/sigmao",
+    more: "/docs/ecosystem/financial/defi/sigmao",
     highlight: false,
   },
   {
@@ -82,7 +82,7 @@ const defiList: Array<{
     category: "Synthetics & Derivatives",
     description: "Pooled options trading on Ergo.",
     link: "https://github.com/anon-real/optionpools",
-    more: "/Docs/ecosystem/financial/defi/optionpools",
+    more: "/docs/ecosystem/financial/defi/optionpools",
     highlight: false,
   },
   {
@@ -91,7 +91,7 @@ const defiList: Array<{
     category: "Synthetics & Derivatives",
     description: "100% trustless, permissionless prediction markets powered by the UTXO model. Make markets on any on-chain data, with automatic verification and payout based on smart contracts.",
     link: null,
-    more: "/Docs/ecosystem/financial/defi/trustless-prediction-markets",
+    more: "/docs/ecosystem/financial/defi/trustless-prediction-markets",
   },
   {
     name: "Perpetual Tokens",
@@ -99,7 +99,7 @@ const defiList: Array<{
     category: "Synthetics & Derivatives",
     description: "Tokens designed to persist indefinitely on-chain, enabled by ErgoScript. Perpetual tokens can only be removed via garbage collection, ensuring long-term existence and innovative protocol design.",
     link: null,
-    more: "/Docs/ecosystem/financial/defi/perpetual-tokens",
+    more: "/docs/ecosystem/financial/defi/perpetual-tokens",
   },
   {
     name: "Multi-Stage Protocols",
@@ -107,7 +107,7 @@ const defiList: Array<{
     category: "Synthetics & Derivatives",
     description: "Protocols enabling advanced DeFi logic through scripts that reference each other across stages. Supports complex interactions, including cyclic references and persistent state across transactions.",
     link: null,
-    more: "/Docs/ecosystem/financial/defi/multi-stage-protocols",
+    more: "/docs/ecosystem/financial/defi/multi-stage-protocols",
   },
   
   
@@ -118,7 +118,7 @@ const defiList: Array<{
     category: "Crowdfunding",
     description: "Decentralized raffle and crowdfunding platform.",
     link: "https://ergoraffle.com/",
-    more: "/Docs/ecosystem/financial/defi/ergoraffle",
+    more: "/docs/ecosystem/financial/defi/ergoraffle",
     highlight: false,
   },
   {
@@ -127,7 +127,7 @@ const defiList: Array<{
     category: "Crowdfunding",
     description: "Subscription-based crowdfunding protocol.",
     link: "https://github.com/cornbelt-dev/sigma-subscriptions",
-    more: "/Docs/ecosystem/financial/defi/sigma-subscriptions",
+    more: "/docs/ecosystem/financial/defi/sigma-subscriptions",
     highlight: false,
   },
 ];
@@ -171,7 +171,7 @@ export default function DeFiPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/ecosystem/financial"
+            href="/docs/ecosystem/financial"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -365,7 +365,7 @@ export default function DeFiPage() {
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
                   <Link
-                    href="/Docs/ecosystem/financial/defi/ico"
+                    href="/docs/ecosystem/financial/defi/ico"
                     className="inline-flex items-center text-pink-400 font-semibold text-base hover:text-pink-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
                   >
                     More
@@ -417,7 +417,7 @@ export default function DeFiPage() {
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
                   {/* More button */}
                   <Link
-                    href="/Docs/ecosystem/financial/defi/revenue-sharing"
+                    href="/docs/ecosystem/financial/defi/revenue-sharing"
                     className="inline-flex items-center text-yellow-400 font-semibold text-base hover:text-yellow-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
                   >
                     More
@@ -446,7 +446,7 @@ export default function DeFiPage() {
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
                   <Link
-                    href="/Docs/ecosystem/financial/defi/buyback-guarantees"
+                    href="/docs/ecosystem/financial/defi/buyback-guarantees"
                     className="inline-flex items-center text-yellow-400 font-semibold text-base hover:text-yellow-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
                   >
                     More
@@ -469,7 +469,7 @@ export default function DeFiPage() {
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
                   <Link
-                    href="/Docs/ecosystem/financial/defi/insurance"
+                    href="/docs/ecosystem/financial/defi/insurance"
                     className="inline-flex items-center text-yellow-400 font-semibold text-base hover:text-yellow-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
                   >
                     More
@@ -518,7 +518,7 @@ export default function DeFiPage() {
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
                   <Link
-                    href="/Docs/ecosystem/financial/defi/index-coins"
+                    href="/docs/ecosystem/financial/defi/index-coins"
                     className="inline-flex items-center text-pink-400 font-semibold text-base hover:text-pink-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
                   >
                     More
@@ -541,7 +541,7 @@ export default function DeFiPage() {
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
                   <Link
-                    href="/Docs/ecosystem/financial/defi/pow-tokens"
+                    href="/docs/ecosystem/financial/defi/pow-tokens"
                     className="inline-flex items-center text-pink-400 font-semibold text-base hover:text-pink-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
                   >
                     More
@@ -564,7 +564,7 @@ export default function DeFiPage() {
                 </div>
                 <div className="flex justify-between items-center mt-auto gap-3 flex-wrap md:flex-nowrap">
                   <Link
-                    href="/Docs/ecosystem/financial/defi/bonding-curve"
+                    href="/docs/ecosystem/financial/defi/bonding-curve"
                     className="inline-flex items-center text-pink-400 font-semibold text-base hover:text-pink-300 transition-colors duration-150 focus:outline-none focus:underline mb-2 md:mb-0"
                   >
                     More

@@ -25,7 +25,7 @@ export default function SatergoPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/wallets"
+            href="/docs/developers/infrastructure/wallets"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Wallets
@@ -90,7 +90,7 @@ export default function SatergoPage() {
             <Lock className="w-5 h-5 text-yellow-400" /> Satergo Offline Vault
           </h3>
           <p className="text-gray-300 mb-2">
-            Use the <Link href="/Docs/developers/infrastructure/wallets/satergo-vault" className="underline hover:text-cyan-400">Satergo Offline Vault</Link> Android app to securely store your encrypted seed phrase and sign transactions via Bluetooth.
+            Use the <Link href="/docs/developers/infrastructure/wallets/satergo-vault" className="underline hover:text-cyan-400">Satergo Offline Vault</Link> Android app to securely store your encrypted seed phrase and sign transactions via Bluetooth.
           </p>
         </div>
       </div>

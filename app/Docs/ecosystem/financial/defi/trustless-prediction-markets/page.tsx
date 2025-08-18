@@ -78,13 +78,13 @@ export default function TrustlessPredictionMarketsPage() {
           </p>
           <div className="flex flex-wrap gap-4 mb-6">
             <Link
-              href="/Docs/ecosystem/financial/defi"
+              href="/docs/ecosystem/financial/defi"
               className="inline-flex items-center px-6 py-3 bg-purple-500 rounded-xl font-semibold text-black hover:bg-purple-600 transition-transform hover:scale-105"
             >
               <ChevronRight className="w-5 h-5 mr-2" /> Back to DeFi
             </Link>
             <Link
-              href="/Docs/introduction/eutxo"
+              href="/docs/introduction/eutxo"
               className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
             >
               <Globe className="w-5 h-5 mr-2" /> eUTXO Model
@@ -685,7 +685,7 @@ export default function TrustlessPredictionMarketsPage() {
                 Understanding the extended UTXO model that enables trustless prediction markets.
               </p>
               <Link
-                href="/Docs/introduction/eutxo"
+                href="/docs/introduction/eutxo"
                 className="inline-flex items-center px-3 py-1 bg-green-600 rounded text-xs text-white hover:bg-green-700"
               >
                 Learn More
@@ -697,7 +697,7 @@ export default function TrustlessPredictionMarketsPage() {
                 Explore other DeFi applications and protocols in the Ergo ecosystem.
               </p>
               <Link
-                href="/Docs/ecosystem/financial/defi"
+                href="/docs/ecosystem/financial/defi"
                 className="inline-flex items-center px-3 py-1 bg-blue-600 rounded text-xs text-white hover:bg-blue-700"
               >
                 Explore DeFi

@@ -261,7 +261,7 @@ export default function ErgoScriptPage() {
                               name: "Read Documentation",
                               description: "Comprehensive guides and API references",
                               icon: <BookOpen className="w-6 h-6" />,
-                              link: "/Docs",
+                              link: "/docs",
                               external: false
                             },
                             {
@@ -582,7 +582,7 @@ export default function ErgoScriptPage() {
                               {[
                                 { name: "ErgoScript Playground", url: "https://wallet.plutomonkey.com/p2s/", external: true },
                                 { name: "Official Documentation", url: "https://docs.ergoplatform.com/ergo-script/", external: true },
-                                { name: "Code Examples & Tutorials", url: "/Docs/developers/tutorials", external: false },
+                                { name: "Code Examples & Tutorials", url: "/docs/developers/tutorials", external: false },
                                 { name: "Community Guides", url: "/learn/guides", external: false },
                               ].map((resource, index) => (
                                 <div key={resource.name}>
@@ -623,7 +623,7 @@ export default function ErgoScriptPage() {
                               {[
                                 { name: "Appkit for JVM & Android", url: "https://github.com/ergoplatform/ergo-appkit", external: true },
                                 { name: "ErgoScript Compiler", url: "https://github.com/ergoplatform/sigmastate-interpreter", external: true },
-                                { name: "SDKs & APIs", url: "/Docs/developers/tooling", external: false },
+                                { name: "SDKs & APIs", url: "/docs/developers/tooling", external: false },
                                 { name: "Node.js Library", url: "https://github.com/ergoplatform/ergo-ts", external: true },
                               ].map((tool, index) => (
                                 <div key={tool.name}>

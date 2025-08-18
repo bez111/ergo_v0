@@ -24,7 +24,7 @@ export default function SimpleExamplePage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets/nfts/minting"
+            href="/docs/developers/data-model-apis/assets/nfts/minting"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -94,7 +94,7 @@ appKit.mintToken(value, tokenId, tokenName, tokenDesc, mintAmount, decimals, con
             <li><a href="https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/appkit.py" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoAppKit</a></li>
             <li><a href="https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/ErgoTransaction.py" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ErgoTransaction</a></li>
             <li><a href="https://github.com/ergo-pad/ergo-python-appkit/ergo_python_appkit/__init__.py" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">ergo-python-appkit module</a></li>
-            <li><Link href="/Docs/developers/data-model-apis/assets/nfts/minting/appkit-node" className="text-cyan-400 hover:underline">Building transaction and minting a token using AppKit from Python</Link></li>
+            <li><Link href="/docs/developers/data-model-apis/assets/nfts/minting/appkit-node" className="text-cyan-400 hover:underline">Building transaction and minting a token using AppKit from Python</Link></li>
           </ul>
         </div>
 
@@ -106,7 +106,7 @@ appKit.mintToken(value, tokenId, tokenName, tokenDesc, mintAmount, decimals, con
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li><a href="https://github.com/mgpai22/ergpy/blob/main/examples/example_5_bulk_mint_with_royalty.py" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Bulk Mint with Royalties using v1 design in Python</a></li>
-            <li><Link href="/Docs/developers/data-model-apis/assets/nfts/minting/on-chain" className="text-cyan-400 hover:underline">On-Chain NFTs</Link></li>
+            <li><Link href="/docs/developers/data-model-apis/assets/nfts/minting/on-chain" className="text-cyan-400 hover:underline">On-Chain NFTs</Link></li>
           </ul>
         </div>
 

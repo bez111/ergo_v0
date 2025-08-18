@@ -9,7 +9,7 @@ export default function MosaikExamplesPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">Ergo Mosaik: A UI system for Ergo dApps</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/pathways/mosaik/tutorial"
+          href="/docs/developers/tooling/pathways/mosaik/tutorial"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -21,7 +21,7 @@ export default function MosaikExamplesPage() {
       <h3 className="text-xl font-bold text-orange-400 mb-2 mt-8">Spring and Kotlin DSL</h3>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-2">
         <li>
-          <a href="https://github.com/MrStahlfelge/mosaik-tutorial-series" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Mosaik tutorial example app</a> - Example app for the <a href="/Docs/developers/tooling/pathways/mosaik/tutorial" className="text-cyan-400 hover:underline">tutorial series</a>
+          <a href="https://github.com/MrStahlfelge/mosaik-tutorial-series" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Mosaik tutorial example app</a> - Example app for the <a href="/docs/developers/tooling/pathways/mosaik/tutorial" className="text-cyan-400 hover:underline">tutorial series</a>
         </li>
         <li>
           <a href="https://github.com/MrStahlfelge/mosaik-ageusddemo" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">Age USD demo</a> - Example UI showing AgeUSD state and to mint and redeem SigRSV/SigUSD

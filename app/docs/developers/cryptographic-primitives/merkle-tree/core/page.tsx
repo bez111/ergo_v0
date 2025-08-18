@@ -25,7 +25,7 @@ export default function CoreMerkleTreePage() {
           
           <div className="mb-6">
             <Link
-              href="/Docs/developers/cryptographic-primitives/merkle-tree"
+              href="/docs/developers/cryptographic-primitives/merkle-tree"
               className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
             >
               <ArrowLeft className="w-5 h-5 mr-2" />
@@ -50,7 +50,7 @@ export default function CoreMerkleTreePage() {
               A Merkle Tree is a binary tree where each node contains a cryptographic hash. Leaf nodes represent the hash of individual data elements, such as transactions and their spending proofs, while non-leaf nodes represent the hash of their child nodes. The topmost node, known as the Merkle Root, serves as a cryptographic commitment to the entire dataset. This structure allows for efficient verification of data integrity, ensuring that even if only a small portion of the data is checked, the entire dataset can be trusted.
             </p>
             <p className="text-gray-300">
-              The Merkle Tree format in Ergo follows a specific structure and encoding scheme that is essential for developers working with Merkle proofs and validating data inclusion. For detailed information on the Merkle Tree format, leaf nodes, internal nodes, and the process of validating Merkle proofs, refer to the <a href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Format</a> and <a href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a> sections.
+              The Merkle Tree format in Ergo follows a specific structure and encoding scheme that is essential for developers working with Merkle proofs and validating data inclusion. For detailed information on the Merkle Tree format, leaf nodes, internal nodes, and the process of validating Merkle proofs, refer to the <a href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Format</a> and <a href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Tree Validation</a> sections.
             </p>
           </div>
         </section>
@@ -284,9 +284,9 @@ export default function CoreMerkleTreePage() {
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="text-lg font-bold mb-3 text-cyan-400">Related Documentation</h3>
               <ul className="text-gray-300 space-y-2">
-                <li>• <a href="/Docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Trees Overview</a></li>
-                <li>• <a href="/Docs/developers/cryptographic-primitives/merkle-tree/extension-block" className="text-blue-400 hover:text-blue-300 underline">Extension Block Merkle</a></li>
-                <li>• <a href="/Docs/developers/cryptographic-primitives/merkle-tree/batch-proofs" className="text-blue-400 hover:text-blue-300 underline">Merkle Batch Proofs</a></li>
+                <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree" className="text-blue-400 hover:text-blue-300 underline">Merkle Trees Overview</a></li>
+                <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree/extension-block" className="text-blue-400 hover:text-blue-300 underline">Extension Block Merkle</a></li>
+                <li>• <a href="/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs" className="text-blue-400 hover:text-blue-300 underline">Merkle Batch Proofs</a></li>
               </ul>
             </div>
           </div>

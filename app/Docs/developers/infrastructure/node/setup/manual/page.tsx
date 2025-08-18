@@ -10,11 +10,11 @@ export default function ManualSetupPage() {
       
       <p className="text-lg text-gray-300 mb-8">
         This guide covers the manual setup process for running an Ergo full node. For alternative methods, see{" "}
-        <Link href="/Docs/developers/infrastructure/node/setup/docker" className="text-cyan-400 hover:underline">
+        <Link href="/docs/developers/infrastructure/node/setup/docker" className="text-cyan-400 hover:underline">
           Docker Setup
         </Link>{" "}
         or{" "}
-        <Link href="/Docs/developers/infrastructure/node/setup/android" className="text-cyan-400 hover:underline">
+        <Link href="/docs/developers/infrastructure/node/setup/android" className="text-cyan-400 hover:underline">
           Running on Android
         </Link>.
       </p>
@@ -22,7 +22,7 @@ export default function ManualSetupPage() {
       {/* Back Button */}
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node/setup"
+          href="/docs/developers/infrastructure/node/setup"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -55,13 +55,13 @@ export default function ManualSetupPage() {
               <ul className="list-disc list-inside ml-6 mt-2">
                 <li>
                   See the detailed guide:{" "}
-                  <Link href="/Docs/developers/infrastructure/node/setup/build" className="text-cyan-400 hover:underline">
+                  <Link href="/docs/developers/infrastructure/node/setup/build" className="text-cyan-400 hover:underline">
                     Building the Ergo Node from Source
                   </Link>
                 </li>
                 <li>
                   <em>Note:</em> Building development versions might require handling SNAPSHOT dependencies. Refer to the build guide and the specific{" "}
-                  <Link href="/Docs/developers/infrastructure/node/setup/snapshot" className="text-cyan-400 hover:underline">
+                  <Link href="/docs/developers/infrastructure/node/setup/snapshot" className="text-cyan-400 hover:underline">
                     SNAPSHOT Dependencies guide
                   </Link>{" "}
                   if you encounter issues.
@@ -100,7 +100,7 @@ scorex {
           
           <p className="text-gray-400 mt-2">
             For more configuration options, see the{" "}
-            <Link href="/Docs/developers/infrastructure/node/setup/configuration" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/infrastructure/node/setup/configuration" className="text-cyan-400 hover:underline">
               Configuration Files documentation
             </Link>.
           </p>
@@ -129,7 +129,7 @@ java -jar -Xmx4G ergo-<version>.jar --mainnet -c ergo.conf`}
           <ul className="list-disc list-inside ml-6 mt-2 space-y-2">
             <li>The node will start up and begin synchronizing with the Ergo network. This process downloads and validates the blockchain history.</li>
             <li><strong>Synchronization can take a significant amount of time</strong> (hours to days) depending on your hardware, network speed, and the chosen{" "}
-              <Link href="/Docs/developers/infrastructure/node/setup/modes" className="text-cyan-400 hover:underline">
+              <Link href="/docs/developers/infrastructure/node/setup/modes" className="text-cyan-400 hover:underline">
                 Node Mode
               </Link>. Be patient.
             </li>
@@ -155,32 +155,32 @@ java -jar -Xmx4G ergo-<version>.jar --mainnet -c ergo.conf`}
 
       <ul className="list-disc list-inside text-gray-300 space-y-2">
         <li>
-          <Link href="/Docs/developers/infrastructure/node/setup/troubleshooting" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/setup/troubleshooting" className="text-cyan-400 hover:underline">
             Troubleshooting Guide
           </Link>
         </li>
         <li>
-          <Link href="/Docs/developers/infrastructure/node/setup/configuration" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/setup/configuration" className="text-cyan-400 hover:underline">
             Node Configuration Files
           </Link>
         </li>
         <li>
-          <Link href="/Docs/developers/infrastructure/node/setup/modes" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/setup/modes" className="text-cyan-400 hover:underline">
             Node Modes
           </Link>
         </li>
         <li>
-          <Link href="/Docs/developers/infrastructure/node/setup/api" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/setup/api" className="text-cyan-400 hover:underline">
             Node API (Swagger)
           </Link>
         </li>
         <li>
-          <Link href="/Docs/developers/infrastructure/node/setup/testnet" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/setup/testnet" className="text-cyan-400 hover:underline">
             Testnet Guide
           </Link>
         </li>
         <li>
-          <Link href="/Docs/developers/infrastructure/node/setup/faq" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/infrastructure/node/setup/faq" className="text-cyan-400 hover:underline">
             Node FAQ
           </Link>
         </li>

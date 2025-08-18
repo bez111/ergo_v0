@@ -30,7 +30,7 @@ export default function CrystalPoolPage() {
           Crystal Pool is a decentralized exchange (DEX) built on the Ergo blockchain, enabling real-time order-based trading directly on Layer 1. It is designed to provide a user experience comparable to centralized exchanges (CEXs) while maintaining the security and self-custody benefits of a DEX.
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
-          <Link href="/Docs/ecosystem/financial/dex" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
+          <Link href="/docs/ecosystem/financial/dex" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
             <ChevronRight className="w-5 h-5 mr-2" /> Back to DEX
           </Link>
           <a href="https://github.com/crystalpool" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">

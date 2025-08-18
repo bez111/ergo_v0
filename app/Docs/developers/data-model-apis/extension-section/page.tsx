@@ -12,7 +12,7 @@ export default function ExtensionSectionPage() {
       </h1>
 
       <div className="mb-8">
-        <Link href="/Docs/developers/data-model-apis" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 rounded-lg transition-colors">
+        <Link href="/docs/developers/data-model-apis" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 rounded-lg transition-colors">
           <span className="text-orange-400">← Back to Data Model & APIs</span>
         </Link>
       </div>
@@ -23,16 +23,16 @@ export default function ExtensionSectionPage() {
           In the right place?
         </h3>
         <p className="text-gray-300">
-          Unlike many blockchains that only store <Link href="/Docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transaction</Link> data, Ergo includes a specialized <b>Extension section</b> in each <Link href="/Docs/developers/data-model-apis/block" className="text-orange-400 hover:underline">block</Link>. This versatile key-value storage system provides a flexible mechanism to include critical data beyond standard transactions, enabling features like efficient <Link href="/Docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">light client</Link> support and future-proofing the blockchain for upgrades.
+          Unlike many blockchains that only store <Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transaction</Link> data, Ergo includes a specialized <b>Extension section</b> in each <Link href="/docs/developers/data-model-apis/block" className="text-orange-400 hover:underline">block</Link>. This versatile key-value storage system provides a flexible mechanism to include critical data beyond standard transactions, enabling features like efficient <Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">light client</Link> support and future-proofing the blockchain for upgrades.
         </p>
       </div>
 
       <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-orange-400">Why is the Extension Section Important?</h2>
         <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300">
-          <li><b>Flexibility:</b> Allows incorporating data that doesn't fit into the core block structure, supporting future <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">protocol upgrades</Link> and application-specific needs.</li>
-          <li><b>Efficiency:</b> Enables <Link href="/Docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">nodes</Link> and clients to download only necessary block sections, optimizing storage, bandwidth, and processing resources.</li>
-          <li><b>Light Client Support:</b> Stores essential information like system parameters and <Link href="/Docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> links, allowing light clients to efficiently validate the blockchain without downloading its full history.</li>
+          <li><b>Flexibility:</b> Allows incorporating data that doesn't fit into the core block structure, supporting future <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">protocol upgrades</Link> and application-specific needs.</li>
+          <li><b>Efficiency:</b> Enables <Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">nodes</Link> and clients to download only necessary block sections, optimizing storage, bandwidth, and processing resources.</li>
+          <li><b>Light Client Support:</b> Stores essential information like system parameters and <Link href="/docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> links, allowing light clients to efficiently validate the blockchain without downloading its full history.</li>
         </ul>
       </div>
 
@@ -53,7 +53,7 @@ export default function ExtensionSectionPage() {
             <div>
               <h3 className="text-lg font-semibold text-orange-300 mb-1">0x00: System parameters</h3>
               <p className="text-gray-300 text-sm">
-                (e.g., maximum block size, <Link href="/Docs/developers/emission" className="text-orange-400 hover:underline">block reward</Link>, <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">voting thresholds</Link>).
+                (e.g., maximum block size, <Link href="/docs/developers/emission" className="text-orange-400 hover:underline">block reward</Link>, <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">voting thresholds</Link>).
               </p>
             </div>
           </div>
@@ -64,7 +64,7 @@ export default function ExtensionSectionPage() {
             <div>
               <h3 className="text-lg font-semibold text-purple-300 mb-1">0x01: NiPoPoWs Interlinks</h3>
               <p className="text-gray-300 text-sm">
-                Interlinks for <Link href="/Docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> (efficient <Link href="/Docs/technology/autolykos" className="text-orange-400 hover:underline">proof-of-work</Link> verification).
+                Interlinks for <Link href="/docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> (efficient <Link href="/docs/technology/autolykos" className="text-orange-400 hover:underline">proof-of-work</Link> verification).
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function ExtensionSectionPage() {
             <div>
               <h3 className="text-lg font-semibold text-cyan-300 mb-1">0x02: Validation rules</h3>
               <p className="text-gray-300 text-sm">
-                (e.g., changes to the minimum <Link href="/Docs/developers/ergoscript-languages/wallet-interaction/fees" className="text-orange-400 hover:underline">transaction fee</Link>, activation of new cryptographic features).
+                (e.g., changes to the minimum <Link href="/docs/developers/ergoscript-languages/wallet-interaction/fees" className="text-orange-400 hover:underline">transaction fee</Link>, activation of new cryptographic features).
               </p>
             </div>
           </div>
@@ -95,19 +95,19 @@ Value: 0x0000000000020000 (Represents a block size of 512 KB)
           <div className="bg-neutral-900/50 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-red-300 mb-1">System Parameters</h3>
             <p className="text-gray-300 text-sm">
-              Stored every <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">voting epoch</Link> (1,024 blocks) to aid light clients in block processing without full history verification. These parameters include values like the maximum block size, block reward, and voting thresholds, which can change over time through the <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">miner voting process</Link>.
+              Stored every <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">voting epoch</Link> (1,024 blocks) to aid light clients in block processing without full history verification. These parameters include values like the maximum block size, block reward, and voting thresholds, which can change over time through the <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">miner voting process</Link>.
             </p>
           </div>
           <div className="bg-neutral-900/50 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-purple-300 mb-1">NiPoPoWs Interlinks</h3>
             <p className="text-gray-300 text-sm">
-              Enables efficient verification of the blockchain's proof-of-work by light clients. <Link href="/Docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> (Non-Interactive Proofs of Proof-of-Work) are a cryptographic technique that allows for compact proofs of work done on a blockchain, making it faster and easier for light clients to verify the chain's integrity.
+              Enables efficient verification of the blockchain's proof-of-work by light clients. <Link href="/docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> (Non-Interactive Proofs of Proof-of-Work) are a cryptographic technique that allows for compact proofs of work done on a blockchain, making it faster and easier for light clients to verify the chain's integrity.
             </p>
           </div>
           <div className="bg-neutral-900/50 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-cyan-300 mb-1">Validation Rules</h3>
             <p className="text-gray-300 text-sm">
-              Records changes to <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">consensus rules</Link>, ensuring all nodes operate with the same set of rules. For example, a change to the minimum transaction fee or the activation of new cryptographic features would be recorded here.
+              Records changes to <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">consensus rules</Link>, ensuring all nodes operate with the same set of rules. For example, a change to the minimum transaction fee or the activation of new cryptographic features would be recorded here.
             </p>
           </div>
         </div>
@@ -126,7 +126,7 @@ Value: 0x0000000000020000 (Represents a block size of 512 KB)
       <div className="bg-pink-400/10 border border-pink-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-pink-400">Potential Enhancements</h2>
         <ol className="list-decimal list-inside ml-4 space-y-2 text-gray-300">
-          <li><b>Advanced Cryptography:</b> Support for homomorphic encryption or post-quantum signatures within the Extension section. This could enable new privacy-preserving applications and enhance the long-term security of the Ergo blockchain. For example, homomorphic encryption could allow for computations on encrypted data stored in the Extension, enabling new possibilities for confidential transactions and <Link href="/Docs/technology/ergoscript" className="text-orange-400 hover:underline">smart contracts</Link>.</li>
+          <li><b>Advanced Cryptography:</b> Support for homomorphic encryption or post-quantum signatures within the Extension section. This could enable new privacy-preserving applications and enhance the long-term security of the Ergo blockchain. For example, homomorphic encryption could allow for computations on encrypted data stored in the Extension, enabling new possibilities for confidential transactions and <Link href="/docs/technology/ergoscript" className="text-orange-400 hover:underline">smart contracts</Link>.</li>
           <li><b>Dynamic Updates:</b> Mechanisms for updating Extension data more flexibly, potentially through sidechains or layer-2 solutions. This could allow for more efficient and responsive updates to system parameters or other critical information.</li>
           <li><b>Cross-Chain Interoperability:</b> Facilitate interactions with other blockchains by storing proofs or state information. This could enable the development of cross-chain applications and bridges, expanding the utility and reach of the Ergo platform.</li>
         </ol>

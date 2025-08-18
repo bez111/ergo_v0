@@ -8,25 +8,25 @@ const playgrounds = [
     title: "Scastie",
     icon: Code,
     content: "Online Scala playground with ErgoScript compilation support.",
-    link: "/Docs/developers/tooling/playgrounds/scastie"
+    link: "/docs/developers/tooling/playgrounds/scastie"
   },
   {
     title: "P2S Playground",
     icon: Play,
     content: "Interactive environment for testing pay-to-script ErgoScript contracts.",
-    link: "/Docs/developers/tooling/playgrounds/p2s-playground"
+    link: "/docs/developers/tooling/playgrounds/p2s-playground"
   },
   {
     title: "Kiosk",
     icon: Blocks,
     content: "Development and testing environment for Ergo smart contracts.",
-    link: "/Docs/developers/tooling/playgrounds/kiosk"
+    link: "/docs/developers/tooling/playgrounds/kiosk"
   },
   {
     title: "ErgoPuppet",
     icon: Cpu,
     content: "Puppet-based testing framework for Ergo blockchain development.",
-    link: "/Docs/developers/tooling/playgrounds/ergopuppet"
+    link: "/docs/developers/tooling/playgrounds/ergopuppet"
   }
 ];
 
@@ -67,7 +67,7 @@ export default function PlaygroundsPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

@@ -13,7 +13,7 @@ export default function BabelFeesPage() {
       {/* Back Button */}
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/data-model-apis"
+          href="/docs/developers/data-model-apis"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -30,19 +30,19 @@ export default function BabelFeesPage() {
 
         {/* Hero Buttons */}
         <div className="flex flex-wrap gap-4">
-          <Link href="/Docs/developers/data-model-apis/babel-fees/babel-fleet" className="group">
+          <Link href="/docs/developers/data-model-apis/babel-fees/babel-fleet" className="group">
             <button className="px-6 py-3 bg-green-500/10 border border-green-500/20 rounded-xl hover:bg-green-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
               <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
               <span className="text-green-400 font-semibold">Babel Fees Plugin</span>
             </button>
           </Link>
-          <Link href="/Docs/developers/data-model-apis/babel-fees/how-to" className="group">
+          <Link href="/docs/developers/data-model-apis/babel-fees/how-to" className="group">
             <button className="px-6 py-3 bg-teal-500/10 border border-teal-500/20 rounded-xl hover:bg-teal-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
               <svg className="w-5 h-5 text-teal-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C20.832 18.477 19.246 18 17.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
               <span className="text-teal-400 font-semibold">How To</span>
             </button>
           </Link>
-          <Link href="/Docs/developers/data-model-apis/babel-fees/implementation" className="group">
+          <Link href="/docs/developers/data-model-apis/babel-fees/implementation" className="group">
             <button className="px-6 py-3 bg-blue-500/10 border border-blue-500/20 rounded-xl hover:bg-blue-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
               <svg className="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
               <span className="text-blue-400 font-semibold">Implementation</span>
@@ -149,7 +149,7 @@ export default function BabelFeesPage() {
           </p>
           
           <p className="text-gray-300">
-            You can see the full documentation <Link href="/Docs/developers/data-model-apis/babel-fleet" className="text-orange-400 hover:underline">here</Link>.
+            You can see the full documentation <Link href="/docs/developers/data-model-apis/babel-fleet" className="text-orange-400 hover:underline">here</Link>.
           </p>
         </div>
       </div>

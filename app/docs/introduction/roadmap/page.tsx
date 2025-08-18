@@ -36,19 +36,19 @@ export default function RoadmapPage() {
           </p>
           <div className="flex flex-wrap gap-4 mb-6">
             <Link
-              href="/Docs/introduction/roadmap/scaling-roadmap"
+              href="/docs/introduction/roadmap/scaling-roadmap"
               className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
             >
               <MessageSquare className="w-5 h-5 mr-2" /> Scaling Roadmap
             </Link>
             <Link
-              href="/Docs/introduction/roadmap/atomic-composability"
+              href="/docs/introduction/roadmap/atomic-composability"
               className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
             >
               <Cpu className="w-5 h-5 mr-2" /> Atomic Composability
             </Link>
             <Link
-              href="/Docs/introduction/roadmap/transaction-speed"
+              href="/docs/introduction/roadmap/transaction-speed"
               className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
             >
               <Zap className="w-5 h-5 mr-2" /> Transaction Speed
@@ -108,7 +108,7 @@ export default function RoadmapPage() {
             </div>
             
             <p className="text-gray-400 mt-4">
-              For more information please see the <Link href="/Docs/why-ergo" className="text-blue-400 hover:text-blue-300">Why Ergo?</Link> section.
+              For more information please see the <Link href="/docs/why-ergo" className="text-blue-400 hover:text-blue-300">Why Ergo?</Link> section.
             </p>
           </div>
 
@@ -192,17 +192,17 @@ export default function RoadmapPage() {
               Ergo's innovative approach to scalability sets it apart from other blockchain technologies. Unlike Ethereum's Account model, Ergo's eUTXO employs a unique strategy: transactions are created off-chain, and validation checks are conducted on-chain.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-4">
-              <Link href="/Docs/introduction/roadmap" className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors">
+              <Link href="/docs/introduction/roadmap" className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors">
                 <Network className="w-8 h-8 text-blue-400 mb-2" />
                 <h4 className="font-bold text-white">Layer 0</h4>
                 <p className="text-gray-400 text-sm">Network/P2P Layer</p>
               </Link>
-              <Link href="/Docs/introduction/roadmap" className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors">
+              <Link href="/docs/introduction/roadmap" className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors">
                 <Layers className="w-8 h-8 text-green-400 mb-2" />
                 <h4 className="font-bold text-white">Layer 1</h4>
                 <p className="text-gray-400 text-sm">Core Blockchain Layer</p>
               </Link>
-              <Link href="/Docs/introduction/roadmap" className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors">
+              <Link href="/docs/introduction/roadmap" className="bg-gray-800 rounded-lg p-4 hover:bg-gray-700 transition-colors">
                 <Zap className="w-8 h-8 text-purple-400 mb-2" />
                 <h4 className="font-bold text-white">Layer 2</h4>
                 <p className="text-gray-400 text-sm">Off-chain Layer</p>
@@ -619,7 +619,7 @@ export default function RoadmapPage() {
           {/* Action Buttons */}
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/Docs/introduction/roadmap/sub-blocks"
+              href="/docs/introduction/roadmap/sub-blocks"
               className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-400 to-blue-500 text-white font-medium rounded-lg hover:from-cyan-500 hover:to-blue-600 transition-all duration-200 shadow-lg hover:shadow-xl"
             >
               <Layers className="w-5 h-5 mr-2" />

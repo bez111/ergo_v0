@@ -10,42 +10,42 @@ export default function CompilersPage() {
       description: "Understanding the compilation process from ErgoScript to ErgoTree, including parsing, type checking, and code generation phases.",
       icon: Settings,
       color: "text-blue-400",
-      link: "/Docs/developers/tooling/compilers/phases"
+      link: "/docs/developers/tooling/compilers/phases"
     },
     {
       title: "sigmastate-interpreter",
       description: "The reference JVM implementation of ErgoScript compiler and ErgoTree interpreter used by nodes and AppKit.",
       icon: Cpu,
       color: "text-purple-400", 
-      link: "/Docs/developers/tooling/compilers/sigmastate-interpreter"
+      link: "/docs/developers/tooling/compilers/sigmastate-interpreter"
     },
     {
       title: "SigmaRust",
       description: "Alternative Rust implementation of ErgoTree interpreter and transaction-building tools for cross-platform development.",
       icon: Code,
       color: "text-orange-400",
-      link: "/Docs/developers/tooling/compilers/sigma-rust"
+      link: "/docs/developers/tooling/compilers/sigma-rust"
     },
     {
       title: "ErgoScala",
       description: "Scala-based tools and utilities for ErgoScript development, providing native Scala integration and advanced features.",
       icon: GitBranch,
       color: "text-green-400",
-      link: "/Docs/developers/tooling/compilers/ergo-scala"
+      link: "/docs/developers/tooling/compilers/ergo-scala"
     },
     {
       title: "CLI Compiler",
       description: "Command-line interface tools for compiling ErgoScript contracts and managing ErgoTree bytecode from terminal.",
       icon: Terminal,
       color: "text-cyan-400",
-      link: "/Docs/developers/tooling/compilers/cli"
+      link: "/docs/developers/tooling/compilers/cli"
     },
     {
       title: "Rust vs Sigma",
       description: "Comparison between Rust and Sigma implementations, performance benchmarks, and choosing the right compiler for your project.",
       icon: Zap,
       color: "text-yellow-400",
-      link: "/Docs/developers/tooling/compilers/comparison"
+      link: "/docs/developers/tooling/compilers/comparison"
     }
   ];
 
@@ -57,7 +57,7 @@ export default function CompilersPage() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -68,7 +68,7 @@ export default function CompilersPage() {
       <div className="space-y-6">
         <div className="text-gray-300 mb-8 max-w-3xl">
           There are two implementations of the ErgoScript compiler and ErgoTree interpreter for the{' '}
-          <Link href="/Docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
+          <Link href="/docs/developers/ergoscript-languages/sigma-language" className="text-cyan-400 hover:underline">
             <em>'Sigma Language'</em>
           </Link>.
         </div>
@@ -76,16 +76,16 @@ export default function CompilersPage() {
         <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-2 max-w-3xl">
           <li>
             The{' '}
-            <Link href="/Docs/developers/tooling/compilers/sigmastate-interpreter" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/tooling/compilers/sigmastate-interpreter" className="text-cyan-400 hover:underline">
               sigmastate-interpreter
             </Link>{' '}
             for JVM languages which is used by{' '}
-            <Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">
               AppKit
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/tooling/sigma-rust" className="text-cyan-400 hover:underline">
               sigma-rust
             </Link>{' '}
             is an alternative and simple implementation of ErgoTree interpreter and transaction-building tools.

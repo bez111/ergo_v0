@@ -23,21 +23,21 @@ export default function TokensPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets"
+            href="/docs/developers/data-model-apis/assets"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Assets
           </Link>
           <Link 
-            href="/Docs/developers/data-model-apis/assets/tokens/perpetual"
+            href="/docs/developers/data-model-apis/assets/tokens/perpetual"
             className="inline-flex items-center gap-2 px-4 py-2 bg-green-500/20 hover:bg-green-500/30 text-green-400 rounded-xl transition-colors duration-200"
           >
             <Zap className="w-4 h-4" />
             Perpetual Tokens
           </Link>
           <Link 
-            href="/Docs/developers/data-model-apis/assets/tokens/burning"
+            href="/docs/developers/data-model-apis/assets/tokens/burning"
             className="inline-flex items-center gap-2 px-4 py-2 bg-red-500/20 hover:bg-red-500/30 text-red-400 rounded-xl transition-colors duration-200"
           >
             <AlertTriangle className="w-4 h-4" />
@@ -60,7 +60,7 @@ export default function TokensPage() {
               <h3 className="text-lg font-semibold text-blue-400">What are first-class citizens?</h3>
             </div>
             <p className="text-gray-300">
-              This means that tokens in Ergo are not just metadata attached to transactions, but they are deeply integrated into the Ergo protocol. They can be manipulated and managed with the same level of support and functionality as the native Ergo token (see <Link href="/Docs/developers/eip4" className="text-cyan-400 hover:underline">EIP-0004</Link>).
+              This means that tokens in Ergo are not just metadata attached to transactions, but they are deeply integrated into the Ergo protocol. They can be manipulated and managed with the same level of support and functionality as the native Ergo token (see <Link href="/docs/developers/eip4" className="text-cyan-400 hover:underline">EIP-0004</Link>).
             </p>
           </div>
 
@@ -75,7 +75,7 @@ export default function TokensPage() {
             </p>
             <ul className="list-disc list-inside space-y-2 text-gray-300">
               <li>ERGs <strong>cannot be burned</strong>; the total input and output amounts in any transaction must be equal.</li>
-              <li><Link href="/Docs/introduction/storage-rent" className="text-cyan-400 hover:underline">Storage rent</Link> can only be paid in ERGs.</li>
+              <li><Link href="/docs/introduction/storage-rent" className="text-cyan-400 hover:underline">Storage rent</Link> can only be paid in ERGs.</li>
             </ul>
           </div>
 
@@ -103,7 +103,7 @@ export default function TokensPage() {
             Token Storage
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
-            <li>Tokens are stored in a special <Link href="/Docs/developers/data-model-apis/registers" className="text-cyan-400 hover:underline">register</Link> <code className="bg-neutral-700 px-2 py-1 rounded">R2</code> of a <Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:underline">box</Link> in the form of (tokenId → amount) pairs.</li>
+            <li>Tokens are stored in a special <Link href="/docs/developers/data-model-apis/registers" className="text-cyan-400 hover:underline">register</Link> <code className="bg-neutral-700 px-2 py-1 rounded">R2</code> of a <Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:underline">box</Link> in the form of (tokenId → amount) pairs.</li>
             <li>A single box can hold <strong>up to 255 secondary tokens</strong>.</li>
           </ul>
         </div>
@@ -115,7 +115,7 @@ export default function TokensPage() {
             Register Usage
           </h2>
           <p className="text-gray-300 mb-4">
-            The Ergo reference implementation wallet uses specific <Link href="/Docs/developers/data-model-apis/registers" className="text-cyan-400 hover:underline">registers</Link> in a unique way, although the protocol doesn't enforce this:
+            The Ergo reference implementation wallet uses specific <Link href="/docs/developers/data-model-apis/registers" className="text-cyan-400 hover:underline">registers</Link> in a unique way, although the protocol doesn't enforce this:
           </p>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li><code className="bg-neutral-700 px-2 py-1 rounded">R4</code> - verbose name</li>
@@ -157,7 +157,7 @@ export default function TokensPage() {
           </h2>
           <ul className="list-disc list-inside space-y-2 text-gray-300">
             <li><a href="https://fleet-sdk.github.io/docs/transaction-building#step-4-2-mint-a-token" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">How to mint a token with Fleet SDK</a></li>
-            <li>Creating a <Link href="/Docs/developers/perpetual" className="text-cyan-400 hover:underline">perpetual token</Link> (designed to exist indefinitely, unless it is removed by garbage collection.)</li>
+            <li>Creating a <Link href="/docs/developers/perpetual" className="text-cyan-400 hover:underline">perpetual token</Link> (designed to exist indefinitely, unless it is removed by garbage collection.)</li>
           </ul>
         </div>
 

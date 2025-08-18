@@ -9,56 +9,56 @@ const degfiProjects = [
     status: "Live",
     description: "Yield and synthetic asset platform with game-theoretic elements.",
     link: "https://hodlbox.io/",
-    more: "/Docs/ecosystem/financial/degenerate-finance/hodlbox",
+    more: "/docs/ecosystem/financial/degenerate-finance/hodlbox",
   },
   {
     name: "HodlCoin",
     status: "Experimental",
     description: "A game-theoretic protocol where users lock ERG and can un-HODL with a penalty. High risk, high reward.",
     link: "https://hodlbox.io/",
-    more: "/Docs/ecosystem/financial/degenerate-finance/hodlcoin",
+    more: "/docs/ecosystem/financial/degenerate-finance/hodlcoin",
   },
   {
     name: "OptionCoin",
     status: "Experimental",
     description: "Options protocol for synthetic assets, with degenerate risk profiles.",
     link: "https://github.com/anon-real/optioncoin",
-    more: "/Docs/ecosystem/financial/degenerate-finance/optioncoin",
+    more: "/docs/ecosystem/financial/degenerate-finance/optioncoin",
   },
   {
     name: "AuctionCoin",
     status: "Experimental",
     description: "Auction-based token issuance and buyback mechanism. Transparent but highly speculative.",
     link: "https://github.com/anon-real/auctioncoin",
-    more: "/Docs/ecosystem/financial/degenerate-finance/auctioncoin",
+    more: "/docs/ecosystem/financial/degenerate-finance/auctioncoin",
   },
   {
     name: "Obolflip",
     status: "Experimental",
     description: "A blockchain-based coin flip game with high volatility.",
     link: "https://github.com/ObolFlip/obolflip-client",
-    more: "/Docs/ecosystem/financial/degenerate-finance/obolflip",
+    more: "/docs/ecosystem/financial/degenerate-finance/obolflip",
   },
   {
     name: "Lotteries",
     status: "Experimental",
     description: "Decentralized lottery protocols with unpredictable outcomes.",
     link: "https://github.com/anon-real/lotteries",
-    more: "/Docs/ecosystem/financial/degenerate-finance/lotteries",
+    more: "/docs/ecosystem/financial/degenerate-finance/lotteries",
   },
   {
     name: "The Field",
     status: "Experimental",
     description: "A community-driven speculative experiment in the DegFi space.",
     link: "https://github.com/anon-real/thefield",
-    more: "/Docs/ecosystem/financial/degenerate-finance/the-field",
+    more: "/docs/ecosystem/financial/degenerate-finance/the-field",
   },
   {
     name: "Grand Gambit",
     status: "Experimental",
     description: "A high-stakes, experimental financial game on the blockchain.",
     link: "https://github.com/anon-real/grandgambit",
-    more: "/Docs/ecosystem/financial/degenerate-finance/grand-gambit",
+    more: "/docs/ecosystem/financial/degenerate-finance/grand-gambit",
   },  
 ];
 
@@ -75,7 +75,7 @@ export default function DegenerateFinancePage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <a
-            href="/Docs/ecosystem/financial"
+            href="/docs/ecosystem/financial"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>

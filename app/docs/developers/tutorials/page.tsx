@@ -11,7 +11,7 @@ const tutorialSections = [
       "Practical code examples and guides for using the Fleet SDK to build Ergo dApps and integrations.",
     icon: Layers,
     color: "text-cyan-400",
-    link: "/Docs/developers/tutorials/fleet-sdk-recipes"
+    link: "/docs/developers/tutorials/fleet-sdk-recipes"
   },
   {
     title: "Hardware Wallet Integration",
@@ -19,7 +19,7 @@ const tutorialSections = [
       "Step-by-step guides for integrating hardware wallets with Ergo dApps and services, ensuring secure key management.",
     icon: Usb,
     color: "text-red-400",
-    link: "/Docs/developers/tutorials/hardware-wallet-integration"
+    link: "/docs/developers/tutorials/hardware-wallet-integration"
   },
 ];
 

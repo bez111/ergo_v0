@@ -9,7 +9,7 @@ export default function CSharpPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">Ergo Platform and C#</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/programming-languages/others"
+          href="/docs/developers/tooling/programming-languages/others"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -26,7 +26,7 @@ export default function CSharpPage() {
       </p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">FleetSharp</h2>
       <p className="text-gray-300 mb-4 max-w-2xl">
-        <Link href="/Docs/developers/tooling/fleetsharp" className="text-cyan-400 hover:underline">FleetSharp</Link> is an ongoing open-source project. It is a sigma-type (<Link href="/Docs/developers/tooling/ergotree" className="text-cyan-400 hover:underline">ErgoTree</Link>) <Link href="/Docs/developers/tooling/ergotree#serialization" className="text-cyan-400 hover:underline">serializer/deserializer</Link> based on <Link href="/Docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link>. This tool simplifies the process of converting <Link href="/Docs/developers/data-model" className="text-cyan-400 hover:underline">data</Link> between compatible formats for <Link href="/Docs/developers/infrastructure/node/p2p" className="text-cyan-400 hover:underline">communication</Link> and <Link href="/Docs/introduction/storage-rent" className="text-cyan-400 hover:underline">storage</Link>.
+        <Link href="/docs/developers/tooling/fleetsharp" className="text-cyan-400 hover:underline">FleetSharp</Link> is an ongoing open-source project. It is a sigma-type (<Link href="/docs/developers/tooling/ergotree" className="text-cyan-400 hover:underline">ErgoTree</Link>) <Link href="/docs/developers/tooling/ergotree#serialization" className="text-cyan-400 hover:underline">serializer/deserializer</Link> based on <Link href="/docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link>. This tool simplifies the process of converting <Link href="/docs/developers/data-model" className="text-cyan-400 hover:underline">data</Link> between compatible formats for <Link href="/docs/developers/infrastructure/node/p2p" className="text-cyan-400 hover:underline">communication</Link> and <Link href="/docs/introduction/storage-rent" className="text-cyan-400 hover:underline">storage</Link>.
       </p>
       <p className="text-gray-300 mb-4 max-w-2xl">
         As an open-source project, FleetSharp thrives on community contributions. Developers with C# experience or those interested in learning more about Ergo integration are encouraged to contribute.

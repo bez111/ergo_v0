@@ -11,14 +11,14 @@ export default function ProxyContractsPage() {
       </h1>
       <div className="mb-6 flex gap-4">
         <Link
-          href="/Docs/developers/tooling/payments"
+          href="/docs/developers/tooling/payments"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back
         </Link>
         <Link
-          href="/Docs/developers/tooling/payments/assembler"
+          href="/docs/developers/tooling/payments/assembler"
           className="inline-flex items-center px-5 py-2 bg-orange-400 rounded-xl font-semibold text-black hover:bg-orange-500 transition-transform hover:scale-105"
         >
           Assembler
@@ -30,7 +30,7 @@ export default function ProxyContractsPage() {
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Proxy Contracts</h2>
       <div className="text-gray-300 mb-6 max-w-2xl">
-        Proxy contracts are a specific <Link href="/Docs/developers/tooling/smart-contracts-overview" className="text-cyan-400 hover:underline">smart contract pattern</Link> used on Ergo. They act as intermediaries, allowing users to interact with decentralized applications (dApps) in a controlled and secure manner, especially in scenarios where direct wallet-dApp communication might be complex or limited.
+        Proxy contracts are a specific <Link href="/docs/developers/tooling/smart-contracts-overview" className="text-cyan-400 hover:underline">smart contract pattern</Link> used on Ergo. They act as intermediaries, allowing users to interact with decentralized applications (dApps) in a controlled and secure manner, especially in scenarios where direct wallet-dApp communication might be complex or limited.
       </div>
 
       <h3 className="text-xl font-bold text-orange-400 mb-2">Origins and Purpose</h3>

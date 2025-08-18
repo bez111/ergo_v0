@@ -20,49 +20,49 @@ const toolingSections = [
     description: "A DeFi tool or protocol in the Ergo ecosystem. (Description coming soon)",
     icon: Wrench,
     color: "text-cyan-400",
-    link: "/Docs/ecosystem/tooling/crux-finance"
+    link: "/docs/ecosystem/tooling/crux-finance"
   },
   {
     title: "ErgoNames",
     description: "A naming service for Ergo addresses and dApps. (Description coming soon)",
     icon: Star,
     color: "text-yellow-400",
-    link: "/Docs/ecosystem/tooling/ergonames"
+    link: "/docs/ecosystem/tooling/ergonames"
   },
   {
     title: "Celaut",
     description: "A modular platform for building decentralized applications and systems on Ergo. (Description coming soon)",
     icon: Layers,
     color: "text-purple-400",
-    link: "/Docs/ecosystem/tooling/celaut"
+    link: "/docs/ecosystem/tooling/celaut"
   },
   {
     title: "Reputation System (Celaut)",
     description: "A subsystem for managing and tracking user reputation within Celaut. (Description coming soon)",
     icon: Users,
     color: "text-blue-400",
-    link: "/Docs/ecosystem/tooling/reputation-system"
+    link: "/docs/ecosystem/tooling/reputation-system"
   },
   {
     title: "Netnotes",
     description: "A tool for networked note-taking or collaboration on Ergo. (Description coming soon)",
     icon: Network,
     color: "text-green-400",
-    link: "/Docs/ecosystem/tooling/netnotes"
+    link: "/docs/ecosystem/tooling/netnotes"
   },
   {
     title: "SigmaRand",
     description: "A randomness oracle or random number generator for Ergo smart contracts. (Description coming soon)",
     icon: Puzzle,
     color: "text-pink-400",
-    link: "/Docs/ecosystem/tooling/sigmarand"
+    link: "/docs/ecosystem/tooling/sigmarand"
   },
   {
     title: "Moria Finance",
     description: "A DeFi protocol or tool in the Ergo ecosystem. (Description coming soon)",
     icon: Wrench,
     color: "text-orange-400",
-    link: "/Docs/ecosystem/tooling/moria-finance"
+    link: "/docs/ecosystem/tooling/moria-finance"
   },
   // Trading section header will be inserted here
   {
@@ -70,28 +70,28 @@ const toolingSections = [
     description: "A tool or strategy for arbitrage trading on Ergo. (Description coming soon)",
     icon: Star,
     color: "text-yellow-400",
-    link: "/Docs/ecosystem/tooling/arbit"
+    link: "/docs/ecosystem/tooling/arbit"
   },
   {
     title: "Grid Trading (Trading)",
     description: "Automated grid trading strategies for Ergo. (Description coming soon)",
     icon: Layers,
     color: "text-purple-400",
-    link: "/Docs/ecosystem/tooling/grid-trading"
+    link: "/docs/ecosystem/tooling/grid-trading"
   },
   {
     title: "Off the Grid (Grid Trading)",
     description: "A specific grid trading implementation. (Description coming soon)",
     icon: BookOpen,
     color: "text-blue-400",
-    link: "/Docs/ecosystem/tooling/off-the-grid"
+    link: "/docs/ecosystem/tooling/off-the-grid"
   },
   {
     title: "Tutorial (Off the Grid)",
     description: "Step-by-step guide for using Off the Grid. (Description coming soon)",
     icon: BookOpen,
     color: "text-green-400",
-    link: "/Docs/ecosystem/tooling/tutorial"
+    link: "/docs/ecosystem/tooling/tutorial"
   }
 ];
 

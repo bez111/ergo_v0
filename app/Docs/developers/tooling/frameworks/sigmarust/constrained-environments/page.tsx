@@ -9,7 +9,7 @@ export default function ConstrainedEnvironmentsPage() {
       <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">Using Sigma-Rust in Resource-Constrained Environments</h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/frameworks/sigmarust"
+          href="/docs/developers/tooling/frameworks/sigmarust"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

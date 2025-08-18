@@ -11,7 +11,7 @@ export default function DappConnectorPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/payments"
+          href="/docs/developers/tooling/payments"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -20,7 +20,7 @@ export default function DappConnectorPage() {
       </div>
 
       <div className="text-lg text-gray-300 mb-6 max-w-2xl">
-        <Link href="/Docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link> lets you easily create Ergo transactions with a pure JS library. There is also <a href="https://github.com/nightowlcasino/dApp-connector-react-package" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">NightOwl dApp Connector</a> React package and accompanying <a href="https://twitter.com/NightOwlCasino/status/1529452399475179520" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">video tutorial</a>.
+        <Link href="/docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link> lets you easily create Ergo transactions with a pure JS library. There is also <a href="https://github.com/nightowlcasino/dApp-connector-react-package" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">NightOwl dApp Connector</a> React package and accompanying <a href="https://twitter.com/NightOwlCasino/status/1529452399475179520" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">video tutorial</a>.
       </div>
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Resources</h2>

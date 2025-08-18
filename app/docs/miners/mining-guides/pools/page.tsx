@@ -170,21 +170,21 @@ export default function PoolsPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/miners/mining-guides/software"
+            href="/docs/miners/mining-guides/software"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
           >
             <Settings className="w-5 h-5" />
             Mining Software
           </Link>
           <Link
-            href="/Docs/miners/mining-guides/solo-mining"
+            href="/docs/miners/mining-guides/solo-mining"
             className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors"
           >
             <Shield className="w-5 h-5" />
             Solo Mining
           </Link>
           <Link
-            href="/Docs/miners/mining-guides"
+            href="/docs/miners/mining-guides"
             className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -413,7 +413,7 @@ export default function PoolsPage() {
       {/* Next Steps */}
       <div className="grid md:grid-cols-2 gap-6">
         <Link
-          href="/Docs/miners/mining-guides/overclocking"
+          href="/docs/miners/mining-guides/overclocking"
           className="group bg-gradient-to-r from-yellow-900/20 to-yellow-800/20 border border-yellow-700/30 rounded-xl p-6 hover:border-yellow-600/50 transition-all"
         >
           <div className="flex items-center justify-between mb-4">
@@ -425,7 +425,7 @@ export default function PoolsPage() {
         </Link>
 
         <Link
-          href="/Docs/miners/Revenue"
+          href="/docs/miners/Revenue"
           className="group bg-gradient-to-r from-green-900/20 to-green-800/20 border border-green-700/30 rounded-xl p-6 hover:border-green-600/50 transition-all"
         >
           <div className="flex items-center justify-between mb-4">

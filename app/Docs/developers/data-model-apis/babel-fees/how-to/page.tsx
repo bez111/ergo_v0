@@ -14,7 +14,7 @@ export default function BabelFeesHowToPage() {
       </h1>
 
       {/* Back Button */}
-      <Link href="/Docs/developers/data-model-apis/babel-fees" className="inline-block">
+      <Link href="/docs/developers/data-model-apis/babel-fees" className="inline-block">
         <button className="px-6 py-3 bg-orange-500/10 border border-orange-500/20 rounded-xl hover:bg-orange-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
           <ArrowLeft className="w-5 h-5 text-orange-400" />
           <span className="text-orange-400 font-semibold">Back to Babel Fees</span>

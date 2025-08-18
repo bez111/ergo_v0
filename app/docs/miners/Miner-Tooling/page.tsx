@@ -1,5 +1,5 @@
 // Move the entire content of Miner-Tooling.tsx into this file, preserving all imports and export default.
-// This enables Next.js to resolve /Docs/miners/Miner-Tooling as a route.
+// This enables Next.js to resolve /docs/miners/Miner-Tooling as a route.
 
 "use client";
 
@@ -26,7 +26,7 @@ export default function MinerToolingPage() {
         </h2>
         <div className="grid grid-cols-1 gap-6">
           {/* GuapSwap */}
-          <Link href="/Docs/miners/Miner-Tooling/guapswap" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+          <Link href="/docs/miners/Miner-Tooling/guapswap" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Layers className="w-6 h-6 text-brand-primary-400" />
@@ -41,7 +41,7 @@ export default function MinerToolingPage() {
             </div>
           </Link>
           {/* Lithos */}
-          <Link href="/Docs/miners/Miner-Tooling/lithos" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+          <Link href="/docs/miners/Miner-Tooling/lithos" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Shield className="w-6 h-6 text-brand-primary-400" />
@@ -56,7 +56,7 @@ export default function MinerToolingPage() {
             </div>
           </Link>
           {/* CYTI */}
-          <Link href="/Docs/miners/Miner-Tooling/cyti" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+          <Link href="/docs/miners/Miner-Tooling/cyti" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Database className="w-6 h-6 text-brand-primary-400" />
@@ -71,7 +71,7 @@ export default function MinerToolingPage() {
             </div>
           </Link>
           {/* Log-Space Mining */}
-          <Link href="/Docs/miners/Miner-Tooling/log-space-mining" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+          <Link href="/docs/miners/Miner-Tooling/log-space-mining" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Database className="w-6 h-6 text-brand-primary-400" />
@@ -86,7 +86,7 @@ export default function MinerToolingPage() {
             </div>
           </Link>
           {/* Smartpools */}
-          <Link href="/Docs/miners/Miner-Tooling/smartpools" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
+          <Link href="/docs/miners/Miner-Tooling/smartpools" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer block">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
                 <Users className="w-6 h-6 text-brand-primary-400" />

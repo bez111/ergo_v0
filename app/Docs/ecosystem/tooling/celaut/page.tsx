@@ -32,7 +32,7 @@ export default function CelautPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/ecosystem/tooling"
+            href="/docs/ecosystem/tooling"
             className="inline-flex items-center px-6 py-3 bg-purple-400 rounded-xl font-semibold text-black hover:bg-purple-500 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Tooling
@@ -46,7 +46,7 @@ export default function CelautPage() {
             <ExternalLink className="w-5 h-5 mr-2" /> Celaut Project on GitHub
           </a>
           <Link
-            href="/Docs/ecosystem/tooling/reputation-system"
+            href="/docs/ecosystem/tooling/reputation-system"
             className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
           >
             <Users className="w-5 h-5 mr-2" /> Reputation System
@@ -320,7 +320,7 @@ export default function CelautPage() {
           <li>This combines local asset control with access to scalable, high-performance services that would be too resource-intensive to run on a personal device.</li>
         </ul>
         <p className="text-gray-300 mb-2">
-          If you are looking for personal financial management tools, visit <Link href="/Docs/ecosystem/tooling/netnotes" className="text-purple-400 hover:underline">Netnotes</Link>.
+          If you are looking for personal financial management tools, visit <Link href="/docs/ecosystem/tooling/netnotes" className="text-purple-400 hover:underline">Netnotes</Link>.
         </p>
         <p className="text-gray-300">
           If you want to build or use decentralized services and marketplaces for AI agents, automation, and trading strategies, Celaut provides the infrastructure to make that possible.

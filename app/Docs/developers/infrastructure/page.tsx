@@ -12,7 +12,7 @@ export default function InfrastructurePage() {
         "Run your own Ergo node or use public endpoints for direct blockchain access. Reliable public nodes and setup guides included.",
       icon: Server,
       color: "text-cyan-400",
-      link: "/Docs/developers/infrastructure/node"
+      link: "/docs/developers/infrastructure/node"
     },
     {
       title: "Explorer",
@@ -20,7 +20,7 @@ export default function InfrastructurePage() {
         "Explore the Ergo blockchain with public explorers. Track transactions, blocks, and network activity in real time.",
       icon: Globe,
       color: "text-orange-400",
-      link: "/Docs/developers/infrastructure/explorer"
+      link: "/docs/developers/infrastructure/explorer"
     },
     {
       title: "APIs",
@@ -28,7 +28,7 @@ export default function InfrastructurePage() {
         "Integrate Ergo into your apps with robust APIs. Access network data, submit transactions, and build custom tools.",
       icon: Code,
       color: "text-green-400",
-      link: "/Docs/developers/infrastructure/api"
+      link: "/docs/developers/infrastructure/api"
     },
     {
       title: "Off-Chain",
@@ -36,7 +36,7 @@ export default function InfrastructurePage() {
         "Leverage off-chain services and infrastructure for scalability, data indexing, and advanced dApp logic.",
       icon: Layers,
       color: "text-cyan-300",
-      link: "/Docs/developers/infrastructure/offchain"
+      link: "/docs/developers/infrastructure/offchain"
     },
     {
       title: "Wallets",
@@ -44,7 +44,7 @@ export default function InfrastructurePage() {
         "Discover Ergo wallets for users and developers. Secure, manage, and integrate Ergo assets with ease.",
       icon: Wallet,
       color: "text-orange-300",
-      link: "/Docs/developers/infrastructure/wallets"
+      link: "/docs/developers/infrastructure/wallets"
     },
     {
       title: "Integration Guide",
@@ -52,7 +52,7 @@ export default function InfrastructurePage() {
         "Step-by-step guides and best practices for integrating Ergo into your applications and services.",
       icon: BookOpen,
       color: "text-cyan-400",
-      link: "/Docs/developers/infrastructure/integration"
+      link: "/docs/developers/infrastructure/integration"
     },
   ];
 

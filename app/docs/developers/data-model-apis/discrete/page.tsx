@@ -12,7 +12,7 @@ export default function DlogProofsPage() {
       </h1>
 
       <div className="mb-8">
-        <Link href="/Docs/developers/data-model-apis" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 rounded-lg transition-colors">
+        <Link href="/docs/developers/data-model-apis" className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 rounded-lg transition-colors">
           <span className="text-orange-400">← Back to Data Model & APIs</span>
         </Link>
       </div>
@@ -45,19 +45,19 @@ export default function DlogProofsPage() {
       <div className="bg-red-400/10 border border-red-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-red-400">Related Cryptographic Concepts</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          <Link href="/Docs/developers/cryptographic-primitives/sigma" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives/sigma" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Sigma className="w-5 h-5 text-red-400" />
               <h3 className="font-semibold text-red-300 group-hover:underline">Sigma Protocols</h3>
             </div>
           </Link>
-          <Link href="/Docs/developers/cryptographic-primitives/threshold" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives/threshold" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Users className="w-5 h-5 text-red-400" />
               <h3 className="font-semibold text-red-300 group-hover:underline">Threshold Signatures</h3>
             </div>
           </Link>
-          <Link href="/Docs/developers/cryptographic-primitives/ring" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives/ring" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Key className="w-5 h-5 text-red-400" />
               <h3 className="font-semibold text-red-300 group-hover:underline">Ring Signatures</h3>
@@ -84,13 +84,13 @@ proveDlog(pubKey)`}
       <div className="bg-green-400/10 border border-green-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-green-400">Practical Examples</h2>
         <div className="space-y-4">
-          <Link href="/Docs/developers/cryptographic-primitives/schnorr" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives/schnorr" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <CheckCircle className="w-5 h-5 text-green-400" />
               <h3 className="font-semibold text-green-300 group-hover:underline">Schnorr Signature Verification</h3>
             </div>
           </Link>
-          <Link href="/Docs/developers/cryptographic-primitives/other-signatures/public-keys" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives/other-signatures/public-keys" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Key className="w-5 h-5 text-green-400" />
               <h3 className="font-semibold text-green-300 group-hover:underline">Public Key Cryptography</h3>
@@ -111,13 +111,13 @@ proveDlog(pubKey)`}
       <div className="bg-pink-400/10 border border-pink-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-pink-400">Advanced Applications</h2>
         <div className="space-y-4">
-          <Link href="/Docs/developers/cryptographic-primitives" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <BookOpen className="w-5 h-5 text-pink-400" />
               <h3 className="font-semibold text-pink-300 group-hover:underline">Cryptographic Foundations</h3>
             </div>
           </Link>
-          <Link href="/Docs/developers/cryptographic-primitives/zerojoin" className="group block">
+          <Link href="/docs/developers/cryptographic-primitives/zerojoin" className="group block">
             <div className="bg-neutral-900/50 rounded-lg p-4 flex items-center gap-2 mb-2">
               <Lock className="w-5 h-5 text-pink-400" />
               <h3 className="font-semibold text-pink-300 group-hover:underline">ZeroJoin Privacy Protocol</h3>
@@ -129,8 +129,8 @@ proveDlog(pubKey)`}
       <div className="bg-purple-400/10 border border-purple-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-purple-400">References</h2>
         <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-          <li><Link href="/Docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Cryptographic Primitives</Link></li>
-          <li><Link href="/Docs/technology/ergoscript" className="text-orange-400 hover:underline">ErgoScript Capabilities</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives" className="text-orange-400 hover:underline">Cryptographic Primitives</Link></li>
+          <li><Link href="/docs/technology/ergoscript" className="text-orange-400 hover:underline">ErgoScript Capabilities</Link></li>
         </ul>
       </div>
     </div>

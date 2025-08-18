@@ -11,7 +11,7 @@ export default function CoreConceptsPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -26,7 +26,7 @@ export default function CoreConceptsPage() {
             <li>Ergo is a blockchain platform that operates on the UTXO (Unspent Transaction Output) model and employs a Proof-of-Work consensus mechanism.</li>
             <li>Ergo introduces an <i>extended-UTXO model</i> that enables the execution of intricate financial contracts, akin to those supported by Ethereum's account-based model.</li>
             <li>ErgoScript, being aligned with Ergo's UTXO model, incorporates numerous UTXO-specific constructs such as <code className="bg-neutral-800 px-1 rounded">Box</code>, <code className="bg-neutral-800 px-1 rounded">INPUTS</code>, and <code className="bg-neutral-800 px-1 rounded">OUTPUTS</code>. A comprehensive list of these constructs can be found in the <a href="https://github.com/ScorexFoundation/sigmastate-interpreter/blob/develop/docs/LangSpec.md" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">LangSpec</a>.</li>
-            <li>A <Link href="/Docs/developers/box" className="text-cyan-400 hover:underline">Box</Link>, essentially a UTXO, can accommodate up to ten <Link href="/Docs/developers/registers" className="text-cyan-400 hover:underline">registers</Link> for data storage. Analogous to Bitcoin, an Ergo transaction consumes one or more existing boxes (represented by the <code className="bg-neutral-800 px-1 rounded">INPUTS</code> array) and produces one or more new boxes (represented by the <code className="bg-neutral-800 px-1 rounded">OUTPUTS</code> array).</li>
+            <li>A <Link href="/docs/developers/box" className="text-cyan-400 hover:underline">Box</Link>, essentially a UTXO, can accommodate up to ten <Link href="/docs/developers/registers" className="text-cyan-400 hover:underline">registers</Link> for data storage. Analogous to Bitcoin, an Ergo transaction consumes one or more existing boxes (represented by the <code className="bg-neutral-800 px-1 rounded">INPUTS</code> array) and produces one or more new boxes (represented by the <code className="bg-neutral-800 px-1 rounded">OUTPUTS</code> array).</li>
             <li>ErgoScript is not Turing complete, but it is possible to build Turing-complete applications, as demonstrated in <a href="https://arxiv.org/pdf/1806.10116v1.pdf" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">this peer-reviewed paper</a>.</li>
           </ul>
         </div>
@@ -79,7 +79,7 @@ export default function CoreConceptsPage() {
         <div className="space-y-4">
           <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4">
             <h4 className="font-semibold text-cyan-400 mb-2">1. Reduction</h4>
-            <p className="text-gray-300 text-sm">Same as the prover, the verifier uses the ErgoTree interpreter and deterministically produces a value of the <Link href="/Docs/developers/ergoscript-languages/sigmaboolean" className="text-cyan-400 hover:underline">SigmaBoolean</Link> type. However, this step must finish the evaluation for any possible inputs within a concrete fixed time limit (aka maximum cost), which the interpreter checks.</p>
+            <p className="text-gray-300 text-sm">Same as the prover, the verifier uses the ErgoTree interpreter and deterministically produces a value of the <Link href="/docs/developers/ergoscript-languages/sigmaboolean" className="text-cyan-400 hover:underline">SigmaBoolean</Link> type. However, this step must finish the evaluation for any possible inputs within a concrete fixed time limit (aka maximum cost), which the interpreter checks.</p>
           </div>
 
           <div className="bg-neutral-900 border border-neutral-700 rounded-lg p-4">
@@ -102,17 +102,17 @@ export default function CoreConceptsPage() {
         <h2 className="text-2xl font-bold text-cyan-400 mb-4">Related Resources</h2>
         <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-1">
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/sigmaboolean" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/sigmaboolean" className="text-cyan-400 hover:underline">
               SigmaBoolean
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/simple-syntax" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/simple-syntax" className="text-cyan-400 hover:underline">
               Simple Syntax
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/blockchain-context" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/blockchain-context" className="text-cyan-400 hover:underline">
               The Blockchain Context
             </Link>
           </li>

@@ -30,7 +30,7 @@ export default function LETSPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/ecosystem/financial/monetary-systems"
+            href="/docs/ecosystem/financial/monetary-systems"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Monetary Systems
@@ -318,28 +318,28 @@ export default function LETSPage() {
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link
-            href="/Docs/ecosystem/financial/monetary-systems/sigmausd"
+            href="/docs/ecosystem/financial/monetary-systems/sigmausd"
             className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition"
           >
             <h4 className="font-bold text-orange-400 mb-2">SigmaUSD</h4>
             <p className="text-gray-300 text-sm">The first eUTxO-based stablecoin on Ergo.</p>
           </Link>
           <Link
-            href="/Docs/ecosystem/financial/monetary-systems/chaincash"
+            href="/docs/ecosystem/financial/monetary-systems/chaincash"
             className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition"
           >
             <h4 className="font-bold text-green-400 mb-2">ChainCash</h4>
             <p className="text-gray-300 text-sm">Elastic money creation combining trust and blockchain assets.</p>
           </Link>
           <Link
-            href="/Docs/ecosystem/financial/monetary-systems/gluon"
+            href="/docs/ecosystem/financial/monetary-systems/gluon"
             className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition"
           >
             <h4 className="font-bold text-purple-400 mb-2">Gluon</h4>
             <p className="text-gray-300 text-sm">Dual to liquidity pools with nuclear reaction-inspired mechanisms.</p>
           </Link>
           <Link
-            href="/Docs/ecosystem/financial/monetary-systems/dexygold"
+            href="/docs/ecosystem/financial/monetary-systems/dexygold"
             className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition"
           >
             <h4 className="font-bold text-yellow-400 mb-2">DexyGold</h4>

@@ -40,21 +40,21 @@ export default function LightSpvNodePage() {
       {/* Navigation Buttons */}
       <div className="flex flex-wrap gap-6 mb-12">
         <Link 
-          href="/Docs/developers/infrastructure/node/modes"
+          href="/docs/developers/infrastructure/node/modes"
           className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
         >
           <ChevronRight className="w-5 h-5 mr-2" />
           Back to Node Modes
         </Link>
         <Link 
-          href="/Docs/developers/infrastructure/node/modes/light-spv-node/technical-details"
+          href="/docs/developers/infrastructure/node/modes/light-spv-node/technical-details"
           className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
         >
           <Code className="w-5 h-5 mr-2" />
           Technical Details
         </Link>
         <Link 
-          href="/Docs/developers/infrastructure/node/modes/light-spv-node/overview"
+          href="/docs/developers/infrastructure/node/modes/light-spv-node/overview"
           className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
         >
           <BookOpen className="w-5 h-5 mr-2" />
@@ -72,7 +72,7 @@ export default function LightSpvNodePage() {
           </div>
           <div className="space-y-6 text-gray-300">
             <p className="text-lg leading-relaxed">
-              <a href="/Docs/developers/infrastructure/node/protocol/spv" 
+              <a href="/docs/developers/infrastructure/node/protocol/spv" 
                  className="text-blue-400 hover:text-blue-300 underline">
                 Simplified Payment Verification (SPV)
               </a> allows for a simplified way of verifying transactions by only downloading and verifying the block headers, 
@@ -228,19 +228,19 @@ export default function LightSpvNodePage() {
             <div className="bg-neutral-800/50 border border-neutral-600 rounded-lg p-4">
               <ul className="space-y-2 text-gray-300">
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/protocol/spv" 
+                  <a href="/docs/developers/infrastructure/node/protocol/spv" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     SPV Protocol Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/protocol/nipopows" 
+                  <a href="/docs/developers/infrastructure/node/protocol/nipopows" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     NIPoPoWs Documentation
                   </a>
                 </li>
                 <li>
-                  <a href="/Docs/developers/infrastructure/node/modes/light-full-node" 
+                  <a href="/docs/developers/infrastructure/node/modes/light-full-node" 
                      className="text-blue-400 hover:text-blue-300 underline">
                     Light Full-Node Mode
                   </a>

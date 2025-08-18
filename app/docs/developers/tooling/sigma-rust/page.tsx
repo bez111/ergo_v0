@@ -9,20 +9,20 @@ export default function SigmaRustPage() {
       <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-6 leading-tight pb-1">Sigma Rust</h1>
       <div className="mb-6 flex items-center gap-3">
         <Link
-          href="/Docs/developers/tooling/programming-languages/rust"
+          href="/docs/developers/tooling/programming-languages/rust"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
           Back
         </Link>
         <Link
-          href="/Docs/developers/tooling/pathways/sigma-rust/constrained"
+          href="/docs/developers/tooling/pathways/sigma-rust/constrained"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           Constrained Environments
         </Link>
       </div>
-      <p className="text-gray-300 mb-4">Rust implementation of <a href="/Docs/developers/tooling/pathways/sigmastate-interpreter" className="text-cyan-400 hover:underline">ErgoScript (sigmastate-interpreter)</a> cryptocurrency scripting language.</p>
+      <p className="text-gray-300 mb-4">Rust implementation of <a href="/docs/developers/tooling/pathways/sigmastate-interpreter" className="text-cyan-400 hover:underline">ErgoScript (sigmastate-interpreter)</a> cryptocurrency scripting language.</p>
       <h2 className="text-2xl font-bold text-cyan-400 mb-4 mt-8">Crates</h2>
       <ul className="list-disc pl-6 text-gray-300 mb-4 space-y-2">
         <li><a href="https://github.com/ergoplatform/sigma-rust/tree/develop/ergo-lib" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">ergo-lib</a> – <a href="https://crates.io/crates/ergo-lib" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">crates.io</a> | <a href="https://docs.rs/crate/ergo-lib" className="text-cyan-400 hover:underline" target="_blank" rel="noopener noreferrer">docs</a><br/>Overarching crate exposing wallet-related features: chain types (transactions, boxes, etc.), JSON serialization, box selection for tx inputs, tx builder and signing. Exports other crates API, probably the only crate you'd need to import.</li>

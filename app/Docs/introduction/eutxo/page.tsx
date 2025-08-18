@@ -105,13 +105,13 @@ export default function EutxoPage() {
           </p>
           <div className="flex flex-wrap gap-4">
             <Link
-              href="/Docs/introduction/utxo-vs-account"
+              href="/docs/introduction/utxo-vs-account"
               className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
             >
               <Database className="w-5 h-5 mr-2" /> UTXO vs Account
             </Link>
             <Link
-              href="/Docs/introduction/faq"
+              href="/docs/introduction/faq"
               className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
             >
               <FileText className="w-5 h-5 mr-2" /> Learn More
@@ -238,7 +238,7 @@ export default function EutxoPage() {
             </p>
             <div className="mt-4">
               <Link 
-                href="/Docs/introduction/utxo-vs-account" 
+                href="/docs/introduction/utxo-vs-account" 
                 className="inline-flex items-center text-orange-400 hover:text-orange-300 underline"
               >
                 Compare with Account-Based Model <ArrowRight className="w-4 h-4 ml-1" />
@@ -312,21 +312,21 @@ export default function EutxoPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Ready to explore more?</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/utxo-vs-account"
+              href="/docs/introduction/utxo-vs-account"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Database className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">UTXO vs Account</span>
             </Link>
             <Link
-              href="/Docs/introduction/key-features"
+              href="/docs/introduction/key-features"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Star className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Key Features</span>
             </Link>
             <Link
-              href="/Docs/developers"
+              href="/docs/developers"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Code className="w-5 h-5 mr-2 text-green-400" />
@@ -653,21 +653,21 @@ export default function EutxoPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Learn More About UTXO</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/key-features"
+              href="/docs/introduction/key-features"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Star className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">Key Features</span>
             </Link>
             <Link
-              href="/Docs/developers"
+              href="/docs/developers"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Code className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Developer Docs</span>
             </Link>
             <Link
-              href="/Docs/introduction/faq"
+              href="/docs/introduction/faq"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <FileText className="w-5 h-5 mr-2 text-green-400" />
@@ -958,21 +958,21 @@ export default function EutxoPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Explore More About Atomic Swaps</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/utxo-vs-account"
+              href="/docs/introduction/utxo-vs-account"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Database className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">UTXO vs Account</span>
             </Link>
             <Link
-              href="/Docs/developers"
+              href="/docs/developers"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Code className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Developer Docs</span>
             </Link>
             <Link
-              href="/Docs/introduction/key-features"
+              href="/docs/introduction/key-features"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Star className="w-5 h-5 mr-2 text-green-400" />
@@ -1351,21 +1351,21 @@ export default function EutxoPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Explore More About eUTXO</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/utxo-vs-account"
+              href="/docs/introduction/utxo-vs-account"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Database className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">UTXO vs Account</span>
             </Link>
             <Link
-              href="/Docs/introduction/atomic-swaps"
+              href="/docs/introduction/atomic-swaps"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Zap className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Atomic Swaps</span>
             </Link>
             <Link
-              href="/Docs/developers"
+              href="/docs/developers"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Code className="w-5 h-5 mr-2 text-green-400" />
@@ -1712,21 +1712,21 @@ export default function EutxoPage() {
           <h3 className="text-xl font-bold mb-4 text-center">Learn More About UTXO</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <Link
-              href="/Docs/introduction/utxo-vs-account"
+              href="/docs/introduction/utxo-vs-account"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Database className="w-5 h-5 mr-2 text-orange-400" />
               <span className="text-gray-300">UTXO vs Account</span>
             </Link>
             <Link
-              href="/Docs/introduction/ergo-cardano"
+              href="/docs/introduction/ergo-cardano"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <GitBranch className="w-5 h-5 mr-2 text-cyan-400" />
               <span className="text-gray-300">Ergo vs Cardano</span>
             </Link>
             <Link
-              href="/Docs/developers"
+              href="/docs/developers"
               className="flex items-center justify-center px-4 py-3 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
             >
               <Code className="w-5 h-5 mr-2 text-green-400" />

@@ -42,21 +42,21 @@ export default function WalletsPage() {
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
           <Link
-            href="/Docs/developers/infrastructure"
+            href="/docs/developers/infrastructure"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
             Back to Infrastructure
           </Link>
           <Link
-            href="/Docs/developers/infrastructure/wallets/multisig"
+            href="/docs/developers/infrastructure/wallets/multisig"
             className="inline-flex items-center px-6 py-3 bg-cyan-700 rounded-xl font-semibold text-white hover:bg-cyan-800 transition-transform hover:scale-105"
           >
             <Shield className="w-5 h-5 mr-2" />
             What is Multisig?
           </Link>
           <Link
-            href="/Docs/developers/infrastructure/wallets/access-issues"
+            href="/docs/developers/infrastructure/wallets/access-issues"
             className="inline-flex items-center px-6 py-3 bg-yellow-600 rounded-xl font-semibold text-black hover:bg-yellow-700 transition-transform hover:scale-105"
           >
             <AlertTriangle className="w-5 h-5 mr-2" />
@@ -127,7 +127,7 @@ export default function WalletsPage() {
                   <span className="text-sm text-gray-300">Best For: Users needing shared fund control or enhanced security via multi-sig</span>
                 </div>
                 <Link
-                  href="/Docs/developers/infrastructure/wallets/minotaur"
+                  href="/docs/developers/infrastructure/wallets/minotaur"
                   className="inline-flex items-center px-4 py-2 bg-green-600 rounded-lg text-white hover:bg-green-700 transition-colors"
                 >
                   <Info className="w-4 h-4 mr-2" />
@@ -154,7 +154,7 @@ export default function WalletsPage() {
                 <span className="text-sm text-gray-300">Best For: Users frequently interacting with DeFi, NFT marketplaces, and other web-based Ergo applications</span>
               </div>
               <Link
-                href="/Docs/developers/infrastructure/wallets/nautilus"
+                href="/docs/developers/infrastructure/wallets/nautilus"
                 className="inline-flex items-center px-4 py-2 bg-purple-600 rounded-lg text-white hover:bg-purple-700 transition-colors"
               >
                 <Info className="w-4 h-4 mr-2" />
@@ -181,7 +181,7 @@ export default function WalletsPage() {
                   <span className="text-sm text-gray-300">Best For: Users who want to run their own full node for maximum trust and verification</span>
                 </div>
                 <Link
-                  href="/Docs/developers/infrastructure/wallets/satergo"
+                  href="/docs/developers/infrastructure/wallets/satergo"
                   className="inline-flex items-center px-4 py-2 bg-blue-600 rounded-lg text-white hover:bg-blue-700 transition-colors"
                 >
                   <Info className="w-4 h-4 mr-2" />
@@ -226,7 +226,7 @@ export default function WalletsPage() {
                   <span className="text-sm text-gray-300">Best For: Experienced users needing specific features like mixing or advanced transaction control</span>
                 </div>
                 <Link
-                  href="/Docs/developers/infrastructure/wallets/safew"
+                  href="/docs/developers/infrastructure/wallets/safew"
                   className="inline-flex items-center px-4 py-2 bg-orange-600 rounded-lg text-white hover:bg-orange-700 transition-colors"
                 >
                   <Info className="w-4 h-4 mr-2" />
@@ -243,7 +243,7 @@ export default function WalletsPage() {
                   <span className="text-sm text-gray-300">Best For: Long-term "cold storage" of significant amounts, gifting ERG</span>
                 </div>
                 <Link
-                  href="/Docs/developers/infrastructure/wallets/paper-wallet"
+                  href="/docs/developers/infrastructure/wallets/paper-wallet"
                   className="inline-flex items-center px-4 py-2 bg-orange-600 rounded-lg text-white hover:bg-orange-700 transition-colors"
                 >
                   <FileText className="w-4 h-4 mr-2" />
@@ -344,7 +344,7 @@ export default function WalletsPage() {
         <div className="bg-cyan-400/10 border border-cyan-400/20 rounded-xl p-6 flex flex-col items-start">
           <p className="text-gray-300 mb-4">Explore technical standards for Ergo wallets, APIs, and integrations.</p>
           <Link
-            href="/Docs/developers/infrastructure/wallets/standards"
+            href="/docs/developers/infrastructure/wallets/standards"
             className="inline-flex items-center px-6 py-3 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105 mb-2"
           >
             <BookOpen className="w-5 h-5 mr-2" />
@@ -394,7 +394,7 @@ export default function WalletsPage() {
                 Yoroi wallet no longer supports Ergo. If you have funds in an old Yoroi Ergo wallet and know the password, you might be able to use <a href="https://github.com/satsen/yoroi-ergo-wallet-recover" className="text-blue-400 hover:underline" target="_blank" rel="noopener noreferrer">this community recovery tool</a> to send funds to a new Ergo wallet.
               </p>
               <Link
-                href="/Docs/developers/infrastructure/wallets/access-issues"
+                href="/docs/developers/infrastructure/wallets/access-issues"
                 className="inline-flex items-center px-4 py-2 bg-red-600 rounded-lg text-white hover:bg-red-700 transition-colors"
               >
                 <Info className="w-4 h-4 mr-2" />

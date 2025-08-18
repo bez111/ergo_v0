@@ -217,7 +217,7 @@ export default function SoloMiningPage() {
             <BarChart3 className="w-5 h-5 mr-2" /> Pool Stats
           </a>
           <Link
-            href="/Docs/miners/mining-guides"
+            href="/docs/miners/mining-guides"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <ArrowLeft className="w-5 h-5 mr-2" /> Back to Mining Guides
@@ -330,7 +330,7 @@ scorex {
           </div>
 
           <p className="text-gray-400 text-sm">
-            You'll then either want to use the <Link href="/Docs/miners/mining-guides/solo-mining/stratum" className="text-blue-400 hover:text-blue-300">Ergo Stratum</Link> mining server or <Link href="/Docs/miners/mining-guides/solo-mining/miningcore" className="text-purple-400 hover:text-purple-300">Mining Core</Link>.
+            You'll then either want to use the <Link href="/docs/miners/mining-guides/solo-mining/stratum" className="text-blue-400 hover:text-blue-300">Ergo Stratum</Link> mining server or <Link href="/docs/miners/mining-guides/solo-mining/miningcore" className="text-purple-400 hover:text-purple-300">Mining Core</Link>.
           </p>
         </div>
       </div>
@@ -532,7 +532,7 @@ scorex {
       {/* Next Steps */}
       <div className="grid md:grid-cols-2 gap-6">
         <Link
-          href="/Docs/miners/mining-guides/solo-mining/stratum"
+          href="/docs/miners/mining-guides/solo-mining/stratum"
           className="group bg-neutral-900/50 border border-neutral-700 hover:border-cyan-600/50 rounded-xl p-6 transition-all"
         >
           <div className="flex items-center justify-between mb-4">
@@ -544,7 +544,7 @@ scorex {
         </Link>
 
         <Link
-          href="/Docs/miners/mining-guides/solo-mining/miningcore"
+          href="/docs/miners/mining-guides/solo-mining/miningcore"
           className="group bg-neutral-900/50 border border-neutral-700 hover:border-purple-600/50 rounded-xl p-6 transition-all"
         >
           <div className="flex items-center justify-between mb-4">

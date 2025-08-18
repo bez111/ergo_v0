@@ -15,7 +15,7 @@ export default function AddressTypesPage() {
       {/* Back Button */}
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/data-model-apis"
+          href="/docs/developers/data-model-apis"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -110,7 +110,7 @@ export default function AddressTypesPage() {
           </p>
 
           <p className="text-gray-300">
-            P2SH is a good candidate for a pre-defined contract template (in terms of <Link href="/Docs/developers/eip5" className="text-orange-400 hover:underline">EIP-5</Link>) From this perspective context var id can be a template parameter. So fixing concrete id is not necessary. The template hex can be created once and then used across dApps. Sigma already support ContractTemplate, and the corresponding code can be made available in Fleet via Sigma-js.
+            P2SH is a good candidate for a pre-defined contract template (in terms of <Link href="/docs/developers/eip5" className="text-orange-400 hover:underline">EIP-5</Link>) From this perspective context var id can be a template parameter. So fixing concrete id is not necessary. The template hex can be created once and then used across dApps. Sigma already support ContractTemplate, and the corresponding code can be made available in Fleet via Sigma-js.
           </p>
         </div>
       </div>

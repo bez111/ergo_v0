@@ -22,7 +22,7 @@ export const MIGRATION_PHASES = {
     steps: [
       {
         id: 'prep-1',
-        description: 'Аудит всех внутренних ссылок на /Docs',
+        description: 'Аудит всех внутренних ссылок на /docs',
         status: 'pending' as const,
         estimatedDays: 2,
         risks: ['Пропущенные ссылки в компонентах'],
@@ -68,7 +68,7 @@ export const MIGRATION_PHASES = {
         status: 'pending' as const,
         estimatedDays: 3,
         risks: ['Неожиданные 404 ошибки'],
-        rollbackPlan: 'Возврат к /Docs структуре'
+        rollbackPlan: 'Возврат к /docs структуре'
       },
       {
         id: 'test-3',
@@ -106,7 +106,7 @@ export const MIGRATION_PHASES = {
       },
       {
         id: 'mig-3',
-        description: 'Настройка 301 редиректов /Docs → /docs',
+        description: 'Настройка 301 редиректов /docs → /docs',
         status: 'pending' as const,
         estimatedDays: 1,
         risks: ['Потеря SEO рейтинга'],
@@ -163,20 +163,20 @@ export const MIGRATION_PHASES = {
  */
 export const UPDATE_IMPORTS_SCRIPT = `
 #!/bin/bash
-# Script to update all imports from /Docs to /docs
+# Script to update all imports from /docs to /docs
 
-echo "🔄 Updating imports from /Docs to /docs..."
+echo "🔄 Updating imports from /docs to /docs..."
 
 # Find and replace in all TypeScript/JavaScript files
 find . -type f \\( -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" \\) \\
   -not -path "./node_modules/*" \\
   -not -path "./.next/*" \\
-  -exec sed -i '' 's|/Docs|/docs|g' {} +
+  -exec sed -i '' 's|/docs|/docs|g' {} +
 
 # Update markdown files
 find . -type f -name "*.md" -o -name "*.mdx" \\
   -not -path "./node_modules/*" \\
-  -exec sed -i '' 's|/Docs|/docs|g' {} +
+  -exec sed -i '' 's|/docs|/docs|g' {} +
 
 echo "✅ Import update complete!"
 `

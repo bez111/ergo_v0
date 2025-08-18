@@ -14,7 +14,7 @@ export default function FeesPage() {
       {/* Back Button */}
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/data-model-apis/composing/wallet-interaction"
+          href="/docs/developers/data-model-apis/composing/wallet-interaction"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -25,7 +25,7 @@ export default function FeesPage() {
       <div className="space-y-8">
         <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
           <p className="text-gray-300 mb-4">
-            Each Ergo <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/format" className="text-orange-400 hover:underline">transaction</Link> is an atomic state transition operation, involving the destruction of one or more <Link href="/Docs/developers/data-model-apis/composing/wallet-interaction/format" className="text-orange-400 hover:underline">boxes</Link> from the state and the creation of new ones. Unlike Bitcoin's implicit fee system, Ergo's fee structure is explicit, requiring a separate output to a specific address for fees.
+            Each Ergo <Link href="/docs/developers/data-model-apis/composing/wallet-interaction/format" className="text-orange-400 hover:underline">transaction</Link> is an atomic state transition operation, involving the destruction of one or more <Link href="/docs/developers/data-model-apis/composing/wallet-interaction/format" className="text-orange-400 hover:underline">boxes</Link> from the state and the creation of new ones. Unlike Bitcoin's implicit fee system, Ergo's fee structure is explicit, requiring a separate output to a specific address for fees.
           </p>
           
           <p className="text-gray-300">
@@ -40,7 +40,7 @@ export default function FeesPage() {
           </p>
           
           <p className="text-gray-300 mb-4">
-            This fee is calculated based on the serialized size of the boxes being created, with a minimum threshold set at <b>360 nanoerg per byte</b> and is adjustable via <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">miner voting</Link>. As a guideline, it is suggested to allocate <b>0.001 ERG (1,000,000 NanoErg) for each box</b> involved in the transaction.
+            This fee is calculated based on the serialized size of the boxes being created, with a minimum threshold set at <b>360 nanoerg per byte</b> and is adjustable via <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">miner voting</Link>. As a guideline, it is suggested to allocate <b>0.001 ERG (1,000,000 NanoErg) for each box</b> involved in the transaction.
           </p>
           
           <div className="mt-4 p-4 bg-yellow-900/30 border border-yellow-600/30 rounded-lg">
@@ -54,7 +54,7 @@ export default function FeesPage() {
         <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4">Miner Transaction Prioritization</h2>
           <p className="text-gray-300 mb-4">
-            Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a <Link href="/Docs/developers/governance" className="text-orange-400 hover:underline">voting mechanism among miners</Link>. Nodes can sort transactions based on these metrics, settable in the <Link href="/Docs/developers/conf-node" className="text-orange-400 hover:underline">node configuration</Link>.
+            Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">voting mechanism among miners</Link>. Nodes can sort transactions based on these metrics, settable in the <Link href="/docs/developers/conf-node" className="text-orange-400 hover:underline">node configuration</Link>.
           </p>
           
           <CodeBlock language="typescript"
@@ -69,7 +69,7 @@ mempoolSorting = "random"`}
           <div className="mt-4 p-4 bg-orange-900/30 border border-orange-600/30 rounded-lg">
             <h4 className="text-sm font-semibold text-orange-300 mb-2">Special Considerations</h4>
             <p className="text-sm text-gray-400">
-              Although the minimal fee is a standard, miners can select transactions based on their economic incentives. This means transactions offering higher fees per byte or per execution unit are typically prioritized. However, miners may also choose to include their transactions above others when <Link href="/Docs/developers/rent-fees" className="text-orange-400 hover:underline">collecting storage rent</Link>.
+              Although the minimal fee is a standard, miners can select transactions based on their economic incentives. This means transactions offering higher fees per byte or per execution unit are typically prioritized. However, miners may also choose to include their transactions above others when <Link href="/docs/developers/rent-fees" className="text-orange-400 hover:underline">collecting storage rent</Link>.
             </p>
           </div>
         </div>
@@ -139,7 +139,7 @@ def feeProposition(delta: Int = 720): ErgoTree = {
           
           <h3 className="text-xl font-semibold mb-3 text-orange-300">Babel Fees</h3>
           <p className="text-gray-300 mb-4">
-            Babel Fees enable users to pay transaction fees using tokens like SigmaUSD instead of ERG. This involves creating a new box with Babel tokens as change. The necessary ERGs for the transaction recipient and the miner's fee are sourced from this Babel fee box. For more details, see <Link href="/Docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees documentation</Link>.
+            Babel Fees enable users to pay transaction fees using tokens like SigmaUSD instead of ERG. This involves creating a new box with Babel tokens as change. The necessary ERGs for the transaction recipient and the miner's fee are sourced from this Babel fee box. For more details, see <Link href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">Babel Fees documentation</Link>.
           </p>
           
           <h3 className="text-xl font-semibold mb-3 text-orange-300">ErgoMixer</h3>

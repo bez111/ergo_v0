@@ -26,7 +26,7 @@ export default function StandardsPage() {
       </div>
 
       {/* Back Button */}
-      <Link href="/Docs/developers/data-model-apis/resources" className="inline-block">
+      <Link href="/docs/developers/data-model-apis/resources" className="inline-block">
         <button className="px-6 py-3 bg-orange-500/10 border border-orange-500/20 rounded-xl hover:bg-orange-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
           <ArrowLeft className="w-5 h-5 text-orange-400" />
           <span className="text-orange-400 font-semibold">Back to Resources</span>
@@ -36,7 +36,7 @@ export default function StandardsPage() {
       {/* Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Proxy Contracts */}
-        <Link href="/Docs/developers/data-model-apis/resources/standards/eip17" className="group">
+        <Link href="/docs/developers/data-model-apis/resources/standards/eip17" className="group">
           <div className="bg-blue-500/10 border border-blue-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center">
@@ -68,7 +68,7 @@ export default function StandardsPage() {
         </Link>
 
         {/* ErgoPay Protocol */}
-        <Link href="/Docs/developers/data-model-apis/resources/standards/eip20" className="group">
+        <Link href="/docs/developers/data-model-apis/resources/standards/eip20" className="group">
           <div className="bg-green-500/10 border border-green-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center">
@@ -100,7 +100,7 @@ export default function StandardsPage() {
         </Link>
 
         {/* Payment Request URI */}
-        <Link href="/Docs/developers/data-model-apis/resources/standards/eip25" className="group">
+        <Link href="/docs/developers/data-model-apis/resources/standards/eip25" className="group">
           <div className="bg-purple-500/10 border border-purple-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center">
@@ -132,7 +132,7 @@ export default function StandardsPage() {
         </Link>
 
         {/* Just-In-Time Costing */}
-        <Link href="/Docs/developers/data-model-apis/resources/standards/jitc" className="group">
+        <Link href="/docs/developers/data-model-apis/resources/standards/jitc" className="group">
           <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -171,18 +171,18 @@ export default function StandardsPage() {
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-300">Asset Standards</h3>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-              <li><a href="/Docs/developers/eip4" className="text-orange-400 hover:underline">EIP-4: Asset Standard</a> - Token creation and management</li>
-              <li><a href="/Docs/developers/eip21" className="text-orange-400 hover:underline">EIP-21: Token Verification</a> - Token authenticity verification</li>
-              <li><a href="/Docs/developers/eip22" className="text-orange-400 hover:underline">EIP-22: Auction Contract</a> - Standard auction implementation</li>
-              <li><a href="/Docs/developers/eip24" className="text-orange-400 hover:underline">EIP-24: Artwork Contract</a> - Digital artwork management</li>
+              <li><a href="/docs/developers/eip4" className="text-orange-400 hover:underline">EIP-4: Asset Standard</a> - Token creation and management</li>
+              <li><a href="/docs/developers/eip21" className="text-orange-400 hover:underline">EIP-21: Token Verification</a> - Token authenticity verification</li>
+              <li><a href="/docs/developers/eip22" className="text-orange-400 hover:underline">EIP-22: Auction Contract</a> - Standard auction implementation</li>
+              <li><a href="/docs/developers/eip24" className="text-orange-400 hover:underline">EIP-24: Artwork Contract</a> - Digital artwork management</li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-300">Protocol Standards</h3>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-              <li><a href="/Docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">EIP-31: Babel Fees</a> - Token-based fee payment</li>
-              <li><a href="/Docs/developers/eip5" className="text-orange-400 hover:underline">EIP-5: Contract Templates</a> - Reusable contract patterns</li>
-              <li><a href="/Docs/developers/eip6" className="text-orange-400 hover:underline">EIP-6: Multi-Stage Contracts</a> - Complex transaction flows</li>
+              <li><a href="/docs/developers/data-model-apis/babel-fees" className="text-orange-400 hover:underline">EIP-31: Babel Fees</a> - Token-based fee payment</li>
+              <li><a href="/docs/developers/eip5" className="text-orange-400 hover:underline">EIP-5: Contract Templates</a> - Reusable contract patterns</li>
+              <li><a href="/docs/developers/eip6" className="text-orange-400 hover:underline">EIP-6: Multi-Stage Contracts</a> - Complex transaction flows</li>
             </ul>
           </div>
         </div>

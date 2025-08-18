@@ -19,7 +19,7 @@ export default function RoadmapDiscussionsPage() {
         {/* Hero Buttons */}
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/introduction/roadmap"
+            href="/docs/introduction/roadmap"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-lg font-semibold text-white hover:bg-neutral-700 transition-colors"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />

@@ -31,12 +31,12 @@ export const metadata: Metadata = {
   description: 'Discover Ergo\'s key features: Extended UTXO model, Storage Rent for sustainability, ErgoScript smart contracts, Sigma Protocols, NIPoPoWs, and Autolykos PoW algorithm.',
   keywords: ['ergo features', 'eutxo model', 'storage rent', 'ergoscript', 'sigma protocols', 'nipopows', 'autolykos', 'blockchain features', 'smart contracts', 'proof of work'],
   alternates: {
-    canonical: 'https://ergoblockchain.org/Docs/introduction/key-features'
+    canonical: 'https://ergoblockchain.org/docs/introduction/key-features'
   },
   openGraph: {
     title: 'Ergo Key Features - Revolutionary Blockchain Technology',
     description: 'Explore Ergo\'s revolutionary features: eUTXO model, Storage Rent, ErgoScript, and advanced cryptographic protocols.',
-    url: 'https://ergoblockchain.org/Docs/introduction/key-features',
+    url: 'https://ergoblockchain.org/docs/introduction/key-features',
     siteName: 'Ergo Platform',
     images: [{
       url: 'https://ergoblockchain.org/og/ergo-features.png',
@@ -91,7 +91,7 @@ export default function KeyFeaturesPage() {
     dateModified: new Date().toISOString(),
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': 'https://ergoblockchain.org/Docs/introduction/key-features'
+      '@id': 'https://ergoblockchain.org/docs/introduction/key-features'
     },
     about: [
       {
@@ -126,19 +126,19 @@ export default function KeyFeaturesPage() {
         '@type': 'ListItem',
         position: 2,
         name: 'Documentation',
-        item: 'https://ergoblockchain.org/Docs'
+        item: 'https://ergoblockchain.org/docs'
       },
       {
         '@type': 'ListItem',
         position: 3,
         name: 'Introduction',
-        item: 'https://ergoblockchain.org/Docs/introduction'
+        item: 'https://ergoblockchain.org/docs/introduction'
       },
       {
         '@type': 'ListItem',
         position: 4,
         name: 'Key Features',
-        item: 'https://ergoblockchain.org/Docs/introduction/key-features'
+        item: 'https://ergoblockchain.org/docs/introduction/key-features'
       }
     ]
   }
@@ -161,13 +161,13 @@ export default function KeyFeaturesPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/why-ergo"
+            href="/docs/why-ergo"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <Rocket className="w-5 h-5 mr-2" /> Why Ergo?
           </Link>
           <Link
-            href="/Docs/introduction/faq"
+            href="/docs/introduction/faq"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <FileQuestion className="w-5 h-5 mr-2" /> FAQ
@@ -184,7 +184,7 @@ export default function KeyFeaturesPage() {
 
       {/* Core Features Grid */}
       <div className="grid md:grid-cols-2 gap-6 mb-12">
-        <Link href="/Docs/introduction/eutxo" className="group">
+        <Link href="/docs/introduction/eutxo" className="group">
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -215,7 +215,7 @@ export default function KeyFeaturesPage() {
           </div>
         </Link>
 
-        <Link href="/Docs/introduction/storage-rent" className="group">
+        <Link href="/docs/introduction/storage-rent" className="group">
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-cyan-500/20 rounded-lg flex items-center justify-center">
@@ -277,7 +277,7 @@ export default function KeyFeaturesPage() {
           </div>
         </Link>
 
-        <Link href="/Docs/introduction/nipopows" className="group">
+        <Link href="/docs/introduction/nipopows" className="group">
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">

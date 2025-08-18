@@ -9,35 +9,35 @@ const sections = [
     title: "Handshaking",
     icon: Handshake,
     description: "Peer connection and identity exchange.",
-    link: "/Docs/developers/infrastructure/node/protocol/p2p-handshake"
+    link: "/docs/developers/infrastructure/node/protocol/p2p-handshake"
   },
   {
     key: "network-messages",
     title: "Network Messages",
     icon: MessageSquare,
     description: "Message formats and their roles in node communication.",
-    link: "/Docs/developers/infrastructure/node/protocol/network-messages"
+    link: "/docs/developers/infrastructure/node/protocol/network-messages"
   },
   {
     key: "peer-management",
     title: "Peer Management",
     icon: Users,
     description: "Discovery, banning, and scoring of peers.",
-    link: "/Docs/developers/infrastructure/node/protocol/peer-management"
+    link: "/docs/developers/infrastructure/node/protocol/peer-management"
   },
   {
     key: "block-p2p",
     title: "BlockP2P",
     icon: Network,
     description: "Block/transaction propagation and sync protocols.",
-    link: "/Docs/developers/infrastructure/node/protocol/block-p2p"
+    link: "/docs/developers/infrastructure/node/protocol/block-p2p"
   },
   {
     key: "modifiers",
     title: "Modifiers",
     icon: RefreshCw,
     description: "Ergo's core data exchange format (blocks, txs, proofs).",
-    link: "/Docs/developers/infrastructure/node/protocol/modifiers"
+    link: "/docs/developers/infrastructure/node/protocol/modifiers"
   }
 ];
 
@@ -50,7 +50,7 @@ export default function P2POverviewCards() {
       
       <div className="mb-6">
         <Link
-          href="/Docs/developers/infrastructure/node/protocol"
+          href="/docs/developers/infrastructure/node/protocol"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronLeft className="w-5 h-5 mr-2" />

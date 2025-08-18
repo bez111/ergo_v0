@@ -24,7 +24,7 @@ export default function EntitiesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/ergo-foundation"
+            href="/docs/introduction/ergo-foundation"
             className="inline-flex items-center px-4 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition-colors mt-2 sm:mt-0"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -42,7 +42,7 @@ export default function EntitiesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/devdao"
+            href="/docs/introduction/devdao"
             className="inline-flex items-center px-4 py-2 bg-cyan-500 rounded-lg font-semibold text-black hover:bg-cyan-600 transition-colors mt-2 sm:mt-0"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />
@@ -60,7 +60,7 @@ export default function EntitiesPage() {
             </div>
           </div>
           <Link
-            href="/Docs/introduction/sigmanauts"
+            href="/docs/introduction/sigmanauts"
             className="inline-flex items-center px-4 py-2 bg-yellow-400 rounded-lg font-semibold text-black hover:bg-yellow-500 transition-colors mt-2 sm:mt-0"
           >
             Learn More <ChevronRight className="w-4 h-4 ml-1" />

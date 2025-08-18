@@ -20,7 +20,7 @@ export default function InfrastructurePage() {
         "Cross-chain asset transfers between Ergo, Cardano, and more. Secure, decentralized, and extensible bridge protocol.",
       icon: Link2,
       color: "text-pink-400",
-      link: "/Docs/ecosystem/infrastructure/rosen-bridge"
+      link: "/docs/ecosystem/infrastructure/rosen-bridge"
     },
     {
       title: "Sidechains",
@@ -28,7 +28,7 @@ export default function InfrastructurePage() {
         "Trustless, efficient cross-chain communication and scaling for Ergo. Explore sub-blocks, Sigma Chains, and PoUW sidechains.",
       icon: Layers,
       color: "text-orange-400",
-      link: "/Docs/ecosystem/infrastructure/sidechains"
+      link: "/docs/ecosystem/infrastructure/sidechains"
     },
     {
       title: "Oracles",
@@ -36,7 +36,7 @@ export default function InfrastructurePage() {
         "Decentralized data feeds for DeFi and dApps. Learn about Oracle Pools, Mixicles, and secure data on Ergo.",
       icon: Eye,
       color: "text-blue-400",
-      link: "/Docs/ecosystem/infrastructure/oracles"
+      link: "/docs/ecosystem/infrastructure/oracles"
     },
     {
       title: "Sigma Chains",
@@ -44,7 +44,7 @@ export default function InfrastructurePage() {
         "Programmable, cross-chain, and sustainable PoW blockchains built on Ergo. Unlocks DeFi, privacy, and interoperability.",
       icon: GitBranch,
       color: "text-cyan-400",
-      link: "/Docs/ecosystem/infrastructure/sidechains#sigma-chains"
+      link: "/docs/ecosystem/infrastructure/sidechains#sigma-chains"
     },
   ];
 

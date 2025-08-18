@@ -14,7 +14,7 @@ const frameworks = [
     title: "AppKit Python",
     content: (
       <>
-        Use <Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit</Link> from Python for direct JVM-based blockchain access.
+        Use <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit</Link> from Python for direct JVM-based blockchain access.
       </>
     ),
     url: "https://github.com/ergoplatform/ergo-appkit/wiki/Using-Appkit-from-Python",
@@ -57,7 +57,7 @@ export default function PythonPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/programming-languages/others"
+          href="/docs/developers/tooling/programming-languages/others"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -65,7 +65,7 @@ export default function PythonPage() {
         </Link>
       </div>
       <div className="text-lg text-gray-300 mb-6 max-w-2xl">
-        Python developers can interact with the Ergo blockchain using various <Link href="/Docs/developers/tooling/libraries" className="text-cyan-400 hover:underline">libraries</Link> and <Link href="/Docs/developers/tooling/sigma-rust#bindings" className="text-cyan-400 hover:underline">bindings</Link>. <b>Python bindings for sigma-rust</b> are also available, providing core blockchain interaction capabilities such as transaction building, signing, and off-chain logic.
+        Python developers can interact with the Ergo blockchain using various <Link href="/docs/developers/tooling/libraries" className="text-cyan-400 hover:underline">libraries</Link> and <Link href="/docs/developers/tooling/sigma-rust#bindings" className="text-cyan-400 hover:underline">bindings</Link>. <b>Python bindings for sigma-rust</b> are also available, providing core blockchain interaction capabilities such as transaction building, signing, and off-chain logic.
       </div>
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Python Frameworks & Libraries</h2>
@@ -73,7 +73,7 @@ export default function PythonPage() {
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">ErgoPad & Related Tools</h2>
       <div className="text-gray-300 mb-4 max-w-2xl">
-        <Link href="/Docs/developers/tooling/ergopad" className="text-cyan-400 hover:underline">ErgoPad</Link> provides a set of Docker containers for rapid Ergo dApp development: a React/MaterialUI <Link href="/Docs/developers" className="text-cyan-400 hover:underline">frontend</Link>, <Link href="/Docs/developers/tooling/api" className="text-cyan-400 hover:underline">REST API</Link> backend, <Link href="/Docs/developers/tooling/assembler" className="text-cyan-400 hover:underline">assembler</Link> for smart contract interaction, and support services such as <Link href="/Docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">ergonode</Link>, Redis, and Postgres.
+        <Link href="/docs/developers/tooling/ergopad" className="text-cyan-400 hover:underline">ErgoPad</Link> provides a set of Docker containers for rapid Ergo dApp development: a React/MaterialUI <Link href="/docs/developers" className="text-cyan-400 hover:underline">frontend</Link>, <Link href="/docs/developers/tooling/api" className="text-cyan-400 hover:underline">REST API</Link> backend, <Link href="/docs/developers/tooling/assembler" className="text-cyan-400 hover:underline">assembler</Link> for smart contract interaction, and support services such as <Link href="/docs/developers/infrastructure/node/setup" className="text-cyan-400 hover:underline">ergonode</Link>, Redis, and Postgres.
       </div>
       <ul className="list-disc pl-6 text-gray-300 mb-8 space-y-1">
         <li>
@@ -90,7 +90,7 @@ export default function PythonPage() {
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Bindings</h2>
       <div className="text-gray-300 mb-8 max-w-2xl">
-        See also: <Link href="/Docs/developers/tooling/sigma-rust#bindings" className="text-cyan-400 hover:underline">Python bindings for sigma-rust</Link> for direct cryptography and transaction access.
+        See also: <Link href="/docs/developers/tooling/sigma-rust#bindings" className="text-cyan-400 hover:underline">Python bindings for sigma-rust</Link> for direct cryptography and transaction access.
       </div>
     </>
   );

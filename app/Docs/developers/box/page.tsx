@@ -130,7 +130,7 @@ export default function BoxModelPage() {
 
         {/* Box Lifecycle */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <Link href="/Docs/developers/box/lifecycle" 
+          <Link href="/docs/developers/box/lifecycle" 
                 className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 transition-all">
             <GitBranch className="w-8 h-8 text-orange-400 mb-4" />
             <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 mb-2">
@@ -144,7 +144,7 @@ export default function BoxModelPage() {
             </span>
           </Link>
 
-          <Link href="/Docs/developers/box/assets" 
+          <Link href="/docs/developers/box/assets" 
                 className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 transition-all">
             <Coins className="w-8 h-8 text-orange-400 mb-4" />
             <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 mb-2">
@@ -158,7 +158,7 @@ export default function BoxModelPage() {
             </span>
           </Link>
 
-          <Link href="/Docs/developers/box/modelling" 
+          <Link href="/docs/developers/box/modelling" 
                 className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 transition-all">
             <Database className="w-8 h-8 text-orange-400 mb-4" />
             <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 mb-2">
@@ -228,12 +228,12 @@ const box = new OutputBuilder(
                   </a>
                 </li>
                 <li>
-                  <Link href="/Docs/introduction/eutxo" className="text-cyan-400 hover:text-cyan-300">
+                  <Link href="/docs/introduction/eutxo" className="text-cyan-400 hover:text-cyan-300">
                     eUTXO Model Overview
                   </Link>
                 </li>
                 <li>
-                  <Link href="/Docs/developers/data-model-apis" className="text-cyan-400 hover:text-cyan-300">
+                  <Link href="/docs/developers/data-model-apis" className="text-cyan-400 hover:text-cyan-300">
                     Data Model & APIs
                   </Link>
                 </li>

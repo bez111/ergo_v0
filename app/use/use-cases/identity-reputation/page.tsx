@@ -230,7 +230,7 @@ export default function IdentityReputationPage() {
                               name: "Identity Guide",
                               description: "Learn about SSI on Ergo",
                               icon: <Brain className="w-6 h-6" />,
-                              link: "/Docs/introduction/privacy",
+                              link: "/docs/introduction/privacy",
                               external: false
                             },
                             {
@@ -244,7 +244,7 @@ export default function IdentityReputationPage() {
                               name: "Build Identity Apps",
                               description: "Developer resources",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "/Docs/developers",
+                              link: "/docs/developers",
                               external: false
                             },
                           ].map((item) => (

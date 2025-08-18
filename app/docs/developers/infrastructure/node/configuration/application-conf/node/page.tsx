@@ -42,7 +42,7 @@ export default function NodeConfigPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node/configuration/application-conf?tab=ergo-node"
+            href="/docs/developers/infrastructure/node/configuration/application-conf?tab=ergo-node"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Node Configuration

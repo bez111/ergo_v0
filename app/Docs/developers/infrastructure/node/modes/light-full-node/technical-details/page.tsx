@@ -39,14 +39,14 @@ export default function LightFullNodeTechnicalDetailsPage() {
       {/* Navigation Buttons */}
       <div className="flex flex-wrap gap-6 mb-12">
         <Link 
-          href="/Docs/developers/infrastructure/node/modes/light-full-node"
+          href="/docs/developers/infrastructure/node/modes/light-full-node"
           className="inline-flex items-center px-6 py-3 bg-blue-500 rounded-xl font-semibold text-white hover:bg-blue-600 transition-transform hover:scale-105"
         >
           <ChevronRight className="w-5 h-5 mr-2" />
           Back to Light Full-Node
         </Link>
         <Link 
-          href="/Docs/developers/infrastructure/node/modes"
+          href="/docs/developers/infrastructure/node/modes"
           className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -349,13 +349,13 @@ export default function LightFullNodeTechnicalDetailsPage() {
               </div>
               <div className="space-y-2">
                 <Link 
-                  href="/Docs/developers/infrastructure/node/modes/archival-node"
+                  href="/docs/developers/infrastructure/node/modes/archival-node"
                   className="block text-blue-400 hover:text-blue-300 text-sm"
                 >
                   • Archival Full-Node Mode
                 </Link>
                 <Link 
-                  href="/Docs/developers/infrastructure/node/modes/pruned-full-node"
+                  href="/docs/developers/infrastructure/node/modes/pruned-full-node"
                   className="block text-blue-400 hover:text-blue-300 text-sm"
                 >
                   • Pruned Full-Node Mode

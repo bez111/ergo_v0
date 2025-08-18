@@ -206,21 +206,21 @@ export default function HostAPoolPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/miners/mining-guides/pools"
+            href="/docs/miners/mining-guides/pools"
             className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors"
           >
             <Users className="w-5 h-5" />
             Existing Pools
           </Link>
           <Link
-            href="/Docs/miners/mining-guides/solo-mining"
+            href="/docs/miners/mining-guides/solo-mining"
             className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors"
           >
             <Shield className="w-5 h-5" />
             Solo Mining
           </Link>
           <Link
-            href="/Docs/miners/mining-guides"
+            href="/docs/miners/mining-guides"
             className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
@@ -430,7 +430,7 @@ export default function HostAPoolPage() {
                 we recommend joining established pools that already provide excellent service to the Ergo community.
               </p>
               <Link
-                href="/Docs/miners/mining-guides/pools"
+                href="/docs/miners/mining-guides/pools"
                 className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded transition-colors"
               >
                 <Users className="w-4 h-4" />
@@ -470,7 +470,7 @@ export default function HostAPoolPage() {
       {/* Next Steps */}
       <div className="grid md:grid-cols-2 gap-6">
         <Link
-          href="/Docs/miners/mining-guides/pools"
+          href="/docs/miners/mining-guides/pools"
           className="group bg-gradient-to-r from-blue-900/20 to-blue-800/20 border border-blue-700/30 rounded-xl p-6 hover:border-blue-600/50 transition-all"
         >
           <div className="flex items-center justify-between mb-4">
@@ -482,7 +482,7 @@ export default function HostAPoolPage() {
         </Link>
 
         <Link
-          href="/Docs/miners/governance"
+          href="/docs/miners/governance"
           className="group bg-gradient-to-r from-purple-900/20 to-purple-800/20 border border-purple-700/30 rounded-xl p-6 hover:border-purple-600/50 transition-all"
         >
           <div className="flex items-center justify-between mb-4">

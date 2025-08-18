@@ -247,7 +247,7 @@ export default function OraclesDataFeedsPage() {
                               name: "Developer Docs",
                               description: "Integrate oracle data",
                               icon: <Terminal className="w-6 h-6" />,
-                              link: "/Docs/developers",
+                              link: "/docs/developers",
                               external: false
                             },
                           ].map((item) => (

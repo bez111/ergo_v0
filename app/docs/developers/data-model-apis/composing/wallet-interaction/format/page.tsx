@@ -14,7 +14,7 @@ export default function FormatPage() {
       {/* Back Button */}
       <div className="flex flex-wrap gap-4 mb-8">
         <Link
-          href="/Docs/developers/data-model-apis/composing/wallet-interaction"
+          href="/docs/developers/data-model-apis/composing/wallet-interaction"
           className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>
@@ -43,7 +43,7 @@ export default function FormatPage() {
           </ul>
           
           <p className="text-gray-300 mt-4">
-            Each register is an expression in the Sigma language, meaning every register contains a value of a specific type. These types are defined in <Link href="/Docs/developers/data-model-apis/types" className="text-orange-400 hover:underline">this document</Link>. The value in a register should be a concrete constant value, not a function of a known output type.
+            Each register is an expression in the Sigma language, meaning every register contains a value of a specific type. These types are defined in <Link href="/docs/developers/data-model-apis/types" className="text-orange-400 hover:underline">this document</Link>. The value in a register should be a concrete constant value, not a function of a known output type.
           </p>
           
           <h3 className="text-xl font-semibold mt-6 mb-3 text-purple-300">Additional Registers</h3>

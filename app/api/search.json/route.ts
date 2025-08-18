@@ -73,7 +73,7 @@ export async function GET() {
       },
       {
         title: "Documentation",
-        url: "/Docs",
+        url: "/docs",
         description: "Comprehensive Ergo documentation",
         keywords: ["docs", "documentation", "guides", "tutorials", "reference"],
         content: "Complete documentation for developers, users, and miners",

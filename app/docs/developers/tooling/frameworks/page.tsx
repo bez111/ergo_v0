@@ -9,55 +9,55 @@ const frameworks = [
     title: "AppKit",
     description: "JVM-based SDK for building Ergo dApps in Scala, Java, or Kotlin. Provides full blockchain and transaction access.",
     icon: <Cpu className="w-7 h-7 text-blue-400" />,
-    link: "/Docs/developers/tooling/frameworks/appkit"
+    link: "/docs/developers/tooling/frameworks/appkit"
   },
   {
     title: "Fleet",
     description: "Modern TypeScript/JavaScript library for creating and signing Ergo transactions in web and Node.js apps.",
     icon: <Code2 className="w-7 h-7 text-green-400" />,
-    link: "/Docs/developers/tooling/frameworks/fleet"
+    link: "/docs/developers/tooling/frameworks/fleet"
   },
   {
     title: "Mosaik",
     description: "JSON-based UI framework for building cross-platform dApps, rendered natively in supported wallets.",
     icon: <Layers className="w-7 h-7 text-orange-400" />,
-    link: "/Docs/developers/tooling/frameworks/mosaik"
+    link: "/docs/developers/tooling/frameworks/mosaik"
   },
   {
     title: "Headless dApp Framework",
     description: "Rust toolkit for building backend-only (headless) dApps and off-chain logic.",
     icon: <Wrench className="w-7 h-7 text-yellow-400" />,
-    link: "/Docs/developers/tooling/frameworks/headless-dapp-framework"
+    link: "/docs/developers/tooling/frameworks/headless-dapp-framework"
   },
   {
     title: "RustKit",
     description: "(WIP) High-level Rust library for composing and signing Ergo transactions, built on sigma-rust.",
     icon: <Wrench className="w-7 h-7 text-yellow-400" />,
-    link: "/Docs/developers/tooling/frameworks/rustkit"
+    link: "/docs/developers/tooling/frameworks/rustkit"
   },
   {
     title: "JDE",
     description: "JSON dApp Environment: a lightweight environment for running JSON-based dApps.",
     icon: <FileText className="w-7 h-7 text-cyan-400" />,
-    link: "/Docs/developers/tooling/frameworks/jde"
+    link: "/docs/developers/tooling/frameworks/jde"
   },
   {
     title: "SigmaRust",
     description: "Core Rust implementation of ErgoScript and blockchain primitives. Provides multi-language bindings.",
     icon: <Cpu className="w-7 h-7 text-red-400" />,
-    link: "/Docs/developers/tooling/frameworks/sigmarust"
+    link: "/docs/developers/tooling/frameworks/sigmarust"
   },
   {
     title: "Ergpy",
     description: "Python-JVM wrapper for interacting with the Ergo blockchain from Python scripts.",
     icon: <Code2 className="w-7 h-7 text-yellow-300" />,
-    link: "/Docs/developers/tooling/frameworks/ergpy"
+    link: "/docs/developers/tooling/frameworks/ergpy"
   },
   {
     title: "FleetSharp",
     description: "C#/.NET library for serializing, deserializing, and interacting with Ergo blockchain data.",
     icon: <Code2 className="w-7 h-7 text-indigo-400" />,
-    link: "/Docs/developers/tooling/frameworks/fleetsharp"
+    link: "/docs/developers/tooling/frameworks/fleetsharp"
   },
 ];
 
@@ -72,7 +72,7 @@ export default function FrameworksPage() {
       </p>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling"
+          href="/docs/developers/tooling"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7"></path></svg>

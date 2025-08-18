@@ -8,14 +8,14 @@ const pathwaysSections = [
     description: "Explore the recommended stack for Ergo dApp and infrastructure development.",
     icon: Layers,
     color: "text-cyan-400",
-    link: "/Docs/developers/tooling/development-stack"
+    link: "/docs/developers/tooling/development-stack"
   },
   {
     title: "Programming Languages",
     description: "Supported languages and best practices for building on Ergo.",
     icon: Code2,
     color: "text-orange-400",
-    link: "/Docs/developers/tooling/programming-languages"
+    link: "/docs/developers/tooling/programming-languages"
   },
 ];
 const toolingSections = [
@@ -24,21 +24,21 @@ const toolingSections = [
     description: "SDKs and developer frameworks for dApps and integrations.",
     icon: Wrench,
     color: "text-orange-400",
-    link: "/Docs/developers/tooling/frameworks"
+    link: "/docs/developers/tooling/frameworks"
   },
   {
     title: "Payments",
     description: "Payment modules, merchant tools, and invoicing solutions.",
     icon: CreditCard,
     color: "text-green-400",
-    link: "/Docs/developers/tooling/payments"
+    link: "/docs/developers/tooling/payments"
   },
   {
     title: "Libraries",
     description: "Reusable libraries for Ergo scripting, cryptography, and APIs.",
     icon: BookOpen,
     color: "text-yellow-400",
-    link: "/Docs/developers/tooling/libraries"
+    link: "/docs/developers/tooling/libraries"
   },
 ];
 

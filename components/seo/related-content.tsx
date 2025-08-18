@@ -84,14 +84,14 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     {
       title: 'ErgoScript Tutorial',
       description: 'Learn the basics of ErgoScript programming',
-      href: '/Docs/developers/ergoscript-languages',
+      href: '/docs/developers/ergoscript-languages',
       type: 'guide',
       readTime: 15
     },
     {
       title: 'Smart Contract Examples',
       description: 'Real-world ErgoScript contract examples',
-      href: '/Docs/developers/tutorials',
+      href: '/docs/developers/tutorials',
       type: 'guide',
       readTime: 10
     },
@@ -130,14 +130,14 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     {
       title: 'Start Mining Ergo',
       description: 'Complete guide to mining ERG',
-      href: '/Docs/miners/mining-guides',
+      href: '/docs/miners/mining-guides',
       type: 'guide',
       readTime: 20
     },
     {
       title: 'Autolykos Algorithm',
       description: 'Understanding Ergo\'s mining algorithm',
-      href: '/Docs/introduction/autolykos',
+      href: '/docs/introduction/autolykos',
       type: 'technology',
       readTime: 15
     },
@@ -160,7 +160,7 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     {
       title: 'Privacy Guide',
       description: 'Best practices for privacy on Ergo',
-      href: '/Docs/introduction/privacy-guide',
+      href: '/docs/introduction/privacy-guide',
       type: 'guide',
       readTime: 10
     },

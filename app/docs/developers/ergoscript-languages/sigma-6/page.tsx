@@ -44,7 +44,7 @@ export default function Sigma6Page() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/ergoscript-languages"
+          href="/docs/developers/ergoscript-languages"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -265,17 +265,17 @@ export default function Sigma6Page() {
             </a>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/language-description" className="text-cyan-400 hover:underline">
               ErgoScript Language Description
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/global-functions" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/global-functions" className="text-cyan-400 hover:underline">
               Global Functions
             </Link>
           </li>
           <li>
-            <Link href="/Docs/developers/ergoscript-languages/language-operations" className="text-cyan-400 hover:underline">
+            <Link href="/docs/developers/ergoscript-languages/language-operations" className="text-cyan-400 hover:underline">
               Language Operations
             </Link>
           </li>

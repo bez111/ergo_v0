@@ -23,28 +23,28 @@ const nftSectors = [
         description: "ErgoAuctions is a platform where you can bid on and sell a variety of collectible tokens, art, and more.",
         icon: <Globe className="w-7 h-7 text-cyan-400" />,
         link: "https://ergoauctions.org/",
-        more: "/Docs/ecosystem/financial/degenerate-finance/auctioncoin",
+        more: "/docs/ecosystem/financial/degenerate-finance/auctioncoin",
       },
       {
         name: "SkyHarbor",
         description: "SkyHarbor is a trusted marketplace that specializes in set price transactions.",
         icon: <Store className="w-7 h-7 text-orange-400" />,
         link: "https://skyharbor.app/",
-        more: "/Docs/ecosystem/nfts/skyharbor",
+        more: "/docs/ecosystem/nfts/skyharbor",
       },
       {
         name: "Mew Finance",
         description: "Mew Finance offers NFT marketplace capabilities through Mew Mart (for NFTs/tokens) and Mew Store (for physical assets). Higher tiers share platform revenue and get fee discounts.",
         icon: <ShoppingBag className="w-7 h-7 text-pink-400" />,
         link: "https://mewfinance.com/",
-        more: "/Docs/ecosystem/financial/dex/mew",
+        more: "/docs/ecosystem/financial/dex/mew",
       },
       {
         name: "Trade House",
         description: "Trade House is a decentralized NFT and token marketplace on Ergo, enabling users to trade collectibles and digital assets in a non-custodial way.",
         icon: <Image className="w-7 h-7 text-green-400" />,
         link: "https://tradehouse.app/",
-        more: "/Docs/ecosystem/financial/dex/trade-house",
+        more: "/docs/ecosystem/financial/dex/trade-house",
       },
     ],
   },
@@ -65,7 +65,7 @@ const nftSectors = [
         description: "NFT access control and digital asset platform leveraging Ergo. Secure, decentralized, and transparent management of access rights and ownership using NFTs and blockchain.",
         icon: <Gift className="w-7 h-7 text-pink-400" />,
         link: "https://www.pandav.io/",
-        more: "/Docs/ecosystem/nfts/pandaV",
+        more: "/docs/ecosystem/nfts/pandaV",
       },    // Add more application projects here
     ],
   },
@@ -86,14 +86,14 @@ const nftSectors = [
         description: "A trading card game built on Ergo, leveraging NFTs for true card ownership, transparent gameplay, and a player-driven economy. Compete, collect, and trade unique cards on-chain.",
         icon: <Gamepad2 className="w-7 h-7 text-green-400" />,
         link: "https://blitz.cards/",
-        more: "/Docs/ecosystem/nfts/blitzTCG",
+        more: "/docs/ecosystem/nfts/blitzTCG",
       },
       {
         name: "Cyberverse",
         description: "An immersive metaverse project on Ergo, integrating NFTs for digital land, assets, and avatars. Explore, build, and interact in a decentralized virtual world powered by blockchain.",
         icon: <Globe className="w-7 h-7 text-blue-400" />,
         link: "https://cyberverse.world/",
-        more: "/Docs/ecosystem/nfts/Cyberverse",
+        more: "/docs/ecosystem/nfts/Cyberverse",
       },
     ],
   },
@@ -181,7 +181,7 @@ export default function NFTsPage() {
       ))}
       {/* Minting instructions */}
       <div className="mt-12 text-gray-400 text-base">
-        For instructions on how to mint your own NFTs, refer to the <Link href="/Docs/developers/data-model/box/assets/tokens/non-fungible-tokens/minting-a-nft" className="text-cyan-400 hover:underline">developer section</Link>.
+        For instructions on how to mint your own NFTs, refer to the <Link href="/docs/developers/data-model/box/assets/tokens/non-fungible-tokens/minting-a-nft" className="text-cyan-400 hover:underline">developer section</Link>.
       </div>
     </>
   );

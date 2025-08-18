@@ -89,7 +89,7 @@ export function AlgoliaSearchReal() {
             objectID: 'fallback-1',
             title: 'DeFi Protocols',
             content: 'Explore Ergo\'s decentralized finance ecosystem including lending, derivatives, and crowdfunding protocols.',
-            url: '/Docs/ecosystem/financial/defi',
+            url: '/docs/ecosystem/financial/defi',
             section: 'Ecosystem > Financial > DeFi',
             tags: ['defi', 'lending', 'derivatives', 'crowdfunding'],
             type: 'title',

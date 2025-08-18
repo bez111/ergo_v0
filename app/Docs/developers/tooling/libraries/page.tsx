@@ -6,23 +6,23 @@ import { ArrowLeft, ExternalLink } from "lucide-react";
 const cards = [
   {
     title: "GetBlok Plasma",
-    url: "/Docs/developers/tooling/libraries/getblok-plasma",
+    url: "/docs/developers/tooling/libraries/getblok-plasma",
   },
   {
     title: "Scrypto",
-    url: "/Docs/developers/tooling/libraries/scrypto",
+    url: "/docs/developers/tooling/libraries/scrypto",
   },
   {
     title: "EIP12-Types",
-    url: "/Docs/developers/tooling/libraries/eip12-types",
+    url: "/docs/developers/tooling/libraries/eip12-types",
   },
   {
     title: "SigmaJS",
-    url: "/Docs/developers/tooling/libraries/sigmajs",
+    url: "/docs/developers/tooling/libraries/sigmajs",
   },
   {
     title: "DeCo",
-    url: "/Docs/developers/tooling/libraries/deco",
+    url: "/docs/developers/tooling/libraries/deco",
   },
 ];
 
@@ -63,7 +63,7 @@ export default function LibrariesPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling"
+          href="/docs/developers/tooling"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

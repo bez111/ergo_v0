@@ -16,13 +16,13 @@ export default function ThresholdSignaturesPage() {
         </p>
         <div className="flex flex-wrap gap-4 mb-6">
           <Link
-            href="/Docs/developers/cryptographic-primitives/other-signatures"
+            href="/docs/developers/cryptographic-primitives/other-signatures"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ArrowLeft className="w-5 h-5 mr-2" /> Back to Other Signatures
           </Link>
           <Link
-            href="/Docs/developers/cryptographic-primitives/other-signatures/threshold/3-out-of-5"
+            href="/docs/developers/cryptographic-primitives/other-signatures/threshold/3-out-of-5"
             className="inline-flex items-center px-6 py-3 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
           >
             3-out-of-5 Threshold Signature
@@ -49,7 +49,7 @@ export default function ThresholdSignaturesPage() {
           For a comprehensive example, refer to the dedicated tutorial:
         </p>
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-8">
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/3-out-of-5" className="text-orange-400 hover:text-orange-300">3-out-of-5 Threshold Signature</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/3-out-of-5" className="text-orange-400 hover:text-orange-300">3-out-of-5 Threshold Signature</Link></li>
         </ul>
 
         <h3 className="text-2xl font-bold mb-4 text-white">Practical Use Cases</h3>
@@ -57,12 +57,12 @@ export default function ThresholdSignaturesPage() {
           <li><strong>Corporate Governance:</strong>
             <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
               <li>Multi-signature wallets requiring collective approval</li>
-              <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/microcredit" className="text-orange-400 hover:text-orange-300">Microcredit Scenario</Link></li>
+              <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/microcredit" className="text-orange-400 hover:text-orange-300">Microcredit Scenario</Link></li>
             </ul>
           </li>
           <li><strong>Cross-Chain Interoperability:</strong>
             <ul className="list-disc list-inside ml-6 mt-2 space-y-1">
-              <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/rosen" className="text-orange-400 hover:text-orange-300">Rosen Bridge Mechanisms</Link></li>
+              <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/rosen" className="text-orange-400 hover:text-orange-300">Rosen Bridge Mechanisms</Link></li>
             </ul>
           </li>
         </ol>
@@ -94,9 +94,9 @@ export default function ThresholdSignaturesPage() {
 
         <h2 className="text-3xl font-bold mb-6 text-white">Related Cryptographic Concepts</h2>
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-8">
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/sigma" className="text-orange-400 hover:text-orange-300">Sigma Protocols</Link></li>
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/dlog" className="text-orange-400 hover:text-orange-300">Discrete Logarithm Proofs</Link></li>
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:text-orange-300">Ring Signatures</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/sigma" className="text-orange-400 hover:text-orange-300">Sigma Protocols</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/dlog" className="text-orange-400 hover:text-orange-300">Discrete Logarithm Proofs</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/ring" className="text-orange-400 hover:text-orange-300">Ring Signatures</Link></li>
         </ul>
 
         <h2 className="text-3xl font-bold mb-6 text-white">Technical Advantages</h2>
@@ -108,8 +108,8 @@ export default function ThresholdSignaturesPage() {
 
         <h2 className="text-3xl font-bold mb-6 text-white">References</h2>
         <ul className="list-disc list-inside space-y-2 text-gray-300 mb-8">
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/crypto" className="text-orange-400 hover:text-orange-300">Cryptographic Foundations</Link></li>
-          <li><Link href="/Docs/developers/cryptographic-primitives/other-signatures/ergoscript" className="text-orange-400 hover:text-orange-300">ErgoScript Capabilities</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/crypto" className="text-orange-400 hover:text-orange-300">Cryptographic Foundations</Link></li>
+          <li><Link href="/docs/developers/cryptographic-primitives/other-signatures/ergoscript" className="text-orange-400 hover:text-orange-300">ErgoScript Capabilities</Link></li>
         </ul>
       </div>
     </>

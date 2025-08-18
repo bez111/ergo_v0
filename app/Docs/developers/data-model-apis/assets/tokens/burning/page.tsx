@@ -23,7 +23,7 @@ export default function BurningTokenPage() {
         
         <div className="flex gap-4">
           <Link 
-            href="/Docs/developers/data-model-apis/assets/tokens"
+            href="/docs/developers/data-model-apis/assets/tokens"
             className="inline-flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-xl transition-colors duration-200"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -53,7 +53,7 @@ export default function BurningTokenPage() {
             <li><strong>Mobile Wallet:</strong> <a href="https://www.tokenjay.app/app/#burntoken" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">TokenJay</a> (This requires an Ergopay compatible wallet like Ergo Mobile Wallet)</li>
             <li><strong>Nautilus:</strong> <a href="https://github.com/ThierryM1212/ergo-token-minter" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">Ergo Token Minter / Burner</a></li>
             <li><a href="https://github.com/ThierryM1212/SAFEW" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline"><strong>SAFEW</strong></a> supports token burning natively.</li>
-            <li>Send to <code className="bg-neutral-700 px-2 py-1 rounded">4MQyMKvMbnCJG3aJ</code>, a <Link href="/Docs/developers/p2s" className="text-cyan-400 hover:underline"><strong>P2S (Pay-to-Script)</strong></Link> representation of a "false" condition, i.e. the box is unspendable.</li>
+            <li>Send to <code className="bg-neutral-700 px-2 py-1 rounded">4MQyMKvMbnCJG3aJ</code>, a <Link href="/docs/developers/p2s" className="text-cyan-400 hover:underline"><strong>P2S (Pay-to-Script)</strong></Link> representation of a "false" condition, i.e. the box is unspendable.</li>
           </ul>
         </div>
 
@@ -75,7 +75,7 @@ export default function BurningTokenPage() {
               Using AppKit
             </h3>
             <p className="text-gray-300">
-              If you're working with <Link href="/Docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">AppKit</Link>, the transaction builder conveniently offers a <code className="bg-neutral-700 px-2 py-1 rounded">burntoken</code> method tailored for this purpose.
+              If you're working with <Link href="/docs/developers/tooling/frameworks/appkit" className="text-cyan-400 hover:underline">AppKit</Link>, the transaction builder conveniently offers a <code className="bg-neutral-700 px-2 py-1 rounded">burntoken</code> method tailored for this purpose.
             </p>
           </div>
 

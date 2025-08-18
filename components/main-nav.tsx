@@ -78,7 +78,7 @@ export function MainNav() {
                 className={cn(
                   navigationMenuTriggerStyle(),
                   "font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary",
-                  pathname === "/Docs" && "text-primary font-medium",
+                  pathname === "/docs" && "text-primary font-medium",
                 )}
               >
                 DOCS

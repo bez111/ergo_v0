@@ -10,28 +10,28 @@ const installSections = [
     description: "Step-by-step manual installation guide for the Ergo Node.",
     icon: BookOpen,
     color: "text-orange-400",
-    link: "/Docs/developers/infrastructure/node/setup/manual"
+    link: "/docs/developers/infrastructure/node/setup/manual"
   },
   {
     title: "Build from Source",
     description: "Instructions to build the Ergo Node from source code.",
     icon: Hammer,
     color: "text-cyan-400",
-    link: "/Docs/developers/infrastructure/node/setup/build"
+    link: "/docs/developers/infrastructure/node/setup/build"
   },
   {
     title: "SNAPSHOT Dependencies",
     description: "List of required dependencies for running the Ergo Node.",
     icon: Package,
     color: "text-orange-300",
-    link: "/Docs/developers/infrastructure/node/setup/dependencies"
+    link: "/docs/developers/infrastructure/node/setup/dependencies"
   },
   {
     title: "Docker",
     description: "How to deploy Ergo Node using Docker.",
     icon: Dock,
     color: "text-blue-400",
-    link: "/Docs/developers/infrastructure/node/setup/docker"
+    link: "/docs/developers/infrastructure/node/setup/docker"
   }
 ];
 
@@ -41,14 +41,14 @@ const platformSections = [
     description: "Guide for running Ergo Node on Raspberry Pi.",
     icon: Cpu,
     color: "text-green-400",
-    link: "/Docs/developers/infrastructure/node/setup/pi"
+    link: "/docs/developers/infrastructure/node/setup/pi"
   },
   {
     title: "Android",
     description: "Instructions for running Ergo Node on Android devices.",
     icon: Smartphone,
     color: "text-cyan-400",
-    link: "/Docs/developers/infrastructure/node/setup/android"
+    link: "/docs/developers/infrastructure/node/setup/android"
   }
 ];
 
@@ -58,14 +58,14 @@ const supportSections = [
     description: "Common issues and solutions for Ergo Node setup.",
     icon: LifeBuoy,
     color: "text-cyan-300",
-    link: "/Docs/developers/infrastructure/node/setup/troubleshooting"
+    link: "/docs/developers/infrastructure/node/setup/troubleshooting"
   },
   {
     title: "FAQ",
     description: "Frequently asked questions about node setup.",
     icon: HelpCircle,
     color: "text-orange-400",
-    link: "/Docs/developers/infrastructure/node/setup/faq"
+    link: "/docs/developers/infrastructure/node/setup/faq"
   }
 ];
 
@@ -122,7 +122,7 @@ export default function NodeSetupPage() {
       </p>
       <div className="mb-8">
         <Link
-          href="/Docs/developers/infrastructure/node"
+          href="/docs/developers/infrastructure/node"
           className="inline-flex items-center px-5 py-2 bg-orange-500 rounded-lg font-semibold text-black hover:bg-orange-600 transition hover:scale-[1.02]"
         >
           <ChevronLeft className="w-5 h-5 mr-2" /> Back to Node

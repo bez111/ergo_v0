@@ -11,7 +11,7 @@ export default function GetBlokPlasmaPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/libraries"
+          href="/docs/developers/tooling/libraries"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -19,7 +19,7 @@ export default function GetBlokPlasmaPage() {
         </Link>
       </div>
       <div className="text-lg text-gray-300 mb-6 max-w-2xl">
-        <a href="https://github.com/GetBlok-io/GetBlok-Plasma" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline font-semibold">GetBlok Plasma</a> is a library on top of Ergo <Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">Appkit</Link> that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code. The goal is to give developers an easy way to use this Layer-2 scaling solution in contracts, off-chain code, and distributed systems managing the Plasma itself. GetBlok Plasma uses the default versioned storage implementation powered by LevelDB, with another SwayDB implementation in the works. <b>This allows for distributed systems to keep track of the key-value pairs held in digests stored on-chain.</b>
+        <a href="https://github.com/GetBlok-io/GetBlok-Plasma" target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline font-semibold">GetBlok Plasma</a> is a library on top of Ergo <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">Appkit</Link> that provides an abstraction layer to simplify the process of integrating AVL Trees (AKA Plasma) into off-chain code. The goal is to give developers an easy way to use this Layer-2 scaling solution in contracts, off-chain code, and distributed systems managing the Plasma itself. GetBlok Plasma uses the default versioned storage implementation powered by LevelDB, with another SwayDB implementation in the works. <b>This allows for distributed systems to keep track of the key-value pairs held in digests stored on-chain.</b>
       </div>
       <div className="text-gray-300 mb-6 max-w-2xl">
         See these documents to get started:

@@ -27,7 +27,7 @@ export default function APIPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure"
+            href="/docs/developers/infrastructure"
             className="inline-flex items-center px-6 py-3 bg-pink-500 rounded-xl font-semibold text-black hover:bg-pink-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Infrastructure
@@ -220,7 +220,7 @@ export default function APIPage() {
             to integrating it into your applications.
           </p>
           <Link
-            href="/Docs/developers/infrastructure/api/how-to"
+            href="/docs/developers/infrastructure/api/how-to"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-white hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <Code className="w-5 h-5 mr-2" /> API How-To Guide

@@ -20,7 +20,7 @@ export default function MicroCreditPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/ecosystem/financial/defi"
+            href="/docs/ecosystem/financial/defi"
             className="inline-flex items-center px-6 py-3 bg-yellow-400 rounded-xl font-semibold text-black hover:bg-yellow-500 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to DeFi

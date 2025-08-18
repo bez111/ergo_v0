@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { Search } from "lucide-react";
-import DocsSearchModal from "./DocsSearchModal";
+import DocsSearchModal from "./docsSearchModal";
 
 export default function DocsSearchBar() {
   const [open, setOpen] = useState(false);

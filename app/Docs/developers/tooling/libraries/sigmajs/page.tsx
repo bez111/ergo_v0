@@ -11,7 +11,7 @@ export default function SigmaJSPage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/libraries"
+          href="/docs/developers/tooling/libraries"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />
@@ -27,7 +27,7 @@ export default function SigmaJSPage() {
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Introduction</h2>
       <div className="text-gray-300 mb-6 max-w-2xl">
-        Sigma JS, in conjunction with <Link href="/Docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link>, aims to offer a user experience for Javascript developers that is comparable to what <Link href="/Docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit</Link> provides for JVM developers.
+        Sigma JS, in conjunction with <Link href="/docs/developers/tooling/fleet" className="text-cyan-400 hover:underline">Fleet</Link>, aims to offer a user experience for Javascript developers that is comparable to what <Link href="/docs/developers/tooling/appkit" className="text-cyan-400 hover:underline">AppKit</Link> provides for JVM developers.
       </div>
 
       <h2 className="text-2xl font-bold text-cyan-400 mb-4">Resources</h2>

@@ -12,7 +12,7 @@ export default function PrivacyPage() {
         "A user-friendly mixing service built on Ergo’s privacy protocols. Learn how to use ErgoMixer for anonymous transactions.",
       icon: UserCheck,
       color: "text-blue-400",
-      link: "/Docs/ecosystem/privacy/ergomixer"
+      link: "/docs/ecosystem/privacy/ergomixer"
     },
     {
       title: "Stealth Addresses",
@@ -20,7 +20,7 @@ export default function PrivacyPage() {
         "Stealth addresses allow users to receive funds privately, hiding the recipient’s identity on the blockchain. Explore how Ergo implements stealth payments.",
       icon: EyeOff,
       color: "text-pink-400",
-      link: "/Docs/ecosystem/privacy/stealth-addresses"
+      link: "/docs/ecosystem/privacy/stealth-addresses"
     },
     {
       title: "SigmaJoin",
@@ -28,7 +28,7 @@ export default function PrivacyPage() {
         "SigmaJoin is an advanced privacy protocol for unlinkable transactions. Discover how it works and its role in the Ergo privacy stack.",
       icon: KeyRound,
       color: "text-cyan-400",
-      link: "/Docs/ecosystem/privacy/sigmajoin"
+      link: "/docs/ecosystem/privacy/sigmajoin"
     },
   ];
 

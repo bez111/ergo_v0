@@ -40,7 +40,7 @@ export default function ModelTransactionPage() {
       </div>
 
       {/* Back Button */}
-      <Link href="/Docs/developers/data-model-apis/resources" className="inline-block">
+      <Link href="/docs/developers/data-model-apis/resources" className="inline-block">
         <button className="px-6 py-3 bg-orange-500/10 border border-orange-500/20 rounded-xl hover:bg-orange-500/20 transition-all duration-200 flex items-center gap-2 group-hover:scale-105">
           <ArrowLeft className="w-5 h-5 text-orange-400" />
           <span className="text-orange-400 font-semibold">Back to Resources</span>
@@ -193,10 +193,10 @@ export default function ModelTransactionPage() {
           <div>
             <h3 className="text-lg font-semibold mb-3 text-gray-300">Related Documentation</h3>
             <ul className="list-disc list-inside ml-4 space-y-2 text-gray-300">
-              <li><a href="/Docs/introduction/eutxo" className="text-orange-400 hover:underline">Extended UTXO Model</a></li>
-              <li><a href="/Docs/developers/data-model-apis" className="text-orange-400 hover:underline">Data Model & APIs</a></li>
-              <li><a href="/Docs/developers/box" className="text-orange-400 hover:underline">Box Overview</a></li>
-              <li><a href="/Docs/developers/transactions" className="text-orange-400 hover:underline">Transaction Structure</a></li>
+              <li><a href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">Extended UTXO Model</a></li>
+              <li><a href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">Data Model & APIs</a></li>
+              <li><a href="/docs/developers/box" className="text-orange-400 hover:underline">Box Overview</a></li>
+              <li><a href="/docs/developers/transactions" className="text-orange-400 hover:underline">Transaction Structure</a></li>
             </ul>
           </div>
           <div>

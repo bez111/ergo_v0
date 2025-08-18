@@ -8,17 +8,17 @@ const mobileCards = [
   {
     title: "iOS",
     content: "Develop and deploy Ergo dApps for iOS devices.",
-    url: "/Docs/developers/tooling/mobile/ios"
+    url: "/docs/developers/tooling/mobile/ios"
   },
   {
     title: "Android",
     content: "Develop and deploy Ergo dApps for Android devices.",
-    url: "/Docs/developers/tooling/mobile/android"
+    url: "/docs/developers/tooling/mobile/android"
   },
   {
     title: "Build Constraints",
     content: "Important platform-specific limitations and requirements.",
-    url: "/Docs/developers/tooling/mobile/constraints"
+    url: "/docs/developers/tooling/mobile/constraints"
   }
 ];
 
@@ -54,7 +54,7 @@ export default function MobilePage() {
       </h1>
       <div className="mb-6">
         <Link
-          href="/Docs/developers/tooling/development-stack"
+          href="/docs/developers/tooling/development-stack"
           className="inline-flex items-center px-5 py-2 bg-cyan-500 rounded-xl font-semibold text-black hover:bg-cyan-600 transition-transform hover:scale-105"
         >
           <ArrowLeft className="w-5 h-5 mr-2" />

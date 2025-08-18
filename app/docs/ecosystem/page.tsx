@@ -31,42 +31,42 @@ export default function EcosystemPage() {
       description: "Explore the technologies powering Ergo: robust Proof of Work consensus, extended UTXO, oracles, bridges, and cross-chain capabilities.",
       icon: Settings,
       color: "text-cyan-400",
-      link: "/Docs/ecosystem/infrastructure"
+      link: "/docs/ecosystem/infrastructure"
     },
     {
       title: "Financial Tools",
       description: "Dive into the financial backbone of Ergo: decentralized exchanges, stablecoins, lending, synthetics, and new DeFi primitives.",
       icon: DollarSign,
       color: "text-green-400",
-      link: "/Docs/ecosystem/financial"
+      link: "/docs/ecosystem/financial"
     },
     {
       title: "Privacy Solutions",
       description: "Ergo is at the forefront of privacy innovation, featuring native zero-knowledge proofs, non-custodial mixers, and stealth addresses.",
       icon: Lock,
       color: "text-purple-400",
-      link: "/Docs/ecosystem/privacy"
+      link: "/docs/ecosystem/privacy"
     },
     {
       title: "Decentralized Governance",
       description: "Community-driven governance with DAOs, on-chain voting, and collaborative tools that empower open decision-making.",
       icon: Users,
       color: "text-yellow-400",
-      link: "/Docs/ecosystem/daos"
+      link: "/docs/ecosystem/daos"
     },
     {
       title: "NFTs & Gaming",
       description: "NFT collections, creator protocols, and on-chain games: experience a thriving digital culture built on Ergo.",
       icon: Gamepad2,
       color: "text-pink-400",
-      link: "/Docs/ecosystem/nfts"
+      link: "/docs/ecosystem/nfts"
     },
     {
       title: "Developer Tooling",
       description: "All the SDKs, APIs, libraries, templates, and resources to build your vision on Ergo’s innovative platform.",
       icon: Wrench,
       color: "text-indigo-400",
-      link: "/Docs/ecosystem/tooling"
+      link: "/docs/ecosystem/tooling"
     }
   ];
 
@@ -74,55 +74,55 @@ export default function EcosystemPage() {
     {
       name: "Autolykos",
       description: "Memory-hard, ASIC-resistant Proof of Work algorithm optimized for GPUs. The security backbone of the Ergo blockchain.",
-      link: "/Docs/introduction/autolykos",
+      link: "/docs/introduction/autolykos",
       icon: Cpu
     },
     {
       name: "eUTXO",
       description: "Ergo’s extended UTXO model enables complex scripts, arbitrary data, and powerful on-chain logic at the protocol level.",
-      link: "/Docs/introduction/eutxo",
+      link: "/docs/introduction/eutxo",
       icon: Database
     },
     {
       name: "ErgoScript",
       description: "A robust, high-level smart contract language for expressive and auditable decentralized logic.",
-      link: "/Docs/introduction/ergoscript",
+      link: "/docs/introduction/ergoscript",
       icon: Code
     },
     {
       name: "NIPoPoWs",
       description: "Non-Interactive Proofs of Proof-of-Work: true light clients, secure bridges, and efficient mobile-first interactions.",
-      link: "/Docs/introduction/nipopows",
+      link: "/docs/introduction/nipopows",
       icon: Zap
     },
     {
       name: "Privacy",
       description: "Native support for discrete log-based zero-knowledge proofs and privacy-preserving transactions.",
-      link: "/Docs/introduction/privacy",
+      link: "/docs/introduction/privacy",
       icon: Lock
     },
     {
       name: "Storage Rent",
       description: "A unique mechanism charging small fees for unmoved coins, keeping the blockchain state sustainable long-term.",
-      link: "/Docs/introduction/storage-rent",
+      link: "/docs/introduction/storage-rent",
       icon: Coins
     },
     {
       name: "Oracles",
       description: "Decentralized Oracle Pools securely inject real-world data into Ergo, powering advanced DeFi and cross-chain dApps.",
-      link: "/Docs/ecosystem/infrastructure/oracles",
+      link: "/docs/ecosystem/infrastructure/oracles",
       icon: Globe
     },
     {
       name: "Scaling",
       description: "Layer-1 optimizations, stateless clients, and ongoing sharding research for efficient, future-proof growth.",
-      link: "/Docs/introduction/scaling",
+      link: "/docs/introduction/scaling",
       icon: GitBranch
     },
     {
       name: "Parachains/Sidechains",
       description: "Interoperability and horizontal scaling via NIPoPoW-powered sidechains and cross-chain bridges.",
-      link: "/Docs/introduction/nipopow-sidechains",
+      link: "/docs/introduction/nipopow-sidechains",
       icon: GitBranch
     }
   ];
@@ -145,13 +145,13 @@ export default function EcosystemPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/introduction/key-features"
+            href="/docs/introduction/key-features"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <Rocket className="w-5 h-5 mr-2" /> Explore Key Features
           </Link>
           <Link
-            href="/Docs/developers"
+            href="/docs/developers"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Wrench className="w-5 h-5 mr-2" /> Start Building

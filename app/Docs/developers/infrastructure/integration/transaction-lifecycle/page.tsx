@@ -11,7 +11,7 @@ export default function TransactionLifecyclePage() {
         Transaction Lifecycle
       </h1>
       <Link
-        href="/Docs/developers/infrastructure/integration"
+        href="/docs/developers/infrastructure/integration"
         className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105 mb-8"
       >
         Back to Integration Guide
@@ -211,7 +211,7 @@ System.out.println(json.toString());`}</CodeBlock>
         </table>
       </div>
       <p className="text-gray-300 mb-8">
-        Return to the <Link href="/Docs/developers/infrastructure/integration" className="text-cyan-400 hover:underline">Node & Wallet Configuration</Link> page and confirm the infrastructure settings.
+        Return to the <Link href="/docs/developers/infrastructure/integration" className="text-cyan-400 hover:underline">Node & Wallet Configuration</Link> page and confirm the infrastructure settings.
       </p>
     </>
   );

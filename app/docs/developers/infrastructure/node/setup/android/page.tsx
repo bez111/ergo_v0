@@ -35,19 +35,19 @@ export default function AndroidSetupPage() {
         </p>
         <div className="flex flex-wrap gap-4">
           <Link
-            href="/Docs/developers/infrastructure/node/setup"
+            href="/docs/developers/infrastructure/node/setup"
             className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105"
           >
             <ChevronRight className="w-5 h-5 mr-2" /> Back to Setup
           </Link>
           <Link
-            href="/Docs/developers/infrastructure/node/setup/android/termux-digest"
+            href="/docs/developers/infrastructure/node/setup/android/termux-digest"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <ExternalLink className="w-5 h-5 mr-2" /> Termux (Digest)
           </Link>
           <Link
-            href="/Docs/developers/infrastructure/node/setup/android/proot-rocksdb"
+            href="/docs/developers/infrastructure/node/setup/android/proot-rocksdb"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <ExternalLink className="w-5 h-5 mr-2" /> UTXO Node Setup (Android)
@@ -65,10 +65,10 @@ export default function AndroidSetupPage() {
         </p>
         <ol className="list-decimal list-inside text-gray-300 text-base space-y-2 mb-4">
           <li>
-            <b><a href="/Docs/developers/infrastructure/node/setup/android/termux-digest" className="text-cyan-400 hover:underline">Direct Termux Setup (Digest Mode)</a>:</b> <span className="text-sm">Recommended for most users. Runs the node directly within Termux. Best suited for the resource-efficient <code className="bg-neutral-800 px-1 rounded">stateType="digest"</code> mode. Simpler setup process.</span>
+            <b><a href="/docs/developers/infrastructure/node/setup/android/termux-digest" className="text-cyan-400 hover:underline">Direct Termux Setup (Digest Mode)</a>:</b> <span className="text-sm">Recommended for most users. Runs the node directly within Termux. Best suited for the resource-efficient <code className="bg-neutral-800 px-1 rounded">stateType="digest"</code> mode. Simpler setup process.</span>
           </li>
           <li>
-            <b><a href="/Docs/developers/infrastructure/node/setup/android/proot-rocksdb" className="text-cyan-400 hover:underline">Arch Linux via proot (RocksDB/UTXO Mode)</a>:</b> <span className="text-sm">Advanced method. Required if you need to run <code className="bg-neutral-800 px-1 rounded">stateType="utxo"</code> (RocksDB) or encounter database compatibility issues. Involves running an Arch Linux environment within Termux to provide <code>glibc</code> compatibility for RocksDB. More complex setup and higher resource usage.</span>
+            <b><a href="/docs/developers/infrastructure/node/setup/android/proot-rocksdb" className="text-cyan-400 hover:underline">Arch Linux via proot (RocksDB/UTXO Mode)</a>:</b> <span className="text-sm">Advanced method. Required if you need to run <code className="bg-neutral-800 px-1 rounded">stateType="utxo"</code> (RocksDB) or encounter database compatibility issues. Involves running an Arch Linux environment within Termux to provide <code>glibc</code> compatibility for RocksDB. More complex setup and higher resource usage.</span>
           </li>
         </ol>
         <div className="bg-cyan-400/10 border border-cyan-400/30 rounded-lg p-4 mt-4">
