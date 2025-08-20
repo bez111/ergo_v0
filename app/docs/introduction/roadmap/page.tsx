@@ -373,7 +373,7 @@ export default function RoadmapPage() {
           {/* Header */}
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
-              <Coins className="w-6 h-6 text-brand-primary-400" />
+              <Coins className="w-6 h-6 text-orange-400" />
               DeFi Ecosystem
             </h2>
             <p className="text-gray-400 max-w-3xl mx-auto">
@@ -384,12 +384,12 @@ export default function RoadmapPage() {
           {/* Cards in rows of 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Decentralized Exchanges */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                    <ArrowRight className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                    <ArrowRight className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
                     Decentralized Exchanges
                   </h3>
                 </div>
@@ -418,12 +418,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Stablecoins */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
                     Stablecoins
                   </h3>
                 </div>
@@ -448,12 +448,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Lending and Borrowing */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
                     Lending & Borrowing
                   </h3>
                 </div>
@@ -478,12 +478,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Gaming and Metaverse */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                    <Trophy className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                    <Trophy className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
                     Gaming & Metaverse
                   </h3>
                 </div>
@@ -504,12 +504,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Derivatives */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                    <BarChart3 className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                    <BarChart3 className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
                     Derivatives
                   </h3>
                 </div>
@@ -534,12 +534,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Interoperability */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                    <Network className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                    <Network className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
                     Interoperability
                   </h3>
                 </div>
@@ -568,22 +568,22 @@ export default function RoadmapPage() {
               </div>
           </div>
           {/* Statistics */}
-          <div className="mt-8 bg-brand-primary-400/10 border border-brand-primary-400/20 rounded-xl p-6">
+          <div className="mt-8 bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-2xl font-bold text-brand-primary-400">25+</div>
+                <div className="text-2xl font-bold text-orange-400">25+</div>
                 <div className="text-sm text-gray-400">Live Projects</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-brand-primary-400">6</div>
+                <div className="text-2xl font-bold text-orange-400">6</div>
                 <div className="text-sm text-gray-400">Categories</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-brand-primary-400">15+</div>
+                <div className="text-2xl font-bold text-orange-400">15+</div>
                 <div className="text-sm text-gray-400">In Development</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-brand-primary-400">100%</div>
+                <div className="text-2xl font-bold text-orange-400">100%</div>
                 <div className="text-sm text-gray-400">Decentralized</div>
               </div>
             </div>

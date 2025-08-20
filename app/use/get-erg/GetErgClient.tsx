@@ -125,7 +125,7 @@ export default function GetErgClient() {
                 Buy with fiat, trade on CEX, or swap on DEX — pick the way that’s right for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-6 py-3 rounded-xl border border-brand-primary-500/50">
+                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
                   <Link href="#onramp">Buy with Fiat</Link>
                 </Button>
                 <Button asChild variant="outline" className="border-neutral-600 text-neutral-200 hover:bg-neutral-900/40 px-6 py-3 rounded-xl">
@@ -145,7 +145,7 @@ export default function GetErgClient() {
                     ].map((feature) => (
                       <motion.div key={feature.name} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700" whileHover={{ scale: 1.01, x: 6 }} transition={{ type: "spring", stiffness: 400, damping: 30 }}>
                         <div className="flex items-center gap-3">
-                          <div className="p-2.5 rounded-md bg-brand-primary-500/20 border border-brand-primary-500/30 text-brand-primary-400">
+                          <div className="p-2.5 rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400">
                             <feature.icon className="w-5 h-5" />
                           </div>
                           <h4 className="font-semibold text-white">{feature.name}</h4>
@@ -168,12 +168,12 @@ export default function GetErgClient() {
           <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             {onRampServices.map((service) => (
               <motion.div variants={itemVariants} key={service.name} className="h-full">
-                <Card className="h-full flex flex-col bg-neutral-900/50 border border-neutral-700 transition-all duration-200 hover:border-brand-primary-500/30">
+                <Card className="h-full flex flex-col bg-neutral-900/50 border border-neutral-700 transition-all duration-200 hover:border-orange-500/30">
                   <CardContent className="p-6 text-center flex-1 flex flex-col">
-                    <service.icon className="w-12 h-12 text-brand-primary-400 mx-auto mb-4" />
+                    <service.icon className="w-12 h-12 text-orange-400 mx-auto mb-4" />
                     <h3 className="text-2xl font-bold text-white mb-2">{service.name}</h3>
                     <p className="text-neutral-400 mb-6 flex-1">{service.description}</p>
-                    <Button asChild className="mt-auto bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold rounded-xl border border-brand-primary-500/50">
+                    <Button asChild className="mt-auto bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-xl border border-orange-500/50">
                       <Link href={service.link} target="_blank" rel="noopener noreferrer">
                         Visit {service.name} <ExternalLink className="w-4 h-4 ml-2" />
                       </Link>
@@ -195,9 +195,9 @@ export default function GetErgClient() {
           <div className="flex flex-wrap justify-center gap-6">
             {centralizedExchanges.map((exchange) => (
               <motion.div variants={itemVariants} key={exchange.name} className="w-40">
-                <Card className="bg-neutral-900/50 border border-neutral-700 flex flex-col items-center p-4 transition-all duration-200 hover:border-brand-primary-500/30">
+                <Card className="bg-neutral-900/50 border border-neutral-700 flex flex-col items-center p-4 transition-all duration-200 hover:border-orange-500/30">
                   <CardContent className="flex flex-col items-center p-0">
-                    <exchange.icon className="w-8 h-8 text-brand-primary-400 mb-2" />
+                    <exchange.icon className="w-8 h-8 text-orange-400 mb-2" />
                     <h3 className="text-base font-semibold text-white mb-2 text-center">{exchange.name}</h3>
                     <Button asChild variant="outline" className="w-full text-xs py-1 px-2 border-neutral-700 text-neutral-300 hover:bg-neutral-900/60">
                       <Link href={exchange.link} target="_blank" rel="noopener noreferrer">
@@ -221,9 +221,9 @@ export default function GetErgClient() {
           <div className="flex gap-4 overflow-x-auto px-1 py-2">
             {decentralizedExchanges.map((exchange) => (
               <motion.div variants={itemVariants} key={exchange.name} className="h-full min-w-[260px] w-[260px]">
-                <Card className="bg-neutral-900/50 border border-neutral-700 h-56 flex flex-col transition-all duration-200 hover:border-brand-primary-500/30">
+                <Card className="bg-neutral-900/50 border border-neutral-700 h-56 flex flex-col transition-all duration-200 hover:border-orange-500/30">
                   <CardContent className="p-5 text-center flex-1 flex flex-col">
-                    <exchange.icon className="w-7 h-7 text-brand-primary-400 mx-auto mb-3" />
+                    <exchange.icon className="w-7 h-7 text-orange-400 mx-auto mb-3" />
                     <h3 className="text-lg font-bold text-white mb-2">{exchange.name}</h3>
                     <p className="text-xs text-neutral-400 flex-1 mb-3 leading-relaxed">{exchange.description}</p>
                     <Button asChild size="sm" variant="outline" className="mt-auto border-neutral-700 text-neutral-300 hover:bg-neutral-900/60">
@@ -247,13 +247,13 @@ export default function GetErgClient() {
         >
           <Card className="bg-neutral-900/50 border border-neutral-700">
             <CardContent className="p-8 flex items-center gap-6">
-              <Shield className="w-12 h-12 text-brand-primary-400 flex-shrink-0" />
+              <Shield className="w-12 h-12 text-orange-400 flex-shrink-0" />
               <div>
                 <h3 className="text-xl font-bold text-white mb-2">Always Be Secure</h3>
                 <p className="text-neutral-400 text-sm">
                   After acquiring ERG on an exchange, it is crucial to withdraw it to a personal wallet where you
                   control the private keys. Remember the crypto mantra: "Not your keys, not your crypto."
-                  <Link href="/wallet" className="ml-2 text-brand-primary-400 hover:underline">
+                  <Link href="/wallet" className="ml-2 text-orange-400 hover:underline">
                     Find a secure wallet here <ArrowRight className="inline w-4 h-4" />
                   </Link>
                 </p>

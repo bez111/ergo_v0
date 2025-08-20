@@ -66,7 +66,7 @@ const LivePreview: React.FC<{
     try {
       if (code.includes('Button')) {
         return (
-          <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black">
+          <Button className="bg-orange-500 hover:bg-orange-600 text-black">
             <Zap className="w-4 h-4 mr-2" />
             Live Preview
           </Button>
@@ -78,7 +78,7 @@ const LivePreview: React.FC<{
           <Card className="bg-neutral-900/50 border-neutral-700 w-64">
             <CardHeader>
               <CardTitle className="text-white flex items-center gap-2">
-                <Shield className="w-5 h-5 text-brand-primary-400" />
+                <Shield className="w-5 h-5 text-orange-400" />
                 Live Card
               </CardTitle>
             </CardHeader>
@@ -177,7 +177,7 @@ const PropertyControls: React.FC<{
   return (
     <div className="space-y-4">
       <h4 className="text-sm font-semibold text-white flex items-center gap-2">
-        <Settings className="w-4 h-4 text-brand-primary-400" />
+        <Settings className="w-4 h-4 text-orange-400" />
         Properties
       </h4>
       
@@ -203,7 +203,7 @@ const PropertyControls: React.FC<{
                 type="checkbox"
                 checked={properties[prop.name as keyof typeof properties] as boolean}
                 onChange={(e) => updateProperty(prop.name, e.target.checked)}
-                className="w-4 h-4 text-brand-primary-500 bg-neutral-800 border-neutral-600 rounded focus:ring-brand-primary-500"
+                className="w-4 h-4 text-orange-500 bg-neutral-800 border-neutral-600 rounded focus:ring-orange-500"
               />
               <span className="text-sm text-gray-400">Enable {prop.name}</span>
             </label>
@@ -220,7 +220,7 @@ export const LivePlayground: React.FC<{
   initialCode?: string
 }> = ({ 
   initialComponent = 'Button',
-  initialCode = `<Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black">
+  initialCode = `<Button className="bg-orange-500 hover:bg-orange-600 text-black">
   <Zap className="w-4 h-4 mr-2" />
   Click me
 </Button>`
@@ -262,11 +262,11 @@ export const LivePlayground: React.FC<{
       <div className="border-b border-neutral-700 p-4">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-2">
-            <Play className="w-5 h-5 text-brand-primary-400" />
+            <Play className="w-5 h-5 text-orange-400" />
             Live Playground
           </h3>
           <div className="flex items-center gap-2">
-            <Badge variant="outline" className="border-brand-primary-500/30 text-brand-primary-400">
+            <Badge variant="outline" className="border-orange-500/30 text-orange-400">
               Interactive
             </Badge>
             <Button size="sm" variant="ghost" onClick={resetCode}>
@@ -280,7 +280,7 @@ export const LivePlayground: React.FC<{
       {/* Component Selector */}
       <div className="border-b border-neutral-700 p-4">
         <div className="flex items-center gap-2 mb-3">
-          <Type className="w-4 h-4 text-brand-primary-400" />
+          <Type className="w-4 h-4 text-orange-400" />
           <span className="text-sm font-medium text-white">Component</span>
         </div>
         <div className="flex gap-2">
@@ -291,7 +291,7 @@ export const LivePlayground: React.FC<{
               variant={activeComponent === comp.name ? "default" : "outline"}
               onClick={() => setActiveComponent(comp.name)}
               className={activeComponent === comp.name ? 
-                "bg-brand-primary-500 text-black" : 
+                "bg-orange-500 text-black" : 
                 "border-neutral-600 text-gray-300 hover:bg-neutral-800"
               }
             >
@@ -308,7 +308,7 @@ export const LivePlayground: React.FC<{
         <div className="lg:col-span-2 p-4">
           <div className="mb-4">
             <div className="flex items-center gap-2 mb-3">
-              <Code className="w-4 h-4 text-brand-primary-400" />
+              <Code className="w-4 h-4 text-orange-400" />
               <span className="text-sm font-medium text-white">Code Editor</span>
             </div>
             <LiveCodeEditor
@@ -332,13 +332,13 @@ export const LivePlayground: React.FC<{
           {/* Code Templates */}
           <div className="mt-6 space-y-4">
             <h4 className="text-sm font-semibold text-white flex items-center gap-2">
-              <Zap className="w-4 h-4 text-brand-primary-400" />
+              <Zap className="w-4 h-4 text-orange-400" />
               Templates
             </h4>
             
             <div className="space-y-2">
               {[
-                { name: 'Primary Button', code: '<Button className="bg-brand-primary-500">Primary</Button>' },
+                { name: 'Primary Button', code: '<Button className="bg-orange-500">Primary</Button>' },
                 { name: 'Feature Card', code: '<Card><CardHeader><CardTitle>Feature</CardTitle></CardHeader></Card>' },
                 { name: 'Status Badge', code: '<Badge className="bg-status-success-500">Success</Badge>' }
               ].map((template) => (

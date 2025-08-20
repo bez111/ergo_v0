@@ -47,14 +47,12 @@ export default function PlasmaPage() {
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript"
-              children={`import io.getblok.getblok_plasma.PlasmaParameters
+            <CodeBlock language="typescript">`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.PlasmaMap
 import org.ergoplatform.appkit.ErgoId
 import sigmastate.{AvlTreeFlags, Values}
 // Plasma Map that uses ErgoId's as keys, and ErgoTrees as values
-val plasmaMap = new PlasmaMap[ErgoId, Values.ErgoTree](AvlTreeFlags.AllOperationsAllowed, PlasmaParameters.default)`}
-            />
+val plasmaMap = new PlasmaMap[ErgoId, Values.ErgoTree](AvlTreeFlags.AllOperationsAllowed, PlasmaParameters.default)`</CodeBlock>
           </div>
 
           <p className="text-gray-300 mb-6">
@@ -62,8 +60,7 @@ val plasmaMap = new PlasmaMap[ErgoId, Values.ErgoTree](AvlTreeFlags.AllOperation
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript"
-              children={`import io.getblok.getblok_plasma.ByteConversion
+            <CodeBlock language="typescript">`import io.getblok.getblok_plasma.ByteConversion
 import org.ergoplatform.appkit.ErgoId
 import sigmastate.Values
 import sigmastate.serialization.ErgoTreeSerializer
@@ -79,8 +76,7 @@ implicit val convertsErgoTree: ByteConversion[Values.ErgoTree] = new ByteConvers
   override def convertToBytes(t: Values.ErgoTree): Array[Byte] = t.bytes
 
   override def convertFromBytes(bytes: Array[Byte]): Values.ErgoTree = ErgoTreeSerializer.DefaultSerializer.deserializeErgoTree(bytes)
-}`}
-            />
+}`</CodeBlock>
           </div>
 
           <p className="text-gray-300 mb-6">
@@ -88,8 +84,7 @@ implicit val convertsErgoTree: ByteConversion[Values.ErgoTree] = new ByteConvers
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript"
-              children={`import com.google.common.primitives.{Ints, Longs}
+            <CodeBlock language="typescript">`import com.google.common.primitives.{Ints, Longs}
 import io.getblok.getblok_plasma.ByteConversion
 import org.bouncycastle.util.encoders.Hex
 import org.ergoplatform.appkit.{ErgoType, ErgoValue}
@@ -114,8 +109,7 @@ def getPaid(byte: Byte): Boolean = {
     override def convertToBytes(t: StateScore): Array[Byte] = t.toBytes
 
     override def convertFromBytes(bytes: Array[Byte]): StateScore = StateScore(Longs.fromByteArray(bytes.slice(0, 8)), getPaid(bytes.slice(8, 9).head))
-  }`}
-            />
+  }`</CodeBlock>
           </div>
 
           <p className="text-gray-300 mb-6">
@@ -123,8 +117,7 @@ def getPaid(byte: Byte): Boolean = {
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript"
-              children={`import io.getblok.getblok_plasma.PlasmaParameters
+            <CodeBlock language="typescript">`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.{OpResult, PlasmaMap, Proof, ProvenResult}
 import io.getblok.getblok_plasma.ByteConversion.convertsLongVal
 import org.ergoplatform.appkit.ErgoId
@@ -137,8 +130,7 @@ val tokenData: Seq[(ErgoId, Long)] = Seq(cometId -> 100L)
 val result: ProvenResult[Long] = tokenMap.insert(tokenData: _*)
 
 val opResults: Seq[OpResult[Long]] = result.response
-val proof: Proof = result.proof`}
-            />
+val proof: Proof = result.proof`</CodeBlock>
           </div>
 
           <p className="text-gray-300 mb-6">
@@ -146,8 +138,7 @@ val proof: Proof = result.proof`}
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript"
-              children={`import io.getblok.getblok_plasma.collections.{PlasmaMap, Proof}
+            <CodeBlock language="typescript">`import io.getblok.getblok_plasma.collections.{PlasmaMap, Proof}
 import org.ergoplatform.appkit.{ErgoClient, ErgoContract, ErgoId, Parameters}
 
 implicit val ergoClient: ErgoClient
@@ -163,8 +154,7 @@ ergoClient.execute {
             .contract(myContract)
             .registers(myMap.ergoValue, myProof.ergoValue)
             .build()
-}`}
-            />
+}`</CodeBlock>
           </div>
         </section>
 
@@ -178,8 +168,7 @@ ergoClient.execute {
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript"
-              children={`import io.getblok.getblok_plasma.PlasmaParameters
+            <CodeBlock language="typescript">`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.LocalPlasmaMap
 import io.getblok.getblok_plasma.ByteConversion.convertsLongKey
 import scorex.crypto.authds.avltree.batch.VersionedLDBAVLStorage
@@ -190,8 +179,7 @@ import java.io.File
 
 val ldbStore = new LDBVersionedStore(new File("./level"), 10)
 val avlStorage = new VersionedLDBAVLStorage[Digest32](ldbStore, PlasmaParameters.default.toNodeParams)(Blake2b256)
-val localMap = new LocalPlasmaMap[Long, Values.ErgoTree](avlStorage, AvlTreeFlags.AllOperationsAllowed, PlasmaParameters.default)`}
-            />
+val localMap = new LocalPlasmaMap[Long, Values.ErgoTree](avlStorage, AvlTreeFlags.AllOperationsAllowed, PlasmaParameters.default)`</CodeBlock>
           </div>
         </section>
 
@@ -211,8 +199,7 @@ val localMap = new LocalPlasmaMap[Long, Values.ErgoTree](avlStorage, AvlTreeFlag
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript"
-              children={`import io.getblok.getblok_plasma.PlasmaParameters
+            <CodeBlock language="typescript">`import io.getblok.getblok_plasma.PlasmaParameters
 import io.getblok.getblok_plasma.collections.{LocalPlasmaMap, ProxyPlasmaMap}
 import org.ergoplatform.appkit.ErgoId
 import scorex.crypto.authds.avltree.batch.VersionedLDBAVLStorage
@@ -256,8 +243,7 @@ proxyMap.commitNextOperation()
 // This drops any uncommitted changes and destroys the temporary map. In this case,
 // all changes were already committed since only one operation was performed.
 
-proxyMap.dropChanges()`}
-            />
+proxyMap.dropChanges()`</CodeBlock>
           </div>
         </section>
 

@@ -49,15 +49,13 @@ export default function ErgoToolPage() {
           First, we need to install ErgoTool on our system from sources by following the <a href="https://github.com/aslesarenko/ergo-tool#installation" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">installation instructions</a>. In the directory where we cloned ErgoTool, there is the <code className="bg-neutral-700 px-2 py-1 rounded">ergo-tool.sh</code> script we will use to run commands. Run the following command to check that ErgoTool is installed correctly.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh help     
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh help     
 the command name is not specified (run ergo-tool without arguments to list commands)
 
 Command Name: help
 Usage Syntax: ergo-tool help <commandName>
 Description:  prints usage help for a command
-Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/HelpCmd.html`}
-          />
+Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/HelpCmd.html`</CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           Let's see what we get here. ErgoTool outputs the error message with the information about the <code className="bg-neutral-700 px-2 py-1 rounded">help</code> command. This is a typical output of ErgoTool when one of the known commands is specified but used incorrectly. As we can learn from the message, the <code className="bg-neutral-700 px-2 py-1 rounded">help</code> command requires us to specify an additional <code className="bg-neutral-700 px-2 py-1 rounded">&lt;commandName&gt;</code> argument. Also, each command has an API doc page with all the details about command execution, so its URL is shown here.
@@ -76,10 +74,8 @@ Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/er
           A Mnemonic is a random sequence of characters that is used to generate a master key according to <a href="https://github.com/bitcoin/bips/blob/master/bip-0032.mediawiki" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">Hierarchical Deterministic Wallets</a> specification. For random convenience sequence of English words is used, but this is not required. Run the following command to generate a new mnemonic phrase:
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh mnemonic          
-bird harbor wheat innocent business disease busy quick yellow trust time oil enter situate moon`}
-          />
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh mnemonic          
+bird harbor wheat innocent business disease busy quick yellow trust time oil enter situate moon`</CodeBlock>
         </div>
         <div className="bg-yellow-400/10 border border-yellow-400/20 rounded-lg p-4 mt-4">
           <p className="text-yellow-200 font-semibold mb-2">⚠️ Important Security Note</p>
@@ -107,8 +103,7 @@ bird harbor wheat innocent business disease busy quick yellow trust time oil ent
           For better security, neither a mnemonic phrase nor password is required by ErgoTool to perform the transaction signing. Instead, the secret key from the encrypted storage is required to sign a spending transaction. We can generate a secret key and store it in encrypted storage using the <code className="bg-neutral-700 px-2 py-1 rounded">createStorage</code> command.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh help createStorage
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh help createStorage
 
 Command Name: createStorage
 Usage Syntax: ergo-tool createStorage [<storageDir>="storage"] [<storageFileName>="secret.json"]
@@ -121,8 +116,7 @@ Mnemonic password>
 Repeat mnemonic password> 
 Storage password> 
 Repeat storage password> 
-Storage File: storage/secret.json`}
-          />
+Storage File: storage/secret.json`</CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           A master secret key is generated from the (mnemonic phrase, mnemonic password) pair and saved encrypted in the <code className="bg-neutral-700 px-2 py-1 rounded">storage/secret.json</code> file. The Mnemonic itself is not stored in the file, and there is no way to restore it from the file, even if you know the passwords.
@@ -150,8 +144,7 @@ Storage File: storage/secret.json`}
           Secret storage contains a master secret key and can be used to compute both the public key and the pay-to-public-key address corresponding to that secret key. The <code className="bg-neutral-700 px-2 py-1 rounded">extractStorage</code> command is doing just that.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh help extractStorage
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh help extractStorage
 
 Command Name: extractStorage
 Usage Syntax: ergo-tool extractStorage <storage file> address|masterKey|publicKey|secretKey mainnet|testnet
@@ -160,8 +153,7 @@ Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/er
 
 $ ./ergo-tool.sh extractStorage storage/secret.json address mainnet     
 Storage password> 
-9iHiSAg3ko2ZGxR2vhc1Aem3tShqfzEPDAF7XK5cdtbZ3Ut2CCf`}
-          />
+9iHiSAg3ko2ZGxR2vhc1Aem3tShqfzEPDAF7XK5cdtbZ3Ut2CCf`</CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           Here the command transforms the secret key to the corresponding public key and then creates the pay-to-public-key address on the mainnet.
@@ -170,15 +162,13 @@ Storage password>
           In the same way, we can obtain the public key, private key and other data from the storage.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh extractStorage storage/secret.json secretKey mainnet
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh extractStorage storage/secret.json secretKey mainnet
 Storage password> 
 55dfde63c9b6b4f47683592e85ee997ba2e93507f38ba3f9c82933bcfbc677ca
 
 $ ./ergo-tool.sh extractStorage storage/secret.json publicKey mainnet
 Storage password> 
-03f07aecb145a85920bf6e9be80efe5f1cd1a165b45ad3aa8e5c4ca3ba50856bb8`}
-          />
+03f07aecb145a85920bf6e9be80efe5f1cd1a165b45ad3aa8e5c4ca3ba50856bb8`</CodeBlock>
         </div>
       </div>
 
@@ -194,20 +184,16 @@ Storage password>
           ErgoTool has the special command to list all available (aka unspent) boxes for a given address.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh listAddressBoxes 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v                                                                
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh listAddressBoxes 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v                                                                
 BoxId                                                             NanoERGs          
-4840cb6facc20b765085db0ad24768ed0c5e7afd413e8e58e597c33a993f8119  4987000000`}
-          />
+4840cb6facc20b765085db0ad24768ed0c5e7afd413e8e58e597c33a993f8119  4987000000`</CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           If we specify the <code className="bg-neutral-700 px-2 py-1 rounded">--print-json</code> option, then ErgoTool will output all the boxes in JSON format
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh listAddressBoxes --print-json 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v
-[{"boxId":"4840cb6facc20b765085db0ad24768ed0c5e7afd413e8e58e597c33a993f8119","value":4987000000,"ergoTree":"0008cd02472963123ce32c057907c7a7268bc09f45d9ca57819d3327b9e7497d7b1cc347","creationHeight":125646,"assets":[],"additionalRegisters":{},"transactionId":"820c688f4b9d709924ba0186ee930a7df374d8852920bc769fc1f1d0b313e5ab","index":2}]`}
-          />
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh listAddressBoxes --print-json 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v
+[{"boxId":"4840cb6facc20b765085db0ad24768ed0c5e7afd413e8e58e597c33a993f8119","value":4987000000,"ergoTree":"0008cd02472963123ce32c057907c7a7268bc09f45d9ca57819d3327b9e7497d7b1cc347","creationHeight":125646,"assets":[],"additionalRegisters":{},"transactionId":"820c688f4b9d709924ba0186ee930a7df374d8852920bc769fc1f1d0b313e5ab","index":2}]`</CodeBlock>
         </div>
       </div>
 
@@ -223,22 +209,19 @@ BoxId                                                             NanoERGs
           With a secret key stored securely in the encrypted storage file, we can use ErgoTool to transfer coins from our address to some other recipient address. The command to do that is <code className="bg-neutral-700 px-2 py-1 rounded">send</code>.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`./ergo-tool.sh help send                                     
+          <CodeBlock language="typescript">`./ergo-tool.sh help send                                     
 
 Command Name: send
 Usage Syntax: ergo-tool send <storageFile> <recipientAddr> <amountToSend>
 Description:  send the given <amountToSend> to the given <recipientAddr> using 
  the given <storageFile> to sign transaction (requests storage password)
-Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/SendCmd.html`}
-          />
+Doc page: https://aslesarenko.github.io/ergo-tool/api/org/ergoplatform/appkit/ergotool/SendCmd.html`</CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           The storage file is necessary to access the secret key and generate a signature. The ErgoTool will request a storage password to unlock and decipher the file content. The command <code className="bg-neutral-700 px-2 py-1 rounded">send</code> supports the <code className="bg-neutral-700 px-2 py-1 rounded">--dry-run</code> option, which forces ErgoTool to create the signed transaction, but instead of sending it to the blockchain, ErgoTool prints the transaction on the console.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh send --dry-run storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh send --dry-run storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000
 Storage password>
 Creating prover... Ok
 Loading unspent boxes from at address 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v... Ok
@@ -287,8 +270,7 @@ Tx: {
       "index": 2
     }
   ]
-}`}
-          />
+}`</CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           Note the "ergoTree" scripts are deserialized and printed as abstract syntax trees. This printing format can be regulated by additional options so that the scripts can be printed as human-readable ErgoScript. (Not yet implemented, but somewhere on the roadmap.)
@@ -297,15 +279,13 @@ Tx: {
           If we exclude the <code className="bg-neutral-700 px-2 py-1 rounded">--dry-run</code> option, the transaction will be sent and included in the blockchain.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh send storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000          
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh send storage/E1.json 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K 5000000          
 Storage password>
 Creating prover... Ok
 Loading unspent boxes from at address 9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v... Ok
 Signing the transaction... Ok
 Sending the transaction... Ok
-Server returned tx id: "c5710af17f5124a232a5ef731fdf94a493025334c2a7d5a79e9923210972b962"`}
-          />
+Server returned tx id: "c5710af17f5124a232a5ef731fdf94a493025334c2a7d5a79e9923210972b962"`</CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           The newly created transaction will be broadcast all over the blockchain, and miners will start to include it in a new block. Once the new block with our transaction is mined and accepted by the network, our transfer is confirmed, and we can <a href="https://explorer.ergoplatform.com/en/transactions/c5710af17f5124a232a5ef731fdf94a493025334c2a7d5a79e9923210972b962" className="text-orange-400 hover:underline" target="_blank" rel="noopener noreferrer">see it in Explorer</a>.
@@ -314,16 +294,14 @@ Server returned tx id: "c5710af17f5124a232a5ef731fdf94a493025334c2a7d5a79e992321
           We can also list boxes of the recipient address and see the coin we created, among others. (until it is spent by the recipient)
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`$ ./ergo-tool.sh listAddressBoxes 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K                      
+          <CodeBlock language="typescript">`$ ./ergo-tool.sh listAddressBoxes 9hHDQb26AjnJUXxcqriqY1mnhpLuUeC81C4pggtK7tupr92Ea1K                      
 BoxId                                                             NanoERGs          
 252c5ce38fc367001ea48fa6813e6252ebc169288d9b5392c572edb55380b3cd  5000000
 6df9dbf08b4859b7e280afbd0822dcf20dba5bf8e3e33b78fe278df6597276f1  2000000
 d47f958b201dc7162f641f7eb055e9fa7a9cb65cc24d4447a10f86675fc58328  1000000
 e050a3af38241ce444c34eb25c0ab880674fc23a0e63632633ae14f547141c37  1000000
 b50ed8c2953fd33b52af816c4caa63ec5b6d236a262a5a192534695c3478da78  1000000
-26d6e08027e005270b38e5c5f4a73ffdb6d65a3289efb51ac37f98ad395d887c  10000000000`}
-          />
+26d6e08027e005270b38e5c5f4a73ffdb6d65a3289efb51ac37f98ad395d887c  10000000000`</CodeBlock>
         </div>
       </div>
 

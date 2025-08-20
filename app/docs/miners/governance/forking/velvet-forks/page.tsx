@@ -5,7 +5,7 @@ import { ArrowLeft } from "lucide-react"
 export default function VelvetForksPage() {
   return (
     <>
-      <Link href="/docs/miners/governance/forking/" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-primary-400 mb-6">
+      <Link href="/docs/miners/governance/forking/" className="inline-flex items-center gap-2 text-gray-400 hover:text-orange-400 mb-6">
         <ArrowLeft className="w-4 h-4" />
         Back
       </Link>
@@ -17,7 +17,7 @@ export default function VelvetForksPage() {
           href="http://diyhpl.us/~bryan/papers2/bitcoin/A%20wild%20velvet%20fork%20appears:%20Inclusive%20blockchain%20protocol%20changes%20in%20practice%20-%202018.pdf"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-brand-primary-400 hover:text-brand-primary-300"
+          className="text-orange-400 hover:text-orange-300"
         >
           "A Wild Velvet Fork Appears! Inclusive Blockchain Protocol Changes in Practice"
         </a>

@@ -690,7 +690,7 @@ export function LocalSearch() {
     
     queryWords.forEach(word => {
       const regex = new RegExp(`(${word})`, 'gi');
-      highlightedText = highlightedText.replace(regex, '<mark class="bg-brand-primary-500/30 text-brand-primary-400">$1</mark>');
+      highlightedText = highlightedText.replace(regex, '<mark class="bg-orange-500/30 text-orange-400">$1</mark>');
     });
     
     return highlightedText;
@@ -1175,7 +1175,7 @@ export function LocalSearch() {
             placeholder="Search docs..."
             onClick={() => setIsOpen(true)}
             readOnly
-            className="w-full pl-10 pr-20 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:border-brand-primary-500/50 transition-colors duration-200 cursor-pointer text-sm"
+            className="w-full pl-10 pr-20 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-gray-300 placeholder-gray-500 focus:outline-none focus:border-orange-500/50 transition-colors duration-200 cursor-pointer text-sm"
           />
           {/* Enhanced keyboard shortcut hint */}
           <div className="absolute right-2 top-1/2 transform -translate-y-1/2 flex items-center gap-1 text-xs text-gray-600">
@@ -1201,7 +1201,7 @@ export function LocalSearch() {
               {/* Header with search input */}
               <div className="flex items-center justify-between p-4 border-b border-neutral-700">
                 <div className="flex items-center gap-3 flex-1 relative">
-                  <Search className={`w-5 h-5 transition-colors ${isSearching ? 'text-brand-primary-400 animate-pulse' : 'text-gray-500'}`} />
+                  <Search className={`w-5 h-5 transition-colors ${isSearching ? 'text-orange-400 animate-pulse' : 'text-gray-500'}`} />
                   <input
                     ref={inputRef}
                     type="text"
@@ -1215,7 +1215,7 @@ export function LocalSearch() {
                   
                   {/* Search status */}
                   {isSearching && (
-                    <span className="text-xs text-brand-primary-400 animate-pulse">Searching...</span>
+                    <span className="text-xs text-orange-400 animate-pulse">Searching...</span>
                   )}
                   
                   {/* Autocomplete Suggestions - enhanced */}
@@ -1227,7 +1227,7 @@ export function LocalSearch() {
                           onClick={() => handleSuggestionClick(suggestion)}
                           className={`w-full text-left px-4 py-2 hover:bg-neutral-700 transition-colors duration-150 text-sm font-mono flex items-center justify-between ${
                             index === selectedSuggestionIndex 
-                              ? 'bg-neutral-700 text-brand-primary-400' 
+                              ? 'bg-neutral-700 text-orange-400' 
                               : 'text-gray-300'
                           }`}
                         >
@@ -1246,7 +1246,7 @@ export function LocalSearch() {
                   <button
                     onClick={() => setShowPreview(!showPreview)}
                     className={`p-2 rounded-lg transition-colors duration-200 ${
-                      showPreview ? 'bg-brand-primary-500/20 text-brand-primary-400' : 'hover:bg-neutral-800 text-gray-500'
+                      showPreview ? 'bg-orange-500/20 text-orange-400' : 'hover:bg-neutral-800 text-gray-500'
                     }`}
                     title="Toggle preview (⌘P)"
                   >
@@ -1271,7 +1271,7 @@ export function LocalSearch() {
                       onClick={() => handleContentTypeFilter(contentType.id)}
                       className={`px-3 py-1 rounded-lg transition-colors duration-200 text-xs font-mono ${
                         selectedContentType === contentType.id
-                          ? 'bg-brand-primary-500 text-black'
+                          ? 'bg-orange-500 text-black'
                           : 'bg-neutral-800 text-gray-400 hover:bg-neutral-700'
                       }`}
                       title={contentType.description}
@@ -1300,7 +1300,7 @@ export function LocalSearch() {
                         <button
                           key={index}
                           onClick={() => handleSuggestionClick(pinned)}
-                          className="px-3 py-1 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-lg hover:bg-brand-primary-500/20 transition-colors duration-200 text-brand-primary-400 text-sm font-mono"
+                          className="px-3 py-1 bg-orange-500/10 border border-orange-500/30 rounded-lg hover:bg-orange-500/20 transition-colors duration-200 text-orange-400 text-sm font-mono"
                         >
                           {pinned}
                         </button>
@@ -1323,7 +1323,7 @@ export function LocalSearch() {
                             key={index}
                             href={viewed}
                             onClick={handleCloseModal}
-                            className="block px-3 py-2 text-sm text-gray-400 hover:text-brand-primary-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono"
+                            className="block px-3 py-2 text-sm text-gray-400 hover:text-orange-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono"
                           >
                             {title}
                           </Link>
@@ -1355,7 +1355,7 @@ export function LocalSearch() {
                               setQuery(historyItem);
                               performSearch(historyItem);
                             }}
-                            className="flex-1 text-left px-3 py-2 text-sm text-gray-400 hover:text-brand-primary-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono flex items-center justify-between"
+                            className="flex-1 text-left px-3 py-2 text-sm text-gray-400 hover:text-orange-400 hover:bg-neutral-800 rounded-lg transition-colors duration-150 font-mono flex items-center justify-between"
                           >
                             <span>{historyItem}</span>
                             <span
@@ -1364,7 +1364,7 @@ export function LocalSearch() {
                                 togglePinSearch(historyItem);
                               }}
                               className={`opacity-0 group-hover:opacity-100 transition-opacity cursor-pointer ${
-                                pinnedSearches.includes(historyItem) ? 'text-brand-primary-400' : 'text-gray-600'
+                                pinnedSearches.includes(historyItem) ? 'text-orange-400' : 'text-gray-600'
                               }`}
                               aria-label={`Pin search: ${historyItem}`}
                             >
@@ -1395,7 +1395,7 @@ export function LocalSearch() {
                         <button
                           key={index}
                           onClick={() => handleSuggestionClick(popularQuery)}
-                          className="px-3 py-1 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors duration-200 text-gray-300 hover:text-brand-primary-400 text-sm font-mono"
+                          className="px-3 py-1 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors duration-200 text-gray-300 hover:text-orange-400 text-sm font-mono"
                         >
                           {popularQuery}
                         </button>
@@ -1410,7 +1410,7 @@ export function LocalSearch() {
                     <div className="text-sm text-gray-500 font-mono">
                       Found {filteredResults.reduce((sum, group) => sum + group.totalHits, 0)} results
                       {selectedContentType !== 'all' && (
-                        <span className="ml-2 text-brand-primary-400">
+                        <span className="ml-2 text-orange-400">
                           • {contentTypes.find(ct => ct.id === selectedContentType)?.label}
                         </span>
                       )}
@@ -1420,7 +1420,7 @@ export function LocalSearch() {
                         onClick={() => togglePinSearch(query)}
                         className={`text-xs px-2 py-1 rounded transition-colors ${
                           pinnedSearches.includes(query) 
-                            ? 'bg-brand-primary-500/20 text-brand-primary-400' 
+                            ? 'bg-orange-500/20 text-orange-400' 
                             : 'bg-neutral-800 text-gray-500 hover:text-gray-300'
                         }`}
                       >
@@ -1434,7 +1434,7 @@ export function LocalSearch() {
                 {filteredResults.map((group, groupIndex) => (
                   <div key={group.pageUrl} className="mb-4">
                     <div className={`bg-neutral-800/50 border border-neutral-700 rounded-lg overflow-hidden ${
-                      selectedResultIndex >= 0 ? 'ring-2 ring-brand-primary-500/50' : ''
+                      selectedResultIndex >= 0 ? 'ring-2 ring-orange-500/50' : ''
                     }`}>
                       <button
                         onClick={() => handleExpandGroup(group.pageUrl)}
@@ -1475,19 +1475,19 @@ export function LocalSearch() {
                                 }}
                                 data-result-item
                                 className={`block px-4 py-3 hover:bg-neutral-800/50 transition-colors duration-200 border-b border-neutral-700/50 last:border-b-0 ${
-                                  resultIndex === selectedResultIndex ? 'bg-brand-primary-500/10 border-l-2 border-l-brand-primary-500' : ''
+                                  resultIndex === selectedResultIndex ? 'bg-orange-500/10 border-l-2 border-l-orange-500' : ''
                                 }`}
                               >
                                 <div className="flex items-start gap-3">
                                   {hit.type === 'code' ? (
-                                    <Hash className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                    <Hash className="w-4 h-4 text-orange-400 mt-0.5" />
                                   ) : hit.type === 'anchor' ? (
                                     <BookOpen className="w-4 h-4 text-cyan-400 mt-0.5" />
                                   ) : (
                                     <FileText className="w-4 h-4 text-gray-600 mt-0.5" />
                                   )}
                                   <div className="flex-1 min-w-0">
-                                    <div className="text-sm font-medium text-brand-primary-400 mb-1">
+                                    <div className="text-sm font-medium text-orange-400 mb-1">
                                       {hit.title}
                                     </div>
                                     <div 
@@ -1520,7 +1520,7 @@ export function LocalSearch() {
                                 e.stopPropagation();
                                 handleExpandGroup(group.pageUrl);
                               }}
-                              className="w-full px-4 py-2 text-xs text-brand-primary-400 hover:bg-neutral-800/50 transition-colors duration-200 font-mono"
+                              className="w-full px-4 py-2 text-xs text-orange-400 hover:bg-neutral-800/50 transition-colors duration-200 font-mono"
                             >
                               Show {group.totalHits - group.visibleHits} more results
                             </button>
@@ -1535,7 +1535,7 @@ export function LocalSearch() {
                 {query && query.length >= 2 && filteredResults.length === 0 && (
                   <div className="text-center py-12">
                     <div className="text-gray-500 mb-2">No results found for</div>
-                    <div className="text-brand-primary-400 font-mono text-lg mb-4">"{query}"</div>
+                    <div className="text-orange-400 font-mono text-lg mb-4">"{query}"</div>
                     <div className="text-sm text-gray-600 mb-4">Try different keywords or check the spelling</div>
                     
                     {/* Suggest similar searches */}
@@ -1549,7 +1549,7 @@ export function LocalSearch() {
                             <button
                               key={index}
                               onClick={() => handleSuggestionClick(suggestion)}
-                              className="px-3 py-1 bg-neutral-800 rounded-lg hover:bg-neutral-700 text-gray-300 hover:text-brand-primary-400 text-sm font-mono"
+                              className="px-3 py-1 bg-neutral-800 rounded-lg hover:bg-neutral-700 text-gray-300 hover:text-orange-400 text-sm font-mono"
                             >
                               {suggestion}
                             </button>
@@ -1599,7 +1599,7 @@ export function LocalSearch() {
                             saveRecentlyViewed(selectedResult.url);
                             handleCloseModal();
                           }}
-                          className="inline-block mt-4 px-3 py-1 bg-brand-primary-500 text-black rounded-lg text-sm font-mono hover:bg-brand-primary-600 transition-colors"
+                          className="inline-block mt-4 px-3 py-1 bg-orange-500 text-black rounded-lg text-sm font-mono hover:bg-orange-600 transition-colors"
                         >
                           Open page →
                         </Link>

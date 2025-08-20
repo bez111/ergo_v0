@@ -44,7 +44,7 @@ export const CopyButton: React.FC<CopyButtonProps> = ({
     return (
       <button
         onClick={handleCopy}
-        className={`inline-flex items-center gap-1 text-xs hover:text-brand-primary-400 transition-colors ${className}`}
+        className={`inline-flex items-center gap-1 text-xs hover:text-orange-400 transition-colors ${className}`}
         title="Copy"
       >
         {copied ? (

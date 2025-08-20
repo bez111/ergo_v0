@@ -199,14 +199,14 @@ export default function NFTsDigitalAssetsPage() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://skyharbor.io" target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                         Explore SkyHarbor
                       </Button>
                                       </a>
                   <Link href="/docs/ecosystem/nfts">
                     <Button
                       variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                       >
                         NFT Guide
                       </Button>
@@ -214,9 +214,9 @@ export default function NFTsDigitalAssetsPage() {
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-brand-primary-400">NFT features</a></li>
-                      <li><a href="#projects" className="hover:text-brand-primary-400">Marketplaces</a></li>
-                      <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">NFT features</a></li>
+                      <li><a href="#projects" className="hover:text-orange-400">Marketplaces</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -257,10 +257,10 @@ export default function NFTsDigitalAssetsPage() {
                                   href={item.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                                 >
                                   <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -271,10 +271,10 @@ export default function NFTsDigitalAssetsPage() {
                               ) : (
                                 <Link
                                   href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                                 >
                                   <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -326,7 +326,7 @@ export default function NFTsDigitalAssetsPage() {
                   >
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
                       <CardContent className="p-6">
-                        <feature.icon className="w-12 h-12 text-brand-primary-400 mb-4" />
+                        <feature.icon className="w-12 h-12 text-orange-400 mb-4" />
                         <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                         <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
                       </CardContent>
@@ -357,13 +357,13 @@ export default function NFTsDigitalAssetsPage() {
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
-                  <TabsTrigger value="overview" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Overview
                   </TabsTrigger>
-                  <TabsTrigger value="metadata" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="metadata" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Metadata
                   </TabsTrigger>
-                  <TabsTrigger value="code" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Code Example
                   </TabsTrigger>
                 </TabsList>
@@ -399,7 +399,7 @@ export default function NFTsDigitalAssetsPage() {
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-brand-primary-300 mb-3">Standard Registers</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">Standard Registers</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
                               <li>• R4: NFT Type/Standard</li>
                               <li>• R5: Name</li>
@@ -408,7 +408,7 @@ export default function NFTsDigitalAssetsPage() {
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-brand-primary-300 mb-3">Extended Registers</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">Extended Registers</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
                               <li>• R8: Attributes/Properties</li>
                               <li>• R9: Royalty information</li>
@@ -426,7 +426,7 @@ export default function NFTsDigitalAssetsPage() {
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
-                          <pre className="text-sm text-brand-primary-300 overflow-x-auto">
+                          <pre className="text-sm text-orange-300 overflow-x-auto">
                             <code>{`{
   "name": "Ergo NFT #001",
   "description": "Unique digital artwork",
@@ -455,7 +455,7 @@ export default function NFTsDigitalAssetsPage() {
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
-                        <pre className="text-sm text-brand-primary-300 overflow-x-auto">
+                        <pre className="text-sm text-orange-300 overflow-x-auto">
                           <code>{`{
   // NFT minting contract
   val nftId = SELF.id
@@ -516,7 +516,7 @@ export default function NFTsDigitalAssetsPage() {
                     transition={{ delay: index * 0.1 }}
                     className="motion-reduce:transform-none"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-brand-primary-500/50 transition-colors">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-orange-500/50 transition-colors">
                       <CardHeader>
                         <div className="flex items-center justify-between">
                           <CardTitle className="text-white">{project.name}</CardTitle>
@@ -538,7 +538,7 @@ export default function NFTsDigitalAssetsPage() {
                           href={project.link} 
                           target="_blank" 
                           rel="noopener noreferrer"
-                          className="inline-flex items-center text-brand-primary-400 hover:text-brand-primary-300 transition-colors"
+                          className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                         >
                           Visit Marketplace
                           <ExternalLink className="ml-1 w-4 h-4" />
@@ -607,13 +607,13 @@ export default function NFTsDigitalAssetsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://skyharbor.io" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
                     Explore SkyHarbor
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
                                     <Link href="/docs/ecosystem/nfts">
-                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400">
+                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
                     NFT Guide
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>

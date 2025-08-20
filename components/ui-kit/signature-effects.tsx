@@ -12,7 +12,7 @@ export const GlitchText: React.FC<{ children: React.ReactNode; className?: strin
     <div className={`relative ${className}`}>
       <div className="relative z-10">{children}</div>
       <div 
-        className="absolute inset-0 text-brand-primary-400 opacity-70 mix-blend-screen"
+        className="absolute inset-0 text-orange-400 opacity-70 mix-blend-screen"
         style={{
           animation: 'glitch-1 2s infinite linear alternate-reverse',
           transform: 'translate(-2px, 1px)',
@@ -63,7 +63,7 @@ export const MathematicalPattern: React.FC<{ className?: string }> = ({ classNam
       <rect fill="url(#sigmaCurve)" width="100%" height="100%"/>
       
       {/* Sigma symbols */}
-      <g className="text-brand-primary-400/20">
+      <g className="text-orange-400/20">
         <text x="50" y="100" fontSize="24" fontFamily="serif">Σ</text>
         <text x="350" y="150" fontSize="18" fontFamily="serif">π</text>
         <text x="200" y="300" fontSize="20" fontFamily="serif">∑</text>
@@ -99,7 +99,7 @@ export const CryptographicVisualization: React.FC<{ className?: string }> = ({ c
         </defs>
 
         {/* Hash chain visualization */}
-        <g className="text-brand-primary-400/30">
+        <g className="text-orange-400/30">
           {[...Array(6)].map((_, i) => (
             <motion.rect
               key={i}
@@ -160,7 +160,7 @@ export const CryptographicVisualization: React.FC<{ className?: string }> = ({ c
         </g>
 
         {/* Proof of Work visualization */}
-        <g className="text-brand-primary-400/20">
+        <g className="text-orange-400/20">
           <text x="100" y="170" textAnchor="middle" fontSize="8" fontFamily="monospace">
             0x4f3c2a1b...
           </text>
@@ -203,7 +203,7 @@ export const BinaryRain: React.FC<{ className?: string }> = ({ className = "" })
       {drops.map((drop, i) => (
         <motion.div
           key={drop.id}
-          className="absolute text-brand-primary-400/20 font-mono text-xs"
+          className="absolute text-orange-400/20 font-mono text-xs"
           style={{ left: `${drop.x}%` }}
           initial={{ y: -100 }}
           animate={{ y: '100vh' }}
@@ -237,7 +237,7 @@ export const GeometricProof: React.FC<{ className?: string }> = ({ className = "
       </defs>
       
       {/* Zero-knowledge proof visualization */}
-      <g className="text-brand-primary-400/25">
+      <g className="text-orange-400/25">
         {/* Main proof circle */}
         <motion.circle
           cx="150"
@@ -281,7 +281,7 @@ export const GeometricProof: React.FC<{ className?: string }> = ({ className = "
       </g>
       
       {/* Mathematical notation */}
-      <text x="150" y="260" textAnchor="middle" fontSize="12" className="text-brand-primary-400/40" fontFamily="serif">
+      <text x="150" y="260" textAnchor="middle" fontSize="12" className="text-orange-400/40" fontFamily="serif">
         ∃ x ∈ ℤ : σ(x) = 1
       </text>
     </svg>
@@ -309,7 +309,7 @@ export const FloatingParticles: React.FC<{ className?: string; count?: number }>
       {particles.map(particle => (
         <motion.div
           key={particle.id}
-          className="absolute w-1 h-1 bg-brand-primary-400/30 rounded-full"
+          className="absolute w-1 h-1 bg-orange-400/30 rounded-full"
           style={{
             left: `${particle.x}%`,
             top: `${particle.y}%`,
@@ -363,7 +363,7 @@ export const HexagonalGrid: React.FC<{ className?: string }> = ({ className = ""
           />
         </pattern>
       </defs>
-      <rect fill="url(#hexPattern)" width="100%" height="100%" className="text-brand-primary-400"/>
+      <rect fill="url(#hexPattern)" width="100%" height="100%" className="text-orange-400"/>
     </svg>
   )
 }
@@ -575,7 +575,7 @@ export const GlitchButton: React.FC<{
 }> = ({ children, className = "", onClick }) => {
   return (
     <button 
-      className={`relative bg-brand-primary-500 text-black px-8 py-3 rounded-xl overflow-hidden group transition-all duration-300 hover:bg-brand-primary-400 active:scale-95 ${className}`}
+      className={`relative bg-orange-500 text-black px-8 py-3 rounded-xl overflow-hidden group transition-all duration-300 hover:bg-orange-400 active:scale-95 ${className}`}
       onClick={onClick}
     >
       {/* Основной текст */}
@@ -605,7 +605,7 @@ export const WatermarkHex: React.FC<{ className?: string }> = ({ className = "" 
   return (
     <div className={`absolute inset-0 pointer-events-none ${className}`}>
       <svg 
-        className="w-full h-full opacity-[0.02] text-brand-primary-400 animate-watermarkFloat"
+        className="w-full h-full opacity-[0.02] text-orange-400 animate-watermarkFloat"
         viewBox="0 0 100 100"
         preserveAspectRatio="xMidYMid slice"
       >

@@ -16,7 +16,7 @@ export default function PrivacyUseCasesPage() {
           <div className="grid gap-6">
             <Card className="bg-neutral-900 border-neutral-800">
               <CardHeader>
-                <Shield className="w-8 h-8 text-brand-primary-400 mb-2" />
+                <Shield className="w-8 h-8 text-orange-400 mb-2" />
                 <CardTitle>Stealth Addresses</CardTitle>
                 <CardDescription>One-time addresses for enhanced privacy</CardDescription>
               </CardHeader>
@@ -29,7 +29,7 @@ export default function PrivacyUseCasesPage() {
 
             <Card className="bg-neutral-900 border-neutral-800">
               <CardHeader>
-                <Lock className="w-8 h-8 text-brand-primary-400 mb-2" />
+                <Lock className="w-8 h-8 text-orange-400 mb-2" />
                 <CardTitle>Ring Signatures</CardTitle>
                 <CardDescription>Obfuscate transaction origins</CardDescription>
               </CardHeader>
@@ -42,7 +42,7 @@ export default function PrivacyUseCasesPage() {
 
             <Card className="bg-neutral-900 border-neutral-800">
               <CardHeader>
-                <Eye className="w-8 h-8 text-brand-primary-400 mb-2" />
+                <Eye className="w-8 h-8 text-orange-400 mb-2" />
                 <CardTitle>Zero-Knowledge Proofs</CardTitle>
                 <CardDescription>Prove without revealing</CardDescription>
               </CardHeader>
@@ -55,7 +55,7 @@ export default function PrivacyUseCasesPage() {
 
             <Card className="bg-neutral-900 border-neutral-800">
               <CardHeader>
-                <Key className="w-8 h-8 text-brand-primary-400 mb-2" />
+                <Key className="w-8 h-8 text-orange-400 mb-2" />
                 <CardTitle>ErgoMixer</CardTitle>
                 <CardDescription>Non-custodial coin mixing</CardDescription>
               </CardHeader>
@@ -68,7 +68,7 @@ export default function PrivacyUseCasesPage() {
 
             <Card className="bg-neutral-900 border-neutral-800">
               <CardHeader>
-                <UserX className="w-8 h-8 text-brand-primary-400 mb-2" />
+                <UserX className="w-8 h-8 text-orange-400 mb-2" />
                 <CardTitle>Anonymous Credentials</CardTitle>
                 <CardDescription>Identity without exposure</CardDescription>
               </CardHeader>
@@ -81,7 +81,7 @@ export default function PrivacyUseCasesPage() {
 
             <Card className="bg-neutral-900 border-neutral-800">
               <CardHeader>
-                <Globe className="w-8 h-8 text-brand-primary-400 mb-2" />
+                <Globe className="w-8 h-8 text-orange-400 mb-2" />
                 <CardTitle>Private Smart Contracts</CardTitle>
                 <CardDescription>Confidential business logic</CardDescription>
               </CardHeader>

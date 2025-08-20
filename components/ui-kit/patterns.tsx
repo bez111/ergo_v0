@@ -53,7 +53,7 @@ export const HeroPattern: React.FC<HeroPatternProps> = ({
   return (
     <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8">
       <h1 className="text-3xl font-bold text-white mb-4 leading-tight">
-        {title} <span className="text-brand-primary-400">{highlight}</span>
+        {title} <span className="text-orange-400">{highlight}</span>
       </h1>
       <p className="text-xl text-gray-400 mb-6">
         {subtitle}
@@ -66,7 +66,7 @@ export const HeroPattern: React.FC<HeroPatternProps> = ({
       <div className="flex flex-wrap gap-4">
         <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.98 }}>
           <Button 
-            className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black"
+            className="bg-orange-500 hover:bg-orange-600 text-black focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black"
             onClick={primaryAction.onClick}
           >
             <primaryAction.icon className="w-4 h-4 mr-2" />
@@ -120,14 +120,14 @@ export const FeatureGrid: React.FC<FeatureGridProps> = ({
         return (
           <motion.div 
             key={feature.title} 
-            className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center hover:border-neutral-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black group cursor-pointer"
+            className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center hover:border-neutral-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black group cursor-pointer"
             {...animationProps}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
             tabIndex={0}
             role="article"
             aria-label={feature.title}
           >
-            <feature.icon className={`w-12 h-12 ${feature.color || 'text-brand-primary-400'} mx-auto mb-4 group-hover:scale-110 transition-transform duration-200`} />
+            <feature.icon className={`w-12 h-12 ${feature.color || 'text-orange-400'} mx-auto mb-4 group-hover:scale-110 transition-transform duration-200`} />
             <h4 className="text-lg font-bold text-white mb-2">{feature.title}</h4>
             <p className="text-gray-300 text-sm">{feature.description}</p>
           </motion.div>
@@ -186,12 +186,12 @@ export const StatsGrid: React.FC<StatsGridProps> = ({
             key={stat.label}
             {...animationProps}
             whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-            className="text-center p-6 bg-neutral-900 border border-neutral-700 rounded-xl hover:border-neutral-600 transition-all duration-300 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black"
+            className="text-center p-6 bg-neutral-900 border border-neutral-700 rounded-xl hover:border-neutral-600 transition-all duration-300 cursor-pointer group focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black"
             tabIndex={0}
             role="button"
             aria-label={`${stat.value} ${stat.label}`}
           >
-            <stat.icon className={`w-8 h-8 ${stat.color || 'text-brand-primary-400'} mx-auto mb-3 group-hover:scale-110 transition-transform duration-200`} />
+            <stat.icon className={`w-8 h-8 ${stat.color || 'text-orange-400'} mx-auto mb-3 group-hover:scale-110 transition-transform duration-200`} />
             <div className="text-2xl font-bold text-white mb-1">{stat.value}</div>
             <div className="text-gray-400 text-sm">{stat.label}</div>
           </motion.div>
@@ -233,14 +233,14 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
       whileHover={{ y: -5, transition: { duration: 0.2 } }} 
       className={`group ${className}`}
     >
-      <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-brand-primary-500 focus-within:ring-offset-2 focus-within:ring-offset-black h-full cursor-pointer ${isCompact ? 'p-0' : ''}`}>
+      <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-all duration-300 focus-within:ring-2 focus-within:ring-orange-500 focus-within:ring-offset-2 focus-within:ring-offset-black h-full cursor-pointer ${isCompact ? 'p-0' : ''}`}>
         <CardHeader className={isCompact ? 'px-5 pt-5 pb-3' : undefined}>
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-              <Icon className="w-5 h-5 text-brand-primary-400" />
+            <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+              <Icon className="w-5 h-5 text-orange-400" />
             </div>
             <div className="flex-1">
-              <CardTitle className="text-white group-hover:text-brand-primary-400 transition-colors">
+              <CardTitle className="text-white group-hover:text-orange-400 transition-colors">
                 {title}
               </CardTitle>
               {subtitle && (
@@ -257,14 +257,14 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
           )}
           <div className="flex items-center justify-between">
             {badge && (
-              <Badge className="bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
+              <Badge className="bg-orange-500/20 text-orange-400 border border-orange-500/30">
                 {badge}
               </Badge>
             )}
             {action && (
               isCompact ? (
                 <button 
-                  className="text-brand-primary-400 hover:text-brand-primary-300 text-sm inline-flex items-center"
+                  className="text-orange-400 hover:text-orange-300 text-sm inline-flex items-center"
                   onClick={action.onClick}
                 >
                   {action.text}
@@ -274,7 +274,7 @@ export const FeatureCard: React.FC<FeatureCardProps> = ({
                 <Button 
                   size="sm" 
                   variant="ghost" 
-                  className="text-brand-primary-400 hover:text-brand-primary-300 focus:ring-2 focus:ring-brand-primary-500"
+                  className="text-orange-400 hover:text-orange-300 focus:ring-2 focus:ring-orange-500"
                   onClick={action.onClick}
                 >
                   {action.text}

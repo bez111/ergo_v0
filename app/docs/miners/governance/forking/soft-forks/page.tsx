@@ -11,7 +11,7 @@ export default function SoftForksPage() {
         Soft forks allow the Ergo network to evolve and incorporate improvements while maintaining compatibility with non-upgraded nodes. This approach
         ensures a smooth transition and minimizes disruption to the network.
       </p>
-      <Link href="/docs/miners/governance/forking" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-primary-400 mb-6">
+      <Link href="/docs/miners/governance/forking" className="inline-flex items-center gap-2 text-gray-400 hover:text-orange-400 mb-6">
         <ArrowLeft className="w-4 h-4" />
         Back
       </Link>
@@ -120,7 +120,7 @@ export default function SoftForksPage() {
           href="https://www.ergoforum.org/t/voting-for-a-soft-fork-in-ergo/2958"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-brand-primary-400 hover:text-brand-primary-300"
+          className="text-orange-400 hover:text-orange-300"
         >
           Ergo Forum post
         </a>.

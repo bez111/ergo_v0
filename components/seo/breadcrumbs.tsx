@@ -71,7 +71,7 @@ export function Breadcrumbs({
             ) : (
               <Link 
                 href={item.href}
-                className="hover:text-brand-primary-400 transition-colors"
+                className="hover:text-orange-400 transition-colors"
               >
                 {index === 0 && showHome ? (
                   <Home className="w-4 h-4" aria-label="Home" />

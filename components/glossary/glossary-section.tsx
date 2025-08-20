@@ -38,7 +38,7 @@ export function GlossarySection({ terms, title = "Glossary", description }: Glos
                     <p className="text-neutral-300">{term.description}</p>
                     {term.relatedTerms && (
                       <div>
-                        <h4 className="text-sm font-medium text-brand-primary-400 mb-2">Related Terms:</h4>
+                        <h4 className="text-sm font-medium text-orange-400 mb-2">Related Terms:</h4>
                         <div className="flex flex-wrap gap-2">
                           {term.relatedTerms.map((relatedTerm, i) => (
                             <span
@@ -53,7 +53,7 @@ export function GlossarySection({ terms, title = "Glossary", description }: Glos
                     )}
                     {term.examples && (
                       <div>
-                        <h4 className="text-sm font-medium text-brand-primary-400 mb-2">Examples:</h4>
+                        <h4 className="text-sm font-medium text-orange-400 mb-2">Examples:</h4>
                         <ul className="list-disc list-inside space-y-1 text-neutral-300">
                           {term.examples.map((example, i) => (
                             <li key={i}>{example}</li>

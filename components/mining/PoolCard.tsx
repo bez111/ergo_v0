@@ -26,11 +26,11 @@ export type Pool = {
 
 export function PoolCard({ pool }: { pool: Pool }) {
   return (
-    <Card className="relative bg-neutral-900/50 border border-neutral-700 rounded-xl transition-all duration-200 hover:border-brand-primary-500/30 hover:-translate-y-0.5 h-full flex flex-col">
+    <Card className="relative bg-neutral-900/50 border border-neutral-700 rounded-xl transition-all duration-200 hover:border-orange-500/30 hover:-translate-y-0.5 h-full flex flex-col">
       <CardContent className="p-8 flex-1 flex flex-col">
         <div className="flex items-center gap-3 mb-3">
-          <div className="p-3 rounded-md bg-brand-primary-500/20 border border-brand-primary-500/30">
-            <Server className="w-5 h-5 text-brand-primary-400" />
+          <div className="p-3 rounded-md bg-orange-500/20 border border-orange-500/30">
+            <Server className="w-5 h-5 text-orange-400" />
           </div>
           <h3 className="text-2xl font-bold text-white flex items-center gap-2">
             {pool.name}
@@ -57,23 +57,23 @@ export function PoolCard({ pool }: { pool: Pool }) {
           {pool.location} • {pool.paymentSystem}
         </p>
         <p className="text-neutral-300 text-base mb-5">
-          Fee: <span className="text-brand-primary-400 font-semibold">{pool.fee}</span> • Min Payout: {pool.minPayout}
+          Fee: <span className="text-orange-400 font-semibold">{pool.fee}</span> • Min Payout: {pool.minPayout}
         </p>
 
         <div className="grid grid-cols-3 gap-3 text-sm mb-6">
-          <div className="p-4 bg-neutral-900/50 rounded-lg border border-brand-primary-500/20">
+          <div className="p-4 bg-neutral-900/50 rounded-lg border border-orange-500/20">
             <div className="flex justify-between items-center">
               <span className="text-neutral-400">Hashrate</span>
               <span className="text-white font-semibold">{pool.hashrate}</span>
             </div>
           </div>
-          <div className="p-4 bg-neutral-900/50 rounded-lg border border-brand-primary-500/20">
+          <div className="p-4 bg-neutral-900/50 rounded-lg border border-orange-500/20">
             <div className="flex justify-between items-center">
               <span className="text-neutral-400">Miners</span>
               <span className="text-white font-semibold">{pool.miners.toLocaleString()}</span>
             </div>
           </div>
-          <div className="p-4 bg-neutral-900/50 rounded-lg border border-brand-primary-500/20">
+          <div className="p-4 bg-neutral-900/50 rounded-lg border border-orange-500/20">
             <div className="flex justify-between items-center">
               <span className="text-neutral-400">Uptime</span>
               <span className="text-white font-semibold">{pool.uptime}</span>
@@ -83,7 +83,7 @@ export function PoolCard({ pool }: { pool: Pool }) {
 
         <Button
           asChild
-          className="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-brand-primary-500/50 bg-neutral-900/50 text-neutral-200 transition-all hover:border-brand-primary-500 hover:text-brand-primary-400 hover:bg-neutral-900/60 focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+          className="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-orange-500/50 bg-neutral-900/50 text-neutral-200 transition-all hover:border-orange-500 hover:text-orange-400 hover:bg-neutral-900/60 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
         >
           <Link href={pool.url} target="_blank" className="flex items-center gap-2">
             Visit Pool <ExternalLink className="w-4 h-4" />

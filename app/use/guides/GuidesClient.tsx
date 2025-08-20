@@ -61,13 +61,13 @@ export default function GuidesClient() {
           {/* Header Card (like blog) */}
           <div className="mb-8 bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm">
             <div className="flex items-center gap-3">
-              <BookOpen className="w-6 h-6 text-brand-primary-400" />
+              <BookOpen className="w-6 h-6 text-orange-400" />
               <h2 className="text-2xl font-bold text-white">
                 {selectedCategory
                   ? `${categories.find((cat) => cat.id === selectedCategory)?.name} Guides`
                   : "All Guides"}
               </h2>
-              <span className="px-3 py-1 bg-brand-primary-500/20 text-brand-primary-400 rounded-full text-sm font-semibold">
+              <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">
                 {filteredGuides.length}
               </span>
             </div>

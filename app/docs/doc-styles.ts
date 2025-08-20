@@ -18,16 +18,16 @@ export const docStyles = {
   small: "text-sm text-gray-400",
   
   // Links
-  link: "text-brand-primary-400 hover:text-brand-primary-300 transition-colors",
+  link: "text-orange-400 hover:text-orange-300 transition-colors",
   
   // Buttons - Плоский дизайн
-  buttonPrimary: "inline-flex items-center px-6 py-3 bg-brand-primary-500 text-black font-semibold rounded-lg hover:bg-brand-primary-400 transition-colors",
+  buttonPrimary: "inline-flex items-center px-6 py-3 bg-orange-500 text-black font-semibold rounded-lg hover:bg-orange-400 transition-colors",
   buttonSecondary: "inline-flex items-center px-6 py-3 bg-neutral-800 text-white font-semibold rounded-lg hover:bg-neutral-700 transition-colors border border-neutral-700",
-  buttonOutline: "inline-flex items-center px-6 py-3 border border-brand-primary-500 text-brand-primary-400 font-semibold rounded-lg hover:bg-brand-primary-500/10 transition-colors",
+  buttonOutline: "inline-flex items-center px-6 py-3 border border-orange-500 text-orange-400 font-semibold rounded-lg hover:bg-orange-500/10 transition-colors",
   
   // Cards - Обновленный дизайн как на скриншоте
   card: "bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-neutral-700 transition-all",
-  cardHighlight: "bg-gradient-to-br from-neutral-900 to-neutral-800 border border-brand-primary-500/20 rounded-2xl p-6",
+  cardHighlight: "bg-gradient-to-br from-neutral-900 to-neutral-800 border border-orange-500/20 rounded-2xl p-6",
   
   // Grids
   grid2: "grid md:grid-cols-2 gap-6",
@@ -44,7 +44,7 @@ export const docStyles = {
   
   // Code blocks
   codeBlock: "bg-neutral-900 border border-neutral-800 rounded-xl p-4 font-mono text-sm overflow-x-auto",
-  codeInline: "bg-neutral-800 px-2 py-1 rounded text-brand-primary-400 font-mono text-sm",
+  codeInline: "bg-neutral-800 px-2 py-1 rounded text-orange-400 font-mono text-sm",
   
   // Alerts/Callouts
   alertInfo: "bg-blue-500/10 border border-blue-500/20 rounded-xl p-6",
@@ -53,7 +53,7 @@ export const docStyles = {
   alertError: "bg-red-500/10 border border-red-500/20 rounded-xl p-6",
   
   // Icons
-  iconPrimary: "text-brand-primary-400",
+  iconPrimary: "text-orange-400",
   iconSecondary: "text-gray-400",
   iconSuccess: "text-green-400",
   iconWarning: "text-orange-400",
@@ -61,7 +61,7 @@ export const docStyles = {
   
   // Badges
   badge: "inline-flex items-center px-3 py-1 rounded-lg text-xs font-medium bg-neutral-800 text-gray-300",
-  badgePrimary: "inline-flex items-center px-3 py-1 rounded-lg text-xs font-medium bg-brand-primary-500/20 text-brand-primary-400",
+  badgePrimary: "inline-flex items-center px-3 py-1 rounded-lg text-xs font-medium bg-orange-500/20 text-orange-400",
   
   // Tables
   table: "w-full",
@@ -70,7 +70,7 @@ export const docStyles = {
   
   // Navigation
   navLink: "text-gray-400 hover:text-white transition-colors",
-  navLinkActive: "text-brand-primary-400 font-semibold",
+  navLinkActive: "text-orange-400 font-semibold",
   
   // Dividers
   divider: "border-t border-neutral-800 my-8",
@@ -79,7 +79,7 @@ export const docStyles = {
   featureCard: "group relative bg-neutral-900 border border-neutral-800 rounded-2xl p-6 hover:border-orange-500/50 transition-all duration-300 flex items-start gap-4 cursor-pointer overflow-hidden",
   
   // Chevron icon
-  chevron: "w-5 h-5 text-gray-500 group-hover:text-brand-primary-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 absolute right-6 top-1/2 -translate-y-1/2",
+  chevron: "w-5 h-5 text-gray-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all duration-300 flex-shrink-0 absolute right-6 top-1/2 -translate-y-1/2",
 }
 
 // Helper function for combining classes

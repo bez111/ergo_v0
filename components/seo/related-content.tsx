@@ -45,10 +45,10 @@ export function RelatedContent({
             
             return (
               <Link key={item.href} href={item.href}>
-                <Card className="h-full hover:border-brand-primary-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-brand-primary-500/10">
+                <Card className="h-full hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
                   <CardHeader>
                     <div className="flex items-start justify-between">
-                      <Icon className="w-5 h-5 text-brand-primary-400" />
+                      <Icon className="w-5 h-5 text-orange-400" />
                       {item.readTime && (
                         <span className="text-xs text-neutral-400">
                           {item.readTime} min read
@@ -63,7 +63,7 @@ export function RelatedContent({
                     <CardDescription className="line-clamp-2">
                       {item.description}
                     </CardDescription>
-                    <div className="flex items-center mt-4 text-brand-primary-400 text-sm font-medium">
+                    <div className="flex items-center mt-4 text-orange-400 text-sm font-medium">
                       Read more
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </div>

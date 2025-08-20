@@ -78,22 +78,22 @@ export function CTASection() {
         <div className="container px-4 md:px-6 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Ready to Build the <span className="text-brand-primary-400">Future?</span>
+              Ready to Build the <span className="text-orange-400">Future?</span>
             </h2>
             <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto">
               Join the movement for truly decentralized, programmable money. Start your Ergo journey today.
             </p>
             <div className="grid sm:grid-cols-3 gap-6 mb-12">
               {ctaActions.map((action, index) => (
-                <Link key={index} href={action.href} className={`group p-6 rounded-xl border transition-all duration-300 ${action.primary ? 'bg-brand-primary-500 border-brand-primary-500 text-black hover:bg-brand-primary-600' : 'bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/30'}`}>
-                  <action.icon className={`h-8 w-8 mx-auto mb-3 ${action.primary ? 'text-black' : 'text-brand-primary-400'}`} />
+                <Link key={index} href={action.href} className={`group p-6 rounded-xl border transition-all duration-300 ${action.primary ? 'bg-orange-500 border-orange-500 text-black hover:bg-orange-600' : 'bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30'}`}>
+                  <action.icon className={`h-8 w-8 mx-auto mb-3 ${action.primary ? 'text-black' : 'text-orange-400'}`} />
                   <h3 className={`font-bold mb-2 ${action.primary ? 'text-black' : 'text-white'}`}>{action.title}</h3>
                   <p className={`text-sm mb-4 ${action.primary ? 'text-black/70' : 'text-gray-400'}`}>{action.description}</p>
-                  <span className={`text-xs font-mono font-bold ${action.primary ? 'text-black' : 'text-brand-primary-400'}`}>{action.label}</span>
+                  <span className={`text-xs font-mono font-bold ${action.primary ? 'text-black' : 'text-orange-400'}`}>{action.label}</span>
                 </Link>
               ))}
             </div>
-            <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-mono px-8 py-4 text-lg">
+            <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-mono px-8 py-4 text-lg">
               <Link href="/start">
                 Get Started Now
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -111,8 +111,8 @@ export function CTASection() {
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.05)_1px,transparent_1px)] bg-[size:60px_60px]"></div>
       
       {/* Glowing orbs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-primary-500/10 rounded-full blur-[120px] animate-pulse"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-brand-primary-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s" }}></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-[120px] animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-orange-500/10 rounded-full blur-[120px] animate-pulse" style={{ animationDelay: "2s" }}></div>
 
       <div className="container px-4 md:px-6 relative z-10">
         <motion.div 
@@ -126,9 +126,9 @@ export function CTASection() {
             transition={{ delay: isInitialized ? 0.1 : 0 }}
           >
             <h2 className="text-5xl md:text-6xl font-bold text-white mb-8">
-              Ready to Get <span className="text-brand-primary-400">Started?</span>
+              Ready to Get <span className="text-orange-400">Started?</span>
             </h2>
-            <div className="w-40 h-1 bg-brand-primary-500 mx-auto rounded-full mb-8"></div>
+            <div className="w-40 h-1 bg-orange-500 mx-auto rounded-full mb-8"></div>
             <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-3xl mx-auto font-mono">
               Choose your path and start using the future of programmable money today.
             </p>
@@ -149,20 +149,20 @@ export function CTASection() {
                   href={action.href} 
                   className={`group block p-6 rounded-xl border transition-all duration-300 ${
                     action.primary 
-                      ? 'bg-brand-primary-500 border-brand-primary-500 text-black hover:bg-brand-primary-600 hover:scale-105' 
-                      : 'bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/30 hover:bg-neutral-800/50 backdrop-blur-sm'
+                      ? 'bg-orange-500 border-orange-500 text-black hover:bg-orange-600 hover:scale-105' 
+                      : 'bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 hover:bg-neutral-800/50 backdrop-blur-sm'
                   }`}
                 >
                   <action.icon className={`h-8 w-8 mx-auto mb-3 group-hover:scale-110 transition-transform duration-200 ${
-                    action.primary ? 'text-black' : 'text-brand-primary-400'
+                    action.primary ? 'text-black' : 'text-orange-400'
                   }`} />
-                  <h3 className={`font-bold mb-2 ${action.primary ? 'text-black' : 'text-white group-hover:text-brand-primary-400'} transition-colors duration-200`}>
+                  <h3 className={`font-bold mb-2 ${action.primary ? 'text-black' : 'text-white group-hover:text-orange-400'} transition-colors duration-200`}>
                     {action.title}
                   </h3>
                   <p className={`text-sm mb-4 ${action.primary ? 'text-black/70' : 'text-gray-400'}`}>
                     {action.description}
                   </p>
-                  <span className={`text-xs font-mono font-bold ${action.primary ? 'text-black' : 'text-brand-primary-400'}`}>
+                  <span className={`text-xs font-mono font-bold ${action.primary ? 'text-black' : 'text-orange-400'}`}>
                     {action.label}
                   </span>
                 </Link>
@@ -174,7 +174,7 @@ export function CTASection() {
             variants={fadeInUp}
             transition={{ delay: isInitialized ? 0.6 : 0 }}
           >
-            <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-mono px-8 py-4 text-lg transition-all duration-200 hover:scale-105">
+            <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-mono px-8 py-4 text-lg transition-all duration-200 hover:scale-105">
               <Link href="/start">
                 Get Started Now
                 <ArrowRight className="ml-2 h-5 w-5" />

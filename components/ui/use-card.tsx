@@ -37,7 +37,7 @@ function CardInner({
     <Card
       className={
         `bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 transition-all duration-200 h-full flex flex-col ` +
-        `hover:border-brand-primary-500/30 hover:-translate-y-0.5 ${className || ""}`
+        `hover:border-orange-500/30 hover:-translate-y-0.5 ${className || ""}`
       }
     >
       {/* Content wrapper that grows */}
@@ -46,8 +46,8 @@ function CardInner({
         {(icon || title || subtitle) && (
           <div className="flex items-start gap-3 mb-3">
             {icon && (
-              <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                {React.cloneElement(icon as React.ReactElement, { className: "w-5 h-5 text-brand-primary-400" })}
+              <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                {React.cloneElement(icon as React.ReactElement, { className: "w-5 h-5 text-orange-400" })}
               </div>
             )}
             <div className="flex-1 min-w-0">
@@ -95,8 +95,8 @@ function CardInner({
           className={
             `inline-flex items-center gap-1.5 text-neutral-400 text-sm font-medium transition-all duration-200 mt-auto pt-2 ` +
             `${withGroupHover 
-              ? "opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:text-brand-primary-400" 
-              : "opacity-0 translate-y-1 hover:opacity-100 hover:translate-y-0 hover:text-brand-primary-400"}`
+              ? "opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 group-hover:text-orange-400" 
+              : "opacity-0 translate-y-1 hover:opacity-100 hover:translate-y-0 hover:text-orange-400"}`
           }
         >
           <span>{cta.label}</span>
@@ -123,7 +123,7 @@ export function UseCard({
       <Link
         href={cta.href}
         aria-label={`${title} — ${cta.label}`}
-        className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-xl h-full"
+        className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-xl h-full"
       >
         <CardInner
           icon={icon}

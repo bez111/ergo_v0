@@ -30,14 +30,14 @@ export function GetErgCard({
     <Card
       className={cn(
         "relative bg-neutral-900/60 border border-neutral-700 rounded-2xl shadow",
-        "hover:shadow-lg hover:ring-2 hover:ring-brand-primary-500/20 transition-all duration-200",
+        "hover:shadow-lg hover:ring-2 hover:ring-orange-500/20 transition-all duration-200",
         "flex flex-col h-full cursor-pointer group",
         className
       )}
     >
       <CardContent className="p-6 flex flex-col items-center text-center flex-1">
         {badge && (
-          <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-brand-primary-700 text-xs font-bold text-brand-primary-300 shadow">
+          <span className="absolute top-4 left-4 px-3 py-1 rounded-full bg-orange-700 text-xs font-bold text-orange-300 shadow">
             {badge}
           </span>
         )}
@@ -46,8 +46,8 @@ export function GetErgCard({
             Recommended
           </span>
         )}
-        <div className="p-3 mb-3 rounded-md bg-brand-primary-500/20 border border-brand-primary-500/30 w-fit transition-transform duration-200 group-hover:scale-110">
-          <Icon className="w-8 h-8 text-brand-primary-400" />
+        <div className="p-3 mb-3 rounded-md bg-orange-500/20 border border-orange-500/30 w-fit transition-transform duration-200 group-hover:scale-110">
+          <Icon className="w-8 h-8 text-orange-400" />
         </div>
         <h3 className="text-xl font-bold text-white mb-1">{name}</h3>
         {description && (
@@ -56,7 +56,7 @@ export function GetErgCard({
         <Button
           asChild
           className={cn(
-            "w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold border border-brand-primary-500/50",
+            "w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold border border-orange-500/50",
             !featured && "mt-auto"
           )}
         >

@@ -88,7 +88,7 @@ export function SocialProofSection() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {stats.map((stat, index) => (
               <div key={index} className="text-center p-4 rounded-xl bg-neutral-900/50 border border-neutral-700">
-                <stat.icon className="h-8 w-8 text-brand-primary-400 mx-auto mb-2" />
+                <stat.icon className="h-8 w-8 text-orange-400 mx-auto mb-2" />
                 <div className="text-2xl font-bold text-white">{stat.value}</div>
                 <div className="text-sm text-gray-400 font-mono">{stat.label}</div>
               </div>
@@ -124,7 +124,7 @@ export function SocialProofSection() {
                 key={index}
                 variants={staggerItem}
                 transition={{ delay: isInitialized ? (0.2 + index * 0.05) : 0 }}
-                className="text-gray-600 font-mono text-sm hover:text-brand-primary-400 transition-colors duration-200"
+                className="text-gray-600 font-mono text-sm hover:text-orange-400 transition-colors duration-200"
               >
                 {exchange}
               </motion.div>
@@ -143,11 +143,11 @@ export function SocialProofSection() {
               key={index}
               variants={staggerItem}
               transition={{ delay: isInitialized ? (0.4 + index * 0.1) : 0 }}
-              className="text-center p-6 rounded-xl bg-neutral-900/50 border border-neutral-700 hover:border-brand-primary-500/30 hover:bg-neutral-800/50 transition-all duration-300 backdrop-blur-sm group"
+              className="text-center p-6 rounded-xl bg-neutral-900/50 border border-neutral-700 hover:border-orange-500/30 hover:bg-neutral-800/50 transition-all duration-300 backdrop-blur-sm group"
             >
-              <stat.icon className="h-8 w-8 text-brand-primary-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-200" />
+              <stat.icon className="h-8 w-8 text-orange-400 mx-auto mb-3 group-hover:scale-110 transition-transform duration-200" />
               <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
-              <div className="text-sm text-brand-primary-400 font-mono font-semibold mb-2">{stat.label}</div>
+              <div className="text-sm text-orange-400 font-mono font-semibold mb-2">{stat.label}</div>
               <div className="text-xs text-gray-500 font-mono">{stat.description}</div>
             </motion.div>
           ))}

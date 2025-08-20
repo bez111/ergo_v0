@@ -112,7 +112,7 @@ export function TestimonialsSection() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                What The <span className="text-brand-primary-400">Community</span> Says
+                What The <span className="text-orange-400">Community</span> Says
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 Developers, researchers, and users worldwide are building the future with Ergo.
@@ -121,10 +121,10 @@ export function TestimonialsSection() {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {testimonials.map((testimonial, index) => (
                 <div key={index} className="p-6 rounded-xl bg-neutral-900/50 border border-neutral-700">
-                  <Quote className="h-8 w-8 text-brand-primary-400 mb-4" />
+                  <Quote className="h-8 w-8 text-orange-400 mb-4" />
                   <p className="text-gray-300 mb-6 leading-relaxed">{testimonial.quote}</p>
                   <div className="flex items-center gap-4">
-                    <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-full flex items-center justify-center text-brand-primary-400 font-mono font-bold">
+                    <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-full flex items-center justify-center text-orange-400 font-mono font-bold">
                       {testimonial.avatar}
                     </div>
                     <div>
@@ -156,9 +156,9 @@ export function TestimonialsSection() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              What The <span className="text-brand-primary-400">Community</span> Says
+              What The <span className="text-orange-400">Community</span> Says
             </h2>
-            <div className="w-32 h-1 bg-brand-primary-500 mx-auto rounded-full mb-6"></div>
+            <div className="w-32 h-1 bg-orange-500 mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-mono">
               Developers, researchers, and users worldwide are building the future with Ergo.
             </p>
@@ -173,24 +173,24 @@ export function TestimonialsSection() {
                 key={index}
                 variants={staggerItem}
                 whileHover={{ scale: 1.02 }}
-                className="p-8 rounded-xl bg-neutral-900/50 border border-neutral-700 hover:border-brand-primary-500/30 hover:bg-neutral-800/50 transition-all duration-300 backdrop-blur-sm group"
+                className="p-8 rounded-xl bg-neutral-900/50 border border-neutral-700 hover:border-orange-500/30 hover:bg-neutral-800/50 transition-all duration-300 backdrop-blur-sm group"
               >
-                <Quote className="h-8 w-8 text-brand-primary-400 mb-6 group-hover:scale-110 transition-transform duration-200" />
+                <Quote className="h-8 w-8 text-orange-400 mb-6 group-hover:scale-110 transition-transform duration-200" />
                 <p className="text-gray-300 mb-8 leading-relaxed font-mono text-sm">
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-full flex items-center justify-center text-brand-primary-400 font-mono font-bold group-hover:scale-110 transition-transform duration-200">
+                  <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-full flex items-center justify-center text-orange-400 font-mono font-bold group-hover:scale-110 transition-transform duration-200">
                     {testimonial.avatar}
                   </div>
                   <div className="flex-1">
-                    <div className="text-white font-semibold group-hover:text-brand-primary-400 transition-colors duration-200">
+                    <div className="text-white font-semibold group-hover:text-orange-400 transition-colors duration-200">
                       {testimonial.author}
                     </div>
                     <div className="text-sm text-gray-500 font-mono mb-2">
                       {testimonial.role}
                     </div>
-                    <div className="flex items-center gap-1 text-xs text-brand-primary-400">
+                    <div className="flex items-center gap-1 text-xs text-orange-400">
                       <testimonial.social.icon className="h-3 w-3" />
                       <span className="font-mono">{testimonial.social.handle}</span>
                     </div>

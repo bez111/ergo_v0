@@ -116,7 +116,7 @@ export function FeatureComparisonSection() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="text-brand-primary-400">Ergo</span> vs The Competition
+                <span className="text-orange-400">Ergo</span> vs The Competition
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See how Ergo combines the best features from Bitcoin and Ethereum while solving their limitations.
@@ -129,8 +129,8 @@ export function FeatureComparisonSection() {
                     <th className="text-left py-4 px-6 text-white font-mono">Feature</th>
                     <th className="text-center py-4 px-6">
                       <div className="flex items-center justify-center gap-2">
-                        <Star className="h-5 w-5 text-brand-primary-400" />
-                        <span className="text-brand-primary-400 font-bold">Ergo</span>
+                        <Star className="h-5 w-5 text-orange-400" />
+                        <span className="text-orange-400 font-bold">Ergo</span>
                       </div>
                     </th>
                     <th className="text-center py-4 px-6 text-gray-400">Bitcoin</th>
@@ -181,9 +181,9 @@ export function FeatureComparisonSection() {
             className="text-center mb-12"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-              <span className="text-brand-primary-400">Ergo</span> vs The Competition
+              <span className="text-orange-400">Ergo</span> vs The Competition
             </h2>
-            <div className="w-32 h-1 bg-brand-primary-500 mx-auto rounded-full mb-6"></div>
+            <div className="w-32 h-1 bg-orange-500 mx-auto rounded-full mb-6"></div>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto font-mono">
               See how Ergo combines the best features from Bitcoin and Ethereum while solving their limitations.
             </p>
@@ -200,8 +200,8 @@ export function FeatureComparisonSection() {
                   <th className="text-left py-6 px-6 text-white font-mono tracking-wider">Feature</th>
                   <th className="text-center py-6 px-6">
                     <div className="flex items-center justify-center gap-2">
-                      <Star className="h-5 w-5 text-brand-primary-400" />
-                      <span className="text-brand-primary-400 font-bold font-mono">ERGO</span>
+                      <Star className="h-5 w-5 text-orange-400" />
+                      <span className="text-orange-400 font-bold font-mono">ERGO</span>
                     </div>
                   </th>
                   <th className="text-center py-6 px-6 text-gray-400 font-mono">BITCOIN</th>
@@ -248,7 +248,7 @@ export function FeatureComparisonSection() {
             transition={{ delay: isInitialized ? 0.8 : 0 }}
             className="text-center mt-8"
           >
-            <p className="text-brand-primary-400 font-mono text-sm">
+            <p className="text-orange-400 font-mono text-sm">
               * Ergo = Bitcoin's Security + Ethereum's Functionality + Unique Innovations
             </p>
           </motion.div>
