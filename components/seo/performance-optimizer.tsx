@@ -180,7 +180,7 @@ function initAdvancedWebVitalsTracking() {
 
     // CLS tracking with shift details
     let clsValue = 0
-    let clsEntries: any[] = []
+    const clsEntries: any[] = []
 
     const clsObserver = new PerformanceObserver((list) => {
       for (const entry of list.getEntries()) {

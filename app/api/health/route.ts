@@ -70,7 +70,7 @@ export async function GET(request: Request) {
     status: 'healthy',
     timestamp: new Date().toISOString(),
     uptime,
-    version: process.env.NEXT_PUBLIC_VERSION || '1.0.0',
+    version: process.env['NEXT_PUBLIC_VERSION'] || '1.0.0',
     checks: {},
     metrics: {
       memoryUsage: process.memoryUsage(),
@@ -120,19 +120,22 @@ export async function GET(request: Request) {
         hasWarnings = true
       }
     } else {
-      const name = checks[index].name
-      health.checks[name] = {
-        status: 'fail',
-        message: 'Check failed with error'
+      const check = checks[index]
+      if (check) {
+        const name = check.name
+        health.checks[name] = {
+          status: 'fail',
+          message: 'Check failed with error'
+        }
+        hasFailures = true
       }
-      hasFailures = true
     }
   })
   
   // Проверка памяти - корректная формула для реального использования
-  const heapUsed = health.metrics.memoryUsage.heapUsed
-  const heapTotal = health.metrics.memoryUsage.heapTotal
-  const rss = health.metrics.memoryUsage.rss
+  const heapUsed = health.metrics?.memoryUsage.heapUsed || 0
+  const heapTotal = health.metrics?.memoryUsage.heapTotal || 0
+  const rss = health.metrics?.memoryUsage.rss || 0
   
   // Используем RSS (Resident Set Size) для более точной оценки
   const maxMemory = 1024 * 1024 * 1024 // 1GB limit
@@ -140,19 +143,19 @@ export async function GET(request: Request) {
   const heapPercent = (heapUsed / heapTotal) * 100
   
   if (rss > maxMemory * 0.9) {
-    health.checks.memory = {
+    health.checks['memory'] = {
       status: 'fail',
       message: `Memory critical: RSS ${(rss / 1024 / 1024).toFixed(0)}MB (${memoryUsagePercent.toFixed(1)}%), Heap ${heapPercent.toFixed(1)}%`
     }
     hasFailures = true
   } else if (rss > maxMemory * 0.75) {
-    health.checks.memory = {
+    health.checks['memory'] = {
       status: 'warn',
       message: `Memory high: RSS ${(rss / 1024 / 1024).toFixed(0)}MB (${memoryUsagePercent.toFixed(1)}%), Heap ${heapPercent.toFixed(1)}%`
     }
     hasWarnings = true
   } else {
-    health.checks.memory = {
+    health.checks['memory'] = {
       status: 'pass',
       message: `Memory normal: RSS ${(rss / 1024 / 1024).toFixed(0)}MB (${memoryUsagePercent.toFixed(1)}%), Heap ${heapPercent.toFixed(1)}%`
     }
