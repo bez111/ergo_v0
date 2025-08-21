@@ -7,10 +7,10 @@ import { useRouter } from "next/navigation";
 
 const languages = [
   { code: "en", label: "EN" },
-  { code: "zh", label: "中文" },
+  { code: "zh", label: "ZH" },
   { code: "ru", label: "RU" },
-  { code: "ko", label: "한국어" },
-  { code: "ja", label: "日本語" },
+  { code: "ko", label: "KO" },
+  { code: "ja", label: "JA" },
   { code: "tr", label: "TR" },
   { code: "pt", label: "PT" },
   { code: "de", label: "DE" },
