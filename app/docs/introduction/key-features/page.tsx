@@ -22,7 +22,13 @@ import {
   Eye,
   Key,
   Network,
-  Smartphone
+  Smartphone,
+  Layers,
+  BarChart3,
+  Package,
+  Workflow,
+  Timer,
+  Target
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -309,36 +315,257 @@ export default function KeyFeaturesPage() {
         </Link>
       </div>
 
-      {/* Additional Features */}
-      <div className="grid md:grid-cols-3 gap-6 mb-12">
-        <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6">
-          <div className="flex items-center gap-3 mb-4">
-            <Shield className="w-8 h-8 text-green-400" />
-            <h3 className="text-lg font-semibold text-white">Autolykos PoW</h3>
-          </div>
-          <p className="text-gray-400 text-sm">
-            ASIC-resistant proof-of-work algorithm ensuring fair mining and network decentralization.
-          </p>
+      {/* Advanced Features Section */}
+      <div className="mb-12">
+        <h2 className="text-3xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+          Advanced Blockchain Features
+        </h2>
+        
+        <div className="grid md:grid-cols-2 gap-6 mb-8">
+          <Link href="/technology/native-tokens" className="group">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-green-500/20 rounded-lg flex items-center justify-center">
+                  <Package className="w-6 h-6 text-green-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-green-400">Native Tokens</h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                First-class tokens integrated at the protocol level. Create tokens, NFTs, and stablecoins in a single transaction without smart contracts, with protocol-level security guarantees.
+              </p>
+              <ul className="space-y-2 text-gray-400 text-sm mb-4">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  One-click token creation (~$0.01 cost)
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Protocol-level security
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Universal DeFi compatibility
+                </li>
+              </ul>
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-green-400 text-sm font-medium">
+                Learn More →
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/technology/oracle-pools" className="group">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-indigo-500/20 rounded-lg flex items-center justify-center">
+                  <BarChart3 className="w-6 h-6 text-indigo-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-indigo-400">Oracle Pools</h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Decentralized oracle networks providing reliable external data feeds. Multiple data providers reach consensus through on-chain aggregation with 99.9% uptime.
+              </p>
+              <ul className="space-y-2 text-gray-400 text-sm mb-4">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  14+ independent data providers
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Updates every 5 minutes
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Manipulation-resistant consensus
+                </li>
+              </ul>
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-indigo-400 text-sm font-medium">
+                Learn More →
+              </div>
+            </div>
+          </Link>
         </div>
 
-        <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6">
-          <div className="flex items-center gap-3 mb-4">
-            <Eye className="w-8 h-8 text-indigo-400" />
-            <h3 className="text-lg font-semibold text-white">Sigma Protocols</h3>
-          </div>
-          <p className="text-gray-400 text-sm">
-            Advanced cryptographic protocols enabling zero-knowledge proofs and enhanced privacy.
-          </p>
-        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Link href="/docs/developers/ergoscript-languages/wallet-interaction/data-inputs" className="group">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-yellow-500/20 rounded-lg flex items-center justify-center">
+                  <Layers className="w-6 h-6 text-yellow-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-yellow-400">Data Inputs</h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Unique feature allowing smart contracts to read data from other UTXOs without spending them. Enables complex multi-stage protocols and efficient data sharing.
+              </p>
+              <ul className="space-y-2 text-gray-400 text-sm mb-4">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Read-only UTXO access
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Multi-stage contract support
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Efficient data sharing
+                </li>
+              </ul>
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-yellow-400 text-sm font-medium">
+                Learn More →
+              </div>
+            </div>
+          </Link>
 
-        <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6">
-          <div className="flex items-center gap-3 mb-4">
-            <Network className="w-8 h-8 text-yellow-400" />
-            <h3 className="text-lg font-semibold text-white">Interoperability</h3>
+          <Link href="/docs/developers/ergoscript-languages/multi-stage-protocol" className="group">
+            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+                  <Workflow className="w-6 h-6 text-red-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-red-400">Multi-Stage Contracts</h3>
+              </div>
+              <p className="text-gray-300 text-sm mb-4">
+                Complex smart contracts that evolve through multiple stages, enabling sophisticated DeFi protocols like auctions, crowdfunding, and multi-party agreements.
+              </p>
+              <ul className="space-y-2 text-gray-400 text-sm mb-4">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Stateful contract evolution
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Complex DeFi protocols
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Multi-party coordination
+                </li>
+              </ul>
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-red-400 text-sm font-medium">
+                Learn More →
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Technical Advantages Section */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-6 text-white">Technical Advantages</h2>
+        <div className="grid md:grid-cols-3 gap-6">
+          <Link href="/docs/introduction/autolykos" className="group">
+            <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <Shield className="w-8 h-8 text-green-400" />
+                <h3 className="text-lg font-semibold text-white">Autolykos PoW</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-3">
+                ASIC-resistant proof-of-work algorithm ensuring fair mining and network decentralization.
+              </p>
+              <ul className="space-y-1 text-gray-500 text-xs mb-4">
+                <li>• Memory-hard algorithm</li>
+                <li>• GPU-friendly mining</li>
+                <li>• Pool-resistant design</li>
+              </ul>
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-green-400 text-sm font-medium">
+                Learn More →
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/technology/privacy-features" className="group">
+            <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <Eye className="w-8 h-8 text-indigo-400" />
+                <h3 className="text-lg font-semibold text-white">Sigma Protocols</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-3">
+                Advanced cryptographic protocols enabling zero-knowledge proofs and enhanced privacy.
+              </p>
+              <ul className="space-y-1 text-gray-500 text-xs mb-4">
+                <li>• Zero-knowledge proofs</li>
+                <li>• Composable privacy</li>
+                <li>• Efficient verification</li>
+              </ul>
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-indigo-400 text-sm font-medium">
+                Learn More →
+              </div>
+            </div>
+          </Link>
+
+          <Link href="/use/bridges" className="group">
+            <div className="bg-neutral-900/30 border border-neutral-700/50 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
+              <div className="flex items-center gap-3 mb-4">
+                <Network className="w-8 h-8 text-yellow-400" />
+                <h3 className="text-lg font-semibold text-white">Interoperability</h3>
+              </div>
+              <p className="text-gray-400 text-sm mb-3">
+                Seamless integration with other blockchains through trustless bridges and cross-chain protocols.
+              </p>
+              <ul className="space-y-1 text-gray-500 text-xs mb-4">
+                <li>• Trustless bridges</li>
+                <li>• Cross-chain swaps</li>
+                <li>• Multi-chain DeFi</li>
+              </ul>
+              <div className="absolute bottom-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity duration-200 text-yellow-400 text-sm font-medium">
+                Learn More →
+              </div>
+            </div>
+          </Link>
+        </div>
+      </div>
+
+      {/* Unique Value Propositions */}
+      <div className="mb-12">
+        <h2 className="text-2xl font-bold mb-6 text-white">Why Ergo Stands Out</h2>
+        <div className="bg-gradient-to-r from-orange-400/5 to-cyan-400/5 border border-orange-400/10 rounded-xl p-8">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div>
+              <h3 className="text-xl font-bold text-orange-400 mb-4 flex items-center gap-2">
+                <Target className="w-6 h-6" /> Research-Driven Development
+              </h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                Ergo is built on peer-reviewed research and academic foundations, ensuring robust and proven cryptographic implementations.
+              </p>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Peer-reviewed cryptographic protocols
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Academic partnerships
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Formal verification support
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-cyan-400 mb-4 flex items-center gap-2">
+                <Timer className="w-6 h-6" /> Long-term Sustainability
+              </h3>
+              <p className="text-gray-300 mb-4 text-sm">
+                Designed for the long term with economic sustainability mechanisms and gradual, non-breaking protocol evolution.
+              </p>
+              <ul className="space-y-2 text-gray-400 text-sm">
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Storage rent prevents bloat
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Organic protocol upgrades
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle className="w-4 h-4 text-green-400" />
+                  Miner incentive alignment
+                </li>
+              </ul>
+            </div>
           </div>
-          <p className="text-gray-400 text-sm">
-            Seamless integration with other blockchains through trustless bridges and cross-chain protocols.
-          </p>
         </div>
       </div>
 

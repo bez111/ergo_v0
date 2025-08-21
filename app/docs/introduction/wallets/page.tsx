@@ -128,43 +128,28 @@ export default function WalletsPage() {
         </p>
       </div>
       {/* Disclaimer */}
-      <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-5 flex items-center gap-4">
-        <AlertTriangle className="w-7 h-7 text-orange-400" />
-        <div>
-          <span className="font-semibold text-orange-300">Disclaimer:</span> The wallets listed here are primarily developed and maintained by independent teams within the Ergo community. Always download software from official sources linked here and practice strong security habits (like safeguarding your seed phrase). This information is for guidance only; conduct your own research before entrusting funds to any wallet.
-        </div>
+      <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-5">
+        <span className="font-semibold text-orange-300">Disclaimer:</span> The wallets listed here are primarily developed and maintained by independent teams within the Ergo community. Always download software from official sources linked here and practice strong security habits (like safeguarding your seed phrase). This information is for guidance only; conduct your own research before entrusting funds to any wallet.
       </div>
       {/* How to Choose */}
       <div>
         <h2 className="text-2xl font-bold mb-5 flex items-center gap-2"><Info className="w-6 h-6 text-cyan-400" /> How to Choose a Wallet?</h2>
         <div className="grid md:grid-cols-2 gap-4">
-          <div className="flex items-start gap-3 bg-neutral-900/50 rounded-xl p-4">
-            <Smartphone className="w-9 h-9 text-orange-400 mt-2" />
-            <div>
-              <div className="font-bold text-orange-300 mb-1">Mobile Use</div>
-              <div className="text-gray-300 text-sm">If you need access to your funds primarily on your smartphone (iOS or Android), look at <span className="text-orange-300 font-semibold">Mobile Wallets</span>.</div>
-            </div>
+          <div className="bg-neutral-900/50 rounded-xl p-4">
+            <div className="font-bold text-orange-300 mb-1">Mobile Use</div>
+            <div className="text-gray-300 text-sm">If you need access to your funds primarily on your smartphone (iOS or Android), look at <span className="text-orange-300 font-semibold">Mobile Wallets</span>.</div>
           </div>
-          <div className="flex items-start gap-3 bg-neutral-900/50 rounded-xl p-4">
-            <Monitor className="w-9 h-9 text-green-400 mt-2" />
-            <div>
-              <div className="font-bold text-green-300 mb-1">Desktop Management</div>
-              <div className="text-gray-300 text-sm">If you prefer managing funds on your computer (Windows, macOS, Linux), check out <span className="text-green-300 font-semibold">Desktop Wallets</span>.</div>
-            </div>
+          <div className="bg-neutral-900/50 rounded-xl p-4">
+            <div className="font-bold text-green-300 mb-1">Desktop Management</div>
+            <div className="text-gray-300 text-sm">If you prefer managing funds on your computer (Windows, macOS, Linux), check out <span className="text-green-300 font-semibold">Desktop Wallets</span>.</div>
           </div>
-          <div className="flex items-start gap-3 bg-neutral-900/50 rounded-xl p-4">
-            <Globe className="w-9 h-9 text-cyan-400 mt-2" />
-            <div>
-              <div className="font-bold text-cyan-300 mb-1">dApp Interaction</div>
-              <div className="text-gray-300 text-sm">If you plan to frequently interact with Ergo dApps directly through your web browser, a <span className="text-cyan-300 font-semibold">Browser Extension Wallet</span> is often the most convenient.</div>
-            </div>
+          <div className="bg-neutral-900/50 rounded-xl p-4">
+            <div className="font-bold text-cyan-300 mb-1">dApp Interaction</div>
+            <div className="text-gray-300 text-sm">If you plan to frequently interact with Ergo dApps directly through your web browser, a <span className="text-cyan-300 font-semibold">Browser Extension Wallet</span> is often the most convenient.</div>
           </div>
-          <div className="flex items-start gap-3 bg-neutral-900/50 rounded-xl p-4">
-            <Lock className="w-9 h-9 text-neutral-400 mt-2" />
-            <div>
-              <div className="font-bold text-neutral-300 mb-1">Maximum Security / Long-Term Storage</div>
-              <div className="text-gray-300 text-sm">For storing significant amounts of ERG or holding funds offline ("cold storage"), consider a <span className="text-neutral-300 font-semibold">Paper Wallet</span> or the offline/cold wallet features available in some mobile/desktop wallets.</div>
-            </div>
+          <div className="bg-neutral-900/50 rounded-xl p-4">
+            <div className="font-bold text-neutral-300 mb-1">Maximum Security / Long-Term Storage</div>
+            <div className="text-gray-300 text-sm">For storing significant amounts of ERG or holding funds offline ("cold storage"), consider a <span className="text-neutral-300 font-semibold">Paper Wallet</span> or the offline/cold wallet features available in some mobile/desktop wallets.</div>
           </div>
         </div>
       </div>
@@ -292,11 +277,8 @@ export default function WalletsPage() {
         )}
       </div>
       {/* Yoroi Recovery */}
-      <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-5 flex items-center gap-4">
-        <AlertTriangle className="w-7 h-7 text-orange-400" />
-        <div>
-          <span className="font-semibold text-orange-300">Funds stuck in Yoroi?</span> Yoroi wallet no longer supports Ergo. If you have funds in an old Yoroi Ergo wallet and know the password, you might be able to use this <a href="https://ergowallet.io/yoroi-recovery" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">community recovery tool</a> to send funds to a new Ergo wallet. Alternatively, check the <a href="https://ergoplatform.org/en/blog/access-issues-guide/" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">access issues guide</a> for other troubleshooting tips.
-        </div>
+      <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-5">
+        <span className="font-semibold text-orange-300">Funds stuck in Yoroi?</span> Yoroi wallet no longer supports Ergo. If you have funds in an old Yoroi Ergo wallet and know the password, you might be able to use this <a href="https://ergowallet.io/yoroi-recovery" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">community recovery tool</a> to send funds to a new Ergo wallet. Alternatively, check the <a href="https://ergoplatform.org/en/blog/access-issues-guide/" className="text-orange-300 underline hover:text-orange-200" target="_blank" rel="noopener noreferrer">access issues guide</a> for other troubleshooting tips.
       </div>
       {/* Additional Resources */}
       <div>

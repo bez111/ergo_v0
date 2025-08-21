@@ -73,37 +73,37 @@ export default function RoadmapPage() {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center text-green-400">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>eUTXO Model:</strong> Allows UTXOs to carry arbitrary data and complex scripts</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-gray-300"><strong className="text-white">eUTXO Model:</strong> Allows UTXOs to carry arbitrary data and complex scripts</span>
               </div>
-              <div className="flex items-center text-green-400">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>Autolykos PoW Algorithm:</strong> ASIC-resistant and designed for fair mining</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-gray-300"><strong className="text-white">Autolykos PoW Algorithm:</strong> ASIC-resistant and designed for fair mining</span>
               </div>
-              <div className="flex items-center text-green-400">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>Emission Schedule:</strong> Ensures stable and predictable supply of ERG tokens</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-gray-300"><strong className="text-white">Emission Schedule:</strong> Ensures stable and predictable supply of ERG tokens</span>
               </div>
-              <div className="flex items-center text-green-400">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>NiPoPoWs:</strong> Enables efficient light clients and trustless sidechains</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-gray-300"><strong className="text-white">NiPoPoWs:</strong> Enables efficient light clients and trustless sidechains</span>
               </div>
-              <div className="flex items-center text-green-400">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>ErgoScript:</strong> Supports clear smart contract development with Σ-protocols</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-gray-300"><strong className="text-white">ErgoScript:</strong> Supports clear smart contract development with Σ-protocols</span>
               </div>
-              <div className="flex items-center text-green-400">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>Storage Rent:</strong> Mitigates blockchain bloat and ensures sustainability</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-gray-300"><strong className="text-white">Storage Rent:</strong> Mitigates blockchain bloat and ensures sustainability</span>
               </div>
-              <div className="flex items-center text-green-400">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>Turing-Complete Smart Contracts:</strong> Allows complex on-chain computations</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-gray-300"><strong className="text-white">Turing-Complete Smart Contracts:</strong> Allows complex on-chain computations</span>
               </div>
-              <div className="flex items-center text-green-400">
-                <CheckCircle className="w-5 h-5 mr-2" />
-                <span><strong>Long-Term Economic Sustainability:</strong> Through storage rent and transaction fees</span>
+              <div className="flex items-center">
+                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
+                <span className="text-gray-300"><strong className="text-white">Long-Term Economic Sustainability:</strong> Through storage rent and transaction fees</span>
               </div>
             </div>
             
