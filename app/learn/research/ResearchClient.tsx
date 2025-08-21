@@ -257,17 +257,15 @@ export default function ResearchClient() {
             </div>
           </motion.section>
 
-          {/* Content Sections */}
-          <div className="container mx-auto px-4 relative z-10">
-            <div className="flex flex-col gap-16 md:gap-24">
-              {/* Key Documents */}
-              <motion.section
-                id="key-docs"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={itemVariants}
-              >
+          {/* Key Documents */}
+          <motion.section
+            id="key-docs"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={itemVariants}
+            className="py-20 px-4"
+          >
                 <div className="max-w-7xl mx-auto">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Key Documents</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -297,13 +295,14 @@ export default function ResearchClient() {
                 </div>
               </motion.section>
 
-              {/* Research by Category */}
-              <motion.section
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, amount: 0.2 }}
-                variants={itemVariants}
-              >
+          {/* Research by Category */}
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={itemVariants}
+            className="py-20 px-4"
+          >
                 <div className="max-w-7xl mx-auto">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Research by Category</h2>
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -340,61 +339,79 @@ export default function ResearchClient() {
                 </div>
               </motion.section>
 
-              {/* Developer Resources & Community */}
+              {/* Developer Resources */}
               <motion.section
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
                 variants={itemVariants}
+                className="py-20 px-4"
               >
-                <div className="max-w-7xl mx-auto">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-                    <div>
-                      <h2 className="text-3xl font-bold mb-8 text-white">Developer Resources</h2>
-                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                        <CardContent className="p-6">
-                          <ul className="space-y-4">
-                            {developerResources.map((resource) => (
-                              <li key={resource.title}>
+                <div className="max-w-4xl mx-auto">
+                  <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Developer Resources</h2>
+                  
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors">
+                    <CardContent className="p-8">
+                      <div className="space-y-4">
+                        {developerResources.map((resource) => (
+                          <div key={resource.title} className="flex items-center space-x-6 hover:translate-x-2 transition-transform">
+                            <Card className="flex-1 bg-neutral-800/30 border-neutral-700/50 backdrop-blur-sm rounded-xl hover:border-orange-500/30">
+                              <CardContent className="p-6">
                                 <Link
                                   href={resource.url}
                                   target="_blank"
-                                  className="group flex items-center gap-4 p-3 rounded-lg hover:bg-neutral-800/30 transition-colors"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center space-x-4 group"
                                 >
-                                  <resource.icon className="w-6 h-6 text-orange-400" />
-                                  <span className="text-lg text-neutral-300 group-hover:text-white">{resource.title}</span>
-                                  <ExternalLink className="w-5 h-5 ml-auto text-neutral-500 group-hover:text-white" />
+                                  <span className="text-orange-400">{<resource.icon className="w-6 h-6" />}</span>
+                                  <div className="flex-1">
+                                    <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">{resource.title}</h3>
+                                  </div>
+                                  <ExternalLink className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
                                 </Link>
-                              </li>
-                            ))}
-                          </ul>
-                        </CardContent>
-                      </Card>
-                    </div>
-
-                    <div>
-                      <h2 className="text-3xl font-bold mb-8 text-white">Join the Discussion</h2>
-                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                        <CardContent className="p-8 text-center">
-                          <Users className="w-12 h-12 mx-auto mb-4 text-orange-400" />
-                          <h3 className="text-2xl font-bold text-white mb-3">Contribute to Ergo Research</h3>
-                          <p className="text-neutral-300 mb-6">
-                            Have an idea or want to contribute? Join community channels to discuss research and collaborate.
-                          </p>
-                          <Button asChild>
-                            <Link href="/start/community" className="flex items-center gap-2">
-                              Community Channels
-                              <Users className="w-4 h-4" />
-                            </Link>
-                          </Button>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
+                              </CardContent>
+                            </Card>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
               </motion.section>
+
+          {/* Join the Discussion */}
+          <motion.section
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={itemVariants}
+            className="py-20 px-4"
+          >
+            <div className="max-w-4xl mx-auto text-center">
+              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
+                <CardContent className="p-12">
+                  <h2 className="text-4xl font-bold mb-6 text-white">Join the Discussion</h2>
+                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
+                    Have an idea or want to contribute? Join community channels to discuss research and collaborate.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Link href="/start/community" className="flex items-center">
+                        <Users className="mr-2 w-4 h-4" />
+                        Community Channels
+                      </Link>
+                    </Button>
+                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl">
+                      <Link href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer" className="flex items-center">
+                        <ExternalLink className="mr-2 w-4 h-4" />
+                        GitHub Research
+                      </Link>
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-          </div>
+          </motion.section>
         </motion.div>
       </div>
     </>

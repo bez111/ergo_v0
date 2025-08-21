@@ -12,8 +12,8 @@ export default function MinerToolingPage() {
     <div className="space-y-10">
       {/* Hero Section */}
       <div className="mb-10">
-        <h1 className="text-4xl font-bold text-white mb-4 leading-tight pb-1 flex items-center gap-3">
-          <Pickaxe className="w-8 h-8 text-orange-400" /> Miner Tooling
+        <h1 className="text-4xl font-bold text-white mb-4 leading-tight pb-1">
+          Miner Tooling
         </h1>
         <p className="text-xl text-gray-400 mb-6 max-w-2xl">
           Explore decentralized apps and innovations designed to empower miners in the Ergo ecosystem. These tools promote decentralization, efficiency, and new opportunities for both miners and the broader network.

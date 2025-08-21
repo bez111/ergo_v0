@@ -32,6 +32,13 @@ export default function GovernancePage() {
       </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
+            href="/docs/miners"
+            className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors justify-center"
+          >
+            <span>←</span>
+            Back to Miners
+          </Link>
+          <Link
             href="/docs/miners/governance/voting"
             className="inline-flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg transition-colors justify-center"
           >
@@ -44,13 +51,6 @@ export default function GovernancePage() {
           >
             <GitBranch className="w-5 h-5" />
             Forking Mechanisms
-          </Link>
-          <Link
-            href="/docs/miners"
-            className="inline-flex items-center gap-2 border border-gray-600 hover:border-gray-500 text-gray-300 px-6 py-3 rounded-lg transition-colors justify-center"
-          >
-            <span>←</span>
-            Back to Miners
           </Link>
         </div>
       </div>
