@@ -160,10 +160,10 @@ function ErgoHackContent({ onBack }: { onBack: () => void }) {
       </div>
       <button
         onClick={onBack}
-        className="flex items-center gap-2 text-sm text-gray-400 hover:text-orange-400 transition mb-8 ml-1"
+        className="inline-flex items-center px-6 py-3 bg-orange-500/10 border border-orange-500/20 rounded-xl hover:bg-orange-500/20 transition-all duration-200 gap-2 mb-8"
       >
-        <ChevronLeft className="w-4 h-4" />
-        Back to events
+        <ChevronLeft className="w-5 h-5 text-orange-400" />
+        <span className="text-orange-400 font-semibold">Back to Events</span>
       </button>
       <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
         <blockquote className="text-xl italic text-center text-gray-300">
@@ -317,10 +317,10 @@ function ErgoSummitContent({ onBack }: { onBack: () => void }) {
       </div>
       <button
         onClick={onBack}
-        className="flex items-center gap-2 text-sm text-gray-400 hover:text-orange-400 transition mb-8 ml-1"
+        className="inline-flex items-center px-6 py-3 bg-orange-500/10 border border-orange-500/20 rounded-xl hover:bg-orange-500/20 transition-all duration-200 gap-2 mb-8"
       >
-        <ChevronLeft className="w-4 h-4" />
-        Back to events
+        <ChevronLeft className="w-5 h-5 text-orange-400" />
+        <span className="text-orange-400 font-semibold">Back to Events</span>
       </button>
       <div className="bg-gradient-to-r from-orange-400/10 to-cyan-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
         <blockquote className="text-xl italic text-center text-gray-300">
