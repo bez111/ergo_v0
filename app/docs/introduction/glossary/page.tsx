@@ -724,7 +724,15 @@ function StatsSegment({ terms, languages, sections, topTerms }: { terms: number;
   const [displayTerms, setDisplayTerms] = useState(0);
   const [displayLangs, setDisplayLangs] = useState(0);
   const [displaySections, setDisplaySections] = useState(0);
+  const [mounted, setMounted] = useState(false);
+  
   useEffect(() => {
+    setMounted(true);
+  }, []);
+  
+  useEffect(() => {
+    if (!mounted) return;
+    
     let t = 0, l = 0, s = 0;
     const step = () => {
       let changed = false;
@@ -734,7 +742,7 @@ function StatsSegment({ terms, languages, sections, topTerms }: { terms: number;
       if (changed) setTimeout(step, 30);
     };
     step();
-  }, [terms, languages, sections]);
+  }, [terms, languages, sections, mounted]);
   return (
     <div className="mb-8 flex flex-wrap gap-x-12 gap-y-4 items-end text-base font-medium text-gray-200 select-none">
       <StatItem label="terms" value={displayTerms} />
