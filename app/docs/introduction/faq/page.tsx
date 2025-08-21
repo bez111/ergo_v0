@@ -1,6 +1,24 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { 
+  ChevronDown, 
+  ChevronUp, 
+  Search, 
+  Filter,
+  HelpCircle,
+  Lightbulb,
+  Shield,
+  Zap,
+  Users,
+  Settings,
+  AlertTriangle,
+  CheckCircle,
+  BookOpen
+} from "lucide-react";
 
 // Категории FAQ из /learn/faq
 const categories = [
@@ -8,586 +26,613 @@ const categories = [
     id: "general",
     title: "General Questions",
     color: "from-blue-500 to-cyan-500",
+    icon: HelpCircle,
   },
   {
     id: "technology",
     title: "Technology",
     color: "from-purple-500 to-pink-500",
+    icon: Shield,
   },
   {
     id: "economics",
     title: "Economics",
     color: "from-green-500 to-emerald-500",
+    icon: Zap,
   },
   {
     id: "ecosystem",
     title: "Ecosystem",
     color: "from-orange-500 to-red-500",
+    icon: Users,
   },
   {
-    id: "wallets",
-    title: "Wallets & User Practicalities",
-    color: "from-cyan-500 to-blue-500",
+    id: "development",
+    title: "Development",
+    color: "from-indigo-500 to-blue-500",
+    icon: Settings,
   },
   {
-    id: "troubleshooting",
-    title: "Troubleshooting",
-    color: "from-red-500 to-orange-500",
+    id: "security",
+    title: "Security",
+    color: "from-red-500 to-pink-500",
+    icon: AlertTriangle,
   },
 ];
 
-// Вопросы и ответы из /learn/faq (faqData)
+// FAQ данные
 const faqData = [
-  // General
+  // General Questions
   {
-    id: "what-is-ergo",
+    category: "general",
     question: "What is Ergo?",
-    answer:
-      "Ergo is a programmable blockchain protocol engineered for the development of decentralized applications (dApps), with a pronounced emphasis on creating an efficient, secure, and accessible environment for implementing financial contracts. Launched in 2019, the platform distinctively merges the security advantages of Bitcoin's Unspent Transaction Output (UTXO) model with sophisticated cryptographic features and a potent smart contract language known as ErgoScript.",
-    category: "general",
+    answer: "Ergo is a next-generation smart contract platform that ensures the economic freedom of ordinary people through secure, accessible, and decentralized financial tools. It combines Bitcoin's security model with advanced smart contract capabilities.",
+    priority: 1,
   },
   {
-    id: "ergo-vision",
-    question: "What is the main goal or vision of Ergo?",
-    answer:
-      "The overarching vision of Ergo is to furnish tools that promote economic freedom for ordinary individuals by offering secure, accessible, and decentralized financial instruments. This mission is supported by a commitment to creating a resilient platform engineered for long-term viability, capable of adapting to new challenges and incorporating novel ideas through its self-amendable protocol.",
     category: "general",
+    question: "Who created Ergo?",
+    answer: "Ergo was founded by Alexander Chepurnoy (kushti) and Dmitry Meshkov, both former IOHK researchers who contributed to Cardano's development. The platform launched in 2019 with a fair distribution model.",
+    priority: 1,
   },
   {
-    id: "ergo-principles",
-    question: "What are the core principles of the Ergo Platform?",
-    answer:
-      "Ergo operates under several core principles: Organic and Non-Breaking Development (protocol modifications undergo approval by miners, users, and projects), Open-Source and Permissive Licensing, Privacy and Trustless Environments, Community-Driven governance (Ergo Treasury benefits the community), and Focus on Long-Term Survivability through researched solutions and self-amendable protocol design.",
     category: "general",
+    question: "What makes Ergo different from other blockchains?",
+    answer: "Ergo combines Proof-of-Work consensus with advanced features like eUTXO model, Sigma Protocols for zero-knowledge proofs, storage rent for sustainability, and NiPoPoWs for light clients. It's designed to be survivable, self-amendable, and truly decentralized.",
+    priority: 1,
   },
   {
-    id: "ergo-manifesto",
-    question: "What is the Ergo Manifesto and its key ideas on privacy?",
-    answer:
-      "The Ergo Manifesto, authored by co-founder Alex Chepurnoy, articulates that financial privacy is a fundamental human right. Key ideas include: privacy as a tool for survival and protection against authoritarian control, defense against financial asset seizure, recognition that regulation stability isn't guaranteed, and advocacy for non-custodial, decentralized privacy mechanisms through tools like ErgoMixer and Sigma protocols.",
     category: "general",
+    question: "Is Ergo decentralized?",
+    answer: "Yes, Ergo is fully decentralized with no pre-mine, ICO, or VC funding. The network is secured by miners worldwide, and development is community-driven through the Ergo Foundation and various independent developers.",
+    priority: 2,
   },
   {
-    id: "why-named-ergo",
-    question: 'Why is it named "Ergo"?',
-    answer:
-      'The name "Ergo" has multifaceted meanings: In Latin, "ergo" means "therefore" or "consequently," reflecting logical consistency and efficient operation. In Greek, "ἔργον" (ergon) means "work," acknowledging the Proof-of-Work consensus mechanism. It also evokes ergonomics, emphasizing user-friendly design. The ticker ERG connects to "erg," a unit of work/energy in physics.',
     category: "general",
+    question: "What is the ERG token?",
+    answer: "ERG is Ergo's native cryptocurrency used for transaction fees, storage rent, and as a store of value. It has a fixed maximum supply of 97.7 million ERG with a fair emission schedule over approximately 8 years.",
+    priority: 1,
   },
   {
-    id: "ergo-launch",
-    question: "When was Ergo launched? Was there an ICO?",
-    answer:
-      'Ergo\'s mainnet launched on July 1st, 2019, with initial concepts starting in 2016. Significantly, Ergo had NO ICO, pre-mine, or private sales - it was a "fair launch" where ERG tokens were primarily obtainable through mining. The Ergo Foundation was allocated 4.43% of the total monetary base, distributed over the emission period for ecosystem development.',
     category: "general",
+    question: "How does Ergo ensure long-term sustainability?",
+    answer: "Ergo implements Storage Rent to prevent blockchain bloat, has a fixed supply with no inflation, and will transition to fee-based mining rewards. The platform is designed to be self-sustaining without relying on external funding or continuous token issuance.",
+    priority: 2,
   },
   {
-    id: "where-analytics",
-    question: "Where can I see analytics on use?",
-    answer: 'Analytics provides an overview of various metrics available.',
     category: "general",
+    question: "What is Ergo's vision for the future?",
+    answer: "Ergo aims to create contractual money - a platform where ordinary people can access the same sophisticated financial tools as large institutions, but in a decentralized, trustless manner. The goal is to enable true peer-to-peer economic interactions without intermediaries.",
+    priority: 2,
   },
+
+  // Technology
   {
-    id: "what-is-efyt",
-    question: "What is EFYT?",
-    answer: `Ergo-First-Year-Token (EFYT) was airdropped and distributed on Waves DEX starting in May 2017. EFYT helped build an early community and raise funds for Ergo before mainnet launch. EFYT is not the same as ERG; the mainnet native token is mined after launch. The max supply of EFYT is 1,970,945.0, which is 10% of the first year of Ergo token emission and the same number of Ergs that the Treasury will receive during year 1, sufficient to swap the max supply of EFYT for Erg.`,
-    category: "general",
-  },
-  {
-    id: "how-different-from-btc",
-    question: "How does Ergo differ from Bitcoin?",
-    answer: `Ergo builds upon the same UTXO model as Bitcoin but extends its functionality with additional features. Ergo allows for more complex programmability by providing access to the entire spending transaction and the block solution in the execution context. This enables the creation of Turing-complete contracts and the implementation of contractual money, where digital coins can be explicitly bound to a contract in the form of executable code.`,
     category: "technology",
+    question: "What is the eUTXO model?",
+    answer: "The Extended UTXO (eUTXO) model combines Bitcoin's UTXO security with Ethereum's smart contract capabilities. It allows UTXOs to carry arbitrary data and complex scripts, enabling advanced DeFi applications while maintaining predictability and security.",
+    priority: 1,
   },
   {
-    id: "what-is-contractual-money",
-    question: "What is contractual money?",
-    answer: `Contractual money is digital money that is bound to a contract in the form of executable code, which enforces specific rules and conditions for its usage. This allows for more precise control over how the money is spent and can be used to implement various use cases, such as microcredit systems or local exchange trading systems.`,
     category: "technology",
+    question: "What are Sigma Protocols?",
+    answer: "Sigma Protocols are efficient zero-knowledge proofs that enable privacy-preserving applications on Ergo. They allow users to prove statements about data without revealing the data itself, enabling features like mixer services and private transactions.",
+    priority: 1,
   },
   {
-    id: "energy-consumption",
-    question: "What about energy consumption?",
-    answer: `Proof of Work, Energy & Ergo: Ergo uses Proof of Work, which is energy-intensive compared to Proof of Stake. However, Ergo's design is conservative, focusing on well-known and tested Sigma protocols for privacy. The network is designed to be upgradeable, allowing for the adoption of newer, resilient cryptographic frameworks in the future.`,
+    category: "technology",
+    question: "What is Storage Rent?",
+    answer: "Storage Rent is a small fee charged for keeping data on the blockchain. After 4 years of inactivity, a minimal fee (0.14 ERG per box) is charged. This ensures long-term sustainability by preventing blockchain bloat and incentivizing efficient use of storage.",
+    priority: 1,
+  },
+  {
+    category: "technology",
+    question: "What is ErgoScript?",
+    answer: "ErgoScript is Ergo's smart contract language based on Sigma Protocols. It's a powerful, flexible scripting language that enables complex DeFi applications, multi-signature wallets, and advanced cryptographic operations while maintaining security and efficiency.",
+    priority: 2,
+  },
+  {
+    category: "technology",
+    question: "What are NIPoPoWs?",
+    answer: "Non-Interactive Proofs of Proof-of-Work (NIPoPoWs) are succinct proofs that allow light clients to verify blockchain events with minimal data. This enables secure mobile wallets and cross-chain communication without downloading the entire blockchain.",
+    priority: 2,
+  },
+  {
+    category: "technology",
+    question: "How does Ergo handle scalability?",
+    answer: "Ergo addresses scalability through efficient UTXO model design, Layer 2 solutions like Plasma and state channels, NIPoPoWs for light clients, and potential sharding. The focus is on sustainable growth without compromising decentralization.",
+    priority: 2,
+  },
+  {
+    category: "technology",
+    question: "What is Autolykos and why is it ASIC-resistant?",
+    answer: "Autolykos v2 is Ergo's Proof-of-Work algorithm designed to be memory-hard and ASIC-resistant. It requires significant memory bandwidth, making it more suitable for GPUs than specialized ASIC hardware, thus promoting mining decentralization.",
+    priority: 2,
+  },
+  {
+    category: "technology",
+    question: "How does Ergo achieve interoperability?",
+    answer: "Ergo enables interoperability through NIPoPoWs for light client proofs, cross-chain bridges like Rosen Bridge, and sigma protocols for trustless verification. This allows secure communication and value transfer between different blockchain networks.",
+    priority: 2,
+  },
+  {
+    category: "technology",
+    question: "What are Oracle Pools in Ergo?",
+    answer: "Oracle Pools are decentralized data feeds that bring real-world information onto the blockchain. Multiple oracles contribute data, and the system uses cryptographic techniques to ensure data integrity and resistance to manipulation.",
+    priority: 2,
+  },
+
+  // Economics
+  {
     category: "economics",
+    question: "What is Ergo's monetary policy?",
+    answer: "Ergo has a fixed supply of 97,739,925 ERG with no additional inflation. The emission schedule spans approximately 8 years, with block rewards decreasing every 3 months. After emission ends, miners are incentivized through transaction fees and storage rent.",
+    priority: 1,
   },
   {
-    id: "fiftyone-attack",
-    question: "What about 51% Attacks?",
-    answer: `Mining pools offer a buffer against network attacks as the hash rate is distributed across thousands of individual miners. The memory hardened aspect of Ergo also makes this attack vector more expensive as there is no ASIC support to rent. Usually, this attack is made for profit, and massive dumping occurs on an exchange as it is occurring. The current exchange situation doesn't provide the liquidity for a viable offramp, and the rentable ASIC support isn't an option.`,
-    category: "technology",
-  },
-  {
-    id: "miners-after-emission",
-    question: "How will miners be supported after emissions?",
-    answer: `After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through transaction fees, Miner Extracted Value (MEV), storage rent, and custom emission contracts as part of a Fair Initial Mining Offering (FIMO).`,
     category: "economics",
+    question: "How does mining work on Ergo?",
+    answer: "Ergo uses Autolykos v2, an ASIC-resistant Proof-of-Work algorithm optimized for GPUs. Miners can join pools or mine solo, with block time of approximately 2 minutes and dynamic difficulty adjustment.",
+    priority: 2,
   },
   {
-    id: "proof-of-useful-work",
-    question: "Is Proof of Useful Work being considered?",
-    answer: `While Proof of Useful Work (PoUW) is an interesting concept, it is still in the research phase. Ergo is open to exploring PoUW, but a radical change to the consensus mechanism would likely be beyond the scope and resources of the current team.`,
-    category: "technology",
-  },
-  {
-    id: "staking-erg",
-    question: "How can I stake my Erg?",
-    answer: `Ergo is a PoW coin, not PoS, so you can't stake Erg directly. However, you can earn yield from your ERG in liquidity pools, tokenisation of dApps, trading bots, lending platforms, and other mechanisms.`,
     category: "economics",
-  },
-  {
-    id: "how-fast",
-    question: "How fast is Ergo?",
-    answer: `TPS (Transactions Per Second) is not a useful metric. On Ergo Reference Node v.5, TPS is estimated to be a minimum of 47.5 tx/s. However, transactions can happen in three scaling layers or levels: L0 (Reference Nodes), L1 (scaling solutions), L2 (off-chain). Many transactions can be bundled and settled on the L0 layer.`,
-    category: "technology",
-  },
-  {
-    id: "why-scala",
-    question: "Why Scala?",
-    answer: `Ergo's primary language is Scala. The scripting language used by Ergo, ErgoScript, is also based on Scala, but the off-chain code can be written in any language. Scala is cross-platform, concise, efficient, and multi-paradigm, making it suitable for a wide range of domains.`,
-    category: "technology",
-  },
-  // --- ДОБАВЛЯЮ НОВЫЕ ВОПРОСЫ ---
-  {
-    id: "future-plans-ecosystem-growth",
-    question: "What are Ergo's future plans, especially in terms of how you grow your ecosystem?",
-    answer: `Position Ergo as a basis for unstoppable, grassroots economies, serving as a decentralized central bank digital currency (CBDC) for the people. Continue to solve pain points in development, especially UX. Hardware wallets, more courses, tutorials, guides, and resources are appearing daily. Bulk of our issue is lack of T1 exchanges and professional marketing. Rosen is helping here by connecting extensive liquidity to our DeFi stack. DAOs are now live and the community can help to grow the ecosystem in a more structured and decentralised way. Sigmanauts Program: Dozens of volunteers drive Ergo forward already. We're not reliant on a centralised entity or group pushing things forward. This kind of growth is a slow-burn but cumulative.`,
-    category: "ecosystem",
-  },
-  {
-    id: "privacy-focus",
-    question: "How important is privacy for Ergo currently, and how do you plan to avoid the issues that some privacy-focused projects have faced, like legal challenges?",
-    answer: `Privacy is a core principle for Ergo, considered a fundamental human right, and is implemented through opt-in protocols and robust cryptographic methods within its eUTXO model, ensuring strong protection while maintaining necessary transparency. To sidestep legal challenges, Ergo operates as a fully open-source platform with clear documentation and transparent development practices. Innovations like ErgoMixer—the first non-custodial, programmable, non-interactive mixer—demonstrate this commitment. More advanced ideas like SigmaJoin and Mixicles are also proposed. Contracts can't be shut down. We avoid legal challenges by pushing for completely unstoppable designs, educating the community on Knowing Their Assumptions and best practices.`,
-    category: "technology",
-  },
-  {
-    id: "mining-energy",
-    question: "What about energy consumption?",
-    answer: `Proof of Work, Energy & Ergo: Ergo uses Proof of Work, which is energy-intensive compared to Proof of Stake. However, Ergo's design is conservative, focusing on well-known and tested Sigma protocols for privacy. The network is designed to be upgradeable, allowing for the adoption of newer, resilient cryptographic frameworks in the future.`,
-    category: "economics",
-  },
-  {
-    id: "mining-51-attack",
-    question: "What about 51% Attacks?",
-    answer: `Mining pools offer a buffer against network attacks as the hash rate is distributed across thousands of individual miners. The memory hardened aspect of Ergo also makes this attack vector more expensive as there is no ASIC support to rent. Usually, this attack is made for profit, and massive dumping occurs on an exchange as it is occurring. The current exchange situation doesn't provide the liquidity for a viable offramp, and the rentable ASIC support isn't an option.`,
-    category: "technology",
-  },
-  {
-    id: "mining-support-after-emission",
-    question: "How will miners be supported after emissions?",
-    answer: `After the scheduled emissions conclude in 2045, miners on Ergo will continue to be incentivized through transaction fees, Miner Extracted Value (MEV), storage rent, and custom emission contracts as part of a Fair Initial Mining Offering (FIMO).`,
-    category: "economics",
-  },
-  {
-    id: "mining-proof-of-useful-work",
-    question: "Is Proof of Useful Work being considered?",
-    answer: `While Proof of Useful Work (PoUW) is an interesting concept, it is still in the research phase. Ergo is open to exploring PoUW, but a radical change to the consensus mechanism would likely be beyond the scope and resources of the current team.`,
-    category: "technology",
-  },
-  {
-    id: "mining-stake-erg",
-    question: "How can I stake my Erg?",
-    answer: `Ergo is a PoW coin, not PoS, so you can't stake Erg directly. However, you can earn yield from your ERG in liquidity pools, tokenisation of dApps, trading bots, lending platforms, and other mechanisms.`,
-    category: "economics",
-  },
-  {
-    id: "mining-quantum",
-    question: "Is Ergo quantum resistant?",
-    answer: `Ergo employs an efficient class of zero-knowledge proofs known as sigma-protocols, but the known post-quantum alternatives are still considered exotic and impractical for widespread use. In the event of a crypto-disaster—such as the development of an efficient quantum computer, number-theoretical attacks on elliptic curves, or other unforeseen vulnerabilities—transitioning to a blockchain with robust post-quantum security measures would be the best course of action.`,
-    category: "technology",
-  },
-  {
-    id: "mining-non-outsourceability",
-    question: "Why was non-outsourceability turned off?",
-    answer: `Autolykos v1 originally had non-outsourceability built-in to prevent mining pools on Ergo. However, it became apparent that it's only possible to avoid pools with smart contracts. So, they (the miners) turned it off so that not only larger players could take advantage of the loophole. Ergo is now focusing on memory hardness to keep mining as fair as possible, which should help prevent ASICs mining at least. There are also some improvements for pooling, e.g. Stratum 2 protocol. Mining pools have certain benefits just now being exposed by Ergo, like more equitable token distribution for dApps/ projects. This is now available to miners on GETBLOK.io, using the world's first working SmartPools/subpooling system.`,
-    category: "technology",
-  },
-  {
-    id: "mining-tps",
-    question: "How fast is Ergo?",
-    answer: `TPS (Transactions Per Second) is not a useful metric. On Ergo Reference Node v.5, TPS is estimated to be a minimum of 47.5 tx/s. However, transactions can happen in three scaling layers or levels: L0 (Reference Nodes), L1 (scaling solutions), L2 (off-chain). Many transactions can be bundled and settled on the L0 layer.`,
-    category: "technology",
-  },
-  {
-    id: "mining-why-scala",
-    question: "Why Scala?",
-    answer: `Ergo's primary language is Scala. The scripting language used by Ergo, ErgoScript, is also based on Scala, but the off-chain code can be written in any language. Scala is cross-platform, concise, efficient, and multi-paradigm, making it suitable for a wide range of domains.`,
-    category: "technology",
-  },
-  // ... остальные вопросы из faqData ...
-  // --- ДОБАВЛЯЮ ОТСУТСТВУЮЩИЕ ВОПРОСЫ ИЗ /learn/faq ---
-  {
-    id: "consensus-mechanism",
-    question: "What consensus mechanism does Ergo use?",
-    answer: 'Ergo employs a Proof-of-Work (PoW) consensus mechanism using the Autolykos algorithm. PoW was chosen for its "truly fair start" for token distribution, "highest degree of decentralisation," being "widely studied" and well-understood, providing "very high-security guarantees," and being "friendly to light clients."',
-    category: "technology",
-  },
-  {
-    id: "autolykos-algorithm",
-    question: "What is Autolykos and how is it different?",
-    answer: "Autolykos is Ergo's bespoke PoW algorithm. Version 1 was 'pool-resistant' with non-outsourceable puzzles. Version 2 (current) allows mining pools but maintains ASIC resistance and GPU-friendliness. It's memory-hard (initially ~2GB, growing over time), energy-efficient compared to SHA-256, and based on the k-sum problem. It requires GPUs with at least 4GB VRAM.",
-    category: "technology",
-  },
-  {
-    id: "eutxo-model",
-    question: "What is the eUTXO model and how does it differ from Bitcoin's UTXO or Ethereum's account model?",
-    answer: 'The Extended UTXO (eUTXO) model builds on Bitcoin\'s UTXO system but adds rich data and logic capabilities. Unlike Bitcoin\'s limited scripts or Ethereum\'s mutable account balances, eUTXO uses "boxes" that can contain values, complex scripts, and arbitrary data in "registers." This enables sophisticated smart contracts while maintaining UTXO benefits like parallel processing and predictable costs.',
-    category: "technology",
-  },
-  {
-    id: "eutxo-advantages",
-    question: "What are the advantages of eUTXO for Ergo?",
-    answer: "eUTXO provides: Enhanced Privacy (one-time objects), Scalability and Parallel Processing, better Interoperability with off-chain protocols, Transaction Cost Predictability (stable fees around 0.0011 ERG), Security and Determinism (isolated contract execution), Local Reasoning and Off-Chain Validation, and Expressive Smart Contracts on a secure foundation.",
-    category: "technology",
-  },
-  {
-    id: "smart-contracts-ergo",
-    question: "What are smart contracts on Ergo?",
-    answer: 'Smart contracts on Ergo are self-executing code that automatically enforce predefined terms. Every "coin" (UTXO/box) is protected by an ErgoScript program specifying spending conditions. This "contractual money" paradigm means logic is tied directly to digital assets, enabling complex financial instruments like asset-backed tokens, derivatives, escrow services, and decentralized microcredit.',
-    category: "technology",
-  },
-  {
-    id: "ergoscript-features",
-    question: "What is ErgoScript and what are its key features?",
-    answer: "ErgoScript is Ergo's smart contract language based on Scala. Key features: Security and Expressiveness for complex financial contracts, Safety by Design (intentionally not Turing-complete by default to prevent vulnerabilities), deep integration with Sigma Protocols for zero-knowledge proofs, Contextual Awareness (access to transaction and block data), and Functional Programming paradigm for more verifiable code.",
-    category: "technology",
-  },
-  {
-    id: "ergoscript-vs-solidity",
-    question: "How does ErgoScript compare to Solidity?",
-    answer: "ErgoScript (Ergo/eUTXO) vs Solidity (Ethereum/Account): ErgoScript emphasizes security and expressiveness with built-in cryptographic primitives, while Solidity focuses on ease of use. ErgoScript is Scala-based and functional, Solidity is JavaScript-like. ErgoScript offers more predictable costs and native privacy features, while Solidity has a larger ecosystem and more development tools currently available.",
-    category: "technology",
-  },
-  {
-    id: "boxes-ergoscript",
-    question: 'What are "boxes" in ErgoScript?',
-    answer: "Boxes are Ergo's enhanced UTXOs. Each box holds: a value (ERG or tokens), a guarding script (spending conditions), and data registers (R0-R9) for arbitrary data storage. This allows boxes to carry state and participate in complex dApp logic. Smart contracts read data from input boxes and create new output boxes with updated data, forming the basis of state transitions.",
-    category: "technology",
-  },
-  {
-    id: "sigma-protocols",
-    question: "What are Sigma Protocols and how do they enhance privacy?",
-    answer: "Sigma Protocols are efficient, composable zero-knowledge proofs that allow proving knowledge of secrets without revealing them. They enable: multi-signature wallets, ring signatures (for anonymity), threshold signatures, atomic swaps, and power ErgoMixer. They're deeply integrated into ErgoScript, making powerful cryptographic tools directly accessible to developers.",
-    category: "technology",
-  },
-  {
-    id: "zero-knowledge-proofs",
-    question: "Does Ergo offer Zero-Knowledge Proofs?",
-    answer: 'Yes, Ergo provides robust support for discrete log-based zero-knowledge proofs through Sigma Protocols. These are actively used for privacy-preserving features, complex authentication schemes, and applications like ErgoMixer. ErgoScript is described as being "based on Σ-protocols," meaning ZKP capabilities are woven into the fabric of smart contract execution.',
-    category: "technology",
-  },
-  {
-    id: "ergomixer",
-    question: "What is ErgoMixer and how does it work?",
-    answer: "ErgoMixer is a non-custodial, non-interactive token mixing service that enhances transaction privacy by obscuring links between sender and receiver addresses. It uses Sigma Protocols (ring signatures) to combine user transactions with others or decoys. Being non-custodial means users retain control of private keys, and non-interactive means no real-time coordination with other users is required.",
-    category: "technology",
-  },
-  {
-    id: "privacy-optional",
-    question: "Is privacy on Ergo optional or mandatory?",
-    answer: "Privacy on Ergo is optional, not mandatory. This allows flexibility for diverse use cases - some applications need transparency (like charities), while others require privacy. Optional privacy enables rich smart contract functionality, broader adoption, regulatory navigation, and user autonomy. Users can choose privacy tools like ErgoMixer when needed.",
-    category: "technology",
-  },
-  {
-    id: "storage-rent",
-    question: 'What is "storage rent" and why does it exist?',
-    answer: 'Storage rent is a fee levied on UTXOs inactive for 4+ years (approximately 0.14 ERG per typical box every 4 years). It exists to: prevent blockchain bloat by recycling "dust" and lost coins, provide long-term miner compensation beyond block rewards, and maintain network efficiency. Users can avoid it by simply moving funds before the 4-year period, resetting the timer.',
-    category: "technology",
-  },
-  {
-    id: "long-term-survivability",
-    question: "How does Ergo aim for long-term survivability and self-amendability?",
-    answer: "Ergo ensures survivability through: researched solutions to minimize security risks, sustainable economic model (storage rent + emission schedule), robust PoW consensus, and self-amendable protocol design. Changes require approval from miners, users, and projects through the EIP (Ergo Improvement Proposal) process, promoting organic, non-breaking development.",
-    category: "technology",
-  },
-  {
-    id: "erg-token-uses",
-    question: "What is ERG and what are its uses?",
-    answer: "ERG is Ergo's native cryptocurrency used for: transaction fees, smart contract execution, storage rent payments, DeFi applications (collateral, liquidity, SigmaUSD minting), potential governance participation, medium of exchange within the ecosystem, and store of value given its limited supply and PoW security.",
-    category: "economics",
-  },
-  {
-    id: "erg-tokenomics",
-    question: "What are the tokenomics of ERG?",
-    answer: "ERG has a fixed maximum supply of 97,739,924.5 ERG. Current circulating supply is approximately 81 million ERG (mid-2024). The Ergo Foundation received 4.43% allocation. Original block rewards were 75 ERG, now following EIP-27 schedule. Storage rent can remove small amounts from circulation, making it potentially deflationary post-emission.",
-    category: "economics",
-  },
-  {
-    id: "emission-schedule",
-    question: "What is Ergo's emission schedule and how has EIP-27 changed it?",
-    answer: 'Originally, emission was to complete in ~8 years (by 2027) with 75 ERG/block initially, reducing by 3 ERG every 3 months. EIP-27 (activated June 2022) extended this by redirecting rewards to a "remission contract" for gradual payout until ~2045. Current rules: if scheduled reward ≥15 ERG, 12 ERG goes to remission contract; if <15 ERG, then R-3 ERG goes to remission, miners get 3 ERG.',
-    category: "economics",
-  },
-  {
-    id: "mining-ergo",
-    question: "How does mining work on Ergo? Can anyone mine ERG?",
-    answer: "Yes, anyone with suitable GPU hardware can mine ERG. Ergo uses Autolykos v2 (ASIC-resistant, GPU-friendly, requires 4GB+ VRAM). Miners solve cryptographic puzzles to create blocks and earn rewards (currently following EIP-27 schedule) plus transaction fees. Mining pools are supported, and the Ergo team recommends supporting smaller pools for decentralization.",
-    category: "economics",
-  },
-  {
-    id: "notable-dapps",
-    question: "What are some notable dApps and projects in the Ergo ecosystem?",
-    answer: "Key projects include: ErgoMixer (privacy mixer), SigmaUSD (algorithmic stablecoin), Spectrum Finance (DEX), Oracle Pools (decentralized oracles), Rosen Bridge (cross-chain interoperability), Duckpools (lending), SigmaFi (P2P bonds), ErgoRaffle (crowdfunding), Ergo Auctions (NFT marketplace), Paideia (DAO framework), Nautilus Wallet (browser extension), and various gaming/utility projects.",
-    category: "ecosystem",
-  },
-  {
-    id: "ergo-cardano-relationship",
-    question: "What is the relationship between Ergo and Cardano?",
-    answer: "Ergo and Cardano share a close collaborative relationship: both use eUTXO model, reciprocal research exchange (DJED stablecoin was first implemented as SigmaUSD on Ergo), philosophical alignment on research-driven development, personnel connections (Alex Chepurnoy worked at IOHK), and complementary strengths (Ergo's PoW + privacy, Cardano's PoS + governance).",
-    category: "ecosystem",
-  },
-  {
-    id: "rosen-bridge",
-    question: "What is the Rosen Bridge?",
-    answer: "Rosen Bridge is a cross-chain interoperability solution connecting Ergo with Cardano, Bitcoin, Ethereum, and BSC. It utilizes Ergo's security as foundation, aims for decentralized design with guards/watchers, minimizes smart contract risk, and enables non-custodial asset transfers. It allows moving assets like ERG to other chains and vice versa for cross-chain DeFi participation.",
-    category: "ecosystem",
-  },
-  {
-    id: "ergo-vs-other-blockchains",
-    question: "How does Ergo compare to Bitcoin and Ethereum?",
-    answer: "vs Bitcoin: Ergo extends UTXO with smart contracts, uses ASIC-resistant mining, has advanced privacy features, and focuses on financial contracts beyond simple payments. vs Ethereum: Ergo uses eUTXO vs accounts, PoW vs PoS, ErgoScript vs Solidity, more predictable costs, native privacy tools, and research-driven development approach. Ergo targets secure financial contracts specifically.",
-    category: "ecosystem",
-  },
-  {
-    id: "buy-erg",
-    question: "How can I buy Ergo (ERG)?",
-    answer: "You can buy ERG through: 1) Centralized Exchanges (KuCoin, Gate.io, HTX) - register, complete KYC, buy directly with fiat or swap from USDT/BTC/ETH; 2) Crypto Wallets with built-in purchase (if supported); 3) Decentralized Exchanges like Spectrum Finance (requires existing crypto). Always use official platforms and consider transferring to self-custodial wallets for security.",
-    category: "wallets",
-  },
-  {
-    id: "recommended-wallets",
-    question: "What are the recommended Ergo wallets?",
-    answer: "Mobile: Ergo Mobile Wallet/Terminus (user-friendly, supports offline mode), Minotaur (multi-sig). Browser: Nautilus (most popular for dApps, privacy mode). Desktop: Satergo (full node GUI), Node Wallet (CLI). Web: SAFEW (advanced features, ErgoMixer access). Hardware: Ledger support, Paper Wallets for cold storage. Choose based on your security needs and usage patterns.",
-    category: "wallets",
-  },
-  {
-    id: "common-issues",
-    question: "What are common user complaints or issues with Ergo?",
-    answer: "Common issues include: transaction speeds feeling slow sometimes, wallet UX improvements needed (transaction history, in-wallet swaps), historical lack of major exchange listings, perceived marketing challenges, storage rent confusion, and some centralization concerns in early dApp versions. The community actively works on addressing these through development and education.",
-    category: "troubleshooting",
-  },
-  {
-    id: "wallet-access-issues",
-    question: "What are common wallet access issues and solutions?",
-    answer: 'Common issues: 1) Zero balance after restore - check derivation paths, BIP32 bug (pre-Oct 2022), verify seed phrase; 2) "User not authenticated" on iOS - often device credential changes, need seed phrase; 3) Lost seed phrase - generally unrecoverable, prevention is key; 4) Trezor errors - update software, check passphrase. Always securely backup seed phrases!',
-    category: "troubleshooting",
-  },
-  // --- ДОБАВЛЯЮ вопросы из Background ---
-  {
-    id: "where-wallets-exchanges",
-    question: "Where can I use Ergo? (wallets and exchanges)",
-    answer: "Ergo is currently available on the following wallets and exchanges.",
-    category: "general",
-  },
-  {
-    id: "where-roadmap",
-    question: "Where can I see the development roadmap?",
-    answer: "The development roadmap can be seen here.",
-    category: "general",
-  },
-  {
-    id: "where-dapps",
-    question: "Where can I see the list of Ergo dApps?",
-    answer: 'To see the applications currently running on Ergo, check out <a href="https://sigmaverse.io" class="text-cyan-300 underline hover:text-orange-300" target="_blank" rel="noopener noreferrer">sigmaverse.io</a>.',
-    category: "general",
-  },
-  {
-    id: "where-ergonaut",
-    question: "Where can I read about Ergo in simple terms?",
-    answer: 'To read about Ergo from a less technical perspective, visit <a href="https://ergonaut.space" class="text-cyan-300 underline hover:text-orange-300" target="_blank" rel="noopener noreferrer">ergonaut.space</a>.',
-    category: "general",
-  },
-  {
-    id: "where-mining-info",
-    question: "Where can I find mining info?",
-    answer: "If you want to mine, see the Miners Handbook.",
-    category: "general",
-  },
-  // --- Why Ergo ---
-  {
-    id: "why-ergo-name",
-    question: "Why is it called 'Ergo'?",
-    answer: '"Ergo" is a versatile term with deep roots in both Latin and Greek. In Latin, "ergo" means "therefore" or "consequently," reflecting logical consistency and efficient operation. In Greek, "ἔργον" (ergon) means "work," acknowledging the Proof-of-Work consensus mechanism. It also evokes ergonomics, emphasizing user-friendly design. The ticker ERG connects to "erg," a unit of work/energy in physics.',
-    category: "general",
-  },
-  // --- Emission ---
-  {
-    id: "why-97739924",
-    question: "Why 97,739,924?",
-    answer: 'A pre-agreed smart contract controls emission in Ergo, so we tried to have a simple enough emission curve with the total limited supply being close to 100M (and emission to be done in 8-10 years). The max supply is simply the amount needed to create the initial genesis state: a box with proof-of-no-premine (1 ERG), Foundation treasury (4,330,791.5 ERG), Miner Reward Box with the required ERG for 2,080,800 Blocks according to the emission schedule until rewards equal 0 and storage rent and EIP-27-reemission-box takes over (93,409,132 ERG). The treasury box is protected by a vesting smart contract that ensures an initial unlocked amount and then only releases an amount of ERG that provides funds for 2.5 years (never exceeding 10% of the circulating supply). All of this results in these specific amounts. In total, this happens to be 97,739,924.5 ERG.',
-    category: "economics",
-  },
-  // --- Foundation ---
-  {
-    id: "what-is-ergo-foundation",
-    question: "What is the Ergo Foundation?",
-    answer: 'The Ergo Foundation is a community-driven entity focused on: Promoting non-breaking development of Ergo Platform protocol; Promoting the widespread adoption and use of Ergo Platform and its native token (ERG); Developing the ecosystem around Ergo; Promoting the use of Ergo Platform and blockchain technology for social good; Supporting truly decentralised infrastructure and; Supporting privacy as a basic human right. To fund development, promotion, events, and any other activities which may advance the platform, Ergo has in place a Treasury, which will receive 4.43% of the Ergs released during emission. During the first two years post‐mainnet launch, the Treasury received 7.5 Ergs per block.',
-    category: "ecosystem",
-  },
-  // --- Emission Schedule ---
-  {
-    id: "emission-schedule-simple",
     question: "What is the emission schedule?",
-    answer: 'Ergo has a maximum supply of 97,739,925 Ergs, to be completed by 2045. The block reward lowers to 3ERG in 2026. You can see this emission schedule on ergo.watch',
-    category: "economics",
+    answer: "Ergo's emission started with 75 ERG per block, decreasing by 3 ERG every 3 months. The emission will complete around 2027-2028, after which the network will be sustained by transaction fees and storage rent.",
+    priority: 2,
   },
-  // --- Future Plans ---
   {
-    id: "future-plans-ecosystem-growth-block",
-    question: "What are Ergo's future plans, especially in terms of how you grow your ecosystem?",
-    answer: 'Position Ergo as a basis for unstoppable, grassroots economies, serving as a decentralized central bank digital currency (CBDC) for the people. See the roadmap. Continue to solve pain points in development. UX is a big one which will be helped hugely by sub-blocks. Hardware wallets, more courses, tutorials, guides, resources, etc appearing daily making it easier to onboard developers. Bulk of our issue is lack of T1 exchanges and professional marketing. Rosen is helping here by connecting extensive liquidity to our DeFi stack. DAOs are now live and the community can help to grow the ecosystem in a more structured and decentralised way. Sigmanauts Program: Dozens of volunteers drive Ergo forward already. We are not reliant on a centralised entity or group pushing things forward. This kind of growth is a slow-burn but cumulative.',
-    category: "ecosystem",
+    category: "economics",
+    question: "Are there any pre-mined tokens?",
+    answer: "No, Ergo had no pre-mine, ICO, or VC allocation. 4.43% of the total supply was allocated to the Ergo Foundation treasury to support development, released gradually over the emission period.",
+    priority: 1,
   },
-  // ... Аналогично для остальных справочных секций ...
-  // ... остальные вопросы ...
+  {
+    category: "economics",
+    question: "How does Ergo compare to Bitcoin economically?",
+    answer: "Like Bitcoin, Ergo has a fixed supply and uses Proof-of-Work consensus. However, Ergo adds Storage Rent for sustainability, has a shorter emission period (8 vs 140+ years), and includes advanced smart contract capabilities for more diverse economic applications.",
+    priority: 2,
+  },
+  {
+    category: "economics",
+    question: "What happens after the emission period ends?",
+    answer: "After emission ends around 2027-2028, miners will be incentivized through transaction fees and storage rent collection. The network is designed to remain economically viable and secure through these mechanisms, ensuring long-term sustainability.",
+    priority: 2,
+  },
+  {
+    category: "economics",
+    question: "How does Storage Rent benefit the network?",
+    answer: "Storage Rent prevents blockchain bloat, creates a sustainable fee market, incentivizes efficient UTXO management, and provides ongoing rewards for miners after emission ends. It ensures the network remains economically viable long-term.",
+    priority: 2,
+  },
+
+  // Ecosystem
+  {
+    category: "ecosystem",
+    question: "What DeFi applications are available on Ergo?",
+    answer: "Ergo has a growing DeFi ecosystem including SigmaUSD (algorithmic stablecoin), Spectrum (DEX), ErgoMixer (privacy tool), Rosen Bridge (cross-chain bridge), and various lending, NFT, and gaming platforms.",
+    priority: 1,
+  },
+  {
+    category: "ecosystem",
+    question: "What wallets support Ergo?",
+    answer: "Popular Ergo wallets include Nautilus (browser extension), SAFEW (mobile), Satergo (desktop), and Minotaur (multi-platform). Hardware wallet support is available through Ledger integration.",
+    priority: 1,
+  },
+  {
+    category: "ecosystem",
+    question: "Where can I buy ERG?",
+    answer: "ERG is available on various exchanges including KuCoin, Gate.io, CoinEx, and decentralized exchanges like Spectrum. Always verify exchange legitimacy and consider self-custody for security.",
+    priority: 1,
+  },
+  {
+    category: "ecosystem",
+    question: "What is the Ergo Foundation?",
+    answer: "The Ergo Foundation is a non-profit entity that supports Ergo's development, adoption, and ecosystem growth. It manages development funds, coordinates research, and facilitates community initiatives.",
+    priority: 2,
+  },
+  {
+    category: "ecosystem",
+    question: "How can I participate in the Ergo community?",
+    answer: "Join the Ergo community through Discord, Telegram, Reddit (r/ergonauts), and the Ergo Forum. Participate in discussions, contribute to development, create content, or support ecosystem projects.",
+    priority: 2,
+  },
+  {
+    category: "ecosystem",
+    question: "What is SigmaUSD?",
+    answer: "SigmaUSD is Ergo's algorithmic stablecoin pegged to the US Dollar. It uses a unique crypto-backed reserve system with SigmaRSV (reserve token) to maintain stability without requiring traditional collateral like other stablecoins.",
+    priority: 2,
+  },
+  {
+    category: "ecosystem",
+    question: "What is Spectrum DEX?",
+    answer: "Spectrum is Ergo's decentralized exchange (DEX) that enables trustless token swaps, liquidity provision, and yield farming. It uses an innovative AMM model optimized for the eUTXO architecture.",
+    priority: 2,
+  },
+  {
+    category: "ecosystem",
+    question: "What is ErgoMixer?",
+    answer: "ErgoMixer is a non-interactive, non-custodial mixer that provides privacy for ERG transactions. It uses Sigma Protocols to break the link between input and output addresses while maintaining full decentralization.",
+    priority: 2,
+  },
+  {
+    category: "ecosystem",
+    question: "What is Rosen Bridge?",
+    answer: "Rosen Bridge is a cross-chain bridge that enables secure transfer of assets between Ergo and other blockchains like Bitcoin, Ethereum, and Cardano. It uses advanced cryptographic techniques and decentralized watchers for security.",
+    priority: 2,
+  },
+
+  // Development
+  {
+    category: "development",
+    question: "How can I develop on Ergo?",
+    answer: "Start with the Ergo documentation, learn ErgoScript, and use development tools like Ergo AppKit, Ergo Playground, and Fleet SDK. The community provides tutorials, examples, and support for developers.",
+    priority: 1,
+  },
+  {
+    category: "development",
+    question: "What programming languages can I use?",
+    answer: "Smart contracts are written in ErgoScript. For dApp development, you can use JavaScript/TypeScript (Fleet SDK), Java/Scala (AppKit), Python, Rust, and other languages through various SDKs and libraries.",
+    priority: 2,
+  },
+  {
+    category: "development",
+    question: "Are there developer grants available?",
+    answer: "Yes, the Ergo Foundation offers grants for projects that contribute to the ecosystem. Additionally, there are hackathons, bounties, and community funding initiatives like the Good Whale Fund.",
+    priority: 2,
+  },
+  {
+    category: "development",
+    question: "What tools are available for developers?",
+    answer: "Ergo provides comprehensive developer tools including Ergo Node, Explorer, AppKit, Fleet SDK, Ergo Playground, Oracle Pools framework, and various testing and deployment utilities.",
+    priority: 2,
+  },
+  {
+    category: "development",
+    question: "How do I write my first smart contract?",
+    answer: "Start with the Ergo Playground to experiment with ErgoScript. Learn the eUTXO model, understand box concepts, and use the documentation and tutorials. Begin with simple contracts like multi-signature wallets before moving to complex DeFi applications.",
+    priority: 2,
+  },
+  {
+    category: "development",
+    question: "What is the Ergo Playground?",
+    answer: "The Ergo Playground is a web-based IDE for writing, testing, and deploying ErgoScript contracts. It provides a user-friendly interface for learning ErgoScript and experimenting with smart contract development without setting up a local environment.",
+    priority: 2,
+  },
+  {
+    category: "development",
+    question: "How does testing work on Ergo?",
+    answer: "Ergo provides robust testing frameworks including unit testing for ErgoScript contracts, integration testing with AppKit, and simulation environments. The eUTXO model makes contracts more predictable and easier to test than account-based systems.",
+    priority: 2,
+  },
+
+  // Security
+  {
+    category: "security",
+    question: "How secure is Ergo?",
+    answer: "Ergo inherits Bitcoin's battle-tested PoW security model while adding advanced cryptographic features. The eUTXO model provides predictable execution, and formal verification ensures contract security. Regular security audits and conservative design choices prioritize safety.",
+    priority: 1,
+  },
+  {
+    category: "security",
+    question: "Is Ergo quantum-resistant?",
+    answer: "While not fully quantum-resistant yet, Ergo's architecture allows for crypto-agility. The platform can adapt to post-quantum cryptography when needed, and research is ongoing for quantum-resistant implementations.",
+    priority: 2,
+  },
+  {
+    category: "security",
+    question: "How does Ergo prevent 51% attacks?",
+    answer: "Ergo uses ASIC-resistant mining to maintain decentralization, has a strong global mining community, implements NIPoPoWs for additional security layers, and benefits from the security of the Proof-of-Work consensus mechanism.",
+    priority: 2,
+  },
+  {
+    category: "security",
+    question: "What about smart contract security?",
+    answer: "ErgoScript's design prioritizes security with formal verification capabilities, predictable gas costs through the eUTXO model, built-in safety features, and extensive testing tools. The community conducts regular audits of major protocols.",
+    priority: 2,
+  },
+  {
+    category: "security",
+    question: "How does Ergo handle private keys?",
+    answer: "Ergo wallets use standard cryptographic practices for private key generation and management. The platform supports hardware wallets, multi-signature schemes, and advanced cryptographic features like threshold signatures through Sigma Protocols.",
+    priority: 2,
+  },
+  {
+    category: "security",
+    question: "What is the security model of Storage Rent?",
+    answer: "Storage Rent is implemented at the protocol level with strict rules. It only applies to old, inactive UTXOs (4+ years), uses minimal fees, and includes safeguards to prevent accidental loss. The system is designed to be predictable and fair.",
+    priority: 2,
+  },
+  {
+    category: "security",
+    question: "How are cross-chain bridges secured?",
+    answer: "Ergo's cross-chain bridges like Rosen Bridge use multiple security mechanisms including decentralized watchers, cryptographic proofs, economic incentives, and fraud detection. The design minimizes trust assumptions and provides multiple layers of protection.",
+    priority: 2,
+  },
 ];
 
-// Удаляю вопросы, дублирующие Background:
-const filteredFaqData = faqData.filter(q => ![
-  "where-wallets-exchanges",
-  "where-roadmap",
-  "where-dapps",
-  "where-ergonaut",
-  "where-mining-info"
-].includes(q.id));
+export default function FAQPage() {
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [expandedItems, setExpandedItems] = useState<Set<number>>(new Set());
+  const [showAllCategories, setShowAllCategories] = useState(true);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
-function SearchBar({ value, onChange }: { value: string; onChange: (v: string) => void }) {
-  return (
-    <div className="max-w-xl mx-auto mb-8 relative">
-      <input
-        type="text"
-        value={value}
-        onChange={e => onChange(e.target.value)}
-        placeholder="Search questions or info..."
-        className="w-full rounded-xl px-5 py-3 bg-neutral-900/80 text-lg text-gray-100 border border-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-400 placeholder:text-gray-400 shadow"
-      />
-      <span className="absolute right-4 top-1/2 -translate-y-1/2 text-cyan-400">🔍</span>
-    </div>
-  );
-}
+  // Filter FAQs based on search and category
+  const filteredFAQs = faqData.filter((faq) => {
+    const matchesSearch = searchTerm
+      ? faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        faq.answer.toLowerCase().includes(searchTerm.toLowerCase())
+      : true;
+    const matchesCategory = selectedCategory
+      ? faq.category === selectedCategory
+      : true;
+    return matchesSearch && matchesCategory;
+  });
 
-function SectionAccordion({ sections, search }: { sections: {id: string, title: string, color?: string, questions?: any[], content?: any}[], search: string }) {
-  const [open, setOpen] = useState<string | null>(sections[0]?.id || null);
-  // Фильтрация по поиску: ищем по вопросам и по справочному тексту
-  const filtered = sections.map(sec => {
-    if (sec.questions) {
-      const filteredQuestions = search.trim()
-        ? sec.questions.filter(q =>
-            q.question.toLowerCase().includes(search.toLowerCase()) ||
-            q.answer.toLowerCase().includes(search.toLowerCase())
-          )
-        : sec.questions;
-      return { ...sec, questions: filteredQuestions };
-    } else if (sec.content) {
-      const text = typeof sec.content === 'string' ? sec.content : '';
-      if (!search.trim() || (text && text.toLowerCase().includes(search.toLowerCase()))) {
-        return sec;
-      }
-      return null;
+  // Group FAQs by category
+  const groupedFAQs = categories.map(category => ({
+    ...category,
+    faqs: filteredFAQs.filter(faq => faq.category === category.id)
+  })).filter(category => category.faqs.length > 0);
+
+  const toggleExpanded = (index: number) => {
+    const newExpanded = new Set(expandedItems);
+    if (newExpanded.has(index)) {
+      newExpanded.delete(index);
+    } else {
+      newExpanded.add(index);
     }
-    return sec;
-  }).filter(Boolean);
-  // Если поиск — раскрываем все секции с результатами
-  const isSearching = !!search.trim();
+    setExpandedItems(newExpanded);
+  };
+
+  const handleCategorySelect = (categoryId: string | null) => {
+    setSelectedCategory(categoryId);
+    setShowAllCategories(false);
+  };
+
+  // Keyboard shortcuts
+  useEffect(() => {
+    const handleKeyPress = (e: KeyboardEvent) => {
+      if (e.key === "/" && e.ctrlKey) {
+        e.preventDefault();
+        searchInputRef.current?.focus();
+      }
+      if (e.key === "Escape") {
+        setSearchTerm("");
+        setSelectedCategory(null);
+        setShowAllCategories(true);
+      }
+    };
+    window.addEventListener("keydown", handleKeyPress);
+    return () => window.removeEventListener("keydown", handleKeyPress);
+  }, []);
+
   return (
-    <div className="space-y-6">
-      {filtered.map((sec, i) => {
-        if (!sec) return null;
-        return (
-          <div key={sec.id} className={`rounded-2xl shadow-lg border border-neutral-700 bg-neutral-900/80`}> 
+    <div className="relative">
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="pb-12 relative">
+          <div className="text-center">
+            <h1 className="text-5xl font-bold mb-6 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
+              Frequently Asked Questions
+            </h1>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+              Find answers to common questions about Ergo's technology, ecosystem, and development
+            </p>
+            
+            {/* Search Bar */}
+            <div className="max-w-2xl mx-auto mb-8">
+              <div className="relative">
+                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  placeholder="Search questions... (Ctrl + /)"
+                  className="w-full pl-12 pr-4 py-4 bg-neutral-900 border border-neutral-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-orange-500 transition-colors text-lg"
+                />
+                {searchTerm && (
             <button
-              className={`w-full text-left px-6 py-4 flex justify-between items-center font-bold text-xl sm:text-2xl text-white focus:outline-none focus:ring`}
-              onClick={() => setOpen(open === sec.id ? null : sec.id)}
-              aria-expanded={open === sec.id || isSearching}
+                    onClick={() => setSearchTerm("")}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-white"
             >
-              {sec.title}
-              <span className={`ml-2 text-gray-400 transition-transform ${open === sec.id || isSearching ? 'rotate-90' : ''}`}>▶</span>
+                    ✕
             </button>
-            <div className={`overflow-hidden transition-all duration-300 ${open === sec.id || isSearching ? 'py-2 px-6' : 'max-h-0 px-6'}`}
-              style={{lineHeight:'1.7'}}>
-              {sec.questions ? (
-                sec.questions.length > 0 ? (
-                  <div className="space-y-3">
-                    {sec.questions.map((q: any) => (
-                      <div key={q.id} className="rounded-xl bg-neutral-800/80 shadow">
-                        <div className="px-5 py-4 font-semibold text-lg text-cyan-200">{q.question}</div>
-                        <div className="px-5 pb-4 text-gray-200 text-base whitespace-pre-line" dangerouslySetInnerHTML={{__html: q.answer}} />
+                )}
+              </div>
+            </div>
+
+            {/* Category Filters */}
+            <div className="flex flex-wrap justify-center gap-3 mb-8">
+              <Button
+                variant={showAllCategories ? "default" : "outline"}
+                onClick={() => {
+                  setSelectedCategory(null);
+                  setShowAllCategories(true);
+                }}
+                className={`${
+                  showAllCategories 
+                    ? "bg-orange-500 text-black hover:bg-orange-600" 
+                    : "bg-neutral-800 text-gray-300 hover:bg-neutral-700 border-neutral-700"
+                }`}
+              >
+                <Filter className="w-4 h-4 mr-2" />
+                All Categories
+              </Button>
+              {categories.map((category) => {
+                const Icon = category.icon;
+                const isActive = selectedCategory === category.id;
+                return (
+                  <Button
+                    key={category.id}
+                    variant={isActive ? "default" : "outline"}
+                    onClick={() => handleCategorySelect(category.id)}
+                    className={`${
+                      isActive 
+                        ? "bg-orange-500 text-black hover:bg-orange-600" 
+                        : "bg-neutral-800 text-gray-300 hover:bg-neutral-700 border-neutral-700"
+                    }`}
+                  >
+                    <Icon className="w-4 h-4 mr-2" />
+                    {category.title}
+                  </Button>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* FAQ Content */}
+        <section className="pb-20">
+          {filteredFAQs.length === 0 ? (
+            <div className="text-center py-12">
+              <p className="text-gray-400 text-lg">
+                No questions found matching your search.
+              </p>
+            </div>
+          ) : showAllCategories && !searchTerm ? (
+            // Group by category view
+            <div className="space-y-12">
+              {groupedFAQs.map((category) => {
+                const Icon = category.icon;
+                return (
+                  <div key={category.id}>
+                    <div className="flex items-center gap-3 mb-6">
+                      <div className={`w-10 h-10 rounded-lg bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                        <Icon className="w-5 h-5 text-white" />
                       </div>
-                    ))}
+                      <h2 className="text-2xl font-bold text-white">
+                        {category.title}
+                      </h2>
+                      <span className="text-gray-500 text-sm">
+                        ({category.faqs.length} questions)
+                      </span>
+                    </div>
+                    <div className="space-y-4">
+                      {category.faqs.map((faq, index) => {
+                        const globalIndex = faqData.indexOf(faq);
+                        const isExpanded = expandedItems.has(globalIndex);
+                        return (
+                          <Card
+                            key={globalIndex}
+                            className="bg-neutral-900 border-neutral-700 hover:border-neutral-600 transition-all duration-200"
+                          >
+                            <CardHeader
+                              className="cursor-pointer"
+                              onClick={() => toggleExpanded(globalIndex)}
+                            >
+                              <div className="flex items-start justify-between">
+                                <CardTitle className="text-lg font-medium text-gray-200 pr-4">
+                                  {faq.question}
+                                </CardTitle>
+                                                              <div className="flex items-center gap-2 flex-shrink-0">
+                                {isExpanded ? (
+                                  <ChevronUp className="w-5 h-5 text-gray-400" />
+                                ) : (
+                                  <ChevronDown className="w-5 h-5 text-gray-400" />
+                                )}
+                              </div>
+                              </div>
+                            </CardHeader>
+                            {isExpanded && (
+                              <CardContent>
+                                <p className="text-gray-400 leading-relaxed">
+                                  {faq.answer}
+                                </p>
+                              </CardContent>
+                            )}
+                          </Card>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              })}
                   </div>
                 ) : (
-                  <div className="text-gray-400 italic">No questions in this section.</div>
-                )
-              ) : (
-                <div className="text-gray-200 text-base space-y-2 leading-relaxed" dangerouslySetInnerHTML={{__html: sec.content}} />
+            // List view
+            <div className="space-y-4">
+              {filteredFAQs.map((faq, index) => {
+                const globalIndex = faqData.indexOf(faq);
+                const isExpanded = expandedItems.has(globalIndex);
+                const category = categories.find(c => c.id === faq.category);
+                const Icon = category?.icon || HelpCircle;
+                
+                return (
+                  <Card
+                    key={globalIndex}
+                    className="bg-neutral-900 border-neutral-700 hover:border-neutral-600 transition-all duration-200"
+                  >
+                    <CardHeader
+                      className="cursor-pointer"
+                      onClick={() => toggleExpanded(globalIndex)}
+                    >
+                      <div className="flex items-start justify-between">
+                        <div className="flex-1">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Icon className="w-4 h-4 text-gray-500" />
+                            <Badge variant="outline" className="text-xs border-neutral-700 text-gray-500">
+                              {category?.title}
+                            </Badge>
+                          </div>
+                          <CardTitle className="text-lg font-medium text-gray-200">
+                            {faq.question}
+                          </CardTitle>
+                        </div>
+                        <div className="flex items-center gap-2 flex-shrink-0 ml-4">
+                          {isExpanded ? (
+                            <ChevronUp className="w-5 h-5 text-gray-400" />
+                          ) : (
+                            <ChevronDown className="w-5 h-5 text-gray-400" />
               )}
             </div>
           </div>
+                    </CardHeader>
+                    {isExpanded && (
+                      <CardContent>
+                        <p className="text-gray-400 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </CardContent>
+                    )}
+                  </Card>
         );
       })}
-      {filtered.length === 0 && (
-        <div className="text-center text-gray-400 italic">No results found.</div>
-      )}
+            </div>
+          )}
+        </section>
+
+        {/* Help Section */}
+        <section className="py-12 border-t border-neutral-800">
+          <div className="text-center">
+            <h3 className="text-2xl font-bold text-white mb-4">
+              Still have questions?
+            </h3>
+            <p className="text-gray-400 mb-8">
+              Can't find what you're looking for? Our community is here to help.
+            </p>
+            <div className="flex justify-center gap-4">
+              <Button
+                className="bg-orange-500 text-black hover:bg-orange-600"
+                onClick={() => window.open("https://discord.gg/ergo", "_blank")}
+              >
+                <Users className="w-4 h-4 mr-2" />
+                Join Discord
+              </Button>
+              <Button
+                variant="outline"
+                className="border-neutral-700 text-gray-300 hover:bg-neutral-800"
+                onClick={() => window.open("https://www.ergoforum.org/", "_blank")}
+              >
+                <BookOpen className="w-4 h-4 mr-2" />
+                Visit Forum
+              </Button>
     </div>
-  );
-}
-
-function ScrollTopButton() {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    const onScroll = () => setShow(window.scrollY > 300);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-  return show ? (
-    <button
-      onClick={() => window.scrollTo({top:0,behavior:'smooth'})}
-      className="fixed bottom-6 right-6 z-50 bg-gradient-to-r from-orange-400 to-cyan-400 text-white p-3 rounded-full shadow-lg hover:scale-110 transition"
-      aria-label="Scroll to top"
-    >↑</button>
-  ) : null;
-}
-
-function BackgroundBlock() {
-  return (
-    <div className="mb-10 p-6 rounded-2xl bg-neutral-900/80 border border-neutral-700 shadow text-gray-100">
-      <h2 className="text-2xl font-bold mb-4 text-white">Background</h2>
-      <ul className="list-disc ml-6 space-y-2">
-        <li>Ergo is currently available on the following <span className="text-red-400">wallets</span> and <span className="text-red-400">exchanges</span>.</li>
-        <li>The development roadmap can be seen <span className="text-red-400">here</span>.</li>
-        <li>To see the applications currently running on Ergo, check out <span className="text-red-400">sigmaverse.io</span>.</li>
-        <li>To read about Ergo from a less technical perspective, visit <span className="text-red-400">ergonaut.space</span>.</li>
-        <li>If you want to mine, see the <span className="text-blue-400">Miners Handbook</span>.</li>
-      </ul>
     </div>
-  );
-}
-
-export default function FAQPage() {
-  const [search, setSearch] = useState("");
-  // Готовим секции: категории с вопросами + extraSections
-  const allSections = [
-    ...categories.map(cat => ({
-      ...cat,
-      questions: filteredFaqData.filter(q => q.category === cat.id),
-    })),
-  ];
-  return (
-    <div className="px-4 max-w-3xl mx-auto pb-24">
-      {/* Вводная секция */}
-      <div className="mb-10 text-center">
-        <h1 className="text-4xl font-bold text-white mb-4 drop-shadow-lg">Ergo FAQ</h1>
-        <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-6">Find answers to the most common questions about Ergo, its technology, ecosystem, wallets, and more. Use the search or browse the sections below.</p>
+        </section>
       </div>
-      <BackgroundBlock />
-      <SearchBar value={search} onChange={setSearch} />
-      <SectionAccordion sections={allSections} search={search} />
-      <ScrollTopButton />
-      <style>{`
-        html { scroll-behavior: smooth; }
-        .animate-fadein { animation: fadein 0.7s; }
-        @keyframes fadein { from { opacity: 0; transform: translateY(30px);} to { opacity: 1; transform: none; } }
-      `}</style>
     </div>
   );
 } 

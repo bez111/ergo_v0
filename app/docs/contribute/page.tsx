@@ -34,14 +34,14 @@ export default function ContributePage() {
         {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-            Contributing to Ergo
-          </h1>
+          Contributing to Ergo
+        </h1>
           <p className="text-xl text-gray-400 mb-6">
             Ergo is an open-source project driven by its community. Contributions of all kinds are welcome and essential for the ecosystem's growth and success.
           </p>
           <p className="text-lg text-gray-300 mb-6">
             Whether you're a developer, writer, designer, marketer, researcher, or simply an enthusiastic user, there are many ways to get involved!
-          </p>
+        </p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="https://bounties.ergo.community/"
@@ -80,17 +80,17 @@ export default function ContributePage() {
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Core repositories: <a href="https://github.com/ergoplatform/ergo" target="_blank" className="text-cyan-400 hover:underline">ergo</a>, <a href="https://github.com/ScorexFoundation/sigmastate-interpreter" target="_blank" className="text-cyan-400 hover:underline">sigmastate-interpreter</a>
-              </li>
+                </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 <a href="https://bounties.ergo.community/" target="_blank" className="text-cyan-400 hover:underline">Bounties Board</a> for funded tasks
-              </li>
+                </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 <a href="https://ergoplatform.org/en/grants/" target="_blank" className="text-cyan-400 hover:underline">Development Grants</a> for larger projects
-              </li>
-            </ul>
-          </div>
+                </li>
+              </ul>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -103,17 +103,17 @@ export default function ContributePage() {
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Improve ErgoDocs clarity and examples
-              </li>
+                </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 <a href="https://github.com/ergoplatform/ergodocs" target="_blank" className="text-cyan-400 hover:underline">Submit PRs to ergodocs</a>
-              </li>
+                </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Translate content to other languages
-              </li>
-            </ul>
-          </div>
+                </li>
+              </ul>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -130,13 +130,13 @@ export default function ContributePage() {
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Articles, videos, and infographics
-              </li>
+                </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Community engagement and meetups
-              </li>
-            </ul>
-          </div>
+                </li>
+              </ul>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -153,12 +153,12 @@ export default function ContributePage() {
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 <a href="https://sigmanauts.org/" target="_blank" className="text-cyan-400 hover:underline">Join Sigmanauts Program</a>
-              </li>
+                </li>
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Test releases, wallets, and dApps
-              </li>
-            </ul>
+                </li>
+              </ul>
           </div>
         </div>
 
@@ -211,14 +211,14 @@ export default function ContributePage() {
         {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-            Developer Contributions
-          </h1>
+          Developer Contributions
+        </h1>
           <p className="text-xl text-gray-400 mb-6">
             Help build and improve Ergo's core protocol, node software, SDKs, tooling, and ecosystem projects.
           </p>
           <p className="text-lg text-gray-300 mb-6">
             Find bounties, grants, and technical guidelines for contributing code to the Ergo ecosystem.
-          </p>
+        </p>
           <div className="flex flex-wrap gap-4">
             <Link
               href="https://bounties.ergo.community/"
@@ -246,8 +246,8 @@ export default function ContributePage() {
             <li><strong>Join the Ergo Community:</strong> Connect with other developers and Ergo team members on our <a href="https://discord.gg/ergo" target="_blank" className="text-cyan-400 hover:underline">Discord Server</a>. Make sure to enable the development channels for relevant discussions.</li>
             <li><strong>Explore Opportunities:</strong> Visit our <a href="https://bounties.ergo.community/" target="_blank" className="text-cyan-400 hover:underline">Bounties</a> and <a href="https://ergoplatform.org/en/grants/" target="_blank" className="text-cyan-400 hover:underline">Grants</a> pages to find out about ongoing projects and tasks you can contribute to.</li>
             <li><strong>Submit Your Work:</strong> Once you've completed a task or project, you can submit your work for review.</li>
-          </ol>
-        </div>
+              </ol>
+            </div>
 
         {/* Payment Requests Section */}
         <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-8">
@@ -279,8 +279,8 @@ export default function ContributePage() {
               <li><strong>Submit Pull Request:</strong> Open a PR with clear description and reference to issue number.</li>
               <li><strong>Code Review:</strong> Respond to feedback and update your PR accordingly.</li>
               <li><strong>Merge:</strong> Once approved, maintainers will merge your PR.</li>
-            </ol>
-          </div>
+              </ol>
+            </div>
 
           <div className="grid md:grid-cols-2 gap-6">
             <div>
@@ -328,14 +328,14 @@ export default function ContributePage() {
         {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-            Community Marketing
-          </h1>
+          Community Marketing
+        </h1>
           <p className="text-xl text-gray-400 mb-6">
             Ergo has a lively and diverse community made up of various sub-ecosystems.
           </p>
           <p className="text-lg text-gray-300 mb-6">
             Here's how you can get involved and make a difference in spreading awareness about Ergo.
-          </p>
+        </p>
         </div>
 
         {/* Marketing Activities Grid */}
@@ -359,9 +359,9 @@ export default function ContributePage() {
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Collaborate on marketing strategies
-              </li>
-            </ul>
-          </div>
+                </li>
+              </ul>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -382,9 +382,9 @@ export default function ContributePage() {
               <li className="flex items-center gap-2">
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Global community reach
-              </li>
-            </ul>
-          </div>
+                </li>
+              </ul>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -406,8 +406,8 @@ export default function ContributePage() {
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Blog posts and articles
               </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -429,8 +429,8 @@ export default function ContributePage() {
                 <CheckCircle className="w-4 h-4 text-green-400" />
                 Webinars and live streams
               </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
         </div>
 
         {/* Collaboration Section */}
@@ -457,16 +457,16 @@ export default function ContributePage() {
                 <li>• Organize community fundraising campaigns</li>
               </ul>
             </div>
-          </div>
-        </div>
+            </div>
+            </div>
       </TabsContent>
 
       <TabsContent value="sigmanauts">
         {/* Hero Section */}
         <div className="mb-12">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-            Sigmanauts: Empowering the Ergo Community
-          </h1>
+          Sigmanauts: Empowering the Ergo Community
+        </h1>
           <p className="text-xl text-gray-400 mb-6">
             The Sigmanauts Program is a grassroots initiative aimed at empowering individuals to take ownership of Ergo and help shape its future.
           </p>
@@ -496,7 +496,7 @@ export default function ContributePage() {
           <p className="text-gray-300">
             Ergo, as outlined in its Manifesto, is a platform designed for the common person, standing against the centralization of banking and the misuse of money. The future of Ergo lies in the hands of its users, and we encourage everyone to take as much control of the Ergo ecosystem as possible.
           </p>
-        </div>
+            </div>
 
         {/* Categories Grid */}
         <div className="grid md:grid-cols-3 gap-6 mb-12">
@@ -507,7 +507,7 @@ export default function ContributePage() {
             <p className="text-gray-300 text-sm">
               Ideal for those with marketing expertise, connections to other projects, or skills that can help expand the community and attract diverse individuals.
             </p>
-          </div>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -516,7 +516,7 @@ export default function ContributePage() {
             <p className="text-gray-300 text-sm">
               Perfect for individuals interested in roles such as ambassador, moderator, or translator, fostering a welcoming environment for all members.
             </p>
-          </div>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -525,8 +525,8 @@ export default function ContributePage() {
             <p className="text-gray-300 text-sm">
               Suited for graphic designers, videographers, writers, or social media experts who want to showcase their talents and contribute to the visual and narrative aspects.
             </p>
-          </div>
-        </div>
+            </div>
+            </div>
 
         {/* Process & Achievements */}
         <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -540,7 +540,7 @@ export default function ContributePage() {
             <p className="text-gray-300 text-sm">
               As SigCANs demonstrate commitment and abilities, they can become full-fledged Sigmanauts with greater community responsibility and leadership roles.
             </p>
-          </div>
+            </div>
 
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
             <h3 className="text-xl font-bold mb-3 flex items-center gap-2">
@@ -552,8 +552,8 @@ export default function ContributePage() {
             <p className="text-gray-300 text-sm">
               Collaborative environment for learning, sharing ideas, and working towards common goals with networking opportunities.
             </p>
-          </div>
-        </div>
+            </div>
+            </div>
 
         {/* Mining Pool Section */}
         <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6">
@@ -588,7 +588,7 @@ export default function ContributePage() {
         <div className="mb-12">
           <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
             Contributing to Documentation
-          </h1>
+        </h1>
           <p className="text-xl text-gray-400 mb-6">
             We appreciate your interest in contributing! Your assistance is invaluable, and we aim to make the contribution process as straightforward as possible.
           </p>
@@ -674,8 +674,8 @@ export default function ContributePage() {
                 <li>• Sentence capitalization</li>
               </ul>
             </div>
-          </div>
-        </div>
+            </div>
+            </div>
       </TabsContent>
     </Tabs>
   )
