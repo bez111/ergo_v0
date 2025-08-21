@@ -3420,7 +3420,7 @@ export const glossaryData = [
       },
       {
         title: "Layer 0",
-        anchor: "layer-0-network",
+        anchor: "layer-0",
         definition: "The base network or peer-to-peer layer in a blockchain, responsible for communication and data propagation.",
         description: "Layer 0 provides the foundation for all higher layers, handling node discovery, message relaying, and network security.",
         example: "Example: 'Layer 0 ensures all nodes can communicate reliably.'",
@@ -3430,7 +3430,7 @@ export const glossaryData = [
       },
       {
         title: "Layer 1",
-        anchor: "layer-1-blockchain",
+        anchor: "layer-1",
         definition: "The core blockchain layer where consensus, transaction validation, and state management occur.",
         description: "Layer 1 is responsible for the main chain's security and integrity. Examples: Bitcoin, Ethereum, Ergo mainnets.",
         example: "Example: 'Ergo's Layer 1 uses the eUTXO model.'",
@@ -3440,7 +3440,7 @@ export const glossaryData = [
       },
       {
         title: "Layer 2",
-        anchor: "layer-2-offchain",
+        anchor: "layer-2",
         definition: "An off-chain or secondary protocol built on top of a Layer 1 blockchain to improve scalability and reduce costs.",
         description: "Layer 2 solutions include payment channels, rollups, and sidechains. They process transactions off-chain and settle them on Layer 1.",
         example: "Example: 'Lightning Network is a Layer 2 solution for Bitcoin.'",
