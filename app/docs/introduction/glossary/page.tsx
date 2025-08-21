@@ -7,10 +7,14 @@ import { useRouter } from "next/navigation";
 
 const languages = [
   { code: "en", label: "EN" },
+  { code: "zh", label: "ZH" },
   { code: "ru", label: "RU" },
+  { code: "ko", label: "KO" },
+  { code: "ja", label: "JA" },
+  { code: "tr", label: "TR" },
+  { code: "pt", label: "PT" },
   { code: "de", label: "DE" },
   { code: "es", label: "ES" },
-  { code: "pt", label: "PT" },
 ];
 
 export default function GlossaryPage() {
