@@ -42,7 +42,7 @@ export default function GrantsClient() {
 
               {/* Countdown */}
               <div className="flex justify-center items-center gap-4 mb-12">
-                <Clock className="w-6 h-6 text-brand-primary-400" />
+                <Clock className="w-6 h-6 text-orange-400" />
                 <span className="text-lg text-neutral-300">Expected Launch: Q3 2025</span>
               </div>
 
@@ -58,7 +58,7 @@ export default function GrantsClient() {
                       className="bg-neutral-900/80 border-neutral-700 text-white placeholder-neutral-500"
                       required
                     />
-                    <Button type="submit" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button type="submit" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Notify Me
                     </Button>
                   </form>
@@ -118,10 +118,10 @@ export default function GrantsClient() {
                     className="group"
                   >
                     <Card
-                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-brand-primary-500/50 transition-all duration-300 rounded-xl h-full`}
+                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 rounded-xl h-full`}
                     >
                       <CardContent className="p-8 text-center">
-                        <feature.icon className="w-12 h-12 text-brand-primary-400 mx-auto mb-4" />
+                        <feature.icon className="w-12 h-12 text-orange-400 mx-auto mb-4" />
                         <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                         <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
                       </CardContent>
@@ -144,7 +144,7 @@ export default function GrantsClient() {
                 Start preparing your project proposal and join our community to stay updated
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                   Join Discord Community
                 </Button>
                 <Button

@@ -271,7 +271,7 @@ export default function StorageRentPage() {
                     Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       <Link href="#how-it-works">Learn More</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
@@ -290,7 +290,7 @@ export default function StorageRentPage() {
                 </div>
                 <div className="relative">
                   <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">Core Principles</h3>
                         <div className="space-y-4">
@@ -298,19 +298,19 @@ export default function StorageRentPage() {
                             {
                               name: "Prevent Bloat",
                               description: "Keeps the blockchain lean and efficient",
-                              icon: <Recycle className="w-6 h-6 text-brand-primary-400" aria-hidden="true" />,
+                              icon: <Recycle className="w-6 h-6 text-orange-400" aria-hidden="true" />,
                               color: "from-orange-500/20 to-orange-500/5",
                             },
                             {
                               name: "Economic Sustainability",
                               description: "Creates long-term incentives for miners",
-                              icon: <TrendingUp className="w-6 h-6 text-brand-primary-400" aria-hidden="true" />,
+                              icon: <TrendingUp className="w-6 h-6 text-orange-400" aria-hidden="true" />,
                               color: "from-cyan-500/20 to-cyan-500/5",
                             },
                             {
                               name: "Predictable Costs",
                               description: "Users pay a transparent fee for data storage",
-                              icon: <Clock className="w-6 h-6 text-brand-primary-400" aria-hidden="true" />,
+                              icon: <Clock className="w-6 h-6 text-orange-400" aria-hidden="true" />,
                               color: "from-purple-500/20 to-purple-500/5",
                             },
                           ].map((feature, index) => (
@@ -352,9 +352,9 @@ export default function StorageRentPage() {
                     key={problem.title}
                     className="group cursor-pointer"
                   >
-                    <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/30 transition-colors h-full`}>
+                    <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors h-full`}>
                       <CardContent className="p-8 relative">
-                        <div className="p-3 bg-neutral-800 rounded-xl text-brand-primary-400 w-fit mb-6">
+                        <div className="p-3 bg-neutral-800 rounded-xl text-orange-400 w-fit mb-6">
                           {problem.icon}
                         </div>
 
@@ -443,9 +443,9 @@ export default function StorageRentPage() {
                     key={solution.title}
                     className="group cursor-pointer"
                   >
-                    <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/30 transition-colors h-full`}>
+                    <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors h-full`}>
                       <CardContent className="p-8 text-center relative overflow-hidden">
-                        <div className="mx-auto mb-6 text-brand-primary-400">{solution.icon}</div>
+                        <div className="mx-auto mb-6 text-orange-400">{solution.icon}</div>
                         <h3 className="text-2xl font-bold mb-4 text-white">{solution.title}</h3>
                         <p className="text-neutral-300 leading-relaxed">{solution.description}</p>
                       </CardContent>
@@ -468,7 +468,7 @@ export default function StorageRentPage() {
 
               <div className="relative">
                 {/* Timeline Line */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-brand-primary-500 rounded-full" aria-hidden="true" />
+                <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-orange-500 rounded-full" aria-hidden="true" />
 
                 <div className="space-y-16">
                   {timeline.map((phase, index) => (
@@ -477,10 +477,10 @@ export default function StorageRentPage() {
                       className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
                     >
                       <div className="flex-1 px-8">
-                        <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/30 transition-colors`}>
+                        <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors`}>
                           <CardContent className="p-8">
                             <div className="flex items-center mb-4">
-                              <div className={`p-3 bg-neutral-800 rounded-xl text-brand-primary-400 mr-4`} aria-hidden="true">{phase.icon}</div>
+                              <div className={`p-3 bg-neutral-800 rounded-xl text-orange-400 mr-4`} aria-hidden="true">{phase.icon}</div>
                               <div>
                                 <h3 className={`text-2xl font-bold text-white`}>{phase.status}</h3>
                                 <p className="text-neutral-400 font-medium">{phase.year}</p>
@@ -493,7 +493,7 @@ export default function StorageRentPage() {
                       </div>
 
                       {/* Timeline Node */}
-                      <div className={`w-6 h-6 rounded-full bg-brand-primary-500 border-4 border-black z-10`} aria-hidden="true" />
+                      <div className={`w-6 h-6 rounded-full bg-orange-500 border-4 border-black z-10`} aria-hidden="true" />
 
                       <div className="flex-1 px-8" />
                     </div>
@@ -519,10 +519,10 @@ export default function StorageRentPage() {
                     key={index}
                     className="group cursor-pointer"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/30 transition-colors rounded-xl overflow-hidden">
+                    <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors rounded-xl overflow-hidden">
                       <CardContent className="p-6">
                         <div className="flex items-start space-x-4">
-                          <div className="text-brand-primary-400" aria-hidden="true">
+                          <div className="text-orange-400" aria-hidden="true">
                             {benefit.icon}
                           </div>
                           <span className="text-neutral-300 leading-relaxed">
@@ -572,14 +572,14 @@ export default function StorageRentPage() {
           {/* CTA Section — NIPoPoWs Style */}
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30">
                 <CardContent className="p-12">
                   <h2 className="text-4xl font-bold mb-6 text-white">The Future is Sustainable</h2>
                   <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
                     Storage Rent keeps Ergo efficient, fair, and ready for the decades ahead. No bloat, no dead coins, no stale data — just a healthy, sustainable blockchain economy.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="start-building">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="start-building">
                       <Link href="/ecosystem" className="flex items-center">
                         <ArrowRight className="mr-2 w-4 h-4" aria-hidden="true" />
                         Start Building on Ergo

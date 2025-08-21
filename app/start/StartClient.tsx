@@ -282,10 +282,10 @@ const journeys: Record<Journey, {
 
 // Stats for the page
 const statsItems: StatsGridItem[] = [
-  { value: "5", label: "Learning Paths", icon: Target, color: "text-brand-primary-400" },
-  { value: "< 30min", label: "Quick Start", icon: Clock, color: "text-brand-primary-400" },
-  { value: "100%", label: "Open Source", icon: GitBranch, color: "text-brand-primary-400" },
-  { value: "24/7", label: "Community", icon: Users, color: "text-brand-primary-400" }
+  { value: "5", label: "Learning Paths", icon: Target, color: "text-orange-400" },
+  { value: "< 30min", label: "Quick Start", icon: Clock, color: "text-orange-400" },
+  { value: "100%", label: "Open Source", icon: GitBranch, color: "text-orange-400" },
+  { value: "24/7", label: "Community", icon: Users, color: "text-orange-400" }
 ]
 
 export default function StartPage() {
@@ -351,7 +351,7 @@ export default function StartPage() {
         <div className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Start Your <span className="text-brand-primary-400">Journey</span>
+              Start Your <span className="text-orange-400">Journey</span>
             </h1>
             <p className="text-gray-400">Loading...</p>
           </div>
@@ -416,7 +416,7 @@ export default function StartPage() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.3 + index * 0.1 }}
-                  className="flex items-center gap-3 bg-neutral-900/50 border border-neutral-700 rounded-lg px-4 py-3 hover:border-brand-primary-500/30 transition-all duration-300"
+                  className="flex items-center gap-3 bg-neutral-900/50 border border-neutral-700 rounded-lg px-4 py-3 hover:border-orange-500/30 transition-all duration-300"
                 >
                   <item.icon className={`w-5 h-5 ${item.color}`} />
                   <div className="flex flex-col">
@@ -450,10 +450,10 @@ export default function StartPage() {
                   onClick={() => setSelectedJourney(key)}
                   className="cursor-pointer"
                 >
-                  <div className={`relative bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full transition-all duration-300 hover:border-brand-primary-500/50 hover:bg-neutral-900/80 bg-gradient-to-br ${journey.gradient} group`}>
+                  <div className={`relative bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full transition-all duration-300 hover:border-orange-500/50 hover:bg-neutral-900/80 bg-gradient-to-br ${journey.gradient} group`}>
                     {/* Badge */}
                     {key === "new" && (
-                      <Badge className="absolute top-4 right-4 bg-brand-primary-500/20 text-brand-primary-400 border-brand-primary-500/30">
+                      <Badge className="absolute top-4 right-4 bg-orange-500/20 text-orange-400 border-orange-500/30">
                         Recommended
                       </Badge>
                     )}
@@ -464,7 +464,7 @@ export default function StartPage() {
                     </div>
                     
                     {/* Content */}
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-brand-primary-400 transition-colors">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-orange-400 transition-colors">
                       {journey.title}
                     </h3>
                     <p className="text-gray-400 mb-4">{journey.subtitle}</p>
@@ -477,7 +477,7 @@ export default function StartPage() {
                           return acc + (isNaN(duration) ? 5 : duration)
                         }, 0)
                       } min total</span>
-                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 group-hover:text-brand-primary-400 transition-all duration-300" />
+                      <ChevronRight className="w-5 h-5 group-hover:translate-x-1 group-hover:text-orange-400 transition-all duration-300" />
                     </div>
                   </div>
                 </motion.div>
@@ -518,13 +518,13 @@ export default function StartPage() {
                   <div className="space-y-3">
                     <div className="flex justify-between text-sm">
                       <span className="text-gray-400">Journey Progress</span>
-                      <span className="text-brand-primary-400 font-semibold">
+                      <span className="text-orange-400 font-semibold">
                         {completedCount} of {totalSteps} completed
                       </span>
                     </div>
                     <div className="h-3 bg-neutral-800 rounded-full overflow-hidden">
                       <motion.div 
-                        className="h-full bg-gradient-to-r from-brand-primary-500 to-brand-primary-400 rounded-full"
+                        className="h-full bg-gradient-to-r from-orange-500 to-orange-400 rounded-full"
                         initial={{ width: 0 }}
                         animate={{ width: `${progress}%` }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -582,7 +582,7 @@ export default function StartPage() {
                             <div className="flex items-start justify-between gap-4">
                               <div>
                                 <h3 className="text-lg font-semibold mb-1 flex items-center gap-2">
-                                  <step.icon className="w-5 h-5 text-brand-primary-400" />
+                                  <step.icon className="w-5 h-5 text-orange-400" />
                                   {step.title}
                                 </h3>
                                 <p className="text-gray-400">{step.description}</p>
@@ -600,7 +600,7 @@ export default function StartPage() {
                                     size="sm"
                                     className={isCompleted 
                                       ? "bg-neutral-800 hover:bg-neutral-700 text-gray-300" 
-                                      : "bg-brand-primary-500 hover:bg-brand-primary-600 text-black"
+                                      : "bg-orange-500 hover:bg-orange-600 text-black"
                                     }
                                   >
                                     <Link href={step.href}>
@@ -636,12 +636,12 @@ export default function StartPage() {
                   transition={{ duration: 0.5, delay: 0.3 }}
                   className="mt-12 text-center"
                 >
-                  <div className="bg-gradient-to-r from-green-500/20 to-brand-primary-500/20 border border-green-500/30 rounded-xl p-8">
+                  <div className="bg-gradient-to-r from-green-500/20 to-orange-500/20 border border-green-500/30 rounded-xl p-8">
                     <motion.div
                       animate={{ rotate: [0, 10, -10, 10, 0] }}
                       transition={{ duration: 0.5, delay: 0.5 }}
                     >
-                      <Award className="w-16 h-16 text-brand-primary-400 mx-auto mb-4" />
+                      <Award className="w-16 h-16 text-orange-400 mx-auto mb-4" />
                     </motion.div>
                     <h3 className="text-2xl font-bold mb-2">Congratulations! 🎉</h3>
                     <p className="text-gray-400 mb-6">
@@ -650,7 +650,7 @@ export default function StartPage() {
                     <div className="flex gap-4 justify-center">
                       <Button
                         onClick={() => setSelectedJourney(null)}
-                        className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black"
+                        className="bg-orange-500 hover:bg-orange-600 text-black"
                       >
                         <Sparkles className="w-4 h-4 mr-2" />
                         Choose Another Path
@@ -682,7 +682,7 @@ export default function StartPage() {
             className="mt-16"
           >
             <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-              <Brain className="w-5 h-5 text-brand-primary-400" />
+              <Brain className="w-5 h-5 text-orange-400" />
               Developer Manifesto
             </h3>
             <UndergroundManifesto />
@@ -701,7 +701,7 @@ export default function StartPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-neutral-600 text-gray-300 hover:bg-neutral-800 hover:text-brand-primary-400 hover:border-brand-primary-500/50 min-w-[200px] transition-all duration-200"
+                className="border-neutral-600 text-gray-300 hover:bg-neutral-800 hover:text-orange-400 hover:border-orange-500/50 min-w-[200px] transition-all duration-200"
               >
                 <Link href="/start/faq">
                   <HelpCircle className="w-4 h-4 mr-2" />
@@ -714,7 +714,7 @@ export default function StartPage() {
             <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
               <Button
                 asChild
-                className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black min-w-[200px] transition-all duration-200"
+                className="bg-orange-500 hover:bg-orange-600 text-black min-w-[200px] transition-all duration-200"
               >
                 <Link href="/start/community">
                   <Users className="w-4 h-4 mr-2" />
@@ -728,7 +728,7 @@ export default function StartPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-neutral-600 text-gray-300 hover:bg-neutral-800 hover:text-brand-primary-400 hover:border-brand-primary-500/50 min-w-[200px] transition-all duration-200"
+                className="border-neutral-600 text-gray-300 hover:bg-neutral-800 hover:text-orange-400 hover:border-orange-500/50 min-w-[200px] transition-all duration-200"
               >
                 <Link href="/start/quiz">
                   <Target className="w-4 h-4 mr-2" />

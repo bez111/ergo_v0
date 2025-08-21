@@ -159,7 +159,7 @@ export default function FAQClient() {
                 placeholder="Search questions..."
                 value={searchTerm}
                 onChange={e => setSearchTerm(e.target.value)}
-                className="pl-12 w-full bg-neutral-800 border-neutral-600 h-12 text-base focus:ring-2 focus:ring-brand-primary-500 focus:border-brand-primary-500"
+                className="pl-12 w-full bg-neutral-800 border-neutral-600 h-12 text-base focus:ring-2 focus:ring-orange-500 focus:border-orange-500"
               />
             </div>
             <div className="flex flex-wrap items-center justify-center gap-2">
@@ -169,7 +169,7 @@ export default function FAQClient() {
                   variant={activeCategory === category ? "default" : "outline"}
                   onClick={() => setActiveCategory(category)}
                   className={activeCategory === category 
-                    ? "bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-mono transition-all duration-200" 
+                    ? "bg-orange-500 hover:bg-orange-600 text-black font-mono transition-all duration-200" 
                     : "border-neutral-500 text-neutral-400 hover:bg-neutral-500/10 font-mono transition-all duration-200"
                   }
                 >
@@ -185,17 +185,17 @@ export default function FAQClient() {
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((faq, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/30 transition-all duration-300">
+                <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-all duration-300">
                   <button
                     onClick={() => setExpanded(expanded === index ? null : index)}
                     className="w-full p-6 flex justify-between items-start text-left group"
                   >
                     <div className="flex items-start gap-3 flex-1">
-                      <div className="w-6 h-6 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0">
-                        <faq.icon className="w-3 h-3 text-brand-primary-400" />
+                      <div className="w-6 h-6 bg-orange-500/20 border border-orange-500/30 rounded-lg flex items-center justify-center mt-0.5 flex-shrink-0">
+                        <faq.icon className="w-3 h-3 text-orange-400" />
                       </div>
                       <div className="flex-1">
-                        <span className="text-lg font-medium text-white group-hover:text-brand-primary-400 transition-colors">
+                        <span className="text-lg font-medium text-white group-hover:text-orange-400 transition-colors">
                           {faq.q}
                         </span>
                         <div className="text-xs text-gray-500 mt-1 uppercase tracking-wider">

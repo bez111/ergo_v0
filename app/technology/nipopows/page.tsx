@@ -136,7 +136,7 @@ export default function NIPOPOWsPage() {
                 <p className="text-xl md:text-2xl text-neutral-300 mb-6">Succinct proofs of chain work for trust-minimized verification.</p>
                 <p className="text-lg text-neutral-400 mb-8">Verify Ergo from mobile, browsers, or other chains using compact proofs instead of full sync. Learn how PoW works in <Link href="/technology/secure-pow" className="underline hover:opacity-80">Secure PoW</Link>.</p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="learn-more">
+                  <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="learn-more">
                     <Link href="#what">Learn More</Link>
                   </Button>
                   <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl" data-cta="view-docs">
@@ -145,10 +145,10 @@ export default function NIPOPOWsPage() {
                 </div>
                 <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                   <ul className="flex flex-wrap gap-4">
-                    <li><a href="#what" className="hover:text-brand-primary-400">What are NIPoPoWs</a></li>
-                    <li><a href="#benefits" className="hover:text-brand-primary-400">Benefits</a></li>
-                    <li><a href="#use-cases" className="hover:text-brand-primary-400">Use cases</a></li>
-                    <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                    <li><a href="#what" className="hover:text-orange-400">What are NIPoPoWs</a></li>
+                    <li><a href="#benefits" className="hover:text-orange-400">Benefits</a></li>
+                    <li><a href="#use-cases" className="hover:text-orange-400">Use cases</a></li>
+                    <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
                   </ul>
                 </nav>
 
@@ -161,8 +161,8 @@ export default function NIPOPOWsPage() {
                       {workingSteps.map(step => (
                         <div key={step.step} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
                           <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-full bg-brand-primary-500 text-black font-bold grid place-items-center">{step.step}</div>
-                            <div className="text-brand-primary-400" aria-hidden="true">{step.icon}</div>
+                            <div className="w-8 h-8 rounded-full bg-orange-500 text-black font-bold grid place-items-center">{step.step}</div>
+                            <div className="text-orange-400" aria-hidden="true">{step.icon}</div>
                             <div>
                               <h4 className="font-semibold text-white">{step.title}</h4>
                               <p className="text-sm text-neutral-400">{step.description}</p>
@@ -204,7 +204,7 @@ export default function NIPOPOWsPage() {
                   <Card key={benefit.title} className="bg-neutral-900/50 border-neutral-700 h-full">
                     <CardContent className="p-8">
                       <div className="flex items-start gap-4">
-                        <div className="p-3 bg-neutral-800 rounded-lg text-brand-primary-400" aria-hidden="true">{benefit.icon}</div>
+                        <div className="p-3 bg-neutral-800 rounded-lg text-orange-400" aria-hidden="true">{benefit.icon}</div>
                         <div>
                           <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
                           <p className="text-neutral-400 leading-relaxed">{benefit.description}</p>
@@ -216,7 +216,7 @@ export default function NIPOPOWsPage() {
                 <Card className="bg-neutral-900/50 border-neutral-700 h-full">
                   <CardContent className="p-8">
                     <div className="flex items-start gap-4">
-                      <div className="p-3 bg-neutral-800 rounded-lg text-brand-primary-400" aria-hidden="true"><Shield className="w-8 h-8" /></div>
+                      <div className="p-3 bg-neutral-800 rounded-lg text-orange-400" aria-hidden="true"><Shield className="w-8 h-8" /></div>
                       <div>
                         <h3 className="text-xl font-semibold mb-2 text-white">Reorg-resilience & finality windows</h3>
                         <p className="text-neutral-400 leading-relaxed">Light clients should observe a finality window; new proofs can supersede earlier ones if a short reorg occurs.</p>
@@ -274,7 +274,7 @@ export default function NIPOPOWsPage() {
                   <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 h-full">
                     <CardContent className="p-8">
                       <div className="flex items-start gap-4 mb-4">
-                        <div className="p-3 bg-neutral-800 rounded-lg text-brand-primary-400" aria-hidden="true">{useCase.icon}</div>
+                        <div className="p-3 bg-neutral-800 rounded-lg text-orange-400" aria-hidden="true">{useCase.icon}</div>
                         <div>
                           <h3 className="text-xl font-semibold mb-2 text-white">{useCase.title}</h3>
                           <p className="text-neutral-400 mb-4">{useCase.description}</p>
@@ -353,7 +353,7 @@ if (!ok) throw new Error("Invalid proof");
                   <h2 className="text-4xl font-bold mb-6 text-white">The Future of Interoperability</h2>
                   <p className="text-xl text-neutral-300 mb-8 leading-relaxed">NIPoPoWs enable a new generation of lightweight, trust-minimized applications across devices and chains.</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="explore-apps">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="explore-apps">
                       <Link href="/ecosystem" className="flex items-center">
                         <ArrowRight className="mr-2 w-4 h-4" aria-hidden="true" />
                         Explore Applications

@@ -104,7 +104,7 @@ export default function UIKitPage() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-8 relative z-10">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">
-              <span className="text-brand-primary-400">Ergo</span> UI Kit
+              <span className="text-orange-400">Ergo</span> UI Kit
             </h1>
             <p className="text-gray-400">Loading...</p>
           </div>
@@ -120,7 +120,7 @@ export default function UIKitPage() {
 
   // Comprehensive component code examples
   const componentCode = {
-    primaryButton: `<Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200">
+    primaryButton: `<Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200">
   <Rocket className="w-5 h-5 mr-2" />
   Deploy Contract
 </Button>`,
@@ -138,7 +138,7 @@ export default function UIKitPage() {
   }}
 />`,
 
-    alert: `<Alert className="border-brand-primary-500 bg-brand-primary-500/10 text-brand-primary-400 rounded-xl focus-within:ring-2 focus-within:ring-brand-primary-500">
+    alert: `<Alert className="border-orange-500 bg-orange-500/10 text-orange-400 rounded-xl focus-within:ring-2 focus-within:ring-orange-500">
   <CheckCircle className="w-4 h-4" />
   <div className="ml-3">
     <h4 className="font-semibold">Transaction Confirmed</h4>
@@ -167,7 +167,7 @@ export default function UIKitPage() {
 
     featureGrid: `<FeatureGrid
   items={[
-    { icon: Shield, title: "Security", description: "Built with security as the foundation", color: "text-brand-primary-400" },
+    { icon: Shield, title: "Security", description: "Built with security as the foundation", color: "text-orange-400" },
     { icon: Zap, title: "Performance", description: "Optimized for speed and efficiency", color: "text-brand-secondary-400" },
     { icon: Users, title: "Community", description: "Supported by a vibrant ecosystem", color: "text-status-success-500" }
   ]}
@@ -177,10 +177,10 @@ export default function UIKitPage() {
 
     statsGrid: `<StatsGrid
   items={[
-    { value: "50+", label: "Components", icon: Layers, color: "text-brand-primary-400" },
-    { value: "8", label: "Categories", icon: Building, color: "text-brand-primary-400" },
-    { value: "100%", label: "Accessible", icon: ShieldCheck, color: "text-brand-primary-400" },
-    { value: "Open", label: "Source", icon: GitBranch, color: "text-brand-primary-400" }
+    { value: "50+", label: "Components", icon: Layers, color: "text-orange-400" },
+    { value: "8", label: "Categories", icon: Building, color: "text-orange-400" },
+    { value: "100%", label: "Accessible", icon: ShieldCheck, color: "text-orange-400" },
+    { value: "Open", label: "Source", icon: GitBranch, color: "text-orange-400" }
   ]}
   columns={4}
 />`,
@@ -193,7 +193,7 @@ export default function UIKitPage() {
 
 export default function MyComponent() {
   return (
-    <Button className="bg-brand-primary-500">
+    <Button className="bg-orange-500">
       Click me
     </Button>
   )
@@ -278,17 +278,17 @@ export default function MyComponent() {
 
   // Feature grid data
   const featureGridItems: FeatureGridItem[] = [
-    { icon: Shield, title: "Security", description: "Built with security as the foundation", color: "text-brand-primary-400" },
+    { icon: Shield, title: "Security", description: "Built with security as the foundation", color: "text-orange-400" },
     { icon: Zap, title: "Performance", description: "Optimized for speed and efficiency", color: "text-brand-secondary-400" },
     { icon: Users, title: "Community", description: "Supported by a vibrant ecosystem", color: "text-status-success-500" }
   ]
 
   // Stats grid data
   const statsGridItems: StatsGridItem[] = [
-    { value: "50+", label: "Components", icon: Layers, color: "text-brand-primary-400" },
-    { value: "8", label: "Categories", icon: Building, color: "text-brand-primary-400" },
-    { value: "100%", label: "Accessible", icon: ShieldCheck, color: "text-brand-primary-400" },
-    { value: "Open", label: "Source", icon: GitBranch, color: "text-brand-primary-400" }
+    { value: "50+", label: "Components", icon: Layers, color: "text-orange-400" },
+    { value: "8", label: "Categories", icon: Building, color: "text-orange-400" },
+    { value: "100%", label: "Accessible", icon: ShieldCheck, color: "text-orange-400" },
+    { value: "Open", label: "Source", icon: GitBranch, color: "text-orange-400" }
   ]
 
   return (
@@ -316,7 +316,7 @@ export default function MyComponent() {
               >
                 <div className="flex items-center gap-4 mb-6">
                   <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-white">
-                    <span className="text-brand-primary-400">Ergo</span> UI Kit
+                    <span className="text-orange-400">Ergo</span> UI Kit
                   </h1>
                   <div className="group w-12 h-12 sm:w-16 sm:h-16">
                     <GlitchHex size={48} />
@@ -335,7 +335,7 @@ export default function MyComponent() {
                 <div className="flex flex-col sm:flex-row gap-4">
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                     <Button 
-                      className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
+                      className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
                       aria-label="Get started with Ergo UI Kit"
                     >
                     <Rocket className="w-5 h-5 mr-2" />
@@ -398,8 +398,8 @@ export default function MyComponent() {
                       }}
                     >
                     <div className="flex items-center gap-3 mb-3">
-                        <feature.icon className="w-6 h-6 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
-                        <h3 className="text-lg font-semibold text-white group-hover:text-brand-primary-400 transition-colors duration-200">{feature.title}</h3>
+                        <feature.icon className="w-6 h-6 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
+                        <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors duration-200">{feature.title}</h3>
                     </div>
                     <p className="text-gray-400 text-sm">
                         {feature.desc}
@@ -409,8 +409,8 @@ export default function MyComponent() {
                 </div>
 
                 {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 w-20 h-20 bg-brand-primary-500/20 rounded-full blur-xl opacity-60 animate-pulse" />
-                <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-brand-primary-500/10 rounded-full blur-lg opacity-40 animate-pulse" style={{ animationDelay: '1s' }} />
+                <div className="absolute -top-4 -right-4 w-20 h-20 bg-orange-500/20 rounded-full blur-xl opacity-60 animate-pulse" />
+                <div className="absolute -bottom-6 -left-6 w-16 h-16 bg-orange-500/10 rounded-full blur-lg opacity-40 animate-pulse" style={{ animationDelay: '1s' }} />
               </motion.div>
             </div>
           </div>
@@ -421,10 +421,10 @@ export default function MyComponent() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="bg-brand-primary-400/10 border border-brand-primary-400/20 rounded-xl p-6 mb-12"
+          className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6 mb-12"
         >
           <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-            <Brain className="w-6 h-6 text-brand-primary-400" />
+            <Brain className="w-6 h-6 text-orange-400" />
             Design Philosophy
           </h2>
           <p className="text-gray-300 mb-6">
@@ -435,7 +435,7 @@ export default function MyComponent() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {Object.entries(designPrinciples).slice(0, 3).map(([key, principle]) => (
               <div key={key} className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-brand-primary-400 rounded-full mt-2 flex-shrink-0" />
+                <div className="w-2 h-2 bg-orange-400 rounded-full mt-2 flex-shrink-0" />
                 <div>
                   <h4 className="font-semibold text-white text-sm mb-1">{principle.title}</h4>
                   <p className="text-gray-400 text-xs">{principle.description}</p>
@@ -461,7 +461,7 @@ export default function MyComponent() {
                 <TabsTrigger 
                   key={tab.id}
                   value={tab.id} 
-                  className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 flex-shrink-0 text-sm px-3 py-2"
+                  className="data-[state=active]:bg-orange-500 data-[state=active]:text-black focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 flex-shrink-0 text-sm px-3 py-2"
                   aria-label={`Switch to ${tab.label} tab`}
                 >
                   <tab.icon className="w-4 h-4 mr-1 sm:mr-2" />
@@ -475,7 +475,7 @@ export default function MyComponent() {
           <TabsContent value="overview" className="space-y-12">
             <motion.div {...getConditionalAnimation("overview")}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <Target className="w-6 h-6 text-brand-primary-400" />
+                <Target className="w-6 h-6 text-orange-400" />
                 Key Features
               </h2>
               <FeatureGrid items={featureGridItems} columns={3} isTabVisited={visitedTabs.has("overview")} />
@@ -483,7 +483,7 @@ export default function MyComponent() {
 
             <motion.div {...getConditionalAnimation("overview")}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <TrendingUp className="w-6 h-6 text-brand-primary-400" />
+                <TrendingUp className="w-6 h-6 text-orange-400" />
                 By the Numbers
               </h2>
               <StatsGrid items={statsGridItems} columns={4} isTabVisited={visitedTabs.has("overview")} />
@@ -492,7 +492,7 @@ export default function MyComponent() {
             {/* Auto-generated documentation showcase */}
             <motion.div {...getConditionalAnimation("overview")}>
               <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-                <BookOpen className="w-6 h-6 text-brand-primary-400" />
+                <BookOpen className="w-6 h-6 text-orange-400" />
                 Auto-Generated Documentation
               </h2>
               <div className="grid md:grid-cols-2 gap-6">
@@ -516,7 +516,7 @@ export default function MyComponent() {
           <TabsContent value="playground" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
-                <span className="text-brand-primary-400">Live</span> Playground
+                <span className="text-orange-400">Live</span> Playground
               </h2>
               <p className="text-gray-400 max-w-3xl mx-auto">
                 Interactive sandbox for testing and experimenting with components. Edit code in real-time and see instant results.
@@ -531,7 +531,7 @@ export default function MyComponent() {
           <TabsContent value="philosophy" className="space-y-8">
             <motion.div {...getConditionalAnimation("philosophy")} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
-                <span className="text-brand-primary-400">Design</span> Philosophy
+                <span className="text-orange-400">Design</span> Philosophy
               </h2>
               <p className="text-gray-400 max-w-3xl mx-auto">
                 Our design system is built on the fundamental principles that guide the Ergo ecosystem. 
@@ -568,14 +568,14 @@ export default function MyComponent() {
                   <motion.div
                     key={key}
                     {...animationProps}
-                    className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer"
+                    className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-8 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer"
                   >
                     <div className="flex items-start gap-6">
-                      <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <IconComponent className="w-6 h-6 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
+                      <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <IconComponent className="w-6 h-6 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
                     </div>
                       <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-primary-400 transition-colors duration-200">
+                        <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-200">
                           {principle.title}
                         </h3>
                         <p className="text-gray-300 mb-6 leading-relaxed">
@@ -584,7 +584,7 @@ export default function MyComponent() {
                         <div className="grid sm:grid-cols-2 gap-3">
                           {principle.guidelines.map((guideline, guideIndex) => (
                             <div key={guideIndex} className="flex items-start gap-3">
-                              <CheckCircle className="w-4 h-4 text-brand-primary-400 mt-0.5 flex-shrink-0" />
+                              <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
                               <span className="text-gray-400 text-sm">{guideline}</span>
                             </div>
                 ))}
@@ -603,7 +603,7 @@ export default function MyComponent() {
               className="mt-12"
             >
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <Terminal className="w-5 h-5 text-brand-primary-400" />
+                <Terminal className="w-5 h-5 text-orange-400" />
                 Underground Manifesto
               </h3>
               <UndergroundManifesto />
@@ -614,7 +614,7 @@ export default function MyComponent() {
           <TabsContent value="colors" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
-                <span className="text-brand-primary-400">Color</span> System
+                <span className="text-orange-400">Color</span> System
               </h2>
               <p className="text-gray-400">Carefully selected colors for optimal contrast and accessibility</p>
             </motion.div>
@@ -622,12 +622,12 @@ export default function MyComponent() {
             {/* Brand Colors with code examples */}
             <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <Palette className="w-5 h-5 text-brand-primary-400" />
+                <Palette className="w-5 h-5 text-orange-400" />
                 Brand Colors
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {[
-                  { name: "Primary Orange", hex: "#f97316", class: "bg-brand-primary-500", description: "Primary brand color", token: "brand.primary.500" },
+                  { name: "Primary Orange", hex: "#f97316", class: "bg-orange-500", description: "Primary brand color", token: "brand.primary.500" },
                   { name: "Secondary Cyan", hex: "#22d3ee", class: "bg-brand-secondary-400", description: "Secondary accent", token: "brand.secondary.400" },
                   { name: "Dark", hex: "#171717", class: "bg-brand-dark-900", description: "Background", token: "brand.dark.900" },
                   { name: "Neutral", hex: "#ffffff", class: "bg-neutral-0", description: "Text & contrast", token: "neutral.0" }
@@ -650,7 +650,7 @@ export default function MyComponent() {
                       <p className="text-white font-medium">{color.name}</p>
                       <code className="text-gray-400 text-sm">{color.hex}</code>
                       <p className="text-gray-500 text-xs">{color.description}</p>
-                      <p className="text-brand-primary-400 text-xs font-mono">{color.token}</p>
+                      <p className="text-orange-400 text-xs font-mono">{color.token}</p>
                     </div>
                   </motion.div>
                 ))}
@@ -661,12 +661,12 @@ export default function MyComponent() {
                 title="Using Brand Colors"
                 language="jsx"
                 code={`// Using Tailwind classes
-<Button className="bg-brand-primary-500 hover:bg-brand-primary-600">
+<Button className="bg-orange-500 hover:bg-orange-600">
   Primary Button
 </Button>
 
 // Using CSS custom properties  
-<div style={{ backgroundColor: 'var(--brand-primary-500)' }}>
+<div style={{ backgroundColor: 'var(--orange-500)' }}>
   Custom element
 </div>`}
               />
@@ -675,7 +675,7 @@ export default function MyComponent() {
             {/* Status Colors */}
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <CheckCircle className="w-5 h-5 text-brand-primary-400" />
+                <CheckCircle className="w-5 h-5 text-orange-400" />
                 Status Colors
               </h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
@@ -722,7 +722,7 @@ export default function MyComponent() {
           <TabsContent value="typography" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
-                <span className="text-brand-primary-400">Typography</span> Scale
+                <span className="text-orange-400">Typography</span> Scale
               </h2>
               <p className="text-gray-400">Clear hierarchy and readable text at all sizes</p>
             </motion.div>
@@ -768,7 +768,7 @@ export default function MyComponent() {
             {/* Code Typography */}
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <Terminal className="w-5 h-5 text-brand-primary-400" />
+                <Terminal className="w-5 h-5 text-orange-400" />
                 Code Typography
               </h3>
               <CodeSnippet
@@ -786,7 +786,7 @@ if (OUTPUTS.size > 0) result`}
           <TabsContent value="components" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
-                <span className="text-brand-primary-400">Component</span> Library
+                <span className="text-orange-400">Component</span> Library
               </h2>
               <p className="text-gray-400">Production-ready components with comprehensive documentation</p>
             </motion.div>
@@ -795,7 +795,7 @@ if (OUTPUTS.size > 0) result`}
             <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
               <div className="flex items-center justify-between mb-6">
               <h3 className="text-xl font-semibold text-white flex items-center gap-2">
-                  <Layers className="w-5 h-5 text-brand-primary-400" />
+                  <Layers className="w-5 h-5 text-orange-400" />
                   Feature Cards
               </h3>
                         </div>
@@ -852,7 +852,7 @@ if (OUTPUTS.size > 0) result`}
             {/* Buttons */}
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <Target className="w-5 h-5 text-brand-primary-400" />
+                <Target className="w-5 h-5 text-orange-400" />
                 Interactive Elements
                 </h3>
               
@@ -860,14 +860,14 @@ if (OUTPUTS.size > 0) result`}
                 <div className="space-y-4 group">
                   <h4 className="text-lg font-semibold text-white">Primary Actions</h4>
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
-                    <Button className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black transition-all duration-200 focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black">
+                    <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black transition-all duration-200 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black">
                     <Rocket className="w-4 h-4 mr-2" />
                     Deploy Contract
                   </Button>
                   </motion.div>
                   
                   <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
-                    <Button size="sm" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black">
+                    <Button size="sm" className="bg-orange-500 hover:bg-orange-600 text-black focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black">
                     Small Action
                   </Button>
                   </motion.div>
@@ -876,7 +876,7 @@ if (OUTPUTS.size > 0) result`}
                     <Button
                       size="sm"
                       variant="ghost"
-                      className="text-brand-primary-400 hover:text-brand-primary-300 focus:ring-2 focus:ring-brand-primary-500"
+                      className="text-orange-400 hover:text-orange-300 focus:ring-2 focus:ring-orange-500"
                       onClick={() => {
                         const codeElement = document.createElement('textarea')
                         codeElement.value = componentCode.primaryButton
@@ -921,7 +921,7 @@ if (OUTPUTS.size > 0) result`}
             {/* Signature Effects Showcase */}
             <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <Sparkles className="w-5 h-5 text-brand-primary-400" />
+                <Sparkles className="w-5 h-5 text-orange-400" />
                 Signature Effects
               </h3>
               
@@ -1008,7 +1008,7 @@ if (OUTPUTS.size > 0) result`}
           <TabsContent value="patterns" className="space-y-8">
             <motion.div {...fadeInUp} className="text-center mb-8">
               <h2 className="text-2xl font-bold text-white mb-4 leading-tight">
-                <span className="text-brand-primary-400">Design</span> Patterns
+                <span className="text-orange-400">Design</span> Patterns
               </h2>
               <p className="text-gray-400">Reusable patterns and layouts with comprehensive code examples</p>
             </motion.div>
@@ -1016,7 +1016,7 @@ if (OUTPUTS.size > 0) result`}
             {/* Hero Pattern */}
             <motion.div {...fadeInUp} transition={{ delay: 0.1 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <Lightbulb className="w-5 h-5 text-brand-primary-400" />
+                <Lightbulb className="w-5 h-5 text-orange-400" />
                 Hero Section Pattern
               </h3>
               
@@ -1050,7 +1050,7 @@ if (OUTPUTS.size > 0) result`}
             {/* Feature Grid Pattern */}
             <motion.div {...fadeInUp} transition={{ delay: 0.2 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <Building className="w-5 h-5 text-brand-primary-400" />
+                <Building className="w-5 h-5 text-orange-400" />
                 Feature Grid Pattern
               </h3>
               
@@ -1069,11 +1069,11 @@ if (OUTPUTS.size > 0) result`}
             {/* Auto-docs showcase */}
             <motion.div {...fadeInUp} transition={{ delay: 0.3 }}>
               <h3 className="text-xl font-semibold text-white flex items-center gap-2 mb-6">
-                <BookOpen className="w-5 h-5 text-brand-primary-400" />
+                <BookOpen className="w-5 h-5 text-orange-400" />
                 Auto-Generated Documentation
               </h3>
               
-              <div className="bg-brand-primary-400/10 border border-brand-primary-400/20 rounded-xl p-6">
+              <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
                 <p className="text-gray-300 mb-4">
                   All patterns include comprehensive TypeScript interfaces, usage examples, and auto-generated 
                   documentation. Props are automatically inferred and documented for better developer experience.
@@ -1087,7 +1087,7 @@ if (OUTPUTS.size > 0) result`}
         {/* Footer с signature effects */}
         <footer className="text-center pt-16 pb-8 border-t border-neutral-800 mt-16 relative">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <ErgoHex className="text-brand-primary-500" />
+            <ErgoHex className="text-orange-500" />
             <h3 className="text-lg font-semibold text-white">Ergo Design System</h3>
           </div>
           <p className="text-gray-400 mb-4">

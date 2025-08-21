@@ -181,13 +181,13 @@ export default function CommunityClient() {
                       whileHover={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-500 h-full backdrop-blur-sm">
+                      <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-all duration-500 h-full backdrop-blur-sm">
                         <CardContent className="p-8">
                           {/* Header */}
                           <div className="flex items-center justify-between mb-6">
                             <div className="flex items-center gap-4">
-                              <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
-                                <platform.icon className="w-6 h-6 text-brand-primary-400" />
+                              <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <platform.icon className="w-6 h-6 text-orange-400" />
                               </div>
                               <div>
                                 <h3 className="text-2xl font-bold text-white font-mono">{platform.name}</h3>
@@ -199,11 +199,11 @@ export default function CommunityClient() {
                           {/* Stats */}
                           <div className="flex gap-6 mb-6">
                             <div className="text-center">
-                              <div className="text-brand-primary-400 font-bold text-lg">{platform.members}</div>
+                              <div className="text-orange-400 font-bold text-lg">{platform.members}</div>
                               <div className="text-gray-500 text-xs uppercase tracking-wider">Members</div>
                             </div>
                             <div className="text-center">
-                              <div className="text-brand-primary-400 font-bold text-lg">{platform.activity}</div>
+                              <div className="text-orange-400 font-bold text-lg">{platform.activity}</div>
                               <div className="text-gray-500 text-xs uppercase tracking-wider">Activity</div>
                             </div>
                           </div>
@@ -213,7 +213,7 @@ export default function CommunityClient() {
                             <div className="grid grid-cols-2 gap-3">
                               {platform.features.map((feature, featureIndex) => (
                                 <div key={featureIndex} className="flex items-center gap-2">
-                                  <CheckCircle className="w-3 h-3 text-brand-primary-400 flex-shrink-0" />
+                                  <CheckCircle className="w-3 h-3 text-orange-400 flex-shrink-0" />
                                   <span className="text-gray-300 text-sm">{feature}</span>
                                 </div>
                               ))}
@@ -223,7 +223,7 @@ export default function CommunityClient() {
                           {/* CTA Button */}
                           <Button
                             asChild
-                            className="w-full bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-mono uppercase tracking-wider transition-all duration-200 focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black"
+                            className="w-full bg-orange-500 hover:bg-orange-600 text-black font-mono uppercase tracking-wider transition-all duration-200 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black"
                           >
                             <Link href={platform.href} target="_blank" rel="noopener noreferrer">
                               {platform.buttonText}
@@ -247,9 +247,9 @@ export default function CommunityClient() {
               <FadeIn>
                 <div className="text-center mb-16">
                   <p className="text-xl text-gray-300 font-mono max-w-3xl mx-auto">
-                    <span className="text-brand-primary-400">[</span>
+                    <span className="text-orange-400">[</span>
                     Every contribution strengthens the Ergo ecosystem. Find your path to make an impact.
-                    <span className="text-brand-primary-400">]</span>
+                    <span className="text-orange-400">]</span>
                   </p>
                 </div>
               </FadeIn>
@@ -263,10 +263,10 @@ export default function CommunityClient() {
                       whileHover={{ scale: 1.02 }}
                       transition={{ type: "spring", stiffness: 300 }}
                     >
-                      <Card className="bg-neutral-900/50 border-neutral-700 hover:border-brand-primary-500/50 transition-all duration-500 h-full backdrop-blur-sm">
+                      <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-all duration-500 h-full backdrop-blur-sm">
                         <CardContent className="p-8 text-center">
-                          <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center mx-auto mb-6">
-                            <contribution.icon className="w-6 h-6 text-brand-primary-400" />
+                          <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center mx-auto mb-6">
+                            <contribution.icon className="w-6 h-6 text-orange-400" />
                           </div>
 
                           <h3 className="text-xl font-bold text-white mb-3 font-mono">{contribution.title}</h3>
@@ -275,7 +275,7 @@ export default function CommunityClient() {
                           <div className="space-y-2">
                             {contribution.tasks.map((task, taskIndex) => (
                               <div key={taskIndex} className="flex items-center gap-2 text-sm text-gray-300">
-                                <div className="w-1 h-1 bg-brand-primary-400 rounded-full"></div>
+                                <div className="w-1 h-1 bg-orange-400 rounded-full"></div>
                                 <span>{task}</span>
                               </div>
                             ))}
@@ -336,8 +336,8 @@ export default function CommunityClient() {
                   <CardContent className="p-12 text-center">
                     <div className="mb-8">
                       <div className="inline-flex items-center gap-4 mb-6">
-                        <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                          <Network className="w-6 h-6 text-brand-primary-400" />
+                        <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                          <Network className="w-6 h-6 text-orange-400" />
                         </div>
                         <h2 className="text-3xl md:text-4xl font-bold text-white font-mono">READY TO CONNECT?</h2>
                       </div>
@@ -349,7 +349,7 @@ export default function CommunityClient() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Button
                         asChild
-                        className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-mono uppercase tracking-wider px-8 py-3 transition-all duration-200 focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black"
+                        className="bg-orange-500 hover:bg-orange-600 text-black font-mono uppercase tracking-wider px-8 py-3 transition-all duration-200 focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black"
                       >
                         <Link href="https://discord.gg/ergo-platform" target="_blank" rel="noopener noreferrer">
                           <MessageCircle className="w-4 h-4 mr-2" />

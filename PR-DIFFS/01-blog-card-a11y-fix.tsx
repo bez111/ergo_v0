@@ -15,7 +15,7 @@ interface BlogCardProps {
 export function BlogCard({ post, featured = false }: BlogCardProps) {
   return (
     <article
-      className="relative h-full overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm hover:border-brand-primary-500/30 transition-colors"
+      className="relative h-full overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm hover:border-orange-500/30 transition-colors"
       itemScope
       itemType="https://schema.org/BlogPosting"
     >
@@ -23,7 +23,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
       <div className="relative w-full aspect-[16/9] overflow-hidden">
         <Link 
           href={`/blog/${post.slug}`} 
-          className="block w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2"
+          className="block w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
         >
           <Image
             src={post.image || '/placeholder.svg'}
@@ -44,7 +44,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           {post.category && (
             <Link
               href={`/blog/category/${encodeURIComponent(post.category)}`}
-              className="px-3 py-1 text-xs font-semibold bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30 rounded-xl backdrop-blur-sm hover:bg-brand-primary-500/30 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2"
+              className="px-3 py-1 text-xs font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-xl backdrop-blur-sm hover:bg-orange-500/30 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
             >
               {post.category}
             </Link>
@@ -68,7 +68,7 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
         <h3 className="text-xl font-bold mb-3 text-white">
           <Link 
             href={`/blog/${post.slug}`}
-            className="hover:text-brand-primary-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2"
+            className="hover:text-orange-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
           >
             {post.title}
           </Link>

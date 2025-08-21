@@ -262,7 +262,7 @@ export default function PrivacyFeaturesPage() {
                       Financial freedom and privacy go hand in hand. Ergo bakes privacy features directly into its core — not as an afterthought.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                         <Link href="/docs">Explore Privacy</Link>
                       </Button>
                       <Button
@@ -285,7 +285,7 @@ export default function PrivacyFeaturesPage() {
                   </div>
                   <div className="relative">
                     <div className="relative z-10">
-                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30 transition-colors">
+                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors">
                         <CardContent className="p-0">
                           <h3 className="text-2xl font-bold mb-6 text-center text-white">Privacy Levels</h3>
                           <div className="space-y-4">
@@ -339,7 +339,7 @@ export default function PrivacyFeaturesPage() {
 
             <m.section id="what" variants={prefersReduced ? undefined : itemVariants} transition={prefersReduced ? { duration: 0 } : undefined} className="py-20 px-4" viewport={prefersReduced ? undefined : { once: true, amount: 0.2 }}>
               <div className="max-w-4xl mx-auto">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30 transition-colors" aria-describedby="why-privacy-desc">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors" aria-describedby="why-privacy-desc">
                   <CardContent className="p-8">
                     <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text:white md:text-white">Why Privacy Matters</h2>
                     <p id="why-privacy-desc" className="text-neutral-300 text-lg leading-relaxed mb-6">
@@ -358,7 +358,7 @@ export default function PrivacyFeaturesPage() {
                 <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Key Privacy Technologies</h2>
                 <div className="space-y-8">
                   {TECHNOLOGIES.map((tech) => (
-                    <Card key={tech.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30 transition-colors">
+                    <Card key={tech.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors">
                       <CardContent className="p-8">
                         <div className="flex items-start gap-6">
                           <span aria-hidden="true" className="p-4 bg-orange-500/20 rounded-lg text-orange-400">{tech.icon}</span>
@@ -376,7 +376,7 @@ export default function PrivacyFeaturesPage() {
                             <div className="grid md:grid-cols-2 gap-3">
                               {tech.features.map((feature, featureIndex) => (
                                 <div key={featureIndex} className="flex items-center gap-2">
-                                  <CheckCircle className="w-4 h-4 text-brand-primary-400 flex-shrink-0" aria-hidden="true" focusable="false" />
+                                  <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0" aria-hidden="true" focusable="false" />
                                   <span className="text-neutral-300 text-sm">{feature}</span>
                                 </div>
                               ))}
@@ -395,14 +395,14 @@ export default function PrivacyFeaturesPage() {
                 <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">What You Can Do with Ergo Privacy</h2>
                 <div className="grid md:grid-cols-2 gap-8">
                   {USE_CASES.map((useCase) => (
-                    <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30 transition-colors">
+                    <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30 transition-colors">
                       <CardContent className="p-8">
                         <div className="flex items-start gap-4 mb-4">
                           <span aria-hidden="true" className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{useCase.icon}</span>
                           <div>
                             <h3 className="text-xl font-semibold mb-2 text-white">{useCase.title}</h3>
                             <p className="text-neutral-400 mb-4">{useCase.description}</p>
-                            <Badge variant="outline" className="border-neutral-700 text-neutral-300 hover:border-brand-primary-500/50">
+                            <Badge variant="outline" className="border-neutral-700 text-neutral-300 hover:border-orange-500/50">
                               {useCase.example}
                             </Badge>{" "}
                             {useCase.title === "Private Transactions" && (
@@ -459,7 +459,7 @@ export default function PrivacyFeaturesPage() {
                       Experience true financial freedom with cryptographically proven privacy.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                         <Link href="/use/defi" className="flex items-center">
                           <ArrowRight className="mr-2 w-4 h-4" aria-hidden="true" focusable="false" />
                           Try ErgoMixer (non-custodial community tool)

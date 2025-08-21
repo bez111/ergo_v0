@@ -62,7 +62,7 @@ const researchCategories = [
   {
     title: "Formal Security & Protocol Analysis",
     icon: Shield,
-    color: "text-brand-primary-400",
+    color: "text-orange-400",
     papers: [
       { title: "Formal Verification of ErgoScript", url: "https://ergoplatform.org/en/blog/2022_09_01-formal-verification/" },
       { title: "ErgoScript: Foundations and Security", url: "https://ergoplatform.org/docs/ErgoScript.pdf" },
@@ -72,7 +72,7 @@ const researchCategories = [
   {
     title: "Privacy & Zero-Knowledge",
     icon: Eye,
-    color: "text-brand-primary-400",
+    color: "text-orange-400",
     papers: [
       { title: "Zero-Knowledge Proofs in Sigma Protocols", url: "https://eprint.iacr.org/2017/1050.pdf" },
       { title: "Ring Signatures for Blockchain Privacy", url: "https://ergoplatform.org/docs/ring-signatures.pdf" },
@@ -81,7 +81,7 @@ const researchCategories = [
   {
     title: "DeFi & Economic Models",
     icon: Database,
-    color: "text-brand-primary-400",
+    color: "text-orange-400",
     papers: [
       { title: "Composable DeFi Primitives on eUTXO", url: "https://ergoplatform.org/en/blog/2021_12_07-composable-defi/" },
       { title: "On-chain Lending, LETS, and Oracles", url: "https://ergoplatform.org/en/blog/2020_07_13-leveraging-oracles/" },
@@ -90,7 +90,7 @@ const researchCategories = [
   {
     title: "Storage Rent & Blockchain Sustainability",
     icon: FileText,
-    color: "text-brand-primary-400",
+    color: "text-orange-400",
     papers: [
       { title: "Ergo Storage Rent Model", url: "https://ergoplatform.org/docs/storage-rent.pdf" },
       { title: "Efficient Blockchain State Management", url: "https://eprint.iacr.org/2019/1072.pdf" },
@@ -171,14 +171,14 @@ export default function ResearchClient() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="#key-docs">
-                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                         Key Documents
                       </Button>
                     </a>
                     <Link href="/start/community">
                       <Button
                         variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                       >
                         Community
                       </Button>
@@ -220,10 +220,10 @@ export default function ResearchClient() {
                                   href={item.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                                 >
                                   <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -234,10 +234,10 @@ export default function ResearchClient() {
                               ) : (
                                 <Link
                                   href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                                 >
                                   <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -276,14 +276,14 @@ export default function ResearchClient() {
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardContent className="p-6 h-full flex flex-col">
                             <div className="flex items-start gap-4 mb-4">
-                              <paper.icon className="w-8 h-8 text-brand-primary-400" />
+                              <paper.icon className="w-8 h-8 text-orange-400" />
                               <div>
                                 <h3 className="text-xl font-bold text-white">{paper.title}</h3>
                                 <span className="text-xs text-neutral-400">{paper.category}</span>
                               </div>
                             </div>
                             <p className="text-neutral-300 mb-6 flex-1">{paper.description}</p>
-                            <Button asChild variant="outline" className="mt-auto border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10">
+                            <Button asChild variant="outline" className="mt-auto border-neutral-700 text-neutral-300 hover:bg-orange-500/10">
                               <Link href={paper.url} target="_blank" className="flex items-center gap-2">
                                 Read Paper
                                 <ExternalLink className="w-4 h-4" />
@@ -321,13 +321,13 @@ export default function ResearchClient() {
                                   <Link
                                     href={paper.url}
                                     target="_blank"
-                                    className="group flex items-center justify-between text-sm text-neutral-400 hover:text-brand-primary-400 transition-colors"
+                                    className="group flex items-center justify-between text-sm text-neutral-400 hover:text-orange-400 transition-colors"
                                   >
                                     <div className="flex items-center gap-3">
                                       <FileText className="w-4 h-4 text-neutral-600 flex-shrink-0" />
                                       <span className="flex-1 leading-snug">{paper.title}</span>
                                     </div>
-                                    <ExternalLink className="w-4 h-4 text-neutral-600 opacity-50 group-hover:opacity-100 group-hover:text-brand-primary-400 transition-all" />
+                                    <ExternalLink className="w-4 h-4 text-neutral-600 opacity-50 group-hover:opacity-100 group-hover:text-orange-400 transition-all" />
                                   </Link>
                                 </li>
                               ))}
@@ -361,7 +361,7 @@ export default function ResearchClient() {
                                   target="_blank"
                                   className="group flex items-center gap-4 p-3 rounded-lg hover:bg-neutral-800/30 transition-colors"
                                 >
-                                  <resource.icon className="w-6 h-6 text-brand-primary-400" />
+                                  <resource.icon className="w-6 h-6 text-orange-400" />
                                   <span className="text-lg text-neutral-300 group-hover:text-white">{resource.title}</span>
                                   <ExternalLink className="w-5 h-5 ml-auto text-neutral-500 group-hover:text-white" />
                                 </Link>
@@ -376,7 +376,7 @@ export default function ResearchClient() {
                       <h2 className="text-3xl font-bold mb-8 text-white">Join the Discussion</h2>
                       <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                         <CardContent className="p-8 text-center">
-                          <Users className="w-12 h-12 mx-auto mb-4 text-brand-primary-400" />
+                          <Users className="w-12 h-12 mx-auto mb-4 text-orange-400" />
                           <h3 className="text-2xl font-bold text-white mb-3">Contribute to Ergo Research</h3>
                           <p className="text-neutral-300 mb-6">
                             Have an idea or want to contribute? Join community channels to discuss research and collaborate.

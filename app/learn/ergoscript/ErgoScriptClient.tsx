@@ -249,12 +249,12 @@ export default function ErgoScriptClient() {
                   developers of all experience levels.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                     Start Learning
                   </Button>
                   <Button
                     variant="outline"
-                    className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl backdrop-blur-sm"
                   >
                     View Documentation
                   </Button>
@@ -303,7 +303,7 @@ export default function ErgoScriptClient() {
             <div className="grid md:grid-cols-2 gap-8">
               {whyLearnFeatures.map((feature) => (
                 <div key={feature.title}>
-                  <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-brand-primary-500/50 transition-colors`}>
+                  <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-orange-500/50 transition-colors`}>
                     <CardContent className="p-8">
                       <div className="flex items-start space-x-4">
                         <div className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{feature.icon}</div>
@@ -330,7 +330,7 @@ export default function ErgoScriptClient() {
             <div className="grid md:grid-cols-2 gap-8">
               {targetAudience.map((audience) => (
                 <div key={audience.title} className="group">
-                  <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-brand-primary-500/50 transition-colors`}>
+                  <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-orange-500/50 transition-colors`}>
                     <CardContent className="p-8">
                       <div className="flex items-start space-x-4 mb-4">
                         <div className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{audience.icon}</div>
@@ -347,7 +347,7 @@ export default function ErgoScriptClient() {
                             <Badge
                               key={example}
                               variant="outline"
-                              className="border-neutral-700 text-neutral-300 hover:border-brand-primary-500/50"
+                              className="border-neutral-700 text-neutral-300 hover:border-orange-500/50"
                             >
                               {example}
                             </Badge>
@@ -443,7 +443,7 @@ export default function ErgoScriptClient() {
                     <CollapsibleTrigger className="w-full">
                       <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
                         <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-brand-primary-500/20 rounded-full flex items-center justify-center text-black font-bold text-lg">
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center text-black font-bold text-lg">
                             {module.number}
                           </div>
                           <div className="text-left">
@@ -540,7 +540,7 @@ export default function ErgoScriptClient() {
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
-                    className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl"
+                    className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl"
                   >
                     <Link href="#" className="flex items-center">
                       Start Learning Now
@@ -550,7 +550,7 @@ export default function ErgoScriptClient() {
                   <Button
                     asChild
                     variant="outline"
-                    className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
+                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                   >
                     <Link href="#" className="flex items-center">
                       Join Community

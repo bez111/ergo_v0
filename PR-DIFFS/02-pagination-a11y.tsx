@@ -37,7 +37,7 @@ export function BlogPagination({ currentPage, totalPages, baseUrl }: BlogPaginat
       {currentPage > 1 && (
         <Link
           href={currentPage === 2 ? baseUrl : `${baseUrl}?page=${currentPage - 1}`}
-          className="px-4 py-2 text-sm font-medium text-neutral-300 hover:text-white border border-neutral-700 rounded-lg hover:border-brand-primary-500/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+          className="px-4 py-2 text-sm font-medium text-neutral-300 hover:text-white border border-neutral-700 rounded-lg hover:border-orange-500/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           aria-label={`Go to previous page, page ${currentPage - 1}`}
         >
           <span aria-hidden="true">←</span>
@@ -65,10 +65,10 @@ export function BlogPagination({ currentPage, totalPages, baseUrl }: BlogPaginat
                     ? `Current page, page ${page}` 
                     : `Go to page ${page}`
                 }
-                className={`px-4 py-2 text-sm font-medium rounded-lg border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
+                className={`px-4 py-2 text-sm font-medium rounded-lg border transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black ${
                   page === currentPage
-                    ? "bg-brand-primary-500 text-black border-brand-primary-500 font-bold"
-                    : "text-neutral-300 hover:text-white border-neutral-700 hover:border-brand-primary-500/50 hover:bg-neutral-800/50"
+                    ? "bg-orange-500 text-black border-orange-500 font-bold"
+                    : "text-neutral-300 hover:text-white border-neutral-700 hover:border-orange-500/50 hover:bg-neutral-800/50"
                 }`}
               >
                 {page}
@@ -82,7 +82,7 @@ export function BlogPagination({ currentPage, totalPages, baseUrl }: BlogPaginat
       {currentPage < totalPages && (
         <Link
           href={`${baseUrl}?page=${currentPage + 1}`}
-          className="px-4 py-2 text-sm font-medium text-neutral-300 hover:text-white border border-neutral-700 rounded-lg hover:border-brand-primary-500/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
+          className="px-4 py-2 text-sm font-medium text-neutral-300 hover:text-white border border-neutral-700 rounded-lg hover:border-orange-500/50 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black"
           aria-label={`Go to next page, page ${currentPage + 1}`}
         >
           <span>Next</span>

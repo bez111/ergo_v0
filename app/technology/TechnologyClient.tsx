@@ -417,7 +417,7 @@ export default function TechnologyPage() {
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <CardContent className="px-6 pb-6 pt-0">
-                        <div className="text-neutral-300 leading-relaxed [&>a]:text-brand-primary-400 [&>a]:underline [&>a]:hover:text-brand-primary-300 [&>b]:text-white [&>i]:text-neutral-200">
+                        <div className="text-neutral-300 leading-relaxed [&>a]:text-orange-400 [&>a]:underline [&>a]:hover:text-orange-300 [&>b]:text-white [&>i]:text-neutral-200">
                           {faq.a}
                         </div>
                       </CardContent>
@@ -428,7 +428,7 @@ export default function TechnologyPage() {
             </div>
             <div className="mt-8 pt-6 border-t border-neutral-800">
               <div className="flex justify-end">
-                <Button asChild variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 transition-all duration-200">
+                <Button asChild variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 transition-all duration-200">
                   <Link href="/docs">Go to Docs <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" /></Link>
                 </Button>
               </div>
@@ -481,11 +481,11 @@ export default function TechnologyPage() {
                 >
                   <Link href={feature.href || "/technology"} prefetch={false}>
                     <Card
-                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-brand-primary-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
+                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
                     >
                       <CardHeader className="text-center">
                         <div className="w-16 h-16 bg-neutral-800 rounded-lg flex items-center justify-center mx-auto mb-6">
-                          <feature.icon className="w-8 h-8 text-brand-primary-400" aria-hidden="true" />
+                          <feature.icon className="w-8 h-8 text-orange-400" aria-hidden="true" />
                         </div>
                         <CardTitle className="text-2xl font-bold mb-2 text-white">
                           <div className="flex items-center justify-center gap-2 flex-wrap">
@@ -514,7 +514,7 @@ export default function TechnologyPage() {
                               className="flex items-start gap-3 p-2 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none"
                             >
                               {d.icon ? (
-                                <d.icon className="w-4 h-4 text-brand-primary-400 mt-0.5" aria-hidden="true" />
+                                <d.icon className="w-4 h-4 text-orange-400 mt-0.5" aria-hidden="true" />
                               ) : (
                                 <span className="text-lg">•</span>
                               )}
@@ -612,10 +612,10 @@ export default function TechnologyPage() {
                           },
                         ].map((col) => (
                           <motion.div key={col.title} variants={itemVariants}>
-                            <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
+                            <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-orange-500/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
                               <CardHeader className="pb-3">
                                 <div className="flex items-center gap-3">
-                                  <col.icon className="w-5 h-5 text-brand-primary-400" />
+                                  <col.icon className="w-5 h-5 text-orange-400" />
                                   <CardTitle className="text-xl text-white">{col.title}</CardTitle>
                                 </div>
                               </CardHeader>
@@ -623,7 +623,7 @@ export default function TechnologyPage() {
                                 <ul className="space-y-2">
                                   {col.items.map((t) => (
                                     <li key={t} className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors">
-                                      <ArrowRight className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                      <ArrowRight className="w-4 h-4 text-orange-400 mt-0.5" />
                                       <span className="text-sm text-neutral-200">{t}</span>
                                     </li>
                                   ))}
@@ -654,13 +654,13 @@ export default function TechnologyPage() {
                       {/* Layer 1 */}
                       <Card className="bg-neutral-900/60 border-neutral-700 rounded-xl">
                         <CardHeader className="pb-2">
-                          <CardTitle className="text-brand-primary-400 text-xl">Layer 1</CardTitle>
+                          <CardTitle className="text-orange-400 text-xl">Layer 1</CardTitle>
                         </CardHeader>
                         <CardContent className="pt-0">
                           <ul className="space-y-2 text-neutral-300">
                             {layer1.map(({ label, icon: Icon }) => (
                               <li key={label} className="flex items-start gap-3">
-                                <Icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                <Icon className="w-4 h-4 text-orange-400 mt-0.5" />
                                 <span>{label}</span>
                               </li>
                             ))}
@@ -671,13 +671,13 @@ export default function TechnologyPage() {
                       {/* Layer 2 / Extensions */}
                       <Card className="bg-neutral-900/60 border-neutral-700 rounded-xl">
                         <CardHeader className="pb-2">
-                          <CardTitle className="text-brand-primary-400 text-xl">Layer 2 / Extensions</CardTitle>
+                          <CardTitle className="text-orange-400 text-xl">Layer 2 / Extensions</CardTitle>
                         </CardHeader>
                         <CardContent className="pt-0">
                           <ul className="space-y-2 text-neutral-300">
                             {layer2.map(({ label, icon: Icon }) => (
                               <li key={label} className="flex items-start gap-3">
-                                <Icon className="w-4 h-4 text-brand-primary-400 mt-0.5" />
+                                <Icon className="w-4 h-4 text-orange-400 mt-0.5" />
                                 <span>{label}</span>
                               </li>
                             ))}
@@ -706,15 +706,15 @@ export default function TechnologyPage() {
                           return (
                             <motion.div key={res.title} variants={itemVariants}>
                               <Wrapper {...wrapperProps} className="group block focus-visible:outline-none">
-                                <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-brand-primary-500/50 focus-visible:ring-2 focus-visible:ring-brand-primary-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
+                                <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-orange-500/50 focus-visible:ring-2 focus-visible:ring-orange-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
                                   <CardHeader className="pb-4">
                                     <div className="flex items-center justify-between gap-3">
                                       <div className="flex items-center gap-3">
-                                        <res.icon className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
+                                        <res.icon className="w-5 h-5 text-orange-400" aria-hidden="true" />
                                         <CardTitle className="text-xl text-white">{res.title}</CardTitle>
                                       </div>
                                       {isExternal && (
-                                        <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-brand-primary-400 transition-colors" aria-hidden="true" />
+                                        <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-orange-400 transition-colors" aria-hidden="true" />
                                       )}
                                     </div>
                                   </CardHeader>
@@ -753,7 +753,7 @@ export default function TechnologyPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 {ctas.map((cta) => (
-                  <Button key={cta.label} asChild className={cta.outline ? "border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm" : "bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl"} variant={cta.outline ? "outline" : "default"}>
+                  <Button key={cta.label} asChild className={cta.outline ? "border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm" : "bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl"} variant={cta.outline ? "outline" : "default"}>
                     <Link href={cta.href} prefetch={false}>{cta.label}</Link>
                   </Button>
                 ))}

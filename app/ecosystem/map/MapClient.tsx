@@ -274,7 +274,7 @@ export default function MapClient() {
               </div>
             </div>
             <div className="flex items-center lg:justify-end gap-2">
-              <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black">
+              <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black">
                 <Link href="/ecosystem" className="inline-flex items-center gap-2">Browse Ecosystem</Link>
               </Button>
               <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
@@ -441,7 +441,7 @@ export default function MapClient() {
                                   {n.featured && <Star className="w-3 h-3 text-orange-400" />}
                                 </div>
                                 <div className="text-[11px] text-neutral-300 mb-1">{n.category}</div>
-                                <a href={n.url} target="_blank" rel="noreferrer" className="text-brand-primary-400 underline inline-flex items-center gap-1">
+                                <a href={n.url} target="_blank" rel="noreferrer" className="text-orange-400 underline inline-flex items-center gap-1">
                                   Open <ExternalLink className="w-3 h-3" />
                                 </a>
                                 {isTouch && (

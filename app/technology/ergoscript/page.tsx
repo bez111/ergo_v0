@@ -40,11 +40,11 @@ function CopyButton({ code, label }: { code: string; label: string }) {
     <button
       aria-live="polite"
       onClick={onCopy}
-      className="p-1 hover:bg-brand-primary-500/10 rounded transition-colors"
+      className="p-1 hover:bg-orange-500/10 rounded transition-colors"
       aria-label={`Copy ${label} code`}
       title="Copy to clipboard"
     >
-      <Copy className="w-4 h-4 text-neutral-400 hover:text-brand-primary-400" aria-hidden="true" />
+      <Copy className="w-4 h-4 text-neutral-400 hover:text-orange-400" aria-hidden="true" />
       <span className="sr-only">{copied ? "Copied" : "Copy"}</span>
     </button>
   )
@@ -220,14 +220,14 @@ export default function ErgoScriptPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/docs">
-                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Start Building
                   </Button>
                     </Link>
                     <a href="https://wallet.plutomonkey.com/p2s/" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                   >
                       View Examples
                                     </Button>
@@ -235,9 +235,9 @@ export default function ErgoScriptPage() {
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-brand-primary-400">Key features</a></li>
-                      <li><a href="#comparison" className="hover:text-brand-primary-400">Comparison</a></li>
-                      <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
+                      <li><a href="#comparison" className="hover:text-orange-400">Comparison</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
                     </ul>
                   </nav>
               </div>
@@ -278,10 +278,10 @@ export default function ErgoScriptPage() {
                                   href={item.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                             >
                               <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -292,10 +292,10 @@ export default function ErgoScriptPage() {
                               ) : (
                                 <Link
                                   href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                                 >
                                   <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -342,10 +342,10 @@ export default function ErgoScriptPage() {
                         whileHover={{ y: -5 }}
                       className="motion-reduce:transform-none motion-reduce:transition-none"
                   >
-                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/50 transition-colors h-full">
+                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors h-full">
                         <CardContent className="p-6">
-                          <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center mb-4">
-                            <feature.icon className="w-6 h-6 text-brand-primary-400" />
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
+                            <feature.icon className="w-6 h-6 text-orange-400" />
                       </div>
                           <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
                           <p className="text-neutral-200 leading-relaxed">{feature.description}</p>
@@ -390,8 +390,8 @@ export default function ErgoScriptPage() {
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
-                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
-                                <Shield className="w-6 h-6 text-brand-primary-400" />
+                              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                <Shield className="w-6 h-6 text-orange-400" />
                         </div>
                               <CardTitle className="text-2xl font-bold text-white">Security First</CardTitle>
                       </div>
@@ -421,9 +421,9 @@ export default function ErgoScriptPage() {
                         ].map((feature) => (
                                 <div
                             key={feature.title}
-                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-all duration-300"
+                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-300"
                           >
-                                  <feature.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" aria-hidden="true" />
+                                  <feature.icon className="w-5 h-5 text-orange-400 mt-0.5" aria-hidden="true" />
                             <div>
                               <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
                                     <p className="text-neutral-400 text-sm">{feature.description}</p>
@@ -440,8 +440,8 @@ export default function ErgoScriptPage() {
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
-                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
-                                <Code className="w-6 h-6 text-brand-primary-400" />
+                              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                <Code className="w-6 h-6 text-orange-400" />
                         </div>
                               <CardTitle className="text-2xl font-bold text-white">Developer Experience</CardTitle>
                       </div>
@@ -471,9 +471,9 @@ export default function ErgoScriptPage() {
                         ].map((feature) => (
                                 <div
                             key={feature.title}
-                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-all duration-300"
+                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-300"
                           >
-                                  <feature.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" aria-hidden="true" />
+                                  <feature.icon className="w-5 h-5 text-orange-400 mt-0.5" aria-hidden="true" />
                             <div>
                               <h4 className="font-semibold text-white mb-1">{feature.title}</h4>
                                     <p className="text-neutral-400 text-sm">{feature.description}</p>
@@ -494,8 +494,8 @@ export default function ErgoScriptPage() {
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
-                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
-                                <Coins className="w-6 h-6 text-brand-primary-400" />
+                              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                <Coins className="w-6 h-6 text-orange-400" />
                               </div>
                               <CardTitle className="text-2xl font-bold text-white">DeFi & Finance</CardTitle>
                             </div>
@@ -513,9 +513,9 @@ export default function ErgoScriptPage() {
                               ].map((useCase, index) => (
                                 <div
                                   key={useCase.name}
-                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
+                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
                                 >
-                                  <useCase.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                                  <useCase.icon className="w-5 h-5 text-orange-400 mt-0.5" />
                                   <span className="text-neutral-200 text-sm">{useCase.name}</span>
                                 </div>
                               ))}
@@ -529,8 +529,8 @@ export default function ErgoScriptPage() {
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
-                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
-                                <Lock className="w-6 h-6 text-brand-primary-400" />
+                              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                <Lock className="w-6 h-6 text-orange-400" />
                               </div>
                               <CardTitle className="text-2xl font-bold text-white">Privacy & Governance</CardTitle>
                             </div>
@@ -548,9 +548,9 @@ export default function ErgoScriptPage() {
                               ].map((useCase, index) => (
                                 <div
                                   key={useCase.name}
-                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
+                                  className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
                       >
-                                  <useCase.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" />
+                                  <useCase.icon className="w-5 h-5 text-orange-400 mt-0.5" />
                                   <span className="text-neutral-200 text-sm">{useCase.name}</span>
                                 </div>
                     ))}
@@ -568,8 +568,8 @@ export default function ErgoScriptPage() {
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
-                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
-                                <BookOpen className="w-6 h-6 text-brand-primary-400" />
+                              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                <BookOpen className="w-6 h-6 text-orange-400" />
                               </div>
                               <CardTitle className="text-2xl font-bold text-white">Learning Resources</CardTitle>
                             </div>
@@ -587,8 +587,8 @@ export default function ErgoScriptPage() {
                               ].map((resource, index) => (
                                 <div key={resource.name}>
                                   <Link href={resource.url} {...(resource.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
-                                    <div className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors cursor-pointer">
-                                      <BookOpen className="w-5 h-5 text-brand-primary-400" />
+                                    <div className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors cursor-pointer">
+                                      <BookOpen className="w-5 h-5 text-orange-400" />
                                       <span className="text-neutral-200 text-sm flex-1">{resource.name}</span>
                                       {resource.external ? (
                                         <ExternalLink className="w-4 h-4 text-neutral-400" />
@@ -609,8 +609,8 @@ export default function ErgoScriptPage() {
                         <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
-                              <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
-                                <Terminal className="w-6 h-6 text-brand-primary-400" />
+                              <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                                <Terminal className="w-6 h-6 text-orange-400" />
                               </div>
                               <CardTitle className="text-2xl font-bold text-white">Developer Tools</CardTitle>
                             </div>
@@ -628,8 +628,8 @@ export default function ErgoScriptPage() {
                               ].map((tool, index) => (
                                 <div key={tool.name}>
                                   <Link href={tool.url} {...(tool.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
-                                    <div className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors cursor-pointer">
-                                      <Terminal className="w-5 h-5 text-brand-primary-400" />
+                                    <div className="flex items-center gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors cursor-pointer">
+                                      <Terminal className="w-5 h-5 text-orange-400" />
                                       <span className="text-neutral-200 text-sm flex-1">{tool.name}</span>
                                       {tool.external ? (
                                         <ExternalLink className="w-4 h-4 text-neutral-400" />
@@ -663,8 +663,8 @@ export default function ErgoScriptPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                       <CardHeader className="pb-2">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
-                            <Shield className="w-6 h-6 text-brand-primary-400" />
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                            <Shield className="w-6 h-6 text-orange-400" />
                           </div>
                           <CardTitle className="text-2xl font-bold text-white">ErgoScript's Key Advantages</CardTitle>
                         </div>
@@ -698,9 +698,9 @@ export default function ErgoScriptPage() {
                           ].map((advantage, index) => (
                             <div
                               key={advantage.title}
-                              className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
+                              className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
                             >
-                              <advantage.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" aria-hidden="true" />
+                              <advantage.icon className="w-5 h-5 text-orange-400 mt-0.5" aria-hidden="true" />
                               <div>
                                 <h4 className="font-semibold text-white mb-1">{advantage.title}</h4>
                                 <p className="text-neutral-400 text-sm">{advantage.description}</p>
@@ -717,8 +717,8 @@ export default function ErgoScriptPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
                       <CardHeader className="pb-2">
                         <div className="flex items-center gap-3">
-                          <div className="w-12 h-12 bg-brand-primary-500/20 rounded-lg flex items-center justify-center">
-                            <Code className="w-6 h-6 text-brand-primary-400" />
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
+                            <Code className="w-6 h-6 text-orange-400" />
                           </div>
                           <CardTitle className="text-2xl font-bold text-white">Philosophy & Design</CardTitle>
                         </div>
@@ -752,9 +752,9 @@ export default function ErgoScriptPage() {
                           ].map((concept, index) => (
                             <div
                               key={concept.title}
-                              className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-brand-primary-500/10 transition-colors"
+                              className="flex items-start gap-3 p-3 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-colors"
                             >
-                              <concept.icon className="w-5 h-5 text-brand-primary-400 mt-0.5" aria-hidden="true" />
+                              <concept.icon className="w-5 h-5 text-orange-400 mt-0.5" aria-hidden="true" />
                               <div>
                                 <h4 className="font-semibold text-white mb-1">{concept.title}</h4>
                                 <p className="text-neutral-400 text-sm">{concept.description}</p>
@@ -780,8 +780,8 @@ export default function ErgoScriptPage() {
                       <caption className="sr-only">Language comparison</caption>
                     <thead>
                           <tr className="border-b border-neutral-700">
-                            <th className="text-left p-4 font-semibold text-brand-primary-400">Feature</th>
-                            <th className="text-left p-4 font-semibold text-brand-primary-400">ErgoScript (Ergo)</th>
+                            <th className="text-left p-4 font-semibold text-orange-400">Feature</th>
+                            <th className="text-left p-4 font-semibold text-orange-400">ErgoScript (Ergo)</th>
                         <th className="text-left p-4 font-semibold text-blue-400">Solidity (Ethereum)</th>
                         <th className="text-left p-4 font-semibold text-purple-400">Plutus (Cardano)</th>
                         <th className="text-left p-4 font-semibold text-yellow-400">Bitcoin Script</th>
@@ -808,7 +808,7 @@ export default function ErgoScriptPage() {
                           <tr className="border-b border-neutral-800 hover:bg-neutral-800/30">
                         <th scope="row" className="p-4 font-medium">Turing-complete</th>
                         <td className="p-4">
-                              <span className="text-brand-primary-400">No (restricted for security)</span>
+                              <span className="text-orange-400">No (restricted for security)</span>
                         </td>
                         <td className="p-4">Yes (with gas limits)</td>
                         <td className="p-4">No (highly restricted)</td>
@@ -1040,14 +1040,14 @@ export default function ErgoScriptPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Link href="https://wallet.plutomonkey.com/p2s/?source=bXkgPSBzaWdtYVByb3AocHJvcGVyVGFibGVJZCkNCg0KLy8gZXhhbXBsZSBzcGVuZGluZyBjb25kaXRpb24NCm15VmFsaWRhdGlvbiA9IGZhbHNl" target="_blank" rel="noopener noreferrer">
-                        <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                        <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                     Try Playground
                   </Button>
                 </Link>
                       <Link href="/docs/developers/ergoscript-languages">
                   <Button
                     variant="outline"
-                          className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                          className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                   >
                     View Documentation
                   </Button>

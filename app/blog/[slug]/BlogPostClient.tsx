@@ -160,7 +160,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
       {/* Reading Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1 z-50 bg-neutral-900">
         <div 
-          className="h-full bg-gradient-to-r from-brand-primary-500 to-brand-primary-600 transition-all duration-200"
+          className="h-full bg-gradient-to-r from-orange-500 to-orange-600 transition-all duration-200"
           style={{ width: `${readingProgress}%` }}
         />
       </div>
@@ -170,7 +170,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
         <Button 
           variant="ghost" 
           size="default"
-          className="bg-neutral-900/80 backdrop-blur-sm border border-neutral-700 text-gray-400 hover:text-brand-primary-400 hover:bg-brand-primary-400/10 hover:border-brand-primary-500/30 transition-all duration-200 group"
+          className="bg-neutral-900/80 backdrop-blur-sm border border-neutral-700 text-gray-400 hover:text-orange-400 hover:bg-orange-400/10 hover:border-orange-500/30 transition-all duration-200 group"
           asChild
         >
           <Link href="/blog">
@@ -192,7 +192,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
             <Button
               onClick={scrollToTop}
               size="icon"
-              className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black shadow-lg"
+              className="bg-orange-500 hover:bg-orange-600 text-black shadow-lg"
             >
               <ArrowUp className="w-5 h-5" />
             </Button>
@@ -223,7 +223,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
           <motion.header variants={itemVariants} className="mb-8 blog-content">
             {/* Category Badge */}
             <div className="mb-4">
-              <span className="inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold bg-brand-primary-500/20 text-brand-primary-400 border border-brand-primary-500/30">
+              <span className="inline-flex items-center px-3 py-1 rounded-lg text-xs font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/30">
                 {post.category}
               </span>
             </div>

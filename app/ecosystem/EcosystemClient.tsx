@@ -136,22 +136,22 @@ export default function EcosystemClient() {
     <div className="min-h-screen bg-black text-white relative overflow-hidden" style={{ overflowAnchor: "none" }}>
       {/* Background pulses */}
       <div className="absolute inset-0 z-0" aria-hidden="true" role="presentation">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-brand-primary-500/5 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-brand-primary-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2s" }} />
-        <div className="absolute top-1/2 left-3/4 w-20 h-20 bg-brand-primary-500/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: "4s" }} />
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-3/4 w-20 h-20 bg-orange-500/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: "4s" }} />
       </div>
 
       <div className="relative z-10">
         {/* Hero */}
         <motion.section variants={itemVariants} initial="hidden" animate="visible" className="pt-32 pb-16 px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-white">Ergo</span> <span className="text-brand-primary-400">Ecosystem</span>
+            <span className="text-white">Ergo</span> <span className="text-orange-400">Ecosystem</span>
           </h1>
           <p className="text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto mb-8">
             Discover a rich ecosystem of dApps, tools, and services built on the Ergo blockchain, designed for security, privacy, and real-world utility.
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-neutral-400">
-            <span className="w-2 h-2 bg-brand-primary-400 rounded-full animate-pulse"></span>
+            <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
             <span>38+ Active Projects</span>
             <span className="w-1 h-1 bg-neutral-600 rounded-full"></span>
             <span>6 Categories</span>
@@ -166,13 +166,13 @@ export default function EcosystemClient() {
             <div className="flex justify-between items-center mb-8">
               <div className="flex items-center gap-3">
                 <h2 className="text-3xl font-bold text-white">Featured Projects</h2>
-                <div className="px-3 py-1 bg-brand-primary-500/20 text-brand-primary-400 rounded-full text-xs font-semibold">Top 6</div>
+                <div className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">Top 6</div>
               </div>
               <div className="flex gap-2">
-                <Button variant="outline" size="icon" onClick={() => setCurrentFeaturedIndex((p) => Math.max(0, p - 1))} disabled={currentFeaturedIndex === 0} className="border-neutral-700 text-neutral-2 00 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400">
+                <Button variant="outline" size="icon" onClick={() => setCurrentFeaturedIndex((p) => Math.max(0, p - 1))} disabled={currentFeaturedIndex === 0} className="border-neutral-700 text-neutral-2 00 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400">
                   <ChevronLeft className="w-4 h-4" aria-hidden="true" focusable="false" />
                 </Button>
-                <Button variant="outline" size="icon" onClick={() => setCurrentFeaturedIndex((p) => Math.min(featuredProjects.length - 3, p + 1))} disabled={currentFeaturedIndex >= featuredProjects.length - 3} className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400">
+                <Button variant="outline" size="icon" onClick={() => setCurrentFeaturedIndex((p) => Math.min(featuredProjects.length - 3, p + 1))} disabled={currentFeaturedIndex >= featuredProjects.length - 3} className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400">
                   <ChevronRight className="w-4 h-4" aria-hidden="true" focusable="false" />
                 </Button>
               </div>
@@ -180,14 +180,14 @@ export default function EcosystemClient() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredProjects.slice(currentFeaturedIndex, currentFeaturedIndex + 3).map((project) => (
                 <motion.div key={project.id} variants={itemVariants}>
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200 h-full flex flex-col">
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-orange-500/30 transition-all duration-200 h-full flex flex-col">
                     <CardContent className="p-6 flex-1 flex flex-col">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-4">
-                          <div className="p-3 rounded-xl bg-brand-primary-500/20 border border-brand-primary-500/30">
+                          <div className="p-3 rounded-xl bg-orange-500/20 border border-orange-500/30">
                             {(() => {
                               const IconComponent = (projectIcons as any)[project.name] || Activity
-                              return <IconComponent className="w-6 h-6 text-brand-primary-400" aria-hidden="true" focusable="false" />
+                              return <IconComponent className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />
                             })()}
                           </div>
                           <div>
@@ -200,7 +200,7 @@ export default function EcosystemClient() {
                         </div>
                       </div>
                       <p className="text-neutral-400 mb-6 flex-1">{project.description}</p>
-                      <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500 hover:text-brand-primary-400">
+                      <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500 hover:text-orange-400">
                         <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="flex items-center gap-2">
                           Visit Project
                           <ExternalLink className="w-4 h-4" aria-hidden="true" focusable="false" />
@@ -226,14 +226,14 @@ export default function EcosystemClient() {
               </div>
               <div className="relative w-full md:w-auto md:flex-1" style={{ contain: "layout paint" }}>
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" aria-hidden="true" focusable="false" />
-                <Input type="text" placeholder="Search projects..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-neutral-900/80 border-neutral-700 pl-12 h-12 rounded-xl focus:border-brand-primary-500/50" />
+                <Input type="text" placeholder="Search projects..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-neutral-900/80 border-neutral-700 pl-12 h-12 rounded-xl focus:border-orange-500/50" />
                 <div className="h-0 md:h-0" />
               </div>
               <div className="flex items-center gap-2">
-                <Button variant="outline" onClick={() => { setViewMode("list"); try { localStorage.setItem("ecosystemViewMode", "list") } catch {} }} className={`h-12 w-12 border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400 ${viewMode === "list" ? "bg-neutral-800 border-neutral-600 text-white" : ""}`}>
+                <Button variant="outline" onClick={() => { setViewMode("list"); try { localStorage.setItem("ecosystemViewMode", "list") } catch {} }} className={`h-12 w-12 border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${viewMode === "list" ? "bg-neutral-800 border-neutral-600 text-white" : ""}`}>
                   <List aria-hidden="true" focusable="false" />
                 </Button>
-                <Button variant="outline" onClick={() => { setViewMode("grid"); try { localStorage.setItem("ecosystemViewMode", "grid") } catch {} }} className={`h-12 w-12 border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400 ${viewMode === "grid" ? "bg-neutral-800 border-neutral-600 text-white" : ""}`}>
+                <Button variant="outline" onClick={() => { setViewMode("grid"); try { localStorage.setItem("ecosystemViewMode", "grid") } catch {} }} className={`h-12 w-12 border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${viewMode === "grid" ? "bg-neutral-800 border-neutral-600 text-white" : ""}`}>
                   <LayoutGrid aria-hidden="true" focusable="false" />
                 </Button>
               </div>
@@ -241,7 +241,7 @@ export default function EcosystemClient() {
 
             <div className="flex flex-wrap gap-2 justify-center mb-4" style={{ contain: "layout paint" }}>
               {["ALL", ...categoryOrder].map((category) => (
-                <Button key={category} variant="outline" onClick={() => setSelectedCategory(category)} className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400 ${selectedCategory === category ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}>
+                <Button key={category} variant="outline" onClick={() => setSelectedCategory(category)} className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedCategory === category ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}>
                   {category}
                 </Button>
               ))}
@@ -249,7 +249,7 @@ export default function EcosystemClient() {
             <div className="h-2" />
             <div className="flex flex-wrap gap-2 justify-center" style={{ contain: "layout paint" }}>
               {["ALL", ...statusOrder].map((status) => (
-                <Button key={status} variant="outline" onClick={() => setSelectedStatus(status)} className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500/50 hover:text-brand-primary-400 ${selectedStatus === status ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}>
+                <Button key={status} variant="outline" onClick={() => setSelectedStatus(status)} className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedStatus === status ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}>
                   {status}
                 </Button>
               ))}
@@ -262,14 +262,14 @@ export default function EcosystemClient() {
           {filteredProjects.map((project) => (
             <motion.div key={project.id} variants={itemVariants}>
               {viewMode === "grid" ? (
-                <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-brand-primary-500/30 transition-all duration-200 h-full flex flex-col">
+                <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-orange-500/30 transition-all duration-200 h-full flex flex-col">
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-4">
-                        <div className="p-3 rounded-xl bg-brand-primary-500/20 border border-brand-primary-500/30">
+                        <div className="p-3 rounded-xl bg-orange-500/20 border border-orange-500/30">
                           {(() => {
                             const IconComponent = (projectIcons as any)[project.name] || Activity
-                            return <IconComponent className="w-6 h-6 text-brand-primary-400" aria-hidden="true" focusable="false" />
+                            return <IconComponent className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />
                           })()}
                         </div>
                         <div>
@@ -282,7 +282,7 @@ export default function EcosystemClient() {
                       </div>
                     </div>
                     <p className="text-neutral-400 mb-6 flex-1">{project.description}</p>
-                    <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-brand-primary-500 hover:text-brand-primary-400">
+                    <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500 hover:text-orange-400">
                       <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="flex items-center gap-2">
                         Visit Project
                         <ExternalLink className="w-4 h-4" aria-hidden="true" focusable="false" />
@@ -294,10 +294,10 @@ export default function EcosystemClient() {
                 <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="block p-4 rounded-lg hover:bg-neutral-900/80 border border-transparent hover:border-neutral-700 transition-colors">
                   <div className="grid grid-cols-12 items-center gap-4">
                     <div className="col-span-12 md:col-span-3 flex items-center gap-4">
-                      <div className="p-2 rounded-lg bg-brand-primary-500/20 border border-brand-primary-500/30">
+                      <div className="p-2 rounded-lg bg-orange-500/20 border border-orange-500/30">
                         {(() => {
                           const IconComponent = (projectIcons as any)[project.name] || Activity
-                          return <IconComponent className="w-5 h-5 text-brand-primary-400" aria-hidden="true" focusable="false" />
+                          return <IconComponent className="w-5 h-5 text-orange-400" aria-hidden="true" focusable="false" />
                         })()}
                       </div>
                       <h3 className="font-semibold text-white">{project.name}</h3>

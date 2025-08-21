@@ -17,7 +17,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
 
   return (
     <article
-      className="relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900/60 backdrop-blur-sm p-8 h-full min-h-[400px] flex flex-col justify-between hover:border-brand-primary-500/30 transition-all duration-300 focus-within:border-brand-primary-500/50 focus-within:ring-2 focus-within:ring-brand-primary-400/20"
+      className="relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900/60 backdrop-blur-sm p-8 h-full min-h-[400px] flex flex-col justify-between hover:border-orange-500/30 transition-all duration-300 focus-within:border-orange-500/50 focus-within:ring-2 focus-within:ring-orange-400/20"
       itemScope
       itemType="https://schema.org/BlogPosting"
       aria-labelledby={`feat-${post.id}`}
@@ -44,7 +44,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         <h2 id={`feat-${post.id}`} className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
           <Link 
             href={`/blog/${post.slug}`} 
-            className="hover:text-brand-primary-400 focus:text-brand-primary-400 focus:outline-none focus:underline transition-colors"
+            className="hover:text-orange-400 focus:text-orange-400 focus:outline-none focus:underline transition-colors"
             aria-describedby={`feat-desc-${post.id}`}
           >
             {post.title}

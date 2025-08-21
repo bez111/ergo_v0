@@ -88,7 +88,7 @@ export default function EutxoClient() {
                   <p className="text-xl md:text-2xl text-neutral-300 mb-6 max-w-2xl">How Ergo Differs from Account-Based Blockchains</p>
                   <p className="text-lg text-neutral-400 mb-6 max-w-2xl leading-relaxed">Ergo's eUTXO model fuses the security, parallelism, and simplicity of UTXO with the expressive power needed for complex smart contracts.</p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                                                   <Link href="/docs">Learn More</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
@@ -97,16 +97,16 @@ export default function EutxoClient() {
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#transaction-flow" className="hover:text-brand-primary-400">Transaction flow</a></li>
-                      <li><a href="#key-differences" className="hover:text-brand-primary-400">Key differences</a></li>
-                      <li><a href="#use-cases" className="hover:text-brand-primary-400">Use cases</a></li>
-                      <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                      <li><a href="#transaction-flow" className="hover:text-orange-400">Transaction flow</a></li>
+                      <li><a href="#key-differences" className="hover:text-orange-400">Key differences</a></li>
+                      <li><a href="#use-cases" className="hover:text-orange-400">Use cases</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
                     </ul>
                   </nav>
                 </div>
                 <div className="relative">
                   <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30 transition-colors">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">eUTXO Box Structure</h3>
                         <div className="space-y-4">
@@ -132,7 +132,7 @@ export default function EutxoClient() {
 
           <motion.section variants={itemVariants} className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30 transition-colors">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors">
                 <CardContent className="p-8">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Introduction</h2>
                   <p className="text-neutral-300 text-lg leading-relaxed mb-6">Every blockchain's heart is its ledger model: it defines how assets and data move. The two dominant models are UTXO (pioneered by Bitcoin) and account-based (popularized by Ethereum). Each has unique trade-offs.</p>
@@ -147,7 +147,7 @@ export default function EutxoClient() {
               <h2 id="ledger-models" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Blockchain Ledger Models: UTXO vs. Account</h2>
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="motion-reduce:transform-none motion-reduce:transition-none">
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30">
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30">
                     <CardContent className="p-8">
                       <h3 className="text-2xl font-bold mb-4 text-orange-400">UTXO Model (Bitcoin-style)</h3>
                       <p className="text-neutral-300 mb-4">No global balances — only a collection of unspent outputs.</p>
@@ -166,7 +166,7 @@ export default function EutxoClient() {
                   </Card>
                 </div>
                 <div className="motion-reduce:transform-none motion-reduce:transition-none">
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30">
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30">
                     <CardContent className="p-8">
                       <h3 className="text-2xl font-bold mb-4 text-cyan-400">Account Model (Ethereum-style)</h3>
                       <p className="text-neutral-300 mb-4">Global state: Each account has a balance and (for contracts) its own data storage.</p>
@@ -195,7 +195,7 @@ export default function EutxoClient() {
                 {transactionSteps.map((step, index) => (
                   <motion.div key={step.step} variants={itemVariants} className="flex items-center space-x-6 motion-reduce:transform-none motion-reduce:transition-none hover:translate-x-2 transition-transform" transition={{ type: "spring", stiffness: 400 }}>
                     <div className="flex-shrink-0 w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center text-white font-bold text-xl">{step.step}</div>
-                    <Card className="flex-1 bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30">
+                    <Card className="flex-1 bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30">
                       <CardContent className="p-6">
                         <div className="flex items-center space-x-4">
                           <span aria-hidden="true" className="text-orange-400">{step.icon}</span>
@@ -254,7 +254,7 @@ export default function EutxoClient() {
               <div className="grid md:grid-cols-2 gap-8">
                 {useCases.map((useCase) => (
                   <motion.div key={useCase.title} variants={itemVariants} className="group motion-reduce:transform-none motion-reduce:transition-none" whileHover={{ scale: 1.05, rotateY: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                    <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-brand-primary-500/30 transition-all duration-300`}>
+                    <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30 transition-all duration-300`}>
                       <CardContent className="p-8">
                         <div className="flex items-start space-x-4 mb-4">
                           <span aria-hidden="true" className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{useCase.icon}</span>
@@ -269,7 +269,7 @@ export default function EutxoClient() {
                             {useCase.examples.map((example) => (
                               <span key={example} className="inline-block">
                                 <Link href="/ecosystem" prefetch={false}>
-                                  <Badge variant="outline" className="border-neutral-700 text-neutral-300 hover:border-brand-primary-500/50">{example}</Badge>
+                                  <Badge variant="outline" className="border-neutral-700 text-neutral-300 hover:border-orange-500/50">{example}</Badge>
                                 </Link>
                               </span>
                             ))}
@@ -320,7 +320,7 @@ export default function EutxoClient() {
                   <h2 id="conclusion" className="text-4xl font-bold mb-6 text-white">Conclusion: The Future is eUTXO</h2>
                   <p className="text-xl text-neutral-300 mb-8 leading-relaxed">The eUTXO model is a quantum leap: it keeps UTXO's clarity, security, and scalability while unlocking true programmability. For developers who want robust, auditable, and future-proof dApps — Ergo's approach is both powerful and elegant.</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                         <Link href="/docs" className="flex items-center">Start Building<ArrowRight className="ml-2 w-4 h-4" /></Link>
                     </Button>
                     <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">

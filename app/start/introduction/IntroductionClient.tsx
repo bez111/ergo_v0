@@ -69,7 +69,7 @@ export default function IntroductionClient() {
       icon: Users,
       title: "Decentralized First",
       description: "Launched fairly with no premine or ICO. Community-driven for maximum decentralization.",
-      color: "text-brand-primary-400"
+      color: "text-orange-400"
     },
     {
       icon: Shield,
@@ -237,8 +237,8 @@ export default function IntroductionClient() {
               transition={{ duration: 0.6, delay: 0.2 }}
             >
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 flex items-center gap-3">
-                <Brain className="w-8 h-8 text-brand-primary-400" aria-hidden="true" />
-                <span className="text-white">What is <span className="text-brand-primary-400">Ergo</span>?</span>
+                <Brain className="w-8 h-8 text-orange-400" aria-hidden="true" />
+                <span className="text-white">What is <span className="text-orange-400">Ergo</span>?</span>
               </h2>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Ergo is designed for developing secure and powerful decentralized applications (dApps) and financial contracts. 
@@ -263,10 +263,10 @@ export default function IntroductionClient() {
               </div>
               
               {/* Alert with key info */}
-              <Alert className="border-brand-primary-500/30 bg-brand-primary-500/10 rounded-xl">
-                <Info className="w-4 h-4 text-brand-primary-400" />
+              <Alert className="border-orange-500/30 bg-orange-500/10 rounded-xl">
+                <Info className="w-4 h-4 text-orange-400" />
                 <div className="ml-3">
-                  <h4 className="font-semibold text-brand-primary-400">Key Innovation</h4>
+                  <h4 className="font-semibold text-orange-400">Key Innovation</h4>
                   <AlertDescription className="text-gray-300 text-sm">
                     Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, 
                     creating a unique platform for complex financial applications.
@@ -303,11 +303,11 @@ export default function IntroductionClient() {
                       animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
                       whileHover={{ x: prefersReducedMotion ? 0 : 5 }}
-                      className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 backdrop-blur-sm hover:border-brand-primary-500/30 transition-all duration-300"
+                      className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                          <feature.icon className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
+                        <div className="w-10 h-10 bg-orange-500/10 border border-orange-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                          <feature.icon className="w-5 h-5 text-orange-400" aria-hidden="true" />
                         </div>
                         <div>
                           <h4 className="font-semibold text-white">
@@ -334,7 +334,7 @@ export default function IntroductionClient() {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Core <span className="text-brand-primary-400">Principles</span>
+              Core <span className="text-orange-400">Principles</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Built on fundamental values that ensure long-term sustainability and real-world utility
@@ -354,7 +354,7 @@ export default function IntroductionClient() {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Key <span className="text-brand-primary-400">Technologies</span>
+              Key <span className="text-orange-400">Technologies</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Advanced cryptography and innovative consensus mechanisms power the Ergo platform
@@ -372,15 +372,15 @@ export default function IntroductionClient() {
                 whileTap={{ scale: 0.98 }}
                 className="h-full"
               >
-                <Link href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-400 rounded-xl">
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-brand-primary-500/50 hover:bg-neutral-900/80 transition-all duration-300 cursor-pointer">
+                <Link href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-xl">
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-orange-500/50 hover:bg-neutral-900/80 transition-all duration-300 cursor-pointer">
                     {/* Icon */}
-                    <div className="w-12 h-12 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-brand-primary-500/20 transition-all duration-300">
-                      <tech.icon className="w-6 h-6 text-brand-primary-400" aria-hidden="true" />
+                    <div className="w-12 h-12 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-orange-500/20 transition-all duration-300">
+                      <tech.icon className="w-6 h-6 text-orange-400" aria-hidden="true" />
                     </div>
                     
                     {/* Content */}
-                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-brand-primary-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-orange-400 transition-colors">
                       {tech.title}
                     </h3>
                     <p className="text-sm text-gray-400 mb-3">{tech.subtitle}</p>
@@ -390,10 +390,10 @@ export default function IntroductionClient() {
                     
                     {/* Footer */}
                     <div className="flex items-center justify-between">
-                      <Badge className="bg-brand-primary-500/10 text-brand-primary-400 border border-brand-primary-500/30">
+                      <Badge className="bg-orange-500/10 text-orange-400 border border-orange-500/30">
                         {tech.badge}
                       </Badge>
-                      <div className="flex items-center text-brand-primary-400 text-sm font-semibold">
+                      <div className="flex items-center text-orange-400 text-sm font-semibold">
                         Learn More
                         <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </div>
@@ -434,7 +434,7 @@ export default function IntroductionClient() {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              What Can You <span className="text-brand-primary-400">Build</span>?
+              What Can You <span className="text-orange-400">Build</span>?
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Explore the endless possibilities of the Ergo ecosystem
@@ -474,23 +474,23 @@ export default function IntroductionClient() {
                 whileTap="tap"
                 variants={scaleOnHover}
               >
-                <Link href={useCase.href} prefetch={false} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-400 rounded-xl">
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-brand-primary-500/30 transition-all duration-300 cursor-pointer">
+                <Link href={useCase.href} prefetch={false} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-xl">
+                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-orange-500/30 transition-all duration-300 cursor-pointer">
                     <div className="flex items-start justify-between mb-4">
-                      <div className="w-12 h-12 bg-brand-primary-500/10 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
-                        <useCase.icon className="w-6 h-6 text-brand-primary-400" aria-hidden="true" />
+                      <div className="w-12 h-12 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                        <useCase.icon className="w-6 h-6 text-orange-400" aria-hidden="true" />
                       </div>
-                      <Badge className="bg-brand-primary-500/10 text-brand-primary-400 border border-brand-primary-500/30">
+                      <Badge className="bg-orange-500/10 text-orange-400 border border-orange-500/30">
                         {useCase.badge}
                       </Badge>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-primary-400 transition-colors">
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
                       {useCase.title}
                     </h3>
                     <p className="text-gray-400 text-sm mb-4">
                       {useCase.description}
                     </p>
-                    <div className="flex items-center text-brand-primary-400 text-sm font-semibold group-hover:gap-3 transition-all">
+                    <div className="flex items-center text-orange-400 text-sm font-semibold group-hover:gap-3 transition-all">
                       Explore
                       <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </div>
@@ -532,14 +532,14 @@ export default function IntroductionClient() {
           transition={{ duration: 0.6, delay: 0.7 }}
           className="py-16 text-center relative"
         >
-          <Card className="bg-neutral-900/50 border border-neutral-700 rounded-2xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden hover:border-brand-primary-500/30">
+          <Card className="bg-neutral-900/50 border border-neutral-700 rounded-2xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden hover:border-orange-500/30">
             {/* Glitch Hex decoration */}
             <div className="absolute top-8 right-8 w-16 h-16 opacity-20">
               <GlitchHex size={64} />
             </div>
             
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to <span className="text-brand-primary-400">Dive In</span>?
+              Ready to <span className="text-orange-400">Dive In</span>?
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
               Your journey into the Ergo ecosystem is just a few clicks away. 
@@ -550,7 +550,7 @@ export default function IntroductionClient() {
               <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
                 <Button 
                   asChild 
-                  className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl shadow-lg"
+                  className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl shadow-lg"
                 >
                   <Link href="/wallet">
                     <Wallet className="w-5 h-5 mr-2" aria-hidden="true" />

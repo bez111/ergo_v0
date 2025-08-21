@@ -199,14 +199,14 @@ export default function NativeTokensPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/docs/ecosystem/nfts">
-                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Explore NFT Ecosystem
                   </Button>
                     </Link>
                     <a href="https://docs.ergo.getblok.io/api/issuing/" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                   >
                       Token API Docs
                                     </Button>
@@ -214,10 +214,10 @@ export default function NativeTokensPage() {
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-brand-primary-400">Key features</a></li>
-                      <li><a href="#asset-types" className="hover:text-brand-primary-400">Asset types</a></li>
-                      <li><a href="#use-cases" className="hover:text-brand-primary-400">Use cases</a></li>
-                      <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
+                      <li><a href="#asset-types" className="hover:text-orange-400">Asset types</a></li>
+                      <li><a href="#use-cases" className="hover:text-orange-400">Use cases</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
                     </ul>
                   </nav>
               </div>
@@ -258,7 +258,7 @@ export default function NativeTokensPage() {
                                   <p className="text-sm text-neutral-400">{item.description}</p>
                                 </div>
                                 <div className="text-right">
-                                  <div className="text-2xl font-bold text-brand-primary-400">{item.value}</div>
+                                  <div className="text-2xl font-bold text-orange-400">{item.value}</div>
                                 </div>
                               </div>
                             </div>
@@ -303,8 +303,8 @@ export default function NativeTokensPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
                       <CardHeader>
                         <div className="flex items-center space-x-3">
-                          <div className="p-2 bg-brand-primary-500/10 rounded-lg">
-                            <feature.icon className="w-6 h-6 text-brand-primary-400" />
+                          <div className="p-2 bg-orange-500/10 rounded-lg">
+                            <feature.icon className="w-6 h-6 text-orange-400" />
                           </div>
                           <CardTitle className="text-white">{feature.title}</CardTitle>
                         </div>
@@ -352,7 +352,7 @@ export default function NativeTokensPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2 text-white">
-                          <Coins className="w-5 h-5 text-brand-primary-400" />
+                          <Coins className="w-5 h-5 text-orange-400" />
                           Standard Tokens
                         </CardTitle>
                       </CardHeader>
@@ -384,7 +384,7 @@ export default function NativeTokensPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2 text-white">
-                          <DollarSign className="w-5 h-5 text-brand-primary-400" />
+                          <DollarSign className="w-5 h-5 text-orange-400" />
                           Stablecoins
                         </CardTitle>
                       </CardHeader>
@@ -420,7 +420,7 @@ export default function NativeTokensPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2 text-white">
-                          <Image className="w-5 h-5 text-brand-primary-400" />
+                          <Image className="w-5 h-5 text-orange-400" />
                           Art & Collectibles
                         </CardTitle>
                       </CardHeader>
@@ -452,7 +452,7 @@ export default function NativeTokensPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2 text-white">
-                          <Package className="w-5 h-5 text-brand-primary-400" />
+                          <Package className="w-5 h-5 text-orange-400" />
                           Gaming Assets
                         </CardTitle>
                       </CardHeader>
@@ -488,7 +488,7 @@ export default function NativeTokensPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2 text-white">
-                          <Layers className="w-5 h-5 text-brand-primary-400" />
+                          <Layers className="w-5 h-5 text-orange-400" />
                           Semi-Fungible Tokens
                         </CardTitle>
                       </CardHeader>
@@ -520,7 +520,7 @@ export default function NativeTokensPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
                         <CardTitle className="flex items-center gap-2 text-white">
-                          <Code className="w-5 h-5 text-brand-primary-400" />
+                          <Code className="w-5 h-5 text-orange-400" />
                           Programmable Assets
                         </CardTitle>
                       </CardHeader>
@@ -585,8 +585,8 @@ export default function NativeTokensPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
                       <CardHeader>
                         <div className="flex items-center space-x-3 mb-4">
-                          <div className="p-2 bg-brand-primary-500/10 rounded-lg">
-                            <useCase.icon className="w-6 h-6 text-brand-primary-400" />
+                          <div className="p-2 bg-orange-500/10 rounded-lg">
+                            <useCase.icon className="w-6 h-6 text-orange-400" />
                           </div>
                           <CardTitle className="text-white text-lg">{useCase.title}</CardTitle>
                         </div>
@@ -625,7 +625,7 @@ export default function NativeTokensPage() {
                 <CardContent className="p-8">
                   <div className="bg-neutral-900/60 rounded-lg p-6 overflow-x-auto">
                     <pre className="text-sm">
-                      <code className="language-scala text-brand-primary-300">{`// Token creation parameters
+                      <code className="language-scala text-orange-300">{`// Token creation parameters
 val tokenName = "MyToken"
 val tokenDescription = "My awesome token on Ergo"
 val tokenDecimals = 2
@@ -793,14 +793,14 @@ println(s"Token created in TX: \${token.creationTx}")`}</code>
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://docs.ergoplatform.com/dev/tokens/" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                     Read Documentation
                   </Button>
                 </a>
                 <a href="https://ergoplatform.org/en/blog/2022-03-08-building-ergo-how-the-ageusd-stablecoin-works/" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
-                    className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                   >
                     Learn About AgeUSD
                   </Button>

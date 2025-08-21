@@ -226,14 +226,14 @@ export default function AdaptiveEmissionPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/docs/miners/governance">
-                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Governance Docs
                   </Button>
                     </Link>
                     <a href="https://www.ergoforum.org/t/emission-soft-fork-proposal/2996" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                   >
                       EIP-27 Proposal
                                     </Button>
@@ -241,9 +241,9 @@ export default function AdaptiveEmissionPage() {
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-brand-primary-400">Key features</a></li>
-                      <li><a href="#emission" className="hover:text-brand-primary-400">Emission Schedule</a></li>
-                      <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
+                      <li><a href="#emission" className="hover:text-orange-400">Emission Schedule</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
                     </ul>
                   </nav>
               </div>
@@ -284,10 +284,10 @@ export default function AdaptiveEmissionPage() {
                                   href={item.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                             >
                               <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -298,10 +298,10 @@ export default function AdaptiveEmissionPage() {
                               ) : (
                                 <Link
                                   href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                                 >
                                   <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -353,7 +353,7 @@ export default function AdaptiveEmissionPage() {
                   >
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
                       <CardContent className="p-6">
-                        <feature.icon className="w-12 h-12 text-brand-primary-400 mb-4" />
+                        <feature.icon className="w-12 h-12 text-orange-400 mb-4" />
                         <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                         <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
                       </CardContent>
@@ -385,13 +385,13 @@ export default function AdaptiveEmissionPage() {
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
-                  <TabsTrigger value="emission" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="emission" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Emission
                   </TabsTrigger>
-                  <TabsTrigger value="voting" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="voting" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Voting
                   </TabsTrigger>
-                  <TabsTrigger value="parameters" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="parameters" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Parameters
                   </TabsTrigger>
                 </TabsList>
@@ -405,7 +405,7 @@ export default function AdaptiveEmissionPage() {
                     <CardContent className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-6">
                         <div className="space-y-4">
-                          <h4 className="font-semibold text-brand-primary-300">Current Phase (2021-2057)</h4>
+                          <h4 className="font-semibold text-orange-300">Current Phase (2021-2057)</h4>
                           <ul className="space-y-2 text-neutral-400">
                             <li>• Initial emission: 75 ERG per block</li>
                             <li>• Reduction every 3 months by 3 ERG</li>
@@ -414,7 +414,7 @@ export default function AdaptiveEmissionPage() {
                           </ul>
                         </div>
                         <div className="space-y-4">
-                          <h4 className="font-semibold text-brand-primary-300">Post-Emission (2057+)</h4>
+                          <h4 className="font-semibold text-orange-300">Post-Emission (2057+)</h4>
                           <ul className="space-y-2 text-neutral-400">
                             <li>• Miner rewards from transaction fees</li>
                             <li>• Storage rent from inactive UTXOs</li>
@@ -436,22 +436,22 @@ export default function AdaptiveEmissionPage() {
                     <CardContent className="space-y-6">
                       <div className="grid md:grid-cols-3 gap-6">
                         <div className="text-center">
-                          <div className="w-16 h-16 bg-brand-primary-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Users className="w-8 h-8 text-brand-primary-400" />
+                          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Users className="w-8 h-8 text-orange-400" />
                           </div>
                           <h4 className="font-semibold text-white mb-2">1. Community Discussion</h4>
                           <p className="text-sm text-neutral-400">Proposals are discussed in forums and community channels</p>
                         </div>
                         <div className="text-center">
-                          <div className="w-16 h-16 bg-brand-primary-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <Vote className="w-8 h-8 text-brand-primary-400" />
+                          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Vote className="w-8 h-8 text-orange-400" />
                           </div>
                           <h4 className="font-semibold text-white mb-2">2. Miner Voting</h4>
                           <p className="text-sm text-neutral-400">Miners vote through block headers over 1024 epochs</p>
                         </div>
                         <div className="text-center">
-                          <div className="w-16 h-16 bg-brand-primary-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                            <CheckCircle className="w-8 h-8 text-brand-primary-400" />
+                          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <CheckCircle className="w-8 h-8 text-orange-400" />
                           </div>
                           <h4 className="font-semibold text-white mb-2">3. Implementation</h4>
                           <p className="text-sm text-neutral-400">Changes activate gradually with 90% consensus</p>
@@ -470,7 +470,7 @@ export default function AdaptiveEmissionPage() {
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-brand-primary-300 mb-3">Block Parameters</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">Block Parameters</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
                               <li>• Maximum block size</li>
                               <li>• Block cost limit</li>
@@ -478,7 +478,7 @@ export default function AdaptiveEmissionPage() {
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-brand-primary-300 mb-3">Economic Parameters</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">Economic Parameters</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
                               <li>• Storage fee factor</li>
                               <li>• Minimum transaction fee</li>
@@ -523,14 +523,14 @@ export default function AdaptiveEmissionPage() {
                     transition={{ delay: index * 0.1 }}
                     className="motion-reduce:transform-none"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-brand-primary-500/50 transition-colors">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-orange-500/50 transition-colors">
                       <CardContent className="p-6">
-                        <item.icon className="w-12 h-12 text-brand-primary-400 mb-4" />
+                        <item.icon className="w-12 h-12 text-orange-400 mb-4" />
                         <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
                         <p className="text-neutral-400 leading-relaxed mb-4">{item.description}</p>
                         <Link 
                           href={item.link}
-                          className="inline-flex items-center text-brand-primary-400 hover:text-brand-primary-300 transition-colors"
+                          className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                         >
                           {item.linkText}
                         </Link>
@@ -564,7 +564,7 @@ export default function AdaptiveEmissionPage() {
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-2">
-                      <Clock className="w-5 h-5 text-brand-primary-400" />
+                      <Clock className="w-5 h-5 text-orange-400" />
                       4 Year Period
                     </CardTitle>
                   </CardHeader>
@@ -578,7 +578,7 @@ export default function AdaptiveEmissionPage() {
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-2">
-                      <DollarSign className="w-5 h-5 text-brand-primary-400" />
+                      <DollarSign className="w-5 h-5 text-orange-400" />
                       Fee Structure
                     </CardTitle>
                   </CardHeader>
@@ -592,7 +592,7 @@ export default function AdaptiveEmissionPage() {
                 <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-white flex items-center gap-2">
-                      <Shield className="w-5 h-5 text-brand-primary-400" />
+                      <Shield className="w-5 h-5 text-orange-400" />
                       Network Benefits
                     </CardTitle>
                   </CardHeader>
@@ -640,7 +640,7 @@ export default function AdaptiveEmissionPage() {
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                           <div className="flex-1">
                             <div className="flex items-center gap-3 mb-2">
-                              <span className="px-3 py-1 bg-brand-primary-500/20 text-brand-primary-300 rounded-full text-sm font-medium">
+                              <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium">
                                 {vote.eip}
                               </span>
                               <span className={`px-3 py-1 rounded-full text-sm font-medium ${
@@ -655,7 +655,7 @@ export default function AdaptiveEmissionPage() {
                             <p className="text-neutral-400 leading-relaxed">{vote.description}</p>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold text-brand-primary-400">{vote.support}</div>
+                            <div className="text-2xl font-bold text-orange-400">{vote.support}</div>
                             <div className="text-sm text-neutral-400">Support</div>
                             <div className="text-sm text-neutral-500 mt-1">{vote.date}</div>
                           </div>
@@ -724,13 +724,13 @@ export default function AdaptiveEmissionPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/docs/miners/governance">
-                  <Button size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
                     Learn Governance
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <a href="https://discord.gg/ergo" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400">
+                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
                     Join Community
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>

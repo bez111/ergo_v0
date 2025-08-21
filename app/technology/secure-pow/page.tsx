@@ -222,7 +222,7 @@ export default function SecurePowPage() {
                     Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       <Link href="/use/mining">Start Mining</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
@@ -233,7 +233,7 @@ export default function SecurePowPage() {
                 </div>
                 <div className="relative">
                   <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-brand-primary-500/30 transition-colors">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
                           Live Network Statistics
@@ -244,7 +244,7 @@ export default function SecurePowPage() {
                               key={stat.label}
                               className="text-center p-4 bg-neutral-900/60 rounded-lg"
                             >
-                              <div className="text-xl font-bold text-brand-primary-400 mb-1">{stat.value}</div>
+                              <div className="text-xl font-bold text-orange-400 mb-1">{stat.value}</div>
                               <div className="text-xs text-neutral-400 mb-2">{stat.label}</div>
                               <Badge variant={stat.change.includes("+") ? "default" : "secondary"} className="text-xs">
                                 {stat.change}
@@ -278,11 +278,11 @@ export default function SecurePowPage() {
                     className="group"
                   >
                     <Card
-                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-brand-primary-500/30 transition-colors h-full`}
+                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors h-full`}
                     >
                       <CardContent className="p-8 text-center">
-                        <div className="w-16 h-16 bg-brand-primary-500/20 rounded-lg flex items-center justify-center mx-auto mb-6">
-                          <feature.icon className="w-8 h-8 text-brand-primary-400" aria-hidden="true" />
+                        <div className="w-16 h-16 bg-orange-500/20 rounded-lg flex items-center justify-center mx-auto mb-6">
+                          <feature.icon className="w-8 h-8 text-orange-400" aria-hidden="true" />
                         </div>
                         <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
                         <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
@@ -417,7 +417,7 @@ export default function SecurePowPage() {
             <Card className="mb-16 bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
               <CardHeader>
                 <CardTitle className="text-xl text-white flex items-center gap-2">
-                  <TrendingUp className="w-5 h-5 text-brand-primary-400" aria-hidden="true" />
+                  <TrendingUp className="w-5 h-5 text-orange-400" aria-hidden="true" />
                   Mining Decentralization
                 </CardTitle>
                 <CardDescription>Distribution of mining power across the network (weekly refresh)</CardDescription>
@@ -516,7 +516,7 @@ export default function SecurePowPage() {
                             setTimeout(() => setCopied(false), 1500)
                           } catch {}
                         }}
-                        className="inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-brand-primary-400 transition-colors p-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-primary-400"
+                        className="inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-orange-400 transition-colors p-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                         aria-label="Copy sample command"
                         title="Copy"
                       >
@@ -587,7 +587,7 @@ export default function SecurePowPage() {
                   Join thousands of GPU miners securing Ergo — start in minutes.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                  <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                     <Link href="/use/mining">Mining Guide</Link>
                   </Button>
                   <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm gap-2">

@@ -540,9 +540,9 @@ export default function QuizClient() {
 
                   <div className="max-w-4xl mx-auto mb-12">
                     <h2 className="text-2xl md:text-3xl text-gray-300 mb-6 font-mono">
-                      <span className="text-brand-primary-400">[</span>
+                      <span className="text-orange-400">[</span>
                       DISCOVER YOUR PLACE IN THE ECOSYSTEM
-                      <span className="text-brand-primary-400">]</span>
+                      <span className="text-orange-400">]</span>
                     </h2>
                     <p className="text-lg md:text-xl text-gray-400 leading-relaxed mb-8">
                       Welcome to Ergo! New to our vast ecosystem and not sure where to begin? This short quiz will
@@ -551,17 +551,17 @@ export default function QuizClient() {
                     </p>
                     <p className="text-lg text-gray-300 font-mono">
                       Answer a few simple questions to find your path: Are you a future{" "}
-                      <span className="text-brand-primary-400">Investor</span>, <span className="text-brand-primary-400">Developer</span>,{" "}
-                      <span className="text-brand-primary-400">Miner</span>,{" "}
-                      <span className="text-brand-primary-400">NFT Enthusiast</span>,{" "}
-                      <span className="text-brand-primary-400">DeFi User</span>, or something else?
+                      <span className="text-orange-400">Investor</span>, <span className="text-orange-400">Developer</span>,{" "}
+                      <span className="text-orange-400">Miner</span>,{" "}
+                      <span className="text-orange-400">NFT Enthusiast</span>,{" "}
+                      <span className="text-orange-400">DeFi User</span>, or something else?
                     </p>
                   </div>
 
                   <Button
                     onClick={handleStartQuiz}
                     size="lg"
-                    className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-mono uppercase tracking-wider px-12 py-6 text-xl focus:ring-2 focus:ring-brand-primary-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
+                    className="bg-orange-500 hover:bg-orange-600 text-black font-mono uppercase tracking-wider px-12 py-6 text-xl focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200"
                   >
                     <Rocket className="w-6 h-6 mr-2" />
                     START QUIZ
@@ -585,7 +585,7 @@ export default function QuizClient() {
               {/* Progress Bar */}
               <div className="mb-12">
                 <div className="flex items-center justify-between mb-4">
-                  <span className="text-brand-primary-400 font-mono text-sm">
+                  <span className="text-orange-400 font-mono text-sm">
                     QUESTION {currentQuestion + 1} OF {quizQuestions.length}
                   </span>
                   <span className="text-gray-400 font-mono text-sm">{Math.round(progress)}% COMPLETE</span>
@@ -594,7 +594,7 @@ export default function QuizClient() {
               </div>
 
               {/* Question */}
-              <Card className="bg-neutral-900/50 border-brand-primary-500/20 backdrop-blur-sm">
+              <Card className="bg-neutral-900/50 border-orange-500/20 backdrop-blur-sm">
                 <CardContent className="p-8">
                   <motion.div
                     key={currentQuestion}
@@ -603,7 +603,7 @@ export default function QuizClient() {
                     transition={{ duration: 0.5 }}
                   >
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 font-mono flex items-center gap-3">
-                      <Target className="w-6 h-6 text-brand-primary-400" />
+                      <Target className="w-6 h-6 text-orange-400" />
                       {quizQuestions[currentQuestion].question}
                     </h2>
 
@@ -612,7 +612,7 @@ export default function QuizClient() {
                         <motion.button
                           key={index}
                           onClick={() => handleAnswerSelect(quizQuestions[currentQuestion].id, index)}
-                          className="w-full p-6 text-left border border-brand-primary-500/20 rounded-lg hover:border-brand-primary-500/50 hover:bg-brand-primary-500/5 transition-all duration-300 group"
+                          className="w-full p-6 text-left border border-orange-500/20 rounded-lg hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300 group"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
                         >
@@ -620,7 +620,7 @@ export default function QuizClient() {
                             <span className="text-lg text-gray-300 group-hover:text-white font-mono">
                               {option.text}
                             </span>
-                            <ChevronRight className="w-5 h-5 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                            <ChevronRight className="w-5 h-5 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                           </div>
                         </motion.button>
                       ))}
@@ -635,7 +635,7 @@ export default function QuizClient() {
                   onClick={() => setCurrentQuestion(Math.max(0, currentQuestion - 1))}
                   variant="outline"
                   disabled={currentQuestion === 0}
-                  className="border-brand-primary-500/50 text-brand-primary-400 hover:bg-brand-primary-500/10"
+                  className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10"
                 >
                   <ChevronLeft className="w-4 h-4 mr-2" />
                   Previous
@@ -676,9 +676,9 @@ export default function QuizClient() {
                       YOUR ERGO PATH: {profiles[selectedProfile].name.toUpperCase()}
                     </h1>
                     <h2 className="text-2xl md:text-3xl text-gray-300 font-mono">
-                      <span className="text-brand-primary-400">[</span>
+                      <span className="text-orange-400">[</span>
                       {profiles[selectedProfile].title}
-                      <span className="text-brand-primary-400">]</span>
+                      <span className="text-orange-400">]</span>
                     </h2>
                   </motion.div>
 
@@ -697,17 +697,17 @@ export default function QuizClient() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.2 }}
                   >
-                    <Card className="bg-neutral-900/50 border-brand-primary-500/20 backdrop-blur-sm h-full">
+                    <Card className="bg-neutral-900/50 border-orange-500/20 backdrop-blur-sm h-full">
                       <CardContent className="p-8">
                         <h3 className="text-xl font-bold text-white mb-6 font-mono flex items-center gap-2">
-                          <Brain className="w-5 h-5 text-brand-primary-400" />
+                          <Brain className="w-5 h-5 text-orange-400" />
                           {toolCategory.category}
                         </h3>
                         <div className="space-y-4">
                           {toolCategory.items.map((item, itemIndex) => (
-                            <div key={itemIndex} className="border-l-2 border-brand-primary-500/30 pl-4">
-                              <Link href={item.link} className="block hover:text-brand-primary-400 transition-colors group">
-                                <h4 className="font-medium text-white group-hover:text-brand-primary-400 flex items-center gap-2">
+                            <div key={itemIndex} className="border-l-2 border-orange-500/30 pl-4">
+                              <Link href={item.link} className="block hover:text-orange-400 transition-colors group">
+                                <h4 className="font-medium text-white group-hover:text-orange-400 flex items-center gap-2">
                                   {item.name}
                                   <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </h4>
@@ -735,7 +735,7 @@ export default function QuizClient() {
                     <Button
                       key={index}
                       asChild
-                      className="bg-transparent border-2 border-brand-primary-500 text-brand-primary-400 hover:bg-brand-primary-500 hover:text-black font-mono uppercase tracking-wider h-auto py-4 transition-all duration-200"
+                      className="bg-transparent border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black font-mono uppercase tracking-wider h-auto py-4 transition-all duration-200"
                     >
                       <Link href={step.link}>
                         <ArrowRight className="w-4 h-4 mr-2" />
@@ -753,7 +753,7 @@ export default function QuizClient() {
                 transition={{ delay: 0.8 }}
                 className="mb-16"
               >
-                <Card className="bg-gradient-to-r from-brand-primary-500/20 via-brand-primary-500/10 to-brand-primary-500/20 border-brand-primary-500/40 backdrop-blur-sm">
+                <Card className="bg-gradient-to-r from-orange-500/20 via-orange-500/10 to-orange-500/20 border-orange-500/40 backdrop-blur-sm">
                   <CardContent className="p-8 text-center">
                     <h3 className="text-2xl font-bold text-white mb-4 font-mono">CONNECT WITH YOUR COMMUNITY</h3>
                     <p className="text-gray-300 mb-6">
@@ -765,7 +765,7 @@ export default function QuizClient() {
                           key={index}
                           asChild
                           variant="outline"
-                          className="border-brand-primary-500/50 text-brand-primary-400 hover:bg-brand-primary-500/10"
+                          className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10"
                         >
                           <Link href={channel.link} target="_blank" rel="noopener noreferrer">
                             <ExternalLink className="w-4 h-4 mr-2" />
@@ -780,7 +780,7 @@ export default function QuizClient() {
 
               {/* General Learn More */}
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
-                <Card className="bg-neutral-900/40 border-brand-primary-500/20 backdrop-blur-sm">
+                <Card className="bg-neutral-900/40 border-orange-500/20 backdrop-blur-sm">
                   <CardContent className="p-8 text-center">
                     <h3 className="text-xl font-bold text-white mb-6 font-mono">
                       WANT TO EXPLORE OTHER ASPECTS OF ERGO?
@@ -788,7 +788,7 @@ export default function QuizClient() {
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                       <Button
                         asChild
-                        className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black hover:shadow-lg font-mono uppercase tracking-wider transition-all duration-200"
+                        className="bg-orange-500 hover:bg-orange-600 text-black hover:shadow-lg font-mono uppercase tracking-wider transition-all duration-200"
                       >
                         <Link href="/ecosystem">
                           <ArrowRight className="w-4 h-4 mr-2" />
@@ -798,7 +798,7 @@ export default function QuizClient() {
                       <Button
                         asChild
                         variant="outline"
-                        className="border-brand-primary-500/50 text-brand-primary-400 hover:bg-brand-primary-500/10 font-mono uppercase tracking-wider"
+                        className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 font-mono uppercase tracking-wider"
                       >
                         <Link href="/start/faq">
                           <ArrowRight className="w-4 h-4 mr-2" />
@@ -808,7 +808,7 @@ export default function QuizClient() {
                       <Button
                         asChild
                         variant="outline"
-                        className="border-brand-primary-500/50 text-brand-primary-400 hover:bg-brand-primary-500/10 font-mono uppercase tracking-wider"
+                        className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 font-mono uppercase tracking-wider"
                       >
                         <Link href="/community">
                           <ArrowRight className="w-4 h-4 mr-2" />
@@ -817,7 +817,7 @@ export default function QuizClient() {
                       </Button>
                     </div>
 
-                    <div className="mt-8 pt-8 border-t border-brand-primary-500/20">
+                    <div className="mt-8 pt-8 border-t border-orange-500/20">
                       <Button
                         onClick={resetQuiz}
                         variant="ghost"

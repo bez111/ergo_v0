@@ -247,14 +247,14 @@ export default function OraclePoolsPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://oracle-core.ergoplatform.com/" target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       Oracle Dashboard
                   </Button>
                     </a>
                     <a href="https://github.com/ergoplatform/oracle-core" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400 px-8 py-3 rounded-xl"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                   >
                       View on GitHub
                                     </Button>
@@ -262,9 +262,9 @@ export default function OraclePoolsPage() {
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-brand-primary-400">Key features</a></li>
-                      <li><a href="#technical" className="hover:text-brand-primary-400">Technical Details</a></li>
-                      <li><a href="#faq" className="hover:text-brand-primary-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
+                      <li><a href="#technical" className="hover:text-orange-400">Technical Details</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
                     </ul>
                   </nav>
               </div>
@@ -305,10 +305,10 @@ export default function OraclePoolsPage() {
                                   href={item.link}
                                   target="_blank"
                                   rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                             >
                               <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -319,10 +319,10 @@ export default function OraclePoolsPage() {
                               ) : (
                                 <Link
                                   href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-brand-primary-500/50 transition-colors"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
                                 >
                                   <div className="flex items-center space-x-3">
-                                    <div className="text-brand-primary-400">{item.icon}</div>
+                                    <div className="text-orange-400">{item.icon}</div>
                                     <div className="flex-1">
                                       <h4 className="font-semibold text-white">{item.name}</h4>
                                       <p className="text-sm text-neutral-400">{item.description}</p>
@@ -374,7 +374,7 @@ export default function OraclePoolsPage() {
                   >
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
                       <CardContent className="p-6">
-                        <feature.icon className="w-12 h-12 text-brand-primary-400 mb-4" />
+                        <feature.icon className="w-12 h-12 text-orange-400 mb-4" />
                         <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
                         <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
                       </CardContent>
@@ -406,13 +406,13 @@ export default function OraclePoolsPage() {
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
-                  <TabsTrigger value="overview" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Overview
                   </TabsTrigger>
-                  <TabsTrigger value="pools" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="pools" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Live Pools
                   </TabsTrigger>
-                  <TabsTrigger value="details" className="data-[state=active]:bg-brand-primary-500 data-[state=active]:text-black">
+                  <TabsTrigger value="details" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
                     Implementation
                   </TabsTrigger>
                 </TabsList>
@@ -562,16 +562,16 @@ export default function OraclePoolsPage() {
                     transition={{ delay: index * 0.1 }}
                     className="motion-reduce:transform-none"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-brand-primary-500/50 transition-colors">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-orange-500/50 transition-colors">
                       <CardContent className="p-6">
-                        <useCase.icon className="w-12 h-12 text-brand-primary-400 mb-4" />
+                        <useCase.icon className="w-12 h-12 text-orange-400 mb-4" />
                         <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
                         <p className="text-neutral-400 leading-relaxed mb-4">{useCase.description}</p>
                         <a 
                           href={useCase.link} 
                           target={useCase.link.startsWith('http') ? '_blank' : undefined}
                           rel={useCase.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className="inline-flex items-center text-brand-primary-400 hover:text-brand-primary-300 transition-colors"
+                          className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                         >
                           Learn more
                           {useCase.link.startsWith('http') ? (
@@ -644,13 +644,13 @@ export default function OraclePoolsPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://oracle-core.ergoplatform.com/" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-brand-primary-500 hover:bg-brand-primary-600 text-black font-semibold">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
                     View Oracle Dashboard
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
                                     <Link href="/docs">
-                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-brand-primary-500/10 hover:border-brand-primary-500/50 hover:text-brand-primary-400">
+                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
                     Read Documentation
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
