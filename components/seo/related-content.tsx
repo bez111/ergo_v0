@@ -107,7 +107,7 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     {
       title: 'AgeUSD Protocol',
       description: 'How the AgeUSD stablecoin protocol works',
-      href: '/use/use-cases/algorithmic-stablecoins',
+      href: '/use/stablecoins',
       type: 'use-case',
       readTime: 12
     },
@@ -167,7 +167,7 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     {
       title: 'Mixer & ErgoMix',
       description: 'Privacy tools for transactions',
-      href: '/use/use-cases/privacy-confidentiality',
+      href: '/use/privacy',
       type: 'use-case',
       readTime: 8
     }

@@ -48,7 +48,7 @@ export const speakableContent: Record<string, { cssSelector: string[], summary: 
     cssSelector: ['h1', '.intro-text', '.key-concepts', '.code-example'],
     summary: 'ErgoScript is a powerful scripting language for Ergo blockchain smart contracts, based on Sigma protocols.'
   },
-  '/use/use-cases/algorithmic-stablecoins': {
+  '/use/stablecoins': {
     cssSelector: ['h1', '.overview', '.how-it-works', '.benefits'],
     summary: 'Algorithmic stablecoins on Ergo use the AgeUSD protocol to maintain stable value through over-collateralization.'
   },

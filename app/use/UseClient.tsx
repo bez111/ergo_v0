@@ -97,7 +97,7 @@ export default function UseClient() {
                   <p className="text-neutral-400 font-medium mb-1">{uc.subtitle}</p>
                   <p className="text-neutral-300 text-base mb-5">{uc.description}</p>
                                       <Button asChild className="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-orange-500/50 bg-neutral-900/50 text-neutral-200 transition-all hover:border-orange-500 hover:text-orange-400 hover:bg-neutral-900/60 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black">
-                    <Link href={`/use/cases/${uc.id}`} className="flex items-center gap-2" aria-label={`Explore: ${uc.title}`}>
+                    <Link href={`/use/${uc.id}`} className="flex items-center gap-2" aria-label={`Explore: ${uc.title}`}>
                       Explore: {uc.title} <ArrowRight className="w-5 h-5" aria-hidden="true" focusable="false" />
                     </Link>
                   </Button>

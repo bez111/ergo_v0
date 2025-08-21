@@ -76,7 +76,7 @@ export function UseCaseCard({ useCase, index }: UseCaseCardProps) {
 
         {/* CTA */}
         {useCase.id && (
-          <Link href={`/use/use-cases/${useCase.id}`}>
+          <Link href={`/use/${useCase.id}`}>
             <motion.div
               whileHover={{ x: 5 }}
               className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors cursor-pointer"

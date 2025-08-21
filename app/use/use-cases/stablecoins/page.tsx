@@ -2,5 +2,5 @@ import { redirect } from 'next/navigation'
 
 export default function StablecoinsPage() {
   // Redirect to the actual stablecoins page
-  redirect('/use/use-cases/algorithmic-stablecoins')
+  redirect('/use/stablecoins')
 } 
