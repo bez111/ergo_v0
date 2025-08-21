@@ -526,12 +526,12 @@ export default function GlossaryPage() {
           <section key={section.letter} id={section.letter} className="mb-12" itemScope itemType="https://schema.org/DefinedTermSet">
             <h2 className="text-3xl font-bold mb-6 text-orange-300 tracking-wide">{section.letter}</h2>
             <dl>
-              {section.terms.map(term => {
+              {section.terms.map((term, termIndex) => {
                 const title = typeof term.title === "string"
                   ? term.title
                   : ((term.title as Record<string, string>)[lang] || (term.title as Record<string, string>).en || (term.title && Object.values(term.title)[0]) || "");
                 return (
-                  <React.Fragment key={term.anchor}>
+                  <React.Fragment key={`${section.letter}-${term.anchor}-${termIndex}`}>
                     <dt id={term.anchor} className="text-xl font-semibold mt-8 mb-2 text-cyan-300 scroll-mt-24 flex items-center justify-between group" itemScope itemProp="hasDefinedTerm" itemType="https://schema.org/DefinedTerm">
                       <span className="flex-1">
                         {(() => {
