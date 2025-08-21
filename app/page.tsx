@@ -12,6 +12,7 @@ import { blogPosts } from "@/app/blog/_lib/blog-data"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 import { InternalLinking } from "@/lib/ai-internal-linking"
+import { ERGProductSchema } from "@/components/seo/erg-product-schema"
 
 export const metadata: Metadata = {
   title: 'Ergo Platform - Resilient DeFi Blockchain for the People',
@@ -221,6 +222,9 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(cryptocurrencySchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
+      
+      {/* ERG PRODUCT SCHEMA FOR RICH RESULTS */}
+      <ERGProductSchema />
     </>
   )
 }
