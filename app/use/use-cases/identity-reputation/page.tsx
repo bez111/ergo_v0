@@ -136,7 +136,7 @@ export default function IdentityReputationPage() {
               "@type": "ListItem", 
               position: 2,
               name: "Identity & Reputation",
-              item: "https://ergoblockchain.org/use/use-cases/identity-reputation"
+              item: "https://ergoblockchain.org/use/identity-reputation"
             }
           ]
         }}
@@ -165,8 +165,8 @@ export default function IdentityReputationPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Use Cases", href: "/use" },
-              { label: "Identity & Reputation", href: "/use/use-cases/identity-reputation" }
+              { name: "Use Cases", href: "/use" },
+              { name: "Identity & Reputation", href: "/use/identity-reputation" }
             ]}
             className="mb-8"
           />

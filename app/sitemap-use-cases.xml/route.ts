@@ -6,14 +6,16 @@ export async function GET() {
   
   const useCasePages = [
     { url: '/use', priority: 0.9, changeFreq: 'weekly' },
-    { url: '/use/use-cases/algorithmic-stablecoins', priority: 0.8, changeFreq: 'monthly' },
-    { url: '/use/use-cases/privacy-confidentiality', priority: 0.8, changeFreq: 'monthly' },
-    { url: '/use/use-cases/cross-chain-bridges', priority: 0.8, changeFreq: 'monthly' },
-    { url: '/use/use-cases/daos-alternative-economies', priority: 0.8, changeFreq: 'monthly' },
-    { url: '/use/use-cases/nfts-digital-assets', priority: 0.8, changeFreq: 'monthly' },
-    { url: '/use/use-cases/oracles-data-feeds', priority: 0.8, changeFreq: 'monthly' },
-    { url: '/use/use-cases/identity-reputation', priority: 0.8, changeFreq: 'monthly' },
-    { url: '/use/use-cases/gaming-metaverse', priority: 0.8, changeFreq: 'monthly' },
+    // New short URLs (primary)
+    { url: '/use/stablecoins', priority: 0.8, changeFreq: 'monthly' },
+    { url: '/use/privacy', priority: 0.8, changeFreq: 'monthly' },
+    { url: '/use/bridges', priority: 0.8, changeFreq: 'monthly' },
+    { url: '/use/daos', priority: 0.8, changeFreq: 'monthly' },
+    { url: '/use/nfts', priority: 0.8, changeFreq: 'monthly' },
+    { url: '/use/oracles', priority: 0.8, changeFreq: 'monthly' },
+    { url: '/use/identity', priority: 0.8, changeFreq: 'monthly' },
+    { url: '/use/gaming', priority: 0.8, changeFreq: 'monthly' },
+    // Other use pages
     { url: '/use/get-erg', priority: 0.7, changeFreq: 'weekly' },
     { url: '/use/mining', priority: 0.7, changeFreq: 'weekly' },
     { url: '/use/babel-fees', priority: 0.7, changeFreq: 'monthly' },

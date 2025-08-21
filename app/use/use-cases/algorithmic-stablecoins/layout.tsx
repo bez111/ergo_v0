@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "Stable value storage without centralized control. Over-collateralized stablecoins with innovative AgeUSD protocol.",
     images: ["/og-stablecoins.png"],
     type: "website",
-    url: "https://ergoblockchain.org/use/use-cases/algorithmic-stablecoins",
+    url: "https://ergoblockchain.org/use/stablecoins",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: ["/og-stablecoins.png"],
   },
   alternates: {
-    canonical: "https://ergoblockchain.org/use/use-cases/algorithmic-stablecoins",
+    canonical: "https://ergoblockchain.org/use/stablecoins",
   },
 }
 

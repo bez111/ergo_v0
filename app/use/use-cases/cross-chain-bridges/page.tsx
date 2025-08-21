@@ -139,7 +139,7 @@ export default function CrossChainBridgesPage() {
               "@type": "ListItem", 
               position: 2,
               name: "Cross-Chain Bridges",
-              item: "https://ergoblockchain.org/use/use-cases/cross-chain-bridges"
+              item: "https://ergoblockchain.org/use/cross-chain-bridges"
             }
           ]
         }}
@@ -168,8 +168,8 @@ export default function CrossChainBridgesPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Use Cases", href: "/use" },
-              { label: "Cross-Chain Bridges", href: "/use/use-cases/cross-chain-bridges" }
+              { name: "Use Cases", href: "/use" },
+              { name: "Cross-Chain Bridges", href: "/use/cross-chain-bridges" }
             ]}
             className="mb-8"
           />

@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "Secure, trustless value transfer between blockchains with Rosen Bridge.",
     images: ["/og-bridges.png"],
     type: "website",
-    url: "https://ergoblockchain.org/use/use-cases/cross-chain-bridges",
+    url: "https://ergoblockchain.org/use/cross-chain-bridges",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: ["/og-bridges.png"],
   },
   alternates: {
-    canonical: "https://ergoblockchain.org/use/use-cases/cross-chain-bridges",
+    canonical: "https://ergoblockchain.org/use/cross-chain-bridges",
   },
 }
 

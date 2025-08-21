@@ -43,17 +43,30 @@ export const URL_CONFIG = {
 // URL REDIRECTS REGISTRY
 // ============================================
 
-export const URL_REDIRECTS = {
-  // Soft redirects (302) - для тестирования
+export const URL_REDIRECTS: {
+  soft: Record<string, string>
+  permanent: Record<string, string>
+  gone: string[]
+} = {
+  // Soft redirects (302) - для тестирования новых URL
   soft: {
-    '/use/use-cases/algorithmic-stablecoins': '/use/cases/stablecoins',
-    '/use/use-cases/privacy-confidentiality': '/use/cases/privacy',
-    '/use/use-cases/cross-chain-bridges': '/use/cases/bridges',
-    '/use/use-cases/daos-alternative-economies': '/use/cases/daos',
-    '/use/use-cases/nfts-digital-assets': '/use/cases/nfts',
-    '/use/use-cases/oracles-data-feeds': '/use/cases/oracles',
-    '/use/use-cases/identity-reputation': '/use/cases/identity',
-    '/use/use-cases/gaming-metaverse': '/use/cases/gaming'
+    '/use/use-cases/algorithmic-stablecoins': '/use/stablecoins',
+    '/use/use-cases/privacy-confidentiality': '/use/privacy',
+    '/use/use-cases/cross-chain-bridges': '/use/bridges',
+    '/use/use-cases/daos-alternative-economies': '/use/daos',
+    '/use/use-cases/nfts-digital-assets': '/use/nfts',
+    '/use/use-cases/oracles-data-feeds': '/use/oracles',
+    '/use/use-cases/identity-reputation': '/use/identity',
+    '/use/use-cases/gaming-metaverse': '/use/gaming',
+    // Old cases URLs (from previous structure)
+    '/use/cases/stablecoins': '/use/stablecoins',
+    '/use/cases/privacy': '/use/privacy',
+    '/use/cases/bridges': '/use/bridges',
+    '/use/cases/daos': '/use/daos',
+    '/use/cases/nfts': '/use/nfts',
+    '/use/cases/oracles': '/use/oracles',
+    '/use/cases/identity': '/use/identity',
+    '/use/cases/gaming': '/use/gaming'
   },
   
   // Permanent redirects (301) - после валидации

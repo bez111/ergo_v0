@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description: "Financial privacy in an increasingly surveilled world. Non-custodial mixers and zero-knowledge proofs.",
     images: ["/og-privacy.png"],
     type: "website",
-    url: "https://ergoblockchain.org/use/use-cases/privacy-confidentiality",
+    url: "https://ergoblockchain.org/use/privacy-confidentiality",
   },
   twitter: {
     card: "summary_large_image",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     images: ["/og-privacy.png"],
   },
   alternates: {
-    canonical: "https://ergoblockchain.org/use/use-cases/privacy-confidentiality",
+    canonical: "https://ergoblockchain.org/use/privacy-confidentiality",
   },
 }
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Bringing real-world data on-chain with decentralized oracle pools.",
     images: ["/og-oracles.png"],
     type: "website",
-    url: "https://ergoblockchain.org/use/use-cases/oracles-data-feeds",
+    url: "https://ergoblockchain.org/use/oracles-data-feeds",
   },
   twitter: {
     card: "summary_large_image",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/og-oracles.png"],
   },
   alternates: {
-    canonical: "https://ergoblockchain.org/use/use-cases/oracles-data-feeds",
+    canonical: "https://ergoblockchain.org/use/oracles-data-feeds",
   },
 }
 

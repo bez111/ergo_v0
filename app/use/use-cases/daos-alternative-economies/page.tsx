@@ -139,7 +139,7 @@ export default function DAOsAlternativeEconomiesPage() {
               "@type": "ListItem", 
               position: 2,
               name: "DAOs & Alternative Economies",
-              item: "https://ergoblockchain.org/use/use-cases/daos-alternative-economies"
+              item: "https://ergoblockchain.org/use/daos-alternative-economies"
             }
           ]
         }}
@@ -168,8 +168,8 @@ export default function DAOsAlternativeEconomiesPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Use Cases", href: "/use" },
-              { label: "DAOs & Alternative Economies", href: "/use/use-cases/daos-alternative-economies" }
+              { name: "Use Cases", href: "/use" },
+              { name: "DAOs & Alternative Economies", href: "/use/daos-alternative-economies" }
             ]}
             className="mb-8"
           />

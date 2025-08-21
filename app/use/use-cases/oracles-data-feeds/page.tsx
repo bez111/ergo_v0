@@ -139,7 +139,7 @@ export default function OraclesDataFeedsPage() {
               "@type": "ListItem", 
               position: 2,
               name: "Oracles & Data Feeds",
-              item: "https://ergoblockchain.org/use/use-cases/oracles-data-feeds"
+              item: "https://ergoblockchain.org/use/oracles-data-feeds"
             }
           ]
         }}
@@ -168,8 +168,8 @@ export default function OraclesDataFeedsPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Use Cases", href: "/use" },
-              { label: "Oracles & Data Feeds", href: "/use/use-cases/oracles-data-feeds" }
+              { name: "Use Cases", href: "/use" },
+              { name: "Oracles & Data Feeds", href: "/use/oracles-data-feeds" }
             ]}
             className="mb-8"
           />

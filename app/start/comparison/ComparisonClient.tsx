@@ -47,51 +47,85 @@ const keyDifferentiators = [
   },
 ]
 
-// Simple comparison for key metrics - convert to semantic table later
-const simpleComparison = [
+// Blockchain platform comparison with accurate data from the reference
+const enhancedComparison = [
   {
-    metric: "Reentrancy risk",
-    ergo: { value: "Absent in eUTXO", score: "excellent" },
-    ethereum: { value: "Present in app patterns", score: "fair" },
-    bitcoin: { value: "N/A (no contracts)", score: "fair" },
-    cardano: { value: "Absent in eUTXO", score: "good" },
+    feature: "Consensus",
+    ergo: { value: "PoW (Autolykos)", color: "text-orange-400", bg: "bg-black" },
+    bitcoin: { value: "PoW (SHA-256d)", color: "text-yellow-400", bg: "bg-black" },
+    ethereum: { value: "PoS (Beacon/Gasper)", color: "text-blue-400", bg: "bg-black" },
+    cardano: { value: "PoS (Ouroboros)", color: "text-purple-400", bg: "bg-black" },
+    solana: { value: "PoS + Proof of History (Tower BFT)", color: "text-green-400", bg: "bg-black" },
+    sui: { value: "PoS (Narwhal/Bullshark → Mysticeti)", color: "text-cyan-400", bg: "bg-black" }
   },
   {
-    metric: "Fee model",
-    ergo: { value: "Predictable; no gas auctions", score: "good" },
-    ethereum: { value: "Auction-based gas", score: "poor" },
-    bitcoin: { value: "Mempool-driven", score: "fair" },
-    cardano: { value: "Generally stable", score: "good" },
+    feature: "State model",
+    ergo: { value: "eUTXO", color: "text-orange-400", bg: "bg-black" },
+    bitcoin: { value: "UTXO", color: "text-yellow-400", bg: "bg-black" },
+    ethereum: { value: "Account model + EVM", color: "text-blue-400", bg: "bg-black" },
+    cardano: { value: "eUTXO", color: "text-purple-400", bg: "bg-black" },
+    solana: { value: "Account model; parallel Sealevel runtime", color: "text-green-400", bg: "bg-black" },
+    sui: { value: "Object-centric (Move)", color: "text-cyan-400", bg: "bg-black" }
   },
   {
-    metric: "Contract paradigm",
-    ergo: { value: "eUTXO (declarative)", score: "good" },
-    ethereum: { value: "Account (imperative)", score: "fair" },
-    bitcoin: { value: "Script (limited)", score: "fair" },
-    cardano: { value: "eUTXO (Plutus)", score: "good" },
+    feature: "Smart contract languages",
+    ergo: { value: "ErgoScript", color: "text-orange-400", bg: "bg-black" },
+    bitcoin: { value: "Bitcoin Script (limited)", color: "text-yellow-400", bg: "bg-black" },
+    ethereum: { value: "Solidity, Vyper (EVM)", color: "text-blue-400", bg: "bg-black" },
+    cardano: { value: "Plutus (Haskell family), Aiken", color: "text-purple-400", bg: "bg-black" },
+    solana: { value: "Rust / C / C++ (SVM)", color: "text-green-400", bg: "bg-black" },
+    sui: { value: "Move", color: "text-cyan-400", bg: "bg-black" }
   },
   {
-    metric: "Assets",
-    ergo: { value: "Native L1 tokens/NFTs", score: "good" },
-    ethereum: { value: "Wrapped via contracts", score: "fair" },
-    bitcoin: { value: "No native tokens", score: "poor" },
-    cardano: { value: "Native assets", score: "good" },
+    feature: "Issuance / Max supply",
+    ergo: { value: "Max ~97.74M ERG; fixed supply", color: "text-orange-400", bg: "bg-black" },
+    bitcoin: { value: "Max 21M BTC (halvings)", color: "text-yellow-400", bg: "bg-black" },
+    ethereum: { value: "No hard cap; issuance + burn (EIP-1559)", color: "text-blue-400", bg: "bg-black" },
+    cardano: { value: "Max 45B ADA", color: "text-purple-400", bg: "bg-black" },
+    solana: { value: "No fixed cap; decaying inflation", color: "text-green-400", bg: "bg-black" },
+    sui: { value: "Max 10B SUI (scheduled distribution)", color: "text-cyan-400", bg: "bg-black" }
   },
+  {
+    feature: "Target block/slot time",
+    ergo: { value: "≈ 2 min", color: "text-orange-400", bg: "bg-black" },
+    bitcoin: { value: "≈ 10 min", color: "text-yellow-400", bg: "bg-black" },
+    ethereum: { value: "12 s slot; 32-slot epoch", color: "text-blue-400", bg: "bg-black" },
+    cardano: { value: "1 s slot; expected block ≈ every 20 s", color: "text-purple-400", bg: "bg-black" },
+    solana: { value: "≈ 400–600 ms slot", color: "text-green-400", bg: "bg-black" },
+    sui: { value: "Seconds (fast finality for simple tx)", color: "text-cyan-400", bg: "bg-black" }
+  },
+  {
+    feature: "Finality (typical)",
+    ergo: { value: "Probabilistic (via confirmations)", color: "text-orange-400", bg: "bg-black" },
+    bitcoin: { value: "Probabilistic (via confirmations)", color: "text-yellow-400", bg: "bg-black" },
+    ethereum: { value: "Economic finality ≈ 2 epochs (~13–15 min)", color: "text-blue-400", bg: "bg-black" },
+    cardano: { value: "Through stability window & k-blocks; ~20 s blocks", color: "text-purple-400", bg: "bg-black" },
+    solana: { value: "\"Confirmed\" in 2–3 blocks; \"Finalized\" ≈ 32 blocks", color: "text-green-400", bg: "bg-black" },
+    sui: { value: "BFT finality; typically seconds", color: "text-cyan-400", bg: "bg-black" }
+  },
+  {
+    feature: "Distinctive features",
+    ergo: { value: "Storage Rent, NiPoPoWs, Σ-protocols", color: "text-orange-400", bg: "bg-black" },
+    bitcoin: { value: "Simple UTXO model, high reliability", color: "text-yellow-400", bg: "bg-black" },
+    ethereum: { value: "General EVM platform, EIP-1559 (burn)", color: "text-blue-400", bg: "bg-black" },
+    cardano: { value: "eUTXO + formal methods, Hydra L2", color: "text-purple-400", bg: "bg-black" },
+    solana: { value: "High throughput, Sealevel, PoH", color: "text-green-400", bg: "bg-black" },
+    sui: { value: "Objects/ownership, parallel tx, Move safety", color: "text-cyan-400", bg: "bg-black" }
+  },
+  {
+    feature: "Privacy / L1 special features",
+    ergo: { value: "Built-in Sigma protocols, mixer contracts", color: "text-orange-400", bg: "bg-black" },
+    bitcoin: { value: "Limited scripts; privacy via L2/protocols", color: "text-yellow-400", bg: "bg-black" },
+    ethereum: { value: "Base L1 lacks privacy; zk/privacy on L2", color: "text-blue-400", bg: "bg-black" },
+    cardano: { value: "Base L1; extensions via Plutus/Hydra", color: "text-purple-400", bg: "bg-black" },
+    solana: { value: "Base L1; privacy via applications", color: "text-green-400", bg: "bg-black" },
+    sui: { value: "Base L1; privacy via applications", color: "text-cyan-400", bg: "bg-black" }
+  }
 ]
 
-const getScoreColor = (score: string) => {
-  switch (score) {
-    case "excellent":
-      return "border-orange-500/50 bg-orange-500/10 text-orange-400"
-    case "good":
-      return "border-neutral-500/50 bg-neutral-500/10 text-neutral-400"
-    case "fair":
-      return "border-neutral-600/50 bg-neutral-600/10 text-neutral-400"
-    case "poor":
-      return "border-neutral-700/50 bg-neutral-700/10 text-neutral-500"
-    default:
-      return "border-neutral-600/50 bg-neutral-600/10 text-neutral-400"
-  }
+// Enhanced styling to match the reference image - dark theme with colored cells
+const getFeatureCellStyle = (item: { value: string; color: string; bg: string }) => {
+  return `${item.color} ${item.bg} px-4 py-3 text-sm font-medium text-center`
 }
 
 export default function ComparisonClient() {
@@ -412,43 +446,65 @@ export default function ComparisonClient() {
           {/* Platform Comparison Table */}
           <section className="mb-16" id="comparison">
             <h2 className="text-3xl font-bold text-center mb-12 text-white">
-              Quick <span className="text-orange-400">Platform</span> Comparison
+              Blockchain <span className="text-orange-400">Platform</span> Comparison
             </h2>
-            <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl overflow-hidden">
-              <div className="p-6">
-                <table className="w-full border-separate border-spacing-0 text-sm">
-                  <caption className="sr-only">Comparison of key platform characteristics for Ergo, Ethereum, Bitcoin, and Cardano</caption>
+            <div className="bg-black border border-neutral-800 rounded-xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[900px] bg-black">
+                  <caption className="text-2xl font-bold text-white mb-6 p-6 text-center bg-black">
+                    Comparison (EN): Ergo Vs BTC/ETH/ADA/SOL/SUI
+                  </caption>
                   <thead>
-                    <tr className="bg-neutral-800/50">
-                      <th scope="col" className="text-left p-3 text-gray-200">Key Factor</th>
-                      <th scope="col" className="text-center p-3 text-orange-400">Ergo</th>
-                      <th scope="col" className="text-center p-3 text-neutral-400">Ethereum</th>
-                      <th scope="col" className="text-center p-3 text-neutral-400">Bitcoin</th>
-                      <th scope="col" className="text-center p-3 text-neutral-400">Cardano</th>
+                    <tr className="border-b border-neutral-800">
+                      <th scope="col" className="text-left p-4 text-orange-400 font-semibold bg-black">Parameter</th>
+                      <th scope="col" className="text-center p-4 text-orange-400 font-semibold bg-black">Ergo</th>
+                      <th scope="col" className="text-center p-4 text-yellow-400 font-semibold bg-black">Bitcoin</th>
+                      <th scope="col" className="text-center p-4 text-blue-400 font-semibold bg-black">Ethereum</th>
+                      <th scope="col" className="text-center p-4 text-purple-400 font-semibold bg-black">Cardano</th>
+                      <th scope="col" className="text-center p-4 text-green-400 font-semibold bg-black">Solana</th>
+                      <th scope="col" className="text-center p-4 text-cyan-400 font-semibold bg-black">Sui</th>
                     </tr>
                   </thead>
                   <tbody>
-                    {simpleComparison.map((row) => (
-                      <tr key={row.metric} className="odd:bg-neutral-800/20 hover:bg-orange-500/10 transition-colors">
-                        <th scope="row" className="text-left p-3 font-medium text-gray-200">{row.metric}</th>
-                        <td className="text-center p-3">
-                          <Badge className={`${getScoreColor(row.ergo.score)} text-xs border-2 px-2 py-0.5`}>{row.ergo.value}</Badge>
+                    {enhancedComparison.map((row, index) => (
+                      <tr key={row.feature} className="border-b border-neutral-800">
+                        <td className="text-left p-4 font-medium text-white bg-black">{row.feature}</td>
+                        <td className="p-0 bg-black">
+                          <div className={getFeatureCellStyle(row.ergo)}>
+                            {row.ergo.value}
+                          </div>
                         </td>
-                        <td className="text-center p-3">
-                          <Badge className={`${getScoreColor(row.ethereum.score)} text-xs border-2 px-2 py-0.5`}>{row.ethereum.value}</Badge>
+                        <td className="p-0 bg-black">
+                          <div className={getFeatureCellStyle(row.ethereum)}>
+                            {row.ethereum.value}
+                          </div>
                         </td>
-                        <td className="text-center p-3">
-                          <Badge className={`${getScoreColor(row.bitcoin.score)} text-xs border-2 px-2 py-0.5`}>{row.bitcoin.value}</Badge>
+                        <td className="p-0 bg-black">
+                          <div className={getFeatureCellStyle(row.cardano)}>
+                            {row.cardano.value}
+                          </div>
                         </td>
-                        <td className="text-center p-3">
-                          <Badge className={`${getScoreColor(row.cardano.score)} text-xs border-2 px-2 py-0.5`}>{row.cardano.value}</Badge>
+                        <td className="p-0 bg-black">
+                          <div className={getFeatureCellStyle(row.bitcoin)}>
+                            {row.bitcoin.value}
+                          </div>
+                        </td>
+                        <td className="p-0 bg-black">
+                          <div className={getFeatureCellStyle(row.solana)}>
+                            {row.solana.value}
+                          </div>
+                        </td>
+                        <td className="p-0 bg-black">
+                          <div className={getFeatureCellStyle(row.sui)}>
+                            {row.sui.value}
+                          </div>
                         </td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
-                <p className="text-xs text-neutral-500 mt-4">
-                  Methodology: qualitative assessment of model-level properties (reentrancy risk, fee model, contract paradigm, asset layer). Updated: {isoDate}.
+                <p className="text-xs text-neutral-500 mt-6 p-6">
+                  Comprehensive comparison of major blockchain platforms including consensus mechanisms, state models, smart contract capabilities, and distinctive features. Updated: {isoDate}.
                 </p>
               </div>
             </div>

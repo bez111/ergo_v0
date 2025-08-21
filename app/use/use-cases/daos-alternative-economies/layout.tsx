@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Community governance and alternative economic systems on Ergo blockchain.",
     images: ["/og-daos.png"],
     type: "website",
-    url: "https://ergoblockchain.org/use/use-cases/daos-alternative-economies",
+    url: "https://ergoblockchain.org/use/daos-alternative-economies",
   },
   twitter: {
     card: "summary_large_image",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/og-daos.png"],
   },
   alternates: {
-    canonical: "https://ergoblockchain.org/use/use-cases/daos-alternative-economies",
+    canonical: "https://ergoblockchain.org/use/daos-alternative-economies",
   },
 }
 

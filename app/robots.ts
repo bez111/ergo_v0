@@ -26,6 +26,12 @@ export default function robots(): MetadataRoute.Robots {
           '/*?page=9',
           '/*?page=1*', // block page=10+
           '/*?page=2*', // block page=20+
+          // Technical documentation (too niche for general search)
+          '/docs/developers/cryptographic-primitives/',
+          '/docs/developers/tooling/debugging/',
+          '/docs/developers/data-model-apis/resources/ergotool/',
+          '/ui-kit*', // internal UI components
+          '/test*', // test pages
           '/*.json$',
           '/*_buildManifest.js$',
           '/*_middlewareManifest.js$',

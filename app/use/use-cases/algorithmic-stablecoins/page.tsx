@@ -134,7 +134,7 @@ export default function AlgorithmicStablecoinsPage() {
               "@type": "ListItem", 
               position: 2,
               name: "Algorithmic Stablecoins",
-              item: "https://ergoblockchain.org/use/use-cases/algorithmic-stablecoins"
+              item: "https://ergoblockchain.org/use/stablecoins"
             }
           ]
         }}
@@ -163,8 +163,8 @@ export default function AlgorithmicStablecoinsPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Use Cases", href: "/use" },
-              { label: "Algorithmic Stablecoins", href: "/use/use-cases/algorithmic-stablecoins" }
+                              { name: "Use Cases", href: "/use" },
+              { name: "Algorithmic Stablecoins", href: "/use/stablecoins" }
             ]}
             className="mb-8"
           />

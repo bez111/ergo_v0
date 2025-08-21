@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "True digital ownership with on-chain metadata and protocol royalties.",
     images: ["/og-nfts.png"],
     type: "website",
-    url: "https://ergoblockchain.org/use/use-cases/nfts-digital-assets",
+    url: "https://ergoblockchain.org/use/nfts-digital-assets",
   },
   twitter: {
     card: "summary_large_image",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/og-nfts.png"],
   },
   alternates: {
-    canonical: "https://ergoblockchain.org/use/use-cases/nfts-digital-assets",
+    canonical: "https://ergoblockchain.org/use/nfts-digital-assets",
   },
 }
 

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Self-sovereign identity and Web3 reputation systems.",
     images: ["/og-identity.png"],
     type: "website",
-    url: "https://ergoblockchain.org/use/use-cases/identity-reputation",
+    url: "https://ergoblockchain.org/use/identity-reputation",
   },
   twitter: {
     card: "summary_large_image",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/og-identity.png"],
   },
   alternates: {
-    canonical: "https://ergoblockchain.org/use/use-cases/identity-reputation",
+    canonical: "https://ergoblockchain.org/use/identity-reputation",
   },
 }
 

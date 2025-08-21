@@ -139,7 +139,7 @@ export default function PrivacyConfidentialityPage() {
               "@type": "ListItem", 
               position: 2,
               name: "Privacy & Confidentiality",
-              item: "https://ergoblockchain.org/use/use-cases/privacy-confidentiality"
+              item: "https://ergoblockchain.org/use/privacy"
             }
           ]
         }}
@@ -168,8 +168,8 @@ export default function PrivacyConfidentialityPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Use Cases", href: "/use" },
-              { label: "Privacy & Confidentiality", href: "/use/use-cases/privacy-confidentiality" }
+                              { name: "Use Cases", href: "/use" },
+              { name: "Privacy & Confidentiality", href: "/use/privacy" }
             ]}
             className="mb-8"
           />

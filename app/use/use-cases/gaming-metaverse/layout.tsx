@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     description: "Next-gen gaming assets and digital worlds on Ergo blockchain.",
     images: ["/og-gaming.png"],
     type: "website",
-    url: "https://ergoblockchain.org/use/use-cases/gaming-metaverse",
+    url: "https://ergoblockchain.org/use/gaming-metaverse",
   },
   twitter: {
     card: "summary_large_image",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     images: ["/og-gaming.png"],
   },
   alternates: {
-    canonical: "https://ergoblockchain.org/use/use-cases/gaming-metaverse",
+    canonical: "https://ergoblockchain.org/use/gaming-metaverse",
   },
 }
 

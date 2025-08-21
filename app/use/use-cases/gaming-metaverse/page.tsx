@@ -136,7 +136,7 @@ export default function GamingMetaversePage() {
               "@type": "ListItem", 
               position: 2,
               name: "Gaming & Metaverse",
-              item: "https://ergoblockchain.org/use/use-cases/gaming-metaverse"
+              item: "https://ergoblockchain.org/use/gaming-metaverse"
             }
           ]
         }}
@@ -165,8 +165,8 @@ export default function GamingMetaversePage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Use Cases", href: "/use" },
-              { label: "Gaming & Metaverse", href: "/use/use-cases/gaming-metaverse" }
+              { name: "Use Cases", href: "/use" },
+              { name: "Gaming & Metaverse", href: "/use/gaming-metaverse" }
             ]}
             className="mb-8"
           />

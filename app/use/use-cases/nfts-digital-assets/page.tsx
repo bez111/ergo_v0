@@ -139,7 +139,7 @@ export default function NFTsDigitalAssetsPage() {
               "@type": "ListItem", 
               position: 2,
               name: "NFTs & Digital Assets",
-              item: "https://ergoblockchain.org/use/use-cases/nfts-digital-assets"
+              item: "https://ergoblockchain.org/use/nfts-digital-assets"
             }
           ]
         }}
@@ -168,8 +168,8 @@ export default function NFTsDigitalAssetsPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Use Cases", href: "/use" },
-              { label: "NFTs & Digital Assets", href: "/use/use-cases/nfts-digital-assets" }
+              { name: "Use Cases", href: "/use" },
+              { name: "NFTs & Digital Assets", href: "/use/nfts-digital-assets" }
             ]}
             className="mb-8"
           />
