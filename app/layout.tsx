@@ -12,6 +12,7 @@ import { GoogleAnalytics } from "@/components/analytics/google-analytics"
 import { RUMProvider } from "@/app/_components/rum-provider"
 import { PerformanceOptimizer } from "@/components/seo/performance-optimizer"
 import { CoreWebVitalsDashboard } from "@/components/seo/core-web-vitals-dashboard"
+import { ErrorBoundary } from "@/components/error-boundary"
 
 // Optimized font loading for Core Web Vitals
 const inter = Inter({ 
@@ -164,15 +165,17 @@ export default function RootLayout({
     {/* Core Web Vitals Dashboard (development only) */}
     <CoreWebVitalsDashboard showInProduction={false} />
         
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <div className="flex min-h-screen flex-col">
-            <Header />
-            <main className="flex-1 relative overflow-hidden" id="main-content">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </ThemeProvider>
+        <ErrorBoundary>
+          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+            <div className="flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1 relative overflow-hidden" id="main-content">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </ThemeProvider>
+        </ErrorBoundary>
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
           <GoogleAnalytics id={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
         )}

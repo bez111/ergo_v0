@@ -3,7 +3,6 @@
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs"
 import Link from "next/link"
 import { 
-  ExternalLink, 
   Users, 
   Code, 
   BookOpen, 
