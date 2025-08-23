@@ -810,7 +810,7 @@ if (OUTPUTS.size > 0) result`}
                   action={{
                     text: "Learn More",
                     icon: ArrowRight,
-                    onClick: () => console.log('Learn more clicked')
+                    onClick: () => {}
                   }}
                 />
                 
@@ -823,7 +823,7 @@ if (OUTPUTS.size > 0) result`}
                   action={{
                     text: "Benchmark",
                     icon: TrendingUp,
-                    onClick: () => console.log('Benchmark clicked')
+                    onClick: () => {}
                   }}
                 />
                 
@@ -836,7 +836,7 @@ if (OUTPUTS.size > 0) result`}
                   action={{
                     text: "Contribute",
                     icon: GitBranch,
-                    onClick: () => console.log('Contribute clicked')
+                    onClick: () => {}
                   }}
                 />
                     </div>
@@ -959,7 +959,7 @@ if (OUTPUTS.size > 0) result`}
               <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 relative overflow-hidden mb-6">
                 <h4 className="text-lg font-semibold text-white mb-4">Glitch Button</h4>
                 <div className="flex justify-center items-center py-8">
-                  <GlitchButton onClick={() => console.log('Deploy clicked')}>
+                  <GlitchButton onClick={() => {}}>
                     DEPLOY
                   </GlitchButton>
                 </div>
@@ -968,9 +968,9 @@ if (OUTPUTS.size > 0) result`}
               <CodeSnippet
                 title="Glitch Button"
                 language="jsx"
-                code={`<GlitchButton onClick={() => console.log('Deploy clicked')}>
-  DEPLOY
-</GlitchButton>`}
+                      code={`<GlitchButton onClick={() => {}}>
+        DEPLOY
+      </GlitchButton>`}
               />
               
               {/* Cryptographic Visualization */}
@@ -1029,12 +1029,12 @@ if (OUTPUTS.size > 0) result`}
                   primaryAction={{
                     text: "Get Started",
                     icon: Rocket,
-                    onClick: () => console.log('Get started')
+                    onClick: () => {}
                   }}
                   secondaryAction={{
                     text: "Learn More",
                     icon: BookOpen,
-                    onClick: () => console.log('Learn more')
+                    onClick: () => {}
                   }}
                 />
             </div>

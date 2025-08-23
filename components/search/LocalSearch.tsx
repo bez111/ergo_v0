@@ -343,8 +343,7 @@ function buildSearchIndex() {
   });
   
   // Log the total number of pages in search index
-  console.log(`Search index built with ${index.length} pages`);
-  console.log('Pages in index:', index.map(hit => hit.url).slice(0, 10));
+      // Search index built successfully
   
   return index;
 }

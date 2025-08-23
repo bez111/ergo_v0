@@ -109,7 +109,7 @@
   },
   "performance": [
     {
-      "url": "/Docs",
+      "url": "/docs",
       "responseTime": 688,
       "timestamp": "2025-08-18T15:05:22.759Z"
     },
@@ -119,7 +119,7 @@
       "timestamp": "2025-08-18T15:05:32.538Z"
     },
     {
-      "url": "/Docs/introduction",
+      "url": "/docs/introduction",
       "responseTime": 122,
       "timestamp": "2025-08-18T15:05:32.762Z"
     },
@@ -129,7 +129,7 @@
       "timestamp": "2025-08-18T15:05:33.149Z"
     },
     {
-      "url": "/Docs/ecosystem",
+      "url": "/docs/ecosystem",
       "responseTime": 85,
       "timestamp": "2025-08-18T15:05:33.336Z"
     },
@@ -139,7 +139,7 @@
       "timestamp": "2025-08-18T15:05:33.688Z"
     },
     {
-      "url": "/Docs/developers",
+      "url": "/docs/developers",
       "responseTime": 86,
       "timestamp": "2025-08-18T15:05:33.875Z"
     },
@@ -149,7 +149,7 @@
       "timestamp": "2025-08-18T15:05:34.223Z"
     },
     {
-      "url": "/Docs",
+      "url": "/docs",
       "responseTime": 103,
       "timestamp": "2025-08-18T15:06:34.432Z"
     },
@@ -159,7 +159,7 @@
       "timestamp": "2025-08-18T15:06:35.577Z"
     },
     {
-      "url": "/Docs/introduction",
+      "url": "/docs/introduction",
       "responseTime": 77,
       "timestamp": "2025-08-18T15:06:35.756Z"
     },
@@ -169,7 +169,7 @@
       "timestamp": "2025-08-18T15:06:36.107Z"
     },
     {
-      "url": "/Docs/ecosystem",
+      "url": "/docs/ecosystem",
       "responseTime": 82,
       "timestamp": "2025-08-18T15:06:36.291Z"
     },
@@ -179,7 +179,7 @@
       "timestamp": "2025-08-18T15:06:36.629Z"
     },
     {
-      "url": "/Docs/developers",
+      "url": "/docs/developers",
       "responseTime": 91,
       "timestamp": "2025-08-18T15:06:36.822Z"
     },
@@ -189,7 +189,7 @@
       "timestamp": "2025-08-18T15:06:37.192Z"
     },
     {
-      "url": "/Docs",
+      "url": "/docs",
       "responseTime": 11,
       "timestamp": "2025-08-18T15:07:34.340Z"
     },
@@ -229,7 +229,7 @@
       "timestamp": "2025-08-18T15:07:36.674Z"
     },
     {
-      "url": "/Docs",
+      "url": "/docs",
       "responseTime": 10,
       "timestamp": "2025-08-18T15:08:34.340Z"
     },

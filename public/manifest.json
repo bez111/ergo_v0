@@ -121,7 +121,7 @@
       "name": "Documentation",
       "short_name": "Docs",
       "description": "Ergo developer documentation",
-      "url": "/Docs",
+      "url": "/docs",
       "icons": [
         {
           "src": "/icon-96x96.png",

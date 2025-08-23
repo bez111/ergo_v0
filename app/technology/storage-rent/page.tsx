@@ -21,11 +21,10 @@ import {
   Target,
   ChevronDown,
 } from "lucide-react"
-import { useState } from "react"
+import { useState, useMemo } from "react"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
-import { useMemo } from "react"
 
 // Removed page-level metadata from client component; moved to route layout
 

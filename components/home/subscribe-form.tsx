@@ -19,7 +19,7 @@ export function SubscribeForm() {
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
-      console.log("Subscribing email:", email)
+      // Email subscription processed
       setMessage("Successfully subscribed!")
       setEmail("")
     } catch (error) {

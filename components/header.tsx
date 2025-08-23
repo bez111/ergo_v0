@@ -8,7 +8,7 @@ import { Search, Wallet } from "lucide-react"
 import { ModeToggle } from "@/components/mode-toggle"
 import { useState, useEffect } from "react"
 import { mainNavItems } from "@/lib/navigation-data"
-import DocsSearchModal from "./docsSearchModal";
+import DocsSearchModal from "./DocsSearchModal";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)

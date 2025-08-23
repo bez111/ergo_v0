@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect, useMemo } from "react";
 import { X, Search, FileText, Code, ExternalLink, Clock, Filter, Globe, BookOpen, MessageSquare, GitBranch, Calendar, Trash2 } from "lucide-react";
-import { buildDocsSearchIndex, DocsSearchIndexItem, searchWithTypos } from "../lib/docs-search-index";
-import { useSearchHistory } from "../hooks/use-search-history";
+import { buildDocsSearchIndex, DocsSearchIndexItem, searchWithTypos } from "@/lib/docs-search-index";
+import { useSearchHistory } from "@/hooks/use-search-history";
 import Link from "next/link";
 
 function highlight(text: string, query: string) {

@@ -240,9 +240,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     <Script
       id="blog-schema"
       type="application/ld+json"
-      dangerouslySetInnerHTML={{
-        __html: JSON.stringify(combinedSchema)
-      }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(combinedSchema) }}
       strategy="afterInteractive"
     />
   )

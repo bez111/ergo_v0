@@ -26,7 +26,7 @@ export function GlitchText({ text, className = "" }: GlitchTextProps) {
     }, 2000)
 
     return () => clearInterval(glitchInterval)
-  }, [])
+  }, [isMounted])
 
   return (
     <motion.span
