@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowLeft, ArrowUp, Eye, Heart, Clock, Twitter, Copy, Check, UserCircle, Calendar, MessageCircle, Share2, Hash, AlertCircle, CheckCircle, ExternalLink, Menu, X } from "lucide-react"
+import { ArrowLeft, ArrowUp, Eye, Heart, Clock, Twitter, Copy, Check, UserCircle, Calendar, MessageCircle, AlertCircle, ExternalLink, Menu, X } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCard } from "../_components/blog-card"
 import { BlogBreadcrumbs } from "../_components/blog-breadcrumbs"
@@ -12,8 +12,7 @@ import { Button } from "@/components/ui/button"
 import { 
   HexagonalGrid, 
   FloatingParticles, 
-  MathematicalPattern,
-  WatermarkHex
+  MathematicalPattern
 } from "@/components/ui-kit/signature-effects"
 
 interface BlogPostClientProps {
@@ -126,7 +125,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
     
     return () => {
       const timeSpent = Math.floor((Date.now() - startTime) / 1000)
-      console.log(`User spent ${timeSpent} seconds on article`)
+      // Time tracking removed for cleaner output
     }
   }, [])
 

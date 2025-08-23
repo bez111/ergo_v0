@@ -108,7 +108,7 @@ npm install @fleet-sdk/babel-fees-plugin`</CodeBlock>
             <h3 className="text-xl font-semibold mb-3 text-purple-300">4. Configuration Files</h3>
             <p className="text-gray-300 mb-4">Create webpack configuration (<code className="bg-neutral-700 px-1 py-0.5 rounded">webpack.config.js</code>):</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="typescript">`const path = require('path');
+              <CodeBlock language="javascript">{`const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -136,11 +136,11 @@ module.exports = {
             template: 'index.html'
         })
     ]
-};`</CodeBlock>
+};`}</CodeBlock>
             </div>
             <p className="text-gray-300 mt-4 mb-4">Create TypeScript configuration (<code className="bg-neutral-700 px-1 py-0.5 rounded">tsconfig.json</code>):</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="typescript">`{
+              <CodeBlock language="json">{`{
     "compilerOptions": {
         "outDir": "./dist/",
         "sourceMap": true,
@@ -153,7 +153,7 @@ module.exports = {
     "include": [
         "./src/**/*"
     ]
-}`</CodeBlock>
+}`}</CodeBlock>
             </div>
           </div>
 
@@ -256,7 +256,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 className="text-xl font-semibold mb-3 text-purple-300">6. Create HTML Interface</h3>
             <p className="text-gray-300 mb-4">Create <code className="bg-neutral-700 px-1 py-0.5 rounded">babelfees.html</code>:</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="typescript">`<html lang="en">
+              <CodeBlock language="html">{`<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 </body>
-</html>`</CodeBlock>
+</html>`}</CodeBlock>
             </div>
           </div>
 
@@ -279,8 +279,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 className="text-xl font-semibold mb-3 text-purple-300">7. Build and Deploy</h3>
             <p className="text-gray-300 mb-4">Compile the TypeScript code:</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="typescript">`cd /var/www/html/fleetsdk
-npx webpack`</CodeBlock>
+              <CodeBlock language="bash">{`cd /var/www/html/fleetsdk
+npx webpack`}</CodeBlock>
             </div>
           </div>
         </div>

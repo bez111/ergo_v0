@@ -28,8 +28,7 @@ export async function POST(request: NextRequest) {
         })
       }
     } else {
-      // В development просто логируем
-      console.log('[RUM Received]', data)
+      // В development режиме данные не отправляются
     }
     
     return NextResponse.json({ success: true })

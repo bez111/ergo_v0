@@ -3,8 +3,7 @@ import { notFound } from "next/navigation"
 import { blogPosts } from "../_lib/blog-data"
 import { BlogPostClient } from "./BlogPostClient"
 import { BlogSchema } from "../_components/blog-schema"
-import { generateMetadata as generatePageMetadata } from '@/components/seo/page-metadata'
-import { PageMetadata } from '@/components/seo/page-metadata'
+
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({

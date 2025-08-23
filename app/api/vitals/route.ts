@@ -13,7 +13,8 @@ export async function POST(request: NextRequest) {
     // В production здесь можно отправлять данные в аналитику
     // Google Analytics, DataDog, или собственную систему
     
-    console.log('📊 Web Vitals Metric:', {
+    // Web Vitals metrics processing (console logging removed for cleaner output)
+    const _metricsData = {
       name: body.name,
       value: body.value,
       rating: body.rating,
@@ -22,13 +23,13 @@ export async function POST(request: NextRequest) {
       url: request.headers.get('referer'),
       userAgent: request.headers.get('user-agent'),
       timestamp: new Date().toISOString(),
-      // Attribution data для диагностики
       attribution: body.attribution
-    })
+    }
 
     // Для INP собираем дополнительную информацию о событиях
     if (body.name === 'INP' && body.attribution) {
-      console.log('🎯 INP Attribution:', {
+      // INP Attribution data collected (logging removed)
+      const _inpData = {
         eventType: body.attribution.eventType,
         eventTarget: body.attribution.eventTarget,
         eventTime: body.attribution.eventTime,
@@ -38,18 +39,21 @@ export async function POST(request: NextRequest) {
         inputDelay: body.attribution.inputDelay,
         processingDuration: body.attribution.processingDuration,
         presentationDelay: body.attribution.presentationDelay
-      })
+      }
+      // В production здесь можно отправить inpData в аналитику
     }
 
     // Для LCP собираем информацию об элементе
     if (body.name === 'LCP' && body.attribution) {
-      console.log('🖼️ LCP Attribution:', {
+      // LCP Attribution data collected (logging removed)
+      const _lcpData = {
         element: body.attribution.element,
         elementRenderDelay: body.attribution.elementRenderDelay,
         resourceLoadDelay: body.attribution.resourceLoadDelay,
         resourceLoadDuration: body.attribution.resourceLoadDuration,
         url: body.attribution.url
-      })
+      }
+      // В production здесь можно отправить lcpData в аналитику
     }
 
     return NextResponse.json({ success: true })

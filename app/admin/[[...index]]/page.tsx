@@ -7,12 +7,7 @@ export default function AdminPage() {
   const router = useRouter()
   
   useEffect(() => {
-    // For now, redirect to a simple message since Tina requires additional setup
-    console.log('Tina CMS requires additional configuration:')
-    console.log('1. Register at https://app.tina.io')
-    console.log('2. Create a project and get your Client ID')
-    console.log('3. Add credentials to .env.local')
-    console.log('4. Run: npx tinacms dev -c "next dev"')
+    // Tina CMS setup instructions moved to UI instead of console
   }, [])
 
   return (

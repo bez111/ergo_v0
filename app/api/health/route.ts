@@ -1,5 +1,4 @@
 import { NextResponse } from 'next/server'
-import { healthChecker } from '@/lib/resilience'
 
 interface HealthStatus {
   status: 'healthy' | 'degraded' | 'unhealthy'
@@ -59,7 +58,7 @@ async function checkExternalAPIs(): Promise<boolean> {
   }
 }
 
-export async function GET(request: Request) {
+export async function GET(_request: Request) {
   const startTime = Date.now()
   
   // Получаем uptime процесса

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Search, Code, Link2, Wrench } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -241,7 +241,7 @@ export default function DebuggingPage() {
               </p>
             </div>
 
-            <CodeBlock language="typescript">`// Snippet from AssetsAtomicExchange - Breakpoint can be set inside this block
+            <CodeBlock language="scala">{`// Snippet from AssetsAtomicExchange - Breakpoint can be set inside this block
 lazy val buyerProp = proposition("buyer", { ctx: Context =>
   import ctx._
   (HEIGHT > deadline && pkA) || { // Breakpoint here
@@ -256,7 +256,7 @@ lazy val buyerProp = proposition("buyer", { ctx: Context =>
     ))
   }
 },
-// ...`</CodeBlock>
+// ...`}</CodeBlock>
 
             <h3 className="text-xl font-bold text-orange-400 mb-4">Debugging Process Example</h3>
 

@@ -2,12 +2,10 @@
 
 import { useEffect, useMemo, useState, useDeferredValue } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { BookOpen, TrendingUp, Clock, Users, X } from "lucide-react"
+import { BookOpen } from "lucide-react"
 import { BlogCard } from "./blog-card"
-import { NewsletterSignup } from "./newsletter-signup"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogFilters } from "./blog-filters"
-import { HexagonalGrid, FloatingParticles, MathematicalPattern } from "@/components/ui-kit/signature-effects"
 
 interface BlogClientProps {
   posts: BlogPost[]

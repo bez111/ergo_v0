@@ -6,8 +6,6 @@ import TrendingNow from "./_components/trending-now"
 import { BlogPagination } from "./_components/blog-pagination"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
-import Link from "next/link"
-import { NewsletterSignup } from "./_components/newsletter-signup"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 

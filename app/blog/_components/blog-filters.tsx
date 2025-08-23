@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Search, X, Filter } from "lucide-react"
+import { Search, X } from "lucide-react"
 import { categories } from "../_lib/blog-data"
 
 interface BlogFiltersProps {

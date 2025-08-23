@@ -28,8 +28,8 @@ export async function GET() {
   }))
   
   // Index documentation pages
-  const docsIndex: any[] = []
-  const flattenDocs = (items: any[], parent = '') => {
+  const docsIndex: unknown[] = []
+  const flattenDocs = (items: unknown[], parent = '') => {
     items.forEach(item => {
       if (item.href && item.label) {
         docsIndex.push({

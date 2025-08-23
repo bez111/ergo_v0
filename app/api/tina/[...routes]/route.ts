@@ -1,7 +1,7 @@
 // Tina CMS API route - disabled until proper setup is completed
 // This route requires Tina Cloud configuration and generated database client
 
-export async function POST(request: Request) {
+export async function POST(_request: Request) {
   return new Response(
     JSON.stringify({ 
       error: 'Tina CMS not configured. Please set up Tina Cloud credentials.' 

@@ -1,8 +1,6 @@
 // Server Component - optimized for LCP
 import Link from "next/link"
-import Image from "next/image"
 import type { BlogPost } from "../_lib/blog-data"
-import { Calendar, Clock, User } from "lucide-react"
 
 interface BlogHeroProps {
   featuredPost: BlogPost | null

@@ -22,7 +22,11 @@ function getDeviceType(): 'mobile' | 'desktop' {
 }
 
 function getConnectionType(): string | undefined {
-  const nav = navigator as any
+  const nav = navigator as Navigator & {
+    connection?: { effectiveType?: string }
+    mozConnection?: { effectiveType?: string }
+    webkitConnection?: { effectiveType?: string }
+  }
   const connection = nav.connection || nav.mozConnection || nav.webkitConnection
   return connection?.effectiveType
 }
@@ -30,7 +34,6 @@ function getConnectionType(): string | undefined {
 function sendToAnalytics(metric: Metric) {
   // Don't send in development
   if (process.env.NODE_ENV === 'development') {
-    console.log('[RUM]', metric.name, metric.value, metric.rating)
     return
   }
 
@@ -74,10 +77,7 @@ export function initRUM() {
   onFCP(sendToAnalytics)
   onTTFB(sendToAnalytics)
   
-  // Log page view
-  if (process.env.NODE_ENV === 'development') {
-    console.log('[RUM] Initialized for', location.pathname)
-  }
+  // Log page view in development is removed for cleaner output
 }
 
 // Performance marks for custom metrics
@@ -91,11 +91,8 @@ export function measurePerformance(name: string, startMark: string, endMark: str
   if (typeof window !== 'undefined' && window.performance) {
     try {
       performance.measure(name, startMark, endMark)
-      const measure = performance.getEntriesByName(name)[0]
-      if (measure && process.env.NODE_ENV === 'development') {
-        console.log(`[Performance] ${name}: ${Math.round(measure.duration)}ms`)
-      }
-    } catch (e) {
+      // Performance logging removed for cleaner output
+    } catch {
       // Silently fail
     }
   }

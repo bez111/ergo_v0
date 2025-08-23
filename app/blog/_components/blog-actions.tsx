@@ -62,7 +62,7 @@ export function BlogActions({ title, slug }: BlogActionsProps) {
   const handleExportPDF = async () => {
     // Note: In production, you'd want to use a library like jsPDF or html2pdf
     // or generate PDFs server-side
-    alert('PDF export functionality would be implemented here using a library like jsPDF')
+    // PDF export functionality would be implemented here using a library like jsPDF
   }
 
   const handleTextToSpeech = () => {
@@ -80,7 +80,7 @@ export function BlogActions({ title, slug }: BlogActionsProps) {
         setIsSpeaking(true)
       }
     } else {
-      alert('Text-to-speech is not supported in your browser')
+      // Text-to-speech is not supported in your browser
     }
   }
 
@@ -112,7 +112,7 @@ export function BlogActions({ title, slug }: BlogActionsProps) {
     } else {
       // Fallback to copy link
       navigator.clipboard.writeText(window.location.href)
-      alert('Link copied to clipboard!')
+              // Link copied to clipboard
     }
   }
 
