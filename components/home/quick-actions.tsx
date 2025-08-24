@@ -9,6 +9,7 @@ export function QuickActions() {
       iconName: "Wallet" as const,
       href: "/wallet",
       ariaLabel: "Get started with Ergo wallet setup",
+      analytics: "quick-action-wallet"
     },
     {
       title: "BUY ERG",
@@ -16,6 +17,7 @@ export function QuickActions() {
       iconName: "CreditCard" as const,
       href: "/use/get-erg",
       ariaLabel: "Learn how to buy Ergo tokens",
+      analytics: "quick-action-buy"
     },
     {
       title: "TRY A DAPP",
@@ -23,6 +25,7 @@ export function QuickActions() {
       iconName: "Layers" as const,
       href: "/ecosystem",
       ariaLabel: "Explore Ergo decentralized applications",
+      analytics: "quick-action-dapp"
     },
     {
       title: "MINE ERG",
@@ -30,6 +33,7 @@ export function QuickActions() {
       iconName: "Cpu" as const,
       href: "/use/mining",
       ariaLabel: "Start mining Ergo and secure the network",
+      analytics: "quick-action-mine"
     },
     {
       title: "JOIN COMMUNITY",
@@ -37,6 +41,7 @@ export function QuickActions() {
       iconName: "Users" as const,
       href: "/start/community",
       ariaLabel: "Join the Ergo community",
+      analytics: "quick-action-community"
     },
   ]
 

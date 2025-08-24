@@ -1,10 +1,6 @@
 import { HeroSection } from "@/components/home/hero-section"
 import { QuickActions } from "@/components/home/quick-actions"
 import { CorePillars } from "@/components/home/core-pillars"
-import { EcosystemShowcase } from "@/components/home/ecosystem-showcase"
-import { Differentiation } from "@/components/home/differentiation"
-import { AudiencePaths } from "@/components/home/audience-paths"
-import { BlogSection } from "@/components/home/blog-section"
 import { SubscribeSection } from "@/components/home/subscribe-section"
 import { Manifesto } from "@/components/home/manifesto"
 import { Metadata } from 'next'
@@ -13,6 +9,25 @@ import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 import { InternalLinking } from "@/lib/ai-internal-linking"
 import { ERGProductSchema } from "@/components/seo/erg-product-schema"
+import dynamic from "next/dynamic"
+
+// Динамические импорты для компонентов ниже фолда (ускоряет LCP)
+const Differentiation = dynamic(() => import("@/components/home/differentiation").then(m => ({ default: m.Differentiation })), { 
+  loading: () => null,
+  ssr: true 
+})
+const EcosystemShowcase = dynamic(() => import("@/components/home/ecosystem-showcase").then(m => ({ default: m.EcosystemShowcase })), { 
+  loading: () => null,
+  ssr: true 
+})
+const AudiencePaths = dynamic(() => import("@/components/home/audience-paths").then(m => ({ default: m.AudiencePaths })), { 
+  loading: () => null,
+  ssr: true 
+})
+const BlogSection = dynamic(() => import("@/components/home/blog-section").then(m => ({ default: m.BlogSection })), { 
+  loading: () => null,
+  ssr: true 
+})
 
 export const metadata: Metadata = {
   title: 'Ergo Platform - Resilient DeFi Blockchain for the People',
@@ -28,7 +43,7 @@ export const metadata: Metadata = {
         url: 'https://ergoblockchain.org/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Ergo Platform',
+        alt: 'Ergo Platform - Resilient DeFi Blockchain for the People',
       },
     ],
     locale: 'en_US',
@@ -36,22 +51,43 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ergo Platform - Resilient DeFi Blockchain',
-    description: 'PoW blockchain with eUTXO smart contracts and built-in privacy. Build resilient DeFi without compromises.',
+    title: 'Ergo Platform - Resilient DeFi Blockchain for the People',
+    description: 'Ergo: PoW blockchain with eUTXO smart contracts, built-in privacy via Sigma protocols, and sustainable tokenomics. Build resilient DeFi without compromises.',
     images: ['https://ergoblockchain.org/og-image.png'],
     creator: '@ergoplatform',
     site: '@ergoplatform',
+    siteId: '@ergoplatform',
   },
   alternates: {
     canonical: 'https://ergoblockchain.org/',
     languages: {
       'en': 'https://ergoblockchain.org/',
+      'zh-CN': 'https://ergoblockchain.org/zh-cn',
+      'es-419': 'https://ergoblockchain.org/es',
+      'pt-BR': 'https://ergoblockchain.org/pt-br',
+      'ru': 'https://ergoblockchain.org/ru',
+      'tr': 'https://ergoblockchain.org/tr',
+      'vi': 'https://ergoblockchain.org/vi',
+      'id': 'https://ergoblockchain.org/id',
+      'hi-IN': 'https://ergoblockchain.org/hi',
+      'ar': 'https://ergoblockchain.org/ar',
+      'ko': 'https://ergoblockchain.org/ko',
+      'ja': 'https://ergoblockchain.org/ja',
+      'th': 'https://ergoblockchain.org/th',
+      'fr': 'https://ergoblockchain.org/fr',
+      'de': 'https://ergoblockchain.org/de',
+      'uk': 'https://ergoblockchain.org/uk',
       'x-default': 'https://ergoblockchain.org/'
     }
   },
+  icons: { 
+    icon: '/favicon.ico', 
+    apple: '/apple-touch-icon.png' 
+  },
+  themeColor: '#000000',
   verification: {
-    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
-    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || undefined,
+    google: process.env['NEXT_PUBLIC_GSC_VERIFICATION'] || undefined,
+    yandex: process.env['NEXT_PUBLIC_YANDEX_VERIFICATION'] || undefined,
   },
   robots: {
     index: true,
@@ -64,6 +100,9 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  other: { 
+    'link:rss': 'https://ergoblockchain.org/rss.xml' 
+  }
 }
 
 export default function Home() {
@@ -109,6 +148,35 @@ export default function Home() {
       'query-input': 'required name=search_term_string'
     },
     inLanguage: 'en-US'
+  }
+
+  // НОВЫЕ JSON-LD СХЕМЫ для лучшего SEO
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://ergoblockchain.org/#webpage",
+    "url": "https://ergoblockchain.org/",
+    "name": "Ergo Platform - Resilient DeFi Blockchain for the People",
+    "isPartOf": { "@id": "https://ergoblockchain.org/#website" },
+    "about": { "@id": "https://ergoblockchain.org/#organization" },
+    "inLanguage": "en-US",
+    "datePublished": "2017-01-01",
+    "dateModified": new Date().toISOString().split('T')[0]
+  }
+
+  const siteNavigationSchema = {
+    "@context": "https://schema.org",
+    "@type": "SiteNavigationElement",
+    "name": ["Technology", "Use Cases", "Ecosystem", "Wallets", "Docs", "Blog", "Start"],
+    "url": [
+      "https://ergoblockchain.org/technology",
+      "https://ergoblockchain.org/use",
+      "https://ergoblockchain.org/ecosystem",
+      "https://ergoblockchain.org/wallet",
+      "https://ergoblockchain.org/docs",
+      "https://ergoblockchain.org/blog",
+      "https://ergoblockchain.org/start"
+    ]
   }
 
   const itemList = {
@@ -159,6 +227,18 @@ export default function Home() {
 
   return (
     <>
+      {/* CSP для безопасности */}
+      <meta
+        httpEquiv="Content-Security-Policy"
+        content="
+          default-src 'self';
+          img-src 'self' https://ergoblockchain.org data:;
+          script-src 'self' 'unsafe-inline';
+          style-src 'self' 'unsafe-inline';
+          frame-ancestors 'none';
+        "
+      />
+      
       <a 
         href="#main-content" 
         className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-orange-500 focus:text-white focus:rounded"
@@ -166,7 +246,7 @@ export default function Home() {
         Skip to main content
       </a>
       
-      <main className="flex flex-col bg-black text-white relative">
+      <main id="main-content" className="flex flex-col bg-black text-white relative">
         <header>
           <HeroSection />
         </header>
@@ -208,7 +288,7 @@ export default function Home() {
         
         <section id="subscribe" aria-labelledby="subscribe-heading">
           <h2 id="subscribe-heading" className="sr-only">Subscribe to Updates</h2>
-          <SubscribeSection />
+          <SubscribeSection segments={["Builder", "User", "Researcher", "Node Ops"]} />
         </section>
       </main>
       
@@ -216,6 +296,10 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemList) }} />
+      
+      {/* НОВЫЕ JSON-LD СХЕМЫ для лучшего SEO */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationSchema) }} />
       
       {/* НОВЫЕ ПРОДВИНУТЫЕ SEO СХЕМЫ */}
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blockchainPlatformSchema) }} />

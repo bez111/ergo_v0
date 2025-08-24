@@ -6,8 +6,13 @@ import { Input } from "@/components/ui/input"
 import { Send, Shield, CheckCircle } from "lucide-react"
 import { newsletterAnalytics } from "@/lib/newsletter-analytics"
 
-export function SubscribeForm() {
+interface SubscribeFormProps {
+  segments?: string[]
+}
+
+export function SubscribeForm({ segments = [] }: SubscribeFormProps) {
   const [email, setEmail] = useState("")
+  const [selectedSegment, setSelectedSegment] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [message, setMessage] = useState("")
   const [messageType, setMessageType] = useState<"success" | "error" | "">("")
@@ -19,27 +24,9 @@ export function SubscribeForm() {
     setIsSubscribed(alreadySubscribed)
     
     if (!alreadySubscribed) {
-      // Track form view for analytics
       newsletterAnalytics.trackView('homepage')
     }
   }, [])
-
-  // Don't render form if user is already subscribed
-  if (isSubscribed) {
-    return (
-      <div className="w-full max-w-md space-y-4">
-        <div className="text-center p-6 bg-green-400/10 border border-green-400/30 rounded-lg">
-          <CheckCircle className="h-8 w-8 text-green-400 mx-auto mb-2" />
-          <p className="text-green-400 font-mono">
-            You're already subscribed! 🎉
-          </p>
-          <p className="text-sm text-gray-400 mt-2">
-            Check your email for the latest updates
-          </p>
-        </div>
-      </div>
-    )
-  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -49,103 +36,137 @@ export function SubscribeForm() {
     
     // Basic email validation
     if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
-      const errorMsg = "Please enter a valid email address"
-      setMessage(errorMsg)
+      setMessage("Please enter a valid email address")
       setMessageType("error")
       setIsLoading(false)
-      
-      // Track error
-      newsletterAnalytics.trackError('homepage', errorMsg)
+      newsletterAnalytics.trackError('homepage', email, 'Invalid email format')
       return
     }
-    
-    // Track submission
-    newsletterAnalytics.trackSubmit('homepage', email)
-    
-    // Handle subscription logic here
+
     try {
+      newsletterAnalytics.trackSubmit('homepage', email)
+      
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 1000))
       
-      // Email subscription processed
-      const successMsg = "🎉 Successfully subscribed! Check your email for confirmation."
-      setMessage(successMsg)
+      // Success
+      setMessage("Successfully subscribed! Check your email for confirmation.")
       setMessageType("success")
+      setEmail("")
+      setSelectedSegment("")
+      newsletterAnalytics.trackSuccess('homepage', email)
+      newsletterAnalytics.markSubscribed(email)
       setIsSubscribed(true)
       
-      // Track success
-      newsletterAnalytics.trackSuccess('homepage', email)
-      setEmail("")
     } catch (error) {
-      const errorMsg = "Something went wrong. Please try again."
-      setMessage(errorMsg)
+      const errorMessage = error instanceof Error ? error.message : "Failed to subscribe. Please try again."
+      setMessage(errorMessage)
       setMessageType("error")
-      
-      // Track error
-      newsletterAnalytics.trackError('homepage', errorMsg)
+      newsletterAnalytics.trackError('homepage', email, errorMessage)
     } finally {
       setIsLoading(false)
     }
   }
 
+  // Show subscribed status for already subscribed users
+  if (isSubscribed) {
+    return (
+      <div className="flex items-center justify-center gap-2 p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
+        <CheckCircle className="w-5 h-5 text-green-400" />
+        <span className="text-green-400 font-medium">You're already subscribed! 🎉</span>
+      </div>
+    )
+  }
+
   return (
-    <div className="w-full max-w-md space-y-4">
-      <form onSubmit={handleSubmit} className="flex gap-2">
-        <div className="flex-grow relative">
-          <label htmlFor="newsletter-email" className="sr-only">
-            Email address for newsletter subscription
-          </label>
-          <Input
-            id="newsletter-email"
-            type="email"
-            placeholder="your.email@example.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            disabled={isLoading}
-            className="bg-neutral-900/50 border-2 border-orange-500/50 text-white font-mono placeholder:text-gray-500 focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20 backdrop-blur-sm transition-all duration-200"
-            aria-describedby={message ? "newsletter-message" : undefined}
-          />
-        </div>
-        <Button
-          type="submit"
-          disabled={isLoading || !email}
-          className="gap-2 bg-transparent border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black font-mono uppercase tracking-wider transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
-          aria-label="Subscribe to newsletter"
-        >
-          {isLoading ? (
-            <span className="animate-spin">⟳</span>
-          ) : messageType === "success" ? (
-            <CheckCircle className="h-4 w-4" />
-          ) : (
-            <>
-              SUBSCRIBE
-              <Send className="h-4 w-4" />
-            </>
-          )}
-        </Button>
-      </form>
-      
-      {/* Message with aria-live for screen readers */}
-      {message && (
-        <div 
-          id="newsletter-message"
-          role="status"
-          aria-live="polite"
-          className={`text-sm font-mono p-3 rounded-lg border ${
-            messageType === "success" 
-              ? "text-green-400 bg-green-400/10 border-green-400/30" 
-              : "text-red-400 bg-red-400/10 border-red-400/30"
-          }`}
-        >
-          {message}
+    <div className="max-w-md mx-auto">
+      {/* Segment Selection */}
+      {segments.length > 0 && (
+        <div className="mb-4">
+          <p className="text-sm text-gray-400 mb-2">I'm interested as a:</p>
+          <div className="flex flex-wrap gap-2 justify-center">
+            {segments.map((segment) => (
+              <button
+                key={segment}
+                type="button"
+                onClick={() => setSelectedSegment(segment === selectedSegment ? "" : segment)}
+                className={`px-3 py-1 text-xs rounded-full border transition-colors duration-200 ${
+                  selectedSegment === segment
+                    ? "bg-orange-500 border-orange-500 text-white"
+                    : "border-gray-600 text-gray-400 hover:border-orange-500 hover:text-orange-400"
+                }`}
+                data-analytics="segment-select"
+                data-segment={segment}
+              >
+                {segment}
+              </button>
+            ))}
+          </div>
         </div>
       )}
-      
-      <div className="flex items-center justify-center gap-2 text-sm text-gray-500 font-mono">
-        <Shield className="h-4 w-4 text-orange-400" />
-        <span>YOUR DATA IS PRIVATE AND WILL NEVER BE SHARED</span>
-      </div>
+
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <div className="flex flex-col sm:flex-row gap-2">
+          <div className="flex-1">
+            <label htmlFor="newsletter-email" className="sr-only">
+              Email address
+            </label>
+            <Input
+              id="newsletter-email"
+              type="email"
+              placeholder="Enter your email address"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              disabled={isLoading}
+              className="bg-gray-800/50 border-gray-600 text-white placeholder-gray-400 focus:border-orange-500 focus:ring-orange-500/20"
+              aria-describedby={message ? "newsletter-message" : undefined}
+            />
+          </div>
+          <Button
+            type="submit"
+            disabled={isLoading || !email}
+            className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors duration-200"
+            data-analytics="subscribe-submit"
+            data-segment={selectedSegment}
+          >
+            {isLoading ? (
+              <div className="flex items-center gap-2">
+                <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                <span>Subscribing...</span>
+              </div>
+            ) : (
+              <div className="flex items-center gap-2">
+                <Send className="w-4 h-4" />
+                <span>Subscribe</span>
+              </div>
+            )}
+          </Button>
+        </div>
+
+        {/* Message Display */}
+        {message && (
+          <div
+            id="newsletter-message"
+            className={`p-3 rounded-lg text-sm ${
+              messageType === "success"
+                ? "bg-green-900/20 border border-green-500/30 text-green-400"
+                : "bg-red-900/20 border border-red-500/30 text-red-400"
+            }`}
+            role={messageType === "error" ? "alert" : "status"}
+            aria-live="polite"
+          >
+            <div className="flex items-center gap-2">
+              {messageType === "success" ? (
+                <CheckCircle className="w-4 h-4 flex-shrink-0" />
+              ) : (
+                <Shield className="w-4 h-4 flex-shrink-0" />
+              )}
+              <span>{message}</span>
+            </div>
+          </div>
+        )}
+      </form>
     </div>
   )
 } 
