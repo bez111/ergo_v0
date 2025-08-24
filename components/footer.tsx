@@ -1,7 +1,8 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Github, Twitter, DiscIcon as Discord, Send, Shield, ExternalLink } from "lucide-react"
+import { Send, Shield, Github, Twitter, MessageCircle } from "lucide-react"
+import { FooterNewsletter } from "./footer-newsletter"
 
 export function Footer() {
   return (
@@ -12,131 +13,62 @@ export function Footer() {
       <div className="container py-12 md:py-16 relative z-10">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <Link href="/" className="font-bold text-xl text-primary">
-              ERGO
-            </Link>
-            <p className="text-sm text-gray-400 font-mono">
-              A resilient platform for contractual money. Ergo Blockchain provides the tools for people to secure
-              financial interactions.
-            </p>
-            <div className="flex gap-4">
-              <Button
-                variant="ghost"
-                size="icon"
-                asChild
-                className="text-gray-400 hover:text-primary hover:bg-primary/10"
-              >
-                <Link href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer">
-                  <Github className="h-5 w-5" />
-                  <span className="sr-only">GitHub</span>
-                </Link>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                asChild
-                className="text-gray-400 hover:text-primary hover:bg-primary/10"
-              >
-                <Link href="https://twitter.com/ergoplatform" target="_blank" rel="noopener noreferrer">
-                  <Twitter className="h-5 w-5" />
-                  <span className="sr-only">Twitter</span>
-                </Link>
-              </Button>
-              <Button
-                variant="ghost"
-                size="icon"
-                asChild
-                className="text-gray-400 hover:text-primary hover:bg-primary/10"
-              >
-                <Link href="https://discord.gg/ergo" target="_blank" rel="noopener noreferrer">
-                  <Discord className="h-5 w-5" />
-                  <span className="sr-only">Discord</span>
-                </Link>
-              </Button>
-            </div>
-          </div>
-
-          <div className="grid grid-cols-1 gap-4">
-            <div className="font-medium font-mono text-primary">QUICK LINKS</div>
-            <nav className="flex flex-col gap-2 text-sm">
-              <Link href="/start" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
-                <ExternalLink className="h-3 w-3" />
-                Get Started
+            <div className="font-medium font-mono text-primary">PLATFORM</div>
+            <nav className="flex flex-col gap-2">
+              <Link href="/technology" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Technology
               </Link>
-              <Link href="/use/get-erg" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
-                <ExternalLink className="h-3 w-3" />
-                Buy ERG
+              <Link href="/use" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Use Cases
               </Link>
-              <Link href="/use/mining" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
-                <ExternalLink className="h-3 w-3" />
-                Mine ERG
+              <Link href="/ecosystem" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Ecosystem
               </Link>
-              <Link href="/wallet" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
-                <ExternalLink className="h-3 w-3" />
+              <Link href="/wallet" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Wallets
               </Link>
-              <Link href="/learn/faq" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
-                <ExternalLink className="h-3 w-3" />
-                FAQ
-              </Link>
             </nav>
           </div>
 
-          <div className="grid grid-cols-1 gap-4">
-            <div className="font-medium font-mono text-primary">RESOURCES</div>
-            <nav className="flex flex-col gap-2 text-sm">
-              <Link href="/docs" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
-                <ExternalLink className="h-3 w-3" />
+          <div className="flex flex-col gap-4">
+            <div className="font-medium font-mono text-primary">DEVELOPERS</div>
+            <nav className="flex flex-col gap-2">
+              <Link href="/docs" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Documentation
               </Link>
-              <Link
-                href="/technology/whitepaper"
-                className="text-gray-400 hover:text-primary font-mono flex items-center gap-1"
-              >
-                <ExternalLink className="h-3 w-3" />
-                Whitepaper
+              <Link href="/learn" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Learn
               </Link>
-              <Link href="/learn" className="text-gray-400 hover:text-primary font-mono flex items-center gap-1">
-                <ExternalLink className="h-3 w-3" />
-                Learning Hub
+              <Link href="https://github.com/ergoplatform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                GitHub
               </Link>
-              <Link
-                href="/community/events"
-                className="text-gray-400 hover:text-primary font-mono flex items-center gap-1"
-              >
-                <ExternalLink className="h-3 w-3" />
-                Events
-              </Link>
-              <Link
-                href="/ecosystem"
-                className="text-gray-400 hover:text-primary font-mono flex items-center gap-1"
-              >
-                <ExternalLink className="h-3 w-3" />
-                Projects
+              <Link href="/ecosystem/grants" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Grants
               </Link>
             </nav>
           </div>
 
-          <div className="grid grid-cols-1 gap-4">
-            <div className="font-medium font-mono text-primary">NEWSLETTER</div>
-            <p className="text-sm text-gray-400 font-mono">
-              Stay updated with the latest news and developments from the Ergo ecosystem.
-            </p>
-            <div className="flex gap-2">
-              <Input
-                placeholder="ENTER YOUR EMAIL"
-                type="email"
-                className="max-w-[220px] bg-black border border-primary/30 text-white font-mono placeholder:text-gray-600 focus:border-primary"
-              />
-              <Button size="icon" className="bg-transparent border border-primary text-primary hover:bg-primary/10">
-                <Send className="h-4 w-4" />
-                <span className="sr-only">Subscribe</span>
-              </Button>
-            </div>
-            <div className="text-xs text-gray-600 font-mono flex items-center gap-1">
-              <Shield className="h-3 w-3 text-primary" />
-              <span>YOUR DATA IS PRIVATE</span>
-            </div>
+          <div className="flex flex-col gap-4">
+            <div className="font-medium font-mono text-primary">COMMUNITY</div>
+            <nav className="flex flex-col gap-2">
+              <Link href="/blog" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Blog
+              </Link>
+              <Link href="https://discord.gg/ergo-platform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Discord
+              </Link>
+              <Link href="https://t.me/ergoplatform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Telegram
+              </Link>
+              <Link href="https://twitter.com/ergo_platform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+                Twitter
+              </Link>
+            </nav>
+          </div>
+
+          {/* Newsletter section with smart visibility */}
+          <div className="flex flex-col gap-4">
+            <FooterNewsletter />
           </div>
         </div>
       </div>

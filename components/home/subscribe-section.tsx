@@ -5,7 +5,7 @@ import { SubscribeForm } from "./subscribe-form"
 
 export function SubscribeSection() {
   const socialLinks = [
-    { 
+    {
       name: "Discord", 
       href: "https://discord.gg/ergo-platform", 
       icon: Shield,
@@ -22,14 +22,13 @@ export function SubscribeSection() {
       href: "https://t.me/ergoplatform", 
       icon: Shield,
       ariaLabel: "Join our Telegram channel"
-    },
+    }
   ]
 
   return (
     <section className="py-16 relative overflow-hidden bg-black border-t border-neutral-700">
       {/* Background elements */}
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-orange-500/5 rounded-full blur-[100px] animate-pulse"></div>
       <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-orange-500/5 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: "2s" }}></div>
       
       <div className="container px-4 md:px-6 relative z-10">
@@ -38,8 +37,12 @@ export function SubscribeSection() {
             <h2 className="text-3xl font-bold text-white mb-4">
               <span className="text-orange-400">STAY</span> IN THE LOOP
             </h2>
-            <p className="text-gray-400 max-w-xl mx-auto">
-              Subscribe to our newsletter for the latest updates, technical insights, and community news from the Ergo ecosystem
+            <p className="text-gray-400 max-w-xl mx-auto mb-2">
+              Get Ergo releases, grants, dev calls, and top articles delivered weekly. No spam, just the essentials.
+            </p>
+            {/* Social proof and micro-copy */}
+            <p className="text-sm text-gray-500 font-mono">
+              Join 20,000+ subscribers • One email per week • Unsubscribe anytime
             </p>
           </div>
 
