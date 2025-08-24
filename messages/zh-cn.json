@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "retry": "重试",
+    "close": "关闭",
+    "open": "打开",
+    "save": "保存",
+    "cancel": "取消",
+    "confirm": "确认",
+    "delete": "删除",
+    "edit": "编辑",
+    "view": "查看",
+    "search": "搜索",
+    "filter": "筛选",
+    "sort": "排序",
+    "next": "下一个",
+    "previous": "上一个",
+    "home": "首页",
+    "back": "返回",
+    "more": "更多",
+    "less": "更少"
+  },
+  "navigation": {
+    "home": "首页",
+    "docs": "文档",
+    "ecosystem": "生态系统",
+    "technology": "技术",
+    "use": "用例",
+    "start": "开始",
+    "learn": "学习",
+    "blog": "博客",
+    "wallet": "钱包",
+    "events": "活动",
+    "mining": "挖矿"
+  },
+  "hero": {
+    "title": "Ergo平台",
+    "subtitle": "用于合约货币的弹性区块链平台",
+    "description": "Ergo在十年区块链理论和开发奠定的坚实基础上，构建先进的密码学功能和全新的DeFi功能。",
+    "getStarted": "开始",
+    "learnMore": "了解更多",
+    "documentation": "文档"
+  },
+  "footer": {
+    "description": "Ergo是用于合约货币的弹性区块链平台。建立在具有先进密码学功能的坚实基础上。",
+    "quickLinks": "快速链接",
+    "developers": "开发者",
+    "community": "社区",
+    "resources": "资源",
+    "legal": "法律",
+    "privacy": "隐私政策",
+    "terms": "服务条款",
+    "copyright": "© 2024 Ergo平台。保留所有权利。"
+  },
+  "seo": {
+    "defaultTitle": "Ergo平台 - 用于合约货币的弹性区块链",
+    "defaultDescription": "Ergo在十年区块链理论和开发奠定的坚实基础上，构建先进的密码学功能和全新的DeFi功能。",
+    "keywords": "区块链, 加密货币, DeFi, 智能合约, Ergo, UTXO, 工作量证明"
+  },
+  "errors": {
+    "pageNotFound": "页面未找到",
+    "pageNotFoundDescription": "您寻找的页面不存在。",
+    "serverError": "服务器错误",
+    "serverErrorDescription": "我们这边出了点问题。",
+    "networkError": "网络错误",
+    "networkErrorDescription": "请检查您的网络连接。"
+  },
+  "language": {
+    "switchLanguage": "切换语言",
+    "currentLanguage": "简体中文"
+  }
+} 

@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "Yükleniyor...",
+    "error": "Hata",
+    "retry": "Tekrar dene",
+    "close": "Kapat",
+    "open": "Aç",
+    "save": "Kaydet",
+    "cancel": "İptal",
+    "confirm": "Onayla",
+    "delete": "Sil",
+    "edit": "Düzenle",
+    "view": "Görüntüle",
+    "search": "Ara",
+    "filter": "Filtrele",
+    "sort": "Sırala",
+    "next": "Sonraki",
+    "previous": "Önceki",
+    "home": "Ana sayfa",
+    "back": "Geri",
+    "more": "Daha fazla",
+    "less": "Daha az"
+  },
+  "navigation": {
+    "home": "Ana sayfa",
+    "docs": "Dokümantasyon",
+    "ecosystem": "Ekosistem",
+    "technology": "Teknoloji",
+    "use": "Kullanım alanları",
+    "start": "Başla",
+    "learn": "Öğren",
+    "blog": "Blog",
+    "wallet": "Cüzdan",
+    "events": "Etkinlikler",
+    "mining": "Madencilik"
+  },
+  "hero": {
+    "title": "Ergo Platformu",
+    "subtitle": "Sözleşmeli para için dayanıklı blockchain platformu",
+    "description": "Ergo, on yıllık blockchain teorisi ve geliştirmesinin attığı sağlam temeller üzerine gelişmiş kriptografik özellikler ve radikal yeni DeFi işlevselliği inşa eder.",
+    "getStarted": "Başla",
+    "learnMore": "Daha fazla öğren",
+    "documentation": "Dokümantasyon"
+  },
+  "footer": {
+    "description": "Ergo, sözleşmeli para için dayanıklı bir blockchain platformudur. Gelişmiş kriptografik özelliklerle sağlam temeller üzerine inşa edilmiştir.",
+    "quickLinks": "Hızlı bağlantılar",
+    "developers": "Geliştiriciler",
+    "community": "Topluluk",
+    "resources": "Kaynaklar",
+    "legal": "Yasal",
+    "privacy": "Gizlilik politikası",
+    "terms": "Hizmet şartları",
+    "copyright": "© 2024 Ergo Platformu. Tüm hakları saklıdır."
+  },
+  "seo": {
+    "defaultTitle": "Ergo Platformu - Sözleşmeli para için dayanıklı blockchain",
+    "defaultDescription": "Ergo, on yıllık blockchain teorisi ve geliştirmesinin attığı sağlam temeller üzerine gelişmiş kriptografik özellikler ve radikal yeni DeFi işlevselliği inşa eder.",
+    "keywords": "blockchain, kripto para, DeFi, akıllı sözleşmeler, Ergo, UTXO, iş kanıtı"
+  },
+  "errors": {
+    "pageNotFound": "Sayfa bulunamadı",
+    "pageNotFoundDescription": "Aradığınız sayfa mevcut değil.",
+    "serverError": "Sunucu hatası",
+    "serverErrorDescription": "Bizim tarafımızda bir sorun oluştu.",
+    "networkError": "Ağ hatası",
+    "networkErrorDescription": "Lütfen internet bağlantınızı kontrol edin."
+  },
+  "language": {
+    "switchLanguage": "Dil değiştir",
+    "currentLanguage": "Türkçe"
+  }
+} 

@@ -60,7 +60,7 @@ val plasmaMap = new PlasmaMap[ErgoId, Values.ErgoTree](AvlTreeFlags.AllOperation
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript">`import io.getblok.getblok_plasma.ByteConversion
+            <CodeBlock language="scala">{`import io.getblok.getblok_plasma.ByteConversion
 import org.ergoplatform.appkit.ErgoId
 import sigmastate.Values
 import sigmastate.serialization.ErgoTreeSerializer
@@ -76,7 +76,7 @@ implicit val convertsErgoTree: ByteConversion[Values.ErgoTree] = new ByteConvers
   override def convertToBytes(t: Values.ErgoTree): Array[Byte] = t.bytes
 
   override def convertFromBytes(bytes: Array[Byte]): Values.ErgoTree = ErgoTreeSerializer.DefaultSerializer.deserializeErgoTree(bytes)
-}`</CodeBlock>
+}`}</CodeBlock>
           </div>
 
           <p className="text-gray-300 mb-6">

@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "載入中...",
+    "error": "錯誤",
+    "retry": "重試",
+    "close": "關閉",
+    "open": "開啟",
+    "save": "儲存",
+    "cancel": "取消",
+    "confirm": "確認",
+    "delete": "刪除",
+    "edit": "編輯",
+    "view": "檢視",
+    "search": "搜尋",
+    "filter": "篩選",
+    "sort": "排序",
+    "next": "下一個",
+    "previous": "上一個",
+    "home": "首頁",
+    "back": "返回",
+    "more": "更多",
+    "less": "更少"
+  },
+  "navigation": {
+    "home": "首頁",
+    "docs": "文件",
+    "ecosystem": "生態系統",
+    "technology": "技術",
+    "use": "使用案例",
+    "start": "開始",
+    "learn": "學習",
+    "blog": "部落格",
+    "wallet": "錢包",
+    "events": "活動",
+    "mining": "挖礦"
+  },
+  "hero": {
+    "title": "Ergo平台",
+    "subtitle": "用於合約貨幣的彈性區塊鏈平台",
+    "description": "Ergo在十年區塊鏈理論和開發奠定的堅實基礎上，構建先進的密碼學功能和全新的DeFi功能。",
+    "getStarted": "開始",
+    "learnMore": "了解更多",
+    "documentation": "文件"
+  },
+  "footer": {
+    "description": "Ergo是用於合約貨幣的彈性區塊鏈平台。建立在具有先進密碼學功能的堅實基礎上。",
+    "quickLinks": "快速連結",
+    "developers": "開發者",
+    "community": "社群",
+    "resources": "資源",
+    "legal": "法律",
+    "privacy": "隱私政策",
+    "terms": "服務條款",
+    "copyright": "© 2024 Ergo平台。保留所有權利。"
+  },
+  "seo": {
+    "defaultTitle": "Ergo平台 - 用於合約貨幣的彈性區塊鏈",
+    "defaultDescription": "Ergo在十年區塊鏈理論和開發奠定的堅實基礎上，構建先進的密碼學功能和全新的DeFi功能。",
+    "keywords": "區塊鏈, 加密貨幣, DeFi, 智能合約, Ergo, UTXO, 工作量證明"
+  },
+  "errors": {
+    "pageNotFound": "頁面未找到",
+    "pageNotFoundDescription": "您尋找的頁面不存在。",
+    "serverError": "伺服器錯誤",
+    "serverErrorDescription": "我們這邊出了點問題。",
+    "networkError": "網路錯誤",
+    "networkErrorDescription": "請檢查您的網路連線。"
+  },
+  "language": {
+    "switchLanguage": "切換語言",
+    "currentLanguage": "繁體中文"
+  }
+} 

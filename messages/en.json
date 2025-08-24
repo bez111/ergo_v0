@@ -1,0 +1,81 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "open": "Open",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "sort": "Sort",
+    "next": "Next",
+    "previous": "Previous",
+    "home": "Home",
+    "back": "Back",
+    "more": "More",
+    "less": "Less"
+  },
+  "navigation": {
+    "home": "Home",
+    "docs": "Documentation",
+    "ecosystem": "Ecosystem",
+    "technology": "Technology",
+    "use": "Use Cases",
+    "start": "Get Started",
+    "learn": "Learn",
+    "blog": "Blog",
+    "wallet": "Wallet",
+    "events": "Events",
+    "mining": "Mining"
+  },
+  "hero": {
+    "title": "Ergo Platform",
+    "subtitle": "A resilient blockchain platform for contractual money",
+    "description": "Ergo builds advanced cryptographic features and radically new DeFi functionality on the rock-solid foundations laid by a decade of blockchain theory and development.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "documentation": "Documentation",
+    "message1": "Decentralized Money for a Free Society",
+    "message2": "The globally-neutral settlement layer for programmable money.",
+    "message3": "The open-source home of digital freedom",
+    "message4": "Join the movement for decentralized, open-source money",
+    "feature1": "Secure",
+    "feature2": "Fast",
+    "feature3": "Programmable", 
+    "feature4": "Scalable"
+  },
+  "footer": {
+    "description": "Ergo is a resilient blockchain platform for contractual money. Built on solid foundations with advanced cryptographic features.",
+    "quickLinks": "Quick Links",
+    "developers": "Developers",
+    "community": "Community",
+    "resources": "Resources",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "copyright": "© 2024 Ergo Platform. All rights reserved."
+  },
+  "seo": {
+    "defaultTitle": "Ergo Platform - Resilient Blockchain for Contractual Money",
+    "defaultDescription": "Ergo builds advanced cryptographic features and radically new DeFi functionality on the rock-solid foundations laid by a decade of blockchain theory and development.",
+    "keywords": "blockchain, cryptocurrency, DeFi, smart contracts, Ergo, UTXO, proof of work"
+  },
+  "errors": {
+    "pageNotFound": "Page Not Found",
+    "pageNotFoundDescription": "The page you're looking for doesn't exist.",
+    "serverError": "Server Error",
+    "serverErrorDescription": "Something went wrong on our end.",
+    "networkError": "Network Error",
+    "networkErrorDescription": "Please check your internet connection."
+  },
+  "language": {
+    "switchLanguage": "Switch Language",
+    "currentLanguage": "English"
+  }
+} 

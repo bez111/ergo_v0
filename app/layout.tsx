@@ -105,6 +105,7 @@ export default function RootLayout({
   return (
     <html 
       lang="en" 
+      dir="ltr"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
@@ -120,12 +121,6 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         
         {/* Preload critical resources */}
-        <link
-          rel="preload"
-          href="/hero-bg.jpg"
-          as="image"
-          type="image/jpeg"
-        />
         <link
           rel="preload"
           href="/logo.png"
@@ -148,16 +143,16 @@ export default function RootLayout({
         />
       </head>
       <body 
-        className={`${inter.className} ${jetbrainsMono.variable} min-h-screen bg-black text-white antialiased`}
+        className="min-h-screen bg-background font-sans antialiased"
         suppressHydrationWarning
       >
-        <ErrorBoundary>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ErrorBoundary>
             <div className="relative flex min-h-screen flex-col">
               <Header />
               <main className="flex-1">
@@ -165,8 +160,8 @@ export default function RootLayout({
               </main>
               <Footer />
             </div>
-          </ThemeProvider>
-        </ErrorBoundary>
+          </ErrorBoundary>
+        </ThemeProvider>
       </body>
     </html>
   )

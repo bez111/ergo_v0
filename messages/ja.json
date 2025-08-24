@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "読み込み中...",
+    "error": "エラー",
+    "retry": "再試行",
+    "close": "閉じる",
+    "open": "開く",
+    "save": "保存",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "delete": "削除",
+    "edit": "編集",
+    "view": "表示",
+    "search": "検索",
+    "filter": "フィルター",
+    "sort": "並び替え",
+    "next": "次へ",
+    "previous": "前へ",
+    "home": "ホーム",
+    "back": "戻る",
+    "more": "もっと",
+    "less": "少なく"
+  },
+  "navigation": {
+    "home": "ホーム",
+    "docs": "ドキュメント",
+    "ecosystem": "エコシステム",
+    "technology": "テクノロジー",
+    "use": "ユースケース",
+    "start": "始める",
+    "learn": "学ぶ",
+    "blog": "ブログ",
+    "wallet": "ウォレット",
+    "events": "イベント",
+    "mining": "マイニング"
+  },
+  "hero": {
+    "title": "Ergoプラットフォーム",
+    "subtitle": "契約貨幣のための回復力のあるブロックチェーンプラットフォーム",
+    "description": "Ergoは、10年間のブロックチェーン理論と開発によって築かれた堅固な基盤の上に、高度な暗号機能と根本的に新しいDeFi機能を構築します。",
+    "getStarted": "始める",
+    "learnMore": "詳しく見る",
+    "documentation": "ドキュメント"
+  },
+  "footer": {
+    "description": "Ergoは契約貨幣のための回復力のあるブロックチェーンプラットフォームです。高度な暗号機能を持つ堅固な基盤の上に構築されています。",
+    "quickLinks": "クイックリンク",
+    "developers": "開発者",
+    "community": "コミュニティ",
+    "resources": "リソース",
+    "legal": "法的事項",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "copyright": "© 2024 Ergoプラットフォーム。全著作権所有。"
+  },
+  "seo": {
+    "defaultTitle": "Ergoプラットフォーム - 契約貨幣のための回復力のあるブロックチェーン",
+    "defaultDescription": "Ergoは、10年間のブロックチェーン理論と開発によって築かれた堅固な基盤の上に、高度な暗号機能と根本的に新しいDeFi機能を構築します。",
+    "keywords": "ブロックチェーン, 暗号通貨, DeFi, スマートコントラクト, Ergo, UTXO, プルーフオブワーク"
+  },
+  "errors": {
+    "pageNotFound": "ページが見つかりません",
+    "pageNotFoundDescription": "お探しのページは存在しません。",
+    "serverError": "サーバーエラー",
+    "serverErrorDescription": "私たちの側で何かが間違っています。",
+    "networkError": "ネットワークエラー",
+    "networkErrorDescription": "インターネット接続を確認してください。"
+  },
+  "language": {
+    "switchLanguage": "言語を切り替える",
+    "currentLanguage": "日本語"
+  }
+} 

@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "Laden...",
+    "error": "Fehler",
+    "retry": "Wiederholen",
+    "close": "Schließen",
+    "open": "Öffnen",
+    "save": "Speichern",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "view": "Ansehen",
+    "search": "Suchen",
+    "filter": "Filtern",
+    "sort": "Sortieren",
+    "next": "Weiter",
+    "previous": "Zurück",
+    "home": "Startseite",
+    "back": "Zurück",
+    "more": "Mehr",
+    "less": "Weniger"
+  },
+  "navigation": {
+    "home": "Startseite",
+    "docs": "Dokumentation",
+    "ecosystem": "Ökosystem",
+    "technology": "Technologie",
+    "use": "Anwendungsfälle",
+    "start": "Loslegen",
+    "learn": "Lernen",
+    "blog": "Blog",
+    "wallet": "Wallet",
+    "events": "Veranstaltungen",
+    "mining": "Mining"
+  },
+  "hero": {
+    "title": "Ergo Plattform",
+    "subtitle": "Eine widerstandsfähige Blockchain-Plattform für vertragliches Geld",
+    "description": "Ergo entwickelt fortschrittliche kryptographische Funktionen und radikal neue DeFi-Funktionalitäten auf dem soliden Fundament, das durch ein Jahrzehnt der Blockchain-Theorie und -Entwicklung gelegt wurde.",
+    "getStarted": "Loslegen",
+    "learnMore": "Mehr erfahren",
+    "documentation": "Dokumentation"
+  },
+  "footer": {
+    "description": "Ergo ist eine widerstandsfähige Blockchain-Plattform für vertragliches Geld. Aufgebaut auf soliden Fundamenten mit fortschrittlichen kryptographischen Funktionen.",
+    "quickLinks": "Schnelllinks",
+    "developers": "Entwickler",
+    "community": "Gemeinschaft",
+    "resources": "Ressourcen",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "copyright": "© 2024 Ergo Plattform. Alle Rechte vorbehalten."
+  },
+  "seo": {
+    "defaultTitle": "Ergo Plattform - Widerstandsfähige Blockchain für vertragliches Geld",
+    "defaultDescription": "Ergo entwickelt fortschrittliche kryptographische Funktionen und radikal neue DeFi-Funktionalitäten auf dem soliden Fundament, das durch ein Jahrzehnt der Blockchain-Theorie und -Entwicklung gelegt wurde.",
+    "keywords": "Blockchain, Kryptowährung, DeFi, Smart Contracts, Ergo, UTXO, Proof of Work"
+  },
+  "errors": {
+    "pageNotFound": "Seite nicht gefunden",
+    "pageNotFoundDescription": "Die Seite, die Sie suchen, existiert nicht.",
+    "serverError": "Server-Fehler",
+    "serverErrorDescription": "Etwas ist auf unserer Seite schief gelaufen.",
+    "networkError": "Netzwerk-Fehler",
+    "networkErrorDescription": "Bitte überprüfen Sie Ihre Internetverbindung."
+  },
+  "language": {
+    "switchLanguage": "Sprache wechseln",
+    "currentLanguage": "Deutsch"
+  }
+} 

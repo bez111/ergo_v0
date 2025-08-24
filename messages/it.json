@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "Caricamento...",
+    "error": "Errore",
+    "retry": "Riprova",
+    "close": "Chiudi",
+    "open": "Apri",
+    "save": "Salva",
+    "cancel": "Annulla",
+    "confirm": "Conferma",
+    "delete": "Elimina",
+    "edit": "Modifica",
+    "view": "Visualizza",
+    "search": "Cerca",
+    "filter": "Filtra",
+    "sort": "Ordina",
+    "next": "Successivo",
+    "previous": "Precedente",
+    "home": "Home",
+    "back": "Indietro",
+    "more": "Di più",
+    "less": "Di meno"
+  },
+  "navigation": {
+    "home": "Home",
+    "docs": "Documentazione",
+    "ecosystem": "Ecosistema",
+    "technology": "Tecnologia",
+    "use": "Casi d'uso",
+    "start": "Inizia",
+    "learn": "Impara",
+    "blog": "Blog",
+    "wallet": "Portafoglio",
+    "events": "Eventi",
+    "mining": "Mining"
+  },
+  "hero": {
+    "title": "Piattaforma Ergo",
+    "subtitle": "Una piattaforma blockchain resiliente per il denaro contrattuale",
+    "description": "Ergo costruisce funzionalità crittografiche avanzate e funzionalità DeFi radicalmente nuove sulle solide fondamenta poste da un decennio di teoria e sviluppo blockchain.",
+    "getStarted": "Inizia",
+    "learnMore": "Scopri di più",
+    "documentation": "Documentazione"
+  },
+  "footer": {
+    "description": "Ergo è una piattaforma blockchain resiliente per il denaro contrattuale. Costruita su solide fondamenta con funzionalità crittografiche avanzate.",
+    "quickLinks": "Link rapidi",
+    "developers": "Sviluppatori",
+    "community": "Comunità",
+    "resources": "Risorse",
+    "legal": "Legale",
+    "privacy": "Politica sulla privacy",
+    "terms": "Termini di servizio",
+    "copyright": "© 2024 Piattaforma Ergo. Tutti i diritti riservati."
+  },
+  "seo": {
+    "defaultTitle": "Piattaforma Ergo - Blockchain resiliente per il denaro contrattuale",
+    "defaultDescription": "Ergo costruisce funzionalità crittografiche avanzate e funzionalità DeFi radicalmente nuove sulle solide fondamenta poste da un decennio di teoria e sviluppo blockchain.",
+    "keywords": "blockchain, criptovaluta, DeFi, contratti intelligenti, Ergo, UTXO, proof of work"
+  },
+  "errors": {
+    "pageNotFound": "Pagina non trovata",
+    "pageNotFoundDescription": "La pagina che stai cercando non esiste.",
+    "serverError": "Errore del server",
+    "serverErrorDescription": "Qualcosa è andato storto dal nostro lato.",
+    "networkError": "Errore di rete",
+    "networkErrorDescription": "Controlla la tua connessione internet."
+  },
+  "language": {
+    "switchLanguage": "Cambia lingua",
+    "currentLanguage": "Italiano"
+  }
+} 

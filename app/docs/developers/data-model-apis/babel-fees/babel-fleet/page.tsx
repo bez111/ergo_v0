@@ -105,7 +105,7 @@ export default function BabelFleetPage() {
           This example demonstrates how to pay for transaction fees using tokens with BabelSwapPlugin.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript">`import { TransactionBuilder } from '@fleet-sdk/core';
+          <CodeBlock language="typescript">{`import { TransactionBuilder } from '@fleet-sdk/core';
 import { BabelSwapPlugin } from '@fleet-sdk/babel-fees-plugin';
 
 const tx = new TransactionBuilder(1000000) // Replace with current block height
@@ -120,7 +120,7 @@ const tx = new TransactionBuilder(1000000) // Replace with current block height
   .sendChangeTo("9hY16vzHmmfyVBwKeFGHvb2bMFsG94A1u7To1QWtUokACyFVENQ") // Define the address for leftover funds after fee conversion
   .build();
 
-console.log(tx);`</CodeBlock>
+console.log(tx);`}</CodeBlock>
         </div>
         <div className="mt-4 bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
           <h3 className="text-lg font-semibold mb-2 text-purple-300">Explanation:</h3>

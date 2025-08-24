@@ -1,0 +1,73 @@
+{
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류",
+    "retry": "다시 시도",
+    "close": "닫기",
+    "open": "열기",
+    "save": "저장",
+    "cancel": "취소",
+    "confirm": "확인",
+    "delete": "삭제",
+    "edit": "편집",
+    "view": "보기",
+    "search": "검색",
+    "filter": "필터",
+    "sort": "정렬",
+    "next": "다음",
+    "previous": "이전",
+    "home": "홈",
+    "back": "뒤로",
+    "more": "더 보기",
+    "less": "줄이기"
+  },
+  "navigation": {
+    "home": "홈",
+    "docs": "문서",
+    "ecosystem": "생태계",
+    "technology": "기술",
+    "use": "사용 사례",
+    "start": "시작하기",
+    "learn": "학습",
+    "blog": "블로그",
+    "wallet": "지갑",
+    "events": "이벤트",
+    "mining": "마이닝"
+  },
+  "hero": {
+    "title": "Ergo 플랫폼",
+    "subtitle": "계약 화폐를 위한 탄력적인 블록체인 플랫폼",
+    "description": "Ergo는 10년간의 블록체인 이론과 개발로 다져진 견고한 기반 위에 고급 암호화 기능과 혁신적인 DeFi 기능을 구축합니다.",
+    "getStarted": "시작하기",
+    "learnMore": "더 알아보기",
+    "documentation": "문서"
+  },
+  "footer": {
+    "description": "Ergo는 계약 화폐를 위한 탄력적인 블록체인 플랫폼입니다. 고급 암호화 기능을 갖춘 견고한 기반 위에 구축되었습니다.",
+    "quickLinks": "빠른 링크",
+    "developers": "개발자",
+    "community": "커뮤니티",
+    "resources": "리소스",
+    "legal": "법적 고지",
+    "privacy": "개인정보 보호정책",
+    "terms": "서비스 약관",
+    "copyright": "© 2024 Ergo 플랫폼. 모든 권리 보유."
+  },
+  "seo": {
+    "defaultTitle": "Ergo 플랫폼 - 계약 화폐를 위한 탄력적인 블록체인",
+    "defaultDescription": "Ergo는 10년간의 블록체인 이론과 개발로 다져진 견고한 기반 위에 고급 암호화 기능과 혁신적인 DeFi 기능을 구축합니다.",
+    "keywords": "블록체인, 암호화폐, DeFi, 스마트 계약, Ergo, UTXO, 작업 증명"
+  },
+  "errors": {
+    "pageNotFound": "페이지를 찾을 수 없습니다",
+    "pageNotFoundDescription": "찾고 있는 페이지가 존재하지 않습니다.",
+    "serverError": "서버 오류",
+    "serverErrorDescription": "저희 쪽에서 문제가 발생했습니다.",
+    "networkError": "네트워크 오류",
+    "networkErrorDescription": "인터넷 연결을 확인해 주세요."
+  },
+  "language": {
+    "switchLanguage": "언어 변경",
+    "currentLanguage": "한국어"
+  }
+} 
