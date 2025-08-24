@@ -1,0 +1,35 @@
+# Ergo Platform - Optimized for SEO
+User-agent: *
+Allow: /
+
+# Block staging and development
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /_next/
+Disallow: /api/
+Disallow: /admin/
+
+# Block search and filter parameters
+Disallow: /*?search=*
+Disallow: /*?filter=*
+Disallow: /*?utm_*
+
+# Allow important crawl paths
+Allow: /docs/
+Allow: /blog/
+Allow: /ecosystem/
+Allow: /technology/
+Allow: /use/
+
+# Sitemaps
+Sitemap: https://ergoblockchain.org/sitemap.xml
+Sitemap: https://ergoblockchain.org/sitemap-pages.xml
+Sitemap: https://ergoblockchain.org/sitemap-blog.xml
+Sitemap: https://ergoblockchain.org/sitemap-docs.xml
+
+# Crawl-delay for aggressive bots
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10 

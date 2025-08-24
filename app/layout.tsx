@@ -1,65 +1,46 @@
-import type React from "react"
-import type { Metadata } from "next/dist/lib/metadata/types/metadata-interface"
+import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google"
 import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { SchemaOrg } from "@/components/seo/schema-org"
-import { ORGANIZATION_SCHEMA, WEBSITE_SCHEMA } from "@/lib/schema-constants"
-import { GoogleAnalytics } from "@/components/analytics/google-analytics"
-// import { WebVitalsRUM } from "@/components/analytics/web-vitals-rum"
-import { RUMProvider } from "@/app/_components/rum-provider"
-import { PerformanceOptimizer } from "@/components/seo/performance-optimizer"
-import { CoreWebVitalsDashboard } from "@/components/seo/core-web-vitals-dashboard"
 import { ErrorBoundary } from "@/components/error-boundary"
+import { organizationSchema, websiteSchema } from "@/lib/schema-generator"
 
-// Optimized font loading for Core Web Vitals
-const inter = Inter({ 
-  subsets: ["latin"], 
-  weight: ["400", "500", "600", "700"], 
-  display: "swap",
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: 'swap',
   preload: true,
-  fallback: ['-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
-  adjustFontFallback: true,
 })
 
-const jetbrainsMono = JetBrains_Mono({ 
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-mono",
-  display: "swap",
+  variable: "--font-jetbrains-mono",
+  display: 'swap',
   preload: true,
-  fallback: ['Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
-  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ergoblockchain.org"),
+  metadataBase: new URL('https://ergoblockchain.org'),
   title: {
-    default: "Ergo Blockchain | Resilient Platform for Contractual Money",
-    template: "%s | Ergo Platform",
+    default: "Ergo Platform - Resilient Blockchain for Contractual Money",
+    template: "%s | Ergo Platform"
   },
-  description:
-    "Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money. Explore eUTXO, ErgoScript, Sigma protocols, and build secure dApps.",
+  description: "Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.",
   keywords: [
-    "ergo",
-    "blockchain",
+    "ergo blockchain",
+    "smart contracts", 
+    "DeFi platform",
+    "ErgoScript",
+    "eUTXO model",
+    "proof of work",
     "cryptocurrency",
-    "smart contracts",
-    "eutxo",
-    "proof-of-work",
-    "ergoscript",
-    "sigma protocols",
-    "defi",
-    "privacy",
-    "decentralized applications",
-    "contractual money",
-    "cryptocurrency platform",
-    "blockchain technology",
+    "blockchain development",
     "decentralized finance",
+    "privacy blockchain"
   ],
-  authors: [{ name: "Ergo Platform", url: "https://ergoblockchain.org" }],
+  authors: [{ name: "Ergo Platform" }],
   creator: "Ergo Platform",
   publisher: "Ergo Platform",
   formatDetection: {
@@ -68,31 +49,28 @@ export const metadata: Metadata = {
     telephone: false,
   },
   openGraph: {
-    type: "website",
-    locale: "en_US",
-    url: "https://ergoblockchain.org",
-    title: {
-      default: "Ergo Blockchain | Resilient Platform for Contractual Money",
-      template: "%s | Ergo Platform",
-    },
-    description:
-      "Ergo is a next-generation smart contract platform that ensures economic freedom for ordinary people through secure, accessible, and decentralized financial tools.",
-    siteName: "Ergo Platform",
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://ergoblockchain.org',
+    siteName: 'Ergo Platform',
+    title: 'Ergo Platform - Resilient Blockchain for Contractual Money',
+    description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
     images: [
       {
-        url: "/og-image.png",
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: "Ergo Platform - Contractual Money",
-      },
+        alt: 'Ergo Platform - Resilient Blockchain for Contractual Money',
+      }
     ],
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Ergo Blockchain | Resilient Platform for Contractual Money",
-    description: "Discover Ergo, a resilient Proof-of-Work blockchain platform for contractual money.",
-    images: ["/og-image.png"],
-    creator: "@ergoplatform",
+    card: 'summary_large_image',
+    site: '@ergoplatformorg',
+    creator: '@ergoplatformorg',
+    title: 'Ergo Platform - Resilient Blockchain for Contractual Money',
+    description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
+    images: ['/og-image.png'],
   },
   robots: {
     index: true,
@@ -100,89 +78,95 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  alternates: {
+    canonical: 'https://ergoblockchain.org',
+    languages: {
+      'en': 'https://ergoblockchain.org',
+      'ru': 'https://ergoblockchain.org/ru',
+      'pt-BR': 'https://ergoblockchain.org/pt-br',
     },
   },
   verification: {
-    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION || undefined,
-    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || undefined,
-  },
-  // Additional Core Web Vitals optimizations
-  other: {
-    'google-site-verification': process.env.NEXT_PUBLIC_GSC_VERIFICATION || '',
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code',
   },
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
-    <html lang="en" suppressHydrationWarning className="dark">
+    <html 
+      lang="en" 
+      className={`${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
-        {/* Critical resource hints for Core Web Vitals */}
+        {/* Preconnect to external domains */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://www.google-analytics.com" />
-        <link rel="dns-prefetch" href="//vitals.vercel-insights.com" />
         
-        {/* Preload critical assets */}
-        <link rel="preload" href="/og-image.png" as="image" type="image/png" />
-        <link rel="preload" href="/logo.png" as="image" type="image/png" />
-        <link rel="preload" href="/favicon.ico" as="image" type="image/x-icon" />
+        {/* DNS prefetch for performance */}
+        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+        <link rel="dns-prefetch" href="//www.google-analytics.com" />
+        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
         
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#ff8800" />
-        <meta name="color-scheme" content="dark light" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+        {/* Preload critical resources */}
+        <link
+          rel="preload"
+          href="/hero-bg.jpg"
+          as="image"
+          type="image/jpeg"
+        />
+        <link
+          rel="preload"
+          href="/logo.png"
+          as="image"
+          type="image/png"
+        />
         
-        {/* Performance hints */}
-        <meta httpEquiv="x-dns-prefetch-control" content="on" />
-        
-        <SchemaOrg type="Organization" data={ORGANIZATION_SCHEMA} />
-        <SchemaOrg type="WebSite" data={WEBSITE_SCHEMA} />
+        {/* Global Schema.org structured data */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema)
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(websiteSchema)
+          }}
+        />
       </head>
-      <body className={`${inter.className} ${jetbrainsMono.variable} antialiased`}>
-            {/* Performance Optimization Component */}
-    <PerformanceOptimizer
-      preloadUrls={[
-        '/logo.png',
-        '/og-image.png',
-        // Add critical CSS and JS files
-      ]}
-      prefetchUrls={[
-        '/docs',
-        '/ecosystem',
-        '/technology',
-        '/wallet',
-      ]}
-      criticalCSS={[]}
-      enableWebVitalsTracking={true}
-    />
-
-    {/* Core Web Vitals Dashboard (development only) */}
-    <CoreWebVitalsDashboard showInProduction={false} />
-        
+      <body 
+        className={`${inter.className} ${jetbrainsMono.variable} min-h-screen bg-black text-white antialiased`}
+        suppressHydrationWarning
+      >
         <ErrorBoundary>
-          <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-            <div className="flex min-h-screen flex-col">
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="dark"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <div className="relative flex min-h-screen flex-col">
               <Header />
-              <main className="flex-1 relative overflow-hidden" id="main-content">
+              <main className="flex-1">
                 {children}
               </main>
               <Footer />
             </div>
           </ThemeProvider>
         </ErrorBoundary>
-        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && (
-          <GoogleAnalytics id={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />
-        )}
-        
-        {/* Web Vitals RUM tracking */}
-        {/* <WebVitalsRUM /> */}
-        <RUMProvider />
       </body>
     </html>
   )

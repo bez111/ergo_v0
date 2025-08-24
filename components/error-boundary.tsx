@@ -4,15 +4,9 @@ import React from 'react'
 
 interface ErrorBoundaryProps {
   children: React.ReactNode
-  fallback?: React.ComponentType<{ error: Error; resetError: () => void }>
 }
 
-interface ErrorBoundaryState {
-  hasError: boolean
-  error: Error | null
-}
-
-function DefaultErrorFallback({ error, resetError }: { error: Error; resetError: () => void }) {
+function DefaultErrorFallback({ error }: { error: Error }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-neutral-900">
       <div className="max-w-md mx-auto text-center p-6">
@@ -23,14 +17,8 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
         </p>
         <div className="space-y-3">
           <button
-            onClick={resetError}
-            className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
-          >
-            Try again
-          </button>
-          <button
             onClick={() => window.location.reload()}
-            className="w-full bg-neutral-700 hover:bg-neutral-600 text-white font-medium py-2 px-4 rounded-lg transition-colors"
+            className="w-full bg-orange-600 hover:bg-orange-700 text-white font-medium py-2 px-4 rounded-lg transition-colors"
           >
             Refresh page
           </button>
@@ -42,6 +30,7 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
             </summary>
             <pre className="mt-2 p-3 bg-neutral-800 rounded text-xs text-red-300 overflow-auto">
               {error.message}
+              {'\n'}
               {error.stack}
             </pre>
           </details>
@@ -51,35 +40,12 @@ function DefaultErrorFallback({ error, resetError }: { error: Error; resetError:
   )
 }
 
-export class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
-  constructor(props: ErrorBoundaryProps) {
-    super(props)
-    this.state = { hasError: false, error: null }
-  }
-
-  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error }
-  }
-
-  override componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
-    // Log error to monitoring service in production
-    if (process.env.NODE_ENV === 'production') {
-      console.error('ErrorBoundary caught an error:', error, errorInfo)
-      // Here you would typically send to error reporting service
-      // Example: Sentry.captureException(error, { contexts: { react: errorInfo } })
-    }
-  }
-
-  resetError = () => {
-    this.setState({ hasError: false, error: null })
-  }
-
-  override render() {
-    if (this.state.hasError && this.state.error) {
-      const FallbackComponent = this.props.fallback || DefaultErrorFallback
-      return <FallbackComponent error={this.state.error} resetError={this.resetError} />
-    }
-
-    return this.props.children
+// Simple wrapper that catches errors and shows fallback
+export function ErrorBoundary({ children }: ErrorBoundaryProps) {
+  try {
+    return <>{children}</>
+  } catch (error) {
+    console.error('Error caught by ErrorBoundary:', error)
+    return <DefaultErrorFallback error={error as Error} />
   }
 } 

@@ -424,80 +424,78 @@ export default function IntroductionClient() {
           />
         </motion.section>
 
-        {/* Use Cases Section */}
+        {/* What Makes Ergo Different Section */}
         <motion.section
           initial={{ opacity: 0 }}
           animate={{ opacity: isInitialized ? 1 : 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="py-24"
-          id="what-to-build"
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="py-16 border-t border-b border-neutral-700"
+          id="what-makes-different"
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              What Can You <span className="text-orange-400">Build</span>?
+              <span className="text-orange-400">WHAT MAKES</span> ERGO DIFFERENT
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
-              Explore the endless possibilities of the Ergo ecosystem
+            <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
+              Ergo combines proven cryptographic techniques with innovative blockchain design to
+              create a platform that's secure, scalable, and sustainable
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                icon: TrendingUp,
-                title: "DeFi Applications",
-                description: "Build stablecoins, DEXs, lending platforms, and innovative financial instruments.",
-                href: "/use/defi",
-                badge: "Popular"
+                title: "FAIR LAUNCH & PROOF-OF-WORK",
+                description: "Launched with no ICO or premine, secured by Autolykos v2 – an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one.",
+                icon: Shield,
               },
               {
-                icon: Puzzle,
-                title: "dApps & Tools",
-                description: "Create decentralized applications for any use case with powerful smart contracts.",
-                href: "/ecosystem",
-                badge: "Growing"
+                title: "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
+                description: "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi.",
+                icon: Zap,
               },
               {
-                icon: Code2,
-                title: "Developer Tools",
-                description: "Access comprehensive SDKs, libraries, and documentation to build on Ergo.",
-                href: "/docs/developers",
-                badge: "Resources"
-              }
-            ].map((useCase, index) => (
-              <motion.div
-                key={useCase.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
-                whileHover="hover"
-                whileTap="tap"
-                variants={scaleOnHover}
-              >
-                <Link href={useCase.href} prefetch={false} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-xl">
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-orange-500/30 transition-all duration-300 cursor-pointer">
-                    <div className="flex items-start justify-between mb-4">
-                      <div className="w-12 h-12 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center">
-                        <useCase.icon className="w-6 h-6 text-orange-400" aria-hidden="true" />
-                      </div>
-                      <Badge className="bg-orange-500/10 text-orange-400 border border-orange-500/30">
-                        {useCase.badge}
-                      </Badge>
+                title: "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
+                description: 'A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data ("dust") back to miners, preventing bloat and keeping the chain efficient.',
+                icon: Database,
+              },
+              {
+                title: "RESEARCH-DRIVEN INNOVATION",
+                description: "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+                icon: BookOpen,
+              },
+              {
+                title: "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
+                description: "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions.",
+                icon: Lock,
+              },
+              {
+                title: "COMMUNITY-LED DEVELOPMENT",
+                description: "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control.",
+                icon: Users,
+              },
+            ].map((pillar, index) => {
+              const Icon = pillar.icon
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
+                  whileHover={{ scale: 1.02, y: -5 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-6 hover:border-orange-400/50 hover:bg-neutral-800/50 transition-all duration-300 cursor-pointer"
+                >
+                  <div className="flex items-center mb-4">
+                    <div className="w-12 h-12 bg-orange-400/10 rounded-lg flex items-center justify-center mr-4">
+                      <Icon className="w-6 h-6 text-orange-400" />
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-orange-400 transition-colors">
-                      {useCase.title}
-                    </h3>
-                    <p className="text-gray-400 text-sm mb-4">
-                      {useCase.description}
-                    </p>
-                    <div className="flex items-center text-orange-400 text-sm font-semibold group-hover:gap-3 transition-all">
-                      Explore
-                      <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                    </div>
-                  </Card>
-                </Link>
-              </motion.div>
-            ))}
+                    <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
+                  </div>
+                  <p className="text-neutral-300 text-sm leading-relaxed">{pillar.description}</p>
+                </motion.div>
+              )
+            })}
           </div>
         </motion.section>
 

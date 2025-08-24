@@ -1,79 +1,66 @@
 "use client"
 
-import { useState, useEffect, useRef, useMemo } from "react"
+import { useState, useEffect } from "react"
 import Link from "next/link"
-import { motion } from "framer-motion"
 import { Code, Shield, Zap, Layers } from "lucide-react"
-import { FadeIn } from "@/components/animations/fade-in"
-import { StaggerContainer, StaggerItem } from "@/components/animations/stagger-container"
-import { CyberButton } from "@/components/animations/cyber-button"
-import { GlitchText } from "@/components/animations/glitch-text"
 
-const HERO_MESSAGES: readonly string[] = [
+const HERO_MESSAGES = [
   "Decentralized Money for a Free Society",
-  "Global neutral settlement layer",
-  "Territory of digital freedom",
-  "Join the Resistance",
-] as const
+  "The globally-neutral settlement layer for programmable money.",
+  "The open-source home of digital freedom",
+  "Join the movement for decentralized, open-source money",
+]
 
 export function HeroSection() {
-  // Initialize with first text immediately visible
-  const [typedText, setTypedText] = useState(HERO_MESSAGES[0])
+  const [typedText, setTypedText] = useState("")
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
-  const [isTyping, setIsTyping] = useState(false)
-  const [animationsEnabled, setAnimationsEnabled] = useState(false)
-  const containerRef = useRef<HTMLDivElement>(null)
+  const [isTyping, setIsTyping] = useState(true)
+  const [showCursor, setShowCursor] = useState(true)
+  const [isClient, setIsClient] = useState(false)
 
-  const texts = useMemo(() => HERO_MESSAGES, [])
-
-  // Respect reduced-motion and defer non-critical animations to idle
+  // Проверка на клиентскую сторону
   useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches
-    if (prefersReducedMotion) {
-      setAnimationsEnabled(false)
-      // Text is already set in initial state
-      return
-    }
-    
-    // Start typing animation after a short delay
-    const start = () => {
-      setAnimationsEnabled(true)
-      setTypedText("")  // Clear text to start typing animation
-      setIsTyping(true)
-    }
-    
-    if ("requestIdleCallback" in window) {
-      ;(window as any).requestIdleCallback(start, { timeout: 800 })
-    } else {
-      setTimeout(start, 300)
-    }
+    setIsClient(true)
   }, [])
 
+  // Typing animation
   useEffect(() => {
-    if (!animationsEnabled) return
+    if (!isClient) return
+    
+    const currentMessage = HERO_MESSAGES[currentTextIndex]
+    if (!currentMessage) return
+    
     let timeout: NodeJS.Timeout
-    if (isTyping) {
-      if (typedText.length < texts[currentTextIndex].length) {
+    
+    if (isTyping && typedText.length < currentMessage.length) {
         timeout = setTimeout(() => {
-          setTypedText(texts[currentTextIndex].slice(0, typedText.length + 1))
+        setTypedText(currentMessage.slice(0, typedText.length + 1))
         }, 100)
-      } else {
+    } else if (isTyping && typedText.length === currentMessage.length) {
         timeout = setTimeout(() => {
           setIsTyping(false)
         }, 2000)
-      }
-    } else {
-      if (typedText.length > 0) {
+    } else if (!isTyping && typedText.length > 0) {
         timeout = setTimeout(() => {
-          setTypedText(typedText.slice(0, typedText.length - 1))
+        setTypedText(typedText.slice(0, -1))
         }, 50)
-      } else {
-        setCurrentTextIndex((currentTextIndex + 1) % texts.length)
+    } else if (!isTyping && typedText.length === 0) {
+      setCurrentTextIndex((prev) => (prev + 1) % HERO_MESSAGES.length)
         setIsTyping(true)
-      }
     }
+    
     return () => clearTimeout(timeout)
-  }, [animationsEnabled, typedText, isTyping, currentTextIndex, texts])
+  }, [typedText, isTyping, currentTextIndex, isClient])
+
+  // Cursor blinking
+  useEffect(() => {
+    if (!isClient) return
+    
+    const interval = setInterval(() => {
+      setShowCursor(prev => !prev)
+    }, 500)
+    return () => clearInterval(interval)
+  }, [isClient])
 
   const features = [
     { icon: Shield, label: "Secure PoW" },
@@ -84,102 +71,77 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-24 lg:py-32">
-      <div className="absolute inset-0 bg-neutral-950 z-0 pointer-events-none"></div>
-      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] bg-cover bg-center opacity-10 z-0 pointer-events-none"></div>
-      {animationsEnabled && (
-        <motion.div
-          className="absolute inset-0 bg-[linear-gradient(0deg,rgba(147,51,234,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(34,211,238,0.04)_1px,transparent_1px)] bg-[size:40px_40px] z-0"
-          initial={false}
-          animate={{ backgroundPosition: ["0px 0px", "40px 40px"] }}
-          transition={{ duration: 20, repeat: Number.POSITIVE_INFINITY, ease: "linear" }}
-        />
-      )}
+      {/* Background layers */}
+      <div className="absolute inset-0 bg-neutral-950 z-0"></div>
+      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] bg-cover bg-center opacity-10 z-0"></div>
 
-      <div className="container relative z-20 px-4 md:px-6" ref={containerRef}>
+      <div className="container relative z-20 px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
+          {/* ERGO Title */}
           <div className="relative">
-            <div className="text-7xl font-extrabold tracking-tighter text-primary">
-              <GlitchText text="ERGO" />
-            </div>
+            <h2 className="text-7xl font-extrabold tracking-tighter text-orange-500">
+              ERGO
+            </h2>
           </div>
 
+          {/* Dynamic typing text */}
           <div className="space-y-4 relative">
             <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl text-white">
-              <span className="relative inline-block">
+              <span className="relative inline-block font-mono" suppressHydrationWarning>
+                <span className="text-orange-500">&gt;</span> {isClient ? typedText : HERO_MESSAGES[0]}
                 <span
-                  className="relative z-10 font-mono whitespace-nowrap overflow-hidden"
-                  style={{
-                    fontSize: `${Math.max(0.6, 1 - typedText.length * 0.01)}em`,
-                    transition: animationsEnabled ? "font-size 0.1s ease-out" : undefined,
-                  }}
-                >
-                  <span className="text-primary">&gt;</span> {typedText}
-                  {animationsEnabled && (
-                    <motion.span
-                      className="text-primary"
-                      initial={false}
-                      animate={{ opacity: [1, 0, 1] }}
-                      transition={{ duration: 1, repeat: Number.POSITIVE_INFINITY }}
+                  className={`text-orange-500 ${isClient && showCursor ? 'opacity-100' : 'opacity-0'} transition-opacity`}
+                  suppressHydrationWarning
                     >
                       _
-                    </motion.span>
-                  )}
                 </span>
               </span>
             </h1>
-            {animationsEnabled && (
-              <motion.p
-                className="text-xl md:text-2xl text-neutral-300 font-mono max-w-3xl mx-auto"
-                initial={false}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.8, duration: 0.6 }}
-              >
-                Join a movement for open, programmable, and censorship-resistant finance.
-              </motion.p>
-            )}
-            {!animationsEnabled && (
+            
               <p className="text-xl md:text-2xl text-neutral-300 font-mono max-w-3xl mx-auto">
                 Join a movement for open, programmable, and censorship-resistant finance.
               </p>
-            )}
           </div>
 
-          <StaggerContainer className="flex flex-wrap justify-center gap-4 mt-8" staggerDelay={0.1}>
-            <StaggerItem>
-              <CyberButton
-                size="lg"
-                className="gap-2 bg-primary text-white hover:bg-primary/80 font-mono uppercase tracking-wider border-2 border-primary px-6 py-3"
-                asChild
-              >
-                <Link href="/start" className="flex items-center">
-                  <span className="text-white">&gt;</span>
-                  <span className="ml-2">get-started</span>
-                  <span className="ml-1 animate-pulse">_</span>
+          {/* Action buttons */}
+          <div className="flex flex-wrap justify-center gap-4 mt-8">
+            <Link 
+              href="/docs/developers" 
+              className="inline-flex items-center gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              <span>&gt;</span>
+              <span>Start Building</span>
+              <span className="animate-pulse">_</span>
                 </Link>
-              </CyberButton>
-            </StaggerItem>
-            <StaggerItem>
-              <CyberButton
-                variant="outline"
-                size="lg"
-                className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary/10 font-mono uppercase tracking-wider"
-                asChild
-              >
-                <Link href="/docs">
-                  <Code className="h-5 w-5" />
-                  Read Docs
+            
+            <Link 
+              href="/wallet"
+              className="inline-flex items-center gap-2 bg-transparent border-2 border-orange-500 text-orange-500 hover:bg-orange-500/10 font-mono uppercase tracking-wider px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              <span>Get a Wallet</span>
                 </Link>
-              </CyberButton>
-            </StaggerItem>
-          </StaggerContainer>
 
+            <a 
+              href="#get-started"
+              className="inline-flex items-center gap-2 bg-transparent border-2 border-gray-600 text-gray-300 hover:bg-gray-600/10 hover:border-gray-500 hover:text-gray-200 font-mono uppercase tracking-wider px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+            >
+              <span>Choose your path</span>
+            </a>
+          </div>
+
+          {/* Feature icons */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-16 w-full max-w-3xl">
-            {features.map((feature) => (
-              <div key={feature.label} className="flex flex-col items-center gap-2 text-center">
-                <div className="rounded-full bg-primary/10 p-3 border border-primary/30">
-                  <feature.icon className="h-6 w-6 text-primary" />
+            {features.map((feature, index) => (
+              <div 
+                key={feature.label} 
+                className="flex flex-col items-center gap-2 text-center group cursor-pointer"
+              >
+                <div className="rounded-full bg-orange-500/10 p-3 border border-orange-500/30 group-hover:bg-orange-500/20 transition-all duration-300 group-hover:scale-110">
+                  <feature.icon className="h-6 w-6 text-orange-500" />
                 </div>
-                <p className="text-sm text-gray-400 font-mono uppercase tracking-wider">{feature.label}</p>
+                <p className="text-sm text-gray-400 font-mono uppercase tracking-wider group-hover:text-gray-300 transition-colors">
+                  {feature.label}
+                </p>
               </div>
             ))}
           </div>

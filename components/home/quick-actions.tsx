@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react"
 import { QuickActionCard } from "./quick-action-card"
 
@@ -48,7 +50,16 @@ export function QuickActions() {
   return (
     <section className="py-12 relative overflow-hidden bg-black" aria-label="Quick Actions">
       <div className="container px-4 md:px-6">
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl font-bold text-white mb-4">
+            <span className="text-orange-400">GET STARTED</span> WITH ERGO
+          </h2>
+          <p className="text-lg text-neutral-300 max-w-2xl mx-auto">
+            Choose your path to explore the Ergo ecosystem.
+          </p>
+        </div>
+        
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {actions.map((action, index) => (
             <QuickActionCard key={index} action={action} />
           ))}

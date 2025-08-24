@@ -1,270 +1,407 @@
-// SEO Monitoring System for Ergo Platform
-// Track rankings, Core Web Vitals, and SEO performance
+// SEO Monitoring and Analytics for Ergo Platform
+// Track Core Web Vitals, Search Console metrics, and SEO KPIs
 
-interface SEOMetrics {
-  rankings: KeywordRanking[]
-  coreWebVitals: CoreWebVitals
-  indexation: IndexationStatus
-  backlinks: BacklinkProfile
-  traffic: TrafficMetrics
-}
-
-interface KeywordRanking {
-  keyword: string
-  position: number
-  previousPosition: number
-  change: number
-  url: string
-  searchVolume: number
-  difficulty: number
-  date: string
-}
-
-interface CoreWebVitals {
+export interface SEOMetrics {
+  // Core Web Vitals
   lcp: number // Largest Contentful Paint
-  fid: number // First Input Delay
-  cls: number // Cumulative Layout Shift
+  cls: number // Cumulative Layout Shift  
+  inp: number // Interaction to Next Paint
   fcp: number // First Contentful Paint
   ttfb: number // Time to First Byte
-  inp: number // Interaction to Next Paint
-}
-
-interface IndexationStatus {
-  indexed: number
-  notIndexed: number
-  errors: number
-  warnings: number
-  lastCrawl: string
-}
-
-interface BacklinkProfile {
-  total: number
-  dofollow: number
-  nofollow: number
-  referringDomains: number
-  domainAuthority: number
-  trustFlow: number
-}
-
-interface TrafficMetrics {
-  organic: number
-  direct: number
-  referral: number
-  social: number
-  total: number
+  
+  // SEO Metrics
+  organicTraffic: number
+  organicConversions: number
+  averagePosition: number
+  clickThroughRate: number
+  impressions: number
+  clicks: number
+  
+  // Technical SEO
+  indexedPages: number
+  crawlErrors: number
+  sitemapStatus: 'healthy' | 'warning' | 'error'
+  robotsStatus: 'healthy' | 'warning' | 'error'
+  
+  // Page-specific
+  pageLoadTime: number
   bounceRate: number
-  avgSessionDuration: number
-  pagesPerSession: number
+  timeOnPage: number
+  internalLinks: number
+  externalLinks: number
 }
 
-// Target keywords to monitor
-export const monitoringKeywords = [
-  // Tier 1 - Primary targets
-  { keyword: 'ergo blockchain', targetPosition: 3, priority: 'highest' },
-  { keyword: 'ergo crypto', targetPosition: 3, priority: 'highest' },
-  { keyword: 'ERG token', targetPosition: 3, priority: 'highest' },
-  { keyword: 'ergo mining', targetPosition: 3, priority: 'highest' },
-  { keyword: 'ergo wallet', targetPosition: 3, priority: 'highest' },
-  
-  // Tier 2 - Technology keywords
-  { keyword: 'ergoscript', targetPosition: 1, priority: 'high' },
-  { keyword: 'eutxo blockchain', targetPosition: 1, priority: 'high' },
-  { keyword: 'autolykos algorithm', targetPosition: 1, priority: 'high' },
-  { keyword: 'sigma protocols blockchain', targetPosition: 1, priority: 'high' },
-  { keyword: 'nipopows', targetPosition: 1, priority: 'high' },
-  
-  // Tier 3 - Competition keywords
-  { keyword: 'layer 1 blockchain', targetPosition: 10, priority: 'high' },
-  { keyword: 'proof of work blockchain 2024', targetPosition: 5, priority: 'high' },
-  { keyword: 'bitcoin alternative', targetPosition: 10, priority: 'medium' },
-  { keyword: 'ethereum alternative', targetPosition: 10, priority: 'medium' },
-  { keyword: 'sustainable blockchain', targetPosition: 5, priority: 'high' },
-  
-  // Tier 4 - Commercial keywords
-  { keyword: 'buy ergo', targetPosition: 3, priority: 'highest' },
-  { keyword: 'where to buy ergo', targetPosition: 3, priority: 'highest' },
-  { keyword: 'ergo price', targetPosition: 5, priority: 'high' },
-  { keyword: 'ergo exchanges', targetPosition: 3, priority: 'high' },
-  { keyword: 'mine ergo', targetPosition: 3, priority: 'highest' },
-]
-
-// Core Web Vitals thresholds
-export const webVitalsThresholds = {
-  lcp: { good: 2500, needsImprovement: 4000 }, // milliseconds
-  fid: { good: 100, needsImprovement: 300 }, // milliseconds
-  cls: { good: 0.1, needsImprovement: 0.25 }, // score
-  fcp: { good: 1800, needsImprovement: 3000 }, // milliseconds
-  ttfb: { good: 800, needsImprovement: 1800 }, // milliseconds
-  inp: { good: 200, needsImprovement: 500 }, // milliseconds
+// SEO Alerts Configuration
+export const seoAlerts = {
+  coreWebVitals: {
+    lcp: { warning: 2500, critical: 4000 }, // milliseconds
+    cls: { warning: 0.1, critical: 0.25 }, // score
+    inp: { warning: 200, critical: 500 }, // milliseconds
+  },
+  traffic: {
+    organicDropPercent: { warning: 10, critical: 25 }, // percentage drop
+    conversionDropPercent: { warning: 15, critical: 30 },
+  },
+  technical: {
+    crawlErrorsThreshold: { warning: 10, critical: 50 },
+    indexDropPercent: { warning: 5, critical: 15 },
+  }
 }
 
-// Initialize performance monitoring
-export function initPerformanceMonitoring() {
+// Track Core Web Vitals
+export function trackCoreWebVitals() {
   if (typeof window === 'undefined') return
 
-  // Monitor Core Web Vitals
-  if ('PerformanceObserver' in window) {
-    // LCP
-    const lcpObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries()
-      const lastEntry = entries[entries.length - 1] as any
-      const lcp = lastEntry.renderTime || lastEntry.loadTime
-      trackMetric('LCP', lcp)
-    })
-    lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true })
-
-    // FID
-    const fidObserver = new PerformanceObserver((list) => {
-      const entries = list.getEntries()
-      entries.forEach((entry: any) => {
-        const fid = entry.processingStart - entry.startTime
-        trackMetric('FID', fid)
-      })
-    })
-    fidObserver.observe({ type: 'first-input', buffered: true })
-
-    // CLS
-    let clsValue = 0
-    const clsObserver = new PerformanceObserver((list) => {
-      for (const entry of list.getEntries()) {
-        const layoutShift = entry as any
-        if (!layoutShift.hadRecentInput) {
-          clsValue += layoutShift.value
-        }
+  // LCP - Largest Contentful Paint
+  new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      const lcp = entry.startTime
+      
+      // Send to analytics
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Core Web Vitals',
+          event_label: 'LCP',
+          value: Math.round(lcp),
+          custom_map: { metric_value: lcp }
+        })
       }
-      trackMetric('CLS', clsValue)
-    })
-    clsObserver.observe({ type: 'layout-shift', buffered: true })
-  }
+      
+      // Check alerts
+      if (lcp > seoAlerts.coreWebVitals.lcp.critical) {
+        console.warn(`🚨 Critical LCP: ${lcp}ms (threshold: ${seoAlerts.coreWebVitals.lcp.critical}ms)`)
+      } else if (lcp > seoAlerts.coreWebVitals.lcp.warning) {
+        console.warn(`⚠️ Warning LCP: ${lcp}ms (threshold: ${seoAlerts.coreWebVitals.lcp.warning}ms)`)
+      }
+    }
+  }).observe({ type: 'largest-contentful-paint', buffered: true })
 
-  // Monitor page load metrics
-  window.addEventListener('load', () => {
-    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming
+  // CLS - Cumulative Layout Shift
+  new PerformanceObserver((list) => {
+    let cls = 0
+    for (const entry of list.getEntries()) {
+      const layoutShift = entry as any
+      if (!layoutShift.hadRecentInput) {
+        cls += layoutShift.value
+      }
+    }
     
-    if (navigation) {
-      trackMetric('TTFB', navigation.responseStart - navigation.requestStart)
-      trackMetric('DOMContentLoaded', navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart)
-      trackMetric('LoadComplete', navigation.loadEventEnd - navigation.loadEventStart)
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'web_vitals', {
+        event_category: 'Core Web Vitals',
+        event_label: 'CLS',
+        value: Math.round(cls * 1000),
+        custom_map: { metric_value: cls }
+      })
     }
-  })
+    
+    if (cls > seoAlerts.coreWebVitals.cls.critical) {
+      console.warn(`🚨 Critical CLS: ${cls} (threshold: ${seoAlerts.coreWebVitals.cls.critical})`)
+    }
+  }).observe({ type: 'layout-shift', buffered: true })
+
+  // INP - Interaction to Next Paint
+  new PerformanceObserver((list) => {
+    for (const entry of list.getEntries()) {
+      const eventEntry = entry as any
+      const inp = eventEntry.processingStart - eventEntry.startTime
+      
+      if ((window as any).gtag) {
+        (window as any).gtag('event', 'web_vitals', {
+          event_category: 'Core Web Vitals',
+          event_label: 'INP',
+          value: Math.round(inp),
+          custom_map: { metric_value: inp }
+        })
+      }
+    }
+  }).observe({ type: 'event', buffered: true })
 }
 
-// Track metrics to analytics
-function trackMetric(name: string, value: number) {
-  // Send to Google Analytics
-  if (typeof window !== 'undefined' && (window as any).gtag) {
-    (window as any).gtag('event', 'web_vitals', {
-      event_category: 'Web Vitals',
-      event_label: name,
-      value: Math.round(value),
-      non_interaction: true,
-    })
-  }
-
-  // Send to custom monitoring endpoint
-  fetch('/api/metrics', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      metric: name,
-      value,
-      url: window.location.href,
-      timestamp: new Date().toISOString(),
-    }),
-  }).catch(() => {
-    // Fail silently
-  })
-}
-
-// Check keyword rankings
-export async function checkKeywordRankings() {
-  const rankings: KeywordRanking[] = []
+// SEO Event Tracking
+export const seoEvents = {
+  // Search interactions
+  searchQuery: (query: string, results: number) => {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'search', {
+        search_term: query,
+        search_results: results,
+        event_category: 'SEO',
+        event_label: 'Internal Search'
+      })
+    }
+  },
   
-  for (const kw of monitoringKeywords) {
-    try {
-      // This would integrate with a rank tracking API
-      const ranking = await checkSingleKeyword(kw.keyword)
-      rankings.push(ranking)
-    } catch (error) {
-      console.error(`Failed to check ranking for ${kw.keyword}:`, error)
+  // Content engagement
+  contentEngagement: (page: string, timeOnPage: number, scrollDepth: number) => {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'content_engagement', {
+        page_path: page,
+        time_on_page: timeOnPage,
+        scroll_depth: scrollDepth,
+        event_category: 'SEO',
+        event_label: 'Content Quality'
+      })
+    }
+  },
+  
+  // Internal link clicks
+  internalLinkClick: (fromPage: string, toPage: string, linkText: string) => {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'internal_link_click', {
+        from_page: fromPage,
+        to_page: toPage,
+        link_text: linkText,
+        event_category: 'SEO',
+        event_label: 'Internal Linking'
+      })
+    }
+  },
+  
+  // External link clicks
+  externalLinkClick: (url: string, linkText: string) => {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'external_link_click', {
+        external_url: url,
+        link_text: linkText,
+        event_category: 'SEO',
+        event_label: 'External Links'
+      })
+    }
+  },
+  
+  // Schema.org validation
+  schemaValidation: (pageType: string, isValid: boolean, errors?: string[]) => {
+    if ((window as any).gtag) {
+      (window as any).gtag('event', 'schema_validation', {
+        page_type: pageType,
+        is_valid: isValid,
+        errors: errors?.join(', ') || 'none',
+        event_category: 'SEO',
+        event_label: 'Structured Data'
+      })
     }
   }
-  
-  return rankings
 }
 
-async function checkSingleKeyword(keyword: string): Promise<KeywordRanking> {
-  // Placeholder - integrate with actual rank tracking service
+// Generate SEO Dashboard Data
+export async function generateSEODashboard(): Promise<{
+  summary: {
+    score: number
+    status: 'excellent' | 'good' | 'needs_improvement' | 'poor'
+    lastUpdated: string
+  }
+  coreWebVitals: {
+    lcp: { value: number; status: 'good' | 'needs_improvement' | 'poor' }
+    cls: { value: number; status: 'good' | 'needs_improvement' | 'poor' }
+    inp: { value: number; status: 'good' | 'needs_improvement' | 'poor' }
+  }
+  technicalSEO: {
+    indexedPages: number
+    crawlErrors: number
+    sitemapStatus: string
+    robotsStatus: string
+  }
+  recommendations: Array<{
+    priority: 'high' | 'medium' | 'low'
+    category: string
+    issue: string
+    solution: string
+    impact: string
+  }>
+}> {
+  // This would integrate with actual APIs in production
+  // For now, returning mock data structure
+  
   return {
-    keyword,
-    position: Math.floor(Math.random() * 100) + 1,
-    previousPosition: Math.floor(Math.random() * 100) + 1,
-    change: 0,
-    url: 'https://ergoblockchain.org',
-    searchVolume: 1000,
-    difficulty: 50,
-    date: new Date().toISOString(),
+    summary: {
+      score: 85,
+      status: 'good',
+      lastUpdated: new Date().toISOString()
+    },
+    coreWebVitals: {
+      lcp: { value: 2100, status: 'good' },
+      cls: { value: 0.08, status: 'good' },
+      inp: { value: 150, status: 'good' }
+    },
+    technicalSEO: {
+      indexedPages: 1250,
+      crawlErrors: 3,
+      sitemapStatus: 'healthy',
+      robotsStatus: 'healthy'
+    },
+    recommendations: [
+      {
+        priority: 'high',
+        category: 'Structured Data',
+        issue: 'Missing FAQ schema on documentation pages',
+        solution: 'Add FAQ schema to all docs pages with Q&A sections',
+        impact: 'Rich snippets in search results, +15% CTR'
+      },
+      {
+        priority: 'medium',
+        category: 'International SEO',
+        issue: 'No hreflang implementation',
+        solution: 'Implement hreflang tags for multi-language support',
+        impact: 'Better international search visibility'
+      },
+      {
+        priority: 'low',
+        category: 'Content',
+        issue: 'Some pages have thin content',
+        solution: 'Expand content on pages with <300 words',
+        impact: 'Better search rankings for long-tail keywords'
+      }
+    ]
   }
 }
 
-// Generate SEO report
-export function generateSEOReport(metrics: SEOMetrics): string {
-  const report = `
-# SEO Performance Report - Ergo Platform
-Generated: ${new Date().toISOString()}
-
-## 📊 Keyword Rankings
-${metrics.rankings.map(r => `
-- **${r.keyword}**: Position ${r.position} (${r.change > 0 ? '↑' : r.change < 0 ? '↓' : '→'} ${Math.abs(r.change)})
-  - Search Volume: ${r.searchVolume}/mo
-  - Difficulty: ${r.difficulty}/100
-`).join('')}
-
-## ⚡ Core Web Vitals
-- LCP: ${metrics.coreWebVitals.lcp}ms ${getVitalStatus('lcp', metrics.coreWebVitals.lcp)}
-- FID: ${metrics.coreWebVitals.fid}ms ${getVitalStatus('fid', metrics.coreWebVitals.fid)}
-- CLS: ${metrics.coreWebVitals.cls} ${getVitalStatus('cls', metrics.coreWebVitals.cls)}
-- FCP: ${metrics.coreWebVitals.fcp}ms ${getVitalStatus('fcp', metrics.coreWebVitals.fcp)}
-- TTFB: ${metrics.coreWebVitals.ttfb}ms ${getVitalStatus('ttfb', metrics.coreWebVitals.ttfb)}
-
-## 🔍 Indexation Status
-- Indexed Pages: ${metrics.indexation.indexed}
-- Not Indexed: ${metrics.indexation.notIndexed}
-- Errors: ${metrics.indexation.errors}
-- Last Crawl: ${metrics.indexation.lastCrawl}
-
-## 🔗 Backlink Profile
-- Total Backlinks: ${metrics.backlinks.total}
-- Referring Domains: ${metrics.backlinks.referringDomains}
-- Domain Authority: ${metrics.backlinks.domainAuthority}/100
-- Trust Flow: ${metrics.backlinks.trustFlow}/100
-
-## 📈 Traffic Metrics
-- Total Traffic: ${metrics.traffic.total}
-- Organic: ${metrics.traffic.organic} (${(metrics.traffic.organic / metrics.traffic.total * 100).toFixed(1)}%)
-- Bounce Rate: ${metrics.traffic.bounceRate}%
-- Avg Session Duration: ${metrics.traffic.avgSessionDuration}s
-- Pages/Session: ${metrics.traffic.pagesPerSession}
-`
-
-  return report
+// SEO Health Check
+export function performSEOHealthCheck(url: string): Promise<{
+  score: number
+  issues: Array<{
+    type: 'error' | 'warning' | 'info'
+    category: string
+    message: string
+    fix: string
+  }>
+}> {
+  return new Promise((resolve) => {
+    const issues: Array<{
+      type: 'error' | 'warning' | 'info'
+      category: string
+      message: string
+      fix: string
+    }> = []
+    
+    // Check meta tags
+    const title = document.querySelector('title')?.textContent
+    const description = document.querySelector('meta[name="description"]')?.getAttribute('content')
+    
+    if (!title || title.length < 30) {
+      issues.push({
+        type: 'error',
+        category: 'Meta Tags',
+        message: 'Title tag missing or too short',
+        fix: 'Add descriptive title tag (30-60 characters)'
+      })
+    }
+    
+    if (!description || description.length < 120) {
+      issues.push({
+        type: 'error',
+        category: 'Meta Tags',
+        message: 'Meta description missing or too short',
+        fix: 'Add compelling meta description (120-160 characters)'
+      })
+    }
+    
+    // Check headings structure
+    const h1s = document.querySelectorAll('h1')
+    if (h1s.length === 0) {
+      issues.push({
+        type: 'error',
+        category: 'Content Structure',
+        message: 'No H1 tag found',
+        fix: 'Add exactly one H1 tag per page'
+      })
+    } else if (h1s.length > 1) {
+      issues.push({
+        type: 'warning',
+        category: 'Content Structure',
+        message: 'Multiple H1 tags found',
+        fix: 'Use only one H1 tag per page'
+      })
+    }
+    
+    // Check images alt text
+    const images = document.querySelectorAll('img')
+    let imagesWithoutAlt = 0
+    images.forEach(img => {
+      if (!img.getAttribute('alt')) {
+        imagesWithoutAlt++
+      }
+    })
+    
+    if (imagesWithoutAlt > 0) {
+      issues.push({
+        type: 'warning',
+        category: 'Accessibility',
+        message: `${imagesWithoutAlt} images missing alt text`,
+        fix: 'Add descriptive alt text to all images'
+      })
+    }
+    
+    // Check internal links
+    const internalLinks = document.querySelectorAll('a[href^="/"], a[href^="https://ergoblockchain.org"]')
+    if (internalLinks.length < 3) {
+      issues.push({
+        type: 'info',
+        category: 'Internal Linking',
+        message: 'Few internal links found',
+        fix: 'Add more contextual internal links (3-8 per page)'
+      })
+    }
+    
+    // Calculate score
+    const errorCount = issues.filter(i => i.type === 'error').length
+    const warningCount = issues.filter(i => i.type === 'warning').length
+    const score = Math.max(0, 100 - (errorCount * 15) - (warningCount * 5))
+    
+    resolve({ score, issues })
+  })
 }
 
-function getVitalStatus(metric: string, value: number): string {
-  const threshold = webVitalsThresholds[metric as keyof typeof webVitalsThresholds]
-  if (!threshold) return ''
+// Initialize SEO monitoring
+export function initSEOMonitoring() {
+  if (typeof window === 'undefined') return
   
-  if (value <= threshold.good) return '✅ Good'
-  if (value <= threshold.needsImprovement) return '⚠️ Needs Improvement'
-  return '❌ Poor'
-}
-
-// Export monitoring dashboard URL
-export const monitoringDashboards = {
-  googleSearchConsole: 'https://search.google.com/search-console',
-  googleAnalytics: 'https://analytics.google.com',
-  pagespeedInsights: 'https://pagespeed.web.dev',
-  ahrefs: 'https://ahrefs.com',
-  semrush: 'https://semrush.com',
-  moz: 'https://moz.com',
+  // Track Core Web Vitals
+  trackCoreWebVitals()
+  
+  // Track scroll depth
+  let maxScroll = 0
+  const trackScrollDepth = () => {
+    const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100)
+    if (scrollPercent > maxScroll) {
+      maxScroll = scrollPercent
+      
+      // Track milestone scrolls
+      if ([25, 50, 75, 90].includes(scrollPercent)) {
+        seoEvents.contentEngagement(window.location.pathname, Date.now(), scrollPercent)
+      }
+    }
+  }
+  
+  window.addEventListener('scroll', trackScrollDepth, { passive: true })
+  
+  // Track time on page
+  const startTime = Date.now()
+  window.addEventListener('beforeunload', () => {
+    const timeOnPage = Date.now() - startTime
+    seoEvents.contentEngagement(window.location.pathname, timeOnPage, maxScroll)
+  })
+  
+  // Track internal link clicks
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement
+    const link = target.closest('a')
+    
+    if (link && link.href) {
+      const url = new URL(link.href)
+      const currentDomain = window.location.hostname
+      
+      if (url.hostname === currentDomain) {
+        // Internal link
+        seoEvents.internalLinkClick(
+          window.location.pathname,
+          url.pathname,
+          link.textContent || 'Unknown'
+        )
+      } else {
+        // External link
+        seoEvents.externalLinkClick(link.href, link.textContent || 'Unknown')
+      }
+    }
+  })
 } 
