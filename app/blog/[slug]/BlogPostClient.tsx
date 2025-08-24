@@ -124,7 +124,7 @@ export function BlogPostClient({ post, relatedPosts }: BlogPostClientProps) {
     const startTime = Date.now()
     
     return () => {
-      const timeSpent = Math.floor((Date.now() - startTime) / 1000)
+      const _timeSpent = Math.floor((Date.now() - startTime) / 1000)
       // Time tracking removed for cleaner output
     }
   }, [])

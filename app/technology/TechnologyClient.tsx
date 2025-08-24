@@ -36,8 +36,7 @@ import {
   BarChart3,
   TrendingUp,
   Book,
-  ChevronDown,
-
+  ChevronDown
 } from "lucide-react"
 import Link from "next/link"
 // Removed glossary imports
