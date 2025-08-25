@@ -32,8 +32,8 @@ export default async function HomePage({ params }: HomePageProps) {
       <HeroSection />
       <Manifesto />
       <CorePillars />
-      <LazyEcosystemShowcase />
       <LazyAudiencePaths />
+      <LazyEcosystemShowcase />
       <LazyBlogSection />
       <LazySubscribeSection />
     </main>
