@@ -92,20 +92,20 @@ export function EcosystemShowcase() {
 
       {/* Digital rain effect removed - was causing issues */}
 
-      {/* Hexagonal grid pattern */}
+      {/* Flat-top hexagonal grid pattern */}
       <div className="absolute inset-0 opacity-20">
         <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <pattern id="hexagons" width="50" height="43.4" patternUnits="userSpaceOnUse" patternTransform="scale(2)">
+            <pattern id="flat-hexagons" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="scale(1.5)">
               <path
-                d="M25,0 L50,14.4 L50,43.4 L25,57.8 L0,43.4 L0,14.4 Z"
+                d="M30,0 L60,0 L60,26 L30,52 L0,52 L0,26 Z"
                 fill="none"
                 stroke="rgba(255, 136, 0, 0.5)"
                 strokeWidth="0.5"
               />
             </pattern>
           </defs>
-          <rect width="100%" height="100%" fill="url(#hexagons)" />
+          <rect width="100%" height="100%" fill="url(#flat-hexagons)" />
         </svg>
       </div>
 
