@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
-import { menuData } from "../app/docs/menuData"
+import { menuData } from "../app/[locale]/docs/menuData"
 import { usePathname, useRouter } from "next/navigation"
 import { LocalSearch } from "./search/LocalSearch"
 

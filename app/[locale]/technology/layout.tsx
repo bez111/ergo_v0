@@ -1,8 +1,4 @@
 import { Metadata } from "next"
-import { Header } from "@/components/header";
-import { Footer } from "@/components/footer";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ErrorBoundary } from "@/components/error-boundary";
 
 export const metadata: Metadata = {
   title: "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
@@ -21,22 +17,5 @@ export const metadata: Metadata = {
 }
 
 export default function TechnologyLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <ThemeProvider
-      attribute="class"
-      defaultTheme="system"
-      enableSystem
-      disableTransitionOnChange
-    >
-      <ErrorBoundary>
-        <div className="relative flex min-h-screen flex-col">
-          <Header />
-          <main className="flex-1">
-            {children}
-          </main>
-          <Footer />
-        </div>
-      </ErrorBoundary>
-    </ThemeProvider>
-  );
+  return children;
 } 
