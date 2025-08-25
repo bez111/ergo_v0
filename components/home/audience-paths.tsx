@@ -82,7 +82,7 @@ export function AudiencePaths() {
   ]
 
   return (
-    <section className="py-16 bg-neutral-950" id="get-started">
+    <section className="py-16 bg-neutral-950" id="choose-path">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           {/* Header */}

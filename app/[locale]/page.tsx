@@ -1,13 +1,12 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { HeroSection } from "@/components/home/hero-section"
-import { Manifesto } from "@/components/home/manifesto"
 import { WhyErgo } from "@/components/home/why-ergo"
+import { JoinMovement } from "@/components/home/join-movement"
 import { 
   LazyEcosystemShowcase, 
   LazyAudiencePaths, 
-  LazyBlogSection, 
-  LazySubscribeSection 
+  LazyBlogSection
 } from "@/components/home/lazy-sections"
 
 interface HomePageProps {
@@ -30,12 +29,11 @@ export default async function HomePage({ params }: HomePageProps) {
   return (
     <main className="flex flex-col bg-black text-white">
       <HeroSection />
-      <Manifesto />
       <WhyErgo />
       <LazyAudiencePaths />
       <LazyEcosystemShowcase />
       <LazyBlogSection />
-      <LazySubscribeSection />
+      <JoinMovement />
     </main>
   );
 } 

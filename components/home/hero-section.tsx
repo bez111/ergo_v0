@@ -106,27 +106,20 @@ export function HeroSection() {
           {/* Action buttons */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
             <Link 
-              href="/docs/developers" 
+              href="#why-ergo" 
               className="inline-flex items-center gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
             >
               <span>&gt;</span>
-              <span>Start Building</span>
+              <span>Explore Ergo</span>
               <span className="animate-pulse">_</span>
-                </Link>
+            </Link>
             
             <Link 
-              href="/wallet"
+              href="#choose-path"
               className="inline-flex items-center gap-2 bg-transparent border-2 border-orange-500 text-orange-500 hover:bg-orange-500/10 font-mono uppercase tracking-wider px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
             >
-              <span>Get a Wallet</span>
-                </Link>
-
-            <a 
-              href="#get-started"
-              className="inline-flex items-center gap-2 bg-transparent border-2 border-gray-600 text-gray-300 hover:bg-gray-600/10 hover:border-gray-500 hover:text-gray-200 font-mono uppercase tracking-wider px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
-            >
-              <span>Choose your path</span>
-            </a>
+              <span>Get Started</span>
+            </Link>
           </div>
 
           {/* Feature icons */}

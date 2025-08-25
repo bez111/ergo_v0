@@ -1,7 +1,6 @@
 "use client"
 
 import React from "react"
-import Link from "next/link"
 import { Shield, Zap, Database, Lock, Users, Cpu } from "lucide-react"
 
 export function WhyErgo() {
@@ -45,7 +44,7 @@ export function WhyErgo() {
   ]
 
   return (
-    <section className="py-32 relative overflow-hidden bg-black">
+    <section className="py-32 relative overflow-hidden bg-black" id="why-ergo">
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-950 to-black"></div>
       
@@ -126,27 +125,6 @@ export function WhyErgo() {
                   </div>
                 )
               })}
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="flex flex-col items-center gap-4 mt-8">
-            <p className="text-gray-400 text-lg">
-              Ready to explore the future of blockchain?
-            </p>
-            <div className="flex gap-4">
-              <Link 
-                href="/docs/developers"
-                className="px-8 py-3 bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-lg transition-colors duration-300 inline-block"
-              >
-                Start Building
-              </Link>
-              <Link 
-                href="/start/introduction"
-                className="px-8 py-3 border border-orange-500/50 hover:border-orange-400 text-orange-400 font-semibold rounded-lg transition-colors duration-300 inline-block"
-              >
-                Learn More
-              </Link>
             </div>
           </div>
         </div>
