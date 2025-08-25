@@ -45,10 +45,10 @@
     "message2": "The globally-neutral settlement layer for programmable money.",
     "message3": "The open-source home of digital freedom",
     "message4": "Join the movement for decentralized, open-source money",
-    "feature1": "Smart Contracts",
-    "feature2": "Proof of Work",
-    "feature3": "eUTXO Model", 
-    "feature4": "ErgoScript"
+    "feature1": "Secure",
+    "feature2": "Fast",
+    "feature3": "Programmable", 
+    "feature4": "Scalable"
   },
   "footer": {
     "description": "Ergo is a resilient blockchain platform for contractual money. Built on solid foundations with advanced cryptographic features.",

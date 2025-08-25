@@ -124,20 +124,21 @@ export function HeroSectionLocalized() {
           </Link>
         </div>
 
-        {/* Feature Pills */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
+        {/* Feature Icons */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
           {[
-            { icon: Zap, text: t('feature1') || 'Smart Contracts' },
-            { icon: Shield, text: t('feature2') || 'Proof of Work' },
-            { icon: Layers, text: t('feature3') || 'eUTXO Model' },
-            { icon: Code, text: t('feature4') || 'ErgoScript' }
-          ].map((feature, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full text-gray-300 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300"
-            >
-              <feature.icon className="w-4 h-4" />
-              <span className="text-sm font-mono">{feature.text}</span>
+            { icon: Shield, label: t('feature1') || 'Secure' },
+            { icon: Zap, label: t('feature2') || 'Fast' },
+            { icon: Code, label: t('feature3') || 'Programmable' },
+            { icon: Layers, label: t('feature4') || 'Scalable' }
+          ].map(({ icon: Icon, label }, index) => (
+            <div key={index} className="flex flex-col items-center group">
+              <div className="p-4 rounded-full bg-gray-800/50 border border-gray-700 group-hover:border-orange-400 transition-colors duration-300">
+                <Icon className="h-6 w-6 text-gray-400 group-hover:text-orange-400 transition-colors duration-300" />
+              </div>
+              <span className="mt-2 text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
+                {label}
+              </span>
             </div>
           ))}
         </div>
