@@ -88,8 +88,6 @@ export function EcosystemShowcase() {
     <section className="relative py-24 overflow-hidden" id="ecosystem">
       {/* Semi-transparent overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
-      {/* Cyberpunk background elements */}
-      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-20 bg-cover bg-center"></div>
       <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"></div>
 
       {/* Digital rain effect removed - was causing issues */}

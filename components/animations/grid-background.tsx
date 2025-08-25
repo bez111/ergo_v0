@@ -5,44 +5,44 @@ import React from 'react'
 export function GridBackground() {
   return (
     <div className="fixed inset-0 pointer-events-none" style={{ zIndex: 1 }}>
-      {/* Grid pattern */}
+      {/* Additional grid overlay for depth */}
       <div 
         className="absolute inset-0"
         style={{
           backgroundImage: `
-            linear-gradient(rgba(255, 136, 0, 0.05) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255, 136, 0, 0.05) 1px, transparent 1px)
+            linear-gradient(rgba(255, 136, 0, 0.03) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255, 136, 0, 0.03) 1px, transparent 1px)
           `,
-          backgroundSize: '50px 50px',
+          backgroundSize: '100px 100px',
           backgroundPosition: '0 0, 0 0'
         }}
       />
       
-      {/* Perspective grid effect */}
+      {/* Subtle vignette effect */}
       <div 
         className="absolute inset-0"
         style={{
           background: `
-            linear-gradient(180deg, 
+            radial-gradient(ellipse at center, 
               transparent 0%, 
-              rgba(0, 0, 0, 0.2) 50%, 
-              rgba(0, 0, 0, 0.8) 100%
+              rgba(0, 0, 0, 0.4) 100%
             )
-          `,
-          transform: 'perspective(1000px) rotateX(60deg)',
-          transformOrigin: 'center -100%',
-          opacity: 0.5
+          `
         }}
       />
       
-      {/* Glow effect in center */}
+      {/* Top and bottom gradients for depth */}
       <div 
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+        className="absolute inset-0"
         style={{
-          width: '100%',
-          height: '100%',
-          background: 'radial-gradient(circle at center, rgba(255, 136, 0, 0.1) 0%, transparent 70%)',
-          filter: 'blur(100px)'
+          background: `
+            linear-gradient(to bottom, 
+              rgba(0, 0, 0, 0.5) 0%, 
+              transparent 20%, 
+              transparent 80%, 
+              rgba(0, 0, 0, 0.7) 100%
+            )
+          `
         }}
       />
     </div>

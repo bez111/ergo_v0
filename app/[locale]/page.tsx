@@ -36,7 +36,10 @@ export default async function HomePage({ params }: HomePageProps) {
   
   return (
     <main className="flex flex-col bg-black text-white relative overflow-hidden">
-      {/* Grid Background */}
+      {/* Cyberpunk grid background that spans all sections */}
+      <div className="fixed inset-0 bg-[url('/cyberpunk-grid.png')] bg-cover bg-center opacity-20 z-0"></div>
+      
+      {/* Grid overlay */}
       <GridBackground />
       
       {/* Content with higher z-index */}
