@@ -82,8 +82,10 @@ export function AudiencePaths() {
   ]
 
   return (
-    <section className="py-16 md:py-24 bg-neutral-950" id="choose-path">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-16 md:py-24 relative" id="choose-path">
+      {/* Semi-transparent overlay */}
+      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div

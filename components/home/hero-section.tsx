@@ -71,9 +71,8 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-20 md:py-24 lg:py-32">
-      {/* Background layers */}
-      <div className="absolute inset-0 bg-neutral-950 z-0"></div>
-      <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] bg-cover bg-center opacity-10 z-0"></div>
+      {/* Semi-transparent overlay for depth */}
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40 z-0"></div>
 
       <div className="container relative z-20 px-4 md:px-6">
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">

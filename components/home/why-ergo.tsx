@@ -44,9 +44,9 @@ export function WhyErgo() {
   ]
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden bg-black" id="why-ergo">
-      {/* Subtle background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-950 to-black"></div>
+    <section className="py-16 md:py-24 relative overflow-hidden" id="why-ergo">
+      {/* Semi-transparent overlay for better text readability */}
+      <div className="absolute inset-0 bg-black/30"></div>
       
       <div className="container px-4 md:px-6 relative z-10">
         <div className="flex flex-col items-center gap-16">

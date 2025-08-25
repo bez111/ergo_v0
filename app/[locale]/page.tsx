@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { HeroSection } from "@/components/home/hero-section"
 import { WhyErgo } from "@/components/home/why-ergo"
-import { HexagonBackground } from "@/components/animations/hexagon-background"
+import { GridBackground } from "@/components/animations/grid-background"
 import { 
   LazyEcosystemShowcase, 
   LazyAudiencePaths, 
@@ -36,8 +36,8 @@ export default async function HomePage({ params }: HomePageProps) {
   
   return (
     <main className="flex flex-col bg-black text-white relative overflow-hidden">
-      {/* Animated Hexagon Background */}
-      <HexagonBackground />
+      {/* Grid Background */}
+      <GridBackground />
       
       {/* Content with higher z-index */}
       <div className="relative z-10">

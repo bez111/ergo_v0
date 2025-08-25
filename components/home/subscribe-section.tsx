@@ -30,7 +30,7 @@ export function SubscribeSection({ segments = [] }: SubscribeSectionProps) {
   ]
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden bg-black">
+    <section className="py-16 md:py-24 relative overflow-hidden">
       {/* Subtle geometric pattern */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,rgba(255,136,0,0.02)_49%,rgba(255,136,0,0.02)_51%,transparent_52%)] bg-[size:30px_30px]"></div>
