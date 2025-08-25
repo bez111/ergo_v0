@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { HeroSection } from "@/components/home/hero-section"
 import { WhyErgo } from "@/components/home/why-ergo"
+import { HexagonBackground } from "@/components/animations/hexagon-background"
 import { 
   LazyEcosystemShowcase, 
   LazyAudiencePaths, 
@@ -34,36 +35,42 @@ export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   
   return (
-    <main className="flex flex-col bg-black text-white">
-      {/* Hero: Full viewport */}
-      <HeroSection />
+    <main className="flex flex-col bg-black text-white relative overflow-hidden">
+      {/* Animated Hexagon Background */}
+      <HexagonBackground />
       
-      {/* Beat 1: After hero */}
-      <RhythmBeat />
-      
-      {/* Why Ergo: Major section */}
-      <WhyErgo />
-      
-      {/* Beat 2: Transition to action */}
-      <RhythmBeat />
-      
-      {/* Audience Paths: Interactive choice */}
-      <LazyAudiencePaths />
-      
-      {/* Beat 3: Before ecosystem */}
-      <RhythmBeat />
-      
-      {/* Ecosystem: Social proof */}
-      <LazyEcosystemShowcase />
-      
-      {/* Beat 4: Before blog */}
-      <RhythmBeat />
-      
-      {/* Blog: Fresh content */}
-      <LazyBlogSection />
-      
-      {/* Subscribe: Final CTA */}
-      <LazySubscribeSection />
+      {/* Content with higher z-index */}
+      <div className="relative z-10">
+        {/* Hero: Full viewport */}
+        <HeroSection />
+        
+        {/* Beat 1: After hero */}
+        <RhythmBeat />
+        
+        {/* Why Ergo: Major section */}
+        <WhyErgo />
+        
+        {/* Beat 2: Transition to action */}
+        <RhythmBeat />
+        
+        {/* Audience Paths: Interactive choice */}
+        <LazyAudiencePaths />
+        
+        {/* Beat 3: Before ecosystem */}
+        <RhythmBeat />
+        
+        {/* Ecosystem: Social proof */}
+        <LazyEcosystemShowcase />
+        
+        {/* Beat 4: Before blog */}
+        <RhythmBeat />
+        
+        {/* Blog: Fresh content */}
+        <LazyBlogSection />
+        
+        {/* Subscribe: Final CTA */}
+        <LazySubscribeSection />
+      </div>
     </main>
   );
 } 
