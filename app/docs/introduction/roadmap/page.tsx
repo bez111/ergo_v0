@@ -73,37 +73,37 @@ export default function RoadmapPage() {
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-gray-300"><strong className="text-white">eUTXO Model:</strong> Allows UTXOs to carry arbitrary data and complex scripts</span>
+              <div className="flex items-center text-green-400">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span><strong>eUTXO Model:</strong> Allows UTXOs to carry arbitrary data and complex scripts</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-gray-300"><strong className="text-white">Autolykos PoW Algorithm:</strong> ASIC-resistant and designed for fair mining</span>
+              <div className="flex items-center text-green-400">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span><strong>Autolykos PoW Algorithm:</strong> ASIC-resistant and designed for fair mining</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-gray-300"><strong className="text-white">Emission Schedule:</strong> Ensures stable and predictable supply of ERG tokens</span>
+              <div className="flex items-center text-green-400">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span><strong>Emission Schedule:</strong> Ensures stable and predictable supply of ERG tokens</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-gray-300"><strong className="text-white">NiPoPoWs:</strong> Enables efficient light clients and trustless sidechains</span>
+              <div className="flex items-center text-green-400">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span><strong>NiPoPoWs:</strong> Enables efficient light clients and trustless sidechains</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-gray-300"><strong className="text-white">ErgoScript:</strong> Supports clear smart contract development with Σ-protocols</span>
+              <div className="flex items-center text-green-400">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span><strong>ErgoScript:</strong> Supports clear smart contract development with Σ-protocols</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-gray-300"><strong className="text-white">Storage Rent:</strong> Mitigates blockchain bloat and ensures sustainability</span>
+              <div className="flex items-center text-green-400">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span><strong>Storage Rent:</strong> Mitigates blockchain bloat and ensures sustainability</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-gray-300"><strong className="text-white">Turing-Complete Smart Contracts:</strong> Allows complex on-chain computations</span>
+              <div className="flex items-center text-green-400">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span><strong>Turing-Complete Smart Contracts:</strong> Allows complex on-chain computations</span>
               </div>
-              <div className="flex items-center">
-                <CheckCircle className="w-5 h-5 mr-2 text-green-400" />
-                <span className="text-gray-300"><strong className="text-white">Long-Term Economic Sustainability:</strong> Through storage rent and transaction fees</span>
+              <div className="flex items-center text-green-400">
+                <CheckCircle className="w-5 h-5 mr-2" />
+                <span><strong>Long-Term Economic Sustainability:</strong> Through storage rent and transaction fees</span>
               </div>
             </div>
             
@@ -373,7 +373,7 @@ export default function RoadmapPage() {
           {/* Header */}
           <div className="text-center mb-8">
             <h2 className="text-2xl font-bold text-white mb-4 flex items-center justify-center gap-2">
-              <Coins className="w-6 h-6 text-orange-400" />
+              <Coins className="w-6 h-6 text-brand-primary-400" />
               DeFi Ecosystem
             </h2>
             <p className="text-gray-400 max-w-3xl mx-auto">
@@ -384,12 +384,12 @@ export default function RoadmapPage() {
           {/* Cards in rows of 2 */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {/* Decentralized Exchanges */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
-                    <ArrowRight className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <ArrowRight className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
                     Decentralized Exchanges
                   </h3>
                 </div>
@@ -418,12 +418,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Stablecoins */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
-                    <Shield className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <Shield className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
                     Stablecoins
                   </h3>
                 </div>
@@ -448,12 +448,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Lending and Borrowing */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
-                    <TrendingUp className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <TrendingUp className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
                     Lending & Borrowing
                   </h3>
                 </div>
@@ -478,12 +478,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Gaming and Metaverse */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
-                    <Trophy className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <Trophy className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
                     Gaming & Metaverse
                   </h3>
                 </div>
@@ -504,12 +504,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Derivatives */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
-                    <BarChart3 className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <BarChart3 className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
                     Derivatives
                   </h3>
                 </div>
@@ -534,12 +534,12 @@ export default function RoadmapPage() {
               </div>
 
               {/* Interoperability */}
-              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+              <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="w-10 h-10 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
-                    <Network className="w-5 h-5 text-orange-400 group-hover:scale-110 transition-transform duration-200" />
+                  <div className="w-10 h-10 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center">
+                    <Network className="w-5 h-5 text-brand-primary-400 group-hover:scale-110 transition-transform duration-200" />
                   </div>
-                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors duration-200">
+                  <h3 className="text-lg font-bold text-white group-hover:text-brand-primary-400 transition-colors duration-200">
                     Interoperability
                   </h3>
                 </div>
@@ -568,22 +568,22 @@ export default function RoadmapPage() {
               </div>
           </div>
           {/* Statistics */}
-          <div className="mt-8 bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
+          <div className="mt-8 bg-brand-primary-400/10 border border-brand-primary-400/20 rounded-xl p-6">
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
               <div>
-                <div className="text-2xl font-bold text-orange-400">25+</div>
+                <div className="text-2xl font-bold text-brand-primary-400">25+</div>
                 <div className="text-sm text-gray-400">Live Projects</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-orange-400">6</div>
+                <div className="text-2xl font-bold text-brand-primary-400">6</div>
                 <div className="text-sm text-gray-400">Categories</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-orange-400">15+</div>
+                <div className="text-2xl font-bold text-brand-primary-400">15+</div>
                 <div className="text-sm text-gray-400">In Development</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-orange-400">100%</div>
+                <div className="text-2xl font-bold text-brand-primary-400">100%</div>
                 <div className="text-sm text-gray-400">Decentralized</div>
               </div>
             </div>

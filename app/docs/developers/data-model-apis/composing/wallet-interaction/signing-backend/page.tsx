@@ -37,7 +37,8 @@ export default function SigningBackendPage() {
             In this use case, you may need to mint a token and send it to a user when their address is funded. To achieve this, it is recommended to define a wallet on your backend that can sign the transactions. The following code snippet demonstrates how this can be done:
           </p>
           
-          <CodeBlock language="typescript">{`import SignerWallet from '../src/services/WalletFromMnemonics';
+          <CodeBlock language="typescript"
+            children={`import SignerWallet from '../src/services/WalletFromMnemonics';
 
 // Example transaction
 const unsignedTx = {
@@ -51,14 +52,16 @@ const wallet = await new SignerWallet().fromMnemonics('add your 12-word seed phr
 
 const signedTx = wallet.sign(unsignedTx);
 
-// The signed transaction can now be submitted to the mempool.`}</CodeBlock>
+// The signed transaction can now be submitted to the mempool.`}
+          />
 
           <h3 className="text-xl font-semibold mb-3 mt-6 text-green-300">Off-Chain Bot</h3>
           <p className="text-gray-300 mb-4">
             In this use case, an off-chain bot is responsible for withdrawing funds from a contract. Similar to the previous use case, you will need a backend wallet to sign the transactions. The code snippet below illustrates how to achieve this:
           </p>
           
-          <CodeBlock language="typescript">{`import SignerWallet from '../src/services/WalletFromMnemonics';
+          <CodeBlock language="typescript"
+            children={`import SignerWallet from '../src/services/WalletFromMnemonics';
 
 // Example transaction
 const unsignedTx = {
@@ -72,7 +75,8 @@ const wallet = await new SignerWallet().fromMnemonics('add your 12-word seed phr
 
 const signedTx = wallet.sign(unsignedTx);
 
-// The signed transaction can now be submitted to the mempool.`}</CodeBlock>
+// The signed transaction can now be submitted to the mempool.`}
+          />
         </div>
 
         <div className="bg-teal-400/10 border border-teal-400/20 rounded-xl p-6">

@@ -147,9 +147,9 @@ export default function DeveloperResourcesHub() {
               const Icon = resource.icon
               return (
                 <Link key={resource.href} href={resource.href}>
-                  <Card className="h-full hover:border-orange-500/50 transition-all duration-300">
+                  <Card className="h-full hover:border-brand-primary-500/50 transition-all duration-300">
                     <CardHeader>
-                      <Icon className="w-8 h-8 text-orange-400 mb-4" />
+                      <Icon className="w-8 h-8 text-brand-primary-400 mb-4" />
                       <CardTitle>{resource.title}</CardTitle>
                       <CardDescription>{resource.description}</CardDescription>
                     </CardHeader>
@@ -157,12 +157,12 @@ export default function DeveloperResourcesHub() {
                       <ul className="space-y-2 text-sm text-neutral-400">
                         {resource.items.map((item, idx) => (
                           <li key={idx} className="flex items-start">
-                            <span className="text-orange-400 mr-2">•</span>
+                            <span className="text-brand-primary-400 mr-2">•</span>
                             {item}
                           </li>
                         ))}
                       </ul>
-                      <div className="mt-4 text-orange-400 text-sm font-medium flex items-center">
+                      <div className="mt-4 text-brand-primary-400 text-sm font-medium flex items-center">
                         Explore <ArrowRight className="ml-1 h-3 w-3" />
                       </div>
                     </CardContent>

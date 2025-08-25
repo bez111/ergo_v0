@@ -15,7 +15,7 @@ export default function HardForksPage() {
         network's participants do not upgrade, the blockchain splits into two separate chains, with the new chain following the updated protocol and
         the old chain following the previous one.
       </p>
-      <Link href="/docs/miners/governance/forking" className="inline-flex items-center gap-2 text-gray-400 hover:text-orange-400 mb-6">
+      <Link href="/docs/miners/governance/forking" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-primary-400 mb-6">
         <ArrowLeft className="w-4 h-4" />
         Back
       </Link>
@@ -52,7 +52,7 @@ export default function HardForksPage() {
                 href="https://github.com/ergoplatform/ergo/blob/master/src/it/scala/org/ergoplatform/it/ForkResolutionSpec.scala"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-400 hover:text-orange-300"
+                className="text-brand-primary-400 hover:text-brand-primary-300"
               >
                 ForkResolutionSpec
               </a>
@@ -62,7 +62,7 @@ export default function HardForksPage() {
                 href="https://github.com/ergoplatform/ergo"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-orange-400 hover:text-orange-300"
+                className="text-brand-primary-400 hover:text-brand-primary-300"
               >
                 Ergo GitHub repository
               </a>
@@ -140,7 +140,7 @@ export default function HardForksPage() {
           href="https://github.com/ergoplatform/ergo"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-orange-400 hover:text-orange-300"
+          className="text-brand-primary-400 hover:text-brand-primary-300"
         >
           Ergo GitHub repository
         </a>.

@@ -25,13 +25,20 @@ import {
   Calendar,
   Award,
   ExternalLink,
+  CheckCircle,
+  Brain,
   Lock,
   Coins,
   GitBranch,
   Eye,
+  Key,
   Smartphone,
+  ArrowRight,
   Star,
+  Layers,
   FileQuestion,
+  Briefcase,
+  TreePine,
   GraduationCap
 } from "lucide-react"
 import Link from "next/link"

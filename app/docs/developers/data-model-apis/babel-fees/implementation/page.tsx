@@ -77,7 +77,8 @@ export default function BabelFeesImplementationPage() {
           <div>
             <h3 className="text-xl font-semibold mb-3 text-purple-300">3. Server Setup</h3>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="typescript">`# Update system
+              <CodeBlock language="typescript"
+                children={`# Update system
 sudo apt-get update
 sudo apt-get upgrade
 
@@ -99,7 +100,8 @@ cd fleetsdk/
 # Install dependencies
 npm install @fleet-sdk/core
 npm install --save-dev webpack webpack-cli ts-loader html-webpack-plugin typescript
-npm install @fleet-sdk/babel-fees-plugin`</CodeBlock>
+npm install @fleet-sdk/babel-fees-plugin`}
+              />
             </div>
           </div>
 
@@ -108,7 +110,8 @@ npm install @fleet-sdk/babel-fees-plugin`</CodeBlock>
             <h3 className="text-xl font-semibold mb-3 text-purple-300">4. Configuration Files</h3>
             <p className="text-gray-300 mb-4">Create webpack configuration (<code className="bg-neutral-700 px-1 py-0.5 rounded">webpack.config.js</code>):</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="javascript">{`const path = require('path');
+              <CodeBlock language="typescript"
+                children={`const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
@@ -136,11 +139,13 @@ module.exports = {
             template: 'index.html'
         })
     ]
-};`}</CodeBlock>
+};`}
+              />
             </div>
             <p className="text-gray-300 mt-4 mb-4">Create TypeScript configuration (<code className="bg-neutral-700 px-1 py-0.5 rounded">tsconfig.json</code>):</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="json">{`{
+              <CodeBlock language="typescript"
+                children={`{
     "compilerOptions": {
         "outDir": "./dist/",
         "sourceMap": true,
@@ -153,7 +158,8 @@ module.exports = {
     "include": [
         "./src/**/*"
     ]
-}`}</CodeBlock>
+}`}
+              />
             </div>
           </div>
 
@@ -256,7 +262,8 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 className="text-xl font-semibold mb-3 text-purple-300">6. Create HTML Interface</h3>
             <p className="text-gray-300 mb-4">Create <code className="bg-neutral-700 px-1 py-0.5 rounded">babelfees.html</code>:</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="html">{`<html lang="en">
+              <CodeBlock language="typescript"
+                children={`<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -270,7 +277,8 @@ document.addEventListener('DOMContentLoaded', () => {
         </div>
     </div>
 </body>
-</html>`}</CodeBlock>
+</html>`}
+              />
             </div>
           </div>
 
@@ -279,8 +287,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <h3 className="text-xl font-semibold mb-3 text-purple-300">7. Build and Deploy</h3>
             <p className="text-gray-300 mb-4">Compile the TypeScript code:</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="bash">{`cd /var/www/html/fleetsdk
-npx webpack`}</CodeBlock>
+              <CodeBlock language="typescript"
+                children={`cd /var/www/html/fleetsdk
+npx webpack`}
+              />
             </div>
           </div>
         </div>
@@ -333,7 +343,9 @@ npx webpack`}</CodeBlock>
             <h3 className="text-lg font-semibold mb-2 text-cyan-300">Box Discovery and Identification</h3>
             <p className="text-gray-300 mb-4">The hexadecimal representation of the Babel Fees contract is:</p>
             <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-              <CodeBlock language="typescript">`100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`</CodeBlock>
+              <CodeBlock language="typescript"
+                children={`100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`}
+              />
             </div>
             <p className="text-gray-300 mt-4">
               Replace <code className="bg-neutral-700 px-1 py-0.5 rounded">{`{tokenId}`}</code> with the specific token ID and use this as a parameter in the API endpoint: <code className="bg-neutral-700 px-1 py-0.5 rounded">https://api.ergoplatform.com/api/v1/boxes/unspent/byErgoTree/&#123;ErgoTree&#125;</code>

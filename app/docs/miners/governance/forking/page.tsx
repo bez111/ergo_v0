@@ -12,7 +12,7 @@ export default function ForkingPage() {
         Ergo's view is that disruptive hard forks should be avoided unless absolutely critical. Ergo implements various measures to
         prevent hard forks, such as pushing complexity to the application layer and enabling many things to be implemented via soft-forks.
       </p>
-      <Link href="/docs/miners/governance" className="inline-flex items-center gap-2 text-gray-400 hover:text-orange-400 mb-6">
+      <Link href="/docs/miners/governance" className="inline-flex items-center gap-2 text-gray-400 hover:text-brand-primary-400 mb-6">
         <ArrowLeft className="w-4 h-4" />
         Back
       </Link>
@@ -24,48 +24,48 @@ export default function ForkingPage() {
       {/* Fork type cards placed after Overview */}
       <div className="grid grid-cols-1 gap-6 mb-8">
         {/* Velvet Forks */}
-        <Link href="/docs/miners/governance/forking/velvet-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+        <Link href="/docs/miners/governance/forking/velvet-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
-              <GitBranch className="w-6 h-6 text-orange-400" />
+            <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+              <GitBranch className="w-6 h-6 text-brand-primary-400" />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-orange-400 transition-colors">Velvet Forks</h3>
+              <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-brand-primary-400 transition-colors">Velvet Forks</h3>
               <p className="text-sm text-gray-500 mb-1">Minority‑upgrade fork enabling gradual deployment via NiPoPoW interlinks; stays compatible with non‑upgraded nodes.</p>
               <div className="mt-2 text-right">
-                <span className="inline-flex items-center gap-1 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
+                <span className="inline-flex items-center gap-1 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
               </div>
             </div>
           </div>
         </Link>
 
         {/* Soft Forks */}
-        <Link href="/docs/miners/governance/forking/soft-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+        <Link href="/docs/miners/governance/forking/soft-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
-              <GitBranch className="w-6 h-6 text-orange-400" />
+            <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+              <GitBranch className="w-6 h-6 text-brand-primary-400" />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-orange-400 transition-colors">Soft Forks</h3>
+              <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-brand-primary-400 transition-colors">Soft Forks</h3>
               <p className="text-sm text-gray-500 mb-1">Requires a subset of nodes; miner‑enforced via protocol rules (e.g., EIP‑37 re‑emission) and activatable with 90% miner support.</p>
               <div className="mt-2 text-right">
-                <span className="inline-flex items-center gap-1 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
+                <span className="inline-flex items-center gap-1 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
               </div>
             </div>
           </div>
         </Link>
 
         {/* Hard Forks */}
-        <Link href="/docs/miners/governance/forking/hard-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300 group cursor-pointer">
+        <Link href="/docs/miners/governance/forking/hard-forks" className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-brand-primary-500/30 transition-all duration-300 group cursor-pointer">
           <div className="flex items-start gap-4">
-            <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
-              <GitBranch className="w-6 h-6 text-orange-400" />
+            <div className="w-12 h-12 bg-brand-primary-500/20 border border-brand-primary-500/30 rounded-xl flex items-center justify-center flex-shrink-0">
+              <GitBranch className="w-6 h-6 text-brand-primary-400" />
             </div>
             <div className="flex-1">
-              <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-orange-400 transition-colors">Hard Forks</h3>
+              <h3 className="text-lg font-semibold text-white mb-1 group-hover:text-brand-primary-400 transition-colors">Hard Forks</h3>
               <p className="text-sm text-gray-500 mb-1">Requires all nodes to upgrade; used only when backward‑compatible approaches are insufficient.</p>
               <div className="mt-2 text-right">
-                <span className="inline-flex items-center gap-1 text-orange-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
+                <span className="inline-flex items-center gap-1 text-brand-primary-400 opacity-0 group-hover:opacity-100 transition-opacity text-sm">Learn more <ArrowRight className="w-4 h-4" /></span>
               </div>
             </div>
           </div>
@@ -76,7 +76,7 @@ export default function ForkingPage() {
       <p className="text-gray-300 mb-8">
         For more information, refer to the
         {" "}
-        <a href="https://github.com/ergoplatform/eips" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">
+        <a href="https://github.com/ergoplatform/eips" target="_blank" rel="noopener noreferrer" className="text-brand-primary-400 hover:text-brand-primary-300">
           Ergo Improvement Proposals (EIPs)
         </a>.
       </p>

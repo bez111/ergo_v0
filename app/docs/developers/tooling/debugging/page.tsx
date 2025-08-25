@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { ArrowLeft, Search, Code, Link2, Wrench } from "lucide-react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -241,7 +241,8 @@ export default function DebuggingPage() {
               </p>
             </div>
 
-            <CodeBlock language="scala">{`// Snippet from AssetsAtomicExchange - Breakpoint can be set inside this block
+            <CodeBlock language="typescript"
+              children={`// Snippet from AssetsAtomicExchange - Breakpoint can be set inside this block
 lazy val buyerProp = proposition("buyer", { ctx: Context =>
   import ctx._
   (HEIGHT > deadline && pkA) || { // Breakpoint here
@@ -256,7 +257,8 @@ lazy val buyerProp = proposition("buyer", { ctx: Context =>
     ))
   }
 },
-// ...`}</CodeBlock>
+// ...`}
+            />
 
             <h3 className="text-xl font-bold text-orange-400 mb-4">Debugging Process Example</h3>
 
@@ -274,11 +276,13 @@ lazy val buyerProp = proposition("buyer", { ctx: Context =>
                     <code className="bg-gray-800 px-2 py-1 rounded text-cyan-400">AssetsAtomicExchangeTests.scala</code>
                   </a>, such as <code className="bg-gray-800 px-2 py-1 rounded text-cyan-400">property("atomic exchange spec")</code>.
                   
-                  <CodeBlock language="typescript">`// Test method for atomic exchange in AssetsAtomicExchangeTests.scala
+                  <CodeBlock language="typescript"
+                    children={`// Test method for atomic exchange in AssetsAtomicExchangeTests.scala
 property("atomic exchange spec") {
   // Test implementation details...
   // This code sets up the context and attempts the transaction
-}`</CodeBlock>
+}`}
+                  />
                 </li>
                 <li>
                   <strong>Run Test in Debug Mode:</strong> Right-click the specific test method (or the whole test class) in your IDE and select "Debug".

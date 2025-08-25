@@ -1,12 +1,12 @@
 import React from "react";
-import { BookOpen, FileText, Video, Star, Quote, Users } from "lucide-react";
+import { BookOpen, FileText, Video, Star, ExternalLink, Quote, Users } from "lucide-react";
 import Link from "next/link";
 
 const overviews = [
-  { title: "Whitepaper I: Ergo: The Resilient Platform For Contractual Money", url: "https://storage.googleapis.com/ergo-cms-media/docs/whitepaper.pdf" },
-  { title: "Whitepaper II: ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs", url: "https://storage.googleapis.com/ergo-cms-media/docs/ErgoScript.pdf" },
-  { title: "Teaser: The Ergo Platform Project Overview", url: "https://storage.googleapis.com/ergo-cms-media/docs/teaser.pdf" },
-  { title: "Whitepaper III: Advanced ErgoScript Tutorial", url: "https://storage.googleapis.com/ergo-cms-media/docs/AdvancedErgoScriptTutorial.pdf" },
+  { title: "Whitepaper I: Ergo: The Resilient Platform For Contractual Money", url: "https://ergoplatform.org/docs/whitepaper.pdf" },
+  { title: "Whitepaper II: ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs", url: "https://ergoplatform.org/docs/ErgoScript.pdf" },
+  { title: "Teaser: The Ergo Platform Project Overview", url: "https://ergoplatform.org/docs/teaser.pdf" },
+  { title: "Whitepaper III: Advanced ErgoScript Tutorial", url: "https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf" },
 ];
 const foundational = [
   { title: "On Contractual Money", url: "https://pdfs.semanticscholar.org/d51b/51fd136b1b74ece7caa6a7cb9c8f74b1b829.pdf" },
@@ -23,8 +23,8 @@ const foundational = [
 const postMainnet = [
   { title: "Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts", url: "https://eprint.iacr.org/2020/044.pdf" },
   { title: "Ergo Hackathon: Crowdfunded Smart Contract Pools Research and Conceptualization", url: "https://eprint.iacr.org/2021/846" },
-  { title: "Succinct, Non-Interactive Share Proofs (See Lithos Protocol)", url: "/docs/miners/Miner-Tooling/lithos" },
-  { title: "Dexy (See Dexy)", url: "/docs/ecosystem/financial/monetary-systems/dexygold" },
+  { title: "Succinct, Non-Interactive Share Proofs (See Lithos Protocol)", url: "/docs/introduction/lithos" },
+  { title: "Dexy (See Dexy)", url: "/docs/introduction/dexy" },
   { title: "Sigmajoin", url: "https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf" },
   { title: "ChainCash", url: "https://github.com/kushti/chaincash/blob/master/paper/chaincash.pdf" },
   { title: "KYA - A Treatise On Assumptions in Cryptocurrencies and Defi", url: "https://github.com/kushti/kya/blob/master/kya.pdf" },
@@ -49,7 +49,7 @@ const meetups = [
   { title: "Ergo Platform Presentation, Sanya, Hainan - January 2019. 2019年区块链技术大会 / 2019 International Blockchain Technology Conference (IBTC2019).", url: "https://www.youtube.com/watch?v=Ae8VDOo1YfM" },
 ];
 
-function ResourceCards({ items }: { items: { title: string; url: string }[] }) {
+function ResourceCards({ items, icon }: { items: { title: string; url: string }[]; icon: React.ReactNode }) {
   return (
     <div className="grid md:grid-cols-2 gap-4 mb-6">
       {items.map((item) => (
@@ -59,7 +59,9 @@ function ResourceCards({ items }: { items: { title: string; url: string }[] }) {
             href={item.url}
             className="flex items-center gap-3 bg-neutral-900/60 border border-neutral-700 rounded-xl p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
           >
+            {icon}
             <span className="font-semibold text-orange-300 hover:underline text-base">{item.title}</span>
+            <ExternalLink className="w-4 h-4 ml-auto text-gray-400" />
           </Link>
         ) : (
           <a
@@ -69,7 +71,9 @@ function ResourceCards({ items }: { items: { title: string; url: string }[] }) {
             rel="noopener noreferrer"
             className="flex items-center gap-3 bg-neutral-900/60 border border-neutral-700 rounded-xl p-4 hover:bg-orange-500/10 transition-all hover:scale-105"
           >
+            {icon}
             <span className="font-semibold text-orange-300 hover:underline text-base">{item.title}</span>
+            <ExternalLink className="w-4 h-4 ml-auto text-gray-400" />
           </a>
         )
       ))}
@@ -82,8 +86,8 @@ export default function ResearchWhitepapersPage() {
     <div className="px-4 w-full">
       {/* Hero Section */}
       <div className="mb-12">
-        <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1">
-          Research & White Papers
+        <h1 className="text-4xl font-bold bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent mb-4 leading-tight pb-1 flex items-center gap-3">
+          <BookOpen className="w-5 h-5 text-orange-400" /> Research & White Papers
         </h1>
         <p className="text-xl text-gray-400 mb-6">
           Ergo's approach is grounded in peer-reviewed research and robust, well-tested solutions. Most innovations are formalized in papers and widely discussed in the community.
@@ -103,35 +107,35 @@ export default function ResearchWhitepapersPage() {
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <FileText className="w-5 h-5 text-orange-400" /> Overviews
         </h2>
-        <ResourceCards items={overviews} />
+        <ResourceCards items={overviews} icon={<FileText className="w-5 h-5 text-orange-400" />} />
       </div>
       {/* Foundational Papers Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <FileText className="w-5 h-5 text-orange-400" /> Foundational Papers
+          <Star className="w-5 h-5 text-blue-400" /> Foundational Papers
         </h2>
-        <ResourceCards items={foundational} />
+        <ResourceCards items={foundational} icon={<Star className="w-5 h-5 text-blue-400" />} />
       </div>
       {/* Post-Mainnet Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <FileText className="w-5 h-5 text-orange-400" /> Post-Mainnet
+          <FileText className="w-5 h-5 text-cyan-400" /> Post-Mainnet
         </h2>
-        <ResourceCards items={postMainnet} />
+        <ResourceCards items={postMainnet} icon={<FileText className="w-5 h-5 text-cyan-400" />} />
       </div>
       {/* Video Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
           <Video className="w-5 h-5 text-orange-400" /> Notable Youtube Appearances
         </h2>
-        <ResourceCards items={videos} />
+        <ResourceCards items={videos} icon={<Video className="w-5 h-5 text-orange-400" />} />
       </div>
       {/* Meetups Section */}
       <div className="mb-10">
         <h2 className="text-2xl font-bold mb-4 flex items-center gap-2">
-          <Users className="w-5 h-5 text-orange-400" /> Meetups and Presentations
+          <Users className="w-5 h-5 text-blue-400" /> Meetups and Presentations
         </h2>
-        <ResourceCards items={meetups} />
+        <ResourceCards items={meetups} icon={<Users className="w-5 h-5 text-blue-400" />} />
       </div>
     </div>
   );

@@ -60,7 +60,8 @@ export default function RingSignaturesPage() {
 
         <h3 className="text-2xl font-bold mb-4 text-white">Example Scenario</h3>
         <div className="mb-8">
-          <CodeBlock language="typescript">`// Simplified conceptual representation
+          <CodeBlock language="typescript"
+            children={`// Simplified conceptual representation
 val ringSignature = prove {
   atLeastOneOf(
     List(
@@ -69,7 +70,8 @@ val ringSignature = prove {
       proveDlog(pubKey3)
     )
   )
-}`</CodeBlock>
+}`}
+          />
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-white">Related Cryptographic Concepts</h2>

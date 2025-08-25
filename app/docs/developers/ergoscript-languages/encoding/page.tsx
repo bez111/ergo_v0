@@ -48,7 +48,8 @@ export default function ErgoTreeEncodingPage() {
         <p className="text-gray-300 mb-6">
           During the encoding procedure, the method first verifies if the value can be represented using a single byte by applying a bitwise AND operation with <code className="bg-gray-700 px-1 py-0.5 rounded text-cyan-300">~0x7FL</code> (bitwise NOT 0x7F) and checking if the result equals zero. If so, the value is cast to a byte and stored in the buffer array. If not, the value undergoes a bitwise AND operation with <code className="bg-gray-700 px-1 py-0.5 rounded text-cyan-300">0x7F</code>, is then cast to a byte, and finally bitwise ORed with <code className="bg-gray-700 px-1 py-0.5 rounded text-cyan-300">0x80</code>. The resulting byte is stored in the buffer array, and the value is right-shifted by 7 bits (unsigned shift). This procedure repeats until the entire value is encoded.
         </p>
-        <CodeBlock language="java">{`// Defining a public method putULong that accepts a single long value as input
+        <CodeBlock language="typescript" 
+          children={`// Defining a public method putULong that accepts a single long value as input
 public final void putULong(long value) {
     // An infinite loop will continue until a return statement is executed
     while (true) {
@@ -68,7 +69,8 @@ public final void putULong(long value) {
             value >>>= 7;
         }
     }
-}`}</CodeBlock>
+}`}
+        />
       </div>
 
       {/* ZigZag Encoding */}
@@ -82,12 +84,14 @@ public final void putULong(long value) {
         <p className="text-gray-300 mb-6">
           Parameter <span className="font-bold text-white">n</span> is a signed 64-bit integer. The following Java method demonstrates ZigZag encoding. Note that while the result represents an unsigned value conceptually, Java returns it as a standard signed <code className="bg-gray-700 px-1 py-0.5 rounded text-cyan-300">long</code>.
         </p>
-        <CodeBlock language="java">{`public static long encodeZigZag64(final long n) {
+        <CodeBlock language="typescript" 
+          children={`public static long encodeZigZag64(final long n) {
     // This code shifts the long integer 'n' one bit to the left and performs a bitwise XOR operation 
     // with 'n' shifted arithmetically 63 bits to the right. This arithmetic shift ensures the sign bit 
     // is extended to the leftmost position.
     return (n << 1) ^ (n >> 63);
-}`}</CodeBlock>
+}`}
+        />
       </div>
     </div>
   );

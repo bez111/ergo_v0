@@ -8,7 +8,7 @@ export default function VotingPage() {
       <p className="text-lg text-gray-300 mb-6">
         Votes on foundational changes, such as block version, span <strong>32 epochs</strong> and demand a <strong>90% miner consensus</strong>. Everyday changes, like block size adjustments, require only a simple majority. Each block allows miners to cast votes for up to two everyday changes and one foundational change. These votes are included in the block's header.
       </p>
-      <Link href="/docs/miners/governance" className="inline-flex items-center px-4 py-2 border border-neutral-700 rounded-lg text-white hover:border-orange-500/30 hover:text-orange-400 transition-colors mb-4">
+      <Link href="/docs/miners/governance" className="inline-flex items-center px-4 py-2 border border-neutral-700 rounded-lg text-white hover:border-brand-primary-500/30 hover:text-brand-primary-400 transition-colors mb-4">
         <span className="mr-2">←</span> Back
       </Link>
 
@@ -63,7 +63,7 @@ export default function VotingPage() {
       </p>
       <p className="text-gray-300 mb-4">
         Try out these parameters on{' '}
-        <a href="https://deadit.github.io/paizo/" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300">
+        <a href="https://deadit.github.io/paizo/" target="_blank" rel="noopener noreferrer" className="text-brand-primary-400 hover:text-brand-primary-300">
           deadit.github.io/paizo/
         </a>
       </p>
