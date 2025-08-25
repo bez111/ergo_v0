@@ -53,7 +53,7 @@ export function WhyErgo() {
           {/* Header */}
           <div className="text-center space-y-6 max-w-4xl">
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
-              <span className="text-white">WHY</span> <span className="text-orange-400">ERGO?</span>
+              <span className="text-white">WHY</span> <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">ERGO?</span>
             </h2>
             <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-[65ch] mx-auto">
               A resilient blockchain platform combining proven principles with cutting-edge innovation
@@ -76,7 +76,7 @@ export function WhyErgo() {
                   <div className="relative z-10">
                     {/* Icon */}
                     <div className="mb-6">
-                      <div className="inline-flex bg-gradient-to-br from-orange-500/20 to-amber-900/20 p-4 rounded-xl border border-orange-500/20 group-hover:border-orange-400/40 transition-colors duration-300">
+                      <div className="inline-flex bg-gradient-to-br from-orange-500/20 to-orange-900/20 p-4 rounded-xl border border-orange-500/20 group-hover:border-orange-400/40 transition-colors duration-300">
                         <Icon className="h-8 w-8 text-orange-400" />
                       </div>
                     </div>
@@ -111,7 +111,7 @@ export function WhyErgo() {
                     key={index}
                     className="group flex items-start gap-4 p-6 bg-gradient-to-b from-neutral-900/60 to-neutral-900/40 border border-neutral-800/30 rounded-xl hover:from-neutral-900/80 hover:to-neutral-900/60 hover:border-orange-400/30 transition-all duration-300"
                   >
-                    <div className="bg-gradient-to-br from-amber-900/30 to-amber-900/10 p-3 rounded-lg border border-amber-800/20 group-hover:border-amber-700/30 transition-colors duration-300 flex-shrink-0">
+                                            <div className="bg-gradient-to-br from-orange-900/30 to-orange-900/10 p-3 rounded-lg border border-orange-800/20 group-hover:border-orange-700/30 transition-colors duration-300 flex-shrink-0">
                       <Icon className="h-5 w-5 text-orange-400/90" />
                     </div>
                     <div>

@@ -71,9 +71,9 @@ export function SubscribeForm({ segments = [] }: SubscribeFormProps) {
   // Show subscribed status for already subscribed users
   if (isSubscribed) {
     return (
-      <div className="flex items-center justify-center gap-2 p-4 bg-green-900/20 border border-green-500/30 rounded-lg">
-        <CheckCircle className="w-5 h-5 text-green-400" />
-        <span className="text-green-400 font-medium">You're already subscribed! 🎉</span>
+      <div className="flex items-center justify-center gap-2 p-4 bg-orange-900/20 border border-orange-500/30 rounded-lg">
+        <CheckCircle className="w-5 h-5 text-orange-400" />
+        <span className="text-orange-400 font-medium">You're already subscribed! 🎉</span>
       </div>
     )
   }
@@ -150,8 +150,8 @@ export function SubscribeForm({ segments = [] }: SubscribeFormProps) {
             id="newsletter-message"
             className={`p-3 rounded-lg text-sm ${
               messageType === "success"
-                ? "bg-green-900/20 border border-green-500/30 text-green-400"
-                : "bg-red-900/20 border border-red-500/30 text-red-400"
+                ? "bg-orange-900/20 border border-orange-500/30 text-orange-400"
+                : "bg-orange-900/20 border border-orange-500/30 text-orange-400/70"
             }`}
             role={messageType === "error" ? "alert" : "status"}
             aria-live="polite"

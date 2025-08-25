@@ -87,7 +87,7 @@ export function HeroSectionLocalized() {
               {isClient && (
                 <>
                   {typedText}
-                  <span className={`inline-block w-0.5 h-8 bg-blue-400 ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'}`} />
+                  <span className={`inline-block w-0.5 h-8 bg-orange-400 ml-1 ${showCursor ? 'opacity-100' : 'opacity-0'}`} />
                 </>
               )}
             </p>
@@ -111,7 +111,7 @@ export function HeroSectionLocalized() {
           
           <Link
             href={`/${locale === 'en' ? '' : locale + '/'}ecosystem`}
-            className="group px-8 py-4 border-2 border-gray-600 text-white font-semibold rounded-lg hover:border-blue-400 hover:text-blue-400 transition-all duration-300 transform hover:scale-105"
+            className="group px-8 py-4 border-2 border-gray-600 text-white font-semibold rounded-lg hover:border-orange-400 hover:text-orange-400 transition-all duration-300 transform hover:scale-105"
           >
             {t('learnMore')}
           </Link>
@@ -126,8 +126,8 @@ export function HeroSectionLocalized() {
             { icon: Layers, label: t('feature4') || 'Scalable' }
           ].map(({ icon: Icon, label }, index) => (
             <div key={index} className="flex flex-col items-center group">
-              <div className="p-4 rounded-full bg-gray-800/50 border border-gray-700 group-hover:border-blue-400 transition-colors duration-300">
-                <Icon className="h-6 w-6 text-gray-400 group-hover:text-blue-400 transition-colors duration-300" />
+              <div className="p-4 rounded-full bg-gray-800/50 border border-gray-700 group-hover:border-orange-400 transition-colors duration-300">
+                <Icon className="h-6 w-6 text-gray-400 group-hover:text-orange-400 transition-colors duration-300" />
               </div>
               <span className="mt-2 text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
                 {label}
@@ -138,9 +138,9 @@ export function HeroSectionLocalized() {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute top-20 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse opacity-60" />
-      <div className="absolute top-40 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse opacity-40" />
-      <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-green-400 rounded-full animate-pulse opacity-50" />
+              <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse opacity-60" />
+        <div className="absolute top-40 right-20 w-1 h-1 bg-orange-400 rounded-full animate-pulse opacity-40" />
+        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse opacity-50" />
     </section>
   )
 } 

@@ -95,7 +95,7 @@ export function AudiencePaths() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-              <span className="text-orange-400">GET STARTED</span> WITH ERGO
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">GET STARTED</span> WITH ERGO
             </h2>
             <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
               Choose your path to explore the Ergo ecosystem.

@@ -21,7 +21,7 @@ export function BlogSection() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              <span className="text-orange-400">LATEST</span> FROM THE ERGO BLOG
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">LATEST</span> FROM THE ERGO BLOG
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Stay updated with the latest news, technical insights, and community updates from the Ergo ecosystem

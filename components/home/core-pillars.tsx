@@ -48,7 +48,7 @@ export function CorePillars() {
             </h2>
             <div className="w-20 h-1 bg-orange-400 mx-auto"></div>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              <span className="text-orange-400">&gt;</span> Ergo combines proven principles with cutting-edge cryptography
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">&gt;</span> Ergo combines proven principles with cutting-edge cryptography
             </p>
           </div>
 
@@ -63,7 +63,7 @@ export function CorePillars() {
                 >
                   {/* Icon */}
                   <div className="flex justify-center mb-6">
-                    <div className="bg-gradient-to-br from-amber-900/40 to-amber-900/20 p-4 rounded-xl border border-amber-800/30 group-hover:border-amber-700/40 transition-colors duration-300">
+                    <div className="bg-gradient-to-br from-orange-900/40 to-orange-900/20 p-4 rounded-xl border border-orange-800/30 group-hover:border-orange-700/40 transition-colors duration-300">
                       <Icon className="h-7 w-7 text-orange-400" />
                     </div>
                   </div>

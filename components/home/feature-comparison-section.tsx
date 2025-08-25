@@ -103,9 +103,9 @@ export function FeatureComparisonSection() {
 
   const CheckIcon = ({ hasFeature }: { hasFeature: boolean }) => (
     hasFeature ? (
-      <Check className="h-5 w-5 text-green-400" />
+      <Check className="h-5 w-5 text-orange-400" />
     ) : (
-      <X className="h-5 w-5 text-red-400" />
+      <X className="h-5 w-5 text-orange-400/50" />
     )
   )
 
@@ -116,7 +116,7 @@ export function FeatureComparisonSection() {
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                <span className="text-orange-400">Ergo</span> vs The Competition
+                <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">Ergo</span> vs The Competition
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
                 See how Ergo combines the best features from Bitcoin and Ethereum while solving their limitations.
@@ -223,17 +223,17 @@ export function FeatureComparisonSection() {
                       </div>
                     </td>
                     <td className="text-center py-6 px-6">
-                      <div className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${item.ergo ? 'bg-green-400/20' : 'bg-red-400/20'}`}>
+                                                <div className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${item.ergo ? 'bg-orange-400/20' : 'bg-orange-400/10'}`}>
                         <CheckIcon hasFeature={item.ergo} />
                       </div>
                     </td>
                     <td className="text-center py-6 px-6">
-                      <div className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${item.bitcoin ? 'bg-green-400/20' : 'bg-red-400/20'}`}>
+                                                <div className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${item.bitcoin ? 'bg-orange-400/20' : 'bg-orange-400/10'}`}>
                         <CheckIcon hasFeature={item.bitcoin} />
                       </div>
                     </td>
                     <td className="text-center py-6 px-6">
-                      <div className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${item.ethereum ? 'bg-green-400/20' : 'bg-red-400/20'}`}>
+                                                <div className={`inline-flex items-center justify-center w-8 h-8 rounded-full ${item.ethereum ? 'bg-orange-400/20' : 'bg-orange-400/10'}`}>
                         <CheckIcon hasFeature={item.ethereum} />
                       </div>
                     </td>

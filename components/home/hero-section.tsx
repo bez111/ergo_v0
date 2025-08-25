@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Code, Shield, Zap, Layers } from "lucide-react"
 import { CyberButton } from "@/components/animations/cyber-button"
+import { GlitchText } from "@/components/animations/glitch-text"
 
 const HERO_MESSAGES = [
   "Decentralized Money for a Free Society",
@@ -79,8 +80,8 @@ export function HeroSection() {
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
           {/* ERGO Title */}
           <div className="relative">
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-orange-500">
-              ERGO
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white font-mono">
+              <GlitchText text="ERGO" className="text-primary" />
             </h2>
           </div>
 

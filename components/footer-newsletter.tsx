@@ -36,7 +36,7 @@ export function FooterNewsletter({ showOnHomepage = false }: FooterNewsletterPro
     return (
       <div className="space-y-4">
         <h3 className="text-lg font-semibold text-primary">NEWSLETTER</h3>
-        <div className="flex items-center space-x-2 text-sm text-green-400">
+        <div className="flex items-center space-x-2 text-sm text-orange-400">
           <CheckCircle className="h-4 w-4" />
           <span>SUBSCRIBED ✓</span>
         </div>
@@ -127,7 +127,7 @@ export function FooterNewsletter({ showOnHomepage = false }: FooterNewsletterPro
         
         {message && (
           <div 
-            className={`text-xs ${messageType === 'success' ? 'text-green-400' : 'text-red-400'}`}
+            className={`text-xs ${messageType === 'success' ? 'text-orange-400' : 'text-orange-400/70'}`}
             role="alert"
             aria-live="polite"
           >

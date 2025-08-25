@@ -44,7 +44,7 @@ export function WhatMakesDifferent() {
           {/* Header */}
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-orange-400">WHAT MAKES</span> <span className="text-white">ERGO DIFFERENT</span>
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">WHAT MAKES</span> <span className="text-white">ERGO DIFFERENT</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-4xl mx-auto">
               Ergo combines proven cryptographic techniques with innovative blockchain design to create a<br />
@@ -63,7 +63,7 @@ export function WhatMakesDifferent() {
                 >
                   {/* Icon and Title Row */}
                   <div className="flex items-start gap-4 mb-4">
-                    <div className="bg-gradient-to-br from-amber-900/40 to-amber-900/20 p-3 rounded-lg border border-amber-800/30 group-hover:border-amber-700/40 transition-colors duration-300 flex-shrink-0">
+                    <div className="bg-gradient-to-br from-orange-900/40 to-orange-900/20 p-3 rounded-lg border border-orange-800/30 group-hover:border-orange-700/40 transition-colors duration-300 flex-shrink-0">
                       <Icon className="h-5 w-5 text-orange-400" />
                     </div>
                     <h3 className="text-white font-semibold text-sm leading-tight uppercase tracking-wide">

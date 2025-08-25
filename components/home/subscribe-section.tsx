@@ -40,8 +40,8 @@ export function SubscribeSection({ segments = [] }: SubscribeSectionProps) {
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
           <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-orange-500">
-              STAY IN THE LOOP
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">STAY IN THE LOOP</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-2">
               Get Ergo releases, grants, dev calls, and top articles delivered weekly
