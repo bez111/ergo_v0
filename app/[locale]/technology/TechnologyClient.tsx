@@ -1,6 +1,8 @@
 "use client"
 
 import { motion } from "framer-motion"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -210,6 +212,9 @@ const ctas = [
 ]
 
 export default function TechnologyPage() {
+  const t = useTranslations('technology')
+  const localizedPath = useLocalizedPath()
+  
   const layer1 = [
     { label: "eUTXO & ErgoScript", icon: Layers },
     { label: "Autolykos PoW", icon: Cpu },
@@ -259,7 +264,7 @@ export default function TechnologyPage() {
           eUTXO splits the blockchain state into independent “boxes” (outputs), enabling <b>parallel smart
           contracts</b> without a global state and reducing reentrancy risks. DApps become <i>composable</i>: complex
           logic can be built from simple outputs. Learn more — {""}
-          <Link href="/technology/eutxo-model" className="underline hover:opacity-80">eUTXO Model</Link>.
+          <Link href={localizedPath("technology/eutxo-model")} className="underline hover:opacity-80">eUTXO Model</Link>.
         </>
       ),
     },
@@ -271,7 +276,7 @@ export default function TechnologyPage() {
         <>
           It’s Ergo’s contract language for “money with logic”: formally verifiable code, strict typing, and built-in
           cryptographic primitives. Contracts are <b>auditable and predictable</b>—design avoids global mutable state and typical reentrancy patterns. Start here: {""}
-          <Link href="/technology/ergoscript" className="underline hover:opacity-80">ErgoScript</Link>.
+          <Link href={localizedPath("technology/ergoscript")} className="underline hover:opacity-80">ErgoScript</Link>.
         </>
       ),
     },
@@ -283,7 +288,7 @@ export default function TechnologyPage() {
         <>
           Memory-hard and ASIC-resistant — fair for ordinary miners. Rewards favor <b>solo mining</b> and reduce pool
           dependence, keeping the network secure with moderate energy use. More details: {""}
-          <Link href="/technology/secure-pow" className="underline hover:opacity-80">Autolykos PoW</Link>.
+          <Link href={localizedPath("technology/secure-pow")} className="underline hover:opacity-80">Autolykos PoW</Link>.
         </>
       ),
     },
@@ -295,7 +300,7 @@ export default function TechnologyPage() {
         <>
           Unspent coins after ~4 years start paying “rent” — this is <b>state recycling</b>: prevents unlimited
           blockchain growth and ensures miners earn revenue even after emissions end. Learn more: {""}
-          <Link href="/technology/storage-rent" className="underline hover:opacity-80">Storage Rent</Link>.
+          <Link href={localizedPath("technology/storage-rent")} className="underline hover:opacity-80">Storage Rent</Link>.
         </>
       ),
     },

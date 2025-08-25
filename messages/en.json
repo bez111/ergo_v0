@@ -429,5 +429,40 @@
     "previous": "Previous",
     "next": "Next",
     "home": "Home"
+  },
+  "docs": {
+    "title": "Documentation",
+    "subtitle": "Everything you need to build on Ergo",
+    "description": "Comprehensive guides, API references, and tutorials for developers building on the Ergo blockchain.",
+    "sections": {
+      "developers": {
+        "title": "Developers",
+        "description": "Build applications on Ergo"
+      },
+      "miners": {
+        "title": "Miners",
+        "description": "Mine Ergo and secure the network"
+      },
+      "ecosystem": {
+        "title": "Ecosystem",
+        "description": "Explore the Ergo ecosystem"
+      }
+    }
+  },
+  "wallet": {
+    "title": "Wallets",
+    "subtitle": "Secure storage for your ERG and tokens",
+    "description": "Choose from a variety of wallets to store, send, and receive ERG and Ergo native tokens.",
+    "features": {
+      "security": "Bank-grade security",
+      "privacy": "Enhanced privacy features",
+      "tokens": "Native token support",
+      "dapps": "dApp integration"
+    }
+  },
+  "events": {
+    "title": "Events",
+    "subtitle": "Join the Ergo community",
+    "description": "Discover upcoming events, meetups, and conferences in the Ergo ecosystem."
   }
 } 

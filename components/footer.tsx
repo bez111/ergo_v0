@@ -1,10 +1,15 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Send, Shield, Github, Twitter, MessageCircle } from "lucide-react"
 import { FooterNewsletter } from "./footer-newsletter"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 export function Footer() {
+  const localizedPath = useLocalizedPath()
+  
   return (
     <footer className="border-t border-primary/30 bg-black relative overflow-hidden z-50">
       {/* Animated grid lines */}
@@ -15,16 +20,16 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <div className="font-medium font-mono text-primary">PLATFORM</div>
             <nav className="flex flex-col gap-2">
-              <Link href="/technology" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href={localizedPath("technology")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Technology
               </Link>
-              <Link href="/use" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href={localizedPath("use")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Use Cases
               </Link>
-              <Link href="/ecosystem" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href={localizedPath("ecosystem")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Ecosystem
               </Link>
-              <Link href="/wallet" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href={localizedPath("wallet")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Wallets
               </Link>
             </nav>
@@ -33,16 +38,16 @@ export function Footer() {
           <div className="flex flex-col gap-4">
             <div className="font-medium font-mono text-primary">DEVELOPERS</div>
             <nav className="flex flex-col gap-2">
-              <Link href="/docs" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href={localizedPath("docs")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Documentation
               </Link>
-              <Link href="/learn" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href={localizedPath("learn")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Learn
               </Link>
               <Link href="https://github.com/ergoplatform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 GitHub
               </Link>
-              <Link href="/ecosystem/grants" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href={localizedPath("ecosystem/grants")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 Grants
               </Link>
             </nav>
