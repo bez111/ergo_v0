@@ -3,6 +3,8 @@
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
@@ -289,6 +291,8 @@ const statsItems: StatsGridItem[] = [
 ]
 
 export default function StartPage() {
+  const t = useTranslations('start')
+  const localizedPath = useLocalizedPath()
   const [selectedJourney, setSelectedJourney] = useState<Journey | null>(null)
   const [completedSteps, setCompletedSteps] = useLocalStorage<Record<string, boolean>>(
     "ergo_start_completed",
@@ -296,6 +300,233 @@ export default function StartPage() {
   )
   const [hasMounted, setHasMounted] = useState(false)
   const [isInitialized, setIsInitialized] = useState(false)
+
+  // Get localized journeys data
+  const getLocalizedJourneys = () => {
+    const localizedJourneys: Record<Journey, {
+      title: string
+      subtitle: string
+      icon: LucideIcon
+      color: string
+      gradient: string
+      steps: Step[]
+    }> = {
+      new: {
+        title: t('journeys.new.title'),
+        subtitle: t('journeys.new.subtitle'),
+        icon: User,
+        color: "text-green-400",
+        gradient: "from-green-500/20 to-transparent",
+        steps: [
+          {
+            id: "why",
+            title: t('journeys.new.steps.why.title'),
+            description: t('journeys.new.steps.why.description'),
+            icon: Zap,
+            href: "/start/introduction",
+            duration: "2 min"
+          },
+          {
+            id: "wallet",
+            title: t('journeys.new.steps.wallet.title'),
+            description: t('journeys.new.steps.wallet.description'),
+            icon: Wallet,
+            href: "/wallet",
+            duration: "5 min"
+          },
+          {
+            id: "testnet",
+            title: t('journeys.new.steps.testnet.title'),
+            description: t('journeys.new.steps.testnet.description'),
+            icon: TestTube,
+            href: "/wallet/testnet-faucet",
+            duration: "2 min"
+          },
+          {
+            id: "send",
+            title: t('journeys.new.steps.send.title'),
+            description: t('journeys.new.steps.send.description'),
+            icon: Send,
+            href: "/wallet/send",
+            duration: "3 min"
+          },
+          {
+            id: "security",
+            title: t('journeys.new.steps.security.title'),
+            description: t('journeys.new.steps.security.description'),
+            icon: Shield,
+            href: "/start/security-tips",
+            duration: "5 min"
+          }
+        ]
+      },
+      explore: {
+        title: t('journeys.explore.title'),
+        subtitle: t('journeys.explore.subtitle'),
+        icon: BookOpen,
+        color: "text-blue-400",
+        gradient: "from-blue-500/20 to-transparent",
+        steps: [
+          {
+            id: "compare",
+            title: t('journeys.explore.steps.compare.title'),
+            description: t('journeys.explore.steps.compare.description'),
+            icon: Zap,
+            href: "/learn/comparison",
+            duration: "10 min"
+          },
+          {
+            id: "features",
+            title: t('journeys.explore.steps.features.title'),
+            description: t('journeys.explore.steps.features.description'),
+            icon: Code,
+            href: "/technology/features",
+            duration: "15 min"
+          },
+          {
+            id: "privacy",
+            title: t('journeys.explore.steps.privacy.title'),
+            description: t('journeys.explore.steps.privacy.description'),
+            icon: Shield,
+            href: "/learn/censorship-resistance",
+            duration: "8 min"
+          },
+          {
+            id: "stories",
+            title: t('journeys.explore.steps.stories.title'),
+            description: t('journeys.explore.steps.stories.description'),
+            icon: User,
+            href: "/community/stories",
+            duration: "12 min"
+          }
+        ]
+      },
+      build: {
+        title: t('journeys.build.title'),
+        subtitle: t('journeys.build.subtitle'),
+        icon: Code,
+        color: "text-purple-400",
+        gradient: "from-purple-500/20 to-transparent",
+        steps: [
+          {
+            id: "hello",
+            title: t('journeys.build.steps.hello.title'),
+            description: t('journeys.build.steps.hello.description'),
+            icon: Code,
+            href: "/docs/developers",
+            duration: "15 min"
+          },
+          {
+            id: "playground",
+            title: t('journeys.build.steps.playground.title'),
+            description: t('journeys.build.steps.playground.description'),
+            icon: TestTube,
+            href: "/docs/developers/playground",
+            duration: "10 min"
+          },
+          {
+            id: "sdk",
+            title: t('journeys.build.steps.sdk.title'),
+            description: t('journeys.build.steps.sdk.description'),
+            icon: Zap,
+            href: "/docs/developers/tooling",
+            duration: "Browse"
+          },
+          {
+            id: "community",
+            title: t('journeys.build.steps.community.title'),
+            description: t('journeys.build.steps.community.description'),
+            icon: User,
+            href: "/community/developers",
+            duration: "Now"
+          }
+        ]
+      },
+      mine: {
+        title: t('journeys.mine.title'),
+        subtitle: t('journeys.mine.subtitle'),
+        icon: Cpu,
+        color: "text-orange-400",
+        gradient: "from-orange-500/20 to-transparent",
+        steps: [
+          {
+            id: "hardware",
+            title: t('journeys.mine.steps.hardware.title'),
+            description: t('journeys.mine.steps.hardware.description'),
+            icon: Cpu,
+            href: "/use/mining",
+            duration: "20 min"
+          },
+          {
+            id: "pool",
+            title: t('journeys.mine.steps.pool.title'),
+            description: t('journeys.mine.steps.pool.description'),
+            icon: Zap,
+            href: "/use/mining-pools",
+            duration: "10 min"
+          },
+          {
+            id: "software",
+            title: t('journeys.mine.steps.software.title'),
+            description: t('journeys.mine.steps.software.description'),
+            icon: LineChart,
+            href: "/use/mining-calculator",
+            duration: "5 min"
+          },
+          {
+            id: "monitor",
+            title: t('journeys.mine.steps.monitor.title'),
+            description: t('journeys.mine.steps.monitor.description'),
+            icon: Shield,
+            href: "/docs/developers/infrastructure",
+            duration: "30 min"
+          }
+        ]
+      },
+      invest: {
+        title: t('journeys.invest.title'),
+        subtitle: t('journeys.invest.subtitle'),
+        icon: LineChart,
+        color: "text-yellow-400",
+        gradient: "from-yellow-500/20 to-transparent",
+        steps: [
+          {
+            id: "research",
+            title: t('journeys.invest.steps.research.title'),
+            description: t('journeys.invest.steps.research.description'),
+            icon: Zap,
+            href: "/docs/ecosystem",
+            duration: "15 min"
+          },
+          {
+            id: "exchange",
+            title: t('journeys.invest.steps.exchange.title'),
+            description: t('journeys.invest.steps.exchange.description'),
+            icon: LineChart,
+            href: "/docs/introduction/resources",
+            duration: "10 min"
+          },
+          {
+            id: "storage",
+            title: t('journeys.invest.steps.storage.title'),
+            description: t('journeys.invest.steps.storage.description'),
+            icon: User,
+            href: "/ecosystem/partnerships",
+            duration: "8 min"
+          },
+          {
+            id: "defi",
+            title: t('journeys.invest.steps.defi.title'),
+            description: t('journeys.invest.steps.defi.description'),
+            icon: LineChart,
+            href: "/ecosystem/market",
+            duration: "Live"
+          }
+        ]
+      }
+    }
+    return localizedJourneys
+  }
   
   // Responsive and accessibility hooks
   const isMobile = useIsMobile()
@@ -318,7 +549,8 @@ export default function StartPage() {
     }))
   }
 
-  const journey = selectedJourney ? journeys[selectedJourney] : null
+  const localizedJourneys = getLocalizedJourneys()
+  const journey = selectedJourney ? localizedJourneys[selectedJourney] : null
   const completedCount = journey 
     ? journey.steps.filter(step => completedSteps[step.id]).length 
     : 0
@@ -351,7 +583,7 @@ export default function StartPage() {
         <div className="max-w-6xl mx-auto px-4 py-16">
           <div className="text-center">
             <h1 className="text-4xl font-bold text-white mb-4">
-              Start Your <span className="text-orange-400">Journey</span>
+              {t('title') || 'Start Your Journey'}
             </h1>
             <p className="text-gray-400">Loading...</p>
           </div>
@@ -380,16 +612,16 @@ export default function StartPage() {
           </div>
           
           <HeroPattern
-            title="Start Your"
-            highlight="Journey"
-            subtitle="Choose your path into Ergo"
-            description="Pick what describes you best, and we'll guide you through everything you need to know."
+            title={t('title').split(' ').slice(0, -1).join(' ') || 'Start Your'}
+            highlight={t('title').split(' ').slice(-1)[0] || 'Journey'}
+            subtitle={t('subtitle') || 'Choose your path into Ergo'}
+            description={t('description') || 'Pick what describes you best, and we\'ll guide you through everything you need to know.'}
             primaryAction={selectedJourney ? {
-              text: "Change Path",
+              text: t('common.viewAll') || "Change Path",
               icon: ArrowRight,
               onClick: () => setSelectedJourney(null)
             } : {
-              text: "Get Started",
+              text: t('common.getStarted') || "Get Started",
               icon: Rocket,
               onClick: () => setSelectedJourney("new")
             }}
@@ -439,7 +671,7 @@ export default function StartPage() {
               exit={{ opacity: 0 }}
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
             >
-              {(Object.entries(journeys) as [Journey, typeof journeys[Journey]][]).map(([key, journey], index) => (
+              {(Object.entries(localizedJourneys) as [Journey, typeof localizedJourneys[Journey]][]).map(([key, journey], index) => (
                 <motion.div
                   key={key}
                   initial={{ opacity: 0, y: 20 }}
@@ -703,7 +935,7 @@ export default function StartPage() {
                 variant="outline"
                 className="border-neutral-600 text-gray-300 hover:bg-neutral-800 hover:text-orange-400 hover:border-orange-500/50 min-w-[200px] transition-all duration-200"
               >
-                <Link href="/start/faq">
+                <Link href={localizedPath("start/faq")}>
                   <HelpCircle className="w-4 h-4 mr-2" />
                   FAQ
                   <ChevronRight className="w-4 h-4 ml-2" />
@@ -716,7 +948,7 @@ export default function StartPage() {
                 asChild
                 className="bg-orange-500 hover:bg-orange-600 text-black min-w-[200px] transition-all duration-200"
               >
-                <Link href="/start/community">
+                <Link href={localizedPath("start/community")}>
                   <Users className="w-4 h-4 mr-2" />
                   Join Community
                   <ChevronRight className="w-4 h-4 ml-2" />
@@ -730,7 +962,7 @@ export default function StartPage() {
                 variant="outline"
                 className="border-neutral-600 text-gray-300 hover:bg-neutral-800 hover:text-orange-400 hover:border-orange-500/50 min-w-[200px] transition-all duration-200"
               >
-                <Link href="/start/quiz">
+                <Link href={localizedPath("start/quiz")}>
                   <Target className="w-4 h-4 mr-2" />
                   Take the Quiz
                   <ChevronRight className="w-4 h-4 ml-2" />

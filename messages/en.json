@@ -77,5 +77,357 @@
   "language": {
     "switchLanguage": "Switch Language",
     "currentLanguage": "English"
+  },
+  "start": {
+    "title": "Start Your Ergo Journey",
+    "subtitle": "Choose your path into the Ergo ecosystem",
+    "description": "Whether you're new to crypto, want to learn more, build applications, mine, or invest - we have a personalized path for you.",
+    "journeys": {
+      "new": {
+        "title": "I'm New to Crypto",
+        "subtitle": "Start from the basics",
+        "steps": {
+          "why": {
+            "title": "Why Ergo Exists",
+            "description": "Understand the problems we solve"
+          },
+          "wallet": {
+            "title": "Get a Wallet",
+            "description": "Download and set up securely"
+          },
+          "testnet": {
+            "title": "Try Test Coins",
+            "description": "Get free testnet ERG to practice"
+          },
+          "send": {
+            "title": "Send First Transaction",
+            "description": "Learn by doing - send ERG"
+          },
+          "security": {
+            "title": "Stay Safe",
+            "description": "Essential security practices"
+          }
+        }
+      },
+      "explore": {
+        "title": "I Want to Learn",
+        "subtitle": "Deep dive into Ergo",
+        "steps": {
+          "compare": {
+            "title": "Ergo vs Others",
+            "description": "Compare with Bitcoin, Ethereum, Monero"
+          },
+          "features": {
+            "title": "Unique Tech",
+            "description": "eUTXO, Sigma Protocols explained"
+          },
+          "privacy": {
+            "title": "Privacy Features",
+            "description": "How Ergo protects your data"
+          },
+          "stories": {
+            "title": "Real Use Cases",
+            "description": "Community success stories"
+          }
+        }
+      },
+      "build": {
+        "title": "I'm a Developer",
+        "subtitle": "Build on Ergo",
+        "steps": {
+          "hello": {
+            "title": "Hello World",
+            "description": "Your first ErgoScript contract"
+          },
+          "playground": {
+            "title": "Try Playground",
+            "description": "Interactive contract editor"
+          },
+          "sdk": {
+            "title": "SDKs & Tools",
+            "description": "Libraries for your language"
+          },
+          "community": {
+            "title": "Join Dev Chat",
+            "description": "Get help from core devs"
+          }
+        }
+      },
+      "mine": {
+        "title": "I Want to Mine",
+        "subtitle": "Secure the network",
+        "steps": {
+          "hardware": {
+            "title": "Check Hardware",
+            "description": "GPU requirements and setup"
+          },
+          "pool": {
+            "title": "Choose Pool",
+            "description": "Find the best mining pool"
+          },
+          "software": {
+            "title": "Mining Software",
+            "description": "Download and configure miner"
+          },
+          "monitor": {
+            "title": "Monitor & Optimize",
+            "description": "Track performance and earnings"
+          }
+        }
+      },
+      "invest": {
+        "title": "I Want to Invest",
+        "subtitle": "Smart money moves",
+        "steps": {
+          "research": {
+            "title": "Do Your Research",
+            "description": "Understand tokenomics and roadmap"
+          },
+          "exchange": {
+            "title": "Find Exchange",
+            "description": "Where to buy ERG safely"
+          },
+          "storage": {
+            "title": "Secure Storage",
+            "description": "Hardware wallets and best practices"
+          },
+          "defi": {
+            "title": "Explore DeFi",
+            "description": "Yield farming and dApps"
+          }
+        }
+      }
+    },
+    "common": {
+      "duration": "Duration",
+      "getStarted": "Get Started",
+      "viewAll": "View All Paths",
+      "completed": "Completed",
+      "inProgress": "In Progress",
+      "notStarted": "Not Started"
+    }
+  },
+  "technology": {
+    "title": "Ergo Technology",
+    "subtitle": "Advanced blockchain technology for the future of finance",
+    "description": "Explore Ergo's innovative technical features that make it the most advanced blockchain platform for building secure, scalable, and sustainable applications.",
+    "features": {
+      "eutxo": {
+        "title": "eUTXO Model",
+        "description": "Extended UTXO model that enables parallel smart contract execution and composable DeFi applications. Eliminates reentrancy attacks while maintaining Bitcoin's proven security model.",
+        "details": {
+          "parallel": {
+            "title": "Parallel Execution",
+            "description": "Smart contracts run independently without global state conflicts."
+          },
+          "composability": {
+            "title": "Composability", 
+            "description": "Build complex DeFi applications from simple, reusable components."
+          },
+          "security": {
+            "title": "Bitcoin-Level Security",
+            "description": "Inherits UTXO's battle-tested double-spend protection."
+          }
+        }
+      },
+      "ergoscript": {
+        "title": "ErgoScript",
+        "description": "Powerful smart contract language designed for security and flexibility. Features built-in Sigma protocols for zero-knowledge proofs and formal verification support for bulletproof contracts.",
+        "details": {
+          "verification": {
+            "title": "Formal Verification",
+            "description": "Mathematically prove your smart contracts are secure and bug-free."
+          },
+          "privacy": {
+            "title": "Built-in Privacy",
+            "description": "Native zero-knowledge proofs and ring signatures for confidential transactions."
+          },
+          "safety": {
+            "title": "Safe by Design",
+            "description": "Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors."
+          }
+        }
+      },
+      "autolykos": {
+        "title": "Autolykos PoW",
+        "description": "Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.",
+        "details": {
+          "efficient": {
+            "title": "Energy Efficient",
+            "description": "Memory-hard algorithm reduces power consumption compared to traditional PoW."
+          },
+          "mining": {
+            "title": "Solo Mining Friendly",
+            "description": "Low barrier to entry enables individual miners to participate profitably."
+          },
+          "resistant": {
+            "title": "ASIC Resistant",
+            "description": "Optimized for consumer GPUs to prevent mining centralization."
+          }
+        }
+      },
+      "storage": {
+        "title": "Storage Rent",
+        "description": "Revolutionary economic model that prevents blockchain bloat. Inactive coins pay minimal rent after 4 years, ensuring sustainable blockchain size and permanent miner rewards.",
+        "details": {
+          "sustainable": {
+            "title": "Sustainable Blockchain",
+            "description": "Automatic cleanup of unused data keeps the blockchain lean and efficient."
+          },
+          "security": {
+            "title": "Perpetual Security",
+            "description": "Miners receive rewards forever, ensuring long-term network security."
+          },
+          "cleanup": {
+            "title": "Automatic Cleanup",
+            "description": "Unused UTXOs are recycled, preventing blockchain bloat and spam."
+          }
+        }
+      }
+    },
+    "common": {
+      "learnMore": "Learn More",
+      "exploreFeature": "Explore Feature",
+      "technicalDetails": "Technical Details",
+      "getStarted": "Get Started"
+    }
+  },
+  "use": {
+    "title": "Use Cases",
+    "subtitle": "Real-world applications powered by Ergo",
+    "description": "Discover how Ergo's advanced technology enables innovative solutions across finance, privacy, gaming, and more.",
+    "cases": {
+      "stablecoins": {
+        "title": "Algorithmic Stablecoins",
+        "subtitle": "Stable value storage without centralized control",
+        "description": "Over-collateralized stablecoins with innovative AgeUSD protocol.",
+        "tags": ["Stablecoin", "Algorithmic", "Collateral"]
+      },
+      "privacy": {
+        "title": "Privacy & Confidentiality",
+        "subtitle": "Financial privacy in an increasingly surveilled world",
+        "description": "Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy.",
+        "tags": ["Mixer", "Stealth", "Zero-Knowledge"]
+      },
+      "bridges": {
+        "title": "Cross-Chain Bridges",
+        "subtitle": "Secure, trustless value transfer between blockchains",
+        "description": "Decentralized bridges with multi-signature security, no central custody.",
+        "tags": ["Bridge", "Interoperability", "Multi-chain"]
+      },
+      "daos": {
+        "title": "DAOs & Alternative Economies",
+        "subtitle": "Community governance and alternative economic systems",
+        "description": "Composable DAO infrastructure: treasury, voting, profit-sharing.",
+        "tags": ["DAO", "Governance", "Community"]
+      },
+      "nfts": {
+        "title": "NFTs & Digital Assets",
+        "subtitle": "True digital ownership, dynamic properties",
+        "description": "On-chain metadata, protocol royalties, programmable NFTs.",
+        "tags": ["NFT", "Royalties", "Dynamic"]
+      },
+      "oracles": {
+        "title": "Oracles & Data Feeds",
+        "subtitle": "Bringing real-world data on-chain",
+        "description": "Decentralized oracle pools provide external data for DeFi & prediction markets.",
+        "tags": ["Oracles", "Data Feeds", "Prediction"]
+      },
+      "identity": {
+        "title": "Identity & Reputation",
+        "subtitle": "Self-sovereign identity & Web3 reputation",
+        "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems.",
+        "tags": ["Identity", "Reputation", "DID"]
+      },
+      "gaming": {
+        "title": "Gaming & Metaverse",
+        "subtitle": "Next-gen gaming assets & digital worlds",
+        "description": "Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.",
+        "tags": ["Gaming", "Metaverse", "NFT"]
+      }
+    },
+    "common": {
+      "exploreCase": "Explore Use Case",
+      "learnMore": "Learn More",
+      "supportedProjects": "Supported Projects",
+      "getStarted": "Get Started"
+    }
+  },
+  "learn": {
+    "title": "Learn Ergo",
+    "subtitle": "Master the future of blockchain technology",
+    "description": "From beginner-friendly tutorials to advanced research papers.",
+    "resources": {
+      "ergoscript": {
+        "title": "ErgoScript Tutorial Series",
+        "description": "Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo, step by step.",
+        "difficulty": "Beginner to Expert",
+        "duration": "20+ hours"
+      },
+      "faq": {
+        "title": "Comprehensive FAQ",
+        "description": "Everything you need to know about Ergo blockchain, technology, and ecosystem in one place.",
+        "difficulty": "All Levels",
+        "duration": "Reference"
+      },
+      "research": {
+        "title": "Research Papers",
+        "description": "Deep dive into the academic research and technical papers behind Ergo's innovations.",
+        "difficulty": "Advanced",
+        "duration": "Varies"
+      }
+    },
+    "sections": {
+      "learningResources": "Learning Resources"
+    },
+    "common": {
+      "startLearning": "Start Learning",
+      "difficulty": "Difficulty",
+      "duration": "Duration",
+      "allLevels": "All Levels",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced",
+      "expert": "Expert",
+      "reference": "Reference",
+      "varies": "Varies"
+    }
+  },
+  "navigation": {
+    "main": {
+      "start": "Start",
+      "technology": "Technology", 
+      "use": "Use",
+      "learn": "Learn",
+      "docs": "Docs",
+      "ecosystem": "Ecosystem",
+      "blog": "Blog",
+      "wallet": "Wallet"
+    },
+    "footer": {
+      "about": "About",
+      "community": "Community",
+      "developers": "Developers",
+      "resources": "Resources",
+      "legal": "Legal"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry",
+    "close": "Close",
+    "open": "Open",
+    "menu": "Menu",
+    "search": "Search",
+    "searchPlaceholder": "Search...",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "getStarted": "Get Started",
+    "viewAll": "View All",
+    "backToTop": "Back to Top",
+    "previous": "Previous",
+    "next": "Next",
+    "home": "Home"
   }
 } 

@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 import dynamic from "next/dynamic"
 // Removed framer-motion animations
 import {
@@ -49,6 +50,7 @@ const HexagonalGrid = dynamic(() => import("@/components/ui-kit/signature-effect
 // Removed animation-related imports
 
 export default function IntroductionClient() {
+  const localizedPath = useLocalizedPath()
   const isoDate = new Date().toISOString().slice(0, 10)
 
   // SSR full content; heavy effects render client-only via dynamic()
@@ -209,10 +211,10 @@ export default function IntroductionClient() {
               </p>
               <p className="text-gray-300 leading-relaxed mb-8">
                 Its mission is to provide tools for decentralized and accessible financial systems — empowering people with economic freedom without intermediaries. Learn about the
-                <Link href="/technology/eutxo-model" className="underline hover:opacity-80 ml-1">eUTXO smart‑contract model</Link>,
-                <Link href="/technology/secure-pow" className="underline hover:opacity-80 ml-1">Autolykos (ASIC‑resistant PoW)</Link>,
-                <Link href="/technology/storage-rent" className="underline hover:opacity-80 ml-1">Storage Rent</Link>, and
-                <Link href="/technology/privacy-features" className="underline hover:opacity-80 ml-1">Sigma‑powered privacy</Link>.
+                <Link href={localizedPath("technology/eutxo-model")} className="underline hover:opacity-80 ml-1">eUTXO smart‑contract model</Link>,
+                <Link href={localizedPath("technology/secure-pow")} className="underline hover:opacity-80 ml-1">Autolykos (ASIC‑resistant PoW)</Link>,
+                <Link href={localizedPath("technology/storage-rent")} className="underline hover:opacity-80 ml-1">Storage Rent</Link>, and
+                <Link href={localizedPath("technology/privacy-features")} className="underline hover:opacity-80 ml-1">Sigma‑powered privacy</Link>.
               </p>
               {/* Why Ergo (keywords) */}
               <div className="mb-6">

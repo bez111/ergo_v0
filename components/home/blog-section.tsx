@@ -2,13 +2,13 @@ import React from "react"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { BlogCard } from "./blog-card"
-import { blogPosts } from "@/app/blog/_lib/blog-data"
+import { blogPosts } from "@/app/[locale]/blog/_lib/blog-data"
 
 export function BlogSection() {
   const posts = blogPosts.slice(0, 3).map(p => ({
     title: p.title,
-    date: p.publishedAt,
-    summary: p.description,
+    date: p.date,
+    summary: p.excerpt,
     link: `/blog/${p.slug}`,
   }))
 

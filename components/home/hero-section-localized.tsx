@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Code, Shield, Zap, Layers } from "lucide-react"
 import { useTranslations, useLocale } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 export function HeroSectionLocalized() {
   const [typedText, setTypedText] = useState("")
@@ -14,6 +15,7 @@ export function HeroSectionLocalized() {
   
   const t = useTranslations('hero')
   const locale = useLocale()
+  const localizedPath = useLocalizedPath()
 
   // Локализованные сообщения
   const HERO_MESSAGES = [
@@ -104,7 +106,7 @@ export function HeroSectionLocalized() {
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <Link href="/start/introduction">
+          <Link href={localizedPath("start/introduction")}>
             <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(251,146,60,0.5)] min-w-[200px]">
               <span className="relative z-10 flex items-center gap-2 font-mono uppercase tracking-wider">
                 <Code className="w-5 h-5" />
