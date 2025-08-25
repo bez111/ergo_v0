@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { HeroSection } from "@/components/home/hero-section"
 import { Manifesto } from "@/components/home/manifesto"
-import { CorePillars } from "@/components/home/core-pillars"
+import { WhyErgo } from "@/components/home/why-ergo"
 import { 
   LazyEcosystemShowcase, 
   LazyAudiencePaths, 
@@ -31,7 +31,7 @@ export default async function HomePage({ params }: HomePageProps) {
     <main className="flex flex-col bg-black text-white">
       <HeroSection />
       <Manifesto />
-      <CorePillars />
+      <WhyErgo />
       <LazyAudiencePaths />
       <LazyEcosystemShowcase />
       <LazyBlogSection />

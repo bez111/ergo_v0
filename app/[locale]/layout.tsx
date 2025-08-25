@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
 import { notFound } from 'next/navigation';
 import { locales, isRtlLocale, getLocaleConfig, type Locale } from '../../i18n';
 import { getMessages, getTranslations } from '@/lib/messages';
@@ -11,20 +10,6 @@ import { organizationSchema, websiteSchema } from "@/lib/schema-generator";
 import "../globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-  display: 'swap',
-  preload: true,
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
-  display: 'swap',
-  preload: true,
-});
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -120,41 +105,26 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const isRtl = isRtlLocale(locale);
 
   return (
-    <html 
-      lang={locale} 
-      dir={localeConfig.dir}
-      className={`${inter.variable} ${jetbrainsMono.variable}`}
-      suppressHydrationWarning
-    >
-      <head>
-        <HreflangTags pathname="/" currentLocale={locale} />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify([organizationSchema, websiteSchema])
-          }}
-        />
-      </head>
-      <body className={`min-h-screen bg-background font-sans antialiased ${isRtl ? 'rtl' : 'ltr'}`}>
-                <LocaleProvider locale={locale as Locale} messages={messages}>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <ErrorBoundary>
-              <div className="relative flex min-h-screen flex-col">
-                <Header />
-                <main className="flex-1">
-                  {children}
-                </main>
-                <Footer />
-              </div>
-            </ErrorBoundary>
-          </ThemeProvider>
-        </LocaleProvider>
-      </body>
-    </html>
+    <>
+      <HreflangTags pathname="/" currentLocale={locale} />
+      <LocaleProvider locale={locale as Locale} messages={messages}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <ErrorBoundary>
+            <div className="relative flex min-h-screen flex-col">
+              <Header />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </ErrorBoundary>
+        </ThemeProvider>
+      </LocaleProvider>
+    </>
   );
 } 
