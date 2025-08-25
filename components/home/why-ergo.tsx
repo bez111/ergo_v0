@@ -109,7 +109,7 @@ export function WhyErgo() {
                 return (
                   <div
                     key={index}
-                    className="group flex items-start gap-4 p-6 bg-neutral-900/30 border border-neutral-800/30 rounded-xl hover:bg-neutral-900/50 hover:border-orange-400/30 transition-all duration-300"
+                    className="group flex items-start gap-4 p-6 bg-gradient-to-b from-neutral-900/60 to-neutral-900/40 border border-neutral-800/30 rounded-xl hover:from-neutral-900/80 hover:to-neutral-900/60 hover:border-orange-400/30 transition-all duration-300"
                   >
                     <div className="bg-gradient-to-br from-amber-900/30 to-amber-900/10 p-3 rounded-lg border border-amber-800/20 group-hover:border-amber-700/30 transition-colors duration-300 flex-shrink-0">
                       <Icon className="h-5 w-5 text-orange-400/90" />

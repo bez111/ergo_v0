@@ -1,9 +1,8 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
 import dynamic from "next/dynamic"
+// Removed framer-motion animations
 import {
   ArrowRight,
   Shield,
@@ -45,21 +44,12 @@ import {
   type FeatureGridItem, type StatsGridItem 
 } from "@/components/ui-kit/patterns"
 import { SchemaOrg } from "@/components/seo/schema-org"
-// Dynamic, client-only signature effects for performance/SSR
-const FloatingParticles = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.FloatingParticles), { ssr: false })
+// Dynamic hexagonal grid for background
 const HexagonalGrid = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.HexagonalGrid), { ssr: false })
-const CryptographicVisualization = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.CryptographicVisualization), { ssr: false })
-const GlitchHex = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.GlitchHex), { ssr: false })
-import { useIsMobile, usePrefersReducedMotion, getAnimationConfig } from "@/lib/theme-system"
+// Removed animation-related imports
 
 export default function IntroductionClient() {
-  const [isInitialized] = useState(true)
   const isoDate = new Date().toISOString().slice(0, 10)
-  
-  // Responsive and accessibility hooks
-  const isMobile = useIsMobile()
-  const prefersReducedMotion = usePrefersReducedMotion()
-  const animationConfig = getAnimationConfig(isMobile, prefersReducedMotion)
 
   // SSR full content; heavy effects render client-only via dynamic()
 
@@ -116,23 +106,7 @@ export default function IntroductionClient() {
     }
   ]
 
-  // Animation variants
-  const fadeInUp = {
-    initial: { opacity: 0, y: prefersReducedMotion ? 0 : 20 },
-    animate: { 
-      opacity: 1, 
-      y: 0,
-      transition: { duration: prefersReducedMotion ? 0.1 : 0.6 }
-    }
-  }
-
-  const scaleOnHover = {
-    hover: { 
-      scale: prefersReducedMotion ? 1 : animationConfig.scale, 
-      transition: { duration: animationConfig.duration } 
-    },
-    tap: { scale: prefersReducedMotion ? 1 : 0.98 }
-  }
+  // Removed animation variants
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -200,26 +174,19 @@ export default function IntroductionClient() {
         }}
       />
       {/* Background Effects */}
-      {!isMobile && <FloatingParticles count={prefersReducedMotion ? 10 : 30} />}
-      {!isMobile && !prefersReducedMotion && <HexagonalGrid className="opacity-[0.02]" />}
+      <HexagonalGrid className="opacity-[0.02]" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         
         {/* Removed jump links per request */}
 
         {/* What is Ergo Section */}
-        <motion.section 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInitialized ? 1 : 0 }}
-          transition={{ duration: 0.6 }}
+        <section 
           className="py-16 pt-32"
           id="what-is-ergo"
         >
           {/* Mission Statement - Hero Slogan */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
-            transition={{ duration: 0.8 }}
+          <div
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">
@@ -228,14 +195,10 @@ export default function IntroductionClient() {
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
               A next‑generation, ASIC‑resistant Proof‑of‑Work platform with predictable, auditable smart contracts and native privacy.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
+            <div>
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 flex items-center gap-3">
                 <Brain className="w-8 h-8 text-orange-400" aria-hidden="true" />
                 <span className="text-white">What is <span className="text-orange-400">Ergo</span>?</span>
@@ -277,17 +240,13 @@ export default function IntroductionClient() {
                 References: <a href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Autolykos v2</a> ·
                 <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80 ml-2">ergo (GitHub)</a>
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+            <div
               className="space-y-4"
             >
-              {/* Cryptographic Visualization */}
+              {/* Removed Cryptographic Visualization */}
               <div className="relative">
-                <CryptographicVisualization className="absolute -top-8 -right-8 w-32 h-32 opacity-20" />
                 
                 {/* Feature highlights */}
                 <ul className="space-y-4">
@@ -297,12 +256,8 @@ export default function IntroductionClient() {
                     { icon: Network, title: "Light Clients", desc: "Succinct proofs (NIPoPoWs), near full-node guarantees" },
                     { icon: Award, title: "Fair Launch", desc: "No premine, no ICO, community-driven" }
                   ].map((feature, index) => (
-                    <motion.li
+                    <li
                       key={feature.title}
-                      initial={{ opacity: 0, x: 20 }}
-                      animate={{ opacity: isInitialized ? 1 : 0, x: 0 }}
-                      transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                      whileHover={{ x: prefersReducedMotion ? 0 : 5 }}
                       className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3">
@@ -316,19 +271,16 @@ export default function IntroductionClient() {
                           <p className="text-gray-400 text-sm">{feature.desc}</p>
                         </div>
                       </div>
-                    </motion.li>
+                    </li>
                   ))}
                 </ul>
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* Core Principles using FeatureGrid */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInitialized ? 1 : 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+        <section
           className="py-24"
           id="core-principles"
         >
@@ -342,13 +294,10 @@ export default function IntroductionClient() {
           </div>
           
           <FeatureGrid items={principlesGridItems} columns={4} />
-        </motion.section>
+        </section>
 
         {/* Key Technologies Section */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInitialized ? 1 : 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
+        <section
           className="py-16"
           id="key-technologies"
         >
@@ -363,13 +312,8 @@ export default function IntroductionClient() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {technologies.map((tech, index) => (
-              <motion.div
+              <div
                 key={tech.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.4 + index * 0.1 }}
-                whileHover={{ scale: 1.02, y: -5 }}
-                whileTap={{ scale: 0.98 }}
                 className="h-full"
               >
                 <Link href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-xl">
@@ -400,7 +344,7 @@ export default function IntroductionClient() {
                     </div>
                   </Card>
                 </Link>
-              </motion.div>
+              </div>
             ))}
           </div>
 
@@ -422,13 +366,10 @@ export default function IntroductionClient() {
   )
 }`}
           />
-        </motion.section>
+        </section>
 
         {/* What Makes Ergo Different Section */}
-        <motion.section
-          initial={{ opacity: 0 }}
-          animate={{ opacity: isInitialized ? 1 : 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
+        <section
           className="py-16 border-t border-b border-neutral-700"
           id="what-makes-different"
         >
@@ -477,13 +418,8 @@ export default function IntroductionClient() {
             ].map((pillar, index) => {
               const Icon = pillar.icon
               return (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  whileTap={{ scale: 0.98 }}
                   className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-6 hover:border-orange-400/50 hover:bg-neutral-800/50 transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex items-center mb-4">
@@ -493,11 +429,11 @@ export default function IntroductionClient() {
                     <h3 className="text-lg font-semibold text-white">{pillar.title}</h3>
                   </div>
                   <p className="text-neutral-300 text-sm leading-relaxed">{pillar.description}</p>
-                </motion.div>
+                </div>
               )
             })}
           </div>
-        </motion.section>
+        </section>
 
         {/* Visible mini-FAQ matching JSON-LD */}
         <section className="py-16">
@@ -524,17 +460,11 @@ export default function IntroductionClient() {
         </section>
 
         {/* CTA Section with Glitch Effects */}
-        <motion.section
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: isInitialized ? 1 : 0, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.7 }}
+        <section
           className="py-16 text-center relative"
         >
           <Card className="bg-neutral-900/50 border border-neutral-700 rounded-2xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden hover:border-orange-500/30">
-            {/* Glitch Hex decoration */}
-            <div className="absolute top-8 right-8 w-16 h-16 opacity-20">
-              <GlitchHex size={64} />
-            </div>
+            {/* Removed Glitch Hex decoration */}
             
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to <span className="text-orange-400">Dive In</span>?
@@ -545,7 +475,7 @@ export default function IntroductionClient() {
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
-              <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
+              <div>
                 <Button 
                   asChild 
                   className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl shadow-lg"
@@ -555,9 +485,9 @@ export default function IntroductionClient() {
                     Get an Ergo Wallet
                   </Link>
                 </Button>
-              </motion.div>
+              </div>
               
-              <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
+              <div>
                 <Button 
                   asChild 
                   variant="outline" 
@@ -568,9 +498,9 @@ export default function IntroductionClient() {
                     Explore Ecosystem
                   </Link>
                 </Button>
-              </motion.div>
+              </div>
               
-              <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>
+              <div>
                 <Button 
                   asChild 
                   variant="outline" 
@@ -581,11 +511,11 @@ export default function IntroductionClient() {
                     Documentation
                   </Link>
                 </Button>
-              </motion.div>
+              </div>
             </div>
             <p className="text-xs text-neutral-500 mt-6">Last updated: 2025-08-10</p>
           </Card>
-        </motion.section>
+        </section>
 
       </div>
     </div>

@@ -23,7 +23,7 @@ export function SubscribeSection({ segments = [] }: SubscribeSectionProps) {
     },
     { 
       name: "Telegram", 
-      href: "https://t.me/ergoplatform", 
+      href: "https://t.me/ergo_news", 
       icon: Shield,
       ariaLabel: "Join our Telegram channel"
     }
@@ -45,9 +45,6 @@ export function SubscribeSection({ segments = [] }: SubscribeSectionProps) {
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-2">
               Get Ergo releases, grants, dev calls, and top articles delivered weekly
-            </p>
-            <p className="text-sm text-gray-400">
-              Join 20,000+ subscribers • One email per week • Unsubscribe anytime
             </p>
           </div>
 

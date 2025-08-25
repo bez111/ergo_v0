@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Code, Shield, Zap, Layers } from "lucide-react"
+import { CyberButton } from "@/components/animations/cyber-button"
 
 const HERO_MESSAGES = [
   "Decentralized Money for a Free Society",
@@ -104,21 +105,25 @@ export function HeroSection() {
 
           {/* Action buttons */}
           <div className="flex flex-wrap justify-center gap-4 mt-8">
-            <Link 
-              href="#why-ergo" 
-              className="inline-flex items-center gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+            <CyberButton
+              className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3"
+              asChild
             >
-              <span>&gt;</span>
-              <span>Explore Ergo</span>
-              <span className="animate-pulse">_</span>
-            </Link>
+              <Link href="/start/introduction" className="inline-flex items-center gap-2">
+                <span>&gt;</span>
+                <span>Explore Ergo</span>
+                <span className="animate-pulse">_</span>
+              </Link>
+            </CyberButton>
             
-            <Link 
-              href="#choose-path"
-              className="inline-flex items-center gap-2 bg-transparent border-2 border-orange-500 text-orange-500 hover:bg-orange-500/10 font-mono uppercase tracking-wider px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
+            <CyberButton
+              className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-6 py-3"
+              asChild
             >
-              <span>Get Started</span>
-            </Link>
+              <Link href="#choose-path">
+                Choose Your Path
+              </Link>
+            </CyberButton>
           </div>
 
           {/* Feature icons */}

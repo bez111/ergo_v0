@@ -10,7 +10,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { GlitchText } from "@/components/animations/glitch-text"
 import { cn } from "@/lib/utils"
-import HexBackground from "@/components/HexBackground"
 
 export function EcosystemShowcase() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -87,45 +86,8 @@ export function EcosystemShowcase() {
 
   return (
     <section className="relative py-24 overflow-hidden" id="ecosystem">
-      {/* Semi-transparent overlay */}
-      <div className="absolute inset-0 bg-black/50"></div>
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-black/80"></div>
-
-      {/* Digital rain effect removed - was causing issues */}
-
-      {/* Flat-top hexagonal grid pattern */}
-      <HexBackground 
-        size={20}
-        stroke={0.5}
-        color="rgba(255, 136, 0, 0.5)"
-        opacity={0.2}
-        className="absolute inset-0"
-      />
-
-      {/* Animated circuit lines */}
-      <motion.div
-        className="absolute inset-0"
-        initial={false}
-        animate={{ opacity: 0.4 }}
-        transition={{ duration: 2 }}
-      >
-        <svg width="100%" height="100%" viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
-          <g stroke="rgba(255, 136, 0, 0.4)" fill="none" strokeWidth="1">
-            <motion.path
-              d="M0,500 Q250,400 500,500 T1000,500"
-              strokeDasharray="5,5"
-              animate={{
-                strokeDashoffset: [0, -1000],
-              }}
-              transition={{
-                duration: 20,
-                repeat: Number.POSITIVE_INFINITY,
-                ease: "linear",
-              }}
-            />
-          </g>
-        </svg>
-      </motion.div>
+      {/* Semi-transparent overlay - same as GET STARTED WITH ERGO */}
+      <div className="absolute inset-0 bg-black/40"></div>
 
       <div className="container px-4 md:px-6 relative z-10" ref={containerRef}>
         <div className="flex flex-col gap-12">

@@ -6,11 +6,11 @@ import { FooterNewsletter } from "./footer-newsletter"
 
 export function Footer() {
   return (
-    <footer className="border-t border-primary/30 bg-black relative overflow-hidden">
+    <footer className="border-t border-primary/30 bg-black relative overflow-hidden z-50">
       {/* Animated grid lines */}
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
-      <div className="container py-12 md:py-16 relative z-10">
+      <div className="container py-12 md:py-16 relative z-20">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
             <div className="font-medium font-mono text-primary">PLATFORM</div>
@@ -72,12 +72,12 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="border-t border-primary/20 py-6 relative">
+      <div className="border-t border-primary/20 py-6 relative z-20">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
-          <p className="text-sm text-gray-500 font-mono">
+          <p className="text-sm text-gray-300 font-mono">
             © {new Date().getFullYear()} ERGO PLATFORM. ALL RIGHTS RESERVED.
           </p>
-          <p className="text-sm text-gray-500 font-mono">
+          <p className="text-sm text-gray-300 font-mono">
             ERGO IS AN OPEN-SOURCE PROJECT.{" "}
             <Link href="https://github.com/ergoplatform" className="text-primary hover:underline">
               CONTRIBUTE ON GITHUB

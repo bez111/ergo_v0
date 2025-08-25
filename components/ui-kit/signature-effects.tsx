@@ -339,8 +339,7 @@ export const HexagonalGrid: React.FC<{ className?: string }> = ({ className = ""
   const R = 40; // радиус
   const cx = 50, cy = 50; // центр
   const points = [...Array(6)].map((_, i) => {
-    const angle = Math.PI / 3 * i; // шаг 60°
-    // flat-top: смещение на Math.PI/6
+    const angle = Math.PI / 3 * i + Math.PI / 6; // шаг 60° + смещение для flat-top
     return [
       cx + R * Math.cos(angle),
       cy + R * Math.sin(angle)

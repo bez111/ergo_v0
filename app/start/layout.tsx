@@ -3,7 +3,7 @@ import { Footer } from "@/components/footer";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ErrorBoundary } from "@/components/error-boundary";
 
-export default function EcosystemLayout({ children }: { children: React.ReactNode }) {
+export default function StartLayout({ children }: { children: React.ReactNode }) {
   return (
     <ThemeProvider
       attribute="class"

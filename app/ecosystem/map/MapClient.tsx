@@ -6,7 +6,7 @@ import Link from "next/link"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
+
 import { ExternalLink, ZoomIn, ZoomOut, RefreshCw, Plus, Star, Download } from "lucide-react"
 
 // OPERATIONAL projects from /ecosystem
@@ -76,7 +76,7 @@ function truncateLabel(text: string, max: number) {
 function hexPoints(cx: number, cy: number, r: number) {
   const pts: string[] = []
   for (let i = 0; i < 6; i++) {
-    const angle = (Math.PI / 3) * i - Math.PI / 2 // pointy-top hex
+    const angle = (Math.PI / 3) * i // flat-top hex (0 degrees rotation)
     const x = cx + r * Math.cos(angle)
     const y = cy + r * Math.sin(angle)
     pts.push(`${x},${y}`)
@@ -255,9 +255,6 @@ export default function MapClient() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background */}
-      <HexagonalGrid className="opacity-[0.03]" />
-
       <div className="relative z-10 max-w-7xl mx-auto px-4 pt-28 pb-16">
         {/* Hero */}
         <div className="pt-6 pb-6">

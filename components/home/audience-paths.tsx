@@ -115,7 +115,7 @@ export function AudiencePaths() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="h-full"
                 >
-                  <Card className="group relative h-full flex flex-col bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 hover:bg-neutral-800/50 transition-all duration-300">
+                  <Card className="group relative h-full flex flex-col bg-gradient-to-b from-neutral-900/60 to-neutral-900/40 border-neutral-700 hover:border-orange-500/30 hover:from-neutral-900/80 hover:to-neutral-900/60 transition-all duration-300">
                     <CardHeader className="pb-3">
                       <div className="flex items-center gap-3 mb-2">
                         <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">

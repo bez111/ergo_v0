@@ -29,23 +29,7 @@ export function FooterNewsletter({ showOnHomepage = false }: FooterNewsletterPro
     }
   }, [])
 
-  // НЕ показывать форму на главной странице (там есть большой блок)
-  if (pathname === '/' && !showOnHomepage) {
-    return (
-      <div className="space-y-4">
-        <h3 className="text-lg font-semibold text-primary">NEWSLETTER</h3>
-        <p className="text-sm text-muted-foreground">
-          Stay updated with the latest news and developments from the Ergo ecosystem.
-        </p>
-        <a 
-          href="/#subscribe" 
-          className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors"
-        >
-          Subscribe to Newsletter →
-        </a>
-      </div>
-    )
-  }
+  // Показывать одинаково на всех страницах
 
   // Показать статус подписки для уже подписанных
   if (isSubscribed) {

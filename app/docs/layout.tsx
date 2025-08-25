@@ -5,6 +5,10 @@ import { BookOpen, Globe, Code, Pickaxe, Menu } from "lucide-react"
 import { usePathname } from "next/navigation"
 import NavLink from "@/components/nav-link"
 import SidebarMenu from "@/components/SidebarMenu"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
+import { ThemeProvider } from "@/components/theme-provider"
+import { ErrorBoundary } from "@/components/error-boundary"
 
 const NoIcon = () => null;
 
@@ -88,21 +92,36 @@ const sectionButtons = [
 
 export default function DocsLayout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="bg-black text-white min-h-screen">
-      <div className="container mx-auto px-4 pt-24 pb-12">
-        <div className="grid lg:grid-cols-[280px_1fr] gap-x-8">
-          {/* Sidebar Navigation */}
-          <aside className="lg:block hidden fixed lg:relative inset-0 z-40 lg:z-auto">
-            <SidebarMenu />
-          </aside>
-          {/* Main Content */}
-          <main className="lg:pl-8">
-            <div className="prose prose-invert prose-lg max-w-3xl prose-headings:font-bold prose-headings:text-white prose-a:text-orange-400 prose-a:no-underline hover:prose-a:underline">
-              {children}
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <ErrorBoundary>
+        <div className="relative flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
+            <div className="bg-black text-white min-h-screen">
+              <div className="container mx-auto px-4 pt-24 pb-12">
+                <div className="grid lg:grid-cols-[280px_1fr] gap-x-8">
+                  {/* Sidebar Navigation */}
+                  <aside className="lg:block hidden fixed lg:relative inset-0 z-40 lg:z-auto">
+                    <SidebarMenu />
+                  </aside>
+                  {/* Main Content */}
+                  <main className="lg:pl-8">
+                    <div className="prose prose-invert prose-lg max-w-3xl prose-headings:font-bold prose-headings:text-white prose-a:text-orange-400 prose-a:no-underline hover:prose-a:underline">
+                      {children}
+                    </div>
+                  </main>
+                </div>
+              </div>
             </div>
           </main>
+          <Footer />
         </div>
-      </div>
-    </div>
+      </ErrorBoundary>
+    </ThemeProvider>
   );
 } 

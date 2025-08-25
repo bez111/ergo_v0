@@ -1,4 +1,8 @@
 import { Metadata } from "next"
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ErrorBoundary } from "@/components/error-boundary";
 
 export const metadata: Metadata = {
   title: "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
@@ -10,12 +14,29 @@ export const metadata: Metadata = {
     url: "https://ergoblockchain.org/technology",
     title: "Ergo Technology",
     description:
-      "Explore Ergo’s technology stack: eUTXO, ErgoScript, Autolykos PoW, Storage Rent, Sigma Protocols, NIPoPoWs.",
+      "Explore Ergo's technology stack: eUTXO, ErgoScript, Autolykos PoW, Storage Rent, Sigma Protocols, NIPoPoWs.",
     images: [{ url: "https://ergoblockchain.org/og/technology-1200x630.png", width: 1200, height: 630 }],
   },
   twitter: { card: "summary_large_image" },
 }
 
 export default function TechnologyLayout({ children }: { children: React.ReactNode }) {
-  return children
+  return (
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      <ErrorBoundary>
+        <div className="relative flex min-h-screen flex-col">
+          <Header />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
+      </ErrorBoundary>
+    </ThemeProvider>
+  );
 } 

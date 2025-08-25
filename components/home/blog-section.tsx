@@ -13,8 +13,9 @@ export function BlogSection() {
   }))
 
   return (
-    <section className="py-16 relative overflow-hidden bg-black border-t border-neutral-700">
-      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+    <section className="relative py-24 overflow-hidden" id="blog">
+      {/* Semi-transparent overlay - same as GET STARTED WITH ERGO */}
+      <div className="absolute inset-0 bg-black/40"></div>
       
       <div className="container px-4 md:px-6 relative z-10">
         <div className="max-w-7xl mx-auto">
