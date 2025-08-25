@@ -9,6 +9,8 @@ import HreflangTags from "@/components/seo/hreflang-tags";
 import { LocaleProvider } from "@/components/locale-provider";
 import { organizationSchema, websiteSchema } from "@/lib/schema-generator";
 import "../globals.css";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -143,9 +145,11 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
           >
             <ErrorBoundary>
               <div className="relative flex min-h-screen flex-col">
+                <Header />
                 <main className="flex-1">
                   {children}
                 </main>
+                <Footer />
               </div>
             </ErrorBoundary>
           </ThemeProvider>
