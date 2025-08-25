@@ -10,6 +10,7 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { GlitchText } from "@/components/animations/glitch-text"
 import { cn } from "@/lib/utils"
+import HexBackground from "@/components/HexBackground"
 
 export function EcosystemShowcase() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -93,21 +94,13 @@ export function EcosystemShowcase() {
       {/* Digital rain effect removed - was causing issues */}
 
       {/* Flat-top hexagonal grid pattern */}
-      <div className="absolute inset-0 opacity-20">
-        <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <pattern id="flat-hexagons" width="60" height="52" patternUnits="userSpaceOnUse" patternTransform="scale(1.5)">
-              <path
-                d="M30,0 L60,0 L60,26 L30,52 L0,52 L0,26 Z"
-                fill="none"
-                stroke="rgba(255, 136, 0, 0.5)"
-                strokeWidth="0.5"
-              />
-            </pattern>
-          </defs>
-          <rect width="100%" height="100%" fill="url(#flat-hexagons)" />
-        </svg>
-      </div>
+      <HexBackground 
+        size={20}
+        stroke={0.5}
+        color="rgba(255, 136, 0, 0.5)"
+        opacity={0.2}
+        className="absolute inset-0"
+      />
 
       {/* Animated circuit lines */}
       <motion.div
