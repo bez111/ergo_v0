@@ -30,15 +30,17 @@ export function SubscribeSection({ segments = [] }: SubscribeSectionProps) {
   ]
 
   return (
-    <section className="py-16 md:py-24 relative overflow-hidden bg-gradient-to-br from-black via-gray-900 to-black">
-      {/* Animated background grid */}
-      <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]"></div>
+    <section className="py-16 md:py-24 relative overflow-hidden bg-black">
+      {/* Subtle geometric pattern */}
+      <div className="absolute inset-0 opacity-20">
+        <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_48%,rgba(255,136,0,0.02)_49%,rgba(255,136,0,0.02)_51%,transparent_52%)] bg-[size:30px_30px]"></div>
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
           <div className="mb-8">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-orange-500">
               STAY IN THE LOOP
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-2">
