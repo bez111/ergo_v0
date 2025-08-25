@@ -4,18 +4,7 @@ import { useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { locales, localeConfig, type Locale } from '../i18n';
-// Простые SVG иконки вместо heroicons
-const GlobeIcon = () => (
-  <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-  </svg>
-);
-
-const ChevronDownIcon = ({ className }: { className?: string }) => (
-  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-  </svg>
-);
+import { Globe, ChevronDown } from 'lucide-react';
 
 export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,12 +37,12 @@ export default function LanguageSwitcher() {
     <div className="relative">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors duration-200 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800"
-        aria-label={t('switchLanguage')}
+        className="flex items-center gap-2 px-3 py-2 text-sm font-mono uppercase tracking-wider text-white hover:text-primary hover:bg-primary/10 transition-colors duration-200 rounded-md border border-primary/20 hover:border-primary/50"
+        aria-label={t('switchLanguage') || 'Switch Language'}
       >
-        <GlobeIcon />
+        <Globe className="h-4 w-4" />
         <span className="hidden sm:inline">{currentLocaleConfig.name}</span>
-        <ChevronDownIcon 
+        <ChevronDown 
           className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
         />
       </button>
@@ -67,8 +56,8 @@ export default function LanguageSwitcher() {
           />
           
           {/* Dropdown menu */}
-          <div className="absolute right-0 mt-2 w-56 bg-white dark:bg-gray-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 z-20">
-            <div className="py-1" role="menu">
+          <div className="absolute right-0 mt-2 w-64 bg-black/90 backdrop-blur border border-primary/20 rounded-md shadow-lg shadow-primary/10 z-20">
+            <div className="py-2" role="menu">
               {locales.map((localeCode) => {
                 const config = localeConfig[localeCode];
                 const isActive = localeCode === locale;
@@ -78,24 +67,24 @@ export default function LanguageSwitcher() {
                     key={localeCode}
                     onClick={() => switchLanguage(localeCode)}
                     className={`
-                      w-full text-left px-4 py-2 text-sm transition-colors duration-200
+                      w-full text-left px-4 py-3 text-sm font-mono transition-colors duration-200 flex items-center justify-between
                       ${isActive 
-                        ? 'bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300' 
-                        : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'
+                        ? 'bg-primary/20 text-primary border-l-2 border-primary' 
+                        : 'text-gray-300 hover:bg-primary/10 hover:text-primary'
                       }
                     `}
                     role="menuitem"
                     dir={config.dir}
                   >
-                    <div className="flex items-center justify-between">
+                    <div className="flex flex-col">
                       <span className="font-medium">{config.name}</span>
-                      {isActive && (
-                        <span className="text-blue-600 dark:text-blue-400">✓</span>
-                      )}
+                      <span className="text-xs text-gray-500 uppercase tracking-wider">
+                        {config.hreflang}
+                      </span>
                     </div>
-                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      {config.hreflang}
-                    </div>
+                    {isActive && (
+                      <span className="text-primary">●</span>
+                    )}
                   </button>
                 );
               })}

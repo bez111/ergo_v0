@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Code, Shield, Zap, Layers } from "lucide-react"
-import { useTranslations, useLocaleContext } from "@/components/locale-provider"
+import { useTranslations, useLocale } from "next-intl"
 
 export function HeroSectionLocalized() {
   const [typedText, setTypedText] = useState("")
@@ -13,7 +13,7 @@ export function HeroSectionLocalized() {
   const [isClient, setIsClient] = useState(false)
   
   const t = useTranslations('hero')
-  const { locale } = useLocaleContext()
+  const locale = useLocale()
 
   // Локализованные сообщения
   const HERO_MESSAGES = [
@@ -31,31 +31,34 @@ export function HeroSectionLocalized() {
   // Typing animation
   useEffect(() => {
     if (!isClient) return
-    
+
     const currentMessage = HERO_MESSAGES[currentTextIndex]
     if (!currentMessage) return
     
-    let timeout: NodeJS.Timeout
-    
-    if (isTyping && typedText.length < currentMessage.length) {
-        timeout = setTimeout(() => {
-        setTypedText(currentMessage.slice(0, typedText.length + 1))
-        }, 100)
-    } else if (isTyping && typedText.length === currentMessage.length) {
-        timeout = setTimeout(() => {
+    if (isTyping) {
+      if (typedText.length < currentMessage.length) {
+        const timeout = setTimeout(() => {
+          setTypedText(currentMessage.slice(0, typedText.length + 1))
+        }, 50)
+        return () => clearTimeout(timeout)
+      } else {
+        const timeout = setTimeout(() => {
           setIsTyping(false)
         }, 2000)
-    } else if (!isTyping && typedText.length > 0) {
-        timeout = setTimeout(() => {
-        setTypedText(typedText.slice(0, -1))
-        }, 50)
-    } else if (!isTyping && typedText.length === 0) {
-      setCurrentTextIndex((prev) => (prev + 1) % HERO_MESSAGES.length)
+        return () => clearTimeout(timeout)
+      }
+    } else {
+      if (typedText.length > 0) {
+        const timeout = setTimeout(() => {
+          setTypedText(typedText.slice(0, -1))
+        }, 30)
+        return () => clearTimeout(timeout)
+      } else {
+        setCurrentTextIndex((prev) => (prev + 1) % HERO_MESSAGES.length)
         setIsTyping(true)
+      }
     }
-    
-    return () => clearTimeout(timeout)
-  }, [typedText, isTyping, currentTextIndex, isClient, HERO_MESSAGES])
+  }, [typedText, isTyping, currentTextIndex, HERO_MESSAGES, isClient])
 
   // Cursor blinking
   useEffect(() => {
@@ -78,7 +81,7 @@ export function HeroSectionLocalized() {
         {/* Main Title */}
         <div className="mb-8">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-white via-gray-100 to-gray-300 bg-clip-text text-transparent mb-6">
-            {t('title')}
+            {t('title') || 'Ergo Platform'}
           </h1>
           
           {/* Animated Subtitle */}
@@ -96,51 +99,49 @@ export function HeroSectionLocalized() {
 
         {/* Description */}
         <p className="text-lg sm:text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed">
-          {t('description')}
+          {t('description') || 'A resilient blockchain platform for contractual money. Ergo builds advanced cryptographic features and radically new DeFi functionality on the rock-solid foundations laid by a decade of blockchain theory and development.'}
         </p>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16">
-          <Link
-            href={`/${locale === 'en' ? '' : locale + '/'}docs`}
-            className="group relative px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/25"
-          >
-            <span className="relative z-10">{t('getStarted')}</span>
-            <div className="absolute inset-0 bg-gradient-to-r from-blue-400 to-purple-400 rounded-lg blur opacity-30 group-hover:opacity-50 transition-opacity duration-300" />
+          <Link href="/start/introduction">
+            <button className="group relative px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(251,146,60,0.5)] min-w-[200px]">
+              <span className="relative z-10 flex items-center gap-2 font-mono uppercase tracking-wider">
+                <Code className="w-5 h-5" />
+                {t('getStarted') || 'Get Started'}
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-orange-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+            </button>
           </Link>
           
-          <Link
-            href={`/${locale === 'en' ? '' : locale + '/'}ecosystem`}
-            className="group px-8 py-4 border-2 border-gray-600 text-white font-semibold rounded-lg hover:border-orange-400 hover:text-orange-400 transition-all duration-300 transform hover:scale-105"
-          >
-            {t('learnMore')}
+          <Link href="/docs">
+            <button className="group relative px-8 py-4 bg-transparent border-2 border-gray-600 text-gray-300 font-bold rounded-lg overflow-hidden transition-all duration-300 hover:border-orange-400 hover:text-orange-400 hover:shadow-[0_0_20px_rgba(251,146,60,0.3)] min-w-[200px]">
+              <span className="relative z-10 flex items-center gap-2 font-mono uppercase tracking-wider">
+                <Shield className="w-5 h-5" />
+                {t('learnMore') || 'Learn More'}
+              </span>
+            </button>
           </Link>
         </div>
 
-        {/* Feature Icons */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-2xl mx-auto">
+        {/* Feature Pills */}
+        <div className="flex flex-wrap justify-center gap-4 mb-8">
           {[
-            { icon: Shield, label: t('feature1') || 'Secure' },
-            { icon: Zap, label: t('feature2') || 'Fast' },
-            { icon: Code, label: t('feature3') || 'Programmable' },
-            { icon: Layers, label: t('feature4') || 'Scalable' }
-          ].map(({ icon: Icon, label }, index) => (
-            <div key={index} className="flex flex-col items-center group">
-              <div className="p-4 rounded-full bg-gray-800/50 border border-gray-700 group-hover:border-orange-400 transition-colors duration-300">
-                <Icon className="h-6 w-6 text-gray-400 group-hover:text-orange-400 transition-colors duration-300" />
-              </div>
-              <span className="mt-2 text-sm text-gray-500 group-hover:text-gray-300 transition-colors duration-300">
-                {label}
-              </span>
+            { icon: Zap, text: t('feature1') || 'Smart Contracts' },
+            { icon: Shield, text: t('feature2') || 'Proof of Work' },
+            { icon: Layers, text: t('feature3') || 'eUTXO Model' },
+            { icon: Code, text: t('feature4') || 'ErgoScript' }
+          ].map((feature, index) => (
+            <div
+              key={index}
+              className="flex items-center gap-2 px-4 py-2 bg-gray-800/50 border border-gray-700 rounded-full text-gray-300 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300"
+            >
+              <feature.icon className="w-4 h-4" />
+              <span className="text-sm font-mono">{feature.text}</span>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Floating Elements */}
-              <div className="absolute top-20 left-10 w-2 h-2 bg-orange-400 rounded-full animate-pulse opacity-60" />
-        <div className="absolute top-40 right-20 w-1 h-1 bg-orange-400 rounded-full animate-pulse opacity-40" />
-        <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-orange-400 rounded-full animate-pulse opacity-50" />
     </section>
   )
 } 

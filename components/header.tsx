@@ -9,7 +9,7 @@ import { ModeToggle } from "@/components/mode-toggle"
 import { useState, useEffect } from "react"
 import { mainNavItems } from "@/lib/navigation-data"
 import DocsSearchModal from "./DocsSearchModal";
-// import LanguageSwitcher from "./language-switcher";
+import LanguageSwitcher from "./language-switcher";
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false)
@@ -41,7 +41,7 @@ export function Header() {
     }, 3000)
 
     return () => clearInterval(glitchInterval)
-  }, [])
+  }, [isMounted])
 
   return (
     <>
@@ -88,7 +88,7 @@ export function Header() {
               </Button>
             </Link>
 
-            {/* <LanguageSwitcher /> */}
+            <LanguageSwitcher />
             
             <ModeToggle />
 
