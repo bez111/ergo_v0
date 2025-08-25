@@ -5,7 +5,7 @@ import { getMessages, getTranslations } from '@/lib/messages';
 import { ThemeProvider } from "@/components/theme-provider";
 import { ErrorBoundary } from "@/components/error-boundary";
 import HreflangTags from "@/components/seo/hreflang-tags";
-import { LocaleProvider } from "@/components/locale-provider";
+import { NextIntlClientProvider } from 'next-intl';
 import { organizationSchema, websiteSchema } from "@/lib/schema-generator";
 import "../globals.css";
 import { Header } from "@/components/header";
@@ -107,7 +107,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <>
       <HreflangTags pathname="/" currentLocale={locale} />
-      <LocaleProvider locale={locale as Locale} messages={messages}>
+      <NextIntlClientProvider locale={locale} messages={messages}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -124,7 +124,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
             </div>
           </ErrorBoundary>
         </ThemeProvider>
-      </LocaleProvider>
+      </NextIntlClientProvider>
     </>
   );
 } 
