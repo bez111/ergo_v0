@@ -36,10 +36,11 @@ export function BlogSection() {
           <div className="text-center mt-12">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500/10 border border-orange-500/30 text-orange-400 rounded-lg hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-200 group"
+              className="inline-flex items-center gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
               aria-label="View all blog posts"
             >
-              View All Posts
+              <span>&gt;</span>
+              <span>View All Posts</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

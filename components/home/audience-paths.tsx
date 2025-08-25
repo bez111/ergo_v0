@@ -149,10 +149,11 @@ export function AudiencePaths() {
                     <CardFooter className="pt-4 mt-auto">
                       <Button 
                         asChild
-                        className="w-full bg-transparent border border-orange-500/50 text-orange-400 hover:bg-orange-500 hover:text-black font-semibold uppercase tracking-wider transition-all duration-300 rounded-xl"
+                        className="w-full bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 transition-all duration-300 hover:scale-105 rounded-lg"
                       >
                         <Link href={audience.ctaLink} className="inline-flex w-full items-center justify-center">
-                          {audience.cta}
+                          <span>&gt;</span>
+                          <span>{audience.cta}</span>
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Link>
                       </Button>

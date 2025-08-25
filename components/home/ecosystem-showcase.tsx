@@ -234,11 +234,12 @@ export function EcosystemShowcase() {
                   {/* CTA - эта кнопка будет справа */}
                   <div className="flex justify-end">
                     <CyberButton
-                      className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider w-fit"
+                      className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 transition-all duration-300 hover:scale-105 w-fit"
                       asChild
                     >
                       <Link href={currentProject.ctaLink}>
-                        {currentProject.ctaText}
+                        <span>&gt;</span>
+                        <span>{currentProject.ctaText}</span>
                         <ArrowRight className="h-4 w-4" />
                       </Link>
                     </CyberButton>
@@ -252,10 +253,13 @@ export function EcosystemShowcase() {
           <FadeIn delay={0.6}>
             <div className="text-center">
               <CyberButton
-                className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-8 py-4"
+                className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 transition-all duration-300 hover:scale-105 px-8 py-4"
                 asChild
               >
-                <Link href="/ecosystem/projects">EXPLORE ECOSYSTEM</Link>
+                <Link href="/ecosystem/projects">
+                  <span>&gt;</span>
+                  <span>EXPLORE ECOSYSTEM</span>
+                </Link>
               </CyberButton>
             </div>
           </FadeIn>
