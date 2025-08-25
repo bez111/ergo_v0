@@ -168,13 +168,14 @@ export function EcosystemShowcase() {
 
           {/* Featured project showcase */}
           <FadeIn delay={0.2}>
-            <motion.div
-              key={activeCategory}
-              initial={false}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="grid lg:grid-cols-2 gap-8 bg-black/60 backdrop-blur-sm border border-primary/30 rounded-lg overflow-hidden"
-            >
+            <Link href={currentProject.ctaLink}>
+              <motion.div
+                key={activeCategory}
+                initial={false}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="grid lg:grid-cols-2 gap-8 bg-black/60 backdrop-blur-sm border border-primary/30 rounded-lg overflow-hidden hover:border-primary/50 hover:bg-black/80 transition-all duration-300 cursor-pointer group"
+              >
               {/* Visual/Image side */}
               <div className="relative h-64 lg:h-96 bg-gradient-to-br from-primary/20 via-primary/10 to-transparent flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-[url('/cyberpunk-grid.png')] opacity-20 bg-cover bg-center"></div>
@@ -231,35 +232,27 @@ export function EcosystemShowcase() {
                     ))}
                   </div>
 
-                  {/* CTA - эта кнопка будет справа */}
+                  {/* CTA indicator - показываем что карточка кликабельна */}
                   <div className="flex justify-end">
-                    <CyberButton
-                      className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 transition-all duration-300 hover:scale-105 w-fit"
-                      asChild
-                    >
-                      <Link href={currentProject.ctaLink}>
-                        <span>&gt;</span>
-                        <span>{currentProject.ctaText}</span>
-                        <ArrowRight className="h-4 w-4" />
-                      </Link>
-                    </CyberButton>
+                    <div className="flex items-center gap-2 text-primary font-mono text-sm group-hover:text-primary/80 transition-colors">
+                      <span>{currentProject.ctaText}</span>
+                      <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
                   </div>
                 </div>
               </div>
             </motion.div>
+            </Link>
           </FadeIn>
 
           {/* Bottom CTA - эта кнопка остается по центру */}
           <FadeIn delay={0.6}>
             <div className="text-center">
               <CyberButton
-                className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 transition-all duration-300 hover:scale-105 px-8 py-4"
+                className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-8 py-4"
                 asChild
               >
-                <Link href="/ecosystem/projects">
-                  <span>&gt;</span>
-                  <span>EXPLORE ECOSYSTEM</span>
-                </Link>
+                <Link href="/ecosystem/projects">EXPLORE ECOSYSTEM</Link>
               </CyberButton>
             </div>
           </FadeIn>
