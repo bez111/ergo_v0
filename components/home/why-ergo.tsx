@@ -44,7 +44,7 @@ export function WhyErgo() {
   ]
 
   return (
-    <section className="py-32 relative overflow-hidden bg-black" id="why-ergo">
+    <section className="py-16 md:py-24 relative overflow-hidden bg-black" id="why-ergo">
       {/* Subtle background gradient */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-neutral-950 to-black"></div>
       
@@ -55,7 +55,7 @@ export function WhyErgo() {
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
               <span className="text-white">WHY</span> <span className="text-orange-400">ERGO?</span>
             </h2>
-            <p className="text-gray-300 text-xl md:text-2xl font-light leading-relaxed">
+            <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-[65ch] mx-auto">
               A resilient blockchain platform combining proven principles with cutting-edge innovation
             </p>
           </div>

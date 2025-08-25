@@ -79,7 +79,7 @@ export function HeroSection() {
         <div className="flex flex-col items-center text-center space-y-8 max-w-4xl mx-auto">
           {/* ERGO Title */}
           <div className="relative">
-            <h2 className="text-7xl font-extrabold tracking-tighter text-orange-500">
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tighter text-orange-500">
               ERGO
             </h2>
           </div>
@@ -98,9 +98,9 @@ export function HeroSection() {
               </span>
             </h1>
             
-              <p className="text-xl md:text-2xl text-neutral-300 font-mono max-w-3xl mx-auto">
-                Join a movement for open, programmable, and censorship-resistant finance.
-              </p>
+                          <p className="text-lg md:text-xl text-neutral-300 font-mono max-w-[65ch] mx-auto leading-relaxed">
+              Join a movement for open, programmable, and censorship-resistant finance.
+            </p>
           </div>
 
           {/* Action buttons */}
