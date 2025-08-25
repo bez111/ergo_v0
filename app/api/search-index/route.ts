@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server'
-import { blogPosts } from '@/app/blog/_lib/blog-data'
-import { menuData } from '@/app/docs/menuData'
+import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
+import { menuData } from '@/app/[locale]/docs/menuData'
 
 // Generate a comprehensive search index for SEO and site search
 export async function GET() {

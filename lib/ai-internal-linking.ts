@@ -1,8 +1,8 @@
 // AI-Powered Internal Linking System for Maximum SEO
 // Automatically creates contextual links between related content
 
-import { blogPosts } from '@/app/blog/_lib/blog-data'
-import { menuData } from '@/app/docs/menuData'
+import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
+import { menuData } from '@/app/[locale]/docs/menuData'
 
 interface ContentNode {
   id: string
@@ -34,11 +34,11 @@ export function buildContentGraph(): ContentNode[] {
       id: `blog-${post.slug}`,
       url: `/blog/${post.slug}`,
       title: post.title,
-      description: post.description,
-      keywords: [...post.tags, post.category.toLowerCase()],
+      description: post.excerpt,
+      keywords: [...(post.tags || []), post.category.toLowerCase()],
       category: post.category,
       type: 'blog',
-      content: post.description, // In real app, would use full content
+      content: post.excerpt, // In real app, would use full content
     })
   })
   

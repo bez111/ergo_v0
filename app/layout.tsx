@@ -55,17 +55,34 @@ export const metadata: Metadata = {
         url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Ergo Platform - Resilient Blockchain for Contractual Money',
-      }
+        alt: 'Ergo Platform',
+      },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    site: '@ergoplatformorg',
-    creator: '@ergoplatformorg',
     title: 'Ergo Platform - Resilient Blockchain for Contractual Money',
     description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
     images: ['/og-image.png'],
+    creator: '@ergoplatformorg',
+  },
+  alternates: {
+    canonical: 'https://ergoblockchain.org',
+    languages: {
+      'en': 'https://ergoblockchain.org',
+      'ru': 'https://ergoblockchain.org/ru',
+      'fr': 'https://ergoblockchain.org/fr',
+      'de': 'https://ergoblockchain.org/de',
+      'es': 'https://ergoblockchain.org/es',
+      'ar': 'https://ergoblockchain.org/ar',
+      'zh-CN': 'https://ergoblockchain.org/zh-cn',
+      'zh-TW': 'https://ergoblockchain.org/zh-tw',
+      'tr': 'https://ergoblockchain.org/tr',
+      'pt-BR': 'https://ergoblockchain.org/pt-br',
+      'it': 'https://ergoblockchain.org/it',
+      'ja': 'https://ergoblockchain.org/ja',
+      'ko-KR': 'https://ergoblockchain.org/ko-kr',
+    },
   },
   robots: {
     index: true,
@@ -76,14 +93,6 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1,
-    },
-  },
-  alternates: {
-    canonical: 'https://ergoblockchain.org',
-    languages: {
-      'en': 'https://ergoblockchain.org',
-      'ru': 'https://ergoblockchain.org/ru',
-      'pt-BR': 'https://ergoblockchain.org/pt-br',
     },
   },
   verification: {
@@ -99,7 +108,7 @@ export default function RootLayout({
 }) {
   return (
     <html 
-      lang="en" 
+      lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
@@ -108,4 +117,4 @@ export default function RootLayout({
       </body>
     </html>
   );
-}
+} 

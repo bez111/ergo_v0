@@ -107,6 +107,12 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <>
       <HreflangTags pathname="/" currentLocale={locale} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([organizationSchema, websiteSchema])
+        }}
+      />
       <NextIntlClientProvider locale={locale} messages={messages}>
         <ThemeProvider
           attribute="class"
