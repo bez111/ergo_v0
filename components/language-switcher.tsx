@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
 import { locales, localeConfig, type Locale } from '../i18n';
@@ -10,27 +10,70 @@ export default function LanguageSwitcher() {
   const [isOpen, setIsOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  const locale = useLocale();
+  const nextIntlLocale = useLocale();
   const t = useTranslations('language');
 
+  // Определяем текущую локаль на основе pathname
+  const getCurrentLocale = (): Locale => {
+    for (const loc of locales) {
+      if (loc !== 'en' && pathname.startsWith(`/${loc}`)) {
+        return loc;
+      }
+    }
+    return 'en'; // По умолчанию английский, если нет префикса
+  };
+
+  const locale = getCurrentLocale();
   const currentLocaleConfig = localeConfig[locale as Locale];
 
+  // Закрываем меню при изменении pathname
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   const switchLanguage = (newLocale: Locale) => {
-    let newPath = pathname;
+    // Получаем чистый путь без локали
+    let cleanPath = pathname;
     
-    // Удаляем текущую локаль из пути (если она есть)
-    const currentLocalePrefix = `/${locale}`;
-    if (pathname.startsWith(currentLocalePrefix)) {
-      newPath = pathname.slice(currentLocalePrefix.length) || '/';
+    // Удаляем любой префикс локали из текущего пути
+    for (const loc of locales) {
+      if (loc !== 'en') {
+        const localePrefix = `/${loc}`;
+        if (pathname === localePrefix || pathname.startsWith(`${localePrefix}/`)) {
+          cleanPath = pathname.slice(localePrefix.length) || '/';
+          break;
+        }
+      }
     }
     
-    // Добавляем новую локаль (если не английский)
-    if (newLocale !== 'en') {
-      newPath = `/${newLocale}${newPath}`;
+    // Формируем новый путь с учетом выбранной локали
+    let newPath: string;
+    if (newLocale === 'en') {
+      // Для английского используем путь без префикса
+      newPath = cleanPath;
+    } else {
+      // Для других языков добавляем префикс локали
+      newPath = `/${newLocale}${cleanPath === '/' ? '' : cleanPath}`;
     }
     
     setIsOpen(false);
-    router.push(newPath);
+    
+    // Устанавливаем cookie для next-intl, чтобы middleware знал о выборе пользователя
+    // Cookie NEXT_LOCALE используется next-intl для определения предпочтительной локали
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
+    
+    // Отладка
+    console.log('Current pathname:', pathname);
+    console.log('Clean path:', cleanPath);
+    console.log('New locale:', newLocale);
+    console.log('New path:', newPath);
+    console.log('Setting cookie:', `NEXT_LOCALE=${newLocale}`);
+    
+    // Небольшая задержка чтобы cookie успела установиться
+    setTimeout(() => {
+      // Используем window.location для полной перезагрузки страницы с новой локалью
+      window.location.href = newPath;
+    }, 50);
   };
 
   return (

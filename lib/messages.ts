@@ -1,16 +1,22 @@
 import { locales, type Locale } from '../i18n';
 
 export async function getMessages(locale: Locale) {
-  if (!locales.includes(locale)) {
-    throw new Error(`Unsupported locale: ${locale}`);
+  // Fallback to 'en' if locale is undefined
+  const safeLocale = locale || 'en';
+  
+  if (!locales.includes(safeLocale as Locale)) {
+    console.warn(`Unsupported locale: ${safeLocale}, falling back to 'en'`);
+    const messages = await import(`../messages/en.json`);
+    return messages.default;
   }
 
   try {
-    const messages = await import(`../messages/${locale}.json`);
+    const messages = await import(`../messages/${safeLocale}.json`);
     return messages.default;
   } catch (error) {
-    console.error(`Failed to load messages for locale: ${locale}`, error);
-    throw new Error(`Failed to load messages for locale: ${locale}`);
+    console.error(`Failed to load messages for locale: ${safeLocale}, falling back to 'en'`, error);
+    const fallbackMessages = await import(`../messages/en.json`);
+    return fallbackMessages.default;
   }
 }
 

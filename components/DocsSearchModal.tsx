@@ -15,8 +15,10 @@ function highlight(text: string, query: string) {
 function groupBySection(items: DocsSearchIndexItem[]) {
   const groups: Record<string, DocsSearchIndexItem[]> = {};
   for (const item of items) {
-    if (!groups[item.section]) groups[item.section] = [];
-    groups[item.section].push(item);
+    const section = item.section;
+    if (!section) continue;
+    if (!groups[section]) groups[section] = [];
+    groups[section].push(item);
   }
   return groups;
 }
@@ -304,9 +306,9 @@ export default function DocsSearchModal({ open, onClose }: { open: boolean; onCl
                     </button>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    {searchHistory.map(term => (
+                    {searchHistory.map((term, index) => (
                       <button
-                        key={term.query}
+                        key={`${term.query}-${index}`}
                         onClick={() => handleSearch(term.query)}
                         className="px-3 py-1 text-xs bg-neutral-800 text-gray-300 rounded-full hover:bg-neutral-700 transition-colors"
                       >

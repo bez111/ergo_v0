@@ -1,5 +1,4 @@
 import { getRequestConfig } from 'next-intl/server';
-import { notFound } from 'next/navigation';
 
 // Поддерживаемые локали
 export const locales = [
@@ -44,9 +43,12 @@ export const localeConfig = {
 } as const;
 
 export default getRequestConfig(async ({ locale }) => {
+  // Если locale не определен или не поддерживается, используем английский
+  const safeLocale = locale && locales.includes(locale as any) ? locale : 'en';
+  
   return {
-    locale: locale as string,
-    messages: (await import(`./messages/${locale}.json`)).default
+    locale: safeLocale as string,
+    messages: (await import(`./messages/${safeLocale}.json`)).default
   };
 });
 

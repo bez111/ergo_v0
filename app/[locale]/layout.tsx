@@ -94,9 +94,9 @@ export function generateStaticParams() {
 }
 
 export default async function LocaleLayout({ children, params }: LocaleLayoutProps) {
-  const { locale } = await params;
+  const { locale = 'en' } = await params;
   
-  if (!locales.includes(locale as any)) {
+  if (!locale || !locales.includes(locale as any)) {
     notFound();
   }
 
