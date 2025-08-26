@@ -101,6 +101,28 @@ export const metadata: Metadata = {
   },
 }
 
+// JSON-LD структурированные данные
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Ergo Platform',
+  url: 'https://ergoblockchain.org',
+  logo: 'https://ergoblockchain.org/logo.png',
+  description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
+  sameAs: [
+    'https://twitter.com/ergoplatformorg',
+    'https://github.com/ergoplatform',
+    'https://www.reddit.com/r/ergonauts/',
+    'https://t.me/ergoplatform'
+  ],
+  foundingDate: '2019',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    contactType: 'Community Support',
+    url: 'https://ergoblockchain.org/docs'
+  }
+}
+
 export default function RootLayout({
   children,
 }: {
@@ -112,6 +134,16 @@ export default function RootLayout({
       className={`${inter.variable} ${jetbrainsMono.variable}`}
       suppressHydrationWarning
     >
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://ergoblockchain.org" />
+        <link rel="preload" href="/og-image.png" as="image" type="image/png" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="min-h-screen bg-background font-sans antialiased" suppressHydrationWarning>
         {children}
       </body>

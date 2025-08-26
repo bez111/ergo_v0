@@ -10,19 +10,17 @@ module.exports = {
       ],
       numberOfRuns: 3,
       settings: {
-        preset: 'mobile',
-        throttlingMethod: 'simulate',
         formFactor: 'mobile',
+        throttling: {
+          rttMs: 150,
+          throughputKbps: 1638.4,
+          cpuSlowdownMultiplier: 4,
+        },
         screenEmulation: {
           mobile: true,
           width: 360,
           height: 640,
           deviceScaleFactor: 2,
-        },
-        throttling: {
-          rttMs: 150,
-          throughputKbps: 1638.4,
-          cpuSlowdownMultiplier: 4,
         },
       },
     },
