@@ -69,5 +69,25 @@
   "language": {
     "switchLanguage": "切換語言",
     "currentLanguage": "繁體中文"
+  },
+  "technology": {
+    "title": "技術",
+    "subtitle": "先進的區塊鏈技術",
+    "description": "探索Ergo的尖端功能：eUTXO、ErgoScript、Sigma協議等。"
+  },
+  "useCases": {
+    "title": "用例",
+    "subtitle": "現實世界的應用",
+    "description": "了解Ergo如何推動DeFi、NFT、隱私和更多創新應用。"
+  },
+  "docs": {
+    "title": "文檔",
+    "subtitle": "完整的開發者資源",
+    "description": "在Ergo上構建所需的一切：指南、API、工具和示例。"
+  },
+  "learn": {
+    "title": "學習",
+    "subtitle": "掌握Ergo技術",
+    "description": "為開發者、用戶和愛好者提供的全面學習資源。"
   }
-} 
+}

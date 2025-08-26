@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import LearnClient from './LearnClient'
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
+import { getTranslations } from 'next-intl/server'
 
-export const metadata: Metadata = {
-  title: 'Learn Ergo - Tutorials, Guides & Educational Resources',
-  description: 'Master Ergo blockchain: ErgoScript tutorials, comprehensive FAQ, research papers, technical guides, and step-by-step learning paths for all skill levels.',
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'learn' })
+  
+  return {
+    title: `${t('title')} - ${t('subtitle')}`,
+    description: t('description'),
   keywords: ['learn ergo', 'ergoscript tutorial', 'blockchain education', 'crypto learning', 'ergo guides', 'blockchain tutorials', 'smart contract tutorial', 'ergo documentation'],
   alternates: {
     canonical: 'https://ergoblockchain.org/learn'
@@ -41,6 +46,7 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1
+    }
     }
   }
 }

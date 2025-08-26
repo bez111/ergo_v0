@@ -12,6 +12,8 @@ import { Coins, Package, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircl
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,65 +37,71 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "One-Click Creation",
-    description: "Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts",
-    icon: Zap,
-  },
-  {
-    title: "True Native Assets",
-    description: "First-class tokens with protocol-level security guarantees, not contract-based",
-    icon: Shield,
-  },
-  {
-    title: "DeFi Ready",
-    description: "Native integration with all Ergo applications and protocols",
-    icon: Package,
-  },
-  {
-    title: "Cost Effective",
-    description: "Minimal fees for token creation and transfers - just simple, secure, native assets",
-    icon: DollarSign,
-  },
-  {
-    title: "Rich Metadata",
-    description: "Support for complex metadata including images, descriptions, and custom properties",
-    icon: Database,
-  },
-  {
-    title: "Universal Compatibility",
-    description: "Any smart contract can access oracle data without special integrations",
-    icon: Globe,
-  },
-]
+// Features will be defined inside component to use translations
 
-const useCases = [
-  {
-    title: "DeFi Tokens",
-    description: "Create governance tokens, utility tokens, and reward tokens for DeFi protocols",
-    icon: Coins,
-  },
-  {
-    title: "NFT Collections",
-    description: "Build unique digital art, collectibles, and gaming assets",
-    icon: Image,
-  },
-  {
-    title: "Stablecoins",
-    description: "Issue algorithmic or collateralized stablecoins with oracle integration",
-    icon: DollarSign,
-  },
-  {
-    title: "Gaming Assets",
-    description: "Create in-game currencies, items, and character tokens",
-    icon: Package,
-  },
-]
+// Use cases will be defined inside component to use translations
 
 export default function NativeTokensPage() {
+  const t = useTranslations('technology.nativeTokensPage')
+  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("tokens")
+
+  const features = [
+    {
+      title: t('features.oneClick.title'),
+      description: t('features.oneClick.description'),
+      icon: Zap,
+    },
+    {
+      title: t('features.nativeAssets.title'),
+      description: t('features.nativeAssets.description'),
+      icon: Shield,
+    },
+    {
+      title: t('features.defiReady.title'),
+      description: t('features.defiReady.description'),
+      icon: Package,
+    },
+    {
+      title: t('features.costEffective.title'),
+      description: t('features.costEffective.description'),
+      icon: DollarSign,
+    },
+    {
+      title: t('features.richMetadata.title'),
+      description: t('features.richMetadata.description'),
+      icon: Database,
+    },
+    {
+      title: t('features.universalCompatibility.title'),
+      description: t('features.universalCompatibility.description'),
+      icon: Globe,
+    },
+  ]
+
+  const useCases = [
+    {
+      title: t('useCases.defiTokens.title'),
+      description: t('useCases.defiTokens.description'),
+      icon: Coins,
+    },
+    {
+      title: t('useCases.nftCollections.title'),
+      description: t('useCases.nftCollections.description'),
+      icon: Image,
+    },
+    {
+      title: t('useCases.stablecoins.title'),
+      description: t('useCases.stablecoins.description'),
+      icon: DollarSign,
+    },
+    {
+      title: t('useCases.gameAssets.title'),
+      description: t('useCases.gameAssets.description'),
+      icon: Package,
+    },
+  ]
 
   const faqs = [
     {
@@ -168,8 +176,8 @@ export default function NativeTokensPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Native Tokens & NFTs", href: "/technology/native-tokens" }
+              { name: "Technology", href: "/technology" },
+              { name: "Native Tokens & NFTs", href: "/technology/native-tokens" }
             ]}
             className="mb-8"
           />

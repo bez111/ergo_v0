@@ -3,14 +3,17 @@ import UseClient from "./UseClient"
 import { useCases } from "./_data"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
+import { getTranslations } from "next-intl/server"
 
 export const revalidate = 600
 
-export function generateMetadata(): Metadata {
-  const title = "Ergo Use Cases — DeFi, NFTs, Privacy, Bridges"
-  const description = "Explore real use cases on Ergo: DeFi, algorithmic stablecoins, NFTs, privacy apps, DAOs, cross-chain bridges and more."
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'useCases' })
+  const title = t('title') + " — DeFi, NFTs, Privacy, Bridges"
+  const description = t('description')
   const url = "https://ergoblockchain.org/use"
-  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE
+  const twitterHandle = process.env['NEXT_PUBLIC_TWITTER_HANDLE']
   return {
     title,
     description,
@@ -38,7 +41,8 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default function UsePage() {
+export default async function UsePage({ params }: { params: { locale: string } }) {
+  const { locale } = await params
   const base = "https://ergoblockchain.org/use"
 
   const listJsonLd = {

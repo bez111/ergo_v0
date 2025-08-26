@@ -69,5 +69,25 @@
   "language": {
     "switchLanguage": "Dil değiştir",
     "currentLanguage": "Türkçe"
+  },
+  "technology": {
+    "title": "Teknoloji",
+    "subtitle": "Gelişmiş blockchain teknolojisi",
+    "description": "Ergo'nun en son özelliklerini keşfedin: eUTXO, ErgoScript, Sigma Protocols ve daha fazlası."
+  },
+  "useCases": {
+    "title": "Kullanım Durumları",
+    "subtitle": "Gerçek dünya uygulamaları",
+    "description": "Ergo'nun DeFi, NFT'ler, gizlilik ve daha fazla yenilikçi uygulamayı nasıl güçlendirdiğini keşfedin."
+  },
+  "docs": {
+    "title": "Dokümantasyon",
+    "subtitle": "Eksiksiz geliştirici kaynakları",
+    "description": "Ergo üzerinde inşa etmek için ihtiyacınız olan her şey: kılavuzlar, API'ler, araçlar ve örnekler."
+  },
+  "learn": {
+    "title": "Öğren",
+    "subtitle": "Ergo teknolojisinde ustalaşın",
+    "description": "Geliştiriciler, kullanıcılar ve meraklılar için kapsamlı öğrenme kaynakları."
   }
-} 
+}

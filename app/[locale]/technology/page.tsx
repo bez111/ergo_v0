@@ -3,11 +3,16 @@ import TechnologyClient from './TechnologyClient'
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
 import { targetQuestions } from '@/lib/featured-snippets-optimizer'
+import { getTranslations } from 'next-intl/server'
 
-export const metadata: Metadata = {
-  title: 'Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma Protocols',
-  description: 'Discover Ergo\'s advanced blockchain technology: eUTXO model for parallel smart contracts, ErgoScript programming language, Sigma protocols for zero-knowledge proofs, and ASIC-resistant Autolykos mining.',
-  keywords: ['eUTXO blockchain', 'ErgoScript smart contracts', 'Sigma protocols', 'Autolykos mining', 'blockchain technology', 'smart contract programming', 'NIPoPoWs', 'storage rent', 'proof of work', 'DeFi infrastructure'],
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'technology' })
+  
+  return {
+    title: t('title') + ' | Ergo Platform',
+    description: t('description'),
+    keywords: ['eUTXO blockchain', 'ErgoScript smart contracts', 'Sigma protocols', 'Autolykos mining', 'blockchain technology', 'smart contract programming', 'NIPoPoWs', 'storage rent', 'proof of work', 'DeFi infrastructure'],
   alternates: {
     canonical: 'https://ergoblockchain.org/technology'
   },
@@ -44,9 +49,11 @@ export const metadata: Metadata = {
       'max-snippet': -1
     }
   }
+  }
 }
 
-export default function TechnologyPage() {
+export default async function TechnologyPage({ params }: { params: { locale: string } }) {
+  const { locale } = await params
   const techArticleSchema = {
     '@context': 'https://schema.org',
     '@type': 'TechArticle',

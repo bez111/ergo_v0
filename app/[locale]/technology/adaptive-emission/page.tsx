@@ -12,6 +12,8 @@ import { DollarSign, Shield, TrendingUp, ExternalLink, ArrowRight, Users, CheckC
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,92 +37,100 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "Parameter Tuning",
-    description: "Economic variables can be adjusted based on network conditions",
-    icon: Settings,
-  },
-  {
-    title: "Economic Flexibility",
-    description: "Adapt to changing network needs without hard forks",
-    icon: TrendingUp,
-  },
-  {
-    title: "Community Input",
-    description: "Discussions and decisions involve the entire community",
-    icon: Users,
-  },
-  {
-    title: "Miner Voting",
-    description: "Miners vote on parameter changes through block headers",
-    icon: Vote,
-  },
-  {
-    title: "Gradual Changes",
-    description: "Parameters adjust smoothly to prevent economic shocks",
-    icon: Activity,
-  },
-  {
-    title: "Long-term Sustainability",
-    description: "Ensures network security even after emission ends",
-    icon: Shield,
-  },
-]
+// Features moved inside component to use translations
 
-const governanceData = [
-  {
-    title: "Emission Schedule",
-    description: "Declining emission with periodic reductions and post-emission sustainability through storage rent and transaction fees.",
-    icon: DollarSign,
-    link: "/docs/miners/governance",
-    linkText: "Learn about governance →",
-  },
-  {
-    title: "Storage Rent Economics",
-    description: "UTXOs unspent for 4+ years pay storage fees, providing sustainable miner revenue and preventing state bloat.",
-    icon: Coins,
-    link: "/docs/introduction/storage-rent",
-    linkText: "Storage rent details →",
-  },
-  {
-    title: "Miner Voting Process",
-    description: "Community proposals, 1024-epoch voting period, 90% threshold requirement, and gradual activation.",
-    icon: Vote,
-    link: "/docs/miners/governance/voting",
-    linkText: "Voting mechanism →",
-  },
-  {
-    title: "Economic Parameters",
-    description: "Adjustable parameters include block size, storage fee factor, min fee, and computational cost limits.",
-    icon: Settings,
-    link: "/docs/miners/governance",
-    linkText: "Parameter details →",
-  },
-]
+// Governance data moved inside component to use translations
 
-const historicalVotes = [
-  {
-    eip: "EIP-27",
-    title: "Re-emission Soft Fork",
-    status: "Passed",
-    description: "Extends emission schedule to ensure long-term network security",
-    date: "2024",
-    support: "95%",
-  },
-  {
-    eip: "EIP-37",
-    title: "Difficulty Adjustment",
-    status: "Passed", 
-    description: "Improved difficulty adjustment algorithm for more stable block times",
-    date: "2023",
-    support: "92%",
-  },
-]
+// Historical votes moved inside component to use translations
 
 export default function AdaptiveEmissionPage() {
+  const t = useTranslations('technology.adaptiveEmissionPage')
+  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("emission")
+
+  const features = [
+    {
+      title: t('features.parameterTuning.title'),
+      description: t('features.parameterTuning.description'),
+      icon: Settings,
+    },
+    {
+      title: t('features.economicFlexibility.title'),
+      description: t('features.economicFlexibility.description'),
+      icon: TrendingUp,
+    },
+    {
+      title: t('features.communityInput.title'),
+      description: t('features.communityInput.description'),
+      icon: Users,
+    },
+    {
+      title: t('features.minerVoting.title'),
+      description: t('features.minerVoting.description'),
+      icon: Vote,
+    },
+    {
+      title: t('features.gradualChanges.title'),
+      description: t('features.gradualChanges.description'),
+      icon: Activity,
+    },
+    {
+      title: t('features.longTermSustainability.title'),
+      description: t('features.longTermSustainability.description'),
+      icon: Shield,
+    },
+  ]
+
+  const governanceData = [
+    {
+      title: t('governance.emissionSchedule.title'),
+      description: t('governance.emissionSchedule.description'),
+      icon: DollarSign,
+      link: localizedPath("/docs/miners/governance"),
+      linkText: t('governance.emissionSchedule.linkText'),
+    },
+    {
+      title: t('governance.storageRentEconomics.title'),
+      description: t('governance.storageRentEconomics.description'),
+      icon: Coins,
+      link: localizedPath("/docs/introduction/storage-rent"),
+      linkText: t('governance.storageRentEconomics.linkText'),
+    },
+    {
+      title: t('governance.minerVotingProcess.title'),
+      description: t('governance.minerVotingProcess.description'),
+      icon: Vote,
+      link: localizedPath("/docs/miners/governance/voting"),
+      linkText: t('governance.minerVotingProcess.linkText'),
+    },
+    {
+      title: t('governance.economicParameters.title'),
+      description: t('governance.economicParameters.description'),
+      icon: Settings,
+      link: localizedPath("/docs/miners/governance"),
+      linkText: t('governance.economicParameters.linkText'),
+    },
+  ]
+
+  const historicalVotes = [
+    {
+      eip: "EIP-27",
+      title: t('historicalVotes.eip27.title'),
+      status: "Passed",
+      description: t('historicalVotes.eip27.description'),
+      date: "2024",
+      support: "95%",
+    },
+    {
+      eip: "EIP-37",
+      title: t('historicalVotes.eip37.title'),
+      status: "Passed", 
+      description: t('historicalVotes.eip37.description'),
+      date: "2023",
+      support: "92%",
+    },
+  ]
 
   const faqs = [
     {
@@ -195,8 +205,8 @@ export default function AdaptiveEmissionPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Adaptive Emission", href: "/technology/adaptive-emission" }
+              { name: "Technology", href: "/technology" },
+              { name: "Adaptive Emission", href: "/technology/adaptive-emission" }
             ]}
             className="mb-8"
           />

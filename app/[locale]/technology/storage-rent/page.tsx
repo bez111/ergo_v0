@@ -25,43 +25,15 @@ import { useState, useMemo } from "react"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 // Removed page-level metadata from client component; moved to route layout
 
 const PUBLISHED = "2023-11-10"
 const UPDATED = "2025-08-10"
 
-// Hoisted static data with a11y fixes
-const problems = [
-  {
-    title: "Blockchain Bloat",
-    description:
-      "Traditional blockchains accumulate unused data over time, leading to inefficiency and higher costs.",
-    icon: <Database className="w-8 h-8" aria-hidden="true" />,
-    color: "from-red-500 to-pink-500",
-    bgColor: "bg-red-500/10",
-    borderColor: "border-red-500/30",
-    stats: "2TB+ wasted space",
-  },
-  {
-    title: "Forgotten Wallets",
-    description: "Lost private keys mean funds are stuck forever, reducing the effective money supply.",
-    icon: <AlertTriangle className="w-8 h-8" aria-hidden="true" />,
-    color: "from-yellow-500 to-orange-500",
-    bgColor: "bg-yellow-500/10",
-    borderColor: "border-yellow-500/30",
-    stats: "4M+ lost coins",
-  },
-  {
-    title: "Network Stagnation",
-    description: "Accumulated dust and inactive data slow down the network and increase storage requirements.",
-    icon: <TrendingUp className="w-8 h-8" aria-hidden="true" />,
-    color: "from-purple-500 to-indigo-500",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/30",
-    stats: "50% slower sync",
-  },
-]
+// Problems data will be defined inside component to use translations
 
 const benefits = [
   { text: "The blockchain stays clean, compact, and fast", icon: <Zap className="w-5 h-5" aria-hidden="true" /> },
@@ -186,7 +158,39 @@ function RentEstimator() {
 }
 
 export default function StorageRentPage() {
+  const t = useTranslations('technology.storageRentPage')
+  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
+  const problems = [
+    {
+      title: t('problems.blockchainBloat.title'),
+      description: t('problems.blockchainBloat.description'),
+      icon: <Database className="w-8 h-8" aria-hidden="true" />,
+      color: "from-red-500 to-pink-500",
+      bgColor: "bg-red-500/10",
+      borderColor: "border-red-500/30",
+      stats: t('problems.blockchainBloat.stats'),
+    },
+    {
+      title: t('problems.forgottenWallets.title'),
+      description: t('problems.forgottenWallets.description'),
+      icon: <AlertTriangle className="w-8 h-8" aria-hidden="true" />,
+      color: "from-yellow-500 to-orange-500",
+      bgColor: "bg-yellow-500/10",
+      borderColor: "border-yellow-500/30",
+      stats: t('problems.forgottenWallets.stats'),
+    },
+    {
+      title: t('problems.scalabilityIssues.title'),
+      description: t('problems.scalabilityIssues.description'),
+      icon: <TrendingUp className="w-8 h-8" aria-hidden="true" />,
+      color: "from-purple-500 to-indigo-500",
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/30",
+      stats: t('problems.scalabilityIssues.stats'),
+    },
+  ]
 
   return (
     <>
@@ -249,8 +253,8 @@ export default function StorageRentPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Storage Rent", href: "/technology/storage-rent" }
+              { name: "Technology", href: "/technology" },
+              { name: "Storage Rent", href: "/technology/storage-rent" }
             ]}
             className="mb-8"
           />

@@ -11,6 +11,8 @@ import { useState } from "react"
 import dynamic from "next/dynamic"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 const HexagonalGrid = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.HexagonalGrid), { ssr: false })
 
@@ -29,37 +31,7 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
-const TECHNOLOGIES = [
-  {
-    icon: <Shield className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    title: "Sigma Protocols",
-    description:
-      "Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
-    features: ["Zero-knowledge proofs", "Ring signatures", "Threshold signatures", "Composable privacy"],
-  },
-  {
-    icon: <Shuffle className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    title: "ErgoMixer",
-    description: "On-chain, non-custodial mixing for transaction privacy and anonymity.",
-    features: [
-      "Non-custodial mixing",
-      "On-chain privacy",
-      "Token mixing support",
-      "Configurable anonymity",
-    ],
-  },
-  {
-    icon: <Eye className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    title: "Confidential Assets",
-    description: "Issue tokens with hidden amounts and rules for maximum privacy.",
-    features: [
-      "Hidden token amounts",
-      "Private smart contracts",
-      "Confidential transactions",
-      "Selective disclosure",
-    ],
-  },
-] as const
+// Technologies moved inside component to use translations
 
 const ADVANTAGES = [
   "No trusted setup needed — pure cryptographic security",
@@ -122,9 +94,47 @@ export const FAQS = [
 ] as const
 
 export default function PrivacyFeaturesPage() {
+  const t = useTranslations('technology.privacyFeaturesPage')
+  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const prefersReduced = useReducedMotion()
   const lastUpdated = new Date().toISOString().slice(0, 10)
+
+  const TECHNOLOGIES = [
+    {
+      icon: <Shield className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      title: t('technologies.sigmaProtocols.title'),
+      description: t('technologies.sigmaProtocols.description'),
+      features: [
+        t('technologies.sigmaProtocols.features.0'),
+        t('technologies.sigmaProtocols.features.1'),
+        t('technologies.sigmaProtocols.features.2'),
+        t('technologies.sigmaProtocols.features.3'),
+      ],
+    },
+    {
+      icon: <Shuffle className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      title: t('technologies.ergoMixer.title'),
+      description: t('technologies.ergoMixer.description'),
+      features: [
+        t('technologies.ergoMixer.features.0'),
+        t('technologies.ergoMixer.features.1'),
+        t('technologies.ergoMixer.features.2'),
+        t('technologies.ergoMixer.features.3'),
+      ],
+    },
+    {
+      icon: <Eye className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      title: t('technologies.confidentialAssets.title'),
+      description: t('technologies.confidentialAssets.description'),
+      features: [
+        t('technologies.confidentialAssets.features.0'),
+        t('technologies.confidentialAssets.features.1'),
+        t('technologies.confidentialAssets.features.2'),
+        t('technologies.confidentialAssets.features.3'),
+      ],
+    },
+  ]
 
   return (
     <>
@@ -228,8 +238,8 @@ export default function PrivacyFeaturesPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Privacy Features", href: "/technology/privacy-features" },
+              { name: "Technology", href: "/technology" },
+              { name: "Privacy Features", href: "/technology/privacy-features" },
             ]}
             className="mb-8"
           />

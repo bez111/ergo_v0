@@ -8,6 +8,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { useMemo } from "react"
 import { useCases as data } from "./_data"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 const iconNode = {
   coins: <Coins className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />,
@@ -26,6 +28,8 @@ function isComingSoon(uc: { supportedProjects: string[] }) {
 }
 
 export default function UseClient() {
+  const t = useTranslations('useCases')
+  const localizedPath = useLocalizedPath()
   const useCases = useMemo(() => data, [])
   return (
     <div className="min-h-screen relative pb-24">
@@ -34,8 +38,8 @@ export default function UseClient() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Ergo Use Cases</h1>
-              <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">Explore the full spectrum of financial, privacy, and social applications powered by Ergo.</p>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">{t('title')}</h1>
+              <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">{t('description')}</p>
               <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">From DeFi and stablecoins to DAOs and the metaverse, discover how Ergo's technology is building a new era of digital sovereignty.</p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">

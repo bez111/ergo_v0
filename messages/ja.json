@@ -69,5 +69,25 @@
   "language": {
     "switchLanguage": "言語を切り替える",
     "currentLanguage": "日本語"
+  },
+  "technology": {
+    "title": "技術",
+    "subtitle": "先進的なブロックチェーン技術",
+    "description": "Ergoの最先端機能を探る：eUTXO、ErgoScript、Sigmaプロトコルなど。"
+  },
+  "useCases": {
+    "title": "ユースケース",
+    "subtitle": "実世界のアプリケーション",
+    "description": "ErgoがDeFi、NFT、プライバシー、その他の革新的なアプリケーションをどのように推進するかを発見。"
+  },
+  "docs": {
+    "title": "ドキュメント",
+    "subtitle": "完全な開発者リソース",
+    "description": "Ergoで構築するために必要なすべて：ガイド、API、ツール、例。"
+  },
+  "learn": {
+    "title": "学習",
+    "subtitle": "Ergo技術をマスター",
+    "description": "開発者、ユーザー、愛好家のための包括的な学習リソース。"
   }
-} 
+}

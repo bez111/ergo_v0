@@ -5,38 +5,42 @@ import { motion } from "framer-motion"
 import { BookOpen, Code, FileText, Users, ChevronRight } from "lucide-react"
 import { GlitchText } from "@/components/glitch-text"
 import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
-const learningResources = [
-  {
-    title: "ErgoScript Tutorial Series",
-    description: "Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo, step by step.",
-    icon: Code,
-    href: "/learn/ergoscript",
-    difficulty: "Beginner to Expert",
-    duration: "20+ hours",
-    color: "from-orange-500 to-red-500",
-  },
-  {
-    title: "Comprehensive FAQ",
-    description: "Everything you need to know about Ergo blockchain, technology, and ecosystem in one place.",
-    icon: FileText,
-    href: "/learn/faq",
-    difficulty: "All Levels",
-    duration: "Reference",
-    color: "from-blue-500 to-cyan-500",
-  },
-  {
-    title: "Research Papers",
-    description: "Deep dive into the academic research and technical papers behind Ergo's innovations.",
-    icon: BookOpen,
-    href: "/learn/research",
-    difficulty: "Advanced",
-    duration: "Varies",
-    color: "from-purple-500 to-pink-500",
-  },
-]
+// Learning resources moved inside component to use translations
 
-const MobileLearnPage = () => {
+const MobileLearnPage = ({ t, localizedPath }: { t: any, localizedPath: any }) => {
+  const learningResources = [
+    {
+      title: t('resources.ergoscript.title'),
+      description: t('resources.ergoscript.description'),
+      icon: Code,
+      href: localizedPath("/learn/ergoscript"),
+      difficulty: t('resources.ergoscript.difficulty'),
+      duration: t('resources.ergoscript.duration'),
+      color: "from-orange-500 to-red-500",
+    },
+    {
+      title: t('resources.faq.title'),
+      description: t('resources.faq.description'),
+      icon: FileText,
+      href: localizedPath("/learn/faq"),
+      difficulty: t('resources.faq.difficulty'),
+      duration: t('resources.faq.duration'),
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      title: t('resources.research.title'),
+      description: t('resources.research.description'),
+      icon: BookOpen,
+      href: localizedPath("/learn/research"),
+      difficulty: t('resources.research.difficulty'),
+      duration: t('resources.research.duration'),
+      color: "from-purple-500 to-pink-500",
+    },
+  ]
+
   return (
     <div className="min-h-screen relative">
       {/* Hero Section */}
@@ -46,14 +50,14 @@ const MobileLearnPage = () => {
         <div className="container mx-auto px-4 relative z-20">
           <div className="text-center">
             <GlitchText
-              text="Learn Ergo"
+              text={t('title')}
               className="text-4xl font-bold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500"
             />
             <p className="text-lg text-gray-300 mb-6">
-              Master the future of blockchain technology
+              {t('subtitle')}
             </p>
             <p className="text-base text-gray-400">
-              From beginner-friendly tutorials to advanced research papers.
+              {t('description')}
             </p>
           </div>
         </div>
@@ -64,7 +68,7 @@ const MobileLearnPage = () => {
         <div className="container mx-auto px-4">
           <h2 className="text-2xl font-bold mb-8 text-center">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
-              Learning Resources
+              {t('sections.learningResources')}
             </span>
           </h2>
 
@@ -162,7 +166,37 @@ const MobileLearnPage = () => {
   )
 }
 
-const DesktopLearnPage = () => {
+const DesktopLearnPage = ({ t, localizedPath }: { t: any, localizedPath: any }) => {
+  const learningResources = [
+    {
+      title: t('resources.ergoscript.title'),
+      description: t('resources.ergoscript.description'),
+      icon: Code,
+      href: localizedPath("/learn/ergoscript"),
+      difficulty: t('resources.ergoscript.difficulty'),
+      duration: t('resources.ergoscript.duration'),
+      color: "from-orange-500 to-red-500",
+    },
+    {
+      title: t('resources.faq.title'),
+      description: t('resources.faq.description'),
+      icon: FileText,
+      href: localizedPath("/learn/faq"),
+      difficulty: t('resources.faq.difficulty'),
+      duration: t('resources.faq.duration'),
+      color: "from-blue-500 to-cyan-500",
+    },
+    {
+      title: t('resources.research.title'),
+      description: t('resources.research.description'),
+      icon: BookOpen,
+      href: localizedPath("/learn/research"),
+      difficulty: t('resources.research.difficulty'),
+      duration: t('resources.research.duration'),
+      color: "from-purple-500 to-pink-500",
+    },
+  ]
+
   return (
     <div className="min-h-screen relative">
       {/* Hero Section */}
@@ -172,15 +206,14 @@ const DesktopLearnPage = () => {
         <div className="container mx-auto px-4 relative z-20">
           <div className="text-center max-w-4xl mx-auto">
             <GlitchText
-              text="Learn Ergo"
+              text={t('title')}
               className="text-5xl md:text-6xl font-bold mb-6 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500"
             />
             <p className="text-xl md:text-2xl text-gray-300 mb-8">
-              Master the future of blockchain technology with comprehensive learning resources
+              {t('subtitle')}
             </p>
             <p className="text-lg text-gray-400 max-w-2xl mx-auto">
-              From beginner-friendly tutorials to advanced research papers, discover everything you need to build on
-              Ergo's revolutionary platform.
+              {t('description')}
             </p>
           </div>
         </div>
@@ -289,6 +322,8 @@ const DesktopLearnPage = () => {
 }
 
 export default function LearnPage() {
+  const t = useTranslations('learn')
+  const localizedPath = useLocalizedPath()
   const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
@@ -304,5 +339,5 @@ export default function LearnPage() {
     }
   }, [])
 
-  return isMobile ? <MobileLearnPage /> : <DesktopLearnPage />
+  return isMobile ? <MobileLearnPage t={t} localizedPath={localizedPath} /> : <DesktopLearnPage t={t} localizedPath={localizedPath} />
 }

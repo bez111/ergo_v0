@@ -69,5 +69,25 @@
   "language": {
     "switchLanguage": "언어 변경",
     "currentLanguage": "한국어"
+  },
+  "technology": {
+    "title": "기술",
+    "subtitle": "고급 블록체인 기술",
+    "description": "Ergo의 최첨단 기능 탐색: eUTXO, ErgoScript, Sigma Protocols 등."
+  },
+  "useCases": {
+    "title": "사용 사례",
+    "subtitle": "실제 애플리케이션",
+    "description": "Ergo가 DeFi, NFT, 프라이버시 및 더 많은 혁신적인 애플리케이션을 어떻게 구동하는지 발견하세요."
+  },
+  "docs": {
+    "title": "문서",
+    "subtitle": "완전한 개발자 리소스",
+    "description": "Ergo에서 구축하는 데 필요한 모든 것: 가이드, API, 도구 및 예제."
+  },
+  "learn": {
+    "title": "학습",
+    "subtitle": "Ergo 기술 마스터",
+    "description": "개발자, 사용자 및 애호가를 위한 포괄적인 학습 리소스."
   }
-} 
+}

@@ -12,6 +12,8 @@ import { GitBranch, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, La
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,73 +37,79 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "Backward Compatible",
-    description: "No forced upgrades, no chain wars - new features coexist with non-upgraded nodes",
-    icon: RefreshCw,
-  },
-  {
-    title: "Future Proof",
-    description: "Adopt innovations at your own pace without network disruption",
-    icon: TrendingUp,
-  },
-  {
-    title: "Gradual Adoption",
-    description: "Evolutionary, not revolutionary changes - the network evolves smoothly",
-    icon: Settings,
-  },
-  {
-    title: "Consensus Preservation",
-    description: "Maintains network consensus even with different node versions",
-    icon: Users,
-  },
-  {
-    title: "Security First",
-    description: "New features only activate when safe majority adoption is reached",
-    icon: Shield,
-  },
-  {
-    title: "Developer Friendly",
-    description: "Test new features on mainnet without breaking existing applications",
-    icon: CheckCircle,
-  },
-]
+// Features moved inside component to use translations
 
-const useCases = [
-  {
-    title: "NiPoPoWs Integration",
-    description: "Non-Interactive Proofs of Proof-of-Work can be added as an optional feature, enabling light clients without forcing all nodes to support them.",
-    icon: Layers,
-    link: "/technology/nipopows",
-    linkText: "Learn about NiPoPoWs →",
-  },
-  {
-    title: "Privacy Enhancements",
-    description: "Advanced privacy features like ring signatures or stealth addresses can be introduced without breaking existing transparent transactions.",
-    icon: Shield,
-    link: "/technology/privacy-features",
-    linkText: "Explore privacy features →",
-  },
-  {
-    title: "Smart Contract Extensions",
-    description: "New opcodes and scripting capabilities can be added for developers who want to use them, while existing contracts continue to work.",
-    icon: Zap,
-    link: "/technology/ergoscript",
-    linkText: "Learn about ErgoScript →",
-  },
-  {
-    title: "Consensus Improvements",
-    description: "Optimizations to block validation, mining algorithms, or network protocols can be tested and adopted gradually.",
-    icon: RefreshCw,
-    link: "/docs/introduction/autolykos",
-    linkText: "About Autolykos →",
-  },
-]
+// Use cases moved inside component to use translations
 
 export default function VelvetForksPage() {
+  const t = useTranslations('technology.velvetForksPage')
+  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("concept")
+
+  const features = [
+    {
+      title: t('features.backwardCompatible.title'),
+      description: t('features.backwardCompatible.description'),
+      icon: RefreshCw,
+    },
+    {
+      title: t('features.futureProof.title'),
+      description: t('features.futureProof.description'),
+      icon: TrendingUp,
+    },
+    {
+      title: t('features.gradualAdoption.title'),
+      description: t('features.gradualAdoption.description'),
+      icon: Settings,
+    },
+    {
+      title: t('features.consensusPreservation.title'),
+      description: t('features.consensusPreservation.description'),
+      icon: Users,
+    },
+    {
+      title: t('features.securityFirst.title'),
+      description: t('features.securityFirst.description'),
+      icon: Shield,
+    },
+    {
+      title: t('features.developerFriendly.title'),
+      description: t('features.developerFriendly.description'),
+      icon: CheckCircle,
+    },
+  ]
+
+  const useCases = [
+    {
+      title: t('useCases.nipopowsIntegration.title'),
+      description: t('useCases.nipopowsIntegration.description'),
+      icon: Layers,
+      link: localizedPath("/technology/nipopows"),
+      linkText: t('useCases.nipopowsIntegration.linkText'),
+    },
+    {
+      title: t('useCases.privacyEnhancements.title'),
+      description: t('useCases.privacyEnhancements.description'),
+      icon: Shield,
+      link: localizedPath("/technology/privacy-features"),
+      linkText: t('useCases.privacyEnhancements.linkText'),
+    },
+    {
+      title: t('useCases.smartContractExtensions.title'),
+      description: t('useCases.smartContractExtensions.description'),
+      icon: Zap,
+      link: localizedPath("/technology/ergoscript"),
+      linkText: t('useCases.smartContractExtensions.linkText'),
+    },
+    {
+      title: t('useCases.consensusImprovements.title'),
+      description: t('useCases.consensusImprovements.description'),
+      icon: RefreshCw,
+      link: localizedPath("/docs/introduction/autolykos"),
+      linkText: t('useCases.consensusImprovements.linkText'),
+    },
+  ]
 
   const faqs = [
     {
@@ -176,8 +184,8 @@ export default function VelvetForksPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Velvet Forks", href: "/technology/velvet-forks" }
+              { name: "Technology", href: "/technology" },
+              { name: "Velvet Forks", href: "/technology/velvet-forks" }
             ]}
             className="mb-8"
           />

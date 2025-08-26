@@ -3,10 +3,11 @@
 import React, { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { Search, X, Tag, FileText, ArrowUp, ArrowDown, Command, Eye, Pin, Trash2, ChevronDown, ChevronRight, Clock, TrendingUp, Hash, BookOpen } from 'lucide-react';
 import Link from 'next/link';
-import { menuData } from '@/app/[locale]/docs/menuData';
+import { getLocalizedMenuData } from '@/app/[locale]/docs/menuData';
 import { SearchPreview } from './SearchPreview';
 import { useSearchHistory } from '@/hooks/use-search-history';
 import { useDebounce } from '@/hooks/use-debounce';
+import { useTranslations } from 'next-intl';
 
 interface SearchHit {
   objectID: string;
@@ -218,8 +219,7 @@ function buildSearchIndex() {
     }
   }
   
-  // Process existing menu data
-  menuData.forEach(section => processMenuSection(section));
+  // Process existing menu data - will be called from component with localized data
   
   // Add all existing pages from file system that don't have href in menuData
   const existingPages = [
@@ -594,6 +594,8 @@ function highlightText(text: string, query: string): string {
 }
 
 export function LocalSearch() {
+  const t = useTranslations()
+  const menuData = getLocalizedMenuData(t)
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
   const [results, setResults] = useState<GroupedSearchResult[]>([]);

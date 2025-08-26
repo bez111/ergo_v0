@@ -2,10 +2,15 @@ import type { Metadata } from 'next'
 import StartClient from './StartClient'
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
+import { getTranslations } from 'next-intl/server'
 
-export const metadata: Metadata = {
-  title: 'Start Your Ergo Journey - Beginner\'s Guide',
-  description: 'New to Ergo? Start here! Learn the basics, get a wallet, understand the technology, or begin mining. Choose your path into the Ergo ecosystem.',
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'start' })
+  
+  return {
+    title: `${t('title')} - ${t('subtitle')}`,
+    description: t('description'),
   keywords: ['ergo tutorial', 'blockchain beginner', 'start with ergo', 'crypto guide', 'ergo wallet setup', 'learn blockchain', 'ergo mining', 'ergo development'],
   alternates: {
     canonical: 'https://ergoblockchain.org/start'
@@ -41,6 +46,7 @@ export const metadata: Metadata = {
       'max-video-preview': -1,
       'max-image-preview': 'large',
       'max-snippet': -1
+    }
     }
   }
 }

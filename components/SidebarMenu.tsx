@@ -1,9 +1,10 @@
 "use client"
 import { useState } from "react"
 import Link from "next/link"
-import { menuData } from "../app/[locale]/docs/menuData"
+import { getLocalizedMenuData } from "@/app/[locale]/docs/menuData"
 import { usePathname, useRouter } from "next/navigation"
 import { LocalSearch } from "./search/LocalSearch"
+import { useTranslations } from "next-intl"
 
 function MenuItem({ item, level = 0, parentPath = "" }: { item: any, level?: number, parentPath?: string }) {
   const [open, setOpen] = useState(false)
@@ -73,6 +74,8 @@ function getSectionKeyByPath(pathname: string) {
 }
 
 export default function SidebarMenu() {
+  const t = useTranslations()
+  const menuData = getLocalizedMenuData(t)
   const pathname = usePathname() || "";
   const router = useRouter();
   const [openSection, setOpenSection] = useState(() => getSectionKeyByPath(pathname));

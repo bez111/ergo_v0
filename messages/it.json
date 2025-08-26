@@ -69,5 +69,25 @@
   "language": {
     "switchLanguage": "Cambia lingua",
     "currentLanguage": "Italiano"
+  },
+  "technology": {
+    "title": "Tecnologia",
+    "subtitle": "Tecnologia blockchain avanzata",
+    "description": "Esplora le funzionalità all'avanguardia di Ergo: eUTXO, ErgoScript, Sigma Protocols e altro."
+  },
+  "useCases": {
+    "title": "Casi d'Uso",
+    "subtitle": "Applicazioni del mondo reale",
+    "description": "Scopri come Ergo alimenta DeFi, NFT, privacy e altre applicazioni innovative."
+  },
+  "docs": {
+    "title": "Documentazione",
+    "subtitle": "Risorse complete per sviluppatori",
+    "description": "Tutto ciò di cui hai bisogno per costruire su Ergo: guide, API, strumenti ed esempi."
+  },
+  "learn": {
+    "title": "Imparare",
+    "subtitle": "Padroneggia la tecnologia Ergo",
+    "description": "Risorse di apprendimento complete per sviluppatori, utenti ed entusiasti."
   }
-} 
+}
