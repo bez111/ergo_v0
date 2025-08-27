@@ -140,7 +140,7 @@ function uploadSource() {
     '--tag-updated-keys=true',
     '--apply-tm=true',
     '--poll=true',
-    '--poll-timeout=120'
+    '--poll-timeout=120s'
   ].join(' ');
   
   try {
@@ -216,7 +216,7 @@ function showStatus() {
   info('Fetching project status...');
   
   const command = [
-    'lokalise2 project show',
+    'lokalise2 project retrieve',
     `--project-id=${config.projectId}`,
     `--token=${config.apiToken}`
   ].join(' ');
