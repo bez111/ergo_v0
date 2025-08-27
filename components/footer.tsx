@@ -6,8 +6,10 @@ import { Input } from "@/components/ui/input"
 import { Send, Shield, Github, Twitter, MessageCircle } from "lucide-react"
 import { FooterNewsletter } from "./footer-newsletter"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
+import { useTranslations } from "next-intl"
 
 export function Footer() {
+  const t = useTranslations("footer")
   const localizedPath = useLocalizedPath()
   
   return (
@@ -18,55 +20,55 @@ export function Footer() {
       <div className="container py-12 md:py-16 relative z-20">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <div className="flex flex-col gap-4">
-            <div className="font-medium font-mono text-primary">PLATFORM</div>
+            <div className="font-medium font-mono text-primary">{t("platform") || "PLATFORM"}</div>
             <nav className="flex flex-col gap-2">
               <Link href={localizedPath("technology")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Technology
+                {t("technology") || "Technology"}
               </Link>
               <Link href={localizedPath("use")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Use Cases
+                {t("useCases") || "Use Cases"}
               </Link>
               <Link href={localizedPath("ecosystem")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Ecosystem
+                {t("ecosystem") || "Ecosystem"}
               </Link>
               <Link href={localizedPath("wallet")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Wallets
+                {t("wallets") || "Wallets"}
               </Link>
             </nav>
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="font-medium font-mono text-primary">DEVELOPERS</div>
+            <div className="font-medium font-mono text-primary">{t("developers") || "DEVELOPERS"}</div>
             <nav className="flex flex-col gap-2">
               <Link href={localizedPath("docs")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Documentation
+                {t("documentation") || "Documentation"}
               </Link>
               <Link href={localizedPath("learn")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Learn
+                {t("learn") || "Learn"}
               </Link>
               <Link href="https://github.com/ergoplatform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                GitHub
+                {t("github") || "GitHub"}
               </Link>
               <Link href={localizedPath("ecosystem/grants")} className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Grants
+                {t("grants") || "Grants"}
               </Link>
             </nav>
           </div>
 
           <div className="flex flex-col gap-4">
-            <div className="font-medium font-mono text-primary">COMMUNITY</div>
+            <div className="font-medium font-mono text-primary">{t("community") || "COMMUNITY"}</div>
             <nav className="flex flex-col gap-2">
               <Link href="/blog" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Blog
+                {t("blog") || "Blog"}
               </Link>
               <Link href="https://discord.gg/ergo-platform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Discord
+                {t("discord") || "Discord"}
               </Link>
               <Link href="https://t.me/ergoplatform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Telegram
+                {t("telegram") || "Telegram"}
               </Link>
               <Link href="https://twitter.com/ergo_platform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
-                Twitter
+                {t("twitter") || "Twitter"}
               </Link>
             </nav>
           </div>
@@ -80,12 +82,12 @@ export function Footer() {
       <div className="border-t border-primary/20 py-6 relative z-20">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-gray-300 font-mono">
-            © {new Date().getFullYear()} ERGO PLATFORM. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} ERGO {t("platform") || "PLATFORM"}. ALL RIGHTS RESERVED.
           </p>
           <p className="text-sm text-gray-300 font-mono">
-            ERGO IS AN OPEN-SOURCE PROJECT.{" "}
+            {t("openSource") || "ERGO IS AN OPEN-SOURCE PROJECT."}{" "}
             <Link href="https://github.com/ergoplatform" className="text-primary hover:underline">
-              CONTRIBUTE ON GITHUB
+              {t("contributeOnGithub") || "CONTRIBUTE ON GITHUB"}
             </Link>
           </p>
         </div>

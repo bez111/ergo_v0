@@ -7,11 +7,13 @@ import { MobileNav } from "@/components/mobile-nav"
 import { Search, Wallet } from "lucide-react"
 import { ModeToggle } from "@/components/mode-toggle"
 import { useState, useEffect } from "react"
+import { useTranslations } from "next-intl"
 import { mainNavItems } from "@/lib/navigation-data"
 import DocsSearchModal from "./DocsSearchModal";
 import LanguageSwitcher from "./language-switcher";
 
 export function Header() {
+  const t = useTranslations("navigation")
   const [scrolled, setScrolled] = useState(false)
   const [glitchActive, setGlitchActive] = useState(false)
   const [searchOpen, setSearchOpen] = useState(false);
@@ -71,7 +73,7 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
-              aria-label="Search"
+              aria-label={t("searchAriaLabel") || "Search"}
               className="text-white hover:text-primary hover:bg-primary/10"
               onClick={() => setSearchOpen(true)}
             >
@@ -84,7 +86,7 @@ export function Header() {
                 className="hidden md:flex gap-2 bg-transparent border border-primary/50 text-primary hover:bg-primary/10 hover:text-primary font-mono uppercase tracking-wider"
               >
                 <Wallet className="h-4 w-4" />
-                <span>Get Wallet</span>
+                <span>{t("getWallet") || "Get Wallet"}</span>
               </Button>
             </Link>
 

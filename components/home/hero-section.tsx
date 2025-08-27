@@ -68,10 +68,10 @@ export function HeroSection() {
   }, [isClient])
 
   const features = [
-    { icon: Shield, label: "Secure PoW" },
-    { icon: Zap, label: "Smart Contracts" },
-    { icon: Code, label: "Privacy" },
-    { icon: Layers, label: "eUTXO Model" },
+    { icon: Shield, label: t("features.securePow") || "Secure PoW" },
+    { icon: Zap, label: t("features.smartContracts") || "Smart Contracts" },
+    { icon: Code, label: t("features.privacy") || "Privacy" },
+    { icon: Layers, label: t("features.eutxoModel") || "eUTXO Model" },
   ]
 
   return (

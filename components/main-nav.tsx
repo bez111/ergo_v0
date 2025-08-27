@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
+import { useTranslations } from "next-intl"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -16,6 +17,7 @@ import {
 import { mainNavItems } from "@/lib/navigation-data"
 
 export function MainNav() {
+  const t = useTranslations("navigation")
   const pathname = usePathname()
   const localizedPath = useLocalizedPath()
 
@@ -83,7 +85,7 @@ export function MainNav() {
                   pathname === "/docs" && "text-primary font-medium",
                 )}
               >
-                DOCS
+                {t("docs") || "DOCS"}
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
@@ -98,7 +100,7 @@ export function MainNav() {
                   pathname === "/blog" && "text-primary font-medium",
                 )}
               >
-                BLOG
+                {t("blog") || "BLOG"}
               </Link>
             </NavigationMenuLink>
           </NavigationMenuItem>
