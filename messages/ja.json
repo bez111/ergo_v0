@@ -29,62 +29,25 @@
     "backToTop": "[TODO: Back to Top]"
   },
   "navigation": {
-    "home": "ホーム",
-    "docs": "ドキュメント",
-    "ecosystem": "エコシステム",
-    "technology": "テクノロジー",
-    "use": "ユースケース",
-    "start": "始める",
-    "learn": "学ぶ",
-    "blog": "ブログ",
-    "wallet": "ウォレット",
-    "events": "イベント",
-    "mining": "マイニング",
-    "main": {
-      "start": "[TODO: Start]",
-      "technology": "[TODO: Technology]",
-      "use": "[TODO: Use]",
-      "learn": "[TODO: Learn]",
-      "docs": "[TODO: Docs]",
-      "ecosystem": "[TODO: Ecosystem]",
-      "blog": "[TODO: Blog]",
-      "wallet": "[TODO: Wallet]"
-    },
-    "footer": {
-      "about": "[TODO: About]",
-      "community": "[TODO: Community]",
-      "developers": "[TODO: Developers]",
-      "resources": "[TODO: Resources]",
-      "legal": "[TODO: Legal]"
-    }
+    "home": "Home",
+    "start": "Start",
+    "ecosystem": "Ecosystem",
+    "docs": "Docs",
+    "blog": "Blog",
+    "community": "Community"
   },
   "hero": {
-    "title": "Ergoプラットフォーム",
-    "subtitle": "契約貨幣のための回復力のあるブロックチェーンプラットフォーム",
-    "description": "Ergoは、10年間のブロックチェーン理論と開発によって築かれた堅固な基盤の上に、高度な暗号機能と根本的に新しいDeFi機能を構築します。",
-    "getStarted": "始める",
-    "learnMore": "詳しく見る",
-    "documentation": "ドキュメント",
-    "message1": "[TODO: Decentralized Money for a Free Society]",
-    "message2": "[TODO: The globally-neutral settlement layer for programmable money.]",
-    "message3": "[TODO: The open-source home of digital freedom]",
-    "message4": "[TODO: Join the movement for decentralized, open-source money]",
-    "feature1": "[TODO: Secure]",
-    "feature2": "[TODO: Fast]",
-    "feature3": "[TODO: Programmable]",
-    "feature4": "[TODO: Scalable]"
+    "title": "Ergo",
+    "subtitle": "オープンでプログラム可能で検閲耐性のある金融のための運動に参加しましょう。",
+    "description": "プログラマブルマネーのグローバル中立決済層。",
+    "message1": "自由な社会のための分散型マネー",
+    "message2": "プログラマブルマネーのグローバル中立決済層。",
+    "message3": "デジタル自由のオープンソースホーム",
+    "message4": "分散型でオープンソースのマネー運動に参加しましょう",
+    "exploreErgo": "Ergoを探索",
+    "chooseYourPath": "あなたの道を選ぶ"
   },
-  "footer": {
-    "description": "Ergoは契約貨幣のための回復力のあるブロックチェーンプラットフォームです。高度な暗号機能を持つ堅固な基盤の上に構築されています。",
-    "quickLinks": "クイックリンク",
-    "developers": "開発者",
-    "community": "コミュニティ",
-    "resources": "リソース",
-    "legal": "法的事項",
-    "privacy": "プライバシーポリシー",
-    "terms": "利用規約",
-    "copyright": "© 2024 Ergoプラットフォーム。全著作権所有。"
-  },
+  "footer": {},
   "seo": {
     "defaultTitle": "Ergoプラットフォーム - 契約貨幣のための回復力のあるブロックチェーン",
     "defaultDescription": "Ergoは、10年間のブロックチェーン理論と開発によって築かれた堅固な基盤の上に、高度な暗号機能と根本的に新しいDeFi機能を構築します。",
@@ -115,135 +78,7 @@
     "switchLanguage": "言語を切り替える",
     "currentLanguage": "日本語"
   },
-  "start": {
-    "title": "[TODO: Start Your Ergo Journey]",
-    "subtitle": "[TODO: Choose your path into the Ergo ecosystem]",
-    "description": "[TODO: Whether you're new to crypto, want to learn more, build applications, mine, or invest - we have a personalized path for you.]",
-    "journeys": {
-      "new": {
-        "title": "[TODO: I'm New to Crypto]",
-        "subtitle": "[TODO: Start from the basics]",
-        "steps": {
-          "why": {
-            "title": "[TODO: Why Ergo Exists]",
-            "description": "[TODO: Understand the problems we solve]"
-          },
-          "wallet": {
-            "title": "[TODO: Get a Wallet]",
-            "description": "[TODO: Download and set up securely]"
-          },
-          "testnet": {
-            "title": "[TODO: Try Test Coins]",
-            "description": "[TODO: Get free testnet ERG to practice]"
-          },
-          "send": {
-            "title": "[TODO: Send First Transaction]",
-            "description": "[TODO: Learn by doing - send ERG]"
-          },
-          "security": {
-            "title": "[TODO: Stay Safe]",
-            "description": "[TODO: Essential security practices]"
-          }
-        }
-      },
-      "explore": {
-        "title": "[TODO: I Want to Learn]",
-        "subtitle": "[TODO: Deep dive into Ergo]",
-        "steps": {
-          "compare": {
-            "title": "[TODO: Ergo vs Others]",
-            "description": "[TODO: Compare with Bitcoin, Ethereum, Monero]"
-          },
-          "features": {
-            "title": "[TODO: Unique Tech]",
-            "description": "[TODO: eUTXO, Sigma Protocols explained]"
-          },
-          "privacy": {
-            "title": "[TODO: Privacy Features]",
-            "description": "[TODO: How Ergo protects your data]"
-          },
-          "stories": {
-            "title": "[TODO: Real Use Cases]",
-            "description": "[TODO: Community success stories]"
-          }
-        }
-      },
-      "build": {
-        "title": "[TODO: I'm a Developer]",
-        "subtitle": "[TODO: Build on Ergo]",
-        "steps": {
-          "hello": {
-            "title": "[TODO: Hello World]",
-            "description": "[TODO: Your first ErgoScript contract]"
-          },
-          "playground": {
-            "title": "[TODO: Try Playground]",
-            "description": "[TODO: Interactive contract editor]"
-          },
-          "sdk": {
-            "title": "[TODO: SDKs & Tools]",
-            "description": "[TODO: Libraries for your language]"
-          },
-          "community": {
-            "title": "[TODO: Join Dev Chat]",
-            "description": "[TODO: Get help from core devs]"
-          }
-        }
-      },
-      "mine": {
-        "title": "[TODO: I Want to Mine]",
-        "subtitle": "[TODO: Secure the network]",
-        "steps": {
-          "hardware": {
-            "title": "[TODO: Check Hardware]",
-            "description": "[TODO: GPU requirements and setup]"
-          },
-          "pool": {
-            "title": "[TODO: Choose Pool]",
-            "description": "[TODO: Find the best mining pool]"
-          },
-          "software": {
-            "title": "[TODO: Mining Software]",
-            "description": "[TODO: Download and configure miner]"
-          },
-          "monitor": {
-            "title": "[TODO: Monitor & Optimize]",
-            "description": "[TODO: Track performance and earnings]"
-          }
-        }
-      },
-      "invest": {
-        "title": "[TODO: I Want to Invest]",
-        "subtitle": "[TODO: Smart money moves]",
-        "steps": {
-          "research": {
-            "title": "[TODO: Do Your Research]",
-            "description": "[TODO: Understand tokenomics and roadmap]"
-          },
-          "exchange": {
-            "title": "[TODO: Find Exchange]",
-            "description": "[TODO: Where to buy ERG safely]"
-          },
-          "storage": {
-            "title": "[TODO: Secure Storage]",
-            "description": "[TODO: Hardware wallets and best practices]"
-          },
-          "defi": {
-            "title": "[TODO: Explore DeFi]",
-            "description": "[TODO: Yield farming and dApps]"
-          }
-        }
-      }
-    },
-    "common": {
-      "duration": "[TODO: Duration]",
-      "getStarted": "[TODO: Get Started]",
-      "viewAll": "[TODO: View All Paths]",
-      "completed": "[TODO: Completed]",
-      "inProgress": "[TODO: In Progress]",
-      "notStarted": "[TODO: Not Started]"
-    }
-  },
+  "start": {},
   "technology": {
     "title": "技術",
     "subtitle": "先進的なブロックチェーン技術",
@@ -1488,5 +1323,26 @@
       "lg": "[TODO: Large]",
       "icon": "[TODO: Icon]"
     }
-  }
+  },
+  "manifesto": {},
+  "corePillars": {},
+  "whyErgo": {},
+  "audiencePaths": {},
+  "ecosystem": {},
+  "blog": {},
+  "search": {
+    "placeholder": "Search documentation...",
+    "noResults": "No results found",
+    "results": "results",
+    "searchIn": "Search in"
+  },
+  "quiz": {},
+  "ecosystemPage": {},
+  "notFound": {
+    "title": "Page Not Found",
+    "description": "The page you're looking for doesn't exist.",
+    "backHome": "Back to Home"
+  },
+  "docsResources": {},
+  "glossary": {}
 }

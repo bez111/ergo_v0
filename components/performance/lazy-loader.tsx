@@ -15,34 +15,34 @@ export const LoadingSkeleton = () => (
 
 // Lazy load тяжелых компонентов
 export const LazyLocalSearch = dynamic(
-  () => import('@/components/search/LocalSearch'),
+  () => import('@/components/search/LocalSearch').then(mod => ({ default: mod.LocalSearch })),
   { 
     loading: () => <LoadingSkeleton />,
-    ssr: false 
+    ssr: true 
   }
 )
 
 export const LazyAlgoliaSearch = dynamic(
-  () => import('@/components/search/AlgoliaSearchReal'),
+  () => import('@/components/search/AlgoliaSearchReal').then(mod => ({ default: mod.AlgoliaSearchReal })),
   { 
     loading: () => <LoadingSkeleton />,
-    ssr: false 
+    ssr: true 
   }
 )
 
 export const LazyLivePlayground = dynamic(
-  () => import('@/components/ui-kit/live-playground'),
+  () => import('@/components/ui-kit/live-playground').then(mod => ({ default: mod.LivePlayground })),
   { 
     loading: () => <LoadingSkeleton />,
-    ssr: false 
+    ssr: true 
   }
 )
 
 export const LazyDigitalRainEffect = dynamic(
-  () => import('@/components/digital-rain-effect'),
+  () => import('@/components/digital-rain-effect').then(mod => ({ default: mod.DigitalRainEffect })),
   { 
     loading: () => null,
-    ssr: false 
+    ssr: true 
   }
 )
 
@@ -50,15 +50,15 @@ export const LazyPerformanceOptimizer = dynamic(
   () => import('@/components/seo/performance-optimizer').then(mod => ({ default: mod.PerformanceOptimizer })),
   { 
     loading: () => null,
-    ssr: false 
+    ssr: true 
   }
 )
 
 export const LazyWebVitalsTracker = dynamic(
-  () => import('@/components/analytics/web-vitals-tracker'),
+  () => import('@/components/analytics/web-vitals-tracker').then(mod => ({ default: mod.WebVitalsTracker })),
   { 
     loading: () => null,
-    ssr: false 
+    ssr: true 
   }
 )
 
@@ -72,6 +72,6 @@ export function createLazyComponent<P = Record<string, unknown>>(
 ) {
   return dynamic(importFn, {
     loading: () => (options?.fallback as ReactNode) || <LoadingSkeleton />,
-    ssr: options?.ssr ?? false
+    ssr: options?.ssr ?? true
   })
 } 

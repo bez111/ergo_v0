@@ -3,17 +3,20 @@
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Code, Shield, Zap, Layers } from "lucide-react"
+import { useTranslations, useLocale } from "next-intl"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { GlitchText } from "@/components/animations/glitch-text"
 
-const HERO_MESSAGES = [
-  "Decentralized Money for a Free Society",
-  "The globally-neutral settlement layer for programmable money.",
-  "The open-source home of digital freedom",
-  "Join the movement for decentralized, open-source money",
-]
-
 export function HeroSection() {
+  const t = useTranslations('hero')
+  const locale = useLocale()
+  
+  const HERO_MESSAGES = [
+    t('message1') || "Decentralized Money for a Free Society",
+    t('message2') || "The globally-neutral settlement layer for programmable money.",
+    t('message3') || "The open-source home of digital freedom",
+    t('message4') || "Join the movement for decentralized, open-source money",
+  ]
   const [typedText, setTypedText] = useState("")
   const [currentTextIndex, setCurrentTextIndex] = useState(0)
   const [isTyping, setIsTyping] = useState(true)
@@ -100,7 +103,7 @@ export function HeroSection() {
             </h1>
             
                           <p className="text-lg md:text-xl text-neutral-300 font-mono max-w-[65ch] mx-auto leading-relaxed">
-              Join a movement for open, programmable, and censorship-resistant finance.
+              {t('subtitle') || "Join a movement for open, programmable, and censorship-resistant finance."}
             </p>
           </div>
 
@@ -110,9 +113,9 @@ export function HeroSection() {
               className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3"
               asChild
             >
-              <Link href="/start/introduction" className="inline-flex items-center gap-2">
+              <Link href={`/${locale}/start/introduction`} className="inline-flex items-center gap-2">
                 <span>&gt;</span>
-                <span>Explore Ergo</span>
+                <span>{t('exploreErgo') || "Explore Ergo"}</span>
                 <span className="animate-pulse">_</span>
               </Link>
             </CyberButton>
@@ -122,7 +125,7 @@ export function HeroSection() {
               asChild
             >
               <Link href="#choose-path">
-                Choose Your Path
+                {t('chooseYourPath') || "Choose Your Path"}
               </Link>
             </CyberButton>
           </div>

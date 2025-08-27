@@ -17,23 +17,23 @@ const SkeletonTable = () => (
 
 // Critical components (load immediately)
 export const CriticalComponents = {
-  HeroSection: dynamic(() => import('@/components/home/hero-section'), {
+  HeroSection: dynamic(() => import('@/components/home/hero-section').then(mod => ({ default: mod.HeroSection })), {
     ssr: true // Critical for LCP
   }),
   
-  Navigation: dynamic(() => import('@/components/navigation'), {
+  Navigation: dynamic(() => import('@/components/navigation').then(mod => ({ default: mod.Navigation })), {
     ssr: true // Critical for interaction
   })
 }
 
 // Above-the-fold components (high priority)
 export const AboveFoldComponents = {
-  QuickActions: dynamic(() => import('@/components/home/quick-actions'), {
+  QuickActions: dynamic(() => import('@/components/home/quick-actions').then(mod => ({ default: mod.QuickActions })), {
     loading: () => <SkeletonCard />,
     ssr: true
   }),
   
-  CorePillars: dynamic(() => import('@/components/home/core-pillars'), {
+  CorePillars: dynamic(() => import('@/components/home/core-pillars').then(mod => ({ default: mod.CorePillars })), {
     loading: () => <SkeletonCard />,
     ssr: true
   })
@@ -42,62 +42,63 @@ export const AboveFoldComponents = {
 // Below-the-fold components (lazy load)
 export const BelowFoldComponents = {
   // Heavy animation components
-  Differentiation: dynamic(() => import('@/components/home/differentiation'), {
+  Differentiation: dynamic(() => import('@/components/home/differentiation').then(mod => ({ default: mod.Differentiation })), {
     loading: () => <SkeletonCard />,
-    ssr: false
+    ssr: true
   }),
   
-  EcosystemShowcase: dynamic(() => import('@/components/home/ecosystem-showcase'), {
+  EcosystemShowcase: dynamic(() => import('@/components/home/ecosystem-showcase').then(mod => ({ default: mod.EcosystemShowcase })), {
     loading: () => <SkeletonCard />,
-    ssr: false
+    ssr: true
   }),
   
   // Interactive components
-  BlogSection: dynamic(() => import('@/components/home/blog-section'), {
+  BlogSection: dynamic(() => import('@/components/home/blog-section').then(mod => ({ default: mod.BlogSection })), {
     loading: () => <SkeletonCard />,
-    ssr: false
+    ssr: true
   }),
   
-  SubscribeSection: dynamic(() => import('@/components/home/subscribe-section'), {
+  SubscribeSection: dynamic(() => import('@/components/home/subscribe-section').then(mod => ({ default: mod.SubscribeSection })), {
     loading: () => <SkeletonCard />,
-    ssr: false
+    ssr: true
   })
 }
 
 // Heavy UI components (load on interaction)
 export const InteractiveComponents = {
-  ComparisonTable: dynamic(() => import('@/app/start/comparison/ComparisonClient'), {
+  ComparisonTable: dynamic(() => import('@/app/start/comparison/ComparisonClient').then(mod => ({ default: mod.ComparisonTable })), {
     loading: () => <SkeletonTable />,
-    ssr: false
+    ssr: true
   }),
   
-  SearchInterface: dynamic(() => import('@/components/search/search-interface'), {
+  SearchInterface: dynamic(() => import('@/components/search/search-interface').then(mod => ({ default: mod.SearchInterface })), {
     loading: () => <SkeletonCard />,
-    ssr: false
+    ssr: true
   }),
   
-  LivePlayground: dynamic(() => import('@/components/ui-kit/live-playground'), {
+  LivePlayground: dynamic(() => import('@/components/ui-kit/live-playground').then(mod => ({ default: mod.LivePlayground })), {
     loading: () => <SkeletonCard />,
-    ssr: false
+    ssr: true
   })
 }
 
 // Animation components (load after critical path)
 export const AnimationComponents = {
-  DigitalRain: dynamic(() => import('@/components/effects/digital-rain'), {
+  DigitalRain: dynamic(() => import('@/components/effects/digital-rain').then(mod => ({ default: mod.DigitalRain })), {
     loading: () => null,
-    ssr: false
+    ssr: true
   }),
   
-  ParticleEffect: dynamic(() => import('@/components/effects/particles'), {
+  ParticleEffect: dynamic(() => import('@/components/effects/particles').then(mod => ({ default: mod.ParticleEffect })), {
     loading: () => null,
-    ssr: false
+    ssr: true
   }),
   
   MotionWrapper: dynamic(() => 
-    import('framer-motion').then(mod => ({ default: mod.motion.div })), {
+    import('framer-motion').then(mod => ({ default: mod.motion.div })),
+  {
     loading: () => <div />,
-    ssr: false
+    ssr: true
   })
 }
 

@@ -9,21 +9,24 @@ const LoadingSkeleton = () => (
 // Optimized dynamic imports with preload
 export const LazyComponents = {
   // Search components
-  LocalSearch: dynamic(() => import('@/components/search/LocalSearch'), {
+  LocalSearch: dynamic(() => import('@/components/search/LocalSearch').then(mod => ({ default: mod.LocalSearch })),
+  {
     loading: () => <LoadingSkeleton />,
-    ssr: false
+    ssr: true
   }),
   
   // Heavy animations
-  DigitalRainEffect: dynamic(() => import('@/components/digital-rain-effect'), {
+  DigitalRainEffect: dynamic(() => import('@/components/digital-rain-effect').then(mod => ({ default: mod.DigitalRainEffect })),
+  {
     loading: () => null,
-    ssr: false
+    ssr: true
   }),
   
   // Analytics (load after interaction)
-  WebVitalsTracker: dynamic(() => import('@/components/analytics/web-vitals-tracker'), {
+  WebVitalsTracker: dynamic(() => import('@/components/analytics/web-vitals-tracker').then(mod => ({ default: mod.WebVitalsTracker })),
+  {
     loading: () => null,
-    ssr: false
+    ssr: true
   }),
   
   // SEO components
@@ -31,13 +34,14 @@ export const LazyComponents = {
     () => import('@/components/seo/performance-optimizer').then(mod => ({ 
       default: mod.PerformanceOptimizer 
     })),
-    { ssr: false }
+    { ssr: true }
   ),
   
   // Heavy UI components
-  LivePlayground: dynamic(() => import('@/components/ui-kit/live-playground'), {
+  LivePlayground: dynamic(() => import('@/components/ui-kit/live-playground').then(mod => ({ default: mod.LivePlayground })),
+  {
     loading: () => <LoadingSkeleton />,
-    ssr: false
+    ssr: true
   })
 }
 

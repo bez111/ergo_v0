@@ -1,23 +1,14 @@
-import { HeroSection } from "@/components/home/hero-section"
-import { Manifesto } from "@/components/home/manifesto"
-import { CorePillars } from "@/components/home/core-pillars"
-import { 
-  LazyEcosystemShowcase, 
-  LazyAudiencePaths, 
-  LazyBlogSection, 
-  LazySubscribeSection 
-} from "@/components/home/lazy-sections"
-
-export default function Home() {
+export default function RootTestPage() {
   return (
-    <main className="flex flex-col bg-black text-white">
-      <HeroSection />
-      <Manifesto />
-      <CorePillars />
-      <LazyEcosystemShowcase />
-      <LazyAudiencePaths />
-      <LazyBlogSection />
-      <LazySubscribeSection />
-    </main>
-  )
+    <html>
+      <head>
+        <title>Root Test</title>
+      </head>
+      <body>
+        <h1>Root Test Page!</h1>
+        <p>This is the root page test.</p>
+        <a href="/en">Go to English</a>
+      </body>
+    </html>
+  );
 }
