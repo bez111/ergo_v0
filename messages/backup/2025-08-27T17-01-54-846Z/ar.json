@@ -1,25 +1,25 @@
 {
   "common": {
-    "loading": "Yükleniyor...",
-    "error": "Hata",
-    "retry": "Tekrar dene",
-    "close": "Kapat",
-    "open": "Aç",
-    "save": "Kaydet",
-    "cancel": "İptal",
-    "confirm": "Onayla",
-    "delete": "Sil",
-    "edit": "Düzenle",
-    "view": "Görüntüle",
-    "search": "Ara",
-    "filter": "Filtrele",
-    "sort": "Sırala",
-    "next": "Sonraki",
-    "previous": "Önceki",
-    "home": "Ana sayfa",
-    "back": "Geri",
-    "more": "Daha fazla",
-    "less": "Daha az",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "retry": "إعادة المحاولة",
+    "close": "إغلاق",
+    "open": "فتح",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "delete": "حذف",
+    "edit": "تحرير",
+    "view": "عرض",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sort": "ترتيب",
+    "next": "التالي",
+    "previous": "السابق",
+    "home": "الرئيسية",
+    "back": "رجوع",
+    "more": "المزيد",
+    "less": "أقل",
     "menu": "[TODO: Menu]",
     "searchPlaceholder": "[TODO: Search...]",
     "readMore": "[TODO: Read More]",
@@ -29,17 +29,17 @@
     "backToTop": "[TODO: Back to Top]"
   },
   "navigation": {
-    "home": "Ana sayfa",
-    "docs": "Dokümantasyon",
-    "ecosystem": "Ekosistem",
-    "technology": "Teknoloji",
-    "use": "Kullanım alanları",
-    "start": "Başla",
-    "learn": "Öğren",
-    "blog": "Blog",
-    "wallet": "Cüzdan",
-    "events": "Etkinlikler",
-    "mining": "Madencilik",
+    "home": "الرئيسية",
+    "docs": "التوثيق",
+    "ecosystem": "النظام البيئي",
+    "technology": "التكنولوجيا",
+    "use": "حالات الاستخدام",
+    "start": "البدء",
+    "learn": "تعلم",
+    "blog": "المدونة",
+    "wallet": "المحفظة",
+    "events": "الأحداث",
+    "mining": "التعدين",
     "main": {
       "start": "[TODO: Start]",
       "technology": "[TODO: Technology]",
@@ -59,12 +59,12 @@
     }
   },
   "hero": {
-    "title": "Ergo Platformu",
-    "subtitle": "Sözleşmeli para için dayanıklı blockchain platformu",
-    "description": "Ergo, on yıllık blockchain teorisi ve geliştirmesinin attığı sağlam temeller üzerine gelişmiş kriptografik özellikler ve radikal yeni DeFi işlevselliği inşa eder.",
-    "getStarted": "Başla",
-    "learnMore": "Daha fazla öğren",
-    "documentation": "Dokümantasyon",
+    "title": "منصة إرجو",
+    "subtitle": "منصة بلوك تشين مرنة للأموال التعاقدية",
+    "description": "تبني إرجو ميزات تشفير متقدمة ووظائف DeFi جديدة جذرياً على الأسس الصلبة التي وضعها عقد من نظرية وتطوير البلوك تشين.",
+    "getStarted": "البدء",
+    "learnMore": "تعلم المزيد",
+    "documentation": "التوثيق",
     "message1": "[TODO: Decentralized Money for a Free Society]",
     "message2": "[TODO: The globally-neutral settlement layer for programmable money.]",
     "message3": "[TODO: The open-source home of digital freedom]",
@@ -75,28 +75,28 @@
     "feature4": "[TODO: Scalable]"
   },
   "footer": {
-    "description": "Ergo, sözleşmeli para için dayanıklı bir blockchain platformudur. Gelişmiş kriptografik özelliklerle sağlam temeller üzerine inşa edilmiştir.",
-    "quickLinks": "Hızlı bağlantılar",
-    "developers": "Geliştiriciler",
-    "community": "Topluluk",
-    "resources": "Kaynaklar",
-    "legal": "Yasal",
-    "privacy": "Gizlilik politikası",
-    "terms": "Hizmet şartları",
-    "copyright": "© 2024 Ergo Platformu. Tüm hakları saklıdır."
+    "description": "إرجو هي منصة بلوك تشين مرنة للأموال التعاقدية. مبنية على أسس صلبة مع ميزات تشفير متقدمة.",
+    "quickLinks": "روابط سريعة",
+    "developers": "المطورون",
+    "community": "المجتمع",
+    "resources": "الموارد",
+    "legal": "قانوني",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة",
+    "copyright": "© 2024 منصة إرجو. جميع الحقوق محفوظة."
   },
   "seo": {
-    "defaultTitle": "Ergo Platformu - Sözleşmeli para için dayanıklı blockchain",
-    "defaultDescription": "Ergo, on yıllık blockchain teorisi ve geliştirmesinin attığı sağlam temeller üzerine gelişmiş kriptografik özellikler ve radikal yeni DeFi işlevselliği inşa eder.",
-    "keywords": "blockchain, kripto para, DeFi, akıllı sözleşmeler, Ergo, UTXO, iş kanıtı"
+    "defaultTitle": "منصة إرجو - بلوك تشين مرن للأموال التعاقدية",
+    "defaultDescription": "تبني إرجو ميزات تشفير متقدمة ووظائف DeFi جديدة جذرياً على الأسس الصلبة التي وضعها عقد من نظرية وتطوير البلوك تشين.",
+    "keywords": "بلوك تشين، عملة مشفرة، DeFi، عقود ذكية، إرجو، UTXO، إثبات العمل"
   },
   "errors": {
-    "pageNotFound": "Sayfa bulunamadı",
-    "pageNotFoundDescription": "Aradığınız sayfa mevcut değil.",
-    "serverError": "Sunucu hatası",
-    "serverErrorDescription": "Bizim tarafımızda bir sorun oluştu.",
-    "networkError": "Ağ hatası",
-    "networkErrorDescription": "Lütfen internet bağlantınızı kontrol edin.",
+    "pageNotFound": "الصفحة غير موجودة",
+    "pageNotFoundDescription": "الصفحة التي تبحث عنها غير موجودة.",
+    "serverError": "خطأ في الخادم",
+    "serverErrorDescription": "حدث خطأ من جانبنا.",
+    "networkError": "خطأ في الشبكة",
+    "networkErrorDescription": "يرجى التحقق من اتصالك بالإنترنت.",
     "network": {
       "offline": "[TODO: You appear to be offline. Please check your connection.]",
       "timeout": "[TODO: Request timed out. Please try again.]",
@@ -112,142 +112,13 @@
     }
   },
   "language": {
-    "switchLanguage": "Dil değiştir",
-    "currentLanguage": "Türkçe"
-  },
-  "start": {
-    "title": "[TODO: Start Your Ergo Journey]",
-    "subtitle": "[TODO: Choose your path into the Ergo ecosystem]",
-    "description": "[TODO: Whether you're new to crypto, want to learn more, build applications, mine, or invest - we have a personalized path for you.]",
-    "journeys": {
-      "new": {
-        "title": "[TODO: I'm New to Crypto]",
-        "subtitle": "[TODO: Start from the basics]",
-        "steps": {
-          "why": {
-            "title": "[TODO: Why Ergo Exists]",
-            "description": "[TODO: Understand the problems we solve]"
-          },
-          "wallet": {
-            "title": "[TODO: Get a Wallet]",
-            "description": "[TODO: Download and set up securely]"
-          },
-          "testnet": {
-            "title": "[TODO: Try Test Coins]",
-            "description": "[TODO: Get free testnet ERG to practice]"
-          },
-          "send": {
-            "title": "[TODO: Send First Transaction]",
-            "description": "[TODO: Learn by doing - send ERG]"
-          },
-          "security": {
-            "title": "[TODO: Stay Safe]",
-            "description": "[TODO: Essential security practices]"
-          }
-        }
-      },
-      "explore": {
-        "title": "[TODO: I Want to Learn]",
-        "subtitle": "[TODO: Deep dive into Ergo]",
-        "steps": {
-          "compare": {
-            "title": "[TODO: Ergo vs Others]",
-            "description": "[TODO: Compare with Bitcoin, Ethereum, Monero]"
-          },
-          "features": {
-            "title": "[TODO: Unique Tech]",
-            "description": "[TODO: eUTXO, Sigma Protocols explained]"
-          },
-          "privacy": {
-            "title": "[TODO: Privacy Features]",
-            "description": "[TODO: How Ergo protects your data]"
-          },
-          "stories": {
-            "title": "[TODO: Real Use Cases]",
-            "description": "[TODO: Community success stories]"
-          }
-        }
-      },
-      "build": {
-        "title": "[TODO: I'm a Developer]",
-        "subtitle": "[TODO: Build on Ergo]",
-        "steps": {
-          "hello": {
-            "title": "[TODO: Hello World]",
-            "description": "[TODO: Your first ErgoScript contract]"
-          },
-          "playground": {
-            "title": "[TODO: Try Playground]",
-            "description": "[TODO: Interactive contract editor]"
-          },
-          "sdk": {
-            "title": "[TODO: SDKs & Tools]",
-            "description": "[TODO: Libraries for your language]"
-          },
-          "community": {
-            "title": "[TODO: Join Dev Chat]",
-            "description": "[TODO: Get help from core devs]"
-          }
-        }
-      },
-      "mine": {
-        "title": "[TODO: I Want to Mine]",
-        "subtitle": "[TODO: Secure the network]",
-        "steps": {
-          "hardware": {
-            "title": "[TODO: Check Hardware]",
-            "description": "[TODO: GPU requirements and setup]"
-          },
-          "pool": {
-            "title": "[TODO: Choose Pool]",
-            "description": "[TODO: Find the best mining pool]"
-          },
-          "software": {
-            "title": "[TODO: Mining Software]",
-            "description": "[TODO: Download and configure miner]"
-          },
-          "monitor": {
-            "title": "[TODO: Monitor & Optimize]",
-            "description": "[TODO: Track performance and earnings]"
-          }
-        }
-      },
-      "invest": {
-        "title": "[TODO: I Want to Invest]",
-        "subtitle": "[TODO: Smart money moves]",
-        "steps": {
-          "research": {
-            "title": "[TODO: Do Your Research]",
-            "description": "[TODO: Understand tokenomics and roadmap]"
-          },
-          "exchange": {
-            "title": "[TODO: Find Exchange]",
-            "description": "[TODO: Where to buy ERG safely]"
-          },
-          "storage": {
-            "title": "[TODO: Secure Storage]",
-            "description": "[TODO: Hardware wallets and best practices]"
-          },
-          "defi": {
-            "title": "[TODO: Explore DeFi]",
-            "description": "[TODO: Yield farming and dApps]"
-          }
-        }
-      }
-    },
-    "common": {
-      "duration": "[TODO: Duration]",
-      "getStarted": "[TODO: Get Started]",
-      "viewAll": "[TODO: View All Paths]",
-      "completed": "[TODO: Completed]",
-      "inProgress": "[TODO: In Progress]",
-      "notStarted": "[TODO: Not Started]"
-    }
+    "switchLanguage": "تغيير اللغة",
+    "currentLanguage": "العربية"
   },
   "technology": {
-    "title": "Teknoloji",
-    "subtitle": "Gelişmiş blockchain teknolojisi",
-    "description": "Ergo'nun en son özelliklerini keşfedin: eUTXO, ErgoScript, Sigma Protocols ve daha fazlası.",
+    "title": "التكنولوجيا",
+    "subtitle": "تكنولوجيا البلوك تشين المتقدمة",
+    "description": "استكشف ميزات Ergo المتطورة: eUTXO، ErgoScript، Sigma Protocols والمزيد.",
     "sections": {
       "useCases": "[TODO: Use Cases]",
       "architecture": "[TODO: Architecture]",
@@ -1026,76 +897,53 @@
       }
     }
   },
-  "use": {
-    "title": "[TODO: Use Cases]",
-    "subtitle": "[TODO: Real-world applications powered by Ergo]",
-    "description": "[TODO: Discover how Ergo's advanced technology enables innovative solutions across finance, privacy, gaming, and more.]",
-    "cases": {
-      "stablecoins": {
-        "title": "[TODO: Algorithmic Stablecoins]",
-        "subtitle": "[TODO: Stable value storage without centralized control]",
-        "description": "[TODO: Over-collateralized stablecoins with innovative AgeUSD protocol.]",
-        "tags": "[TODO: Stablecoin,Algorithmic,Collateral]"
-      },
-      "privacy": {
-        "title": "[TODO: Privacy & Confidentiality]",
-        "subtitle": "[TODO: Financial privacy in an increasingly surveilled world]",
-        "description": "[TODO: Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy.]",
-        "tags": "[TODO: Mixer,Stealth,Zero-Knowledge]"
-      },
-      "bridges": {
-        "title": "[TODO: Cross-Chain Bridges]",
-        "subtitle": "[TODO: Secure, trustless value transfer between blockchains]",
-        "description": "[TODO: Decentralized bridges with multi-signature security, no central custody.]",
-        "tags": "[TODO: Bridge,Interoperability,Multi-chain]"
-      },
-      "daos": {
-        "title": "[TODO: DAOs & Alternative Economies]",
-        "subtitle": "[TODO: Community governance and alternative economic systems]",
-        "description": "[TODO: Composable DAO infrastructure: treasury, voting, profit-sharing.]",
-        "tags": "[TODO: DAO,Governance,Community]"
+  "useCases": {
+    "title": "حالات الاستخدام",
+    "subtitle": "تطبيقات العالم الحقيقي",
+    "description": "اكتشف كيف يدعم Ergo التمويل اللامركزي والرموز غير القابلة للاستبدال والخصوصية والمزيد من التطبيقات المبتكرة.",
+    "categories": {
+      "defi": {
+        "title": "[TODO: DeFi Applications]",
+        "description": "[TODO: Decentralized finance built on solid foundations]"
       },
       "nfts": {
         "title": "[TODO: NFTs & Digital Assets]",
-        "subtitle": "[TODO: True digital ownership, dynamic properties]",
-        "description": "[TODO: On-chain metadata, protocol royalties, programmable NFTs.]",
-        "tags": "[TODO: NFT,Royalties,Dynamic]"
+        "description": "[TODO: Native tokens and NFTs with protocol-level security]"
+      },
+      "privacy": {
+        "title": "[TODO: Privacy & Confidentiality]",
+        "description": "[TODO: Built-in privacy features and mixing protocols]"
+      },
+      "bridges": {
+        "title": "[TODO: Cross-Chain Bridges]",
+        "description": "[TODO: Secure interoperability with other blockchains]"
       },
       "oracles": {
         "title": "[TODO: Oracles & Data Feeds]",
-        "subtitle": "[TODO: Bringing real-world data on-chain]",
-        "description": "[TODO: Decentralized oracle pools provide external data for DeFi & prediction markets.]",
-        "tags": "[TODO: Oracles,Data Feeds,Prediction]"
+        "description": "[TODO: Reliable external data integration]"
       },
-      "identity": {
-        "title": "[TODO: Identity & Reputation]",
-        "subtitle": "[TODO: Self-sovereign identity & Web3 reputation]",
-        "description": "[TODO: Decentralized identifiers (DID), Sybil resistance, reputation systems.]",
-        "tags": "[TODO: Identity,Reputation,DID]"
+      "daos": {
+        "title": "[TODO: DAOs & Alternative Economies]",
+        "description": "[TODO: Decentralized governance and economic models]"
+      },
+      "stablecoins": {
+        "title": "[TODO: Algorithmic Stablecoins]",
+        "description": "[TODO: Decentralized stable value mechanisms]"
       },
       "gaming": {
         "title": "[TODO: Gaming & Metaverse]",
-        "subtitle": "[TODO: Next-gen gaming assets & digital worlds]",
-        "description": "[TODO: Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.]",
-        "tags": "[TODO: Gaming,Metaverse,NFT]"
+        "description": "[TODO: Blockchain gaming and virtual worlds]"
+      },
+      "identity": {
+        "title": "[TODO: Identity & Reputation]",
+        "description": "[TODO: Decentralized identity and reputation systems]"
       }
-    },
-    "common": {
-      "exploreCase": "[TODO: Explore Use Case]",
-      "learnMore": "[TODO: Learn More]",
-      "supportedProjects": "[TODO: Supported Projects]",
-      "getStarted": "[TODO: Get Started]"
     }
   },
-  "learn": {
-    "title": "Öğren",
-    "subtitle": "Ergo teknolojisinde ustalaşın",
-    "description": "Geliştiriciler, kullanıcılar ve meraklılar için kapsamlı öğrenme kaynakları."
-  },
   "docs": {
-    "title": "Dokümantasyon",
-    "subtitle": "Eksiksiz geliştirici kaynakları",
-    "description": "Ergo üzerinde inşa etmek için ihtiyacınız olan her şey: kılavuzlar, API'ler, araçlar ve örnekler.",
+    "title": "التوثيق",
+    "subtitle": "موارد شاملة للمطورين",
+    "description": "كل ما تحتاجه للبناء على Ergo: أدلة، واجهات برمجة التطبيقات، أدوات وأمثلة.",
     "hero": {
       "whyErgo": "[TODO: Why Ergo?]",
       "glossary": "[TODO: Glossary]",
@@ -1196,6 +1044,201 @@
       }
     }
   },
+  "learn": {
+    "title": "تعلم",
+    "subtitle": "أتقن تكنولوجيا Ergo",
+    "description": "موارد تعليمية شاملة للمطورين والمستخدمين والمتحمسين."
+  },
+  "start": {
+    "title": "[TODO: Start Your Ergo Journey]",
+    "subtitle": "[TODO: Choose your path into the Ergo ecosystem]",
+    "description": "[TODO: Whether you're new to crypto, want to learn more, build applications, mine, or invest - we have a personalized path for you.]",
+    "journeys": {
+      "new": {
+        "title": "[TODO: I'm New to Crypto]",
+        "subtitle": "[TODO: Start from the basics]",
+        "steps": {
+          "why": {
+            "title": "[TODO: Why Ergo Exists]",
+            "description": "[TODO: Understand the problems we solve]"
+          },
+          "wallet": {
+            "title": "[TODO: Get a Wallet]",
+            "description": "[TODO: Download and set up securely]"
+          },
+          "testnet": {
+            "title": "[TODO: Try Test Coins]",
+            "description": "[TODO: Get free testnet ERG to practice]"
+          },
+          "send": {
+            "title": "[TODO: Send First Transaction]",
+            "description": "[TODO: Learn by doing - send ERG]"
+          },
+          "security": {
+            "title": "[TODO: Stay Safe]",
+            "description": "[TODO: Essential security practices]"
+          }
+        }
+      },
+      "explore": {
+        "title": "[TODO: I Want to Learn]",
+        "subtitle": "[TODO: Deep dive into Ergo]",
+        "steps": {
+          "compare": {
+            "title": "[TODO: Ergo vs Others]",
+            "description": "[TODO: Compare with Bitcoin, Ethereum, Monero]"
+          },
+          "features": {
+            "title": "[TODO: Unique Tech]",
+            "description": "[TODO: eUTXO, Sigma Protocols explained]"
+          },
+          "privacy": {
+            "title": "[TODO: Privacy Features]",
+            "description": "[TODO: How Ergo protects your data]"
+          },
+          "stories": {
+            "title": "[TODO: Real Use Cases]",
+            "description": "[TODO: Community success stories]"
+          }
+        }
+      },
+      "build": {
+        "title": "[TODO: I'm a Developer]",
+        "subtitle": "[TODO: Build on Ergo]",
+        "steps": {
+          "hello": {
+            "title": "[TODO: Hello World]",
+            "description": "[TODO: Your first ErgoScript contract]"
+          },
+          "playground": {
+            "title": "[TODO: Try Playground]",
+            "description": "[TODO: Interactive contract editor]"
+          },
+          "sdk": {
+            "title": "[TODO: SDKs & Tools]",
+            "description": "[TODO: Libraries for your language]"
+          },
+          "community": {
+            "title": "[TODO: Join Dev Chat]",
+            "description": "[TODO: Get help from core devs]"
+          }
+        }
+      },
+      "mine": {
+        "title": "[TODO: I Want to Mine]",
+        "subtitle": "[TODO: Secure the network]",
+        "steps": {
+          "hardware": {
+            "title": "[TODO: Check Hardware]",
+            "description": "[TODO: GPU requirements and setup]"
+          },
+          "pool": {
+            "title": "[TODO: Choose Pool]",
+            "description": "[TODO: Find the best mining pool]"
+          },
+          "software": {
+            "title": "[TODO: Mining Software]",
+            "description": "[TODO: Download and configure miner]"
+          },
+          "monitor": {
+            "title": "[TODO: Monitor & Optimize]",
+            "description": "[TODO: Track performance and earnings]"
+          }
+        }
+      },
+      "invest": {
+        "title": "[TODO: I Want to Invest]",
+        "subtitle": "[TODO: Smart money moves]",
+        "steps": {
+          "research": {
+            "title": "[TODO: Do Your Research]",
+            "description": "[TODO: Understand tokenomics and roadmap]"
+          },
+          "exchange": {
+            "title": "[TODO: Find Exchange]",
+            "description": "[TODO: Where to buy ERG safely]"
+          },
+          "storage": {
+            "title": "[TODO: Secure Storage]",
+            "description": "[TODO: Hardware wallets and best practices]"
+          },
+          "defi": {
+            "title": "[TODO: Explore DeFi]",
+            "description": "[TODO: Yield farming and dApps]"
+          }
+        }
+      }
+    },
+    "common": {
+      "duration": "[TODO: Duration]",
+      "getStarted": "[TODO: Get Started]",
+      "viewAll": "[TODO: View All Paths]",
+      "completed": "[TODO: Completed]",
+      "inProgress": "[TODO: In Progress]",
+      "notStarted": "[TODO: Not Started]"
+    }
+  },
+  "use": {
+    "title": "[TODO: Use Cases]",
+    "subtitle": "[TODO: Real-world applications powered by Ergo]",
+    "description": "[TODO: Discover how Ergo's advanced technology enables innovative solutions across finance, privacy, gaming, and more.]",
+    "cases": {
+      "stablecoins": {
+        "title": "[TODO: Algorithmic Stablecoins]",
+        "subtitle": "[TODO: Stable value storage without centralized control]",
+        "description": "[TODO: Over-collateralized stablecoins with innovative AgeUSD protocol.]",
+        "tags": "[TODO: Stablecoin,Algorithmic,Collateral]"
+      },
+      "privacy": {
+        "title": "[TODO: Privacy & Confidentiality]",
+        "subtitle": "[TODO: Financial privacy in an increasingly surveilled world]",
+        "description": "[TODO: Non-custodial mixers, stealth addresses, zero-knowledge proofs for complete privacy.]",
+        "tags": "[TODO: Mixer,Stealth,Zero-Knowledge]"
+      },
+      "bridges": {
+        "title": "[TODO: Cross-Chain Bridges]",
+        "subtitle": "[TODO: Secure, trustless value transfer between blockchains]",
+        "description": "[TODO: Decentralized bridges with multi-signature security, no central custody.]",
+        "tags": "[TODO: Bridge,Interoperability,Multi-chain]"
+      },
+      "daos": {
+        "title": "[TODO: DAOs & Alternative Economies]",
+        "subtitle": "[TODO: Community governance and alternative economic systems]",
+        "description": "[TODO: Composable DAO infrastructure: treasury, voting, profit-sharing.]",
+        "tags": "[TODO: DAO,Governance,Community]"
+      },
+      "nfts": {
+        "title": "[TODO: NFTs & Digital Assets]",
+        "subtitle": "[TODO: True digital ownership, dynamic properties]",
+        "description": "[TODO: On-chain metadata, protocol royalties, programmable NFTs.]",
+        "tags": "[TODO: NFT,Royalties,Dynamic]"
+      },
+      "oracles": {
+        "title": "[TODO: Oracles & Data Feeds]",
+        "subtitle": "[TODO: Bringing real-world data on-chain]",
+        "description": "[TODO: Decentralized oracle pools provide external data for DeFi & prediction markets.]",
+        "tags": "[TODO: Oracles,Data Feeds,Prediction]"
+      },
+      "identity": {
+        "title": "[TODO: Identity & Reputation]",
+        "subtitle": "[TODO: Self-sovereign identity & Web3 reputation]",
+        "description": "[TODO: Decentralized identifiers (DID), Sybil resistance, reputation systems.]",
+        "tags": "[TODO: Identity,Reputation,DID]"
+      },
+      "gaming": {
+        "title": "[TODO: Gaming & Metaverse]",
+        "subtitle": "[TODO: Next-gen gaming assets & digital worlds]",
+        "description": "[TODO: Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.]",
+        "tags": "[TODO: Gaming,Metaverse,NFT]"
+      }
+    },
+    "common": {
+      "exploreCase": "[TODO: Explore Use Case]",
+      "learnMore": "[TODO: Learn More]",
+      "supportedProjects": "[TODO: Supported Projects]",
+      "getStarted": "[TODO: Get Started]"
+    }
+  },
   "wallet": {
     "title": "[TODO: Wallets]",
     "subtitle": "[TODO: Secure storage for your ERG and tokens]",
@@ -1211,49 +1254,6 @@
     "title": "[TODO: Events]",
     "subtitle": "[TODO: Join the Ergo community]",
     "description": "[TODO: Discover upcoming events, meetups, and conferences in the Ergo ecosystem.]"
-  },
-  "useCases": {
-    "title": "Kullanım Durumları",
-    "subtitle": "Gerçek dünya uygulamaları",
-    "description": "Ergo'nun DeFi, NFT'ler, gizlilik ve daha fazla yenilikçi uygulamayı nasıl güçlendirdiğini keşfedin.",
-    "categories": {
-      "defi": {
-        "title": "[TODO: DeFi Applications]",
-        "description": "[TODO: Decentralized finance built on solid foundations]"
-      },
-      "nfts": {
-        "title": "[TODO: NFTs & Digital Assets]",
-        "description": "[TODO: Native tokens and NFTs with protocol-level security]"
-      },
-      "privacy": {
-        "title": "[TODO: Privacy & Confidentiality]",
-        "description": "[TODO: Built-in privacy features and mixing protocols]"
-      },
-      "bridges": {
-        "title": "[TODO: Cross-Chain Bridges]",
-        "description": "[TODO: Secure interoperability with other blockchains]"
-      },
-      "oracles": {
-        "title": "[TODO: Oracles & Data Feeds]",
-        "description": "[TODO: Reliable external data integration]"
-      },
-      "daos": {
-        "title": "[TODO: DAOs & Alternative Economies]",
-        "description": "[TODO: Decentralized governance and economic models]"
-      },
-      "stablecoins": {
-        "title": "[TODO: Algorithmic Stablecoins]",
-        "description": "[TODO: Decentralized stable value mechanisms]"
-      },
-      "gaming": {
-        "title": "[TODO: Gaming & Metaverse]",
-        "description": "[TODO: Blockchain gaming and virtual worlds]"
-      },
-      "identity": {
-        "title": "[TODO: Identity & Reputation]",
-        "description": "[TODO: Decentralized identity and reputation systems]"
-      }
-    }
   },
   "docsMenu": {
     "introduction": {

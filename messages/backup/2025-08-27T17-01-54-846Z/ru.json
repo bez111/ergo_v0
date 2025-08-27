@@ -1338,6 +1338,57 @@
       "varies": "Различается"
     }
   },
+  "docsMenu": {
+    "introduction": {
+      "title": "Введение",
+      "whyErgo": "Зачем Ergo",
+      "keyFeatures": "Ключевые особенности",
+      "roadmap": "Дорожная карта",
+      "researchWhitepapers": "Исследования и Whitepaper'ы",
+      "entities": "Организации",
+      "wallets": "Кошельки",
+      "resources": "Ресурсы",
+      "contribute": "Внести вклад",
+      "events": "События",
+      "glossary": "Глоссарий",
+      "faq": "FAQ"
+    },
+    "ecosystem": {
+      "title": "Экосистема",
+      "infrastructure": "Инфраструктура",
+      "applications": "Приложения",
+      "financial": "Финансовые",
+      "nfts": "NFT",
+      "privacy": "Приватность",
+      "ai": "ИИ",
+      "daos": "DAO",
+      "tooling": "Инструменты",
+      "standards": "Стандарты"
+    },
+    "developers": {
+      "title": "Разработчики",
+      "gettingStarted": "Начало работы",
+      "ergoscriptLanguages": "Языки ErgoScript",
+      "dataModelApis": "Модель данных и API",
+      "cryptographicPrimitives": "Криптографические примитивы",
+      "infrastructure": "Инфраструктура",
+      "tooling": "Инструменты",
+      "tutorials": "Руководства",
+      "bountiesGrants": "Баунти и гранты",
+      "communitySupport": "Поддержка сообщества",
+      "students": "Студенты",
+      "resources": "Ресурсы"
+    },
+    "miners": {
+      "title": "Майнеры",
+      "miningGuides": "Руководства по майнингу",
+      "poolMining": "Пул майнинг",
+      "soloMining": "Соло майнинг",
+      "hardware": "Оборудование",
+      "software": "Программное обеспечение",
+      "troubleshooting": "Устранение неполадок"
+    }
+  },
   "docs": {
     "title": "Документация Ergo",
     "subtitle": "Ваше исчерпывающее руководство по пониманию, использованию и созданию на Ergo. От базовых концепций до продвинутой разработки - найдите всё необходимое для навигации в экосистеме Ergo.",
@@ -1441,6 +1492,29 @@
       }
     }
   },
+  "resources": {
+    "ergoscript": {
+      "title": "Серия руководств по ErgoScript",
+      "description": "Освойте ErgoScript: ваш путь к созданию безопасных и мощных смарт-контрактов на Ergo, шаг за шагом.",
+      "difficulty": "От новичка до эксперта",
+      "duration": "20+ часов"
+    },
+    "faq": {
+      "title": "Исчерпывающие FAQ",
+      "description": "Всё, что вам нужно знать о блокчейне Ergo, технологиях и экосистеме в одном месте.",
+      "difficulty": "Все уровни",
+      "duration": "Справочник"
+    },
+    "research": {
+      "title": "Исследовательские работы",
+      "description": "Глубокое погружение в академические исследования и технические работы, лежащие в основе инноваций Ergo.",
+      "difficulty": "Продвинутый",
+      "duration": "Различается"
+    }
+  },
+  "sections": {
+    "learningResources": "Обучающие ресурсы"
+  },
   "wallet": {
     "title": "Кошельки",
     "subtitle": "Secure storage for your ERG and Токенs",
@@ -1498,57 +1572,6 @@
         "title": "Identity & Reputation",
         "description": "Decentralized identity and reputation systems"
       }
-    }
-  },
-  "docsMenu": {
-    "introduction": {
-      "title": "Введение",
-      "whyErgo": "Зачем Ergo",
-      "keyFeatures": "Ключевые особенности",
-      "roadmap": "Дорожная карта",
-      "researchWhitepapers": "Исследования и Whitepaper'ы",
-      "entities": "Организации",
-      "wallets": "Кошельки",
-      "resources": "Ресурсы",
-      "contribute": "Внести вклад",
-      "events": "События",
-      "glossary": "Глоссарий",
-      "faq": "FAQ"
-    },
-    "ecosystem": {
-      "title": "Экосистема",
-      "infrastructure": "Инфраструктура",
-      "applications": "Приложения",
-      "financial": "Финансовые",
-      "nfts": "NFT",
-      "privacy": "Приватность",
-      "ai": "ИИ",
-      "daos": "DAO",
-      "tooling": "Инструменты",
-      "standards": "Стандарты"
-    },
-    "developers": {
-      "title": "Разработчики",
-      "gettingStarted": "Начало работы",
-      "ergoscriptLanguages": "Языки ErgoScript",
-      "dataModelApis": "Модель данных и API",
-      "cryptographicPrimitives": "Криптографические примитивы",
-      "infrastructure": "Инфраструктура",
-      "tooling": "Инструменты",
-      "tutorials": "Руководства",
-      "bountiesGrants": "Баунти и гранты",
-      "communitySupport": "Поддержка сообщества",
-      "students": "Студенты",
-      "resources": "Ресурсы"
-    },
-    "miners": {
-      "title": "Майнеры",
-      "miningGuides": "Руководства по майнингу",
-      "poolMining": "Пул майнинг",
-      "soloMining": "Соло майнинг",
-      "hardware": "Оборудование",
-      "software": "Программное обеспечение",
-      "troubleshooting": "Устранение неполадок"
     }
   },
   "validation": {
@@ -1733,28 +1756,5 @@
       "lg": "[TODO: Large]",
       "icon": "[TODO: Icon]"
     }
-  },
-  "resources": {
-    "ergoscript": {
-      "title": "Серия руководств по ErgoScript",
-      "description": "Освойте ErgoScript: ваш путь к созданию безопасных и мощных смарт-контрактов на Ergo, шаг за шагом.",
-      "difficulty": "От новичка до эксперта",
-      "duration": "20+ часов"
-    },
-    "faq": {
-      "title": "Исчерпывающие FAQ",
-      "description": "Всё, что вам нужно знать о блокчейне Ergo, технологиях и экосистеме в одном месте.",
-      "difficulty": "Все уровни",
-      "duration": "Справочник"
-    },
-    "research": {
-      "title": "Исследовательские работы",
-      "description": "Глубокое погружение в академические исследования и технические работы, лежащие в основе инноваций Ergo.",
-      "difficulty": "Продвинутый",
-      "duration": "Различается"
-    }
-  },
-  "sections": {
-    "learningResources": "Обучающие ресурсы"
   }
 }
