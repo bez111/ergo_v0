@@ -12,8 +12,6 @@ import { Rocket, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, Check
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
-import { useTranslations } from "next-intl"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,92 +35,84 @@ const itemVariants = {
   },
 }
 
-// Features moved inside component to use translations
+const features = [
+  {
+    title: "Sub-Second Confirmations",
+    description: "Near-instant transaction finality for improved user experience without sacrificing decentralization",
+    icon: Clock,
+  },
+  {
+    title: "Layer 1 Security",
+    description: "Full blockchain security without trusted intermediaries or bridges",
+    icon: Shield,
+  },
+  {
+    title: "Seamless Integration",
+    description: "Works with existing infrastructure - no bridges or sidechains needed",
+    icon: Network,
+  },
+  {
+    title: "Parallel Processing",
+    description: "Multiple subblocks can be validated in parallel for increased throughput",
+    icon: Layers,
+  },
+  {
+    title: "Adaptive Difficulty",
+    description: "Dynamic adjustment ensures consistent block times even with varying hash power",
+    icon: Activity,
+  },
+  {
+    title: "Miner Incentives",
+    description: "Additional rewards for subblock miners while maintaining main chain security",
+    icon: Cpu,
+  },
+]
 
-// Technical details moved inside component to use translations
+const technicalDetails = [
+  {
+    title: "Architecture",
+    content: "Subblocks are intermediate blocks between main blocks that provide faster confirmations. They maintain the same security model as main blocks but with adjusted difficulty targets.",
+  },
+  {
+    title: "Consensus Mechanism",
+    content: "Uses a modified version of Autolykos that allows for variable difficulty targets. Subblocks contribute to the overall chain weight while maintaining compatibility with existing infrastructure.",
+  },
+  {
+    title: "Transaction Ordering",
+    content: "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness.",
+  },
+  {
+    title: "State Management",
+    content: "Subblocks update the UTXO set incrementally, allowing for efficient state transitions without full block validation overhead.",
+  },
+]
 
-// Use cases moved inside component to use translations
+const useCases = [
+  {
+    title: "DeFi Applications",
+    description: "Enable high-frequency trading and instant swaps with sub-second finality",
+    icon: GitBranch,
+  },
+  {
+    title: "Payment Systems",
+    description: "Point-of-sale transactions with immediate confirmation",
+    icon: Database,
+  },
+  {
+    title: "Gaming",
+    description: "Real-time game state updates without waiting for block confirmations",
+    icon: Server,
+  },
+  {
+    title: "Social Applications",
+    description: "Instant messaging and social interactions on-chain",
+    icon: Users,
+  },
+]
 
 export default function SubblocksPage() {
-  const t = useTranslations('technology.subblocksPage')
-  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("features")
-
-  const features = [
-    {
-      title: t('features.subSecondConfirmations.title'),
-      description: t('features.subSecondConfirmations.description'),
-      icon: Clock,
-    },
-    {
-      title: t('features.layer1Security.title'),
-      description: t('features.layer1Security.description'),
-      icon: Shield,
-    },
-    {
-      title: t('features.seamlessIntegration.title'),
-      description: t('features.seamlessIntegration.description'),
-      icon: Network,
-    },
-    {
-      title: t('features.parallelProcessing.title'),
-      description: t('features.parallelProcessing.description'),
-      icon: Layers,
-    },
-    {
-      title: t('features.adaptiveDifficulty.title'),
-      description: t('features.adaptiveDifficulty.description'),
-      icon: Activity,
-    },
-    {
-      title: t('features.minerIncentives.title'),
-      description: t('features.minerIncentives.description'),
-      icon: Cpu,
-    },
-  ]
-
-  const technicalDetails = [
-    {
-      title: t('technicalDetails.architecture.title'),
-      content: t('technicalDetails.architecture.content'),
-    },
-    {
-      title: t('technicalDetails.consensusMechanism.title'),
-      content: t('technicalDetails.consensusMechanism.content'),
-    },
-    {
-      title: t('technicalDetails.transactionOrdering.title'),
-      content: t('technicalDetails.transactionOrdering.content'),
-    },
-    {
-      title: t('technicalDetails.stateManagement.title'),
-      content: t('technicalDetails.stateManagement.content'),
-    },
-  ]
-
-  const useCases = [
-    {
-      title: t('useCases.defiApplications.title'),
-      description: t('useCases.defiApplications.description'),
-      icon: GitBranch,
-    },
-    {
-      title: t('useCases.paymentSystems.title'),
-      description: t('useCases.paymentSystems.description'),
-      icon: Database,
-    },
-    {
-      title: t('useCases.gaming.title'),
-      description: t('useCases.gaming.description'),
-      icon: Server,
-    },
-    {
-      title: t('useCases.socialApplications.title'),
-      description: t('useCases.socialApplications.description'),
-      icon: Users,
-    },
-  ]
 
   const faqs = [
     {
@@ -197,8 +187,8 @@ export default function SubblocksPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Technology", href: "/technology" },
-              { name: "Subblocks", href: "/technology/subblocks" }
+              { label: "Technology", href: "/technology" },
+              { label: "Subblocks", href: "/technology/subblocks" }
             ]}
             className="mb-8"
           />

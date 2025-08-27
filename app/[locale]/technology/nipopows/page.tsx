@@ -9,8 +9,6 @@ import Link from "next/link"
 import { useState, type ReactNode } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
-import { useTranslations } from "next-intl"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 // Types and hoisted data
 type UseCase = {
@@ -22,9 +20,19 @@ type UseCase = {
   external?: boolean
 }
 
-// Benefits moved inside component to use translations
+const benefits = [
+  { icon: <Link2 className="w-8 h-8" aria-hidden="true" />, title: "Interoperability", description: "Enables SPV/NIPoPoW-style protocols and trust-minimized cross-chain interactions." },
+  { icon: <Smartphone className="w-8 h-8" aria-hidden="true" />, title: "Light Clients", description: "Secure verification on mobile or web without downloading the full blockchain." },
+  { icon: <Zap className="w-8 h-8" aria-hidden="true" />, title: "Fast Verification", description: "Verify chain work in seconds using compact proofs instead of full syncs." },
+  { icon: <Shield className="w-8 h-8" aria-hidden="true" />, title: "Trustless", description: "No trusted relays or validators; verification follows PoW assumptions." },
+] as const
 
-// Use cases moved inside component to use translations
+const useCases: UseCase[] = [
+  { title: "Cross-Chain Protocols", description: "Trust-minimized bridges and SPV-style interoperability.", example: "Rosen Bridge", icon: <Link2 className="w-8 h-8" aria-hidden="true" />, href: "https://rosen.tech", external: true },
+  { title: "Mobile Wallets", description: "Light wallets that prove chain work with succinct proofs.", example: "Ergo Mobile", icon: <Smartphone className="w-8 h-8" aria-hidden="true" />, href: "/wallet", external: false },
+  { title: "Oracle Systems", description: "Efficient verification of external chain data.", example: "Oracle Pools", icon: <Network className="w-8 h-8" aria-hidden="true" />, href: "/learn/guides/oracle-pool", external: false },
+  { title: "Sidechains", description: "Sidechains can verify L1 succinctly for security and liveness.", example: "Research", icon: <Zap className="w-8 h-8" aria-hidden="true" />, href: "/docs/introduction/research-whitepapers", external: false },
+]
 
 const comparisonData = [
   { aspect: "Verification Time", traditional: "Hours to days (full sync)", nipopows: "Seconds to minutes", advantage: "NIPoPoWs" },
@@ -58,24 +66,8 @@ const extraFaqs = [
 const allFaqs = [...baseFaqs, ...extraFaqs]
 
 export default function NIPOPOWsPage() {
-  const t = useTranslations('technology.nipopowsPage')
-  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const lastUpdated = new Date().toISOString().slice(0, 10)
-
-  const benefits = [
-    { icon: <Link2 className="w-8 h-8" aria-hidden="true" />, title: t('benefits.interoperability.title'), description: t('benefits.interoperability.description') },
-    { icon: <Smartphone className="w-8 h-8" aria-hidden="true" />, title: t('benefits.lightClients.title'), description: t('benefits.lightClients.description') },
-    { icon: <Zap className="w-8 h-8" aria-hidden="true" />, title: t('benefits.fastVerification.title'), description: t('benefits.fastVerification.description') },
-    { icon: <Shield className="w-8 h-8" aria-hidden="true" />, title: t('benefits.trustless.title'), description: t('benefits.trustless.description') },
-  ]
-
-  const useCases: UseCase[] = [
-    { title: t('useCases.crossChain.title'), description: t('useCases.crossChain.description'), example: t('useCases.crossChain.example'), icon: <Link2 className="w-8 h-8" aria-hidden="true" />, href: "https://rosen.tech", external: true },
-    { title: t('useCases.mobileWallets.title'), description: t('useCases.mobileWallets.description'), example: t('useCases.mobileWallets.example'), icon: <Smartphone className="w-8 h-8" aria-hidden="true" />, href: localizedPath("/wallet"), external: false },
-    { title: t('useCases.oracleSystems.title'), description: t('useCases.oracleSystems.description'), example: t('useCases.oracleSystems.example'), icon: <Network className="w-8 h-8" aria-hidden="true" />, href: localizedPath("/learn/guides/oracle-pool"), external: false },
-    { title: t('useCases.sidechains.title'), description: t('useCases.sidechains.description'), example: t('useCases.sidechains.example'), icon: <Zap className="w-8 h-8" aria-hidden="true" />, href: localizedPath("/docs/introduction/research-whitepapers"), external: false },
-  ]
 
   return (
     <>
@@ -129,7 +121,7 @@ export default function NIPOPOWsPage() {
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
-            items={[{ name: "Technology", href: "/technology" }, { name: "NIPoPoWs", href: "/technology/nipopows" }]}
+            items={[{ label: "Technology", href: "/technology" }, { label: "NIPoPoWs", href: "/technology/nipopows" }]}
             className="mb-8"
           />
         </div>

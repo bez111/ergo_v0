@@ -1,13 +1,12 @@
 import type { Metadata } from "next"
-import { getTranslations } from "next-intl/server"
 import EutxoClient from "./EutxoClient"
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const t = await getTranslations('technology.eutxoModelPage')
+export function generateMetadata(): Metadata {
   const url = "https://ergoblockchain.org/technology/eutxo-model"
-  const title = `${t('title')} — ${t('subtitle')} | Ergo`
-  const description = t('description')
-  const twitterHandle = process.env['NEXT_PUBLIC_TWITTER_HANDLE']
+  const title = "eUTXO Model — UTXO vs Account | Ergo"
+  const description =
+    "Plain-English guide to the eUTXO model on Ergo: how it works, UTXO vs account-based, security, parallelism, and real use cases."
+  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE
   return {
     title,
     description,

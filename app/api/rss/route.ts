@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { blogPosts } from '@/app/blog/_lib/blog-data'
+import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
 
 export async function GET() {
   const baseUrl = 'https://ergoblockchain.org'
@@ -7,8 +7,8 @@ export async function GET() {
   
   // Sort posts by date (newest first)
   const sortedPosts = [...blogPosts].sort((a, b) => {
-    const dateA = new Date(a.publishedAt).getTime()
-    const dateB = new Date(b.publishedAt).getTime()
+    const dateA = new Date(a.date).getTime()
+    const dateB = new Date(b.date).getTime()
     return dateB - dateA
   })
   
@@ -36,20 +36,20 @@ export async function GET() {
     ${sortedPosts.map(post => `
     <item>
       <title><![CDATA[${post.title}]]></title>
-      <description><![CDATA[${post.description}]]></description>
+      <description><![CDATA[${post.excerpt}]]></description>
       <link>${baseUrl}/blog/${post.slug}</link>
       <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
-      <pubDate>${new Date(post.publishedAt).toUTCString()}</pubDate>
-      <dc:creator><![CDATA[${post.author.name}]]></dc:creator>
-      ${post.tags.map(tag => `<category><![CDATA[${tag}]]></category>`).join('\n      ')}
+      <pubDate>${new Date(post.date).toUTCString()}</pubDate>
+      <dc:creator><![CDATA[${post.author}]]></dc:creator>
+      ${(post.tags || []).map(tag => `<category><![CDATA[${tag}]]></category>`).join('\n      ')}
     </item>`).join('')}
   </channel>
 </rss>`
   
   return new NextResponse(rssXml, {
     headers: {
-      'Content-Type': 'application/rss+xml; charset=utf-8',
-      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
+      'Content-Type': 'application/xml',
+      'Cache-Control': 'public, max-age=3600'
     }
   })
 } 

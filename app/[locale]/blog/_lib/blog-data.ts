@@ -28,7 +28,7 @@ export const blogPosts: BlogPost[] = [
     id: '2',
     slug: 'eutxo-ultimate-guide',
     title: 'Understanding eUTXO: The Ultimate Guide',
-    excerpt: 'A comprehensive deep dive into Ergo\'s extended UTXO model and how it combines the best of Bitcoin\'s security with Ethereum\'s expressiveness.',
+    excerpt: 'Dive deep into Ergo\'s extended UTXO model and discover how it enables more expressive and secure smart contracts than traditional account-based systems.',
     date: '2024-03-10',
     author: 'Technical Team',
     category: 'Technology',
@@ -38,41 +38,56 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: '3',
-    slug: 'why-ergo-is-the-most-sustainable-blockchain',
-    title: 'Why Ergo is the Most Sustainable Blockchain',
-    excerpt: 'Learn about Ergo\'s innovative storage rent mechanism and how it ensures long-term blockchain sustainability without compromising decentralization.',
+    slug: 'ergoscript-smart-contracts',
+    title: 'ErgoScript: Writing Secure Smart Contracts',
+    excerpt: 'Learn how ErgoScript\'s functional programming approach and built-in security features make it easier to write bug-free smart contracts.',
     date: '2024-03-05',
-    author: 'Research Team',
-    category: 'Sustainability',
+    author: 'Developer Relations',
+    category: 'Development',
     readTime: '10 min',
-    image: '/assets/img/blog/sustainability.jpg',
-    tags: ['Storage Rent', 'Sustainability', 'Economics']
+    image: '/assets/img/blog/ergoscript-contracts.jpg',
+    tags: ['ErgoScript', 'Development', 'Smart Contracts']
   },
   {
     id: '4',
-    slug: 'ergoscript-smart-contracts-tutorial',
-    title: 'Building Your First Smart Contract with ErgoScript',
-    excerpt: 'Step-by-step tutorial on creating, deploying, and interacting with smart contracts on the Ergo blockchain using ErgoScript.',
+    slug: 'ergo-mining-guide',
+    title: 'Complete Guide to Ergo Mining',
+    excerpt: 'Everything you need to know about mining Ergo, from hardware requirements to pool selection and optimization strategies.',
     date: '2024-02-28',
-    author: 'Developer Relations',
-    category: 'Tutorial',
+    author: 'Mining Community',
+    category: 'Mining',
     readTime: '15 min',
-    image: '/assets/img/blog/ergoscript-tutorial.jpg',
-    tags: ['ErgoScript', 'Tutorial', 'Development']
+    image: '/assets/img/blog/mining-guide.jpg',
+    tags: ['Mining', 'Hardware', 'Community']
   },
   {
     id: '5',
-    slug: 'sigma-protocols-privacy',
-    title: 'Privacy Without Compromise: Sigma Protocols in Ergo',
-    excerpt: 'Discover how Ergo\'s implementation of Sigma protocols enables powerful privacy features while maintaining transparency and auditability.',
+    slug: 'privacy-features-ergo',
+    title: 'Privacy by Design: Ergo\'s Built-in Privacy Features',
+    excerpt: 'Explore Ergo\'s privacy-preserving technologies including Sigma protocols, stealth addresses, and mixer applications.',
     date: '2024-02-20',
     author: 'Privacy Team',
     category: 'Privacy',
     readTime: '9 min',
-    image: '/assets/img/blog/sigma-privacy.jpg',
-    tags: ['Privacy', 'Sigma Protocols', 'Cryptography']
+    image: '/assets/img/blog/privacy-features.jpg',
+    tags: ['Privacy', 'Sigma Protocols', 'Security']
+  },
+  {
+    id: '6',
+    slug: 'ecosystem-update-q1-2024',
+    title: 'Ergo Ecosystem Update: Q1 2024',
+    excerpt: 'Discover the latest developments in the Ergo ecosystem, including new dApps, partnerships, and protocol improvements.',
+    date: '2024-02-15',
+    author: 'Ecosystem Team',
+    category: 'Ecosystem',
+    readTime: '7 min',
+    image: '/assets/img/blog/ecosystem-update.jpg',
+    tags: ['Ecosystem', 'Updates', 'dApps']
   }
 ]
+
+// Extract unique categories from blog posts
+export const categories = Array.from(new Set(blogPosts.map(post => post.category))).sort()
 
 export function getBlogPost(slug: string): BlogPost | undefined {
   return blogPosts.find(post => post.slug === slug)

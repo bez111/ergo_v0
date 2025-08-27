@@ -1,8 +1,6 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { useTranslations } from "next-intl"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 
@@ -38,7 +36,8 @@ import {
   BarChart3,
   TrendingUp,
   Book,
-  ChevronDown
+  ChevronDown,
+
 } from "lucide-react"
 import Link from "next/link"
 // Removed glossary imports
@@ -50,7 +49,151 @@ import Head from "next/head"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import Script from "next/script"
 
-// techFeatures moved inside component to use translations
+const techFeatures = [
+  {
+    icon: Layers,
+    title: "eUTXO Model",
+    description:
+      "Extended UTXO model that enables parallel smart contract execution and composable DeFi applications. Eliminates reentrancy attacks while maintaining Bitcoin's proven security model.",
+    color: "",
+    href: "/technology/eutxo-model",
+    details: [
+      { icon: Layers, title: "Parallel Execution", description: "Smart contracts run independently without global state conflicts." },
+      { icon: LinkIcon, title: "Composability", description: "Build complex DeFi applications from simple, reusable components." },
+      { icon: Shield, title: "Bitcoin-Level Security", description: "Inherits UTXO's battle-tested double-spend protection." },
+    ],
+  },
+  {
+    icon: Code,
+    title: "ErgoScript",
+    description:
+      "Powerful smart contract language designed for security and flexibility. Features built-in Sigma protocols for zero-knowledge proofs and formal verification support for bulletproof contracts.",
+    color: "",
+    href: "/technology/ergoscript",
+    details: [
+      { icon: ShieldCheck, title: "Formal Verification", description: "Mathematically prove your smart contracts are secure and bug-free." },
+      { icon: Lock, title: "Built-in Privacy", description: "Native zero-knowledge proofs and ring signatures for confidential transactions." },
+      { icon: Code, title: "Safe by Design", description: "Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors." },
+    ],
+  },
+  {
+    icon: Cpu,
+    title: "Autolykos PoW",
+    description:
+      "Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.",
+    color: "",
+    href: "/technology/secure-pow",
+    details: [
+      { icon: Zap, title: "Energy Efficient", description: "Memory-hard algorithm reduces power consumption compared to traditional PoW." },
+      { icon: Users, title: "Solo Mining Friendly", description: "Low barrier to entry enables individual miners to participate profitably." },
+      { icon: Shield, title: "ASIC Resistant", description: "Optimized for consumer GPUs to prevent mining centralization." },
+    ],
+  },
+  {
+    icon: Database,
+    title: "Storage Rent",
+    description:
+      "Revolutionary economic model that prevents blockchain bloat. Inactive coins pay minimal rent after 4 years, ensuring sustainable blockchain size and permanent miner rewards.",
+    color: "",
+    href: "/technology/storage-rent",
+    details: [
+      { icon: RefreshCw, title: "Sustainable Blockchain", description: "Automatic cleanup of unused data keeps the blockchain lean and efficient." },
+      { icon: CircleDollarSign, title: "Perpetual Security", description: "Miners receive rewards forever, ensuring long-term network security." },
+      { icon: Monitor, title: "Resource Efficient", description: "Maintains lightweight blockchain that runs on modest hardware." },
+    ],
+  },
+  {
+    icon: Lock,
+    title: "Sigma Protocols",
+    description:
+      "Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.",
+    color: "",
+    href: "/technology/privacy-features",
+    details: [
+      { icon: Eye, title: "Optional Privacy", description: "Choose between transparent or confidential transactions as needed." },
+      { icon: ShieldCheck, title: "Advanced Security", description: "Multi-signature wallets, threshold signatures, and secure voting systems." },
+      { icon: Sparkles, title: "Developer Friendly", description: "Simple APIs to add privacy features to any application." },
+    ],
+  },
+  {
+    icon: InfinityIcon,
+    title: "NIPoPoWs",
+    description:
+      "Non-Interactive Proofs of Proof-of-Work enable ultra-light clients and trustless cross-chain communication. Sync mobile wallets in seconds, not hours.",
+    color: "",
+    href: "/technology/nipopows",
+    details: [
+      { icon: Smartphone, title: "Instant Mobile Sync", description: "Full security with minimal data - sync in seconds on any device." },
+      { icon: LinkIcon, title: "Trustless Bridges", description: "Connect to other blockchains without centralized validators." },
+      { icon: ShieldCheck, title: "Cryptographic Security", description: "Mathematical proofs ensure full node-level security for light clients." },
+    ],
+  },
+  {
+    icon: Rocket,
+    title: "Subblocks (In Development)",
+    description:
+      "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations without sacrificing decentralization or security.",
+    color: "",
+    href: "/technology/subblocks",
+    details: [
+      { icon: Timer, title: "Sub-Second Confirmations", description: "Near-instant transaction finality for improved user experience." },
+      { icon: Lock, title: "Layer 1 Security", description: "Full blockchain security without trusted intermediaries." },
+      { icon: Globe, title: "Seamless Integration", description: "Works with existing infrastructure - no bridges or sidechains needed." },
+    ],
+  },
+  {
+    icon: Box,
+    title: "Native Tokens & NFTs",
+    description:
+      "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.",
+    color: "",
+    href: "/technology/native-tokens",
+    details: [
+      { icon: Coins, title: "One-Click Creation", description: "Issue tokens, stablecoins, or NFTs in a single transaction." },
+      { icon: Layers, title: "DeFi Ready", description: "Native integration with all Ergo applications and protocols." },
+      { icon: Zap, title: "True Native Assets", description: "First-class tokens with protocol-level security guarantees." },
+    ],
+  },
+  {
+    icon: Eye,
+    title: "Oracle Pools",
+    description:
+      "Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.",
+    color: "",
+    href: "/technology/oracle-pools",
+    details: [
+      { icon: BarChart3, title: "Reliable Price Feeds", description: "Consensus-based data aggregation ensures accurate, manipulation-resistant prices." },
+      { icon: Layers, title: "Universal Compatibility", description: "Any smart contract can access oracle data without special integrations." },
+      { icon: ShieldCheck, title: "Fully Decentralized", description: "No central authority or single point of failure in the data pipeline." },
+    ],
+  },
+  {
+    icon: Settings,
+    title: "Velvet Forks",
+    description:
+      "Optional, backward-compatible extensions (velvet). New features can coexist with non-upgraded nodes; security depends on the specific proposal.",
+    color: "",
+    href: "/technology/velvet-forks",
+    details: [
+      { icon: RefreshCw, title: "Backward Compatible", description: "No forced upgrades, no chain wars." },
+      { icon: TrendingUp, title: "Future Proof", description: "Adopt innovations at your own pace." },
+      { icon: Timer, title: "Gradual Adoption", description: "Evolutionary, not revolutionary changes." },
+    ],
+  },
+  {
+    icon: CircleDollarSign,
+    title: "Adaptive Emission & Governance",
+    description:
+      "Consensus-driven tuning of economic parameters (e.g., miner voting) with community input.",
+    color: "",
+    href: "/technology/adaptive-emission",
+    details: [
+      { icon: CircleDollarSign, title: "Parameter Tuning", description: "Economic variables can be adjusted." },
+      { icon: TrendingUp, title: "Economic Flexibility", description: "Adapt to changing network needs." },
+      { icon: Users, title: "Community Input", description: "Discussions and decisions involve the community." },
+    ],
+  },
+]
 
 const ctas = [
   {
@@ -68,72 +211,6 @@ const ctas = [
 ]
 
 export default function TechnologyPage() {
-  const t = useTranslations('technology')
-  const localizedPath = useLocalizedPath()
-
-  const techFeatures = [
-    {
-      icon: Layers,
-      title: t('techFeatures.eutxoModel.title'),
-      description: t('techFeatures.eutxoModel.description'),
-      color: "",
-      href: "/technology/eutxo-model",
-      details: [
-        { icon: Layers, title: t('techFeatures.eutxoModel.details.parallelExecution.title'), description: t('techFeatures.eutxoModel.details.parallelExecution.description') },
-        { icon: LinkIcon, title: t('techFeatures.eutxoModel.details.composability.title'), description: t('techFeatures.eutxoModel.details.composability.description') },
-        { icon: Shield, title: t('techFeatures.eutxoModel.details.bitcoinSecurity.title'), description: t('techFeatures.eutxoModel.details.bitcoinSecurity.description') },
-      ],
-    },
-    {
-      icon: Code,
-      title: t('techFeatures.ergoScript.title'),
-      description: t('techFeatures.ergoScript.description'),
-      color: "",
-      href: "/technology/ergoscript",
-      details: [
-        { icon: ShieldCheck, title: t('techFeatures.ergoScript.details.formalVerification.title'), description: t('techFeatures.ergoScript.details.formalVerification.description') },
-        { icon: Lock, title: t('techFeatures.ergoScript.details.builtInPrivacy.title'), description: t('techFeatures.ergoScript.details.builtInPrivacy.description') },
-        { icon: Code, title: t('techFeatures.ergoScript.details.safeByDesign.title'), description: t('techFeatures.ergoScript.details.safeByDesign.description') },
-      ],
-    },
-    {
-      icon: Cpu,
-      title: t('techFeatures.autolykos.title'),
-      description: t('techFeatures.autolykos.description'),
-      color: "",
-      href: "/technology/secure-pow",
-      details: [
-        { icon: Zap, title: t('techFeatures.autolykos.details.energyEfficient.title'), description: t('techFeatures.autolykos.details.energyEfficient.description') },
-        { icon: Users, title: t('techFeatures.autolykos.details.soloMining.title'), description: t('techFeatures.autolykos.details.soloMining.description') },
-        { icon: Shield, title: t('techFeatures.autolykos.details.asicResistant.title'), description: t('techFeatures.autolykos.details.asicResistant.description') },
-      ],
-    },
-    {
-      icon: Database,
-      title: t('techFeatures.storageRent.title'),
-      description: t('techFeatures.storageRent.description'),
-      color: "",
-      href: "/technology/storage-rent",
-      details: [
-        { icon: RefreshCw, title: t('techFeatures.storageRent.details.sustainableBlockchain.title'), description: t('techFeatures.storageRent.details.sustainableBlockchain.description') },
-        { icon: CircleDollarSign, title: t('techFeatures.storageRent.details.perpetualSecurity.title'), description: t('techFeatures.storageRent.details.perpetualSecurity.description') },
-        { icon: Monitor, title: t('techFeatures.storageRent.details.resourceEfficient.title'), description: t('techFeatures.storageRent.details.resourceEfficient.description') },
-      ],
-    },
-    {
-      icon: Lock,
-      title: t('techFeatures.sigmaProtocols.title'),
-      description: t('techFeatures.sigmaProtocols.description'),
-      color: "",
-      href: "/technology/privacy-features",
-      details: [
-        { icon: Eye, title: t('techFeatures.sigmaProtocols.details.optionalPrivacy.title'), description: t('techFeatures.sigmaProtocols.details.optionalPrivacy.description') },
-        { icon: ShieldCheck, title: t('techFeatures.sigmaProtocols.details.advancedSecurity.title'), description: t('techFeatures.sigmaProtocols.details.advancedSecurity.description') },
-        { icon: Sparkles, title: t('techFeatures.sigmaProtocols.details.developerFriendly.title'), description: t('techFeatures.sigmaProtocols.details.developerFriendly.description') },
-      ],
-    },
-  ]
-  
   const layer1 = [
     { label: "eUTXO & ErgoScript", icon: Layers },
     { label: "Autolykos PoW", icon: Cpu },
@@ -183,7 +260,7 @@ export default function TechnologyPage() {
           eUTXO splits the blockchain state into independent “boxes” (outputs), enabling <b>parallel smart
           contracts</b> without a global state and reducing reentrancy risks. DApps become <i>composable</i>: complex
           logic can be built from simple outputs. Learn more — {""}
-          <Link href={localizedPath("technology/eutxo-model")} className="underline hover:opacity-80">eUTXO Model</Link>.
+          <Link href="/technology/eutxo-model" className="underline hover:opacity-80">eUTXO Model</Link>.
         </>
       ),
     },
@@ -195,7 +272,7 @@ export default function TechnologyPage() {
         <>
           It’s Ergo’s contract language for “money with logic”: formally verifiable code, strict typing, and built-in
           cryptographic primitives. Contracts are <b>auditable and predictable</b>—design avoids global mutable state and typical reentrancy patterns. Start here: {""}
-          <Link href={localizedPath("technology/ergoscript")} className="underline hover:opacity-80">ErgoScript</Link>.
+          <Link href="/technology/ergoscript" className="underline hover:opacity-80">ErgoScript</Link>.
         </>
       ),
     },
@@ -207,7 +284,7 @@ export default function TechnologyPage() {
         <>
           Memory-hard and ASIC-resistant — fair for ordinary miners. Rewards favor <b>solo mining</b> and reduce pool
           dependence, keeping the network secure with moderate energy use. More details: {""}
-          <Link href={localizedPath("technology/secure-pow")} className="underline hover:opacity-80">Autolykos PoW</Link>.
+          <Link href="/technology/secure-pow" className="underline hover:opacity-80">Autolykos PoW</Link>.
         </>
       ),
     },
@@ -219,7 +296,7 @@ export default function TechnologyPage() {
         <>
           Unspent coins after ~4 years start paying “rent” — this is <b>state recycling</b>: prevents unlimited
           blockchain growth and ensures miners earn revenue even after emissions end. Learn more: {""}
-          <Link href={localizedPath("technology/storage-rent")} className="underline hover:opacity-80">Storage Rent</Link>.
+          <Link href="/technology/storage-rent" className="underline hover:opacity-80">Storage Rent</Link>.
         </>
       ),
     },
@@ -379,10 +456,10 @@ export default function TechnologyPage() {
                 className="mb-8"
               >
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white leading-snug pb-2 align-baseline block text-center">
-                  {t('title').toUpperCase()}
+                  ERGO TECHNOLOGY
                 </h1>
                 <p className="text-xl md:text-2xl text-neutral-300 max-w-3xl mx-auto leading-relaxed">
-                  {t('description')}
+                  Advanced blockchain infrastructure for scalable DeFi, secure smart contracts, and true decentralization.
                 </p>
               </motion.div>
             </FadeIn>
@@ -465,19 +542,19 @@ export default function TechnologyPage() {
                 value="usecases"
                 className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
               >
-                {t('sections.useCases') || 'Use Cases'}
+                Use Cases
               </TabsTrigger>
               <TabsTrigger
                 value="architecture"
                 className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
               >
-                {t('sections.architecture') || 'Architecture'}
+                Architecture
               </TabsTrigger>
               <TabsTrigger
                 value="resources"
                 className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
               >
-                {t('sections.resources') || 'Resources'}
+                Resources
               </TabsTrigger>
             </TabsList>
 

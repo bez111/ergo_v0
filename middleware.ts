@@ -8,7 +8,7 @@ export default createMiddleware({
   // Used when no locale matches
   defaultLocale: 'en',
   
-  // Don't use a prefix for the default locale
+  // Don't use a prefix for the default locale (en)
   localePrefix: 'as-needed',
   
   // Disable automatic locale detection to rely on our cookie

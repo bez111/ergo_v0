@@ -22,7 +22,7 @@
 
 /* Improved focus indicators */
 *:focus-visible {
-  outline: 2px solid #3b82f6;
+  outline: 3px solid #2563eb;
   outline-offset: 2px;
   border-radius: 2px;
 }
@@ -30,6 +30,36 @@
 /* Remove default focus for mouse users */
 *:focus:not(:focus-visible) {
   outline: none;
+}
+
+/* Ensure minimum contrast ratios */
+@media (prefers-contrast: high) {
+  :root {
+    --foreground: #000000;
+    --background: #ffffff;
+  }
+}
+
+/* Fix contrast for text elements */
+body {
+  color: #1a1a1a;
+  background-color: #ffffff;
+}
+
+/* Ensure links have sufficient contrast */
+a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #0052a3;
+}
+
+/* Button contrast improvements */
+button {
+  min-height: 44px;
+  min-width: 44px;
 }
 
 /* RTL Support */

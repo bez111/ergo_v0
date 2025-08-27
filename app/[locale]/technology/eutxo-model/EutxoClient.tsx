@@ -11,8 +11,6 @@ import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
-import { useTranslations } from "next-intl"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -28,54 +26,22 @@ const itemVariants = {
 }
 
 export default function EutxoClient() {
-  const t = useTranslations('technology.eutxoModelPage')
-  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   const modelComparison = [
-    { 
-      aspect: t('modelComparison.stateManagement.aspect'), 
-      utxo: t('modelComparison.stateManagement.utxo'), 
-      account: t('modelComparison.stateManagement.account'), 
-      advantage: t('modelComparison.stateManagement.advantage') 
-    },
-    { 
-      aspect: t('modelComparison.security.aspect'), 
-      utxo: t('modelComparison.security.utxo'), 
-      account: t('modelComparison.security.account'), 
-      advantage: t('modelComparison.security.advantage') 
-    },
-    { 
-      aspect: t('modelComparison.parallelism.aspect'), 
-      utxo: t('modelComparison.parallelism.utxo'), 
-      account: t('modelComparison.parallelism.account'), 
-      advantage: t('modelComparison.parallelism.advantage') 
-    },
-    { 
-      aspect: t('modelComparison.privacy.aspect'), 
-      utxo: t('modelComparison.privacy.utxo'), 
-      account: t('modelComparison.privacy.account'), 
-      advantage: t('modelComparison.privacy.advantage') 
-    },
-    { 
-      aspect: t('modelComparison.tokenHandling.aspect'), 
-      utxo: t('modelComparison.tokenHandling.utxo'), 
-      account: t('modelComparison.tokenHandling.account'), 
-      advantage: t('modelComparison.tokenHandling.advantage') 
-    },
-    { 
-      aspect: t('modelComparison.learningCurve.aspect'), 
-      utxo: t('modelComparison.learningCurve.utxo'), 
-      account: t('modelComparison.learningCurve.account'), 
-      advantage: t('modelComparison.learningCurve.advantage') 
-    },
+    { aspect: "State Management", utxo: "No global balances — only unspent outputs", account: "Global state with account balances and storage", advantage: "eUTXO" },
+    { aspect: "Security", utxo: "The reentrancy vulnerability class common to account-based systems is absent in eUTXO; script execution cost is bounded (fees depend on mempool conditions)", account: "Re-entrancy class typical for account-based systems; gas costs can be unpredictable depending on network conditions", advantage: "eUTXO" },
+    { aspect: "Parallelism", utxo: "Independent boxes enable parallel processing", account: "State contention forces sequential processing", advantage: "eUTXO" },
+    { aspect: "Privacy", utxo: "UTXO mixing, Σ-protocols for advanced privacy", account: "Global state makes privacy harder by default", advantage: "eUTXO" },
+    { aspect: "Token Handling", utxo: "Tokens are first-class citizens in boxes", account: "Requires separate contract logic (ERC-20/721)", advantage: "eUTXO" },
+    { aspect: "Learning Curve", utxo: "Must 'think in boxes', different paradigm", account: "More intuitive for traditional developers", advantage: "Account" },
   ]
 
   const boxComponents = [
-    { name: t('boxComponents.value.name'), description: t('boxComponents.value.description'), icon: <Database className="w-6 h-6" />, color: "from-orange-500/20 to-orange-500/5" },
-    { name: t('boxComponents.guardingScript.name'), description: t('boxComponents.guardingScript.description'), icon: <Shield className="w-6 h-6" />, color: "from-cyan-500/20 to-cyan-500/5" },
-    { name: t('boxComponents.registers.name'), description: t('boxComponents.registers.description'), icon: <Box className="w-6 h-6" />, color: "from-purple-500/20 to-purple-500/5" },
-    { name: t('boxComponents.metadata.name'), description: t('boxComponents.metadata.description'), icon: <Code className="w-6 h-6" />, color: "from-green-500/20 to-green-500/5" },
+    { name: "Value", description: "ERG + custom tokens", icon: <Database className="w-6 h-6" />, color: "from-orange-500/20 to-orange-500/5" },
+    { name: "Guarding Script", description: "ErgoScript code controlling spending conditions", icon: <Shield className="w-6 h-6" />, color: "from-cyan-500/20 to-cyan-500/5" },
+    { name: "Registers (R0–R9)", description: "User-defined: R4–R9 (R0–R3 are protocol-reserved)", icon: <Box className="w-6 h-6" />, color: "from-purple-500/20 to-purple-500/5" },
+    { name: "Metadata", description: "Creation height, boxId (derived from creating tx)", icon: <Code className="w-6 h-6" />, color: "from-green-500/20 to-green-500/5" },
   ]
 
   const transactionSteps = [
@@ -104,7 +70,7 @@ export default function EutxoClient() {
   return (
     <div className="min-h-screen relative">
       <div className="sr-only">
-        <Breadcrumbs items={[{ name: "Technology", href: "/technology" }, { name: "eUTXO Model", href: "/technology/eutxo-model" }]} className="mb-8" />
+        <Breadcrumbs items={[{ label: "Technology", href: "/technology" }, { label: "eUTXO Model", href: "/technology/eutxo-model" }]} className="mb-8" />
       </div>
 
       <div className="absolute inset-0 pointer-events-none">
@@ -178,22 +144,22 @@ export default function EutxoClient() {
 
           <motion.section variants={itemVariants} className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 id="ledger-models" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t('sections.ledgerModels')}</h2>
+              <h2 id="ledger-models" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Blockchain Ledger Models: UTXO vs. Account</h2>
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div className="motion-reduce:transform-none motion-reduce:transition-none">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30">
                     <CardContent className="p-8">
-                      <h3 className="text-2xl font-bold mb-4 text-orange-400">{t('models.utxo.title')}</h3>
-                      <p className="text-neutral-300 mb-4">{t('models.utxo.description')}</p>
-                      <p className="text-neutral-400 mb-6 italic">{t('models.utxo.analogy')}</p>
+                      <h3 className="text-2xl font-bold mb-4 text-orange-400">UTXO Model (Bitcoin-style)</h3>
+                      <p className="text-neutral-300 mb-4">No global balances — only a collection of unspent outputs.</p>
+                      <p className="text-neutral-400 mb-6 italic">Analogy: Like having cash bills/coins. Each transaction spends some bills, creates new ones.</p>
                       <div className="space-y-4">
                         <div>
-                          <h4 className="font-semibold text-green-400 mb-2 flex items-center"><CheckCircle className="w-4 h-4 mr-2" aria-hidden="true" />{t('models.utxo.strengths')}</h4>
-                          <p className="text-neutral-300 text-sm">{t('models.utxo.strengthsText')}</p>
+                          <h4 className="font-semibold text-green-400 mb-2 flex items-center"><CheckCircle className="w-4 h-4 mr-2" aria-hidden="true" />Strengths:</h4>
+                          <p className="text-neutral-300 text-sm">Simplicity, privacy, parallel processing, easier audit trails.</p>
                         </div>
                         <div>
-                          <h4 className="font-semibold text-red-400 mb-2">{t('models.utxo.weakness')}</h4>
-                          <p className="text-neutral-300 text-sm">{t('models.utxo.weaknessText')}</p>
+                          <h4 className="font-semibold text-red-400 mb-2">Weakness:</h4>
+                          <p className="text-neutral-300 text-sm">Not naturally suited for stateful dApps.</p>
                         </div>
                       </div>
                     </CardContent>
@@ -202,17 +168,17 @@ export default function EutxoClient() {
                 <div className="motion-reduce:transform-none motion-reduce:transition-none">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30">
                     <CardContent className="p-8">
-                      <h3 className="text-2xl font-bold mb-4 text-cyan-400">{t('models.account.title')}</h3>
-                      <p className="text-neutral-300 mb-4">{t('models.account.description')}</p>
-                      <p className="text-neutral-400 mb-6 italic">{t('models.account.analogy')}</p>
+                      <h3 className="text-2xl font-bold mb-4 text-cyan-400">Account Model (Ethereum-style)</h3>
+                      <p className="text-neutral-300 mb-4">Global state: Each account has a balance and (for contracts) its own data storage.</p>
+                      <p className="text-neutral-400 mb-6 italic">Analogy: Like a bank account — all assets tracked in one place.</p>
                       <div className="space-y-4">
                         <div>
-                          <h4 className="font-semibold text-green-400 mb-2 flex items-center"><CheckCircle className="w-4 h-4 mr-2" aria-hidden="true" />{t('models.account.strengths')}</h4>
-                          <p className="text-neutral-300 text-sm">{t('models.account.strengthsText')}</p>
+                          <h4 className="font-semibold text-green-400 mb-2 flex items-center"><CheckCircle className="w-4 h-4 mr-2" aria-hidden="true" />Strengths:</h4>
+                          <p className="text-neutral-300 text-sm">Intuitive, flexible for stateful apps, natural for Turing-complete contracts.</p>
                         </div>
                         <div>
-                          <h4 className="font-semibold text-red-400 mb-2">{t('models.account.weaknesses')}</h4>
-                          <p className="text-neutral-300 text-sm">{t('models.account.weaknessesText')}</p>
+                          <h4 className="font-semibold text-red-400 mb-2">Weaknesses:</h4>
+                          <p className="text-neutral-300 text-sm">Potential for re-entrancy bugs, unpredictable gas, global state bloat.</p>
                         </div>
                       </div>
                     </CardContent>
@@ -224,7 +190,7 @@ export default function EutxoClient() {
 
           <motion.section variants={itemVariants} className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 id="transaction-flow" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t('sections.transactionFlow')}</h2>
+              <h2 id="transaction-flow" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">How eUTXO Transactions Work</h2>
               <div className="space-y-6">
                 {transactionSteps.map((step, index) => (
                   <motion.div key={step.step} variants={itemVariants} className="flex items-center space-x-6 motion-reduce:transform-none motion-reduce:transition-none hover:translate-x-2 transition-transform" transition={{ type: "spring", stiffness: 400 }}>
@@ -249,7 +215,7 @@ export default function EutxoClient() {
 
           <motion.section variants={itemVariants} className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 id="key-differences" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t('sections.keyDifferences')}</h2>
+              <h2 id="key-differences" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">eUTXO vs. Account Model — Key Differences</h2>
               <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl overflow-hidden">
                 <CardContent className="p-0">
                   <div className="overflow-x-auto">
@@ -257,10 +223,10 @@ export default function EutxoClient() {
                       <caption className="sr-only">Key differences between eUTXO and account models</caption>
                       <thead className="bg-neutral-900/60">
                         <tr>
-                          <th scope="col" className="px-6 py-4 text-left text-cyan-400 font-semibold">{t('table.aspect')}</th>
-                          <th scope="col" className="px-6 py-4 text-left text-orange-400 font-semibold">{t('table.eutxo')}</th>
-                          <th scope="col" className="px-6 py-4 text-left text-purple-400 font-semibold">{t('table.account')}</th>
-                          <th scope="col" className="px-6 py-4 text-left text-green-400 font-semibold">{t('table.advantage')}</th>
+                          <th scope="col" className="px-6 py-4 text-left text-cyan-400 font-semibold">Aspect</th>
+                          <th scope="col" className="px-6 py-4 text-left text-orange-400 font-semibold">eUTXO</th>
+                          <th scope="col" className="px-6 py-4 text-left text-purple-400 font-semibold">Account</th>
+                          <th scope="col" className="px-6 py-4 text-left text-green-400 font-semibold">Advantage</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -284,7 +250,7 @@ export default function EutxoClient() {
 
           <motion.section variants={itemVariants} className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
-              <h2 id="use-cases" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t('sections.useCases')}</h2>
+              <h2 id="use-cases" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">eUTXO in Action — When It Shines</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {useCases.map((useCase) => (
                   <motion.div key={useCase.title} variants={itemVariants} className="group motion-reduce:transform-none motion-reduce:transition-none" whileHover={{ scale: 1.05, rotateY: 5 }} transition={{ type: "spring", stiffness: 300 }}>
@@ -319,7 +285,7 @@ export default function EutxoClient() {
 
           <motion.section variants={itemVariants} className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
-              <h2 id="faq" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t('sections.faq')}</h2>
+              <h2 id="faq" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 {faqs.map((faq, index) => {
                   const id = faq.question.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
@@ -351,14 +317,14 @@ export default function EutxoClient() {
             <div className="max-w-4xl mx-auto text-center">
               <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
                 <CardContent className="p-12">
-                  <h2 id="conclusion" className="text-4xl font-bold mb-6 text-white">{t('sections.conclusion')}</h2>
-                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">{t('conclusion.text')}</p>
+                  <h2 id="conclusion" className="text-4xl font-bold mb-6 text-white">Conclusion: The Future is eUTXO</h2>
+                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">The eUTXO model is a quantum leap: it keeps UTXO's clarity, security, and scalability while unlocking true programmability. For developers who want robust, auditable, and future-proof dApps — Ergo's approach is both powerful and elegant.</p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        <Link href={localizedPath('/docs')} className="flex items-center">{t('conclusion.startBuilding')}<ArrowRight className="ml-2 w-4 h-4" /></Link>
+                        <Link href="/docs" className="flex items-center">Start Building<ArrowRight className="ml-2 w-4 h-4" /></Link>
                     </Button>
                     <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
-                      <Link href={localizedPath('/ecosystem')} className="flex items-center">{t('conclusion.exploreEcosystem')}<ExternalLink className="ml-2 w-4 h-4" /></Link>
+                      <Link href="/ecosystem" className="flex items-center">Explore Ecosystem<ExternalLink className="ml-2 w-4 h-4" /></Link>
                     </Button>
                   </div>
                 </CardContent>

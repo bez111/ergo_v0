@@ -12,8 +12,6 @@ import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCi
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
-import { useTranslations } from "next-intl"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 function CopyButton({ code, label }: { code: string; label: string }) {
   const [copied, setCopied] = useState(false)
@@ -74,75 +72,53 @@ const itemVariants = {
   },
 }
 
-// Features moved inside component to use translations
+const features = [
+  {
+    title: "Formal Verification Support",
+    description: "Supports formal verification and auditability via declarative constraints and first-class crypto primitives",
+    icon: Shield,
+  },
+  {
+    title: "eUTXO Security Model",
+    description: "The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO",
+    icon: Lock,
+  },
+  {
+    title: "Deterministic Execution",
+    description: "Computational complexity is predictable, though network fees are market-driven",
+    icon: Zap,
+  },
+  {
+    title: "Native Sigma Protocols",
+    description: "First-class support for multi-signature, threshold, and ring-signature constructions",
+    icon: Code,
+  },
+  {
+    title: "UTXO Concurrency",
+    description: "Parallel transaction processing with batcher patterns for high-contention scenarios",
+    icon: CheckCircle,
+  },
+  {
+    title: "Restricted Computation",
+    description: "Non-Turing-complete within scripts for safety, yet sequences can express complex behaviors",
+    icon: Code,
+  },
+]
 
-// Use cases moved inside component to use translations
+const useCases = [
+  "Non-custodial DeFi protocols",
+  "Custom multi-signature wallets",
+  "Auctions and DAOs",
+  "Oracle systems",
+  "Privacy tools and mixers",
+  "Advanced NFT contracts",
+]
 
 export default function ErgoScriptPage() {
-  const t = useTranslations('technology.ergoScriptPage')
-  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("features")
 
-  const features = [
-    {
-      title: t('features.formalVerification.title'),
-      description: t('features.formalVerification.description'),
-      icon: Shield,
-    },
-    {
-      title: t('features.eutxoSecurity.title'),
-      description: t('features.eutxoSecurity.description'),
-      icon: Lock,
-    },
-    {
-      title: t('features.deterministicExecution.title'),
-      description: t('features.deterministicExecution.description'),
-      icon: Zap,
-    },
-    {
-      title: t('features.nativeSigmaProtocols.title'),
-      description: t('features.nativeSigmaProtocols.description'),
-      icon: Code,
-    },
-    {
-      title: t('features.utxoConcurrency.title'),
-      description: t('features.utxoConcurrency.description'),
-      icon: CheckCircle,
-    },
-    {
-      title: t('features.richDataTypes.title'),
-      description: t('features.richDataTypes.description'),
-      icon: Microscope,
-    },
-  ]
 
-  const useCases = [
-    {
-      title: t('useCases.defi.title'),
-      description: t('useCases.defi.description'),
-    },
-    {
-      title: t('useCases.nfts.title'),
-      description: t('useCases.nfts.description'),
-    },
-    {
-      title: t('useCases.governance.title'),
-      description: t('useCases.governance.description'),
-    },
-    {
-      title: t('useCases.privacy.title'),
-      description: t('useCases.privacy.description'),
-    },
-    {
-      title: t('useCases.oracles.title'),
-      description: t('useCases.oracles.description'),
-    },
-    {
-      title: t('useCases.gaming.title'),
-      description: t('useCases.gaming.description'),
-    },
-  ]
 
   const faqs = [
     {
@@ -213,8 +189,8 @@ export default function ErgoScriptPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Technology", href: "/technology" },
-              { name: "ErgoScript", href: "/technology/ergoscript" }
+              { label: "Technology", href: "/technology" },
+              { label: "ErgoScript", href: "/technology/ergoscript" }
             ]}
             className="mb-8"
           />

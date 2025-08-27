@@ -12,8 +12,6 @@ import { Eye, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, 
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
-import { useTranslations } from "next-intl"
-import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -37,7 +35,38 @@ const itemVariants = {
   },
 }
 
-// Features moved inside component to use translations
+const features = [
+  {
+    title: "Reliable Price Feeds",
+    description: "Consensus-based data aggregation ensures accurate, manipulation-resistant prices",
+    icon: TrendingUp,
+  },
+  {
+    title: "Universal Compatibility",
+    description: "Any smart contract can access oracle data without special integrations",
+    icon: Globe,
+  },
+  {
+    title: "Fully Decentralized",
+    description: "No central authority or single point of failure in the data pipeline",
+    icon: Users,
+  },
+  {
+    title: "Economic Security",
+    description: "Stake-based incentives ensure honest data provision",
+    icon: Shield,
+  },
+  {
+    title: "Consensus Mechanism",
+    description: "Outlier detection and averaging for robust data quality",
+    icon: CheckCircle,
+  },
+  {
+    title: "Low Latency Updates",
+    description: "Frequent updates ensure data freshness for DeFi applications",
+    icon: Activity,
+  },
+]
 
 const oraclePools = [
   {
@@ -70,88 +99,49 @@ const oraclePools = [
   },
 ]
 
-// Technical details moved inside component to use translations
+const technicalDetails = [
+  {
+    title: "Data Aggregation",
+    content: "The oracle pool uses a robust averaging mechanism that filters out outliers by removing the top and bottom 25% of submissions, then calculating the average of remaining values for consensus.",
+  },
+  {
+    title: "Update Triggers",
+    content: "New data is published when price deviation exceeds threshold (e.g., 0.5%), maximum time since last update (e.g., 1 hour), or minimum oracle submissions are reached.",
+  },
+  {
+    title: "Economic Security",
+    content: "Oracle operators must stake collateral, with slashing for malicious behavior and rewards for honest participation, creating strong economic incentives for reliable data.",
+  },
+  {
+    title: "Attack Resistance",
+    content: "Sybil attack protection via staking, outlier filtering prevents manipulation, and decentralization prevents censorship of oracle data.",
+  },
+]
 
-// Use cases moved inside component to use translations
+const useCases = [
+  {
+    title: "SigmaUSD Stablecoin",
+    description: "Algorithmic stablecoin using ERG/USD price feed for collateral calculations",
+    link: "https://sigmausd.io",
+    icon: DollarSign,
+  },
+  {
+    title: "Spectrum DEX",
+    description: "Decentralized exchange using price feeds for limit orders and liquidations",
+    link: "https://spectrum.fi",
+    icon: BarChart3,
+  },
+  {
+    title: "Lending Protocols",
+    description: "Collateralized lending using oracle prices for liquidation thresholds",
+    link: "/docs/ecosystem/financial",
+    icon: Shield,
+  },
+]
 
 export default function OraclePoolsPage() {
-  const t = useTranslations('technology.oraclePoolsPage')
-  const localizedPath = useLocalizedPath()
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
-
-  const features = [
-    {
-      title: t('features.reliablePriceFeeds.title'),
-      description: t('features.reliablePriceFeeds.description'),
-      icon: TrendingUp,
-    },
-    {
-      title: t('features.universalCompatibility.title'),
-      description: t('features.universalCompatibility.description'),
-      icon: Globe,
-    },
-    {
-      title: t('features.fullyDecentralized.title'),
-      description: t('features.fullyDecentralized.description'),
-      icon: Users,
-    },
-    {
-      title: t('features.economicSecurity.title'),
-      description: t('features.economicSecurity.description'),
-      icon: Shield,
-    },
-    {
-      title: t('features.consensusMechanism.title'),
-      description: t('features.consensusMechanism.description'),
-      icon: CheckCircle,
-    },
-    {
-      title: t('features.lowLatencyUpdates.title'),
-      description: t('features.lowLatencyUpdates.description'),
-      icon: Activity,
-    },
-  ]
-
-  const technicalDetails = [
-    {
-      title: t('technicalDetails.dataAggregation.title'),
-      content: t('technicalDetails.dataAggregation.content'),
-    },
-    {
-      title: t('technicalDetails.updateTriggers.title'),
-      content: t('technicalDetails.updateTriggers.content'),
-    },
-    {
-      title: t('technicalDetails.economicSecurity.title'),
-      content: t('technicalDetails.economicSecurity.content'),
-    },
-    {
-      title: t('technicalDetails.attackResistance.title'),
-      content: t('technicalDetails.attackResistance.content'),
-    },
-  ]
-
-  const useCases = [
-    {
-      title: t('useCases.sigmaUsdStablecoin.title'),
-      description: t('useCases.sigmaUsdStablecoin.description'),
-      link: "https://sigmausd.io",
-      icon: DollarSign,
-    },
-    {
-      title: t('useCases.spectrumDex.title'),
-      description: t('useCases.spectrumDex.description'),
-      link: "https://spectrum.fi",
-      icon: BarChart3,
-    },
-    {
-      title: t('useCases.lendingProtocols.title'),
-      description: t('useCases.lendingProtocols.description'),
-      link: localizedPath("/docs/ecosystem/financial"),
-      icon: Shield,
-    },
-  ]
 
   const faqs = [
     {
@@ -226,8 +216,8 @@ export default function OraclePoolsPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Technology", href: "/technology" },
-              { name: "Oracle Pools", href: "/technology/oracle-pools" }
+              { label: "Technology", href: "/technology" },
+              { label: "Oracle Pools", href: "/technology/oracle-pools" }
             ]}
             className="mb-8"
           />
