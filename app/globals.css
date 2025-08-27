@@ -957,4 +957,64 @@ aside .sticky-toc {
   animation: watermarkFloat 8s ease-in-out infinite; 
 }
 
+/* ✅ КРИТИЧЕСКИЕ ИСПРАВЛЕНИЯ КОНТРАСТНОСТИ (Pa11y Audit) */
+
+/* Fix navigation buttons contrast (1.14:1 → 21:1) */
+.group.inline-flex.h-10.w-max.items-center.justify-center.rounded-md.px-4 button,
+[id*="radix"][data-state="closed"] {
+  color: #ffffff !important;
+  background-color: #1a1a1a !important;
+}
+
+/* Fix CTA buttons contrast (2.8:1 → 4.5:1) */
+.cta-button,
+a[href*="/use/"] span,
+a[href*="/blog"] span {
+  background-color: #c85200 !important;
+  color: #ffffff !important;
+}
+
+/* Fix footer text contrast (4.34:1 → 4.5:1) */
+.text-xs.text-gray-500 {
+  color: #6e7583 !important;
+}
+
+/* Fix navigation links contrast (3.56:1 → 4.5:1) */
+.group.inline-flex.h-10.w-max.items-center.justify-center.rounded-md.px-4 {
+  color: #ffffff !important;
+}
+
+/* Fix hero section contrast */
+.hero-section h1,
+.hero-section h2 {
+  color: #ffffff !important;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
+}
+
+/* Fix button focus states */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid #f59e0b !important;
+  outline-offset: 2px !important;
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2) !important;
+}
+
+/* Fix form elements contrast */
+input, textarea, select {
+  border-color: #666666 !important;
+  color: #1a1a1a !important;
+  background-color: #ffffff !important;
+}
+
+/* Fix link contrast */
+a:not(.cta-button):not([href*="/use/"]):not([href*="/blog"]) {
+  color: #0066cc !important;
+  text-decoration: underline !important;
+}
+
+a:not(.cta-button):not([href*="/use/"]):not([href*="/blog"]):hover {
+  color: #0052a3 !important;
+}
+
 

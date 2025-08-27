@@ -7,8 +7,10 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-*'],
     webpackBuildWorker: true, // Ускорить сборку
     optimizeCss: true, // Включаем CSS оптимизацию для лучшего TTFB
-    serverComponentsExternalPackages: ['sharp'], // Оптимизация серверных компонентов
   },
+
+  // Оптимизация серверных компонентов
+  serverExternalPackages: ['sharp'],
 
   // Исправление workspace root warning
   outputFileTracingRoot: __dirname,
