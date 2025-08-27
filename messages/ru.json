@@ -90,12 +90,19 @@
     "keywords": "блокчейн, криптовалюта, DeFi, смарт-контракты, Ergo, UTXO, доказательство работы"
   },
   "errors": {
-    "pageNotFound": "Страница не найдена",
-    "pageNotFoundDescription": "Страница, которую вы ищете, не существует.",
-    "serverError": "Ошибка сервера",
-    "serverErrorDescription": "Что-то пошло не так на нашей стороне.",
-    "networkError": "Ошибка сети",
-    "networkErrorDescription": "Пожалуйста, проверьте подключение к интернету."
+    "network": {
+      "offline": "Похоже, вы не подключены к интернету. Проверьте соединение.",
+      "timeout": "Время ожидания истекло. Попробуйте еще раз.",
+      "serverError": "Ошибка сервера. Попробуйте позже."
+    },
+    "form": {
+      "submissionFailed": "Не удалось отправить форму. Попробуйте еще раз.",
+      "invalidData": "Проверьте введенные данные и попробуйте снова."
+    },
+    "general": {
+      "unexpected": "Произошла неожиданная ошибка",
+      "tryAgain": "Попробуйте еще раз"
+    }
   },
   "language": {
     "switchLanguage": "Сменить язык",
@@ -1137,69 +1144,67 @@
           "recycling": {
             "title": "Full Recycling",
             "description": "If rent isn't paid, the remaining value goes to miners and the box is removed."
-                  }
+          }
+        }
+      }
+    },
+    "icu": {
+      "items": "{count, plural, =0 {нет элементов} one {# элемент} few {# элемента} many {# элементов} other {# элементов}}",
+      "minutes": "{count, plural, =0 {нет минут} one {# минута} few {# минуты} many {# минут} other {# минут}}",
+      "bytes": "{count, plural, =0 {нет байт} one {# байт} few {# байта} many {# байт} other {# байт}}",
+      "results": "{count, plural, =0 {нет результатов} one {# результат} few {# результата} many {# результатов} other {# результатов}}",
+      "errors": "{count, plural, =0 {нет ошибок} one {# ошибка} few {# ошибки} many {# ошибок} other {# ошибок}}",
+      "files": "{count, plural, =0 {нет файлов} one {# файл} few {# файла} many {# файлов} other {# файлов}}",
+      "users": "{count, plural, =0 {нет пользователей} one {# пользователь} few {# пользователя} many {# пользователей} other {# пользователей}}",
+      "days": "{count, plural, =0 {нет дней} one {# день} few {# дня} many {# дней} other {# дней}}",
+      "hours": "{count, plural, =0 {нет часов} one {# час} few {# часа} many {# часов} other {# часов}}",
+      "seconds": "{count, plural, =0 {нет секунд} one {# секунда} few {# секунды} many {# секунд} other {# секунд}}"
+    },
+    "playground": {
+      "title": "Живая площадка",
+      "interactive": "Интерактивно",
+      "reset": "Сбросить",
+      "component": "Компонент",
+      "codeEditor": "Редактор кода",
+      "livePreview": "Живой предпросмотр",
+      "properties": {
+        "variant": "Вариант",
+        "size": "Размер",
+        "disabled": "Отключено",
+        "loading": "Загрузка",
+        "hoverable": "Наведение",
+        "bordered": "С границей"
+      },
+      "templates": {
+        "primaryButton": "Основная кнопка",
+        "featureCard": "Карточка функции",
+        "statusBadge": "Значок статуса"
+      },
+      "editCode": "Редактируйте код для просмотра результата",
+      "errorRendering": "Ошибка рендеринга компонента",
+      "codeEmpty": "Код не может быть пустым",
+      "enable": "Включить",
+      "poweredBy": "Работает на Ergo UI Kit",
+      "components": {
+        "button": "Кнопка",
+        "card": "Карточка",
+        "badge": "Значок",
+        "grid": "Сетка"
+      },
+      "variants": {
+        "default": "По умолчанию",
+        "outline": "Контур",
+        "ghost": "Призрак",
+        "destructive": "Разрушительный"
+      },
+      "sizes": {
+        "sm": "Маленький",
+        "default": "По умолчанию",
+        "lg": "Большой",
+        "icon": "Иконка"
       }
     }
   },
-  "icu": {
-    "items": "{count, plural, =0 {нет элементов} one {# элемент} few {# элемента} many {# элементов} other {# элементов}}",
-    "minutes": "{count, plural, =0 {нет минут} one {# минута} few {# минуты} many {# минут} other {# минут}}",
-    "bytes": "{count, plural, =0 {нет байт} one {# байт} few {# байта} many {# байт} other {# байт}}",
-    "results": "{count, plural, =0 {нет результатов} one {# результат} few {# результата} many {# результатов} other {# результатов}}",
-    "errors": "{count, plural, =0 {нет ошибок} one {# ошибка} few {# ошибки} many {# ошибок} other {# ошибок}}",
-    "files": "{count, plural, =0 {нет файлов} one {# файл} few {# файла} many {# файлов} other {# файлов}}",
-    "users": "{count, plural, =0 {нет пользователей} one {# пользователь} few {# пользователя} many {# пользователей} other {# пользователей}}",
-    "days": "{count, plural, =0 {нет дней} one {# день} few {# дня} many {# дней} other {# дней}}",
-    "hours": "{count, plural, =0 {нет часов} one {# час} few {# часа} many {# часов} other {# часов}}",
-    "seconds": "{count, plural, =0 {нет секунд} one {# секунда} few {# секунды} many {# секунд} other {# секунд}}"
-  },
-  "playground": {
-    "title": "Живая площадка",
-    "interactive": "Интерактивно",
-    "reset": "Сбросить",
-    "component": "Компонент",
-    "codeEditor": "Редактор кода",
-    "livePreview": "Живой предпросмотр",
-    "properties": "Свойства",
-    "templates": "Шаблоны",
-    "editCode": "Редактируйте код для просмотра результата",
-    "errorRendering": "Ошибка рендеринга компонента",
-    "codeEmpty": "Код не может быть пустым",
-    "enable": "Включить",
-    "poweredBy": "Работает на Ergo UI Kit",
-    "components": {
-      "button": "Кнопка",
-      "card": "Карточка",
-      "badge": "Значок",
-      "grid": "Сетка"
-    },
-    "templates": {
-      "primaryButton": "Основная кнопка",
-      "featureCard": "Карточка функции",
-      "statusBadge": "Значок статуса"
-    },
-    "properties": {
-      "variant": "Вариант",
-      "size": "Размер",
-      "disabled": "Отключено",
-      "loading": "Загрузка",
-      "hoverable": "Наведение",
-      "bordered": "С границей"
-    },
-    "variants": {
-      "default": "По умолчанию",
-      "outline": "Контур",
-      "ghost": "Призрак",
-      "destructive": "Разрушительный"
-    },
-    "sizes": {
-      "sm": "Маленький",
-      "default": "По умолчанию",
-      "lg": "Большой",
-      "icon": "Иконка"
-    }
-  }
-},
   "use": {
     "title": "Варианты использования",
     "subtitle": "Реальные приложения на базе Ergo",
@@ -1596,21 +1601,6 @@
       "deleted": "Успешно удалено"
     }
   },
-  "errors": {
-    "network": {
-      "offline": "Похоже, вы не подключены к интернету. Проверьте соединение.",
-      "timeout": "Время ожидания истекло. Попробуйте еще раз.",
-      "serverError": "Ошибка сервера. Попробуйте позже."
-    },
-    "form": {
-      "submissionFailed": "Не удалось отправить форму. Попробуйте еще раз.",
-      "invalidData": "Проверьте введенные данные и попробуйте снова."
-    },
-    "general": {
-      "unexpected": "Произошла неожиданная ошибка",
-      "tryAgain": "Попробуйте еще раз"
-    }
-  },
   "newsletter": {
     "title": "Будьте в курсе",
     "subtitle": "Получайте последние новости и обновления Ergo",
@@ -1709,6 +1699,62 @@
           "a": "Вы можете помочь с поддержкой сообщества, созданием контента (статьи, видео), переводом, тестированием dApps или просто распространением информации о Ergo."
         }
       }
+    }
+  },
+  "icu": {
+    "items": "[TODO: {count, plural, =0 {no items} one {# item} other {# items}}]",
+    "minutes": "[TODO: {count, plural, =0 {no minutes} one {# minute} other {# minutes}}]",
+    "bytes": "[TODO: {count, plural, =0 {no bytes} one {# byte} other {# bytes}}]",
+    "results": "[TODO: {count, plural, =0 {no results} one {# result} other {# results}}]",
+    "errors": "[TODO: {count, plural, =0 {no errors} one {# error} other {# errors}}]",
+    "files": "[TODO: {count, plural, =0 {no files} one {# file} other {# files}}]",
+    "users": "[TODO: {count, plural, =0 {no users} one {# user} other {# users}}]",
+    "days": "[TODO: {count, plural, =0 {no days} one {# day} other {# days}}]",
+    "hours": "[TODO: {count, plural, =0 {no hours} one {# hour} other {# hours}}]",
+    "seconds": "[TODO: {count, plural, =0 {no seconds} one {# second} other {# seconds}}]"
+  },
+  "playground": {
+    "title": "[TODO: Live Playground]",
+    "interactive": "[TODO: Interactive]",
+    "reset": "[TODO: Reset]",
+    "component": "[TODO: Component]",
+    "codeEditor": "[TODO: Code Editor]",
+    "livePreview": "[TODO: Live Preview]",
+    "properties": {
+      "variant": "[TODO: Variant]",
+      "size": "[TODO: Size]",
+      "disabled": "[TODO: Disabled]",
+      "loading": "[TODO: Loading]",
+      "hoverable": "[TODO: Hoverable]",
+      "bordered": "[TODO: Bordered]"
+    },
+    "templates": {
+      "primaryButton": "[TODO: Primary Button]",
+      "featureCard": "[TODO: Feature Card]",
+      "statusBadge": "[TODO: Status Badge]"
+    },
+    "editCode": "[TODO: Edit the code to see live preview]",
+    "errorRendering": "[TODO: Error rendering component]",
+    "codeEmpty": "[TODO: Code cannot be empty]",
+    "enable": "[TODO: Enable]",
+    "poweredBy": "[TODO: Powered by Ergo UI Kit]",
+    "components": {
+      "button": "[TODO: Button]",
+      "card": "[TODO: Card]",
+      "badge": "[TODO: Badge]",
+      "grid": "[TODO: Grid]"
+    },
+    "variants": {
+      "default": "[TODO: Default]",
+      "outline": "[TODO: Outline]",
+      "ghost": "[TODO: Ghost]",
+      "destructive": "[TODO: Destructive]"
+    },
+    "sizes": {
+      "sm": "[TODO: Small]",
+      "default": "[TODO: Default]",
+      "lg": "[TODO: Large]",
+      "icon": "[TODO: Icon]"
     }
   }
 }

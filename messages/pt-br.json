@@ -96,7 +96,20 @@
     "serverError": "Erro do servidor",
     "serverErrorDescription": "Algo deu errado do nosso lado.",
     "networkError": "Erro de rede",
-    "networkErrorDescription": "Por favor, verifique sua conexão com a internet."
+    "networkErrorDescription": "Por favor, verifique sua conexão com a internet.",
+    "network": {
+      "offline": "[TODO: You appear to be offline. Please check your connection.]",
+      "timeout": "[TODO: Request timed out. Please try again.]",
+      "serverError": "[TODO: Server error occurred. Please try again later.]"
+    },
+    "form": {
+      "submissionFailed": "[TODO: Failed to submit form. Please try again.]",
+      "invalidData": "[TODO: Please check your input and try again.]"
+    },
+    "general": {
+      "unexpected": "[TODO: An unexpected error occurred]",
+      "tryAgain": "[TODO: Please try again]"
+    }
   },
   "language": {
     "switchLanguage": "Trocar idioma",
@@ -1291,6 +1304,189 @@
       "hardware": "[TODO: Hardware]",
       "software": "[TODO: Software]",
       "troubleshooting": "[TODO: Troubleshooting]"
+    }
+  },
+  "validation": {
+    "required": "[TODO: {field} is required]",
+    "email": {
+      "invalid": "[TODO: Please enter a valid email address]",
+      "required": "[TODO: Email address is required]"
+    },
+    "minLength": "[TODO: {field} must be at least {min} characters long (current: {current})]",
+    "maxLength": "[TODO: {field} must be no more than {max} characters long (current: {current})]",
+    "pattern": "[TODO: {field} format is invalid]",
+    "custom": "[TODO: {field} is invalid]"
+  },
+  "success": {
+    "newsletter": {
+      "subscribed": "[TODO: Successfully subscribed! Check your email for confirmation.]",
+      "alreadySubscribed": "[TODO: You're already subscribed to our newsletter.]",
+      "confirmationSent": "[TODO: Confirmation email sent to {email}]"
+    },
+    "contact": {
+      "sent": "[TODO: Message sent successfully!]",
+      "received": "[TODO: We've received your message and will respond soon.]"
+    },
+    "general": {
+      "saved": "[TODO: Changes saved successfully]",
+      "updated": "[TODO: Updated successfully]",
+      "deleted": "[TODO: Deleted successfully]"
+    }
+  },
+  "newsletter": {
+    "title": "[TODO: Stay Updated]",
+    "subtitle": "[TODO: Get the latest Ergo news and updates]",
+    "emailPlaceholder": "[TODO: Enter your email address]",
+    "subscribe": "[TODO: Subscribe]",
+    "interests": "[TODO: Interests (optional)]",
+    "privacyNotice": "[TODO: By subscribing, you agree to our]",
+    "privacyPolicy": "[TODO: Privacy Policy]",
+    "alreadySubscribed": {
+      "title": "[TODO: You're subscribed!]"
+    },
+    "segments": {
+      "developers": "[TODO: Developers]",
+      "miners": "[TODO: Miners]",
+      "investors": "[TODO: Investors]",
+      "general": "[TODO: General News]"
+    }
+  },
+  "faq": {
+    "title": "[TODO: Need Help?]",
+    "subtitle": "[TODO: Find answers to common questions about Ergo, its technology, and the ecosystem. If you can't find what you're looking for, join our community channels.]",
+    "searchPlaceholder": "[TODO: Search questions...]",
+    "noResults": "[TODO: No questions found. Try a different search or filter.]",
+    "categories": {
+      "all": "[TODO: All]",
+      "basics": "[TODO: Basics]",
+      "technology": "[TODO: Technology]",
+      "gettingStarted": "[TODO: Getting Started]",
+      "ecosystem": "[TODO: Ecosystem]",
+      "community": "[TODO: Community]"
+    },
+    "questions": {
+      "basics": {
+        "whatIsErgo": {
+          "q": "[TODO: What is Ergo in simple terms?]",
+          "a": "[TODO: Ergo is a secure Proof-of-Work blockchain for powerful smart contracts, enabling decentralized financial applications. Think of it as digital money (ERG) with programmable rules.]"
+        },
+        "isErgoCompany": {
+          "q": "[TODO: Is Ergo a company?]",
+          "a": "[TODO: No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network.]"
+        },
+        "fairLaunch": {
+          "q": "[TODO: What does a \"fair launch\" mean?]",
+          "a": "[TODO: Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.]"
+        }
+      },
+      "technology": {
+        "ergoDifference": {
+          "q": "[TODO: How is Ergo different from Bitcoin or Ethereum?]",
+          "a": "[TODO: vs. Bitcoin: Ergo supports advanced smart contracts, not just currency. \\n vs. Ethereum: Ergo uses the eUTXO model for enhanced security and predictable fees, and remains Proof-of-Work.]"
+        },
+        "whatIsEutxo": {
+          "q": "[TODO: What is eUTXO?]",
+          "a": "[TODO: The Extended UTXO model attaches data and logic directly to \"boxes\" of money. This enhances smart contract security, fee predictability, and allows for better scalability compared to the account model.]"
+        },
+        "whatIsErgoscript": {
+          "q": "[TODO: What is ErgoScript?]",
+          "a": "[TODO: ErgoScript is the powerful and secure programming language for writing smart contracts on Ergo. You do not need to know code to use Ergo; it's a tool for developers.]"
+        },
+        "sigmaProtocols": {
+          "q": "[TODO: What are Sigma Protocols?]",
+          "a": "[TODO: These are advanced zero-knowledge proofs built into Ergo's core, enabling privacy features like ErgoMixer, complex multi-party contracts, and secure multi-signature schemes.]"
+        }
+      },
+      "gettingStarted": {
+        "ergCoinUse": {
+          "q": "[TODO: What is the ERG coin used for?]",
+          "a": "[TODO: ERG is used for transaction fees, collateral for stablecoins (SigmaUSD), participating in DeFi applications, powering dApps (NFTs, gaming), and incentivizing miners.]"
+        },
+        "howToGetErg": {
+          "q": "[TODO: How can I get ERG?]",
+          "a": "[TODO: You can acquire ERG on various cryptocurrency exchanges, through peer-to-peer trades, or by mining. Always do your own research before investing.]"
+        },
+        "bestWallet": {
+          "q": "[TODO: Which wallet is best for beginners?]",
+          "a": "[TODO: The official mobile wallets (Android/iOS) or the Nautilus Wallet (browser extension) are excellent, user-friendly starting points.]"
+        }
+      },
+      "ecosystem": {
+        "dappsOnErgo": {
+          "q": "[TODO: What kinds of dApps are on Ergo?]",
+          "a": "[TODO: Ergo's ecosystem includes DeFi platforms (Spectrum, Duckpools), privacy tools (ErgoMixer), NFT marketplaces (SkyHarbor), cross-chain bridges (Rosen), and more.]"
+        },
+        "ergoMixer": {
+          "q": "[TODO: What is ErgoMixer?]",
+          "a": "[TODO: ErgoMixer is a non-custodial service that increases your transaction privacy by mixing your ERG with others, making it difficult to trace your transaction history.]"
+        }
+      },
+      "community": {
+        "whoGoverns": {
+          "q": "[TODO: Who governs Ergo?]",
+          "a": "[TODO: Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support.]"
+        },
+        "howToContribute": {
+          "q": "[TODO: How can I contribute if I'm not a developer?]",
+          "a": "[TODO: You can help with community support, content creation (articles, videos), translation, testing dApps, or simply spreading awareness about Ergo.]"
+        }
+      }
+    }
+  },
+  "icu": {
+    "items": "[TODO: {count, plural, =0 {no items} one {# item} other {# items}}]",
+    "minutes": "[TODO: {count, plural, =0 {no minutes} one {# minute} other {# minutes}}]",
+    "bytes": "[TODO: {count, plural, =0 {no bytes} one {# byte} other {# bytes}}]",
+    "results": "[TODO: {count, plural, =0 {no results} one {# result} other {# results}}]",
+    "errors": "[TODO: {count, plural, =0 {no errors} one {# error} other {# errors}}]",
+    "files": "[TODO: {count, plural, =0 {no files} one {# file} other {# files}}]",
+    "users": "[TODO: {count, plural, =0 {no users} one {# user} other {# users}}]",
+    "days": "[TODO: {count, plural, =0 {no days} one {# day} other {# days}}]",
+    "hours": "[TODO: {count, plural, =0 {no hours} one {# hour} other {# hours}}]",
+    "seconds": "[TODO: {count, plural, =0 {no seconds} one {# second} other {# seconds}}]"
+  },
+  "playground": {
+    "title": "[TODO: Live Playground]",
+    "interactive": "[TODO: Interactive]",
+    "reset": "[TODO: Reset]",
+    "component": "[TODO: Component]",
+    "codeEditor": "[TODO: Code Editor]",
+    "livePreview": "[TODO: Live Preview]",
+    "properties": {
+      "variant": "[TODO: Variant]",
+      "size": "[TODO: Size]",
+      "disabled": "[TODO: Disabled]",
+      "loading": "[TODO: Loading]",
+      "hoverable": "[TODO: Hoverable]",
+      "bordered": "[TODO: Bordered]"
+    },
+    "templates": {
+      "primaryButton": "[TODO: Primary Button]",
+      "featureCard": "[TODO: Feature Card]",
+      "statusBadge": "[TODO: Status Badge]"
+    },
+    "editCode": "[TODO: Edit the code to see live preview]",
+    "errorRendering": "[TODO: Error rendering component]",
+    "codeEmpty": "[TODO: Code cannot be empty]",
+    "enable": "[TODO: Enable]",
+    "poweredBy": "[TODO: Powered by Ergo UI Kit]",
+    "components": {
+      "button": "[TODO: Button]",
+      "card": "[TODO: Card]",
+      "badge": "[TODO: Badge]",
+      "grid": "[TODO: Grid]"
+    },
+    "variants": {
+      "default": "[TODO: Default]",
+      "outline": "[TODO: Outline]",
+      "ghost": "[TODO: Ghost]",
+      "destructive": "[TODO: Destructive]"
+    },
+    "sizes": {
+      "sm": "[TODO: Small]",
+      "default": "[TODO: Default]",
+      "lg": "[TODO: Large]",
+      "icon": "[TODO: Icon]"
     }
   }
 }
