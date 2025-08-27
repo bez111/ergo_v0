@@ -4,9 +4,10 @@ const withNextIntl = require('next-intl/plugin')('./i18n.ts');
 const nextConfig = {
   // Экспериментальные оптимизации
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion'],
+    optimizePackageImports: ['lucide-react', 'framer-motion', '@radix-ui/react-*'],
     webpackBuildWorker: true, // Ускорить сборку
-    // optimizeCss: true, // Временно отключено из-за проблем с critters
+    optimizeCss: true, // Включаем CSS оптимизацию для лучшего TTFB
+    serverComponentsExternalPackages: ['sharp'], // Оптимизация серверных компонентов
   },
 
   // Исправление workspace root warning

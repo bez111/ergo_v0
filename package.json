@@ -75,6 +75,13 @@
     "tinacms": "^2.1.1",
     "web-vitals": "^5.1.0"
   },
+  "overrides": {
+    "dompurify": "^3.2.4",
+    "lodash.set": "^4.3.2",
+    "lodash": "^4.17.21",
+    "jsonpath-plus": "^10.3.0",
+    "micromatch": "^4.0.8"
+  },
   "devDependencies": {
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",

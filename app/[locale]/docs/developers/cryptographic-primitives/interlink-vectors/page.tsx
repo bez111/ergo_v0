@@ -154,8 +154,8 @@ export default function InterlinkVectorsPage() {
           </p>
 
           <div className="mb-6">
-            <CodeBlock language="typescript"
-              children={`use sigma_merkle_tree::batchmerkleproof::BatchMerkleProof;
+            <CodeBlock language="typescript">
+              {`use sigma_merkle_tree::batchmerkleproof::BatchMerkleProof;
 use sigma_merkle_tree::merkletree::MerkleTree;
 use sigma_merkle_tree::MerkleNode;
 
@@ -164,7 +164,7 @@ fn verify_interlink_vector(tree: &MerkleTree, proof: &BatchMerkleProof) {
     assert!(proof.valid(tree.root_hash().as_ref()));
     println!("Interlink vector is valid.");
 }`}
-            />
+            </CodeBlock>
           </div>
 
           <p className="text-gray-300">
