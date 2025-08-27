@@ -1580,5 +1580,145 @@
       "investors": "Investors",
       "general": "General News"
     }
+  },
+  "faq": {
+    "title": "Need Help?",
+    "subtitle": "Find answers to common questions about Ergo, its technology, and the ecosystem. If you can't find what you're looking for, join our community channels.",
+    "searchPlaceholder": "Search questions...",
+    "noResults": "No questions found. Try a different search or filter.",
+    "categories": {
+      "all": "All",
+      "basics": "Basics",
+      "technology": "Technology",
+      "gettingStarted": "Getting Started",
+      "ecosystem": "Ecosystem",
+      "community": "Community"
+    },
+    "questions": {
+      "basics": {
+        "whatIsErgo": {
+          "q": "What is Ergo in simple terms?",
+          "a": "Ergo is a secure Proof-of-Work blockchain for powerful smart contracts, enabling decentralized financial applications. Think of it as digital money (ERG) with programmable rules."
+        },
+        "isErgoCompany": {
+          "q": "Is Ergo a company?",
+          "a": "No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network."
+        },
+        "fairLaunch": {
+          "q": "What does a \"fair launch\" mean?",
+          "a": "Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one."
+        }
+      },
+      "technology": {
+        "ergoDifference": {
+          "q": "How is Ergo different from Bitcoin or Ethereum?",
+          "a": "vs. Bitcoin: Ergo supports advanced smart contracts, not just currency. \\n vs. Ethereum: Ergo uses the eUTXO model for enhanced security and predictable fees, and remains Proof-of-Work."
+        },
+        "whatIsEutxo": {
+          "q": "What is eUTXO?",
+          "a": "The Extended UTXO model attaches data and logic directly to \"boxes\" of money. This enhances smart contract security, fee predictability, and allows for better scalability compared to the account model."
+        },
+        "whatIsErgoscript": {
+          "q": "What is ErgoScript?",
+          "a": "ErgoScript is the powerful and secure programming language for writing smart contracts on Ergo. You do not need to know code to use Ergo; it's a tool for developers."
+        },
+        "sigmaProtocols": {
+          "q": "What are Sigma Protocols?",
+          "a": "These are advanced zero-knowledge proofs built into Ergo's core, enabling privacy features like ErgoMixer, complex multi-party contracts, and secure multi-signature schemes."
+        }
+      },
+      "gettingStarted": {
+        "ergCoinUse": {
+          "q": "What is the ERG coin used for?",
+          "a": "ERG is used for transaction fees, collateral for stablecoins (SigmaUSD), participating in DeFi applications, powering dApps (NFTs, gaming), and incentivizing miners."
+        },
+        "howToGetErg": {
+          "q": "How can I get ERG?",
+          "a": "You can acquire ERG on various cryptocurrency exchanges, through peer-to-peer trades, or by mining. Always do your own research before investing."
+        },
+        "bestWallet": {
+          "q": "Which wallet is best for beginners?",
+          "a": "The official mobile wallets (Android/iOS) or the Nautilus Wallet (browser extension) are excellent, user-friendly starting points."
+        }
+      },
+      "ecosystem": {
+        "dappsOnErgo": {
+          "q": "What kinds of dApps are on Ergo?",
+          "a": "Ergo's ecosystem includes DeFi platforms (Spectrum, Duckpools), privacy tools (ErgoMixer), NFT marketplaces (SkyHarbor), cross-chain bridges (Rosen), and more."
+        },
+        "ergoMixer": {
+          "q": "What is ErgoMixer?",
+          "a": "ErgoMixer is a non-custodial service that increases your transaction privacy by mixing your ERG with others, making it difficult to trace your transaction history."
+        }
+      },
+      "community": {
+        "whoGoverns": {
+          "q": "Who governs Ergo?",
+          "a": "Ergo is decentralized and community-driven. Protocol changes are discussed and formalized through Ergo Improvement Proposals (EIPs), with miners signaling support."
+        },
+        "howToContribute": {
+          "q": "How can I contribute if I'm not a developer?",
+          "a": "You can help with community support, content creation (articles, videos), translation, testing dApps, or simply spreading awareness about Ergo."
+        }
+      }
+    }
+  },
+  "icu": {
+    "items": "{count, plural, =0 {no items} one {# item} other {# items}}",
+    "minutes": "{count, plural, =0 {no minutes} one {# minute} other {# minutes}}",
+    "bytes": "{count, plural, =0 {no bytes} one {# byte} other {# bytes}}",
+    "results": "{count, plural, =0 {no results} one {# result} other {# results}}",
+    "errors": "{count, plural, =0 {no errors} one {# error} other {# errors}}",
+    "files": "{count, plural, =0 {no files} one {# file} other {# files}}",
+    "users": "{count, plural, =0 {no users} one {# user} other {# users}}",
+    "days": "{count, plural, =0 {no days} one {# day} other {# days}}",
+    "hours": "{count, plural, =0 {no hours} one {# hour} other {# hours}}",
+    "seconds": "{count, plural, =0 {no seconds} one {# second} other {# seconds}}"
+  },
+  "playground": {
+    "title": "Live Playground",
+    "interactive": "Interactive",
+    "reset": "Reset",
+    "component": "Component",
+    "codeEditor": "Code Editor",
+    "livePreview": "Live Preview",
+    "properties": "Properties",
+    "templates": "Templates",
+    "editCode": "Edit the code to see live preview",
+    "errorRendering": "Error rendering component",
+    "codeEmpty": "Code cannot be empty",
+    "enable": "Enable",
+    "poweredBy": "Powered by Ergo UI Kit",
+    "components": {
+      "button": "Button",
+      "card": "Card",
+      "badge": "Badge",
+      "grid": "Grid"
+    },
+    "templates": {
+      "primaryButton": "Primary Button",
+      "featureCard": "Feature Card",
+      "statusBadge": "Status Badge"
+    },
+    "properties": {
+      "variant": "Variant",
+      "size": "Size",
+      "disabled": "Disabled",
+      "loading": "Loading",
+      "hoverable": "Hoverable",
+      "bordered": "Bordered"
+    },
+    "variants": {
+      "default": "Default",
+      "outline": "Outline",
+      "ghost": "Ghost",
+      "destructive": "Destructive"
+    },
+    "sizes": {
+      "sm": "Small",
+      "default": "Default",
+      "lg": "Large",
+      "icon": "Icon"
+    }
   }
 } 

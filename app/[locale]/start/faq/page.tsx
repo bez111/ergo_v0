@@ -1,5 +1,5 @@
 import type { Metadata } from "next"
-import FAQClient from "./FAQClient"
+import FAQClientLocalized from "./FAQClientLocalized"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
@@ -73,7 +73,7 @@ export default function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
       
-      <FAQClient />
+      <FAQClientLocalized />
     </>
   )
 } 
