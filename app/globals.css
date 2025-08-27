@@ -959,8 +959,8 @@ aside .sticky-toc {
 
 /* ✅ КРИТИЧЕСКИЕ ИСПРАВЛЕНИЯ КОНТРАСТНОСТИ (Pa11y Audit) */
 
-/* Fix navigation buttons contrast (1.14:1 → 21:1) */
-.group.inline-flex.h-10.w-max.items-center.justify-center.rounded-md.px-4 button,
+/* Fix navigation buttons contrast (1.14:1 → 21:1) - only for low contrast */
+.group.inline-flex.h-10.w-max.items-center.justify-center.rounded-md.px-4 button[data-state="closed"],
 [id*="radix"][data-state="closed"] {
   color: #ffffff !important;
   background-color: #1a1a1a !important;
@@ -979,14 +979,14 @@ a[href*="/blog"] span {
   color: #6e7583 !important;
 }
 
-/* Fix navigation links contrast (3.56:1 → 4.5:1) */
-.group.inline-flex.h-10.w-max.items-center.justify-center.rounded-md.px-4 {
+/* Fix navigation links contrast (3.56:1 → 4.5:1) - only for low contrast */
+.group.inline-flex.h-10.w-max.items-center.justify-center.rounded-md.px-4 a[href] {
   color: #ffffff !important;
 }
 
-/* Fix hero section contrast */
-.hero-section h1,
-.hero-section h2 {
+/* Fix hero section contrast - only for low contrast */
+.hero-section h1[style*="color: rgba"],
+.hero-section h2[style*="color: rgba"] {
   color: #ffffff !important;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
 }
@@ -1007,13 +1007,12 @@ input, textarea, select {
   background-color: #ffffff !important;
 }
 
-/* Fix link contrast */
-a:not(.cta-button):not([href*="/use/"]):not([href*="/blog"]) {
+/* Fix link contrast - only for low contrast links */
+a[href]:not(.cta-button):not([href*="/use/"]):not([href*="/blog"]):not(.no-underline) {
   color: #0066cc !important;
-  text-decoration: underline !important;
 }
 
-a:not(.cta-button):not([href*="/use/"]):not([href*="/blog"]):hover {
+a[href]:not(.cta-button):not([href*="/use/"]):not([href*="/blog"]):not(.no-underline):hover {
   color: #0052a3 !important;
 }
 
