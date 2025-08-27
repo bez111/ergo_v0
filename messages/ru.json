@@ -1,25 +1,31 @@
 {
   "common": {
+    "startLearning": "Начать обучение",
+    "difficulty": "Сложность",
+    "duration": "Длительность",
+    "allLevels": "Все уровни",
+    "beginner": "Новичок",
+    "intermediate": "Средний",
+    "advanced": "Продвинутый",
+    "expert": "Эксперт",
+    "reference": "Справочник",
+    "varies": "Различается",
     "loading": "Загрузка...",
     "error": "Ошибка",
     "retry": "Повторить",
     "close": "Закрыть",
     "open": "Открыть",
-    "save": "Сохранить",
-    "cancel": "Отмена",
-    "confirm": "Подтвердить",
-    "delete": "Удалить",
-    "edit": "Редактировать",
-    "view": "Просмотр",
+    "menu": "Меню",
     "search": "Поиск",
-    "filter": "Фильтр",
-    "sort": "Сортировка",
-    "next": "Далее",
-    "previous": "Назад",
-    "home": "Главная",
-    "back": "Назад",
-    "more": "Больше",
-    "less": "Меньше"
+    "searchPlaceholder": "Поиск...",
+    "readMore": "Читать далее",
+    "learnMore": "Узнать больше",
+    "getStarted": "Начать",
+    "viewAll": "Посмотреть все",
+    "backToTop": "Наверх",
+    "previous": "Предыдущий",
+    "next": "Следующий",
+    "home": "Главная"
   },
   "navigation": {
     "home": "Главная",
@@ -32,7 +38,24 @@
     "blog": "Блог",
     "wallet": "Кошелёк",
     "events": "События",
-    "mining": "Майнинг"
+    "mining": "Майнинг",
+    "main": {
+      "start": "Начало",
+      "technology": "Технологии",
+      "use": "Применение",
+      "learn": "Обучение",
+      "docs": "Документация",
+      "ecosystem": "Экосистема",
+      "blog": "Блог",
+      "wallet": "Кошелек"
+    },
+    "footer": {
+      "about": "О проекте",
+      "community": "Сообщество",
+      "developers": "Разработчикам",
+      "resources": "Ресурсы",
+      "legal": "Правовая информация"
+    }
   },
   "hero": {
     "title": "Платформа Ergo",
@@ -221,7 +244,7 @@
             "description": "Смарт-контракты работают независимо без конфликтов глобального состояния."
           },
           "composability": {
-            "title": "Композируемость", 
+            "title": "Композируемость",
             "description": "Создавайте сложные DeFi-приложения из простых, переиспользуемых компонентов."
           },
           "security": {
@@ -297,9 +320,6 @@
       "description": "Модель eUTXO от Ergo сочетает безопасность Bitcoin с программируемостью Ethereum, обеспечивая параллельную обработку и предсказуемые комиссии.",
       "table": {
         "aspect": "Аспект",
-        "eutxo": "eUTXO",
-        "account": "Аккаунт",
-        "advantage": "Преимущество",
         "eutxo": "eUTXO",
         "account": "Аккаунт",
         "advantage": "Преимущество"
@@ -404,6 +424,722 @@
           "description": "Высота создания, boxId (производный от создающей транзакции)"
         }
       }
+    },
+    "sections": {
+      "useCases": "Случаи использования",
+      "architecture": "Архитектура",
+      "resources": "Ресурсы"
+    },
+    "techFeatures": {
+      "eutxoModel": {
+        "title": "eUTXO модель",
+        "description": "Расширенная модель UTXO, обеспечивающая параллельное выполнение смарт-контрактов и композитные DeFi приложения. Исключает атаки повторного входа, сохраняя проверенную модель безопасности Bitcoin.",
+        "details": {
+          "parallelExecution": {
+            "title": "Параллельное выполнение",
+            "description": "Смарт-контракты работают независимо без конфликтов глобального состояния."
+          },
+          "composability": {
+            "title": "Композитность",
+            "description": "Создавайте сложные DeFi приложения из простых, переиспользуемых компонентов."
+          },
+          "bitcoinSecurity": {
+            "title": "Безопасность уровня Bitcoin",
+            "description": "Наследует проверенную временем защиту UTXO от двойных трат."
+          }
+        }
+      },
+      "ergoScript": {
+        "title": "ErgoScript",
+        "description": "Powerful Смарт-контракт language designed for Безопасность and flexibility. Функцияs built-in Sigma Протоколs for zero-knowledge proofs and formal verification Поддержка for bulletproof contracts.",
+        "details": {
+          "formalVerification": {
+            "title": "Formal Verification",
+            "description": "Mathematically prove your Смарт-контрактs are secure and bug-free."
+          },
+          "builtInPrivacy": {
+            "title": "Built-in Конфиденциальность",
+            "description": "Native zero-knowledge proofs and ring signatures for confidential transactions."
+          },
+          "safeByDesign": {
+            "title": "Safe by Design",
+            "description": "Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors."
+          }
+        }
+      },
+      "autolykos": {
+        "title": "Autolykos PoW",
+        "description": "Energy-efficient, ASIC-resistant Майнинг algorithm that democratizes Сеть participation. Designed for GPU Майнинг to keep the Сеть decentralized and accessible to everyone.",
+        "details": {
+          "energyEfficient": {
+            "title": "Energy Efficient",
+            "description": "Memory-hard algorithm reduces power consumption compared to traditional PoW."
+          },
+          "soloMining": {
+            "title": "Solo Майнинг Friendly",
+            "description": "Low barrier to entry enables individual miners to participate profitably."
+          },
+          "asicResistant": {
+            "title": "ASIC Resistant",
+            "description": "Optimized for consumer GPUs to prevent Майнинг centralization."
+          }
+        }
+      },
+      "storageRent": {
+        "title": "Storage Rent",
+        "description": "Revolutionary economic model that prevents Блокчейн bloat. Inactive coins pay minimal rent after 4 years, ensuring sustainable Блокчейн size and permanent miner rewards.",
+        "details": {
+          "sustainableBlockchain": {
+            "title": "Sustainable Блокчейн",
+            "description": "Automatic cleanup of unused data keeps the Блокчейн lean and efficient."
+          },
+          "perpetualSecurity": {
+            "title": "Perpetual Безопасность",
+            "description": "Miners receive rewards forever, ensuring long-term Сеть Безопасность."
+          },
+          "resourceEfficient": {
+            "title": "Ресурс Efficient",
+            "description": "Maintains lightweight Блокчейн that runs on modest hardware."
+          }
+        }
+      },
+      "sigmaProtocols": {
+        "title": "Сигма протоколы",
+        "description": "Built-in zero-knowledge proofs enable Конфиденциальность-preserving transactions and advanced cryptographic Функцияs without third-party Решениеs or complex setups.",
+        "details": {
+          "optionalPrivacy": {
+            "title": "Optional Конфиденциальность",
+            "description": "Choose between transparent or confidential transactions as needed."
+          },
+          "advancedSecurity": {
+            "title": "Advanced Безопасность",
+            "description": "Multi-signature Кошелекs, threshold signatures, and secure voting systems."
+          },
+          "developerFriendly": {
+            "title": "Developer Friendly",
+            "description": "Simple APIs to add Конфиденциальность Функцияs to any Приложение."
+          }
+        }
+      },
+      "sections": {
+        "ledgerModels": "Блокчейн Ledger Models: UTXO vs. Account",
+        "transactionFlow": "How eUTXO Transactions Work",
+        "keyDifferences": "eUTXO vs. Account Model — Key Differences",
+        "useCases": "eUTXO in Action — When It Shines",
+        "faq": "Frequently Asked Questions",
+        "conclusion": "Conclusion: The Future is eUTXO"
+      },
+      "models": {
+        "utxo": {
+          "title": "UTXO Model (Bitcoin-style)",
+          "description": "No global balances — only a collection of unspent outputs.",
+          "analogy": "Analogy: Like having cash bills/coins. Each transaction spends some bills, creates new ones.",
+          "strengths": "Strengths:",
+          "strengthsText": "Simplicity, Конфиденциальность, parallel processing, easier audit trails.",
+          "weakness": "Weakness:",
+          "weaknessText": "Not naturally suited for stateful dApps."
+        },
+        "account": {
+          "title": "Account Model (Ethereum-style)",
+          "description": "Global state: Each account has a balance and (for contracts) its own data storage.",
+          "analogy": "Analogy: Like a bank account — all assets tracked in one place.",
+          "strengths": "Strengths:",
+          "strengthsText": "Intuitive, flexible for stateful apps, natural for Turing-complete contracts.",
+          "weaknesses": "Weaknesses:",
+          "weaknessesText": "Potential for re-entrancy bugs, unpredictable gas, global state bloat."
+        }
+      },
+      "table": {
+        "aspect": "Aspect",
+        "eutxo": "eUTXO",
+        "account": "Account",
+        "advantage": "Advantage"
+      },
+      "conclusion": {
+        "text": "The eUTXO model is a quantum leap: it keeps UTXO's clarity, Безопасность, and scalability while unlocking true programmability. For developers who want robust, auditable, and future-proof dApps — Ergo's approach is both powerful and elegant.",
+        "startBuilding": "Start Building",
+        "exploreEcosystem": "Explore Ecosystem"
+      }
+    },
+    "ergoScriptPage": {
+      "title": "ErgoScript",
+      "subtitle": "Смарт-контракт Language",
+      "description": "Powerful, secure Смарт-контракт language with built-in cryptographic primitives and formal verification Поддержка.",
+      "features": {
+        "formalVerification": {
+          "title": "Formal Verification Поддержка",
+          "description": "Поддержкаs formal verification and auditability via declarative constraints and first-class crypto primitives"
+        },
+        "eutxoSecurity": {
+          "title": "eUTXO Безопасность Model",
+          "description": "The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO"
+        },
+        "deterministicExecution": {
+          "title": "Deterministic Execution",
+          "description": "Computational complexity is predictable, though Сеть fees are market-driven"
+        },
+        "nativeSigmaProtocols": {
+          "title": "Native Sigma Протоколs",
+          "description": "First-class Поддержка for multi-signature, threshold, and ring-signature constructions"
+        },
+        "utxoConcurrency": {
+          "title": "UTXO Concurrency",
+          "description": "Parallel transaction processing with batcher patterns for high-contention scenarios"
+        },
+        "richDataTypes": {
+          "title": "Rich Data Types",
+          "description": "Native Поддержка for complex data structures, collections, and cryptographic operations"
+        }
+      },
+      "useCases": {
+        "defi": {
+          "title": "DeFi Протоколs",
+          "description": "Decentralized exchanges, lending Платформаs, and algorithmic stablecoins"
+        },
+        "nfts": {
+          "title": "NFT Marketplaces",
+          "description": "Unique digital assets with complex ownership and trading logic"
+        },
+        "governance": {
+          "title": "DAO Governance",
+          "description": "Decentralized voting systems and treasury management"
+        },
+        "privacy": {
+          "title": "Приложения для конфиденциальности",
+          "description": "Zero-knowledge proofs and confidential transactions"
+        },
+        "oracles": {
+          "title": "Oracle Systems",
+          "description": "Decentralized data feeds and price discovery mechanisms"
+        },
+        "gaming": {
+          "title": "Gaming & Metaverse",
+          "description": "In-game assets, virtual economies, and play-to-earn mechanics"
+        }
+      }
+    },
+    "nipopowsPage": {
+      "title": "NIPoPoWs",
+      "subtitle": "Non-Interactive Proofs of Proof-of-Work",
+      "description": "Revolutionary cryptographic proofs that enable light clients, cross-chain Протоколs, and mobile verification without downloading the entire Блокчейн.",
+      "benefits": {
+        "interoperability": {
+          "title": "Совместимость",
+          "description": "Enables SPV/NIPoPoW-style Протоколs and trust-minimized cross-chain interactions."
+        },
+        "lightClients": {
+          "title": "Light Clients",
+          "description": "Secure verification on mobile or web without downloading the full Блокчейн."
+        },
+        "fastVerification": {
+          "title": "Fast Verification",
+          "description": "Verify chain work in seconds using compact proofs instead of full syncs."
+        },
+        "trustless": {
+          "title": "Trustless",
+          "description": "No trusted relays or validators; verification follows PoW assumptions."
+        }
+      },
+      "useCases": {
+        "crossChain": {
+          "title": "Cross-Chain Протоколs",
+          "description": "Trust-minimized bridges and SPV-style interoperability.",
+          "example": "Rosen Bridge"
+        },
+        "mobileWallets": {
+          "title": "Mobile Кошелекs",
+          "description": "Light Кошелекs that prove chain work with succinct proofs.",
+          "example": "Ergo Mobile"
+        },
+        "oracleSystems": {
+          "title": "Oracle Systems",
+          "description": "Efficient verification of external chain data.",
+          "example": "Oracle Pools"
+        },
+        "sidechains": {
+          "title": "Sidechains",
+          "description": "Sidechains can verify L1 succinctly for Безопасность and liveness.",
+          "example": "Research"
+        }
+      },
+      "comparison": {
+        "verificationTime": {
+          "aspect": "Verification Time",
+          "traditional": "Hours to days (full sync)",
+          "nipopows": "Seconds to minutes",
+          "advantage": "NIPoPoWs"
+        },
+        "dataRequired": {
+          "aspect": "Data Required",
+          "traditional": "Entire Блокчейн history",
+          "nipopows": "Small cryptographic proof",
+          "advantage": "NIPoPoWs"
+        },
+        "trustRequirements": {
+          "aspect": "Trust Requirements",
+          "traditional": "Trust full nodes or validators",
+          "nipopows": "Trustless cryptographic verification",
+          "advantage": "NIPoPoWs"
+        },
+        "mobileCompatibility": {
+          "aspect": "Mobile Compatibility",
+          "traditional": "Impractical due to size",
+          "nipopows": "Optimized for mobile devices",
+          "advantage": "NIPoPoWs"
+        },
+        "securityModel": {
+          "aspect": "Безопасность model",
+          "traditional": "Varies by design",
+          "nipopows": "Preserves PoW assumptions",
+          "advantage": "NIPoPoWs"
+        },
+        "finalityHandling": {
+          "aspect": "Finality handling",
+          "traditional": "Implementation-specific",
+          "nipopows": "Observe window; new proof can supersede",
+          "advantage": "NIPoPoWs"
+        },
+        "stateAccess": {
+          "aspect": "State access",
+          "traditional": "Full state on device",
+          "nipopows": "Event/work proof only (no full state)",
+          "advantage": "Depends"
+        }
+      },
+      "workingSteps": {
+        "eventOccurs": {
+          "title": "Event Occurs",
+          "description": "A transaction or block appears on Ergo."
+        },
+        "proofGeneration": {
+          "title": "Proof Generation",
+          "description": "A succinct proof is built from sampled headers."
+        },
+        "verification": {
+          "title": "Verification",
+          "description": "Anyone verifies the proof quickly and trustlessly."
+        }
+      }
+    },
+    "privacyFeaturesPage": {
+      "title": "Конфиденциальность Функцияs",
+      "subtitle": "Sigma Протоколs & Confidential Transactions",
+      "description": "Advanced cryptographic Конфиденциальность Инструментs built into Ergo's Протокол. Zero-knowledge proofs, ring signatures, and confidential transactions without trusted setups.",
+      "technologies": {
+        "sigmaProtocols": {
+          "title": "Сигма протоколы",
+          "description": "Enable powerful Конфиденциальность Инструментs like ring signatures and zero-knowledge proofs at the Протокол level.",
+          "features": {
+            "0": "Zero-knowledge proofs",
+            "1": "Ring signatures",
+            "2": "Threshold signatures",
+            "3": "Composable Конфиденциальность"
+          }
+        },
+        "ergoMixer": {
+          "title": "ErgoMixer",
+          "description": "On-chain, non-custodial mixing for transaction Конфиденциальность and anonymity.",
+          "features": {
+            "0": "Non-custodial mixing",
+            "1": "On-chain Конфиденциальность",
+            "2": "Токен mixing Поддержка",
+            "3": "Configurable anonymity"
+          }
+        },
+        "confidentialAssets": {
+          "title": "Confidential Assets",
+          "description": "Issue Токенs with hidden amounts and rules for maximum Конфиденциальность.",
+          "features": {
+            "0": "Hidden Токен amounts",
+            "1": "Private Смарт-контрактs",
+            "2": "Confidential transactions",
+            "3": "Selective disclosure"
+          }
+        }
+      },
+      "advantages": "No trusted setup needed — pure cryptographic Безопасность,Flexible Конфиденциальность Функцияs usable in dApps, DeFi, and NFTs,Open-source, peer-reviewed cryptography,Composable with other Ergo Функцияs,Built into the Протокол, not added as afterthought,Mathematically proven Безопасность guarantees",
+      "useCases": {
+        "privateTransactions": {
+          "title": "Private Transactions",
+          "description": "Mix your ERG and Токенs to achieve strong on-chain anonymity (within the current anonymity set)",
+          "example": "ErgoMixer"
+        },
+        "confidentialDefi": {
+          "title": "Confidential DeFi",
+          "description": "Build DeFi Приложениеs with private balances and logic",
+          "example": "Private DEX orders"
+        },
+        "anonymousVoting": {
+          "title": "Anonymous Voting",
+          "description": "Create DAOs and voting systems with secret ballots",
+          "example": "DAO governance"
+        },
+        "privateNfts": {
+          "title": "Private NFTs",
+          "description": "NFTs with hidden metadata or ownership information",
+          "example": "Confidential collectibles"
+        }
+      }
+    },
+    "oraclePoolsPage": {
+      "title": "Oracle Pools",
+      "subtitle": "Decentralized Price Feeds",
+      "description": "Reliable, consensus-based oracle system providing accurate price feeds for DeFi Приложениеs without central authorities or single points of failure.",
+      "features": {
+        "reliablePriceFeeds": {
+          "title": "Reliable Price Feeds",
+          "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices"
+        },
+        "universalCompatibility": {
+          "title": "Universal Compatibility",
+          "description": "Any Смарт-контракт can access oracle data without special integrations"
+        },
+        "fullyDecentralized": {
+          "title": "Fully Decentralized",
+          "description": "No central authority or single point of failure in the data pipeline"
+        },
+        "economicSecurity": {
+          "title": "Economic Безопасность",
+          "description": "Stake-based incentives ensure honest data provision"
+        },
+        "consensusMechanism": {
+          "title": "Consensus Mechanism",
+          "description": "Outlier detection and averaging for robust data quality"
+        },
+        "lowLatencyUpdates": {
+          "title": "Low Latency Updates",
+          "description": "Frequent updates ensure data freshness for DeFi Приложениеs"
+        }
+      },
+      "technicalDetails": {
+        "dataAggregation": {
+          "title": "Data Aggregation",
+          "content": "The oracle pool uses a robust averaging mechanism that filters out outliers by removing the top and bottom 25% of submissions, then calculating the average of remaining values for consensus."
+        },
+        "updateTriggers": {
+          "title": "Update Triggers",
+          "content": "New data is published when price deviation exceeds threshold (e.g., 0.5%), maximum time since last update (e.g., 1 hour), or minimum oracle submissions are reached."
+        },
+        "economicSecurity": {
+          "title": "Economic Безопасность",
+          "content": "Oracle operators must stake collateral, with slashing for malicious behavior and rewards for honest participation, creating strong economic incentives for reliable data."
+        },
+        "attackResistance": {
+          "title": "Attack Resistance",
+          "content": "Sybil attack protection via staking, outlier filtering prevents manipulation, and decentralization prevents censorship of oracle data."
+        }
+      },
+      "useCases": {
+        "sigmaUsdStablecoin": {
+          "title": "SigmaUSD Stablecoin",
+          "description": "Algorithmic stablecoin using ERG/USD price feed for collateral calculations"
+        },
+        "spectrumDex": {
+          "title": "Spectrum DEX",
+          "description": "Decentralized exchange using price feeds for limit orders and liquidations"
+        },
+        "lendingProtocols": {
+          "title": "Lending Протоколs",
+          "description": "Collateralized lending using oracle prices for liquidation thresholds"
+        }
+      }
+    },
+    "subblocksPage": {
+      "title": "Subblocks",
+      "subtitle": "Sub-Second Confirmations",
+      "description": "Revolutionary scaling Решение providing near-instant transaction finality with full Layer 1 Безопасность. No bridges, no compromises.",
+      "features": {
+        "subSecondConfirmations": {
+          "title": "Sub-Second Confirmations",
+          "description": "Near-instant transaction finality for improved user experience without sacrificing decentralization"
+        },
+        "layer1Security": {
+          "title": "Layer 1 Безопасность",
+          "description": "Full Блокчейн Безопасность without trusted intermediaries or bridges"
+        },
+        "seamlessIntegration": {
+          "title": "Seamless Integration",
+          "description": "Works with existing infrastructure - no bridges or sidechains needed"
+        },
+        "parallelProcessing": {
+          "title": "Parallel Processing",
+          "description": "Multiple subblocks can be validated in parallel for increased throughput"
+        },
+        "adaptiveDifficulty": {
+          "title": "Adaptive Difficulty",
+          "description": "Dynamic adjustment ensures consistent block times even with varying hash power"
+        },
+        "minerIncentives": {
+          "title": "Miner Incentives",
+          "description": "Additional rewards for subblock miners while maintaining main chain Безопасность"
+        }
+      },
+      "technicalDetails": {
+        "architecture": {
+          "title": "Architecture",
+          "content": "Subblocks are intermediate blocks between main blocks that provide faster confirmations. They maintain the same Безопасность model as main blocks but with adjusted difficulty targets."
+        },
+        "consensusMechanism": {
+          "title": "Consensus Mechanism",
+          "content": "Uses a modified version of Autolykos that allows for variable difficulty targets. Subblocks contribute to the overall chain weight while maintaining compatibility with existing infrastructure."
+        },
+        "transactionOrdering": {
+          "title": "Transaction Ordering",
+          "content": "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness."
+        },
+        "stateManagement": {
+          "title": "State Management",
+          "content": "Subblocks update the UTXO set incrementally, allowing for efficient state transitions without full block validation overhead."
+        }
+      },
+      "useCases": {
+        "defiApplications": {
+          "title": "DeFi Приложениеs",
+          "description": "Enable high-frequency trading and instant swaps with sub-second finality"
+        },
+        "paymentSystems": {
+          "title": "Payment Systems",
+          "description": "Point-of-sale transactions with immediate confirmation"
+        },
+        "gaming": {
+          "title": "Gaming",
+          "description": "Real-time game state updates without waiting for block confirmations"
+        },
+        "socialApplications": {
+          "title": "Social Приложениеs",
+          "description": "Instant messaging and social interactions on-chain"
+        }
+      }
+    },
+    "velvetForksPage": {
+      "title": "Velvet Forks",
+      "subtitle": "Smooth Протокол Evolution",
+      "description": "Revolutionary upgrade mechanism enabling backward-compatible Протокол improvements without forced upgrades or Сеть splits.",
+      "features": {
+        "backwardCompatible": {
+          "title": "Backward Compatible",
+          "description": "No forced upgrades, no chain wars - new Функцияs coexist with non-upgraded nodes"
+        },
+        "futureProof": {
+          "title": "Future Proof",
+          "description": "Adopt Инновацияs at your own pace without Сеть disruption"
+        },
+        "gradualAdoption": {
+          "title": "Gradual Adoption",
+          "description": "Evolutionary, not revolutionary changes - the Сеть evolves smoothly"
+        },
+        "consensusPreservation": {
+          "title": "Consensus Preservation",
+          "description": "Maintains Сеть consensus even with different node versions"
+        },
+        "securityFirst": {
+          "title": "Безопасность First",
+          "description": "New Функцияs only activate when safe majority adoption is reached"
+        },
+        "developerFriendly": {
+          "title": "Developer Friendly",
+          "description": "Test new Функцияs on mainnet without breaking existing Приложениеs"
+        }
+      },
+      "useCases": {
+        "nipopowsIntegration": {
+          "title": "NiPoPoWs Integration",
+          "description": "Non-Interactive Proofs of Proof-of-Work can be added as an optional Функция, enabling light clients without forcing all nodes to Поддержка them.",
+          "linkText": "Learn О проекте NiPoPoWs →"
+        },
+        "privacyEnhancements": {
+          "title": "Конфиденциальность Enhancements",
+          "description": "Advanced Конфиденциальность Функцияs like ring signatures or stealth addresses can be introduced without breaking existing transparent transactions.",
+          "linkText": "Explore Конфиденциальность Функцияs →"
+        },
+        "smartContractExtensions": {
+          "title": "Смарт-контракт Extensions",
+          "description": "New opcodes and scripting capabilities can be added for developers who want to use them, while existing contracts continue to work.",
+          "linkText": "Learn О проекте ErgoScript →"
+        },
+        "consensusImprovements": {
+          "title": "Consensus Improvements",
+          "description": "Optimizations to block validation, Майнинг algorithms, or Сеть Протоколs can be tested and adopted gradually.",
+          "linkText": "О проекте Autolykos →"
+        }
+      }
+    },
+    "adaptiveEmissionPage": {
+      "title": "Adaptive Emission",
+      "subtitle": "Flexible Economic Parameters",
+      "description": "Сообщество-driven governance system enabling parameter adjustments through miner voting, ensuring long-term sustainability and Сеть adaptability.",
+      "features": {
+        "parameterTuning": {
+          "title": "Parameter Tuning",
+          "description": "Economic variables can be adjusted based on Сеть conditions"
+        },
+        "economicFlexibility": {
+          "title": "Economic Flexibility",
+          "description": "Adapt to changing Сеть needs without hard forks"
+        },
+        "communityInput": {
+          "title": "Сообщество Input",
+          "description": "Discussions and decisions involve the entire Сообщество"
+        },
+        "minerVoting": {
+          "title": "Miner Voting",
+          "description": "Miners vote on parameter changes through block headers"
+        },
+        "gradualChanges": {
+          "title": "Gradual Changes",
+          "description": "Parameters adjust smoothly to prevent economic shocks"
+        },
+        "longTermSustainability": {
+          "title": "Long-term Sustainability",
+          "description": "Ensures Сеть Безопасность even after emission ends"
+        }
+      },
+      "governance": {
+        "emissionSchedule": {
+          "title": "Emission Schedule",
+          "description": "Declining emission with periodic reductions and post-emission sustainability through storage rent and transaction fees.",
+          "linkText": "Learn О проекте governance →"
+        },
+        "storageRentEconomics": {
+          "title": "Storage Rent Economics",
+          "description": "UTXOs unspent for 4+ years pay storage fees, providing sustainable miner revenue and preventing state bloat.",
+          "linkText": "Storage rent details →"
+        },
+        "minerVotingProcess": {
+          "title": "Miner Voting Process",
+          "description": "Сообщество proposals, 1024-epoch voting period, 90% threshold requirement, and gradual activation.",
+          "linkText": "Voting mechanism →"
+        },
+        "economicParameters": {
+          "title": "Economic Parameters",
+          "description": "Adjustable parameters include block size, storage fee factor, min fee, and computational cost limits.",
+          "linkText": "Parameter details →"
+        }
+      },
+      "historicalVotes": {
+        "eip27": {
+          "title": "Re-emission Soft Fork",
+          "description": "Extends emission schedule to ensure long-term Сеть Безопасность"
+        },
+        "eip37": {
+          "title": "Difficulty Adjustment",
+          "description": "Improved difficulty adjustment algorithm for more stable block times"
+        }
+      }
+    },
+    "nativeTokensPage": {
+      "title": "Native Токенs & NFTs",
+      "subtitle": "First-Class Assets on Ergo",
+      "description": "Create and trade Токенs and NFTs directly at the Протокол level. No Смарт-контрактs needed - just simple, secure, and cost-effective native assets.",
+      "features": {
+        "oneClick": {
+          "title": "One-Click Creation",
+          "description": "Issue Токенs, stablecoins, or NFTs in a single transaction without Смарт-контрактs"
+        },
+        "nativeAssets": {
+          "title": "True Native Assets",
+          "description": "First-class Токенs with Протокол-level Безопасность guarantees, not contract-based"
+        },
+        "defiReady": {
+          "title": "DeFi Ready",
+          "description": "Native integration with all Ergo Приложениеs and Протоколs"
+        },
+        "costEffective": {
+          "title": "Cost Effective",
+          "description": "Minimal fees for Токен creation and transfers - just simple, secure, native assets"
+        },
+        "richMetadata": {
+          "title": "Rich Metadata",
+          "description": "Поддержка for complex metadata including images, descriptions, and custom properties"
+        },
+        "universalCompatibility": {
+          "title": "Universal Compatibility",
+          "description": "Any Смарт-контракт can access oracle data without special integrations"
+        }
+      },
+      "useCases": {
+        "defiTokens": {
+          "title": "DeFi Токенs",
+          "description": "Create governance Токенs, utility Токенs, and reward Токенs for DeFi Протоколs"
+        },
+        "nftCollections": {
+          "title": "NFT Collections",
+          "description": "Build unique digital art, collectibles, and gaming assets"
+        },
+        "stablecoins": {
+          "title": "Стейблкоины",
+          "description": "Issue algorithmic or collateralized stable value Токенs"
+        },
+        "loyaltyPrograms": {
+          "title": "Loyalty Programs",
+          "description": "Create reward points and loyalty Токенs for businesses"
+        },
+        "gameAssets": {
+          "title": "Game Assets",
+          "description": "In-game items, characters, and currencies with true ownership"
+        },
+        "identityTokens": {
+          "title": "Identity Токенs",
+          "description": "Reputation systems and identity verification Токенs"
+        }
+      }
+    },
+    "storageRentPage": {
+      "title": "Storage Rent",
+      "subtitle": "Sustainable Блокчейн Economics",
+      "description": "Ergo's storage rent mechanism prevents Блокчейн bloat and ensures long-term sustainability by recycling unused outputs.",
+      "problems": {
+        "blockchainBloat": {
+          "title": "Блокчейн Bloat",
+          "description": "Traditional Блокчейнs accumulate unused data over time, leading to inefficiency and higher costs.",
+          "stats": "2TB+ wasted space"
+        },
+        "forgottenWallets": {
+          "title": "Forgotten Кошелекs",
+          "description": "Lost private keys mean funds are stuck forever, reducing the effective money supply.",
+          "stats": "4M+ lost coins"
+        },
+        "scalabilityIssues": {
+          "title": "Scalability Issues",
+          "description": "Growing Блокчейн size makes it harder for new nodes to sync and participate in the Сеть.",
+          "stats": "500GB+ to sync"
+        }
+      },
+      "solutions": {
+        "automaticCleanup": {
+          "title": "Automatic Cleanup",
+          "description": "Storage rent automatically removes old, unused outputs from the Блокчейн state."
+        },
+        "fundRecycling": {
+          "title": "Fund Recycling",
+          "description": "Coins from forgotten Кошелекs are gradually returned to circulation through miners."
+        },
+        "sustainableGrowth": {
+          "title": "Sustainable Growth",
+          "description": "Блокчейн size remains manageable, ensuring long-term Сеть health."
+        }
+      },
+      "howItWorks": {
+        "title": "How Storage Rent Works",
+        "steps": {
+          "creation": {
+            "title": "Box Creation",
+            "description": "When you create a UTXO (box), it starts with full value and no rent due."
+          },
+          "aging": {
+            "title": "Aging Process",
+            "description": "After 4 years of inactivity, the box becomes subject to storage rent fees."
+          },
+          "collection": {
+            "title": "Rent Collection",
+            "description": "Miners can collect rent, gradually reducing the box value until it's spent or recycled."
+          },
+          "recycling": {
+            "title": "Full Recycling",
+            "description": "If rent isn't paid, the remaining value goes to miners and the box is removed."
+          }
+        }
+      }
     }
   },
   "use": {
@@ -415,49 +1151,81 @@
         "title": "Алгоритмические стейблкоины",
         "subtitle": "Стабильное хранение стоимости без централизованного контроля",
         "description": "Избыточно обеспеченные стейблкоины с инновационным протоколом AgeUSD.",
-        "tags": ["Стейблкоин", "Алгоритмический", "Обеспечение"]
+        "tags": [
+          "Стейблкоин",
+          "Алгоритмический",
+          "Обеспечение"
+        ]
       },
       "privacy": {
         "title": "Приватность и конфиденциальность",
         "subtitle": "Финансовая приватность в мире растущей слежки",
         "description": "Некастодиальные миксеры, скрытые адреса, доказательства с нулевым разглашением для полной приватности.",
-        "tags": ["Миксер", "Скрытность", "Нулевое разглашение"]
+        "tags": [
+          "Миксер",
+          "Скрытность",
+          "Нулевое разглашение"
+        ]
       },
       "bridges": {
         "title": "Межсетевые мосты",
         "subtitle": "Безопасная, не требующая доверия передача стоимости между блокчейнами",
         "description": "Децентрализованные мосты с многоподписной безопасностью, без центрального хранения.",
-        "tags": ["Мост", "Совместимость", "Мультисеть"]
+        "tags": [
+          "Мост",
+          "Совместимость",
+          "Мультисеть"
+        ]
       },
       "daos": {
         "title": "DAO и альтернативные экономики",
         "subtitle": "Управление сообществом и альтернативные экономические системы",
         "description": "Композируемая инфраструктура DAO: казначейство, голосование, распределение прибыли.",
-        "tags": ["DAO", "Управление", "Сообщество"]
+        "tags": [
+          "DAO",
+          "Управление",
+          "Сообщество"
+        ]
       },
       "nfts": {
         "title": "NFT и цифровые активы",
         "subtitle": "Истинное цифровое владение, динамические свойства",
         "description": "Метаданные в блокчейне, протокольные роялти, программируемые NFT.",
-        "tags": ["NFT", "Роялти", "Динамические"]
+        "tags": [
+          "NFT",
+          "Роялти",
+          "Динамические"
+        ]
       },
       "oracles": {
         "title": "Оракулы и потоки данных",
         "subtitle": "Перенос данных реального мира в блокчейн",
         "description": "Децентрализованные пулы оракулов предоставляют внешние данные для DeFi и рынков предсказаний.",
-        "tags": ["Оракулы", "Потоки данных", "Предсказания"]
+        "tags": [
+          "Оракулы",
+          "Потоки данных",
+          "Предсказания"
+        ]
       },
       "identity": {
         "title": "Идентичность и репутация",
         "subtitle": "Суверенная идентичность и репутация Web3",
         "description": "Децентрализованные идентификаторы (DID), защита от Sybil-атак, системы репутации.",
-        "tags": ["Идентичность", "Репутация", "DID"]
+        "tags": [
+          "Идентичность",
+          "Репутация",
+          "DID"
+        ]
       },
       "gaming": {
         "title": "Игры и метавселенная",
         "subtitle": "Игровые активы нового поколения и цифровые миры",
         "description": "Программируемые игровые токены, экономики на базе NFT, инфраструктура метавселенной.",
-        "tags": ["Игры", "Метавселенная", "NFT"]
+        "tags": [
+          "Игры",
+          "Метавселенная",
+          "NFT"
+        ]
       }
     },
     "common": {
@@ -662,38 +1430,145 @@
     }
   },
   "resources": {
-      "ergoscript": {
-        "title": "Серия руководств по ErgoScript",
-        "description": "Освойте ErgoScript: ваш путь к созданию безопасных и мощных смарт-контрактов на Ergo, шаг за шагом.",
-        "difficulty": "От новичка до эксперта",
-        "duration": "20+ часов"
-      },
-      "faq": {
-        "title": "Исчерпывающие FAQ",
-        "description": "Всё, что вам нужно знать о блокчейне Ergo, технологиях и экосистеме в одном месте.",
-        "difficulty": "Все уровни",
-        "duration": "Справочник"
-      },
-      "research": {
-        "title": "Исследовательские работы",
-        "description": "Глубокое погружение в академические исследования и технические работы, лежащие в основе инноваций Ergo.",
-        "difficulty": "Продвинутый",
-        "duration": "Различается"
-      }
+    "ergoscript": {
+      "title": "Серия руководств по ErgoScript",
+      "description": "Освойте ErgoScript: ваш путь к созданию безопасных и мощных смарт-контрактов на Ergo, шаг за шагом.",
+      "difficulty": "От новичка до эксперта",
+      "duration": "20+ часов"
     },
-    "sections": {
-      "learningResources": "Обучающие ресурсы"
+    "faq": {
+      "title": "Исчерпывающие FAQ",
+      "description": "Всё, что вам нужно знать о блокчейне Ergo, технологиях и экосистеме в одном месте.",
+      "difficulty": "Все уровни",
+      "duration": "Справочник"
     },
-    "common": {
-      "startLearning": "Начать обучение",
-      "difficulty": "Сложность",
-      "duration": "Длительность",
-      "allLevels": "Все уровни",
-      "beginner": "Новичок",
-      "intermediate": "Средний",
-      "advanced": "Продвинутый",
-      "expert": "Эксперт",
-      "reference": "Справочник",
-      "varies": "Различается"
+    "research": {
+      "title": "Исследовательские работы",
+      "description": "Глубокое погружение в академические исследования и технические работы, лежащие в основе инноваций Ergo.",
+      "difficulty": "Продвинутый",
+      "duration": "Различается"
     }
+  },
+  "sections": {
+    "learningResources": "Обучающие ресурсы"
+  },
+  "wallet": {
+    "title": "Кошельки",
+    "subtitle": "Secure storage for your ERG and Токенs",
+    "description": "Choose from a variety of Кошелекs to store, send, and receive ERG and Ergo native Токенs.",
+    "features": {
+      "security": "Bank-grade Безопасность",
+      "privacy": "Enhanced Конфиденциальность Функцияs",
+      "tokens": "Native Токен Поддержка",
+      "dapps": "dApp integration"
+    }
+  },
+  "events": {
+    "title": "События",
+    "subtitle": "Join the Ergo Сообщество",
+    "description": "Discover upcoming events, meetups, and conferences in the Ergo ecosystem."
+  },
+  "useCases": {
+    "title": "Use Cases",
+    "subtitle": "Real-world Приложениеs",
+    "description": "Discover how Ergo powers DeFi, NFTs, Конфиденциальность, and more innovative Приложениеs.",
+    "categories": {
+      "defi": {
+        "title": "DeFi Приложениеs",
+        "description": "Decentralized finance built on solid foundations"
+      },
+      "nfts": {
+        "title": "NFTs & Digital Assets",
+        "description": "Native Токенs and NFTs with Протокол-level Безопасность"
+      },
+      "privacy": {
+        "title": "Конфиденциальность & Confidentiality",
+        "description": "Built-in Конфиденциальность Функцияs and mixing Протоколs"
+      },
+      "bridges": {
+        "title": "Cross-Chain Bridges",
+        "description": "Secure interoperability with other Блокчейнs"
+      },
+      "oracles": {
+        "title": "Oracles & Data Feeds",
+        "description": "Reliable external data integration"
+      },
+      "daos": {
+        "title": "DAOs & Alternative Economies",
+        "description": "Decentralized governance and economic models"
+      },
+      "stablecoins": {
+        "title": "Algorithmic Stablecoins",
+        "description": "Decentralized stable value mechanisms"
+      },
+      "gaming": {
+        "title": "Gaming & Metaverse",
+        "description": "Блокчейн gaming and virtual worlds"
+      },
+      "identity": {
+        "title": "Identity & Reputation",
+        "description": "Decentralized identity and reputation systems"
+      }
+    }
+  },
+  "validation": {
+    "required": "Поле {field} обязательно для заполнения",
+    "email": {
+      "invalid": "Пожалуйста, введите корректный email адрес",
+      "required": "Email адрес обязателен"
+    },
+    "minLength": "{field} должно содержать минимум {min} символов (текущее: {current})",
+    "maxLength": "{field} должно содержать максимум {max} символов (текущее: {current})",
+    "pattern": "Неверный формат поля {field}",
+    "custom": "Поле {field} заполнено неверно"
+  },
+  "success": {
+    "newsletter": {
+      "subscribed": "Успешно подписались! Проверьте email для подтверждения.",
+      "alreadySubscribed": "Вы уже подписаны на нашу рассылку.",
+      "confirmationSent": "Письмо с подтверждением отправлено на {email}"
+    },
+    "contact": {
+      "sent": "Сообщение успешно отправлено!",
+      "received": "Мы получили ваше сообщение и скоро ответим."
+    },
+    "general": {
+      "saved": "Изменения успешно сохранены",
+      "updated": "Успешно обновлено",
+      "deleted": "Успешно удалено"
+    }
+  },
+  "errors": {
+    "network": {
+      "offline": "Похоже, вы не подключены к интернету. Проверьте соединение.",
+      "timeout": "Время ожидания истекло. Попробуйте еще раз.",
+      "serverError": "Ошибка сервера. Попробуйте позже."
+    },
+    "form": {
+      "submissionFailed": "Не удалось отправить форму. Попробуйте еще раз.",
+      "invalidData": "Проверьте введенные данные и попробуйте снова."
+    },
+    "general": {
+      "unexpected": "Произошла неожиданная ошибка",
+      "tryAgain": "Попробуйте еще раз"
+    }
+  },
+  "newsletter": {
+    "title": "Будьте в курсе",
+    "subtitle": "Получайте последние новости и обновления Ergo",
+    "emailPlaceholder": "Введите ваш email адрес",
+    "subscribe": "Подписаться",
+    "interests": "Интересы (необязательно)",
+    "privacyNotice": "Подписываясь, вы соглашаетесь с нашей",
+    "privacyPolicy": "Политикой конфиденциальности",
+    "alreadySubscribed": {
+      "title": "Вы подписаны!"
+    },
+    "segments": {
+      "developers": "Разработчики",
+      "miners": "Майнеры",
+      "investors": "Инвесторы",
+      "general": "Общие новости"
+    }
+  }
 }
