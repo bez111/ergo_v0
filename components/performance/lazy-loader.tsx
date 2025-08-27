@@ -63,7 +63,7 @@ export const LazyWebVitalsTracker = dynamic(
 )
 
 // Универсальная функция для создания lazy компонентов
-export function createLazyComponent<P = {}>(
+export function createLazyComponent<P = Record<string, unknown>>(
   importFn: () => Promise<{ default: ComponentType<P> }>,
   options?: {
     fallback?: ReactNode
@@ -71,7 +71,7 @@ export function createLazyComponent<P = {}>(
   }
 ) {
   return dynamic(importFn, {
-    loading: () => (options?.fallback as any) || <LoadingSkeleton />,
+    loading: () => (options?.fallback as ReactNode) || <LoadingSkeleton />,
     ssr: options?.ssr ?? false
   })
 } 

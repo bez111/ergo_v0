@@ -9,13 +9,16 @@ const nextConfig = {
     // optimizeCss: true, // Временно отключено из-за проблем с critters
   },
 
+  // Исправление workspace root warning
+  outputFileTracingRoot: __dirname,
+
   // Оптимизация изображений
   images: {
     formats: ['image/avif', 'image/webp'], // AVIF приоритет для лучшего сжатия
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256],
     minimumCacheTTL: 60 * 60 * 24 * 365, // 1 год для статичных изображений
-    dangerouslyAllowSVG: false, // Безопасность SVG
+    dangerouslyAllowSVG: true, // Разрешить SVG для placeholder изображений
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     unoptimized: false,
   },
@@ -118,7 +121,7 @@ const nextConfig = {
           lib: {
             test: /[\\/]node_modules[\\/]/,
             name(module, chunks, cacheGroupKey) {
-              const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+              const packageName = module.context?.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)?.[1] || 'unknown';
               return `npm.${packageName.replace('@', '')}`;
             },
             priority: 30,

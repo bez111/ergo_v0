@@ -11,7 +11,6 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { Rocket, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCircle, Layers, Clock, Network, GitBranch, Activity, Cpu, Database, Server, Users, Globe, Terminal, BookOpen } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import React from "react"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -187,8 +186,8 @@ export default function SubblocksPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Subblocks", href: "/technology/subblocks" }
+              { name: "Technology", href: "/technology" },
+              { name: "Subblocks", href: "/technology/subblocks" }
             ]}
             className="mb-8"
           />
