@@ -2,65 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Accessibility improvements */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 6px;
-  background: #000;
-  color: #fff;
-  padding: 8px 16px;
-  text-decoration: none;
-  z-index: 1000;
-  border-radius: 4px;
-  font-weight: 500;
-}
 
-.skip-link:focus {
-  top: 6px;
-}
-
-/* Improved focus indicators */
-*:focus-visible {
-  outline: 3px solid #2563eb;
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-/* Remove default focus for mouse users */
-*:focus:not(:focus-visible) {
-  outline: none;
-}
-
-/* Ensure minimum contrast ratios */
-@media (prefers-contrast: high) {
-  :root {
-    --foreground: #000000;
-    --background: #ffffff;
-  }
-}
-
-/* Fix contrast for text elements */
-body {
-  color: #1a1a1a;
-  background-color: #ffffff;
-}
-
-/* Ensure links have sufficient contrast */
-a {
-  color: #0066cc;
-  text-decoration: underline;
-}
-
-a:hover {
-  color: #0052a3;
-}
-
-/* Button contrast improvements */
-button {
-  min-height: 44px;
-  min-width: 44px;
-}
 
 /* RTL Support */
 [dir="rtl"] {
@@ -957,63 +899,6 @@ aside .sticky-toc {
   animation: watermarkFloat 8s ease-in-out infinite; 
 }
 
-/* ✅ КРИТИЧЕСКИЕ ИСПРАВЛЕНИЯ КОНТРАСТНОСТИ (Pa11y Audit) */
 
-/* Fix navigation buttons contrast (1.14:1 → 21:1) - only for low contrast */
-.group.inline-flex.h-10.w-max.items-center.justify-center.rounded-md.px-4 button[data-state="closed"],
-[id*="radix"][data-state="closed"] {
-  color: #ffffff !important;
-  background-color: #1a1a1a !important;
-}
-
-/* Fix CTA buttons contrast (2.8:1 → 4.5:1) */
-.cta-button,
-a[href*="/use/"] span,
-a[href*="/blog"] span {
-  background-color: #c85200 !important;
-  color: #ffffff !important;
-}
-
-/* Fix footer text contrast (4.34:1 → 4.5:1) */
-.text-xs.text-gray-500 {
-  color: #6e7583 !important;
-}
-
-/* Fix navigation links contrast (3.56:1 → 4.5:1) - only for low contrast */
-.group.inline-flex.h-10.w-max.items-center.justify-center.rounded-md.px-4 a[href] {
-  color: #ffffff !important;
-}
-
-/* Fix hero section contrast - only for low contrast */
-.hero-section h1[style*="color: rgba"],
-.hero-section h2[style*="color: rgba"] {
-  color: #ffffff !important;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8) !important;
-}
-
-/* Fix button focus states */
-button:focus-visible,
-a:focus-visible,
-[role="button"]:focus-visible {
-  outline: 3px solid #f59e0b !important;
-  outline-offset: 2px !important;
-  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2) !important;
-}
-
-/* Fix form elements contrast */
-input, textarea, select {
-  border-color: #666666 !important;
-  color: #1a1a1a !important;
-  background-color: #ffffff !important;
-}
-
-/* Fix link contrast - only for low contrast links */
-a[href]:not(.cta-button):not([href*="/use/"]):not([href*="/blog"]):not(.no-underline) {
-  color: #0066cc !important;
-}
-
-a[href]:not(.cta-button):not([href*="/use/"]):not([href*="/blog"]):not(.no-underline):hover {
-  color: #0052a3 !important;
-}
 
 
