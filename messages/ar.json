@@ -149,24 +149,24 @@
     "privacyNotice": "نحن نحترم خصوصيتك. يُستخدم بريدك الإلكتروني فقط لتحديثات Ergo ولن يتم مشاركته مع أطراف ثالثة. يمكنك إلغاء الاشتراك في أي وقت بنقرة واحدة."
   },
   "footer": {
+    "platform": "المنصة",
+    "developers": "المطورون",
+    "community": "المجتمع",
+    "technology": "التكنولوجيا",
+    "useCases": "حالات الاستخدام",
     "ecosystem": "النظام البيئي",
     "wallets": "المحافظ",
-    "developers": "المطورون",
-    "documentation": "الوثائق",
+    "documentation": "التوثيق",
     "learn": "تعلم",
     "github": "GitHub",
     "grants": "المنح",
-    "community": "المجتمع",
     "blog": "المدونة",
     "discord": "Discord",
     "telegram": "Telegram",
     "twitter": "Twitter",
-    "platform": "المنصة",
+    "copyright": "© {{year}} ERGO PLATFORM. جميع الحقوق محفوظة.",
     "openSource": "ERGO مشروع مفتوح المصدر.",
-    "contributeOnGithub": "ساهم على GITHUB",
-    "technology": "Technology",
-    "useCases": "Use Cases",
-    "copyright": "© {{year}} ERGO PLATFORM. ALL RIGHTS RESERVED."
+    "contributeOnGithub": "ساهم على GITHUB"
   },
   "seo": {
     "defaultTitle": "Ergo - بلوكشين لامركزي للحرية المالية",

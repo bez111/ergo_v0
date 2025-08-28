@@ -75,9 +75,9 @@
     "discord": "Discord",
     "telegram": "Telegram",
     "twitter": "Twitter",
-    "copyright": "© {{year}} ERGO PLATTFORM. ALLE RECHTE VORBEHALTEN.",
+    "copyright": "© {{year}} ERGO PLATFORM. ALLE RECHTE VORBEHALTEN.",
     "openSource": "ERGO IST EIN OPEN-SOURCE-PROJEKT.",
-    "contributeOnGithub": "AUF GITHUB MITWIRKEN"
+    "contributeOnGithub": "AUF GITHUB BEITRAGEN"
   },
   "seo": {
     "defaultTitle": "Ergo Plattform - Widerstandsfähige Blockchain für vertragliches Geld",
