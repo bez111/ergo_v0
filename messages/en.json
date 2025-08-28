@@ -82,7 +82,8 @@
     "learn_ergoscript_description": "Comprehensive ErgoScript tutorial series from beginner to expert level",
     "research_papers_description": "Academic research, whitepapers, and foundational studies.",
     "user_developer_guides_description": "All guides and how-tos for users and developers in one place.",
-    "faq_description": "Answers to frequently asked questions and common issues."
+    "faq_description": "Answers to frequently asked questions and common issues.",
+    "how_ergo_compares_to_bitcoin_ethereum_solana_and_other_blockchains_description": "How Ergo compares to Bitcoin, Ethereum, Solana and other blockchains."
   },
   "hero": {
     "title": "Ergo",
