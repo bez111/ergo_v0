@@ -25,19 +25,12 @@ export function MainNav() {
   const getNavTitle = (title: string) => {
     const titleKey = title.toLowerCase()
     
-    // Only translate main navigation items, not sub-items
-    const mainNavKeys = ['start', 'use', 'ecosystem', 'technology', 'learn', 'docs', 'blog', 'home']
-    
-    if (mainNavKeys.includes(titleKey)) {
-      try {
-        return t(titleKey) || title
-      } catch (error) {
-        return title
-      }
+    try {
+      return t(titleKey) || title
+    } catch (error) {
+      // Fallback to original title if translation fails
+      return title
     }
-    
-    // Return original title for sub-items
-    return title
   }
 
   return (
