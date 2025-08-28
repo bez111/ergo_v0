@@ -3,8 +3,11 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { BlogCard } from "./blog-card"
 import { blogPosts } from "@/app/[locale]/blog/_lib/blog-data"
+import { useTranslations } from "next-intl"
 
 export function BlogSection() {
+  const t = useTranslations('blogSection')
+  
   const posts = blogPosts.slice(0, 3).map(p => ({
     title: p.title,
     date: p.date,
@@ -21,10 +24,10 @@ export function BlogSection() {
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-white mb-4">
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">LATEST</span> FROM THE ERGO BLOG
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">{t('title')}</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
-              Stay updated with the latest news, technical insights, and community updates from the Ergo ecosystem
+              {t('subtitle')}
             </p>
           </div>
 
@@ -38,10 +41,10 @@ export function BlogSection() {
             <Link
               href="/blog"
               className="inline-flex items-center gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3 rounded-lg transition-all duration-300 hover:scale-105"
-              aria-label="View all blog posts"
+              aria-label={t('viewAllPosts')}
             >
               <span>&gt;</span>
-              <span>View All Posts</span>
+              <span>{t('viewAllPosts')}</span>
               <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -49,4 +52,4 @@ export function BlogSection() {
       </div>
     </section>
   )
-} 
+}

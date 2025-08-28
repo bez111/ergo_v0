@@ -2,28 +2,31 @@ import React from "react"
 import Link from "next/link"
 import { Shield, Twitter } from "lucide-react"
 import { SubscribeForm } from "./subscribe-form"
+import { useTranslations } from "next-intl"
 
 interface SubscribeSectionProps {
   segments?: string[]
 }
 
 export function SubscribeSection({ segments = [] }: SubscribeSectionProps) {
+  const t = useTranslations('subscribeSection')
+  
   const socialLinks = [
     {
-      name: "Discord", 
+      name: t('socialLinks.discord'), 
       href: "https://discord.gg/ergo-platform", 
       icon: Shield,
       ariaLabel: "Join our Discord community"
     },
     { 
-      name: "Twitter", 
+      name: t('socialLinks.twitter'), 
       href: "https://twitter.com/ergo_platform", 
       icon: Twitter,
       ariaLabel: "Follow us on Twitter"
     },
     { 
-      name: "Telegram", 
-      href: "https://t.me/ergo_news", 
+      name: t('socialLinks.telegram'), 
+      href: "https://t.me/ergoplatform", 
       icon: Shield,
       ariaLabel: "Join our Telegram channel"
     }
@@ -41,10 +44,10 @@ export function SubscribeSection({ segments = [] }: SubscribeSectionProps) {
           {/* Header */}
           <div className="mb-8">
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">STAY IN THE LOOP</span>
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">{t('title')}</span>
             </h2>
             <p className="text-lg md:text-xl text-gray-300 mb-2">
-              Get Ergo releases, grants, dev calls, and top articles delivered weekly
+              {t('subtitle')}
             </p>
           </div>
 
@@ -75,8 +78,7 @@ export function SubscribeSection({ segments = [] }: SubscribeSectionProps) {
 
           {/* Privacy Notice */}
           <p className="text-xs text-gray-500 max-w-2xl mx-auto">
-            We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. 
-            You can unsubscribe at any time with one click.
+            {t('privacyNotice')}
           </p>
         </div>
       </div>

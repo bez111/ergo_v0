@@ -34,7 +34,9 @@
     "ecosystem": "Ökosystem",
     "docs": "Dokumentation",
     "blog": "Blog",
-    "community": "Gemeinschaft"
+    "communityNav": "Gemeinschaft",
+    "getWallet": "Wallet holen",
+    "searchAriaLabel": "Suchen"
   },
   "hero": {
     "title": "Ergo",
@@ -45,9 +47,34 @@
     "message3": "Die Open-Source-Heimat der digitalen Freiheit",
     "message4": "Schließen Sie sich der Bewegung für dezentrales, quelloffenes Geld an",
     "exploreErgo": "Ergo erkunden",
-    "chooseYourPath": "Wählen Sie Ihren Weg"
+    "chooseYourPath": "Wählen Sie Ihren Weg",
+    "features": {
+      "securePow": "Secure PoW",
+      "smartContracts": "Smart Contracts",
+      "privacy": "Privacy",
+      "eutxoModel": "eUTXO Model"
+    }
   },
-  "footer": {},
+  "footer": {
+    "platform": "PLATTFORM",
+    "developers": "ENTWICKLER",
+    "community": "GEMEINSCHAFT",
+    "technology": "Technologie",
+    "useCases": "Anwendungsfälle",
+    "ecosystem": "Ökosystem",
+    "wallets": "Wallets",
+    "documentation": "Dokumentation",
+    "learn": "Lernen",
+    "github": "GitHub",
+    "grants": "Förderungen",
+    "blog": "Blog",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "copyright": "© {{year}} ERGO PLATTFORM. ALLE RECHTE VORBEHALTEN.",
+    "openSource": "ERGO IST EIN OPEN-SOURCE-PROJEKT.",
+    "contributeOnGithub": "AUF GITHUB MITWIRKEN"
+  },
   "seo": {
     "defaultTitle": "Ergo Plattform - Widerstandsfähige Blockchain für vertragliches Geld",
     "defaultDescription": "Ergo entwickelt fortschrittliche kryptographische Funktionen und radikal neue DeFi-Funktionalitäten auf dem soliden Fundament, das durch ein Jahrzehnt der Blockchain-Theorie und -Entwicklung gelegt wurde.",
@@ -1326,8 +1353,80 @@
   },
   "manifesto": {},
   "corePillars": {},
-  "whyErgo": {},
-  "audiencePaths": {},
+  "whyErgo": {
+    "title": "WARUM ERGO?",
+    "subtitle": "Eine widerstandsfähige Blockchain-Plattform, die bewährte Prinzipien mit modernster Innovation verbindet",
+    "mainFeatures": {
+      "fairAndSecure": {
+        "title": "FAIR & SICHER",
+        "subtitle": "Proof-of-Work Grundlage",
+        "description": "Kein ICO, kein Premine. ASIC-resistentes Mining gewährleistet echte Dezentralisierung und langfristige Sicherheit für alle."
+      },
+      "powerfulAndFlexible": {
+        "title": "LEISTUNGSSTARK & FLEXIBEL",
+        "subtitle": "Erweiterte Smart Contracts",
+        "description": "eUTXO Modell + ErgoScript ermöglichen sichere, ausdrucksstarke DeFi-Anwendungen, die die Grenzen des Möglichen erweitern."
+      },
+      "sustainable": {
+        "title": "NACHHALTIG",
+        "subtitle": "Für die Ewigkeit gebaut",
+        "description": "Speichermiete-Mechanismus verhindert Blockchain-Bloat und gewährleistet Netzwerkgesundheit mit vorhersehbaren Kosten für Jahrzehnte."
+      }
+    },
+    "additionalFeatures": {
+      "privacyFirst": {
+        "title": "PRIVATSPHÄRE ZUERST",
+        "description": "Optionale Privatsphäre mit Sigma-Protokollen für vertrauliche Transaktionen."
+      },
+      "communityDriven": {
+        "title": "GEMEINSCHAFTSGETRIEBEN",
+        "description": "Open-Source-Entwicklung, geleitet von leidenschaftlichen Mitwirkenden weltweit."
+      },
+      "developerFriendly": {
+        "title": "ENTWICKLERFREUNDLICH",
+        "description": "Erstklassige Dokumentation, Tools und Support machen die Entwicklung auf Ergo einfach."
+      }
+    }
+  },
+  "audiencePaths": {
+    "title": "GET STARTED WITH ERGO",
+    "subtitle": "Choose your path and start your journey in the Ergo ecosystem",
+    "audiences": {
+      "developers": {
+        "title": "For Developers",
+        "description": "Build advanced DeFi applications and dApps with ErgoScript",
+        "cta": "Start Developing"
+      },
+      "miners": {
+        "title": "For Miners",
+        "description": "Join the ASIC-resistant Autolykos mining network",
+        "cta": "Start Mining"
+      },
+      "users": {
+        "title": "For Users",
+        "description": "Explore the ecosystem and start using Ergo",
+        "cta": "Get Wallet"
+      },
+      "investors": {
+        "title": "For Investors",
+        "description": "Learn about investment opportunities in the Ergo ecosystem",
+        "cta": "Learn About Investing"
+      }
+    },
+    "links": {
+      "documentation": "Documentation",
+      "technology": "Technology",
+      "useCases": "Use Cases",
+      "miningDocs": "Mining Docs",
+      "miningPools": "Mining Pools",
+      "profitabilityCalculator": "Profitability Calculator",
+      "wallets": "Wallets",
+      "ecosystem": "Ecosystem",
+      "buyErg": "Buy ERG",
+      "whatIsErgo": "What is Ergo",
+      "projects": "Projects"
+    }
+  },
   "ecosystem": {},
   "blog": {},
   "search": {
@@ -1344,5 +1443,20 @@
     "backHome": "Zurück zur Startseite"
   },
   "docsResources": {},
-  "glossary": {}
+  "glossary": {},
+  "blogSection": {
+    "title": "LATEST FROM THE ERGO BLOG",
+    "subtitle": "Stay updated with the latest news, technical insights, and community updates from the Ergo ecosystem",
+    "viewAllPosts": "View All Posts"
+  },
+  "subscribeSection": {
+    "title": "STAY IN THE LOOP",
+    "subtitle": "Get Ergo releases, grants, dev calls, and top articles delivered weekly",
+    "socialLinks": {
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "telegram": "Telegram"
+    },
+    "privacyNotice": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click."
+  }
 }
