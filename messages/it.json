@@ -1469,5 +1469,97 @@
       "telegram": "Telegram"
     },
     "privacyNotice": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click."
+  },
+  "ecosystemShowcase": {
+    "title": "Decentralizzare Tutto",
+    "exploreEcosystem": "ESPLORA ECOSISTEMA",
+    "categories": {
+      "defi": "DEFI",
+      "privacy": "PRIVACY",
+      "stable": "ASSET STABILI",
+      "gaming": "GAMING"
+    },
+    "projects": {
+      "rosenBridge": {
+        "title": "Rosen Bridge",
+        "subtitle": "Connettere l'Ecosistema di Ergo",
+        "description": "Trasferisci facilmente asset tra Ergo e altre blockchain leader come Bitcoin, Ethereum, Cardano e BSC con Rosen Bridge. Il nostro sistema sicuro Watcher & Guard sblocca liquidità cross-chain e nuove possibilità DeFi.",
+        "cta": "VISITA ROSEN BRIDGE",
+        "stats": {
+          "crossChain": {
+            "label": "Cross-Chain",
+            "value": "BTC, ETH, ADA, BSC e altro"
+          },
+          "secureBridge": {
+            "label": "Bridge Sicuro",
+            "value": "Modello Watcher & Guard"
+          },
+          "unlockLiquidity": {
+            "label": "Sblocca Liquidità",
+            "value": "Accedi a Nuovi Mercati"
+          }
+        }
+      },
+      "ergoMixer": {
+        "title": "ErgoMixer",
+        "subtitle": "Protocollo Privacy Non-Custodial",
+        "description": "ErgoMixer fornisce soluzioni privacy all'avanguardia usando protocolli Sigma e firme ad anello. Goditi completa privacy finanziaria mantenendo la conformità normativa attraverso funzionalità di trasparenza opzionali.",
+        "cta": "SCOPRI LA PRIVACY SU ERGO",
+        "stats": {
+          "mixedVolume": {
+            "label": "Volume Mixato",
+            "value": "$3.7M"
+          },
+          "privacyScore": {
+            "label": "Punteggio Privacy",
+            "value": "99.9%"
+          },
+          "transactions": {
+            "label": "Transazioni",
+            "value": "25K+"
+          }
+        }
+      },
+      "sigmaUSD": {
+        "title": "SigmaUSD",
+        "subtitle": "Protocollo Stablecoin Algoritmico",
+        "description": "SigmaUSD è un protocollo stablecoin algoritmico crypto-backed costruito su Ergo. Fornisce un modo decentralizzato per creare valore stabile senza dipendere da sistemi bancari tradizionali o riserve centralizzate.",
+        "cta": "ESPLORA SIGMAUSD",
+        "stats": {
+          "stabilityScore": {
+            "label": "Punteggio Stabilità",
+            "value": "99.2%"
+          },
+          "totalSupply": {
+            "label": "Fornitura Totale",
+            "value": "$2.1M"
+          },
+          "collateralRatio": {
+            "label": "Rapporto Collaterale",
+            "value": "400%"
+          }
+        }
+      },
+      "gaming": {
+        "title": "Ecosistema Gaming Ergo",
+        "subtitle": "Piattaforma Gaming Blockchain",
+        "description": "Sperimenta il futuro del gaming con vera proprietà degli asset, meccaniche play-to-earn e tornei decentralizzati. Alimentato dall'infrastruttura blockchain efficiente e sicura di Ergo.",
+        "cta": "INIZIA A GIOCARE SU ERGO",
+        "stats": {
+          "activeGames": {
+            "label": "Giochi Attivi",
+            "value": "12"
+          },
+          "players": {
+            "label": "Giocatori",
+            "value": "5K+"
+          },
+          "rewardsPaid": {
+            "label": "Ricompense Pagate",
+            "value": "$250K"
+          }
+        }
+      }
+    }
   }
 }

@@ -1469,5 +1469,97 @@
       "telegram": "Telegram"
     },
     "privacyNotice": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click."
+  },
+  "ecosystemShowcase": {
+    "title": "Her Şeyi Merkezsizleştir",
+    "exploreEcosystem": "EKOSİSTEMİ KEŞFET",
+    "categories": {
+      "defi": "DEFI",
+      "privacy": "GİZLİLİK",
+      "stable": "STABİL VARLIKLAR",
+      "gaming": "OYUN"
+    },
+    "projects": {
+      "rosenBridge": {
+        "title": "Rosen Bridge",
+        "subtitle": "Ergo Ekosistemini Bağlamak",
+        "description": "Rosen Bridge ile Ergo ve Bitcoin, Ethereum, Cardano ve BSC gibi diğer önde gelen blok zincirler arasında varlıkları sorunsuz bir şekilde transfer edin. Güvenli Watcher & Guard sistemimiz çapraz zincir likiditeyi ve yeni DeFi olanaklarını açar.",
+        "cta": "ROSEN BRIDGE'İ ZİYARET ET",
+        "stats": {
+          "crossChain": {
+            "label": "Çapraz Zincir",
+            "value": "BTC, ETH, ADA, BSC ve daha fazlası"
+          },
+          "secureBridge": {
+            "label": "Güvenli Köprü",
+            "value": "Watcher & Guard Modeli"
+          },
+          "unlockLiquidity": {
+            "label": "Likiditeyi Aç",
+            "value": "Yeni Pazarlara Erişim"
+          }
+        }
+      },
+      "ergoMixer": {
+        "title": "ErgoMixer",
+        "subtitle": "Saklama Yapmayan Gizlilik Protokolü",
+        "description": "ErgoMixer, Sigma protokolleri ve halka imzaları kullanarak son teknoloji gizlilik çözümleri sağlar. İsteğe bağlı şeffaflık özellikleri aracılığıyla düzenleyici uyumluluğu korurken tam finansal gizlilikten yararlanın.",
+        "cta": "ERGO'DA GİZLİLİK HAKKINDA ÖĞRENİN",
+        "stats": {
+          "mixedVolume": {
+            "label": "Karışık Hacim",
+            "value": "$3.7M"
+          },
+          "privacyScore": {
+            "label": "Gizlilik Puanı",
+            "value": "99.9%"
+          },
+          "transactions": {
+            "label": "İşlemler",
+            "value": "25K+"
+          }
+        }
+      },
+      "sigmaUSD": {
+        "title": "SigmaUSD",
+        "subtitle": "Algoritmik Stablecoin Protokolü",
+        "description": "SigmaUSD, Ergo üzerine inşa edilmiş kripto destekli algoritmik bir stablecoin protokolüdür. Geleneksel bankacılık sistemlerine veya merkezi rezervlere bağımlı olmadan istikrarlı değer yaratmanın merkezi olmayan bir yolunu sağlar.",
+        "cta": "SIGMAUSD'YI KEŞFET",
+        "stats": {
+          "stabilityScore": {
+            "label": "İstikrar Puanı",
+            "value": "99.2%"
+          },
+          "totalSupply": {
+            "label": "Toplam Arz",
+            "value": "$2.1M"
+          },
+          "collateralRatio": {
+            "label": "Teminat Oranı",
+            "value": "400%"
+          }
+        }
+      },
+      "gaming": {
+        "title": "Ergo Oyun Ekosistemi",
+        "subtitle": "Blok Zincir Oyun Platformu",
+        "description": "Gerçek varlık sahipliği, oyna-kazan mekaniği ve merkezi olmayan turnuvalarla oyunun geleceğini deneyimleyin. Ergo'nun verimli ve güvenli blok zincir altyapısı tarafından desteklenmektedir.",
+        "cta": "ERGO'DA OYNAMAYA BAŞLA",
+        "stats": {
+          "activeGames": {
+            "label": "Aktif Oyunlar",
+            "value": "12"
+          },
+          "players": {
+            "label": "Oyuncular",
+            "value": "5K+"
+          },
+          "rewardsPaid": {
+            "label": "Ödenen Ödüller",
+            "value": "$250K"
+          }
+        }
+      }
+    }
   }
 }

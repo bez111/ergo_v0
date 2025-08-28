@@ -10,74 +10,72 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { GlitchText } from "@/components/animations/glitch-text"
 import { cn } from "@/lib/utils"
+import { useTranslations } from "next-intl"
 
 export function EcosystemShowcase() {
+  const t = useTranslations('ecosystemShowcase')
   const containerRef = useRef<HTMLDivElement>(null)
   const [activeCategory, setActiveCategory] = useState("DEFI")
 
   const categories = [
-    { id: "DEFI", label: "DEFI" },
-    { id: "PRIVACY", label: "PRIVACY" },
-    { id: "STABLE", label: "STABLE ASSETS" },
-    { id: "GAMING", label: "GAMING" },
+    { id: "DEFI", label: t("categories.defi") || "DEFI" },
+    { id: "PRIVACY", label: t("categories.privacy") || "PRIVACY" },
+    { id: "STABLE", label: t("categories.stable") || "STABLE ASSETS" },
+    { id: "GAMING", label: t("categories.gaming") || "GAMING" },
   ]
 
   const featuredProjects = {
     DEFI: {
-      title: "Rosen Bridge",
-      subtitle: "Connecting Ergo's Ecosystem",
-      description:
-        "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+      title: t("projects.rosenBridge.title") || "Rosen Bridge",
+      subtitle: t("projects.rosenBridge.subtitle") || "Connecting Ergo's Ecosystem",
+      description: t("projects.rosenBridge.description") || "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
       image: "/placeholder.svg",
       stats: [
-        { label: "Cross-Chain", value: "BTC, ETH, ADA, BSC & more" },
-        { label: "Secure Bridge", value: "Watcher & Guard Model" },
-        { label: "Unlock Liquidity", value: "Access New Markets" },
+        { label: t("projects.rosenBridge.stats.crossChain.label") || "Cross-Chain", value: t("projects.rosenBridge.stats.crossChain.value") || "BTC, ETH, ADA, BSC & more" },
+        { label: t("projects.rosenBridge.stats.secureBridge.label") || "Secure Bridge", value: t("projects.rosenBridge.stats.secureBridge.value") || "Watcher & Guard Model" },
+        { label: t("projects.rosenBridge.stats.unlockLiquidity.label") || "Unlock Liquidity", value: t("projects.rosenBridge.stats.unlockLiquidity.value") || "Access New Markets" },
       ],
-      ctaText: "VISIT ROSEN BRIDGE",
+      ctaText: t("projects.rosenBridge.cta") || "VISIT ROSEN BRIDGE",
       ctaLink: "https://rosen.tech",
     },
     PRIVACY: {
-      title: "ErgoMixer",
-      subtitle: "Non-Custodial Privacy Protocol",
-      description:
-        "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
+      title: t("projects.ergoMixer.title") || "ErgoMixer",
+      subtitle: t("projects.ergoMixer.subtitle") || "Non-Custodial Privacy Protocol",
+      description: t("projects.ergoMixer.description") || "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
       image: "/placeholder.svg",
       stats: [
-        { label: "Mixed Volume", value: "$3.7M" },
-        { label: "Privacy Score", value: "99.9%" },
-        { label: "Transactions", value: "25K+" },
+        { label: t("projects.ergoMixer.stats.mixedVolume.label") || "Mixed Volume", value: t("projects.ergoMixer.stats.mixedVolume.value") || "$3.7M" },
+        { label: t("projects.ergoMixer.stats.privacyScore.label") || "Privacy Score", value: t("projects.ergoMixer.stats.privacyScore.value") || "99.9%" },
+        { label: t("projects.ergoMixer.stats.transactions.label") || "Transactions", value: t("projects.ergoMixer.stats.transactions.value") || "25K+" },
       ],
-      ctaText: "LEARN ABOUT PRIVACY ON ERGO",
+      ctaText: t("projects.ergoMixer.cta") || "LEARN ABOUT PRIVACY ON ERGO",
       ctaLink: "/ecosystem/privacy",
     },
 
     STABLE: {
-      title: "SigmaUSD",
-      subtitle: "Algorithmic Stablecoin Protocol",
-      description:
-        "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+      title: t("projects.sigmaUSD.title") || "SigmaUSD",
+      subtitle: t("projects.sigmaUSD.subtitle") || "Algorithmic Stablecoin Protocol",
+      description: t("projects.sigmaUSD.description") || "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
       image: "/placeholder.svg",
       stats: [
-        { label: "Stability Score", value: "99.2%" },
-        { label: "Total Supply", value: "$2.1M" },
-        { label: "Collateral Ratio", value: "400%" },
+        { label: t("projects.sigmaUSD.stats.stabilityScore.label") || "Stability Score", value: t("projects.sigmaUSD.stats.stabilityScore.value") || "99.2%" },
+        { label: t("projects.sigmaUSD.stats.totalSupply.label") || "Total Supply", value: t("projects.sigmaUSD.stats.totalSupply.value") || "$2.1M" },
+        { label: t("projects.sigmaUSD.stats.collateralRatio.label") || "Collateral Ratio", value: t("projects.sigmaUSD.stats.collateralRatio.value") || "400%" },
       ],
-      ctaText: "EXPLORE SIGMAUSD",
+      ctaText: t("projects.sigmaUSD.cta") || "EXPLORE SIGMAUSD",
       ctaLink: "/ecosystem/sigmausd",
     },
     GAMING: {
-      title: "Ergo Gaming Ecosystem",
-      subtitle: "Blockchain Gaming Platform",
-      description:
-        "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
+      title: t("projects.gaming.title") || "Ergo Gaming Ecosystem",
+      subtitle: t("projects.gaming.subtitle") || "Blockchain Gaming Platform",
+      description: t("projects.gaming.description") || "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
       image: "/placeholder.svg?height=400&width=600",
       stats: [
-        { label: "Active Games", value: "12" },
-        { label: "Players", value: "5K+" },
-        { label: "Rewards Paid", value: "$250K" },
+        { label: t("projects.gaming.stats.activeGames.label") || "Active Games", value: t("projects.gaming.stats.activeGames.value") || "12" },
+        { label: t("projects.gaming.stats.players.label") || "Players", value: t("projects.gaming.stats.players.value") || "5K+" },
+        { label: t("projects.gaming.stats.rewardsPaid.label") || "Rewards Paid", value: t("projects.gaming.stats.rewardsPaid.value") || "$250K" },
       ],
-      ctaText: "START GAMING ON ERGO",
+      ctaText: t("projects.gaming.cta") || "START GAMING ON ERGO",
       ctaLink: "/ecosystem/gaming",
     },
   }
@@ -96,7 +94,7 @@ export function EcosystemShowcase() {
             <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
               <div>
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white font-mono">
-                  <GlitchText text="Decentralize Everything" className="text-primary" />.
+                  <GlitchText text={t("title") || "Decentralize Everything"} className="text-primary" />.
                 </h2>
               </div>
 
@@ -207,7 +205,7 @@ export function EcosystemShowcase() {
                 className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-8 py-4"
                 asChild
               >
-                <Link href="/ecosystem/projects">EXPLORE ECOSYSTEM</Link>
+                <Link href="/ecosystem/projects">{t("exploreEcosystem") || "EXPLORE ECOSYSTEM"}</Link>
               </CyberButton>
             </div>
           </FadeIn>

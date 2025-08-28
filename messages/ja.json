@@ -1469,5 +1469,97 @@
       "telegram": "Telegram"
     },
     "privacyNotice": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click."
+  },
+  "ecosystemShowcase": {
+    "title": "すべてを分散化",
+    "exploreEcosystem": "エコシステムを探索",
+    "categories": {
+      "defi": "DEFI",
+      "privacy": "プライバシー",
+      "stable": "安定資産",
+      "gaming": "ゲーミング"
+    },
+    "projects": {
+      "rosenBridge": {
+        "title": "Rosen Bridge",
+        "subtitle": "Ergoエコシステムの接続",
+        "description": "Rosen Bridgeを使用して、ErgoとBitcoin、Ethereum、Cardano、BSCなどの他の主要なブロックチェーン間で資産をシームレスに転送します。私たちの安全なWatcher & Guardシステムは、クロスチェーン流動性と新しいDeFiの可能性を解き放ちます。",
+        "cta": "ROSEN BRIDGEを訪問",
+        "stats": {
+          "crossChain": {
+            "label": "クロスチェーン",
+            "value": "BTC、ETH、ADA、BSCなど"
+          },
+          "secureBridge": {
+            "label": "セキュアブリッジ",
+            "value": "Watcher & Guardモデル"
+          },
+          "unlockLiquidity": {
+            "label": "流動性のアンロック",
+            "value": "新しい市場へのアクセス"
+          }
+        }
+      },
+      "ergoMixer": {
+        "title": "ErgoMixer",
+        "subtitle": "非カストディアルプライバシープロトコル",
+        "description": "ErgoMixerは、Sigmaプロトコルとリング署名を使用した最先端のプライバシーソリューションを提供します。オプションの透明性機能を通じて規制遵守を維持しながら、完全な金融プライバシーをお楽しみください。",
+        "cta": "ERGOでのプライバシーについて学ぶ",
+        "stats": {
+          "mixedVolume": {
+            "label": "ミックス量",
+            "value": "$3.7M"
+          },
+          "privacyScore": {
+            "label": "プライバシースコア",
+            "value": "99.9%"
+          },
+          "transactions": {
+            "label": "取引",
+            "value": "25K+"
+          }
+        }
+      },
+      "sigmaUSD": {
+        "title": "SigmaUSD",
+        "subtitle": "アルゴリズムステーブルコインプロトコル",
+        "description": "SigmaUSDは、Ergo上に構築された暗号通貨担保のアルゴリズムステーブルコインプロトコルです。従来の銀行システムや中央集権的な準備金に依存することなく、安定した価値を創造する分散型の方法を提供します。",
+        "cta": "SIGMAUSDを探索",
+        "stats": {
+          "stabilityScore": {
+            "label": "安定性スコア",
+            "value": "99.2%"
+          },
+          "totalSupply": {
+            "label": "総供給量",
+            "value": "$2.1M"
+          },
+          "collateralRatio": {
+            "label": "担保比率",
+            "value": "400%"
+          }
+        }
+      },
+      "gaming": {
+        "title": "Ergoゲーミングエコシステム",
+        "subtitle": "ブロックチェーンゲーミングプラットフォーム",
+        "description": "真の資産所有権、play-to-earnメカニクス、分散型トーナメントでゲームの未来を体験してください。Ergoの効率的で安全なブロックチェーンインフラストラクチャによって支えられています。",
+        "cta": "ERGOでゲームを始める",
+        "stats": {
+          "activeGames": {
+            "label": "アクティブゲーム",
+            "value": "12"
+          },
+          "players": {
+            "label": "プレイヤー",
+            "value": "5K+"
+          },
+          "rewardsPaid": {
+            "label": "支払われた報酬",
+            "value": "$250K"
+          }
+        }
+      }
+    }
   }
 }

@@ -1469,5 +1469,97 @@
       "telegram": "Telegram"
     },
     "privacyNotice": "We respect your privacy. Your email is only used for Ergo updates and will never be shared with third parties. You can unsubscribe at any time with one click."
+  },
+  "ecosystemShowcase": {
+    "title": "去中心化一切",
+    "exploreEcosystem": "探索生態系統",
+    "categories": {
+      "defi": "去中心化金融",
+      "privacy": "隱私",
+      "stable": "穩定資產",
+      "gaming": "遊戲"
+    },
+    "projects": {
+      "rosenBridge": {
+        "title": "Rosen Bridge",
+        "subtitle": "連接Ergo生態系統",
+        "description": "使用Rosen Bridge在Ergo和其他領先的區塊鏈（如比特幣、以太坊、卡爾達諾和BSC）之間無縫轉移資產。我們安全的Watcher & Guard系統解鎖跨鏈流動性和新的DeFi可能性。",
+        "cta": "訪問ROSEN BRIDGE",
+        "stats": {
+          "crossChain": {
+            "label": "跨鏈",
+            "value": "BTC, ETH, ADA, BSC等"
+          },
+          "secureBridge": {
+            "label": "安全橋接",
+            "value": "Watcher & Guard模型"
+          },
+          "unlockLiquidity": {
+            "label": "解鎖流動性",
+            "value": "訪問新市場"
+          }
+        }
+      },
+      "ergoMixer": {
+        "title": "ErgoMixer",
+        "subtitle": "非託管隱私協議",
+        "description": "ErgoMixer使用Sigma協議和環簽名提供尖端的隱私解決方案。享受完全的金融隱私，同時通過可選的透明度功能保持監管合規性。",
+        "cta": "了解ERGO上的隱私",
+        "stats": {
+          "mixedVolume": {
+            "label": "混合交易量",
+            "value": "$3.7M"
+          },
+          "privacyScore": {
+            "label": "隱私評分",
+            "value": "99.9%"
+          },
+          "transactions": {
+            "label": "交易",
+            "value": "25K+"
+          }
+        }
+      },
+      "sigmaUSD": {
+        "title": "SigmaUSD",
+        "subtitle": "算法穩定幣協議",
+        "description": "SigmaUSD是建立在Ergo上的加密貨幣支持的算法穩定幣協議。它提供了一種去中心化的方式來創造穩定價值，而不依賴傳統銀行系統或中心化儲備。",
+        "cta": "探索SIGMAUSD",
+        "stats": {
+          "stabilityScore": {
+            "label": "穩定性評分",
+            "value": "99.2%"
+          },
+          "totalSupply": {
+            "label": "總供應量",
+            "value": "$2.1M"
+          },
+          "collateralRatio": {
+            "label": "抵押比率",
+            "value": "400%"
+          }
+        }
+      },
+      "gaming": {
+        "title": "Ergo遊戲生態系統",
+        "subtitle": "區塊鏈遊戲平台",
+        "description": "體驗遊戲的未來，擁有真正的資產所有權、邊玩邊賺機制和去中心化錦標賽。由Ergo高效安全的區塊鏈基礎設施提供支持。",
+        "cta": "開始在ERGO上遊戲",
+        "stats": {
+          "activeGames": {
+            "label": "活躍遊戲",
+            "value": "12"
+          },
+          "players": {
+            "label": "玩家",
+            "value": "5K+"
+          },
+          "rewardsPaid": {
+            "label": "已支付獎勵",
+            "value": "$250K"
+          }
+        }
+      }
+    }
   }
 }
