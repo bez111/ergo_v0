@@ -29,15 +29,18 @@
     "backToTop": "[TODO: Back to Top]"
   },
   "navigation": {
-    "home": "Home",
-    "start": "Start",
-    "ecosystem": "Ecosystem",
-    "docs": "Docs",
+    "home": "Ana Sayfa",
+    "start": "Başla",
+    "use": "Kullan",
+    "ecosystem": "Ekosistem",
+    "technology": "Teknoloji",
+    "learn": "Öğren",
+    "docs": "Dokümantasyon",
     "blog": "Blog",
-    "community": "Community",
-    "communityNav": "COMMUNITY",
-    "getWallet": "Get Wallet",
-    "searchAriaLabel": "Search"
+    "community": "Topluluk",
+    "communityNav": "TOPLULUK",
+    "getWallet": "Cüzdan Al",
+    "searchAriaLabel": "Ara"
   },
   "hero": {
     "title": "Ergo",
@@ -50,10 +53,10 @@
     "exploreErgo": "Ergo'yu Keşfet",
     "chooseYourPath": "Yolunuzu Seçin",
     "features": {
-      "securePow": "Secure PoW",
-      "smartContracts": "Smart Contracts",
-      "privacy": "Privacy",
-      "eutxoModel": "eUTXO Model"
+      "securePow": "Güvenli PoW",
+      "smartContracts": "Akıllı Sözleşmeler",
+      "privacy": "Gizlilik",
+      "eutxoModel": "eUTXO Modeli"
     }
   },
   "footer": {
@@ -1355,77 +1358,84 @@
   "manifesto": {},
   "corePillars": {},
   "whyErgo": {
-    "title": "[TODO: WHY ERGO?]",
-    "subtitle": "[TODO: A resilient blockchain platform combining proven principles with cutting-edge innovation]",
+    "title": "NEDEN ERGO?",
+    "subtitle": "Kanıtlanmış ilkeleri en son yeniliklerle birleştiren dayanıklı bir blok zinciri platformu",
     "mainFeatures": {
+      "sustainable": {
+        "title": "SÜRDÜRÜLEBİLİR",
+        "subtitle": "Kalıcı Olmak İçin İnşa Edildi",
+        "description": "Depolama kiralama mekanizması blok zinciri şişmesini önler ve onlarca yıl boyunca öngörülebilir maliyetlerle ağ sağlığını garanti eder."
+      },
       "fairAndSecure": {
-        "title": "[TODO: FAIR & SECURE]",
-        "subtitle": "[TODO: Proof-of-Work Foundation]",
-        "description": "[TODO: No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone.]"
+        "title": "ADİL VE GÜVENLİ",
+        "subtitle": "İş İspatı Temeli",
+        "description": "ICO yok, ön madencilik yok. ASIC dirençli madencilik, herkes için gerçek merkeziyetsizlik ve uzun vadeli güvenlik sağlar."
       },
       "powerfulAndFlexible": {
-        "title": "[TODO: POWERFUL & FLEXIBLE]",
-        "subtitle": "[TODO: Advanced Smart Contracts]",
-        "description": "[TODO: eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what is possible.]"
-      },
-      "sustainable": {
-        "title": "[TODO: SUSTAINABLE]",
-        "subtitle": "[TODO: Built to Last]",
-        "description": "[TODO: Storage rent mechanism prevents blockchain bloat and ensures network health with predictable costs for decades to come.]"
+        "title": "GÜÇLÜ VE ESNEK",
+        "subtitle": "Gelişmiş Akıllı Sözleşmeler",
+        "description": "eUTXO modeli + ErgoScript, mümkün olanın sınırlarını zorlayan güvenli, ifade gücü yüksek DeFi uygulamalarını mümkün kılar."
       }
     },
     "additionalFeatures": {
-      "privacyFirst": {
-        "title": "[TODO: PRIVACY FIRST]",
-        "description": "[TODO: Optional privacy with Sigma protocols for confidential transactions.]"
+      "privacy": {
+        "title": "GİZLİLİK ÖNCELİKLİ",
+        "description": "Gizli işlemler için Sigma protokolleri ile isteğe bağlı gizlilik."
       },
-      "communityDriven": {
-        "title": "[TODO: COMMUNITY DRIVEN]",
-        "description": "[TODO: Open-source development led by passionate contributors worldwide.]"
+      "community": {
+        "title": "TOPLULUK ODAKLI",
+        "description": "Dünya çapındaki tutkulu katkıda bulunanlar tarafından yönetilen açık kaynak geliştirme."
       },
-      "developerFriendly": {
-        "title": "[TODO: DEVELOPER FRIENDLY]",
-        "description": "[TODO: World-class docs, tools, and support make building on Ergo easy.]"
+      "developer": {
+        "title": "GELİŞTİRİCİ DOSTU",
+        "description": "Dünya standartlarında belgeler, araçlar ve destek, Ergo üzerinde inşa etmeyi kolaylaştırır."
       }
     }
   },
   "audiencePaths": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path and start your journey in the Ergo ecosystem",
+    "title": "ERGO İLE BAŞLAYIN",
+    "subtitle": "Yolunuzu seçin ve Ergo ekosistemindeki yolculuğunuza başlayın",
     "audiences": {
       "developers": {
-        "title": "For Developers",
-        "description": "Build advanced DeFi applications and dApps with ErgoScript",
-        "cta": "Start Developing"
+        "title": "Geliştiriciler İçin",
+        "description": "ErgoScript ile gelişmiş DeFi uygulamaları ve dApplar oluşturun",
+        "cta": "Geliştirmeye Başla",
+        "links": {
+          "documentation": "Dokümantasyon",
+          "technology": "Teknoloji",
+          "useCases": "Kullanım Durumları"
+        }
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Join the ASIC-resistant Autolykos mining network",
-        "cta": "Start Mining"
+        "title": "Madenciler İçin",
+        "description": "ASIC dirençli Autolykos madencilik ağına katılın",
+        "cta": "Madenciliğe Başla",
+        "links": {
+          "miningDocs": "Madencilik Belgeleri",
+          "miningPools": "Madencilik Havuzları",
+          "calculator": "Karlılık Hesaplayıcı"
+        }
       },
       "users": {
-        "title": "For Users",
-        "description": "Explore the ecosystem and start using Ergo",
-        "cta": "Get Wallet"
+        "title": "Kullanıcılar İçin",
+        "description": "Ekosistemi keşfedin ve Ergo kullanmaya başlayın",
+        "cta": "Cüzdan Edinin",
+        "links": {
+          "wallets": "Cüzdanlar",
+          "ecosystem": "Ekosistem",
+          "buyErg": "ERG Satın Al"
+        }
       },
       "investors": {
-        "title": "For Investors",
-        "description": "Learn about investment opportunities in the Ergo ecosystem",
-        "cta": "Learn About Investing"
+        "title": "Yatırımcılar İçin",
+        "description": "Ergo ekosistemindeki yatırım fırsatları hakkında bilgi edinin",
+        "cta": "Yatırım Hakkında Bilgi",
+        "links": {
+          "whatIsErgo": "Ergo Nedir",
+          "projects": "Projeler",
+          "community": "Topluluk"
+        }
       }
-    },
-    "links": {
-      "documentation": "Documentation",
-      "technology": "Technology",
-      "useCases": "Use Cases",
-      "miningDocs": "Mining Docs",
-      "miningPools": "Mining Pools",
-      "profitabilityCalculator": "Profitability Calculator",
-      "wallets": "Wallets",
-      "ecosystem": "Ecosystem",
-      "buyErg": "Buy ERG",
-      "whatIsErgo": "What is Ergo",
-      "projects": "Projects"
     }
   },
   "ecosystem": {},

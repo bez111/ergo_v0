@@ -29,15 +29,18 @@
     "backToTop": "[TODO: Back to Top]"
   },
   "navigation": {
-    "home": "Home",
-    "start": "Start",
-    "ecosystem": "Ecosystem",
-    "docs": "Docs",
-    "blog": "Blog",
-    "community": "Community",
-    "communityNav": "COMMUNITY",
-    "getWallet": "Get Wallet",
-    "searchAriaLabel": "Search"
+    "home": "홈",
+    "start": "시작",
+    "use": "사용",
+    "ecosystem": "생태계",
+    "technology": "기술",
+    "learn": "학습",
+    "docs": "문서",
+    "blog": "블로그",
+    "community": "커뮤니티",
+    "communityNav": "커뮤니티",
+    "getWallet": "지갑 받기",
+    "searchAriaLabel": "검색"
   },
   "hero": {
     "title": "Ergo",
@@ -50,10 +53,10 @@
     "exploreErgo": "Ergo 탐색",
     "chooseYourPath": "당신의 길을 선택하세요",
     "features": {
-      "securePow": "Secure PoW",
-      "smartContracts": "Smart Contracts",
-      "privacy": "Privacy",
-      "eutxoModel": "eUTXO Model"
+      "securePow": "보안 PoW",
+      "smartContracts": "스마트 계약",
+      "privacy": "개인정보 보호",
+      "eutxoModel": "eUTXO 모델"
     }
   },
   "footer": {
@@ -1355,77 +1358,84 @@
   "manifesto": {},
   "corePillars": {},
   "whyErgo": {
-    "title": "[TODO: WHY ERGO?]",
-    "subtitle": "[TODO: A resilient blockchain platform combining proven principles with cutting-edge innovation]",
+    "title": "왜 ERGO인가?",
+    "subtitle": "검증된 원칙과 최첨단 혁신을 결합한 탄력적인 블록체인 플랫폼",
     "mainFeatures": {
       "fairAndSecure": {
-        "title": "[TODO: FAIR & SECURE]",
-        "subtitle": "[TODO: Proof-of-Work Foundation]",
-        "description": "[TODO: No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone.]"
+        "title": "공정하고 안전한",
+        "subtitle": "작업 증명 기반",
+        "description": "ICO 없음, 사전 채굴 없음. ASIC 저항성 채굴은 모두를 위한 진정한 탈중앙화와 장기적 보안을 보장합니다."
       },
       "powerfulAndFlexible": {
-        "title": "[TODO: POWERFUL & FLEXIBLE]",
-        "subtitle": "[TODO: Advanced Smart Contracts]",
-        "description": "[TODO: eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what is possible.]"
+        "title": "강력하고 유연한",
+        "subtitle": "고급 스마트 계약",
+        "description": "eUTXO 모델 + ErgoScript는 가능한 것의 경계를 넓히는 안전하고 표현력이 풍부한 DeFi 애플리케이션을 가능하게 합니다."
       },
       "sustainable": {
-        "title": "[TODO: SUSTAINABLE]",
-        "subtitle": "[TODO: Built to Last]",
-        "description": "[TODO: Storage rent mechanism prevents blockchain bloat and ensures network health with predictable costs for decades to come.]"
+        "title": "지속 가능한",
+        "subtitle": "지속성을 위해 구축",
+        "description": "스토리지 임대 메커니즘은 블록체인 팽창을 방지하고 수십 년 동안 예측 가능한 비용으로 네트워크 건강을 보장합니다."
       }
     },
     "additionalFeatures": {
-      "privacyFirst": {
-        "title": "[TODO: PRIVACY FIRST]",
-        "description": "[TODO: Optional privacy with Sigma protocols for confidential transactions.]"
+      "privacy": {
+        "title": "프라이버시 우선",
+        "description": "기밀 거래를 위한 시그마 프로토콜을 사용한 선택적 프라이버시."
       },
-      "communityDriven": {
-        "title": "[TODO: COMMUNITY DRIVEN]",
-        "description": "[TODO: Open-source development led by passionate contributors worldwide.]"
+      "community": {
+        "title": "커뮤니티 주도",
+        "description": "전 세계의 열정적인 기여자들이 이끄는 오픈 소스 개발."
       },
-      "developerFriendly": {
-        "title": "[TODO: DEVELOPER FRIENDLY]",
-        "description": "[TODO: World-class docs, tools, and support make building on Ergo easy.]"
+      "developer": {
+        "title": "개발자 친화적",
+        "description": "세계적 수준의 문서, 도구 및 지원으로 Ergo에서 쉽게 구축할 수 있습니다."
       }
     }
   },
   "audiencePaths": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path and start your journey in the Ergo ecosystem",
+    "title": "ERGO 시작하기",
+    "subtitle": "경로를 선택하고 Ergo 생태계에서 여정을 시작하세요",
     "audiences": {
       "developers": {
-        "title": "For Developers",
-        "description": "Build advanced DeFi applications and dApps with ErgoScript",
-        "cta": "Start Developing"
+        "title": "개발자를 위한",
+        "description": "ErgoScript로 고급 DeFi 애플리케이션 및 dApps 구축",
+        "cta": "개발 시작",
+        "links": {
+          "documentation": "문서",
+          "technology": "기술",
+          "useCases": "사용 사례"
+        }
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Join the ASIC-resistant Autolykos mining network",
-        "cta": "Start Mining"
+        "title": "채굴자를 위한",
+        "description": "ASIC 저항성 Autolykos 채굴 네트워크에 참여",
+        "cta": "채굴 시작",
+        "links": {
+          "miningDocs": "채굴 문서",
+          "miningPools": "채굴 풀",
+          "calculator": "수익성 계산기"
+        }
       },
       "users": {
-        "title": "For Users",
-        "description": "Explore the ecosystem and start using Ergo",
-        "cta": "Get Wallet"
+        "title": "사용자를 위한",
+        "description": "생태계를 탐색하고 Ergo 사용 시작",
+        "cta": "지갑 받기",
+        "links": {
+          "wallets": "지갑",
+          "ecosystem": "생태계",
+          "buyErg": "ERG 구매"
+        }
       },
       "investors": {
-        "title": "For Investors",
-        "description": "Learn about investment opportunities in the Ergo ecosystem",
-        "cta": "Learn About Investing"
+        "title": "투자자를 위한",
+        "description": "Ergo 생태계의 투자 기회에 대해 알아보기",
+        "cta": "투자에 대해 알아보기",
+        "links": {
+          "whatIsErgo": "Ergo란 무엇인가",
+          "projects": "프로젝트",
+          "community": "커뮤니티"
+        }
       }
-    },
-    "links": {
-      "documentation": "Documentation",
-      "technology": "Technology",
-      "useCases": "Use Cases",
-      "miningDocs": "Mining Docs",
-      "miningPools": "Mining Pools",
-      "profitabilityCalculator": "Profitability Calculator",
-      "wallets": "Wallets",
-      "ecosystem": "Ecosystem",
-      "buyErg": "Buy ERG",
-      "whatIsErgo": "What is Ergo",
-      "projects": "Projects"
     }
   },
   "ecosystem": {},

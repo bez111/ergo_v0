@@ -20,9 +20,13 @@
   "navigation": {
     "home": "Home",
     "start": "Start",
+    "use": "Use",
     "ecosystem": "Ecosystem",
-    "docs": "DOCS",
-    "blog": "BLOG",
+    "technology": "Technology",
+    "learn": "Learn",
+    "docs": "Docs",
+    "blog": "Blog",
+    "community": "Community",
     "communityNav": "COMMUNITY",
     "getWallet": "Get Wallet",
     "searchAriaLabel": "Search"
@@ -207,15 +211,15 @@
       }
     },
     "additionalFeatures": {
-      "privacyFirst": {
+      "privacy": {
         "title": "PRIVACY FIRST",
         "description": "Optional privacy with Sigma protocols for confidential transactions."
       },
-      "communityDriven": {
+      "community": {
         "title": "COMMUNITY DRIVEN",
         "description": "Open-source development led by passionate contributors worldwide."
       },
-      "developerFriendly": {
+      "developer": {
         "title": "DEVELOPER FRIENDLY",
         "description": "World-class docs, tools, and support make building on Ergo easy."
       }
@@ -228,36 +232,43 @@
       "developers": {
         "title": "For Developers",
         "description": "Build advanced DeFi applications and dApps with ErgoScript",
-        "cta": "Start Developing"
+        "cta": "Start Developing",
+        "links": {
+          "documentation": "Documentation",
+          "technology": "Technology",
+          "useCases": "Use Cases"
+        }
       },
       "miners": {
         "title": "For Miners",
         "description": "Join the ASIC-resistant Autolykos mining network",
-        "cta": "Start Mining"
+        "cta": "Start Mining",
+        "links": {
+          "miningDocs": "Mining Docs",
+          "miningPools": "Mining Pools",
+          "calculator": "Profitability Calculator"
+        }
       },
       "users": {
         "title": "For Users",
         "description": "Explore the ecosystem and start using Ergo",
-        "cta": "Get Wallet"
+        "cta": "Get Wallet",
+        "links": {
+          "wallets": "Wallets",
+          "ecosystem": "Ecosystem",
+          "buyErg": "Buy ERG"
+        }
       },
       "investors": {
         "title": "For Investors",
         "description": "Learn about investment opportunities in the Ergo ecosystem",
-        "cta": "Learn About Investing"
+        "cta": "Learn About Investing",
+        "links": {
+          "whatIsErgo": "What is Ergo",
+          "projects": "Projects",
+          "community": "Community"
+        }
       }
-    },
-    "links": {
-      "documentation": "Documentation",
-      "technology": "Technology",
-      "useCases": "Use Cases",
-      "miningDocs": "Mining Docs",
-      "miningPools": "Mining Pools",
-      "profitabilityCalculator": "Profitability Calculator",
-      "wallets": "Wallets",
-      "ecosystem": "Ecosystem",
-      "buyErg": "Buy ERG",
-      "whatIsErgo": "What is Ergo",
-      "projects": "Projects"
     }
   },
   "blogSection": {

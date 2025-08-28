@@ -30,12 +30,16 @@
   },
   "navigation": {
     "home": "Startseite",
-    "start": "Anfang",
+    "start": "Starten",
+    "use": "Verwenden",
     "ecosystem": "Ökosystem",
+    "technology": "Technologie",
+    "learn": "Lernen",
     "docs": "Dokumentation",
     "blog": "Blog",
-    "communityNav": "Gemeinschaft",
-    "getWallet": "Wallet holen",
+    "community": "Gemeinschaft",
+    "communityNav": "GEMEINSCHAFT",
+    "getWallet": "Wallet erhalten",
     "searchAriaLabel": "Suchen"
   },
   "hero": {
@@ -49,10 +53,10 @@
     "exploreErgo": "Ergo erkunden",
     "chooseYourPath": "Wählen Sie Ihren Weg",
     "features": {
-      "securePow": "Secure PoW",
+      "securePow": "Sicherer PoW",
       "smartContracts": "Smart Contracts",
-      "privacy": "Privacy",
-      "eutxoModel": "eUTXO Model"
+      "privacy": "Privatsphäre",
+      "eutxoModel": "eUTXO-Modell"
     }
   },
   "footer": {
@@ -1374,57 +1378,64 @@
       }
     },
     "additionalFeatures": {
-      "privacyFirst": {
+      "privacy": {
         "title": "PRIVATSPHÄRE ZUERST",
         "description": "Optionale Privatsphäre mit Sigma-Protokollen für vertrauliche Transaktionen."
       },
-      "communityDriven": {
+      "community": {
         "title": "GEMEINSCHAFTSGETRIEBEN",
         "description": "Open-Source-Entwicklung, geleitet von leidenschaftlichen Mitwirkenden weltweit."
       },
-      "developerFriendly": {
+      "developer": {
         "title": "ENTWICKLERFREUNDLICH",
         "description": "Erstklassige Dokumentation, Tools und Support machen die Entwicklung auf Ergo einfach."
       }
     }
   },
   "audiencePaths": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path and start your journey in the Ergo ecosystem",
+    "title": "STARTEN SIE MIT ERGO",
+    "subtitle": "Wählen Sie Ihren Weg und beginnen Sie Ihre Reise im Ergo-Ökosystem",
     "audiences": {
       "developers": {
-        "title": "For Developers",
-        "description": "Build advanced DeFi applications and dApps with ErgoScript",
-        "cta": "Start Developing"
+        "title": "Für Entwickler",
+        "description": "Erstellen Sie fortschrittliche DeFi-Anwendungen und dApps mit ErgoScript",
+        "cta": "Entwicklung Starten",
+        "links": {
+          "documentation": "Dokumentation",
+          "technology": "Technologie",
+          "useCases": "Anwendungsfälle"
+        }
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Join the ASIC-resistant Autolykos mining network",
-        "cta": "Start Mining"
+        "title": "Für Miner",
+        "description": "Treten Sie dem ASIC-resistenten Autolykos-Mining-Netzwerk bei",
+        "cta": "Mining Starten",
+        "links": {
+          "miningDocs": "Mining-Dokumentation",
+          "miningPools": "Mining-Pools",
+          "calculator": "Rentabilitätsrechner"
+        }
       },
       "users": {
-        "title": "For Users",
-        "description": "Explore the ecosystem and start using Ergo",
-        "cta": "Get Wallet"
+        "title": "Für Benutzer",
+        "description": "Erkunden Sie das Ökosystem und beginnen Sie mit der Nutzung von Ergo",
+        "cta": "Wallet Erhalten",
+        "links": {
+          "wallets": "Wallets",
+          "ecosystem": "Ökosystem",
+          "buyErg": "ERG Kaufen"
+        }
       },
       "investors": {
-        "title": "For Investors",
-        "description": "Learn about investment opportunities in the Ergo ecosystem",
-        "cta": "Learn About Investing"
+        "title": "Für Investoren",
+        "description": "Erfahren Sie mehr über Investitionsmöglichkeiten im Ergo-Ökosystem",
+        "cta": "Investition Erfahren",
+        "links": {
+          "whatIsErgo": "Was ist Ergo",
+          "projects": "Projekte",
+          "community": "Gemeinschaft"
+        }
       }
-    },
-    "links": {
-      "documentation": "Documentation",
-      "technology": "Technology",
-      "useCases": "Use Cases",
-      "miningDocs": "Mining Docs",
-      "miningPools": "Mining Pools",
-      "profitabilityCalculator": "Profitability Calculator",
-      "wallets": "Wallets",
-      "ecosystem": "Ecosystem",
-      "buyErg": "Buy ERG",
-      "whatIsErgo": "What is Ergo",
-      "projects": "Projects"
     }
   },
   "ecosystem": {},

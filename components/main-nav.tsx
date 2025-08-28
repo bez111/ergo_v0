@@ -21,6 +21,25 @@ export function MainNav() {
   const pathname = usePathname()
   const localizedPath = useLocalizedPath()
 
+  // Function to get translated navigation title
+  const getNavTitle = (title: string) => {
+    const titleKey = title.toLowerCase()
+    
+    // Only translate main navigation items, not sub-items
+    const mainNavKeys = ['start', 'use', 'ecosystem', 'technology', 'learn', 'docs', 'blog', 'home']
+    
+    if (mainNavKeys.includes(titleKey)) {
+      try {
+        return t(titleKey) || title
+      } catch (error) {
+        return title
+      }
+    }
+    
+    // Return original title for sub-items
+    return title
+  }
+
   return (
     <div className="hidden md:flex">
       <NavigationMenu>
@@ -34,7 +53,7 @@ export function MainNav() {
                     style={{ caretColor: "transparent", userSelect: "none" }}
                     className="font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary data-[state=open]:bg-primary/10 data-[state=open]:text-primary"
                   >
-                    {item.title}
+                    {getNavTitle(item.title)}
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
                     <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] bg-black/90 backdrop-blur-lg border border-primary/30">
@@ -68,7 +87,7 @@ export function MainNav() {
                         pathname === localizedPath(item.href.startsWith('/') ? item.href.slice(1) : item.href) && "text-primary font-medium",
                       )}
                     >
-                      {item.title}
+                      {getNavTitle(item.title)}
                     </Link>
                   </NavigationMenuLink>
                 </NavigationMenuItem>

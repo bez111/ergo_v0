@@ -62,18 +62,8 @@ export default function LanguageSwitcher() {
     // Cookie NEXT_LOCALE используется next-intl для определения предпочтительной локали
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
     
-    // Отладка
-    console.log('Current pathname:', pathname);
-    console.log('Clean path:', cleanPath);
-    console.log('New locale:', newLocale);
-    console.log('New path:', newPath);
-    console.log('Setting cookie:', `NEXT_LOCALE=${newLocale}`);
-    
-    // Небольшая задержка чтобы cookie успела установиться
-    setTimeout(() => {
-      // Используем window.location для полной перезагрузки страницы с новой локалью
-      window.location.href = newPath;
-    }, 50);
+    // Используем router.push для более плавного перехода без полной перезагрузки
+    router.push(newPath);
   };
 
   return (

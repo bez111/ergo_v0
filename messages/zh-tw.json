@@ -29,15 +29,18 @@
     "backToTop": "[TODO: Back to Top]"
   },
   "navigation": {
-    "home": "Home",
-    "start": "Start",
-    "ecosystem": "Ecosystem",
-    "docs": "Docs",
-    "blog": "Blog",
-    "community": "Community",
-    "communityNav": "COMMUNITY",
-    "getWallet": "Get Wallet",
-    "searchAriaLabel": "Search"
+    "home": "首頁",
+    "start": "開始",
+    "use": "使用",
+    "ecosystem": "生態系統",
+    "technology": "技術",
+    "learn": "學習",
+    "docs": "文檔",
+    "blog": "博客",
+    "community": "社區",
+    "communityNav": "社區",
+    "getWallet": "獲取錢包",
+    "searchAriaLabel": "搜索"
   },
   "hero": {
     "title": "Ergo",
@@ -50,10 +53,10 @@
     "exploreErgo": "探索 Ergo",
     "chooseYourPath": "選擇您的道路",
     "features": {
-      "securePow": "Secure PoW",
-      "smartContracts": "Smart Contracts",
-      "privacy": "Privacy",
-      "eutxoModel": "eUTXO Model"
+      "securePow": "安全的PoW",
+      "smartContracts": "智能合約",
+      "privacy": "隱私",
+      "eutxoModel": "eUTXO模型"
     }
   },
   "footer": {
@@ -1355,77 +1358,84 @@
   "manifesto": {},
   "corePillars": {},
   "whyErgo": {
-    "title": "[TODO: WHY ERGO?]",
-    "subtitle": "[TODO: A resilient blockchain platform combining proven principles with cutting-edge innovation]",
+    "title": "為什麼選擇ERGO？",
+    "subtitle": "一個將經過驗證的原則與尖端創新相結合的彈性區塊鏈平台",
     "mainFeatures": {
+      "sustainable": {
+        "title": "可持續",
+        "subtitle": "為持久而建",
+        "description": "存儲租賃機制防止區塊鏈膨脹，確保網絡健康，成本可預測數十年。"
+      },
       "fairAndSecure": {
-        "title": "[TODO: FAIR & SECURE]",
-        "subtitle": "[TODO: Proof-of-Work Foundation]",
-        "description": "[TODO: No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone.]"
+        "title": "公平與安全",
+        "subtitle": "工作量證明基礎",
+        "description": "無ICO，無預挖。抗ASIC挖礦確保真正的去中心化和長期安全。"
       },
       "powerfulAndFlexible": {
-        "title": "[TODO: POWERFUL & FLEXIBLE]",
-        "subtitle": "[TODO: Advanced Smart Contracts]",
-        "description": "[TODO: eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what is possible.]"
-      },
-      "sustainable": {
-        "title": "[TODO: SUSTAINABLE]",
-        "subtitle": "[TODO: Built to Last]",
-        "description": "[TODO: Storage rent mechanism prevents blockchain bloat and ensures network health with predictable costs for decades to come.]"
+        "title": "強大與靈活",
+        "subtitle": "高級智能合約",
+        "description": "eUTXO模型+ErgoScript實現安全、富有表現力的DeFi應用，突破可能性的邊界。"
       }
     },
     "additionalFeatures": {
-      "privacyFirst": {
-        "title": "[TODO: PRIVACY FIRST]",
-        "description": "[TODO: Optional privacy with Sigma protocols for confidential transactions.]"
+      "privacy": {
+        "title": "隱私優先",
+        "description": "使用Sigma協議的可選隱私，用於機密交易。"
       },
-      "communityDriven": {
-        "title": "[TODO: COMMUNITY DRIVEN]",
-        "description": "[TODO: Open-source development led by passionate contributors worldwide.]"
+      "community": {
+        "title": "社區驅動",
+        "description": "由來自世界各地的熱情貢獻者領導的開源開發。"
       },
-      "developerFriendly": {
-        "title": "[TODO: DEVELOPER FRIENDLY]",
-        "description": "[TODO: World-class docs, tools, and support make building on Ergo easy.]"
+      "developer": {
+        "title": "開發者友好",
+        "description": "世界級的文檔、工具和支持使在Ergo上構建變得簡單。"
       }
     }
   },
   "audiencePaths": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path and start your journey in the Ergo ecosystem",
+    "title": "開始使用ERGO",
+    "subtitle": "選擇您的路徑，開始在Ergo生態系統中的旅程",
     "audiences": {
       "developers": {
-        "title": "For Developers",
-        "description": "Build advanced DeFi applications and dApps with ErgoScript",
-        "cta": "Start Developing"
+        "title": "開發者",
+        "description": "使用ErgoScript構建高級DeFi應用和dApps",
+        "cta": "開始開發",
+        "links": {
+          "documentation": "文檔",
+          "technology": "技術",
+          "useCases": "用例"
+        }
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Join the ASIC-resistant Autolykos mining network",
-        "cta": "Start Mining"
+        "title": "礦工",
+        "description": "加入抗ASIC的Autolykos挖礦網絡",
+        "cta": "開始挖礦",
+        "links": {
+          "miningDocs": "挖礦文檔",
+          "miningPools": "礦池",
+          "calculator": "收益計算器"
+        }
       },
       "users": {
-        "title": "For Users",
-        "description": "Explore the ecosystem and start using Ergo",
-        "cta": "Get Wallet"
+        "title": "用戶",
+        "description": "探索生態系統並開始使用Ergo",
+        "cta": "獲取錢包",
+        "links": {
+          "wallets": "錢包",
+          "ecosystem": "生態系統",
+          "buyErg": "購買ERG"
+        }
       },
       "investors": {
-        "title": "For Investors",
-        "description": "Learn about investment opportunities in the Ergo ecosystem",
-        "cta": "Learn About Investing"
+        "title": "投資者",
+        "description": "了解Ergo生態系統中的投資機會",
+        "cta": "了解投資",
+        "links": {
+          "whatIsErgo": "什麼是Ergo",
+          "projects": "項目",
+          "community": "社區"
+        }
       }
-    },
-    "links": {
-      "documentation": "Documentation",
-      "technology": "Technology",
-      "useCases": "Use Cases",
-      "miningDocs": "Mining Docs",
-      "miningPools": "Mining Pools",
-      "profitabilityCalculator": "Profitability Calculator",
-      "wallets": "Wallets",
-      "ecosystem": "Ecosystem",
-      "buyErg": "Buy ERG",
-      "whatIsErgo": "What is Ergo",
-      "projects": "Projects"
     }
   },
   "ecosystem": {},

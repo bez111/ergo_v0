@@ -20,120 +20,117 @@
   "navigation": {
     "home": "الرئيسية",
     "start": "ابدأ",
+    "use": "استخدم",
     "ecosystem": "النظام البيئي",
+    "technology": "التكنولوجيا",
+    "learn": "تعلم",
     "docs": "الوثائق",
     "blog": "المدونة",
+    "community": "المجتمع",
     "communityNav": "المجتمع",
-    "getWallet": "احصل على المحفظة",
+    "getWallet": "احصل على محفظة",
     "searchAriaLabel": "بحث"
   },
   "hero": {
     "title": "Ergo",
     "subtitle": "انضم إلى حركة للتمويل المفتوح، القابل للبرمجة، والمقاوم للرقابة",
     "features": {
-      "pow": {
-        "title": "إثبات العمل",
-        "description": "أمان حقيقي من خلال تعدين ASIC المقاوم"
-      },
-      "eUTXO": {
-        "title": "eUTXO",
-        "description": "نموذج أصول قابلة للإنفاق مرة واحدة مع امتداد ErgoScript"
-      },
-      "storageRent": {
-        "title": "إيجار التخزين",
-        "description": "منع نفاد المساحة من خلال آلية الإيجار"
-      },
-      "dao": {
-        "title": "دي أيه أو",
-        "description": "حوكمة لامركزية مدمجة في البروتوكول"
-      },
-      "privacy": "Privacy",
-      "autolykos": {
-        "title": "أوتوليكوس",
-        "description": "خوارزمية تعدين مقاومة للASIC"
-      },
-      "securePow": "Secure PoW",
-      "smartContracts": "Smart Contracts",
-      "eutxoModel": "eUTXO Model"
+      "securePow": "PoW آمن",
+      "smartContracts": "العقود الذكية",
+      "privacy": "الخصوصية",
+      "eutxoModel": "نموذج eUTXO"
     },
     "buttons": {
       "start": "ابدأ الآن",
       "docs": "اقرأ الوثائق",
       "learn": "تعلم المزيد"
-    }
+    },
+    "message1": "أموال لامركزية لمجتمع حر",
+    "message2": "طبقة التسوية المحايدة عالمياً للأموال القابلة للبرمجة",
+    "message3": "موطن الحرية الرقمية مفتوح المصدر",
+    "message4": "انضم إلى حركة الأموال اللامركزية مفتوحة المصدر",
+    "exploreErgo": "استكشف إرجو",
+    "chooseYourPath": "اختر مسارك"
   },
   "whyErgo": {
-    "title": "[TODO: WHY ERGO?]",
-    "subtitle": "[TODO: A resilient blockchain platform combining proven principles with cutting-edge innovation]",
+    "title": "لماذا إرجو؟",
+    "subtitle": "منصة بلوكشين مرنة تجمع بين المبادئ المثبتة والابتكار المتطور",
     "mainFeatures": {
+      "sustainable": {
+        "title": "مستدام",
+        "subtitle": "مبني للبقاء",
+        "description": "آلية رسوم التخزين تمنع انتفاخ البلوكشين وتضمن صحة الشبكة بتكاليف يمكن التنبؤ بها لعقود قادمة."
+      },
       "fairAndSecure": {
-        "title": "[TODO: FAIR & SECURE]",
-        "subtitle": "[TODO: Proof-of-Work Foundation]",
-        "description": "[TODO: No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone.]"
+        "title": "عادل وآمن",
+        "subtitle": "أساس إثبات العمل",
+        "description": "بدون ICO، بدون تعدين مسبق. التعدين المقاوم لـ ASIC يضمن اللامركزية الحقيقية والأمان طويل المدى للجميع."
       },
       "powerfulAndFlexible": {
-        "title": "[TODO: POWERFUL & FLEXIBLE]",
-        "subtitle": "[TODO: Advanced Smart Contracts]",
-        "description": "[TODO: eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what is possible.]"
-      },
-      "sustainable": {
-        "title": "[TODO: SUSTAINABLE]",
-        "subtitle": "[TODO: Built to Last]",
-        "description": "[TODO: Storage rent mechanism prevents blockchain bloat and ensures network health with predictable costs for decades to come.]"
+        "title": "قوي ومرن",
+        "subtitle": "عقود ذكية متقدمة",
+        "description": "نموذج eUTXO + ErgoScript يتيح تطبيقات DeFi آمنة ومعبرة تدفع حدود ما هو ممكن."
       }
     },
     "additionalFeatures": {
-      "privacyFirst": {
-        "title": "[TODO: PRIVACY FIRST]",
-        "description": "[TODO: Optional privacy with Sigma protocols for confidential transactions.]"
+      "privacy": {
+        "title": "الخصوصية أولاً",
+        "description": "خصوصية اختيارية مع بروتوكولات سيجما للمعاملات السرية."
       },
-      "communityDriven": {
-        "title": "[TODO: COMMUNITY DRIVEN]",
-        "description": "[TODO: Open-source development led by passionate contributors worldwide.]"
+      "community": {
+        "title": "مدفوع بالمجتمع",
+        "description": "تطوير مفتوح المصدر بقيادة مساهمين شغوفين من جميع أنحاء العالم."
       },
-      "developerFriendly": {
-        "title": "[TODO: DEVELOPER FRIENDLY]",
-        "description": "[TODO: World-class docs, tools, and support make building on Ergo easy.]"
+      "developer": {
+        "title": "صديق للمطورين",
+        "description": "وثائق وأدوات ودعم من الطراز العالمي تجعل البناء على إرجو سهلاً."
       }
     }
   },
   "audiencePaths": {
-    "title": "GET STARTED WITH ERGO",
-    "subtitle": "Choose your path and start your journey in the Ergo ecosystem",
+    "title": "ابدأ مع إرجو",
+    "subtitle": "اختر مسارك وابدأ رحلتك في نظام إرجو البيئي",
     "audiences": {
       "developers": {
-        "title": "For Developers",
-        "description": "Build advanced DeFi applications and dApps with ErgoScript",
-        "cta": "Start Developing"
+        "title": "للمطورين",
+        "description": "أنشئ تطبيقات DeFi متقدمة وdApps باستخدام ErgoScript",
+        "cta": "ابدأ التطوير",
+        "links": {
+          "documentation": "الوثائق",
+          "technology": "التكنولوجيا",
+          "useCases": "حالات الاستخدام"
+        }
       },
       "miners": {
-        "title": "For Miners",
-        "description": "Join the ASIC-resistant Autolykos mining network",
-        "cta": "Start Mining"
+        "title": "للمعدنين",
+        "description": "انضم إلى شبكة التعدين Autolykos المقاومة لـ ASIC",
+        "cta": "ابدأ التعدين",
+        "links": {
+          "miningDocs": "وثائق التعدين",
+          "miningPools": "مجمعات التعدين",
+          "calculator": "حاسبة الربحية"
+        }
       },
       "users": {
-        "title": "For Users",
-        "description": "Explore the ecosystem and start using Ergo",
-        "cta": "Get Wallet"
+        "title": "للمستخدمين",
+        "description": "استكشف النظام البيئي وابدأ باستخدام إرجو",
+        "cta": "احصل على المحفظة",
+        "links": {
+          "wallets": "المحافظ",
+          "ecosystem": "النظام البيئي",
+          "buyErg": "اشترِ ERG"
+        }
       },
       "investors": {
-        "title": "For Investors",
-        "description": "Learn about investment opportunities in the Ergo ecosystem",
-        "cta": "Learn About Investing"
+        "title": "للمستثمرين",
+        "description": "تعرف على فرص الاستثمار في نظام إرجو البيئي",
+        "cta": "تعرف على الاستثمار",
+        "links": {
+          "whatIsErgo": "ما هو إرجو",
+          "projects": "المشاريع",
+          "community": "المجتمع"
+        }
       }
-    },
-    "links": {
-      "documentation": "Documentation",
-      "technology": "Technology",
-      "useCases": "Use Cases",
-      "miningDocs": "Mining Docs",
-      "miningPools": "Mining Pools",
-      "profitabilityCalculator": "Profitability Calculator",
-      "wallets": "Wallets",
-      "ecosystem": "Ecosystem",
-      "buyErg": "Buy ERG",
-      "whatIsErgo": "What is Ergo",
-      "projects": "Projects"
     }
   },
   "blogSection": {
@@ -170,5 +167,14 @@
     "technology": "Technology",
     "useCases": "Use Cases",
     "copyright": "© {{year}} ERGO PLATFORM. ALL RIGHTS RESERVED."
+  },
+  "seo": {
+    "defaultTitle": "Ergo - بلوكشين لامركزي للحرية المالية",
+    "defaultDescription": "منصة بلوكشين مرنة وآمنة مع عقود ذكية متقدمة وخصوصية اختيارية"
+  },
+  "language": {
+    "switchLanguage": "تبديل اللغة",
+    "selectLanguage": "اختر اللغة",
+    "currentLanguage": "العربية"
   }
 }

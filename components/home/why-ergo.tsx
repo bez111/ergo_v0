@@ -1,7 +1,12 @@
+"use client"
+
 import React from "react"
 import { Shield, Zap, Database, Lock, Users, Cpu } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function WhyErgo() {
+  const t = useTranslations('whyErgo')
+  
   return (
     <section className="py-16 md:py-24 relative overflow-hidden" id="why-ergo">
       {/* Semi-transparent overlay for better text readability */}
@@ -12,10 +17,10 @@ export function WhyErgo() {
           {/* Header */}
           <div className="text-center space-y-6 max-w-4xl">
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
-              <span className="text-white">WHY ERGO?</span>
+              <span className="text-white">{t("title")}</span>
             </h2>
             <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-[65ch] mx-auto">
-              A resilient blockchain platform combining proven principles with cutting-edge innovation
+              {t("subtitle")}
             </p>
           </div>
 
@@ -31,10 +36,10 @@ export function WhyErgo() {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <h3 className="text-white font-bold text-xl mb-1">FAIR & SECURE</h3>
-                  <p className="text-orange-400/80 text-sm font-medium">Proof-of-Work Foundation</p>
+                  <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.fairAndSecure.title")}</h3>
+                  <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.fairAndSecure.subtitle")}</p>
                 </div>
-                <p className="text-gray-400 leading-relaxed">No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone.</p>
+                <p className="text-gray-400 leading-relaxed">{t("mainFeatures.fairAndSecure.description")}</p>
               </div>
             </div>
 
@@ -48,10 +53,10 @@ export function WhyErgo() {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <h3 className="text-white font-bold text-xl mb-1">POWERFUL & FLEXIBLE</h3>
-                  <p className="text-orange-400/80 text-sm font-medium">Advanced Smart Contracts</p>
+                  <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.powerfulAndFlexible.title")}</h3>
+                  <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.powerfulAndFlexible.subtitle")}</p>
                 </div>
-                <p className="text-gray-400 leading-relaxed">eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what is possible.</p>
+                <p className="text-gray-400 leading-relaxed">{t("mainFeatures.powerfulAndFlexible.description")}</p>
               </div>
             </div>
 
@@ -65,15 +70,15 @@ export function WhyErgo() {
                   </div>
                 </div>
                 <div className="mb-4">
-                  <h3 className="text-white font-bold text-xl mb-1">SUSTAINABLE</h3>
-                  <p className="text-orange-400/80 text-sm font-medium">Built to Last</p>
+                  <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.sustainable.title")}</h3>
+                  <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.sustainable.subtitle")}</p>
                 </div>
-                <p className="text-gray-400 leading-relaxed">Storage rent mechanism prevents blockchain bloat and ensures network health with predictable costs for decades to come.</p>
+                <p className="text-gray-400 leading-relaxed">{t("mainFeatures.sustainable.description")}</p>
               </div>
             </div>
           </div>
 
-          {/* Additional Features - Compact Grid */}
+          {/* Additional Features - Smaller Cards */}
           <div className="w-full max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* PRIVACY FIRST */}
@@ -82,8 +87,8 @@ export function WhyErgo() {
                   <Lock className="h-5 w-5 text-orange-400/90" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold text-sm mb-2 uppercase tracking-wide">PRIVACY FIRST</h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">Optional privacy with Sigma protocols for confidential transactions.</p>
+                  <h4 className="text-white font-semibold text-sm mb-2 uppercase tracking-wide">{t("additionalFeatures.privacy.title")}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">{t("additionalFeatures.privacy.description")}</p>
                 </div>
               </div>
 
@@ -93,8 +98,8 @@ export function WhyErgo() {
                   <Users className="h-5 w-5 text-orange-400/90" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold text-sm mb-2 uppercase tracking-wide">COMMUNITY DRIVEN</h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">Open-source development led by passionate contributors worldwide.</p>
+                  <h4 className="text-white font-semibold text-sm mb-2 uppercase tracking-wide">{t("additionalFeatures.community.title")}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">{t("additionalFeatures.community.description")}</p>
                 </div>
               </div>
 
@@ -104,8 +109,8 @@ export function WhyErgo() {
                   <Cpu className="h-5 w-5 text-orange-400/90" />
                 </div>
                 <div>
-                  <h4 className="text-white font-semibold text-sm mb-2 uppercase tracking-wide">DEVELOPER FRIENDLY</h4>
-                  <p className="text-gray-400 text-sm leading-relaxed">World-class docs, tools, and support make building on Ergo easy.</p>
+                  <h4 className="text-white font-semibold text-sm mb-2 uppercase tracking-wide">{t("additionalFeatures.developer.title")}</h4>
+                  <p className="text-gray-400 text-sm leading-relaxed">{t("additionalFeatures.developer.description")}</p>
                 </div>
               </div>
             </div>

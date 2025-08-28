@@ -4,6 +4,7 @@ import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import { useTranslations } from "next-intl"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
@@ -26,6 +27,26 @@ interface MobileNavProps {
 export function MobileNav({ items }: MobileNavProps) {
   const [open, setOpen] = React.useState(false)
   const pathname = usePathname()
+  const t = useTranslations("navigation")
+
+  // Function to get translated navigation title
+  const getNavTitle = (title: string) => {
+    const titleKey = title.toLowerCase()
+    
+    // Only translate main navigation items, not sub-items
+    const mainNavKeys = ['start', 'use', 'ecosystem', 'technology', 'learn', 'docs', 'blog', 'home']
+    
+    if (mainNavKeys.includes(titleKey)) {
+      try {
+        return t(titleKey) || title
+      } catch (error) {
+        return title
+      }
+    }
+    
+    // Return original title for sub-items
+    return title
+  }
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -47,7 +68,7 @@ export function MobileNav({ items }: MobileNavProps) {
               item.children ? (
                 <Accordion key={item.title} type="single" collapsible className="w-full">
                   <AccordionItem value={item.title} className="border-b-0">
-                    <AccordionTrigger className="py-2 text-base">{item.title}</AccordionTrigger>
+                    <AccordionTrigger className="py-2 text-base">{getNavTitle(item.title)}</AccordionTrigger>
                     <AccordionContent>
                       <div className="flex flex-col space-y-2">
                         {item.children.map((child) => (
@@ -60,7 +81,7 @@ export function MobileNav({ items }: MobileNavProps) {
                               pathname === child.href ? "text-foreground" : "text-foreground/60",
                             )}
                           >
-                            {child.title}
+                            {getNavTitle(child.title)}
                           </Link>
                         ))}
                       </div>
@@ -78,7 +99,7 @@ export function MobileNav({ items }: MobileNavProps) {
                     item.disabled && "opacity-50 pointer-events-none",
                   )}
                 >
-                  {item.title}
+                  {getNavTitle(item.title)}
                 </Link>
               ),
             )}
