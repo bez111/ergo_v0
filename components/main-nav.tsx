@@ -67,10 +67,15 @@ export function MainNav() {
     
     const descriptionKey = descriptionMap[description]
     
+    // Always return original description if no mapping found
+    if (!descriptionKey) {
+      return description
+    }
+
+    // Try to get translation, but always fallback to original on any error
     try {
-      return descriptionKey ? t(descriptionKey) : description
+      return t(descriptionKey)
     } catch (error) {
-      // Fallback to original description if translation fails
       return description
     }
   }
