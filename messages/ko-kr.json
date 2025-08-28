@@ -66,7 +66,8 @@
     "learn ergoscript": "ErgoScript 학습",
     "research & papers": "연구 및 논문",
     "user & developer guides": "사용자 및 개발자 가이드",
-    "faq": "FAQ"
+    "faq": "FAQ",
+    "a_brief_overview_of_ergo_and_its_core_purpose_description": "Ergo와 그 핵심 목적에 대한 간략한 개요."
   },
   "hero": {
     "title": "Ergo",
