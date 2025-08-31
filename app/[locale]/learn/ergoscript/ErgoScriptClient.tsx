@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { useTranslations } from "next-intl"
 import {
   ChevronDown,
   ArrowRight,
@@ -47,6 +48,7 @@ const difficultyColors = {
 
 export default function ErgoScriptClient() {
   const [expandedModule, setExpandedModule] = useState<number | null>(null)
+  const t = useTranslations("learnErgoscript")
 
   const toggleModule = (moduleIndex: number) => {
     if (expandedModule === moduleIndex) {
@@ -58,26 +60,26 @@ export default function ErgoScriptClient() {
 
   const whyLearnFeatures = [
     {
-      title: "Secure by Design",
-      description: "Built-in security and formal verifiability, minimizing smart contract risks",
+      title: t("whyLearnFeatures.secureByDesign.title"),
+      description: t("whyLearnFeatures.secureByDesign.description"),
       icon: <Shield className="w-6 h-6" aria-hidden="true" focusable="false" />,
       color: "",
     },
     {
-      title: "Powerful & Expressive",
-      description: "Enables complex DeFi, multi-stage protocols, and unique dApps",
+      title: t("whyLearnFeatures.powerfulExpressive.title"),
+      description: t("whyLearnFeatures.powerfulExpressive.description"),
       icon: <Zap className="w-6 h-6" aria-hidden="true" focusable="false" />,
       color: "",
     },
     {
-      title: "Leverage eUTXO",
-      description: "Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability",
+      title: t("whyLearnFeatures.leverageEutxo.title"),
+      description: t("whyLearnFeatures.leverageEutxo.description"),
       icon: <Database className="w-6 h-6" aria-hidden="true" focusable="false" />,
       color: "",
     },
     {
-      title: "Built-in Cryptography",
-      description: "Native support for Sigma-protocols, privacy, and advanced access schemes",
+      title: t("whyLearnFeatures.builtInCryptography.title"),
+      description: t("whyLearnFeatures.builtInCryptography.description"),
       icon: <Code className="w-6 h-6" aria-hidden="true" focusable="false" />,
       color: "",
     },
@@ -85,46 +87,46 @@ export default function ErgoScriptClient() {
 
   const targetAudience = [
     {
-      title: "New to Smart Contracts",
-      description: "Step-by-step explanations of core blockchain and smart contract concepts",
+      title: t("targetAudience.newToSmartContracts.title"),
+      description: t("targetAudience.newToSmartContracts.description"),
       icon: <Users className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      examples: ["Blockchain basics", "Smart contract fundamentals", "eUTXO introduction"],
+      examples: t("targetAudience.newToSmartContracts.examples"),
       color: "",
     },
     {
-      title: "Experienced Blockchain Developers",
-      description: "Discover eUTXO, new safe patterns, and advanced contract design",
+      title: t("targetAudience.experiencedDevelopers.title"),
+      description: t("targetAudience.experiencedDevelopers.description"),
       icon: <Code className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      examples: ["eUTXO patterns", "Security best practices", "Advanced cryptography"],
+      examples: t("targetAudience.experiencedDevelopers.examples"),
       color: "",
     },
     {
-      title: "Scala/Functional Programmers",
-      description: "ErgoScript's syntax and philosophy will feel familiar—apply your skills easily",
+      title: t("targetAudience.scalaFunctionalProgrammers.title"),
+      description: t("targetAudience.scalaFunctionalProgrammers.description"),
       icon: <Layers className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      examples: ["Functional paradigms", "Type safety", "Immutable data structures"],
+      examples: t("targetAudience.scalaFunctionalProgrammers.examples"),
       color: "",
     },
     {
-      title: "DeFi Enthusiasts",
-      description: "Build the next generation of decentralized financial applications",
+      title: t("targetAudience.defiEnthusiasts.title"),
+      description: t("targetAudience.defiEnthusiasts.description"),
       icon: <Zap className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      examples: ["DEX protocols", "Lending platforms", "Algorithmic stablecoins"],
+      examples: t("targetAudience.defiEnthusiasts.examples"),
       color: "",
     },
   ]
 
   const modules = [
     {
-      title: "Foundations of Ergo and ErgoScript",
-      number: 1,
-      totalDuration: "185 min",
+      title: t("modules.foundations.title"),
+      number: t("modules.foundations.number"),
+      totalDuration: t("modules.foundations.totalDuration"),
       lessons: [
-        { title: "Introduction to Ergo & the eUTXO Model", duration: "20 min", level: "Beginner" },
-        { title: "What is ErgoScript? Philosophy and Design Goals", duration: "15 min", level: "Beginner" },
-        { title: "Setting Up Your ErgoScript Development Environment", duration: "30 min", level: "Beginner" },
-        { title: "Basic Syntax, Data Types, Operators", duration: "40 min", level: "Beginner" },
-        { title: "Boxes, Registers, Context Variables", duration: "45 min", level: "Beginner" },
+        { title: t("modules.foundations.lessons.0.title"), duration: t("modules.foundations.lessons.0.duration"), level: t("modules.foundations.lessons.0.level") },
+        { title: t("modules.foundations.lessons.1.title"), duration: t("modules.foundations.lessons.1.duration"), level: t("modules.foundations.lessons.1.level") },
+        { title: t("modules.foundations.lessons.2.title"), duration: t("modules.foundations.lessons.2.duration"), level: t("modules.foundations.lessons.2.level") },
+        { title: t("modules.foundations.lessons.3.title"), duration: t("modules.foundations.lessons.3.duration"), level: t("modules.foundations.lessons.3.level") },
+        { title: t("modules.foundations.lessons.4.title"), duration: t("modules.foundations.lessons.4.duration"), level: t("modules.foundations.lessons.4.level") },
         { title: "Anatomy of an Ergo Transaction", duration: "35 min", level: "Beginner" },
       ],
     },
@@ -204,24 +206,24 @@ export default function ErgoScriptClient() {
 
   const faqs = [
     {
-      question: "Do I need prior blockchain experience to start?",
+      question: t("faqs.needPriorExperience.question"),
       answer:
-        "No! Our tutorial series starts from the basics and gradually builds up complexity. We explain blockchain and smart contract concepts as we go, making it accessible for complete beginners.",
+        t("faqs.needPriorExperience.answer"),
     },
     {
-      question: "How is ErgoScript different from Solidity?",
+      question: t("faqs.ergoScriptDifferentFromSolidity.question"),
       answer:
-        "ErgoScript is based on Scala and designed for the eUTXO model, offering better security guarantees, predictable costs, and native support for advanced cryptography like Sigma protocols. It's more functional and mathematically rigorous than Solidity.",
+        t("faqs.ergoScriptDifferentFromSolidity.answer"),
     },
     {
-      question: "What development tools do I need?",
+      question: t("faqs.developmentTools.question"),
       answer:
-        "You'll need a text editor, the Ergo node software, and optionally the ErgoScript compiler. We provide detailed setup instructions in Module 1.3 to get you started with the complete development environment.",
+        t("faqs.developmentTools.answer"),
     },
     {
-      question: "How long does it take to complete the entire series?",
+      question: t("faqs.completeSeriesDuration.question"),
       answer:
-        "The complete series contains approximately 32 hours of content. Depending on your pace and prior experience, you can expect to complete it in 4-8 weeks with consistent study.",
+        t("faqs.completeSeriesDuration.answer"),
     },
   ]
 
@@ -342,17 +344,9 @@ export default function ErgoScriptClient() {
 
                       <div className="space-y-2">
                         <p className="text-sm font-medium text-orange-400 mb-2">You'll learn:</p>
-                        <div className="flex flex-wrap gap-2">
-                          {audience.examples.map((example) => (
-                            <Badge
-                              key={example}
-                              variant="outline"
-                              className="border-neutral-700 text-neutral-300 hover:border-orange-500/50"
-                            >
-                              {example}
-                            </Badge>
-                          ))}
-                        </div>
+                        <p className="text-sm text-neutral-300">
+                          {audience.examples}
+                        </p>
                       </div>
                     </CardContent>
                   </Card>

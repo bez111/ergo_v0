@@ -48,154 +48,147 @@ import { useState, useEffect, useMemo } from "react"
 import Head from "next/head"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import Script from "next/script"
+import { useTranslations } from "next-intl"
 
-const techFeatures = [
-  {
-    icon: Layers,
-    title: "eUTXO Model",
-    description:
-      "Extended UTXO model that enables parallel smart contract execution and composable DeFi applications. Eliminates reentrancy attacks while maintaining Bitcoin's proven security model.",
-    color: "",
-    href: "/technology/eutxo-model",
-    details: [
-      { icon: Layers, title: "Parallel Execution", description: "Smart contracts run independently without global state conflicts." },
-      { icon: LinkIcon, title: "Composability", description: "Build complex DeFi applications from simple, reusable components." },
-      { icon: Shield, title: "Bitcoin-Level Security", description: "Inherits UTXO's battle-tested double-spend protection." },
-    ],
-  },
-  {
-    icon: Code,
-    title: "ErgoScript",
-    description:
-      "Powerful smart contract language designed for security and flexibility. Features built-in Sigma protocols for zero-knowledge proofs and formal verification support for bulletproof contracts.",
-    color: "",
-    href: "/technology/ergoscript",
-    details: [
-      { icon: ShieldCheck, title: "Formal Verification", description: "Mathematically prove your smart contracts are secure and bug-free." },
-      { icon: Lock, title: "Built-in Privacy", description: "Native zero-knowledge proofs and ring signatures for confidential transactions." },
-      { icon: Code, title: "Safe by Design", description: "Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors." },
-    ],
-  },
-  {
-    icon: Cpu,
-    title: "Autolykos PoW",
-    description:
-      "Energy-efficient, ASIC-resistant mining algorithm that democratizes network participation. Designed for GPU mining to keep the network decentralized and accessible to everyone.",
-    color: "",
-    href: "/technology/secure-pow",
-    details: [
-      { icon: Zap, title: "Energy Efficient", description: "Memory-hard algorithm reduces power consumption compared to traditional PoW." },
-      { icon: Users, title: "Solo Mining Friendly", description: "Low barrier to entry enables individual miners to participate profitably." },
-      { icon: Shield, title: "ASIC Resistant", description: "Optimized for consumer GPUs to prevent mining centralization." },
-    ],
-  },
-  {
-    icon: Database,
-    title: "Storage Rent",
-    description:
-      "Revolutionary economic model that prevents blockchain bloat. Inactive coins pay minimal rent after 4 years, ensuring sustainable blockchain size and permanent miner rewards.",
-    color: "",
-    href: "/technology/storage-rent",
-    details: [
-      { icon: RefreshCw, title: "Sustainable Blockchain", description: "Automatic cleanup of unused data keeps the blockchain lean and efficient." },
-      { icon: CircleDollarSign, title: "Perpetual Security", description: "Miners receive rewards forever, ensuring long-term network security." },
-      { icon: Monitor, title: "Resource Efficient", description: "Maintains lightweight blockchain that runs on modest hardware." },
-    ],
-  },
-  {
-    icon: Lock,
-    title: "Sigma Protocols",
-    description:
-      "Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.",
-    color: "",
-    href: "/technology/privacy-features",
-    details: [
-      { icon: Eye, title: "Optional Privacy", description: "Choose between transparent or confidential transactions as needed." },
-      { icon: ShieldCheck, title: "Advanced Security", description: "Multi-signature wallets, threshold signatures, and secure voting systems." },
-      { icon: Sparkles, title: "Developer Friendly", description: "Simple APIs to add privacy features to any application." },
-    ],
-  },
-  {
-    icon: InfinityIcon,
-    title: "NIPoPoWs",
-    description:
-      "Non-Interactive Proofs of Proof-of-Work enable ultra-light clients and trustless cross-chain communication. Sync mobile wallets in seconds, not hours.",
-    color: "",
-    href: "/technology/nipopows",
-    details: [
-      { icon: Smartphone, title: "Instant Mobile Sync", description: "Full security with minimal data - sync in seconds on any device." },
-      { icon: LinkIcon, title: "Trustless Bridges", description: "Connect to other blockchains without centralized validators." },
-      { icon: ShieldCheck, title: "Cryptographic Security", description: "Mathematical proofs ensure full node-level security for light clients." },
-    ],
-  },
-  {
-    icon: Rocket,
-    title: "Subblocks (In Development)",
-    description:
-      "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations without sacrificing decentralization or security.",
-    color: "",
-    href: "/technology/subblocks",
-    details: [
-      { icon: Timer, title: "Sub-Second Confirmations", description: "Near-instant transaction finality for improved user experience." },
-      { icon: Lock, title: "Layer 1 Security", description: "Full blockchain security without trusted intermediaries." },
-      { icon: Globe, title: "Seamless Integration", description: "Works with existing infrastructure - no bridges or sidechains needed." },
-    ],
-  },
-  {
-    icon: Box,
-    title: "Native Tokens & NFTs",
-    description:
-      "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.",
-    color: "",
-    href: "/technology/native-tokens",
-    details: [
-      { icon: Coins, title: "One-Click Creation", description: "Issue tokens, stablecoins, or NFTs in a single transaction." },
-      { icon: Layers, title: "DeFi Ready", description: "Native integration with all Ergo applications and protocols." },
-      { icon: Zap, title: "True Native Assets", description: "First-class tokens with protocol-level security guarantees." },
-    ],
-  },
-  {
-    icon: Eye,
-    title: "Oracle Pools",
-    description:
-      "Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.",
-    color: "",
-    href: "/technology/oracle-pools",
-    details: [
-      { icon: BarChart3, title: "Reliable Price Feeds", description: "Consensus-based data aggregation ensures accurate, manipulation-resistant prices." },
-      { icon: Layers, title: "Universal Compatibility", description: "Any smart contract can access oracle data without special integrations." },
-      { icon: ShieldCheck, title: "Fully Decentralized", description: "No central authority or single point of failure in the data pipeline." },
-    ],
-  },
-  {
-    icon: Settings,
-    title: "Velvet Forks",
-    description:
-      "Optional, backward-compatible extensions (velvet). New features can coexist with non-upgraded nodes; security depends on the specific proposal.",
-    color: "",
-    href: "/technology/velvet-forks",
-    details: [
-      { icon: RefreshCw, title: "Backward Compatible", description: "No forced upgrades, no chain wars." },
-      { icon: TrendingUp, title: "Future Proof", description: "Adopt innovations at your own pace." },
-      { icon: Timer, title: "Gradual Adoption", description: "Evolutionary, not revolutionary changes." },
-    ],
-  },
-  {
-    icon: CircleDollarSign,
-    title: "Adaptive Emission & Governance",
-    description:
-      "Consensus-driven tuning of economic parameters (e.g., miner voting) with community input.",
-    color: "",
-    href: "/technology/adaptive-emission",
-    details: [
-      { icon: CircleDollarSign, title: "Parameter Tuning", description: "Economic variables can be adjusted." },
-      { icon: TrendingUp, title: "Economic Flexibility", description: "Adapt to changing network needs." },
-      { icon: Users, title: "Community Input", description: "Discussions and decisions involve the community." },
-    ],
-  },
-]
+export default function TechnologyPage() {
+  const t = useTranslations('technology')
+  
+  const techFeatures = [
+    {
+      icon: Layers,
+      title: t('features.eutxo.title'),
+      description: t('features.eutxo.description'),
+      color: "",
+      href: "/technology/eutxo-model",
+      details: [
+        { icon: Layers, title: t('features.eutxo.details.parallel.title'), description: t('features.eutxo.details.parallel.description') },
+        { icon: LinkIcon, title: t('features.eutxo.details.composability.title'), description: t('features.eutxo.details.composability.description') },
+        { icon: Shield, title: t('features.eutxo.details.security.title'), description: t('features.eutxo.details.security.description') },
+      ],
+    },
+    {
+      icon: Code,
+      title: t('features.ergoscript.title'),
+      description: t('features.ergoscript.description'),
+      color: "",
+      href: "/technology/ergoscript",
+      details: [
+        { icon: ShieldCheck, title: t('features.ergoscript.details.verification.title'), description: t('features.ergoscript.details.verification.description') },
+        { icon: Lock, title: t('features.ergoscript.details.privacy.title'), description: t('features.ergoscript.details.privacy.description') },
+        { icon: Code, title: t('features.ergoscript.details.safety.title'), description: t('features.ergoscript.details.safety.description') },
+      ],
+    },
+    {
+      icon: Cpu,
+      title: t('features.autolykos.title'),
+      description: t('features.autolykos.description'),
+      color: "",
+      href: "/technology/secure-pow",
+      details: [
+        { icon: Zap, title: t('features.autolykos.details.efficiency.title'), description: t('features.autolykos.details.efficiency.description') },
+        { icon: Users, title: t('features.autolykos.details.solo.title'), description: t('features.autolykos.details.solo.description') },
+        { icon: Shield, title: t('features.autolykos.details.asic.title'), description: t('features.autolykos.details.asic.description') },
+      ],
+    },
+    {
+      icon: Database,
+      title: t('features.storageRent.title'),
+      description: t('features.storageRent.description'),
+      color: "",
+      href: "/technology/storage-rent",
+      details: [
+        { icon: RefreshCw, title: t('features.storageRent.details.sustainable.title'), description: t('features.storageRent.details.sustainable.description') },
+        { icon: Timer, title: t('features.storageRent.details.rewards.title'), description: t('features.storageRent.details.rewards.description') },
+        { icon: Box, title: t('features.storageRent.details.prevention.title'), description: t('features.storageRent.details.prevention.description') },
+      ],
+    },
+    {
+      icon: Lock,
+      title: t('features.sigmaProtocols.title'),
+      description: t('features.sigmaProtocols.description'),
+      color: "",
+      href: "/technology/privacy-features",
+      details: [
+        { icon: Eye, title: t('features.sigmaProtocols.details.optionalPrivacy.title'), description: t('features.sigmaProtocols.details.optionalPrivacy.description') },
+        { icon: ShieldCheck, title: t('features.sigmaProtocols.details.advancedSecurity.title'), description: t('features.sigmaProtocols.details.advancedSecurity.description') },
+        { icon: Sparkles, title: t('features.sigmaProtocols.details.developerFriendly.title'), description: t('features.sigmaProtocols.details.developerFriendly.description') },
+      ],
+    },
+    {
+      icon: InfinityIcon,
+      title: t('features.nipopows.title'),
+      description: t('features.nipopows.description'),
+      color: "",
+      href: "/technology/nipopows",
+      details: [
+        { icon: Smartphone, title: t('features.nipopows.details.instantMobileSync.title'), description: t('features.nipopows.details.instantMobileSync.description') },
+        { icon: LinkIcon, title: t('features.nipopows.details.trustlessBridges.title'), description: t('features.nipopows.details.trustlessBridges.description') },
+        { icon: ShieldCheck, title: t('features.nipopows.details.cryptographicSecurity.title'), description: t('features.nipopows.details.cryptographicSecurity.description') },
+      ],
+    },
+    {
+      icon: Rocket,
+      title: t('features.subblocks.title'),
+      description: t('features.subblocks.description'),
+      color: "",
+      href: "/technology/subblocks",
+      details: [
+        { icon: Timer, title: t('features.subblocks.details.subSecondConfirmations.title'), description: t('features.subblocks.details.subSecondConfirmations.description') },
+        { icon: Lock, title: t('features.subblocks.details.layer1Security.title'), description: t('features.subblocks.details.layer1Security.description') },
+        { icon: Globe, title: t('features.subblocks.details.seamlessIntegration.title'), description: t('features.subblocks.details.seamlessIntegration.description') },
+      ],
+    },
+    {
+      icon: Box,
+      title: t('features.nativeTokens.title'),
+      description: t('features.nativeTokens.description'),
+      color: "",
+      href: "/technology/native-tokens",
+      details: [
+        { icon: Coins, title: t('features.nativeTokens.details.oneClickCreation.title'), description: t('features.nativeTokens.details.oneClickCreation.description') },
+        { icon: Layers, title: t('features.nativeTokens.details.defiReady.title'), description: t('features.nativeTokens.details.defiReady.description') },
+        { icon: Zap, title: t('features.nativeTokens.details.trueNativeAssets.title'), description: t('features.nativeTokens.details.trueNativeAssets.description') },
+      ],
+    },
+    {
+      icon: Eye,
+      title: t('features.oraclePools.title'),
+      description: t('features.oraclePools.description'),
+      color: "",
+      href: "/technology/oracle-pools",
+      details: [
+        { icon: BarChart3, title: t('features.oraclePools.details.reliablePriceFeeds.title'), description: t('features.oraclePools.details.reliablePriceFeeds.description') },
+        { icon: Layers, title: t('features.oraclePools.details.universalCompatibility.title'), description: t('features.oraclePools.details.universalCompatibility.description') },
+        { icon: ShieldCheck, title: t('features.oraclePools.details.fullyDecentralized.title'), description: t('features.oraclePools.details.fullyDecentralized.description') },
+      ],
+    },
+    {
+      icon: Settings,
+      title: t('features.velvetForks.title'),
+      description: t('features.velvetForks.description'),
+      color: "",
+      href: "/technology/velvet-forks",
+      details: [
+        { icon: RefreshCw, title: t('features.velvetForks.details.backwardCompatible.title'), description: t('features.velvetForks.details.backwardCompatible.description') },
+        { icon: TrendingUp, title: t('features.velvetForks.details.futureProof.title'), description: t('features.velvetForks.details.futureProof.description') },
+        { icon: Timer, title: t('features.velvetForks.details.gradualAdoption.title'), description: t('features.velvetForks.details.gradualAdoption.description') },
+      ],
+    },
+    {
+      icon: CircleDollarSign,
+      title: t('features.adaptiveEmission.title'),
+      description: t('features.adaptiveEmission.description'),
+      color: "",
+      href: "/technology/adaptive-emission",
+      details: [
+        { icon: CircleDollarSign, title: t('features.adaptiveEmission.details.parameterTuning.title'), description: t('features.adaptiveEmission.details.parameterTuning.description') },
+        { icon: TrendingUp, title: t('features.adaptiveEmission.details.economicFlexibility.title'), description: t('features.adaptiveEmission.details.economicFlexibility.description') },
+        { icon: Users, title: t('features.adaptiveEmission.details.communityInput.title'), description: t('features.adaptiveEmission.details.communityInput.description') },
+      ],
+    },
+  ]
 
-const ctas = [
+  const ctas = [
   {
     label: "Dive into Ergo Docs",
           href: "/docs",
@@ -210,7 +203,6 @@ const ctas = [
   },
 ]
 
-export default function TechnologyPage() {
   const layer1 = [
     { label: "eUTXO & ErgoScript", icon: Layers },
     { label: "Autolykos PoW", icon: Cpu },

@@ -2,44 +2,47 @@
 
 import React from "react"
 import { QuickActionCard } from "./quick-action-card"
+import { useTranslations } from "next-intl"
 
 export function QuickActions() {
+  const t = useTranslations('quickActions')
+  
   const actions = [
     {
-      title: "GET WALLET",
-      description: "Set up your Ergo wallet",
+      title: t('actions.getWallet.title'),
+      description: t('actions.getWallet.description'),
       iconName: "Wallet" as const,
       href: "/wallet",
       ariaLabel: "Get started with Ergo wallet setup",
       analytics: "quick-action-wallet"
     },
     {
-      title: "BUY ERG",
-      description: "Purchase Ergo tokens",
+      title: t('actions.buyErg.title'),
+      description: t('actions.buyErg.description'),
       iconName: "CreditCard" as const,
       href: "/use/get-erg",
       ariaLabel: "Learn how to buy Ergo tokens",
       analytics: "quick-action-buy"
     },
     {
-      title: "TRY A DAPP",
-      description: "Explore decentralized apps",
+      title: t('actions.tryDapp.title'),
+      description: t('actions.tryDapp.description'),
       iconName: "Layers" as const,
       href: "/ecosystem",
       ariaLabel: "Explore Ergo decentralized applications",
       analytics: "quick-action-dapp"
     },
     {
-      title: "MINE ERG",
-      description: "Secure the network",
+      title: t('actions.mineErg.title'),
+      description: t('actions.mineErg.description'),
       iconName: "Cpu" as const,
       href: "/use/mining",
       ariaLabel: "Start mining Ergo and secure the network",
       analytics: "quick-action-mine"
     },
     {
-      title: "JOIN COMMUNITY",
-      description: "Connect with Ergo users",
+      title: t('actions.joinCommunity.title'),
+      description: t('actions.joinCommunity.description'),
       iconName: "Users" as const,
       href: "/start/community",
       ariaLabel: "Join the Ergo community",
@@ -52,10 +55,10 @@ export function QuickActions() {
       <div className="container px-4 md:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">
-            <span className="text-orange-400">GET STARTED</span> WITH ERGO
+            <span className="text-orange-400">{t('title').split(' ')[0]} {t('title').split(' ')[1]}</span> {t('title').split(' ').slice(2).join(' ')}
           </h2>
           <p className="text-lg text-neutral-300 max-w-2xl mx-auto">
-            Choose your path to explore the Ergo ecosystem.
+            {t('subtitle')}
           </p>
         </div>
         

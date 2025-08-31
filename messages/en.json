@@ -1724,11 +1724,129 @@
       },
       "sigmaProtocols": {
         "title": "Sigma Protocols",
-        "description": "Powerful cryptographic protocols for complex smart contracts"
+        "description": "Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.",
+        "details": {
+          "optionalPrivacy": {
+            "title": "Optional Privacy",
+            "description": "Choose between transparent or confidential transactions as needed."
+          },
+          "advancedSecurity": {
+            "title": "Advanced Security",
+            "description": "Multi-signature wallets, threshold signatures, and secure voting systems."
+          },
+          "developerFriendly": {
+            "title": "Developer Friendly",
+            "description": "Simple APIs to add privacy features to any application."
+          }
+        }
       },
       "oraclePools": {
         "title": "Oracle Pools",
-        "description": "Decentralized data feeds for smart contracts"
+        "description": "Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.",
+        "details": {
+          "reliablePriceFeeds": {
+            "title": "Reliable Price Feeds", 
+            "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices."
+          },
+          "universalCompatibility": {
+            "title": "Universal Compatibility",
+            "description": "Any smart contract can access oracle data without special integrations."
+          },
+          "fullyDecentralized": {
+            "title": "Fully Decentralized",
+            "description": "No central authority or single point of failure in the data pipeline."
+          }
+        }
+      },
+      "nipopows": {
+        "title": "NIPoPoWs",
+        "description": "Non-Interactive Proofs of Proof-of-Work enable ultra-light clients and trustless cross-chain communication. Sync mobile wallets in seconds, not hours.",
+        "details": {
+          "instantMobileSync": {
+            "title": "Instant Mobile Sync",
+            "description": "Full security with minimal data - sync in seconds on any device."
+          },
+          "trustlessBridges": {
+            "title": "Trustless Bridges", 
+            "description": "Connect to other blockchains without centralized validators."
+          },
+          "cryptographicSecurity": {
+            "title": "Cryptographic Security",
+            "description": "Mathematical proofs ensure full node-level security for light clients."
+          }
+        }
+      },
+      "subblocks": {
+        "title": "Subblocks (In Development)",
+        "description": "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations without sacrificing decentralization or security.",
+        "details": {
+          "subSecondConfirmations": {
+            "title": "Sub-Second Confirmations",
+            "description": "Near-instant transaction finality for improved user experience."
+          },
+          "layer1Security": {
+            "title": "Layer 1 Security",
+            "description": "Full blockchain security without trusted intermediaries."
+          },
+          "seamlessIntegration": {
+            "title": "Seamless Integration",
+            "description": "Works with existing infrastructure - no bridges or sidechains needed."
+          }
+        }
+      },
+      "nativeTokens": {
+        "title": "Native Tokens & NFTs",
+        "description": "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets.",
+        "details": {
+          "oneClickCreation": {
+            "title": "One-Click Creation",
+            "description": "Issue tokens, stablecoins, or NFTs in a single transaction."
+          },
+          "defiReady": {
+            "title": "DeFi Ready",
+            "description": "Native integration with all Ergo applications and protocols."
+          },
+          "trueNativeAssets": {
+            "title": "True Native Assets",
+            "description": "First-class tokens with protocol-level security guarantees."
+          }
+        }
+      },
+      "velvetForks": {
+        "title": "Velvet Forks",
+        "description": "Optional, backward-compatible extensions (velvet). New features can coexist with non-upgraded nodes; security depends on the specific proposal.",
+        "details": {
+          "backwardCompatible": {
+            "title": "Backward Compatible",
+            "description": "No forced upgrades, no chain wars."
+          },
+          "futureProof": {
+            "title": "Future Proof", 
+            "description": "Adopt innovations at your own pace."
+          },
+          "gradualAdoption": {
+            "title": "Gradual Adoption",
+            "description": "Evolutionary, not revolutionary changes."
+          }
+        }
+      },
+      "adaptiveEmission": {
+        "title": "Adaptive Emission & Governance",
+        "description": "Consensus-driven tuning of economic parameters (e.g., miner voting) with community input.",
+        "details": {
+          "parameterTuning": {
+            "title": "Parameter Tuning",
+            "description": "Economic variables can be adjusted."
+          },
+          "economicFlexibility": {
+            "title": "Economic Flexibility",
+            "description": "Adapt to changing network needs."
+          },
+          "communityInput": {
+            "title": "Community Input",
+            "description": "Discussions and decisions involve the community."
+          }
+        }
       }
     },
     "innovations": {
@@ -3834,8 +3952,9 @@
   },
   "learn": {
     "title": "Learn",
-    "subtitle": "Educational resources for everyone",
+    "subtitle": "Educational resources for everyone", 
     "description": "Educational resources for Ergo blockchain",
+    "browseFaq": "Browse FAQ",
     "sections": {
       "basics": "Blockchain Basics",
       "ergoScript": "ErgoScript",
@@ -4986,8 +5105,46 @@
   "sections": {
     "learningResources": "Learning Resources"
   },
-  "manifesto": {},
-  "corePillars": {},
+  "manifesto": {
+    "title": "MANIFESTO",
+    "content": {
+      "paragraph1": "In a world of increasing surveillance and control, we stand for financial freedom and privacy.",
+      "paragraph2": "Ergo is built on the core principles that drove the original crypto revolution: open, permissionless, secure systems that empower regular people.",
+      "paragraph3": "We reject the centralization of power. We reject the surveillance state. We reject the corporate capture of our financial systems.",
+      "paragraph4": "Ergo provides the tools for people to secure their financial interactions through contractual money - programmable, private, and unstoppable.",
+      "conclusion": "This is not just technology. This is resistance."
+    }
+  },
+  "corePillars": {
+    "title": "CORE PILLARS",
+    "subtitle": "Ergo combines proven principles with cutting-edge cryptography",
+    "pillars": {
+      "security": {
+        "title": "SECURITY (POW)",
+        "description": "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone."
+      },
+      "programmability": {
+        "title": "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
+        "description": "Formally verifiable, expressive, and secure contracts—powered by ErgoScript and the advanced eUTXO model."
+      },
+      "sustainability": {
+        "title": "SUSTAINABILITY (STORAGE RENT)",
+        "description": "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat."
+      },
+      "privacy": {
+        "title": "PRIVACY",
+        "description": "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions."
+      },
+      "oraclePools": {
+        "title": "ORACLE POOLS",
+        "description": "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives."
+      },
+      "devFriendly": {
+        "title": "DEV FRIENDLY",
+        "description": "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative."
+      }
+    }
+  },
   "search": {
     "placeholder": "Search documentation...",
     "noResults": "No results found",
@@ -6063,6 +6220,83 @@
     "meetups": "Meetups",
     "conferences": "Conferences"
   },
+  "ctaSection": {
+    "title": "Ready to Build the Future?",
+    "subtitle": "Join the Ergo ecosystem and be part of the decentralized revolution",
+    "actions": {
+      "getStarted": {
+        "title": "Get Started",
+        "description": "Set up wallet & buy ERG",
+        "label": "START NOW"
+      },
+      "developers": {
+        "title": "For Developers", 
+        "description": "Build on Ergo",
+        "label": "START BUILDING"
+      },
+      "miners": {
+        "title": "For Miners",
+        "description": "Secure the network",
+        "label": "START MINING"
+      }
+    }
+  },
+  "whatMakesDifferent": {
+    "title": "WHAT MAKES ERGO DIFFERENT",
+    "subtitle": "Ergo combines proven cryptographic techniques with innovative blockchain design to create a sustainable, secure, and truly decentralized platform",
+    "features": {
+      "fairLaunch": {
+        "title": "FAIR LAUNCH & PROOF-OF-WORK",
+        "description": "Launched with no ICO or premine, secured by Autolykos v2 - an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one."
+      },
+      "eutxoErgoscript": {
+        "title": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
+        "description": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi."
+      },
+      "storageRent": {
+        "title": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
+        "description": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient."
+      },
+      "researchDriven": {
+        "title": "RESEARCH-DRIVEN INNOVATION",
+        "description": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity."
+      },
+      "privacy": {
+        "title": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
+        "description": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions."
+      },
+      "communityLed": {
+        "title": "COMMUNITY-LED DEVELOPMENT", 
+        "description": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control."
+      }
+    }
+  },
+  "quickActions": {
+    "title": "GET STARTED WITH ERGO",
+    "subtitle": "Choose your path to explore the Ergo ecosystem",
+    "actions": {
+      "getWallet": {
+        "title": "GET WALLET",
+        "description": "Set up your Ergo wallet"
+      },
+      "buyErg": {
+        "title": "BUY ERG", 
+        "description": "Purchase Ergo tokens"
+      },
+      "tryDapp": {
+        "title": "TRY A DAPP",
+        "description": "Explore decentralized apps"
+      },
+      "mineErg": {
+        "title": "MINE ERG",
+        "description": "Secure the network"
+      },
+      "joinCommunity": {
+        "title": "JOIN COMMUNITY",
+        "description": "Connect with Ergo users"
+      }
+    }
+  },
   "privacyFeatures": {
     "title": "Privacy Features",
     "description": "Advanced cryptographic protocols for financial privacy on Ergo blockchain",
@@ -6111,8 +6345,286 @@
   "learnErgoscript": {
     "title": "Learn ErgoScript",
     "description": "Comprehensive guide to Ergo's smart contract language",
-    "subtitle": "Master blockchain programming with ErgoScript"
-  },
+    "subtitle": "Master blockchain programming with ErgoScript",
+    "whyLearnFeatures": {
+      "secureByDesign": {
+        "title": "Secure by Design",
+        "description": "Built-in security and formal verifiability, minimizing smart contract risks"
+      },
+      "powerfulExpressive": {
+        "title": "Powerful & Expressive", 
+        "description": "Enables complex DeFi, multi-stage protocols, and unique dApps"
+      },
+      "leverageEutxo": {
+        "title": "Leverage eUTXO",
+        "description": "Only ErgoScript unlocks the full power of eUTXO: predictable costs, local state, composability"
+      },
+      "builtInCryptography": {
+        "title": "Built-in Cryptography",
+        "description": "Native support for Sigma-protocols, privacy, and advanced access schemes"
+      }
+    },
+    "faqs": {
+      "needPriorExperience": {
+        "question": "Do I need prior blockchain experience to start?",
+        "answer": "No! Our tutorial series starts from the basics and gradually builds up complexity. We explain blockchain and smart contract concepts as we go, making it accessible for complete beginners."
+      },
+      "ergoScriptDifferentFromSolidity": {
+        "question": "How is ErgoScript different from Solidity?",
+        "answer": "ErgoScript is based on Scala and designed for the eUTXO model, offering better security guarantees, predictable costs, and native support for advanced cryptography like Sigma protocols. It's more functional and mathematically rigorous than Solidity."
+      },
+      "developmentTools": {
+        "question": "What development tools do I need?",
+        "answer": "You'll need a text editor, the Ergo node software, and optionally the ErgoScript compiler. We provide detailed setup instructions in Module 1.3 to get you started with the complete development environment."
+      },
+      "completeSeriesDuration": {
+        "question": "How long does it take to complete the entire series?",
+        "answer": "The complete series contains approximately 32 hours of content. Depending on your pace and prior experience, you can expect to complete it in 4-8 weeks with consistent study."
+      }
+    },
+        "targetAudience": {
+      "newToSmartContracts": {
+        "title": "New to Smart Contracts",
+        "description": "Step-by-step explanations of core blockchain and smart contract concepts",
+        "examples": "Blockchain basics, Smart contract fundamentals, eUTXO introduction"
+      },
+      "experiencedDevelopers": {
+        "title": "Experienced Blockchain Developers", 
+        "description": "Discover eUTXO, new safe patterns, and advanced contract design",
+        "examples": "eUTXO patterns, Security best practices, Advanced cryptography"
+      },
+      "scalaFunctionalProgrammers": {
+        "title": "Scala/Functional Programmers",
+        "description": "ErgoScript's syntax and philosophy will feel familiar—apply your skills easily",
+        "examples": "Functional paradigms, Type safety, Immutable data structures"
+      },
+      "defiEnthusiasts": {
+        "title": "DeFi Enthusiasts",
+        "description": "Build the next generation of decentralized financial applications",
+        "examples": "DEX protocols, Lending platforms, Algorithmic stablecoins"
+      }
+    },
+    "modules": {
+      "foundations": {
+        "title": "Foundations of Ergo and ErgoScript",
+        "number": 1,
+        "totalDuration": "185 min",
+        "lessons": [
+          {
+            "title": "Introduction to Ergo & the eUTXO Model",
+            "duration": "20 min",
+            "level": "Beginner"
+          },
+          {
+            "title": "What is ErgoScript? Philosophy and Design Goals", 
+            "duration": "15 min",
+            "level": "Beginner"
+          },
+          {
+            "title": "Setting Up Your ErgoScript Development Environment",
+            "duration": "30 min", 
+            "level": "Beginner"
+          },
+          {
+            "title": "Basic Syntax, Data Types, Operators",
+            "duration": "40 min",
+            "level": "Beginner"
+          },
+          {
+            "title": "Boxes, Registers, Context Variables",
+            "duration": "45 min",
+            "level": "Beginner"
+          }
+        ]
+      }
+    }
+   },
+  "startIntroduction": {
+    "title": "Introduction to Ergo",
+    "description": "Quick overview of Ergo blockchain fundamentals", 
+    "subtitle": "What makes Ergo unique",
+    "coreValues": {
+      "decentralizedFirst": {
+        "title": "Decentralized First",
+        "description": "No central authority, no single points of failure"
+      },
+      "secureReliable": {
+        "title": "Secure & Reliable", 
+        "description": "Battle-tested cryptography and proven consensus"
+      },
+      "powerfulContracts": {
+        "title": "Powerful Contracts",
+        "description": "Advanced smart contract capabilities with ErgoScript"
+      },
+      "longTermFocus": {
+        "title": "Long-term Focus",
+        "description": "Sustainable economics and future-proof design"
+      }
+    },
+    "keyInnovations": {
+      "proofOfWork": {
+        "title": "Proof-of-Work (PoW)",
+        "subtitle": "Maximum security",
+        "description": "ASIC-resistant Autolykos algorithm ensures fair mining"
+      },
+      "extendedUtxo": {
+        "title": "Extended UTXO",
+        "subtitle": "Smart money",
+        "description": "Combines Bitcoin security with Ethereum programmability"
+      },
+      "sigmaProtocols": {
+        "title": "Sigma Protocols",
+        "subtitle": "Advanced cryptography", 
+        "description": "Built-in zero-knowledge proofs and privacy features"
+      }
+    },
+    "introduction": {
+      "principles": {
+        "decentralizedFirst": {
+          "title": "Decentralized First",
+          "description": "Launched fairly with no premine or ICO. Community-driven for maximum decentralization."
+        },
+        "secureReliable": {
+          "title": "Secure & Reliable",
+          "description": "Built on Proof-of-Work consensus (Autolykos) and the innovative eUTXO model."
+        },
+        "powerfulContracts": {
+          "title": "Powerful Contracts",
+          "description": "ErgoScript enables secure financial apps that are hard to implement safely in account-based models."
+        },
+        "longTermFocus": {
+          "title": "Long-term Focus",
+          "description": "Designed for resilience with focus on real-world utility over speculation."
+        }
+      },
+      "technologies": {
+        "pow": {
+          "title": "Proof-of-Work (PoW)",
+          "subtitle": "Maximum security",
+          "description": "Autolykos algorithm is ASIC-resistant, ensuring fair distribution and robust security.",
+          "badge": "Autolykos"
+        },
+        "extendedUtxo": {
+          "title": "Extended UTXO",
+          "subtitle": "Smart money",
+          "description": "Allows complex smart contracts with better scalability and predictable fees.",
+          "badge": "eUTXO"
+        },
+        "sigmaProtocols": {
+          "title": "Sigma Protocols",
+          "subtitle": "Advanced cryptography",
+          "description": "Enables privacy and advanced crypto primitives (threshold/multisig, ring-like constructions).",
+          "badge": "Σ-protocols"
+        }
+      },
+      "whatIsErgo": {
+        "eutxoLink": "eUTXO smart‑contract model",
+        "powLink": "Autolykos (ASIC‑resistant PoW)",
+        "storageRentLink": "Storage Rent",
+        "privacyLink": "Sigma‑powered privacy"
+      },
+      "whyErgo": {
+        "title": "Why Ergo?",
+        "eutxo": "eUTXO smart contracts with predictable execution",
+        "sigma": "Sigma (ZK) protocols for threshold/multisig and privacy",
+        "pow": "Autolykos — ASIC‑resistant, GPU‑friendly PoW",
+        "storageRent": "Storage Rent and NIPoPoWs (succinct proofs)"
+      },
+      "keyInnovation": {
+        "title": "Key Innovation"
+      },
+      "references": {
+        "autolykos": "Autolykos v2",
+        "ergoGithub": "ergo (GitHub)"
+      },
+      "featureHighlights": {
+        "privacyFirst": {
+          "title": "Privacy First",
+          "description": "Built-in privacy at the protocol level"
+        },
+        "storageRent": {
+          "title": "Storage Rent",
+          "description": "Sustainable economic model for long-term viability"
+        },
+        "lightClients": {
+          "title": "Light Clients",
+          "description": "Succinct proofs (NIPoPoWs), near full-node guarantees"
+        },
+        "fairLaunch": {
+          "title": "Fair Launch",
+          "description": "No premine, no ICO, community-driven"
+        }
+      },
+      "corePrinciples": {
+        "title": "Principles"
+      },
+      "keyTechnologies": {
+        "title": "Technologies",
+        "learnMore": "Learn More"
+      },
+      "whatMakesErgoDifferent": {
+        "title": "WHAT MAKES",
+        "fairLaunch": {
+          "title": "FAIR LAUNCH & PROOF-OF-WORK",
+          "description": "Launched with no ICO or premine, secured by Autolykos v2 – an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one."
+        },
+        "eutxoErgoScript": {
+          "title": "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
+          "description": "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi."
+        },
+        "storageRent": {
+          "title": "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
+          "description": "A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data (\"dust\") back to miners, preventing bloat and keeping the chain efficient."
+        },
+        "researchDriven": {
+          "title": "RESEARCH-DRIVEN INNOVATION",
+          "description": "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity."
+        },
+        "robustPrivacy": {
+          "title": "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
+          "description": "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions."
+        },
+        "communityLed": {
+          "title": "COMMUNITY-LED DEVELOPMENT",
+          "description": "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control."
+        }
+      },
+      "faq": {
+        "eutxoModel": {
+          "question": "What is the eUTXO model?",
+          "answer": "eUTXO is an extension of Bitcoin's UTXO enabling expressive, parallelizable smart contracts with predictable execution costs."
+        },
+        "sigmaProtocols": {
+          "question": "What are Sigma protocols on Ergo?",
+          "answer": "Sigma protocols are native cryptographic proofs enabling threshold/multisig and privacy without trusted setup."
+        },
+        "pow": {
+          "question": "Why Proof‑of‑Work for Ergo?",
+          "answer": "PoW (Autolykos) keeps mining accessible (ASIC‑resistant), supports decentralization, and has a robust security track record."
+        }
+      },
+      "ergoScriptExample": {
+        "title": "ErgoScript Example: Time-Locked Contract",
+        "filename": "TimeLock.ergo"
+      },
+      "cta": {
+        "readyToDiveIn": {
+          "title": "Ready to Dive In?",
+          "description": "Your journey into the Ergo ecosystem is just a few clicks away. Get a secure wallet and start exploring the future of finance."
+        },
+        "getErgoWallet": {
+          "button": "Get an Ergo Wallet"
+        },
+        "exploreEcosystem": {
+          "button": "Explore Ecosystem"
+        },
+        "documentation": {
+          "button": "Documentation"
+        },
+        "lastUpdated": "Last updated: 2025-08-10"
+      }
+    }
+   },
   "learnFaq": {
     "title": "Learn FAQ",
     "description": "Frequently asked questions about learning Ergo",
@@ -6166,7 +6678,42 @@
   "startIntroduction": {
     "title": "Introduction to Ergo",
     "description": "Quick overview of Ergo blockchain fundamentals", 
-    "subtitle": "What makes Ergo unique"
+    "subtitle": "What makes Ergo unique",
+    "coreValues": {
+      "decentralizedFirst": {
+        "title": "Decentralized First",
+        "description": "No central authority, no single points of failure"
+      },
+      "secureReliable": {
+        "title": "Secure & Reliable", 
+        "description": "Battle-tested cryptography and proven consensus"
+      },
+      "powerfulContracts": {
+        "title": "Powerful Contracts",
+        "description": "Advanced smart contract capabilities with ErgoScript"
+      },
+      "longTermFocus": {
+        "title": "Long-term Focus",
+        "description": "Sustainable economics and future-proof design"
+      }
+    },
+    "keyInnovations": {
+      "proofOfWork": {
+        "title": "Proof-of-Work (PoW)",
+        "subtitle": "Maximum security",
+        "description": "ASIC-resistant Autolykos algorithm ensures fair mining"
+      },
+      "extendedUtxo": {
+        "title": "Extended UTXO",
+        "subtitle": "Smart money",
+        "description": "Combines Bitcoin security with Ethereum programmability"
+      },
+      "sigmaProtocols": {
+        "title": "Sigma Protocols",
+        "subtitle": "Advanced cryptography", 
+        "description": "Built-in zero-knowledge proofs and privacy features"
+      }
+    }
   },
   "startQuiz": {
     "title": "Onboarding Quiz",

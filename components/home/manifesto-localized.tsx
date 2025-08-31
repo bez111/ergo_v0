@@ -11,25 +11,25 @@ export function Manifesto() {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-white">
-              MANIFESTO
+              {t('title')}
             </h2>
           </div>
           
           <div className="space-y-6 font-mono text-gray-300 border-l-2 border-neutral-600 pl-6">
             <p className="leading-relaxed">
-              In a world of increasing surveillance and control, we stand for financial freedom and privacy.
+              {t('content.paragraph1')}
             </p>
             <p className="leading-relaxed">
-              Ergo is built on the core principles that drove the original crypto revolution: open, permissionless, secure systems that empower regular people.
+              {t('content.paragraph2')}
             </p>
             <p className="leading-relaxed">
-              We reject the centralization of power. We reject the surveillance state. We reject the corporate capture of our financial systems.
+              {t('content.paragraph3')}
             </p>
             <p className="leading-relaxed">
-              Ergo provides the tools for people to secure their financial interactions through contractual money - programmable, private, and unstoppable.
+              {t('content.paragraph4')}
             </p>
             <p className="text-lg font-bold text-orange-500 mt-8">
-              This is not just technology. This is resistance.
+              {t('content.conclusion')}
             </p>
           </div>
         </div>

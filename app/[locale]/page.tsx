@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
 import { HeroSection } from "@/components/home/hero-section"
-import { WhyErgo } from "@/components/home/why-ergo"
+import { WhyErgo } from "@/components/home/why-ergo-localized"
 import { GridBackground } from "@/components/animations/grid-background"
 import { 
   LazyEcosystemShowcase, 

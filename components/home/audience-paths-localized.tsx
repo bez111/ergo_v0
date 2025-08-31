@@ -36,51 +36,51 @@ export function AudiencePaths() {
 
   const audiences: Audience[] = [
     {
-      title: "FOR DEVELOPERS",
-      description: "Build innovative applications on Ergo",
+      title: t('audiences.developers.title').toUpperCase(),
+      description: t('audiences.developers.description'),
       iconName: "Code",
-      cta: "START BUILDING",
+      cta: t('audiences.developers.cta').toUpperCase(),
       ctaLink: "/docs",
       links: [
-        { label: "Documentation", href: "/docs" },
-        { label: "Technology", href: "/technology" },
-        { label: "Use Cases", href: "/use" },
+        { label: t('audiences.developers.links.documentation'), href: "/docs" },
+        { label: t('audiences.developers.links.technology'), href: "/technology" },
+        { label: t('audiences.developers.links.useCases'), href: "/use" },
       ],
     },
     {
-      title: "FOR MINERS",
-      description: "Secure the network and earn rewards",
+      title: t('audiences.miners.title').toUpperCase(),
+      description: t('audiences.miners.description'),
       iconName: "Cpu",
-      cta: "START MINING",
+      cta: t('audiences.miners.cta').toUpperCase(),
       ctaLink: "/use/mining",
       links: [
-        { label: "Mining Documents", href: "/docs/miners" },
-        { label: "Mining Pools", href: "/mining/pools" },
-        { label: "Profitability Calculator", href: "/use/mining#calculator" },
+        { label: t('audiences.miners.links.miningDocs'), href: "/docs/miners" },
+        { label: t('audiences.miners.links.miningPools'), href: "/mining/pools" },
+        { label: t('audiences.miners.links.calculator'), href: "/use/mining#calculator" },
       ],
     },
     {
-      title: "FOR USERS",
-      description: "Use Ergo for payments and DeFi",
+      title: t('audiences.users.title').toUpperCase(),
+      description: t('audiences.users.description'),
       iconName: "User",
-      cta: "GET STARTED",
+      cta: t('audiences.users.cta').toUpperCase(),
       ctaLink: "/start/introduction",
       links: [
-        { label: "Wallets", href: "/wallet" },
-        { label: "Ecosystem", href: "/ecosystem" },
-        { label: "Buy ERG", href: "/use/get-erg" },
+        { label: t('audiences.users.links.wallets'), href: "/wallet" },
+        { label: t('audiences.users.links.ecosystem'), href: "/ecosystem" },
+        { label: t('audiences.users.links.buyErg'), href: "/use/get-erg" },
       ],
     },
     {
-      title: "FOR INVESTORS",
-      description: "Understand Ergo's value proposition",
+      title: t('audiences.investors.title').toUpperCase(),
+      description: t('audiences.investors.description'),
       iconName: "LineChart",
-      cta: "EXPLORE ECOSYSTEM",
+      cta: t('audiences.investors.cta').toUpperCase(),
       ctaLink: "/ecosystem",
       links: [
-        { label: "What is Ergo", href: "/start/introduction" },
-        { label: "Projects", href: "/ecosystem" },
-        { label: "Use Cases", href: "/use" },
+        { label: t('audiences.investors.links.whatIsErgo'), href: "/start/introduction" },
+        { label: t('audiences.investors.links.projects'), href: "/ecosystem" },
+        { label: t('audiences.investors.links.community'), href: "/start/community" },
       ],
     },
   ]
@@ -99,10 +99,10 @@ export function AudiencePaths() {
             className="text-center mb-12"
           >
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 text-center">
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">GET STARTED</span> WITH ERGO
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">{t('title').split(' ').slice(0, 2).join(' ')}</span> {t('title').split(' ').slice(2).join(' ')}
             </h2>
             <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
-              Choose your path to explore the Ergo ecosystem.
+              {t('subtitle')}
             </p>
           </motion.div>
 

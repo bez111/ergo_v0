@@ -20,68 +20,64 @@ export function EcosystemShowcase() {
   const [activeCategory, setActiveCategory] = useState("DEFI")
 
   const categories = [
-    { id: "DEFI", label: "DEFI" },
-    { id: "PRIVACY", label: "PRIVACY" },
-    { id: "STABLE", label: "STABLE ASSETS" },
-    { id: "GAMING", label: "GAMING" },
+    { id: "DEFI", label: t('categories.defi') },
+    { id: "PRIVACY", label: t('categories.privacy') },
+    { id: "STABLE", label: t('categories.stable') },
+    { id: "GAMING", label: t('categories.gaming') },
   ]
 
   const featuredProjects = {
     DEFI: {
-      title: "Rosen Bridge",
-      subtitle: "Connecting Ergo's Ecosystem",
-      description:
-        "Seamlessly transfer assets between Ergo and other leading blockchains like Bitcoin, Ethereum, Cardano, and BSC with Rosen Bridge. Our secure Watcher & Guard system unlocks cross-chain liquidity and new DeFi possibilities.",
+      title: t('projects.rosenBridge.title'),
+      subtitle: t('projects.rosenBridge.subtitle'),
+      description: t('projects.rosenBridge.description'),
       image: "/placeholder.svg",
       stats: [
-        { label: "Cross-Chain", value: "BTC, ETH, ADA, BSC & more" },
-        { label: "Secure Bridge", value: "Watcher & Guard Model" },
-        { label: "Unlock Liquidity", value: "Access New Markets" },
+        { label: t('projects.rosenBridge.stats.crossChain.label'), value: t('projects.rosenBridge.stats.crossChain.value') },
+        { label: t('projects.rosenBridge.stats.secureBridge.label'), value: t('projects.rosenBridge.stats.secureBridge.value') },
+        { label: t('projects.rosenBridge.stats.unlockLiquidity.label'), value: t('projects.rosenBridge.stats.unlockLiquidity.value') },
       ],
-      ctaText: "VISIT ROSEN BRIDGE",
+      ctaText: t('projects.rosenBridge.cta'),
       ctaLink: "https://rosen.tech",
     },
     PRIVACY: {
-      title: "ErgoMixer",
-      subtitle: "Non-Custodial Privacy Protocol",
-      description:
-        "ErgoMixer provides cutting-edge privacy solutions using Sigma protocols and ring signatures. Enjoy complete financial privacy while maintaining regulatory compliance through optional transparency features.",
+      title: t('projects.ergoMixer.title'),
+      subtitle: t('projects.ergoMixer.subtitle'),
+      description: t('projects.ergoMixer.description'),
       image: "/placeholder.svg",
       stats: [
-        { label: "Mixed Volume", value: "$3.7M" },
-        { label: "Privacy Score", value: "99.9%" },
-        { label: "Transactions", value: "25K+" },
+        { label: t('projects.ergoMixer.stats.mixedVolume.label'), value: t('projects.ergoMixer.stats.mixedVolume.value') },
+        { label: t('projects.ergoMixer.stats.privacyScore.label'), value: t('projects.ergoMixer.stats.privacyScore.value') },
+        { label: t('projects.ergoMixer.stats.transactions.label'), value: t('projects.ergoMixer.stats.transactions.value') },
       ],
-      ctaText: "LEARN ABOUT PRIVACY ON ERGO",
+      ctaText: t('projects.ergoMixer.cta'),
       ctaLink: "/ecosystem/privacy",
     },
 
     STABLE: {
-      title: "SigmaUSD",
-      subtitle: "Algorithmic Stablecoin Protocol",
-      description:
-        "SigmaUSD is a crypto-backed algorithmic stablecoin protocol built on Ergo. It provides a decentralized way to create stable value without relying on traditional banking systems or centralized reserves.",
+      title: t('projects.sigmaUSD.title'),
+      subtitle: t('projects.sigmaUSD.subtitle'),
+      description: t('projects.sigmaUSD.description'),
       image: "/placeholder.svg",
       stats: [
-        { label: "Stability Score", value: "99.2%" },
-        { label: "Total Supply", value: "$2.1M" },
-        { label: "Collateral Ratio", value: "400%" },
+        { label: t('projects.sigmaUSD.stats.stabilityScore.label'), value: t('projects.sigmaUSD.stats.stabilityScore.value') },
+        { label: t('projects.sigmaUSD.stats.totalSupply.label'), value: t('projects.sigmaUSD.stats.totalSupply.value') },
+        { label: t('projects.sigmaUSD.stats.collateralRatio.label'), value: t('projects.sigmaUSD.stats.collateralRatio.value') },
       ],
-      ctaText: "EXPLORE SIGMAUSD",
+      ctaText: t('projects.sigmaUSD.cta'),
       ctaLink: "/ecosystem/sigmausd",
     },
     GAMING: {
-      title: "Ergo Gaming Ecosystem",
-      subtitle: "Blockchain Gaming Platform",
-      description:
-        "Experience the future of gaming with true asset ownership, play-to-earn mechanics, and decentralized tournaments. Powered by Ergo's efficient and secure blockchain infrastructure.",
+      title: t('projects.gaming.title'),
+      subtitle: t('projects.gaming.subtitle'),
+      description: t('projects.gaming.description'),
       image: "/placeholder.svg?height=400&width=600",
       stats: [
-        { label: "Active Games", value: "12" },
-        { label: "Players", value: "5K+" },
-        { label: "Rewards Paid", value: "$250K" },
+        { label: t('projects.gaming.stats.activeGames.label'), value: t('projects.gaming.stats.activeGames.value') },
+        { label: t('projects.gaming.stats.players.label'), value: t('projects.gaming.stats.players.value') },
+        { label: t('projects.gaming.stats.gameAssets.label'), value: t('projects.gaming.stats.gameAssets.value') },
       ],
-      ctaText: "START GAMING ON ERGO",
+      ctaText: t('projects.gaming.cta'),
       ctaLink: "/ecosystem/gaming",
     },
   }

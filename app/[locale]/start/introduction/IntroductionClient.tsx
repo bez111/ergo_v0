@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
+import { useTranslations } from "next-intl"
 import dynamic from "next/dynamic"
 // Removed framer-motion animations
 import {
@@ -51,6 +52,7 @@ const HexagonalGrid = dynamic(() => import("@/components/ui-kit/signature-effect
 
 export default function IntroductionClient() {
   const localizedPath = useLocalizedPath()
+  const t = useTranslations('startIntroduction')
   const isoDate = new Date().toISOString().slice(0, 10)
 
   // SSR full content; heavy effects render client-only via dynamic()
@@ -59,26 +61,26 @@ export default function IntroductionClient() {
   const principlesGridItems: FeatureGridItem[] = [
     {
       icon: Users,
-      title: "Decentralized First",
-      description: "Launched fairly with no premine or ICO. Community-driven for maximum decentralization.",
+      title: t("introduction.principles.decentralizedFirst.title"),
+      description: t("introduction.principles.decentralizedFirst.description"),
       color: "text-orange-400"
     },
     {
       icon: Shield,
-      title: "Secure & Reliable",
-      description: "Built on Proof-of-Work consensus (Autolykos) and the innovative eUTXO model.",
+      title: t("introduction.principles.secureReliable.title"),
+      description: t("introduction.principles.secureReliable.description"),
       color: "text-brand-secondary-400"
     },
     {
       icon: Code,
-      title: "Powerful Contracts",
-      description: "ErgoScript enables secure financial apps that are hard to implement safely in account-based models.",
+      title: t("introduction.principles.powerfulContracts.title"),
+      description: t("introduction.principles.powerfulContracts.description"),
       color: "text-status-success-500"
     },
     {
       icon: GitBranch,
-      title: "Long-term Focus",
-      description: "Designed for resilience with focus on real-world utility over speculation.",
+      title: t("introduction.principles.longTermFocus.title"),
+      description: t("introduction.principles.longTermFocus.description"),
       color: "text-status-info-500"
     }
   ]
@@ -87,24 +89,24 @@ export default function IntroductionClient() {
   const technologies = [
     {
       icon: Cpu,
-      title: "Proof-of-Work (PoW)",
-      subtitle: "Maximum security",
-      description: "Autolykos algorithm is ASIC-resistant, ensuring fair distribution and robust security.",
-      badge: "Autolykos"
+      title: t("introduction.technologies.pow.title"),
+      subtitle: t("introduction.technologies.pow.subtitle"),
+      description: t("introduction.technologies.pow.description"),
+      badge: t("introduction.technologies.pow.badge")
     },
     {
       icon: Layers,
-      title: "Extended UTXO",
-      subtitle: "Smart money",
-      description: "Allows complex smart contracts with better scalability and predictable fees.",
-      badge: "eUTXO"
+      title: t("introduction.technologies.extendedUtxo.title"),
+      subtitle: t("introduction.technologies.extendedUtxo.subtitle"),
+      description: t("introduction.technologies.extendedUtxo.description"),
+      badge: t("introduction.technologies.extendedUtxo.badge")
     },
     {
       icon: Lock,
-      title: "Sigma Protocols",
-      subtitle: "Advanced cryptography",
-      description: "Enables privacy and advanced crypto primitives (threshold/multisig, ring-like constructions).",
-      badge: "Σ-protocols"
+      title: t("introduction.technologies.sigmaProtocols.title"),
+      subtitle: t("introduction.technologies.sigmaProtocols.subtitle"),
+      description: t("introduction.technologies.sigmaProtocols.description"),
+      badge: t("introduction.technologies.sigmaProtocols.badge")
     }
   ]
 
@@ -150,26 +152,26 @@ export default function IntroductionClient() {
           mainEntity: [
             {
               "@type": "Question",
-              name: "What is the eUTXO model?",
+              name: t("introduction.faq.eutxoModel.question"),
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "eUTXO is an extension of Bitcoin's UTXO enabling expressive, parallelizable smart contracts with predictable execution costs.",
+                text: t("introduction.faq.eutxoModel.answer"),
               },
             },
             {
               "@type": "Question",
-              name: "What are Sigma protocols on Ergo?",
+              name: t("introduction.faq.sigmaProtocols.question"),
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "Sigma protocols are native cryptographic proofs enabling threshold/multisig and privacy without trusted setup.",
+                text: t("introduction.faq.sigmaProtocols.answer"),
               },
             },
             {
               "@type": "Question",
-              name: "Why Proof‑of‑Work for Ergo?",
+              name: t("introduction.faq.pow.question"),
               acceptedAnswer: {
                 "@type": "Answer",
-                text: "PoW (Autolykos) keeps mining accessible (ASIC‑resistant), supports decentralization, and has a robust security track record.",
+                text: t("introduction.faq.pow.answer"),
               },
             },
           ],
@@ -211,19 +213,19 @@ export default function IntroductionClient() {
               </p>
               <p className="text-gray-300 leading-relaxed mb-8">
                 Its mission is to provide tools for decentralized and accessible financial systems — empowering people with economic freedom without intermediaries. Learn about the
-                <Link href={localizedPath("technology/eutxo-model")} className="underline hover:opacity-80 ml-1">eUTXO smart‑contract model</Link>,
-                <Link href={localizedPath("technology/secure-pow")} className="underline hover:opacity-80 ml-1">Autolykos (ASIC‑resistant PoW)</Link>,
-                <Link href={localizedPath("technology/storage-rent")} className="underline hover:opacity-80 ml-1">Storage Rent</Link>, and
-                <Link href={localizedPath("technology/privacy-features")} className="underline hover:opacity-80 ml-1">Sigma‑powered privacy</Link>.
+                <Link href={localizedPath("technology/eutxo-model")} className="underline hover:opacity-80 ml-1">{t("introduction.whatIsErgo.eutxoLink")}</Link>,
+                <Link href={localizedPath("technology/secure-pow")} className="underline hover:opacity-80 ml-1">{t("introduction.whatIsErgo.powLink")}</Link>,
+                <Link href={localizedPath("technology/storage-rent")} className="underline hover:opacity-80 ml-1">{t("introduction.whatIsErgo.storageRentLink")}</Link>, and
+                <Link href={localizedPath("technology/privacy-features")} className="underline hover:opacity-80 ml-1">{t("introduction.whatIsErgo.privacyLink")}</Link>.
               </p>
               {/* Why Ergo (keywords) */}
               <div className="mb-6">
-                <h3 className="text-white font-semibold mb-2">Why Ergo?</h3>
+                <h3 className="text-white font-semibold mb-2">{t("introduction.whyErgo.title")}</h3>
                 <ul className="list-disc list-inside text-gray-300 text-sm space-y-1">
-                  <li>eUTXO smart contracts with predictable execution</li>
-                  <li>Sigma (ZK) protocols for threshold/multisig and privacy</li>
-                  <li>Autolykos — ASIC‑resistant, GPU‑friendly PoW</li>
-                  <li>Storage Rent and NIPoPoWs (succinct proofs)</li>
+                  <li>{t("introduction.whyErgo.eutxo")}</li>
+                  <li>{t("introduction.whyErgo.sigma")}</li>
+                  <li>{t("introduction.whyErgo.pow")}</li>
+                  <li>{t("introduction.whyErgo.storageRent")}</li>
                 </ul>
               </div>
               
@@ -231,7 +233,7 @@ export default function IntroductionClient() {
               <Alert className="border-orange-500/30 bg-orange-500/10 rounded-xl">
                 <Info className="w-4 h-4 text-orange-400" />
                 <div className="ml-3">
-                  <h4 className="font-semibold text-orange-400">Key Innovation</h4>
+                  <h4 className="font-semibold text-orange-400">{t("introduction.keyInnovation.title")}</h4>
                   <AlertDescription className="text-gray-300 text-sm">
                     Ergo combines the security of Bitcoin's UTXO model with the expressiveness of Ethereum's smart contracts, 
                     creating a unique platform for complex financial applications.
@@ -239,8 +241,8 @@ export default function IntroductionClient() {
                 </div>
               </Alert>
               <div className="mt-4 text-xs text-neutral-500">
-                References: <a href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Autolykos v2</a> ·
-                <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80 ml-2">ergo (GitHub)</a>
+                References: <a href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">{t("introduction.references.autolykos")}</a> ·
+                <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80 ml-2">{t("introduction.references.ergoGithub")}</a>
               </div>
             </div>
 
@@ -253,10 +255,10 @@ export default function IntroductionClient() {
                 {/* Feature highlights */}
                 <ul className="space-y-4">
                   {[
-                    { icon: Fingerprint, title: "Privacy First", desc: "Built-in privacy at the protocol level" },
-                    { icon: Database, title: "Storage Rent", desc: "Sustainable economic model for long-term viability" },
-                    { icon: Network, title: "Light Clients", desc: "Succinct proofs (NIPoPoWs), near full-node guarantees" },
-                    { icon: Award, title: "Fair Launch", desc: "No premine, no ICO, community-driven" }
+                    { icon: Fingerprint, title: t("introduction.featureHighlights.privacyFirst.title"), desc: t("introduction.featureHighlights.privacyFirst.description") },
+                    { icon: Database, title: t("introduction.featureHighlights.storageRent.title"), desc: t("introduction.featureHighlights.storageRent.description") },
+                    { icon: Network, title: t("introduction.featureHighlights.lightClients.title"), desc: t("introduction.featureHighlights.lightClients.description") },
+                    { icon: Award, title: t("introduction.featureHighlights.fairLaunch.title"), desc: t("introduction.featureHighlights.fairLaunch.description") }
                   ].map((feature, index) => (
                     <li
                       key={feature.title}
@@ -288,7 +290,7 @@ export default function IntroductionClient() {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Core <span className="text-orange-400">Principles</span>
+              Core <span className="text-orange-400">{t("introduction.corePrinciples.title")}</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Built on fundamental values that ensure long-term sustainability and real-world utility
@@ -305,7 +307,7 @@ export default function IntroductionClient() {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              Key <span className="text-orange-400">Technologies</span>
+              Key <span className="text-orange-400">{t("introduction.keyTechnologies.title")}</span>
             </h2>
             <p className="text-gray-400 max-w-2xl mx-auto">
               Advanced cryptography and innovative consensus mechanisms power the Ergo platform
@@ -340,7 +342,7 @@ export default function IntroductionClient() {
                         {tech.badge}
                       </Badge>
                       <div className="flex items-center text-orange-400 text-sm font-semibold">
-                        Learn More
+                        {t("introduction.keyTechnologies.learnMore")}
                         <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
@@ -352,9 +354,9 @@ export default function IntroductionClient() {
 
           {/* ErgoScript Code Example */}
           <CodeSnippet
-            title="ErgoScript Example: Time-Locked Contract"
+            title={t("introduction.ergoScriptExample.title")}
             language="scala"
-            filename="TimeLock.ergo"
+            filename={t("introduction.ergoScriptExample.filename")}
             code={`{
   val deadline = SELF.R4[Long].get
   sigmaProp(
@@ -377,7 +379,7 @@ export default function IntroductionClient() {
         >
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-              <span className="text-orange-400">WHAT MAKES</span> ERGO DIFFERENT
+              <span className="text-orange-400">{t("introduction.whatMakesErgoDifferent.title")}</span> ERGO DIFFERENT
             </h2>
             <p className="text-lg text-neutral-300 max-w-3xl mx-auto">
               Ergo combines proven cryptographic techniques with innovative blockchain design to
@@ -388,33 +390,33 @@ export default function IntroductionClient() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
               {
-                title: "FAIR LAUNCH & PROOF-OF-WORK",
-                description: "Launched with no ICO or premine, secured by Autolykos v2 – an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one.",
+                title: t("introduction.whatMakesErgoDifferent.fairLaunch.title"),
+                description: t("introduction.whatMakesErgoDifferent.fairLaunch.description"),
                 icon: Shield,
               },
               {
-                title: "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
-                description: "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi.",
+                title: t("introduction.whatMakesErgoDifferent.eutxoErgoScript.title"),
+                description: t("introduction.whatMakesErgoDifferent.eutxoErgoScript.description"),
                 icon: Zap,
               },
               {
-                title: "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
-                description: 'A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data ("dust") back to miners, preventing bloat and keeping the chain efficient.',
+                title: t("introduction.whatMakesErgoDifferent.storageRent.title"),
+                description: t("introduction.whatMakesErgoDifferent.storageRent.description"),
                 icon: Database,
               },
               {
-                title: "RESEARCH-DRIVEN INNOVATION",
-                description: "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+                title: t("introduction.whatMakesErgoDifferent.researchDriven.title"),
+                description: t("introduction.whatMakesErgoDifferent.researchDriven.description"),
                 icon: BookOpen,
               },
               {
-                title: "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
-                description: "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions.",
+                title: t("introduction.whatMakesErgoDifferent.robustPrivacy.title"),
+                description: t("introduction.whatMakesErgoDifferent.robustPrivacy.description"),
                 icon: Lock,
               },
               {
-                title: "COMMUNITY-LED DEVELOPMENT",
-                description: "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control.",
+                title: t("introduction.whatMakesErgoDifferent.communityLed.title"),
+                description: t("introduction.whatMakesErgoDifferent.communityLed.description"),
                 icon: Users,
               },
             ].map((pillar, index) => {
@@ -443,14 +445,14 @@ export default function IntroductionClient() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">FAQ</h2>
             <div className="space-y-4">
               {[{
-                q: "What is the eUTXO model?",
-                a: "eUTXO is an extension of Bitcoin's UTXO enabling expressive, parallelizable smart contracts with predictable execution costs.",
+                q: t("introduction.faq.eutxoModel.question"),
+                a: t("introduction.faq.eutxoModel.answer"),
               }, {
-                q: "What are Sigma protocols on Ergo?",
-                a: "Sigma protocols are native cryptographic proofs enabling threshold/multisig and privacy without trusted setup.",
+                q: t("introduction.faq.sigmaProtocols.question"),
+                a: t("introduction.faq.sigmaProtocols.answer"),
               }, {
-                q: "Why Proof‑of‑Work for Ergo?",
-                a: "PoW (Autolykos) keeps mining accessible (ASIC‑resistant), supports decentralization, and has a robust security track record.",
+                q: t("introduction.faq.pow.question"),
+                a: t("introduction.faq.pow.answer"),
               }].map(item => (
                 <div key={item.q} className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4">
                   <h3 className="text-lg font-semibold text-white mb-1">{item.q}</h3>
@@ -469,11 +471,10 @@ export default function IntroductionClient() {
             {/* Removed Glitch Hex decoration */}
             
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Ready to <span className="text-orange-400">Dive In</span>?
+              {t("introduction.cta.readyToDiveIn.title")}
             </h2>
             <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              Your journey into the Ergo ecosystem is just a few clicks away. 
-              Get a secure wallet and start exploring the future of finance.
+              {t("introduction.cta.readyToDiveIn.description")}
             </p>
             
             <div className="flex flex-wrap justify-center gap-4">
@@ -484,7 +485,7 @@ export default function IntroductionClient() {
                 >
                   <Link href="/wallet">
                     <Wallet className="w-5 h-5 mr-2" aria-hidden="true" />
-                    Get an Ergo Wallet
+                    {t("introduction.cta.getErgoWallet.button")}
                   </Link>
                 </Button>
               </div>
@@ -497,7 +498,7 @@ export default function IntroductionClient() {
                 >
                   <Link href="/ecosystem" prefetch={false}>
                     <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                    Explore Ecosystem
+                    {t("introduction.cta.exploreEcosystem.button")}
                   </Link>
                 </Button>
               </div>
@@ -510,12 +511,12 @@ export default function IntroductionClient() {
                 >
                   <Link href="/docs" prefetch={false}>
                     <BookOpen className="w-5 h-5 mr-2" aria-hidden="true" />
-                    Documentation
+                    {t("introduction.cta.documentation.button")}
                   </Link>
                 </Button>
               </div>
             </div>
-            <p className="text-xs text-neutral-500 mt-6">Last updated: 2025-08-10</p>
+            <p className="text-xs text-neutral-500 mt-6">{t("introduction.cta.lastUpdated")}</p>
           </Card>
         </section>
 

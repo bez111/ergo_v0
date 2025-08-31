@@ -10,39 +10,39 @@ export function WhyErgo() {
 
   const mainFeatures = [
     {
-      title: "FAIR & SECURE",
-      subtitle: "Proof-of-Work Foundation",
-      description: "No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone.",
+      title: t('mainFeatures.fairAndSecure.title'),
+      subtitle: t('mainFeatures.fairAndSecure.subtitle'),
+      description: t('mainFeatures.fairAndSecure.description'),
       icon: Shield,
     },
     {
-      title: "POWERFUL & FLEXIBLE",
-      subtitle: "Advanced Smart Contracts",
-      description: "eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what's possible.",
+      title: t('mainFeatures.powerfulAndFlexible.title'),
+      subtitle: t('mainFeatures.powerfulAndFlexible.subtitle'),
+      description: t('mainFeatures.powerfulAndFlexible.description'),
       icon: Zap,
     },
     {
-      title: "SUSTAINABLE",
-      subtitle: "Built to Last",
-      description: "Storage rent mechanism prevents bloat and ensures network health with predictable costs for decades to come.",
+      title: t('mainFeatures.sustainable.title'),
+      subtitle: t('mainFeatures.sustainable.subtitle'),
+      description: t('mainFeatures.sustainable.description'),
       icon: Database,
     },
   ]
 
   const additionalFeatures = [
     {
-      title: "PRIVACY FIRST",
-      description: "Optional privacy with Sigma protocols for confidential transactions.",
+      title: t('additionalFeatures.privacy.title'),
+      description: t('additionalFeatures.privacy.description'),
       icon: Lock,
     },
     {
-      title: "COMMUNITY DRIVEN",
-      description: "Open-source development led by passionate contributors worldwide.",
+      title: t('additionalFeatures.community.title'),
+      description: t('additionalFeatures.community.description'),
       icon: Users,
     },
     {
-      title: "DEVELOPER FRIENDLY",
-      description: "World-class docs, tools, and support make building on Ergo easy.",
+      title: t('additionalFeatures.developer.title'),
+      description: t('additionalFeatures.developer.description'),
       icon: Cpu,
     },
   ]
@@ -57,10 +57,10 @@ export function WhyErgo() {
           {/* Header */}
           <div className="text-center space-y-6 max-w-4xl">
             <h2 className="text-5xl md:text-6xl font-bold tracking-tight">
-              <span className="text-white">WHY</span> <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">ERGO?</span>
+              <span className="text-white">{t('title').split(' ')[0]}</span> <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">{t('title').split(' ')[1]}?</span>
             </h2>
             <p className="text-gray-300 text-lg md:text-xl font-light leading-relaxed max-w-[65ch] mx-auto">
-              A resilient blockchain platform combining proven principles with cutting-edge innovation
+              {t('subtitle')}
             </p>
           </div>
 

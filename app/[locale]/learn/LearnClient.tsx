@@ -102,7 +102,7 @@ const MobileLearnPage = ({ t, localizedPath }: { t: any, localizedPath: any }) =
                     </div>
 
                     <div className="flex items-center text-orange-400 group-hover:text-orange-300 transition-colors text-sm">
-                      <span className="mr-2">Learn more</span>
+                      <span className="mr-2">{t('common.learnMore')}</span>
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>
@@ -126,12 +126,12 @@ const MobileLearnPage = ({ t, localizedPath }: { t: any, localizedPath: any }) =
             <div className="flex flex-col gap-3">
               <Link href="/start/introduction" className="w-full">
                 <button className="w-full px-6 py-3 bg-gradient-to-r from-orange-600 to-red-600 rounded-md font-medium hover:from-orange-500 hover:to-red-500 transition-all flex items-center justify-center gap-2">
-                  Get Started <ChevronRight className="w-4 h-4" />
+                  {t('common.getStarted')} <ChevronRight className="w-4 h-4" />
                 </button>
               </Link>
               <Link href="/learn/faq" className="w-full">
                 <button className="w-full px-6 py-3 bg-gray-800 border border-gray-700 rounded-md font-medium hover:bg-gray-700 transition-all flex items-center justify-center gap-2">
-                  Browse FAQ <FileText className="w-4 h-4" />
+                  {t('browseFaq')} <FileText className="w-4 h-4" />
                 </button>
               </Link>
             </div>
@@ -257,7 +257,7 @@ const DesktopLearnPage = ({ t, localizedPath }: { t: any, localizedPath: any }) 
                     </div>
 
                     <div className="flex items-center text-orange-400 group-hover:text-orange-300 transition-colors">
-                      <span className="mr-2">Learn more</span>
+                      <span className="mr-2">{t('common.learnMore')}</span>
                       <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </div>
                   </div>

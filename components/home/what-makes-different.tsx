@@ -2,37 +2,40 @@
 
 import React from "react"
 import { Shield, Zap, Database, BookOpen, Lock, Users } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export function WhatMakesDifferent() {
+  const t = useTranslations('whatMakesDifferent')
+  
   const features = [
     {
-      title: "FAIR LAUNCH & PROOF-OF-WORK",
-      description: "Launched with no ICO or premine, secured by Autolykos v2 - an ASIC-resistant and energy-efficient Proof-of-Work algorithm ensuring fair distribution and robust security from day one.",
+      title: t('features.fairLaunch.title'),
+      description: t('features.fairLaunch.description'),
       icon: Shield,
     },
     {
-      title: "eUTXO & ERGOSCRIPT FOR ADVANCED DEFI",
-      description: "The extended UTXO model combined with our powerful language, ErgoScript, enables highly secure, predictable, and expressive financial applications, pushing the boundaries of DeFi.",
+      title: t('features.eutxoErgoscript.title'),
+      description: t('features.eutxoErgoscript.description'),
       icon: Zap,
     },
     {
-      title: "STORAGE RENT FOR LONG-TERM SUSTAINABILITY",
-      description: 'A novel mechanism ensuring network health and predictable operational costs by recycling fees from unused data ("dust") back to miners, preventing bloat and keeping the chain efficient.',
+      title: t('features.storageRent.title'),
+      description: t('features.storageRent.description'),
       icon: Database,
     },
     {
-      title: "RESEARCH-DRIVEN INNOVATION",
-      description: "Built on peer-reviewed academic research and first principles, Ergo fosters robust, groundbreaking solutions designed for real-world longevity.",
+      title: t('features.researchDriven.title'),
+      description: t('features.researchDriven.description'),
       icon: BookOpen,
     },
     {
-      title: "ROBUST OPTIONAL PRIVACY (Σ-PROTOCOLS)",
-      description: "Ergo offers flexible privacy features powered by Sigma protocols, enabling secure multi-signatures, ring signatures, and zero-knowledge proofs for tailored confidentiality options in transactions.",
+      title: t('features.privacy.title'),
+      description: t('features.privacy.description'),
       icon: Lock,
     },
     {
-      title: "COMMUNITY-LED DEVELOPMENT",
-      description: "A truly decentralized, open-source project where development is led by passionate community members and developers worldwide, ensuring the protocol remains free from centralized control.",
+      title: t('features.communityLed.title'),
+      description: t('features.communityLed.description'),
       icon: Users,
     },
   ]
@@ -44,11 +47,10 @@ export function WhatMakesDifferent() {
           {/* Header */}
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">WHAT MAKES</span> <span className="text-white">ERGO DIFFERENT</span>
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">{t('title').split(' ').slice(0, 2).join(' ')}</span> <span className="text-white">{t('title').split(' ').slice(2).join(' ')}</span>
             </h2>
             <p className="text-gray-400 text-lg max-w-4xl mx-auto">
-              Ergo combines proven cryptographic techniques with innovative blockchain design to create a<br />
-              platform that's secure, scalable, and sustainable
+              {t('subtitle')}
             </p>
           </div>
 

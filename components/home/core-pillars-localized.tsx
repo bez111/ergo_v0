@@ -10,33 +10,33 @@ export function CorePillars() {
 
   const pillars = [
     {
-      title: "SECURITY (POW)",
-      description: "ASIC-resistant Autolykos v2 PoW ensures robust decentralization, fair mining, and long-term security for everyone.",
+      title: t('pillars.security.title'),
+      description: t('pillars.security.description'),
       icon: Shield,
     },
     {
-      title: "PROGRAMMABILITY (eUTXO + ERGOSCRIPT)",
-      description: "Formally verifiable, expressive, and secure contracts—powered by ErgoScript and the advanced eUTXO model.",
+      title: t('pillars.programmability.title'),
+      description: t('pillars.programmability.description'),
       icon: Code,
     },
     {
-      title: "SUSTAINABILITY (STORAGE RENT)",
-      description: "Storage rent and predictable costs maintain long-term network health and prevent blockchain bloat.",
+      title: t('pillars.sustainability.title'),
+      description: t('pillars.sustainability.description'),
       icon: RefreshCw,
     },
     {
-      title: "PRIVACY",
-      description: "Protocol-level privacy using Sigma protocols—enabling confidential dApps and transactions.",
+      title: t('pillars.privacy.title'),
+      description: t('pillars.privacy.description'),
       icon: Lock,
     },
     {
-      title: "ORACLE POOLS",
-      description: "The first truly decentralized oracle pools—reliable, permissionless off-chain data access with built-in incentives.",
+      title: t('pillars.oraclePools.title'),
+      description: t('pillars.oraclePools.description'),
       icon: Database,
     },
     {
-      title: "DEV FRIENDLY",
-      description: "World-class docs, open tools, and a vibrant, collaborative community make building on Ergo easy and innovative.",
+      title: t('pillars.devFriendly.title'),
+      description: t('pillars.devFriendly.description'),
       icon: Cpu,
     },
   ]
@@ -48,11 +48,11 @@ export function CorePillars() {
           {/* Header */}
           <div className="text-center space-y-4">
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              <span className="text-orange-400">CORE</span> <span className="text-white">PILLARS</span>
+              <span className="text-orange-400">{t('title').split(' ')[0]}</span> <span className="text-white">{t('title').split(' ')[1]}</span>
             </h2>
             <div className="w-20 h-1 bg-orange-400 mx-auto"></div>
             <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">&gt;</span> Ergo combines proven principles with cutting-edge cryptography
+              <span className="bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent">&gt;</span> {t('subtitle')}
             </p>
           </div>
 

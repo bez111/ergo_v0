@@ -9,7 +9,7 @@ export const revalidate = 600
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'useCases' })
+  const t = await getTranslations({ locale, namespace: 'use' })
   const title = t('title') + " — DeFi, NFTs, Privacy, Bridges"
   const description = t('description')
   const url = "https://ergoblockchain.org/use"
