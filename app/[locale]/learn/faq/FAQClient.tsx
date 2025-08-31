@@ -1,10 +1,12 @@
 "use client"
 
 import { useEffect, useRef, useState } from "react"
+import { useTranslations } from "next-intl"
 
 export default function FAQClient({ rootId = "faq-root" }: { rootId?: string }) {
   const [query, setQuery] = useState("")
   const rootRef = useRef<HTMLDivElement | null>(null)
+  const t = useTranslations("learn.faq")
 
   useEffect(() => {
     rootRef.current = document.getElementById(rootId) as HTMLDivElement | null
@@ -42,7 +44,7 @@ export default function FAQClient({ rootId = "faq-root" }: { rootId?: string }) 
     <div className="mb-8 flex flex-wrap items-center gap-3">
       <input
         type="search"
-        placeholder="Search FAQ…"
+        placeholder={t('searchPlaceholder')}
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         className="w-full md:w-96 bg-neutral-900/60 border border-neutral-700 rounded-lg px-3 py-2 text-white placeholder:text-neutral-500"
@@ -52,20 +54,20 @@ export default function FAQClient({ rootId = "faq-root" }: { rootId?: string }) 
         onClick={() => onExpandAll(true)}
         className="px-3 py-2 rounded-md border border-neutral-700 hover:bg-neutral-800"
       >
-        Expand all
+        {t('expandAll')}
       </button>
       <button
         onClick={() => onExpandAll(false)}
         className="px-3 py-2 rounded-md border border-neutral-700 hover:bg-neutral-800"
       >
-        Collapse all
+        {t('collapseAll')}
       </button>
       {query && (
         <button
           onClick={() => setQuery("")}
           className="px-3 py-2 rounded-md border border-neutral-700 hover:bg-neutral-800"
         >
-          Clear
+          {t('clear')}
         </button>
       )}
     </div>

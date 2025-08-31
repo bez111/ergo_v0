@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -29,99 +30,100 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
-const TECHNOLOGIES = [
-  {
-    icon: <Shield className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    title: "Sigma Protocols",
-    description:
-      "Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
-    features: ["Zero-knowledge proofs", "Ring signatures", "Threshold signatures", "Composable privacy"],
-  },
-  {
-    icon: <Shuffle className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    title: "ErgoMixer",
-    description: "On-chain, non-custodial mixing for transaction privacy and anonymity.",
-    features: [
-      "Non-custodial mixing",
-      "On-chain privacy",
-      "Token mixing support",
-      "Configurable anonymity",
-    ],
-  },
-  {
-    icon: <Eye className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    title: "Confidential Assets",
-    description: "Issue tokens with hidden amounts and rules for maximum privacy.",
-    features: [
-      "Hidden token amounts",
-      "Private smart contracts",
-      "Confidential transactions",
-      "Selective disclosure",
-    ],
-  },
-] as const
-
-const ADVANTAGES = [
-  "No trusted setup needed — pure cryptographic security",
-  "Flexible privacy features usable in dApps, DeFi, and NFTs",
-  "Open-source, peer-reviewed cryptography",
-  "Composable with other Ergo features",
-  "Built into the protocol, not added as afterthought",
-  "Mathematically proven security guarantees",
-] as const
-
-export const USE_CASES = [
-  {
-    title: "Private Transactions",
-    description:
-      "Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)",
-    icon: <Shuffle className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    example: "ErgoMixer",
-  },
-  {
-    title: "Confidential DeFi",
-    description: "Build DeFi applications with private balances and logic",
-    icon: <Lock className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    example: "Private DEX orders",
-  },
-  {
-    title: "Anonymous Voting",
-    description: "Create DAOs and voting systems with secret ballots",
-    icon: <Vote className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    example: "DAO governance",
-  },
-  {
-    title: "Private NFTs",
-    description: "NFTs with hidden metadata or ownership information",
-    icon: <Eye className="w-8 h-8" aria-hidden="true" focusable="false" />,
-    example: "Confidential collectibles",
-  },
-] as const
-
-export const FAQS = [
-  {
-    question: "What level of privacy does Ergo offer? Is it just coin mixing?",
-    answer:
-      "Ergo offers multi-layered privacy, not just a single feature. At its core are Sigma protocols—powerful cryptography that allows data to be hidden. On top of this runs ErgoMixer (non-custodial community tool), the first non-interactive and trustless mixer in the eUTXO space. It helps break the link between your transactions, providing strong anonymity on-chain.",
-  },
-  {
-    question: "If I use privacy features, won't my transactions look suspicious?",
-    answer:
-      "On the contrary. Because privacy tools are a core part of the Ergo ecosystem, using them is the norm. When many people mix their coins, they create a large anonymity set where it's easy to blend in. On Ergo, protecting your financial data is standard practice, not a reason for suspicion.",
-  },
-  {
-    question: "Doesn't this kind of privacy attract criminals?",
-    answer:
-      "Privacy is a fundamental right, not an admission of guilt. You don't use curtains on your windows because you're doing something illegal. Businesses need privacy for trade secrets and payrolls, and individuals need it to protect themselves from tracking and profiling.",
-  },
-  {
-    question: "What if I need to prove a transaction for taxes or an audit?",
-    answer:
-      "Ergo applies a 'privacy by choice' approach with selective disclosure. When needed, you can provide viewing keys for specific transactions to an auditor or regulator without revealing your entire financial history.",
-  },
-] as const
-
 export default function PrivacyFeaturesPage() {
+  const t = useTranslations("privacyFeatures")
+  
+  const TECHNOLOGIES = [
+    {
+      icon: <Shield className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      title: t("technologies.0.title"),
+      description: t("technologies.0.description"),
+      features: [
+        t("technologies.0.features.0"),
+        t("technologies.0.features.1"),
+        t("technologies.0.features.2"),
+        t("technologies.0.features.3"),
+      ],
+    },
+    {
+      icon: <Shuffle className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      title: t("technologies.1.title"),
+      description: t("technologies.1.description"),
+      features: [
+        t("technologies.1.features.0"),
+        t("technologies.1.features.1"),
+        t("technologies.1.features.2"),
+        t("technologies.1.features.3"),
+      ],
+    },
+    {
+      icon: <Eye className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      title: t("technologies.2.title"),
+      description: t("technologies.2.description"),
+      features: [
+        t("technologies.2.features.0"),
+        t("technologies.2.features.1"),
+        t("technologies.2.features.2"),
+        t("technologies.2.features.3"),
+      ],
+    },
+  ] as const
+
+  const ADVANTAGES = [
+    t("advantages.0"),
+    t("advantages.1"),
+    t("advantages.2"),
+    t("advantages.3"),
+    t("advantages.4"),
+    t("advantages.5"),
+  ] as const
+
+  const USE_CASES = [
+    {
+      title: t("useCases.0.title"),
+      description: t("useCases.0.description"),
+      icon: <Shuffle className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      example: t("useCases.0.example"),
+    },
+    {
+      title: t("useCases.1.title"),
+      description: t("useCases.1.description"),
+      icon: <Lock className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      example: t("useCases.1.example"),
+    },
+    {
+      title: t("useCases.2.title"),
+      description: t("useCases.2.description"),
+      icon: <Vote className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      example: t("useCases.2.example"),
+    },
+    {
+      title: t("useCases.3.title"),
+      description: t("useCases.3.description"),
+      icon: <Eye className="w-8 h-8" aria-hidden="true" focusable="false" />,
+      example: t("useCases.3.example"),
+    },
+  ] as const
+
+  const FAQS = [
+    {
+      question: t("faqs.0.question"),
+      answer: t("faqs.0.answer"),
+    },
+    {
+      question: t("faqs.1.question"),
+      answer: t("faqs.1.answer"),
+    },
+    {
+      question: t("faqs.2.question"),
+      answer: t("faqs.2.answer"),
+    },
+    {
+      question: t("faqs.3.question"),
+      answer: t("faqs.3.answer"),
+    },
+  ] as const
+
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const prefersReduced = useReducedMotion()
   const lastUpdated = new Date().toISOString().slice(0, 10)
@@ -135,29 +137,26 @@ export default function PrivacyFeaturesPage() {
           mainEntity: [
             {
               "@type": "Question",
-              name: "What privacy features does Ergo offer?",
+              name: t("faqPage.question1"),
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "Ergo offers multiple privacy features including Sigma protocols, ring signatures, zero-knowledge proofs, and confidential transactions. These technologies enable privacy-preserving transactions while maintaining security and compliance.",
+                text: t("faqPage.answer1"),
               },
             },
             {
               "@type": "Question",
-              name: "How do Sigma protocols work?",
+              name: t("faqPage.question2"),
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "Sigma protocols are zero-knowledge proof systems that allow proving statements about secret values without revealing the values themselves. They enable privacy-preserving authentication and transaction validation.",
+                text: t("faqPage.answer2"),
               },
             },
             {
               "@type": "Question",
-              name: "Are Ergo's privacy features regulatory compliant?",
+              name: t("faqPage.question3"),
               acceptedAnswer: {
                 "@type": "Answer",
-                text:
-                  "Yes, Ergo's privacy features are designed to be regulatory compliant. They provide selective disclosure capabilities, allowing users to reveal transaction details when required while maintaining privacy by default.",
+                text: t("faqPage.answer3"),
               },
             },
           ],

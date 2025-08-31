@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import FAQClient from "./FAQClient"
 import FAQListServer from "./FAQListServer"
 import FAQBackground from "./FAQBackground"
@@ -15,11 +16,12 @@ const firstSentence = (s: string) => {
   return (m?.[1] || s).slice(0, 500)
 }
 
-export function generateMetadata(): Metadata {
-  const title = "Ergo Knowledge Base — FAQ about Tech, Economics, Ecosystem"
-  const description =
-    "Comprehensive answers about Ergo: eUTXO, ErgoScript, privacy, tokenomics, wallets, mining and more."
-  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'learn.faq.seo' })
+  const title = t('title')
+  const description = t('description')
+  const twitterHandle = process.env['NEXT_PUBLIC_TWITTER_HANDLE']
   return {
     title,
     description,
@@ -28,8 +30,8 @@ export function generateMetadata(): Metadata {
       type: "website",
       url,
       siteName: "Ergo",
-      title,
-      description,
+      title: t('ogTitle'),
+      description: t('ogDescription'),
       images: [{ url: `${origin}/og/faq.png`, width: 1200, height: 630 }],
       locale: "en_US",
     },
@@ -43,7 +45,10 @@ export function generateMetadata(): Metadata {
   }
 }
 
-export default function LearnFAQPage() {
+export default async function LearnFAQPage({ params }: { params: { locale: string } }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'learn.faq' })
+  
   const faqJsonLd = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -78,15 +83,15 @@ export default function LearnFAQPage() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12">
         <header className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-3">ERGO KNOWLEDGE BASE</h1>
-          <p className="text-lg md:text-xl text-neutral-400 max-w-3xl">Answers about Ergo’s technology, economics and ecosystem.</p>
+          <h1 className="text-5xl md:text-7xl font-bold mb-3">{t('title')}</h1>
+          <p className="text-lg md:text-xl text-neutral-400 max-w-3xl">{t('subtitle')}</p>
         </header>
 
         {/* Thin client controls over SSR content */}
         <FAQClient rootId="faq-root" />
 
         {/* Full SSR list with anchors and categories ToC */}
-        <FAQListServer data={faqData} rootId="faq-root" />
+        <FAQListServer data={faqData} rootId="faq-root" locale={locale} />
 
         {/* No-JS fallback to ensure content is present if JS disabled */}
         <noscript>

@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -11,24 +12,25 @@ import Link from "next/link"
 import { useState } from "react"
 
 export default function EUTXOPage() {
+  const t = useTranslations("technology.eutxo")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   const faqs = [
     {
-      question: "What's the difference between UTXO and eUTXO?",
-      answer: "eUTXO extends Bitcoin's UTXO model with smart contract capabilities while maintaining the security and parallelism benefits of the original design.",
+      question: t("faq.0.question"),
+      answer: t("faq.0.answer"),
     },
     {
-      question: "Why is eUTXO better than account-based models?",
-      answer: "eUTXO enables parallel transaction processing, eliminates double-spending at the protocol level, and provides more predictable fee structures.",
+      question: t("faq.1.question"),
+      answer: t("faq.1.answer"),
     },
     {
-      question: "Can I build complex dApps with eUTXO?",
-      answer: "Absolutely. eUTXO supports complex smart contracts while maintaining the security and simplicity of the UTXO model.",
+      question: t("faq.2.question"),
+      answer: t("faq.2.answer"),
     },
     {
-      question: "Is eUTXO harder to learn than Ethereum's model?",
-      answer: "The concepts are different but eUTXO makes many safety problems easier to solve. Once you understand 'box thinking', it's often more predictable.",
+      question: t("faq.3.question"),
+      answer: t("faq.3.answer"),
     },
   ]
 
@@ -50,10 +52,10 @@ export default function EUTXOPage() {
                 className="mb-8"
               >
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent leading-snug pb-2 align-baseline block text-center">
-                  eUTXO MODEL
+                  {t("title")}
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
-                  Next-generation Unspent Transaction Output model for parallel smart contracts and composable DeFi
+                  {t("subtitle")}
                 </p>
               </motion.div>
             </FadeIn>
@@ -67,17 +69,15 @@ export default function EUTXOPage() {
               <Card className="bg-gradient-to-br from-orange-400/20 to-orange-400/5 border-gray-700/50 backdrop-blur-xl">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                    What is eUTXO?
+                    {t("whatIs.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    The Extended Unspent Transaction Output (eUTXO) model is an evolution of Bitcoin's UTXO model, 
-                    enhanced with smart contract capabilities while maintaining the security and simplicity of the original design.
+                    {t("whatIs.description1")}
                   </p>
                   <p className="text-gray-300 leading-relaxed">
-                    Unlike account-based models (like Ethereum), eUTXO enables parallel transaction processing, 
-                    eliminates double-spending at the protocol level, and provides a more predictable fee structure.
+                    {t("whatIs.description2")}
                   </p>
                 </CardContent>
               </Card>
@@ -87,7 +87,7 @@ export default function EUTXOPage() {
               <Card className="bg-gradient-to-br from-orange-400/20 to-orange-400/5 border-gray-700/50 backdrop-blur-xl">
                 <CardHeader>
                   <CardTitle className="text-2xl font-bold mb-4 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                    Key Benefits
+                    {t("keyBenefits.title")}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -95,22 +95,22 @@ export default function EUTXOPage() {
                     <div className="flex items-start gap-3">
                       <Zap className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-white">Parallel Processing</h4>
-                        <p className="text-gray-400 text-sm">Multiple transactions can be processed simultaneously</p>
+                        <h4 className="font-semibold text-white">{t("keyBenefits.parallelProcessing.title")}</h4>
+                        <p className="text-gray-400 text-sm">{t("keyBenefits.parallelProcessing.description")}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Shield className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-white">Enhanced Security</h4>
-                        <p className="text-gray-400 text-sm">No global state means fewer attack vectors</p>
+                        <h4 className="font-semibold text-white">{t("keyBenefits.enhancedSecurity.title")}</h4>
+                        <p className="text-gray-400 text-sm">{t("keyBenefits.enhancedSecurity.description")}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Code className="w-6 h-6 text-orange-400 flex-shrink-0 mt-1" />
                       <div>
-                        <h4 className="font-semibold text-white">Smart Contract Support</h4>
-                        <p className="text-gray-400 text-sm">Full programmability with predictable execution</p>
+                        <h4 className="font-semibold text-white">{t("keyBenefits.smartContractSupport.title")}</h4>
+                        <p className="text-gray-400 text-sm">{t("keyBenefits.smartContractSupport.description")}</p>
                       </div>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ export default function EUTXOPage() {
           <FadeIn>
             <div className="max-w-4xl mx-auto mb-16">
               <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                Frequently Asked Questions
+                {t("faq.title")}
               </h2>
 
               <div className="space-y-4">
@@ -192,18 +192,18 @@ export default function EUTXOPage() {
           <FadeIn>
             <div className="text-center">
               <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-orange-400 to-cyan-400 bg-clip-text text-transparent">
-                Learn More About eUTXO
+                {t("learnMore.title")}
               </h2>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link href="/docs/eutxo">
                   <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                    Read Documentation
+                    {t("learnMore.readDocumentation")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="https://github.com/ergoplatform/ergo" target="_blank">
                   <Button variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
-                    View on GitHub
+                    {t("learnMore.viewOnGitHub")}
                     <LinkIcon className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

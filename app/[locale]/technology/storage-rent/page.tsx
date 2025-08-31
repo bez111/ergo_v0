@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -32,161 +33,162 @@ import { useMemo } from "react"
 const PUBLISHED = "2023-11-10"
 const UPDATED = "2025-08-10"
 
-// Hoisted static data with a11y fixes
-const problems = [
-  {
-    title: "Blockchain Bloat",
-    description:
-      "Traditional blockchains accumulate unused data over time, leading to inefficiency and higher costs.",
-    icon: <Database className="w-8 h-8" aria-hidden="true" />,
-    color: "from-red-500 to-pink-500",
-    bgColor: "bg-red-500/10",
-    borderColor: "border-red-500/30",
-    stats: "2TB+ wasted space",
-  },
-  {
-    title: "Forgotten Wallets",
-    description: "Lost private keys mean funds are stuck forever, reducing the effective money supply.",
-    icon: <AlertTriangle className="w-8 h-8" aria-hidden="true" />,
-    color: "from-yellow-500 to-orange-500",
-    bgColor: "bg-yellow-500/10",
-    borderColor: "border-yellow-500/30",
-    stats: "4M+ lost coins",
-  },
-  {
-    title: "Network Stagnation",
-    description: "Accumulated dust and inactive data slow down the network and increase storage requirements.",
-    icon: <TrendingUp className="w-8 h-8" aria-hidden="true" />,
-    color: "from-purple-500 to-indigo-500",
-    bgColor: "bg-purple-500/10",
-    borderColor: "border-purple-500/30",
-    stats: "50% slower sync",
-  },
-]
-
-const benefits = [
-  { text: "The blockchain stays clean, compact, and fast", icon: <Zap className="w-5 h-5" aria-hidden="true" /> },
-  { text: "Miners are rewarded for maintaining real, active data", icon: <Coins className="w-5 h-5" aria-hidden="true" /> },
-  { text: "Network remains healthy — even decades from now", icon: <Shield className="w-5 h-5" aria-hidden="true" /> },
-  { text: "Reduces the share of permanently lost funds (‘stuck’ UTXOs)", icon: <RefreshCw className="w-5 h-5" aria-hidden="true" /> },
-  { text: "Predictable, transparent storage costs", icon: <BarChart3 className="w-5 h-5" aria-hidden="true" /> },
-  { text: "Automatic state cleanup & miner incentives (per protocol)", icon: <Target className="w-5 h-5" aria-hidden="true" /> },
-]
-
-const timeline = [
-  {
-    year: "Year 0–4",
-    status: "No rent accrual period",
-    description: "Your UTXO (box) is stored for free on the blockchain",
-    color: "text-green-400",
-    bgColor: "bg-green-500/20",
-    icon: <Shield className="w-6 h-6" aria-hidden="true" />,
-    details: "No fees, full access to your funds",
-  },
-  {
-    year: "Year 4+",
-    status: "Storage Rent Begins",
-    description: "Small rent fee may be deducted from box value (if applicable)",
-    color: "text-yellow-400",
-    bgColor: "bg-yellow-500/20",
-    icon: <Timer className="w-6 h-6" aria-hidden="true" />,
-    details: "Approximate; depends on protocol parameters/min box value. See docs.",
-  },
-  {
-    year: "Owner Returns",
-    status: "Rent Top-Up",
-    description: "Owner can pay rent and regain full access to funds",
-    color: "text-cyan-400",
-    bgColor: "bg-cyan-500/20",
-    icon: <RefreshCw className="w-6 h-6" aria-hidden="true" />,
-    details: "Pay accumulated rent to restore full control",
-  },
-  {
-    year: "Box Depleted",
-    status: "Eligible for miner claim (per protocol rules)",
-    description: "If rent isn't paid, remaining value goes to miners",
-    color: "text-orange-400",
-    bgColor: "bg-orange-500/20",
-    icon: <Recycle className="w-6 h-6" aria-hidden="true" />,
-    details: "Funds return to active circulation",
-  },
-]
-
-const solutions = [
-  {
-    title: "Automatic Fee Recycling",
-    description: "If coins are left untouched for years, a small fee is recycled back to miners.",
-    icon: <Recycle className="w-12 h-12" aria-hidden="true" />,
-    color: "text-orange-400",
-    gradient: "from-orange-500/20 to-orange-500/5",
-  },
-  {
-    title: "No Forgotten Wallets",
-    description: "If you lose your keys, your funds aren't stuck forever in the system.",
-    icon: <Clock className="w-12 h-12" aria-hidden="true" />,
-    color: "text-cyan-400",
-    gradient: "from-cyan-500/20 to-cyan-500/5",
-  },
-  {
-    title: "Predictable Costs",
-    description: "Users pay a transparent fee for long-term data storage.",
-    icon: <TrendingUp className="w-12 h-12" aria-hidden="true" />,
-    color: "text-green-400",
-    gradient: "from-green-500/20 to-green-500/5",
-  },
-]
-
-const faqs = [
-  {
-    question: "Why does Ergo charge \"storage rent\"? Do I have to pay just to hold ERG?",
-    answer: "No, this isn't a holding tax—it's a way to keep the blockchain \"clean.\" Fees apply only to coins (UTXOs) left untouched for more than 4 years. Think of it like long-term storage: if you abandon a box and never return, a tiny fee is charged for the space you occupy. This keeps the network from getting clogged with forgotten data.",
-  },
-  {
-    question: "Can I lose my funds if I'm a long-term investor (HODLer)?",
-    answer: "Almost impossible. Any action—like sending your coins, even to yourself—resets the 4-year timer. The rent is so small it only affects very low-value UTXOs (\"dust\"). The system is designed to clean up lost change, not to penalize active users or investors.",
-  },
-  {
-    question: "Why is it so important to get rid of \"blockchain dust\"?",
-    answer: "It directly affects decentralization. Every forgotten transaction increases the size of the blockchain state, which full nodes must store and process. Without cleanup, running a full node would become too expensive over time, leaving control to big corporations. Storage rent is a long-term guarantee that Ergo stays accessible and truly decentralized.",
-  },
-  {
-    question: "Where does the collected rent go? Does anyone profit from it?",
-    answer: "The fees aren't kept by a company or burned—they're paid out to miners. This gives miners a direct incentive to help clean up the blockchain state, which aligns perfectly with the community's long-term interests. It's a self-sustaining economic model that keeps the blockchain healthy and resilient.",
-  },
-]
-
-function RentEstimator() {
-  const [ageYears, setAgeYears] = useState<number>(4)
-  const [boxValue, setBoxValue] = useState<number>(1.0)
-  // Simplified illustrative estimator; not protocol-accurate
-  const estimatedRent = useMemo(() => {
-    const periods = Math.max(0, Math.floor(ageYears / 4))
-    const perPeriod = 0.13 // ERG per 4 years (illustrative)
-    return +(periods * perPeriod).toFixed(4)
-  }, [ageYears])
-  const remaining = Math.max(0, +(boxValue - estimatedRent).toFixed(4))
-  const topUpNeeded = estimatedRent > boxValue ? +(estimatedRent - boxValue).toFixed(4) : 0
-  return (
-    <div className="grid md:grid-cols-3 gap-4 items-end">
-      <div>
-        <label className="block text-xs text-neutral-400 mb-1">Box age (years)</label>
-        <input type="number" min={0} step={1} value={ageYears} onChange={(e)=>setAgeYears(Number(e.target.value))} className="w-full bg-neutral-900/60 border border-neutral-700 rounded px-3 py-2 text-sm text-white" />
-      </div>
-      <div>
-        <label className="block text-xs text-neutral-400 mb-1">Box value (ERG)</label>
-        <input type="number" min={0} step={0.01} value={boxValue} onChange={(e)=>setBoxValue(Number(e.target.value))} className="w-full bg-neutral-900/60 border border-neutral-700 rounded px-3 py-2 text-sm text-white" />
-      </div>
-      <div className="text-sm text-neutral-300" aria-live="polite">
-        <div className="flex justify-between"><span>Estimated rent:</span><span className="font-semibold">{estimatedRent} ERG</span></div>
-        <div className="flex justify-between"><span>Top-up needed:</span><span className="font-semibold">{topUpNeeded} ERG</span></div>
-        <div className="flex justify-between"><span>Remaining value:</span><span className="font-semibold">{remaining} ERG</span></div>
-        <p className="text-xs text-neutral-500 mt-1">Illustrative; see docs for formula and current parameters.</p>
-      </div>
-    </div>
-  )
-}
-
 export default function StorageRentPage() {
+  const t = useTranslations("technology.storageRent")
+  
+  // Hoisted static data with a11y fixes
+  const problems = [
+    {
+      title: t("problems.0.title"),
+      description: t("problems.0.description"),
+      icon: <Database className="w-8 h-8" aria-hidden="true" />,
+      color: "from-red-500 to-pink-500",
+      bgColor: "bg-red-500/10",
+      borderColor: "border-red-500/30",
+      stats: t("problems.0.stats"),
+    },
+    {
+      title: t("problems.1.title"),
+      description: t("problems.1.description"),
+      icon: <AlertTriangle className="w-8 h-8" aria-hidden="true" />,
+      color: "from-yellow-500 to-orange-500",
+      bgColor: "bg-yellow-500/10",
+      borderColor: "border-yellow-500/30",
+      stats: t("problems.1.stats"),
+    },
+    {
+      title: t("problems.2.title"),
+      description: t("problems.2.description"),
+      icon: <TrendingUp className="w-8 h-8" aria-hidden="true" />,
+      color: "from-purple-500 to-indigo-500",
+      bgColor: "bg-purple-500/10",
+      borderColor: "border-purple-500/30",
+      stats: t("problems.2.stats"),
+    },
+  ]
+
+  const benefits = [
+    { text: t("benefits.0"), icon: <Zap className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.1"), icon: <Coins className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.2"), icon: <Shield className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.3"), icon: <RefreshCw className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.4"), icon: <BarChart3 className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.5"), icon: <Target className="w-5 h-5" aria-hidden="true" /> },
+  ]
+
+  const timeline = [
+    {
+      year: t("timeline.0.year"),
+      status: t("timeline.0.status"),
+      description: t("timeline.0.description"),
+      color: "text-green-400",
+      bgColor: "bg-green-500/20",
+      icon: <Shield className="w-6 h-6" aria-hidden="true" />,
+      details: t("timeline.0.details"),
+    },
+    {
+      year: t("timeline.1.year"),
+      status: t("timeline.1.status"),
+      description: t("timeline.1.description"),
+      color: "text-yellow-400",
+      bgColor: "bg-yellow-500/20",
+      icon: <Timer className="w-6 h-6" aria-hidden="true" />,
+      details: t("timeline.1.details"),
+    },
+    {
+      year: t("timeline.2.year"),
+      status: t("timeline.2.status"),
+      description: t("timeline.2.description"),
+      color: "text-cyan-400",
+      bgColor: "bg-cyan-500/20",
+      icon: <RefreshCw className="w-6 h-6" aria-hidden="true" />,
+      details: "Pay accumulated rent to restore full control",
+    },
+    {
+      year: "Box Depleted",
+      status: "Eligible for miner claim (per protocol rules)",
+      description: "If rent isn't paid, remaining value goes to miners",
+      color: "text-orange-400",
+      bgColor: "bg-orange-500/20",
+      icon: <Recycle className="w-6 h-6" aria-hidden="true" />,
+      details: "Funds return to active circulation",
+    },
+  ]
+
+  const solutions = [
+    {
+      title: "Automatic Fee Recycling",
+      description: "If coins are left untouched for years, a small fee is recycled back to miners.",
+      icon: <Recycle className="w-12 h-12" aria-hidden="true" />,
+      color: "text-orange-400",
+      gradient: "from-orange-500/20 to-orange-500/5",
+    },
+    {
+      title: "No Forgotten Wallets",
+      description: "If you lose your keys, your funds aren't stuck forever in the system.",
+      icon: <Clock className="w-12 h-12" aria-hidden="true" />,
+      color: "text-cyan-400",
+      gradient: "from-cyan-500/20 to-cyan-500/5",
+    },
+    {
+      title: "Predictable Costs",
+      description: "Users pay a transparent fee for long-term data storage.",
+      icon: <TrendingUp className="w-12 h-12" aria-hidden="true" />,
+      color: "text-green-400",
+      gradient: "from-green-500/20 to-green-500/5",
+    },
+  ]
+
+  const faqs = [
+    {
+      question: "Why does Ergo charge \"storage rent\"? Do I have to pay just to hold ERG?",
+      answer: "No, this isn't a holding tax—it's a way to keep the blockchain \"clean.\" Fees apply only to coins (UTXOs) left untouched for more than 4 years. Think of it like long-term storage: if you abandon a box and never return, a tiny fee is charged for the space you occupy. This keeps the network from getting clogged with forgotten data.",
+    },
+    {
+      question: "Can I lose my funds if I'm a long-term investor (HODLer)?",
+      answer: "Almost impossible. Any action—like sending your coins, even to yourself—resets the 4-year timer. The rent is so small it only affects very low-value UTXOs (\"dust\"). The system is designed to clean up lost change, not to penalize active users or investors.",
+    },
+    {
+      question: "Why is it so important to get rid of \"blockchain dust\"?",
+      answer: "It directly affects decentralization. Every forgotten transaction increases the size of the blockchain state, which full nodes must store and process. Without cleanup, running a full node would become too expensive over time, leaving control to big corporations. Storage rent is a long-term guarantee that Ergo stays accessible and truly decentralized.",
+    },
+    {
+      question: "Where does the collected rent go? Does anyone profit from it?",
+      answer: "The fees aren't kept by a company or burned—they're paid out to miners. This gives miners a direct incentive to help clean up the blockchain state, which aligns perfectly with the community's long-term interests. It's a self-sustaining economic model that keeps the blockchain healthy and resilient.",
+    },
+  ]
+
+  function RentEstimator() {
+    const [ageYears, setAgeYears] = useState<number>(4)
+    const [boxValue, setBoxValue] = useState<number>(1.0)
+    // Simplified illustrative estimator; not protocol-accurate
+    const estimatedRent = useMemo(() => {
+      const periods = Math.max(0, Math.floor(ageYears / 4))
+      const perPeriod = 0.13 // ERG per 4 years (illustrative)
+      return +(periods * perPeriod).toFixed(4)
+    }, [ageYears])
+    const remaining = Math.max(0, +(boxValue - estimatedRent).toFixed(4))
+    const topUpNeeded = estimatedRent > boxValue ? +(estimatedRent - boxValue).toFixed(4) : 0
+    return (
+      <div className="grid md:grid-cols-3 gap-4 items-end">
+        <div>
+          <label className="block text-xs text-neutral-400 mb-1">Box age (years)</label>
+          <input type="number" min={0} step={1} value={ageYears} onChange={(e)=>setAgeYears(Number(e.target.value))} className="w-full bg-neutral-900/60 border border-neutral-700 rounded px-3 py-2 text-sm text-white" />
+        </div>
+        <div>
+          <label className="block text-xs text-neutral-400 mb-1">Box value (ERG)</label>
+          <input type="number" min={0} step={0.01} value={boxValue} onChange={(e)=>setBoxValue(Number(e.target.value))} className="w-full bg-neutral-900/60 border border-neutral-700 rounded px-3 py-2 text-sm text-white" />
+        </div>
+        <div className="text-sm text-neutral-300" aria-live="polite">
+          <div className="flex justify-between"><span>Estimated rent:</span><span className="font-semibold">{estimatedRent} ERG</span></div>
+          <div className="flex justify-between"><span>Top-up needed:</span><span className="font-semibold">{topUpNeeded} ERG</span></div>
+          <div className="flex justify-between"><span>Remaining value:</span><span className="font-semibold">{remaining} ERG</span></div>
+          <p className="text-xs text-neutral-500 mt-1">Illustrative; see docs for formula and current parameters.</p>
+        </div>
+      </div>
+    )
+  }
+
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   return (
