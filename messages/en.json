@@ -1,4 +1,389 @@
 {
+  "technology": {
+    "securePow": {
+      "title": "Secure Proof-of-Work",
+      "subtitle": "Memory-hard mining algorithm designed for fair distribution and ASIC resistance",
+      "seo": {
+        "title": "Secure Proof-of-Work | Ergo Platform",
+        "description": "Learn about Ergo's memory-hard mining algorithm designed for fair distribution and ASIC resistance",
+        "keywords": "ergo, mining, proof of work, asic resistant, gpu mining"
+      },
+      "features": [
+        {
+          "title": "ASIC-Resistant",
+          "description": "ASIC-resistant (not ASIC-proof): specialized-hardware edge is limited; commodity GPUs remain competitive"
+        },
+        {
+          "title": "Energy Efficient",
+          "description": "Memory-hardness dampens the hash-per-watt arms race and extends GPU lifecycles, reducing e-waste"
+        },
+        {
+          "title": "Fair Launch",
+          "description": "No premine, no ICO, no VC allocation"
+        }
+      ],
+      "benefits": [
+        "The blockchain stays clean, compact, and fast",
+        "Miners are rewarded for maintaining real, active data",
+        "Network remains healthy — even decades from now",
+        "Reduces the share of permanently lost funds ('stuck' UTXOs)",
+        "Predictable, transparent storage costs",
+        "Automatic state cleanup & miner incentives (per protocol)"
+      ],
+      "timeline": [
+        {
+          "year": "Year 0–4",
+          "status": "No rent accrual period",
+          "description": "Your UTXO (box) is stored for free on the blockchain",
+          "details": "No fees, full access to your funds"
+        },
+        {
+          "year": "Year 4+",
+          "status": "Storage Rent Begins",
+          "description": "Small rent fee may be deducted from box value (if applicable)",
+          "details": "Approximate; depends on protocol parameters/min box value. See docs."
+        },
+        {
+          "year": "Owner Returns",
+          "status": "Rent Top-Up",
+          "description": "Owner can pay rent and regain full access to funds",
+          "details": "Pay accumulated rent to restore full control"
+        }
+      ]
+    },
+    "nativeTokens": {
+      "title": "Native Tokens",
+      "subtitle": "First-class tokens with protocol-level security guarantees",
+      "seo": {
+        "title": "Native Tokens | Ergo Platform",
+        "description": "Create and trade tokens directly at the protocol level with built-in security",
+        "keywords": "ergo, tokens, native assets, nft, defi"
+      },
+      "features": [
+        {
+          "title": "One-Click Creation",
+          "description": "Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts"
+        },
+        {
+          "title": "True Native Assets",
+          "description": "First-class tokens with protocol-level security guarantees, not contract-based"
+        },
+        {
+          "title": "DeFi Ready",
+          "description": "Native integration with all Ergo applications and protocols"
+        },
+        {
+          "title": "Cost Effective",
+          "description": "Minimal fees for token creation and transfers - just simple, secure, native assets"
+        },
+        {
+          "title": "Rich Metadata",
+          "description": "Support for complex metadata including images, descriptions, and custom properties"
+        },
+        {
+          "title": "Universal Compatibility",
+          "description": "Any smart contract can access oracle data without special integrations"
+        }
+      ],
+      "tabs": {
+        "tokens": "Fungible Tokens",
+        "nfts": "NFTs",
+        "stablecoins": "Stablecoins"
+      },
+      "tabContent": {
+        "tokens": "Create any type of fungible token with customizable properties like fixed or variable supply, decimal precision, and metadata.",
+        "nfts": "Build unique digital assets with rich metadata, royalty mechanisms, and collection support.",
+        "stablecoins": "Issue algorithmic or collateralized stablecoins with oracle integration."
+      }
+    },
+    "subblocks": {
+      "title": "Subblocks",
+      "subtitle": "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations",
+      "seo": {
+        "title": "Subblocks | Ergo Platform",
+        "description": "Learn about Ergo's Layer 1 scaling solution for sub-second transaction confirmations",
+        "keywords": "ergo, scaling, subblocks, layer 1, transactions"
+      },
+      "features": [
+        {
+          "title": "Sub-Second Confirmations",
+          "description": "Near-instant transaction finality for improved user experience without sacrificing decentralization"
+        },
+        {
+          "title": "Layer 1 Security",
+          "description": "Full blockchain security without trusted intermediaries or bridges"
+        },
+        {
+          "title": "Seamless Integration",
+          "description": "Works with existing infrastructure - no bridges or sidechains needed"
+        },
+        {
+          "title": "Parallel Processing",
+          "description": "Multiple subblocks can be validated in parallel for increased throughput"
+        },
+        {
+          "title": "Adaptive Difficulty",
+          "description": "Dynamic adjustment ensures consistent block times even with varying hash power"
+        },
+        {
+          "title": "Miner Incentives",
+          "description": "Additional rewards for subblock miners while maintaining main chain security"
+        }
+      ]
+    }
+  },
+  "start": {
+    "quiz": {
+      "title": "Find Your Path in Ergo",
+      "subtitle": "Answer a few questions to discover your ideal role in the ecosystem",
+      "progress": "Question {current} of {total}",
+      "resetQuiz": "Reset Quiz",
+      "previousQuestion": "Previous",
+      "nextQuestion": "Next",
+      "showResults": "Show Results",
+      "questions": [
+        {
+          "question": "What primarily attracts you to blockchain technology and Ergo?",
+          "options": [
+            {
+              "text": "Investment potential and financial opportunities",
+              "profiles": ["investor", "defi"]
+            },
+            {
+              "text": "Building applications and contributing to new technologies",
+              "profiles": ["developer"]
+            },
+            {
+              "text": "Supporting network security and earning rewards through hardware",
+              "profiles": ["miner"]
+            },
+            {
+              "text": "Collecting, creating, or trading unique digital items and art",
+              "profiles": ["nft"]
+            },
+            {
+              "text": "Using new financial tools for borrowing, lending, or trading",
+              "profiles": ["defi"]
+            },
+            {
+              "text": "Enhancing my financial privacy and anonymity",
+              "profiles": ["privacy"]
+            },
+            {
+              "text": "I'm new and just want to learn the basics first!",
+              "profiles": ["learner"]
+            }
+          ]
+        }
+      ],
+      "profiles": {
+        "developer": {
+          "name": "Aspiring Developer",
+          "title": "BUILD THE FUTURE",
+          "description": "You're drawn to creating innovative applications and contributing to cutting-edge technology! Ergo's powerful ErgoScript and eUTXO model offer unique opportunities to build secure and efficient dApps.",
+          "tools": [
+            {
+              "category": "Documentation & Learning",
+              "items": [
+                {
+                  "name": "ErgoDocs",
+                  "description": "Comprehensive developer documentation",
+                  "link": "/build/docs"
+                },
+                {
+                  "name": "ErgoScript Primer",
+                  "description": "Learn Ergo's smart contract language",
+                  "link": "/build/tutorials"
+                }
+              ]
+            }
+          ],
+          "nextSteps": [
+            {
+              "text": "Explore Developer Documentation",
+              "link": "/build/docs"
+            },
+            {
+              "text": "Try the ErgoScript Playground",
+              "link": "/build/playground"
+            }
+          ],
+          "communityChannels": [
+            {
+              "name": "Developer Discord",
+              "link": "https://discord.gg/ergo-platform"
+            },
+            {
+              "name": "GitHub Organization",
+              "link": "https://github.com/ergoplatform"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "use": {
+    "mining": {
+      "title": "Mine Ergo",
+      "subtitle": "Join the decentralized mining network and earn ERG while securing the blockchain",
+      "poolsTitle": "Mining Pools",
+      "hardwareTitle": "Hardware Requirements",
+      "softwareTitle": "Mining Software",
+      "optimizationTitle": "Optimization Tips",
+      "active": "Active",
+      "inactive": "Inactive",
+      "recommended": "Recommended",
+      "alternative": "Alternative",
+      "poolUrl": "Server",
+      "poolFee": "Fee",
+      "minPayout": "Min Payout",
+      "performance": "Performance",
+      "difficulty": "Difficulty",
+      "download": "Download",
+      "pools": [
+        {
+          "name": "Herominers",
+          "url": "ergo.herominers.com:1180",
+          "fee": "1%",
+          "minPayout": "1 ERG",
+          "features": [
+            "Auto-switching",
+            "Mobile app",
+            "24/7 support"
+          ]
+        },
+        {
+          "name": "2Miners",
+          "url": "ergo.2miners.com:8560",
+          "fee": "1%",
+          "minPayout": "0.1 ERG",
+          "features": [
+            "PPLNS",
+            "Real-time stats",
+            "Telegram bot"
+          ]
+        },
+        {
+          "name": "Nanopool",
+          "url": "ergo-eu1.nanopool.org:11433",
+          "fee": "1%",
+          "minPayout": "0.1 ERG",
+          "features": [
+            "Global servers",
+            "Mobile app",
+            "Email alerts"
+          ]
+        },
+        {
+          "name": "Woolypooly",
+          "url": "ergo.woolypooly.com:3100",
+          "fee": "0.9%",
+          "minPayout": "0.1 ERG",
+          "features": [
+            "Low fees",
+            "MEV rewards",
+            "Dashboard"
+          ]
+        }
+      ],
+      "hardware": {
+        "gpu": {
+          "category": "GPU Mining",
+          "requirements": [
+            "NVIDIA GTX 1060 6GB or AMD RX 580 8GB minimum",
+            "8GB+ VRAM recommended for optimal performance",
+            "PCIe x16 slot",
+            "Adequate power supply (750W+ for multi-GPU)"
+          ],
+          "performance": "4-50 MH/s depending on GPU",
+          "difficulty": "Beginner"
+        },
+        "cpu": {
+          "category": "CPU Mining",
+          "requirements": [
+            "Modern multi-core processor",
+            "16GB+ RAM recommended",
+            "Good cooling solution"
+          ],
+          "performance": "0.1-2 MH/s depending on CPU",
+          "difficulty": "Beginner"
+        },
+        "memory": {
+          "category": "Memory Requirements",
+          "requirements": [
+            "8GB+ system RAM",
+            "Fast storage for DAG file",
+            "SSD recommended"
+          ],
+          "performance": "Affects overall stability",
+          "difficulty": "Important"
+        }
+      },
+      "software": [
+        {
+          "name": "T-Rex Miner",
+          "type": "NVIDIA GPU miner",
+          "features": [
+            "Auto-tuning",
+            "Low dev fee",
+            "Stable performance"
+          ],
+          "link": "https://github.com/trexminer/T-Rex/releases"
+        },
+        {
+          "name": "TeamRedMiner",
+          "type": "AMD GPU miner",
+          "features": [
+            "Optimized for AMD",
+            "Memory timing control",
+            "Temperature management"
+          ],
+          "link": "https://github.com/todxx/teamredminer/releases"
+        },
+        {
+          "name": "NBMiner",
+          "type": "Universal GPU miner",
+          "features": [
+            "NVIDIA & AMD support",
+            "Simple setup",
+            "Regular updates"
+          ],
+          "link": "https://github.com/NebuTech/NBMiner/releases"
+        }
+      ],
+      "optimization": [
+        {
+          "category": "Performance Tuning",
+          "tips": [
+            "Start with stock settings",
+            "Monitor temperatures closely",
+            "Adjust power limits gradually"
+          ]
+        },
+        {
+          "category": "Thermal Management",
+          "tips": [
+            "Keep GPUs under 75°C",
+            "Ensure good airflow",
+            "Clean fans regularly"
+          ]
+        },
+        {
+          "category": "Stability",
+          "tips": [
+            "Use stable drivers",
+            "Monitor error rates",
+            "Maintain clean power"
+          ]
+        }
+      ],
+      "ctaTitle": "Ready to Start Mining?",
+      "ctaButtons": {
+        "readGuide": "Read Full Guide",
+        "viewCode": "View on GitHub"
+      }
+    }
+  },
   "common": {
     "loading": "Loading...",
     "error": "Error",
