@@ -12,6 +12,7 @@ import { Eye, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, 
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -142,6 +143,74 @@ const useCases = [
 export default function OraclePoolsPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
+  const t = useTranslations('technology.oraclePools')
+  
+  const features = [
+    {
+      title: t('features.0.title'),
+      description: t('features.0.description'),
+      icon: TrendingUp,
+    },
+    {
+      title: t('features.1.title'),
+      description: t('features.1.description'),
+      icon: Globe,
+    },
+    {
+      title: t('features.2.title'),
+      description: t('features.2.description'),
+      icon: Shield,
+    },
+    {
+      title: t('features.3.title'),
+      description: t('features.3.description'),
+      icon: Lock,
+    },
+    {
+      title: t('features.4.title'),
+      description: t('features.4.description'),
+      icon: Users,
+    },
+    {
+      title: t('features.5.title'),
+      description: t('features.5.description'),
+      icon: Zap,
+    },
+  ]
+  
+  const howItWorks = [
+    {
+      title: t('howItWorks.0.title'),
+      description: t('howItWorks.0.description'),
+    },
+    {
+      title: t('howItWorks.1.title'),
+      description: t('howItWorks.1.description'),
+    },
+    {
+      title: t('howItWorks.2.title'),
+      description: t('howItWorks.2.description'),
+    },
+    {
+      title: t('howItWorks.3.title'),
+      description: t('howItWorks.3.description'),
+    },
+  ]
+  
+  const useCases = [
+    {
+      title: t('useCases.0.title'),
+      description: t('useCases.0.description'),
+    },
+    {
+      title: t('useCases.1.title'),
+      description: t('useCases.1.description'),
+    },
+    {
+      title: t('useCases.2.title'),
+      description: t('useCases.2.description'),
+    },
+  ]
 
   const faqs = [
     {

@@ -29,6 +29,7 @@ import {
   Shield,
 } from "lucide-react"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 
 const platforms = [
   {
@@ -73,44 +74,7 @@ const platforms = [
   },
 ]
 
-const contributions = [
-  {
-    title: "Development",
-    description: "Build dApps, tools, and infrastructure",
-    icon: Code,
-    tasks: ["Smart Contracts", "Frontend Apps", "Tools & Libraries"],
-  },
-  {
-    title: "Content Creation",
-    description: "Articles, videos, tutorials, documentation",
-    icon: FileText,
-    tasks: ["Technical Writing", "Video Content", "Tutorials"],
-  },
-  {
-    title: "Community Support",
-    description: "Help newcomers and answer questions",
-    icon: Heart,
-    tasks: ["User Support", "Onboarding", "Mentoring"],
-  },
-  {
-    title: "Governance",
-    description: "Participate in protocol decisions",
-    icon: Vote,
-    tasks: ["EIP Reviews", "Voting", "Proposals"],
-  },
-  {
-    title: "Infrastructure",
-    description: "Run nodes, mining, network support",
-    icon: Server,
-    tasks: ["Node Operation", "Mining", "Network Security"],
-  },
-  {
-    title: "Research",
-    description: "Protocol research and improvements",
-    icon: Target,
-    tasks: ["Academic Research", "Protocol Analysis", "Innovation"],
-  },
-]
+// contributions moved to component
 
 const guidelines = [
   {
@@ -142,6 +106,47 @@ const guidelines = [
 ]
 
 export default function CommunityClient() {
+  const t = useTranslations('start.community')
+  
+  const contributions = [
+    {
+      title: t('contributions.0.title'),
+      description: t('contributions.0.description'),
+      icon: Code,
+      tasks: t('contributions.0.tasks').split(', '),
+    },
+    {
+      title: t('contributions.1.title'),
+      description: t('contributions.1.description'),
+      icon: FileText,
+      tasks: t('contributions.1.tasks').split(', '),
+    },
+    {
+      title: t('contributions.2.title'),
+      description: t('contributions.2.description'),
+      icon: Heart,
+      tasks: t('contributions.2.tasks').split(', '),
+    },
+    {
+      title: t('contributions.3.title'),
+      description: t('contributions.3.description'),
+      icon: Vote,
+      tasks: t('contributions.3.tasks').split(', '),
+    },
+    {
+      title: t('contributions.4.title'),
+      description: t('contributions.4.description'),
+      icon: Server,
+      tasks: t('contributions.4.tasks').split(', '),
+    },
+    {
+      title: t('contributions.5.title'),
+      description: t('contributions.5.description'),
+      icon: Target,
+      tasks: t('contributions.5.tasks').split(', '),
+    },
+  ]
+  
   return (
     <div className="min-h-screen bg-black text-white relative">
       <div className="relative z-10">

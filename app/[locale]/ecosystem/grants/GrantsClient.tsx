@@ -11,8 +11,10 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { SectionHeading } from "@/components/section-heading"
 import { Badge } from "@/components/ui/badge"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
+import { useTranslations } from "next-intl"
 
 export default function GrantsClient() {
+  const t = useTranslations('ecosystem.grants')
   const [email, setEmail] = useState("")
   const [isSubscribed, setIsSubscribed] = useState(false)
 
@@ -77,35 +79,35 @@ export default function GrantsClient() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <SectionHeading
-                text="What to Expect"
-                subtitle="Grants Program Features"
-                description="Supporting innovation and development in the Ergo ecosystem"
+                text={t('whatToExpect')}
+                subtitle={t('grantsFeatures')}
+                description={t('supportingInnovation')}
               />
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   {
                     icon: Zap,
-                    title: "Developer Support",
-                    description: "Funding for innovative dApps, tools, and infrastructure projects",
+                    title: t('features.developerSupport.title'),
+                    description: t('features.developerSupport.description'),
                     color: "",
                   },
                   {
                     icon: Target,
-                    title: "Research Funding",
-                    description: "Support for academic research and protocol improvements",
+                    title: t('features.researchFunding.title'),
+                    description: t('features.researchFunding.description'),
                     color: "",
                   },
                   {
                     icon: Users,
-                    title: "Community Projects",
-                    description: "Grants for community-driven initiatives and educational content",
+                    title: t('features.communityProjects.title'),
+                    description: t('features.communityProjects.description'),
                     color: "",
                   },
                   {
                     icon: Lightbulb,
-                    title: "Innovation Grants",
-                    description: "Special funding for breakthrough ideas and experimental projects",
+                    title: t('features.innovationGrants.title'),
+                    description: t('features.innovationGrants.description'),
                     color: "",
                   },
                 ].map((feature, index) => (
@@ -138,20 +140,20 @@ export default function GrantsClient() {
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white leading-[1.1] pb-1">
-                Ready to Build on Ergo?
+                {t('cta.title')}
               </h2>
               <p className="text-xl text-neutral-300 mb-8">
-                Start preparing your project proposal and join our community to stay updated
+                {t('cta.description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                  Join Discord Community
+                  {t('cta.joinDiscord')}
                 </Button>
                 <Button
                   variant="outline"
                   className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
-                  Learn About Ergo
+                  {t('cta.learnAboutErgo')}
                 </Button>
               </div>
             </div>

@@ -12,6 +12,7 @@ import { GitBranch, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, La
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -102,6 +103,35 @@ const useCases = [
 export default function VelvetForksPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("concept")
+  const t = useTranslations('technology.velvetForks')
+  
+  const features = [
+    {
+      title: t('features.0.title'),
+      description: t('features.0.description'),
+      icon: CheckCircle,
+    },
+    {
+      title: t('features.1.title'),
+      description: t('features.1.description'),
+      icon: TrendingUp,
+    },
+    {
+      title: t('features.2.title'),
+      description: t('features.2.description'),
+      icon: Users,
+    },
+    {
+      title: t('features.3.title'),
+      description: t('features.3.description'),
+      icon: Shield,
+    },
+    {
+      title: t('features.4.title'),
+      description: t('features.4.description'),
+      icon: Lock,
+    },
+  ]
 
   const faqs = [
     {

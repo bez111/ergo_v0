@@ -12,6 +12,7 @@ import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCi
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 function CopyButton({ code, label }: { code: string; label: string }) {
   const [copied, setCopied] = useState(false)
@@ -72,51 +73,54 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "Formal Verification Support",
-    description: "Supports formal verification and auditability via declarative constraints and first-class crypto primitives",
-    icon: Shield,
-  },
-  {
-    title: "eUTXO Security Model",
-    description: "The class of reentrancy vulnerabilities common to account-based systems is absent in eUTXO",
-    icon: Lock,
-  },
-  {
-    title: "Deterministic Execution",
-    description: "Computational complexity is predictable, though network fees are market-driven",
-    icon: Zap,
-  },
-  {
-    title: "Native Sigma Protocols",
-    description: "First-class support for multi-signature, threshold, and ring-signature constructions",
-    icon: Code,
-  },
-  {
-    title: "UTXO Concurrency",
-    description: "Parallel transaction processing with batcher patterns for high-contention scenarios",
-    icon: CheckCircle,
-  },
-  {
-    title: "Restricted Computation",
-    description: "Non-Turing-complete within scripts for safety, yet sequences can express complex behaviors",
-    icon: Code,
-  },
-]
-
-const useCases = [
-  "Non-custodial DeFi protocols",
-  "Custom multi-signature wallets",
-  "Auctions and DAOs",
-  "Oracle systems",
-  "Privacy tools and mixers",
-  "Advanced NFT contracts",
-]
+// Features and use cases will be loaded from translations
 
 export default function ErgoScriptPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("features")
+  const t = useTranslations('technology.ergoscriptPage')
+  
+  const features = [
+    {
+      title: t('features.0.title'),
+      description: t('features.0.description'),
+      icon: Shield,
+    },
+    {
+      title: t('features.1.title'),
+      description: t('features.1.description'),
+      icon: Lock,
+    },
+    {
+      title: t('features.2.title'),
+      description: t('features.2.description'),
+      icon: Zap,
+    },
+    {
+      title: t('features.3.title'),
+      description: t('features.3.description'),
+      icon: Code,
+    },
+    {
+      title: t('features.4.title'),
+      description: t('features.4.description'),
+      icon: CheckCircle,
+    },
+    {
+      title: t('features.5.title'),
+      description: t('features.5.description'),
+      icon: Code,
+    },
+  ]
+  
+  const useCases = [
+    t('useCases.0'),
+    t('useCases.1'),
+    t('useCases.2'),
+    t('useCases.3'),
+    t('useCases.4'),
+    t('useCases.5'),
+  ]
 
 
 

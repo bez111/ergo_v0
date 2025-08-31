@@ -2,42 +2,48 @@ import type { Metadata } from "next"
 import BabelFeesClient from "./BabelFeesClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "Babel Fees on Ergo | Pay Transaction Fees with Any Token",
-  description: "Revolutionary fee system on Ergo blockchain. Pay transaction fees using any token instead of ERG. Learn how Babel Fees enable seamless DeFi interactions and improve user experience.",
-  keywords: ["babel fees", "ergo transaction fees", "pay fees with tokens", "defi fees", "blockchain fees", "ergo babel", "token fees", "gas fees alternative"],
-  alternates: {
-    canonical: "https://ergoblockchain.org/use/babel-fees"
-  },
-  openGraph: {
-    title: "Babel Fees - Pay Ergo Fees with Any Token",
-    description: "No ERG? No problem! Pay transaction fees using any token on Ergo blockchain.",
-    url: "https://ergoblockchain.org/use/babel-fees",
-    siteName: "Ergo Platform",
-    images: [{
-      url: "https://ergoblockchain.org/og/babel-fees.png",
-      width: 1200,
-      height: 630,
-      alt: "Ergo Babel Fees"
-    }],
-    type: "article",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Babel Fees on Ergo | Revolutionary Fee System",
-    description: "Pay blockchain fees with any token. No ERG required for transactions.",
-    images: ["https://ergoblockchain.org/og/babel-fees.png"],
-    creator: "@ergoplatform",
-    site: "@ergoplatform"
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'babelFees.seo' })
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: ["babel fees", "ergo transaction fees", "pay fees with tokens", "defi fees", "blockchain fees", "ergo babel", "token fees", "gas fees alternative"],
+    alternates: {
+      canonical: "https://ergoblockchain.org/use/babel-fees"
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: "https://ergoblockchain.org/use/babel-fees",
+      siteName: "Ergo Platform",
+      images: [{
+        url: "https://ergoblockchain.org/og/babel-fees.png",
+        width: 1200,
+        height: 630,
+        alt: "Ergo Babel Fees"
+      }],
+      type: "article",
+      locale: "en_US"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["https://ergoblockchain.org/og/babel-fees.png"],
+      creator: "@ergoplatform",
+      site: "@ergoplatform"
+    },
+    robots: {
       index: true,
-      follow: true
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true
+      }
     }
   }
 }

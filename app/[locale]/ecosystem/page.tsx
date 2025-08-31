@@ -3,24 +3,29 @@ import EcosystemClient from "./EcosystemClient"
 import { projects as allProjects, sortProjectsForListing } from "./_data"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
+import { getTranslations } from "next-intl/server"
 
 export const revalidate = 600
 
-export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[]>> }): Promise<Metadata> {
+export async function generateMetadata({ searchParams, params }: { 
+  searchParams: Promise<Record<string, string | string[]>>, 
+  params: { locale: string } 
+}): Promise<Metadata> {
   const sp = await searchParams
+  const { locale } = await params
   const hasQueries = !!sp && Object.keys(sp).length > 0
   const canonical = "https://ergoblockchain.org/ecosystem"
+  const t = await getTranslations({ locale, namespace: 'ecosystem.seo' })
+  
   return {
-    title: "Ergo Ecosystem — dApps, wallets, tools, DeFi",
-    description:
-      "Explore the Ergo ecosystem: decentralized apps, wallets, privacy tools, DeFi protocols, SDKs and infrastructure.",
+    title: t('title'),
+    description: t('description'),
     alternates: { canonical },
     openGraph: {
       type: "website",
       url: canonical,
-      title: "Ergo Ecosystem",
-      description:
-        "Directory of Ergo dApps, wallets, infrastructure and tools.",
+      title: t('ogTitle'),
+      description: t('ogDescription'),
       images: [{ url: "/og/ecosystem.png", width: 1200, height: 630 }],
       siteName: "Ergo",
       locale: "en_US",

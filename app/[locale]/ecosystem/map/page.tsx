@@ -2,42 +2,48 @@ import type { Metadata } from "next"
 import MapClient from "./MapClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
-  description: "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
-  keywords: ["ergo ecosystem", "defi map", "dapp directory", "blockchain ecosystem", "ergo projects", "interactive map", "defi protocols", "crypto ecosystem"],
-  alternates: {
-    canonical: "https://ergoblockchain.org/ecosystem/map"
-  },
-  openGraph: {
-    title: "Interactive Ergo Ecosystem Map | 50+ Projects",
-    description: "Visual exploration of all Ergo projects. DeFi, NFTs, wallets, infrastructure mapped.",
-    url: "https://ergoblockchain.org/ecosystem/map",
-    siteName: "Ergo Platform",
-    images: [{
-      url: "https://ergoblockchain.org/og/ecosystem-map.png",
-      width: 1200,
-      height: 630,
-      alt: "Ergo Ecosystem Interactive Map"
-    }],
-    type: "website",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ergo Ecosystem Map | Visual Project Explorer",
-    description: "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure.",
-    images: ["https://ergoblockchain.org/og/ecosystem-map.png"],
-    creator: "@ergoplatform",
-    site: "@ergoplatform"
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'ecosystem.map.seo' })
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: ["ergo ecosystem", "defi map", "dapp directory", "blockchain ecosystem", "ergo projects", "interactive map", "defi protocols", "crypto ecosystem"],
+    alternates: {
+      canonical: "https://ergoblockchain.org/ecosystem/map"
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: "https://ergoblockchain.org/ecosystem/map",
+      siteName: "Ergo Platform",
+      images: [{
+        url: "https://ergoblockchain.org/og/ecosystem-map.png",
+        width: 1200,
+        height: 630,
+        alt: "Ergo Ecosystem Interactive Map"
+      }],
+      type: "website",
+      locale: "en_US"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["https://ergoblockchain.org/og/ecosystem-map.png"],
+      creator: "@ergoplatform",
+      site: "@ergoplatform"
+    },
+    robots: {
       index: true,
-      follow: true
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true
+      }
     }
   }
 }

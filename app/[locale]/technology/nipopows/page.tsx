@@ -9,6 +9,7 @@ import Link from "next/link"
 import { useState, type ReactNode } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { useTranslations } from "next-intl"
 
 // Types and hoisted data
 type UseCase = {
@@ -68,6 +69,39 @@ const allFaqs = [...baseFaqs, ...extraFaqs]
 export default function NIPOPOWsPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const lastUpdated = new Date().toISOString().slice(0, 10)
+  const t = useTranslations('technology.nipopows')
+  
+  const features = [
+    {
+      title: t('features.0.title'),
+      description: t('features.0.description'),
+      icon: <Link2 className="w-8 h-8" aria-hidden="true" />,
+    },
+    {
+      title: t('features.1.title'),
+      description: t('features.1.description'),
+      icon: <Smartphone className="w-8 h-8" aria-hidden="true" />,
+    },
+    {
+      title: t('features.2.title'),
+      description: t('features.2.description'),
+      icon: <Zap className="w-8 h-8" aria-hidden="true" />,
+    },
+    {
+      title: t('features.3.title'),
+      description: t('features.3.description'),
+      icon: <Shield className="w-8 h-8" aria-hidden="true" />,
+    },
+  ]
+  
+  const useCases = [
+    {
+      title: t('useCases.0.title'),
+      description: t('useCases.0.description'),
+      example: t('useCases.0.example'),
+      icon: <Link2 className="w-8 h-8" aria-hidden="true" />,
+    },
+  ]
 
   return (
     <>

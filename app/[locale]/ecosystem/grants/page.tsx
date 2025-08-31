@@ -2,42 +2,48 @@ import type { Metadata } from "next"
 import GrantsClient from "./GrantsClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "Ergo Grants Program | Funding for Blockchain Projects",
-  description: "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
-  keywords: ["ergo grants", "blockchain funding", "developer grants", "crypto grants", "defi funding", "ergo foundation", "project funding", "open source grants"],
-  alternates: {
-    canonical: "https://ergoblockchain.org/ecosystem/grants"
-  },
-  openGraph: {
-    title: "Ergo Grants - Fund Your Blockchain Innovation",
-    description: "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
-    url: "https://ergoblockchain.org/ecosystem/grants",
-    siteName: "Ergo Platform",
-    images: [{
-      url: "https://ergoblockchain.org/og/grants.png",
-      width: 1200,
-      height: 630,
-      alt: "Ergo Grants Program"
-    }],
-    type: "website",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ergo Grants Program | Get Funded",
-    description: "Funding for developers building on Ergo. Apply for grants today.",
-    images: ["https://ergoblockchain.org/og/grants.png"],
-    creator: "@ergoplatform",
-    site: "@ergoplatform"
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'ecosystem.grants.seo' })
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: ["ergo grants", "blockchain funding", "developer grants", "crypto grants", "defi funding", "ergo foundation", "project funding", "open source grants"],
+    alternates: {
+      canonical: "https://ergoblockchain.org/ecosystem/grants"
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: "https://ergoblockchain.org/ecosystem/grants",
+      siteName: "Ergo Platform",
+      images: [{
+        url: "https://ergoblockchain.org/og/grants.png",
+        width: 1200,
+        height: 630,
+        alt: "Ergo Grants Program"
+      }],
+      type: "website",
+      locale: "en_US"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["https://ergoblockchain.org/og/grants.png"],
+      creator: "@ergoplatform",
+      site: "@ergoplatform"
+    },
+    robots: {
       index: true,
-      follow: true
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true
+      }
     }
   }
 }

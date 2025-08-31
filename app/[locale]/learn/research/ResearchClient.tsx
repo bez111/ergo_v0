@@ -19,44 +19,9 @@ import {
   ShieldCheck,
   Terminal,
 } from "lucide-react"
+import { useTranslations } from "next-intl"
 
-const keyPapers = [
-  {
-    title: "Ergo Whitepaper",
-    description: "The core technical paper describing Ergo's design, principles, and protocol innovations.",
-    url: "https://ergoplatform.org/docs/whitepaper.pdf",
-    category: "Core Protocol",
-    icon: FileText,
-  },
-  {
-    title: "Extended UTXO (eUTXO) Model",
-    description: "By IOHK/Cardano & Ergo researchers—the definitive paper on the eUTXO paradigm.",
-    url: "https://iohk.io/en/research/library/papers/extended-utxo-a-formal-model-for-utxo-based-cryptocurrencies/",
-    category: "Architecture",
-    icon: Database,
-  },
-  {
-    title: "Sigma Protocols",
-    description: "The cryptographic backbone of privacy and ring signatures in Ergo.",
-    url: "https://ergoplatform.org/docs/sigma-protocol.pdf",
-    category: "Cryptography",
-    icon: Shield,
-  },
-  {
-    title: "Autolykos: Ergo PoW Algorithm",
-    description: "A novel, ASIC-resistant Proof-of-Work consensus mechanism.",
-    url: "https://ergoplatform.org/docs/Autolykos.pdf",
-    category: "Consensus",
-    icon: Terminal,
-  },
-  {
-    title: "NIPoPoWs",
-    description: "Research on cross-chain, lightweight validation protocols for trustless interoperability.",
-    url: "https://nipopows.com/",
-    category: "Interoperability",
-    icon: Users,
-  },
-]
+// keyPapers moved to component
 
 const researchCategories = [
   {
@@ -121,6 +86,88 @@ const itemVariants = {
 
 export default function ResearchClient() {
   const [selectedCategory, setSelectedCategory] = useState("All")
+  const t = useTranslations('learn.research')
+  
+  const keyPapers = [
+    {
+      title: t('keyPapers.0.title'),
+      description: t('keyPapers.0.description'),
+      category: t('keyPapers.0.category'),
+      icon: FileText,
+    },
+    {
+      title: t('keyPapers.1.title'),
+      description: t('keyPapers.1.description'),
+      category: t('keyPapers.1.category'),
+      icon: Database,
+    },
+    {
+      title: t('keyPapers.2.title'),
+      description: t('keyPapers.2.description'),
+      category: t('keyPapers.2.category'),
+      icon: Shield,
+    },
+    {
+      title: t('keyPapers.3.title'),
+      description: t('keyPapers.3.description'),
+      category: t('keyPapers.3.category'),
+      icon: Terminal,
+    },
+    {
+      title: t('keyPapers.4.title'),
+      description: t('keyPapers.4.description'),
+      category: t('keyPapers.4.category'),
+      icon: Users,
+    },
+  ]
+  
+  const researchCategories = [
+    {
+      title: t('categories.0.title'),
+      icon: Shield,
+      color: "text-orange-400",
+      papers: [
+        { title: t('categories.0.papers.0.title') },
+        { title: t('categories.0.papers.1.title') },
+        { title: t('categories.0.papers.2.title') },
+      ],
+    },
+    {
+      title: t('categories.1.title'),
+      icon: Eye,
+      color: "text-orange-400",
+      papers: [
+        { title: t('categories.1.papers.0.title') },
+        { title: t('categories.1.papers.1.title') },
+      ],
+    },
+    {
+      title: t('categories.2.title'),
+      icon: Database,
+      color: "text-orange-400",
+      papers: [
+        { title: t('categories.2.papers.0.title') },
+        { title: t('categories.2.papers.1.title') },
+      ],
+    },
+    {
+      title: t('categories.3.title'),
+      icon: FileText,
+      color: "text-orange-400",
+      papers: [
+        { title: t('categories.3.papers.0.title') },
+        { title: t('categories.3.papers.1.title') },
+      ],
+    },
+  ]
+  
+  const developerResources = [
+    { title: t('developerResources.0.title'), icon: FileText },
+    { title: t('developerResources.1.title'), icon: FileText },
+    { title: t('developerResources.2.title'), icon: GitBranch },
+    { title: t('developerResources.3.title'), icon: Shield },
+    { title: t('developerResources.4.title'), icon: Eye },
+  ]
 
   return (
     <>

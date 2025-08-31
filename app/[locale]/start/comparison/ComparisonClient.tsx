@@ -12,40 +12,11 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
+import { useTranslations } from "next-intl"
 
 // Metadata is defined in this route's layout.tsx (server-only)
 
-// Comparison data - adjusted wording
-const keyDifferentiators = [
-  {
-    title: "Predictable & Auditable Security",
-    ergo: "No known protocol-level reentrancy class; predictable execution costs",
-    others: "Reentrancy patterns and gas price auctions common in account models",
-    icon: Shield,
-    color: "text-orange-400",
-  },
-  {
-    title: "Native Privacy",
-    ergo: "Sigma protocols for threshold/multisig and privacy; ring-like constructions possible",
-    others: "Often requires external add-ons or trusted services",
-    icon: Brain,
-    color: "text-orange-400",
-  },
-  {
-    title: "Developer Experience",
-    ergo: "Declarative ErgoScript with eUTXO reasoning",
-    others: "Mutable global state; complex reentrancy-safe patterns",
-    icon: Code,
-    color: "text-orange-400",
-  },
-  {
-    title: "Fair & Decentralized",
-    ergo: "Fair PoW launch, ASIC-resistant (GPU-friendly)",
-    others: "ICO allocations or validator gating",
-    icon: Heart,
-    color: "text-orange-400",
-  },
-]
+// Comparison data moved to translations
 
 // Blockchain platform comparison with brand-accent corporate styling
 const enhancedComparison = [
@@ -131,6 +102,38 @@ const getFeatureCellStyle = (item: { value: string; color: string; bg: string })
 export default function ComparisonClient() {
   const [activeStory, setActiveStory] = useState(0)
   const isoDate = new Date().toISOString().slice(0, 10)
+  const t = useTranslations('start.comparison')
+  
+  const keyDifferentiators = [
+    {
+      title: t('keyDifferentiators.0.title'),
+      ergo: t('keyDifferentiators.0.ergo'),
+      others: t('keyDifferentiators.0.others'),
+      icon: Shield,
+      color: "text-orange-400",
+    },
+    {
+      title: t('keyDifferentiators.1.title'),
+      ergo: t('keyDifferentiators.1.ergo'),
+      others: t('keyDifferentiators.1.others'),
+      icon: Brain,
+      color: "text-orange-400",
+    },
+    {
+      title: t('keyDifferentiators.2.title'),
+      ergo: t('keyDifferentiators.2.ergo'),
+      others: t('keyDifferentiators.2.others'),
+      icon: Code,
+      color: "text-orange-400",
+    },
+    {
+      title: t('keyDifferentiators.3.title'),
+      ergo: t('keyDifferentiators.3.ergo'),
+      others: t('keyDifferentiators.3.others'),
+      icon: Heart,
+      color: "text-orange-400",
+    },
+  ]
 
   return (
     <div className="min-h-screen bg-black text-white">
