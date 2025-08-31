@@ -519,6 +519,8 @@
         }
       },
       "useCases": {
+        "title": "Случаи использования",
+        "description": "Изучите реальные применения технологии блокчейна Ergo",
         "defi": {
           "title": "DeFi Протоколs",
           "description": "Decentralized exchanges, lending Платформаs, and algorithmic stablecoins"
