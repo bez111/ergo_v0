@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -7,10 +8,11 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
-import { Coins, Package, Shield, Zap, ArrowRight, CheckCircle, Image, Database, Globe, DollarSign, ChevronDown } from "lucide-react"
+import { FadeIn } from "@/components/animations/fade-in"
+import { Coins, Package, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, Image, Code, Database, Globe, DollarSign, Palette, FileText, ChevronDown, Terminal, BookOpen, Users } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import { useTranslations } from "next-intl"
+import React from "react"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -34,91 +36,91 @@ const itemVariants = {
   },
 }
 
+const features = [
+  {
+    title: "One-Click Creation",
+    description: "Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts",
+    icon: Zap,
+  },
+  {
+    title: "True Native Assets",
+    description: "First-class tokens with protocol-level security guarantees, not contract-based",
+    icon: Shield,
+  },
+  {
+    title: "DeFi Ready",
+    description: "Native integration with all Ergo applications and protocols",
+    icon: Package,
+  },
+  {
+    title: "Cost Effective",
+    description: "Minimal fees for token creation and transfers - just simple, secure, native assets",
+    icon: DollarSign,
+  },
+  {
+    title: "Rich Metadata",
+    description: "Support for complex metadata including images, descriptions, and custom properties",
+    icon: Database,
+  },
+  {
+    title: "Universal Compatibility",
+    description: "Any smart contract can access oracle data without special integrations",
+    icon: Globe,
+  },
+]
+
+const useCases = [
+  {
+    title: "DeFi Tokens",
+    description: "Create governance tokens, utility tokens, and reward tokens for DeFi protocols",
+    icon: Coins,
+  },
+  {
+    title: "NFT Collections",
+    description: "Build unique digital art, collectibles, and gaming assets",
+    icon: Image,
+  },
+  {
+    title: "Stablecoins",
+    description: "Issue algorithmic or collateralized stablecoins with oracle integration",
+    icon: DollarSign,
+  },
+  {
+    title: "Gaming Assets",
+    description: "Create in-game currencies, items, and character tokens",
+    icon: Package,
+  },
+]
+
 export default function NativeTokensPage() {
   const t = useTranslations("technology.nativeTokens")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("tokens")
 
-  const features = [
-    {
-      title: t("features.oneClick.title"),
-      description: t("features.oneClick.description"),
-      icon: Zap,
-    },
-    {
-      title: t("features.trueNative.title"),
-      description: t("features.trueNative.description"),
-      icon: Shield,
-    },
-    {
-      title: t("features.defiReady.title"),
-      description: t("features.defiReady.description"),
-      icon: Package,
-    },
-    {
-      title: t("features.costEffective.title"),
-      description: t("features.costEffective.description"),
-      icon: DollarSign,
-    },
-    {
-      title: t("features.richMetadata.title"),
-      description: t("features.richMetadata.description"),
-      icon: Database,
-    },
-    {
-      title: t("features.universalCompatibility.title"),
-      description: t("features.universalCompatibility.description"),
-      icon: Globe,
-    },
-  ]
-
-  const useCases = [
-    {
-      title: t("useCases.defiTokens.title"),
-      description: t("useCases.defiTokens.description"),
-      icon: Coins,
-    },
-    {
-      title: t("useCases.nftCollections.title"),
-      description: t("useCases.nftCollections.description"),
-      icon: Image,
-    },
-    {
-      title: t("useCases.stablecoins.title"),
-      description: t("useCases.stablecoins.description"),
-      icon: DollarSign,
-    },
-    {
-      title: t("useCases.gamingAssets.title"),
-      description: t("useCases.gamingAssets.description"),
-      icon: Package,
-    },
-  ]
-
   const faqs = [
     {
-      question: t("faq.0.question"),
-      answer: t("faq.0.answer"),
+      question: "How do native tokens differ from ERC-20 tokens?",
+      answer: "Native tokens on Ergo are first-class protocol assets that don't require smart contracts. They have protocol-level security guarantees and are more cost-effective to create and transfer compared to ERC-20 tokens which require contract deployment and gas fees.",
     },
     {
-      question: t("faq.1.question"),
-      answer: t("faq.1.answer"),
+      question: "What's the cost to create a native token?",
+      answer: "Creating a native token costs approximately $0.01 in ERG fees, which is significantly cheaper than deploying smart contracts on other blockchains. The cost is just the standard transaction fee.",
     },
     {
-      question: t("faq.2.question"),
-      answer: t("faq.2.answer"),
+      question: "Can I create NFTs with rich metadata?",
+      answer: "Yes, native tokens support complex metadata including images, descriptions, and custom properties. You can store metadata on-chain or reference external data through IPFS or other storage solutions.",
     },
     {
-      question: t("faq.3.question"),
-      answer: t("faq.3.answer"),
+      question: "Are native tokens compatible with all Ergo applications?",
+      answer: "Yes, native tokens are universally compatible with all Ergo applications, wallets, and protocols. They don't require special integrations since they're treated as first-class assets by the protocol.",
     },
     {
-      question: t("faq.4.question"),
-      answer: t("faq.4.answer"),
+      question: "How do I create a stablecoin using native tokens?",
+      answer: "You can create stablecoins by combining native tokens with oracle data feeds. The AgeUSD stablecoin is an example of this approach, using oracle pools to maintain price stability.",
     },
   ]
 
-  const lastUpdated = "2024-01-15"
+  const lastUpdated = new Date().toISOString().slice(0, 10)
 
   return (
     <>
@@ -150,99 +152,105 @@ export default function NativeTokensPage() {
         data={{
           "@type": "FAQPage",
           mainEntity: faqs.map(faq => ({
-            "@type": "Question",
+              "@type": "Question",
             name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
+              acceptedAnswer: {
+                "@type": "Answer", 
               text: faq.answer
-            }
+              }
           }))
         }}
       />
-
-      <div className="min-h-screen bg-black relative overflow-hidden">
+      
+      <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
 
         {/* Breadcrumbs */}
         <div className="sr-only">
-          <Breadcrumbs items={[
-            { name: "Technology", href: "/technology" },
-            { name: "Native Tokens & NFTs", href: "/technology/native-tokens" }
-          ]} className="mb-8" />
+          <Breadcrumbs
+            items={[
+              { name: "Technology", href: "/technology" },
+              { name: "Native Tokens & NFTs", href: "/technology/native-tokens" }
+            ]}
+            className="mb-8"
+          />
         </div>
 
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 pb-24">
-          {/* Hero Section */}
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none pb-24">
+        {/* Hero Section */}
           <motion.section 
             variants={itemVariants} 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4"
+            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 motion-reduce:transform-none"
           >
             <div className="max-w-7xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    {t("title")}
-                  </h1>
+                  {t("title")}
+                </h1>
                   <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
                     {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    {t("details")}
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                    {t("description")}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/docs/ecosystem/nfts">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        {t("buttons.exploreNftEcosystem")}
-                      </Button>
+                      {t("buttons.exploreNFTs")}
+                  </Button>
                     </Link>
                     <a href="https://docs.ergo.getblok.io/api/issuing/" target="_blank" rel="noopener noreferrer">
-                      <Button variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl">
-                        {t("buttons.tokenApiDocs")}
-                      </Button>
+                  <Button
+                    variant="outline"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                  >
+                      {t("buttons.tokenAPI")}
+                                    </Button>
                     </a>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.keyFeatures")}</a></li>
-                      <li><a href="#asset-types" className="hover:text-orange-400">{t("navigation.assetTypes")}</a></li>
-                      <li><a href="#use-cases" className="hover:text-orange-400">{t("navigation.useCases")}</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
+                      <li><a href="#asset-types" className="hover:text-orange-400">Asset types</a></li>
+                      <li><a href="#use-cases" className="hover:text-orange-400">Use cases</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
                     </ul>
                   </nav>
-                </div>
-                <div className="relative">
+              </div>
+              <div className="relative">
                   <div className="relative z-10">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                      <CardContent className="p-0">
+                    <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
                           {t("keyMetrics.title")}
-                        </h3>
+                      </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: t("keyMetrics.tokenCreation.name"),
-                              value: t("keyMetrics.tokenCreation.value"),
-                              description: t("keyMetrics.tokenCreation.description")
+                              name: "Token Creation",
+                              value: "1 TX",
+                              description: "Single transaction creation"
                             },
                             {
-                              name: t("keyMetrics.creationCost.name"),
-                              value: t("keyMetrics.creationCost.value"),
-                              description: t("keyMetrics.creationCost.description")
+                              name: "Creation Cost",
+                              value: "~$0.01",
+                              description: "Minimal fees in ERG"
                             },
                             {
-                              name: t("keyMetrics.protocolSecurity.name"),
-                              value: t("keyMetrics.protocolSecurity.value"),
-                              description: t("keyMetrics.protocolSecurity.description")
+                              name: "Protocol Security",
+                              value: "100%",
+                              description: "First-class assets"
                             },
                             {
-                              name: t("keyMetrics.tokenTypes.name"),
-                              value: t("keyMetrics.tokenTypes.value"),
-                              description: t("keyMetrics.tokenTypes.description")
+                              name: "Token Types",
+                              value: "∞",
+                              description: "Unlimited possibilities"
                             },
                           ].map((item) => (
                             <div key={item.name} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
@@ -258,11 +266,11 @@ export default function NativeTokensPage() {
                             </div>
                           ))}
                         </div>
-                      </CardContent>
+                    </CardContent>
                     </Card>
                   </div>
-                </div>
               </div>
+            </div>
             </div>
           </motion.section>
 
@@ -278,12 +286,13 @@ export default function NativeTokensPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  {t("whyNativeAssets.title")}
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  {t("whyNativeAssets.subtitle")}
+                  {t("features.subtitle")}
                 </p>
               </div>
+              
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
                   <motion.div
@@ -314,9 +323,9 @@ export default function NativeTokensPage() {
             </div>
           </motion.section>
 
-          {/* Use Cases Section */}
+          {/* Asset Types Section */}
           <motion.section 
-            id="use-cases"
+            id="asset-types"
             variants={itemVariants}
             initial="hidden"
             whileInView="visible"
@@ -324,67 +333,478 @@ export default function NativeTokensPage() {
             className="py-16 px-4 bg-neutral-900/20"
           >
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">{t("useCases.title")}</h2>
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Asset Types
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Create any type of digital asset with native protocol support
+                </p>
+              </div>
+
+              <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                <TabsList className="grid grid-cols-3 w-full bg-neutral-900/50">
+                  <TabsTrigger value="tokens">Fungible Tokens</TabsTrigger>
+                  <TabsTrigger value="nfts">NFTs</TabsTrigger>
+                  <TabsTrigger value="hybrid">Hybrid Assets</TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="tokens" className="mt-8">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-white">
+                          <Coins className="w-5 h-5 text-orange-400" />
+                          Standard Tokens
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-neutral-300 mb-4">
+                          Create any type of fungible token with customizable properties:
+                        </p>
+                        <ul className="space-y-2 text-sm text-neutral-400">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Fixed or variable supply</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Decimal precision control</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Metadata and descriptions</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Burn and mint capabilities</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-white">
+                          <DollarSign className="w-5 h-5 text-orange-400" />
+                          Stablecoins
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-neutral-300 mb-4">
+                          Build algorithmic or collateralized stablecoins:
+                        </p>
+                        <ul className="space-y-2 text-sm text-neutral-400">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Oracle price feeds integration</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Collateral management</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Redemption mechanisms</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Governance tokens</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="nfts" className="mt-8">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-white">
+                          <Image className="w-5 h-5 text-orange-400" />
+                          Art & Collectibles
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-neutral-300 mb-4">
+                          Create unique digital assets with rich metadata:
+                        </p>
+                        <ul className="space-y-2 text-sm text-neutral-400">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>IPFS image storage</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Royalty mechanisms</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Collection support</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Custom attributes</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-white">
+                          <Package className="w-5 h-5 text-orange-400" />
+                          Gaming Assets
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-neutral-300 mb-4">
+                          Build gaming tokens and collectibles:
+                        </p>
+                        <ul className="space-y-2 text-sm text-neutral-400">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Character tokens</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>In-game items</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Rarity systems</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Cross-game compatibility</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </TabsContent>
+
+                <TabsContent value="hybrid" className="mt-8">
+                  <div className="grid md:grid-cols-2 gap-8">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-white">
+                          <Layers className="w-5 h-5 text-orange-400" />
+                          Semi-Fungible Tokens
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-neutral-300 mb-4">
+                          Create tokens with both fungible and non-fungible properties:
+                        </p>
+                        <ul className="space-y-2 text-sm text-neutral-400">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Batch NFTs</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Fractional ownership</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Dynamic metadata</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Conditional transfers</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <CardHeader>
+                        <CardTitle className="flex items-center gap-2 text-white">
+                          <Code className="w-5 h-5 text-orange-400" />
+                          Programmable Assets
+                        </CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-neutral-300 mb-4">
+                          Combine native tokens with smart contracts:
+                        </p>
+                        <ul className="space-y-2 text-sm text-neutral-400">
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Conditional logic</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Time-based features</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Multi-signature support</span>
+                          </li>
+                          <li className="flex items-start gap-2">
+                            <CheckCircle className="w-4 h-4 text-green-400 mt-0.5" />
+                            <span>Oracle integration</span>
+                          </li>
+                        </ul>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </div>
+          </motion.section>
+
+          {/* Use Cases Section */}
+          <motion.section 
+            id="use-cases"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Use Cases
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Applications that benefit from native token creation
+                </p>
+              </div>
+              
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {useCases.map((useCase) => (
-                  <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors">
-                    <CardContent className="p-6 text-center">
-                      <div className="text-orange-400 mb-4 flex justify-center">
-                        <useCase.icon className="w-8 h-8" />
-                      </div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
-                      <p className="text-neutral-300 text-sm mb-4">{useCase.description}</p>
-                    </CardContent>
-                  </Card>
+                {useCases.map((useCase, index) => (
+                  <motion.div
+                    key={useCase.title}
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                  >
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
+                      <CardHeader>
+                        <div className="flex items-center space-x-3 mb-4">
+                          <div className="p-2 bg-orange-500/10 rounded-lg">
+                            <useCase.icon className="w-6 h-6 text-orange-400" />
+                          </div>
+                          <CardTitle className="text-white text-lg">{useCase.title}</CardTitle>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <p className="text-neutral-400 leading-relaxed">
+                          {useCase.description}
+                        </p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </motion.section>
 
-          {/* FAQ */}
-          <motion.section variants={itemVariants} id="faq" className="py-16 px-4">
+          {/* Code Example Section */}
+          <motion.section 
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 bg-neutral-900/20"
+          >
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">{t("faq.title")}</h2>
+              <div className="text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Simple Token Creation
+                </h2>
+                <p className="text-xl text-neutral-400">
+                  Create tokens with just a few lines of code
+                </p>
+              </div>
+              
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                <CardContent className="p-8">
+                  <div className="bg-neutral-900/60 rounded-lg p-6 overflow-x-auto">
+                    <pre className="text-sm">
+                      <code className="language-scala text-orange-300">{`// Token creation parameters
+val tokenName = "MyToken"
+val tokenDescription = "My awesome token on Ergo"
+val tokenDecimals = 2
+val tokenAmount = 1000000L
+
+// Create token in a single transaction
+val token = Minting.issueToken(
+  ergoClient = client,
+  tokenName = tokenName,
+  tokenDescription = tokenDescription,
+  tokenAmount = tokenAmount,
+  tokenDecimals = tokenDecimals,
+  mintingAddress = address,
+  txFee = Parameters.MinFee
+)
+
+// Token is now live on the blockchain!
+println(s"Token ID: \${token.getId}")
+println(s"Token created in TX: \${token.creationTx}")`}</code>
+                    </pre>
+                  </div>
+                  <p className="text-sm text-neutral-400 mt-4">
+                    No smart contract deployment, no complex setup - just simple, native token creation.
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </motion.section>
+
+          {/* Ecosystem Section */}
+          <motion.section 
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Token Ecosystem
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  A thriving ecosystem of tools and platforms for native tokens
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-lg text-white">Marketplaces</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm text-neutral-400">
+                      <li>• SkyHarbor - NFT marketplace</li>
+                      <li>• Spectrum - Token DEX</li>
+                      <li>• ErgoAuctionHouse - Auction platform</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-lg text-white">Creation Tools</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm text-neutral-400">
+                      <li>• ErgoMixer - Privacy tokens</li>
+                      <li>• Ergo Token Minter - Simple UI</li>
+                      <li>• Blitz TCG - Gaming tokens</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-lg text-white">Infrastructure</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2 text-sm text-neutral-400">
+                      <li>• Token API - REST endpoints</li>
+                      <li>• Explorer - Token tracking</li>
+                      <li>• Wallets - Native support</li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* FAQ Section */}
+          <motion.section 
+            id="faq"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 bg-neutral-900/20"
+          >
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-xl text-neutral-400">
+                  Common questions about native tokens and their implementation
+                </p>
+              </div>
+              
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <Collapsible key={index} open={openFAQ === index} onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}>
-                    <Card className="bg-neutral-900/50 border-neutral-700">
-                      <CollapsibleTrigger asChild>
-                        <CardContent className="p-6 cursor-pointer hover:bg-neutral-800/30 transition-colors">
-                          <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-semibold text-white text-left">{faq.question}</h3>
-                            <ChevronDown className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} />
-                          </div>
-                        </CardContent>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent>
-                        <CardContent className="px-6 pb-6 pt-0">
-                          <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
-                        </CardContent>
-                      </CollapsibleContent>
-                    </Card>
-                  </Collapsible>
+                  <motion.div
+                    key={index}
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                  >
+                    <Collapsible
+                      open={openFAQ === index}
+                      onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    >
+                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                        <CollapsibleTrigger asChild>
+                          <CardHeader className="cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                            <div className="flex items-center justify-between">
+                              <CardTitle className="text-white text-left">{faq.question}</CardTitle>
+                              <ChevronDown 
+                                className={`w-5 h-5 text-neutral-400 transition-transform ${
+                                  openFAQ === index ? 'rotate-180' : ''
+                                }`} 
+                              />
+                            </div>
+                          </CardHeader>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                          <CardContent>
+                            <p className="text-neutral-400 leading-relaxed">
+                              {faq.answer}
+                            </p>
+                          </CardContent>
+                        </CollapsibleContent>
+                      </Card>
+                    </Collapsible>
+                  </motion.div>
                 ))}
               </div>
             </div>
           </motion.section>
 
-          {/* CTA */}
-          <motion.section variants={itemVariants} className="py-16 px-4">
+          {/* CTA Section */}
+          <motion.section 
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4"
+          >
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("cta.title")}</h2>
-              <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-                {t("cta.subtitle")}
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Start Creating Native Assets
+              </h2>
+              <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
+                Join thousands of creators who have already issued tokens and NFTs on Ergo's native asset layer
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/docs/ecosystem/nfts">
+                <a href="https://docs.ergoplatform.com/dev/tokens/" target="_blank" rel="noopener noreferrer">
                   <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    {t("buttons.exploreNftEcosystem")}
+                    Read Documentation
                   </Button>
-                </Link>
-                <a href="https://docs.ergo.getblok.io/api/issuing/" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl">
-                    {t("buttons.tokenApiDocs")}
+                </a>
+                <a href="https://ergoplatform.org/en/blog/2022-03-08-building-ergo-how-the-ageusd-stablecoin-works/" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                  >
+                    Learn About AgeUSD
                   </Button>
                 </a>
               </div>

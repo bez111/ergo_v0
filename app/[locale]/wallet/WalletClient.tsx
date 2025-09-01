@@ -24,7 +24,7 @@ import {
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
-import { HexagonalGrid, MathematicalPattern } from "@/components/ui-kit/signature-effects"
+
 
 interface Wallet {
   id: string
@@ -164,27 +164,7 @@ const allWallets: Wallet[] = [
   }
 ]
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      staggerChildren: 0.1,
-    },
-  },
-}
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-}
 
 export default function WalletClient() {
   const t = useTranslations("wallet")
@@ -226,254 +206,173 @@ export default function WalletClient() {
   }
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-white relative overflow-hidden">
-      {/* Background Effects - UI Kit Style */}
-      <div className="absolute inset-0 opacity-30">
-        <HexagonalGrid />
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Background pulses */}
+      <div className="absolute inset-0 z-0" aria-hidden="true" role="presentation">
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2s" }} />
+        <div className="absolute top-1/2 left-3/4 w-20 h-20 bg-orange-500/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: "4s" }} />
       </div>
-      <div className="absolute inset-0 opacity-20">
-        <MathematicalPattern />
-      </div>
-      
-      {/* Gradient Border */}
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-orange-500 via-cyan-500 to-orange-500"></div>
 
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="relative z-10 container mx-auto px-4 py-16"
-      >
-        {/* Hero Section - UI Kit Style */}
-        <motion.div variants={itemVariants} className="text-center mb-16">
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 font-mono bg-gradient-to-r from-white via-orange-500 to-cyan-500 bg-clip-text text-transparent">
-            ERGO WALLETS
+      <div className="relative z-10 container mx-auto px-4 py-16">
+        {/* Hero Section */}
+        <motion.section 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          className="pt-32 pb-16 px-4 text-center"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
+            <span className="text-white">Ergo </span>
+            <span className="text-orange-400">Wallets</span>
           </h1>
-          
-          <div className="max-w-4xl mx-auto mb-12">
-            <p className="text-xl md:text-2xl text-gray-300 mb-6 leading-relaxed font-mono">
-              &gt; Secure your ERG with production-ready wallets
-            </p>
-            <p className="text-lg text-gray-400 leading-relaxed">
-              From browser extensions to hardware devices - choose the perfect wallet for your security needs. 
-              Built with cryptographic excellence and user sovereignty in mind.
-            </p>
+          <p className="text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto mb-8">
+            Secure your ERG with production-ready wallets. From browser extensions to hardware devices - choose the perfect wallet for your security needs.
+          </p>
+          <div className="flex items-center justify-center gap-2 text-sm text-neutral-400">
+            <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
+            <span>7 Total Wallets</span>
+            <span className="w-1 h-1 bg-neutral-600 rounded-full"></span>
+            <span>4 Official</span>
+            <span className="w-1 h-1 bg-neutral-600 rounded-full"></span>
+            <span>3 Security Levels</span>
           </div>
+        </motion.section>
 
+        {/* Security First - Compact */}
+        <div className="border-y border-neutral-700">
+          <motion.section 
+            className="max-w-7xl mx-auto px-4 py-8" 
+            initial={{ opacity: 0, y: 20 }} 
+            animate={{ opacity: 1, y: 0 }}
+          >
+            <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-orange-500/30 transition-all duration-200">
+              <CardContent className="p-6 text-center">
+                <div className="flex items-center justify-center gap-3 mb-4">
+                  <div className="p-3 rounded-xl bg-orange-500/20 border border-orange-500/30">
+                    <Shield className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold text-white">Security First</h3>
+                </div>
+                <p className="text-neutral-400 text-sm mb-4 max-w-2xl mx-auto">
+                  Always download wallets from official sources and verify checksums for maximum security.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6 text-sm">
+                  <div className="flex items-center gap-2">
+                    <Check className="w-4 h-4 text-green-400" />
+                    <span className="text-neutral-300">Verify checksums</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <ShieldCheck className="w-4 h-4 text-cyan-400" />
+                    <span className="text-neutral-300">Official sources only</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Lock className="w-4 h-4 text-orange-400" />
+                    <span className="text-neutral-300">Backup your keys</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.section>
+        </div>
 
+        {/* Wallets Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          className="bg-black/50 backdrop-blur-lg py-6 px-4"
+        >
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center gap-3 mb-8">
+              <h2 className="text-3xl font-bold text-white">All Wallets</h2>
+              <div className="px-3 py-1 bg-neutral-800 border border-neutral-700 rounded-full text-xs text-neutral-400 min-w-[80px] text-center">
+                {allWallets.length} wallets
+              </div>
+            </div>
+          </div>
         </motion.div>
 
-
-
-        {/* Wallets Grid - UI Kit Style */}
-        <motion.div variants={itemVariants}>
+        {/* Wallets Grid */}
+        <motion.div 
+          initial={{ opacity: 0 }} 
+          animate={{ opacity: 1 }} 
+          transition={{ staggerChildren: 0.1 }}
+          className="max-w-7xl mx-auto px-4 pb-12"
+        >
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {allWallets.map((wallet, index) => {
                 const IconComponent = wallet.icon
                 return (
-                  <motion.div
+                  <div
                     key={wallet.id}
-                    variants={itemVariants}
-                    transition={{ delay: index * 0.1 }}
                     className="group h-full"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-all duration-300 h-full backdrop-blur-sm relative overflow-hidden">
-                      {/* Gradient Background */}
-                      <div className={`absolute inset-0 bg-gradient-to-br ${wallet.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                    <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-orange-500/30 transition-all duration-200 h-full flex flex-col">
                       
-                      <CardHeader className="pb-4 relative z-10">
+                      <CardContent className="p-6 flex-1 flex flex-col">
                         <div className="flex items-start justify-between mb-4">
                           <div className="flex items-center gap-4">
-                            <div className="relative">
-                              <div className="absolute inset-0 bg-orange-500/20 rounded-xl blur-md"></div>
-                              <div className="relative rounded-xl bg-neutral-800/80 p-4 border border-orange-500/30">
-                                <IconComponent className="w-8 h-8 text-orange-500" />
-                              </div>
+                            <div className="p-3 rounded-xl bg-orange-500/20 border border-orange-500/30">
+                              <IconComponent className="w-6 h-6 text-orange-400" />
                             </div>
                             <div>
-                              <CardTitle className="text-white text-xl font-mono group-hover:text-orange-400 transition-colors">
-                                {wallet.name}
-                              </CardTitle>
-                              
+                              <h2 className="text-xl font-bold text-white">{wallet.name}</h2>
+                              <Badge variant="secondary" className="mt-1 bg-neutral-800 text-neutral-300 border-neutral-700">{wallet.category}</Badge>
                             </div>
                           </div>
-                        </div>
-
-                        <p className="text-gray-400 text-sm leading-relaxed mb-6 font-mono">
-                          {wallet.description}
-                        </p>
-
-                        {/* Stats - UI Kit Style */}
-                        <div className="grid grid-cols-3 gap-4 mb-6">
-                          <div className="text-center bg-neutral-800/50 rounded-lg p-3 border border-neutral-700">
-                            <div className="text-2xl font-bold text-white font-mono">{wallet.rating}</div>
-                            <div className="text-xs text-gray-400 font-mono uppercase">Rating</div>
-                          </div>
-                          <div className="text-center bg-neutral-800/50 rounded-lg p-3 border border-neutral-700">
-                            <div className="text-2xl font-bold text-white font-mono">{wallet.users}</div>
-                            <div className="text-xs text-gray-400 font-mono uppercase">Users</div>
-                          </div>
-                          <div className="text-center bg-neutral-800/50 rounded-lg p-3 border border-neutral-700">
-                            <Badge className={`text-xs border font-mono ${getSecurityColor(wallet.securityLevel)}`}>
+                          <div className={`flex items-center gap-2 ${getSecurityColor(wallet.securityLevel)}`}>
+                            <Badge className={`text-xs border ${getSecurityColor(wallet.securityLevel)}`}>
                               {wallet.securityLevel.toUpperCase()}
                             </Badge>
                           </div>
                         </div>
-                      </CardHeader>
-
-                      <CardContent className="pt-0 relative z-10">
-                        {/* Platforms */}
-                        <div className="mb-6">
-                          <h4 className="text-sm font-semibold text-gray-200 mb-3 font-mono uppercase tracking-wider">
-                            &gt; {t("ui.platforms")}
-                          </h4>
-                          <div className="flex flex-wrap gap-2">
-                            {wallet.platforms.map((platform) => (
-                              <Badge key={platform} variant="outline" className="text-xs border-gray-600 text-gray-300 font-mono">
-                                {platform}
-                              </Badge>
-                            ))}
-                          </div>
-                        </div>
-
-                        {/* Features */}
-                        <div className="mb-6">
-                          <h4 className="text-sm font-semibold text-gray-200 mb-3 font-mono uppercase tracking-wider">
-                            &gt; {t("ui.features")}
-                          </h4>
-                          <ul className="space-y-2">
-                            {wallet.features.slice(0, 4).map((feature) => (
-                              <li key={feature} className="flex items-center gap-3 text-xs text-gray-300 font-mono">
-                                <div className="w-1 h-1 bg-orange-500 rounded-full"></div>
-                                {feature}
-                              </li>
-                            ))}
-                            {wallet.features.length > 4 && (
-                              <li className="text-xs text-gray-500 font-mono">
-                                + {wallet.features.length - 4} more features
-                              </li>
-                            )}
-                          </ul>
-                        </div>
-
-                        {/* Type and Security */}
-                        <div className="flex items-center gap-3 mb-8">
-                          <Badge className={`text-xs border font-mono ${getTypeColor(wallet.type)}`}>
-                            {wallet.type.toUpperCase()}
-                          </Badge>
-                          <Badge variant="outline" className="text-xs border-gray-600 text-gray-300 font-mono">
-                            {wallet.category.toUpperCase()}
-                          </Badge>
-                        </div>
-
-                        {/* Action Buttons - UI Kit Style */}
-                        <div className="space-y-3">
-                          <Button asChild className="w-full bg-orange-500 hover:bg-orange-600 text-black font-mono uppercase tracking-wider transition-all duration-200">
-                            <Link href={wallet.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                              <span>&gt;</span>
-                              <span>{t("ui.visitWebsite")}</span>
-                              <ExternalLink className="w-4 h-4" />
-                            </Link>
-                          </Button>
-                          {wallet.downloadUrl && (
-                            <Button asChild variant="outline" className="w-full border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 font-mono uppercase tracking-wider">
-                              <Link href={wallet.downloadUrl} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-2">
-                                <Download className="w-4 h-4" />
-                                <span>DOWNLOAD</span>
-                              </Link>
-                            </Button>
-                          )}
-                        </div>
+                        <p className="text-neutral-400 mb-6 flex-1">{wallet.description}</p>
+                        <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500 hover:text-orange-400">
+                          <Link href={wallet.websiteUrl} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                            Visit Wallet
+                            <ExternalLink className="w-4 h-4" />
+                          </Link>
+                        </Button>
                       </CardContent>
                     </Card>
-                  </motion.div>
+                  </div>
                 )
               })}
             </div>
           </motion.div>
 
-        {/* Security Notice - UI Kit Pattern */}
-        <motion.div variants={itemVariants} className="mt-20">
+        {/* CTA Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }} 
+          animate={{ opacity: 1, y: 0 }} 
+          className="border-t border-neutral-700 bg-black/50 backdrop-blur-lg py-16 px-4 text-center"
+        >
           <div className="max-w-4xl mx-auto">
-            <Card className="bg-gradient-to-r from-orange-500/10 via-neutral-900/50 to-cyan-500/10 border-orange-500/30 relative overflow-hidden">
-              <div className="absolute inset-0 opacity-20">
-                <MathematicalPattern />
-              </div>
-              <CardContent className="p-12 text-center relative z-10">
-                <div className="relative mb-6">
-                  <div className="absolute inset-0 bg-orange-500/20 rounded-full blur-xl"></div>
-                  <Shield className="relative w-16 h-16 mx-auto text-orange-500" />
-                </div>
-                <h3 className="text-3xl font-bold text-white mb-6 font-mono">
-                  &gt; {t("ui.securityTitle")}
-                </h3>
-                <p className="text-gray-300 text-lg leading-relaxed mb-8 font-mono max-w-2xl mx-auto">
-                  {t("ui.securityNote")}
-                </p>
-                <div className="grid md:grid-cols-3 gap-6">
-                  {[
-                    { icon: Check, text: "Verify checksums", color: "text-green-400" },
-                    { icon: ShieldCheck, text: "Official sources only", color: "text-cyan-400" },
-                    { icon: Lock, text: "Backup your keys", color: "text-orange-400" }
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3 text-sm font-mono">
-                      <div className="rounded-lg bg-neutral-800/50 p-2 border border-neutral-700">
-                        <item.icon className={`w-4 h-4 ${item.color}`} />
-                      </div>
-                      <span className="text-gray-300">{item.text}</span>
-                    </div>
-                  ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </motion.div>
-
-        {/* CTA Section - UI Kit Style */}
-        <motion.div variants={itemVariants} className="text-center mt-20">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white font-mono">
-              &gt; Ready to Secure Your ERG?
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+              Ready to Secure Your ERG?
             </h2>
-            <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto font-mono leading-relaxed">
+            <p className="text-lg md:text-xl text-neutral-300 mb-12 max-w-2xl mx-auto">
               Choose your wallet and start your decentralized journey today. 
               Your keys, your crypto, your sovereignty.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-mono uppercase tracking-[0.2em] px-12 py-4 text-lg border-2 border-orange-500">
-                  <Link href="/use/get-erg" className="flex items-center gap-3">
-                    <span>&gt;</span>
-                    <span>GET ERG</span>
-                    <ArrowRight className="w-5 h-5" />
-                  </Link>
-                </Button>
-              </motion.div>
+              <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500 hover:text-orange-400 px-8 py-3">
+                <Link href="/use/get-erg" className="flex items-center gap-2">
+                  Get ERG
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </Button>
               
-              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                <Button asChild variant="outline" className="border-2 border-cyan-500 text-cyan-500 hover:bg-cyan-500 hover:text-black font-mono uppercase tracking-[0.2em] px-12 py-4 text-lg">
-                  <Link href="/docs" className="flex items-center gap-3">
-                    <span>&gt;</span>
-                    <span>LEARN MORE</span>
-                    <ExternalLink className="w-5 h-5" />
-                  </Link>
-                </Button>
-              </motion.div>
-            </div>
-
-            {/* Underground Manifesto Style Footer */}
-            <div className="mt-16 p-8 bg-neutral-900/30 border border-neutral-700 rounded-xl">
-              <p className="text-gray-400 font-mono text-sm leading-relaxed italic">
-                "We write code not for compliance. We write code to break the chains."
-              </p>
-              <p className="text-gray-500 font-mono text-xs mt-2">
-                Underground. Sovereign. Open source forever.
-              </p>
+              <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500 hover:text-orange-400 px-8 py-3">
+                <Link href="/docs" className="flex items-center gap-2">
+                  Learn More
+                  <ExternalLink className="w-4 h-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </motion.div>
-      </motion.div>
+      </div>
     </div>
   )
 }

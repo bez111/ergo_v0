@@ -28,111 +28,141 @@ import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { useMemo } from "react"
 
-// Removed page-level metadata from client component; moved to route layout
-
 const PUBLISHED = "2023-11-10"
 const UPDATED = "2025-08-10"
 
+function RentEstimator() {
+  const t = useTranslations("technology.storageRent")
+  const [ageYears, setAgeYears] = useState<number>(4)
+  const [boxValue, setBoxValue] = useState<number>(1.0)
+  // Simplified illustrative estimator; not protocol-accurate
+  const estimatedRent = useMemo(() => {
+    const periods = Math.max(0, Math.floor(ageYears / 4))
+    const perPeriod = 0.13 // ERG per 4 years (illustrative)
+    return +(periods * perPeriod).toFixed(4)
+  }, [ageYears])
+  const remaining = Math.max(0, +(boxValue - estimatedRent).toFixed(4))
+  const topUpNeeded = estimatedRent > boxValue ? +(estimatedRent - boxValue).toFixed(4) : 0
+  return (
+    <div className="grid md:grid-cols-3 gap-4 items-end">
+      <div>
+        <label className="block text-xs text-neutral-400 mb-1">{t("estimator.boxAge")}</label>
+        <input type="number" min={0} step={1} value={ageYears} onChange={(e)=>setAgeYears(Number(e.target.value))} className="w-full bg-neutral-900/60 border border-neutral-700 rounded px-3 py-2 text-sm text-white" />
+      </div>
+      <div>
+        <label className="block text-xs text-neutral-400 mb-1">{t("estimator.boxValue")}</label>
+        <input type="number" min={0} step={0.01} value={boxValue} onChange={(e)=>setBoxValue(Number(e.target.value))} className="w-full bg-neutral-900/60 border border-neutral-700 rounded px-3 py-2 text-sm text-white" />
+      </div>
+      <div className="text-sm text-neutral-300" aria-live="polite">
+        <div className="flex justify-between"><span>{t("estimator.estimatedRent")}:</span><span className="font-semibold">{estimatedRent} ERG</span></div>
+        <div className="flex justify-between"><span>{t("estimator.topUpNeeded")}:</span><span className="font-semibold">{topUpNeeded} ERG</span></div>
+        <div className="flex justify-between"><span>{t("estimator.remainingValue")}:</span><span className="font-semibold">{remaining} ERG</span></div>
+        <p className="text-xs text-neutral-500 mt-1">{t("estimator.disclaimer")}</p>
+      </div>
+    </div>
+  )
+}
+
 export default function StorageRentPage() {
   const t = useTranslations("technology.storageRent")
-  
-  // Hoisted static data with a11y fixes
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
   const problems = [
     {
-      title: t("problems.0.title"),
-      description: t("problems.0.description"),
+      title: t("problems.bloat.title"),
+      description: t("problems.bloat.description"),
       icon: <Database className="w-8 h-8" aria-hidden="true" />,
       color: "from-red-500 to-pink-500",
       bgColor: "bg-red-500/10",
       borderColor: "border-red-500/30",
-      stats: t("problems.0.stats"),
+      stats: t("problems.bloat.stats"),
     },
     {
-      title: t("problems.1.title"),
-      description: t("problems.1.description"),
+      title: t("problems.forgottenWallets.title"),
+      description: t("problems.forgottenWallets.description"),
       icon: <AlertTriangle className="w-8 h-8" aria-hidden="true" />,
       color: "from-yellow-500 to-orange-500",
       bgColor: "bg-yellow-500/10",
       borderColor: "border-yellow-500/30",
-      stats: t("problems.1.stats"),
+      stats: t("problems.forgottenWallets.stats"),
     },
     {
-      title: t("problems.2.title"),
-      description: t("problems.2.description"),
+      title: t("problems.networkStagnation.title"),
+      description: t("problems.networkStagnation.description"),
       icon: <TrendingUp className="w-8 h-8" aria-hidden="true" />,
       color: "from-purple-500 to-indigo-500",
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/30",
-      stats: t("problems.2.stats"),
+      stats: t("problems.networkStagnation.stats"),
     },
   ]
 
   const benefits = [
-    { text: t("benefits.0"), icon: <Zap className="w-5 h-5" aria-hidden="true" /> },
-    { text: t("benefits.1"), icon: <Coins className="w-5 h-5" aria-hidden="true" /> },
-    { text: t("benefits.2"), icon: <Shield className="w-5 h-5" aria-hidden="true" /> },
-    { text: t("benefits.3"), icon: <RefreshCw className="w-5 h-5" aria-hidden="true" /> },
-    { text: t("benefits.4"), icon: <BarChart3 className="w-5 h-5" aria-hidden="true" /> },
-    { text: t("benefits.5"), icon: <Target className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.cleanBlockchain"), icon: <Zap className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.minerRewards"), icon: <Coins className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.networkHealth"), icon: <Shield className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.reduceLostFunds"), icon: <RefreshCw className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.predictableCosts"), icon: <BarChart3 className="w-5 h-5" aria-hidden="true" /> },
+    { text: t("benefits.automaticCleanup"), icon: <Target className="w-5 h-5" aria-hidden="true" /> },
   ]
 
   const timeline = [
     {
-      year: t("timeline.0.year"),
-      status: t("timeline.0.status"),
-      description: t("timeline.0.description"),
+      year: t("timeline.noRent.year"),
+      status: t("timeline.noRent.status"),
+      description: t("timeline.noRent.description"),
       color: "text-green-400",
       bgColor: "bg-green-500/20",
       icon: <Shield className="w-6 h-6" aria-hidden="true" />,
-      details: t("timeline.0.details"),
+      details: t("timeline.noRent.details"),
     },
     {
-      year: t("timeline.1.year"),
-      status: t("timeline.1.status"),
-      description: t("timeline.1.description"),
+      year: t("timeline.rentBegins.year"),
+      status: t("timeline.rentBegins.status"),
+      description: t("timeline.rentBegins.description"),
       color: "text-yellow-400",
       bgColor: "bg-yellow-500/20",
       icon: <Timer className="w-6 h-6" aria-hidden="true" />,
-      details: t("timeline.1.details"),
+      details: t("timeline.rentBegins.details"),
     },
     {
-      year: t("timeline.2.year"),
-      status: t("timeline.2.status"),
-      description: t("timeline.2.description"),
+      year: t("timeline.ownerReturns.year"),
+      status: t("timeline.ownerReturns.status"),
+      description: t("timeline.ownerReturns.description"),
       color: "text-cyan-400",
       bgColor: "bg-cyan-500/20",
       icon: <RefreshCw className="w-6 h-6" aria-hidden="true" />,
-      details: "Pay accumulated rent to restore full control",
+      details: t("timeline.ownerReturns.details"),
     },
     {
-      year: "Box Depleted",
-      status: "Eligible for miner claim (per protocol rules)",
-      description: "If rent isn't paid, remaining value goes to miners",
+      year: t("timeline.boxDepleted.year"),
+      status: t("timeline.boxDepleted.status"),
+      description: t("timeline.boxDepleted.description"),
       color: "text-orange-400",
       bgColor: "bg-orange-500/20",
       icon: <Recycle className="w-6 h-6" aria-hidden="true" />,
-      details: "Funds return to active circulation",
+      details: t("timeline.boxDepleted.details"),
     },
   ]
 
   const solutions = [
     {
-      title: "Automatic Fee Recycling",
-      description: "If coins are left untouched for years, a small fee is recycled back to miners.",
+      title: t("solutions.automaticRecycling.title"),
+      description: t("solutions.automaticRecycling.description"),
       icon: <Recycle className="w-12 h-12" aria-hidden="true" />,
       color: "text-orange-400",
       gradient: "from-orange-500/20 to-orange-500/5",
     },
     {
-      title: "No Forgotten Wallets",
-      description: "If you lose your keys, your funds aren't stuck forever in the system.",
+      title: t("solutions.noForgottenWallets.title"),
+      description: t("solutions.noForgottenWallets.description"),
       icon: <Clock className="w-12 h-12" aria-hidden="true" />,
       color: "text-cyan-400",
       gradient: "from-cyan-500/20 to-cyan-500/5",
     },
     {
-      title: "Predictable Costs",
-      description: "Users pay a transparent fee for long-term data storage.",
+      title: t("solutions.predictableCosts.title"),
+      description: t("solutions.predictableCosts.description"),
       icon: <TrendingUp className="w-12 h-12" aria-hidden="true" />,
       color: "text-green-400",
       gradient: "from-green-500/20 to-green-500/5",
@@ -141,55 +171,55 @@ export default function StorageRentPage() {
 
   const faqs = [
     {
-      question: "Why does Ergo charge \"storage rent\"? Do I have to pay just to hold ERG?",
-      answer: "No, this isn't a holding tax—it's a way to keep the blockchain \"clean.\" Fees apply only to coins (UTXOs) left untouched for more than 4 years. Think of it like long-term storage: if you abandon a box and never return, a tiny fee is charged for the space you occupy. This keeps the network from getting clogged with forgotten data.",
+      question: t("faq.whyStorageRent.question"),
+      answer: t("faq.whyStorageRent.answer"),
     },
     {
-      question: "Can I lose my funds if I'm a long-term investor (HODLer)?",
-      answer: "Almost impossible. Any action—like sending your coins, even to yourself—resets the 4-year timer. The rent is so small it only affects very low-value UTXOs (\"dust\"). The system is designed to clean up lost change, not to penalize active users or investors.",
+      question: t("faq.longTermInvestor.question"),
+      answer: t("faq.longTermInvestor.answer"),
     },
     {
-      question: "Why is it so important to get rid of \"blockchain dust\"?",
-      answer: "It directly affects decentralization. Every forgotten transaction increases the size of the blockchain state, which full nodes must store and process. Without cleanup, running a full node would become too expensive over time, leaving control to big corporations. Storage rent is a long-term guarantee that Ergo stays accessible and truly decentralized.",
+      question: t("faq.whyImportant.question"),
+      answer: t("faq.whyImportant.answer"),
     },
     {
-      question: "Where does the collected rent go? Does anyone profit from it?",
-      answer: "The fees aren't kept by a company or burned—they're paid out to miners. This gives miners a direct incentive to help clean up the blockchain state, which aligns perfectly with the community's long-term interests. It's a self-sustaining economic model that keeps the blockchain healthy and resilient.",
+      question: t("faq.whereRentGoes.question"),
+      answer: t("faq.whereRentGoes.answer"),
     },
   ]
 
-  function RentEstimator() {
-    const [ageYears, setAgeYears] = useState<number>(4)
-    const [boxValue, setBoxValue] = useState<number>(1.0)
-    // Simplified illustrative estimator; not protocol-accurate
-    const estimatedRent = useMemo(() => {
-      const periods = Math.max(0, Math.floor(ageYears / 4))
-      const perPeriod = 0.13 // ERG per 4 years (illustrative)
-      return +(periods * perPeriod).toFixed(4)
-    }, [ageYears])
-    const remaining = Math.max(0, +(boxValue - estimatedRent).toFixed(4))
-    const topUpNeeded = estimatedRent > boxValue ? +(estimatedRent - boxValue).toFixed(4) : 0
-    return (
-      <div className="grid md:grid-cols-3 gap-4 items-end">
-        <div>
-          <label className="block text-xs text-neutral-400 mb-1">Box age (years)</label>
-          <input type="number" min={0} step={1} value={ageYears} onChange={(e)=>setAgeYears(Number(e.target.value))} className="w-full bg-neutral-900/60 border border-neutral-700 rounded px-3 py-2 text-sm text-white" />
-        </div>
-        <div>
-          <label className="block text-xs text-neutral-400 mb-1">Box value (ERG)</label>
-          <input type="number" min={0} step={0.01} value={boxValue} onChange={(e)=>setBoxValue(Number(e.target.value))} className="w-full bg-neutral-900/60 border border-neutral-700 rounded px-3 py-2 text-sm text-white" />
-        </div>
-        <div className="text-sm text-neutral-300" aria-live="polite">
-          <div className="flex justify-between"><span>Estimated rent:</span><span className="font-semibold">{estimatedRent} ERG</span></div>
-          <div className="flex justify-between"><span>Top-up needed:</span><span className="font-semibold">{topUpNeeded} ERG</span></div>
-          <div className="flex justify-between"><span>Remaining value:</span><span className="font-semibold">{remaining} ERG</span></div>
-          <p className="text-xs text-neutral-500 mt-1">Illustrative; see docs for formula and current parameters.</p>
-        </div>
-      </div>
-    )
-  }
+  const corePrinciples = [
+    {
+      name: t("corePrinciples.preventBloat.name"),
+      description: t("corePrinciples.preventBloat.description"),
+      icon: <Recycle className="w-6 h-6 text-orange-400" aria-hidden="true" />,
+      color: "from-orange-500/20 to-orange-500/5",
+    },
+    {
+      name: t("corePrinciples.economicSustainability.name"),
+      description: t("corePrinciples.economicSustainability.description"),
+      icon: <TrendingUp className="w-6 h-6 text-orange-400" aria-hidden="true" />,
+      color: "from-cyan-500/20 to-cyan-500/5",
+    },
+    {
+      name: t("corePrinciples.predictableCosts.name"),
+      description: t("corePrinciples.predictableCosts.description"),
+      icon: <Clock className="w-6 h-6 text-orange-400" aria-hidden="true" />,
+      color: "from-purple-500/20 to-purple-500/5",
+    },
+  ]
 
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  const avoidRentSteps = [
+    t("avoidRent.steps.moveFunds"),
+    t("avoidRent.steps.consolidateDust"),
+    t("avoidRent.steps.planTopUps"),
+  ]
+
+  const developerTips = [
+    t("developer.tips.avoidTinyBoxes"),
+    t("developer.tips.maintenancePath"),
+    t("developer.tips.trackBoxAge"),
+  ]
 
   return (
     <>
@@ -218,8 +248,8 @@ export default function StorageRentPage() {
         type="TechArticle"
         data={{
           "@type": "TechArticle",
-          headline: "Storage Rent on Ergo",
-          description: "Predictable on-chain state budgeting for decades-long sustainability.",
+          headline: t("seo.title"),
+          description: t("seo.description"),
           image: "https://ergoblockchain.org/og/storage-rent.png",
           datePublished: PUBLISHED,
           dateModified: UPDATED,
@@ -237,12 +267,12 @@ export default function StorageRentPage() {
         type="HowTo"
         data={{
           "@type": "HowTo",
-          name: "How to avoid storage rent",
-          description: "Actions to minimize rent accrual on Ergo.",
+          name: t("howTo.title"),
+          description: t("howTo.description"),
           step: [
-            { "@type": "HowToStep", position: 1, name: "Move funds periodically", text: "Any spend resets the 4‑year timer." },
-            { "@type": "HowToStep", position: 2, name: "Consolidate dust", text: "Merge small UTXOs into larger boxes." },
-            { "@type": "HowToStep", position: 3, name: "Plan top‑ups in apps", text: "Add maintenance/top‑up paths for contract boxes." },
+            { "@type": "HowToStep", position: 1, name: t("howTo.steps.moveFunds.title"), text: t("howTo.steps.moveFunds.description") },
+            { "@type": "HowToStep", position: 2, name: t("howTo.steps.consolidateDust.title"), text: t("howTo.steps.consolidateDust.description") },
+            { "@type": "HowToStep", position: 3, name: t("howTo.steps.planTopUps.title"), text: t("howTo.steps.planTopUps.description") },
           ],
         }}
       />
@@ -250,16 +280,14 @@ export default function StorageRentPage() {
       <main className="min-h-screen relative">
         {/* Breadcrumbs */}
         <div className="sr-only">
-          <Breadcrumbs
-            items={[
-              { name: "Technology", href: "/technology" },
-              { name: "Storage Rent", href: "/technology/storage-rent" }
-            ]}
-            className="mb-8"
-          />
+                      <Breadcrumbs
+              items={[
+                { name: "Technology", href: "/technology" },
+                { name: "Storage Rent", href: "/technology/storage-rent" }
+              ]}
+              className="mb-8"
+            />
         </div>
-
-        {/* Background removed for /ui-kit neutrality */}
 
         <div className="relative z-10">
           {/* Hero Section */}
@@ -274,48 +302,29 @@ export default function StorageRentPage() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                      <Link href="#how-it-works">Learn More</Link>
+                      <Link href="#how-it-works">{t("buttons.learnMore")}</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
-                      <Link href="https://docs.ergoplatform.com/protocol/storage-rent/" target="_blank" rel="noopener noreferrer">View Details</Link>
+                      <Link href="https://docs.ergoplatform.com/protocol/storage-rent/" target="_blank" rel="noopener noreferrer">{t("buttons.viewDetails")}</Link>
                     </Button>
                   </div>
                   <div className="mt-6 text-sm text-neutral-400 space-x-3">
-                    <Link href="#problem" className="underline hover:opacity-80">What</Link>
+                    <Link href="#problem" className="underline hover:opacity-80">{t("navigation.what")}</Link>
                     <span>·</span>
-                    <Link href="#how-it-works" className="underline hover:opacity-80">How</Link>
+                    <Link href="#how-it-works" className="underline hover:opacity-80">{t("navigation.how")}</Link>
                     <span>·</span>
-                    <Link href="#estimator" className="underline hover:opacity-80">Costs</Link>
+                    <Link href="#estimator" className="underline hover:opacity-80">{t("navigation.costs")}</Link>
                     <span>·</span>
-                    <Link href="#faq" className="underline hover:opacity-80">FAQ</Link>
+                    <Link href="#faq" className="underline hover:opacity-80">{t("navigation.faq")}</Link>
                   </div>
                 </div>
                 <div className="relative">
                   <div className="relative z-10">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30">
                       <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">Core Principles</h3>
+                        <h3 className="text-2xl font-bold mb-6 text-center text-white">{t("corePrinciples.title")}</h3>
                         <div className="space-y-4">
-                          {[
-                            {
-                              name: "Prevent Bloat",
-                              description: "Keeps the blockchain lean and efficient",
-                              icon: <Recycle className="w-6 h-6 text-orange-400" aria-hidden="true" />,
-                              color: "from-orange-500/20 to-orange-500/5",
-                            },
-                            {
-                              name: "Economic Sustainability",
-                              description: "Creates long-term incentives for miners",
-                              icon: <TrendingUp className="w-6 h-6 text-orange-400" aria-hidden="true" />,
-                              color: "from-cyan-500/20 to-cyan-500/5",
-                            },
-                            {
-                              name: "Predictable Costs",
-                              description: "Users pay a transparent fee for data storage",
-                              icon: <Clock className="w-6 h-6 text-orange-400" aria-hidden="true" />,
-                              color: "from-purple-500/20 to-purple-500/5",
-                            },
-                          ].map((feature, index) => (
+                          {corePrinciples.map((feature, index) => (
                             <div
                               key={feature.name}
                               className={`p-4 rounded-lg bg-neutral-900/60 border border-neutral-700`}
@@ -342,9 +351,9 @@ export default function StorageRentPage() {
           <section className="py-20 px-4" id="problem">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">The Problem</h2>
+                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("problemSection.title")}</h2>
                 <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-                  Traditional blockchains face critical sustainability challenges that threaten their long-term viability
+                  {t("problemSection.description")}
                 </p>
               </div>
 
@@ -368,12 +377,12 @@ export default function StorageRentPage() {
 
                         <div className="flex items-center justify-between">
                           <div className="flex items-center gap-2">
-                            <Badge variant="outline" className="text-neutral-400 border-neutral-600">Example metric</Badge>
+                            <Badge variant="outline" className="text-neutral-400 border-neutral-600">{t("problemSection.exampleMetric")}</Badge>
                             <span className="text-xs text-neutral-500">{problem.stats}</span>
                           </div>
                           <ArrowRight className="w-5 h-5 text-neutral-400" aria-hidden="true" />
                         </div>
-                        <p className="text-xs text-neutral-500 mt-2">Illustrative figure; see docs for current parameters.</p>
+                        <p className="text-xs text-neutral-500 mt-2">{t("problemSection.disclaimer")}</p>
                       </CardContent>
                     </Card>
                   </div>
@@ -387,8 +396,8 @@ export default function StorageRentPage() {
             <div className="max-w-4xl mx-auto">
               <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
                 <CardContent className="p-6">
-                  <h3 className="text-2xl font-bold mb-2 text-white">How much rent would I pay?</h3>
-                  <p className="text-neutral-300 text-sm mb-4">Approximate estimator for educational purposes. Parameters may change — see docs.</p>
+                  <h3 className="text-2xl font-bold mb-2 text-white">{t("estimator.title")}</h3>
+                  <p className="text-neutral-300 text-sm mb-4">{t("estimator.description")}</p>
                   <RentEstimator />
                 </CardContent>
               </Card>
@@ -400,28 +409,28 @@ export default function StorageRentPage() {
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
               <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">How to avoid rent</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">{t("avoidRent.title")}</h3>
                   <ol className="list-decimal list-inside text-sm text-neutral-300 space-y-1">
-                    <li>Move funds periodically to reset the 4-year timer</li>
-                    <li>Consolidate dust into larger boxes</li>
-                    <li>Apps: plan top-up/rotation logic into contract design</li>
+                    {avoidRentSteps.map((step, index) => (
+                      <li key={index}>{step}</li>
+                    ))}
                   </ol>
                 </CardContent>
               </Card>
               <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">For developers</h3>
+                  <h3 className="text-xl font-bold text-white mb-2">{t("developer.title")}</h3>
                   <ul className="list-disc list-inside text-sm text-neutral-300 space-y-1">
-                    <li>Avoid spawning many tiny boxes</li>
-                    <li>Provide a "maintenance path" for rent top-ups</li>
-                    <li>Track box age off-chain (indexer)</li>
+                    {developerTips.map((tip, index) => (
+                      <li key={index}>{tip}</li>
+                    ))}
                   </ul>
                   <div className="mt-3 flex gap-3">
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-4 py-2 rounded-xl" data-cta="design-patterns">
-                      <Link href="/docs/developers" >Design patterns</Link>
+                      <Link href="/docs/developers">{t("developer.buttons.designPatterns")}</Link>
                     </Button>
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-4 py-2 rounded-xl" data-cta="sdk-snippet">
-                      <Link href="/docs/developers/tutorials">SDK snippet</Link>
+                      <Link href="/docs/developers/tutorials">{t("developer.buttons.sdkSnippet")}</Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -433,9 +442,9 @@ export default function StorageRentPage() {
           <section className="py-20 px-4" id="solution">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Ergo's Solution</h2>
+                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("solutionSection.title")}</h2>
                 <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-                  Revolutionary storage rent mechanics that keep the blockchain healthy and sustainable
+                  {t("solutionSection.description")}
                 </p>
               </div>
 
@@ -462,9 +471,9 @@ export default function StorageRentPage() {
           <section className="py-20 px-4" id="how-it-works">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">How Storage Rent Works</h2>
+                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("timeline.title")}</h2>
                 <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-                  Follow the lifecycle of a UTXO through Ergo's storage rent system. Learn more about the model in the <Link href="/technology/eutxo-model" className="underline hover:opacity-80">eUTXO deep dive</Link>.
+                  {t("timeline.description")} <Link href="/technology/eutxo-model" className="underline hover:opacity-80">{t("timeline.eutxoLink")}</Link>.
                 </p>
               </div>
 
@@ -509,9 +518,9 @@ export default function StorageRentPage() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Why Storage Rent Matters</h2>
+                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("benefitsSection.title")}</h2>
                 <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-                  The benefits extend far beyond just cleaning up the blockchain
+                  {t("benefitsSection.description")}
                 </p>
               </div>
 
@@ -542,7 +551,7 @@ export default function StorageRentPage() {
           {/* FAQ Section */}
           <section className="py-20 px-4" id="faq">
             <div className="max-w-4xl mx-auto">
-              <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Frequently Asked Questions</h2>
+              <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("faq.title")}</h2>
 
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
@@ -571,26 +580,26 @@ export default function StorageRentPage() {
             </div>
           </section>
 
-          {/* CTA Section — NIPoPoWs Style */}
+          {/* CTA Section */}
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30">
                 <CardContent className="p-12">
-                  <h2 className="text-4xl font-bold mb-6 text-white">The Future is Sustainable</h2>
+                  <h2 className="text-4xl font-bold mb-6 text-white">{t("cta.title")}</h2>
                   <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                    Storage Rent keeps Ergo efficient, fair, and ready for the decades ahead. No bloat, no dead coins, no stale data — just a healthy, sustainable blockchain economy.
+                    {t("cta.description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="start-building">
                       <Link href="/ecosystem" className="flex items-center">
                         <ArrowRight className="mr-2 w-4 h-4" aria-hidden="true" />
-                        Start Building on Ergo
+                        {t("cta.buttons.startBuilding")}
                       </Link>
                     </Button>
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm" data-cta="view-details">
                       <Link href="https://docs.ergoplatform.com/protocol/storage-rent/" target="_blank" rel="noopener noreferrer" className="flex items-center">
                         <ExternalLink className="mr-2 w-4 h-4" aria-hidden="true" />
-                        Technical Documentation
+                        {t("cta.buttons.technicalDocs")}
                       </Link>
                     </Button>
                   </div>

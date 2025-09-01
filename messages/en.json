@@ -1,5 +1,5 @@
 {
-  "technology": {
+  "technologyPages": {
     "securePow": {
       "title": "Secure PoW",
       "subtitle": "ASIC-resistant Autolykos v2 algorithm ensuring fair mining and network security",
@@ -214,29 +214,29 @@
         "subtitle": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens"
       },
       "features": {
-        "oneClick": {
-          "title": "One-Click Creation",
-          "description": "Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts"
+        "0": {
+          "title": "Protocol-Level Support",
+          "description": "Native tokens are first-class citizens, as secure as ERG itself"
         },
-        "trueNative": {
-          "title": "True Native Assets",
-          "description": "First-class tokens with protocol-level security guarantees, not contract-based"
+        "1": {
+          "title": "No Smart Contracts",
+          "description": "Create tokens without complex code or contracts"
         },
-        "defiReady": {
-          "title": "DeFi Ready",
-          "description": "Native integration with all Ergo applications and protocols"
+        "2": {
+          "title": "Instant Creation",
+          "description": "Issue tokens in a single transaction"
         },
-        "costEffective": {
-          "title": "Cost Effective",
-          "description": "Minimal fees for token creation and transfers - just simple, secure, native assets"
+        "3": {
+          "title": "Low Cost",
+          "description": "Minimal fees for token creation and transfers"
         },
-        "richMetadata": {
+        "4": {
           "title": "Rich Metadata",
-          "description": "Support for complex metadata including images, descriptions, and custom properties"
+          "description": "Store token data directly on-chain"
         },
-        "universalCompatibility": {
-          "title": "Universal Compatibility",
-          "description": "Any smart contract can access oracle data without special integrations"
+        "5": {
+          "title": "Cross-Chain Ready",
+          "description": "Built for multi-chain interoperability"
         }
       },
       "assetTypes": {
@@ -244,99 +244,30 @@
         "subtitle": "Create any type of digital asset with native protocol support"
       },
       "tabs": {
-        "fungibleTokens": "Fungible Tokens",
+        "tokens": "Fungible Tokens",
         "nfts": "NFTs",
-        "hybridAssets": "Hybrid Assets",
-        "content": {
-          "tokens": {
-            "standard": {
-              "title": "Standard Tokens",
-              "description": "Create any type of fungible token with customizable properties:",
-              "features": {
-                "0": "Fixed or variable supply",
-                "1": "Decimal precision control",
-                "2": "Metadata and descriptions",
-                "3": "Burn and mint capabilities"
-              }
-            },
-            "stablecoins": {
-              "title": "Stablecoins",
-              "description": "Build algorithmic or collateralized stablecoins:",
-              "features": {
-                "0": "Oracle price feeds integration",
-                "1": "Collateral management",
-                "2": "Redemption mechanisms",
-                "3": "Governance tokens"
-              }
-            }
-          },
-          "nfts": {
-            "artCollectibles": {
-              "title": "Art & Collectibles",
-              "description": "Create unique digital assets with rich metadata:",
-              "features": {
-                "0": "IPFS image storage",
-                "1": "Royalty mechanisms",
-                "2": "Collection support",
-                "3": "Custom attributes"
-              }
-            },
-            "gamingAssets": {
-              "title": "Gaming Assets",
-              "description": "Build gaming tokens and collectibles:",
-              "features": {
-                "0": "Character tokens",
-                "1": "In-game items",
-                "2": "Rarity systems",
-                "3": "Cross-game compatibility"
-              }
-            }
-          },
-          "hybrid": {
-            "semiFungible": {
-              "title": "Semi-Fungible Tokens",
-              "description": "Create tokens with both fungible and non-fungible properties:",
-              "features": {
-                "0": "Batch NFTs",
-                "1": "Fractional ownership",
-                "2": "Dynamic metadata",
-                "3": "Conditional transfers"
-              }
-            },
-            "programmable": {
-              "title": "Programmable Assets",
-              "description": "Combine native tokens with smart contracts:",
-              "features": {
-                "0": "Conditional logic",
-                "1": "Time-based features",
-                "2": "Multi-signature support",
-                "3": "Oracle integration"
-              }
-            }
-          }
-        }
+        "stablecoins": "Stablecoins"
       },
       "useCasesSection": {
         "title": "Use Cases",
         "subtitle": "Applications that benefit from native token creation"
       },
       "useCases": {
-        "title": "Use Cases",
-        "defiTokens": {
-          "title": "DeFi Tokens",
-          "description": "Create governance tokens, utility tokens, and reward tokens for DeFi protocols"
+        "0": {
+          "title": "Fungible Tokens",
+          "description": "Create custom currencies and utility tokens"
         },
-        "nftCollections": {
+        "1": {
           "title": "NFT Collections",
-          "description": "Build unique digital art, collectibles, and gaming assets"
+          "description": "Launch digital art and collectibles"
         },
-        "stablecoins": {
+        "2": {
           "title": "Stablecoins",
-          "description": "Issue algorithmic or collateralized stablecoins with oracle integration"
+          "description": "Issue stable assets with protocol security"
         },
-        "gamingAssets": {
-          "title": "Gaming Assets",
-          "description": "Create in-game currencies, items, and character tokens"
+        "3": {
+          "title": "Asset Tokenization",
+          "description": "Tokenize real-world assets on-chain"
         }
       },
       "codeExample": {
@@ -368,107 +299,6 @@
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about native tokens and their implementation",
-        "0": {
-          "question": "How do native tokens differ from ERC-20 tokens?",
-          "answer": "Native tokens on Ergo are first-class protocol assets that don't require smart contracts. They have protocol-level security guarantees and are more cost-effective to create and transfer compared to ERC-20 tokens which require contract deployment and gas fees."
-        },
-        "1": {
-          "question": "What's the cost to create a native token?",
-          "answer": "Creating a native token costs approximately $0.01 in ERG fees, which is significantly cheaper than deploying smart contracts on other blockchains. The cost is just the standard transaction fee."
-        },
-        "2": {
-          "question": "Can I create NFTs with rich metadata?",
-          "answer": "Yes, native tokens support complex metadata including images, descriptions, and custom properties. You can store metadata on-chain or reference external data through IPFS or other storage solutions."
-        },
-        "3": {
-          "question": "Are native tokens compatible with all Ergo applications?",
-          "answer": "Yes, native tokens are universally compatible with all Ergo applications, wallets, and protocols. They don't require special integrations since they're treated as first-class assets by the protocol."
-        },
-        "4": {
-          "question": "How do I create a stablecoin using native tokens?",
-          "answer": "You can create stablecoins by combining native tokens with oracle data feeds. The AgeUSD stablecoin is an example of this approach, using oracle pools to maintain price stability."
-        }
-      },
-      "cta": {
-        "title": "Start Creating Native Assets",
-        "subtitle": "Join thousands of creators who have already issued tokens and NFTs on Ergo's native asset layer",
-        "buttons": {
-          "readDocumentation": "Read Documentation",
-          "learnAboutAgeUsd": "Learn About AgeUSD"
-        }
-      },
-      "buttons": {
-        "exploreNftEcosystem": "Explore NFT Ecosystem",
-        "tokenApiDocs": "Token API Docs"
-      },
-      "seo": {
-        "title": "Native Tokens & NFTs - First-Class Assets | Ergo Blockchain",
-        "description": "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets on Ergo blockchain.",
-        "keywords": ["native tokens", "NFTs", "blockchain assets", "ergo tokens", "token creation", "non-fungible tokens", "protocol-level assets", "token issuance", "ergo NFTs", "digital assets"],
-        "ogTitle": "Native Tokens & NFTs on Ergo - Protocol-Level Assets",
-        "ogDescription": "Issue tokens and NFTs in one transaction. First-class assets with protocol security, no smart contracts required.",
-        "twitterTitle": "Native Tokens & NFTs - First-Class Ergo Assets",
-        "twitterDescription": "Create tokens & NFTs at protocol level. One-click creation, ~$0.01 cost, 100% secure."
-      },
-      "features": {
-        "0": {
-          "title": "Protocol-Level Support",
-          "description": "Native tokens are first-class citizens, as secure as ERG itself"
-        },
-        "1": {
-          "title": "No Smart Contracts",
-          "description": "Create tokens without complex code or contracts"
-        },
-        "2": {
-          "title": "Instant Creation",
-          "description": "Issue tokens in a single transaction"
-        },
-        "3": {
-          "title": "Low Cost",
-          "description": "Minimal fees for token creation and transfers"
-        },
-        "4": {
-          "title": "Rich Metadata",
-          "description": "Store token data directly on-chain"
-        },
-        "5": {
-          "title": "Cross-Chain Ready",
-          "description": "Built for multi-chain interoperability"
-        }
-      },
-      "useCasesTitle": "Use Cases",
-      "useCases": {
-        "0": {
-          "title": "Fungible Tokens",
-          "description": "Create custom currencies and utility tokens"
-        },
-        "1": {
-          "title": "NFT Collections",
-          "description": "Launch digital art and collectibles"
-        },
-        "2": {
-          "title": "Stablecoins",
-          "description": "Issue stable assets with protocol security"
-        },
-        "3": {
-          "title": "Asset Tokenization",
-          "description": "Tokenize real-world assets on-chain"
-        }
-      },
-      "tabs": {
-        "tokens": "Fungible Tokens",
-        "nfts": "NFTs",
-        "stablecoins": "Stablecoins"
-      },
-      "tabContent": {
-        "tokens": "Create fungible tokens for currencies, rewards, governance, and more. Each token inherits the full security of the Ergo protocol.",
-        "nfts": "Issue unique digital assets with rich metadata. Perfect for art, collectibles, and digital property rights.",
-        "stablecoins": "Build stable assets with protocol-level security. No complex smart contracts required."
-      },
-      "faqTitle": "Frequently Asked Questions",
-      "faq": {
         "0": {
           "question": "What are native tokens on Ergo?",
           "answer": "Native tokens are first-class assets on Ergo that can be created and traded directly at the protocol level without smart contracts. They have the same security guarantees as ERG itself."
@@ -486,6 +316,41 @@
           "answer": "Yes, native tokens have full DeFi compatibility and can be used in all Ergo applications and protocols without special integration requirements."
         }
       },
+      "cta": {
+        "title": "Start Creating Native Assets",
+        "subtitle": "Join thousands of creators who have already issued tokens and NFTs on Ergo's native asset layer",
+        "buttons": {
+          "readDocumentation": "Read Documentation",
+          "learnAboutAgeUsd": "Learn About AgeUSD"
+        }
+      },
+      "seo": {
+        "title": "Native Tokens & NFTs - First-Class Assets | Ergo Blockchain",
+        "description": "Create and trade tokens and NFTs directly at the protocol level. No smart contracts needed - just simple, secure, and cost-effective native assets on Ergo blockchain.",
+        "keywords": [
+          "native tokens",
+          "NFTs",
+          "blockchain assets",
+          "ergo tokens",
+          "token creation",
+          "non-fungible tokens",
+          "protocol-level assets",
+          "token issuance",
+          "ergo NFTs",
+          "digital assets"
+        ],
+        "ogTitle": "Native Tokens & NFTs on Ergo - Protocol-Level Assets",
+        "ogDescription": "Issue tokens and NFTs in one transaction. First-class assets with protocol security, no smart contracts required.",
+        "twitterTitle": "Native Tokens & NFTs - First-Class Ergo Assets",
+        "twitterDescription": "Create tokens & NFTs at protocol level. One-click creation, ~$0.01 cost, 100% secure."
+      },
+      "useCasesTitle": "Use Cases",
+      "tabContent": {
+        "tokens": "Create fungible tokens for currencies, rewards, governance, and more. Each token inherits the full security of the Ergo protocol.",
+        "nfts": "Issue unique digital assets with rich metadata. Perfect for art, collectibles, and digital property rights.",
+        "stablecoins": "Build stable assets with protocol-level security. No complex smart contracts required."
+      },
+      "faqTitle": "Frequently Asked Questions",
       "ctaTitle": "Ready to Create Tokens?",
       "ctaButtons": {
         "readGuide": "Read the Guide",
@@ -544,7 +409,16 @@
       "seo": {
         "title": "Ergo User Guides | Wallets, DeFi, Mining & Trading Tutorials",
         "description": "Complete collection of Ergo user guides. Learn how to use wallets, trade on DEXs, mine ERG, stake tokens, and navigate the ecosystem. Step-by-step tutorials for all levels.",
-        "keywords": ["ergo guides", "ergo tutorials", "how to use ergo", "ergo wallet guide", "defi tutorial", "mining guide", "trading guide", "blockchain tutorials"],
+        "keywords": [
+          "ergo guides",
+          "ergo tutorials",
+          "how to use ergo",
+          "ergo wallet guide",
+          "defi tutorial",
+          "mining guide",
+          "trading guide",
+          "blockchain tutorials"
+        ],
         "ogTitle": "Ergo User Guides - Complete Tutorial Collection",
         "ogDescription": "Master Ergo with our comprehensive guides. Wallets, DeFi, mining, and more.",
         "twitterTitle": "Ergo Guides | Learn to Use Ergo Ecosystem",
@@ -621,7 +495,16 @@
       "seo": {
         "title": "Babel Fees on Ergo | Pay Transaction Fees with Any Token",
         "description": "Learn about Babel Fees on Ergo - pay transaction fees with any token. Understand how this innovative feature enhances UX and token utility.",
-        "keywords": ["babel fees", "ergo transaction fees", "pay fees with tokens", "defi fees", "blockchain fees", "ergo babel", "token fees", "gas fees alternative"],
+        "keywords": [
+          "babel fees",
+          "ergo transaction fees",
+          "pay fees with tokens",
+          "defi fees",
+          "blockchain fees",
+          "ergo babel",
+          "token fees",
+          "gas fees alternative"
+        ],
         "ogTitle": "Babel Fees on Ergo",
         "ogDescription": "Pay transaction fees with any token on Ergo. Enhanced UX and token utility.",
         "twitterTitle": "Babel Fees on Ergo",
@@ -920,504 +803,6 @@
         "answer": "Ergo uses Sigma protocols for optional privacy features including ErgoMixer for transaction mixing, stealth addresses, and zero-knowledge proofs for confidential transactions."
       }
     },
-    "babelFees": {
-      "title": "Babel Fees",
-      "subtitle": "Pay transaction fees with any token, not just ERG. Revolutionary flexibility for Ergo users.",
-      "description": "Babel Fees (EIP-0019) enable seamless fee payments using native tokens, enhancing UX and token utility across the ecosystem.",
-      "seo": {
-        "title": "Babel Fees on Ergo | Pay Transaction Fees with Any Token",
-        "description": "Learn about Babel Fees on Ergo - pay transaction fees with any token. Understand how this innovative feature enhances UX and token utility.",
-        "keywords": ["babel fees", "ergo transaction fees", "pay fees with tokens", "defi fees", "blockchain fees", "ergo babel", "token fees", "gas fees alternative"],
-        "ogTitle": "Babel Fees on Ergo",
-        "ogDescription": "Pay transaction fees with any token on Ergo. Enhanced UX and token utility.",
-        "twitterTitle": "Babel Fees on Ergo",
-        "twitterDescription": "Pay transaction fees with any token on Ergo"
-      },
-      "buttons": {
-        "howItWorks": "How It Works",
-        "eip0019": "EIP-0019"
-      },
-      "feeOptions": {
-        "title": "Fee Payment Options",
-        "options": {
-          "erg": {
-            "name": "ERG (Native)",
-            "description": "Traditional blockchain fees"
-          },
-          "anyToken": {
-            "name": "Any Token",
-            "description": "Pay with project tokens"
-          },
-          "autoExchange": {
-            "name": "Automatic Exchange",
-            "description": "Seamless token-to-ERG conversion"
-          }
-        }
-      },
-      "whyFees": {
-        "title": "Why Are Transaction Fees Necessary on Ergo?",
-        "description": "Like most blockchains, transaction fees on Ergo play a crucial role. They are needed for:",
-        "reasons": {
-          "miners": {
-            "title": "Rewarding Miners",
-            "description": "Miners expend computational resources to process transactions and secure the network. Fees are part of their compensation."
-          },
-          "spam": {
-            "title": "Preventing Spam",
-            "description": "Fees make sending mass volumes of useless transactions economically unviable, protecting the network from congestion."
-          },
-          "network": {
-            "title": "Network Operation",
-            "description": "They contribute to maintaining a healthy and functional infrastructure."
-          }
-        },
-        "standardPayment": {
-          "title": "Standard Payment in ERG",
-          "description": "Typically, transaction fees on the Ergo network are paid in the platform's native coin – ERG. The fee amount depends on the transaction's \"size\" in bytes and current network congestion, but generally, Ergo fees aim to be predictable thanks to the eUTXO model."
-        }
-      },
-      "introduction": {
-        "title": "Introducing Babel Fees (EIP-0019): Flexible Fee Payments",
-        "whatAre": {
-          "title": "What are Babel Fees?",
-          "description": "Babel Fees are an innovative mechanism on Ergo that allows users to pay transaction fees using native tokens issued on the Ergo blockchain instead of ERG. Imagine being able to pay for postage not just with cash (ERG), but also with valuable collectible stamps (your tokens)."
-        },
-        "whyCreated": {
-          "title": "Why were Babel Fees created? (The Problem Solved)",
-          "reasons": {
-            "ux": {
-              "title": "Improved User Experience (UX)",
-              "description": "Users holding specific tokens (e.g., tokens of a particular dApp) might not always have enough ERG readily available to pay fees. This creates friction and barriers."
-            },
-            "utility": {
-              "title": "Increased Token Utility",
-              "description": "Babel Fees significantly enhance the utility of native Ergo tokens, as they can be used for a fundamental network operation – paying fees."
-            },
-            "accessibility": {
-              "title": "dApp Accessibility",
-              "description": "Simplifies interaction with decentralized applications that heavily utilize their own native tokens."
-            }
-          }
-        }
-      },
-      "howItWorks": {
-        "title": "How Babel Fees Work (Simplified Explanation)",
-        "description": "The Babel Fees mechanism is quite elegant and doesn't require changes to the core protocol regarding how fees are ultimately received (the network still receives fees in ERG).",
-        "processFlow": {
-          "title": "Babel Fee Process Flow",
-          "steps": {
-            "userOffer": "User offers tokens",
-            "intermediaryDetects": "Intermediary detects",
-            "ergFeePaid": "ERG fee paid"
-          }
-        },
-        "details": {
-          "userOffer": {
-            "title": "User's Offer",
-            "description": "A user wishing to pay a fee with tokens creates a special \"output\" in their transaction, often referred to as a \"Babel fee box.\" In this box, they offer a certain amount of their tokens in exchange for someone else covering their ERG fee."
-          },
-          "intermediaries": {
-            "title": "Role of Intermediaries (Miners, Bots, Services)",
-            "steps": {
-              "detecting": {
-                "title": "1. Detecting the Offer",
-                "description": "Miners or specialized bots/services (intermediaries) scan the network for these \"Babel fee boxes.\""
-              },
-              "executing": {
-                "title": "2. Executing the Exchange",
-                "description": "If the token offer is profitable (i.e., the market value of the offered tokens is greater than or equal to the ERG fee amount plus a small profit for the intermediary), the intermediary \"fulfills\" this offer."
-              },
-              "paying": {
-                "title": "3. Paying the ERG Fee",
-                "description": "The intermediary takes the offered tokens from the \"Babel fee box\" and pays the required transaction fee in ERG to the miners who include the transaction in a block."
-              }
-            }
-          },
-          "market": {
-            "title": "Market Mechanism",
-            "description": "The effectiveness of Babel Fees for a specific token depends on a \"market\" existing for it – meaning there must be intermediaries willing to accept these tokens in exchange for ERG at a certain rate. The more popular a token, the higher the likelihood it will be accepted for fee payment."
-          }
-        }
-      },
-      "benefits": {
-        "title": "Benefits of Babel Fees",
-        "categories": {
-          "users": {
-            "title": "For Users",
-            "benefits": {
-              "convenience": {
-                "title": "Convenience",
-                "description": "Ability to pay fees with tokens you already own, without needing to first exchange them for ERG."
-              },
-              "friction": {
-                "title": "Reduced Friction",
-                "description": "Simplifies the use of dApps that are centered around their own tokens."
-              }
-            }
-          },
-          "developers": {
-            "title": "For Token Issuers / dApp Developers",
-            "benefits": {
-              "utility": {
-                "title": "Increased Token Utility",
-                "description": "Makes their tokens more in-demand and integrated into the ecosystem."
-              },
-              "ux": {
-                "title": "Improved UX",
-                "description": "Better experience for their application users."
-              }
-            }
-          },
-          "ecosystem": {
-            "title": "For the Ergo Ecosystem",
-            "benefits": {
-              "userFriendly": "A more user-friendly and versatile platform.",
-              "tokenEconomy": "Stimulation of an active token economy."
-            }
-          }
-        }
-      },
-      "practicalConsiderations": {
-        "title": "Practical Considerations for Users",
-        "considerations": {
-          "walletSupport": {
-            "title": "Wallet Support",
-            "description": "Find out which Ergo wallets (e.g., Nautilus Wallet or others) and dApps support the creation of transactions using Babel Fees. This feature may not be available in all wallets."
-          },
-          "tokenAcceptance": {
-            "title": "Token Acceptance",
-            "description": "Not all tokens may be automatically accepted. This depends on intermediaries being willing to exchange them for ERG."
-          },
-          "exchangeRates": {
-            "title": "Exchange Rates",
-            "description": "The \"price\" or exchange rate at which your tokens are accepted to cover ERG fees will be determined by market conditions and intermediary offers."
-          },
-          "howToUse": {
-            "title": "How to Use",
-            "description": "When constructing a transaction in a compatible wallet or dApp, you might see an option to select a token to pay the fee. The interface will typically show the required amount of tokens based on current market rates."
-          }
-        }
-      },
-      "currentStatus": {
-        "title": "Current Status & Future Development of Babel Fees",
-        "alert": {
-          "title": "Important",
-          "description": "This section reflects the current implementation status of Babel Fees. The adoption and availability may vary depending on wallet support and intermediary participation."
-        },
-        "questions": {
-          "adoption": "How widely are Babel Fees currently adopted by miners/intermediaries?",
-          "markets": "Are there active and liquid \"markets\" for many tokens to be used for Babel Fees?",
-          "development": "Is there ongoing work to improve or expand the Babel Fees mechanism?"
-        },
-        "checkUpdates": "Check Latest Updates on EIP-0019"
-      },
-      "comparison": {
-        "title": "Comparison: ERG Fees vs. Babel Fees",
-        "ergFees": {
-          "title": "ERG Fees",
-          "features": {
-            "accepted": "Always accepted for fee payment",
-            "reliable": "Primary and most reliable method",
-            "stable": "Predictable and stable",
-            "supported": "Supported by all wallets and dApps"
-          }
-        },
-        "babelFees": {
-          "title": "Babel Fees",
-          "features": {
-            "flexibility": "Offer flexibility and convenience",
-            "availability": "Availability depends on token market demand",
-            "intermediary": "Requires intermediary participation",
-            "rates": "May have variable exchange rates"
-          }
-        }
-      },
-      "conclusion": {
-        "title": "Conclusion",
-        "description": "Babel Fees are a significant innovation demonstrating Ergo's flexibility and user-centric approach. They contribute to creating a more convenient and multifaceted ecosystem.",
-        "note": "Keep an eye on updates from your wallets and favorite dApps to learn about their support for this feature!"
-      },
-      "cta": {
-        "title": "Ready to Use Babel Fees?",
-        "subtitle": "Experience the flexibility of paying transaction fees with any token",
-        "buttons": {
-          "exploreWallets": "Explore Supported Wallets",
-          "learnMore": "Learn More About EIP-0019"
-        }
-      }
-    },
-    "babelFees": {
-      "title": "Babel Fees",
-      "subtitle": "Pay transaction fees with any token, not just ERG. Revolutionary flexibility for Ergo users.",
-      "description": "Babel Fees (EIP-0019) enable seamless fee payments using native tokens, enhancing UX and token utility across the ecosystem.",
-      "seo": {
-        "title": "Babel Fees on Ergo | Pay Transaction Fees with Any Token",
-        "description": "Learn about Babel Fees on Ergo - pay transaction fees with any token. Understand how this innovative feature enhances UX and token utility.",
-        "keywords": ["babel fees", "ergo transaction fees", "pay fees with tokens", "defi fees", "blockchain fees", "ergo babel", "token fees", "gas fees alternative"],
-        "ogTitle": "Babel Fees on Ergo",
-        "ogDescription": "Pay transaction fees with any token on Ergo. Enhanced UX and token utility.",
-        "twitterTitle": "Babel Fees on Ergo",
-        "twitterDescription": "Pay transaction fees with any token on Ergo"
-      },
-      "buttons": {
-        "howItWorks": "How It Works",
-        "eip0019": "EIP-0019"
-      },
-      "feeOptions": {
-        "title": "Fee Payment Options",
-        "options": {
-          "erg": {
-            "name": "ERG (Native)",
-            "description": "Traditional blockchain fees"
-          },
-          "anyToken": {
-            "name": "Any Token",
-            "description": "Pay with project tokens"
-          },
-          "autoExchange": {
-            "name": "Automatic Exchange",
-            "description": "Seamless token-to-ERG conversion"
-          }
-        }
-      },
-      "whyFees": {
-        "title": "Why Are Transaction Fees Necessary on Ergo?",
-        "description": "Like most blockchains, transaction fees on Ergo play a crucial role. They are needed for:",
-        "reasons": {
-          "miners": {
-            "title": "Rewarding Miners",
-            "description": "Miners expend computational resources to process transactions and secure the network. Fees are part of their compensation."
-          },
-          "spam": {
-            "title": "Preventing Spam",
-            "description": "Fees make sending mass volumes of useless transactions economically unviable, protecting the network from congestion."
-          },
-          "network": {
-            "title": "Network Operation",
-            "description": "They contribute to maintaining a healthy and functional infrastructure."
-          }
-        },
-        "standardPayment": {
-          "title": "Standard Payment in ERG",
-          "description": "Typically, transaction fees on the Ergo network are paid in the platform's native coin – ERG. The fee amount depends on the transaction's \"size\" in bytes and current network congestion, but generally, Ergo fees aim to be predictable thanks to the eUTXO model."
-        }
-      },
-      "introduction": {
-        "title": "Introducing Babel Fees (EIP-0019): Flexible Fee Payments",
-        "whatAre": {
-          "title": "What are Babel Fees?",
-          "description": "Babel Fees are an innovative mechanism on Ergo that allows users to pay transaction fees using native tokens issued on the Ergo blockchain instead of ERG. Imagine being able to pay for postage not just with cash (ERG), but also with valuable collectible stamps (your tokens)."
-        },
-        "whyCreated": {
-          "title": "Why were Babel Fees created? (The Problem Solved)",
-          "reasons": {
-            "ux": {
-              "title": "Improved User Experience (UX)",
-              "description": "Users holding specific tokens (e.g., tokens of a particular dApp) might not always have enough ERG readily available to pay fees. This creates friction and barriers."
-            },
-            "utility": {
-              "title": "Increased Token Utility",
-              "description": "Babel Fees significantly enhance the utility of native Ergo tokens, as they can be used for a fundamental network operation – paying fees."
-            },
-            "accessibility": {
-              "title": "dApp Accessibility",
-              "description": "Simplifies interaction with decentralized applications that heavily utilize their own native tokens."
-            }
-          }
-        }
-      },
-      "howItWorks": {
-        "title": "How Babel Fees Work (Simplified Explanation)",
-        "description": "The Babel Fees mechanism is quite elegant and doesn't require changes to the core protocol regarding how fees are ultimately received (the network still receives fees in ERG).",
-        "processFlow": {
-          "title": "Babel Fee Process Flow",
-          "steps": {
-            "userOffer": "User offers tokens",
-            "intermediaryDetects": "Intermediary detects",
-            "ergFeePaid": "ERG fee paid"
-          }
-        },
-        "details": {
-          "userOffer": {
-            "title": "User's Offer",
-            "description": "A user wishing to pay a fee with tokens creates a special \"output\" in their transaction, often referred to as a \"Babel fee box.\" In this box, they offer a certain amount of their tokens in exchange for someone else covering their ERG fee."
-          },
-          "intermediaries": {
-            "title": "Role of Intermediaries (Miners, Bots, Services)",
-            "steps": {
-              "detecting": {
-                "title": "1. Detecting the Offer",
-                "description": "Miners or specialized bots/services (intermediaries) scan the network for these \"Babel fee boxes.\""
-              },
-              "executing": {
-                "title": "2. Executing the Exchange",
-                "description": "If the token offer is profitable (i.e., the market value of the offered tokens is greater than or equal to the ERG fee amount plus a small profit for the intermediary), the intermediary \"fulfills\" this offer."
-              },
-              "paying": {
-                "title": "3. Paying the ERG Fee",
-                "description": "The intermediary takes the offered tokens from the \"Babel fee box\" and pays the required transaction fee in ERG to the miners who include the transaction in a block."
-              }
-            }
-          },
-          "market": {
-            "title": "Market Mechanism",
-            "description": "The effectiveness of Babel Fees for a specific token depends on a \"market\" existing for it – meaning there must be intermediaries willing to accept these tokens in exchange for ERG at a certain rate. The more popular a token, the higher the likelihood it will be accepted for fee payment."
-          }
-        }
-      },
-      "benefits": {
-        "title": "Benefits of Babel Fees",
-        "categories": {
-          "users": {
-            "title": "For Users",
-            "benefits": {
-              "convenience": {
-                "title": "Convenience",
-                "description": "Ability to pay fees with tokens you already own, without needing to first exchange them for ERG."
-              },
-              "friction": {
-                "title": "Reduced Friction",
-                "description": "Simplifies the use of dApps that are centered around their own tokens."
-              }
-            }
-          },
-          "developers": {
-            "title": "For Token Issuers / dApp Developers",
-            "benefits": {
-              "utility": {
-                "title": "Increased Token Utility",
-                "description": "Makes their tokens more in-demand and integrated into the ecosystem."
-              },
-              "ux": {
-                "title": "Improved UX",
-                "description": "Better experience for their application users."
-              }
-            }
-          },
-          "ecosystem": {
-            "title": "For the Ergo Ecosystem",
-            "benefits": {
-              "userFriendly": "A more user-friendly and versatile platform.",
-              "tokenEconomy": "Stimulation of an active token economy."
-            }
-          }
-        }
-      },
-      "practicalConsiderations": {
-        "title": "Practical Considerations for Users",
-        "considerations": {
-          "walletSupport": {
-            "title": "Wallet Support",
-            "description": "Find out which Ergo wallets (e.g., Nautilus Wallet or others) and dApps support the creation of transactions using Babel Fees. This feature may not be available in all wallets."
-          },
-          "tokenAcceptance": {
-            "title": "Token Acceptance",
-            "description": "Not all tokens may be automatically accepted. This depends on intermediaries being willing to exchange them for ERG."
-          },
-          "exchangeRates": {
-            "title": "Exchange Rates",
-            "description": "The \"price\" or exchange rate at which your tokens are accepted to cover ERG fees will be determined by market conditions and intermediary offers."
-          },
-          "howToUse": {
-            "title": "How to Use",
-            "description": "When constructing a transaction in a compatible wallet or dApp, you might see an option to select a token to pay the fee. The interface will typically show the required amount of tokens based on current market rates."
-          }
-        }
-      },
-      "currentStatus": {
-        "title": "Current Status & Future Development of Babel Fees",
-        "alert": {
-          "title": "Important",
-          "description": "This section reflects the current implementation status of Babel Fees. The adoption and availability may vary depending on wallet support and intermediary participation."
-        },
-        "questions": {
-          "adoption": "How widely are Babel Fees currently adopted by miners/intermediaries?",
-          "markets": "Are there active and liquid \"markets\" for many tokens to be used for Babel Fees?",
-          "development": "Is there ongoing work to improve or expand the Babel Fees mechanism?"
-        },
-        "checkUpdates": "Check Latest Updates on EIP-0019"
-      },
-      "comparison": {
-        "title": "Comparison: ERG Fees vs. Babel Fees",
-        "ergFees": {
-          "title": "ERG Fees",
-          "features": {
-            "accepted": "Always accepted for fee payment",
-            "reliable": "Primary and most reliable method",
-            "stable": "Predictable and stable",
-            "supported": "Supported by all wallets and dApps"
-          }
-        },
-        "babelFees": {
-          "title": "Babel Fees",
-          "features": {
-            "flexibility": "Offer flexibility and convenience",
-            "availability": "Availability depends on token market demand",
-            "intermediary": "Requires intermediary participation",
-            "rates": "May have variable exchange rates"
-          }
-        }
-      },
-      "conclusion": {
-        "title": "Conclusion",
-        "description": "Babel Fees are a significant innovation demonstrating Ergo's flexibility and user-centric approach. They contribute to creating a more convenient and multifaceted ecosystem.",
-        "note": "Keep an eye on updates from your wallets and favorite dApps to learn about their support for this feature!"
-      },
-      "cta": {
-        "title": "Ready to Use Babel Fees?",
-        "subtitle": "Experience the flexibility of paying transaction fees with any token",
-        "buttons": {
-          "exploreWallets": "Explore Supported Wallets",
-          "learnMore": "Learn More About EIP-0019"
-        }
-      },
-      "schema": {
-        "techArticle": {
-          "headline": "Babel Fees: Pay Transaction Fees with Any Token",
-          "description": "Technical guide to Ergo's Babel Fees system for flexible transaction fee payments",
-          "about": {
-            "name": "Blockchain Transaction Fees",
-            "description": "Alternative fee payment methods in blockchain"
-          }
-        },
-        "faq": {
-          "whatAre": {
-            "question": "What are Babel Fees?",
-            "answer": "Babel Fees allow users to pay transaction fees on Ergo using any token instead of ERG, making DeFi more accessible by removing the need to hold ERG for fees."
-          },
-          "howWork": {
-            "question": "How do Babel Fees work?",
-            "answer": "Service providers accept tokens as payment for fees, then handle the ERG payment to miners behind the scenes, creating a seamless experience for users."
-          },
-          "whichTokens": {
-            "question": "Which tokens can be used for Babel Fees?",
-            "answer": "Any token on Ergo can potentially be used for Babel Fees if a service provider supports it. Popular options include SigUSD, SigRSV, and major Ergo tokens."
-          },
-          "expensive": {
-            "question": "Are Babel Fees more expensive than regular fees?",
-            "answer": "Babel Fees may include a small premium to compensate service providers, but the convenience often outweighs the minimal additional cost."
-          }
-        },
-        "howTo": {
-          "name": "How to Use Babel Fees on Ergo",
-          "description": "Step-by-step guide to paying transaction fees with tokens",
-          "steps": {
-            "chooseDapp": {
-              "name": "Choose a supported dApp",
-              "text": "Select a dApp or wallet that supports Babel Fees"
-            },
-            "selectToken": {
-              "name": "Select fee token",
-              "text": "Choose which token you want to use for paying fees"
-            },
-            "executeTransaction": {
-              "name": "Execute transaction",
-              "text": "Complete your transaction with automatic fee conversion"
-            }
-          }
-        }
-      }
-    },
     "getErg": {
       "title": "Acquire ERG",
       "subtitle": "Your guide to obtaining ERG, the native currency of the Ergo ecosystem. Choose the method that best suits you.",
@@ -1425,7 +810,16 @@
       "seo": {
         "title": "How to Get ERG | Buy Ergo on Exchanges & DEXs",
         "description": "Complete guide to buying ERG tokens. Compare 20+ exchanges, find the best rates, and start trading Ergo. Includes CEX and DEX options with step-by-step instructions.",
-        "keywords": ["buy erg", "get ergo", "erg exchanges", "where to buy ergo", "erg trading", "ergo cryptocurrency", "erg token", "buy ergo coin"],
+        "keywords": [
+          "buy erg",
+          "get ergo",
+          "erg exchanges",
+          "where to buy ergo",
+          "erg trading",
+          "ergo cryptocurrency",
+          "erg token",
+          "buy ergo coin"
+        ],
         "ogTitle": "Buy ERG - Complete Exchange Guide",
         "ogDescription": "Find the best exchanges to buy ERG. Compare rates, fees, and get started with Ergo.",
         "twitterTitle": "Where to Buy ERG | Exchange Guide",
@@ -1682,7 +1076,7 @@
           "tvl": "$2.5M+",
           "features": {
             "feature1": "ERG-backed",
-            "feature2": "Dual token model", 
+            "feature2": "Dual token model",
             "feature3": "Reserve ratio protection"
           }
         },
@@ -2712,187 +2106,6 @@
         }
       }
     },
-    "identity": {
-      "title": "Identity & Reputation",
-      "subtitle": "Self-sovereign identity & Web3 reputation",
-      "description": "Decentralized identifiers (DID), Sybil resistance, reputation systems.",
-      "lastUpdated": "Last updated:",
-      "seo": {
-        "title": "Identity & Reputation on Ergo | Self-Sovereign Identity",
-        "description": "Build decentralized identity and reputation systems on Ergo. DIDs, verifiable credentials, Sybil resistance, and non-transferable reputation tokens.",
-        "keywords": "identity, reputation, DID, self-sovereign identity, verifiable credentials, Sybil resistance, Web3 identity",
-        "ogTitle": "Identity & Reputation on Ergo",
-        "ogDescription": "Self-sovereign identity and Web3 reputation systems.",
-        "twitterTitle": "Identity on Ergo",
-        "twitterDescription": "Decentralized identity and reputation systems"
-      },
-      "quickStart": {
-        "title": "Quick Start",
-        "identityGuide": {
-          "name": "Identity Guide",
-          "description": "Learn about SSI on Ergo"
-        },
-        "didStandards": {
-          "name": "DID Standards",
-          "description": "W3C DID specifications"
-        },
-        "buildIdentityApps": {
-          "name": "Build Identity Apps",
-          "description": "Developer resources"
-        }
-      },
-      "navigation": {
-        "identityFeatures": "Identity features",
-        "useCases": "Use Cases",
-        "faq": "FAQ"
-      },
-      "features": {
-        "title": "Identity Features",
-        "subtitle": "Building blocks for decentralized identity",
-        "selfSovereignIdentity": {
-          "title": "Self-Sovereign Identity",
-          "description": "Control your own identity without relying on centralized authorities"
-        },
-        "decentralizedIdentifiers": {
-          "title": "Decentralized Identifiers",
-          "description": "DIDs that work across platforms and applications"
-        },
-        "reputationTokens": {
-          "title": "Reputation Tokens",
-          "description": "Non-transferable tokens that represent earned reputation"
-        },
-        "sybilResistance": {
-          "title": "Sybil Resistance",
-          "description": "Prevent fake identities and ensure one-person-one-vote"
-        },
-        "verifiableCredentials": {
-          "title": "Verifiable Credentials",
-          "description": "Cryptographic proofs of identity attributes and achievements"
-        },
-        "privacyPreserving": {
-          "title": "Privacy-Preserving",
-          "description": "Selective disclosure of identity information using zero-knowledge proofs"
-        }
-      },
-      "technical": {
-        "title": "Technical Architecture",
-        "subtitle": "How identity systems work on Ergo",
-        "tabs": {
-          "overview": "Overview",
-          "reputation": "Reputation",
-          "code": "Code Example"
-        },
-        "overview": {
-          "title": "Identity System",
-          "description": "Ergo enables decentralized identity through:",
-          "points": {
-            "point1": "Cryptographic key pairs for identity",
-            "point2": "On-chain DIDs and credentials",
-            "point3": "Zero-knowledge proofs for privacy",
-            "point4": "Non-transferable reputation tokens",
-            "point5": "Verifiable credential issuance"
-          }
-        },
-        "reputation": {
-          "title": "Reputation System",
-          "earning": {
-            "title": "Earning Reputation",
-            "points": {
-              "point1": "Complete verified actions",
-              "point2": "Receive peer endorsements",
-              "point3": "Contribute to protocols",
-              "point4": "Time-based accumulation"
-            }
-          },
-          "using": {
-            "title": "Using Reputation",
-            "points": {
-              "point1": "Weighted voting power",
-              "point2": "Access to services",
-              "point3": "Better loan terms",
-              "point4": "Trust signaling"
-            }
-          },
-          "sybilResistance": {
-            "title": "Sybil Resistance"
-          }
-        },
-        "codeExample": {
-          "title": "Reputation Token Example",
-          "description": "Non-transferable reputation NFT"
-        }
-      },
-      "useCases": {
-        "title": "Identity Use Cases",
-        "subtitle": "Applications for decentralized identity",
-        "daoGovernance": {
-          "name": "DAO Governance",
-          "description": "Reputation-weighted voting for decentralized organizations",
-          "status": "Concept",
-          "features": {
-            "feature1": "Merit-based voting",
-            "feature2": "Delegation systems",
-            "feature3": "Contribution tracking"
-          }
-        },
-        "defiCreditScoring": {
-          "name": "DeFi Credit Scoring",
-          "description": "On-chain credit history for under-collateralized loans",
-          "status": "Research",
-          "features": {
-            "feature1": "Payment history",
-            "feature2": "Risk assessment",
-            "feature3": "Credit limits"
-          }
-        },
-        "professionalCredentials": {
-          "name": "Professional Credentials",
-          "description": "Verifiable professional certifications and achievements",
-          "status": "Planned",
-          "features": {
-            "feature1": "Skill verification",
-            "feature2": "Work history",
-            "feature3": "Peer endorsements"
-          }
-        }
-      },
-      "faq": {
-        "title": "Frequently Asked Questions",
-        "subtitle": "Common questions about identity on Ergo",
-        "whatIsSsi": {
-          "question": "What is self-sovereign identity?",
-          "answer": "Self-sovereign identity (SSI) gives individuals control over their digital identity without depending on centralized authorities. Users own their identity data and choose what to share and with whom."
-        },
-        "howReputationTokensWork": {
-          "question": "How do reputation tokens work?",
-          "answer": "Reputation tokens are non-transferable NFTs that represent earned achievements or trust. They cannot be sold or transferred, ensuring reputation must be earned, not bought."
-        },
-        "whatAreDids": {
-          "question": "What are DIDs on Ergo?",
-          "answer": "Decentralized Identifiers (DIDs) on Ergo are unique identifiers anchored on the blockchain. They enable verifiable, self-sovereign digital identity that works across different platforms and applications."
-        },
-        "howPrivacyMaintained": {
-          "question": "How is privacy maintained?",
-          "answer": "Ergo uses zero-knowledge proofs and selective disclosure to maintain privacy. Users can prove attributes about their identity (like being over 18) without revealing the actual data."
-        },
-        "canReputationBeUsedForDefi": {
-          "question": "Can reputation be used for DeFi?",
-          "answer": "Yes! On-chain reputation can enable under-collateralized lending, better interest rates, and access to exclusive DeFi services based on proven track record rather than just collateral."
-        }
-      },
-      "cta": {
-        "title": "Ready to Build Identity Solutions?",
-        "subtitle": "Create decentralized identity and reputation systems on Ergo.",
-        "startBuilding": "Start Building",
-        "learnMore": "Learn More"
-      },
-      "schema": {
-        "breadcrumbs": {
-          "useCases": "Use Cases",
-          "identityReputation": "Identity & Reputation"
-        }
-      }
-    },
     "oracles": {
       "title": "Oracles & Data Feeds",
       "subtitle": "Bringing real-world data on-chain",
@@ -3354,16 +2567,6 @@
         }
       }
     },
-    "seo": {
-      "title": "Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma Protocols",
-      "description": "Discover Ergo's advanced blockchain technology: eUTXO model for parallel smart contracts, ErgoScript programming language, Sigma protocols for zero-knowledge proofs, and ASIC-resistant Autolykos mining.",
-      "keywords": "eUTXO blockchain,ErgoScript smart contracts,Sigma protocols,Autolykos mining,blockchain technology,smart contract programming,NIPoPoWs,storage rent,proof of work,DeFi infrastructure",
-      "ogTitle": "Ergo Technology Stack - Building the Future",
-      "ogDescription": "Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.",
-      "ogImageAlt": "Ergo Technology Overview",
-      "twitterTitle": "Ergo Technology - Next Generation Blockchain",
-      "twitterDescription": "eUTXO model, ErgoScript, Sigma protocols, NIPoPoWs - cutting-edge blockchain tech."
-    },
     "hero": {
       "title": "Next-Generation Blockchain Technology",
       "subtitle": "Built for the Future of Finance",
@@ -3394,19 +2597,172 @@
       },
       "ergoscript": {
         "title": "ErgoScript",
+        "subtitle": "Secure Smart Contract Language",
         "description": "Powerful smart contract language designed for security and flexibility. Features built-in Sigma protocols for zero-knowledge proofs and formal verification support for bulletproof contracts.",
-        "details": {
+        "lastUpdated": "Last updated",
+        "tabs": {
+          "overview": "Overview",
+          "examples": "Code Examples",
+          "technical": "Technical Details",
+          "useCases": "Use Cases"
+        },
+        "keyFeatures": {
+          "title": "Key Features",
+          "functional": {
+            "title": "Functional Programming",
+            "description": "Based on Scala with immutable data structures"
+          },
+          "secure": {
+            "title": "Secure by Design",
+            "description": "Prevents reentrancy and common vulnerabilities"
+          },
+          "verifiable": {
+            "title": "Formally Verifiable",
+            "description": "Mathematical proofs for contract correctness"
+          }
+        },
+        "features": {
+          "security": {
+            "title": "Security First",
+            "description": "Built-in protection against common smart contract vulnerabilities",
+            "benefits": [
+              "No reentrancy attacks possible",
+              "Formal verification support",
+              "Type safety guarantees"
+            ]
+          },
+          "expressiveness": {
+            "title": "Highly Expressive",
+            "description": "Rich language features for complex financial contracts",
+            "benefits": [
+              "Sigma protocols integration",
+              "Advanced cryptographic primitives",
+              "Multi-stage protocols support"
+            ]
+          },
+          "efficiency": {
+            "title": "Efficient Execution",
+            "description": "Optimized for performance and cost-effectiveness",
+            "benefits": [
+              "Predictable execution costs",
+              "Parallel transaction processing"
+            ]
+          },
+          "cryptography": {
+            "title": "Native Cryptography",
+            "description": "Built-in support for advanced cryptographic operations",
+            "benefits": [
+              "Zero-knowledge proofs",
+              "Ring signatures",
+              "Multi-signatures"
+            ]
+          },
+          "composability": {
+            "title": "Composable Design",
+            "description": "Build complex protocols from simple components",
+            "benefits": [
+              "Modular contract architecture",
+              "Reusable code patterns"
+            ]
+          },
           "verification": {
             "title": "Formal Verification",
-            "description": "Mathematically prove your smart contracts are secure and bug-free."
+            "description": "Mathematical proofs for contract correctness",
+            "benefits": [
+              "Compile-time verification",
+              "Runtime safety checks"
+            ]
+          }
+        },
+        "examples": {
+          "timelock": {
+            "title": "Time-locked Contract",
+            "description": "Simple time-based spending condition"
+          },
+          "multisig": {
+            "title": "Multi-Signature Wallet",
+            "description": "Require multiple signatures for spending"
+          },
+          "oracle": {
+            "title": "Oracle Data Usage",
+            "description": "Access external data in smart contracts"
+          }
+        },
+        "technical": {
+          "title": "Technical Details",
+          "language": {
+            "aspect": "Language Foundation",
+            "detail": "Based on Scala with functional programming paradigms and strong type system"
+          },
+          "model": {
+            "aspect": "Execution Model",
+            "detail": "Runs on eUTXO model enabling parallel execution and local state management"
+          },
+          "cryptography": {
+            "aspect": "Cryptographic Features",
+            "detail": "Native Sigma protocols for zero-knowledge proofs and advanced signatures"
+          },
+          "verification": {
+            "aspect": "Verification System",
+            "detail": "Compile-time and runtime verification ensuring contract safety and correctness"
+          },
+          "compiler": {
+            "title": "Compilation Process",
+            "description": "ErgoScript compiles to Sigma bytecode for efficient execution"
+          }
+        },
+        "useCases": {
+          "examples": "Examples",
+          "defi": {
+            "title": "DeFi Protocols",
+            "description": "Build decentralized exchanges, lending platforms, and stablecoins",
+            "examples": "DEX, Lending, Stablecoins, Yield Farming"
+          },
+          "oracles": {
+            "title": "Oracle Integration",
+            "description": "Access external data feeds for price information and events",
+            "examples": "Price feeds, Weather data, Sports results, IoT sensors"
           },
           "privacy": {
-            "title": "Built-in Privacy",
-            "description": "Native zero-knowledge proofs and ring signatures for confidential transactions."
+            "title": "Privacy Applications",
+            "description": "Implement confidential transactions and zero-knowledge proofs",
+            "examples": "Mixers, Ring signatures, Stealth addresses, ZK proofs"
           },
-          "safety": {
-            "title": "Safe by Design",
-            "description": "Prevents common vulnerabilities like reentrancy attacks and unexpected behaviors."
+          "tokens": {
+            "title": "Token Management",
+            "description": "Create and manage custom tokens and NFTs",
+            "examples": "Token issuance, NFT creation, Royalty systems, Governance tokens"
+          }
+        },
+        "faq": {
+          "0": {
+            "question": "What makes ErgoScript different from Solidity?",
+            "answer": "ErgoScript is functional, type-safe, and runs on eUTXO model. It has built-in cryptographic primitives and formal verification support, making it more secure than Solidity."
+          },
+          "1": {
+            "question": "Do I need to know Scala to write ErgoScript?",
+            "answer": "While Scala knowledge helps, ErgoScript has its own syntax focused on smart contracts. Our tutorials start from basics and gradually build complexity."
+          },
+          "2": {
+            "question": "Can ErgoScript prevent smart contract bugs?",
+            "answer": "Yes! ErgoScript's type system, formal verification, and eUTXO model prevent common vulnerabilities like reentrancy attacks and unexpected state changes."
+          },
+          "3": {
+            "question": "How do I get started with ErgoScript development?",
+            "answer": "Start with our documentation, set up the development environment, and follow our step-by-step tutorials. Join Discord for community support."
+          },
+          "title": "Frequently Asked Questions"
+        },
+        "buttons": {
+          "learnErgoScript": "Learn ErgoScript",
+          "viewCode": "View Source Code"
+        },
+        "cta": {
+          "title": "Ready to Build Secure Smart Contracts?",
+          "subtitle": "Start learning ErgoScript and build the future of DeFi",
+          "buttons": {
+            "startLearning": "Start Learning",
+            "browseExamples": "Browse Examples"
           }
         }
       },
@@ -3484,55 +2840,81 @@
       },
       "oraclePools": {
         "title": "Oracle Pools",
-        "description": "Decentralized oracle pools provide reliable external data to smart contracts. Multiple data providers ensure accuracy and prevent manipulation.",
-        "details": {
-          "reliablePriceFeeds": {
-            "title": "Reliable Price Feeds",
-            "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices."
-          },
-          "universalCompatibility": {
-            "title": "Universal Compatibility",
-            "description": "Any smart contract can access oracle data without special integrations."
-          },
-          "fullyDecentralized": {
-            "title": "Fully Decentralized",
-            "description": "No central authority controls the data flow or oracle operations."
+        "subtitle": "Decentralized data feeds for smart contracts",
+        "description": "Truly decentralized oracle pools providing reliable off-chain data access with built-in incentives.",
+        "lastUpdated": "Last updated",
+        "keyMetrics": {
+          "title": "Key Metrics",
+          "activePools": {
+            "name": "Active Pools",
+            "value": "15+",
+            "description": "Live oracle data feeds"
+          }
+        },
+        "features": {
+          "title": "Key Features",
+          "subtitle": "Reliable, permissionless off-chain data access with built-in incentives",
+          "decentralized": {
+            "title": "Truly Decentralized",
+            "description": "No single point of failure or centralized control"
+          }
+        },
+        "buttons": {
+          "exploreOracles": "Explore Oracle Pools",
+          "viewLivePools": "View Live Pools"
+        },
+        "faq": {
+          "0": {
+            "question": "How do oracle pools work?",
+            "answer": "Oracle pools aggregate data from multiple sources and provide it to smart contracts through a decentralized network of data providers with economic incentives."
+          }
+        },
+        "cta": {
+          "title": "Ready to Use Oracle Data?",
+          "subtitle": "Start building applications with reliable, decentralized data feeds.",
+          "buttons": {
+            "exploreOracles": "Explore Oracle Pools",
+            "viewLivePools": "View Live Pools"
           }
         }
       },
       "adaptiveEmission": {
         "title": "Adaptive Emission",
-        "description": "Dynamic supply adjustment mechanism for long-term sustainability.",
-        "details": {
+        "subtitle": "Consensus-driven tuning of economic parameters",
+        "description": "Community input and miner voting enable flexible economic policy without hard forks.",
+        "lastUpdated": "Last updated",
+        "keyMetrics": {
+          "title": "Key Metrics",
+          "currentStatus": {
+            "name": "Current Status",
+            "value": "Active",
+            "description": "Community governance enabled"
+          }
+        },
+        "features": {
+          "title": "Key Features",
+          "subtitle": "Flexible economic policy through community consensus and miner voting",
           "parameterTuning": {
             "title": "Parameter Tuning",
-            "description": "Economic variables can be adjusted based on network conditions."
-          },
-          "economicFlexibility": {
-            "title": "Economic Flexibility",
-            "description": "Adapt to changing network needs and market conditions."
-          },
-          "communityInput": {
-            "title": "Community Input",
-            "description": "Discussions and decisions involve the entire community."
+            "description": "Economic variables can be adjusted based on network conditions"
           }
-        }
-      },
-      "oraclePools": {
-        "title": "Oracle Pools",
-        "description": "Decentralized oracle pools provide reliable external data to smart contracts. Multiple data providers ensure accuracy and prevent manipulation.",
-        "details": {
-          "reliablePriceFeeds": {
-            "title": "Reliable Price Feeds",
-            "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices."
-          },
-          "universalCompatibility": {
-            "title": "Universal Compatibility",
-            "description": "Any smart contract can access oracle data without special integrations."
-          },
-          "fullyDecentralized": {
-            "title": "Fully Decentralized",
-            "description": "No central authority controls the data flow or oracle operations."
+        },
+        "buttons": {
+          "viewProposal": "View EIP-27 Proposal",
+          "joinDiscussion": "Join Discussion"
+        },
+        "faq": {
+          "0": {
+            "question": "How does adaptive emission work?",
+            "answer": "Adaptive emission allows the network to adjust economic parameters through miner voting. When proposals reach 90% miner support over 1024 epochs, changes are gradually implemented to maintain network stability."
+          }
+        },
+        "cta": {
+          "title": "Ready to Participate in Governance?",
+          "subtitle": "Join the community and help shape Ergo's economic future through adaptive governance.",
+          "buttons": {
+            "joinDiscussion": "Join Community",
+            "readMore": "Learn Governance"
           }
         }
       },
@@ -3551,24 +2933,6 @@
           "developerFriendly": {
             "title": "Developer Friendly",
             "description": "Simple APIs to add privacy features to any application."
-          }
-        }
-      },
-      "oraclePools": {
-        "title": "Oracle Pools",
-        "description": "Decentralized price feeds and data oracles built into the protocol. No single point of failure, no centralized operators - just reliable, composable data for DeFi.",
-        "details": {
-          "reliablePriceFeeds": {
-            "title": "Reliable Price Feeds",
-            "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices."
-          },
-          "universalCompatibility": {
-            "title": "Universal Compatibility",
-            "description": "Any smart contract can access oracle data without special integrations."
-          },
-          "fullyDecentralized": {
-            "title": "Fully Decentralized",
-            "description": "No central authority or single point of failure in the data pipeline."
           }
         }
       },
@@ -3607,7 +2971,6 @@
           "faq": "FAQ"
         },
         "keyMetrics": {
-          "title": "Key Metrics",
           "tokenCreation": {
             "name": "Token Creation",
             "value": "1 TX",
@@ -3754,29 +3117,7 @@
             "description": "Create in-game currencies, items, and character tokens"
           }
         },
-        "useCases": {
-          "title": "Use Cases",
-          "subtitle": "Real-world applications of native tokens",
-          "defiTokens": {
-            "title": "DeFi Tokens",
-            "description": "Create governance tokens, utility tokens, and reward tokens for DeFi protocols"
-          },
-          "nftCollections": {
-            "title": "NFT Collections",
-            "description": "Build unique digital art, collectibles, and gaming assets"
-          },
-          "stablecoins": {
-            "title": "Stablecoins",
-            "description": "Issue algorithmic or collateralized stablecoins with oracle integration"
-          },
-          "gamingAssets": {
-            "title": "Gaming Assets",
-            "description": "Create in-game currencies, items, and character tokens"
-          }
-        },
         "faq": {
-          "title": "Frequently Asked Questions",
-          "subtitle": "Common questions about native tokens and their implementation",
           "0": {
             "question": "How do native tokens differ from ERC-20 tokens?",
             "answer": "Native tokens on Ergo are first-class protocol assets that don't require smart contracts. They have protocol-level security guarantees and are more cost-effective to create and transfer compared to ERC-20 tokens which require contract deployment and gas fees."
@@ -3796,37 +3137,9 @@
           "4": {
             "question": "How do I create a stablecoin using native tokens?",
             "answer": "You can create stablecoins by combining native tokens with oracle data feeds. The AgeUSD stablecoin is an example of this approach, using oracle pools to maintain price stability."
-          }
-        },
-        "keyMetrics": {
-          "tokenCreation": {
-            "name": "Token Creation",
-            "value": "1 TX",
-            "description": "Single transaction creation"
           },
-          "creationCost": {
-            "name": "Creation Cost",
-            "value": "~$0.01",
-            "description": "Minimal fees in ERG"
-          },
-          "protocolSecurity": {
-            "name": "Protocol Security",
-            "value": "100%",
-            "description": "First-class assets"
-          },
-          "tokenTypes": {
-            "name": "Token Types",
-            "value": "∞",
-            "description": "Unlimited possibilities"
-          }
-        },
-        "whyNativeAssets": {
-          "title": "Why Native Assets?",
-          "subtitle": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens"
-        },
-        "buttons": {
-          "exploreNftEcosystem": "Explore NFT Ecosystem",
-          "tokenApiDocs": "Token API Docs"
+          "title": "Frequently Asked Questions",
+          "subtitle": "Common questions about native tokens and their implementation"
         },
         "cta": {
           "title": "Start Creating Native Assets",
@@ -3848,86 +3161,6 @@
           "gradualAdoption": {
             "title": "Gradual Adoption",
             "description": "Evolutionary, not revolutionary changes."
-          }
-        }
-      },
-      "adaptiveEmission": {
-        "title": "Adaptive Emission",
-        "subtitle": "Consensus-driven tuning of economic parameters",
-        "description": "Community input and miner voting enable flexible economic policy without hard forks.",
-        "lastUpdated": "Last updated",
-        "keyMetrics": {
-          "title": "Key Metrics",
-          "currentStatus": {
-            "name": "Current Status",
-            "value": "Active",
-            "description": "Community governance enabled"
-          }
-        },
-        "features": {
-          "title": "Key Features",
-          "subtitle": "Flexible economic policy through community consensus and miner voting",
-          "parameterTuning": {
-            "title": "Parameter Tuning",
-            "description": "Economic variables can be adjusted based on network conditions"
-          }
-        },
-        "buttons": {
-          "viewProposal": "View EIP-27 Proposal",
-          "joinDiscussion": "Join Discussion"
-        },
-        "faq": {
-          "0": {
-            "question": "How does adaptive emission work?",
-            "answer": "Adaptive emission allows the network to adjust economic parameters through miner voting. When proposals reach 90% miner support over 1024 epochs, changes are gradually implemented to maintain network stability."
-          }
-        },
-        "cta": {
-          "title": "Ready to Participate in Governance?",
-          "subtitle": "Join the community and help shape Ergo's economic future through adaptive governance.",
-          "buttons": {
-            "joinDiscussion": "Join Community",
-            "readMore": "Learn Governance"
-          }
-        }
-      },
-      "oraclePools": {
-        "title": "Oracle Pools",
-        "subtitle": "Decentralized data feeds for smart contracts",
-        "description": "Truly decentralized oracle pools providing reliable off-chain data access with built-in incentives.",
-        "lastUpdated": "Last updated",
-        "keyMetrics": {
-          "title": "Key Metrics",
-          "activePools": {
-            "name": "Active Pools",
-            "value": "15+",
-            "description": "Live oracle data feeds"
-          }
-        },
-        "features": {
-          "title": "Key Features",
-          "subtitle": "Reliable, permissionless off-chain data access with built-in incentives",
-          "decentralized": {
-            "title": "Truly Decentralized",
-            "description": "No single point of failure or centralized control"
-          }
-        },
-        "buttons": {
-          "exploreOracles": "Explore Oracle Pools",
-          "viewLivePools": "View Live Pools"
-        },
-        "faq": {
-          "0": {
-            "question": "How do oracle pools work?",
-            "answer": "Oracle pools aggregate data from multiple sources and provide it to smart contracts through a decentralized network of data providers with economic incentives."
-          }
-        },
-        "cta": {
-          "title": "Ready to Use Oracle Data?",
-          "subtitle": "Start building applications with reliable, decentralized data feeds.",
-          "buttons": {
-            "exploreOracles": "Explore Oracle Pools",
-            "viewLivePools": "View Live Pools"
           }
         }
       }
@@ -3980,178 +3213,423 @@
       "github": "Explore GitHub"
     },
     "nativeTokens": {
-      "what_are_native_tokens_on": "What are native tokens on Ergo?\",\n      answer: \"Native tokens are first-class assets on Ergo that can be created and traded directly at the protocol level without smart contracts. They have the same security guarantees as ERG itself.",
-      "how_much_does_it_cost": "How much does it cost to create a token on Ergo?\",\n      answer:",
-      "can_i_create_nfts_on_ergo_answer": "Can I create NFTs on Ergo?\",\n      answer:",
-      "do_i_need_to_code": "Do I need to code to create tokens?\",\n      answer: \"No, you can create tokens using simple UI tools or with just a few lines of code. The process is as simple as sending a transaction with token parameters.",
-      "are_native_tokens_compatible_with": "Are native tokens compatible with DeFi?\",\n      answer: \"Yes, native tokens have full DeFi compatibility and can be used in all Ergo applications and protocols without special integration requirements.",
-      "create_and_trade_tokens_and": "Create and trade tokens and NFTs directly at the protocol level",
-      "nfts_blockchain_assets_ergo_tokens": "NFTs', 'blockchain assets', 'ergo tokens', 'token creation', 'non-fungible tokens', 'protocol-level assets', 'token issuance', 'ergo NFTs', 'digital assets",
-      "native_tokens_nfts_on_ergo": "Native Tokens & NFTs on Ergo - Protocol-Level Assets',\n    description: 'Issue tokens and NFTs in one transaction. First-class assets with protocol security, no smart contracts required.',\n    url: 'https://ergoblockchain.org/technology/native-tokens',\n    siteName: 'Ergo Platform",
-      "ergo_native_tokens_nfts": "Ergo Native Tokens & NFTs",
-      "native_tokens_nfts_first_class": "Native Tokens & NFTs - First-Class Assets | Ergo Blockchain",
-      "techarticle_headline_native_tokens_nfts": "TechArticle',\n    headline: 'Native Tokens & NFTs: First-Class Assets on Ergo',\n    description: 'Comprehensive guide to creating and managing native tokens and NFTs on Ergo blockchain',\n    datePublished:",
-      "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
-      "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
-      "webpage_id_https_ergoblockchain_org": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology/native-tokens",
-      "howto_name_how_to_create": "HowTo',\n    name: 'How to Create Native Tokens on Ergo',\n    description: 'Step-by-step guide to creating tokens on Ergo blockchain",
-      "howtostep_name_define_token_parameters": "HowToStep',\n        name: 'Define Token Parameters',\n        text: 'Set token name, description, amount, and decimals",
-      "howtostep_name_create_transaction_text": "HowToStep',\n        name: 'Create Transaction',\n        text: 'Build a minting transaction with token parameters",
-      "howtostep_name_submit_to_network": "HowToStep',\n        name: 'Submit to Network',\n        text: 'Send the transaction to create your token instantly",
-      "native_tokens_nfts_on_ergo_protocol_level_assets": "Native Tokens & NFTs on Ergo - Protocol-Level Assets",
-      "issue_tokens_and_nfts_in": "Issue tokens and NFTs in one transaction. First-class assets with protocol security, no smart contracts required.",
-      "native_tokens_nfts_first_class_ergo_assets": "Native Tokens & NFTs - First-Class Ergo Assets",
-      "create_tokens_nfts_at_protocol": "Create tokens & NFTs at protocol level. One-click creation, ~$0.01 cost, 100% secure.",
-      "comprehensive_guide_to_creating_and": "Comprehensive guide to creating and managing native tokens and NFTs on Ergo blockchain",
-      "step_by_step_guide_to": "Step-by-step guide to creating tokens on Ergo blockchain",
-      "use_cases": "Use cases",
-      "fixed_or_variable_supply": "Fixed or variable supply",
-      "decimal_precision_control": "Decimal precision control",
-      "metadata_and_descriptions": "Metadata and descriptions",
-      "burn_and_mint_capabilities": "Burn and mint capabilities",
-      "oracle_price_feeds_integration": "Oracle price feeds integration",
-      "collateral_management": "Collateral management",
-      "redemption_mechanisms": "Redemption mechanisms",
-      "cross_game_compatibility": "Cross-game compatibility",
-      "conditional_transfers": "Conditional transfers",
-      "multi_signature_support": "Multi-signature support",
-      "one_click_creation_description_issue": "One-Click Creation\",\n    description: \"Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts",
-      "true_native_assets_description_first": "True Native Assets\",\n    description: \"First-class tokens with protocol-level security guarantees, not contract-based",
-      "defi_ready_description_native_integration": "DeFi Ready\",\n    description: \"Native integration with all Ergo applications and protocols",
-      "cost_effective_description_minimal_fees": "Cost Effective\",\n    description: \"Minimal fees for token creation and transfers - just simple, secure, native assets",
-      "rich_metadata_description_support_for": "Rich Metadata\",\n    description: \"Support for complex metadata including images, descriptions, and custom properties",
-      "universal_compatibility_description_any_smart": "Universal Compatibility\",\n    description: \"Any smart contract can access oracle data without special integrations",
-      "defi_tokens_description_create_governance": "DeFi Tokens\",\n    description: \"Create governance tokens, utility tokens, and reward tokens for DeFi protocols",
-      "nft_collections_description_build_unique": "NFT Collections\",\n    description: \"Build unique digital art, collectibles, and gaming assets",
-      "stablecoins_description_issue_algorithmic_or": "Stablecoins\",\n    description: \"Issue algorithmic or collateralized stablecoins with oracle integration",
-      "gaming_assets_description_create_in": "Gaming Assets\",\n    description: \"Create in-game currencies, items, and character tokens",
-      "what_s_the_cost_to_create_a_native_token_answer": "What's the cost to create a native token?\",\n      answer:",
-      "can_i_create_nfts_with": "Can I create NFTs with rich metadata?\",\n      answer: \"Yes, native tokens support complex metadata including images, descriptions, and custom properties. You can store metadata on-chain or reference external data through IPFS or other storage solutions.",
-      "how_do_i_create_a": "How do I create a stablecoin using native tokens?\",\n      answer: \"You can create stablecoins by combining native tokens with oracle data feeds. The AgeUSD stablecoin is an example of this approach, using oracle pools to maintain price stability.",
-      "technology_item_https_ergoblockchain_org": "Technology\",\n              item: \"https://ergoblockchain.org/technology",
-      "native_tokens_nfts_item_https": "Native Tokens & NFTs\",\n              item: \"https://ergoblockchain.org/technology/native-tokens",
-      "technology_href_technology": "Technology\", href: \"/technology",
-      "native_tokens_nfts_href_technology_native_tokens": "Native Tokens & NFTs\", href: \"/technology/native-tokens",
-      "on_this_page_classname": "On this page\" className=",
-      "token_creation_value": "Token Creation\",\n                              value:",
-      "single_transaction_creation": "Single transaction creation",
-      "creation_cost_value": "Creation Cost\",\n                              value:",
-      "minimal_fees_in_erg": "Minimal fees in ERG",
-      "protocol_security_value": "Protocol Security\",\n                              value:",
-      "token_types_value": "Token Types\",\n                              value:",
-      "unlimited_possibilities": "Unlimited possibilities",
-      "mytoken_val_tokendescription_my_awesome": "MyToken\"\nval tokenDescription = \"My awesome token on Ergo",
-      "on_this_page": "On this page",
-      "issue_tokens_stablecoins_or_nfts": "Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts",
-      "first_class_tokens_with_protocol": "First-class tokens with protocol-level security guarantees, not contract-based",
-      "native_integration_with_all_ergo": "Native integration with all Ergo applications and protocols",
-      "minimal_fees_for_token_creation": "Minimal fees for token creation and transfers - just simple, secure, native assets",
-      "support_for_complex_metadata_including": "Support for complex metadata including images, descriptions, and custom properties",
-      "universal_compatibility": "Universal Compatibility",
-      "any_smart_contract_can_access": "Any smart contract can access oracle data without special integrations",
-      "create_governance_tokens_utility_tokens": "Create governance tokens, utility tokens, and reward tokens for DeFi protocols",
-      "build_unique_digital_art_collectibles": "Build unique digital art, collectibles, and gaming assets",
-      "issue_algorithmic_or_collateralized_stablecoins": "Issue algorithmic or collateralized stablecoins with oracle integration",
-      "create_in_game_currencies_items": "Create in-game currencies, items, and character tokens",
-      "no_smart_contracts_needed_just": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
-      "explore_nft_ecosystem": "Explore NFT Ecosystem",
-      "why_native_assets": "Why Native Assets?",
-      "unlike_other_blockchains_that_require": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens",
-      "create_any_type_of_digital": "Create any type of digital asset with native protocol support",
-      "create_any_type_of_fungible": "Create any type of fungible token with customizable properties:",
-      "build_algorithmic_or_collateralized_stablecoins": "Build algorithmic or collateralized stablecoins:",
-      "create_unique_digital_assets_with_rich_metadata": "Create unique digital assets with rich metadata:",
-      "build_gaming_tokens_and_collectibles": "Build gaming tokens and collectibles:",
-      "create_tokens_with_both_fungible": "Create tokens with both fungible and non-fungible properties:",
-      "combine_native_tokens_with_smart_contracts": "Combine native tokens with smart contracts:",
-      "applications_that_benefit_from_native": "Applications that benefit from native token creation",
-      "simple_token_creation": "Simple Token Creation",
-      "create_tokens_with_just_a_few_lines_of_code": "Create tokens with just a few lines of code",
-      "no_smart_contract_deployment_no": "No smart contract deployment, no complex setup - just simple, native token creation.",
-      "a_thriving_ecosystem_of_tools": "A thriving ecosystem of tools and platforms for native tokens",
-      "frequently_asked_questions": "Frequently Asked Questions",
-      "common_questions_about_native_tokens": "Common questions about native tokens and their implementation",
-      "start_creating_native_assets": "Start Creating Native Assets",
-      "join_thousands_of_creators_who": "Join thousands of creators who have already issued tokens and NFTs on Ergo's native asset layer"
+      "title": "Native Tokens & NFTs",
+      "subtitle": "Create and trade tokens and NFTs directly at the protocol level",
+      "description": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
+      "lastUpdated": "Last updated",
+      "seo": {
+        "title": "Native Tokens & NFTs on Ergo | First-Class Digital Assets",
+        "description": "Create tokens and NFTs directly at the protocol level on Ergo. No smart contracts needed - just simple, secure, and cost-effective native assets with protocol-level security.",
+        "keywords": "Native tokens, NFTs, Ergo blockchain, token creation, digital assets, protocol-level tokens, cost-effective tokens, secure tokens"
+      },
+      "buttons": {
+        "exploreNFTs": "Explore NFT Ecosystem",
+        "tokenAPI": "Token API Docs",
+        "readDocumentation": "Read Documentation",
+        "learnAgeUSD": "Learn About AgeUSD"
+      },
+      "keyMetrics": {
+        "title": "Key Metrics",
+        "tokenCreation": {
+          "name": "Token Creation",
+          "value": "1 TX",
+          "description": "Single transaction creation"
+        },
+        "creationCost": {
+          "name": "Creation Cost",
+          "value": "~$0.01",
+          "description": "Minimal fees in ERG"
+        },
+        "protocolSecurity": {
+          "name": "Protocol Security",
+          "value": "100%",
+          "description": "First-class assets"
+        },
+        "tokenTypes": {
+          "name": "Token Types",
+          "value": "∞",
+          "description": "Unlimited possibilities"
+        }
+      },
+      "features": {
+        "title": "Why Native Assets?",
+        "subtitle": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens",
+        "oneClick": {
+          "title": "One-Click Creation",
+          "description": "Issue tokens, stablecoins, or NFTs in a single transaction without smart contracts"
+        },
+        "trueNative": {
+          "title": "True Native Assets",
+          "description": "First-class tokens with protocol-level security guarantees, not contract-based"
+        },
+        "defiReady": {
+          "title": "DeFi Ready",
+          "description": "Native integration with all Ergo applications and protocols"
+        },
+        "costEffective": {
+          "title": "Cost Effective",
+          "description": "Minimal fees for token creation and transfers - just simple, secure, native assets"
+        },
+        "richMetadata": {
+          "title": "Rich Metadata",
+          "description": "Support for complex metadata including images, descriptions, and custom properties"
+        },
+        "universalCompatibility": {
+          "title": "Universal Compatibility",
+          "description": "Any smart contract can access oracle data without special integrations"
+        }
+      },
+      "assetTypes": {
+        "title": "Asset Types",
+        "subtitle": "Create any type of digital asset with native protocol support",
+        "tabs": {
+          "tokens": "Fungible Tokens",
+          "nfts": "NFTs",
+          "hybrid": "Hybrid Assets"
+        },
+        "fungibleTokens": {
+          "standard": {
+            "title": "Standard Tokens",
+            "description": "Create any type of fungible token with customizable properties:",
+            "features": [
+              "Fixed or variable supply",
+              "Decimal precision control",
+              "Metadata and descriptions",
+              "Burn and mint capabilities"
+            ]
+          },
+          "stablecoins": {
+            "title": "Stablecoins",
+            "description": "Build algorithmic or collateralized stablecoins:",
+            "features": [
+              "Oracle price feeds integration",
+              "Collateral management",
+              "Redemption mechanisms",
+              "Governance tokens"
+            ]
+          }
+        },
+        "nfts": {
+          "artCollectibles": {
+            "title": "Art & Collectibles",
+            "description": "Create unique digital assets with rich metadata:",
+            "features": [
+              "IPFS image storage",
+              "Royalty mechanisms",
+              "Collection support",
+              "Custom attributes"
+            ]
+          },
+          "gamingAssets": {
+            "title": "Gaming Assets",
+            "description": "Build gaming tokens and collectibles:",
+            "features": [
+              "Character tokens",
+              "In-game items",
+              "Rarity systems",
+              "Cross-game compatibility"
+            ]
+          }
+        },
+        "hybrid": {
+          "semiFungible": {
+            "title": "Semi-Fungible Tokens",
+            "description": "Create tokens with both fungible and non-fungible properties:",
+            "features": [
+              "Batch NFTs",
+              "Fractional ownership",
+              "Dynamic metadata",
+              "Conditional transfers"
+            ]
+          },
+          "programmable": {
+            "title": "Programmable Assets",
+            "description": "Combine native tokens with smart contracts:",
+            "features": [
+              "Conditional logic",
+              "Time-based features",
+              "Multi-signature support",
+              "Oracle integration"
+            ]
+          }
+        }
+      },
+      "useCases": {
+        "title": "Use Cases",
+        "subtitle": "Applications that benefit from native token creation",
+        "defiTokens": {
+          "title": "DeFi Tokens",
+          "description": "Create governance tokens, utility tokens, and reward tokens for DeFi protocols"
+        },
+        "nftCollections": {
+          "title": "NFT Collections",
+          "description": "Build unique digital art, collectibles, and gaming assets"
+        },
+        "stablecoins": {
+          "title": "Stablecoins",
+          "description": "Issue algorithmic or collateralized stablecoins with oracle integration"
+        },
+        "gamingAssets": {
+          "title": "Gaming Assets",
+          "description": "Create in-game currencies, items, and character tokens"
+        }
+      },
+      "codeExample": {
+        "title": "Simple Token Creation",
+        "subtitle": "Create tokens with just a few lines of code",
+        "description": "No smart contract deployment, no complex setup - just simple, native token creation.",
+        "code": "// Token creation parameters\nval tokenName = \"MyToken\"\nval tokenDescription = \"My awesome token on Ergo\"\nval tokenDecimals = 2\nval tokenAmount = 1000000L\n\n// Create token in a single transaction\nval token = Minting.issueToken(\n  ergoClient = client,\n  tokenName = tokenName,\n  tokenDescription = tokenDescription,\n  tokenAmount = tokenAmount,\n  tokenDecimals = tokenDecimals,\n  mintingAddress = address,\n  txFee = Parameters.MinFee\n)\n\n// Token is now live on the blockchain!\nprintln(s\"Token ID: ${token.getId}\")\nprintln(s\"Token created in TX: ${token.creationTx}\")"
+      },
+      "ecosystem": {
+        "title": "Token Ecosystem",
+        "subtitle": "A thriving ecosystem of tools and platforms for native tokens",
+        "marketplaces": {
+          "title": "Marketplaces",
+          "items": [
+            "SkyHarbor - NFT marketplace",
+            "Spectrum - Token DEX",
+            "ErgoAuctionHouse - Auction platform"
+          ]
+        },
+        "creationTools": {
+          "title": "Creation Tools",
+          "items": [
+            "ErgoMixer - Privacy tokens",
+            "Ergo Token Minter - Simple UI",
+            "Blitz TCG - Gaming tokens"
+          ]
+        },
+        "infrastructure": {
+          "title": "Infrastructure",
+          "items": [
+            "Token API - REST endpoints",
+            "Explorer - Token tracking",
+            "Wallets - Native support"
+          ]
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "Common questions about native tokens and their implementation",
+        "items": [
+          {
+            "question": "How do native tokens differ from ERC-20 tokens?",
+            "answer": "Native tokens on Ergo are first-class protocol assets that don't require smart contracts. They have protocol-level security guarantees and are more cost-effective to create and transfer compared to ERC-20 tokens which require contract deployment and gas fees."
+          },
+          {
+            "question": "What's the cost to create a native token?",
+            "answer": "Creating a native token costs approximately $0.01 in ERG fees, which is significantly cheaper than deploying smart contracts on other blockchains. The cost is just the standard transaction fee."
+          },
+          {
+            "question": "Can I create NFTs with rich metadata?",
+            "answer": "Yes, native tokens support complex metadata including images, descriptions, and custom properties. You can store metadata on-chain or reference external data through IPFS or other storage solutions."
+          },
+          {
+            "question": "Are native tokens compatible with all Ergo applications?",
+            "answer": "Yes, native tokens are universally compatible with all Ergo applications, wallets, and protocols. They don't require special integrations since they're treated as first-class assets by the protocol."
+          },
+          {
+            "question": "How do I create a stablecoin using native tokens?",
+            "answer": "You can create stablecoins by combining native tokens with oracle data feeds. The AgeUSD stablecoin is an example of this approach, using oracle pools to maintain price stability."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Start Creating Native Assets",
+        "subtitle": "Join thousands of creators who have already issued tokens and NFTs on Ergo's native asset layer"
+      }
     },
     "storageRent": {
-      "revolutionary_economic_model_solving_blockchain": "Revolutionary economic model solving blockchain bloat forever. Learn how Storage Rent ensures sustainable blockchain size, perpetual miner rewards, and efficient resource usage.",
-      "how_ergo_prevents_blockchain_bloat": "How Ergo prevents blockchain bloat while ensuring perpetual network security through Storage Rent.",
-      "sustainable_economics_automatic_cleanup_perpetual": "Sustainable economics: automatic cleanup, perpetual miner rewards, efficient blockchain.",
-      "what_is_storage_rent_answer": "What is Storage Rent?\",\n      answer:",
-      "how_much_does_storage_rent_cost_answer": "How much does Storage Rent cost?\",\n      answer:",
-      "why_is_storage_rent_important": "Why is Storage Rent important?\",\n      answer: \"Storage Rent ensures blockchain sustainability by preventing unlimited growth, keeping the network lightweight, and providing perpetual security through miner rewards after emission ends.",
-      "techarticle_headline_storage_rent_sustainable": "TechArticle',\n    headline: 'Storage Rent: Sustainable Blockchain Economics',\n    description: 'How Storage Rent solves blockchain bloat and ensures long-term sustainability",
-      "organization_name_ergo_platform": "Organization', name: 'Ergo Platform",
-      "storage_rent_explained_sustainable_blockchain": "Storage Rent Explained | Sustainable Blockchain Economics on Ergo",
-      "storage_rent_the_solution_to": "Storage Rent | The Solution to Blockchain Sustainability",
-      "storage_rent_solving_blockchain_bloat_forever": "Storage Rent | Solving Blockchain Bloat Forever",
-      "how_storage_rent_solves_blockchain": "How Storage Rent solves blockchain bloat and ensures long-term sustainability",
-      "illustrative_see_docs_for_formula": "Illustrative; see docs for formula and current parameters.",
-      "what_is_storage_rent": "What is Storage Rent?",
-      "learn_more": "Learn More",
-      "what": "What",
-      "the_problem": "The Problem",
-      "illustrative_figure_see_docs_for": "Illustrative figure; see docs for current parameters.",
-      "how_much_rent_would_i_pay": "How much rent would I pay?",
-      "how_to_avoid_rent": "How to avoid rent",
-      "consolidate_dust_into_larger_boxes": "Consolidate dust into larger boxes",
-      "apps_plan_top_up_rotation": "Apps: plan top-up/rotation logic into contract design",
-      "for_developers": "For developers",
-      "avoid_spawning_many_tiny_boxes": "Avoid spawning many tiny boxes",
-      "track_box_age_off_chain_indexer": "Track box age off-chain (indexer)",
-      "how_storage_rent_works": "How Storage Rent Works",
-      "why_storage_rent_matters": "Why Storage Rent Matters",
-      "frequently_asked_questions": "Frequently Asked Questions",
-      "the_future_is_sustainable": "The Future is Sustainable",
-      "blockchain_bloat_description_traditional_blockchains": "Blockchain Bloat\",\n    description:\n      \"Traditional blockchains accumulate unused data over time, leading to inefficiency and higher costs.",
-      "network_stagnation_description_accumulated_dust": "Network Stagnation\",\n    description: \"Accumulated dust and inactive data slow down the network and increase storage requirements.",
-      "the_blockchain_stays_clean_compact_and_fast": "The blockchain stays clean, compact, and fast",
-      "miners_are_rewarded_for_maintaining": "Miners are rewarded for maintaining real, active data",
-      "predictable_transparent_storage_costs": "Predictable, transparent storage costs",
-      "automatic_state_cleanup_miner_incentives": "Automatic state cleanup & miner incentives (per protocol)",
-      "no_rent_accrual_period_description": "No rent accrual period\",\n    description: \"Your UTXO (box) is stored for free on the blockchain\",\n    color:",
-      "no_fees_full_access_to_your_funds": "No fees, full access to your funds",
-      "approximate_depends_on_protocol_parameters": "Approximate; depends on protocol parameters/min box value. See docs.",
-      "owner_returns_status_rent_top": "Owner Returns\",\n    status: \"Rent Top-Up\",\n    description: \"Owner can pay rent and regain full access to funds\",\n    color:",
-      "pay_accumulated_rent_to_restore_full_control": "Pay accumulated rent to restore full control",
-      "automatic_fee_recycling_description_if": "Automatic Fee Recycling\",\n    description: \"If coins are left untouched for years, a small fee is recycled back to miners.",
-      "predictable_costs_description_users_pay": "Predictable Costs\",\n                              description: \"Users pay a transparent fee for data storage",
-      "why_does_ergo_charge_storage": "Why does Ergo charge \\\"storage rent\\\"? Do I have to pay just to hold ERG?\",\n    answer: \"No, this isn",
-      "why_is_it_so_important": "Why is it so important to get rid of \\\"blockchain dust\\\"?\",\n    answer: \"It directly affects decentralization. Every forgotten transaction increases the size of the blockchain state, which full nodes must store and process. Without cleanup, running a full node would become too expensive over time, leaving control to big corporations. Storage rent is a long-term guarantee that Ergo stays accessible and truly decentralized.",
-      "where_does_the_collected_rent": "Where does the collected rent go? Does anyone profit from it?\",\n    answer: \"The fees aren",
-      "technology_item_https_ergoblockchain_org": "Technology\", item: \"https://ergoblockchain.org/technology",
-      "storage_rent_item_https_ergoblockchain": "Storage Rent\", item: \"https://ergoblockchain.org/technology/storage-rent",
-      "techarticle_headline_storage_rent_on": "TechArticle\",\n          headline: \"Storage Rent on Ergo\",\n          description: \"Predictable on-chain state budgeting for decades-long sustainability.\",\n          image: \"https://ergoblockchain.org/og/storage-rent.png",
-      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
-      "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
-      "howto_name_how_to_avoid": "HowTo\",\n          name: \"How to avoid storage rent\",\n          description: \"Actions to minimize rent accrual on Ergo.",
-      "move_funds_periodically_text": "Move funds periodically\", text:",
-      "consolidate_dust_text_merge_small": "Consolidate dust\", text: \"Merge small UTXOs into larger boxes.",
-      "technology_href_technology": "Technology\", href: \"/technology",
-      "storage_rent_href_technology_storage_rent": "Storage Rent\", href: \"/technology/storage-rent",
-      "prevent_bloat_description_keeps_the": "Prevent Bloat\",\n                              description: \"Keeps the blockchain lean and efficient",
-      "economic_sustainability_description_creates_long": "Economic Sustainability\",\n                              description: \"Creates long-term incentives for miners",
-      "traditional_blockchains_accumulate_unused_data": "Traditional blockchains accumulate unused data over time, leading to inefficiency and higher costs.",
-      "lost_private_keys_mean_funds": "Lost private keys mean funds are stuck forever, reducing the effective money supply.",
-      "accumulated_dust_and_inactive_data": "Accumulated dust and inactive data slow down the network and increase storage requirements.",
-      "your_utxo_box_is_stored_for_free_on_the_blockchain": "Your UTXO (box) is stored for free on the blockchain",
-      "owner_can_pay_rent_and_regain_full_access_to_funds": "Owner can pay rent and regain full access to funds",
-      "automatic_fee_recycling": "Automatic Fee Recycling",
-      "if_coins_are_left_untouched": "If coins are left untouched for years, a small fee is recycled back to miners.",
-      "if_you_lose_your_keys_your_funds_aren": "If you lose your keys, your funds aren",
-      "users_pay_a_transparent_fee": "Users pay a transparent fee for long-term data storage.",
-      "predictable_on_chain_state_budgeting": "Predictable on-chain state budgeting for decades-long sustainability.",
-      "actions_to_minimize_rent_accrual_on_ergo": "Actions to minimize rent accrual on Ergo.",
-      "keeps_the_blockchain_lean_and_efficient": "Keeps the blockchain lean and efficient",
-      "creates_long_term_incentives_for_miners": "Creates long-term incentives for miners",
-      "users_pay_a_transparent_fee_for_data_storage": "Users pay a transparent fee for data storage",
-      "ergo_s_storage_rent_system": "Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.",
-      "traditional_blockchains_face_critical_sustainability": "Traditional blockchains face critical sustainability challenges that threaten their long-term viability",
-      "revolutionary_storage_rent_mechanics_that": "Revolutionary storage rent mechanics that keep the blockchain healthy and sustainable",
-      "the_benefits_extend_far_beyond": "The benefits extend far beyond just cleaning up the blockchain",
-      "start_building_on_ergo": "Start Building on Ergo",
-      "technical_documentation": "Technical Documentation"
+      "title": "Storage Rent",
+      "subtitle": "What is Storage Rent?",
+      "description": "Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.",
+      "seo": {
+        "title": "Storage Rent on Ergo",
+        "description": "Predictable on-chain state budgeting for decades-long sustainability.",
+        "keywords": "Storage Rent, Ergo blockchain, blockchain sustainability, UTXO cleanup, network health, predictable costs"
+      },
+      "buttons": {
+        "learnMore": "Learn More",
+        "viewDetails": "View Details"
+      },
+      "navigation": {
+        "what": "What",
+        "how": "How",
+        "costs": "Costs",
+        "faq": "FAQ"
+      },
+      "corePrinciples": {
+        "title": "Core Principles",
+        "preventBloat": {
+          "name": "Prevent Bloat",
+          "description": "Keeps the blockchain lean and efficient"
+        },
+        "economicSustainability": {
+          "name": "Economic Sustainability",
+          "description": "Creates long-term incentives for miners"
+        },
+        "predictableCosts": {
+          "name": "Predictable Costs",
+          "description": "Users pay a transparent fee for data storage"
+        }
+      },
+      "problemSection": {
+        "title": "The Problem",
+        "description": "Traditional blockchains face critical sustainability challenges that threaten their long-term viability",
+        "exampleMetric": "Example metric",
+        "disclaimer": "Illustrative figure; see docs for current parameters."
+      },
+      "problems": {
+        "bloat": {
+          "title": "Blockchain Bloat",
+          "description": "Traditional blockchains accumulate unused data over time, leading to inefficiency and higher costs.",
+          "stats": "2TB+ wasted space"
+        },
+        "forgottenWallets": {
+          "title": "Forgotten Wallets",
+          "description": "Lost private keys mean funds are stuck forever, reducing the effective money supply.",
+          "stats": "4M+ lost coins"
+        },
+        "networkStagnation": {
+          "title": "Network Stagnation",
+          "description": "Accumulated dust and inactive data slow down the network and increase storage requirements.",
+          "stats": "50% slower sync"
+        }
+      },
+      "estimator": {
+        "title": "How much rent would I pay?",
+        "description": "Approximate estimator for educational purposes. Parameters may change — see docs.",
+        "boxAge": "Box age (years)",
+        "boxValue": "Box value (ERG)",
+        "estimatedRent": "Estimated rent",
+        "topUpNeeded": "Top-up needed",
+        "remainingValue": "Remaining value",
+        "disclaimer": "Illustrative; see docs for formula and current parameters."
+      },
+      "avoidRent": {
+        "title": "How to avoid rent",
+        "steps": {
+          "moveFunds": "Move funds periodically to reset the 4-year timer",
+          "consolidateDust": "Consolidate dust into larger boxes",
+          "planTopUps": "Apps: plan top-up/rotation logic into contract design"
+        }
+      },
+      "developer": {
+        "title": "For developers",
+        "tips": {
+          "avoidTinyBoxes": "Avoid spawning many tiny boxes",
+          "maintenancePath": "Provide a \"maintenance path\" for rent top-ups",
+          "trackBoxAge": "Track box age off-chain (indexer)"
+        },
+        "buttons": {
+          "designPatterns": "Design patterns",
+          "sdkSnippet": "SDK snippet"
+        }
+      },
+      "solutionSection": {
+        "title": "Ergo's Solution",
+        "description": "Revolutionary storage rent mechanics that keep the blockchain healthy and sustainable"
+      },
+      "solutions": {
+        "automaticRecycling": {
+          "title": "Automatic Fee Recycling",
+          "description": "If coins are left untouched for years, a small fee is recycled back to miners."
+        },
+        "noForgottenWallets": {
+          "title": "No Forgotten Wallets",
+          "description": "If you lose your keys, your funds aren't stuck forever in the system."
+        },
+        "predictableCosts": {
+          "title": "Predictable Costs",
+          "description": "Users pay a transparent fee for long-term data storage."
+        }
+      },
+      "timeline": {
+        "title": "How Storage Rent Works",
+        "description": "Follow the lifecycle of a UTXO through Ergo's storage rent system. Learn more about the model in the",
+        "eutxoLink": "eUTXO deep dive",
+        "noRent": {
+          "year": "Year 0–4",
+          "status": "No rent accrual period",
+          "description": "Your UTXO (box) is stored for free on the blockchain",
+          "details": "No fees, full access to your funds"
+        },
+        "rentBegins": {
+          "year": "Year 4+",
+          "status": "Storage Rent Begins",
+          "description": "Small rent fee may be deducted from box value (if applicable)",
+          "details": "Approximate; depends on protocol parameters/min box value. See docs."
+        },
+        "ownerReturns": {
+          "year": "Owner Returns",
+          "status": "Rent Top-Up",
+          "description": "Owner can pay rent and regain full access to funds",
+          "details": "Pay accumulated rent to restore full control"
+        },
+        "boxDepleted": {
+          "year": "Box Depleted",
+          "status": "Eligible for miner claim (per protocol rules)",
+          "description": "If rent isn't paid, remaining value goes to miners",
+          "details": "Funds return to active circulation"
+        }
+      },
+      "benefitsSection": {
+        "title": "Why Storage Rent Matters",
+        "description": "The benefits extend far beyond just cleaning up the blockchain"
+      },
+      "benefits": {
+        "cleanBlockchain": "The blockchain stays clean, compact, and fast",
+        "minerRewards": "Miners are rewarded for maintaining real, active data",
+        "networkHealth": "Network remains healthy — even decades from now",
+        "reduceLostFunds": "Reduces the share of permanently lost funds ('stuck' UTXOs)",
+        "predictableCosts": "Predictable, transparent storage costs",
+        "automaticCleanup": "Automatic state cleanup & miner incentives (per protocol)"
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "whyStorageRent": {
+          "question": "Why does Ergo charge \"storage rent\"? Do I have to pay just to hold ERG?",
+          "answer": "No, this isn't a holding tax—it's a way to keep the blockchain \"clean.\" Fees apply only to coins (UTXOs) left untouched for more than 4 years. Think of it like long-term storage: if you abandon a box and never return, a tiny fee is charged for the space you occupy. This keeps the network from getting clogged with forgotten data."
+        },
+        "longTermInvestor": {
+          "question": "Can I lose my funds if I'm a long-term investor (HODLer)?",
+          "answer": "Almost impossible. Any action—like sending your coins, even to yourself—resets the 4-year timer. The rent is so small it only affects very low-value UTXOs (\"dust\"). The system is designed to clean up lost change, not to penalize active users or investors."
+        },
+        "whyImportant": {
+          "question": "Why is it so important to get rid of \"blockchain dust\"?",
+          "answer": "It directly affects decentralization. Every forgotten transaction increases the size of the blockchain state, which full nodes must store and process. Without cleanup, running a full node would become too expensive over time, leaving control to big corporations. Storage rent is a long-term guarantee that Ergo stays accessible and truly decentralized."
+        },
+        "whereRentGoes": {
+          "question": "Where does the collected rent go? Does anyone profit from it?",
+          "answer": "The fees aren't kept by a company or burned—they're paid out to miners. This gives miners a direct incentive to help clean up the blockchain state, which aligns perfectly with the community's long-term interests. It's a self-sustaining economic model that keeps the blockchain healthy and resilient."
+        }
+      },
+      "cta": {
+        "title": "The Future is Sustainable",
+        "description": "Storage Rent keeps Ergo efficient, fair, and ready for the decades ahead. No bloat, no dead coins, no stale data — just a healthy, sustainable blockchain economy.",
+        "buttons": {
+          "startBuilding": "Start Building on Ergo",
+          "technicalDocs": "Technical Documentation"
+        }
+      },
+      "howTo": {
+        "title": "How to avoid storage rent",
+        "description": "Actions to minimize rent accrual on Ergo.",
+        "steps": {
+          "moveFunds": {
+            "title": "Move funds periodically",
+            "description": "Any spend resets the 4‑year timer."
+          },
+          "consolidateDust": {
+            "title": "Consolidate dust",
+            "description": "Merge small UTXOs into larger boxes."
+          },
+          "planTopUps": {
+            "title": "Plan top‑ups in apps",
+            "description": "Add maintenance/top‑up paths for contract boxes."
+          }
+        }
+      }
     },
     "eutxo": {
       "title": "eUTXO Model",
@@ -4177,7 +3655,6 @@
         }
       },
       "faq": {
-        "title": "Frequently Asked Questions",
         "0": {
           "question": "What is eUTXO?",
           "answer": "The Extended Unspent Transaction Output (eUTXO) model is an evolution of Bitcoin's UTXO model, enhanced with smart contract capabilities while maintaining the security and simplicity of the original design."
@@ -4193,7 +3670,8 @@
         "3": {
           "question": "How does eUTXO handle shared state?",
           "answer": "Shared state is managed through 'shared boxes' that multiple transactions can reference. Advanced dApps use techniques like batching, state splitting, or stateless contracts."
-        }
+        },
+        "title": "Frequently Asked Questions"
       },
       "learnMore": {
         "title": "Learn More About eUTXO",
@@ -4224,183 +3702,214 @@
     "nipopows": {
       "title": "NIPoPoWs",
       "subtitle": "Non-Interactive Proofs of Proof-of-Work",
-      "description": "Lightweight blockchain verification",
-      "features": {
-        "0": {
+      "description": "Succinct proofs of chain work for trust-minimized verification",
+      "seo": {
+        "title": "NIPoPoWs - Non-Interactive Proofs of Proof-of-Work | Ergo",
+        "description": "Learn about NIPoPoWs on Ergo - compact cryptographic proofs enabling light clients, cross-chain bridges, and mobile verification without full blockchain sync.",
+        "keywords": "NIPoPoWs, Non-Interactive Proofs, Proof-of-Work, light clients, cross-chain, mobile verification, succinct proofs, Ergo blockchain"
+      },
+      "features": [
+        {
           "title": "Interoperability",
           "description": "Enables SPV/NIPoPoW-style protocols and trust-minimized cross-chain interactions."
         },
-        "1": {
+        {
           "title": "Light Clients",
           "description": "Secure verification on mobile or web without downloading the full blockchain."
         },
-        "2": {
+        {
           "title": "Fast Verification",
           "description": "Verify chain work in seconds using compact proofs instead of full syncs."
         },
-        "3": {
+        {
           "title": "Trustless",
           "description": "No trusted relays or validators; verification follows PoW assumptions."
         }
-      },
+      ],
       "useCases": [
         {
           "title": "Cross-Chain Protocols",
-          "description": "Trust-minimized bridges and SPV-style interoperability.",
+          "description": "Trust-minimized bridges and SPV-style interoperability between blockchains.",
           "example": "Rosen Bridge"
+        },
+        {
+          "title": "Mobile Wallets",
+          "description": "Light wallets that prove chain work with succinct proofs for instant sync.",
+          "example": "Ergo Mobile Wallet"
+        },
+        {
+          "title": "Oracle Systems",
+          "description": "Efficient verification of external chain data for smart contracts.",
+          "example": "Oracle Pools"
+        },
+        {
+          "title": "Sidechains",
+          "description": "Sidechains can verify Layer 1 succinctly for security and liveness guarantees.",
+          "example": "Research Implementation"
+        },
+        {
+          "title": "DeFi Protocols",
+          "description": "Fast verification for cross-chain DeFi without waiting for full synchronization.",
+          "example": "Cross-Chain DEX"
+        },
+        {
+          "title": "Payment Verification",
+          "description": "Instant payment confirmation for merchants without running full nodes.",
+          "example": "Point-of-Sale Systems"
         }
       ]
     },
     "subblocks": {
       "title": "Subblocks",
-      "subtitle": "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations without sacrificing decentralization",
+      "subtitle": "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations",
+      "description": "Subblocks enable near-instant transaction finality without sacrificing decentralization or security. Experience blockchain speed that matches traditional payment systems.",
+      "lastUpdated": "Last updated",
       "seo": {
-        "title": "Subblocks - Revolutionary Layer 1 Scaling | Ergo Blockchain",
-        "description": "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations without sacrificing decentralization. Learn how subblocks enable 10x throughput increase with full backward compatibility.",
-        "keywords": "subblocks, layer 1 scaling, blockchain scalability, instant finality, ergo technology, sub-second confirmations, parallel processing, blockchain throughput, decentralized scaling, ergo subblocks"
+        "title": "Subblocks Technology | Sub-Second Confirmations on Ergo",
+        "description": "Learn about Subblocks on Ergo - revolutionary Layer 1 scaling providing sub-second transaction confirmations while maintaining full blockchain security.",
+        "keywords": "Subblocks, Layer 1 scaling, sub-second confirmations, Ergo blockchain, fast transactions, parallel processing"
       },
-      "features": {
-        "0": {
-          "title": "Sub-Second Finality",
-          "description": "Transaction confirmations in under 1 second while maintaining full security"
+      "buttons": {
+        "learnMore": "Learn More",
+        "technicalDetails": "Technical Details"
+      },
+      "navigation": {
+        "keyFeatures": "Key features",
+        "technicalDetails": "Technical details",
+        "useCases": "Use cases",
+        "faq": "FAQ"
+      },
+      "keyMetrics": {
+        "title": "Key Metrics",
+        "confirmationTime": {
+          "name": "Confirmation Time",
+          "value": "< 1 second",
+          "description": "Sub-second transaction finality"
         },
-        "1": {
-          "title": "Backward Compatible",
-          "description": "No hard forks required - works with existing infrastructure"
+        "throughputIncrease": {
+          "name": "Throughput Increase",
+          "value": "10x",
+          "description": "Compared to main chain"
         },
-        "2": {
-          "title": "Parallel Processing",
-          "description": "Multiple subblocks can be validated in parallel for increased throughput"
+        "securityModel": {
+          "name": "Security Model",
+          "value": "Layer 1",
+          "description": "Same as main blocks"
         },
-        "3": {
-          "title": "Full Security",
-          "description": "Same security guarantees as main blocks with adjusted difficulty"
+        "compatibility": {
+          "name": "Compatibility",
+          "value": "100%",
+          "description": "Backward compatible"
+        }
+      },
+      "featuresSection": {
+        "title": "Key Features",
+        "description": "Subblocks combine the best of both worlds: the security of Layer 1 and the speed of modern payment systems"
+      },
+      "features": [
+        {
+          "title": "Sub-Second Confirmations",
+          "description": "Near-instant transaction finality for improved user experience without sacrificing decentralization"
         },
-        "4": {
+        {
+          "title": "Layer 1 Security",
+          "description": "Full blockchain security without trusted intermediaries or bridges"
+        },
+        {
           "title": "Seamless Integration",
           "description": "Works with existing infrastructure - no bridges or sidechains needed"
         },
-        "5": {
+        {
+          "title": "Parallel Processing",
+          "description": "Multiple subblocks can be validated in parallel for increased throughput"
+        },
+        {
+          "title": "Adaptive Difficulty",
+          "description": "Dynamic adjustment ensures consistent block times even with varying hash power"
+        },
+        {
           "title": "Miner Incentives",
           "description": "Additional rewards for subblock miners while maintaining main chain security"
         }
+      ],
+      "technicalSection": {
+        "title": "Technical Details",
+        "description": "Understanding the architecture and implementation of subblocks"
       },
-      "technicalDetailsTitle": "Technical Architecture",
-      "technicalDetails": {
-        "0": {
-          "title": "Block Structure",
+      "technicalDetails": [
+        {
+          "title": "Architecture",
           "content": "Subblocks are intermediate blocks between main blocks that provide faster confirmations. They maintain the same security model as main blocks but with adjusted difficulty targets."
         },
-        "1": {
+        {
           "title": "Consensus Mechanism",
           "content": "Uses a modified version of Autolykos that allows for variable difficulty targets. Subblocks contribute to the overall chain weight while maintaining compatibility with existing infrastructure."
         },
-        "2": {
+        {
           "title": "Transaction Ordering",
           "content": "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness."
         },
-        "3": {
+        {
           "title": "State Management",
           "content": "Subblocks update the UTXO set incrementally, allowing for efficient state transitions without full block validation overhead."
         }
+      ],
+      "useCasesSection": {
+        "title": "Use Cases",
+        "description": "Applications that benefit from sub-second transaction confirmations"
       },
-      "useCasesTitle": "Use Cases",
-      "useCases": {
-        "0": {
+      "useCases": [
+        {
           "title": "DeFi Applications",
           "description": "Enable high-frequency trading and instant swaps with sub-second finality"
         },
-        "1": {
+        {
           "title": "Payment Systems",
           "description": "Point-of-sale transactions with immediate confirmation"
         },
-        "2": {
+        {
           "title": "Gaming",
           "description": "Real-time game state updates without waiting for block confirmations"
         },
-        "3": {
+        {
           "title": "Social Applications",
           "description": "Instant messaging and social interactions on-chain"
         }
+      ],
+      "faqSection": {
+        "title": "Frequently Asked Questions",
+        "description": "Common questions about subblocks and their implementation"
       },
-      "faqTitle": "Frequently Asked Questions",
-      "faq": {
-        "0": {
+      "faq": [
+        {
           "question": "What are subblocks?",
           "answer": "Subblocks are intermediate blocks between main blocks that provide faster confirmations while maintaining the same security model. They enable sub-second transaction finality without sacrificing decentralization."
         },
-        "1": {
+        {
           "question": "How fast are subblock confirmations?",
           "answer": "Subblocks provide confirmations in approximately 1 second, compared to the 2-minute main block time, enabling near-instant transaction finality for improved user experience."
         },
-        "2": {
+        {
           "question": "Do subblocks require a hard fork?",
           "answer": "No, subblocks are designed to be backward compatible. Existing infrastructure continues to work while new features are gradually adopted."
         },
-        "3": {
+        {
           "question": "How do subblocks improve scalability?",
           "answer": "Subblocks enable 10x throughput increase through parallel processing and more frequent block production while maintaining Layer 1 security guarantees."
+        },
+        {
+          "question": "Are subblocks secure?",
+          "answer": "Yes, subblocks maintain the same security model as main blocks with adjusted difficulty targets. They contribute to overall chain weight and are protected by the same PoW consensus."
         }
-      },
-      "ctaTitle": "Ready to Build with Subblocks?",
-      "ctaButtons": {
-        "readGuide": "Technical Guide",
-        "viewCode": "View on GitHub"
-      },
-      "how_fast_are_subblock_confirmations_answer": "How fast are subblock confirmations?\",\n      answer:",
-      "do_subblocks_require_a_hard": "Do subblocks require a hard fork?\",\n      answer: \"No, subblocks are designed to be backward compatible. Existing infrastructure continues to work while new features are gradually adopted.",
-      "how_do_subblocks_improve_scalability_answer": "How do subblocks improve scalability?\",\n      answer:",
-      "revolutionary_scaling_without_compromising_security": "Revolutionary scaling without compromising security. Near-instant finality with full blockchain guarantees.",
-      "ergo_subblocks_technology": "Ergo Subblocks Technology",
-      "techarticle_headline": "TechArticle',\n    headline:",
-      "technical_deep_dive_into_ergo": "Technical deep dive into Ergo\\",
-      "organization_name_ergo_platform": "Organization',\n      name: 'Ergo Platform",
-      "imageobject_url_https_ergoblockchain_org_logo_png": "ImageObject',\n        url: 'https://ergoblockchain.org/logo.png",
-      "webpage_id_https_ergoblockchain_org": "WebPage',\n      '@id': 'https://ergoblockchain.org/technology/subblocks",
-      "subblocks_technology_summary": "Subblocks Technology',\n    summary:",
-      "subblocks_revolutionary_layer_1_scaling": "Subblocks - Revolutionary Layer 1 Scaling",
-      "subblocks_sub_second_confirmations_on_layer_1": "Subblocks - Sub-Second Confirmations on Layer 1",
-      "use_cases": "Use cases",
-      "full_blockchain_security_without_trusted": "Full blockchain security without trusted intermediaries or bridges",
-      "seamless_integration_description_works_with": "Seamless Integration\",\n    description: \"Works with existing infrastructure - no bridges or sidechains needed",
-      "parallel_processing_description_multiple_subblocks": "Parallel Processing\",\n    description: \"Multiple subblocks can be validated in parallel for increased throughput",
-      "miner_incentives_description_additional_rewards": "Miner Incentives\",\n    description: \"Additional rewards for subblock miners while maintaining main chain security",
-      "transaction_ordering_content_transactions_in": "Transaction Ordering\",\n    content: \"Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness.",
-      "state_management_content_subblocks_update": "State Management\",\n    content: \"Subblocks update the UTXO set incrementally, allowing for efficient state transitions without full block validation overhead.",
-      "defi_applications_description_enable_high": "DeFi Applications\",\n    description: \"Enable high-frequency trading and instant swaps with sub-second finality",
-      "payment_systems_description_point_of": "Payment Systems\",\n    description: \"Point-of-sale transactions with immediate confirmation",
-      "gaming_description_real_time_game": "Gaming\",\n    description: \"Real-time game state updates without waiting for block confirmations",
-      "social_applications_description_instant_messaging": "Social Applications\",\n    description: \"Instant messaging and social interactions on-chain",
-      "technology_item_https_ergoblockchain_org": "Technology\",\n              item: \"https://ergoblockchain.org/technology",
-      "subblocks_item_https_ergoblockchain_org": "Subblocks\",\n              item: \"https://ergoblockchain.org/technology/subblocks",
-      "technology_href_technology": "Technology\", href: \"/technology",
-      "subblocks_href_technology_subblocks": "Subblocks\", href: \"/technology/subblocks",
-      "on_this_page_classname": "On this page\" className=",
-      "confirmation_time_value": "Confirmation Time\",\n                              value:",
-      "sub_second_transaction_finality": "Sub-second transaction finality",
-      "throughput_increase_value": "Throughput Increase\",\n                              value:",
-      "compared_to_main_chain": "Compared to main chain",
-      "security_model_value": "Security Model\",\n                              value:",
-      "same_as_main_blocks": "Same as main blocks",
-      "compatibility_value": "Compatibility\",\n                              value:",
-      "on_this_page": "On this page",
-      "sub_second_confirmations": "Sub-Second Confirmations",
-      "works_with_existing_infrastructure_no": "Works with existing infrastructure - no bridges or sidechains needed",
-      "multiple_subblocks_can_be_validated": "Multiple subblocks can be validated in parallel for increased throughput",
-      "dynamic_adjustment_ensures_consistent_block": "Dynamic adjustment ensures consistent block times even with varying hash power",
-      "additional_rewards_for_subblock_miners": "Additional rewards for subblock miners while maintaining main chain security",
-      "enable_high_frequency_trading_and": "Enable high-frequency trading and instant swaps with sub-second finality",
-      "point_of_sale_transactions_with": "Point-of-sale transactions with immediate confirmation",
-      "real_time_game_state_updates": "Real-time game state updates without waiting for block confirmations",
-      "instant_messaging_and_social_interactions_on_chain": "Instant messaging and social interactions on-chain",
-      "understanding_the_architecture_and_implementation": "Understanding the architecture and implementation of subblocks",
-      "applications_that_benefit_from_sub": "Applications that benefit from sub-second transaction confirmations",
-      "frequently_asked_questions": "Frequently Asked Questions",
-      "common_questions_about_subblocks_and": "Common questions about subblocks and their implementation",
-      "ready_to_experience_sub_second_confirmations": "Ready to Experience Sub-Second Confirmations?",
-      "join_the_future_of_blockchain": "Join the future of blockchain technology with subblocks - where speed meets security",
-      "read_technical_details": "Read Technical Details",
-      "explore_other_technologies": "Explore Other Technologies"
+      ],
+      "cta": {
+        "title": "Ready to Experience Sub-Second Confirmations?",
+        "description": "Join the future of blockchain technology with subblocks - where speed meets security",
+        "buttons": {
+          "readTechnicalDetails": "Read Technical Details",
+          "exploreOtherTechnologies": "Explore Other Technologies"
+        }
+      }
     },
     "eutxoModel": {
       "title": "eUTXO Model",
@@ -4593,7 +4102,7 @@
         }
       ]
     },
-    "ergoscript": {
+    "ergoscriptOld": {
       "what_is_ergoscript_answer_ergoscript": "What is ErgoScript?\",\n      answer: \"ErgoScript is Ergo's smart contract language based on Sigma protocols. It enables powerful, flexible, and secure smart contracts while maintaining the benefits of the UTXO model.",
       "is_ergoscript_similar_to_other": "Is ErgoScript similar to other smart contract languages?\",\n      answer: \"ErgoScript is unique, combining functional programming with cryptographic protocols. It's more secure than Solidity, preventing reentrancy attacks by design.",
       "how_do_i_learn_ergoscript": "How do I learn ErgoScript?\",\n      answer: \"Start with the official tutorials, use the ErgoScript playground for practice, and reference the documentation. Basic Scala knowledge helps but isn't required.",
@@ -4842,62 +4351,206 @@
       ]
     },
     "securePow": {
-      "memory_hard_pow_asic_resistant": "Memory-hard PoW, ASIC-resistant (not ASIC-proof), GPU-friendly.",
-      "what_is_autolykos_answer": "What is Autolykos?\",\n      answer:",
-      "how_energy_efficient_is_autolykos_answer": "How energy efficient is Autolykos?\",\n      answer:",
-      "techarticle_headline": "TechArticle\",\n          headline:",
-      "technical_overview_of_ergo_s": "Technical overview of Ergo\\'s memory-hard PoW algorithm",
-      "organization_name_ergo_platform": "Organization', name: 'Ergo Platform",
-      "autolykos_mining_algorithm_asic_resistant": "Autolykos Mining Algorithm | ASIC-Resistant GPU Mining on Ergo",
-      "autolykos_v2_secure_proof_of_work": "Autolykos v2 — Secure Proof-of-Work",
-      "technical_overview_of_ergo": "Technical overview of Ergo\\",
-      "how_energy_efficient_is_autolykos": "How energy efficient is Autolykos?\",\n      answer: \"Autolykos is more energy-efficient than Bitcoin",
-      "memory_hard_algorithm": "Memory-hard algorithm",
-      "asic_resistant_design": "ASIC-resistant design",
-      "memory_bandwidth_bound": "Memory bandwidth bound",
-      "blunts_asic_advantages": "Blunts ASIC advantages",
-      "encourages_decentralization": "Encourages decentralization",
-      "memory_bandwidth_bottleneck": "Memory bandwidth bottleneck:",
-      "broader_participation": "Broader participation:",
-      "distribution_of_mining_power_across": "Distribution of mining power across the network (weekly refresh)",
-      "small_pools": "Small Pools",
-      "quick_start_mining_ergo": "Quick Start: Mining Ergo",
-      "adaptive_emission_governance": "Adaptive Emission & Governance",
-      "asic_resistant_description_asic_resistant": "ASIC-Resistant\",\n    description:\n      \"ASIC-resistant (not ASIC-proof): specialized-hardware edge is limited; commodity GPUs remain competitive.\",\n    color:",
-      "fair_launch_description_no_premine": "Fair Launch\",\n    description: \"No premine, no ICO, no VC allocation.\",\n    color:",
-      "network_hashrate_value": "Network Hashrate\", value:",
-      "active_miners_value": "Active Miners\", value:",
-      "decentralization_by_design_a_wide": "Decentralization by design: a wide GPU set stays competitive.\",",
-      "battle_tested_pow_with_an": "Battle-tested PoW with an ASIC-resistant twist.\",\n  \"Open to all participants.\",\n  \"Competitive on commodity GPUs.\",\n  \"Sustainable long-term economics.",
-      "see_the_mining_guide_for": "See the Mining Guide for current tooling and setup steps. It covers supported miners, configuration basics, and troubleshooting.",
-      "pool_or_solo_mining_answer": "Pool or solo mining?\",\n      answer:\n        \"Both are possible. Pools smooth rewards; solo depends on luck and has higher variance. Choose based on your risk tolerance and expected uptime.",
-      "typical_hashrate_watt_ranges_answer": "Typical hashrate/watt ranges?\",\n      answer:\n        \"They vary by GPU model, drivers, and settings. Start with stock settings, ensure stability and thermals, and consult community resources for optimization.",
-      "technology_item_https_ergoblockchain_org": "Technology\", item: \"https://ergoblockchain.org/technology",
-      "secure_pow_item_https_ergoblockchain": "Secure PoW\", item: \"https://ergoblockchain.org/technology/secure-pow",
-      "organization_name_ergoblockchain_org_url": "Organization\",\n            name: \"ergoblockchain.org\",\n            url: \"https://ergoblockchain.org",
-      "imageobject_url_https_ergoblockchain_org": "ImageObject\", url: \"https://ergoblockchain.org/favicon.ico",
-      "howto_name_start_mining_ergo": "HowTo\",\n          name: \"Start Mining Ergo\",\n          description: \"Quick steps to begin mining Ergo with a GPU.\",\n          totalTime:",
-      "monetaryamount_currency_usd_value": "MonetaryAmount\", currency: \"USD\", value:",
-      "howtotool_name_gpu_enabled_computer": "HowToTool\", name: \"GPU-enabled computer",
-      "howtosupply_name_pool_url_optional": "HowToSupply\", name: \"Pool URL (optional)",
-      "pick_miner_software_text": "Pick miner software\",\n              text:",
-      "choose_a_pool_or_go": "Choose a pool or go solo\",\n              text: \"Pools smooth rewards; solo mining has higher variance. Configure according to your preference.",
-      "test_stability_thermals_text_start": "Test stability & thermals\",\n              text: \"Start at stock settings, monitor temperatures, and avoid aggressive memory overclocks on day one.",
-      "technology_href_technology": "Technology\", href: \"/technology",
-      "secure_pow_href_technology_secure_pow": "Secure PoW\", href: \"/technology/secure-pow",
-      "don_t_start_with_aggressive": "Don't start with aggressive memory overclocks.\", \"Monitor VRAM temperatures and power limits.\",",
-      "copy_sample_command_title_copy": "Copy sample command\"\n                        title=\"Copy",
-      "asic_resistant_not_asic_proof": "ASIC-resistant (not ASIC-proof): specialized-hardware edge is limited; commodity GPUs remain competitive.",
-      "no_premine_no_ico_no_vc_allocation": "No premine, no ICO, no VC allocation.",
-      "ergo_uses_autolykos_v2_a": "Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible.",
-      "quick_steps_to_begin_mining_ergo_with_a_gpu": "Quick steps to begin mining Ergo with a GPU.",
-      "live_network_statistics": "Live Network Statistics",
-      "why_proof_of_work": "Why Proof-of-Work?",
-      "autolykos_is_ergo_s_unique": "Autolykos is Ergo's unique, ASIC-resistant mining algorithm designed to maintain network decentralization and security.",
-      "learn_more_about_the": "Learn more about the",
-      "gpu_accessibility_raises_the_bar": "GPU accessibility raises the bar for renting/buying majority hashpower.",
-      "mining_decentralization": "Mining Decentralization",
-      "frequently_asked_questions": "Frequently Asked Questions"
+      "title": "Autolykos v2 — Secure, Memory-Hard Proof-of-Work",
+      "seo": {
+        "title": "Autolykos v2 — Secure, Memory-Hard Proof-of-Work",
+        "description": "Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible.",
+        "keywords": "Autolykos, ASIC-resistant, Proof-of-Work, PoW mining, GPU mining, decentralized mining, energy efficient, blockchain consensus, Ergo mining"
+      },
+      "description": {
+        "intro": "Ergo is committed to fair, transparent, and sustainable decentralization. That's why we use Proof-of-Work (PoW), but with a modern twist: Autolykos v2.",
+        "main": "Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible."
+      },
+      "buttons": {
+        "startMining": "Start Mining",
+        "readWhitepaper": "Read Whitepaper"
+      },
+      "networkStats": {
+        "title": "Live Network Statistics",
+        "note": "Example metrics. Updated: 2025-08-10 · Source: explorer · 24h avg",
+        "hashrate": {
+          "label": "Network Hashrate",
+          "value": "15.2 TH/s",
+          "change": "+5.2%"
+        },
+        "miners": {
+          "label": "Active Miners",
+          "value": "12,847",
+          "change": "+2.1%"
+        },
+        "blockTime": {
+          "label": "Block Time",
+          "value": "2 min",
+          "change": "Stable"
+        },
+        "difficulty": {
+          "label": "Difficulty",
+          "value": "1.2P",
+          "change": "+1.8%"
+        }
+      },
+      "whyPoW": {
+        "title": "Why Proof-of-Work?"
+      },
+      "features": {
+        "asicResistant": {
+          "title": "ASIC-Resistant",
+          "description": "ASIC-resistant (not ASIC-proof): specialized-hardware edge is limited; commodity GPUs remain competitive."
+        },
+        "energyEfficient": {
+          "title": "Energy Efficient",
+          "description": "Memory-hardness dampens the hash-per-watt arms race and extends GPU lifecycles, reducing e-waste."
+        },
+        "fairLaunch": {
+          "title": "Fair Launch",
+          "description": "No premine, no ICO, no VC allocation."
+        }
+      },
+      "whatIsAutolykos": {
+        "title": "What is Autolykos v2?",
+        "description": "Autolykos is Ergo's unique, ASIC-resistant mining algorithm designed to maintain network decentralization and security.",
+        "learnMore": "Learn more about the",
+        "eutxoLink": "eUTXO model",
+        "and": "and how",
+        "storageRentLink": "Storage Rent",
+        "sustainableEconomics": "supports sustainable network economics"
+      },
+      "algorithm": {
+        "features": {
+          "memoryHard": "Memory-hard algorithm",
+          "asicResistant": "ASIC-resistant design",
+          "gpuFriendly": "GPU-friendly mining"
+        },
+        "benefits": {
+          "memoryBandwidth": "Memory bandwidth bound",
+          "bluntsAsic": "Blunts ASIC advantages",
+          "decentralization": "Encourages decentralization"
+        }
+      },
+      "securityBenefits": {
+        "title": "Security Benefits"
+      },
+      "benefits": {
+        "decentralization": "Decentralization by design: a wide GPU set stays competitive.",
+        "captureResistance": "Higher capture cost: renting/buying 51% hash is harder.",
+        "battleTested": "Battle-tested PoW with an ASIC-resistant twist.",
+        "openParticipation": "Open to all participants.",
+        "gpuCompetitive": "Competitive on commodity GPUs.",
+        "sustainableEconomics": "Sustainable long-term economics."
+      },
+      "threatModel": {
+        "title": "Threat Model",
+        "memoryBottleneck": {
+          "title": "Memory bandwidth bottleneck",
+          "description": "Limits single-vendor ASIC dominance by making memory access the primary constraint."
+        },
+        "broaderParticipation": {
+          "title": "Broader participation",
+          "description": "GPU accessibility raises the bar for renting/buying majority hashpower."
+        }
+      },
+      "miningDecentralization": {
+        "title": "Mining Decentralization",
+        "description": "Distribution of mining power across the network (weekly refresh)",
+        "topPools": "Top 5 Pools",
+        "soloMiners": "Solo Miners",
+        "smallPools": "Small Pools",
+        "healthyNote": "Healthy distribution ensures no single entity can control the network. Top-5 < 50% — healthy concentration."
+      },
+      "quickStart": {
+        "title": "Quick Start: Mining Ergo",
+        "description": "Five steps to begin — see the full guide for details.",
+        "steps": {
+          "installWallet": "Install and secure an Ergo wallet.",
+          "chooseMiner": "Pick supported miner software for Autolykos v2.",
+          "choosePool": "Choose a pool (or solo) and note the connection URL.",
+          "launchMiner": "Launch with your address and pool URL if applicable.",
+          "testStability": "Test stability and thermals; avoid aggressive memory OC on day one."
+        },
+        "pitfallsTitle": "Common pitfalls",
+        "pitfalls": {
+          "memoryOverclock": "Don't start with aggressive memory overclocks.",
+          "monitorTemperatures": "Monitor VRAM temperatures and power limits.",
+          "avoidLaptops": "Avoid running laptops 24/7 for mining."
+        },
+        "sampleCommand": "Sample command",
+        "copy": "Copy",
+        "copied": "Copied",
+        "openGuide": "Open Mining Guide"
+      },
+      "exampleCommand": "./miner --algo autolykos2 --pool pool_url --wallet your_ergo_address --worker rig_name",
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "whatIsAutolykos": {
+          "question": "What is Autolykos v2?",
+          "answer": "Autolykos v2 is Ergo's memory-hard, GPU-friendly Proof-of-Work algorithm designed to keep mining decentralized and accessible."
+        },
+        "asicProof": {
+          "question": "Is Ergo's PoW completely ASIC-proof?",
+          "answer": "No. It's ASIC-resistant (not ASIC-proof). By making memory bandwidth/latency the bottleneck, specialized-hardware advantages are limited and GPUs remain competitive."
+        },
+        "minerSoftware": {
+          "question": "Which miner software works with Autolykos v2?",
+          "answer": "See the Mining Guide for current tooling and setup steps. It covers supported miners, configuration basics, and troubleshooting."
+        },
+        "poolVsSolo": {
+          "question": "Pool or solo mining?",
+          "answer": "Both are possible. Pools smooth rewards; solo depends on luck and has higher variance. Choose based on your risk tolerance and expected uptime."
+        },
+        "hashratePower": {
+          "question": "Typical hashrate/watt ranges?",
+          "answer": "They vary by GPU model, drivers, and settings. Start with stock settings, ensure stability and thermals, and consult community resources for optimization."
+        },
+        "environmentalImpact": {
+          "question": "Is this approach greener?",
+          "answer": "Memory-hardness dampens the hardware arms race and extends useful GPU lifecycles, which helps reduce e-waste and unnecessary upgrades."
+        }
+      },
+      "cta": {
+        "title": "Start Mining Ergo",
+        "description": "Join thousands of GPU miners securing Ergo — start in minutes.",
+        "buttons": {
+          "miningGuide": "Mining Guide",
+          "whitepaper": "Whitepaper"
+        },
+        "relatedText": "Related",
+        "storageRentLink": "Storage Rent",
+        "adaptiveEmissionLink": "Adaptive Emission & Governance"
+      },
+      "howTo": {
+        "title": "Start Mining Ergo",
+        "description": "Quick steps to begin mining Ergo with a GPU.",
+        "tools": {
+          "gpu": "GPU-enabled computer",
+          "minerSoftware": "Autolykos v2 miner software"
+        },
+        "supplies": {
+          "walletAddress": "Ergo wallet address",
+          "poolUrl": "Pool URL (optional)"
+        },
+        "steps": {
+          "installWallet": {
+            "title": "Install a wallet",
+            "description": "Set up a compatible Ergo wallet and secure your seed phrase."
+          },
+          "pickMiner": {
+            "title": "Pick miner software",
+            "description": "Choose supported miner software for Autolykos v2 and download from its official source."
+          },
+          "choosePool": {
+            "title": "Choose a pool or go solo",
+            "description": "Pools smooth rewards; solo mining has higher variance. Configure according to your preference."
+          },
+          "launchMiner": {
+            "title": "Launch with your address",
+            "description": "Run the miner with your wallet address and pool URL if applicable."
+          },
+          "testStability": {
+            "title": "Test stability & thermals",
+            "description": "Start at stock settings, monitor temperatures, and avoid aggressive memory overclocks on day one."
+          }
+        }
+      }
     },
     "frequently_asked_questions": "Frequently Asked Questions",
     "go_to_docs": "Go to Docs",
@@ -5051,7 +4704,7 @@
     "memory_hard_proof_of_work_algorithm": "Memory-hard Proof of Work algorithm",
     "sustainable_blockchain_state_management": "Sustainable blockchain state management",
     "non_interactive_proofs_of_proof_of_work": "Non-Interactive Proofs of Proof-of-Work",
-    "ergoscriptPage": {
+    "ergoscriptPageOld": {
       "features": [
         {
           "title": "Formal Verification Support",
@@ -5086,6 +4739,409 @@
         "Privacy tools and mixers",
         "Advanced NFT contracts"
       ]
+    },
+    "ergoscript": {
+      "title": "ErgoScript",
+      "subtitle": "Mathematical-by-design smart contracts on an eUTXO ledger",
+      "description": "No shared global state, first-class Sigma protocols, verifiable execution. Build secure applications that are predictable by design.",
+      "lastUpdated": "Last updated",
+      "seo": {
+        "title": "ErgoScript Smart Contract Language | Zero-Knowledge Proofs & Formal Verification",
+        "description": "Learn ErgoScript programming for secure DeFi applications. Build unhackable smart contracts with built-in Sigma protocols, formal verification, and no reentrancy vulnerabilities.",
+        "keywords": "ErgoScript,smart contract language,eUTXO,formal verification,cryptography,DeFi,blockchain development,sigma protocols,blockchain programming,secure contracts,re-entrancy protection,Ergo blockchain,cryptocurrency development"
+      },
+      "hero": {
+        "title": "ErgoScript",
+        "subtitle": "Mathematical-by-design smart contracts on an eUTXO ledger",
+        "description": "No shared global state, first-class Sigma protocols, verifiable execution. Build secure applications that are predictable by design."
+      },
+      "quickStart": {
+        "title": "Quick Start",
+        "learnErgoScript": "Learn ErgoScript",
+        "viewCode": "View Code"
+      },
+      "keyFeatures": [
+        {
+          "title": "Security First",
+          "description": "No reentrancy attacks, predictable execution costs, formal verification support"
+        },
+        {
+          "title": "Expressive Power",
+          "description": "Rich type system, Sigma protocols, multi-stage contracts"
+        },
+        {
+          "title": "Cost Efficient",
+          "description": "Predictable fees, parallel execution, optimized for eUTXO"
+        },
+        {
+          "title": "Composable",
+          "description": "Modular design, reusable components, protocol interoperability"
+        },
+        {
+          "title": "Verifiable",
+          "description": "Mathematical proofs, formal verification, auditable logic"
+        },
+        {
+          "title": "Cryptography Native",
+          "description": "Built-in Sigma protocols, zero-knowledge proofs, advanced signatures"
+        }
+      ],
+      "tabs": {
+        "deepDive": "Deep Dive",
+        "useCases": "Use Cases",
+        "resources": "Resources"
+      },
+      "deepDive": {
+        "title": "Deep Dive into ErgoScript",
+        "description": "ErgoScript is designed to be a cryptocurrency with advanced contractual money capabilities."
+      },
+      "codeExamples": {
+        "title": "Code Examples",
+        "timelock": {
+          "title": "Timelock Contract",
+          "description": "Funds locked until specific block height",
+          "code": "{\n  val deadline = 500000 // Block height\n  val recipient = PK(\"9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v\")\n  \n  (HEIGHT > deadline) && recipient\n}"
+        },
+        "multisig": {
+          "title": "Multi-Signature Wallet",
+          "description": "Requires multiple signatures to spend funds",
+          "code": "{\n  val alice = PK(\"9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v\")\n  val bob = PK(\"9f5QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v\")\n  val charlie = PK(\"9f6QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v\")\n  \n  atLeast(2, Coll(alice, bob, charlie))\n}"
+        },
+        "oracle": {
+          "title": "Oracle Data Contract",
+          "description": "Uses external data for contract execution",
+          "code": "{\n  val oracleBox = CONTEXT.dataInputs(0)\n  val price = oracleBox.R4[Long].get\n  val threshold = 100000L // $1000 in cents\n  \n  price > threshold\n}"
+        }
+      },
+      "technicalDetails": [
+        {
+          "aspect": "Language Design",
+          "detail": "Based on Scala with functional programming principles"
+        },
+        {
+          "aspect": "Execution Model",
+          "detail": "eUTXO model with no shared global state"
+        },
+        {
+          "aspect": "Cryptographic Foundation",
+          "detail": "Built on Sigma protocols for zero-knowledge proofs"
+        },
+        {
+          "aspect": "Formal Verification",
+          "detail": "Mathematical proofs of contract correctness"
+        }
+      ],
+      "useCases": [
+        {
+          "title": "DeFi Protocols",
+          "description": "Build decentralized exchanges, lending platforms, and yield farming protocols",
+          "examples": [
+            "SigmaUSD stablecoin",
+            "ErgoDEX exchange",
+            "Spectrum Finance",
+            "DuckPools lending"
+          ]
+        },
+        {
+          "title": "Oracle Systems",
+          "description": "Create reliable data feeds for smart contracts",
+          "examples": [
+            "Price oracles",
+            "Weather data",
+            "Sports results",
+            "IoT sensors"
+          ]
+        },
+        {
+          "title": "Privacy Applications",
+          "description": "Implement privacy-preserving smart contracts",
+          "examples": [
+            "ErgoMixer",
+            "Ring signatures",
+            "Stealth addresses",
+            "Private voting"
+          ]
+        },
+        {
+          "title": "Token Systems",
+          "description": "Create and manage custom tokens and NFTs",
+          "examples": [
+            "NFT marketplaces",
+            "Gaming tokens",
+            "Loyalty programs",
+            "Governance tokens"
+          ]
+        }
+      ],
+      "comparison": {
+        "title": "ErgoScript vs. Other Smart Contract Languages",
+        "codeComparison": {
+          "title": "Code Comparison: 2-of-3 Multisig",
+          "ergoscript": {
+            "title": "ErgoScript",
+            "code": "atLeast(2, Coll(proveDlog(A), proveDlog(B), proveDlog(C)))",
+            "description": "Declarative logic with built-in cryptographic primitives"
+          },
+          "solidity": {
+            "title": "Solidity",
+            "code": "require(validSignatures >= 2, \"Need 2+ sigs\");\nfor (uint i = 0; i < signers.length; i++) {\n  if (verify(signers[i], signature[i])) {\n    validSignatures++;\n  }\n}",
+            "description": "Imperative logic with loops, state variables, and manual validation"
+          }
+        },
+        "table": {
+          "language": "Language",
+          "paradigm": "Paradigm",
+          "security": "Security",
+          "verification": "Verification",
+          "privacy": "Privacy",
+          "ergoscript": {
+            "paradigm": "Functional",
+            "security": "eUTXO + Formal",
+            "verification": "Built-in",
+            "privacy": "Sigma Protocols"
+          },
+          "solidity": {
+            "paradigm": "Imperative",
+            "security": "Account-based",
+            "verification": "External Tools",
+            "privacy": "Limited"
+          },
+          "plutus": {
+            "paradigm": "Functional",
+            "security": "eUTXO",
+            "verification": "Formal Methods",
+            "privacy": "Limited"
+          },
+          "move": {
+            "paradigm": "Resource-oriented",
+            "security": "Resource Safety",
+            "verification": "Move Prover",
+            "privacy": "None"
+          }
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": [
+          {
+            "question": "How does ErgoScript differ from Solidity?",
+            "answer": "ErgoScript is functional, based on eUTXO model, and has built-in formal verification. Solidity is imperative, account-based, and requires external tools for verification."
+          },
+          {
+            "question": "Is ErgoScript Turing complete?",
+            "answer": "ErgoScript is Turing complete within reasonable bounds. It prevents infinite loops through cost models and execution limits."
+          },
+          {
+            "question": "Can I use existing libraries?",
+            "answer": "Yes, ErgoScript has a growing ecosystem of libraries and templates for common patterns like multisig, timelocks, and oracles."
+          },
+          {
+            "question": "How do I get started with ErgoScript?",
+            "answer": "Start with the official documentation, try the online playground, and join the developer community on Discord for support."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Start Building with ErgoScript",
+        "description": "Ready to build secure, verifiable smart contracts? Explore our resources and join the community.",
+        "buttons": {
+          "tryPlayground": "Try Playground",
+          "viewDocumentation": "View Documentation"
+        }
+      }
+    },
+    "privacyFeatures": {
+      "title": "Privacy Features",
+      "subtitle": "Privacy by choice and selective disclosure",
+      "description": "Financial freedom and privacy go hand in hand. Ergo bakes privacy features directly into its core — not as an afterthought.",
+      "lastUpdated": "Last updated",
+      "skipToContent": "Skip to content",
+      "seo": {
+        "title": "Ergo Privacy — Sigma Protocols, Mixer, Confidential Assets",
+        "description": "Ergo bakes privacy into the protocol: Sigma protocols, ring/threshold signatures, ErgoMixer, confidential assets and selective disclosure.",
+        "keywords": "Ergo privacy,Sigma protocols,ring signatures,zero-knowledge proofs,ErgoMixer,confidential transactions",
+        "faq": {
+          "whatFeatures": {
+            "question": "What privacy features does Ergo offer?",
+            "answer": "Ergo offers multiple privacy features including Sigma protocols, ring signatures, zero-knowledge proofs, and confidential transactions. These technologies enable privacy-preserving transactions while maintaining security and compliance."
+          },
+          "howSigmaWorks": {
+            "question": "How do Sigma protocols work?",
+            "answer": "Sigma protocols are zero-knowledge proof systems that allow proving statements about secret values without revealing the values themselves. They enable privacy-preserving authentication and transaction validation."
+          },
+          "regulatoryCompliant": {
+            "question": "Are Ergo's privacy features regulatory compliant?",
+            "answer": "Yes, Ergo's privacy features are designed to be regulatory compliant. They provide selective disclosure capabilities, allowing users to reveal transaction details when required while maintaining privacy by default."
+          }
+        }
+      },
+      "buttons": {
+        "explorePrivacy": "Explore Privacy",
+        "tryErgoMixer": "Try ErgoMixer"
+      },
+      "navigation": {
+        "what": "What",
+        "technologies": "Technologies",
+        "useCases": "Use cases",
+        "faq": "FAQ"
+      },
+      "privacyLevels": {
+        "title": "Privacy Levels",
+        "basic": {
+          "title": "Basic Privacy",
+          "description": "Standard transactions with pseudonymous addresses",
+          "features": {
+            "pseudonymous": "Pseudonymous addresses",
+            "utxoBenefits": "UTXO model benefits",
+            "basicPrivacy": "Basic transaction privacy"
+          }
+        },
+        "enhanced": {
+          "title": "Enhanced Privacy",
+          "description": "Using ErgoMixer for transaction mixing and unlinkability",
+          "features": {
+            "mixing": "Transaction mixing",
+            "unlinkability": "Address unlinkability",
+            "amountObfuscation": "Amount obfuscation"
+          }
+        },
+        "maximum": {
+          "title": "Maximum Privacy",
+          "description": "Sigma protocols with zero-knowledge proofs and ring signatures",
+          "features": {
+            "zeroKnowledge": "Zero-knowledge proofs",
+            "ringSignatures": "Ring signatures",
+            "confidentialAssets": "Confidential assets",
+            "privateContracts": "Private smart contracts"
+          }
+        }
+      },
+      "bestPractices": {
+        "title": "Limits & Best Practices",
+        "offChainAnalysis": "Off-chain network/behavior analysis can deanonymize users.",
+        "useDelays": "Use delays, avoid back-and-forth patterns, don't reuse addresses.",
+        "checkAnonymitySet": "Check the current anonymity set size before mixing."
+      },
+      "whyPrivacyMatters": {
+        "title": "Why Privacy Matters",
+        "description1": "In an increasingly digital world, financial privacy is not about hiding wrongdoing — it's about protecting your fundamental rights. Privacy enables freedom of expression, protects against discrimination, and ensures that your financial activities remain your own business.",
+        "description2": "Ergo recognizes that privacy and transparency can coexist. You should have the choice to keep your transactions private while still participating in a transparent, auditable blockchain ecosystem."
+      },
+      "technologiesSection": {
+        "title": "Key Privacy Technologies",
+        "docsLink": "docs"
+      },
+      "technologies": {
+        "sigmaProtocols": {
+          "title": "Sigma Protocols",
+          "description": "Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
+          "features": {
+            "zeroKnowledge": "Zero-knowledge proofs",
+            "ringSignatures": "Ring signatures",
+            "thresholdSignatures": "Threshold signatures",
+            "composablePrivacy": "Composable privacy"
+          }
+        },
+        "ergoMixer": {
+          "title": "ErgoMixer",
+          "description": "On-chain, non-custodial mixing for transaction privacy and anonymity.",
+          "features": {
+            "nonCustodial": "Non-custodial mixing",
+            "onChain": "On-chain privacy",
+            "tokenSupport": "Token mixing support",
+            "configurableAnonymity": "Configurable anonymity"
+          }
+        },
+        "confidentialAssets": {
+          "title": "Confidential Assets",
+          "description": "Issue tokens with hidden amounts and rules for maximum privacy.",
+          "features": {
+            "hiddenAmounts": "Hidden token amounts",
+            "privateContracts": "Private smart contracts",
+            "confidentialTransactions": "Confidential transactions",
+            "selectiveDisclosure": "Selective disclosure"
+          }
+        }
+      },
+      "advantages": {
+        "noTrustedSetup": "No trusted setup needed — pure cryptographic security",
+        "flexibleFeatures": "Flexible privacy features usable in dApps, DeFi, and NFTs",
+        "openSource": "Open-source, peer-reviewed cryptography",
+        "composable": "Composable with other Ergo features",
+        "builtInProtocol": "Built into the protocol, not added as afterthought",
+        "mathematicalSecurity": "Mathematically proven security guarantees"
+      },
+      "useCasesSection": {
+        "title": "What You Can Do with Ergo Privacy",
+        "guideLink": "guide"
+      },
+      "useCases": {
+        "privateTransactions": {
+          "title": "Private Transactions",
+          "description": "Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)",
+          "example": "ErgoMixer"
+        },
+        "confidentialDefi": {
+          "title": "Confidential DeFi",
+          "description": "Build DeFi applications with private balances and logic",
+          "example": "Private DEX orders"
+        },
+        "anonymousVoting": {
+          "title": "Anonymous Voting",
+          "description": "Create DAOs and voting systems with secret ballots",
+          "example": "DAO governance"
+        },
+        "privateNfts": {
+          "title": "Private NFTs",
+          "description": "NFTs with hidden metadata or ownership information",
+          "example": "Confidential collectibles"
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "privacyLevel": {
+          "question": "What level of privacy does Ergo offer? Is it just coin mixing?",
+          "answer": "Ergo offers multi-layered privacy, not just a single feature. At its core are Sigma protocols—powerful cryptography that allows data to be hidden. On top of this runs ErgoMixer (non-custodial community tool), the first non-interactive and trustless mixer in the eUTXO space. It helps break the link between your transactions, providing strong anonymity on-chain."
+        },
+        "suspicious": {
+          "question": "If I use privacy features, won't my transactions look suspicious?",
+          "answer": "On the contrary. Because privacy tools are a core part of the Ergo ecosystem, using them is the norm. When many people mix their coins, they create a large anonymity set where it's easy to blend in. On Ergo, protecting your financial data is standard practice, not a reason for suspicion."
+        },
+        "criminals": {
+          "question": "Doesn't this kind of privacy attract criminals?",
+          "answer": "Privacy is a fundamental right, not an admission of guilt. You don't use curtains on your windows because you're doing something illegal. Businesses need privacy for trade secrets and payrolls, and individuals need it to protect themselves from tracking and profiling."
+        },
+        "auditProof": {
+          "question": "What if I need to prove a transaction for taxes or an audit?",
+          "answer": "Ergo applies a 'privacy by choice' approach with selective disclosure. When needed, you can provide viewing keys for specific transactions to an auditor or regulator without revealing your entire financial history."
+        }
+      },
+      "cta": {
+        "title": "Privacy by Design, Security by Default",
+        "description": "Ergo's privacy features aren't just add-ons — they're fundamental to the platform's architecture. Experience true financial freedom with cryptographically proven privacy.",
+        "buttons": {
+          "tryErgoMixer": "Try ErgoMixer (non-custodial community tool)",
+          "privacyDocs": "Privacy Documentation"
+        }
+      },
+      "howTo": {
+        "title": "How to increase privacy with ErgoMixer",
+        "description": "High-level steps to improve on-chain privacy using ErgoMixer with delays and larger anonymity sets.",
+        "steps": {
+          "prepareFunds": {
+            "title": "Prepare funds",
+            "description": "Split funds and avoid address reuse."
+          },
+          "runMix": {
+            "title": "Run mix",
+            "description": "Choose round count/delay for larger anonymity set."
+          },
+          "waitAndSpend": {
+            "title": "Wait & spend",
+            "description": "Spend after a delay; avoid direct linkability."
+          }
+        }
+      }
     }
   },
   "start": {
@@ -5094,74 +5150,129 @@
     "description": "Begin your journey with Ergo",
     "quiz": {
       "seo": {
-        "title": "Ergo Quiz | Find Your Path in Blockchain",
-        "description": "Take our interactive quiz to discover your ideal path in the Ergo ecosystem. Whether you're a developer, miner, investor, or enthusiast, find personalized recommendations.",
-        "keywords": "ergo quiz, blockchain quiz, crypto personality test, find your path, blockchain career, ergo ecosystem, interactive quiz, crypto quiz",
-        "ogTitle": "Ergo Quiz - Discover Your Blockchain Path",
-        "ogDescription": "Interactive quiz to find your perfect role in the Ergo ecosystem.",
-        "ogAlt": "Ergo Quiz",
-        "twitterTitle": "Find Your Path in Ergo | Interactive Quiz",
-        "twitterDescription": "Developer? Miner? Investor? Take the quiz to find your perfect fit."
+        "title": "Ergo Knowledge Quiz - Test Your Understanding",
+        "description": "Test your knowledge about Ergo blockchain, smart contracts, and cryptocurrency concepts with our interactive quiz.",
+        "keywords": "Ergo quiz, blockchain quiz, cryptocurrency test, smart contracts quiz"
+      },
+      "progress": "Question {{current}} of {{total}}",
+      "resetQuiz": "Reset",
+      "previousQuestion": "Previous",
+      "nextQuestion": "Next",
+      "showResults": "Show Results",
+      "profiles": {
+        "learner": {
+          "tools": {
+            "0": {
+              "items": {
+                "0": {
+                  "name": "Ergo Documentation",
+                  "description": "Comprehensive guides and tutorials"
+                },
+                "1": {
+                  "name": "Ergo Academy",
+                  "description": "Educational resources for beginners"
+                }
+              }
+            },
+            "1": {
+              "items": {
+                "0": {
+                  "name": "Ergo Forum",
+                  "description": "Community discussions and Q&A"
+                },
+                "1": {
+                  "name": "YouTube Tutorials",
+                  "description": "Video guides and explanations"
+                }
+              }
+            }
+          },
+          "nextSteps": {
+            "0": {
+              "text": "Start with the Introduction to Ergo",
+              "link": "/start/introduction"
+            },
+            "1": {
+              "text": "Join the community Discord",
+              "link": "https://discord.gg/ergo"
+            }
+          },
+          "communityChannels": {
+            "0": {
+              "name": "Discord",
+              "link": "https://discord.gg/ergo"
+            },
+            "1": {
+              "name": "Telegram",
+              "link": "https://t.me/ergoplatform"
+            }
+          }
+        },
+        "miner": {
+          "communityChannels": {
+            "0": {
+              "link": "https://discord.gg/ergo-mining"
+            }
+          }
+        }
       }
     },
     "comparison": {
       "seo": {
-        "title": "Ergo vs Bitcoin vs Ethereum | Blockchain Comparison",
-        "description": "Compare Ergo with Bitcoin, Ethereum, and other blockchains. See how Ergo combines the best features while solving key limitations.",
-        "keywords": "ergo vs bitcoin, ergo vs ethereum, blockchain comparison, ergo vs cardano, cryptocurrency comparison, smart contract platforms, blockchain features, defi platforms",
-        "ogTitle": "Blockchain Comparison - Ergo vs Bitcoin vs Ethereum",
-        "ogDescription": "See how Ergo stacks up against other major blockchain platforms.",
-        "ogAlt": "Blockchain Comparison",
-        "twitterTitle": "Ergo vs Other Blockchains | Platform Comparison",
-        "twitterDescription": "Compare features, security, and innovation across blockchain platforms."
+        "title": "Ergo vs Other Blockchains - Detailed Comparison",
+        "description": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
+        "keywords": "Ergo comparison, blockchain comparison, Bitcoin vs Ergo, Ethereum vs Ergo, UTXO vs account model"
       }
     },
     "faq": {
       "seo": {
-        "title": "Ergo FAQ | Frequently Asked Questions",
-        "description": "Get answers to common questions about Ergo blockchain, mining, wallets, smart contracts, and more. Complete FAQ for beginners and advanced users.",
-        "keywords": "ergo faq, blockchain questions, ergo help, crypto faq, mining questions, wallet help, smart contracts faq, ergo support",
-        "ogTitle": "Ergo FAQ - Your Questions Answered",
-        "ogDescription": "Complete FAQ covering all aspects of Ergo blockchain.",
-        "ogAlt": "Ergo FAQ",
-        "twitterTitle": "Ergo FAQ | Get Your Questions Answered",
-        "twitterDescription": "Everything you need to know about Ergo blockchain."
+        "title": "Ergo FAQ - Frequently Asked Questions",
+        "description": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
+        "keywords": "Ergo FAQ, blockchain questions, cryptocurrency FAQ, smart contracts FAQ, mining FAQ"
       }
     },
     "community": {
       "seo": {
-        "title": "Join Ergo Community | Discord, Telegram, Reddit",
-        "description": "Connect with the Ergo community on Discord, Telegram, Reddit, and GitHub. Join developers, miners, and enthusiasts building the future of blockchain.",
-        "keywords": "ergo community, crypto discord, blockchain community, ergo telegram, developer community, dao governance, ergo reddit, crypto forums",
+        "title": "Ergo Community - Join the Ecosystem",
+        "description": "Connect with the Ergo community through Discord, Telegram, Reddit, and other channels. Get involved in development and governance.",
+        "keywords": "Ergo community, Discord, Telegram, Reddit, blockchain community, cryptocurrency community",
         "ogTitle": "Join the Ergo Community",
-        "ogDescription": "Connect with developers, miners, and enthusiasts worldwide.",
+        "ogDescription": "Connect with developers, miners, traders, and enthusiasts building on Ergo",
         "ogAlt": "Ergo Community",
-        "twitterTitle": "Join the Ergo Community | Discord & Telegram",
-        "twitterDescription": "Connect with the global Ergo community."
-      }
-    },
-    "comparison": {
-      "seo": {
-        "title": "Ergo vs Bitcoin vs Ethereum | Blockchain Comparison",
-        "description": "Compare Ergo with Bitcoin, Ethereum, and other blockchains. See how Ergo combines the best features while solving key limitations.",
-        "keywords": "ergo vs bitcoin, ergo vs ethereum, blockchain comparison, ergo vs cardano, cryptocurrency comparison, smart contract platforms, blockchain features, defi platforms",
-        "ogTitle": "Blockchain Comparison - Ergo vs Bitcoin vs Ethereum",
-        "ogDescription": "See how Ergo stacks up against other major blockchain platforms.",
-        "ogAlt": "Blockchain Comparison",
-        "twitterTitle": "Ergo vs Other Blockchains | Platform Comparison",
-        "twitterDescription": "Compare features, security, and innovation across blockchain platforms."
-      }
-    },
-    "faq": {
-      "seo": {
-        "title": "Ergo FAQ | Frequently Asked Questions",
-        "description": "Get answers to common questions about Ergo blockchain, mining, wallets, smart contracts, and more. Complete FAQ for beginners and advanced users.",
-        "keywords": "ergo faq, blockchain questions, ergo help, crypto faq, mining questions, wallet help, smart contracts faq, ergo support",
-        "ogTitle": "Ergo FAQ - Your Questions Answered",
-        "ogDescription": "Complete FAQ covering all aspects of Ergo blockchain.",
-        "ogAlt": "Ergo FAQ",
-        "twitterTitle": "Ergo FAQ | Get Your Questions Answered",
-        "twitterDescription": "Everything you need to know about Ergo blockchain."
+        "twitterTitle": "Ergo Community - Get Involved",
+        "twitterDescription": "Join thousands of developers, miners, and enthusiasts in the Ergo ecosystem"
+      },
+      "contributions": {
+        "0": {
+          "title": "Development",
+          "description": "Contribute to core protocol development",
+          "tasks": "Core development, Bug fixes, Feature implementation"
+        },
+        "1": {
+          "title": "Documentation",
+          "description": "Help improve documentation and guides",
+          "tasks": "Writing guides, Translation, API documentation"
+        },
+        "2": {
+          "title": "Community Support",
+          "description": "Help new users and answer questions",
+          "tasks": "Discord support, Forum moderation, User onboarding"
+        },
+        "3": {
+          "title": "Governance",
+          "description": "Participate in protocol governance",
+          "tasks": "EIP discussions, Voting, Proposal creation"
+        },
+        "4": {
+          "title": "Infrastructure",
+          "description": "Run nodes and maintain infrastructure",
+          "tasks": "Node operation, Mining pools, Network monitoring"
+        },
+        "5": {
+          "title": "Marketing",
+          "description": "Promote Ergo and educate others",
+          "tasks": "Content creation, Social media, Event organization"
+        }
       }
     },
     "introduction": {
@@ -5322,7 +5433,7 @@
       "documentation": "Documentation",
       "community": "Join Community"
     },
-    "faq": {
+    "faqContent": {
       "basics_icon_helpcircle_q_what": "Basics\",\n    icon: HelpCircle,\n    q: 'What does a \"fair launch\" mean?',\n    a: 'Ergo had no Initial Coin Offering (ICO) or pre-mined tokens for founders. This ensures a more equitable distribution, as everyone had an equal opportunity to acquire ERG through mining from day one.",
       "basics_icon_helpcircle_q_is": "Basics\",\n    icon: HelpCircle,\n    q: \"Is Ergo a company?\",\n    a: \"No, Ergo is a decentralized, open-source protocol. The Ergo Foundation is a non-profit community body that supports development but does not control the network.",
       "basics_icon_helpcircle_q_what_does_a_fair_launch": "Basics\",\n    icon: HelpCircle,\n    q: 'What does a \"fair launch",
@@ -5345,7 +5456,7 @@
       "ergo_faq_all_your_questions_answered": "Ergo FAQ - All Your Questions Answered",
       "ergo_faq_quick_answers_to_common_questions": "Ergo FAQ | Quick Answers to Common Questions"
     },
-    "introduction": {
+    "introductionMeta": {
       "ergo_introduction_description_pow_smart": "Ergo Introduction\",\n    description: \"PoW smart contracts with eUTXO & Sigma Protocols.",
       "ergo_introduction_pow_smart_contracts": "Ergo Introduction — PoW Smart Contracts, eUTXO, Sigma Protocols",
       "meet_ergo_a_pow_smart": "Meet Ergo: a PoW smart‑contract platform using the eUTXO model and Sigma protocols. Build privacy‑aware, auditable dApps with predictable costs.",
@@ -5370,7 +5481,7 @@
       "comprehensive_guide_for_beginners_to": "Comprehensive guide for beginners to understand Ergo",
       "educational_resource_for_learning_ergo": "Educational resource for learning Ergo blockchain fundamentals"
     },
-    "quiz": {
+    "quizContent": {
       "connect_with_your_community": "CONNECT WITH YOUR COMMUNITY",
       "what_primarily_attracts_you_to": "What primarily attracts you to blockchain technology and Ergo?",
       "investment_potential_and_financial_opportunities": "Investment potential and financial opportunities",
@@ -5598,7 +5709,7 @@
     "major_integrations_and_users": "Major integrations and users",
     "price_volume_analytics": "Price, volume, analytics",
     "take_the_quiz": "Take the Quiz",
-    "comparison": {
+    "comparisonMeta": {
       "start_item_https_ergoblockchain_org_start": "Start\", item: \"https://ergoblockchain.org/start",
       "comparison_item_https_ergoblockchain_org": "Comparison\", item: \"https://ergoblockchain.org/start/comparison",
       "techarticle_headline": "TechArticle\",\n          headline:",
@@ -5625,7 +5736,7 @@
     },
     "community_icon_users_color": "Community\", icon: Users, color:",
     "get_started": "Get Started",
-    "community": {
+    "communityMeta": {
       "connect_with_developers_miners_traders": "Connect with developers, miners, traders, and enthusiasts. Discord, Telegram, Reddit, and more.",
       "organization_id_https_ergoblockchain_org": "Organization\",\n    \"@id\": \"https://ergoblockchain.org/#community\",\n    name: \"Ergo Community\",\n    description: \"Global community of developers, miners, and enthusiasts building on Ergo\",\n    url: \"https://ergoblockchain.org/start/community\",\n    logo: \"https://ergoblockchain.org/logo.png",
       "organization_name_ergo_platform": "Organization\",\n      name: \"Ergo Platform",
@@ -7622,127 +7733,9 @@
     "subtitle": "Educational resources for everyone",
     "description": "Educational resources for Ergo blockchain",
     "seo": {
-      "title": "Learn Ergo Blockchain | Educational Resources",
-      "description": "Comprehensive learning resources for Ergo blockchain: tutorials, guides, research papers, and developer documentation.",
-      "keywords": "learn ergo, blockchain education, ergo tutorials, crypto learning, blockchain guides, ergo documentation",
-      "ogTitle": "Learn Ergo Blockchain - Educational Resources",
-      "ogDescription": "Master Ergo blockchain with comprehensive tutorials and guides.",
-      "ogAlt": "Learn Ergo",
-      "twitterTitle": "Learn Ergo Blockchain | Educational Hub",
-      "twitterDescription": "Comprehensive resources to master Ergo blockchain technology."
-    },
-    "research": {
-      "title": "Research Papers",
-      "subtitle": "Academic research and whitepapers",
-      "description": "Explore academic research papers and whitepapers about Ergo blockchain technology.",
-      "lastUpdated": "Last updated",
-      "categories": {
-        "title": "Research Categories",
-        "subtitle": "Explore research by topic",
-        "security": {
-          "title": "Security & Cryptography",
-          "description": "Research on security protocols and cryptographic innovations"
-        }
-      },
-      "buttons": {
-        "readWhitepaper": "Read Whitepaper",
-        "browseResearch": "Browse Research"
-      },
-      "cta": {
-        "title": "Dive Into Research",
-        "subtitle": "Explore the academic foundation of Ergo technology",
-        "buttons": {
-          "readWhitepaper": "Read Whitepaper",
-          "exploreLibrary": "Explore Library"
-        }
-      }
-    },
-    "guides": {
-      "title": "Learning Guides",
-      "subtitle": "Step-by-step tutorials",
-      "description": "Comprehensive guides and tutorials for learning Ergo blockchain technology.",
-      "lastUpdated": "Last updated",
-      "categories": {
-        "title": "Guide Categories",
-        "subtitle": "Choose your learning path",
-        "tutorials": {
-          "title": "Tutorials",
-          "description": "Step-by-step learning guides"
-        }
-      },
-      "buttons": {
-        "browseDocs": "Browse Documentation",
-        "learnErgoscript": "Learn ErgoScript"
-      },
-      "cta": {
-        "title": "Start Learning Today",
-        "subtitle": "Begin your journey with Ergo blockchain technology",
-        "buttons": {
-          "startLearning": "Start Learning",
-          "joinCommunity": "Join Community"
-        }
-      }
-    },
-    "faq": {
-      "title": "Learning FAQ",
-      "subtitle": "Common questions about learning Ergo",
-      "description": "Frequently asked questions about learning Ergo blockchain technology.",
-      "lastUpdated": "Last updated",
-      "questions": {
-        "0": {
-          "question": "Where should I start learning about Ergo?",
-          "answer": "Start with our Introduction guide, then explore the technology pages to understand eUTXO, ErgoScript, and other innovations."
-        },
-        "1": {
-          "question": "Do I need programming experience?",
-          "answer": "Not necessarily. We have resources for all levels, from complete beginners to experienced developers."
-        },
-        "2": {
-          "question": "How long does it take to learn ErgoScript?",
-          "answer": "With consistent study, you can learn ErgoScript basics in 4-8 weeks. Advanced concepts may take several months to master."
-        }
-      },
-      "cta": {
-        "title": "Need More Help?",
-        "subtitle": "Join our community for support and discussions",
-        "buttons": {
-          "askCommunity": "Ask Community",
-          "browseDocs": "Browse Docs"
-        }
-      }
-    },
-    "ergoscript": {
-      "title": "Learn ErgoScript",
-      "subtitle": "Master Ergo's smart contract language",
-      "description": "Comprehensive guide to learning ErgoScript, Ergo's powerful smart contract programming language.",
-      "lastUpdated": "Last updated",
-      "features": {
-        "title": "Why Learn ErgoScript?",
-        "subtitle": "Powerful features for blockchain development",
-        "secure": {
-          "title": "Secure by Design",
-          "description": "Built-in security features and formal verification capabilities"
-        }
-      },
-      "buttons": {
-        "startTutorial": "Start Tutorial",
-        "documentation": "Documentation"
-      },
-      "cta": {
-        "title": "Ready to Start Coding?",
-        "subtitle": "Begin your ErgoScript journey today",
-        "buttons": {
-          "startLearning": "Start Learning",
-          "joinCommunity": "Join Community"
-        }
-      }
-    },
-    "browseFaq": "Browse FAQ",
-    "sections": {
-      "basics": "Blockchain Basics",
-      "ergoScript": "ErgoScript",
-      "development": "Development",
-      "research": "Research"
+      "title": "Learn - Ergo Blockchain Education | Ergo Platform",
+      "description": "Learn about Ergo blockchain technology, smart contracts, and development.",
+      "keywords": "Ergo education, blockchain learning, tutorials, documentation"
     },
     "research": {
       "research_by_category": "Research by Category",
@@ -7939,10 +7932,42 @@
       "ergo_technical_guides_learn_blockchain": "Ergo Technical Guides | Learn Blockchain",
       "collection_of_technical_guides_and": "Collection of technical guides and tutorials for Ergo blockchain"
     },
-    "seo": {
-      "title": "Learn - Ergo Blockchain Education | Ergo Platform",
-      "description": "Learn about Ergo blockchain technology, smart contracts, and development.",
-      "keywords": "Ergo education, blockchain learning, tutorials, documentation"
+    "faq": {
+      "collapse_all": "Collapse all",
+      "faq_sections_classname": "FAQ sections\" className="
+    },
+    "learnErgoscript": {
+      "title": "Learn ErgoScript",
+      "subtitle": "Master Ergo's smart contract language",
+      "description": "Comprehensive guide to learning ErgoScript, Ergo's powerful smart contract programming language.",
+      "lastUpdated": "Last updated",
+      "features": {
+        "title": "Why Learn ErgoScript?",
+        "subtitle": "Powerful features for blockchain development",
+        "secure": {
+          "title": "Secure by Design",
+          "description": "Built-in security features and formal verification capabilities"
+        }
+      },
+      "buttons": {
+        "startTutorial": "Start Tutorial",
+        "documentation": "Documentation"
+      },
+      "cta": {
+        "title": "Ready to Start Coding?",
+        "subtitle": "Begin your ErgoScript journey today",
+        "buttons": {
+          "startLearning": "Start Learning",
+          "joinCommunity": "Join Community"
+        }
+      }
+    },
+    "browseFaq": "Browse FAQ",
+    "sections": {
+      "basics": "Blockchain Basics",
+      "ergoScript": "ErgoScript",
+      "development": "Development",
+      "research": "Research"
     },
     "categories": {
       "basics": {
@@ -7993,10 +8018,6 @@
         "title": "Trader Path",
         "description": "Master DeFi and trading"
       }
-    },
-    "faq": {
-      "collapse_all": "Collapse all",
-      "faq_sections_classname": "FAQ sections\" className="
     },
     "learn_more": "Learn more",
     "start_your_journey_with_our": "Start your journey with our beginner-friendly introduction",
@@ -8623,7 +8644,7 @@
           "a": "ERG is Ergo's native cryptocurrency used for transaction fees, smart contract execution, and storage rent. It has a fixed supply cap of 97.7 million tokens."
         }
       },
-      "technology": {
+      "technologyFaq": {
         "eUTXO": {
           "q": "What is the eUTXO model?",
           "a": "Extended UTXO (eUTXO) combines Bitcoin's UTXO security with Ethereum's smart contract expressiveness, enabling more predictable and secure dApps."
@@ -8711,15 +8732,14 @@
     },
     "ecosystem": {
       "title": "Ecosystem",
-      "subtitle": "Discover the Ergo ecosystem", 
+      "subtitle": "Discover the Ergo ecosystem",
       "description": "Explore the growing Ergo ecosystem",
       "seo": {
-        "title": "Ecosystem - Ergo Blockchain Projects | Ergo Platform",
-        "description": "Discover the thriving Ergo ecosystem: DeFi protocols, NFT marketplaces, tools, and applications.",
-        "ogTitle": "Ergo Ecosystem - Blockchain Projects & Applications",
-        "ogDescription": "Explore DeFi, NFTs, wallets, and developer tools in the Ergo ecosystem.",
-        "twitterTitle": "Ergo Ecosystem | Blockchain Projects",
-        "twitterDescription": "Discover innovative projects building on Ergo blockchain."
+        "title": "Ergo Ecosystem — dApps, wallets, tools, DeFi",
+        "description": "Explore the Ergo ecosystem: decentralized apps, wallets, privacy tools, DeFi protocols, SDKs and infrastructure.",
+        "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain projects",
+        "ogTitle": "Ergo Ecosystem",
+        "ogDescription": "Directory of Ergo dApps, wallets, infrastructure and tools."
       },
       "filters": {
         "all": "All",
@@ -8749,7 +8769,7 @@
               "value": "BTC, ETH, ADA, BSC & more"
             },
             "secureBridge": {
-              "label": "Secure Bridge", 
+              "label": "Secure Bridge",
               "value": "Watcher & Guard Model"
             },
             "unlockLiquidity": {
@@ -8881,13 +8901,6 @@
           "twitterTitle": "Ergo Ecosystem Map | Visual Project Explorer",
           "twitterDescription": "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure."
         }
-      },
-      "seo": {
-        "title": "Ergo Ecosystem — dApps, wallets, tools, DeFi",
-        "description": "Explore the Ergo ecosystem: decentralized apps, wallets, privacy tools, DeFi protocols, SDKs and infrastructure.",
-        "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain projects",
-        "ogTitle": "Ergo Ecosystem",
-        "ogDescription": "Directory of Ergo dApps, wallets, infrastructure and tools."
       }
     },
     "developers": {
@@ -10506,6 +10519,152 @@
         "title": "Sigma Protocols",
         "subtitle": "Advanced cryptography",
         "description": "Built-in zero-knowledge proofs and privacy features"
+      }
+    },
+    "introduction": {
+      "faq": {
+        "eutxoModel": {
+          "question": "What is the Extended UTXO model?",
+          "answer": "Extended UTXO combines Bitcoin's security with Ethereum's programmability, allowing smart contracts while maintaining transaction parallelism."
+        },
+        "sigmaProtocols": {
+          "question": "What are Sigma Protocols?",
+          "answer": "Sigma Protocols are cryptographic proofs that enable privacy features and zero-knowledge proofs natively on Ergo blockchain."
+        },
+        "pow": {
+          "question": "Why does Ergo use Proof-of-Work?",
+          "answer": "Proof-of-Work provides maximum security and decentralization. Ergo's Autolykos algorithm is ASIC-resistant and energy-efficient."
+        }
+      },
+      "cta": {
+        "readyToDiveIn": {
+          "title": "Ready to Dive In?",
+          "description": "Choose your path to start exploring the Ergo ecosystem."
+        },
+        "getErgoWallet": {
+          "button": "Get Ergo Wallet"
+        },
+        "exploreEcosystem": {
+          "button": "Explore Ecosystem"
+        },
+        "documentation": {
+          "button": "Read Documentation"
+        },
+        "lastUpdated": "Last updated: December 2024"
+      },
+      "whatMakesErgoDifferent": {
+        "title": "WHAT MAKES",
+        "fairLaunch": {
+          "title": "Fair Launch",
+          "description": "No ICO, no premine, no VC funding. Ergo was launched fairly with equal opportunity for all participants."
+        },
+        "eutxoErgoScript": {
+          "title": "eUTXO + ErgoScript",
+          "description": "Extended UTXO model combined with powerful ErgoScript enables complex smart contracts with Bitcoin-level security."
+        },
+        "storageRent": {
+          "title": "Storage Rent",
+          "description": "Sustainable blockchain economics through storage rent mechanism that prevents state bloat and ensures long-term viability."
+        },
+        "researchDriven": {
+          "title": "Research-Driven",
+          "description": "Built on peer-reviewed academic research and cryptographic innovations, ensuring solid theoretical foundations."
+        },
+        "robustPrivacy": {
+          "title": "Robust Privacy",
+          "description": "Native Sigma protocols provide zero-knowledge proofs and privacy features without compromising transparency."
+        },
+        "communityLed": {
+          "title": "Community-Led",
+          "description": "Decentralized development and governance driven by a passionate global community of developers and researchers."
+        }
+      },
+      "featureHighlights": {
+        "lightClients": {
+          "title": "Light Clients",
+          "description": "NiPoPoWs enable ultra-efficient light clients with cryptographic security guarantees"
+        },
+        "fairLaunch": {
+          "title": "Fair Launch",
+          "description": "No ICO, no premine, no VC funding - launched fairly for everyone"
+        },
+        "privacyFirst": {
+          "title": "Privacy First",
+          "description": "Optional privacy features using Sigma protocols and zero-knowledge proofs"
+        },
+        "storageRent": {
+          "title": "Storage Rent",
+          "description": "Sustainable economics preventing blockchain bloat and ensuring long-term viability"
+        }
+      },
+      "corePrinciples": {
+        "title": "Principles"
+      },
+      "keyTechnologies": {
+        "title": "Technologies",
+        "learnMore": "Learn More"
+      },
+      "ergoScriptExample": {
+        "title": "ErgoScript Smart Contract Example",
+        "filename": "timelock.ergo"
+      },
+      "principles": {
+        "decentralizedFirst": {
+          "title": "Decentralized First",
+          "description": "No central authority, no single points of failure"
+        },
+        "secureReliable": {
+          "title": "Secure & Reliable",
+          "description": "Battle-tested cryptography and proven consensus"
+        },
+        "powerfulContracts": {
+          "title": "Powerful Contracts",
+          "description": "Advanced smart contract capabilities with ErgoScript"
+        },
+        "longTermFocus": {
+          "title": "Long-term Focus",
+          "description": "Sustainable economics and future-proof design"
+        }
+      },
+      "technologies": {
+        "pow": {
+          "title": "Proof-of-Work (PoW)",
+          "subtitle": "Maximum security",
+          "description": "ASIC-resistant Autolykos algorithm ensures fair mining",
+          "badge": "Secure"
+        },
+        "extendedUtxo": {
+          "title": "Extended UTXO",
+          "subtitle": "Smart money",
+          "description": "Combines Bitcoin security with Ethereum programmability",
+          "badge": "Innovative"
+        },
+        "sigmaProtocols": {
+          "title": "Sigma Protocols",
+          "subtitle": "Advanced cryptography",
+          "description": "Built-in zero-knowledge proofs and privacy features",
+          "badge": "Private"
+        }
+      },
+      "whatIsErgo": {
+        "eutxoLink": "eUTXO model",
+        "powLink": "Proof-of-Work",
+        "storageRentLink": "Storage Rent",
+        "privacyLink": "Privacy Features"
+      },
+      "whyErgo": {
+        "title": "Why Choose Ergo?",
+        "eutxo": "Extended UTXO model for secure smart contracts",
+        "sigma": "Sigma protocols for privacy and zero-knowledge proofs",
+        "pow": "ASIC-resistant Proof-of-Work consensus",
+        "storageRent": "Storage rent mechanism for long-term sustainability"
+      },
+      "keyInnovation": {
+        "title": "Key Innovation"
+      },
+      "references": {
+        "autolykos": "Autolykos v2 Algorithm",
+        "ergoGithub": "Ergo GitHub"
       }
     }
   },

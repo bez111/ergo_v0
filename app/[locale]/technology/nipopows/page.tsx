@@ -100,7 +100,49 @@ export default function NIPOPOWsPage() {
       description: t('useCases.0.description'),
       example: t('useCases.0.example'),
       icon: <Link2 className="w-8 h-8" aria-hidden="true" />,
+      href: "https://rosen.tech",
+      external: true
     },
+    {
+      title: t('useCases.1.title'),
+      description: t('useCases.1.description'),
+      example: t('useCases.1.example'),
+      icon: <Smartphone className="w-8 h-8" aria-hidden="true" />,
+      href: "/wallet",
+      external: false
+    },
+    {
+      title: t('useCases.2.title'),
+      description: t('useCases.2.description'),
+      example: t('useCases.2.example'),
+      icon: <Network className="w-8 h-8" aria-hidden="true" />,
+      href: "/technology/oracle-pools",
+      external: false
+    },
+    {
+      title: t('useCases.3.title'),
+      description: t('useCases.3.description'),
+      example: t('useCases.3.example'),
+      icon: <Zap className="w-8 h-8" aria-hidden="true" />,
+      href: "/docs/introduction/research-whitepapers",
+      external: false
+    },
+    {
+      title: t('useCases.4.title'),
+      description: t('useCases.4.description'),
+      example: t('useCases.4.example'),
+      icon: <Shield className="w-8 h-8" aria-hidden="true" />,
+      href: "/use/defi",
+      external: false
+    },
+    {
+      title: t('useCases.5.title'),
+      description: t('useCases.5.description'),
+      example: t('useCases.5.example'),
+      icon: <CheckCircle className="w-8 h-8" aria-hidden="true" />,
+      href: "/ecosystem/financial",
+      external: false
+    }
   ]
 
   return (
@@ -155,7 +197,7 @@ export default function NIPOPOWsPage() {
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
-            items={[{ label: "Technology", href: "/technology" }, { label: "NIPoPoWs", href: "/technology/nipopows" }]}
+            items={[{ name: "Technology", href: "/technology" }, { name: "NIPoPoWs", href: "/technology/nipopows" }]}
             className="mb-8"
           />
         </div>
@@ -303,7 +345,7 @@ export default function NIPOPOWsPage() {
           <section id="use-cases" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-white">Real Use Cases</h2>
-              <div className="grid md:grid-cols-2 gap-8">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {useCases.map((useCase) => (
                   <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 h-full">
                     <CardContent className="p-8">
