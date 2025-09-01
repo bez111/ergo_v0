@@ -1,12 +1,13 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import EutxoClient from "./EutxoClient"
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const t = await getTranslations({ locale: params.locale, namespace: 'technology.eutxoModel' })
   const url = "https://ergoblockchain.org/technology/eutxo-model"
-  const title = "eUTXO Model — UTXO vs Account | Ergo"
-  const description =
-    "Plain-English guide to the eUTXO model on Ergo: how it works, UTXO vs account-based, security, parallelism, and real use cases."
-  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE
+  const title = t('seo.title')
+  const description = t('seo.description')
+  const twitterHandle = process.env['NEXT_PUBLIC_TWITTER_HANDLE']
   return {
     title,
     description,
@@ -14,12 +15,14 @@ export function generateMetadata(): Metadata {
     openGraph: {
       type: "article",
       url,
-      title,
-      description,
+      title: t('seo.ogTitle'),
+      description: t('seo.ogDescription'),
       images: [{ url: "https://ergoblockchain.org/og/eutxo.png", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
+      title: t('seo.twitterTitle'),
+      description: t('seo.twitterDescription'),
       images: ["https://ergoblockchain.org/og/eutxo.png"],
       ...(twitterHandle ? { site: twitterHandle, creator: twitterHandle } : {}),
     },

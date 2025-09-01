@@ -170,6 +170,7 @@
       "title": "Native Tokens & NFTs",
       "subtitle": "Create and trade tokens and NFTs directly at the protocol level",
       "description": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
+      "details": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
       "lastUpdated": "Last updated",
       "buttons": {
         "exploreNftEcosystem": "Explore NFT Ecosystem",
@@ -203,6 +204,10 @@
           "value": "∞",
           "description": "Unlimited possibilities"
         }
+      },
+      "whyNativeAssets": {
+        "title": "Why Native Assets?",
+        "subtitle": "Unlike other blockchains that require complex smart contracts, Ergo treats custom tokens as first-class citizens"
       },
       "featuresSection": {
         "title": "Why Native Assets?",
@@ -316,6 +321,7 @@
         "subtitle": "Applications that benefit from native token creation"
       },
       "useCases": {
+        "title": "Use Cases",
         "defiTokens": {
           "title": "DeFi Tokens",
           "description": "Create governance tokens, utility tokens, and reward tokens for DeFi protocols"
@@ -392,6 +398,10 @@
           "readDocumentation": "Read Documentation",
           "learnAboutAgeUsd": "Learn About AgeUSD"
         }
+      },
+      "buttons": {
+        "exploreNftEcosystem": "Explore NFT Ecosystem",
+        "tokenApiDocs": "Token API Docs"
       },
       "seo": {
         "title": "Native Tokens & NFTs - First-Class Assets | Ergo Blockchain",
@@ -4365,7 +4375,15 @@
       "eutxo_model_extended_utxo_for_smart_contracts": "eUTXO Model - Extended UTXO for Smart Contracts",
       "eutxo_model_secure_smart_contracts": "eUTXO Model - Secure Smart Contracts",
       "technical_guide_to_the_eutxo": "Technical guide to the eUTXO model and its advantages for DeFi",
-      "plain_english_guide_to_the": "Plain-English guide to the eUTXO model on Ergo: how it works, UTXO vs account-based, security, parallelism, and real use cases."
+      "plain_english_guide_to_the": "Plain-English guide to the eUTXO model on Ergo: how it works, UTXO vs account-based, security, parallelism, and real use cases.",
+      "seo": {
+        "title": "eUTXO Model — UTXO vs Account | Ergo",
+        "description": "Plain-English guide to the eUTXO model on Ergo: how it works, UTXO vs account-based, security, parallelism, and real use cases.",
+        "ogTitle": "eUTXO Model - Extended UTXO for Smart Contracts",
+        "ogDescription": "Discover the eUTXO model, a secure and scalable approach to smart contracts. Learn how Ergo's innovation enables parallel processing and eliminates reentrancy attacks.",
+        "twitterTitle": "eUTXO Model Explained | Parallel Smart Contracts Without Reentrancy",
+        "twitterDescription": "Parallel, secure smart contracts without re-entrancy attacks. The future of DeFi."
+      }
     },
     "oraclePools": {
       "title": "Oracle Pools",
@@ -6868,8 +6886,6 @@
       "title": "Ecosystem - Ergo Blockchain Projects | Ergo Platform",
       "description": "Discover the thriving Ergo ecosystem: DeFi protocols, NFT marketplaces, tools, and applications.",
       "keywords": "Ergo ecosystem, DeFi, NFTs, dApps, blockchain projects",
-      "ogTitle": "Ergo Ecosystem - Blockchain Projects & Applications",
-      "ogDescription": "Explore DeFi, NFTs, wallets, and developer tools in the Ergo ecosystem.",
       "ogTitle": "Ergo Ecosystem - Blockchain Projects & Applications",
       "ogDescription": "Explore DeFi, NFTs, wallets, and developer tools in the Ergo ecosystem."
     },
