@@ -24,7 +24,7 @@ import {
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
-import { HexagonalGrid, MathematicalPattern, GlitchText } from "@/components/ui-kit/signature-effects"
+import { HexagonalGrid, MathematicalPattern } from "@/components/ui-kit/signature-effects"
 
 interface Wallet {
   id: string
@@ -246,15 +246,8 @@ export default function WalletClient() {
       >
         {/* Hero Section - UI Kit Style */}
         <motion.div variants={itemVariants} className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 rounded-full px-6 py-2 mb-8">
-            <Shield className="w-5 h-5 text-orange-500" />
-            <span className="text-sm font-mono uppercase tracking-[0.2em] text-orange-500">Secure Storage</span>
-          </div>
-          
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 font-mono">
-            <GlitchText className="bg-gradient-to-r from-white via-orange-500 to-cyan-500 bg-clip-text text-transparent">
-              ERGO WALLETS
-            </GlitchText>
+          <h1 className="text-6xl md:text-8xl font-bold mb-8 font-mono bg-gradient-to-r from-white via-orange-500 to-cyan-500 bg-clip-text text-transparent">
+            ERGO WALLETS
           </h1>
           
           <div className="max-w-4xl mx-auto mb-12">
@@ -412,7 +405,7 @@ export default function WalletClient() {
                   <Shield className="relative w-16 h-16 mx-auto text-orange-500" />
                 </div>
                 <h3 className="text-3xl font-bold text-white mb-6 font-mono">
-                  <GlitchText>&gt; {t("ui.securityTitle")}</GlitchText>
+                  &gt; {t("ui.securityTitle")}
                 </h3>
                 <p className="text-gray-300 text-lg leading-relaxed mb-8 font-mono max-w-2xl mx-auto">
                   {t("ui.securityNote")}
@@ -440,7 +433,7 @@ export default function WalletClient() {
         <motion.div variants={itemVariants} className="text-center mt-20">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white font-mono">
-              <GlitchText>&gt; Ready to Secure Your ERG?</GlitchText>
+              &gt; Ready to Secure Your ERG?
             </h2>
             <p className="text-xl text-gray-300 mb-12 max-w-2xl mx-auto font-mono leading-relaxed">
               Choose your wallet and start your decentralized journey today. 
