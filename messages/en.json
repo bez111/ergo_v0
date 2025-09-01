@@ -7421,7 +7421,11 @@
     "seo": {
       "title": "Wallets - Secure ERG Storage | Ergo Platform",
       "description": "Find the best Ergo wallets for secure ERG storage and transactions.",
-      "keywords": "Ergo wallet, ERG storage, Nautilus, SAFEW, mobile wallet"
+      "keywords": "Ergo wallet, ERG storage, Nautilus, SAFEW, mobile wallet",
+      "ogTitle": "Ergo Wallets - Secure ERG Storage",
+      "ogDescription": "Find the best Ergo wallets for secure ERG storage and transactions.",
+      "twitterTitle": "Ergo Wallets - Secure ERG Storage",
+      "twitterDescription": "Find the best Ergo wallets for secure ERG storage and transactions."
     },
     "types": {
       "mobile": {
@@ -7468,7 +7472,37 @@
     "offline_key_generation_and_storage": "Offline key generation and storage for maximum security.",
     "offer_price": "Offer',\n            price:",
     "aggregaterating_ratingvalue": "AggregateRating',\n            ratingValue:",
-    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org"
+    "home_item_https_ergoblockchain_org": "Home',\n        item: 'https://ergoblockchain.org",
+    "schema": {
+      "name": "Ergo Wallets",
+      "description": "Collection of secure wallets for Ergo blockchain",
+      "wallets": {
+        "nautilus": {
+          "name": "Nautilus Wallet",
+          "description": "Feature-rich browser extension wallet for Ergo with dApp connectivity"
+        },
+        "satergo": {
+          "name": "Satergo Wallet",
+          "description": "Desktop wallet with full node integration and advanced features"
+        }
+      }
+    },
+    "ui": {
+      "features": "Features",
+      "visitWebsite": "Visit Website",
+      "download": "Download",
+      "securityTitle": "Security First",
+      "securityNote": "Always download wallets from official sources and verify checksums for maximum security.",
+      "platforms": "Platforms",
+      "users": "Users",
+      "rating": "Rating",
+      "recommended": "Recommended",
+      "official": "Official",
+      "allWallets": "All Wallets",
+      "filterBy": "Filter by:",
+      "searchWallets": "Search wallets...",
+      "noWalletsFound": "No wallets found matching your criteria."
+    }
   },
   "mining": {
     "title": "Mining Ergo (ERG)",
