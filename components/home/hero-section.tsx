@@ -4,12 +4,14 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Code, Shield, Zap, Layers } from "lucide-react"
 import { useTranslations, useLocale } from "next-intl"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { CyberButton } from "@/components/animations/cyber-button"
 import { GlitchText } from "@/components/animations/glitch-text"
 
 export function HeroSection() {
   const t = useTranslations('hero')
   const locale = useLocale()
+  const localizedPath = useLocalizedPath()
   
   const HERO_MESSAGES = [
     t('message1') || "Decentralized Money for a Free Society",
@@ -113,7 +115,7 @@ export function HeroSection() {
               className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3"
               asChild
             >
-              <Link href={`/${locale}/start/introduction`} className="inline-flex items-center gap-2">
+              <Link href={localizedPath('/start/introduction')} className="inline-flex items-center gap-2">
                 <span>&gt;</span>
                 <span>{t('exploreErgo') || "Explore Ergo"}</span>
                 <span className="animate-pulse">_</span>
