@@ -25,7 +25,6 @@ import {
 import { motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
 import { HexagonalGrid, MathematicalPattern, GlitchText } from "@/components/ui-kit/signature-effects"
-import { HeroPattern, FeatureGrid } from "@/components/ui-kit/patterns"
 
 interface Wallet {
   id: string
