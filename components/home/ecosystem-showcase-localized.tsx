@@ -13,17 +13,17 @@ import { GlitchText } from "@/components/animations/glitch-text"
 import { cn } from "@/lib/utils"
 
 export function EcosystemShowcase() {
-  const t = useTranslations('ecosystem')
+  const t = useTranslations('ecosystemShowcase')
   const locale = useLocale()
 
   const containerRef = useRef<HTMLDivElement>(null)
   const [activeCategory, setActiveCategory] = useState("DEFI")
 
   const categories = [
-    { id: "DEFI", label: t('filters.defi') },
-    { id: "PRIVACY", label: t('filters.privacy') },
-    { id: "STABLE", label: t('filters.stable') },
-    { id: "GAMING", label: t('filters.gaming') },
+    { id: "DEFI", label: t('categories.defi') },
+    { id: "PRIVACY", label: t('categories.privacy') },
+    { id: "STABLE", label: t('categories.stable') },
+    { id: "GAMING", label: t('categories.gaming') },
   ]
 
   const featuredProjects = {
