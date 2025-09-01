@@ -12,6 +12,7 @@ import { Palette, Coins, Code, ExternalLink, ArrowRight, Lock, CheckCircle, Laye
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,91 +36,104 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "On-Chain Metadata",
-    description: "Store NFT metadata directly on-chain for true permanence and decentralization",
-    icon: Code,
-  },
-  {
-    title: "Protocol Royalties",
-    description: "Enforceable royalties at the protocol level, ensuring creators always get paid",
-    icon: Coins,
-  },
-  {
-    title: "Dynamic NFTs",
-    description: "Programmable NFTs that can evolve based on conditions or user interactions",
-    icon: TrendingUp,
-  },
-  {
-    title: "Fractional Ownership",
-    description: "Split NFTs into fungible tokens for shared ownership and liquidity",
-    icon: Layers,
-  },
-  {
-    title: "Batch Minting",
-    description: "Efficient batch minting for collections with minimal transaction costs",
-    icon: Image,
-  },
-  {
-    title: "Composable Assets",
-    description: "NFTs that can interact with DeFi protocols and other smart contracts",
-    icon: Shield,
-  },
-]
-
-const existingProjects = [
-  {
-    name: "SkyHarbor",
-    description: "Premier NFT marketplace with advanced trading features",
-    status: "Live",
-    features: ["Collection verification", "Bulk trading", "Royalty enforcement"],
-    link: "https://skyharbor.io",
-  },
-  {
-    name: "Auction House",
-    description: "Decentralized auction platform for rare digital assets",
-    status: "Live",
-    features: ["English auctions", "Dutch auctions", "Reserve prices"],
-    link: "https://ergauctions.org",
-  },
-  {
-    name: "Lilium",
-    description: "Art-focused NFT platform with creator tools",
-    status: "Live",
-    features: ["Artist profiles", "Curated collections", "Social features"],
-    link: "https://lilium.art",
-  },
-]
-
 export default function NFTsDigitalAssetsPage() {
+  const t = useTranslations("use.nfts")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
 
-  const faqs = [
+  const features = [
     {
-      question: "What makes Ergo NFTs different?",
-      answer: "Ergo NFTs are native tokens with on-chain metadata, protocol-level royalties, and programmability through ErgoScript. Unlike simple token standards, Ergo NFTs can have complex behaviors and interact with DeFi protocols."
+      title: t("features.onChainMetadata.title"),
+      description: t("features.onChainMetadata.description"),
+      icon: Code,
     },
     {
-      question: "How do protocol royalties work?",
-      answer: "Royalties are enforced at the protocol level through smart contracts. Every sale automatically distributes the specified percentage to creators, ensuring they always receive compensation without relying on marketplace compliance."
+      title: t("features.protocolRoyalties.title"),
+      description: t("features.protocolRoyalties.description"),
+      icon: Coins,
     },
     {
-      question: "Can NFTs store data on-chain?",
-      answer: "Yes! Ergo NFTs can store metadata directly on-chain, including images (as data URIs), attributes, and descriptions. This ensures permanence without relying on external storage like IPFS."
+      title: t("features.dynamicNfts.title"),
+      description: t("features.dynamicNfts.description"),
+      icon: TrendingUp,
     },
     {
-      question: "What are dynamic NFTs?",
-      answer: "Dynamic NFTs can change properties based on conditions like time, user actions, or external data from oracles. Examples include evolving game items, reactive art, or achievement-based collectibles."
+      title: t("features.fractionalOwnership.title"),
+      description: t("features.fractionalOwnership.description"),
+      icon: Layers,
     },
     {
-      question: "How efficient is NFT minting on Ergo?",
-      answer: "Ergo supports batch minting, allowing creators to mint entire collections in a single transaction. The eUTXO model makes this extremely efficient compared to account-based chains."
+      title: t("features.batchMinting.title"),
+      description: t("features.batchMinting.description"),
+      icon: Image,
+    },
+    {
+      title: t("features.composableAssets.title"),
+      description: t("features.composableAssets.description"),
+      icon: Shield,
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
+  const existingProjects = [
+    {
+      name: t("projects.skyHarbor.name"),
+      description: t("projects.skyHarbor.description"),
+      status: t("projects.skyHarbor.status"),
+      features: [
+        t("projects.skyHarbor.features.feature1"),
+        t("projects.skyHarbor.features.feature2"),
+        t("projects.skyHarbor.features.feature3")
+      ],
+      link: "https://skyharbor.io",
+    },
+    {
+      name: t("projects.auctionHouse.name"),
+      description: t("projects.auctionHouse.description"),
+      status: t("projects.auctionHouse.status"),
+      features: [
+        t("projects.auctionHouse.features.feature1"),
+        t("projects.auctionHouse.features.feature2"),
+        t("projects.auctionHouse.features.feature3")
+      ],
+      link: "https://ergauctions.org",
+    },
+    {
+      name: t("projects.lilium.name"),
+      description: t("projects.lilium.description"),
+      status: t("projects.lilium.status"),
+      features: [
+        t("projects.lilium.features.feature1"),
+        t("projects.lilium.features.feature2"),
+        t("projects.lilium.features.feature3")
+      ],
+      link: "https://lilium.art",
+    },
+  ]
+
+  const faqs = [
+    {
+      question: t("faq.whatMakesErgoDifferent.question"),
+      answer: t("faq.whatMakesErgoDifferent.answer")
+    },
+    {
+      question: t("faq.howProtocolRoyaltiesWork.question"),
+      answer: t("faq.howProtocolRoyaltiesWork.answer")
+    },
+    {
+      question: t("faq.canStoreDataOnChain.question"),
+      answer: t("faq.canStoreDataOnChain.answer")
+    },
+    {
+      question: t("faq.whatAreDynamicNfts.question"),
+      answer: t("faq.whatAreDynamicNfts.answer")
+    },
+    {
+      question: t("faq.howEfficientMinting.question"),
+      answer: t("faq.howEfficientMinting.answer")
+    },
+  ]
+
+  const lastUpdated = "2024-01-15"
 
   return (
     <>
@@ -132,13 +146,13 @@ export default function NFTsDigitalAssetsPage() {
             {
               "@type": "ListItem",
               position: 1,
-              name: "Use Cases",
+              name: t("schema.breadcrumbs.useCases"),
               item: "https://ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
-              name: "NFTs & Digital Assets",
+              name: t("schema.breadcrumbs.nftsDigitalAssets"),
               item: "https://ergoblockchain.org/use/nfts-digital-assets"
             }
           ]
@@ -168,8 +182,8 @@ export default function NFTsDigitalAssetsPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Use Cases", href: "/use" },
-              { name: "NFTs & Digital Assets", href: "/use/nfts-digital-assets" }
+              { name: t("schema.breadcrumbs.useCases"), href: "/use" },
+              { name: t("schema.breadcrumbs.nftsDigitalAssets"), href: "/use/nfts-digital-assets" }
             ]}
             className="mb-8"
           />
@@ -188,35 +202,35 @@ export default function NFTsDigitalAssetsPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    NFTs & Digital Assets
+                    {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    True digital ownership, dynamic properties
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    On-chain metadata, protocol royalties, programmable NFTs.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://skyharbor.io" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Explore SkyHarbor
+                        {t("cta.exploreSkyHarbor")}
                       </Button>
-                                      </a>
-                  <Link href="/docs/ecosystem/nfts">
-                    <Button
-                      variant="outline"
+                    </a>
+                    <Link href="/docs/ecosystem/nfts">
+                      <Button
+                        variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                       >
-                        NFT Guide
+                        {t("cta.nftGuide")}
                       </Button>
                     </Link>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">NFT features</a></li>
-                      <li><a href="#projects" className="hover:text-orange-400">Marketplaces</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.nftFeatures")}</a></li>
+                      <li><a href="#projects" className="hover:text-orange-400">{t("navigation.marketplaces")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -225,27 +239,27 @@ export default function NFTsDigitalAssetsPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
+                          {t("quickStart.title")}
                         </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "Browse NFTs",
-                              description: "Explore collections on SkyHarbor",
+                              name: t("quickStart.browseNfts.name"),
+                              description: t("quickStart.browseNfts.description"),
                               icon: <Palette className="w-6 h-6" />,
                               link: "https://skyharbor.io",
                               external: true
                             },
                             {
-                              name: "Create NFTs",
-                              description: "Mint your own collection",
+                              name: t("quickStart.createNfts.name"),
+                              description: t("quickStart.createNfts.description"),
                               icon: <Image className="w-6 h-6" />,
                               link: "https://docs.skyharbor.io",
                               external: true
                             },
                             {
-                              name: "Developer Docs",
-                              description: "Build NFT applications",
+                              name: t("quickStart.developerDocs.name"),
+                              description: t("quickStart.developerDocs.description"),
                               icon: <Terminal className="w-6 h-6" />,
                               link: "/docs/developers",
                               external: false
@@ -306,10 +320,10 @@ export default function NFTsDigitalAssetsPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  NFT Features
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Advanced capabilities for digital assets on Ergo
+                  {t("features.subtitle")}
                 </p>
               </div>
               
@@ -348,42 +362,42 @@ export default function NFTsDigitalAssetsPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Technical Implementation
+                  {t("technical.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  How NFTs work on Ergo
+                  {t("technical.subtitle")}
                 </p>
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
                   <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Overview
+                    {t("technical.tabs.overview")}
                   </TabsTrigger>
                   <TabsTrigger value="metadata" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Metadata
+                    {t("technical.tabs.metadata")}
                   </TabsTrigger>
                   <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Code Example
+                    {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">NFT Architecture</CardTitle>
+                      <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-neutral-400 leading-relaxed">
                         <p className="mb-4">
-                          Ergo NFTs are first-class tokens with unique properties:
+                          {t("technical.overview.description")}
                         </p>
                         <ul className="list-disc list-inside space-y-2 ml-4">
-                          <li>Single token with quantity of 1</li>
-                          <li>Metadata stored in token registers</li>
-                          <li>Programmable through ErgoScript</li>
-                          <li>Native royalty enforcement</li>
-                          <li>Composable with DeFi protocols</li>
+                          <li>{t("technical.overview.points.point1")}</li>
+                          <li>{t("technical.overview.points.point2")}</li>
+                          <li>{t("technical.overview.points.point3")}</li>
+                          <li>{t("technical.overview.points.point4")}</li>
+                          <li>{t("technical.overview.points.point5")}</li>
                         </ul>
                       </div>
                     </CardContent>
@@ -394,26 +408,26 @@ export default function NFTsDigitalAssetsPage() {
                   <div className="space-y-6">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">NFT Registers</CardTitle>
+                        <CardTitle className="text-white">{t("technical.metadata.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Standard Registers</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.metadata.standardRegisters.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• R4: NFT Type/Standard</li>
-                              <li>• R5: Name</li>
-                              <li>• R6: Description</li>
-                              <li>• R7: Image/Media</li>
+                              <li>• {t("technical.metadata.standardRegisters.points.point1")}</li>
+                              <li>• {t("technical.metadata.standardRegisters.points.point2")}</li>
+                              <li>• {t("technical.metadata.standardRegisters.points.point3")}</li>
+                              <li>• {t("technical.metadata.standardRegisters.points.point4")}</li>
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Extended Registers</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.metadata.extendedRegisters.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• R8: Attributes/Properties</li>
-                              <li>• R9: Royalty information</li>
-                              <li>• Custom data structures</li>
-                              <li>• Dynamic properties</li>
+                              <li>• {t("technical.metadata.extendedRegisters.points.point1")}</li>
+                              <li>• {t("technical.metadata.extendedRegisters.points.point2")}</li>
+                              <li>• {t("technical.metadata.extendedRegisters.points.point3")}</li>
+                              <li>• {t("technical.metadata.extendedRegisters.points.point4")}</li>
                             </ul>
                           </div>
                         </div>
@@ -422,7 +436,7 @@ export default function NFTsDigitalAssetsPage() {
 
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Metadata Storage</CardTitle>
+                        <CardTitle className="text-white">{t("technical.metadata.metadataStorage.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -450,8 +464,8 @@ export default function NFTsDigitalAssetsPage() {
                 <TabsContent value="code" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">NFT Minting Example</CardTitle>
-                      <p className="text-neutral-400">ErgoScript for NFT creation</p>
+                      <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
+                      <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -498,10 +512,10 @@ export default function NFTsDigitalAssetsPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  NFT Marketplaces
+                  {t("projects.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Platforms for trading digital assets on Ergo
+                  {t("projects.subtitle")}
                 </p>
               </div>
               
@@ -540,7 +554,7 @@ export default function NFTsDigitalAssetsPage() {
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                         >
-                          Visit Marketplace
+                          {t("projects.visitMarketplace")}
                           <ExternalLink className="ml-1 w-4 h-4" />
                         </a>
                       </CardContent>
@@ -563,10 +577,10 @@ export default function NFTsDigitalAssetsPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about NFTs on Ergo
+                  {t("faq.subtitle")}
                 </p>
               </div>
               
@@ -600,21 +614,21 @@ export default function NFTsDigitalAssetsPage() {
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Create Digital Assets?
+                {t("cta.title")}
               </h2>
               <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Start creating and trading NFTs on Ergo today.
+                {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://skyharbor.io" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Explore SkyHarbor
+                    {t("cta.exploreSkyHarbor")}
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
-                                    <Link href="/docs/ecosystem/nfts">
+                <Link href="/docs/ecosystem/nfts">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    NFT Guide
+                    {t("cta.nftGuide")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

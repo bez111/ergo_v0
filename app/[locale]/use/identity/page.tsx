@@ -12,6 +12,7 @@ import { Brain, Shield, UserCheck, ExternalLink, ArrowRight, Lock, CheckCircle, 
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,88 +36,101 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "Self-Sovereign Identity",
-    description: "Control your own identity without relying on centralized authorities",
-    icon: Fingerprint,
-  },
-  {
-    title: "Decentralized Identifiers",
-    description: "DIDs that work across platforms and applications",
-    icon: UserCheck,
-  },
-  {
-    title: "Reputation Tokens",
-    description: "Non-transferable tokens that represent earned reputation",
-    icon: Award,
-  },
-  {
-    title: "Sybil Resistance",
-    description: "Prevent fake identities and ensure one-person-one-vote",
-    icon: Shield,
-  },
-  {
-    title: "Verifiable Credentials",
-    description: "Cryptographic proofs of identity attributes and achievements",
-    icon: CheckCircle,
-  },
-  {
-    title: "Privacy-Preserving",
-    description: "Selective disclosure of identity information using zero-knowledge proofs",
-    icon: Lock,
-  },
-]
-
-const useCases = [
-  {
-    name: "DAO Governance",
-    description: "Reputation-weighted voting for decentralized organizations",
-    status: "Concept",
-    features: ["Merit-based voting", "Delegation systems", "Contribution tracking"],
-  },
-  {
-    name: "DeFi Credit Scoring",
-    description: "On-chain credit history for under-collateralized loans",
-    status: "Research",
-    features: ["Payment history", "Risk assessment", "Credit limits"],
-  },
-  {
-    name: "Professional Credentials",
-    description: "Verifiable professional certifications and achievements",
-    status: "Planned",
-    features: ["Skill verification", "Work history", "Peer endorsements"],
-  },
-]
-
 export default function IdentityReputationPage() {
+  const t = useTranslations("use.identity")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
 
-  const faqs = [
+  const features = [
     {
-      question: "What is self-sovereign identity?",
-      answer: "Self-sovereign identity (SSI) gives individuals control over their digital identity without depending on centralized authorities. Users own their identity data and choose what to share and with whom."
+      title: t("features.selfSovereignIdentity.title"),
+      description: t("features.selfSovereignIdentity.description"),
+      icon: Fingerprint,
     },
     {
-      question: "How do reputation tokens work?",
-      answer: "Reputation tokens are non-transferable NFTs that represent earned achievements or trust. They cannot be sold or transferred, ensuring reputation must be earned, not bought."
+      title: t("features.decentralizedIdentifiers.title"),
+      description: t("features.decentralizedIdentifiers.description"),
+      icon: UserCheck,
     },
     {
-      question: "What are DIDs on Ergo?",
-      answer: "Decentralized Identifiers (DIDs) on Ergo are unique identifiers anchored on the blockchain. They enable verifiable, self-sovereign digital identity that works across different platforms and applications."
+      title: t("features.reputationTokens.title"),
+      description: t("features.reputationTokens.description"),
+      icon: Award,
     },
     {
-      question: "How is privacy maintained?",
-      answer: "Ergo uses zero-knowledge proofs and selective disclosure to maintain privacy. Users can prove attributes about their identity (like being over 18) without revealing the actual data."
+      title: t("features.sybilResistance.title"),
+      description: t("features.sybilResistance.description"),
+      icon: Shield,
     },
     {
-      question: "Can reputation be used for DeFi?",
-      answer: "Yes! On-chain reputation can enable under-collateralized lending, better interest rates, and access to exclusive DeFi services based on proven track record rather than just collateral."
+      title: t("features.verifiableCredentials.title"),
+      description: t("features.verifiableCredentials.description"),
+      icon: CheckCircle,
+    },
+    {
+      title: t("features.privacyPreserving.title"),
+      description: t("features.privacyPreserving.description"),
+      icon: Lock,
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
+  const useCases = [
+    {
+      name: t("useCases.daoGovernance.name"),
+      description: t("useCases.daoGovernance.description"),
+      status: t("useCases.daoGovernance.status"),
+      features: [
+        t("useCases.daoGovernance.features.feature1"),
+        t("useCases.daoGovernance.features.feature2"),
+        t("useCases.daoGovernance.features.feature3")
+      ],
+    },
+    {
+      name: t("useCases.defiCreditScoring.name"),
+      description: t("useCases.defiCreditScoring.description"),
+      status: t("useCases.defiCreditScoring.status"),
+      features: [
+        t("useCases.defiCreditScoring.features.feature1"),
+        t("useCases.defiCreditScoring.features.feature2"),
+        t("useCases.defiCreditScoring.features.feature3")
+      ],
+    },
+    {
+      name: t("useCases.professionalCredentials.name"),
+      description: t("useCases.professionalCredentials.description"),
+      status: t("useCases.professionalCredentials.status"),
+      features: [
+        t("useCases.professionalCredentials.features.feature1"),
+        t("useCases.professionalCredentials.features.feature2"),
+        t("useCases.professionalCredentials.features.feature3")
+      ],
+    },
+  ]
+
+  const faqs = [
+    {
+      question: t("faq.whatIsSsi.question"),
+      answer: t("faq.whatIsSsi.answer")
+    },
+    {
+      question: t("faq.howReputationTokensWork.question"),
+      answer: t("faq.howReputationTokensWork.answer")
+    },
+    {
+      question: t("faq.whatAreDids.question"),
+      answer: t("faq.whatAreDids.answer")
+    },
+    {
+      question: t("faq.howPrivacyMaintained.question"),
+      answer: t("faq.howPrivacyMaintained.answer")
+    },
+    {
+      question: t("faq.canReputationBeUsedForDefi.question"),
+      answer: t("faq.canReputationBeUsedForDefi.answer")
+    },
+  ]
+
+  const lastUpdated = "2024-01-15"
 
   return (
     <>
@@ -129,13 +143,13 @@ export default function IdentityReputationPage() {
             {
               "@type": "ListItem",
               position: 1,
-              name: "Use Cases",
+              name: t("schema.breadcrumbs.useCases"),
               item: "https://ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
-              name: "Identity & Reputation",
+              name: t("schema.breadcrumbs.identityReputation"),
               item: "https://ergoblockchain.org/use/identity-reputation"
             }
           ]
@@ -165,8 +179,8 @@ export default function IdentityReputationPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Use Cases", href: "/use" },
-              { name: "Identity & Reputation", href: "/use/identity-reputation" }
+              { name: t("schema.breadcrumbs.useCases"), href: "/use" },
+              { name: t("schema.breadcrumbs.identityReputation"), href: "/use/identity-reputation" }
             ]}
             className="mb-8"
           />
@@ -185,19 +199,19 @@ export default function IdentityReputationPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    Identity & Reputation
+                    {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    Self-sovereign identity & Web3 reputation
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Decentralized identifiers (DID), Sybil resistance, reputation systems.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/docs/ecosystem">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Learn More
+                        {t("cta.learnMore")}
                       </Button>
                     </Link>
                     <Link href="/docs/developers">
@@ -211,9 +225,9 @@ export default function IdentityReputationPage() {
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Identity features</a></li>
-                      <li><a href="#use-cases" className="hover:text-orange-400">Use Cases</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.identityFeatures")}</a></li>
+                      <li><a href="#use-cases" className="hover:text-orange-400">{t("navigation.useCases")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -222,27 +236,27 @@ export default function IdentityReputationPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
+                          {t("quickStart.title")}
                         </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "Identity Guide",
-                              description: "Learn about SSI on Ergo",
+                              name: t("quickStart.identityGuide.name"),
+                              description: t("quickStart.identityGuide.description"),
                               icon: <Brain className="w-6 h-6" />,
                               link: "/docs/introduction/privacy",
                               external: false
                             },
                             {
-                              name: "DID Standards",
-                              description: "W3C DID specifications",
+                              name: t("quickStart.didStandards.name"),
+                              description: t("quickStart.didStandards.description"),
                               icon: <UserCheck className="w-6 h-6" />,
                               link: "https://www.w3.org/TR/did-core/",
                               external: true
                             },
                             {
-                              name: "Build Identity Apps",
-                              description: "Developer resources",
+                              name: t("quickStart.buildIdentityApps.name"),
+                              description: t("quickStart.buildIdentityApps.description"),
                               icon: <Terminal className="w-6 h-6" />,
                               link: "/docs/developers",
                               external: false
@@ -303,10 +317,10 @@ export default function IdentityReputationPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Identity Features
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Building blocks for decentralized identity
+                  {t("features.subtitle")}
                 </p>
               </div>
               
@@ -345,42 +359,42 @@ export default function IdentityReputationPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Technical Architecture
+                  {t("technical.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  How identity systems work on Ergo
+                  {t("technical.subtitle")}
                 </p>
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
                   <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Overview
+                    {t("technical.tabs.overview")}
                   </TabsTrigger>
                   <TabsTrigger value="reputation" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Reputation
+                    {t("technical.tabs.reputation")}
                   </TabsTrigger>
                   <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Code Example
+                    {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Identity System</CardTitle>
+                      <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-neutral-400 leading-relaxed">
                         <p className="mb-4">
-                          Ergo enables decentralized identity through:
+                          {t("technical.overview.description")}
                         </p>
                         <ul className="list-disc list-inside space-y-2 ml-4">
-                          <li>Cryptographic key pairs for identity</li>
-                          <li>On-chain DIDs and credentials</li>
-                          <li>Zero-knowledge proofs for privacy</li>
-                          <li>Non-transferable reputation tokens</li>
-                          <li>Verifiable credential issuance</li>
+                          <li>{t("technical.overview.points.point1")}</li>
+                          <li>{t("technical.overview.points.point2")}</li>
+                          <li>{t("technical.overview.points.point3")}</li>
+                          <li>{t("technical.overview.points.point4")}</li>
+                          <li>{t("technical.overview.points.point5")}</li>
                         </ul>
                       </div>
                     </CardContent>
@@ -391,26 +405,26 @@ export default function IdentityReputationPage() {
                   <div className="space-y-6">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Reputation System</CardTitle>
+                        <CardTitle className="text-white">{t("technical.reputation.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Earning Reputation</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.reputation.earning.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Complete verified actions</li>
-                              <li>• Receive peer endorsements</li>
-                              <li>• Contribute to protocols</li>
-                              <li>• Time-based accumulation</li>
+                              <li>• {t("technical.reputation.earning.points.point1")}</li>
+                              <li>• {t("technical.reputation.earning.points.point2")}</li>
+                              <li>• {t("technical.reputation.earning.points.point3")}</li>
+                              <li>• {t("technical.reputation.earning.points.point4")}</li>
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Using Reputation</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.reputation.using.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Weighted voting power</li>
-                              <li>• Access to services</li>
-                              <li>• Better loan terms</li>
-                              <li>• Trust signaling</li>
+                              <li>• {t("technical.reputation.using.points.point1")}</li>
+                              <li>• {t("technical.reputation.using.points.point2")}</li>
+                              <li>• {t("technical.reputation.using.points.point3")}</li>
+                              <li>• {t("technical.reputation.using.points.point4")}</li>
                             </ul>
                           </div>
                         </div>
@@ -419,7 +433,7 @@ export default function IdentityReputationPage() {
 
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Sybil Resistance</CardTitle>
+                        <CardTitle className="text-white">{t("technical.reputation.sybilResistance.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -441,8 +455,8 @@ export default function IdentityReputationPage() {
                 <TabsContent value="code" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Reputation Token Example</CardTitle>
-                      <p className="text-neutral-400">Non-transferable reputation NFT</p>
+                      <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
+                      <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -489,10 +503,10 @@ export default function IdentityReputationPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Identity Use Cases
+                  {t("useCases.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Applications for decentralized identity
+                  {t("useCases.subtitle")}
                 </p>
               </div>
               
@@ -512,9 +526,9 @@ export default function IdentityReputationPage() {
                         <div className="flex items-center justify-between">
                           <CardTitle className="text-white">{useCase.name}</CardTitle>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            useCase.status === 'Concept' 
+                            useCase.status === t("useCases.daoGovernance.status")
                               ? 'bg-purple-500/20 text-purple-400' 
-                              : useCase.status === 'Research'
+                              : useCase.status === t("useCases.defiCreditScoring.status")
                               ? 'bg-blue-500/20 text-blue-400'
                               : 'bg-yellow-500/20 text-yellow-400'
                           }`}>
@@ -551,10 +565,10 @@ export default function IdentityReputationPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about identity on Ergo
+                  {t("faq.subtitle")}
                 </p>
               </div>
               
@@ -588,21 +602,21 @@ export default function IdentityReputationPage() {
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Build Identity Solutions?
+                {t("cta.title")}
               </h2>
               <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Create decentralized identity and reputation systems on Ergo.
+                {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/docs/developers">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Start Building
+                    {t("cta.startBuilding")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="/docs/introduction/privacy">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    Learn More
+                    {t("cta.learnMore")}
                     <BookOpen className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

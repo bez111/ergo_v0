@@ -1,25 +1,31 @@
 import { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "DAOs & Alternative Economies on Ergo | Decentralized Governance",
-  description: "Build DAOs and alternative economic systems on Ergo. Treasury management, on-chain voting, profit sharing, and composable governance infrastructure.",
-  keywords: "DAOs, decentralized governance, alternative economies, Paideia, treasury management, on-chain voting, Ergo DAO",
-  openGraph: {
-    title: "DAOs & Alternative Economies on Ergo",
-    description: "Community governance and alternative economic systems on Ergo blockchain.",
-    images: ["/og-daos.png"],
-    type: "website",
-    url: "https://ergoblockchain.org/use/daos-alternative-economies",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "DAOs on Ergo",
-    description: "Build decentralized organizations with Paideia",
-    images: ["/og-daos.png"],
-  },
-  alternates: {
-    canonical: "https://ergoblockchain.org/use/daos-alternative-economies",
-  },
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'use.daos.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ["/og-daos.png"],
+      type: "website",
+      url: "https://ergoblockchain.org/use/daos-alternative-economies",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["/og-daos.png"],
+    },
+    alternates: {
+      canonical: "https://ergoblockchain.org/use/daos-alternative-economies",
+    },
+  }
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

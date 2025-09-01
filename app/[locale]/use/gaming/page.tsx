@@ -12,6 +12,7 @@ import { Gamepad2, Coins, Globe, ExternalLink, ArrowRight, Lock, CheckCircle, La
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,88 +36,101 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "In-Game Assets",
-    description: "True ownership of game items, characters, and resources as NFTs",
-    icon: Trophy,
-  },
-  {
-    title: "Play-to-Earn",
-    description: "Earn real value through gameplay with tokenized rewards",
-    icon: Coins,
-  },
-  {
-    title: "Virtual Worlds",
-    description: "Decentralized metaverse platforms with user-owned land and assets",
-    icon: Globe,
-  },
-  {
-    title: "Cross-Game Items",
-    description: "Interoperable assets that work across multiple games",
-    icon: Layers,
-  },
-  {
-    title: "Dynamic NFTs",
-    description: "Game items that evolve based on player actions and achievements",
-    icon: Sparkles,
-  },
-  {
-    title: "DAO Governance",
-    description: "Player-owned game economies with community governance",
-    icon: CheckCircle,
-  },
-]
-
-const projects = [
-  {
-    name: "Blitz TCG",
-    description: "Trading card game with on-chain card ownership",
-    status: "In Development",
-    features: ["Collectible cards", "Tournament play", "Card trading"],
-  },
-  {
-    name: "ErgoRacer",
-    description: "Racing game with NFT vehicles and tracks",
-    status: "Concept",
-    features: ["Custom vehicles", "Track ownership", "Racing leagues"],
-  },
-  {
-    name: "CyberPunks",
-    description: "Cyberpunk-themed collectible game",
-    status: "Live",
-    features: ["Unique avatars", "Rarity system", "Community events"],
-  },
-]
-
 export default function GamingMetaversePage() {
+  const t = useTranslations("use.gaming")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
 
-  const faqs = [
+  const features = [
     {
-      question: "How do blockchain games work on Ergo?",
-      answer: "Ergo games use NFTs for in-game assets and tokens for game currencies. Smart contracts handle game logic, item trading, and reward distribution, ensuring transparent and fair gameplay."
+      title: t("features.inGameAssets.title"),
+      description: t("features.inGameAssets.description"),
+      icon: Trophy,
     },
     {
-      question: "What are dynamic game NFTs?",
-      answer: "Dynamic NFTs on Ergo can change properties based on gameplay. A sword might gain power with use, or a character might evolve based on achievements, all tracked on-chain through smart contracts."
+      title: t("features.playToEarn.title"),
+      description: t("features.playToEarn.description"),
+      icon: Coins,
     },
     {
-      question: "Can game assets be used across different games?",
-      answer: "Yes! Ergo's NFT standard allows assets to be interoperable. Developers can build games that recognize and utilize NFTs from other games, creating a shared gaming metaverse."
+      title: t("features.virtualWorlds.title"),
+      description: t("features.virtualWorlds.description"),
+      icon: Globe,
     },
     {
-      question: "How does play-to-earn work?",
-      answer: "Players earn tokens or NFTs through gameplay achievements, competitions, or contributions. These digital assets have real value and can be traded on marketplaces or used in other games."
+      title: t("features.crossGameItems.title"),
+      description: t("features.crossGameItems.description"),
+      icon: Layers,
     },
     {
-      question: "What makes Ergo good for gaming?",
-      answer: "Ergo's low fees, fast transactions, programmable NFTs, and robust smart contracts make it ideal for gaming. The eUTXO model also enables complex game mechanics while maintaining security."
+      title: t("features.dynamicNfts.title"),
+      description: t("features.dynamicNfts.description"),
+      icon: Sparkles,
+    },
+    {
+      title: t("features.daoGovernance.title"),
+      description: t("features.daoGovernance.description"),
+      icon: CheckCircle,
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
+  const projects = [
+    {
+      name: t("projects.blitzTcg.name"),
+      description: t("projects.blitzTcg.description"),
+      status: t("projects.blitzTcg.status"),
+      features: [
+        t("projects.blitzTcg.features.feature1"),
+        t("projects.blitzTcg.features.feature2"),
+        t("projects.blitzTcg.features.feature3")
+      ],
+    },
+    {
+      name: t("projects.ergoRacer.name"),
+      description: t("projects.ergoRacer.description"),
+      status: t("projects.ergoRacer.status"),
+      features: [
+        t("projects.ergoRacer.features.feature1"),
+        t("projects.ergoRacer.features.feature2"),
+        t("projects.ergoRacer.features.feature3")
+      ],
+    },
+    {
+      name: t("projects.cyberPunks.name"),
+      description: t("projects.cyberPunks.description"),
+      status: t("projects.cyberPunks.status"),
+      features: [
+        t("projects.cyberPunks.features.feature1"),
+        t("projects.cyberPunks.features.feature2"),
+        t("projects.cyberPunks.features.feature3")
+      ],
+    },
+  ]
+
+  const faqs = [
+    {
+      question: t("faq.howBlockchainGamesWork.question"),
+      answer: t("faq.howBlockchainGamesWork.answer")
+    },
+    {
+      question: t("faq.whatAreDynamicGameNfts.question"),
+      answer: t("faq.whatAreDynamicGameNfts.answer")
+    },
+    {
+      question: t("faq.canAssetsBeUsedAcrossGames.question"),
+      answer: t("faq.canAssetsBeUsedAcrossGames.answer")
+    },
+    {
+      question: t("faq.howPlayToEarnWorks.question"),
+      answer: t("faq.howPlayToEarnWorks.answer")
+    },
+    {
+      question: t("faq.whatMakesErgoGoodForGaming.question"),
+      answer: t("faq.whatMakesErgoGoodForGaming.answer")
+    },
+  ]
+
+  const lastUpdated = "2024-01-15"
 
   return (
     <>
@@ -129,13 +143,13 @@ export default function GamingMetaversePage() {
             {
               "@type": "ListItem",
               position: 1,
-              name: "Use Cases",
+              name: t("schema.breadcrumbs.useCases"),
               item: "https://ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
-              name: "Gaming & Metaverse",
+              name: t("schema.breadcrumbs.gamingMetaverse"),
               item: "https://ergoblockchain.org/use/gaming-metaverse"
             }
           ]
@@ -165,8 +179,8 @@ export default function GamingMetaversePage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Use Cases", href: "/use" },
-              { name: "Gaming & Metaverse", href: "/use/gaming-metaverse" }
+              { name: t("schema.breadcrumbs.useCases"), href: "/use" },
+              { name: t("schema.breadcrumbs.gamingMetaverse"), href: "/use/gaming-metaverse" }
             ]}
             className="mb-8"
           />
@@ -185,19 +199,19 @@ export default function GamingMetaversePage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    Gaming & Metaverse
+                    {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    Next-gen gaming assets & digital worlds
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Programmable gaming tokens, NFT-powered economies, metaverse infrastructure.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link href="/ecosystem">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Explore Games
+                        {t("cta.exploreGames")}
                       </Button>
                     </Link>
                     <Link href="/docs/developers">
@@ -205,15 +219,15 @@ export default function GamingMetaversePage() {
                         variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                       >
-                        Build a Game
+                        {t("cta.buildAGame")}
                       </Button>
                     </Link>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Gaming features</a></li>
-                      <li><a href="#projects" className="hover:text-orange-400">Game Projects</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.gamingFeatures")}</a></li>
+                      <li><a href="#projects" className="hover:text-orange-400">{t("navigation.gameProjects")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -222,27 +236,27 @@ export default function GamingMetaversePage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
+                          {t("quickStart.title")}
                         </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "Play Games",
-                              description: "Explore Ergo gaming ecosystem",
+                              name: t("quickStart.playGames.name"),
+                              description: t("quickStart.playGames.description"),
                               icon: <Gamepad2 className="w-6 h-6" />,
                               link: "/ecosystem",
                               external: false
                             },
                             {
-                              name: "Game SDK",
-                              description: "Tools for game developers",
+                              name: t("quickStart.gameSdk.name"),
+                              description: t("quickStart.gameSdk.description"),
                               icon: <Code className="w-6 h-6" />,
                               link: "https://github.com/ergoplatform",
                               external: true
                             },
                             {
-                              name: "Developer Docs",
-                              description: "Build blockchain games",
+                              name: t("quickStart.developerDocs.name"),
+                              description: t("quickStart.developerDocs.description"),
                               icon: <Terminal className="w-6 h-6" />,
                               link: "/docs/developers",
                               external: false
@@ -303,10 +317,10 @@ export default function GamingMetaversePage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Gaming Features
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Building blocks for blockchain gaming
+                  {t("features.subtitle")}
                 </p>
               </div>
               
@@ -345,42 +359,42 @@ export default function GamingMetaversePage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Game Architecture
+                  {t("technical.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  How blockchain gaming works on Ergo
+                  {t("technical.subtitle")}
                 </p>
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
                   <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Overview
+                    {t("technical.tabs.overview")}
                   </TabsTrigger>
                   <TabsTrigger value="economy" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Game Economy
+                    {t("technical.tabs.economy")}
                   </TabsTrigger>
                   <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Code Example
+                    {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Gaming Infrastructure</CardTitle>
+                      <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-neutral-400 leading-relaxed">
                         <p className="mb-4">
-                          Ergo provides complete infrastructure for blockchain gaming:
+                          {t("technical.overview.description")}
                         </p>
                         <ul className="list-disc list-inside space-y-2 ml-4">
-                          <li>NFTs for unique game assets</li>
-                          <li>Tokens for in-game currencies</li>
-                          <li>Smart contracts for game logic</li>
-                          <li>Oracles for randomness</li>
-                          <li>DAOs for game governance</li>
+                          <li>{t("technical.overview.points.point1")}</li>
+                          <li>{t("technical.overview.points.point2")}</li>
+                          <li>{t("technical.overview.points.point3")}</li>
+                          <li>{t("technical.overview.points.point4")}</li>
+                          <li>{t("technical.overview.points.point5")}</li>
                         </ul>
                       </div>
                     </CardContent>
@@ -391,26 +405,26 @@ export default function GamingMetaversePage() {
                   <div className="space-y-6">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Token Economy</CardTitle>
+                        <CardTitle className="text-white">{t("technical.economy.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Game Tokens</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.economy.gameTokens.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• In-game currency</li>
-                              <li>• Reward tokens</li>
-                              <li>• Governance tokens</li>
-                              <li>• Staking mechanisms</li>
+                              <li>• {t("technical.economy.gameTokens.points.point1")}</li>
+                              <li>• {t("technical.economy.gameTokens.points.point2")}</li>
+                              <li>• {t("technical.economy.gameTokens.points.point3")}</li>
+                              <li>• {t("technical.economy.gameTokens.points.point4")}</li>
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">NFT Assets</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.economy.nftAssets.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Characters & avatars</li>
-                              <li>• Items & equipment</li>
-                              <li>• Land & buildings</li>
-                              <li>• Achievements & badges</li>
+                              <li>• {t("technical.economy.nftAssets.points.point1")}</li>
+                              <li>• {t("technical.economy.nftAssets.points.point2")}</li>
+                              <li>• {t("technical.economy.nftAssets.points.point3")}</li>
+                              <li>• {t("technical.economy.nftAssets.points.point4")}</li>
                             </ul>
                           </div>
                         </div>
@@ -419,7 +433,7 @@ export default function GamingMetaversePage() {
 
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Play-to-Earn Model</CardTitle>
+                        <CardTitle className="text-white">{t("technical.economy.playToEarnModel.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -440,8 +454,8 @@ export default function GamingMetaversePage() {
                 <TabsContent value="code" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Game Item NFT</CardTitle>
-                      <p className="text-neutral-400">Dynamic game item with leveling</p>
+                      <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
+                      <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -491,10 +505,10 @@ export default function GamingMetaversePage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Game Projects
+                  {t("projects.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Games building on Ergo
+                  {t("projects.subtitle")}
                 </p>
               </div>
               
@@ -514,9 +528,9 @@ export default function GamingMetaversePage() {
                         <div className="flex items-center justify-between">
                           <CardTitle className="text-white">{project.name}</CardTitle>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            project.status === 'Live' 
+                            project.status === t("projects.cyberPunks.status")
                               ? 'bg-green-500/20 text-green-400' 
-                              : project.status === 'In Development'
+                              : project.status === t("projects.blitzTcg.status")
                               ? 'bg-yellow-500/20 text-yellow-400'
                               : 'bg-purple-500/20 text-purple-400'
                           }`}>
@@ -553,10 +567,10 @@ export default function GamingMetaversePage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about gaming on Ergo
+                  {t("faq.subtitle")}
                 </p>
               </div>
               
@@ -590,21 +604,21 @@ export default function GamingMetaversePage() {
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Build the Future of Gaming?
+                {t("cta.title")}
               </h2>
               <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Create blockchain games and metaverse experiences on Ergo.
+                {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link href="/docs/developers">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Start Building
+                    {t("cta.startBuilding")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
                 <Link href="/ecosystem">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    Explore Games
+                    {t("cta.exploreGames")}
                     <Gamepad2 className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

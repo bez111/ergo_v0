@@ -1,11 +1,12 @@
 import { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 export const metadata: Metadata = {
   title: "Storage Rent Explained | Sustainable Blockchain Economics on Ergo",
-  description:
-    "Revolutionary economic model solving blockchain bloat forever. Learn how Storage Rent ensures sustainable blockchain size, perpetual miner rewards, and efficient resource usage.",
+  description: "Revolutionary economic model solving blockchain bloat forever. Learn how Storage Rent ensures sustainable blockchain size, perpetual miner rewards, and efficient resource usage.",
+  keywords: ["storage rent", "blockchain sustainability", "ergo economics", "utxo cleanup", "miner rewards", "blockchain bloat"],
   alternates: { canonical: "https://ergoblockchain.org/technology/storage-rent" },
   openGraph: {
     type: "article",

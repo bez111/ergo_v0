@@ -7,8 +7,10 @@ import { GuideCard } from "@/components/guides/guide-card"
 import { guidesData, categories } from "@/lib/guides-data"
 import { Button } from "@/components/ui/button"
 import { BookOpen } from "lucide-react"
+import { useTranslations } from "next-intl"
 
 export default function GuidesClient() {
+  const t = useTranslations('use.guides')
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("")
 
@@ -43,9 +45,9 @@ export default function GuidesClient() {
             className="pt-28 pb-10 px-4"
           >
             <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Ergo Guides</h1>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">{t('title')}</h1>
               <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-3xl mx-auto">
-                Master the Ergo ecosystem with comprehensive guides, from wallet setup to advanced smart contract development.
+                {t('subtitle')}
               </p>
             </div>
           </motion.section>
@@ -64,8 +66,8 @@ export default function GuidesClient() {
               <BookOpen className="w-6 h-6 text-orange-400" />
               <h2 className="text-2xl font-bold text-white">
                 {selectedCategory
-                  ? `${categories.find((cat) => cat.id === selectedCategory)?.name} Guides`
-                  : "All Guides"}
+                  ? t('filters.categoryGuides', { category: categories.find((cat) => cat.id === selectedCategory)?.name })
+                  : t('filters.allGuides')}
               </h2>
               <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">
                 {filteredGuides.length}
@@ -86,10 +88,10 @@ export default function GuidesClient() {
             ) : (
               <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
-                <h3 className="text-2xl font-bold text-white mb-2">No guides found</h3>
-                <p className="text-white/70 mb-6">Try adjusting your search or filter criteria</p>
+                <h3 className="text-2xl font-bold text-white mb-2">{t('filters.noGuides.title')}</h3>
+                <p className="text-white/70 mb-6">{t('filters.noGuides.description')}</p>
                 <Button onClick={clearFilters} variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                  Clear Filters
+                  {t('filters.noGuides.clearFilters')}
                 </Button>
               </motion.div>
             )}

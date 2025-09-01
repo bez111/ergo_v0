@@ -1,5 +1,6 @@
 "use client"
 
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -26,6 +27,7 @@ const itemVariants = {
 }
 
 export default function EutxoClient() {
+  const t = useTranslations("technology.eutxoModel")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   const modelComparison = [
@@ -46,31 +48,30 @@ export default function EutxoClient() {
 
   const transactionSteps = [
     { step: 1, title: "Inputs", description: "Consume existing boxes ('spend' them)", icon: <Database className="w-6 h-6" /> },
-    { step: 2, title: "Outputs", description: "Create new boxes with new logic or data", icon: <Box className="w-6 h-6" /> },
-    { step: 3, title: "Script Checks", description: "Each input's script must return `true`", icon: <Shield className="w-6 h-6" /> },
-    { step: 4, title: "State Transition", description: "State changes by consuming and recreating boxes", icon: <Zap className="w-6 h-6" /> },
+    { step: 2, title: "Outputs", description: "Create new boxes with value and conditions", icon: <Box className="w-6 h-6" /> },
+    { step: 3, title: "Validation", description: "Check scripts, balances, and protocol rules", icon: <CheckCircle className="w-6 h-6" /> },
   ]
 
   const useCases = [
-    { title: "DeFi with Strong Guarantees", description: "DEXs, algorithmic stablecoins, trust-minimized lending", icon: <Zap className="w-8 h-8" />, examples: ["Spectrum Finance", "SigmaUSD", "DuckPools"], color: "from-orange-500/20 to-orange-500/5" },
-    { title: "NFTs & Asset Registries", description: "Each NFT is a unique box, no global ledger needed", icon: <Box className="w-8 h-8" />, examples: ["Ergo Auction House", "SkyHarbor", "Unique Assets"], color: "from-cyan-500/20 to-cyan-500/5" },
-    { title: "Privacy Protocols", description: "Zero-knowledge logic baked into core language", icon: <Eye className="w-8 h-8" />, examples: ["ErgoMixer", "Σ-protocols", "Confidential Assets"], color: "from-purple-500/20 to-purple-500/5" },
-    { title: "Verifiable Applications", description: "eUTXO's explicitness ideal for audit-heavy environments", icon: <Shield className="w-8 h-8" />, examples: ["Oracle Pools", "Governance", "Compliance Tools"], color: "from-green-500/20 to-green-500/5" },
+    { title: "DeFi Protocols", description: "DEXs, lending, yield farming with composable boxes", icon: <Zap className="w-8 h-8" />, href: "/use/stablecoins" },
+    { title: "NFT Marketplaces", description: "Native tokens as NFTs with rich metadata", icon: <Eye className="w-8 h-8" />, href: "/use/nfts" },
+    { title: "Privacy Applications", description: "Mixing protocols using UTXO anonymity sets", icon: <Shield className="w-8 h-8" />, href: "/use/privacy" },
+    { title: "Cross-Chain Bridges", description: "Trustless bridges using NIPoPoWs and eUTXO", icon: <ArrowRight className="w-8 h-8" />, href: "/use/bridges" },
   ]
 
-  const faqs = [
-    { question: "Is eUTXO more complex for new developers?", answer: "The concepts are different, but eUTXO makes many safety problems easier to solve and enables powerful new designs. Once developers understand the 'box thinking' paradigm, they often find it more predictable and secure than account-based models." },
-    { question: "Can you port Ethereum dApps to Ergo?", answer: "Not directly — but most DeFi primitives can be recreated with eUTXO patterns and are often safer by default. The architecture requires rethinking the application logic, but the result is typically more robust and auditable." },
-    { question: "How does eUTXO handle shared state?", answer: "Shared state is managed through 'shared boxes' that multiple transactions can reference. Advanced dApps use techniques like batching, state splitting, or stateless proxies to minimize contention and maintain scalability." },
+  const faqData = [
+    { question: "What is the eUTXO model?", answer: "The eUTXO (Extended UTXO) model combines Bitcoin's UTXO security with smart contract capabilities, enabling parallel execution and eliminating reentrancy attacks." },
+    { question: "How does eUTXO handle shared state?", answer: "Shared state is managed through 'shared boxes' that multiple transactions can reference. Advanced dApps use techniques like batching, state splitting, or stateless contracts." },
     { question: "What are the main advantages over Bitcoin's UTXO?", answer: "eUTXO extends Bitcoin's UTXO with programmable logic, custom data storage in registers, and support for complex smart contracts while maintaining the security and parallelism benefits of the UTXO model." },
+    { question: "Why is eUTXO better for DeFi?", answer: "eUTXO enables composable, predictable smart contracts with deterministic fees, no front-running, and parallel transaction processing for better throughput." },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
+  const lastUpdated = "2024-01-15"
 
   return (
     <div className="min-h-screen relative">
       <div className="sr-only">
-        <Breadcrumbs items={[{ label: "Technology", href: "/technology" }, { label: "eUTXO Model", href: "/technology/eutxo-model" }]} className="mb-8" />
+        <Breadcrumbs items={[{ name: "Technology", href: "/technology" }, { name: "eUTXO Model", href: "/technology/eutxo-model" }]} className="mb-8" />
       </div>
 
       <div className="absolute inset-0 pointer-events-none">
@@ -78,29 +79,35 @@ export default function EutxoClient() {
       </div>
 
       <main>
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
           <motion.section variants={itemVariants} className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">eUTXO Model</h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
-                  <p className="text-xl md:text-2xl text-neutral-300 mb-6 max-w-2xl">How Ergo Differs from Account-Based Blockchains</p>
-                  <p className="text-lg text-neutral-400 mb-6 max-w-2xl leading-relaxed">Ergo's eUTXO model fuses the security, parallelism, and simplicity of UTXO with the expressive power needed for complex smart contracts.</p>
+                  <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">{t("title")}</h1>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
+                  <p className="text-xl md:text-2xl text-neutral-300 mb-6 max-w-2xl">{t("subtitle")}</p>
+                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                    {t("description")}
+                  </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                                                  <Link href="/docs">Learn More</Link>
-                    </Button>
-                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
-                      <Link href="/docs/developers/tutorials">View Examples</Link>
-                    </Button>
+                    <Link href="/docs/eutxo">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                        {t("buttons.readDocumentation")}
+                      </Button>
+                    </Link>
+                    <a href="https://ergoplatform.org/en/blog/2021-04-26-the-eutxo-model/" target="_blank" rel="noopener noreferrer">
+                      <Button variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl">
+                        {t("buttons.readBlogPost")}
+                      </Button>
+                    </a>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#transaction-flow" className="hover:text-orange-400">Transaction flow</a></li>
-                      <li><a href="#key-differences" className="hover:text-orange-400">Key differences</a></li>
-                      <li><a href="#use-cases" className="hover:text-orange-400">Use cases</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#transaction-flow" className="hover:text-orange-400">{t("navigation.transactionFlow")}</a></li>
+                      <li><a href="#key-differences" className="hover:text-orange-400">{t("navigation.keyDifferences")}</a></li>
+                      <li><a href="#use-cases" className="hover:text-orange-400">{t("navigation.useCases")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -108,7 +115,7 @@ export default function EutxoClient() {
                   <div className="relative z-10">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors">
                       <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">eUTXO Box Structure</h3>
+                        <h3 className="text-2xl font-bold mb-6 text-center text-white">{t("boxStructure.title")}</h3>
                         <div className="space-y-4">
                           {boxComponents.map((component) => (
                             <div key={component.name} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
@@ -130,213 +137,149 @@ export default function EutxoClient() {
             </div>
           </motion.section>
 
-          <motion.section variants={itemVariants} className="py-20 px-4">
-            <div className="max-w-4xl mx-auto">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors">
-                <CardContent className="p-8">
-                  <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Introduction</h2>
-                  <p className="text-neutral-300 text-lg leading-relaxed mb-6">Every blockchain's heart is its ledger model: it defines how assets and data move. The two dominant models are UTXO (pioneered by Bitcoin) and account-based (popularized by Ethereum). Each has unique trade-offs.</p>
-                  <p className="text-neutral-300 text-lg leading-relaxed">Ergo's eUTXO (extended UTXO) model fuses the security, parallelism, and simplicity of UTXO with the expressive power needed for complex smart contracts. Here's how it works, why it matters, and how it stands apart.</p>
-                </CardContent>
-              </Card>
-            </div>
-          </motion.section>
-
-          <motion.section variants={itemVariants} className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 id="ledger-models" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Blockchain Ledger Models: UTXO vs. Account</h2>
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div className="motion-reduce:transform-none motion-reduce:transition-none">
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30">
-                    <CardContent className="p-8">
-                      <h3 className="text-2xl font-bold mb-4 text-orange-400">UTXO Model (Bitcoin-style)</h3>
-                      <p className="text-neutral-300 mb-4">No global balances — only a collection of unspent outputs.</p>
-                      <p className="text-neutral-400 mb-6 italic">Analogy: Like having cash bills/coins. Each transaction spends some bills, creates new ones.</p>
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="font-semibold text-green-400 mb-2 flex items-center"><CheckCircle className="w-4 h-4 mr-2" aria-hidden="true" />Strengths:</h4>
-                          <p className="text-neutral-300 text-sm">Simplicity, privacy, parallel processing, easier audit trails.</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-red-400 mb-2">Weakness:</h4>
-                          <p className="text-neutral-300 text-sm">Not naturally suited for stateful dApps.</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-                <div className="motion-reduce:transform-none motion-reduce:transition-none">
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30">
-                    <CardContent className="p-8">
-                      <h3 className="text-2xl font-bold mb-4 text-cyan-400">Account Model (Ethereum-style)</h3>
-                      <p className="text-neutral-300 mb-4">Global state: Each account has a balance and (for contracts) its own data storage.</p>
-                      <p className="text-neutral-400 mb-6 italic">Analogy: Like a bank account — all assets tracked in one place.</p>
-                      <div className="space-y-4">
-                        <div>
-                          <h4 className="font-semibold text-green-400 mb-2 flex items-center"><CheckCircle className="w-4 h-4 mr-2" aria-hidden="true" />Strengths:</h4>
-                          <p className="text-neutral-300 text-sm">Intuitive, flexible for stateful apps, natural for Turing-complete contracts.</p>
-                        </div>
-                        <div>
-                          <h4 className="font-semibold text-red-400 mb-2">Weaknesses:</h4>
-                          <p className="text-neutral-300 text-sm">Potential for re-entrancy bugs, unpredictable gas, global state bloat.</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-          </motion.section>
-
-          <motion.section variants={itemVariants} className="py-20 px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 id="transaction-flow" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">How eUTXO Transactions Work</h2>
-              <div className="space-y-6">
-                {transactionSteps.map((step, index) => (
-                  <motion.div key={step.step} variants={itemVariants} className="flex items-center space-x-6 motion-reduce:transform-none motion-reduce:transition-none hover:translate-x-2 transition-transform" transition={{ type: "spring", stiffness: 400 }}>
-                    <div className="flex-shrink-0 w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center text-white font-bold text-xl">{step.step}</div>
-                    <Card className="flex-1 bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30">
-                      <CardContent className="p-6">
-                        <div className="flex items-center space-x-4">
-                          <span aria-hidden="true" className="text-orange-400">{step.icon}</span>
-                          <div>
-                            <h3 className="text-xl font-semibold mb-2 text-orange-400">{step.title}</h3>
-                            <p className="text-neutral-300">{step.description}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                    {index < transactionSteps.length - 1 && <ArrowRight className="w-6 h-6 text-neutral-400" />}
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.section>
-
-          <motion.section variants={itemVariants} className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 id="key-differences" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">eUTXO vs. Account Model — Key Differences</h2>
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="overflow-x-auto">
-                    <table className="w-full">
-                      <caption className="sr-only">Key differences between eUTXO and account models</caption>
-                      <thead className="bg-neutral-900/60">
-                        <tr>
-                          <th scope="col" className="px-6 py-4 text-left text-cyan-400 font-semibold">Aspect</th>
-                          <th scope="col" className="px-6 py-4 text-left text-orange-400 font-semibold">eUTXO</th>
-                          <th scope="col" className="px-6 py-4 text-left text-purple-400 font-semibold">Account</th>
-                          <th scope="col" className="px-6 py-4 text-left text-green-400 font-semibold">Advantage</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {modelComparison.map((row) => (
-                          <tr key={row.aspect} className="odd:bg-neutral-800/20 hover:bg-orange-500/10 transition-colors">
-                            <th scope="row" className="px-6 py-4 font-medium text-white text-left">{row.aspect}</th>
-                            <td className="px-6 py-4 text-neutral-300 text-sm">{row.utxo}</td>
-                            <td className="px-6 py-4 text-neutral-300 text-sm">{row.account}</td>
-                            <td className="px-6 py-4">
-                              <Badge className={row.advantage === "eUTXO" ? "bg-green-500/20 text-green-400 border-green-500/30" : "bg-blue-500/20 text-blue-400 border-blue-500/30"}>{row.advantage}</Badge>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </motion.section>
-
-          <motion.section variants={itemVariants} className="py-20 px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 id="use-cases" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">eUTXO in Action — When It Shines</h2>
-              <div className="grid md:grid-cols-2 gap-8">
-                {useCases.map((useCase) => (
-                  <motion.div key={useCase.title} variants={itemVariants} className="group motion-reduce:transform-none motion-reduce:transition-none" whileHover={{ scale: 1.05, rotateY: 5 }} transition={{ type: "spring", stiffness: 300 }}>
-                    <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30 transition-all duration-300`}>
-                      <CardContent className="p-8">
-                        <div className="flex items-start space-x-4 mb-4">
-                          <span aria-hidden="true" className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{useCase.icon}</span>
-                          <div>
-                            <h3 className="text-xl font-semibold mb-2 text-white">{useCase.title}</h3>
-                            <p className="text-neutral-400 mb-4">{useCase.description}</p>
-                          </div>
-                        </div>
-                        <div className="space-y-2">
-                          <p className="text-sm font-medium text-cyan-400 mb-2">Examples:</p>
-                          <div className="flex flex-wrap gap-2">
-                            {useCase.examples.map((example) => (
-                              <span key={example} className="inline-block">
-                                <Link href="/ecosystem" prefetch={false}>
-                                  <Badge variant="outline" className="border-neutral-700 text-neutral-300 hover:border-orange-500/50">{example}</Badge>
-                                </Link>
-                              </span>
-                            ))}
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
-              </div>
-            </div>
-          </motion.section>
-
-          <motion.section variants={itemVariants} className="py-20 px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 id="faq" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                {faqs.map((faq, index) => {
-                  const id = faq.question.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9\-]/g, '')
-                  return (
-                    <Card id={id} key={id} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                      <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
-                        <CollapsibleTrigger asChild>
-                          <button className="w-full">
-                            <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
-                              <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
-                              <ChevronDown className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} aria-hidden="true" />
-                            </CardContent>
-                          </button>
-                        </CollapsibleTrigger>
-                        <CollapsibleContent>
-                          <CardContent className="px-6 pb-6 pt-0">
-                            <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
-                          </CardContent>
-                        </CollapsibleContent>
-                      </Collapsible>
-                    </Card>
-                  )
-                })}
-              </div>
-            </div>
-          </motion.section>
-
-          <motion.section variants={itemVariants} className="py-20 px-4">
+          {/* Introduction */}
+          <motion.section variants={itemVariants} className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                <CardContent className="p-12">
-                  <h2 id="conclusion" className="text-4xl font-bold mb-6 text-white">Conclusion: The Future is eUTXO</h2>
-                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">The eUTXO model is a quantum leap: it keeps UTXO's clarity, security, and scalability while unlocking true programmability. For developers who want robust, auditable, and future-proof dApps — Ergo's approach is both powerful and elegant.</p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        <Link href="/docs" className="flex items-center">Start Building<ArrowRight className="ml-2 w-4 h-4" /></Link>
-                    </Button>
-                    <Button asChild variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm">
-                      <Link href="/ecosystem" className="flex items-center">Explore Ecosystem<ExternalLink className="ml-2 w-4 h-4" /></Link>
-                    </Button>
-                  </div>
-                </CardContent>
-              </Card>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("introduction.title")}</h2>
+              <p className="text-xl text-neutral-300 mb-8 max-w-3xl mx-auto">
+                {t("introduction.description")}
+              </p>
+              <p className="text-lg text-neutral-400 leading-relaxed">
+                {t("introduction.details")}
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Model Comparison */}
+          <motion.section variants={itemVariants} id="key-differences" className="py-16 px-4 bg-neutral-900/20">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">{t("comparison.title")}</h2>
+              <div className="overflow-x-auto">
+                <table className="w-full bg-neutral-900/50 border border-neutral-700 rounded-xl">
+                  <thead>
+                    <tr className="border-b border-neutral-700">
+                      <th className="text-left p-6 text-white font-semibold">{t("comparison.headers.aspect")}</th>
+                      <th className="text-left p-6 text-white font-semibold">{t("comparison.headers.utxo")}</th>
+                      <th className="text-left p-6 text-white font-semibold">{t("comparison.headers.account")}</th>
+                      <th className="text-left p-6 text-white font-semibold">{t("comparison.headers.advantage")}</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {modelComparison.map((row, index) => (
+                      <tr key={index} className="border-b border-neutral-700/50 hover:bg-neutral-800/30">
+                        <td className="p-6 font-medium text-orange-400">{row.aspect}</td>
+                        <td className="p-6 text-neutral-300 text-sm">{row.utxo}</td>
+                        <td className="p-6 text-neutral-300 text-sm">{row.account}</td>
+                        <td className="p-6">
+                          <Badge variant={row.advantage === "eUTXO" ? "default" : "secondary"} className={row.advantage === "eUTXO" ? "bg-orange-500/20 text-orange-400 border-orange-500/30" : ""}>
+                            {row.advantage}
+                          </Badge>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Transaction Flow */}
+          <motion.section variants={itemVariants} id="transaction-flow" className="py-16 px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">{t("transactionFlow.title")}</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {transactionSteps.map((step) => (
+                  <Card key={step.step} className="bg-neutral-900/50 border-neutral-700 relative">
+                    <CardContent className="p-6">
+                      <div className="absolute -top-3 -left-3 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
+                        {step.step}
+                      </div>
+                      <div className="text-orange-400 mb-4">{step.icon}</div>
+                      <h3 className="text-xl font-semibold text-white mb-2">{step.title}</h3>
+                      <p className="text-neutral-300">{step.description}</p>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Use Cases */}
+          <motion.section variants={itemVariants} id="use-cases" className="py-16 px-4 bg-neutral-900/20">
+            <div className="max-w-7xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">{t("useCases.title")}</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {useCases.map((useCase) => (
+                  <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors">
+                    <CardContent className="p-6 text-center">
+                      <div className="text-orange-400 mb-4 flex justify-center">{useCase.icon}</div>
+                      <h3 className="text-lg font-semibold text-white mb-2">{useCase.title}</h3>
+                      <p className="text-neutral-300 text-sm mb-4">{useCase.description}</p>
+                      <Link href={useCase.href} className="text-orange-400 hover:text-orange-300 text-sm font-medium">
+                        {t("useCases.learnMore")} →
+                      </Link>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          {/* FAQ */}
+          <motion.section variants={itemVariants} id="faq" className="py-16 px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 text-white">{t("faq.title")}</h2>
+              <div className="space-y-4">
+                {faqData.map((faq, index) => (
+                  <Collapsible key={index} open={openFAQ === index} onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}>
+                    <Card className="bg-neutral-900/50 border-neutral-700">
+                      <CollapsibleTrigger asChild>
+                        <CardContent className="p-6 cursor-pointer hover:bg-neutral-800/30 transition-colors">
+                          <div className="flex items-center justify-between">
+                            <h3 className="text-lg font-semibold text-white text-left">{faq.question}</h3>
+                            <ChevronDown className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} />
+                          </div>
+                        </CardContent>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent>
+                        <CardContent className="px-6 pb-6 pt-0">
+                          <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
+                        </CardContent>
+                      </CollapsibleContent>
+                    </Card>
+                  </Collapsible>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          {/* CTA */}
+          <motion.section variants={itemVariants} className="py-16 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("cta.title")}</h2>
+              <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+                {t("cta.subtitle")}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/docs/eutxo">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    {t("cta.buttons.readDocumentation")}
+                  </Button>
+                </Link>
+                <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer">
+                  <Button variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl">
+                    {t("cta.buttons.viewOnGitHub")}
+                  </Button>
+                </a>
+              </div>
             </div>
           </motion.section>
         </motion.div>
       </main>
 
-      <SchemaOrg type="FAQPage" data={{ '@type': 'FAQPage', mainEntity: faqs.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }} />
+      <SchemaOrg type="FAQPage" data={{ '@type': 'FAQPage', mainEntity: faqData.map((faq) => ({ '@type': 'Question', name: faq.question, acceptedAnswer: { '@type': 'Answer', text: faq.answer } })) }} />
       <SchemaOrg type="BreadcrumbList" data={{ '@type': 'BreadcrumbList', itemListElement: [ { '@type': 'ListItem', position: 1, name: 'Technology', item: 'https://ergoblockchain.org/technology' }, { '@type': 'ListItem', position: 2, name: 'eUTXO Model', item: 'https://ergoblockchain.org/technology/eutxo-model' } ] }} />
-      <SchemaOrg type="TechArticle" data={{ '@type': 'TechArticle', headline: 'eUTXO Model — UTXO vs Account', description: 'Ergo eUTXO explained: security, parallelism, programmability, and use cases.', image: 'https://ergoblockchain.org/og/eutxo.png', datePublished: '2024-01-01', dateModified: new Date().toISOString().slice(0, 10), keywords: 'eUTXO, UTXO vs account, Ergo, smart contracts', author: { '@type': 'Organization', name: 'Ergo Foundation', url: 'https://ergoblockchain.org' }, publisher: { '@type': 'Organization', name: 'Ergo Platform', url: 'https://ergoblockchain.org', logo: { '@type': 'ImageObject', url: 'https://ergoblockchain.org/og/logo-512.png' } }, mainEntityOfPage: 'https://ergoblockchain.org/technology/eutxo-model' }} />
+      <SchemaOrg type="TechArticle" data={{ '@type': 'TechArticle', headline: 'eUTXO Model — UTXO vs Account', description: 'Ergo eUTXO explained: security, parallelism, programmability, and use cases.', image: 'https://ergoblockchain.org/og/eutxo.png', datePublished: '2024-01-01', dateModified: lastUpdated, keywords: 'eUTXO, UTXO vs account, Ergo, smart contracts', author: { '@type': 'Organization', name: 'Ergo Foundation', url: 'https://ergoblockchain.org' }, publisher: { '@type': 'Organization', name: 'Ergo Platform', url: 'https://ergoblockchain.org', logo: { '@type': 'ImageObject', url: 'https://ergoblockchain.org/og/logo-512.png' } }, mainEntityOfPage: 'https://ergoblockchain.org/technology/eutxo-model' }} />
     </div>
   )
 } 

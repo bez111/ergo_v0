@@ -3,10 +3,11 @@ import BabelFeesClient from "./BabelFeesClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'babelFees.seo' })
+  const t = await getTranslations({ locale, namespace: 'use.babelFees.seo' })
   
   return {
     title: t('title'),
@@ -49,13 +50,15 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 }
 
 export default function BabelFeesPage() {
+  const t = useTranslations('use.babelFees.schema')
+
   // SEO схемы для Babel Fees
   const babelFeesSchema = {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "@id": "https://ergoblockchain.org/use/babel-fees",
-    headline: "Babel Fees: Pay Transaction Fees with Any Token",
-    description: "Technical guide to Ergo's Babel Fees system for flexible transaction fee payments",
+    headline: t('techArticle.headline'),
+    description: t('techArticle.description'),
     author: {
       "@type": "Organization",
       name: "Ergo Platform"
@@ -64,50 +67,50 @@ export default function BabelFeesPage() {
     dateModified: new Date().toISOString(),
     about: {
       "@type": "Thing",
-      name: "Blockchain Transaction Fees",
-      description: "Alternative fee payment methods in blockchain"
+      name: t('techArticle.about.name'),
+      description: t('techArticle.about.description')
     }
   }
   
   const faqSchema = SchemaTypes.FAQSchema([
     {
-      question: "What are Babel Fees?",
-      answer: "Babel Fees allow users to pay transaction fees on Ergo using any token instead of ERG, making DeFi more accessible by removing the need to hold ERG for fees."
+      question: t('faq.whatAre.question'),
+      answer: t('faq.whatAre.answer')
     },
     {
-      question: "How do Babel Fees work?",
-      answer: "Service providers accept tokens as payment for fees, then handle the ERG payment to miners behind the scenes, creating a seamless experience for users."
+      question: t('faq.howWork.question'),
+      answer: t('faq.howWork.answer')
     },
     {
-      question: "Which tokens can be used for Babel Fees?",
-      answer: "Any token on Ergo can potentially be used for Babel Fees if a service provider supports it. Popular options include SigUSD, SigRSV, and major Ergo tokens."
+      question: t('faq.whichTokens.question'),
+      answer: t('faq.whichTokens.answer')
     },
     {
-      question: "Are Babel Fees more expensive than regular fees?",
-      answer: "Babel Fees may include a small premium to compensate service providers, but the convenience often outweighs the minimal additional cost."
+      question: t('faq.expensive.question'),
+      answer: t('faq.expensive.answer')
     }
   ])
   
   const howToSchema = {
     "@context": "https://schema.org",
     "@type": "HowTo",
-    name: "How to Use Babel Fees on Ergo",
-    description: "Step-by-step guide to paying transaction fees with tokens",
+    name: t('howTo.name'),
+    description: t('howTo.description'),
     step: [
       {
         "@type": "HowToStep",
-        name: "Choose a supported dApp",
-        text: "Select a dApp or wallet that supports Babel Fees"
+        name: t('howTo.steps.chooseDapp.name'),
+        text: t('howTo.steps.chooseDapp.text')
       },
       {
         "@type": "HowToStep",
-        name: "Select fee token",
-        text: "Choose which token you want to use for paying fees"
+        name: t('howTo.steps.selectToken.name'),
+        text: t('howTo.steps.selectToken.text')
       },
       {
         "@type": "HowToStep",
-        name: "Execute transaction",
-        text: "Complete your transaction with automatic fee conversion"
+        name: t('howTo.steps.executeTransaction.name'),
+        text: t('howTo.steps.executeTransaction.text')
       }
     ]
   }

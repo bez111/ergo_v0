@@ -252,8 +252,8 @@ export default function StorageRentPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Storage Rent", href: "/technology/storage-rent" }
+              { name: "Technology", href: "/technology" },
+              { name: "Storage Rent", href: "/technology/storage-rent" }
             ]}
             className="mb-8"
           />
@@ -267,10 +267,10 @@ export default function StorageRentPage() {
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">Storage Rent</h1>
-                  <h2 className="text-xl md:text-2xl text-neutral-300 mb-6 max-w-2xl">What is Storage Rent?</h2>
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">{t("title")}</h1>
+                  <h2 className="text-xl md:text-2xl text-neutral-300 mb-6 max-w-2xl">{t("subtitle")}</h2>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
@@ -413,7 +413,7 @@ export default function StorageRentPage() {
                   <h3 className="text-xl font-bold text-white mb-2">For developers</h3>
                   <ul className="list-disc list-inside text-sm text-neutral-300 space-y-1">
                     <li>Avoid spawning many tiny boxes</li>
-                    <li>Provide a “maintenance path” for rent top-ups</li>
+                    <li>Provide a "maintenance path" for rent top-ups</li>
                     <li>Track box age off-chain (indexer)</li>
                   </ul>
                   <div className="mt-3 flex gap-3">

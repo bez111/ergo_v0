@@ -1,41 +1,52 @@
 import { Metadata } from "next"
 import { SchemaOrg } from "@/components/seo/schema-org"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "Algorithmic Stablecoins on Ergo | Decentralized Stable Value",
-  description: "Build and use algorithmic stablecoins on Ergo. Over-collateralized stability with AgeUSD protocol, decentralized governance, and transparent reserves.",
-  keywords: "algorithmic stablecoins, SigmaUSD, AgeUSD, Ergo stablecoin, decentralized finance, DeFi, stable value, crypto stablecoin",
-  openGraph: {
-    title: "Algorithmic Stablecoins on Ergo",
-    description: "Stable value storage without centralized control. Over-collateralized stablecoins with innovative AgeUSD protocol.",
-    images: ["/og-stablecoins.png"],
-    type: "website",
-    url: "https://ergoblockchain.org/use/stablecoins",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Algorithmic Stablecoins on Ergo",
-    description: "Build decentralized stablecoins with Ergo's AgeUSD protocol",
-    images: ["/og-stablecoins.png"],
-  },
-  alternates: {
-    canonical: "https://ergoblockchain.org/use/stablecoins",
-  },
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'use.stablecoins.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ["/og-stablecoins.png"],
+      type: "website",
+      url: "https://ergoblockchain.org/use/stablecoins",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["/og-stablecoins.png"],
+    },
+    alternates: {
+      canonical: "https://ergoblockchain.org/use/stablecoins",
+    },
+  }
 }
 
-export default function AlgorithmicStablecoinsLayout({
+export default async function AlgorithmicStablecoinsLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: { locale: string }
 }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'use.stablecoins.schema' });
+  
   return (
     <>
       <SchemaOrg
         type="TechArticle"
         data={{
           "@type": "TechArticle",
-          headline: "Algorithmic Stablecoins on Ergo",
-          description: "Comprehensive guide to building and using algorithmic stablecoins on Ergo blockchain",
+          headline: t('techArticle.headline'),
+          description: t('techArticle.description'),
           author: {
             "@type": "Organization",
             name: "Ergo Platform",
@@ -53,7 +64,7 @@ export default function AlgorithmicStablecoinsLayout({
           image: "https://ergoblockchain.org/og-stablecoins.png",
           datePublished: "2024-01-01",
           dateModified: new Date().toISOString(),
-          keywords: "algorithmic stablecoins, SigmaUSD, AgeUSD, DeFi, Ergo",
+          keywords: t('techArticle.keywords'),
         }}
       />
       
@@ -61,32 +72,32 @@ export default function AlgorithmicStablecoinsLayout({
         type="HowTo"
         data={{
           "@type": "HowTo",
-          name: "How to Use Algorithmic Stablecoins on Ergo",
-          description: "Step-by-step guide to using and building stablecoins on Ergo",
+          name: t('howTo.name'),
+          description: t('howTo.description'),
           step: [
             {
               "@type": "HowToStep",
               position: 1,
-              name: "Set up Ergo wallet",
-              text: "Install an Ergo wallet like Nautilus or SAFEW",
+              name: t('howTo.steps.setupWallet.name'),
+              text: t('howTo.steps.setupWallet.text'),
             },
             {
               "@type": "HowToStep",
               position: 2,
-              name: "Get ERG tokens",
-              text: "Acquire ERG from exchanges or DEXs",
+              name: t('howTo.steps.getErg.name'),
+              text: t('howTo.steps.getErg.text'),
             },
             {
               "@type": "HowToStep",
               position: 3,
-              name: "Access SigmaUSD",
-              text: "Visit sigmausd.io to mint or redeem stablecoins",
+              name: t('howTo.steps.accessSigmaUsd.name'),
+              text: t('howTo.steps.accessSigmaUsd.text'),
             },
             {
               "@type": "HowToStep",
               position: 4,
-              name: "Manage positions",
-              text: "Monitor reserve ratios and manage your stable assets",
+              name: t('howTo.steps.managePositions.name'),
+              text: t('howTo.steps.managePositions.text'),
             },
           ],
         }}

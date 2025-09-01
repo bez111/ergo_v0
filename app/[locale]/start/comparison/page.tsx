@@ -1,36 +1,40 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import ComparisonClient from "./ComparisonClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
-export const metadata: Metadata = {
-  title: "Ergo vs Bitcoin, Ethereum & Cardano | Blockchain Comparison",
-  description: "Compare Ergo with Bitcoin, Ethereum, and Cardano. Technical specs, consensus mechanisms, smart contracts, scalability, and unique features side-by-side comparison.",
-  keywords: ["ergo vs bitcoin", "ergo vs ethereum", "blockchain comparison", "ergo vs cardano", "cryptocurrency comparison", "smart contract platforms", "blockchain features", "defi platforms"],
-  alternates: {
-    canonical: "https://ergoblockchain.org/start/comparison"
-  },
-  openGraph: {
-    title: "Compare Ergo with Leading Blockchains",
-    description: "Technical comparison of Ergo vs Bitcoin, Ethereum, Cardano. See why Ergo stands out.",
-    url: "https://ergoblockchain.org/start/comparison",
-    siteName: "Ergo Platform",
-    images: [{
-      url: "https://ergoblockchain.org/og/comparison.png",
-      width: 1200,
-      height: 630,
-      alt: "Blockchain Comparison"
-    }],
-    type: "website",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ergo vs Bitcoin, Ethereum, Cardano",
-    description: "Complete technical comparison of leading blockchain platforms.",
-    images: ["https://ergoblockchain.org/og/comparison.png"],
-    creator: "@ergoplatform",
-    site: "@ergoplatform"
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'start.comparison.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    alternates: {
+      canonical: "https://ergoblockchain.org/start/comparison"
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: "https://ergoblockchain.org/start/comparison",
+      siteName: "Ergo Platform",
+      images: [{
+        url: "https://ergoblockchain.org/og/comparison.png",
+        width: 1200,
+        height: 630,
+        alt: t('ogAlt')
+      }],
+      type: "website",
+      locale: "en_US"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["https://ergoblockchain.org/og/comparison.png"]
+    }
   }
 }
 

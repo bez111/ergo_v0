@@ -1,57 +1,66 @@
 import type { Metadata } from 'next'
+import { getTranslations } from 'next-intl/server'
 import WalletClient from './WalletClient'
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
 
-export const metadata: Metadata = {
-  title: 'Ergo Wallets - Desktop, Mobile & Hardware Solutions',
-  description: 'Choose from trusted Ergo wallets: Nautilus for dApps, Satergo for full nodes, hardware wallets for cold storage. Find the perfect wallet for your needs.',
-  keywords: ['ergo wallet', 'nautilus wallet', 'satergo', 'hardware wallet', 'crypto wallet', 'ERG storage', 'ergo mobile wallet', 'browser extension wallet'],
-  alternates: {
-    canonical: 'https://ergoblockchain.org/wallet'
-  },
-  openGraph: {
-    title: 'Ergo Wallets - Secure Your ERG',
-    description: 'Official and community wallets for Ergo blockchain. Desktop, mobile, browser extensions, and hardware solutions.',
-    url: 'https://ergoblockchain.org/wallet',
-    siteName: 'Ergo Platform',
-    images: [{
-      url: 'https://ergoblockchain.org/og/wallets.png',
-      width: 1200,
-      height: 630,
-      alt: 'Ergo Wallets Overview'
-    }],
-    type: 'website',
-    locale: 'en_US'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Ergo Wallets - Choose Your Storage',
-    description: 'Secure wallets for Ergo: Nautilus, Satergo, Ledger support and more.',
-    images: ['https://ergoblockchain.org/og/wallets.png'],
-    creator: '@ergoplatform',
-    site: '@ergoplatform'
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'wallet' });
+  
+  return {
+    title: t('seo.title'),
+    description: t('seo.description'),
+    keywords: t('seo.keywords'),
+    alternates: {
+      canonical: 'https://ergoblockchain.org/wallet'
+    },
+    openGraph: {
+      title: t('seo.ogTitle'),
+      description: t('seo.ogDescription'),
+      url: 'https://ergoblockchain.org/wallet',
+      siteName: 'Ergo Platform',
+      images: [{
+        url: 'https://ergoblockchain.org/og/wallets.png',
+        width: 1200,
+        height: 630,
+        alt: 'Ergo Wallets Overview'
+      }],
+      type: 'website',
+      locale: 'en_US'
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('seo.twitterTitle'),
+      description: t('seo.twitterDescription'),
+      images: ['https://ergoblockchain.org/og/wallets.png'],
+      creator: '@ergoplatform',
+      site: '@ergoplatform'
+    },
+    robots: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1
+      }
     }
   }
 }
 
-export default function WalletPage() {
+export default async function WalletPage({ params }: { params: { locale: string } }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'wallet.schema' });
+  
   const walletsJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'CollectionPage',
     '@id': 'https://ergoblockchain.org/wallet#page',
-    name: 'Ergo Wallets Directory',
-    description: 'Complete collection of Ergo blockchain wallets',
+    name: t('name'),
+    description: t('description'),
     url: 'https://ergoblockchain.org/wallet',
     mainEntity: {
       '@type': 'ItemList',
@@ -59,10 +68,10 @@ export default function WalletPage() {
         {
           '@type': 'SoftwareApplication',
           position: 1,
-          name: 'Nautilus Wallet',
+          name: t('wallets.nautilus.name'),
           applicationCategory: 'FinanceApplication',
           operatingSystem: 'Chrome, Firefox, Android, iOS',
-          description: 'Feature-rich browser extension and mobile wallet for dApp interaction.',
+          description: t('wallets.nautilus.description'),
           offers: {
             '@type': 'Offer',
             price: '0',
@@ -77,10 +86,10 @@ export default function WalletPage() {
         {
           '@type': 'SoftwareApplication',
           position: 2,
-          name: 'Satergo',
+          name: t('wallets.satergo.name'),
           applicationCategory: 'FinanceApplication',
           operatingSystem: 'Windows, macOS, Linux',
-          description: 'Full-node desktop wallet for maximum security and decentralization.',
+          description: t('wallets.satergo.description'),
           offers: {
             '@type': 'Offer',
             price: '0',
@@ -109,66 +118,19 @@ export default function WalletPage() {
       {
         '@type': 'ListItem',
         position: 2,
-        name: 'Wallets',
+        name: t('name'),
         item: 'https://ergoblockchain.org/wallet'
       }
     ]
   }
-  
-  // Добавляем продвинутые SEO схемы
+
   const knowledgeGraph = generateKnowledgeGraph('wallet')
-  
-  const faqSchema = SchemaTypes.FAQSchema([
-    {
-      question: "What is the best Ergo wallet?",
-      answer: "The best wallet depends on your needs: Nautilus for dApp interactions and browser extension, Satergo for full node security, Ledger for hardware cold storage, and mobile wallets for on-the-go access."
-    },
-    {
-      question: "Is there a hardware wallet for Ergo?",
-      answer: "Yes, Ergo is supported by Ledger hardware wallets through the Nautilus browser extension, providing maximum security for cold storage."
-    },
-    {
-      question: "How do I choose an Ergo wallet?",
-      answer: "Choose based on your usage: For DeFi and dApps use Nautilus, for maximum security use Satergo or hardware wallets, for mobile use SAFEW or Ergo Wallet."
-    },
-    {
-      question: "Are Ergo wallets free?",
-      answer: "Yes, all Ergo software wallets are free and open-source. Hardware wallets like Ledger require purchasing the device."
-    }
-  ])
-  
-  const speakableSchema = SchemaTypes.SpeakableSchema({
-    headline: "Ergo Wallets Directory",
-    summary: "Complete guide to Ergo wallets: Nautilus for dApps, Satergo for full nodes, hardware wallets for security",
-    url: "https://ergoblockchain.org/wallet"
-  })
 
   return (
     <>
-      {/* Существующие схемы */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(walletsJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      
-      {/* Новые продвинутые схемы */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
-      />
-      
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(walletsJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
       <WalletClient />
     </>
   )

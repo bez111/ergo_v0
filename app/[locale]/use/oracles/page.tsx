@@ -12,6 +12,7 @@ import { Eye, Activity, Shield, ExternalLink, ArrowRight, Lock, CheckCircle, Lay
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,91 +36,104 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "Decentralized Oracle Pools",
-    description: "Multiple data providers ensure reliability and prevent manipulation",
-    icon: Globe,
-  },
-  {
-    title: "On-Chain Aggregation",
-    description: "Smart contracts aggregate and validate data from multiple sources",
-    icon: Activity,
-  },
-  {
-    title: "Price Feeds",
-    description: "Real-time price data for DeFi protocols and prediction markets",
-    icon: BarChart3,
-  },
-  {
-    title: "Custom Data Sources",
-    description: "Connect any external API or data source to the blockchain",
-    icon: Eye,
-  },
-  {
-    title: "Consensus Mechanisms",
-    description: "Various consensus models for different data reliability requirements",
-    icon: Shield,
-  },
-  {
-    title: "Incentive Alignment",
-    description: "Economic incentives ensure accurate and timely data provision",
-    icon: Layers,
-  },
-]
-
-const existingProjects = [
-  {
-    name: "Oracle Pools v2",
-    description: "Decentralized oracle infrastructure for Ergo",
-    status: "Live",
-    features: ["ERG/USD feed", "ADA/USD feed", "Gold price feed"],
-    link: "https://oracle.ergopool.io",
-  },
-  {
-    name: "Ergo Oracle Core",
-    description: "Framework for building custom oracle solutions",
-    status: "Live",
-    features: ["Custom feeds", "API integration", "Data validation"],
-    link: "https://github.com/ergoplatform/oracle-core",
-  },
-  {
-    name: "DeFi Oracle Network",
-    description: "Specialized oracles for DeFi protocols",
-    status: "In Development",
-    features: ["Multi-asset feeds", "TWAP oracles", "Volatility data"],
-    link: "#",
-  },
-]
-
 export default function OraclesDataFeedsPage() {
+  const t = useTranslations("use.oracles")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
 
-  const faqs = [
+  const features = [
     {
-      question: "How do Ergo oracle pools work?",
-      answer: "Oracle pools aggregate data from multiple independent providers. Each oracle submits data, and smart contracts calculate the median or weighted average to produce a reliable feed resistant to manipulation."
+      title: t("features.decentralizedPools.title"),
+      description: t("features.decentralizedPools.description"),
+      icon: Globe,
     },
     {
-      question: "What data can oracles provide?",
-      answer: "Oracles can provide any external data: price feeds, weather data, sports results, IoT sensor readings, or any API data. The oracle pool framework is flexible enough to support any data type."
+      title: t("features.onChainAggregation.title"),
+      description: t("features.onChainAggregation.description"),
+      icon: Activity,
     },
     {
-      question: "How are oracle operators incentivized?",
-      answer: "Oracle operators earn rewards for providing accurate and timely data. They must stake collateral that can be slashed for malicious behavior, creating economic incentives for honest operation."
+      title: t("features.priceFeeds.title"),
+      description: t("features.priceFeeds.description"),
+      icon: BarChart3,
     },
     {
-      question: "Can I create my own oracle?",
-      answer: "Yes! The Oracle Core framework allows anyone to create custom oracles. You can connect any data source and define your own consensus mechanisms and incentive structures."
+      title: t("features.customDataSources.title"),
+      description: t("features.customDataSources.description"),
+      icon: Eye,
     },
     {
-      question: "How reliable are oracle price feeds?",
-      answer: "Ergo's oracle pools use multiple independent data sources and consensus mechanisms to ensure reliability. Historical data shows 99.9%+ uptime with accurate price feeds updated every epoch."
+      title: t("features.consensusMechanisms.title"),
+      description: t("features.consensusMechanisms.description"),
+      icon: Shield,
+    },
+    {
+      title: t("features.incentiveAlignment.title"),
+      description: t("features.incentiveAlignment.description"),
+      icon: Layers,
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
+  const existingProjects = [
+    {
+      name: t("projects.oraclePools.name"),
+      description: t("projects.oraclePools.description"),
+      status: t("projects.oraclePools.status"),
+      features: [
+        t("projects.oraclePools.features.feature1"),
+        t("projects.oraclePools.features.feature2"),
+        t("projects.oraclePools.features.feature3")
+      ],
+      link: "https://oracle.ergopool.io",
+    },
+    {
+      name: t("projects.oracleCore.name"),
+      description: t("projects.oracleCore.description"),
+      status: t("projects.oracleCore.status"),
+      features: [
+        t("projects.oracleCore.features.feature1"),
+        t("projects.oracleCore.features.feature2"),
+        t("projects.oracleCore.features.feature3")
+      ],
+      link: "https://github.com/ergoplatform/oracle-core",
+    },
+    {
+      name: t("projects.defiNetwork.name"),
+      description: t("projects.defiNetwork.description"),
+      status: t("projects.defiNetwork.status"),
+      features: [
+        t("projects.defiNetwork.features.feature1"),
+        t("projects.defiNetwork.features.feature2"),
+        t("projects.defiNetwork.features.feature3")
+      ],
+      link: "#",
+    },
+  ]
+
+  const faqs = [
+    {
+      question: t("faq.howOraclePoolsWork.question"),
+      answer: t("faq.howOraclePoolsWork.answer")
+    },
+    {
+      question: t("faq.whatDataCanProvide.question"),
+      answer: t("faq.whatDataCanProvide.answer")
+    },
+    {
+      question: t("faq.howOperatorsIncentivized.question"),
+      answer: t("faq.howOperatorsIncentivized.answer")
+    },
+    {
+      question: t("faq.canCreateOwnOracle.question"),
+      answer: t("faq.canCreateOwnOracle.answer")
+    },
+    {
+      question: t("faq.howReliablePriceFeeds.question"),
+      answer: t("faq.howReliablePriceFeeds.answer")
+    },
+  ]
+
+  const lastUpdated = "2024-01-15"
 
   return (
     <>
@@ -132,13 +146,13 @@ export default function OraclesDataFeedsPage() {
             {
               "@type": "ListItem",
               position: 1,
-              name: "Use Cases",
+              name: t("schema.breadcrumbs.useCases"),
               item: "https://ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
-              name: "Oracles & Data Feeds",
+              name: t("schema.breadcrumbs.oraclesDataFeeds"),
               item: "https://ergoblockchain.org/use/oracles-data-feeds"
             }
           ]
@@ -168,8 +182,8 @@ export default function OraclesDataFeedsPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Use Cases", href: "/use" },
-              { name: "Oracles & Data Feeds", href: "/use/oracles-data-feeds" }
+              { name: t("schema.breadcrumbs.useCases"), href: "/use" },
+              { name: t("schema.breadcrumbs.oraclesDataFeeds"), href: "/use/oracles-data-feeds" }
             ]}
             className="mb-8"
           />
@@ -188,19 +202,19 @@ export default function OraclesDataFeedsPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    Oracles & Data Feeds
+                    {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    Bringing real-world data on-chain
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Decentralized oracle pools provide external data for DeFi & prediction markets.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://oracle.ergopool.io" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        View Oracle Pools
+                        {t("cta.viewOraclePools")}
                       </Button>
                     </a>
                     <Link href="https://github.com/ergoplatform/oracle-core" target="_blank">
@@ -214,9 +228,9 @@ export default function OraclesDataFeedsPage() {
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Oracle features</a></li>
-                      <li><a href="#projects" className="hover:text-orange-400">Live Oracles</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.oracleFeatures")}</a></li>
+                      <li><a href="#projects" className="hover:text-orange-400">{t("navigation.liveOracles")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -225,27 +239,27 @@ export default function OraclesDataFeedsPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
+                          {t("quickStart.title")}
                         </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "View Price Feeds",
-                              description: "Check live oracle data",
+                              name: t("quickStart.viewPriceFeeds.name"),
+                              description: t("quickStart.viewPriceFeeds.description"),
                               icon: <BarChart3 className="w-6 h-6" />,
                               link: "https://oracle.ergopool.io",
                               external: true
                             },
                             {
-                              name: "Run an Oracle",
-                              description: "Become a data provider",
+                              name: t("quickStart.runOracle.name"),
+                              description: t("quickStart.runOracle.description"),
                               icon: <Eye className="w-6 h-6" />,
                               link: "https://docs.ergoplatform.com/uses/oracles",
                               external: true
                             },
                             {
-                              name: "Developer Docs",
-                              description: "Integrate oracle data",
+                              name: t("quickStart.developerDocs.name"),
+                              description: t("quickStart.developerDocs.description"),
                               icon: <Terminal className="w-6 h-6" />,
                               link: "/docs/developers",
                               external: false
@@ -306,10 +320,10 @@ export default function OraclesDataFeedsPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Oracle Features
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Reliable external data for smart contracts
+                  {t("features.subtitle")}
                 </p>
               </div>
               
@@ -348,42 +362,42 @@ export default function OraclesDataFeedsPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Oracle Architecture
+                  {t("technical.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  How oracle pools work on Ergo
+                  {t("technical.subtitle")}
                 </p>
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
                   <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Overview
+                    {t("technical.tabs.overview")}
                   </TabsTrigger>
                   <TabsTrigger value="pools" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Oracle Pools
+                    {t("technical.tabs.pools")}
                   </TabsTrigger>
                   <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Code Example
+                    {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Oracle System</CardTitle>
+                      <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-neutral-400 leading-relaxed">
                         <p className="mb-4">
-                          Ergo's oracle system provides reliable external data:
+                          {t("technical.overview.description")}
                         </p>
                         <ul className="list-disc list-inside space-y-2 ml-4">
-                          <li>Decentralized data collection</li>
-                          <li>On-chain aggregation and validation</li>
-                          <li>Economic incentives for accuracy</li>
-                          <li>Flexible consensus mechanisms</li>
-                          <li>Support for any data type</li>
+                          <li>{t("technical.overview.points.point1")}</li>
+                          <li>{t("technical.overview.points.point2")}</li>
+                          <li>{t("technical.overview.points.point3")}</li>
+                          <li>{t("technical.overview.points.point4")}</li>
+                          <li>{t("technical.overview.points.point5")}</li>
                         </ul>
                       </div>
                     </CardContent>
@@ -394,26 +408,26 @@ export default function OraclesDataFeedsPage() {
                   <div className="space-y-6">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Pool Architecture</CardTitle>
+                        <CardTitle className="text-white">{t("technical.pools.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Data Collection</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.pools.dataCollection.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Oracle operators fetch data</li>
-                              <li>• Submit to pool contract</li>
-                              <li>• Timestamp verification</li>
-                              <li>• Stake requirement</li>
+                              <li>• {t("technical.pools.dataCollection.points.point1")}</li>
+                              <li>• {t("technical.pools.dataCollection.points.point2")}</li>
+                              <li>• {t("technical.pools.dataCollection.points.point3")}</li>
+                              <li>• {t("technical.pools.dataCollection.points.point4")}</li>
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Aggregation</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.pools.aggregation.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Collect submissions</li>
-                              <li>• Calculate median/average</li>
-                              <li>• Filter outliers</li>
-                              <li>• Publish final value</li>
+                              <li>• {t("technical.pools.aggregation.points.point1")}</li>
+                              <li>• {t("technical.pools.aggregation.points.point2")}</li>
+                              <li>• {t("technical.pools.aggregation.points.point3")}</li>
+                              <li>• {t("technical.pools.aggregation.points.point4")}</li>
                             </ul>
                           </div>
                         </div>
@@ -422,7 +436,7 @@ export default function OraclesDataFeedsPage() {
 
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Data Flow</CardTitle>
+                        <CardTitle className="text-white">{t("technical.pools.dataFlow.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -448,8 +462,8 @@ export default function OraclesDataFeedsPage() {
                 <TabsContent value="code" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Oracle Contract Example</CardTitle>
-                      <p className="text-neutral-400">Reading oracle data in ErgoScript</p>
+                      <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
+                      <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -501,10 +515,10 @@ export default function OraclesDataFeedsPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Live Oracle Solutions
+                  {t("projects.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Active oracle implementations on Ergo
+                  {t("projects.subtitle")}
                 </p>
               </div>
               
@@ -524,7 +538,7 @@ export default function OraclesDataFeedsPage() {
                         <div className="flex items-center justify-between">
                           <CardTitle className="text-white">{project.name}</CardTitle>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            project.status === 'Live' 
+                            project.status === t("projects.oraclePools.status")
                               ? 'bg-green-500/20 text-green-400' 
                               : 'bg-yellow-500/20 text-yellow-400'
                           }`}>
@@ -548,11 +562,11 @@ export default function OraclesDataFeedsPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                           >
-                            View Oracle
+                            {t("projects.viewOracle")}
                             <ExternalLink className="ml-1 w-4 h-4" />
                           </a>
                         ) : (
-                          <span className="text-neutral-500">Coming Soon</span>
+                          <span className="text-neutral-500">{t("projects.comingSoon")}</span>
                         )}
                       </CardContent>
                     </Card>
@@ -574,10 +588,10 @@ export default function OraclesDataFeedsPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about oracles on Ergo
+                  {t("faq.subtitle")}
                 </p>
               </div>
               
@@ -611,21 +625,21 @@ export default function OraclesDataFeedsPage() {
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Use Oracle Data?
+                {t("cta.title")}
               </h2>
               <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Integrate reliable external data into your smart contracts.
+                {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://oracle.ergopool.io" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    View Oracle Pools
+                    {t("cta.viewOraclePools")}
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
                 <Link href="/docs/developers">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    Developer Docs
+                    {t("cta.developerDocs")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

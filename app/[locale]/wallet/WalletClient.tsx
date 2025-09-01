@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useMemo, MouseEvent, useEffect } from "react"
+import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -181,6 +182,7 @@ const itemVariants = {
 }
 
 export default function WalletPage() {
+  const t = useTranslations("wallet")
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -258,7 +260,7 @@ export default function WalletPage() {
                 className="rounded-full backdrop-blur-sm"
               >
                 <category.icon className="w-4 h-4 mr-2" />
-                {category.name}
+                {t(`categories.${category.id}`)}
               </Button>
             ))}
           </div>
@@ -283,7 +285,7 @@ export default function WalletPage() {
                     {wallet.isRecommended && (
                       <Badge className="mb-4 self-start bg-orange-500/20 text-orange-400 border-orange-500/30">
                         <Star className="w-3 h-3 mr-1" />
-                        Recommended
+                        {t("ui.recommended")}
                       </Badge>
                     )}
                     <div className="flex items-start gap-4 mb-4">
@@ -305,7 +307,7 @@ export default function WalletPage() {
                     </div>
                     <p className="text-gray-400 mb-6 text-sm flex-1">{wallet.description}</p>
                     <div className="mb-6">
-                      <h4 className="text-sm font-semibold text-gray-200 mb-3">Features:</h4>
+                      <h4 className="text-sm font-semibold text-gray-200 mb-3">{t("ui.features")}</h4>
                       <ul className="space-y-2">
                         {wallet.features.map((feature) => (
                           <li key={feature} className="flex items-center gap-2 text-xs text-gray-300">
@@ -318,13 +320,13 @@ export default function WalletPage() {
                     <div className="mt-auto flex gap-2">
                       <Button asChild className="flex-1">
                         <Link href={wallet.websiteUrl} target="_blank">
-                          Visit Website <ExternalLink className="w-4 h-4 ml-2" />
+                          {t("ui.visitWebsite")} <ExternalLink className="w-4 h-4 ml-2" />
                         </Link>
                       </Button>
                       {wallet.downloadUrl && (
                         <Button asChild variant="outline" className="flex-1">
                           <Link href={wallet.downloadUrl} target="_blank">
-                            <Download className="w-4 h-4 mr-2" /> Download
+                            <Download className="w-4 h-4 mr-2" /> {t("ui.download")}
                           </Link>
                         </Button>
                       )}
@@ -346,10 +348,9 @@ export default function WalletPage() {
           <Card className="bg-gray-900/50 border-gray-800/50 text-center">
             <CardContent className="p-8">
               <Shield className="w-10 h-10 mx-auto text-green-500 mb-4" />
-              <h3 className="text-xl font-bold text-white mb-2">Security First</h3>
+              <h3 className="text-xl font-bold text-white mb-2">{t("ui.securityTitle")}</h3>
               <p className="text-gray-400 text-sm">
-                Always download wallets from official sources. Be cautious of phishing sites and never share your seed
-                phrase or private keys.
+                {t("ui.securityNote")}
               </p>
             </CardContent>
           </Card>

@@ -12,6 +12,7 @@ import { Shield, Lock, Eye, EyeOff, ExternalLink, ArrowRight, Key, UserX, Zap, L
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,91 +36,104 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "Non-Custodial Mixers",
-    description: "Mix coins without trusting third parties using ErgoMixer's advanced protocols",
-    icon: UserX,
-  },
-  {
-    title: "Stealth Addresses",
-    description: "One-time addresses for enhanced transaction privacy and unlinkability",
-    icon: EyeOff,
-  },
-  {
-    title: "Zero-Knowledge Proofs",
-    description: "Prove statements without revealing underlying data using Sigma protocols",
-    icon: Key,
-  },
-  {
-    title: "Ring Signatures",
-    description: "Sign transactions as a member of a group without revealing which member",
-    icon: Shield,
-  },
-  {
-    title: "Confidential Assets",
-    description: "Hide asset types and amounts while maintaining verifiability",
-    icon: Lock,
-  },
-  {
-    title: "Privacy Pools",
-    description: "Join privacy-preserving pools for enhanced anonymity sets",
-    icon: Layers,
-  },
-]
-
-const existingProjects = [
-  {
-    name: "ErgoMixer",
-    description: "Non-custodial, non-interactive mixer for enhanced privacy",
-    status: "Live",
-    features: ["CoinJoin++", "No trusted setup", "Tor support"],
-    link: "https://ergomixer.com",
-  },
-  {
-    name: "Stealth Addresses",
-    description: "One-time payment addresses for transaction privacy",
-    status: "Live",
-    features: ["Unlinkable payments", "Receiver privacy", "SPV compatible"],
-    link: "https://github.com/ergoplatform/eips/blob/master/eip-0015.md",
-  },
-  {
-    name: "SigmaUSD Privacy",
-    description: "Privacy features for stablecoin transactions",
-    status: "In Development",
-    features: ["Private minting", "Shielded transfers", "Confidential balances"],
-    link: "#",
-  },
-]
-
 export default function PrivacyConfidentialityPage() {
+  const t = useTranslations("use.privacy")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
 
-  const faqs = [
+  const features = [
     {
-      question: "How does ErgoMixer provide privacy?",
-      answer: "ErgoMixer uses a CoinJoin++ protocol that allows users to mix their coins with others without trusting a central party. It leverages Ergo's Sigma protocols to create complex spending conditions that ensure privacy while maintaining security."
+      title: t("features.nonCustodialMixers.title"),
+      description: t("features.nonCustodialMixers.description"),
+      icon: UserX,
     },
     {
-      question: "What are Sigma protocols?",
-      answer: "Sigma protocols are a class of zero-knowledge proofs that allow proving knowledge of a secret without revealing it. Ergo's ErgoScript natively supports Sigma protocols, enabling complex privacy-preserving applications without trusted setups."
+      title: t("features.stealthAddresses.title"),
+      description: t("features.stealthAddresses.description"),
+      icon: EyeOff,
     },
     {
-      question: "How do stealth addresses work on Ergo?",
-      answer: "Stealth addresses allow receivers to publish a single address while senders generate unique one-time addresses for each payment. This breaks the link between the published address and on-chain transactions, enhancing receiver privacy."
+      title: t("features.zeroKnowledgeProofs.title"),
+      description: t("features.zeroKnowledgeProofs.description"),
+      icon: Key,
     },
     {
-      question: "Is Ergo privacy optional or mandatory?",
-      answer: "Ergo provides optional privacy features. Users can choose when to use privacy tools like ErgoMixer or stealth addresses based on their needs, maintaining flexibility while ensuring regulatory compliance when needed."
+      title: t("features.ringSignatures.title"),
+      description: t("features.ringSignatures.description"),
+      icon: Shield,
     },
     {
-      question: "What makes Ergo's privacy different from other chains?",
-      answer: "Ergo's eUTXO model naturally provides better privacy than account-based systems. Combined with native Sigma protocols, optional privacy tools, and no trusted setups, Ergo offers a unique balance of privacy, transparency, and compliance."
+      title: t("features.confidentialAssets.title"),
+      description: t("features.confidentialAssets.description"),
+      icon: Lock,
+    },
+    {
+      title: t("features.privacyPools.title"),
+      description: t("features.privacyPools.description"),
+      icon: Layers,
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
+  const existingProjects = [
+    {
+      name: t("projects.ergoMixer.name"),
+      description: t("projects.ergoMixer.description"),
+      status: t("projects.ergoMixer.status"),
+      features: [
+        t("projects.ergoMixer.features.feature1"),
+        t("projects.ergoMixer.features.feature2"),
+        t("projects.ergoMixer.features.feature3")
+      ],
+      link: "https://ergomixer.com",
+    },
+    {
+      name: t("projects.stealthAddresses.name"),
+      description: t("projects.stealthAddresses.description"),
+      status: t("projects.stealthAddresses.status"),
+      features: [
+        t("projects.stealthAddresses.features.feature1"),
+        t("projects.stealthAddresses.features.feature2"),
+        t("projects.stealthAddresses.features.feature3")
+      ],
+      link: "https://github.com/ergoplatform/eips/blob/master/eip-0015.md",
+    },
+    {
+      name: t("projects.sigmaUsdPrivacy.name"),
+      description: t("projects.sigmaUsdPrivacy.description"),
+      status: t("projects.sigmaUsdPrivacy.status"),
+      features: [
+        t("projects.sigmaUsdPrivacy.features.feature1"),
+        t("projects.sigmaUsdPrivacy.features.feature2"),
+        t("projects.sigmaUsdPrivacy.features.feature3")
+      ],
+      link: "#",
+    },
+  ]
+
+  const faqs = [
+    {
+      question: t("faq.howErgoMixerWorks.question"),
+      answer: t("faq.howErgoMixerWorks.answer")
+    },
+    {
+      question: t("faq.whatAreSigmaProtocols.question"),
+      answer: t("faq.whatAreSigmaProtocols.answer")
+    },
+    {
+      question: t("faq.howStealthAddressesWork.question"),
+      answer: t("faq.howStealthAddressesWork.answer")
+    },
+    {
+      question: t("faq.isPrivacyOptional.question"),
+      answer: t("faq.isPrivacyOptional.answer")
+    },
+    {
+      question: t("faq.whatMakesErgoDifferent.question"),
+      answer: t("faq.whatMakesErgoDifferent.answer")
+    },
+  ]
+
+  const lastUpdated = "2024-01-15"
 
   return (
     <>
@@ -132,13 +146,13 @@ export default function PrivacyConfidentialityPage() {
             {
               "@type": "ListItem",
               position: 1,
-              name: "Use Cases",
+              name: t("schema.breadcrumbs.useCases"),
               item: "https://ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
-              name: "Privacy & Confidentiality",
+              name: t("schema.breadcrumbs.privacyConfidentiality"),
               item: "https://ergoblockchain.org/use/privacy"
             }
           ]
@@ -168,8 +182,8 @@ export default function PrivacyConfidentialityPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-                              { name: "Use Cases", href: "/use" },
-              { name: "Privacy & Confidentiality", href: "/use/privacy" }
+              { name: t("schema.breadcrumbs.useCases"), href: "/use" },
+              { name: t("schema.breadcrumbs.privacyConfidentiality"), href: "/use/privacy" }
             ]}
             className="mb-8"
           />
@@ -188,19 +202,19 @@ export default function PrivacyConfidentialityPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    Privacy & Confidentiality
+                    {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    Financial privacy in an increasingly surveilled world
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Non-custodial mixers, stealth addresses, and zero-knowledge proofs for complete privacy.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://ergomixer.com" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Try ErgoMixer
+                        {t("cta.tryErgoMixer")}
                       </Button>
                     </a>
                     <Link href="/docs/introduction/privacy">
@@ -208,15 +222,15 @@ export default function PrivacyConfidentialityPage() {
                         variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                       >
-                        Privacy Guide
+                        {t("cta.privacyGuide")}
                       </Button>
                     </Link>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Privacy features</a></li>
-                      <li><a href="#projects" className="hover:text-orange-400">Live Projects</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.privacyFeatures")}</a></li>
+                      <li><a href="#projects" className="hover:text-orange-400">{t("navigation.liveProjects")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -225,27 +239,27 @@ export default function PrivacyConfidentialityPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
+                          {t("quickStart.title")}
                         </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "Use ErgoMixer",
-                              description: "Start mixing coins for privacy",
+                              name: t("quickStart.useErgoMixer.name"),
+                              description: t("quickStart.useErgoMixer.description"),
                               icon: <Shield className="w-6 h-6" />,
                               link: "https://ergomixer.com",
                               external: true
                             },
                             {
-                              name: "Privacy Guide",
-                              description: "Learn privacy best practices",
+                              name: t("quickStart.privacyGuide.name"),
+                              description: t("quickStart.privacyGuide.description"),
                               icon: <BookOpen className="w-6 h-6" />,
                               link: "/docs/introduction/privacy-guide",
                               external: false
                             },
                             {
-                              name: "Developer Docs",
-                              description: "Build privacy applications",
+                              name: t("quickStart.developerDocs.name"),
+                              description: t("quickStart.developerDocs.description"),
                               icon: <Terminal className="w-6 h-6" />,
                               link: "/docs/developers",
                               external: false
@@ -306,10 +320,10 @@ export default function PrivacyConfidentialityPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Privacy Features
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Comprehensive privacy toolkit for financial sovereignty
+                  {t("features.subtitle")}
                 </p>
               </div>
               
@@ -348,43 +362,42 @@ export default function PrivacyConfidentialityPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Technical Implementation
+                  {t("technical.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  How privacy technologies work on Ergo
+                  {t("technical.subtitle")}
                 </p>
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
                   <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Overview
+                    {t("technical.tabs.overview")}
                   </TabsTrigger>
                   <TabsTrigger value="ergomixer" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    ErgoMixer
+                    {t("technical.tabs.ergomixer")}
                   </TabsTrigger>
                   <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Code Example
+                    {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Privacy Technologies</CardTitle>
+                      <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-neutral-400 leading-relaxed">
                         <p className="mb-4">
-                          Ergo provides multiple layers of privacy through cryptographic protocols
-                          and smart contract capabilities:
+                          {t("technical.overview.description")}
                         </p>
                         <ul className="list-disc list-inside space-y-2 ml-4">
-                          <li>Sigma protocols for zero-knowledge proofs</li>
-                          <li>Ring signatures for signer ambiguity</li>
-                          <li>Stealth addresses for receiver privacy</li>
-                          <li>CoinJoin++ for transaction mixing</li>
-                          <li>Confidential assets for amount privacy</li>
+                          <li>{t("technical.overview.points.point1")}</li>
+                          <li>{t("technical.overview.points.point2")}</li>
+                          <li>{t("technical.overview.points.point3")}</li>
+                          <li>{t("technical.overview.points.point4")}</li>
+                          <li>{t("technical.overview.points.point5")}</li>
                         </ul>
                       </div>
                     </CardContent>
@@ -395,26 +408,26 @@ export default function PrivacyConfidentialityPage() {
                   <div className="space-y-6">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">ErgoMixer Protocol</CardTitle>
+                        <CardTitle className="text-white">{t("technical.ergomixer.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">How It Works</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.ergomixer.howItWorks.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Users create mixing requests</li>
-                              <li>• Funds locked in mixing contracts</li>
-                              <li>• Ring signatures hide sender</li>
-                              <li>• Mixed outputs to new addresses</li>
+                              <li>• {t("technical.ergomixer.howItWorks.points.point1")}</li>
+                              <li>• {t("technical.ergomixer.howItWorks.points.point2")}</li>
+                              <li>• {t("technical.ergomixer.howItWorks.points.point3")}</li>
+                              <li>• {t("technical.ergomixer.howItWorks.points.point4")}</li>
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Key Features</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.ergomixer.keyFeatures.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• No trusted coordinator</li>
-                              <li>• No interaction required</li>
-                              <li>• Configurable anonymity sets</li>
-                              <li>• Tor/VPN compatible</li>
+                              <li>• {t("technical.ergomixer.keyFeatures.points.point1")}</li>
+                              <li>• {t("technical.ergomixer.keyFeatures.points.point2")}</li>
+                              <li>• {t("technical.ergomixer.keyFeatures.points.point3")}</li>
+                              <li>• {t("technical.ergomixer.keyFeatures.points.point4")}</li>
                             </ul>
                           </div>
                         </div>
@@ -423,7 +436,7 @@ export default function PrivacyConfidentialityPage() {
 
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Mixing Process</CardTitle>
+                        <CardTitle className="text-white">{t("technical.ergomixer.mixingProcess.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -450,8 +463,8 @@ export default function PrivacyConfidentialityPage() {
                 <TabsContent value="code" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Sigma Protocol Example</CardTitle>
-                      <p className="text-neutral-400">Zero-knowledge proof for mixing</p>
+                      <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
+                      <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -503,10 +516,10 @@ export default function PrivacyConfidentialityPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Privacy Projects
+                  {t("projects.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Privacy-preserving applications on Ergo
+                  {t("projects.subtitle")}
                 </p>
               </div>
               
@@ -526,7 +539,7 @@ export default function PrivacyConfidentialityPage() {
                         <div className="flex items-center justify-between">
                           <CardTitle className="text-white">{project.name}</CardTitle>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            project.status === 'Live' 
+                            project.status === t("projects.ergoMixer.status")
                               ? 'bg-green-500/20 text-green-400' 
                               : 'bg-yellow-500/20 text-yellow-400'
                           }`}>
@@ -550,11 +563,11 @@ export default function PrivacyConfidentialityPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                           >
-                            Learn More
+                            {t("projects.learnMore")}
                             <ExternalLink className="ml-1 w-4 h-4" />
                           </a>
                         ) : (
-                          <span className="text-neutral-500">Coming Soon</span>
+                          <span className="text-neutral-500">{t("projects.comingSoon")}</span>
                         )}
                       </CardContent>
                     </Card>
@@ -576,10 +589,10 @@ export default function PrivacyConfidentialityPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about privacy on Ergo
+                  {t("faq.subtitle")}
                 </p>
               </div>
               
@@ -613,21 +626,21 @@ export default function PrivacyConfidentialityPage() {
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready for Financial Privacy?
+                {t("cta.title")}
               </h2>
               <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Start using privacy tools on Ergo today.
+                {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://ergomixer.com" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Try ErgoMixer
+                    {t("cta.tryErgoMixer")}
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
                 <Link href="/docs/introduction/privacy">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    Privacy Guide
+                    {t("cta.privacyGuide")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

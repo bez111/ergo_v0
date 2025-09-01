@@ -43,6 +43,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
 
 export default async function UsePage({ params }: { params: { locale: string } }) {
   const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'use' })
   const base = "https://ergoblockchain.org/use"
 
   const listJsonLd = {
@@ -71,7 +72,7 @@ export default async function UsePage({ params }: { params: { locale: string } }
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "@id": `${base}#collection`,
-    name: "Ergo Use Cases",
+    name: t('title'),
     url: base,
     isPartOf: { "@type": "WebSite", "@id": "https://ergoblockchain.org#website" },
     inLanguage: "en",
@@ -84,7 +85,7 @@ export default async function UsePage({ params }: { params: { locale: string } }
     "@id": `${base}#breadcrumbs`,
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: "https://ergoblockchain.org/" },
-      { "@type": "ListItem", position: 2, name: "Use Cases", item: base },
+      { "@type": "ListItem", position: 2, name: t('title'), item: base },
     ],
   }
   
@@ -93,26 +94,26 @@ export default async function UsePage({ params }: { params: { locale: string } }
   
   const faqSchema = SchemaTypes.FAQSchema([
     {
-      question: "What can I do with Ergo?",
-      answer: "Ergo enables DeFi applications, NFT minting and trading, privacy-preserving transactions, DAOs, oracle pools, algorithmic stablecoins like SigmaUSD, and cross-chain bridges."
+      question: t('faq.whatCanDo.question'),
+      answer: t('faq.whatCanDo.answer')
     },
     {
-      question: "What DeFi protocols exist on Ergo?",
-      answer: "Ergo has SigmaUSD (stablecoin), ErgoDEX (decentralized exchange), lending protocols, yield farming, oracle pools, and various DeFi primitives for building complex financial applications."
+      question: t('faq.defiProtocols.question'),
+      answer: t('faq.defiProtocols.answer')
     },
     {
-      question: "Can I create NFTs on Ergo?",
-      answer: "Yes, Ergo supports native NFT minting with low fees. You can create, trade, and auction NFTs on marketplaces like SkyHarbor without smart contracts."
+      question: t('faq.createNfts.question'),
+      answer: t('faq.createNfts.answer')
     },
     {
-      question: "How does privacy work on Ergo?",
-      answer: "Ergo uses Sigma protocols for optional privacy features including ErgoMixer for transaction mixing, stealth addresses, and zero-knowledge proofs for confidential transactions."
+      question: t('faq.privacyWork.question'),
+      answer: t('faq.privacyWork.answer')
     }
   ])
   
   const speakableSchema = SchemaTypes.SpeakableSchema({
-    headline: "Ergo Use Cases",
-    summary: "Explore real-world applications: DeFi protocols, NFT marketplaces, privacy tools, DAOs, and cross-chain bridges built on Ergo",
+    headline: t('title'),
+    summary: t('description'),
     url: base
   })
 

@@ -12,6 +12,7 @@ import { TrendingUp, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, L
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,82 +36,91 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "Over-Collateralized Stability",
-    description: "Maintain stable value through robust collateralization mechanisms and algorithmic adjustments",
-    icon: Shield,
-  },
-  {
-    title: "Decentralized Governance",
-    description: "Community-driven protocol parameters without central authority or single points of failure",
-    icon: Users,
-  },
-  {
-    title: "Transparent Reserves",
-    description: "On-chain verifiable reserves and real-time collateral ratios for complete transparency",
-    icon: BarChart3,
-  },
-  {
-    title: "Efficient Liquidations",
-    description: "Automated liquidation mechanisms protect protocol solvency during market volatility",
-    icon: Zap,
-  },
-  {
-    title: "Multi-Asset Collateral",
-    description: "Support for various collateral types including ERG, wrapped assets, and LP tokens",
-    icon: Coins,
-  },
-  {
-    title: "Composable DeFi",
-    description: "Seamlessly integrate with other DeFi protocols for lending, yield farming, and more",
-    icon: Layers,
-  },
-]
-
-const existingProjects = [
-  {
-    name: "SigmaUSD",
-    description: "The first algorithmic stablecoin on Ergo using the AgeUSD protocol",
-    status: "Live",
-    tvl: "$2.5M+",
-    link: "https://sigmausd.io",
-    features: ["ERG-backed", "Dual token model", "Reserve ratio protection"],
-  },
-  {
-    name: "Gluon Gold",
-    description: "Gold-backed stablecoin leveraging Ergo's oracle pools",
-    status: "In Development",
-    tvl: "TBD",
-    link: "https://gluon.gold",
-    features: ["Gold-pegged", "Oracle-powered", "Cross-chain compatible"],
-  },
-]
-
 export default function AlgorithmicStablecoinsPage() {
+  const t = useTranslations("use.stablecoins")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
 
+  const features = [
+    {
+      title: t("features.overCollateralized.title"),
+      description: t("features.overCollateralized.description"),
+      icon: Shield,
+    },
+    {
+      title: t("features.decentralizedGovernance.title"),
+      description: t("features.decentralizedGovernance.description"),
+      icon: Users,
+    },
+    {
+      title: t("features.transparentReserves.title"),
+      description: t("features.transparentReserves.description"),
+      icon: BarChart3,
+    },
+    {
+      title: t("features.efficientLiquidations.title"),
+      description: t("features.efficientLiquidations.description"),
+      icon: Zap,
+    },
+    {
+      title: t("features.multiAssetCollateral.title"),
+      description: t("features.multiAssetCollateral.description"),
+      icon: Coins,
+    },
+    {
+      title: t("features.composableDefi.title"),
+      description: t("features.composableDefi.description"),
+      icon: Layers,
+    },
+  ]
+
+  const existingProjects = [
+    {
+      name: t("projects.sigmaUsd.name"),
+      description: t("projects.sigmaUsd.description"),
+      status: t("projects.sigmaUsd.status"),
+      tvl: t("projects.sigmaUsd.tvl"),
+      link: "https://sigmausd.io",
+      features: [
+        t("projects.sigmaUsd.features.feature1"),
+        t("projects.sigmaUsd.features.feature2"),
+        t("projects.sigmaUsd.features.feature3")
+      ],
+    },
+    {
+      name: t("projects.gluonGold.name"),
+      description: t("projects.gluonGold.description"),
+      status: t("projects.gluonGold.status"),
+      tvl: t("projects.gluonGold.tvl"),
+      link: "https://gluon.gold",
+      features: [
+        t("projects.gluonGold.features.feature1"),
+        t("projects.gluonGold.features.feature2"),
+        t("projects.gluonGold.features.feature3")
+      ],
+    },
+  ]
+
   const faqs = [
     {
-      question: "How do algorithmic stablecoins maintain their peg?",
-      answer: "Algorithmic stablecoins on Ergo maintain their peg through a combination of over-collateralization, algorithmic supply adjustments, and market incentives. The AgeUSD protocol uses a dual-token system where reserve providers absorb volatility to maintain stability."
+      question: t("faq.howMaintainPeg.question"),
+      answer: t("faq.howMaintainPeg.answer")
     },
     {
-      question: "What makes Ergo ideal for stablecoins?",
-      answer: "Ergo's eUTXO model provides superior security for collateral management, native oracle pools ensure reliable price feeds, and ErgoScript enables complex stability mechanisms while maintaining transparency and auditability."
+      question: t("faq.whyErgoIdeal.question"),
+      answer: t("faq.whyErgoIdeal.answer")
     },
     {
-      question: "How does the AgeUSD protocol work?",
-      answer: "AgeUSD uses a reserve pool of ERG collateral and two tokens: SigmaUSD (stable) and SigmaRSV (reserve). Reserve providers mint SigmaRSV to add collateral and earn from fees and price appreciation, while users can mint SigmaUSD when the reserve ratio is healthy."
+      question: t("faq.howAgeUsdWorks.question"),
+      answer: t("faq.howAgeUsdWorks.answer")
     },
     {
-      question: "What are the risks of algorithmic stablecoins?",
-      answer: "Main risks include under-collateralization during extreme market conditions, oracle manipulation, smart contract bugs, and liquidity crises. Ergo mitigates these through robust reserve requirements, decentralized oracles, and formal verification capabilities."
+      question: t("faq.risks.question"),
+      answer: t("faq.risks.answer")
     },
     {
-      question: "Can I build my own stablecoin on Ergo?",
-      answer: "Yes! Ergo provides all necessary infrastructure: oracle pools for price feeds, ErgoScript for stability mechanisms, and proven protocols like AgeUSD as reference implementations. The community offers extensive documentation and support."
+      question: t("faq.buildOwn.question"),
+      answer: t("faq.buildOwn.answer")
     },
   ]
 
@@ -127,13 +137,13 @@ export default function AlgorithmicStablecoinsPage() {
             {
               "@type": "ListItem",
               position: 1,
-              name: "Use Cases",
+              name: t("schema.breadcrumbs.useCases"),
               item: "https://ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
-              name: "Algorithmic Stablecoins",
+              name: t("schema.breadcrumbs.algorithmicStablecoins"),
               item: "https://ergoblockchain.org/use/stablecoins"
             }
           ]
@@ -163,8 +173,8 @@ export default function AlgorithmicStablecoinsPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-                              { name: "Use Cases", href: "/use" },
-              { name: "Algorithmic Stablecoins", href: "/use/stablecoins" }
+              { name: t("schema.breadcrumbs.useCases"), href: "/use" },
+              { name: t("schema.breadcrumbs.algorithmicStablecoins"), href: "/use/stablecoins" }
             ]}
             className="mb-8"
           />
@@ -183,19 +193,19 @@ export default function AlgorithmicStablecoinsPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    Algorithmic Stablecoins
+                    {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    Stable value storage without centralized control
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Over-collateralized stablecoins with innovative AgeUSD protocol. Decentralized, transparent, and resilient.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://sigmausd.io" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Try SigmaUSD
+                        {t("cta.trySignaUsd")}
                       </Button>
                     </a>
                     <Link href="https://github.com/Emurgo/age-usd" target="_blank">
@@ -203,15 +213,15 @@ export default function AlgorithmicStablecoinsPage() {
                         variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                       >
-                        View Protocol
+                        {t("cta.viewProtocol")}
                       </Button>
                     </Link>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
-                      <li><a href="#projects" className="hover:text-orange-400">Live Projects</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.keyFeatures")}</a></li>
+                      <li><a href="#projects" className="hover:text-orange-400">{t("navigation.liveProjects")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -220,27 +230,27 @@ export default function AlgorithmicStablecoinsPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
+                          {t("quickStart.title")}
                         </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "Use SigmaUSD",
-                              description: "Start using Ergo's native stablecoin",
+                              name: t("quickStart.useSigmaUsd.name"),
+                              description: t("quickStart.useSigmaUsd.description"),
                               icon: <DollarSign className="w-6 h-6" />,
                               link: "https://sigmausd.io",
                               external: true
                             },
                             {
-                              name: "Read Whitepaper",
-                              description: "Understand the AgeUSD protocol",
+                              name: t("quickStart.readWhitepaper.name"),
+                              description: t("quickStart.readWhitepaper.description"),
                               icon: <BookOpen className="w-6 h-6" />,
                               link: "https://github.com/Emurgo/age-usd/blob/main/README.md",
                               external: true
                             },
                             {
-                              name: "Developer Docs",
-                              description: "Build your own stablecoin",
+                              name: t("quickStart.developerDocs.name"),
+                              description: t("quickStart.developerDocs.description"),
                               icon: <Terminal className="w-6 h-6" />,
                               link: "/docs/developers",
                               external: false
@@ -301,10 +311,10 @@ export default function AlgorithmicStablecoinsPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Key Features
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Why Ergo is the perfect platform for algorithmic stablecoins
+                  {t("features.subtitle")}
                 </p>
               </div>
               
@@ -343,43 +353,42 @@ export default function AlgorithmicStablecoinsPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Technical Implementation
+                  {t("technical.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  How algorithmic stablecoins work on Ergo
+                  {t("technical.subtitle")}
                 </p>
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
                   <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Overview
+                    {t("technical.tabs.overview")}
                   </TabsTrigger>
                   <TabsTrigger value="ageusd" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    AgeUSD Protocol
+                    {t("technical.tabs.ageUsd")}
                   </TabsTrigger>
                   <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Code Example
+                    {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">How It Works</CardTitle>
+                      <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-neutral-400 leading-relaxed">
                         <p className="mb-4">
-                          Algorithmic stablecoins on Ergo maintain their peg through smart contract mechanisms
-                          that automatically adjust supply and demand based on market conditions.
+                          {t("technical.overview.description")}
                         </p>
                         <ul className="list-disc list-inside space-y-2 ml-4">
-                          <li>Oracle pools provide reliable price feeds</li>
-                          <li>Smart contracts manage collateral and minting</li>
-                          <li>Reserve providers absorb volatility</li>
-                          <li>Liquidation mechanisms protect solvency</li>
-                          <li>Governance tokens enable parameter updates</li>
+                          <li>{t("technical.overview.points.point1")}</li>
+                          <li>{t("technical.overview.points.point2")}</li>
+                          <li>{t("technical.overview.points.point3")}</li>
+                          <li>{t("technical.overview.points.point4")}</li>
+                          <li>{t("technical.overview.points.point5")}</li>
                         </ul>
                       </div>
                     </CardContent>
@@ -390,26 +399,26 @@ export default function AlgorithmicStablecoinsPage() {
                   <div className="space-y-6">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">AgeUSD Protocol Design</CardTitle>
+                        <CardTitle className="text-white">{t("technical.ageUsd.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">SigmaUSD (Stable)</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.ageUsd.sigmaUsd.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Pegged to $1 USD</li>
-                              <li>• Backed by ERG reserves</li>
-                              <li>• Mintable when reserve ratio &gt; 400%</li>
-                              <li>• Redeemable for $1 worth of ERG</li>
+                              <li>• {t("technical.ageUsd.sigmaUsd.points.point1")}</li>
+                              <li>• {t("technical.ageUsd.sigmaUsd.points.point2")}</li>
+                              <li>• {t("technical.ageUsd.sigmaUsd.points.point3")}</li>
+                              <li>• {t("technical.ageUsd.sigmaUsd.points.point4")}</li>
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">SigmaRSV (Reserve)</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.ageUsd.sigmaRsv.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Provides reserve collateral</li>
-                              <li>• Absorbs ERG price volatility</li>
-                              <li>• Earns fees from minting/redeeming</li>
-                              <li>• Profits from ERG appreciation</li>
+                              <li>• {t("technical.ageUsd.sigmaRsv.points.point1")}</li>
+                              <li>• {t("technical.ageUsd.sigmaRsv.points.point2")}</li>
+                              <li>• {t("technical.ageUsd.sigmaRsv.points.point3")}</li>
+                              <li>• {t("technical.ageUsd.sigmaRsv.points.point4")}</li>
                             </ul>
                           </div>
                         </div>
@@ -418,7 +427,7 @@ export default function AlgorithmicStablecoinsPage() {
 
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Reserve Mechanics</CardTitle>
+                        <CardTitle className="text-white">{t("technical.ageUsd.reserveMechanics.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -447,8 +456,8 @@ When ERG price falls:
                 <TabsContent value="code" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">ErgoScript Example</CardTitle>
-                      <p className="text-neutral-400">Simplified stablecoin minting contract</p>
+                      <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
+                      <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -495,10 +504,10 @@ When ERG price falls:
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Live Projects
+                  {t("projects.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Stablecoin projects currently running on Ergo
+                  {t("projects.subtitle")}
                 </p>
               </div>
               
@@ -518,7 +527,7 @@ When ERG price falls:
                         <div className="flex items-center justify-between">
                           <CardTitle className="text-white">{project.name}</CardTitle>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            project.status === 'Live' 
+                            project.status === t("projects.sigmaUsd.status")
                               ? 'bg-green-500/20 text-green-400' 
                               : 'bg-yellow-500/20 text-yellow-400'
                           }`}>
@@ -528,7 +537,7 @@ When ERG price falls:
                       </CardHeader>
                       <CardContent className="space-y-4">
                         <p className="text-neutral-400">{project.description}</p>
-                        {project.tvl !== "TBD" && (
+                        {project.tvl !== t("projects.gluonGold.tvl") && (
                           <div className="flex items-center gap-2">
                             <DollarSign className="w-4 h-4 text-orange-400" />
                             <span className="text-sm text-neutral-300">TVL: {project.tvl}</span>
@@ -547,7 +556,7 @@ When ERG price falls:
                           rel="noopener noreferrer"
                           className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                         >
-                          Visit Project
+                          {t("projects.visitProject")}
                           <ExternalLink className="ml-1 w-4 h-4" />
                         </a>
                       </CardContent>
@@ -570,10 +579,10 @@ When ERG price falls:
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about algorithmic stablecoins on Ergo
+                  {t("faq.subtitle")}
                 </p>
               </div>
               
@@ -607,21 +616,21 @@ When ERG price falls:
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Build Stable Value?
+                {t("cta.title")}
               </h2>
               <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Start using or building algorithmic stablecoins on Ergo today.
+                {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://sigmausd.io" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Use SigmaUSD
+                    {t("cta.useSigmaUsd")}
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
                 <Link href="/docs/developers">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    Developer Docs
+                    {t("cta.developerDocs")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

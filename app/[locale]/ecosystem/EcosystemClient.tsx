@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
+import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import { Input } from "@/components/ui/input"
@@ -103,6 +104,7 @@ const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, trans
 const itemVariants = { hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }
 
 export default function EcosystemClient() {
+  const t = useTranslations("ecosystem")
   const [searchTerm, setSearchTerm] = useState("")
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("ALL")
@@ -145,18 +147,18 @@ export default function EcosystemClient() {
         {/* Hero */}
         <motion.section variants={itemVariants} initial="hidden" animate="visible" className="pt-32 pb-16 px-4 text-center">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            <span className="text-white">Ergo</span> <span className="text-orange-400">Ecosystem</span>
+{t("title")}
           </h1>
           <p className="text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto mb-8">
-            Discover a rich ecosystem of dApps, tools, and services built on the Ergo blockchain, designed for security, privacy, and real-world utility.
+            {t("subtitle")}
           </p>
           <div className="flex items-center justify-center gap-2 text-sm text-neutral-400">
             <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
-            <span>38+ Active Projects</span>
+            <span>{t("stats.activeProjects")}</span>
             <span className="w-1 h-1 bg-neutral-600 rounded-full"></span>
-            <span>6 Categories</span>
+            <span>{t("stats.categories")}</span>
             <span className="w-1 h-1 bg-neutral-600 rounded-full"></span>
-            <span>Live & Growing</span>
+            <span>{t("stats.status")}</span>
           </div>
         </motion.section>
 
@@ -165,8 +167,8 @@ export default function EcosystemClient() {
           <motion.section className="max-w-7xl mx-auto px-4 py-12" variants={itemVariants} initial="hidden" animate="visible">
             <div className="flex justify-between items-center mb-8">
               <div className="flex items-center gap-3">
-                <h2 className="text-3xl font-bold text-white">Featured Projects</h2>
-                <div className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">Top 6</div>
+                <h2 className="text-3xl font-bold text-white">{t("featuredProjects.title")}</h2>
+                <div className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">{t("featuredProjects.badge")}</div>
               </div>
               <div className="flex gap-2">
                 <Button variant="outline" size="icon" onClick={() => setCurrentFeaturedIndex((p) => Math.max(0, p - 1))} disabled={currentFeaturedIndex === 0} className="border-neutral-700 text-neutral-2 00 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400">
@@ -221,12 +223,12 @@ export default function EcosystemClient() {
               <div className="flex-1">
                 <div className="flex items-center gap-3">
                   <h2 className="text-3xl font-bold text-white">All Projects</h2>
-                  <div className="px-3 py-1 bg-neutral-800 border border-neutral-700 rounded-full text-xs text-neutral-400 min-w-[80px] text-center">{filteredProjects.length} projects</div>
+                  <div className="px-3 py-1 bg-neutral-800 border border-neutral-700 rounded-full text-xs text-neutral-400 min-w-[80px] text-center">{t("search.resultsCount", { count: filteredProjects.length })}</div>
                 </div>
               </div>
               <div className="relative w-full md:w-auto md:flex-1" style={{ contain: "layout paint" }}>
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" aria-hidden="true" focusable="false" />
-                <Input type="text" placeholder="Search projects..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-neutral-900/80 border-neutral-700 pl-12 h-12 rounded-xl focus:border-orange-500/50" />
+                <Input type="text" placeholder={t("search.placeholder")} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-neutral-900/80 border-neutral-700 pl-12 h-12 rounded-xl focus:border-orange-500/50" />
                 <div className="h-0 md:h-0" />
               </div>
               <div className="flex items-center gap-2">
@@ -242,7 +244,7 @@ export default function EcosystemClient() {
             <div className="flex flex-wrap gap-2 justify-center mb-4" style={{ contain: "layout paint" }}>
               {["ALL", ...categoryOrder].map((category) => (
                 <Button key={category} variant="outline" onClick={() => setSelectedCategory(category)} className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedCategory === category ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}>
-                  {category}
+                  {category === "ALL" ? t("filters.all") : t(`filters.${category.toLowerCase()}`)}
                 </Button>
               ))}
             </div>

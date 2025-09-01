@@ -12,6 +12,7 @@ import { Link2, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, Layers
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,91 +36,103 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "Trustless Transfers",
-    description: "Move assets between chains without relying on centralized custodians",
-    icon: Shield,
-  },
-  {
-    title: "Multi-Signature Security",
-    description: "Decentralized validator sets ensure bridge security and reliability",
-    icon: Lock,
-  },
-  {
-    title: "Fast Finality",
-    description: "Quick confirmation times for cross-chain transactions",
-    icon: Zap,
-  },
-  {
-    title: "Multiple Chains",
-    description: "Connect to Ethereum, BSC, Cardano, and other major blockchains",
-    icon: Network,
-  },
-  {
-    title: "Wrapped Assets",
-    description: "Native support for wrapped tokens with 1:1 backing",
-    icon: Layers,
-  },
-  {
-    title: "Atomic Swaps",
-    description: "Direct peer-to-peer cross-chain exchanges without intermediaries",
-    icon: Globe,
-  },
-]
-
-const existingProjects = [
-  {
-    name: "Rosen Bridge",
-    description: "Decentralized bridge connecting Ergo to multiple chains",
-    status: "Live",
-    chains: ["Cardano", "Bitcoin", "Ethereum"],
-    link: "https://rosen.tech",
-  },
-  {
-    name: "Spectrum Bridge",
-    description: "Cross-chain liquidity bridge for DeFi applications",
-    status: "In Development",
-    chains: ["Cardano", "BSC"],
-    link: "https://spectrum.fi",
-  },
-  {
-    name: "Graviton",
-    description: "Multi-chain bridge protocol with oracle validation",
-    status: "Planned",
-    chains: ["Ethereum", "Polygon", "Avalanche"],
-    link: "#",
-  },
-]
-
 export default function CrossChainBridgesPage() {
+  const t = useTranslations("use.bridges")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
 
-  const faqs = [
+  const features = [
     {
-      question: "How do cross-chain bridges work on Ergo?",
-      answer: "Ergo bridges use a combination of multi-signature wallets, oracle pools, and smart contracts to lock assets on one chain and mint wrapped versions on another. Validators ensure the integrity of cross-chain transactions."
+      title: t("features.trustlessTransfers.title"),
+      description: t("features.trustlessTransfers.description"),
+      icon: Shield,
     },
     {
-      question: "What is Rosen Bridge?",
-      answer: "Rosen Bridge is Ergo's flagship decentralized bridge solution. It uses a network of watchers and guards to facilitate trustless asset transfers between Ergo and other blockchains without central points of failure."
+      title: t("features.multiSignatureSecurity.title"),
+      description: t("features.multiSignatureSecurity.description"),
+      icon: Lock,
     },
     {
-      question: "Are bridged assets secure?",
-      answer: "Yes, bridged assets are secured through multi-signature contracts and decentralized validator networks. The original assets are locked in secure contracts, and wrapped versions maintain 1:1 backing."
+      title: t("features.fastFinality.title"),
+      description: t("features.fastFinality.description"),
+      icon: Zap,
     },
     {
-      question: "Which chains can Ergo connect to?",
-      answer: "Ergo can connect to any blockchain that supports multi-signature wallets or smart contracts. Current bridges support Cardano, Bitcoin, and Ethereum, with more chains being added regularly."
+      title: t("features.multipleChains.title"),
+      description: t("features.multipleChains.description"),
+      icon: Network,
     },
     {
-      question: "How long do bridge transfers take?",
-      answer: "Transfer times vary by destination chain. Typically, transfers complete within 10-30 minutes, depending on network congestion and confirmation requirements on both chains."
+      title: t("features.wrappedAssets.title"),
+      description: t("features.wrappedAssets.description"),
+      icon: Layers,
+    },
+    {
+      title: t("features.atomicSwaps.title"),
+      description: t("features.atomicSwaps.description"),
+      icon: Globe,
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
+  const existingProjects = [
+    {
+      name: t("projects.rosenBridge.name"),
+      description: t("projects.rosenBridge.description"),
+      status: t("projects.rosenBridge.status"),
+      chains: [
+        t("projects.rosenBridge.chains.chain1"),
+        t("projects.rosenBridge.chains.chain2"),
+        t("projects.rosenBridge.chains.chain3")
+      ],
+      link: "https://rosen.tech",
+    },
+    {
+      name: t("projects.spectrumBridge.name"),
+      description: t("projects.spectrumBridge.description"),
+      status: t("projects.spectrumBridge.status"),
+      chains: [
+        t("projects.spectrumBridge.chains.chain1"),
+        t("projects.spectrumBridge.chains.chain2")
+      ],
+      link: "https://spectrum.fi",
+    },
+    {
+      name: t("projects.graviton.name"),
+      description: t("projects.graviton.description"),
+      status: t("projects.graviton.status"),
+      chains: [
+        t("projects.graviton.chains.chain1"),
+        t("projects.graviton.chains.chain2"),
+        t("projects.graviton.chains.chain3")
+      ],
+      link: "#",
+    },
+  ]
+
+  const faqs = [
+    {
+      question: t("faq.howBridgesWork.question"),
+      answer: t("faq.howBridgesWork.answer")
+    },
+    {
+      question: t("faq.whatIsRosenBridge.question"),
+      answer: t("faq.whatIsRosenBridge.answer")
+    },
+    {
+      question: t("faq.areBridgedAssetsSecure.question"),
+      answer: t("faq.areBridgedAssetsSecure.answer")
+    },
+    {
+      question: t("faq.whichChainsConnect.question"),
+      answer: t("faq.whichChainsConnect.answer")
+    },
+    {
+      question: t("faq.transferTimes.question"),
+      answer: t("faq.transferTimes.answer")
+    },
+  ]
+
+  const lastUpdated = "2024-01-15"
 
   return (
     <>
@@ -132,13 +145,13 @@ export default function CrossChainBridgesPage() {
             {
               "@type": "ListItem",
               position: 1,
-              name: "Use Cases",
+              name: t("schema.breadcrumbs.useCases"),
               item: "https://ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
-              name: "Cross-Chain Bridges",
+              name: t("schema.breadcrumbs.crossChainBridges"),
               item: "https://ergoblockchain.org/use/cross-chain-bridges"
             }
           ]
@@ -168,8 +181,8 @@ export default function CrossChainBridgesPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Use Cases", href: "/use" },
-              { name: "Cross-Chain Bridges", href: "/use/cross-chain-bridges" }
+              { name: t("schema.breadcrumbs.useCases"), href: "/use" },
+              { name: t("schema.breadcrumbs.crossChainBridges"), href: "/use/cross-chain-bridges" }
             ]}
             className="mb-8"
           />
@@ -188,19 +201,19 @@ export default function CrossChainBridgesPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    Cross-Chain Bridges
+                    {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    Secure, trustless value transfer between blockchains
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Decentralized bridges with multi-signature security, no central custody.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://rosen.tech" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Try Rosen Bridge
+                        {t("cta.tryRosenBridge")}
                       </Button>
                     </a>
                     <Link href="https://github.com/rosen-bridge" target="_blank">
@@ -208,15 +221,15 @@ export default function CrossChainBridgesPage() {
                         variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                       >
-                        View Code
+                        {t("cta.viewCode")}
                       </Button>
                     </Link>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
-                      <li><a href="#projects" className="hover:text-orange-400">Live Bridges</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.keyFeatures")}</a></li>
+                      <li><a href="#projects" className="hover:text-orange-400">{t("navigation.liveBridges")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -225,27 +238,27 @@ export default function CrossChainBridgesPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
+                          {t("quickStart.title")}
                         </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "Use Rosen Bridge",
-                              description: "Bridge assets between chains",
+                              name: t("quickStart.useRosenBridge.name"),
+                              description: t("quickStart.useRosenBridge.description"),
                               icon: <Link2 className="w-6 h-6" />,
                               link: "https://rosen.tech",
                               external: true
                             },
                             {
-                              name: "Bridge Docs",
-                              description: "Integration documentation",
+                              name: t("quickStart.bridgeDocs.name"),
+                              description: t("quickStart.bridgeDocs.description"),
                               icon: <BookOpen className="w-6 h-6" />,
                               link: "https://docs.rosen.tech",
                               external: true
                             },
                             {
-                              name: "Developer Guide",
-                              description: "Build bridge applications",
+                              name: t("quickStart.developerGuide.name"),
+                              description: t("quickStart.developerGuide.description"),
                               icon: <Terminal className="w-6 h-6" />,
                               link: "/docs/developers",
                               external: false
@@ -306,10 +319,10 @@ export default function CrossChainBridgesPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Bridge Features
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Connect Ergo to the multi-chain ecosystem
+                  {t("features.subtitle")}
                 </p>
               </div>
               
@@ -348,43 +361,42 @@ export default function CrossChainBridgesPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  How It Works
+                  {t("technical.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Technical architecture of Ergo bridges
+                  {t("technical.subtitle")}
                 </p>
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
                   <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Overview
+                    {t("technical.tabs.overview")}
                   </TabsTrigger>
                   <TabsTrigger value="rosen" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Rosen Bridge
+                    {t("technical.tabs.rosen")}
                   </TabsTrigger>
                   <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Code Example
+                    {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Bridge Architecture</CardTitle>
+                      <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-neutral-400 leading-relaxed">
                         <p className="mb-4">
-                          Cross-chain bridges on Ergo use decentralized validator networks
-                          to ensure secure asset transfers:
+                          {t("technical.overview.description")}
                         </p>
                         <ul className="list-disc list-inside space-y-2 ml-4">
-                          <li>Lock assets in source chain contracts</li>
-                          <li>Validators confirm the lock transaction</li>
-                          <li>Mint wrapped tokens on destination chain</li>
-                          <li>Multi-sig ensures no single point of failure</li>
-                          <li>Oracle pools provide price feeds</li>
+                          <li>{t("technical.overview.points.point1")}</li>
+                          <li>{t("technical.overview.points.point2")}</li>
+                          <li>{t("technical.overview.points.point3")}</li>
+                          <li>{t("technical.overview.points.point4")}</li>
+                          <li>{t("technical.overview.points.point5")}</li>
                         </ul>
                       </div>
                     </CardContent>
@@ -395,26 +407,26 @@ export default function CrossChainBridgesPage() {
                   <div className="space-y-6">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Rosen Architecture</CardTitle>
+                        <CardTitle className="text-white">{t("technical.rosen.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Watchers</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.rosen.watchers.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Monitor source chain events</li>
-                              <li>• Report lock transactions</li>
-                              <li>• Validate bridge requests</li>
-                              <li>• Decentralized network</li>
+                              <li>• {t("technical.rosen.watchers.points.point1")}</li>
+                              <li>• {t("technical.rosen.watchers.points.point2")}</li>
+                              <li>• {t("technical.rosen.watchers.points.point3")}</li>
+                              <li>• {t("technical.rosen.watchers.points.point4")}</li>
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Guards</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.rosen.guards.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Sign multi-sig transactions</li>
-                              <li>• Protect bridge funds</li>
-                              <li>• Execute minting/burning</li>
-                              <li>• Consensus required</li>
+                              <li>• {t("technical.rosen.guards.points.point1")}</li>
+                              <li>• {t("technical.rosen.guards.points.point2")}</li>
+                              <li>• {t("technical.rosen.guards.points.point3")}</li>
+                              <li>• {t("technical.rosen.guards.points.point4")}</li>
                             </ul>
                           </div>
                         </div>
@@ -423,7 +435,7 @@ export default function CrossChainBridgesPage() {
 
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Transfer Process</CardTitle>
+                        <CardTitle className="text-white">{t("technical.rosen.transferProcess.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -444,8 +456,8 @@ export default function CrossChainBridgesPage() {
                 <TabsContent value="code" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">Bridge Contract Example</CardTitle>
-                      <p className="text-neutral-400">Simplified bridge locking contract</p>
+                      <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
+                      <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -496,10 +508,10 @@ export default function CrossChainBridgesPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Live Bridges
+                  {t("projects.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Active bridge solutions connecting Ergo
+                  {t("projects.subtitle")}
                 </p>
               </div>
               
@@ -519,9 +531,9 @@ export default function CrossChainBridgesPage() {
                         <div className="flex items-center justify-between">
                           <CardTitle className="text-white">{project.name}</CardTitle>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            project.status === 'Live' 
+                            project.status === t("projects.rosenBridge.status")
                               ? 'bg-green-500/20 text-green-400' 
-                              : project.status === 'In Development'
+                              : project.status === t("projects.spectrumBridge.status")
                               ? 'bg-yellow-500/20 text-yellow-400'
                               : 'bg-blue-500/20 text-blue-400'
                           }`}>
@@ -545,11 +557,11 @@ export default function CrossChainBridgesPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                           >
-                            Visit Bridge
+                            {t("projects.visitBridge")}
                             <ExternalLink className="ml-1 w-4 h-4" />
                           </a>
                         ) : (
-                          <span className="text-neutral-500">Coming Soon</span>
+                          <span className="text-neutral-500">{t("projects.comingSoon")}</span>
                         )}
                       </CardContent>
                     </Card>
@@ -571,10 +583,10 @@ export default function CrossChainBridgesPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about cross-chain bridges
+                  {t("faq.subtitle")}
                 </p>
               </div>
               
@@ -608,21 +620,21 @@ export default function CrossChainBridgesPage() {
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Bridge Assets?
+                {t("cta.title")}
               </h2>
               <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Connect Ergo to the multi-chain ecosystem today.
+                {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://rosen.tech" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Use Rosen Bridge
+                    {t("cta.useRosenBridge")}
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
                 <Link href="/docs/developers">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    Developer Docs
+                    {t("cta.developerDocs")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>

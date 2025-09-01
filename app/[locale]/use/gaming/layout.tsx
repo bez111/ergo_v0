@@ -1,25 +1,31 @@
 import { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "Gaming & Metaverse on Ergo | Blockchain Gaming",
-  description: "Build blockchain games and metaverse experiences on Ergo. In-game NFTs, play-to-earn mechanics, dynamic items, and decentralized game economies.",
-  keywords: "gaming, metaverse, blockchain games, play-to-earn, game NFTs, virtual worlds, Web3 gaming",
-  openGraph: {
-    title: "Gaming & Metaverse on Ergo",
-    description: "Next-gen gaming assets and digital worlds on Ergo blockchain.",
-    images: ["/og-gaming.png"],
-    type: "website",
-    url: "https://ergoblockchain.org/use/gaming-metaverse",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Gaming on Ergo",
-    description: "Build blockchain games with NFTs and play-to-earn",
-    images: ["/og-gaming.png"],
-  },
-  alternates: {
-    canonical: "https://ergoblockchain.org/use/gaming-metaverse",
-  },
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'use.gaming.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ["/og-gaming.png"],
+      type: "website",
+      url: "https://ergoblockchain.org/use/gaming-metaverse",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["/og-gaming.png"],
+    },
+    alternates: {
+      canonical: "https://ergoblockchain.org/use/gaming-metaverse",
+    },
+  }
 }
 
 export default function Layout({ children }: { children: React.ReactNode }) {

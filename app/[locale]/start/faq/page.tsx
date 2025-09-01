@@ -1,34 +1,40 @@
 import type { Metadata } from "next"
-import FAQClientLocalized from "./FAQClientLocalized"
+import { getTranslations } from "next-intl/server"
+import FaqClient from "./FaqClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
-export const metadata: Metadata = {
-  title: "Ergo FAQ | Frequently Asked Questions About Blockchain",
-  description: "Get answers to common questions about Ergo blockchain. Learn about mining, wallets, smart contracts, tokenomics, and technical specifications. Beginner-friendly explanations.",
-  keywords: ["ergo faq", "blockchain questions", "ergo help", "crypto faq", "mining questions", "wallet help", "smart contracts faq", "ergo support"],
-  alternates: {
-    canonical: "https://ergoblockchain.org/start/faq"
-  },
-  openGraph: {
-    title: "Ergo FAQ - All Your Questions Answered",
-    description: "Complete FAQ covering Ergo basics, technology, mining, wallets, and development.",
-    url: "https://ergoblockchain.org/start/faq",
-    siteName: "Ergo Platform",
-    images: [{
-      url: "https://ergoblockchain.org/og/faq.png",
-      width: 1200,
-      height: 630,
-      alt: "Ergo FAQ"
-    }],
-    type: "website",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ergo FAQ | Quick Answers to Common Questions",
-    description: "Everything you need to know about Ergo blockchain in one place.",
-    images: ["https://ergoblockchain.org/og/faq.png"]
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'start.faq.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    alternates: {
+      canonical: "https://ergoblockchain.org/start/faq"
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: "https://ergoblockchain.org/start/faq",
+      siteName: "Ergo Platform",
+      images: [{
+        url: "https://ergoblockchain.org/og/faq.png",
+        width: 1200,
+        height: 630,
+        alt: t('ogAlt')
+      }],
+      type: "website",
+      locale: "en_US"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["https://ergoblockchain.org/og/faq.png"]
+    }
   }
 }
 
@@ -73,7 +79,7 @@ export default function FAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
       
-      <FAQClientLocalized />
+      <FaqClient />
     </>
   )
 } 

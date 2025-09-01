@@ -22,6 +22,7 @@ import {
   ArrowRight,
 } from "lucide-react"
 import { useState } from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -39,6 +40,7 @@ const itemVariants = {
 }
 
 export default function BabelFeesClient() {
+  const t = useTranslations('use.babelFees')
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
@@ -53,21 +55,21 @@ export default function BabelFeesClient() {
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Babel Fees</h1>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">{t('title')}</h1>
               <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
-                Pay transaction fees with any token, not just ERG. Revolutionary flexibility for Ergo users.
+                {t('subtitle')}
               </p>
               <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                Babel Fees (EIP-0019) enable seamless fee payments using native tokens, enhancing UX and token utility across the ecosystem.
+                {t('description')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
-                  <Link href="#how-it-works">How It Works</Link>
+                  <Link href="#how-it-works">{t('buttons.howItWorks')}</Link>
                 </Button>
                 <Button asChild variant="outline" className="border-neutral-600 text-neutral-200 hover:bg-neutral-900/40 px-6 py-3 rounded-xl">
                   <Link href="https://github.com/ergoplatform/eips/blob/master/eip-0019.md" target="_blank">
                     <ExternalLink className="w-5 h-5 mr-2" />
-                    EIP-0019
+                    {t('buttons.eip0019')}
                   </Link>
                 </Button>
               </div>
@@ -75,12 +77,12 @@ export default function BabelFeesClient() {
             <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
               <Card className="bg-neutral-900/50 border border-neutral-700 backdrop-blur-sm p-8">
                 <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold mb-6 text-center text-white">Fee Payment Options</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">{t('feeOptions.title')}</h3>
                   <div className="space-y-4">
                     {[
-                      { name: "ERG (Native)", icon: Coins, desc: "Traditional blockchain fees" },
-                      { name: "Any Token", icon: ArrowRightLeft, desc: "Pay with project tokens" },
-                      { name: "Automatic Exchange", icon: Zap, desc: "Seamless token-to-ERG conversion" },
+                      { name: t('feeOptions.options.erg.name'), icon: Coins, desc: t('feeOptions.options.erg.description') },
+                      { name: t('feeOptions.options.anyToken.name'), icon: ArrowRightLeft, desc: t('feeOptions.options.anyToken.description') },
+                      { name: t('feeOptions.options.autoExchange.name'), icon: Zap, desc: t('feeOptions.options.autoExchange.description') },
                     ].map((option) => (
                       <div key={option.name} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
                         <div className="flex items-center gap-3">
@@ -113,40 +115,40 @@ export default function BabelFeesClient() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-2xl text-white">
                     <Shield className="w-6 h-6 text-orange-400" />
-                    Why Are Transaction Fees Necessary on Ergo?
+                    {t('whyFees.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-neutral-300 leading-relaxed">
-                    Like most blockchains, transaction fees on Ergo play a crucial role. They are needed for:
+                    {t('whyFees.description')}
                   </p>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="p-4 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <Users className="w-8 h-8 text-orange-400 mb-3" />
-                      <h4 className="font-semibold mb-2 text-orange-400">Rewarding Miners</h4>
+                      <h4 className="font-semibold mb-2 text-orange-400">{t('whyFees.reasons.miners.title')}</h4>
                       <p className="text-sm text-neutral-300">
-                        Miners expend computational resources to process transactions and secure the network. Fees are part of their compensation.
+                        {t('whyFees.reasons.miners.description')}
                       </p>
                     </div>
                     <div className="p-4 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <Shield className="w-8 h-8 text-orange-400 mb-3" />
-                      <h4 className="font-semibold mb-2 text-orange-400">Preventing Spam</h4>
+                      <h4 className="font-semibold mb-2 text-orange-400">{t('whyFees.reasons.spam.title')}</h4>
                       <p className="text-sm text-neutral-300">
-                        Fees make sending mass volumes of useless transactions economically unviable, protecting the network from congestion.
+                        {t('whyFees.reasons.spam.description')}
                       </p>
                     </div>
                     <div className="p-4 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <Network className="w-8 h-8 text-orange-400 mb-3" />
-                      <h4 className="font-semibold mb-2 text-orange-400">Network Operation</h4>
+                      <h4 className="font-semibold mb-2 text-orange-400">{t('whyFees.reasons.network.title')}</h4>
                       <p className="text-sm text-neutral-300">
-                        They contribute to maintaining a healthy and functional infrastructure.
+                        {t('whyFees.reasons.network.description')}
                       </p>
                     </div>
                   </div>
                   <Alert className="border-orange-500/30 bg-orange-500/10">
                     <Info className="h-4 w-4 text-orange-400" />
                     <AlertDescription className="text-neutral-300">
-                      <strong className="text-white">Standard Payment in ERG:</strong> Typically, transaction fees on the Ergo network are paid in the platform's native coin – ERG. The fee amount depends on the transaction's "size" in bytes and current network congestion, but generally, Ergo fees aim to be predictable thanks to the eUTXO model.
+                      <strong className="text-white">{t('whyFees.standardPayment.title')}:</strong> {t('whyFees.standardPayment.description')}
                     </AlertDescription>
                   </Alert>
                 </CardContent>
@@ -159,50 +161,46 @@ export default function BabelFeesClient() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-2xl text-white">
                     <Coins className="w-6 h-6 text-orange-400" />
-                    Introducing Babel Fees (EIP-0019): Flexible Fee Payments
+                    {t('introduction.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <div>
-                    <h4 className="text-xl font-semibold mb-3 text-orange-400">What are Babel Fees?</h4>
+                    <h4 className="text-xl font-semibold mb-3 text-orange-400">{t('introduction.whatAre.title')}</h4>
                     <p className="text-neutral-300 leading-relaxed">
-                      Babel Fees are an innovative mechanism on Ergo that allows users to pay transaction fees using{" "}
-                      <strong className="text-orange-400">
-                        native tokens issued on the Ergo blockchain instead of ERG.
-                      </strong>{" "}
-                      Imagine being able to pay for postage not just with cash (ERG), but also with valuable collectible stamps (your tokens).
+                      {t('introduction.whatAre.description')}
                     </p>
                   </div>
 
                   <div>
                     <h4 className="text-xl font-semibold mb-4 text-orange-400">
-                      Why were Babel Fees created? (The Problem Solved)
+                      {t('introduction.whyCreated.title')}
                     </h4>
                     <div className="space-y-3">
                       <div className="flex gap-3 items-start">
                         <CheckCircle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                         <div>
-                          <strong className="text-orange-400">Improved User Experience (UX):</strong>
+                          <strong className="text-orange-400">{t('introduction.whyCreated.reasons.ux.title')}:</strong>
                           <p className="text-neutral-300 mt-1">
-                            Users holding specific tokens (e.g., tokens of a particular dApp) might not always have enough ERG readily available to pay fees. This creates friction and barriers.
+                            {t('introduction.whyCreated.reasons.ux.description')}
                           </p>
                         </div>
                       </div>
                       <div className="flex gap-3 items-start">
                         <CheckCircle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                         <div>
-                          <strong className="text-orange-400">Increased Token Utility:</strong>
+                          <strong className="text-orange-400">{t('introduction.whyCreated.reasons.utility.title')}:</strong>
                           <p className="text-neutral-300 mt-1">
-                            Babel Fees significantly enhance the utility of native Ergo tokens, as they can be used for a fundamental network operation – paying fees.
+                            {t('introduction.whyCreated.reasons.utility.description')}
                           </p>
                         </div>
                       </div>
                       <div className="flex gap-3 items-start">
                         <CheckCircle className="w-5 h-5 text-orange-400 mt-1 flex-shrink-0" />
                         <div>
-                          <strong className="text-orange-400">dApp Accessibility:</strong>
+                          <strong className="text-orange-400">{t('introduction.whyCreated.reasons.accessibility.title')}:</strong>
                           <p className="text-neutral-300 mt-1">
-                            Simplifies interaction with decentralized applications that heavily utilize their own native tokens.
+                            {t('introduction.whyCreated.reasons.accessibility.description')}
                           </p>
                         </div>
                       </div>
@@ -218,23 +216,23 @@ export default function BabelFeesClient() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-2xl text-white">
                     <ArrowRightLeft className="w-6 h-6 text-orange-400" />
-                    How Babel Fees Work (Simplified Explanation)
+                    {t('howItWorks.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-6">
                   <p className="text-neutral-300 leading-relaxed">
-                    The Babel Fees mechanism is quite elegant and doesn't require changes to the core protocol regarding how fees are ultimately received (the network still receives fees in ERG).
+                    {t('howItWorks.description')}
                   </p>
                   
                   {/* Process Flow */}
                   <div className="bg-neutral-900/60 border border-neutral-700 rounded-lg p-6">
-                    <h4 className="text-lg font-semibold mb-4 text-center text-orange-400">Babel Fee Process Flow</h4>
+                    <h4 className="text-lg font-semibold mb-4 text-center text-orange-400">{t('howItWorks.processFlow.title')}</h4>
                     <div className="flex flex-col md:flex-row items-center justify-between gap-4">
                       <div className="text-center">
                         <div className="w-16 h-16 bg-orange-500/20 border border-orange-500/30 rounded-full flex items-center justify-center mb-2 mx-auto">
                           <Wallet className="w-8 h-8 text-orange-400" />
                         </div>
-                        <p className="text-sm text-neutral-300">User offers tokens</p>
+                        <p className="text-sm text-neutral-300">{t('howItWorks.processFlow.steps.userOffer')}</p>
                       </div>
                       <ArrowRight className="w-6 h-6 text-orange-400 hidden md:block" />
                       <ArrowDown className="w-6 h-6 text-orange-400 md:hidden" />
@@ -242,7 +240,7 @@ export default function BabelFeesClient() {
                         <div className="w-16 h-16 bg-orange-500/20 border border-orange-500/30 rounded-full flex items-center justify-center mb-2 mx-auto">
                           <Network className="w-8 h-8 text-orange-400" />
                         </div>
-                        <p className="text-sm text-neutral-300">Intermediary detects</p>
+                        <p className="text-sm text-neutral-300">{t('howItWorks.processFlow.steps.intermediaryDetects')}</p>
                       </div>
                       <ArrowRight className="w-6 h-6 text-orange-400 hidden md:block" />
                       <ArrowDown className="w-6 h-6 text-orange-400 md:hidden" />
@@ -250,49 +248,49 @@ export default function BabelFeesClient() {
                         <div className="w-16 h-16 bg-orange-500/20 border border-orange-500/30 rounded-full flex items-center justify-center mb-2 mx-auto">
                           <Coins className="w-8 h-8 text-orange-400" />
                         </div>
-                        <p className="text-sm text-neutral-300">ERG fee paid</p>
+                        <p className="text-sm text-neutral-300">{t('howItWorks.processFlow.steps.ergFeePaid')}</p>
                       </div>
                     </div>
                   </div>
 
                   <div className="space-y-6">
                     <div className="border-l-4 border-orange-500 pl-4">
-                      <h4 className="text-lg font-semibold mb-2 text-orange-400">User's Offer</h4>
+                      <h4 className="text-lg font-semibold mb-2 text-orange-400">{t('howItWorks.details.userOffer.title')}</h4>
                       <p className="text-neutral-300">
-                        A user wishing to pay a fee with tokens creates a special "output" in their transaction, often referred to as a "Babel fee box." In this box, they offer a certain amount of their tokens in exchange for someone else covering their ERG fee.
+                        {t('howItWorks.details.userOffer.description')}
                       </p>
                     </div>
 
                     <div className="border-l-4 border-orange-500 pl-4">
                       <h4 className="text-lg font-semibold mb-3 text-orange-400">
-                        Role of Intermediaries (Miners, Bots, Services)
+                        {t('howItWorks.details.intermediaries.title')}
                       </h4>
                       <div className="space-y-3">
                         <div className="bg-neutral-900/60 border border-neutral-700 p-3 rounded">
-                          <strong className="text-orange-400">1. Detecting the Offer:</strong>
+                          <strong className="text-orange-400">{t('howItWorks.details.intermediaries.steps.detecting.title')}:</strong>
                           <p className="text-neutral-300 mt-1">
-                            Miners or specialized bots/services (intermediaries) scan the network for these "Babel fee boxes."
+                            {t('howItWorks.details.intermediaries.steps.detecting.description')}
                           </p>
                         </div>
                         <div className="bg-neutral-900/60 border border-neutral-700 p-3 rounded">
-                          <strong className="text-orange-400">2. Executing the Exchange:</strong>
+                          <strong className="text-orange-400">{t('howItWorks.details.intermediaries.steps.executing.title')}:</strong>
                           <p className="text-neutral-300 mt-1">
-                            If the token offer is profitable (i.e., the market value of the offered tokens is greater than or equal to the ERG fee amount plus a small profit for the intermediary), the intermediary "fulfills" this offer.
+                            {t('howItWorks.details.intermediaries.steps.executing.description')}
                           </p>
                         </div>
                         <div className="bg-neutral-900/60 border border-neutral-700 p-3 rounded">
-                          <strong className="text-orange-400">3. Paying the ERG Fee:</strong>
+                          <strong className="text-orange-400">{t('howItWorks.details.intermediaries.steps.paying.title')}:</strong>
                           <p className="text-neutral-300 mt-1">
-                            The intermediary takes the offered tokens from the "Babel fee box" and pays the required transaction fee in ERG to the miners who include the transaction in a block.
+                            {t('howItWorks.details.intermediaries.steps.paying.description')}
                           </p>
                         </div>
                       </div>
                     </div>
 
                     <div className="border-l-4 border-orange-500 pl-4">
-                      <h4 className="text-lg font-semibold mb-2 text-orange-400">Market Mechanism</h4>
+                      <h4 className="text-lg font-semibold mb-2 text-orange-400">{t('howItWorks.details.market.title')}</h4>
                       <p className="text-neutral-300">
-                        The effectiveness of Babel Fees for a specific token depends on a "market" existing for it – meaning there must be intermediaries willing to accept these tokens in exchange for ERG at a certain rate. The more popular a token, the higher the likelihood it will be accepted for fee payment.
+                        {t('howItWorks.details.market.description')}
                       </p>
                     </div>
                   </div>
@@ -306,7 +304,7 @@ export default function BabelFeesClient() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-2xl text-white">
                     <TrendingUp className="w-6 h-6 text-orange-400" />
-                    Benefits of Babel Fees
+                    {t('benefits.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
@@ -314,19 +312,19 @@ export default function BabelFeesClient() {
                     <div className="space-y-3">
                       <h4 className="text-lg font-semibold text-orange-400 flex items-center gap-2">
                         <Users className="w-5 h-5" />
-                        For Users
+                        {t('benefits.categories.users.title')}
                       </h4>
                       <ul className="space-y-2 text-sm text-neutral-300">
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
                           <div>
-                            <strong className="text-white">Convenience:</strong> Ability to pay fees with tokens you already own, without needing to first exchange them for ERG.
+                            <strong className="text-white">{t('benefits.categories.users.benefits.convenience.title')}:</strong> {t('benefits.categories.users.benefits.convenience.description')}
                           </div>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
                           <div>
-                            <strong className="text-white">Reduced Friction:</strong> Simplifies the use of dApps that are centered around their own tokens.
+                            <strong className="text-white">{t('benefits.categories.users.benefits.friction.title')}:</strong> {t('benefits.categories.users.benefits.friction.description')}
                           </div>
                         </li>
                       </ul>
@@ -334,19 +332,19 @@ export default function BabelFeesClient() {
                     <div className="space-y-3">
                       <h4 className="text-lg font-semibold text-orange-400 flex items-center gap-2">
                         <Zap className="w-5 h-5" />
-                        For Token Issuers / dApp Developers
+                        {t('benefits.categories.developers.title')}
                       </h4>
                       <ul className="space-y-2 text-sm text-neutral-300">
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
                           <div>
-                            <strong className="text-white">Increased Token Utility:</strong> Makes their tokens more in-demand and integrated into the ecosystem.
+                            <strong className="text-white">{t('benefits.categories.developers.benefits.utility.title')}:</strong> {t('benefits.categories.developers.benefits.utility.description')}
                           </div>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
                           <div>
-                            <strong className="text-white">Improved UX:</strong> Better experience for their application users.
+                            <strong className="text-white">{t('benefits.categories.developers.benefits.ux.title')}:</strong> {t('benefits.categories.developers.benefits.ux.description')}
                           </div>
                         </li>
                       </ul>
@@ -354,16 +352,16 @@ export default function BabelFeesClient() {
                     <div className="space-y-3">
                       <h4 className="text-lg font-semibold text-orange-400 flex items-center gap-2">
                         <Network className="w-5 h-5" />
-                        For the Ergo Ecosystem
+                        {t('benefits.categories.ecosystem.title')}
                       </h4>
                       <ul className="space-y-2 text-sm text-neutral-300">
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
-                          <div>A more user-friendly and versatile platform.</div>
+                          <div>{t('benefits.categories.ecosystem.benefits.userFriendly')}</div>
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" />
-                          <div>Stimulation of an active token economy.</div>
+                          <div>{t('benefits.categories.ecosystem.benefits.tokenEconomy')}</div>
                         </li>
                       </ul>
                     </div>
@@ -378,7 +376,7 @@ export default function BabelFeesClient() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-2xl text-white">
                     <Wallet className="w-6 h-6 text-orange-400" />
-                    Practical Considerations for Users
+                    {t('practicalConsiderations.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
@@ -386,37 +384,37 @@ export default function BabelFeesClient() {
                     <div className="p-4 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <h4 className="font-semibold mb-2 text-orange-400 flex items-center gap-2">
                         <Wallet className="w-4 h-4" />
-                        Wallet Support
+                        {t('practicalConsiderations.considerations.walletSupport.title')}
                       </h4>
                       <p className="text-sm text-neutral-300">
-                        Find out which Ergo wallets (e.g., Nautilus Wallet or others) and dApps support the creation of transactions using Babel Fees. This feature may not be available in all wallets.
+                        {t('practicalConsiderations.considerations.walletSupport.description')}
                       </p>
                     </div>
                     <div className="p-4 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <h4 className="font-semibold mb-2 text-orange-400 flex items-center gap-2">
                         <Coins className="w-4 h-4" />
-                        Token Acceptance
+                        {t('practicalConsiderations.considerations.tokenAcceptance.title')}
                       </h4>
                       <p className="text-sm text-neutral-300">
-                        Not all tokens may be automatically accepted. This depends on intermediaries being willing to exchange them for ERG.
+                        {t('practicalConsiderations.considerations.tokenAcceptance.description')}
                       </p>
                     </div>
                     <div className="p-4 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <h4 className="font-semibold mb-2 text-orange-400 flex items-center gap-2">
                         <TrendingUp className="w-4 h-4" />
-                        Exchange Rates
+                        {t('practicalConsiderations.considerations.exchangeRates.title')}
                       </h4>
                       <p className="text-sm text-neutral-300">
-                        The "price" or exchange rate at which your tokens are accepted to cover ERG fees will be determined by market conditions and intermediary offers.
+                        {t('practicalConsiderations.considerations.exchangeRates.description')}
                       </p>
                     </div>
                     <div className="p-4 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <h4 className="font-semibold mb-2 text-orange-400 flex items-center gap-2">
                         <Info className="w-4 h-4" />
-                        How to Use
+                        {t('practicalConsiderations.considerations.howToUse.title')}
                       </h4>
                       <p className="text-sm text-neutral-300">
-                        When constructing a transaction in a compatible wallet or dApp, you might see an option to select a token to pay the fee. The interface will typically show the required amount of tokens based on current market rates.
+                        {t('practicalConsiderations.considerations.howToUse.description')}
                       </p>
                     </div>
                   </div>
@@ -430,14 +428,14 @@ export default function BabelFeesClient() {
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2 text-2xl text-white">
                     <Zap className="w-6 h-6 text-orange-400" />
-                    Current Status & Future Development of Babel Fees
+                    {t('currentStatus.title')}
                   </CardTitle>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Alert className="border-yellow-500/30 bg-yellow-500/10">
                     <Info className="h-4 w-4 text-yellow-400" />
                     <AlertDescription className="text-neutral-300">
-                      <strong className="text-white">Important:</strong> This section reflects the current implementation status of Babel Fees. The adoption and availability may vary depending on wallet support and intermediary participation.
+                      <strong className="text-white">{t('currentStatus.alert.title')}:</strong> {t('currentStatus.alert.description')}
                     </AlertDescription>
                   </Alert>
                   <div className="space-y-4">
@@ -446,19 +444,19 @@ export default function BabelFeesClient() {
                       <div className="flex items-start gap-3 p-3 bg-neutral-900/60 border border-neutral-700 rounded">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-neutral-300">
-                          How widely are Babel Fees currently adopted by miners/intermediaries?
+                          {t('currentStatus.questions.adoption')}
                         </p>
                       </div>
                       <div className="flex items-start gap-3 p-3 bg-neutral-900/60 border border-neutral-700 rounded">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-neutral-300">
-                          Are there active and liquid "markets" for many tokens to be used for Babel Fees?
+                          {t('currentStatus.questions.markets')}
                         </p>
                       </div>
                       <div className="flex items-start gap-3 p-3 bg-neutral-900/60 border border-neutral-700 rounded">
                         <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
                         <p className="text-neutral-300">
-                          Is there ongoing work to improve or expand the Babel Fees mechanism?
+                          {t('currentStatus.questions.development')}
                         </p>
                       </div>
                     </div>
@@ -466,7 +464,7 @@ export default function BabelFeesClient() {
                   <Button asChild variant="outline" className="border-orange-500/50 hover:bg-orange-500/10 text-orange-400">
                     <Link href="https://github.com/ergoplatform/eips/blob/master/eip-0019.md" target="_blank">
                       <ExternalLink className="w-4 h-4 mr-2" />
-                      Check Latest Updates on EIP-0019
+                      {t('currentStatus.checkUpdates')}
                     </Link>
                   </Button>
                 </CardContent>
@@ -477,71 +475,71 @@ export default function BabelFeesClient() {
             <motion.div variants={itemVariants}>
               <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-white">Comparison: ERG Fees vs. Babel Fees</CardTitle>
+                  <CardTitle className="text-2xl text-white">{t('comparison.title')}</CardTitle>
                 </CardHeader>
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="p-6 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <h4 className="text-lg font-semibold mb-4 text-orange-400 flex items-center gap-2">
                         <Coins className="w-5 h-5" />
-                        ERG Fees
+                        {t('comparison.ergFees.title')}
                       </h4>
                       <ul className="space-y-3 text-sm text-neutral-300">
                         <li className="flex items-start gap-2">
                           <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                             ✓
                           </Badge>
-                          <span>Always accepted for fee payment</span>
+                          <span>{t('comparison.ergFees.features.accepted')}</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                             ✓
                           </Badge>
-                          <span>Primary and most reliable method</span>
+                          <span>{t('comparison.ergFees.features.reliable')}</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                             ✓
                           </Badge>
-                          <span>Predictable and stable</span>
+                          <span>{t('comparison.ergFees.features.stable')}</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                             ✓
                           </Badge>
-                          <span>Supported by all wallets and dApps</span>
+                          <span>{t('comparison.ergFees.features.supported')}</span>
                         </li>
                       </ul>
                     </div>
                     <div className="p-6 bg-neutral-900/60 border border-neutral-700 rounded-lg">
                       <h4 className="text-lg font-semibold mb-4 text-orange-400 flex items-center gap-2">
                         <ArrowRightLeft className="w-5 h-5" />
-                        Babel Fees
+                        {t('comparison.babelFees.title')}
                       </h4>
                       <ul className="space-y-3 text-sm text-neutral-300">
                         <li className="flex items-start gap-2">
                           <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                             ⚡
                           </Badge>
-                          <span>Offer flexibility and convenience</span>
+                          <span>{t('comparison.babelFees.features.flexibility')}</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                             ⚡
                           </Badge>
-                          <span>Availability depends on token market demand</span>
+                          <span>{t('comparison.babelFees.features.availability')}</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                             ⚡
                           </Badge>
-                          <span>Requires intermediary participation</span>
+                          <span>{t('comparison.babelFees.features.intermediary')}</span>
                         </li>
                         <li className="flex items-start gap-2">
                           <Badge variant="outline" className="border-orange-500/50 text-orange-400 text-xs">
                             ⚡
                           </Badge>
-                          <span>May have variable exchange rates</span>
+                          <span>{t('comparison.babelFees.features.rates')}</span>
                         </li>
                       </ul>
                     </div>
@@ -554,14 +552,14 @@ export default function BabelFeesClient() {
             <motion.div variants={itemVariants}>
               <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
                 <CardHeader>
-                  <CardTitle className="text-2xl text-center text-white">Conclusion</CardTitle>
+                  <CardTitle className="text-2xl text-center text-white">{t('conclusion.title')}</CardTitle>
                 </CardHeader>
                 <CardContent className="text-center space-y-6">
                   <p className="text-lg text-neutral-300 leading-relaxed">
-                    Babel Fees are a significant innovation demonstrating Ergo's flexibility and user-centric approach. They contribute to creating a more convenient and multifaceted ecosystem.
+                    {t('conclusion.description')}
                   </p>
                   <p className="text-neutral-400">
-                    Keep an eye on updates from your wallets and favorite dApps to learn about their support for this feature!
+                    {t('conclusion.note')}
                   </p>
                 </CardContent>
               </Card>
@@ -575,21 +573,21 @@ export default function BabelFeesClient() {
       <section className="py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-12">
-            <h2 className="text-3xl font-bold mb-6 text-white">Ready to Use Babel Fees?</h2>
+            <h2 className="text-3xl font-bold mb-6 text-white">{t('cta.title')}</h2>
             <p className="text-xl text-neutral-300 mb-8">
-              Experience the flexibility of paying transaction fees with any token
+              {t('cta.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
                 <Link href="/use/get-erg">
                   <Wallet className="w-5 h-5 mr-2" />
-                  Explore Supported Wallets
+                  {t('cta.buttons.exploreWallets')}
                 </Link>
               </Button>
               <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
                 <Link href="https://github.com/ergoplatform/eips/blob/master/eip-0019.md" target="_blank">
                   <ExternalLink className="w-5 h-5 mr-2" />
-                  Learn More About EIP-0019
+                  {t('cta.buttons.learnMore')}
                 </Link>
               </Button>
             </div>

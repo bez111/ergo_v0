@@ -1,41 +1,52 @@
 import { Metadata } from "next"
 import { SchemaOrg } from "@/components/seo/schema-org"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "Privacy & Confidentiality on Ergo | Financial Privacy Solutions",
-  description: "Build privacy-preserving applications on Ergo. Non-custodial mixers, stealth addresses, zero-knowledge proofs, and ring signatures for complete financial privacy.",
-  keywords: "privacy, confidentiality, ErgoMixer, stealth addresses, zero-knowledge proofs, ring signatures, financial privacy, anonymous transactions",
-  openGraph: {
-    title: "Privacy & Confidentiality on Ergo",
-    description: "Financial privacy in an increasingly surveilled world. Non-custodial mixers and zero-knowledge proofs.",
-    images: ["/og-privacy.png"],
-    type: "website",
-    url: "https://ergoblockchain.org/use/privacy-confidentiality",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Privacy & Confidentiality on Ergo",
-    description: "Build privacy-preserving applications with ErgoMixer and Sigma protocols",
-    images: ["/og-privacy.png"],
-  },
-  alternates: {
-    canonical: "https://ergoblockchain.org/use/privacy-confidentiality",
-  },
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'use.privacy.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      images: ["/og-privacy.png"],
+      type: "website",
+      url: "https://ergoblockchain.org/use/privacy-confidentiality",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["/og-privacy.png"],
+    },
+    alternates: {
+      canonical: "https://ergoblockchain.org/use/privacy-confidentiality",
+    },
+  }
 }
 
-export default function PrivacyConfidentialityLayout({
+export default async function PrivacyConfidentialityLayout({
   children,
+  params,
 }: {
   children: React.ReactNode
+  params: { locale: string }
 }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'use.privacy.schema' });
+  
   return (
     <>
       <SchemaOrg
         type="TechArticle"
         data={{
           "@type": "TechArticle",
-          headline: "Privacy & Confidentiality on Ergo",
-          description: "Comprehensive guide to privacy technologies and applications on Ergo blockchain",
+          headline: t('techArticle.headline'),
+          description: t('techArticle.description'),
           author: {
             "@type": "Organization",
             name: "Ergo Platform",
@@ -53,7 +64,7 @@ export default function PrivacyConfidentialityLayout({
           image: "https://ergoblockchain.org/og-privacy.png",
           datePublished: "2024-01-01",
           dateModified: new Date().toISOString(),
-          keywords: "privacy, ErgoMixer, stealth addresses, zero-knowledge proofs",
+          keywords: t('techArticle.keywords'),
         }}
       />
       
@@ -61,32 +72,32 @@ export default function PrivacyConfidentialityLayout({
         type="HowTo"
         data={{
           "@type": "HowTo",
-          name: "How to Use Privacy Features on Ergo",
-          description: "Step-by-step guide to using privacy tools on Ergo",
+          name: t('howTo.name'),
+          description: t('howTo.description'),
           step: [
             {
               "@type": "HowToStep",
               position: 1,
-              name: "Set up Ergo wallet",
-              text: "Install a privacy-focused Ergo wallet",
+              name: t('howTo.steps.setupWallet.name'),
+              text: t('howTo.steps.setupWallet.text'),
             },
             {
               "@type": "HowToStep",
               position: 2,
-              name: "Access ErgoMixer",
-              text: "Connect to ErgoMixer through Tor for enhanced privacy",
+              name: t('howTo.steps.accessErgoMixer.name'),
+              text: t('howTo.steps.accessErgoMixer.text'),
             },
             {
               "@type": "HowToStep",
               position: 3,
-              name: "Configure mixing",
-              text: "Set mixing rounds and anonymity parameters",
+              name: t('howTo.steps.configureMixing.name'),
+              text: t('howTo.steps.configureMixing.text'),
             },
             {
               "@type": "HowToStep",
               position: 4,
-              name: "Mix coins",
-              text: "Submit coins for mixing and wait for completion",
+              name: t('howTo.steps.mixCoins.name'),
+              text: t('howTo.steps.mixCoins.text'),
             },
           ],
         }}

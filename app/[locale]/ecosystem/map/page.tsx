@@ -1,127 +1,199 @@
-import type { Metadata } from "next"
-import MapClient from "./MapClient"
-import { SchemaTypes } from "@/lib/schema-ultimate"
-import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
-import { getTranslations } from "next-intl/server"
+"use client"
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'ecosystem.map.seo' })
-  
-  return {
-    title: t('title'),
-    description: t('description'),
-    keywords: ["ergo ecosystem", "defi map", "dapp directory", "blockchain ecosystem", "ergo projects", "interactive map", "defi protocols", "crypto ecosystem"],
-    alternates: {
-      canonical: "https://ergoblockchain.org/ecosystem/map"
+import { useTranslations } from "next-intl"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { SchemaOrg } from "@/components/seo/schema-org"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { 
+  Map, 
+  ExternalLink, 
+  ArrowRight, 
+  Network,
+  Globe,
+  Search
+} from "lucide-react"
+import Link from "next/link"
+import React from "react"
+
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.6,
+      staggerChildren: 0.1,
     },
-    openGraph: {
-      title: t('ogTitle'),
-      description: t('ogDescription'),
-      url: "https://ergoblockchain.org/ecosystem/map",
-      siteName: "Ergo Platform",
-      images: [{
-        url: "https://ergoblockchain.org/og/ecosystem-map.png",
-        width: 1200,
-        height: 630,
-        alt: "Ergo Ecosystem Interactive Map"
-      }],
-      type: "website",
-      locale: "en_US"
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: t('twitterTitle'),
-      description: t('twitterDescription'),
-      images: ["https://ergoblockchain.org/og/ecosystem-map.png"],
-      creator: "@ergoplatform",
-      site: "@ergoplatform"
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true
-      }
-    }
-  }
+  },
 }
 
-export default function EcosystemMapPage() {
-  // SEO схемы для карты экосистемы
-  const mapSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "@id": "https://ergoblockchain.org/ecosystem/map",
-    name: "Ergo Ecosystem Interactive Map",
-    description: "Visual explorer for Ergo blockchain projects and applications",
-    applicationCategory: "VisualizationApplication",
-    operatingSystem: "Web Browser",
-    url: "https://ergoblockchain.org/ecosystem/map",
-    offers: {
-      "@type": "Offer",
-      price: "0",
-      priceCurrency: "USD"
+const itemVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
     },
-    creator: {
-      "@type": "Organization",
-      name: "Ergo Platform",
-      url: "https://ergoblockchain.org"
-    }
-  }
-  
-  const faqSchema = SchemaTypes.FAQSchema([
-    {
-      question: "What is the Ergo Ecosystem Map?",
-      answer: "An interactive visualization showing all active projects, protocols, and applications built on Ergo blockchain, organized by category."
-    },
-    {
-      question: "How many projects are in the Ergo ecosystem?",
-      answer: "The Ergo ecosystem includes over 50 active projects spanning DeFi, NFTs, wallets, infrastructure, developer tools, and community initiatives."
-    },
-    {
-      question: "How do I add my project to the map?",
-      answer: "Submit your project through the ecosystem submission form or contact the Ergo Foundation to be included in the ecosystem map."
-    },
-    {
-      question: "Is the ecosystem map updated regularly?",
-      answer: "Yes, the ecosystem map is regularly updated to include new projects and remove inactive ones, providing an accurate view of the active ecosystem."
-    }
-  ])
-  
-  const datasetSchema = {
-    "@context": "https://schema.org",
-    "@type": "Dataset",
-    name: "Ergo Ecosystem Projects Dataset",
-    description: "Complete dataset of projects building on Ergo blockchain",
-    creator: {
-      "@type": "Organization",
-      name: "Ergo Platform"
-    },
-    distribution: {
-      "@type": "DataDownload",
-      encodingFormat: "application/json",
-      contentUrl: "https://ergoblockchain.org/api/ecosystem"
-    },
-    temporalCoverage: "2019/..",
-    spatialCoverage: {
-      "@type": "Place",
-      name: "Global"
-    },
-    keywords: ["blockchain", "defi", "ecosystem", "ergo", "projects"]
-  }
-  
-  const knowledgeGraph = generateKnowledgeGraph('ecosystem')
-  
+  },
+}
+
+export default function MapPage() {
+  const t = useTranslations("ecosystem.map")
+
+  const lastUpdated = "2024-01-15"
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(mapSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      
-      <MapClient />
+      {/* BreadcrumbList Schema */}
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Ecosystem",
+              item: "https://ergoblockchain.org/ecosystem"
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: t("title"),
+              item: "https://ergoblockchain.org/ecosystem/map"
+            }
+          ]
+        }}
+      />
+
+      <div className="min-h-screen bg-black relative overflow-hidden">
+        {/* Background */}
+        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
+
+        {/* Breadcrumbs */}
+        <div className="sr-only">
+          <Breadcrumbs
+            items={[
+              { name: "Ecosystem", href: "/ecosystem" },
+              { name: t("title"), href: "/ecosystem/map" }
+            ]}
+            className="mb-8"
+          />
+        </div>
+
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="relative z-10 pb-24"
+        >
+          {/* Hero Section */}
+          <motion.section
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center">
+                <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
+                  {t("title")}
+                </h1>
+                <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
+                <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+                  {t("subtitle")}
+                </p>
+                <p className="text-lg text-neutral-400 mb-8 max-w-2xl mx-auto leading-relaxed">
+                  {t("description")}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <Link href="/ecosystem">
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      {t("buttons.exploreProjects")}
+                    </Button>
+                  </Link>
+                  <a href="https://sigmaverse.io" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                    >
+                      {t("buttons.visitSigmaverse")}
+                    </Button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Features Section */}
+          <motion.section
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  {t("features.title")}
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  {t("features.subtitle")}
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
+                  <CardHeader>
+                    <div className="flex items-center space-x-3">
+                      <div className="p-2 bg-orange-500/10 rounded-lg">
+                        <Network className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <CardTitle className="text-white">{t("features.interactive.title")}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-neutral-400 leading-relaxed">
+                      {t("features.interactive.description")}
+                    </p>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* CTA */}
+          <motion.section
+            variants={itemVariants}
+            className="py-16 px-4"
+          >
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("cta.title")}</h2>
+              <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+                {t("cta.subtitle")}
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/ecosystem">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    {t("cta.buttons.exploreEcosystem")}
+                  </Button>
+                </Link>
+                <a href="https://sigmaverse.io" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                  >
+                    {t("cta.buttons.visitSigmaverse")}
+                  </Button>
+                </a>
+              </div>
+            </div>
+          </motion.section>
+        </motion.div>
+      </div>
     </>
   )
 } 

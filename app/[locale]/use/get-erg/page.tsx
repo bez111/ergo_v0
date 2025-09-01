@@ -2,42 +2,48 @@ import type { Metadata } from "next"
 import GetErgClient from "./GetErgClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
+import { getTranslations } from "next-intl/server"
 
-export const metadata: Metadata = {
-  title: "How to Get ERG | Buy Ergo on Exchanges & DEXs",
-  description: "Complete guide to buying ERG tokens. Compare 20+ exchanges, find the best rates, and start trading Ergo. Includes CEX and DEX options with step-by-step instructions.",
-  keywords: ["buy erg", "get ergo", "erg exchanges", "where to buy ergo", "erg trading", "ergo cryptocurrency", "erg token", "buy ergo coin"],
-  alternates: {
-    canonical: "https://ergoblockchain.org/use/get-erg"
-  },
-  openGraph: {
-    title: "Buy ERG - Complete Exchange Guide",
-    description: "Find the best exchanges to buy ERG. Compare rates, fees, and get started with Ergo.",
-    url: "https://ergoblockchain.org/use/get-erg",
-    siteName: "Ergo Platform",
-    images: [{
-      url: "https://ergoblockchain.org/og/get-erg.png",
-      width: 1200,
-      height: 630,
-      alt: "Buy ERG Guide"
-    }],
-    type: "website",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Where to Buy ERG | Exchange Guide",
-    description: "Compare 20+ exchanges to buy ERG. Find the best rates and start trading.",
-    images: ["https://ergoblockchain.org/og/get-erg.png"],
-    creator: "@ergoplatform",
-    site: "@ergoplatform"
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'use.getErg.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    alternates: {
+      canonical: "https://ergoblockchain.org/use/get-erg"
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: "https://ergoblockchain.org/use/get-erg",
+      siteName: "Ergo Platform",
+      images: [{
+        url: "https://ergoblockchain.org/og/get-erg.png",
+        width: 1200,
+        height: 630,
+        alt: "Buy ERG Guide"
+      }],
+      type: "website",
+      locale: "en_US"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["https://ergoblockchain.org/og/get-erg.png"],
+      creator: "@ergoplatform",
+      site: "@ergoplatform"
+    },
+    robots: {
       index: true,
-      follow: true
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true
+      }
     }
   }
 }

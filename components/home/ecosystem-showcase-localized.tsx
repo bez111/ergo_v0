@@ -20,10 +20,10 @@ export function EcosystemShowcase() {
   const [activeCategory, setActiveCategory] = useState("DEFI")
 
   const categories = [
-    { id: "DEFI", label: t('categories.defi') },
-    { id: "PRIVACY", label: t('categories.privacy') },
-    { id: "STABLE", label: t('categories.stable') },
-    { id: "GAMING", label: t('categories.gaming') },
+    { id: "DEFI", label: t('filters.defi') },
+    { id: "PRIVACY", label: t('filters.privacy') },
+    { id: "STABLE", label: t('filters.stable') },
+    { id: "GAMING", label: t('filters.gaming') },
   ]
 
   const featuredProjects = {

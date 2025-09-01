@@ -1,43 +1,39 @@
 import type { Metadata } from "next"
+import { getTranslations } from "next-intl/server"
 import CommunityClient from "./CommunityClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
-export const metadata: Metadata = {
-  title: "Ergo Community | Join Discord, Telegram & Forums",
-  description: "Connect with the Ergo community. Join 15K+ members on Discord, Telegram, Reddit. Get support, participate in governance, contribute to development, and shape the future of Ergo.",
-  keywords: ["ergo community", "crypto discord", "blockchain community", "ergo telegram", "developer community", "dao governance", "ergo reddit", "crypto forums"],
-  alternates: {
-    canonical: "https://ergoblockchain.org/start/community"
-  },
-  openGraph: {
-    title: "Join the Ergo Community | 15K+ Active Members",
-    description: "Connect with developers, miners, traders, and enthusiasts. Discord, Telegram, Reddit, and more.",
-    url: "https://ergoblockchain.org/start/community",
-    siteName: "Ergo Platform",
-    images: [{
-      url: "https://ergoblockchain.org/og/community.png",
-      width: 1200,
-      height: 630,
-      alt: "Ergo Community"
-    }],
-    type: "website",
-    locale: "en_US"
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Ergo Community | Global Blockchain Network",
-    description: "Join 15K+ members building the future of DeFi. Active Discord, Telegram, development groups.",
-    images: ["https://ergoblockchain.org/og/community.png"],
-    creator: "@ergoplatform",
-    site: "@ergoplatform"
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true
+export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'start.community.seo' });
+  
+  return {
+    title: t('title'),
+    description: t('description'),
+    keywords: t('keywords'),
+    alternates: {
+      canonical: "https://ergoblockchain.org/start/community"
+    },
+    openGraph: {
+      title: t('ogTitle'),
+      description: t('ogDescription'),
+      url: "https://ergoblockchain.org/start/community",
+      siteName: "Ergo Platform",
+      images: [{
+        url: "https://ergoblockchain.org/og/community.png",
+        width: 1200,
+        height: 630,
+        alt: t('ogAlt')
+      }],
+      type: "website",
+      locale: "en_US"
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t('twitterTitle'),
+      description: t('twitterDescription'),
+      images: ["https://ergoblockchain.org/og/community.png"]
     }
   }
 }

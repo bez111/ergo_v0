@@ -12,6 +12,7 @@ import { Users, Vote, Coins, ExternalLink, ArrowRight, Lock, CheckCircle, Layers
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -35,91 +36,104 @@ const itemVariants = {
   },
 }
 
-const features = [
-  {
-    title: "On-Chain Governance",
-    description: "Transparent voting and proposal systems with automatic execution",
-    icon: Vote,
-  },
-  {
-    title: "Treasury Management",
-    description: "Decentralized fund management with multi-signature controls",
-    icon: Coins,
-  },
-  {
-    title: "Profit Sharing",
-    description: "Automatic distribution of revenues to DAO members",
-    icon: TrendingUp,
-  },
-  {
-    title: "Composable Infrastructure",
-    description: "Modular DAO components for custom governance models",
-    icon: Layers,
-  },
-  {
-    title: "Token Economies",
-    description: "Create custom tokens with built-in economic models",
-    icon: Coins,
-  },
-  {
-    title: "Reputation Systems",
-    description: "Non-transferable reputation tokens for merit-based governance",
-    icon: Shield,
-  },
-]
-
-const existingProjects = [
-  {
-    name: "Paideia",
-    description: "Complete DAO infrastructure and governance toolkit",
-    status: "Live",
-    features: ["Treasury management", "Proposal system", "Token distribution"],
-    link: "https://paideia.im",
-  },
-  {
-    name: "ErgoPad DAO",
-    description: "Community-governed launchpad and incubator",
-    status: "Live",
-    features: ["Staking governance", "Revenue sharing", "Project funding"],
-    link: "https://ergopad.io",
-  },
-  {
-    name: "SigmaDAO",
-    description: "Experimental DAO for protocol governance",
-    status: "In Development",
-    features: ["Quadratic voting", "Delegation", "Time-locked proposals"],
-    link: "#",
-  },
-]
-
 export default function DAOsAlternativeEconomiesPage() {
+  const t = useTranslations("use.daos")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
 
-  const faqs = [
+  const features = [
     {
-      question: "What makes Ergo ideal for DAOs?",
-      answer: "Ergo's eUTXO model provides superior security for treasury management, ErgoScript enables complex governance logic, and native tokens allow for custom economic models without smart contract risks."
+      title: t("features.onChainGovernance.title"),
+      description: t("features.onChainGovernance.description"),
+      icon: Vote,
     },
     {
-      question: "How does Paideia work?",
-      answer: "Paideia provides a complete DAO toolkit including proposal creation, on-chain voting, treasury management, and token distribution. It uses ErgoScript for transparent and automatic execution of governance decisions."
+      title: t("features.treasuryManagement.title"),
+      description: t("features.treasuryManagement.description"),
+      icon: Coins,
     },
     {
-      question: "Can DAOs manage real-world assets?",
-      answer: "Yes, Ergo DAOs can manage both digital and tokenized real-world assets through oracle integration and legal wrapper structures, enabling hybrid on-chain/off-chain governance models."
+      title: t("features.profitSharing.title"),
+      description: t("features.profitSharing.description"),
+      icon: TrendingUp,
     },
     {
-      question: "What governance models are supported?",
-      answer: "Ergo supports various governance models including token-weighted voting, quadratic voting, reputation-based systems, delegated voting, and time-locked proposals with customizable parameters."
+      title: t("features.composableInfrastructure.title"),
+      description: t("features.composableInfrastructure.description"),
+      icon: Layers,
     },
     {
-      question: "How are DAO treasuries secured?",
-      answer: "DAO treasuries use multi-signature contracts, time-locks, and spending limits. ErgoScript enables complex security policies that protect funds while allowing legitimate governance actions."
+      title: t("features.tokenEconomies.title"),
+      description: t("features.tokenEconomies.description"),
+      icon: Coins,
+    },
+    {
+      title: t("features.reputationSystems.title"),
+      description: t("features.reputationSystems.description"),
+      icon: Shield,
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
+  const existingProjects = [
+    {
+      name: t("projects.paideia.name"),
+      description: t("projects.paideia.description"),
+      status: t("projects.paideia.status"),
+      features: [
+        t("projects.paideia.features.feature1"),
+        t("projects.paideia.features.feature2"),
+        t("projects.paideia.features.feature3")
+      ],
+      link: "https://paideia.im",
+    },
+    {
+      name: t("projects.ergoPadDao.name"),
+      description: t("projects.ergoPadDao.description"),
+      status: t("projects.ergoPadDao.status"),
+      features: [
+        t("projects.ergoPadDao.features.feature1"),
+        t("projects.ergoPadDao.features.feature2"),
+        t("projects.ergoPadDao.features.feature3")
+      ],
+      link: "https://ergopad.io",
+    },
+    {
+      name: t("projects.sigmaDao.name"),
+      description: t("projects.sigmaDao.description"),
+      status: t("projects.sigmaDao.status"),
+      features: [
+        t("projects.sigmaDao.features.feature1"),
+        t("projects.sigmaDao.features.feature2"),
+        t("projects.sigmaDao.features.feature3")
+      ],
+      link: "#",
+    },
+  ]
+
+  const faqs = [
+    {
+      question: t("faq.whatMakesErgoIdeal.question"),
+      answer: t("faq.whatMakesErgoIdeal.answer")
+    },
+    {
+      question: t("faq.howPaideiaWorks.question"),
+      answer: t("faq.howPaideiaWorks.answer")
+    },
+    {
+      question: t("faq.canManageRealWorldAssets.question"),
+      answer: t("faq.canManageRealWorldAssets.answer")
+    },
+    {
+      question: t("faq.governanceModelsSupported.question"),
+      answer: t("faq.governanceModelsSupported.answer")
+    },
+    {
+      question: t("faq.howTreasuriesSecured.question"),
+      answer: t("faq.howTreasuriesSecured.answer")
+    },
+  ]
+
+  const lastUpdated = "2024-01-15"
 
   return (
     <>
@@ -132,13 +146,13 @@ export default function DAOsAlternativeEconomiesPage() {
             {
               "@type": "ListItem",
               position: 1,
-              name: "Use Cases",
+              name: t("schema.breadcrumbs.useCases"),
               item: "https://ergoblockchain.org/use"
             },
             {
               "@type": "ListItem", 
               position: 2,
-              name: "DAOs & Alternative Economies",
+              name: t("schema.breadcrumbs.daosAlternativeEconomies"),
               item: "https://ergoblockchain.org/use/daos-alternative-economies"
             }
           ]
@@ -168,8 +182,8 @@ export default function DAOsAlternativeEconomiesPage() {
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { name: "Use Cases", href: "/use" },
-              { name: "DAOs & Alternative Economies", href: "/use/daos-alternative-economies" }
+              { name: t("schema.breadcrumbs.useCases"), href: "/use" },
+              { name: t("schema.breadcrumbs.daosAlternativeEconomies"), href: "/use/daos-alternative-economies" }
             ]}
             className="mb-8"
           />
@@ -188,19 +202,19 @@ export default function DAOsAlternativeEconomiesPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    DAOs & Alternative Economies
+                    {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    Community governance and alternative economic systems
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Composable DAO infrastructure: treasury, voting, profit-sharing.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://paideia.im" target="_blank" rel="noopener noreferrer">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Try Paideia
+                        {t("cta.tryPaideia")}
                       </Button>
                     </a>
                     <Link href="https://github.com/paideiadao" target="_blank">
@@ -208,15 +222,15 @@ export default function DAOsAlternativeEconomiesPage() {
                         variant="outline"
                         className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                       >
-                        View Code
+                        {t("cta.viewCode")}
                       </Button>
                     </Link>
                   </div>
                   <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
                     <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">DAO features</a></li>
-                      <li><a href="#projects" className="hover:text-orange-400">Live DAOs</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.daoFeatures")}</a></li>
+                      <li><a href="#projects" className="hover:text-orange-400">{t("navigation.liveDaos")}</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
                     </ul>
                   </nav>
                 </div>
@@ -225,27 +239,27 @@ export default function DAOsAlternativeEconomiesPage() {
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
+                          {t("quickStart.title")}
                         </h3>
                         <div className="space-y-4">
                           {[
                             {
-                              name: "Create a DAO",
-                              description: "Launch your DAO with Paideia",
+                              name: t("quickStart.createDao.name"),
+                              description: t("quickStart.createDao.description"),
                               icon: <Users className="w-6 h-6" />,
                               link: "https://paideia.im",
                               external: true
                             },
                             {
-                              name: "DAO Guide",
-                              description: "Learn DAO best practices",
+                              name: t("quickStart.daoGuide.name"),
+                              description: t("quickStart.daoGuide.description"),
                               icon: <BookOpen className="w-6 h-6" />,
                               link: "/docs/ecosystem/daos",
                               external: false
                             },
                             {
-                              name: "Developer Docs",
-                              description: "Build DAO applications",
+                              name: t("quickStart.developerDocs.name"),
+                              description: t("quickStart.developerDocs.description"),
                               icon: <Terminal className="w-6 h-6" />,
                               link: "/docs/developers",
                               external: false
@@ -306,10 +320,10 @@ export default function DAOsAlternativeEconomiesPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  DAO Features
+                  {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Complete toolkit for decentralized organizations
+                  {t("features.subtitle")}
                 </p>
               </div>
               
@@ -348,42 +362,42 @@ export default function DAOsAlternativeEconomiesPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  DAO Architecture
+                  {t("technical.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  How DAOs work on Ergo
+                  {t("technical.subtitle")}
                 </p>
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
                 <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
                   <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Overview
+                    {t("technical.tabs.overview")}
                   </TabsTrigger>
                   <TabsTrigger value="governance" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Governance
+                    {t("technical.tabs.governance")}
                   </TabsTrigger>
                   <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
-                    Code Example
+                    {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">DAO Components</CardTitle>
+                      <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
                     <CardContent className="space-y-4">
                       <div className="text-neutral-400 leading-relaxed">
                         <p className="mb-4">
-                          Ergo DAOs combine multiple components for complete governance:
+                          {t("technical.overview.description")}
                         </p>
                         <ul className="list-disc list-inside space-y-2 ml-4">
-                          <li>Governance tokens for voting rights</li>
-                          <li>Proposal contracts for decision making</li>
-                          <li>Treasury contracts for fund management</li>
-                          <li>Distribution contracts for profit sharing</li>
-                          <li>Time-locks for security</li>
+                          <li>{t("technical.overview.points.point1")}</li>
+                          <li>{t("technical.overview.points.point2")}</li>
+                          <li>{t("technical.overview.points.point3")}</li>
+                          <li>{t("technical.overview.points.point4")}</li>
+                          <li>{t("technical.overview.points.point5")}</li>
                         </ul>
                       </div>
                     </CardContent>
@@ -394,26 +408,26 @@ export default function DAOsAlternativeEconomiesPage() {
                   <div className="space-y-6">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Voting Mechanisms</CardTitle>
+                        <CardTitle className="text-white">{t("technical.governance.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="grid md:grid-cols-2 gap-6">
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Token Voting</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.governance.tokenVoting.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• 1 token = 1 vote</li>
-                              <li>• Delegation supported</li>
-                              <li>• Snapshot voting</li>
-                              <li>• No double voting</li>
+                              <li>• {t("technical.governance.tokenVoting.points.point1")}</li>
+                              <li>• {t("technical.governance.tokenVoting.points.point2")}</li>
+                              <li>• {t("technical.governance.tokenVoting.points.point3")}</li>
+                              <li>• {t("technical.governance.tokenVoting.points.point4")}</li>
                             </ul>
                           </div>
                           <div>
-                            <h4 className="font-semibold text-orange-300 mb-3">Quadratic Voting</h4>
+                            <h4 className="font-semibold text-orange-300 mb-3">{t("technical.governance.quadraticVoting.title")}</h4>
                             <ul className="space-y-2 text-neutral-400 text-sm">
-                              <li>• Cost = votes squared</li>
-                              <li>• Reduces whale influence</li>
-                              <li>• Fair distribution</li>
-                              <li>• Sybil resistant</li>
+                              <li>• {t("technical.governance.quadraticVoting.points.point1")}</li>
+                              <li>• {t("technical.governance.quadraticVoting.points.point2")}</li>
+                              <li>• {t("technical.governance.quadraticVoting.points.point3")}</li>
+                              <li>• {t("technical.governance.quadraticVoting.points.point4")}</li>
                             </ul>
                           </div>
                         </div>
@@ -422,7 +436,7 @@ export default function DAOsAlternativeEconomiesPage() {
 
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                       <CardHeader>
-                        <CardTitle className="text-white">Proposal Lifecycle</CardTitle>
+                        <CardTitle className="text-white">{t("technical.governance.proposalLifecycle.title")}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -451,8 +465,8 @@ export default function DAOsAlternativeEconomiesPage() {
                 <TabsContent value="code" className="mt-8">
                   <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
                     <CardHeader>
-                      <CardTitle className="text-white">DAO Voting Contract</CardTitle>
-                      <p className="text-neutral-400">Simplified voting mechanism</p>
+                      <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
+                      <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
                     </CardHeader>
                     <CardContent>
                       <div className="bg-neutral-950/50 rounded-lg p-4">
@@ -505,10 +519,10 @@ export default function DAOsAlternativeEconomiesPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Live DAOs
+                  {t("projects.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Active DAOs operating on Ergo
+                  {t("projects.subtitle")}
                 </p>
               </div>
               
@@ -528,7 +542,7 @@ export default function DAOsAlternativeEconomiesPage() {
                         <div className="flex items-center justify-between">
                           <CardTitle className="text-white">{project.name}</CardTitle>
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            project.status === 'Live' 
+                            project.status === t("projects.paideia.status")
                               ? 'bg-green-500/20 text-green-400' 
                               : 'bg-yellow-500/20 text-yellow-400'
                           }`}>
@@ -552,11 +566,11 @@ export default function DAOsAlternativeEconomiesPage() {
                             rel="noopener noreferrer"
                             className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
                           >
-                            Visit DAO
+                            {t("projects.visitDao")}
                             <ExternalLink className="ml-1 w-4 h-4" />
                           </a>
                         ) : (
-                          <span className="text-neutral-500">Coming Soon</span>
+                          <span className="text-neutral-500">{t("projects.comingSoon")}</span>
                         )}
                       </CardContent>
                     </Card>
@@ -578,10 +592,10 @@ export default function DAOsAlternativeEconomiesPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Frequently Asked Questions
+                  {t("faq.title")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about DAOs on Ergo
+                  {t("faq.subtitle")}
                 </p>
               </div>
               
@@ -615,21 +629,21 @@ export default function DAOsAlternativeEconomiesPage() {
           >
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Build a DAO?
+                {t("cta.title")}
               </h2>
               <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Start your decentralized organization on Ergo today.
+                {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a href="https://paideia.im" target="_blank" rel="noopener noreferrer">
                   <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    Launch with Paideia
+                    {t("cta.launchWithPaideia")}
                     <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
                 <Link href="/docs/ecosystem/daos">
                   <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    DAO Guide
+                    {t("cta.daoGuide")}
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
                 </Link>
