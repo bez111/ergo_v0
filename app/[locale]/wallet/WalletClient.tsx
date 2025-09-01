@@ -1,42 +1,26 @@
 "use client"
 
-import { useState, useMemo, useEffect } from "react"
+import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
 import {
   ArrowRight,
   Download,
   Shield,
   Smartphone,
   HardDrive,
-  Globe,
   Monitor,
   Chrome,
   Apple,
   Zap,
   Lock,
-  Eye,
-  Wifi,
-  Star,
-  ExternalLink,
   Check,
-  Search,
-  Filter,
-  Users,
-  Award,
-  Verified,
   Wallet,
-  ChevronRight,
-  Layers,
-  Building,
   ShieldCheck,
-  GitBranch,
-  Target,
-  Type
+  ExternalLink
 } from "lucide-react"
 import { motion } from "framer-motion"
 import { LucideIcon } from "lucide-react"
@@ -205,31 +189,13 @@ const itemVariants = {
 
 export default function WalletClient() {
   const t = useTranslations("wallet")
-  const [selectedCategory, setSelectedCategory] = useState<string>("all")
-  const [searchTerm, setSearchTerm] = useState("")
   const [isClient, setIsClient] = useState(false)
 
   useEffect(() => {
     setIsClient(true)
   }, [])
 
-  const categories = [
-    { id: "all", label: "All Wallets", icon: Wallet, color: "" },
-    { id: "Browser", label: "Browser", icon: Globe, color: "from-orange-500/20 to-orange-500/5" },
-    { id: "Desktop", label: "Desktop", icon: Monitor, color: "from-cyan-500/20 to-cyan-500/5" },
-    { id: "Mobile", label: "Mobile", icon: Smartphone, color: "from-purple-500/20 to-purple-500/5" },
-    { id: "Hardware", label: "Hardware", icon: HardDrive, color: "from-red-500/20 to-red-500/5" },
-    { id: "Paper", label: "Paper", icon: Lock, color: "from-indigo-500/20 to-indigo-500/5" },
-  ]
 
-  const filteredWallets = useMemo(() => {
-    return allWallets.filter((wallet) => {
-      const matchesCategory = selectedCategory === "all" || wallet.category === selectedCategory
-      const matchesSearch = wallet.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                           wallet.description.toLowerCase().includes(searchTerm.toLowerCase())
-      return matchesCategory && matchesSearch
-    })
-  }, [selectedCategory, searchTerm])
 
   const getSecurityColor = (level: string) => {
     switch (level) {
@@ -302,96 +268,15 @@ export default function WalletClient() {
             </p>
           </div>
 
-          {/* Stats Grid - UI Kit Style */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-            {[
-              { label: "Total Wallets", value: allWallets.length.toString(), icon: Wallet, color: "from-orange-500/20 to-orange-500/5" },
-              { label: "Official", value: allWallets.filter(w => w.isOfficial).length.toString(), icon: Verified, color: "from-green-500/20 to-green-500/5" },
-              { label: "Security Levels", value: "3", icon: Shield, color: "from-cyan-500/20 to-cyan-500/5" },
-              { label: "Platforms", value: "7+", icon: Monitor, color: "from-purple-500/20 to-purple-500/5" }
-            ].map((stat, index) => (
-              <motion.div
-                key={stat.label}
-                variants={itemVariants}
-                transition={{ delay: index * 0.1 }}
-                className={`bg-gradient-to-br ${stat.color} border border-neutral-700 rounded-xl p-6 hover:border-orange-500/30 transition-all duration-300`}
-              >
-                <stat.icon className="w-6 h-6 text-orange-500 mx-auto mb-3" />
-                <div className="text-3xl font-bold text-white font-mono">{stat.value}</div>
-                <div className="text-xs text-gray-400 font-mono uppercase tracking-wider">{stat.label}</div>
-              </motion.div>
-            ))}
-          </div>
+
         </motion.div>
 
-        {/* Search and Filters - UI Kit Style */}
-        <motion.div variants={itemVariants} className="mb-16">
-          <div className="max-w-5xl mx-auto">
-            {/* Search Bar */}
-            <div className="relative mb-8">
-              <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-cyan-500/10 rounded-xl blur-xl"></div>
-              <div className="relative bg-neutral-900/50 border border-neutral-700 rounded-xl p-1">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                  <Input
-                    placeholder={`> ${t("ui.searchWallets")}`}
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                    className="pl-12 pr-4 py-4 bg-transparent border-0 text-white placeholder-gray-400 focus:ring-0 font-mono text-lg"
-                  />
-                </div>
-              </div>
-            </div>
 
-            {/* Category Filters */}
-            <div className="flex flex-wrap gap-3 justify-center">
-              {categories.map((category) => {
-                const IconComponent = category.icon
-                const isActive = selectedCategory === category.id
-                return (
-                  <motion.button
-                    key={category.id}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={() => setSelectedCategory(category.id)}
-                    className={`relative group ${
-                      isActive
-                        ? "bg-gradient-to-r from-orange-500/20 to-orange-500/5 border-orange-500/50"
-                        : "bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30"
-                    } border rounded-xl px-6 py-3 transition-all duration-300`}
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className={`rounded-lg p-2 ${isActive ? 'bg-orange-500/20' : 'bg-neutral-800/50 group-hover:bg-orange-500/10'} transition-colors`}>
-                        <IconComponent className={`w-4 h-4 ${isActive ? 'text-orange-500' : 'text-gray-400 group-hover:text-orange-500'}`} />
-                      </div>
-                      <span className={`font-mono text-sm tracking-wider ${isActive ? 'text-orange-400' : 'text-gray-400 group-hover:text-orange-500'}`}>
-                        {category.label}
-                      </span>
-                    </div>
-                    {category.color && (
-                      <div className={`absolute inset-0 bg-gradient-to-r ${category.color} rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
-                    )}
-                  </motion.button>
-                )
-              })}
-            </div>
-          </div>
-        </motion.div>
 
         {/* Wallets Grid - UI Kit Style */}
         <motion.div variants={itemVariants}>
-          {filteredWallets.length === 0 ? (
-            <div className="text-center py-20">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 via-transparent to-cyan-500/10 rounded-full blur-xl"></div>
-                <Wallet className="relative w-20 h-20 text-gray-600 mx-auto mb-6" />
-              </div>
-              <h3 className="text-2xl font-semibold text-gray-400 mb-4 font-mono">{t("ui.noWalletsFound")}</h3>
-              <p className="text-gray-500">Try adjusting your search or filter criteria.</p>
-            </div>
-          ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredWallets.map((wallet, index) => {
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {allWallets.map((wallet, index) => {
                 const IconComponent = wallet.icon
                 return (
                   <motion.div
@@ -513,8 +398,7 @@ export default function WalletClient() {
                 )
               })}
             </div>
-          )}
-        </motion.div>
+          </motion.div>
 
         {/* Security Notice - UI Kit Pattern */}
         <motion.div variants={itemVariants} className="mt-20">
