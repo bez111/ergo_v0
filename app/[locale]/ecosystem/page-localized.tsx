@@ -1,4 +1,5 @@
-import { useTranslations, useLocale, getTranslations } from "next-intl"
+import { useTranslations, useLocale } from "next-intl"
+import { getTranslations } from "next-intl/server"
 import type { Metadata } from "next"
 import EcosystemClient from "./EcosystemClient"
 import { projects as allProjects, sortProjectsForListing } from "./_data"
@@ -7,11 +8,12 @@ import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 export const revalidate = 600
 
-export async function generateMetadata({ searchParams, params }: { searchParams: Promise<Record<string, string | string[]>>, params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ searchParams, params }: { searchParams: Promise<Record<string, string | string[]>>, params: Promise<{ locale: string }> }): Promise<Metadata> {
   const sp = await searchParams
+  const { locale } = await params
   const hasQueries = !!sp && Object.keys(sp).length > 0
   const canonical = "https://ergoblockchain.org/ecosystem"
-  const t = await getTranslations({ locale: params.locale, namespace: 'ecosystem.seo' })
+  const t = await getTranslations({ locale, namespace: 'ecosystem.seo' })
   
   return {
     title: t('title'),

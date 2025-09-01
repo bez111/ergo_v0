@@ -3482,6 +3482,60 @@
           }
         }
       },
+      "oraclePools": {
+        "title": "Oracle Pools",
+        "description": "Decentralized oracle pools provide reliable external data to smart contracts. Multiple data providers ensure accuracy and prevent manipulation.",
+        "details": {
+          "reliablePriceFeeds": {
+            "title": "Reliable Price Feeds",
+            "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices."
+          },
+          "universalCompatibility": {
+            "title": "Universal Compatibility",
+            "description": "Any smart contract can access oracle data without special integrations."
+          },
+          "fullyDecentralized": {
+            "title": "Fully Decentralized",
+            "description": "No central authority controls the data flow or oracle operations."
+          }
+        }
+      },
+      "adaptiveEmission": {
+        "title": "Adaptive Emission",
+        "description": "Dynamic supply adjustment mechanism for long-term sustainability.",
+        "details": {
+          "parameterTuning": {
+            "title": "Parameter Tuning",
+            "description": "Economic variables can be adjusted based on network conditions."
+          },
+          "economicFlexibility": {
+            "title": "Economic Flexibility",
+            "description": "Adapt to changing network needs and market conditions."
+          },
+          "communityInput": {
+            "title": "Community Input",
+            "description": "Discussions and decisions involve the entire community."
+          }
+        }
+      },
+      "oraclePools": {
+        "title": "Oracle Pools",
+        "description": "Decentralized oracle pools provide reliable external data to smart contracts. Multiple data providers ensure accuracy and prevent manipulation.",
+        "details": {
+          "reliablePriceFeeds": {
+            "title": "Reliable Price Feeds",
+            "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices."
+          },
+          "universalCompatibility": {
+            "title": "Universal Compatibility",
+            "description": "Any smart contract can access oracle data without special integrations."
+          },
+          "fullyDecentralized": {
+            "title": "Fully Decentralized",
+            "description": "No central authority controls the data flow or oracle operations."
+          }
+        }
+      },
       "sigmaProtocols": {
         "title": "Sigma Protocols",
         "description": "Built-in zero-knowledge proofs enable privacy-preserving transactions and advanced cryptographic features without third-party solutions or complex setups.",
@@ -8251,6 +8305,10 @@
           "players": {
             "label": "Players",
             "value": "5K+"
+          },
+          "gameAssets": {
+            "label": "Game Assets",
+            "value": "10K+"
           },
           "rewardsPaid": {
             "label": "Rewards Paid",

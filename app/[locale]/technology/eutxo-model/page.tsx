@@ -2,8 +2,9 @@ import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import EutxoClient from "./EutxoClient"
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'technology.eutxoModel' })
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'technology.eutxoModel' })
   const url = "https://ergoblockchain.org/technology/eutxo-model"
   const title = t('seo.title')
   const description = t('seo.description')

@@ -5,8 +5,9 @@ import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
 import { targetQuestions } from '@/lib/featured-snippets-optimizer'
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  const t = await getTranslations({ locale: params.locale, namespace: 'technology.seo' })
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'technology.seo' })
   
   return {
     title: t('title'),
@@ -51,8 +52,9 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   }
 }
 
-export default async function TechnologyPage({ params }: { params: { locale: string } }) {
-  const t = await getTranslations({ locale: params.locale, namespace: 'technology.schema' })
+export default async function TechnologyPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'technology.schema' })
   
   const techArticleSchema = {
     '@context': 'https://schema.org',
