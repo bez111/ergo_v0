@@ -3269,9 +3269,100 @@
       "resources": "Resources"
     },
     "seo": {
-      "title": "Technology - Ergo Blockchain Innovation | Ergo Platform",
-      "description": "Discover Ergo's cutting-edge blockchain technology: eUTXO model, Sigma protocols, storage rent, and more.",
-      "keywords": "Ergo technology, blockchain innovation, eUTXO, Sigma protocols, Autolykos, NIPoPoWs"
+      "title": "Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma Protocols",
+      "description": "Discover Ergo's advanced blockchain technology: eUTXO model for parallel smart contracts, ErgoScript programming language, Sigma protocols for zero-knowledge proofs, and ASIC-resistant Autolykos mining.",
+      "keywords": "eUTXO blockchain,ErgoScript smart contracts,Sigma protocols,Autolykos mining,blockchain technology,smart contract programming,NIPoPoWs,storage rent,proof of work,DeFi infrastructure",
+      "ogTitle": "Ergo Technology Stack - Building the Future",
+      "ogDescription": "Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.",
+      "ogImageAlt": "Ergo Technology Overview",
+      "twitterTitle": "Ergo Technology - Next Generation Blockchain",
+      "twitterDescription": "eUTXO model, ErgoScript, Sigma protocols, NIPoPoWs - cutting-edge blockchain tech."
+    },
+    "schema": {
+      "headline": "Ergo Blockchain Technology Stack",
+      "description": "Comprehensive overview of Ergo's technological innovations including eUTXO, ErgoScript, and Sigma protocols",
+      "about": {
+        "eutxo": {
+          "name": "eUTXO Model",
+          "description": "Extended UTXO model enabling parallel execution"
+        },
+        "ergoscript": {
+          "name": "ErgoScript",
+          "description": "Secure, declarative language for programmable money"
+        },
+        "sigma": {
+          "name": "Sigma Protocols",
+          "description": "Native zero-knowledge proofs and privacy features"
+        },
+        "autolykos": {
+          "name": "Autolykos",
+          "description": "Memory-hard Proof of Work algorithm"
+        },
+        "storageRent": {
+          "name": "Storage Rent",
+          "description": "Sustainable blockchain state management"
+        },
+        "nipopows": {
+          "name": "NIPoPoWs",
+          "description": "Non-Interactive Proofs of Proof-of-Work"
+        }
+      },
+      "breadcrumbs": {
+        "home": "Home",
+        "technology": "Technology"
+      },
+      "speakable": {
+        "headline": "Ergo Technology Stack",
+        "summary": "Ergo uses eUTXO model for parallel execution, ErgoScript for secure contracts, and Sigma protocols for privacy"
+      },
+      "faq": {
+        "0": {
+          "question": "How is eUTXO on Ergo different from the account model?",
+          "answer": "eUTXO splits the blockchain state into independent boxes (outputs), enabling parallel smart contracts without a global state and reducing reentrancy risks. DApps become composable: complex logic can be built from simple outputs."
+        },
+        "1": {
+          "question": "What is ErgoScript and why is it secure?",
+          "answer": "ErgoScript is Ergo's contract language for programmable money with formally verifiable code, strict typing, and built-in cryptographic primitives. Contracts are auditable and predictable—design avoids global mutable state and typical reentrancy patterns."
+        },
+        "2": {
+          "question": "Why is Autolykos considered decentralized and energy-efficient?",
+          "answer": "Autolykos is memory-hard and ASIC-resistant, making it fair for ordinary miners. It rewards solo mining and reduces pool dependence, keeping the network secure with moderate energy use."
+        },
+        "3": {
+          "question": "What is Storage Rent and why does it matter?",
+          "answer": "Storage Rent is a state recycling mechanism where unspent coins after ~4 years start paying rent. This prevents unlimited blockchain growth and ensures miners earn revenue even after emissions end."
+        },
+        "4": {
+          "question": "What privacy and multisig features are built in?",
+          "answer": "Sigma protocols provide native zero-knowledge proofs, ring signatures, multisig/threshold schemes, and private payments without external hacks. This simplifies building confidential dApps."
+        },
+        "5": {
+          "question": "What do NIPoPoWs enable?",
+          "answer": "NIPoPoWs create tiny blockchain proofs that allow light clients, instant mobile sync, and trustless cross-chain bridges without full nodes."
+        },
+        "6": {
+          "question": "How are Oracle Pools different from traditional oracles?",
+          "answer": "Oracle Pools are protocol-native, composable data feeds without a central operator—no single point of bribery or failure. They can be plugged into any contract."
+        },
+        "7": {
+          "question": "What are Subblocks and why use them?",
+          "answer": "Subblocks split blocks into fast sub-blocks to speed up payment and dApp confirmation without trusted sequencers. This provides Layer-1 scaling with faster perceived confirmations."
+        },
+        "8": {
+          "question": "Can I issue tokens and NFTs without a smart contract?",
+          "answer": "Yes—issuance is native at the protocol layer, in a single transaction. True native assets are instantly composable with dApps."
+        }
+      }
+    },
+    "seo": {
+      "title": "Ergo Blockchain Technology | eUTXO Smart Contracts & Sigma Protocols",
+      "description": "Discover Ergo's advanced blockchain technology: eUTXO model for parallel smart contracts, ErgoScript programming language, Sigma protocols for zero-knowledge proofs, and ASIC-resistant Autolykos mining.",
+      "keywords": "eUTXO blockchain,ErgoScript smart contracts,Sigma protocols,Autolykos mining,blockchain technology,smart contract programming,NIPoPoWs,storage rent,proof of work,DeFi infrastructure",
+      "ogTitle": "Ergo Technology Stack - Building the Future",
+      "ogDescription": "Advanced blockchain technology: eUTXO, ErgoScript, privacy features, and sustainable PoW.",
+      "ogImageAlt": "Ergo Technology Overview",
+      "twitterTitle": "Ergo Technology - Next Generation Blockchain",
+      "twitterDescription": "eUTXO model, ErgoScript, Sigma protocols, NIPoPoWs - cutting-edge blockchain tech."
     },
     "hero": {
       "title": "Next-Generation Blockchain Technology",
