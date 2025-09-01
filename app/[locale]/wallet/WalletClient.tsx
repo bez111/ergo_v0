@@ -417,20 +417,7 @@ export default function WalletClient() {
                               <CardTitle className="text-white text-xl font-mono group-hover:text-orange-400 transition-colors">
                                 {wallet.name}
                               </CardTitle>
-                              <div className="flex items-center gap-2 mt-2">
-                                {wallet.isOfficial && (
-                                  <Badge className="bg-green-500/20 text-green-400 border-green-500/30 text-xs font-mono">
-                                    <Verified className="w-3 h-3 mr-1" />
-                                    OFFICIAL
-                                  </Badge>
-                                )}
-                                {wallet.isRecommended && (
-                                  <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 text-xs font-mono">
-                                    <Award className="w-3 h-3 mr-1" />
-                                    RECOMMENDED
-                                  </Badge>
-                                )}
-                              </div>
+                              
                             </div>
                           </div>
                         </div>
