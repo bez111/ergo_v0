@@ -1,199 +1,124 @@
-"use client"
+import type { Metadata } from "next"
+import GrantsClient from "./GrantsClient"
+import { SchemaTypes } from "@/lib/schema-ultimate"
+import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
-import { useTranslations } from "next-intl"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { SchemaOrg } from "@/components/seo/schema-org"
-import { Breadcrumbs } from "@/components/seo/breadcrumbs"
-import { 
-  DollarSign, 
-  Users, 
-  Rocket, 
-  ExternalLink, 
-  ArrowRight, 
-  CheckCircle
-} from "lucide-react"
-import Link from "next/link"
-import React from "react"
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      staggerChildren: 0.1,
-    },
+export const metadata: Metadata = {
+  title: "Ergo Grants Program | Funding for Blockchain Projects",
+  description: "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
+  keywords: ["ergo grants", "blockchain funding", "developer grants", "crypto grants", "defi funding", "ergo foundation", "project funding", "open source grants"],
+  alternates: {
+    canonical: "https://ergoblockchain.org/ecosystem/grants"
   },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-    },
+  openGraph: {
+    title: "Ergo Grants - Fund Your Blockchain Innovation",
+    description: "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
+    url: "https://ergoblockchain.org/ecosystem/grants",
+    siteName: "Ergo Platform",
+    images: [{
+      url: "https://ergoblockchain.org/og/grants.png",
+      width: 1200,
+      height: 630,
+      alt: "Ergo Grants Program"
+    }],
+    type: "website",
+    locale: "en_US"
   },
+  twitter: {
+    card: "summary_large_image",
+    title: "Ergo Grants Program | Get Funded",
+    description: "Funding for developers building on Ergo. Apply for grants today.",
+    images: ["https://ergoblockchain.org/og/grants.png"],
+    creator: "@ergoplatform",
+    site: "@ergoplatform"
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true
+    }
+  }
 }
 
 export default function GrantsPage() {
-  const t = useTranslations("ecosystem.grants")
-
-  const lastUpdated = "2024-01-15"
-
+  // SEO схемы для грантов
+  const grantsSchema = {
+    "@context": "https://schema.org",
+    "@type": "FinancialService",
+    "@id": "https://ergoblockchain.org/ecosystem/grants",
+    name: "Ergo Grants Program",
+    description: "Funding program for projects building on Ergo blockchain",
+    provider: {
+      "@type": "Organization",
+      name: "Ergo Foundation",
+      url: "https://ergoblockchain.org"
+    },
+    areaServed: {
+      "@type": "Place",
+      name: "Worldwide"
+    },
+    audience: {
+      "@type": "Audience",
+      audienceType: "Developers, Researchers, Community Builders"
+    },
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: "https://ergoblockchain.org/ecosystem/grants",
+      serviceType: "Online Application"
+    }
+  }
+  
+  const faqSchema = SchemaTypes.FAQSchema([
+    {
+      question: "Who can apply for Ergo grants?",
+      answer: "Developers, researchers, community builders, and organizations working on projects that benefit the Ergo ecosystem can apply for grants."
+    },
+    {
+      question: "What types of projects get funded?",
+      answer: "DeFi protocols, developer tools, infrastructure, educational content, community initiatives, and research projects that advance Ergo technology."
+    },
+    {
+      question: "How much funding is available?",
+      answer: "Grant amounts vary based on project scope and impact, ranging from small community grants to substantial funding for core infrastructure projects."
+    },
+    {
+      question: "When will the grants program launch?",
+      answer: "The Ergo Grants Program is expected to launch in Q3 2025. Sign up for updates to be notified when applications open."
+    }
+  ])
+  
+  const eventSchema = {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    name: "Ergo Grants Program Launch",
+    description: "Official launch of the Ergo ecosystem grants program",
+    startDate: "2025-07-01",
+    endDate: "2025-12-31",
+    eventStatus: "https://schema.org/EventScheduled",
+    eventAttendanceMode: "https://schema.org/OnlineEventAttendanceMode",
+    location: {
+      "@type": "VirtualLocation",
+      url: "https://ergoblockchain.org/ecosystem/grants"
+    },
+    organizer: {
+      "@type": "Organization",
+      name: "Ergo Foundation",
+      url: "https://ergoblockchain.org"
+    }
+  }
+  
+  const knowledgeGraph = generateKnowledgeGraph('ecosystem')
+  
   return (
     <>
-      {/* BreadcrumbList Schema */}
-      <SchemaOrg
-        type="BreadcrumbList"
-        data={{
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Ecosystem",
-              item: "https://ergoblockchain.org/ecosystem"
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: t("title"),
-              item: "https://ergoblockchain.org/ecosystem/grants"
-            }
-          ]
-        }}
-      />
-
-      <div className="min-h-screen bg-black relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
-
-        {/* Breadcrumbs */}
-        <div className="sr-only">
-          <Breadcrumbs
-            items={[
-              { name: "Ecosystem", href: "/ecosystem" },
-              { name: t("title"), href: "/ecosystem/grants" }
-            ]}
-            className="mb-8"
-          />
-        </div>
-
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 pb-24"
-        >
-          {/* Hero Section */}
-          <motion.section
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4"
-          >
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center">
-                <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                  {t("title")}
-                </h1>
-                <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
-                <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-                  {t("subtitle")}
-                </p>
-                <p className="text-lg text-neutral-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-                  {t("description")}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="https://github.com/ergoplatform/grow-ergo" target="_blank" rel="noopener noreferrer">
-                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                      {t("buttons.applyNow")}
-                    </Button>
-                  </a>
-                  <Link href="/ecosystem">
-                    <Button
-                      variant="outline"
-                      className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                    >
-                      {t("buttons.viewProjects")}
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </motion.section>
-
-          {/* Features Section */}
-          <motion.section
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4"
-          >
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  {t("features.title")}
-                </h2>
-                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  {t("features.subtitle")}
-                </p>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-orange-500/10 rounded-lg">
-                        <DollarSign className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <CardTitle className="text-white">{t("features.funding.title")}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-neutral-400 leading-relaxed">
-                      {t("features.funding.description")}
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </div>
-          </motion.section>
-
-          {/* CTA */}
-          <motion.section
-            variants={itemVariants}
-            className="py-16 px-4"
-          >
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("cta.title")}</h2>
-              <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-                {t("cta.subtitle")}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://github.com/ergoplatform/grow-ergo" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    {t("cta.buttons.applyGrant")}
-                  </Button>
-                </a>
-                <Link href="/start/community">
-                  <Button
-                    variant="outline"
-                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                  >
-                    {t("cta.buttons.joinCommunity")}
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </motion.section>
-        </motion.div>
-      </div>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(grantsSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
+      
+      <GrantsClient />
     </>
   )
 } 

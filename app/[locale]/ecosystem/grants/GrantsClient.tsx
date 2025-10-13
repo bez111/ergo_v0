@@ -6,15 +6,12 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
-import { Clock, Mail, Zap, Users, Target, Lightbulb } from "lucide-react"
+import { Clock, Zap, Users, Target, Lightbulb } from "lucide-react"
 import { FadeIn } from "@/components/animations/fade-in"
 import { SectionHeading } from "@/components/section-heading"
-import { Badge } from "@/components/ui/badge"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
-import { useTranslations } from "next-intl"
 
-export default function GrantsClient() {
-  const t = useTranslations('ecosystem.grants')
+function GrantsClient() {
   const [email, setEmail] = useState("")
   const [isSubscribed, setIsSubscribed] = useState(false)
 
@@ -79,35 +76,35 @@ export default function GrantsClient() {
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <SectionHeading
-                text={t('whatToExpect')}
-                subtitle={t('grantsFeatures')}
-                description={t('supportingInnovation')}
+                text="What to Expect"
+                subtitle="Grants Program Features"
+                description="Supporting innovation and development in the Ergo ecosystem"
               />
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 {[
                   {
                     icon: Zap,
-                    title: t('features.developerSupport.title'),
-                    description: t('features.developerSupport.description'),
+                    title: "Developer Support",
+                    description: "Funding for innovative dApps, tools, and infrastructure projects",
                     color: "",
                   },
                   {
                     icon: Target,
-                    title: t('features.researchFunding.title'),
-                    description: t('features.researchFunding.description'),
+                    title: "Research Funding",
+                    description: "Support for academic research and protocol improvements",
                     color: "",
                   },
                   {
                     icon: Users,
-                    title: t('features.communityProjects.title'),
-                    description: t('features.communityProjects.description'),
+                    title: "Community Projects",
+                    description: "Grants for community-driven initiatives and educational content",
                     color: "",
                   },
                   {
                     icon: Lightbulb,
-                    title: t('features.innovationGrants.title'),
-                    description: t('features.innovationGrants.description'),
+                    title: "Innovation Grants",
+                    description: "Special funding for breakthrough ideas and experimental projects",
                     color: "",
                   },
                 ].map((feature, index) => (
@@ -140,20 +137,20 @@ export default function GrantsClient() {
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white leading-[1.1] pb-1">
-                {t('cta.title')}
+                Ready to Build on Ergo?
               </h2>
               <p className="text-xl text-neutral-300 mb-8">
-                {t('cta.description')}
+                Start preparing your project proposal and join our community to stay updated
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                  {t('cta.joinDiscord')}
+                  Join Discord Community
                 </Button>
                 <Button
                   variant="outline"
                   className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm"
                 >
-                  {t('cta.learnAboutErgo')}
+                  Learn About Ergo
                 </Button>
               </div>
             </div>
@@ -163,3 +160,5 @@ export default function GrantsClient() {
     </div>
   )
 }
+
+export default GrantsClient

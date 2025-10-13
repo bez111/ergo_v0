@@ -84,7 +84,7 @@ function hexPoints(cx: number, cy: number, r: number) {
   return pts.join(" ")
 }
 
-export default function MapClient() {
+function MapClient() {
   const [query, setQuery] = useState("")
   const [activeCats, setActiveCats] = useState<string[]>([...categories])
   const [scale, setScale] = useState(1)
@@ -170,12 +170,6 @@ export default function MapClient() {
     setOffset({ x: dragRef.current.baseX + dx, y: dragRef.current.baseY + dy })
   }
   const endDrag = () => (dragRef.current.dragging = false)
-
-  const focusOn = (x: number, y: number, targetScale = 1.2) => {
-    const s = targetScale
-    setScale(s)
-    setOffset({ x: 800 - x * s, y: 550 - y * s })
-  }
 
   // Smooth animated pan/zoom to cluster
   const animatePanZoom = (x: number, y: number, targetScale = 1.3, durationMs = 450) => {
@@ -472,4 +466,6 @@ export default function MapClient() {
       </div>
     </div>
   )
-} 
+}
+
+export default MapClient 

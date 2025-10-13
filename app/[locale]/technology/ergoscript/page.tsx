@@ -120,7 +120,8 @@ export default function ErgoScriptPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("features")
 
-  const keyFeatures = t.raw("keyFeatures") as Array<{title: string, description: string}>
+  // Use hardcoded features with icons instead of translation data
+  const keyFeatures = features
 
   const faqs = [
     {

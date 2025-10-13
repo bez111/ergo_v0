@@ -454,6 +454,20 @@ export default function TechnologyPage() {
                   Advanced blockchain infrastructure for scalable DeFi, secure smart contracts, and true decentralization.
                 </p>
               </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="mt-8"
+              >
+                <Link href="/technology/map">
+                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-4 rounded-xl text-lg">
+                    <Globe className="w-5 h-5 mr-2" />
+                    Explore Technology Map
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                </Link>
+              </motion.div>
             </FadeIn>
           </div>
         </section>

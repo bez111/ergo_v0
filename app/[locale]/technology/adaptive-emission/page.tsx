@@ -1,6 +1,5 @@
 "use client"
 
-import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -8,25 +7,11 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
-import { FadeIn } from "@/components/animations/fade-in"
-import { 
-  Settings, 
-  TrendingUp, 
-  Users, 
-  Vote, 
-  RotateCcw, 
-  ExternalLink, 
-  ArrowRight, 
-  CheckCircle, 
-  Clock, 
-  ChevronDown,
-  BarChart3,
-  Coins,
-  Target
-} from "lucide-react"
+import { DollarSign, Shield, TrendingUp, ExternalLink, ArrowRight, Users, CheckCircle, Settings, Vote, Coins, ChevronDown, Terminal, BookOpen, Clock } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { useTranslations } from "next-intl"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -50,12 +35,112 @@ const itemVariants = {
   },
 }
 
+// Features moved inside component to access translations
+
+const governanceData = [
+  {
+    title: "Emission Schedule",
+    description: "Declining emission with periodic reductions and post-emission sustainability through storage rent and transaction fees.",
+    icon: DollarSign,
+    link: "/docs/miners/governance",
+    linkText: "Learn about governance →",
+  },
+  {
+    title: "Storage Rent Economics",
+    description: "UTXOs unspent for 4+ years pay storage fees, providing sustainable miner revenue and preventing state bloat.",
+    icon: Coins,
+    link: "/docs/introduction/storage-rent",
+    linkText: "Storage rent details →",
+  },
+  {
+    title: "Miner Voting Process",
+    description: "Community proposals, 1024-epoch voting period, 90% threshold requirement, and gradual activation.",
+    icon: Vote,
+    link: "/docs/miners/governance/voting",
+    linkText: "Voting mechanism →",
+  },
+  {
+    title: "Economic Parameters",
+    description: "Adjustable parameters include block size, storage fee factor, min fee, and computational cost limits.",
+    icon: Settings,
+    link: "/docs/miners/governance",
+    linkText: "Parameter details →",
+  },
+]
+
+const historicalVotes = [
+  {
+    eip: "EIP-27",
+    title: "Re-emission Soft Fork",
+    status: "Passed",
+    description: "Extends emission schedule to ensure long-term network security",
+    date: "2024",
+    support: "95%",
+  },
+  {
+    eip: "EIP-37",
+    title: "Difficulty Adjustment",
+    status: "Passed", 
+    description: "Improved difficulty adjustment algorithm for more stable block times",
+    date: "2023",
+    support: "92%",
+  },
+]
+
 export default function AdaptiveEmissionPage() {
   const t = useTranslations("technology.adaptiveEmission")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
   const [activeTab, setActiveTab] = useState("emission")
 
-  const lastUpdated = "2024-01-15"
+  const features = [
+    {
+      title: t("features.parameterTuning.title"),
+      description: t("features.parameterTuning.description"),
+      icon: Settings,
+    },
+    {
+      title: t("features.economicFlexibility.title"),
+      description: t("features.economicFlexibility.description"),
+      icon: TrendingUp,
+    },
+    {
+      title: t("features.communityInput.title"),
+      description: t("features.communityInput.description"),
+      icon: Users,
+    },
+    {
+      title: t("features.minerVoting.title"),
+      description: t("features.minerVoting.description"),
+      icon: Vote,
+    },
+    {
+      title: t("features.consensusDriven.title"),
+      description: t("features.consensusDriven.description"),
+      icon: CheckCircle,
+    },
+  ]
+
+  // Use translations for FAQs - access as array
+  const faqQuestions = [
+    {
+      question: t("faq.questions.0.question"),
+      answer: t("faq.questions.0.answer")
+    },
+    {
+      question: t("faq.questions.1.question"),
+      answer: t("faq.questions.1.answer")
+    },
+    {
+      question: t("faq.questions.2.question"),
+      answer: t("faq.questions.2.answer")
+    },
+    {
+      question: t("faq.questions.3.question"),
+      answer: t("faq.questions.3.answer")
+    }
+  ]
+
+  const lastUpdated = new Date().toISOString().slice(0, 10)
 
   return (
     <>
@@ -72,9 +157,9 @@ export default function AdaptiveEmissionPage() {
               item: "https://ergoblockchain.org/technology"
             },
             {
-              "@type": "ListItem",
+              "@type": "ListItem", 
               position: 2,
-              name: t("title"),
+              name: "Adaptive Emission",
               item: "https://ergoblockchain.org/technology/adaptive-emission"
             }
           ]
@@ -86,19 +171,17 @@ export default function AdaptiveEmissionPage() {
         type="FAQPage"
         data={{
           "@type": "FAQPage",
-          mainEntity: [
-            {
+          mainEntity: faqQuestions.map(faq => ({
               "@type": "Question",
-              name: t("faq.0.question"),
+            name: faq.question,
               acceptedAnswer: {
-                "@type": "Answer",
-                text: t("faq.0.answer")
+                "@type": "Answer", 
+              text: faq.answer
               }
-            }
-          ]
+          }))
         }}
       />
-
+      
       <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
         {/* Background */}
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
@@ -108,112 +191,409 @@ export default function AdaptiveEmissionPage() {
           <Breadcrumbs
             items={[
               { name: "Technology", href: "/technology" },
-              { name: t("title"), href: "/technology/adaptive-emission" }
+              { name: t("hero.title"), href: "/technology/adaptive-emission" }
             ]}
             className="mb-8"
           />
         </div>
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 motion-reduce:animate-none pb-24"
-        >
-          {/* Hero Section */}
-          <motion.section
-            variants={itemVariants}
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none pb-24">
+        {/* Hero Section */}
+          <motion.section 
+            variants={itemVariants} 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 motion-reduce:transform-none"
           >
             <div className="max-w-7xl mx-auto">
-              <div className="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                    {t("title")}
-                  </h1>
+                  {t("hero.title")}
+                </h1>
                   <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    {t("subtitle")}
+                    {t("hero.subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    {t("description")}
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
-                    <a href="https://www.ergoforum.org/t/emission-soft-fork-proposal/2996" target="_blank" rel="noopener noreferrer">
+                    {t("hero.description")}
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                    <Link href="/docs/miners/governance">
                       <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        {t("buttons.viewProposal")}
-                      </Button>
+                      {t("buttons.readDocs")}
+                  </Button>
+                    </Link>
+                    <a href="https://www.ergoforum.org/t/emission-soft-fork-proposal/2996" target="_blank" rel="noopener noreferrer">
+                  <Button
+                    variant="outline"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                  >
+{t("buttons.readProposal")}
+                                    </Button>
                     </a>
-                    <Button
-                      variant="outline"
-                      className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                    >
-                      {t("buttons.joinDiscussion")}
-                    </Button>
                   </div>
-                </div>
-                <div className="relative">
+                  <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
+                    <ul className="flex flex-wrap gap-4">
+                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
+                      <li><a href="#emission" className="hover:text-orange-400">Emission Schedule</a></li>
+                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
+                    </ul>
+                  </nav>
+              </div>
+              <div className="relative">
                   <div className="relative z-10">
                     <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                      <CardContent className="p-0">
+                    <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          {t("keyMetrics.title")}
-                        </h3>
+                          Quick Start
+                      </h3>
                         <div className="space-y-4">
-                          <div className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
-                            <div className="flex items-center justify-between">
-                              <div>
-                                <h4 className="font-semibold text-white">{t("keyMetrics.currentStatus.name")}</h4>
-                                <p className="text-sm text-neutral-400">{t("keyMetrics.currentStatus.description")}</p>
+                          {[
+                            {
+                              name: "Governance Docs",
+                              description: "Learn about Ergo's governance system",
+                              icon: <BookOpen className="w-6 h-6" />,
+                              link: "/docs/miners/governance",
+                              external: false
+                            },
+                            {
+                              name: "EIP-27 Proposal",
+                              description: "Read the emission soft fork proposal",
+                              icon: <Terminal className="w-6 h-6" />,
+                              link: "https://www.ergoforum.org/t/emission-soft-fork-proposal/2996",
+                              external: true
+                            },
+                            {
+                              name: "Join Community",
+                              description: "Participate in governance discussions",
+                              icon: <Users className="w-6 h-6" />,
+                              link: "https://discord.gg/ergo",
+                              external: true
+                            },
+                          ].map((item) => (
+                            <div key={item.name}>
+                              {item.external ? (
+                                <a
+                                  href={item.link}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
+                            >
+                              <div className="flex items-center space-x-3">
+                                    <div className="text-orange-400">{item.icon}</div>
+                                    <div className="flex-1">
+                                      <h4 className="font-semibold text-white">{item.name}</h4>
+                                      <p className="text-sm text-neutral-400">{item.description}</p>
+                                </div>
+                                    <ExternalLink className="w-4 h-4 text-neutral-400" />
                               </div>
-                              <div className="text-right">
-                                <div className="text-2xl font-bold text-orange-400">{t("keyMetrics.currentStatus.value")}</div>
-                              </div>
+                                </a>
+                              ) : (
+                                <Link
+                                  href={item.link}
+                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
+                                >
+                                  <div className="flex items-center space-x-3">
+                                    <div className="text-orange-400">{item.icon}</div>
+                                    <div className="flex-1">
+                                      <h4 className="font-semibold text-white">{item.name}</h4>
+                                      <p className="text-sm text-neutral-400">{item.description}</p>
+                                    </div>
+                                    <ArrowRight className="w-4 h-4 text-neutral-400" />
+                                  </div>
+                                </Link>
+                              )}
                             </div>
-                          </div>
+                          ))}
                         </div>
-                      </CardContent>
-                    </Card>
+                    </CardContent>
+                  </Card>
                   </div>
-                </div>
               </div>
+            </div>
             </div>
           </motion.section>
 
           {/* Features Section */}
-          <motion.section
+          <motion.section 
             id="features"
-            variants={itemVariants}
+            variants={itemVariants} 
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4"
+            className="py-16 px-4 motion-reduce:transform-none"
           >
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                   {t("features.title")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
                   {t("features.subtitle")}
                 </p>
               </div>
+              
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3">
-                      <div className="p-2 bg-orange-500/10 rounded-lg">
-                        <Settings className="w-6 h-6 text-orange-400" />
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={feature.title}
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="motion-reduce:transform-none"
+                  >
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
+                      <CardContent className="p-6">
+                        <feature.icon className="w-12 h-12 text-orange-400 mb-4" />
+                        <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+                        <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Emission Schedule Section */}
+          <motion.section 
+            id="emission"
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 bg-neutral-900/20 motion-reduce:transform-none"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Emission Schedule
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Understanding Ergo's emission model and governance mechanisms
+                </p>
+              </div>
+
+              <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
+                  <TabsTrigger value="emission" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
+                    Emission
+                  </TabsTrigger>
+                  <TabsTrigger value="voting" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
+                    Voting
+                  </TabsTrigger>
+                  <TabsTrigger value="parameters" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
+                    Parameters
+                  </TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="emission" className="mt-8">
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                    <CardHeader>
+                      <CardTitle className="text-white">Emission Timeline</CardTitle>
+                      <p className="text-neutral-400">Ergo's declining emission schedule and post-emission sustainability</p>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-4">
+                          <h4 className="font-semibold text-orange-300">Current Phase (2021-2057)</h4>
+                          <ul className="space-y-2 text-neutral-400">
+                            <li>• Initial emission: 75 ERG per block</li>
+                            <li>• Reduction every 3 months by 3 ERG</li>
+                            <li>• Total supply: ~97.7 million ERG</li>
+                            <li>• Foundation allocation: 4.37%</li>
+                          </ul>
+                        </div>
+                        <div className="space-y-4">
+                          <h4 className="font-semibold text-orange-300">Post-Emission (2057+)</h4>
+                          <ul className="space-y-2 text-neutral-400">
+                            <li>• Miner rewards from transaction fees</li>
+                            <li>• Storage rent from inactive UTXOs</li>
+                            <li>• Potential re-emission if voted</li>
+                            <li>• Long-term network sustainability</li>
+                          </ul>
+                        </div>
                       </div>
-                      <CardTitle className="text-white">{t("features.parameterTuning.title")}</CardTitle>
-                    </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+
+                <TabsContent value="voting" className="mt-8">
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                    <CardHeader>
+                      <CardTitle className="text-white">Miner Voting Process</CardTitle>
+                      <p className="text-neutral-400">How parameter changes are proposed and implemented</p>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div className="text-center">
+                          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Users className="w-8 h-8 text-orange-400" />
+                          </div>
+                          <h4 className="font-semibold text-white mb-2">1. Community Discussion</h4>
+                          <p className="text-sm text-neutral-400">Proposals are discussed in forums and community channels</p>
+                        </div>
+                        <div className="text-center">
+                          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <Vote className="w-8 h-8 text-orange-400" />
+                          </div>
+                          <h4 className="font-semibold text-white mb-2">2. Miner Voting</h4>
+                          <p className="text-sm text-neutral-400">Miners vote through block headers over 1024 epochs</p>
+                        </div>
+                        <div className="text-center">
+                          <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <CheckCircle className="w-8 h-8 text-orange-400" />
+                          </div>
+                          <h4 className="font-semibold text-white mb-2">3. Implementation</h4>
+                          <p className="text-sm text-neutral-400">Changes activate gradually with 90% consensus</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+
+                <TabsContent value="parameters" className="mt-8">
+                  <div className="space-y-6">
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <CardHeader>
+                        <CardTitle className="text-white">Adjustable Parameters</CardTitle>
+                      </CardHeader>
+                      <CardContent>
+                        <div className="grid md:grid-cols-2 gap-6">
+                          <div>
+                            <h4 className="font-semibold text-orange-300 mb-3">Block Parameters</h4>
+                            <ul className="space-y-2 text-neutral-400 text-sm">
+                              <li>• Maximum block size</li>
+                              <li>• Block cost limit</li>
+                              <li>• Computational cost per byte</li>
+                            </ul>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-orange-300 mb-3">Economic Parameters</h4>
+                            <ul className="space-y-2 text-neutral-400 text-sm">
+                              <li>• Storage fee factor</li>
+                              <li>• Minimum transaction fee</li>
+                              <li>• Token access cost</li>
+                            </ul>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </TabsContent>
+              </Tabs>
+            </div>
+          </motion.section>
+
+          {/* Governance Section */}
+          <motion.section 
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 motion-reduce:transform-none"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Governance
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  How Ergo's governance system enables sustainable economic policy
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {governanceData.map((item, index) => (
+                  <motion.div
+                    key={item.title}
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="motion-reduce:transform-none"
+                  >
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-orange-500/50 transition-colors">
+                      <CardContent className="p-6">
+                        <item.icon className="w-12 h-12 text-orange-400 mb-4" />
+                        <h3 className="text-xl font-semibold mb-3 text-white">{item.title}</h3>
+                        <p className="text-neutral-400 leading-relaxed mb-4">{item.description}</p>
+                        <Link 
+                          href={item.link}
+                          className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
+                        >
+                          {item.linkText}
+                        </Link>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Storage Rent Section */}
+          <motion.section 
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 bg-neutral-900/20 motion-reduce:transform-none"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Storage Rent
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Sustainable miner revenue through storage fees on inactive UTXOs
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-3 gap-8">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-white flex items-center gap-2">
+                      <Clock className="w-5 h-5 text-orange-400" />
+                      4 Year Period
+                    </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-neutral-400 leading-relaxed">
-                      {t("features.parameterTuning.description")}
+                    <p className="text-neutral-400">
+                      UTXOs unspent for 4+ years begin paying storage rent, preventing blockchain bloat and providing miner revenue.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-white flex items-center gap-2">
+                      <DollarSign className="w-5 h-5 text-orange-400" />
+                      Fee Structure
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-neutral-400">
+                      Storage fees are calculated based on UTXO size and age, with a current rate of approximately 4.43% per 4-year period.
+                    </p>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                  <CardHeader>
+                    <CardTitle className="text-white flex items-center gap-2">
+                      <Shield className="w-5 h-5 text-orange-400" />
+                      Network Benefits
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-neutral-400">
+                      Prevents state bloat, ensures long-term sustainability, and provides perpetual miner rewards after emission ends.
                     </p>
                   </CardContent>
                 </Card>
@@ -221,28 +601,135 @@ export default function AdaptiveEmissionPage() {
             </div>
           </motion.section>
 
-          {/* CTA */}
-          <motion.section
-            variants={itemVariants}
-            className="py-16 px-4"
+          {/* Historical Votes Section */}
+          <motion.section 
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 motion-reduce:transform-none"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Historical Votes
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Past governance decisions that shaped Ergo's economic policy
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                {historicalVotes.map((vote, index) => (
+                  <motion.div
+                    key={vote.eip}
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="motion-reduce:transform-none"
+                  >
+                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <CardContent className="p-6">
+                        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+                          <div className="flex-1">
+                            <div className="flex items-center gap-3 mb-2">
+                              <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-sm font-medium">
+                                {vote.eip}
+                              </span>
+                              <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                                vote.status === 'Passed' 
+                                  ? 'bg-green-500/20 text-green-400' 
+                                  : 'bg-yellow-500/20 text-yellow-400'
+                              }`}>
+                                {vote.status}
+                              </span>
+                            </div>
+                            <h3 className="text-xl font-semibold text-white mb-2">{vote.title}</h3>
+                            <p className="text-neutral-400 leading-relaxed">{vote.description}</p>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-2xl font-bold text-orange-400">{vote.support}</div>
+                            <div className="text-sm text-neutral-400">Support</div>
+                            <div className="text-sm text-neutral-500 mt-1">{vote.date}</div>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          {/* FAQ Section */}
+          <motion.section 
+            id="faq"
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 bg-neutral-900/20 motion-reduce:transform-none"
+          >
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  {t("faq.title")}
+                </h2>
+                <p className="text-xl text-neutral-400">
+                  Common questions about adaptive emission and governance
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                {faqQuestions.map((faq, index) => (
+                  <Collapsible
+                    key={index}
+                    open={openFAQ === index}
+                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                  >
+                    <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg bg-neutral-900/50 border border-neutral-700 p-6 text-left hover:bg-neutral-900/70 transition-colors">
+                      <span className="text-lg font-medium text-white">{faq.question}</span>
+                      <ChevronDown className={`h-5 w-5 text-neutral-400 transition-transform ${openFAQ === index ? 'rotate-180' : ''}`} />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent className="px-6 pb-6 pt-2">
+                      <p className="text-neutral-400 leading-relaxed">{faq.answer}</p>
+                    </CollapsibleContent>
+                  </Collapsible>
+                ))}
+              </div>
+            </div>
+          </motion.section>
+
+          {/* CTA Section */}
+          <motion.section 
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 motion-reduce:transform-none"
           >
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("cta.title")}</h2>
-              <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                {t("cta.title")}
+              </h2>
+              <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
                 {t("cta.subtitle")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/docs/miners/governance">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
+{t("cta.buttons.learnMore")}
+                    <ArrowRight className="ml-2 w-4 h-4" />
+                  </Button>
+                </Link>
                 <a href="https://discord.gg/ergo" target="_blank" rel="noopener noreferrer">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    {t("cta.buttons.joinDiscussion")}
+                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
+{t("cta.buttons.joinGovernance")}
+                    <ExternalLink className="ml-2 w-4 h-4" />
                   </Button>
                 </a>
-                <Button
-                  variant="outline"
-                  className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                >
-                  {t("cta.buttons.readMore")}
-                </Button>
               </div>
             </div>
           </motion.section>

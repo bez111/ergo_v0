@@ -119,7 +119,7 @@ export default function ErgoScriptClient() {
   const modules = [
     {
       title: t("modules.foundations.title"),
-      number: t("modules.foundations.number"),
+      number: 1,
       totalDuration: t("modules.foundations.totalDuration"),
       lessons: [
         { title: t("modules.foundations.lessons.0.title"), duration: t("modules.foundations.lessons.0.duration"), level: t("modules.foundations.lessons.0.level") },

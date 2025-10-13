@@ -409,16 +409,7 @@
       "seo": {
         "title": "Ergo User Guides | Wallets, DeFi, Mining & Trading Tutorials",
         "description": "Complete collection of Ergo user guides. Learn how to use wallets, trade on DEXs, mine ERG, stake tokens, and navigate the ecosystem. Step-by-step tutorials for all levels.",
-        "keywords": [
-          "ergo guides",
-          "ergo tutorials",
-          "how to use ergo",
-          "ergo wallet guide",
-          "defi tutorial",
-          "mining guide",
-          "trading guide",
-          "blockchain tutorials"
-        ],
+        "keywords": "ergo guides, ergo tutorials, how to use ergo, ergo wallet guide, defi tutorial, mining guide, trading guide, blockchain tutorials",
         "ogTitle": "Ergo User Guides - Complete Tutorial Collection",
         "ogDescription": "Master Ergo with our comprehensive guides. Wallets, DeFi, mining, and more.",
         "twitterTitle": "Ergo Guides | Learn to Use Ergo Ecosystem",
@@ -478,13 +469,7 @@
           "name": "Ergo User Guide Library",
           "description": "Educational resources for using Ergo blockchain applications",
           "level": "Beginner to Advanced",
-          "teaches": [
-            "Cryptocurrency Wallets",
-            "DeFi Trading",
-            "Blockchain Mining",
-            "NFT Trading",
-            "Smart Contract Interaction"
-          ]
+          "teaches": "Cryptocurrency Wallets, DeFi Trading, Blockchain Mining, NFT Trading, Smart Contract Interaction"
         }
       }
     },
@@ -2470,6 +2455,166 @@
           "gamingMetaverse": "Gaming & Metaverse"
         }
       }
+    },
+    "mining": {
+      "title": "Mining ERG",
+      "subtitle": "Start mining Ergo with our comprehensive guide to pools, hardware, and optimization",
+      "poolsTitle": "Mining Pools",
+      "hardwareTitle": "Hardware Requirements", 
+      "softwareTitle": "Mining Software",
+      "optimizationTitle": "Optimization Tips",
+      "ctaTitle": "Ready to Start Mining?",
+      "active": "Active",
+      "inactive": "Inactive",
+      "recommended": "Recommended",
+      "alternative": "Alternative",
+      "poolUrl": "Pool URL",
+      "poolFee": "Pool Fee",
+      "minPayout": "Min Payout",
+      "performance": "Performance",
+      "difficulty": "Difficulty",
+      "download": "Download",
+      "ctaButtons": {
+        "readGuide": "Read Full Mining Guide",
+        "viewCode": "View Mining Software"
+      },
+      "pools": {
+        "0": {
+          "name": "HeroMiners",
+          "url": "https://ergo.herominers.com",
+          "fee": "1%",
+          "minPayout": "1 ERG",
+          "features": {
+            "0": "Global servers",
+            "1": "Real-time stats",
+            "2": "Mobile app"
+          }
+        },
+        "1": {
+          "name": "2Miners",
+          "url": "https://2miners.com/erg-mining-pool",
+          "fee": "1%", 
+          "minPayout": "0.1 ERG",
+          "features": {
+            "0": "Low latency",
+            "1": "Detailed statistics",
+            "2": "Auto-payouts"
+          }
+        },
+        "2": {
+          "name": "WoolyPooly",
+          "url": "https://woolypooly.com/en/coin/erg",
+          "fee": "0.9%",
+          "minPayout": "1 ERG", 
+          "features": {
+            "0": "Low fees",
+            "1": "High uptime",
+            "2": "Multiple regions"
+          }
+        },
+        "3": {
+          "name": "Flypool",
+          "url": "https://erg.flypool.org",
+          "fee": "1%",
+          "minPayout": "0.1 ERG",
+          "features": {
+            "0": "Professional service",
+            "1": "Advanced monitoring",
+            "2": "24/7 support"
+          }
+        }
+      },
+      "hardware": {
+        "gpu": {
+          "category": "GPU Mining",
+          "requirements": {
+            "0": "Minimum 4GB VRAM",
+            "1": "AMD RX 6000+ or NVIDIA RTX 30+",
+            "2": "Stable power supply",
+            "3": "Good cooling system"
+          },
+          "performance": "High",
+          "difficulty": "Medium"
+        },
+        "cpu": {
+          "category": "CPU Mining",
+          "requirements": {
+            "0": "Modern multi-core processor",
+            "1": "Sufficient RAM (8GB+)",
+            "2": "Stable system"
+          },
+          "performance": "Low",
+          "difficulty": "Easy"
+        },
+        "memory": {
+          "category": "Memory Requirements",
+          "requirements": {
+            "0": "16GB RAM recommended",
+            "1": "Fast SSD storage",
+            "2": "Reliable internet connection"
+          },
+          "performance": "Critical",
+          "difficulty": "Easy"
+        }
+      },
+      "software": {
+        "0": {
+          "name": "T-Rex Miner",
+          "type": "NVIDIA GPU",
+          "features": {
+            "0": "High performance",
+            "1": "Easy configuration",
+            "2": "Regular updates"
+          },
+          "link": "https://github.com/trexminer/T-Rex"
+        },
+        "1": {
+          "name": "TeamRedMiner",
+          "type": "AMD GPU",
+          "features": {
+            "0": "Optimized for AMD",
+            "1": "Stable mining",
+            "2": "Good support"
+          },
+          "link": "https://github.com/todxx/teamredminer"
+        },
+        "2": {
+          "name": "NBMiner",
+          "type": "Universal",
+          "features": {
+            "0": "Cross-platform",
+            "1": "User-friendly",
+            "2": "Good documentation"
+          },
+          "link": "https://github.com/NebuTech/NBMiner"
+        }
+      },
+      "optimization": {
+        "0": {
+          "category": "Power Efficiency",
+          "tips": {
+            "0": "Undervolt your GPUs",
+            "1": "Optimize power limits",
+            "2": "Monitor temperatures"
+          }
+        },
+        "1": {
+          "category": "Performance Tuning",
+          "tips": {
+            "0": "Adjust memory clocks",
+            "1": "Fine-tune core clocks",
+            "2": "Use mining profiles"
+          }
+        },
+        "2": {
+          "category": "System Optimization",
+          "tips": {
+            "0": "Use dedicated mining OS",
+            "1": "Disable unnecessary services",
+            "2": "Regular maintenance"
+          }
+        }
+      }
     }
   },
   "technology": {
@@ -2599,6 +2744,20 @@
         "title": "ErgoScript",
         "subtitle": "Secure Smart Contract Language",
         "description": "Powerful smart contract language designed for security and flexibility. Features built-in Sigma protocols for zero-knowledge proofs and formal verification support for bulletproof contracts.",
+        "details": {
+          "verification": {
+            "title": "Formal Verification",
+            "description": "Mathematically provable contract behavior"
+          },
+          "privacy": {
+            "title": "Built-in Privacy",
+            "description": "Zero-knowledge proofs and confidential transactions"
+          },
+          "safety": {
+            "title": "Type Safety",
+            "description": "Compile-time guarantees prevent runtime errors"
+          }
+        },
         "lastUpdated": "Last updated",
         "tabs": {
           "overview": "Overview",
@@ -2842,6 +3001,20 @@
         "title": "Oracle Pools",
         "subtitle": "Decentralized data feeds for smart contracts",
         "description": "Truly decentralized oracle pools providing reliable off-chain data access with built-in incentives.",
+        "details": {
+          "reliablePriceFeeds": {
+            "title": "Reliable Price Feeds",
+            "description": "Accurate, tamper-proof price data"
+          },
+          "universalCompatibility": {
+            "title": "Universal Compatibility",
+            "description": "Works with any smart contract"
+          },
+          "fullyDecentralized": {
+            "title": "Fully Decentralized",
+            "description": "No single point of failure or control"
+          }
+        },
         "lastUpdated": "Last updated",
         "keyMetrics": {
           "title": "Key Metrics",
@@ -2882,6 +3055,20 @@
         "title": "Adaptive Emission",
         "subtitle": "Consensus-driven tuning of economic parameters",
         "description": "Community input and miner voting enable flexible economic policy without hard forks.",
+        "details": {
+          "parameterTuning": {
+            "title": "Parameter Tuning",
+            "description": "Community can adjust emission parameters"
+          },
+          "economicFlexibility": {
+            "title": "Economic Flexibility",
+            "description": "Respond to changing economic conditions"
+          },
+          "communityInput": {
+            "title": "Community Input",
+            "description": "Democratic governance of monetary policy"
+          }
+        },
         "lastUpdated": "Last updated",
         "keyMetrics": {
           "title": "Key Metrics",
@@ -2958,7 +3145,20 @@
         "title": "Native Tokens & NFTs",
         "subtitle": "First-Class Assets",
         "description": "Create and trade tokens and NFTs directly at the protocol level",
-        "details": "No smart contracts needed - just simple, secure, and cost-effective native assets. Issue tokens, stablecoins, or NFTs in a single transaction with protocol-level security guarantees.",
+        "details": {
+          "oneClickCreation": {
+            "title": "One-Click Creation",
+            "description": "Issue tokens in a single transaction"
+          },
+          "defiReady": {
+            "title": "DeFi Ready",
+            "description": "Native compatibility with all DeFi protocols"
+          },
+          "trueNativeAssets": {
+            "title": "True Native Assets",
+            "description": "Protocol-level security, not contract-based"
+          }
+        },
         "lastUpdated": "Last updated",
         "buttons": {
           "exploreNftEcosystem": "Explore NFT Ecosystem",
@@ -4043,7 +4243,43 @@
       "title": "Oracle Pools",
       "subtitle": "Decentralized Data Feeds",
       "description": "Secure, reliable price feeds for DeFi applications",
-      "features": [
+      "lastUpdated": "Last updated",
+      "buttons": {
+        "viewLivePools": "View Live Pools",
+        "exploreOracles": "Explore Oracles",
+        "readDocs": "Read Documentation",
+        "joinNetwork": "Join Network"
+      },
+      "keyMetrics": {
+        "title": "Key Metrics",
+        "activePools": {
+          "name": "Active Pools",
+          "description": "Live oracle data feeds",
+          "value": "15+"
+        }
+      },
+      "features": {
+        "title": "Key Features",
+        "subtitle": "Reliable, permissionless off-chain data access with built-in incentives",
+        "decentralized": {
+          "title": "Fully Decentralized",
+          "description": "No central authority controls the data flow or oracle operations"
+        }
+      },
+      "cta": {
+        "title": "Ready to Use Oracle Pools?",
+        "subtitle": "Start building with reliable, decentralized data feeds",
+        "buttons": {
+          "exploreOracles": "Explore Oracles",
+          "viewLivePools": "View Live Pools"
+        }
+      },
+      "quickStart": {
+        "title": "Quick Start",
+        "exploreOracles": "Browse live oracle pools and data feeds",
+        "viewLivePools": "Access comprehensive oracle documentation"
+      },
+      "featuresArray": [
         {
           "title": "Reliable Price Feeds",
           "description": "Consensus-based data aggregation ensures accurate, manipulation-resistant prices"
@@ -4100,7 +4336,13 @@
           "title": "Lending Protocols",
           "description": "Collateral valuation for secure lending"
         }
-      ]
+      ],
+      "faq": {
+        "0": {
+          "question": "What are Oracle Pools and how do they work?",
+          "answer": "Oracle Pools are decentralized data feeds that provide off-chain information to smart contracts. Multiple oracle nodes collect data from various sources, reach consensus, and update the blockchain with reliable price feeds and other external data."
+        }
+      }
     },
     "ergoscriptOld": {
       "what_is_ergoscript_answer_ergoscript": "What is ErgoScript?\",\n      answer: \"ErgoScript is Ergo's smart contract language based on Sigma protocols. It enables powerful, flexible, and secure smart contracts while maintaining the benefits of the UTXO model.",
@@ -4218,7 +4460,80 @@
       "title": "Adaptive Emission",
       "subtitle": "Flexible Monetary Policy",
       "description": "Community-driven emission schedule adjustments",
-      "features": [
+      "lastUpdated": "Last updated",
+      "hero": {
+        "title": "Adaptive Emission",
+        "subtitle": "Flexible Monetary Policy Through Community Governance",
+        "description": "Ergo's adaptive emission system enables the community to adjust monetary policy parameters through consensus mechanisms and miner voting, ensuring the network can respond to changing economic conditions without hard forks."
+      },
+      "buttons": {
+        "readDocs": "Read Documentation",
+        "readProposal": "Read Proposal",
+        "learnMore": "Learn More",
+        "joinGovernance": "Join Governance"
+      },
+      "features": {
+        "title": "Key Features",
+        "subtitle": "Democratic governance of monetary policy through community consensus and miner participation",
+        "parameterTuning": {
+          "title": "Parameter Tuning",
+          "description": "Fine-tune emission parameters based on network conditions"
+        },
+        "economicFlexibility": {
+          "title": "Economic Flexibility", 
+          "description": "Adapt to changing economic conditions and requirements"
+        },
+        "communityInput": {
+          "title": "Community Input",
+          "description": "Stakeholder participation in monetary policy decisions"
+        },
+        "minerVoting": {
+          "title": "Miner Voting",
+          "description": "Miners participate in emission schedule governance"
+        },
+        "gradualChanges": {
+          "title": "Gradual Changes",
+          "description": "Smooth transitions prevent economic shocks"
+        },
+        "consensusDriven": {
+          "title": "Consensus Driven",
+          "description": "Changes require broad community agreement and miner consensus"
+        }
+      },
+      "cta": {
+        "title": "Ready to Participate in Governance?",
+        "subtitle": "Join the community in shaping Ergo's monetary policy",
+        "buttons": {
+          "learnMore": "Learn More",
+          "joinGovernance": "Join Governance"
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "questions": {
+          "0": {
+            "question": "What is Adaptive Emission and how does it work?",
+            "answer": "Adaptive Emission allows the Ergo community to adjust emission parameters through consensus mechanisms and miner voting. This enables flexible monetary policy that can respond to changing economic conditions without requiring hard forks."
+          },
+          "1": {
+            "question": "Who can participate in emission governance?",
+            "answer": "Both miners and the broader Ergo community can participate in emission governance. Miners vote through their mining activities, while community members can participate through forum discussions and governance proposals."
+          },
+          "2": {
+            "question": "What parameters can be adjusted through Adaptive Emission?",
+            "answer": "Adaptive Emission can adjust various monetary policy parameters including emission rates, block rewards, and other economic variables that affect the network's monetary supply and incentive structure."
+          },
+          "3": {
+            "question": "How does this differ from traditional hard forks?",
+            "answer": "Unlike hard forks that require all nodes to upgrade, Adaptive Emission enables parameter changes through consensus mechanisms without breaking network compatibility, making governance more flexible and less disruptive."
+          }
+        },
+        "0": {
+          "question": "What is Adaptive Emission and how does it work?",
+          "answer": "Adaptive Emission allows the Ergo community to adjust emission parameters through consensus mechanisms and miner voting. This enables flexible monetary policy that can respond to changing economic conditions without requiring hard forks."
+        }
+      },
+      "featuresArray": [
         {
           "title": "Parameter Tuning",
           "description": "Fine-tune emission parameters based on network conditions"
@@ -5152,37 +5467,50 @@
       "seo": {
         "title": "Ergo Knowledge Quiz - Test Your Understanding",
         "description": "Test your knowledge about Ergo blockchain, smart contracts, and cryptocurrency concepts with our interactive quiz.",
-        "keywords": "Ergo quiz, blockchain quiz, cryptocurrency test, smart contracts quiz"
+        "keywords": "Ergo quiz, blockchain quiz, cryptocurrency test, smart contracts quiz",
+        "ogTitle": "Ergo Knowledge Quiz - Test Your Understanding",
+        "ogDescription": "Test your knowledge about Ergo blockchain, smart contracts, and cryptocurrency concepts with our interactive quiz.",
+        "ogAlt": "Ergo Knowledge Quiz - Interactive blockchain learning",
+        "twitterTitle": "Ergo Knowledge Quiz - Test Your Understanding",
+        "twitterDescription": "Test your knowledge about Ergo blockchain, smart contracts, and cryptocurrency concepts with our interactive quiz."
       },
-      "progress": "Question {{current}} of {{total}}",
+      "progress": "Question {current} of {total}",
       "resetQuiz": "Reset",
       "previousQuestion": "Previous",
       "nextQuestion": "Next",
       "showResults": "Show Results",
       "profiles": {
         "learner": {
+          "title": "Learner",
+          "description": "Explore Ergo's technology and ecosystem at your own pace",
           "tools": {
             "0": {
+              "category": "Learning Resources",
               "items": {
                 "0": {
                   "name": "Ergo Documentation",
-                  "description": "Comprehensive guides and tutorials"
+                  "description": "Comprehensive guides and tutorials",
+                  "link": "/docs"
                 },
                 "1": {
                   "name": "Ergo Academy",
-                  "description": "Educational resources for beginners"
+                  "description": "Educational resources for beginners",
+                  "link": "/learn"
                 }
               }
             },
             "1": {
+              "category": "Community Support",
               "items": {
                 "0": {
                   "name": "Ergo Forum",
-                  "description": "Community discussions and Q&A"
+                  "description": "Community discussions and Q&A",
+                  "link": "https://www.ergoforum.org/"
                 },
                 "1": {
                   "name": "YouTube Tutorials",
-                  "description": "Video guides and explanations"
+                  "description": "Video guides and explanations",
+                  "link": "https://www.youtube.com/@ErgoPlatform"
                 }
               }
             }
@@ -5221,14 +5549,24 @@
       "seo": {
         "title": "Ergo vs Other Blockchains - Detailed Comparison",
         "description": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
-        "keywords": "Ergo comparison, blockchain comparison, Bitcoin vs Ergo, Ethereum vs Ergo, UTXO vs account model"
+        "keywords": "Ergo comparison, blockchain comparison, Bitcoin vs Ergo, Ethereum vs Ergo, UTXO vs account model",
+        "ogTitle": "Ergo vs Other Blockchains - Detailed Comparison",
+        "ogDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols.",
+        "ogAlt": "Ergo blockchain comparison chart",
+        "twitterTitle": "Ergo vs Other Blockchains - Detailed Comparison", 
+        "twitterDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols."
       }
     },
     "faq": {
       "seo": {
         "title": "Ergo FAQ - Frequently Asked Questions",
         "description": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
-        "keywords": "Ergo FAQ, blockchain questions, cryptocurrency FAQ, smart contracts FAQ, mining FAQ"
+        "keywords": "Ergo FAQ, blockchain questions, cryptocurrency FAQ, smart contracts FAQ, mining FAQ",
+        "ogTitle": "Ergo FAQ - Frequently Asked Questions",
+        "ogDescription": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more.",
+        "ogAlt": "Ergo FAQ - Frequently Asked Questions",
+        "twitterTitle": "Ergo FAQ - Frequently Asked Questions",
+        "twitterDescription": "Find answers to common questions about Ergo blockchain, wallets, mining, smart contracts, and more."
       }
     },
     "community": {
@@ -7173,9 +7511,32 @@
     },
     "stats": {
       "projects": "Active Projects",
+      "activeProjects": "Active Projects",
+      "categories": "Categories",
+      "status": "Live Projects",
       "developers": "Developers",
       "tvl": "Total Value Locked",
       "users": "Active Users"
+    },
+    "filters": {
+      "all": "All",
+      "defi": "DeFi",
+      "infrastructure": "Infrastructure", 
+      "oracles": "Oracles",
+      "privacy": "Privacy",
+      "nft": "NFT",
+      "wallets": "Wallets",
+      "dao": "DAO",
+      "gaming": "Gaming",
+      "tools": "Tools"
+    },
+    "search": {
+      "placeholder": "Search projects...",
+      "resultsCount": "{count} projects"
+    },
+    "featuredProjects": {
+      "title": "Featured Projects",
+      "badge": "FEATURED"
     },
     "featured": {
       "title": "Featured Projects",
@@ -7277,6 +7638,46 @@
       "join_thousands_of_miners_securing": "Join thousands of miners securing the Ergo network. Fair, decentralized, and profitable."
     },
     "map": {
+      "title": "Ergo Ecosystem Map",
+      "subtitle": "Interactive DeFi & dApp Directory",
+      "description": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+      "lastUpdated": "Last updated",
+      "buttons": {
+        "exploreProjects": "Explore Projects",
+        "visitSigmaverse": "Visit Sigmaverse"
+      },
+      "features": {
+        "title": "Ecosystem Features",
+        "subtitle": "Discover what makes Ergo's ecosystem unique",
+        "interactive": {
+          "title": "Interactive Visualization",
+          "description": "Explore projects through an intuitive visual interface"
+        },
+        "comprehensive": {
+          "title": "Comprehensive Coverage",
+          "description": "All active projects and protocols in one place"
+        },
+        "realtime": {
+          "title": "Real-time Updates",
+          "description": "Always up-to-date project information and statistics"
+        }
+      },
+      "cta": {
+        "title": "Ready to Explore?",
+        "subtitle": "Dive into the growing Ergo ecosystem and discover innovative projects",
+        "buttons": {
+          "exploreEcosystem": "Explore Ecosystem",
+          "visitSigmaverse": "Visit Sigmaverse"
+        }
+      },
+      "seo": {
+        "title": "Ergo Ecosystem Map | Interactive DeFi & dApp Directory",
+        "description": "Explore the complete Ergo ecosystem visually. Interactive map of DeFi protocols, NFT platforms, wallets, infrastructure, and developer tools. Discover 50+ active projects.",
+        "ogTitle": "Interactive Ergo Ecosystem Map | 50+ Projects",
+        "ogDescription": "Visual exploration of all Ergo projects. DeFi, NFTs, wallets, infrastructure mapped.",
+        "twitterTitle": "Ergo Ecosystem Map | Visual Project Explorer",
+        "twitterDescription": "Interactive visualization of 50+ Ergo projects. Explore DeFi, NFTs, infrastructure."
+      },
       "jump_to": "Jump to:",
       "filter_by_category": "Filter by category:",
       "spectrum_finance_category_defi_url": "Spectrum Finance\", category: \"DEFI\", url: \"https://spectrum.fi",
@@ -8853,6 +9254,39 @@
         "title": "Ergo Grants Program",
         "subtitle": "Funding for Blockchain Projects",
         "description": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
+        "lastUpdated": "Last updated",
+        "buttons": {
+          "applyNow": "Apply Now",
+          "viewProjects": "View Projects"
+        },
+        "features": {
+          "title": "What We Fund",
+          "subtitle": "Supporting innovation and development in the Ergo ecosystem",
+          "funding": {
+            "title": "Developer Support",
+            "description": "Funding for innovative dApps, tools, and infrastructure projects"
+          },
+          "research": {
+            "title": "Research Funding",
+            "description": "Support for academic research and protocol improvements"
+          },
+          "community": {
+            "title": "Community Projects",
+            "description": "Grants for community-driven initiatives and educational content"
+          },
+          "innovation": {
+            "title": "Innovation Grants",
+            "description": "Special funding for breakthrough ideas and experimental projects"
+          }
+        },
+        "cta": {
+          "title": "Ready to Build on Ergo?",
+          "subtitle": "Start preparing your project proposal and join our community to stay updated",
+          "buttons": {
+            "applyGrant": "Apply for Grant",
+            "joinCommunity": "Join Community"
+          }
+        },
         "seo": {
           "title": "Ergo Grants Program | Funding for Blockchain Projects",
           "description": "Get funding for your Ergo project. Grants for developers, researchers, and community builders. Build DeFi, infrastructure, tools, and applications on Ergo blockchain.",
@@ -8860,30 +9294,6 @@
           "ogDescription": "Apply for grants to build on Ergo. Support for developers, researchers, and community initiatives.",
           "twitterTitle": "Ergo Grants Program | Get Funded",
           "twitterDescription": "Funding for developers building on Ergo. Apply for grants today."
-        },
-        "features": {
-          "developerSupport": {
-            "title": "Developer Support",
-            "description": "Funding for innovative dApps, tools, and infrastructure projects"
-          },
-          "researchFunding": {
-            "title": "Research Funding",
-            "description": "Support for academic research and protocol improvements"
-          },
-          "communityProjects": {
-            "title": "Community Projects",
-            "description": "Grants for community-driven initiatives and educational content"
-          },
-          "innovationGrants": {
-            "title": "Innovation Grants",
-            "description": "Special funding for breakthrough ideas and experimental projects"
-          }
-        },
-        "cta": {
-          "title": "Ready to Build on Ergo?",
-          "description": "Start preparing your project proposal and join our community to stay updated",
-          "joinDiscord": "Join Discord Community",
-          "learnAboutErgo": "Learn About Ergo"
         },
         "whatToExpect": "What to Expect",
         "grantsFeatures": "Grants Program Features",
@@ -8925,6 +9335,242 @@
       "hardware": "Hardware",
       "software": "Software",
       "troubleshooting": "Troubleshooting"
+    },
+    "features": {
+      "ergoscript": {
+        "title": "ErgoScript",
+        "description": "Secure, declarative language for programmable money",
+        "details": {
+          "verification": {
+            "title": "Formal Verification",
+            "description": "Mathematically provable contract behavior"
+          },
+          "privacy": {
+            "title": "Built-in Privacy",
+            "description": "Zero-knowledge proofs and confidential transactions"
+          },
+          "safety": {
+            "title": "Type Safety",
+            "description": "Compile-time guarantees prevent runtime errors"
+          }
+        }
+      },
+      "autolykos": {
+        "title": "Autolykos",
+        "description": "ASIC-resistant Proof-of-Work algorithm",
+        "details": {
+          "efficiency": {
+            "title": "Energy Efficient",
+            "description": "More efficient than traditional PoW algorithms"
+          },
+          "solo": {
+            "title": "Solo Mining Friendly",
+            "description": "Designed for individual miners, not just pools"
+          },
+          "asic": {
+            "title": "ASIC Resistant",
+            "description": "Memory-hard algorithm prevents ASIC dominance"
+          }
+        }
+      },
+      "eutxo": {
+        "title": "Extended UTXO",
+        "description": "Parallel smart contracts with Bitcoin-like security",
+        "details": {
+          "parallel": {
+            "title": "Parallel Execution",
+            "description": "Multiple contracts execute simultaneously without conflicts"
+          },
+          "composability": {
+            "title": "Composability",
+            "description": "Contracts can be combined like Lego blocks"
+          },
+          "security": {
+            "title": "Security",
+            "description": "Eliminates reentrancy attacks and global state issues"
+          }
+        }
+      },
+      "storageRent": {
+        "title": "Storage Rent",
+        "description": "Sustainable blockchain economics",
+        "details": {
+          "sustainable": {
+            "title": "Sustainable Growth",
+            "description": "Prevents unlimited blockchain growth"
+          },
+          "rewards": {
+            "title": "Perpetual Rewards",
+            "description": "Miners earn fees even after emission ends"
+          },
+          "prevention": {
+            "title": "Bloat Prevention",
+            "description": "Automatic cleanup of abandoned funds"
+          }
+        }
+      },
+      "sigmaProtocols": {
+        "title": "Sigma Protocols",
+        "description": "Advanced cryptographic primitives",
+        "details": {
+          "optionalPrivacy": {
+            "title": "Optional Privacy",
+            "description": "Choose between transparent and private transactions"
+          },
+          "advancedSecurity": {
+            "title": "Advanced Security",
+            "description": "Zero-knowledge proofs and threshold signatures"
+          },
+          "developerFriendly": {
+            "title": "Developer Friendly",
+            "description": "Built-in cryptographic tools for dApps"
+          }
+        }
+      },
+      "nipopows": {
+        "title": "NIPoPoWs",
+        "description": "Non-Interactive Proofs of Proof-of-Work",
+        "details": {
+          "instantMobileSync": {
+            "title": "Instant Mobile Sync",
+            "description": "Light clients sync in seconds, not hours"
+          },
+          "trustlessBridges": {
+            "title": "Trustless Bridges",
+            "description": "Cross-chain bridges without trusted third parties"
+          },
+          "cryptographicSecurity": {
+            "title": "Cryptographic Security",
+            "description": "Mathematically proven security guarantees"
+          }
+        }
+      },
+      "subblocks": {
+        "title": "Subblocks",
+        "description": "Sub-second confirmations with L1 security",
+        "details": {
+          "subSecondConfirmations": {
+            "title": "Sub-Second Confirmations",
+            "description": "Payments confirm in milliseconds"
+          },
+          "layer1Security": {
+            "title": "Layer 1 Security",
+            "description": "Same security as the main blockchain"
+          },
+          "seamlessIntegration": {
+            "title": "Seamless Integration",
+            "description": "Works with existing Ergo infrastructure"
+          }
+        }
+      },
+      "nativeTokens": {
+        "title": "Native Tokens",
+        "description": "First-class digital assets",
+        "details": {
+          "oneClickCreation": {
+            "title": "One-Click Creation",
+            "description": "Issue tokens in a single transaction"
+          },
+          "defiReady": {
+            "title": "DeFi Ready",
+            "description": "Native compatibility with all DeFi protocols"
+          },
+          "trueNativeAssets": {
+            "title": "True Native Assets",
+            "description": "Protocol-level security, not contract-based"
+          }
+        }
+      },
+      "oraclePools": {
+        "title": "Oracle Pools",
+        "description": "Decentralized data feeds",
+        "details": {
+          "reliablePriceFeeds": {
+            "title": "Reliable Price Feeds",
+            "description": "Accurate, tamper-proof price data"
+          },
+          "universalCompatibility": {
+            "title": "Universal Compatibility",
+            "description": "Works with any smart contract"
+          },
+          "fullyDecentralized": {
+            "title": "Fully Decentralized",
+            "description": "No single point of failure or control"
+          }
+        }
+      },
+      "velvetForks": {
+        "title": "Velvet Forks",
+        "description": "Smooth protocol upgrades",
+        "details": {
+          "backwardCompatible": {
+            "title": "Backward Compatible",
+            "description": "Existing contracts continue working"
+          },
+          "futureProof": {
+            "title": "Future Proof",
+            "description": "Enables gradual adoption of new features"
+          },
+          "gradualAdoption": {
+            "title": "Gradual Adoption",
+            "description": "Changes activate over time, not instantly"
+          }
+        }
+      },
+      "adaptiveEmission": {
+        "title": "Adaptive Emission",
+        "description": "Flexible monetary policy",
+        "details": {
+          "parameterTuning": {
+            "title": "Parameter Tuning",
+            "description": "Community can adjust emission parameters"
+          },
+          "economicFlexibility": {
+            "title": "Economic Flexibility",
+            "description": "Respond to changing economic conditions"
+          },
+          "communityInput": {
+            "title": "Community Input",
+            "description": "Democratic governance of monetary policy"
+          }
+        }
+      }
+    },
+    "map": {
+      "title": "Technology Architecture Map",
+      "subtitle": "Interactive visualization of how Ergo's technologies work together",
+      "seo": {
+        "title": "Ergo Technology Map | Interactive Blockchain Architecture Visualization",
+        "description": "Explore Ergo's technology ecosystem through an interactive map. See how ErgoScript, Autolykos, eUTXO, Sigma Protocols, and other components connect to create a powerful blockchain platform.",
+        "keywords": "ergo technology map, blockchain architecture, interactive visualization, ergoscript connections, technology ecosystem, blockchain components",
+        "ogTitle": "Ergo Technology Map - Interactive Architecture Overview",
+        "ogDescription": "Visualize how Ergo's advanced technologies connect and interact in our comprehensive technology map.",
+        "ogAlt": "Ergo Technology Architecture Map",
+        "twitterTitle": "Explore Ergo's Technology Map",
+        "twitterDescription": "Interactive visualization of Ergo's blockchain architecture and component connections."
+      },
+      "categories": {
+        "all": "All Technologies",
+        "core": "Core Technologies",
+        "consensus": "Consensus",
+        "features": "Features",
+        "infrastructure": "Infrastructure"
+      },
+      "legend": {
+        "title": "Legend",
+        "core": "Core Technologies",
+        "consensus": "Consensus Mechanism",
+        "features": "Advanced Features",
+        "infrastructure": "Infrastructure Layer",
+        "directConnection": "Direct Integration",
+        "relation": "Related Technology"
+      },
+      "details": {
+        "keyFeatures": "Key Features",
+        "connections": "Connected Technologies",
+        "learnMore": "Learn More",
+        "close": "Close"
+      }
     }
   },
   "validation": {
@@ -8957,6 +9603,7 @@
   "newsletter": {
     "title": "Stay Updated",
     "subtitle": "Get the latest Ergo news and updates",
+    "emailLabel": "Email Address",
     "emailPlaceholder": "Enter your email address",
     "subscribe": "Subscribe",
     "interests": "Interests (optional)",
@@ -10452,33 +11099,33 @@
         "title": "Foundations of Ergo and ErgoScript",
         "number": 1,
         "totalDuration": "185 min",
-        "lessons": [
-          {
+        "lessons": {
+          "0": {
             "title": "Introduction to Ergo & the eUTXO Model",
             "duration": "20 min",
             "level": "Beginner"
           },
-          {
+          "1": {
             "title": "What is ErgoScript? Philosophy and Design Goals",
             "duration": "15 min",
             "level": "Beginner"
           },
-          {
+          "2": {
             "title": "Setting Up Your ErgoScript Development Environment",
             "duration": "30 min",
             "level": "Beginner"
           },
-          {
+          "3": {
             "title": "Basic Syntax, Data Types, Operators",
             "duration": "40 min",
             "level": "Beginner"
           },
-          {
+          "4": {
             "title": "Boxes, Registers, Context Variables",
             "duration": "45 min",
             "level": "Beginner"
           }
-        ]
+        }
       }
     }
   },
