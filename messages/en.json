@@ -8147,7 +8147,10 @@
         "ecosystem": "Ecosystem",
         "wallets": "Wallets",
         "troubleshooting": "Troubleshooting"
-      }
+      },
+      "searchPlaceholder": "Search FAQ...",
+      "expandAll": "Expand All",
+      "collapseAll": "Collapse All"
     },
     "research": {
       "research_by_category": "Research by Category",
