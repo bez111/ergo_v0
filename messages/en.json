@@ -8138,6 +8138,17 @@
       "description": "Learn about Ergo blockchain technology, smart contracts, and development.",
       "keywords": "Ergo education, blockchain learning, tutorials, documentation"
     },
+    "faq": {
+      "categories": {
+        "title": "Categories",
+        "general": "General",
+        "technology": "Technology",
+        "economics": "Economics",
+        "ecosystem": "Ecosystem",
+        "wallets": "Wallets",
+        "troubleshooting": "Troubleshooting"
+      }
+    },
     "research": {
       "research_by_category": "Research by Category",
       "join_the_discussion": "Join the Discussion",
