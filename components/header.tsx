@@ -11,6 +11,7 @@ import { useTranslations } from "next-intl"
 import { mainNavItems } from "@/lib/navigation-data"
 import DocsSearchModal from "./DocsSearchModal";
 import LanguageSwitcher from "./language-switcher";
+import { CyberButton } from "@/components/animations/cyber-button"
 
 export function Header() {
   const t = useTranslations("navigation")
@@ -80,15 +81,15 @@ export function Header() {
               <Search className="h-5 w-5" />
             </Button>
 
-            <Link href="/wallet">
-              <Button
-                variant="outline"
-                className="hidden md:flex gap-2 bg-transparent border border-primary/50 text-primary hover:bg-primary/10 hover:text-primary font-mono uppercase tracking-wider"
-              >
+            <CyberButton
+              className="hidden md:flex gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-6 py-3"
+              asChild
+            >
+              <Link href="/wallet" className="inline-flex items-center gap-2">
                 <Wallet className="h-4 w-4" />
                 <span>{t("getWallet") || "Get Wallet"}</span>
-              </Button>
-            </Link>
+              </Link>
+            </CyberButton>
 
             <LanguageSwitcher />
             

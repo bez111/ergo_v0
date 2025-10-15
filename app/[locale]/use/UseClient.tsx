@@ -1,15 +1,17 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight } from "lucide-react"
+import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight, ChevronDown, ExternalLink } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { useMemo } from "react"
+import { useMemo, useState, useEffect } from "react"
 import { useCases as data } from "./_data"
 import { useTranslations } from "next-intl"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import Script from "next/script"
 
 const iconNode = {
   coins: <Coins className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />,
@@ -27,10 +29,132 @@ function isComingSoon(uc: { supportedProjects: string[] }) {
   return !uc.supportedProjects || uc.supportedProjects.length === 0
 }
 
+// FAQ data
+const faqs = [
+  {
+    id: "defi-on-ergo",
+    q: "What makes DeFi on Ergo different?",
+    a: "Ergo's eUTXO model provides superior security and composability for DeFi. Smart contracts are more predictable, costs are deterministic, and parallel transaction processing enables better scalability. Plus, optional privacy features protect your financial data."
+  },
+  {
+    id: "start-using-ergo",
+    q: "How do I start using Ergo applications?",
+    a: (
+      <>
+        1. Get an Ergo wallet like Nautilus or SAFEW<br />
+        2. Acquire ERG tokens from exchanges<br />
+        3. Explore dApps in our ecosystem<br />
+        4. Join the community on Discord or Telegram for help
+      </>
+    )
+  },
+  {
+    id: "ergo-vs-ethereum",
+    q: "How does Ergo compare to Ethereum for dApps?",
+    a: "Ergo uses the eUTXO model (vs Ethereum's account model), offering better security, parallel processing, and predictable costs. ErgoScript is more secure by design with formal verification capabilities. Native tokens don't require smart contracts, making them cheaper and safer."
+  },
+  {
+    id: "privacy-features",
+    q: "Are Ergo's privacy features legal to use?",
+    a: "Ergo provides optional privacy features through Sigma protocols. Users should check their local regulations. Privacy is implemented at the protocol level for legitimate uses like business confidentiality, personal financial privacy, and compliance with data protection laws."
+  },
+  {
+    id: "mining-profitable",
+    q: "Is mining ERG still profitable?",
+    a: "Mining profitability depends on your electricity costs, hardware efficiency, and ERG price. Ergo's ASIC-resistant Autolykos algorithm keeps mining accessible to GPUs. Use mining calculators to estimate your potential returns based on current network difficulty."
+  },
+  {
+    id: "developer-resources",
+    q: "What resources are available for developers?",
+    a: (
+      <>
+        Ergo provides comprehensive developer resources:<br />
+        • ErgoScript documentation and tutorials<br />
+        • SDKs for multiple languages (Scala, JS, Python)<br />
+        • AppKit for dApp development<br />
+        • Active developer community and support<br />
+        • Grants program for ecosystem projects
+      </>
+    )
+  }
+]
+
 export default function UseClient() {
   const t = useTranslations('use')
   const localizedPath = useLocalizedPath()
   const useCases = useMemo(() => data, [])
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+
+  // FAQ Section Component
+  function FAQSection() {
+    // Helper to convert React nodes to plain text for JSON-LD
+    function nodeToPlainText(node: React.ReactNode): string {
+      if (node == null || node === false) return ""
+      if (typeof node === "string" || typeof node === "number") return String(node)
+      if (Array.isArray(node)) return node.map(nodeToPlainText).join(" ")
+      if (typeof node === "object" && "props" in (node as any)) {
+        const { children } = (node as any).props ?? {}
+        return nodeToPlainText(children)
+      }
+      return ""
+    }
+
+    const faqJsonLd = useMemo(() => {
+      const items = faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: typeof f.a === "string" ? f.a : nodeToPlainText(f.a) },
+      }))
+      return { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: items }
+    }, [])
+
+    return (
+      <section aria-labelledby="faq-heading" className="max-w-5xl mx-auto py-16 px-4">
+        <Script id="use-faq-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+        <h2 id="faq-heading" className="text-4xl font-bold text-center mb-8 text-white">
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          {faqs.map((faq, index) => (
+            <Card key={faq.id} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+              <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
+                <CollapsibleTrigger asChild>
+                  <button className="w-full">
+                    <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
+                      <h3 className="text-lg font-semibold text-left text-white">{faq.q}</h3>
+                      <ChevronDown 
+                        aria-hidden="true" 
+                        className={`w-5 h-5 text-neutral-400 transition-transform ${
+                          openFAQ === index ? "rotate-180" : ""
+                        }`} 
+                      />
+                    </CardContent>
+                  </button>
+                </CollapsibleTrigger>
+                <CollapsibleContent>
+                  <CardContent className="px-6 pb-6 pt-0">
+                    <div className="text-neutral-300 leading-relaxed [&>a]:text-orange-400 [&>a]:underline [&>a]:hover:text-orange-300 [&>b]:text-white [&>br]:mb-2">
+                      {faq.a}
+                    </div>
+                  </CardContent>
+                </CollapsibleContent>
+              </Collapsible>
+            </Card>
+          ))}
+        </div>
+        <div className="mt-8 pt-6 border-t border-neutral-800">
+          <div className="flex justify-end">
+            <Button asChild variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 transition-all duration-200">
+              <Link href="/docs">
+                Explore Documentation <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+    )
+  }
+
   return (
     <div className="min-h-screen relative pb-24">
       {/* Hero Section */}
@@ -100,9 +224,9 @@ export default function UseClient() {
                   </div>
                   <p className="text-neutral-400 font-medium mb-1">{uc.subtitle}</p>
                   <p className="text-neutral-300 text-base mb-5">{uc.description}</p>
-                                      <Button asChild className="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-orange-500/50 bg-neutral-900/50 text-neutral-200 transition-all hover:border-orange-500 hover:text-orange-400 hover:bg-neutral-900/60 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black">
-                    <Link href={`/use/${uc.id}`} className="flex items-center gap-2" aria-label={`Explore: ${uc.title}`}>
-                      {t('buttons.exploreUseCase')}: {uc.title} <ArrowRight className="w-5 h-5" aria-hidden="true" focusable="false" />
+                                      <Button asChild className="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-neutral-700 bg-neutral-900/50 text-neutral-200 transition-all hover:border-orange-500/50 hover:text-orange-400 hover:bg-orange-500/10 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black">
+                    <Link href={`/use/${uc.id}`} className="flex items-center gap-2" aria-label={`Explore ${uc.title}`}>
+                      Explore <ArrowRight className="w-4 h-4" aria-hidden="true" focusable="false" />
                     </Link>
                   </Button>
                 </CardContent>
@@ -111,6 +235,52 @@ export default function UseClient() {
           ))}
         </motion.div>
       </div>
+
+      {/* FAQ Section */}
+      <FAQSection />
+
+      {/* Conclusion CTA */}
+      <section className="py-16 px-4">
+        <div className="max-w-5xl mx-auto">
+          <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+            <CardContent className="text-center py-12 px-8">
+              <h3 className="text-4xl font-bold mb-6 text-white">
+                Ready to Start Using Ergo?
+              </h3>
+              <p className="text-xl text-neutral-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                Whether you're looking to explore DeFi, create NFTs, build private applications, or start mining, 
+                Ergo provides the tools and infrastructure you need.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                  <Link href="/ecosystem">
+                    Explore Ecosystem
+                    <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl">
+                  <Link href="/start">
+                    Get Started Guide
+                  </Link>
+                </Button>
+              </div>
+              <div className="mt-8 pt-8 border-t border-neutral-800">
+                <p className="text-sm text-neutral-400">
+                  Join our community on{" "}
+                  <a href="https://discord.gg/ergo" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">
+                    Discord
+                  </a>
+                  {" "}or{" "}
+                  <a href="https://t.me/ergoplatform" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">
+                    Telegram
+                  </a>
+                  {" "}for support and updates.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
     </div>
   )
 } 

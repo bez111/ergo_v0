@@ -14,8 +14,6 @@ import {
   Clock,
   AlertCircle,
   ExternalLink,
-  Filter,
-  Zap,
   LayoutGrid,
   List,
   ChevronLeft,
@@ -29,7 +27,6 @@ import {
   Banknote,
   Building2,
   Eye,
-  Activity,
   Rocket,
   Store,
   Gem,
@@ -50,8 +47,10 @@ import {
   Database,
   CreditCard,
   Home,
+  Layers,
+  Activity,
 } from "lucide-react"
-import { EcosystemProject, projects as rawProjects, featuredProjects as rawFeatured, categoryOrder, statusOrder, categoryNameOrder, sortProjectsForListing } from "./_data"
+import { projects as rawProjects, featuredProjects as rawFeatured, categoryOrder, statusOrder, sortProjectsForListing } from "./_data"
 
 const projectIcons = {
   "Spectrum Finance": ArrowRightLeft,
@@ -145,21 +144,68 @@ export default function EcosystemClient() {
 
       <div className="relative z-10">
         {/* Hero */}
-        <motion.section variants={itemVariants} initial="hidden" animate="visible" className="pt-32 pb-16 px-4 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6">
-{t("title")}
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut" }}
+          className="pt-28 pb-10 px-4 text-center"
+        >
+          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+            {t("title")}
           </h1>
-          <p className="text-lg md:text-xl text-neutral-300 max-w-3xl mx-auto mb-8">
+          <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-3xl mx-auto">
             {t("subtitle")}
           </p>
-          <div className="flex items-center justify-center gap-2 text-sm text-neutral-400">
-            <span className="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
-            <span>{t("stats.activeProjects")}</span>
-            <span className="w-1 h-1 bg-neutral-600 rounded-full"></span>
-            <span>{t("stats.categories")}</span>
-            <span className="w-1 h-1 bg-neutral-600 rounded-full"></span>
-            <span>{t("stats.status")}</span>
-          </div>
+          {/* Stats Pills */}
+          <motion.div 
+            className="flex flex-wrap items-center justify-center gap-3 mb-8"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <motion.div 
+              className="group flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-neutral-900/80 to-neutral-900/60 border border-neutral-800 rounded-2xl backdrop-blur-sm hover:from-neutral-900/90 hover:to-neutral-900/70 transition-all duration-300"
+              whileHover={{ scale: 1.05, borderColor: "rgb(251 146 60 / 0.3)" }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            >
+              <div className="p-2 bg-orange-500/20 rounded-lg">
+                <Activity className="w-4 h-4 text-orange-400" />
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-bold text-white">{projects.length}</span>
+                <span className="text-sm text-neutral-400">{t("stats.activeProjects")}</span>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="group flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-neutral-900/80 to-neutral-900/60 border border-neutral-800 rounded-2xl backdrop-blur-sm hover:from-neutral-900/90 hover:to-neutral-900/70 transition-all duration-300"
+              whileHover={{ scale: 1.05, borderColor: "rgb(251 146 60 / 0.3)" }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            >
+              <div className="p-2 bg-orange-500/20 rounded-lg">
+                <Layers className="w-4 h-4 text-orange-400" />
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-2xl font-bold text-white">{categoryOrder.length}</span>
+                <span className="text-sm text-neutral-400">{t("stats.categories")}</span>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="group flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-neutral-900/80 to-neutral-900/60 border border-neutral-800 rounded-2xl backdrop-blur-sm hover:from-neutral-900/90 hover:to-neutral-900/70 transition-all duration-300"
+              whileHover={{ scale: 1.05, borderColor: "rgb(251 146 60 / 0.3)" }}
+              transition={{ type: "spring", stiffness: 400, damping: 30 }}
+            >
+              <div className="relative p-2 bg-green-500/20 rounded-lg">
+                <div className="absolute inset-0 bg-green-500/20 rounded-lg animate-ping"></div>
+                <CheckCircle className="w-4 h-4 text-green-400 relative z-10" />
+              </div>
+              <div className="flex items-baseline gap-2">
+                <span className="text-sm font-semibold text-green-400 uppercase tracking-wider">Live</span>
+                <span className="text-sm text-neutral-400">{t("stats.status")}</span>
+              </div>
+            </motion.div>
+          </motion.div>
         </motion.section>
 
         {/* Featured */}
