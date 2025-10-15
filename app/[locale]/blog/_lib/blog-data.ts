@@ -35,7 +35,7 @@ export const authors: Record<string, Author> = {
     id: 'ergo-team',
     name: 'Ergo Team',
     bio: 'Core developers and contributors building the Ergo Platform',
-    avatar: '/assets/img/authors/ergo-team.jpg',
+    avatar: '', // Will show initials
     role: 'Core Team',
     twitter: 'ergoplatform',
     github: 'ergoplatform'
@@ -44,7 +44,7 @@ export const authors: Record<string, Author> = {
     id: 'technical-team',
     name: 'Technical Team',
     bio: 'Blockchain architects and cryptography experts',
-    avatar: '/assets/img/authors/technical-team.jpg',
+    avatar: '', // Will show initials
     role: 'Technical Lead',
     twitter: 'ergoplatform'
   },
@@ -52,28 +52,28 @@ export const authors: Record<string, Author> = {
     id: 'dev-relations',
     name: 'Developer Relations',
     bio: 'Helping developers build on Ergo',
-    avatar: '/assets/img/authors/dev-relations.jpg',
+    avatar: '', // Will show initials
     role: 'Developer Advocate'
   },
   'mining-community': {
     id: 'mining-community',
     name: 'Mining Community',
     bio: 'Ergo miners and pool operators sharing knowledge',
-    avatar: '/assets/img/authors/mining-community.jpg',
+    avatar: '', // Will show initials
     role: 'Community Contributor'
   },
   'privacy-team': {
     id: 'privacy-team',
     name: 'Privacy Team',
     bio: 'Privacy and cryptography specialists',
-    avatar: '/assets/img/authors/privacy-team.jpg',
+    avatar: '', // Will show initials
     role: 'Privacy Expert'
   },
   'ecosystem-team': {
     id: 'ecosystem-team',
     name: 'Ecosystem Team',
     bio: 'Growing the Ergo ecosystem and partnerships',
-    avatar: '/assets/img/authors/ecosystem-team.jpg',
+    avatar: '', // Will show initials
     role: 'Ecosystem Lead'
   }
 }
@@ -90,7 +90,7 @@ export const blogPosts: BlogPost[] = [
     category: 'DeFi',
     readTime: 8,
     wordCount: 1600,
-    image: '/assets/img/blog/defi-revolution.jpg',
+    image: '',
     tags: ['DeFi', 'Smart Contracts', 'ErgoScript'],
     featured: true,
     trending: true,
@@ -109,7 +109,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Technology',
     readTime: 12,
     wordCount: 2400,
-    image: '/assets/img/blog/eutxo-guide.jpg',
+    image: '',
     tags: ['eUTXO', 'Technology', 'Blockchain'],
     trending: true,
     difficulty: 'Advanced',
@@ -126,7 +126,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Development',
     readTime: 10,
     wordCount: 2000,
-    image: '/assets/img/blog/ergoscript-contracts.jpg',
+    image: '',
     tags: ['ErgoScript', 'Development', 'Smart Contracts'],
     trending: true,
     difficulty: 'Intermediate',
@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Mining',
     readTime: 15,
     wordCount: 3000,
-    image: '/assets/img/blog/mining-guide.jpg',
+    image: '',
     tags: ['Mining', 'Hardware', 'Community'],
     difficulty: 'Beginner',
     views: 4100,
@@ -160,7 +160,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Privacy',
     readTime: 9,
     wordCount: 1800,
-    image: '/assets/img/blog/privacy-features.jpg',
+    image: '',
     tags: ['Privacy', 'Sigma Protocols', 'Security'],
     difficulty: 'Intermediate',
     views: 1900,
@@ -176,7 +176,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Ecosystem',
     readTime: 7,
     wordCount: 1400,
-    image: '/assets/img/blog/ecosystem-update.jpg',
+    image: '',
     tags: ['Ecosystem', 'Updates', 'dApps'],
     difficulty: 'Beginner',
     views: 1600,

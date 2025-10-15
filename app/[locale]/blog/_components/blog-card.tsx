@@ -17,22 +17,34 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
       itemType="https://schema.org/BlogPosting"
     >
       {/* ✅ ИЗМЕНЕНИЕ: Изображение с фиксированными размерами для предотвращения CLS */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden">
+      <div className="relative w-full aspect-[16/9] overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900">
         <Link 
           href={`/blog/${post.slug}`} 
           className="block w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
         >
-          <Image
-            src={post.image || '/placeholder.svg'}
-            alt={post.title}  // ✅ Содержательный ALT для контентных изображений
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover"
-            priority={featured}
-            fetchPriority={featured ? "high" : "auto"}
-            decoding="async"
-
-          />
+          {post.image ? (
+            <Image
+              src={post.image}
+              alt={post.title}  // ✅ Содержательный ALT для контентных изображений
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover"
+              priority={featured}
+              fetchPriority={featured ? "high" : "auto"}
+              decoding="async"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <div className="text-center">
+                <div className="text-6xl font-bold text-neutral-700 mb-2">
+                  {post.category?.charAt(0) || 'B'}
+                </div>
+                <div className="text-xs text-neutral-600 uppercase tracking-wide">
+                  {post.category || 'Blog'}
+                </div>
+              </div>
+            </div>
+          )}
         </Link>
         
         {/* ✅ КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Категория как отдельная ссылка, НЕ вложенная */}

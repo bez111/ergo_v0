@@ -40,10 +40,16 @@ ${blogPosts
       <guid isPermaLink="true">${postUrl}</guid>
       <description><![CDATA[${post.excerpt}]]></description>
       <pubDate>${pubDate}</pubDate>
-      <dc:creator><![CDATA[${post.author}]]></dc:creator>
+      <dc:creator><![CDATA[${post.author.name}]]></dc:creator>
       <category><![CDATA[${post.category}]]></category>
       ${post.tags?.map(tag => `<category><![CDATA[${tag}]]></category>`).join('\n      ') || ''}
       ${post.image ? `<enclosure url="${baseUrl}${post.image}" type="image/jpeg"/>` : ''}
+      <content:encoded><![CDATA[
+        <p>${post.excerpt}</p>
+        <p>By ${post.author.name}${post.author.role ? ` - ${post.author.role}` : ''}</p>
+        <p><a href="${postUrl}">Read full article →</a></p>
+      ]]></content:encoded>
+      <author>${post.author.name}</author>
     </item>`
   }).join('\n')}
   </channel>
