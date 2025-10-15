@@ -47,11 +47,6 @@ export const mainNavItems = [
         description: "Learn how to buy, exchange, or earn ERG (markets, P2P, exchanges, guides).",
       },
       {
-        title: "How-to Guides",
-        href: "/use/guides",
-        description: "Step-by-step tutorials for wallets, using dApps, transfers, 2FA setup, and more.",
-      },
-      {
         title: "Mine ERG",
         href: "/use/mining",
         description: "Learn how to start mining, find mining pools, requirements, and beginner tips.",

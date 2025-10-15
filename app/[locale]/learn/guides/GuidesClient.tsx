@@ -1,83 +1,101 @@
 "use client"
 
-import { BookOpen, Info, Code2, Scale, History, Sparkles } from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
+import { useState, useMemo } from "react"
+import { motion } from "framer-motion"
+import { GuidesFilters } from "@/components/guides/guides-filters"
+import { GuideCard } from "@/components/guides/guide-card"
+import { guidesData, categories } from "@/lib/guides-data"
+import { Button } from "@/components/ui/button"
+import { BookOpen } from "lucide-react"
 import { useTranslations } from "next-intl"
 
-// guides moved to component
-
 export default function GuidesClient() {
-  const [selectedCategory, setSelectedCategory] = useState("All")
-  const t = useTranslations('learn.guides')
-  
-  const guides = [
-    {
-      title: t('items.0.title'),
-      description: t('items.0.description'),
-      icon: <Scale className="w-10 h-10 text-blue-500" />,
-      href: "/learn/guides/eutxo",
-    },
-    {
-      title: t('items.1.title'),
-      description: t('items.1.description'),
-      icon: <Code2 className="w-10 h-10 text-green-500" />,
-      href: "/learn/guides/ergoscript",
-    },
-    {
-      title: t('items.2.title'),
-      description: t('items.2.description'),
-      icon: <Info className="w-10 h-10 text-orange-500" />,
-      href: "/learn/guides/oracle-pool",
-    },
-    {
-      title: t('items.3.title'),
-      description: t('items.3.description'),
-      icon: <Scale className="w-10 h-10 text-purple-500" />,
-      href: "/learn/guides/fees",
-    },
-    {
-      title: t('items.4.title'),
-      description: t('items.4.description'),
-      icon: <Sparkles className="w-10 h-10 text-yellow-500" />,
-      href: "/learn/guides/ergo-vs-cardano",
-    },
-    {
-      title: t('items.5.title'),
-      description: t('items.5.description'),
-      icon: <BookOpen className="w-10 h-10 text-pink-500" />,
-      href: "/learn/guides/glossary",
-    },
-    {
-      title: t('items.6.title'),
-      description: t('items.6.description'),
-      icon: <History className="w-10 h-10 text-gray-500" />,
-      href: "/learn/guides/history",
-    },
-  ]
+  const t = useTranslations('use.guides')
+  const [searchQuery, setSearchQuery] = useState("")
+  const [selectedCategory, setSelectedCategory] = useState("")
+
+  const filteredGuides = useMemo(() => {
+    return guidesData.filter((guide) => {
+      const matchesSearch =
+        searchQuery === "" ||
+        guide.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        guide.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        guide.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()))
+
+      const matchesCategory = selectedCategory === "" || guide.category === selectedCategory
+
+      return matchesSearch && matchesCategory
+    })
+  }, [searchQuery, selectedCategory])
+
+  const clearFilters = () => {
+    setSearchQuery("")
+    setSelectedCategory("")
+  }
 
   return (
-    <div className="min-h-screen bg-black text-white py-20 px-4">
-      <div className="max-w-5xl mx-auto">
-        <div className="text-center mb-12">
-          <BookOpen className="w-20 h-20 mx-auto text-blue-400 mb-4" />
-          <h1 className="text-5xl font-bold mb-4">{t('title')}</h1>
-          <p className="text-xl text-gray-400">
-            {t('description')}
-          </p>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {guides.map((guide) => (
-            <Link key={guide.title} href={guide.href} className="bg-zinc-900 rounded-xl p-6 flex flex-col items-center hover:bg-zinc-800 transition">
-              {guide.icon}
-              <h2 className="text-2xl font-semibold mt-4 mb-2 text-center">{guide.title}</h2>
-              <p className="text-gray-400 text-center">{guide.description}</p>
-            </Link>
-          ))}
-        </div>
-        <div className="mt-16 text-center">
-          <p className="text-lg text-gray-400 mb-2">{t('cta.suggest')}</p>
-          <a href="https://github.com/ergoplatform/ergowebsite" target="_blank" rel="noopener noreferrer" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition">{t('cta.contribute')}</a>
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      <div className="relative z-10">
+        <div className="max-w-7xl mx-auto px-4 py-8">
+          {/* Hero */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="pt-28 pb-10 px-4"
+          >
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">{t('title')}</h1>
+              <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-3xl mx-auto">
+                {t('subtitle')}
+              </p>
+            </div>
+          </motion.section>
+
+          {/* Filters & Search */}
+          <GuidesFilters
+            searchQuery={searchQuery}
+            setSearchQuery={setSearchQuery}
+            selectedCategory={selectedCategory}
+            setSelectedCategory={setSelectedCategory}
+          />
+
+          {/* Header Card (like blog) */}
+          <div className="mb-8 bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 backdrop-blur-sm">
+            <div className="flex items-center gap-3">
+              <BookOpen className="w-6 h-6 text-orange-400" />
+              <h2 className="text-2xl font-bold text-white">
+                {selectedCategory
+                  ? t('filters.categoryGuides', { category: categories.find((cat) => cat.id === selectedCategory)?.name })
+                  : t('filters.allGuides')}
+              </h2>
+              <span className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-sm font-semibold">
+                {filteredGuides.length}
+              </span>
+            </div>
+          </div>
+
+          {/* Guides Grid */}
+          <section className="mb-16">
+            {filteredGuides.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {filteredGuides.map((guide, index) => (
+                  <div key={guide.id}>
+                    <GuideCard guide={guide} index={index} />
+                  </div>
+                ))}
+              </div>
+            ) : (
+              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center py-16">
+                <div className="text-6xl mb-4">🔍</div>
+                <h3 className="text-2xl font-bold text-white mb-2">{t('filters.noGuides.title')}</h3>
+                <p className="text-white/70 mb-6">{t('filters.noGuides.description')}</p>
+                <Button onClick={clearFilters} variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
+                  {t('filters.noGuides.clearFilters')}
+                </Button>
+              </motion.div>
+            )}
+          </section>
         </div>
       </div>
     </div>

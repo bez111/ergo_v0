@@ -1,78 +1,85 @@
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Search, Home, ArrowLeft, ExternalLink } from "lucide-react"
+import { CyberButton } from "@/components/animations/cyber-button"
 
 export default function NotFound() {
   const popularPages = [
     { title: "Technology", href: "/technology", description: "Core technical concepts" },
     { title: "Ecosystem", href: "/ecosystem", description: "Projects and applications" },
     { title: "Get Started", href: "/start", description: "Begin your Ergo journey" },
+    { title: "Build", href: "/build", description: "Developer resources" },
     { title: "Use Cases", href: "/use", description: "What you can build" },
     { title: "Blog", href: "/blog", description: "Latest updates and insights" },
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-black text-white">
-      <div className="container mx-auto px-4 py-16">
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" />
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute top-3/4 right-1/4 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl animate-pulse" style={{ animationDelay: "2s" }} />
+      
+      <div className="relative z-10 container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
           {/* 404 Header */}
           <div className="mb-12">
-            <h1 className="text-8xl md:text-9xl font-bold bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent mb-6">
-              404
+            <h1 className="text-8xl md:text-9xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-orange-500 via-orange-400 to-white bg-clip-text text-transparent">
+                404
+              </span>
             </h1>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
               Page Not Found
             </h2>
-            <p className="text-xl text-gray-400 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto leading-relaxed">
               The page you're looking for doesn't exist. Let's help you find what you need.
             </p>
           </div>
 
           {/* Search Section */}
-          <Card className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl mb-12">
+          <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm mb-12 hover:border-orange-500/30 transition-colors">
             <CardContent className="p-8">
               <div className="flex items-center gap-4 mb-6">
                 <Search className="w-6 h-6 text-orange-400" />
-                <h3 className="text-xl font-semibold">Search Ergo Platform</h3>
+                <h3 className="text-xl font-semibold text-white">Search Ergo Platform</h3>
               </div>
               <div className="flex gap-4 max-w-md mx-auto">
                 <input
                   type="text"
                   placeholder="Search for topics, guides, or features..."
-                  className="flex-1 px-4 py-3 bg-black/50 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-orange-500"
+                  className="flex-1 px-4 py-3 bg-black/50 border border-neutral-700 rounded-lg text-white placeholder-neutral-400 focus:outline-none focus:border-orange-500 focus:ring-2 focus:ring-orange-500/20"
                 />
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700">
+                <CyberButton className="bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3">
                   Search
-                </Button>
+                </CyberButton>
               </div>
             </CardContent>
           </Card>
 
           {/* Popular Pages */}
           <div className="mb-12">
-            <h3 className="text-2xl font-bold mb-8">Popular Pages</h3>
+            <h3 className="text-2xl font-bold mb-8 text-white">Popular Pages</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {popularPages.map((page) => (
                 <Card
                   key={page.href}
-                  className="bg-gradient-to-br from-gray-900/80 to-gray-800/80 border-gray-700/50 backdrop-blur-xl hover:border-orange-500/50 transition-all duration-300 group"
+                  className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 group hover:-translate-y-1"
                 >
                   <CardContent className="p-6">
-                    <h4 className="text-lg font-semibold mb-2 group-hover:text-orange-400 transition-colors">
+                    <h4 className="text-lg font-semibold mb-2 text-white group-hover:text-orange-400 transition-colors">
                       {page.title}
                     </h4>
-                    <p className="text-gray-400 text-sm mb-4">{page.description}</p>
-                    <Link href={page.href}>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="w-full border-gray-600 hover:border-orange-500 hover:bg-orange-500/10"
-                      >
+                    <p className="text-neutral-400 text-sm mb-4">{page.description}</p>
+                    <CyberButton
+                      className="w-full gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-6 py-3"
+                      asChild
+                    >
+                      <Link href={page.href} className="inline-flex items-center gap-2">
                         Visit Page
-                        <ExternalLink className="w-4 h-4 ml-2" />
-                      </Button>
-                    </Link>
+                        <ExternalLink className="w-4 h-4" />
+                      </Link>
+                    </CyberButton>
                   </CardContent>
                 </Card>
               ))}
@@ -81,25 +88,27 @@ export default function NotFound() {
 
           {/* Action Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
+            <CyberButton
+              className="gap-2 bg-orange-500 text-white hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 px-6 py-3"
               asChild
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl"
             >
-              <Link href="/" className="flex items-center">
-                <Home className="w-4 h-4 mr-2" />
-                Go Home
+              <Link href="/" className="inline-flex items-center gap-2">
+                <span>&gt;</span>
+                <Home className="w-4 h-4" />
+                <span>Go Home</span>
+                <span className="animate-pulse">_</span>
               </Link>
-            </Button>
-            <Button
+            </CyberButton>
+            
+            <CyberButton
+              className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-6 py-3"
               asChild
-              variant="outline"
-              className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
             >
-              <Link href="/technology" className="flex items-center">
-                <ArrowLeft className="w-4 h-4 mr-2" />
+              <Link href="/technology" className="inline-flex items-center gap-2">
+                <ArrowLeft className="w-4 h-4" />
                 Explore Technology
               </Link>
-            </Button>
+            </CyberButton>
           </div>
         </div>
       </div>

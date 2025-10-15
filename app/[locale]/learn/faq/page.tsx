@@ -19,7 +19,7 @@ export function generateMetadata(): Metadata {
   const title = "Ergo Knowledge Base — FAQ about Tech, Economics, Ecosystem"
   const description =
     "Comprehensive answers about Ergo: eUTXO, ErgoScript, privacy, tokenomics, wallets, mining and more."
-  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE
+  const twitterHandle = process.env['NEXT_PUBLIC_TWITTER_HANDLE']
   return {
     title,
     description,
@@ -76,7 +76,7 @@ export default function LearnFAQPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-12">
         <header className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold mb-3">ERGO KNOWLEDGE BASE</h1>
           <p className="text-lg md:text-xl text-neutral-400 max-w-3xl">Answers about Ergo’s technology, economics and ecosystem.</p>
@@ -86,7 +86,7 @@ export default function LearnFAQPage() {
         <FAQClient rootId="faq-root" />
 
         {/* Full SSR list with anchors and categories ToC */}
-        <FAQListServer data={faqData} rootId="faq-root" />
+        <FAQListServer data={faqData} rootId="faq-root" locale="en" />
 
         {/* No-JS fallback to ensure content is present if JS disabled */}
         <noscript>
