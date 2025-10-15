@@ -111,6 +111,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'velvet-forks',
     'adaptive-emission',
     'subblocks',
+    'map', // Interactive technology map
   ].map(slug => ({
     url: `${baseUrl}/technology/${slug}`,
     lastModified: currentDate,
