@@ -19,6 +19,7 @@ import {
 } from "@/components/ui-kit/signature-effects"
 import { useLocalStorage } from "@/hooks/use-local-storage"
 import { useIsMobile, usePrefersReducedMotion, getAnimationConfig } from "@/lib/theme-system"
+import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 import {
   ArrowRight,
   User,
@@ -594,6 +595,12 @@ export default function StartPage() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Hidden Breadcrumbs for SEO */}
+      <HiddenBreadcrumbs 
+        items={[]} 
+        currentPage="Start" 
+      />
+      
       {/* Background Effects */}
       {isInitialized && (
         <>

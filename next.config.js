@@ -153,6 +153,59 @@ const nextConfig = {
     return config
   },
 
+  // Redirects - старая структура URL → новая
+  async redirects() {
+    return [
+      // Old use-cases structure → New simplified structure (301 permanent)
+      {
+        source: '/use/use-cases/algorithmic-stablecoins',
+        destination: '/use/stablecoins',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/privacy-confidentiality',
+        destination: '/use/privacy',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/cross-chain-bridges',
+        destination: '/use/bridges',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/daos-alternative-economies',
+        destination: '/use/daos',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/nfts-digital-assets',
+        destination: '/use/nfts',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/oracles-data-feeds',
+        destination: '/use/oracles',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/identity-reputation',
+        destination: '/use/identity',
+        permanent: true,
+      },
+      {
+        source: '/use/use-cases/gaming-metaverse',
+        destination: '/use/gaming',
+        permanent: true,
+      },
+      // Catch-all для старой структуры с локалями
+      {
+        source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/use/use-cases/:slug',
+        destination: '/:locale/use/:slug',
+        permanent: true,
+      },
+    ]
+  },
+
   // Оптимизация бандла
   poweredByHeader: false,
   reactStrictMode: true,

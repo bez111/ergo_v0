@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { ChevronDown, ArrowRight, Box, Database, Shield, Zap, Eye, Code, ExternalLink, CheckCircle, BookOpen, Terminal, Users } from "lucide-react"
+import { ChevronDown, ArrowRight, Box, Database, Shield, Zap, Eye, Code, ExternalLink, CheckCircle, BookOpen, Users, Coins } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
@@ -551,6 +551,76 @@ export default function EUTXOModelPage() {
             </div>
           </motion.section>
 
+          {/* Related Content */}
+          <motion.section 
+            className="py-16 px-4"
+            variants={itemVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                Continue Learning
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                      <Code className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                      ErgoScript Tutorial
+                    </h3>
+                    <p className="text-neutral-300 mb-4">
+                      Learn to program smart contracts with ErgoScript on the eUTXO model
+                    </p>
+                    <Link href="/learn/ergoscript" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                      Start Learning
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                      <Coins className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                      Native Tokens
+                    </h3>
+                    <p className="text-neutral-300 mb-4">
+                      How eUTXO enables first-class token support without smart contracts
+                    </p>
+                    <Link href="/technology/native-tokens" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                      Learn More
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </CardContent>
+                </Card>
+
+                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                  <CardContent className="p-6">
+                    <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                      <Shield className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                      Privacy Features
+                    </h3>
+                    <p className="text-neutral-300 mb-4">
+                      Privacy capabilities built on the eUTXO foundation
+                    </p>
+                    <Link href="/technology/privacy-features" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                      Explore Privacy
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </Link>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </motion.section>
+
           {/* CTA Section */}
           <motion.section 
             className="py-16 md:py-24 px-4"
@@ -560,30 +630,33 @@ export default function EUTXOModelPage() {
             viewport={{ once: true, amount: 0.2 }}
           >
             <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Build on eUTXO?
-              </h2>
-              <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-                Start developing secure, scalable applications on Ergo's advanced blockchain architecture
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/docs">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    Start Building
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
-                </Link>
-                <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer">
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                  >
-                    Explore GitHub
-                    <ExternalLink className="ml-2 w-4 h-4" />
-                  </Button>
-                </a>
-              </div>
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                <CardContent className="p-8 md:p-12">
+                  <h2 className="text-4xl font-bold mb-6 text-white">
+                    Ready to Build on eUTXO?
+                  </h2>
+                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
+                    Start learning ErgoScript and harness the power of the extended UTXO model for your next project.
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Link href="/learn/ergoscript">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                        Learn ErgoScript
+                        <ArrowRight className="ml-2 w-4 h-4" />
+                      </Button>
+                    </Link>
+                    <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer">
+                      <Button 
+                        variant="outline"
+                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                      >
+                        Explore GitHub
+                        <ExternalLink className="ml-2 w-4 h-4" />
+                      </Button>
+                    </a>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </motion.section>
         </motion.div>

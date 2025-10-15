@@ -19,8 +19,10 @@ import {
   Layers,
   ExternalLink,
   CheckCircle,
+  BookOpen,
 } from "lucide-react"
 import Link from "next/link"
+import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -229,6 +231,12 @@ export default function ErgoScriptClient() {
 
   return (
     <div className="min-h-screen relative">
+      {/* Hidden Breadcrumbs for SEO */}
+      <HiddenBreadcrumbs 
+        items={[{ name: 'Learn', href: '/learn' }]} 
+        currentPage="ErgoScript" 
+      />
+      
       {/* Background simplified to match technology style */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" />
@@ -519,24 +527,87 @@ export default function ErgoScriptClient() {
         </motion.section>
 
         {/* Conclusion */}
+        {/* Related Content */}
+        <motion.section variants={itemVariants} className="py-16 px-4">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">
+              What to Learn Next
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <Database className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    eUTXO Model
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    Understand the data model that ErgoScript operates on
+                  </p>
+                  <Link href="/technology/eutxo-model" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    Learn eUTXO
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <Zap className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    Build DeFi Apps
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    Apply your ErgoScript skills to real DeFi projects
+                  </p>
+                  <Link href="/use/defi" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    Start Building
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <BookOpen className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    Developer Docs
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    Tools and SDKs for ErgoScript development
+                  </p>
+                  <Link href="/docs/developers" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    View Docs
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* CTA Section */}
         <motion.section variants={itemVariants} className="py-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-              <CardContent className="p-12">
-                <h2 className="text-4xl font-bold mb-6 text-white">
-                  Ready to Master ErgoScript?
+              <CardContent className="p-8 md:p-12">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Start Your ErgoScript Journey
                 </h2>
-                <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                  Join our community of developers building the future of decentralized applications on Ergo. Start your
-                  journey from beginner to expert with our comprehensive tutorial series.
+                <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
+                  Join thousands of developers building the future of decentralized finance on Ergo
                 </p>
-
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button
                     asChild
                     className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl"
                   >
-                    <Link href="#" className="flex items-center">
+                    <Link href="/docs/developers" className="flex items-center">
                       Start Learning Now
                       <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" focusable="false" />
                     </Link>
@@ -546,7 +617,7 @@ export default function ErgoScriptClient() {
                     variant="outline"
                     className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
                   >
-                    <Link href="#" className="flex items-center">
+                    <Link href="https://discord.gg/ergo" target="_blank" className="flex items-center">
                       Join Community
                       <ExternalLink className="ml-2 w-4 h-4" aria-hidden="true" focusable="false" />
                     </Link>

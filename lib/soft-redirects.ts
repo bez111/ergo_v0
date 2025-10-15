@@ -3,44 +3,41 @@
  * Фаза 2: Мягкие редиректы для упрощения структуры
  */
 
-// Карта мягких редиректов (302 - временные)
+// Permanent redirects (301) - old URL structure to new
 export const SOFT_REDIRECTS: Record<string, { to: string; permanent: boolean }> = {
-  // Упрощаем use-cases структуру
+  // Old use-cases structure → New simplified structure
   '/use/use-cases/algorithmic-stablecoins': { 
-    to: '/use/cases/stablecoins', 
-    permanent: false 
+    to: '/use/stablecoins', 
+    permanent: true 
   },
   '/use/use-cases/privacy-confidentiality': { 
-    to: '/use/cases/privacy', 
-    permanent: false 
+    to: '/use/privacy', 
+    permanent: true 
   },
   '/use/use-cases/cross-chain-bridges': { 
-    to: '/use/cases/bridges', 
-    permanent: false 
+    to: '/use/bridges', 
+    permanent: true 
   },
   '/use/use-cases/daos-alternative-economies': { 
-    to: '/use/cases/daos', 
-    permanent: false 
+    to: '/use/daos', 
+    permanent: true 
   },
   '/use/use-cases/nfts-digital-assets': { 
-    to: '/use/cases/nfts', 
-    permanent: false 
+    to: '/use/nfts', 
+    permanent: true 
   },
   '/use/use-cases/oracles-data-feeds': { 
-    to: '/use/cases/oracles', 
-    permanent: false 
+    to: '/use/oracles', 
+    permanent: true 
   },
   '/use/use-cases/identity-reputation': { 
-    to: '/use/cases/identity', 
-    permanent: false 
+    to: '/use/identity', 
+    permanent: true 
   },
   '/use/use-cases/gaming-metaverse': { 
-    to: '/use/cases/gaming', 
-    permanent: false 
+    to: '/use/gaming', 
+    permanent: true 
   },
-  
-  // Создаем алиасы для будущей миграции (пока не активны)
-  // '/docs': { to: '/docs', permanent: false }, // Для обратной совместимости
 }
 
 /**
@@ -68,48 +65,48 @@ export function checkSoftRedirect(pathname: string): {
 }
 
 /**
- * Создание новых страниц-алиасов для упрощенных URL
- * Эти страницы будут созданы как копии существующих
+ * URL aliases - New simplified structure
+ * These pages are now at /use/{category} instead of /use/use-cases/{category}
  */
 export const NEW_PAGE_ALIASES = [
   {
     from: '/use/use-cases/algorithmic-stablecoins',
-    to: '/use/cases/stablecoins',
+    to: '/use/stablecoins',
     title: 'Stablecoins'
   },
   {
     from: '/use/use-cases/privacy-confidentiality',
-    to: '/use/cases/privacy',
+    to: '/use/privacy',
     title: 'Privacy'
   },
   {
     from: '/use/use-cases/cross-chain-bridges',
-    to: '/use/cases/bridges',
+    to: '/use/bridges',
     title: 'Cross-Chain Bridges'
   },
   {
     from: '/use/use-cases/daos-alternative-economies',
-    to: '/use/cases/daos',
+    to: '/use/daos',
     title: 'DAOs'
   },
   {
     from: '/use/use-cases/nfts-digital-assets',
-    to: '/use/cases/nfts',
+    to: '/use/nfts',
     title: 'NFTs & Digital Assets'
   },
   {
     from: '/use/use-cases/oracles-data-feeds',
-    to: '/use/cases/oracles',
+    to: '/use/oracles',
     title: 'Oracles & Data Feeds'
   },
   {
     from: '/use/use-cases/identity-reputation',
-    to: '/use/cases/identity',
+    to: '/use/identity',
     title: 'Identity & Reputation'
   },
   {
     from: '/use/use-cases/gaming-metaverse',
-    to: '/use/cases/gaming',
+    to: '/use/gaming',
     title: 'Gaming & Metaverse'
   }
 ]

@@ -13,6 +13,7 @@ import { StaggerContainer } from "@/components/animations/stagger-container"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { useTranslations } from "next-intl"
+import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 
 // Metadata is defined in this route's layout.tsx (server-only)
 

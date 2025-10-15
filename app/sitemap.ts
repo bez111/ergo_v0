@@ -68,21 +68,33 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
   
-  // Use cases
+  // Use cases - Updated to new URL structure
   const useCases = [
-    'algorithmic-stablecoins',
-    'privacy-confidentiality',
-    'cross-chain-bridges',
-    'daos-alternative-economies',
-    'nfts-digital-assets',
-    'oracles-data-feeds',
-    'identity-reputation',
-    'gaming-metaverse',
+    'stablecoins',
+    'privacy',
+    'bridges',
+    'daos',
+    'nfts',
+    'oracles',
+    'identity',
+    'gaming',
   ].map(slug => ({
-    url: `${baseUrl}/use/use-cases/${slug}`,
+    url: `${baseUrl}/use/${slug}`,
     lastModified: currentDate,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
+  }))
+  
+  // Additional use pages
+  const usePages = [
+    { slug: 'get-erg', priority: 0.8 },
+    { slug: 'mining', priority: 0.8 },
+    { slug: 'babel-fees', priority: 0.7 },
+  ].map(({ slug, priority }) => ({
+    url: `${baseUrl}/use/${slug}`,
+    lastModified: currentDate,
+    changeFrequency: 'weekly' as const,
+    priority,
   }))
   
   // Technology pages
@@ -152,6 +164,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...mainPages,
     ...useCases,
+    ...usePages,
     ...technologyPages,
     ...docsPages,
   ]

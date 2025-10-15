@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 import {
   Search,
   CheckCircle,
@@ -49,6 +50,7 @@ import {
   Home,
   Layers,
   Activity,
+  ArrowRight,
 } from "lucide-react"
 import { projects as rawProjects, featuredProjects as rawFeatured, categoryOrder, statusOrder, sortProjectsForListing } from "./_data"
 
@@ -135,6 +137,12 @@ export default function EcosystemClient() {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden" style={{ overflowAnchor: "none" }}>
+      {/* Hidden Breadcrumbs for SEO */}
+      <HiddenBreadcrumbs 
+        items={[]} 
+        currentPage="Ecosystem" 
+      />
+      
       {/* Background pulses */}
       <div className="absolute inset-0 z-0" aria-hidden="true" role="presentation">
         <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-orange-500/5 rounded-full blur-3xl animate-pulse" />
@@ -369,6 +377,75 @@ export default function EcosystemClient() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Related Content */}
+        <motion.section 
+          className="py-16 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">
+              Explore More
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <Layers className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    Technology
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    Learn the tech that powers these projects
+                  </p>
+                  <Link href="/technology" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    Explore Tech
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <Activity className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    Use Cases
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    See what you can build on Ergo
+                  </p>
+                  <Link href="/use" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    View Use Cases
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <CheckCircle className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    Developer Grants
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    Funding opportunities for builders
+                  </p>
+                  <Link href="/ecosystem/grants" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    Apply Now
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </motion.section>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight, ChevronDown, ExternalLink } from "lucide-react"
+import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight, ChevronDown, ExternalLink, Code, Database, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
@@ -12,6 +12,7 @@ import { useTranslations } from "next-intl"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import Script from "next/script"
+import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 
 const iconNode = {
   coins: <Coins className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />,
@@ -157,6 +158,12 @@ export default function UseClient() {
 
   return (
     <div className="min-h-screen relative pb-24">
+      {/* Hidden Breadcrumbs for SEO */}
+      <HiddenBreadcrumbs 
+        items={[]} 
+        currentPage="Use Cases" 
+      />
+      
       {/* Hero Section */}
       <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} className="pt-28 pb-10 px-4">
         <div className="max-w-7xl mx-auto">
@@ -236,8 +243,77 @@ export default function UseClient() {
         </motion.div>
       </div>
 
-      {/* FAQ Section */}
-      <FAQSection />
+        {/* Related Content */}
+        <motion.section 
+          className="py-16 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-12 text-white">
+              Learn the Technology
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <Code className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    ErgoScript
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    Learn the smart contract language powering these use cases
+                  </p>
+                  <Link href="/learn/ergoscript" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    Start Tutorial
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <Database className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    eUTXO Model
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    Understand the foundation that enables these applications
+                  </p>
+                  <Link href="/technology/eutxo-model" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    Learn More
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+
+              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+                <CardContent className="p-6">
+                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
+                    <Layers className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+                    All Technology
+                  </h3>
+                  <p className="text-neutral-300 mb-4">
+                    Explore all of Ergo's technical innovations
+                  </p>
+                  <Link href="/technology" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
+                    View All
+                    <ArrowRight className="w-4 h-4 ml-2" />
+                  </Link>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </motion.section>
+
+        {/* FAQ Section */}
+        <FAQSection />
 
       {/* Conclusion CTA */}
       <section className="py-16 px-4">

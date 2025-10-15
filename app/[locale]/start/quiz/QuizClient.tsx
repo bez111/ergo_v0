@@ -2,14 +2,15 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronRight, ChevronLeft, RotateCcw, ExternalLink, ArrowRight, CheckCircle, Target, Brain, Rocket } from "lucide-react"
+import { ChevronRight, ChevronLeft, RotateCcw, ExternalLink, ArrowRight, Target, Brain, Rocket } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { SectionHeading } from "@/components/section-heading"
+import { Badge } from "@/components/ui/badge"
 import { FadeIn } from "@/components/animations/fade-in"
 import Link from "next/link"
 import { QuizPageWrapper } from "@/components/quiz/quiz-page-wrapper"
+import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 
 interface QuizQuestion {
   id: string
@@ -168,6 +169,16 @@ const quizQuestions: QuizQuestion[] = [
   },
 ]
 
+/**
+ * Quiz profiles are intentionally hardcoded rather than using translations because:
+ * 1. Complex nested data structures (tools → categories → items)
+ * 2. English-first quiz design
+ * 3. Better TypeScript type safety
+ * 4. Improved runtime performance (no translation lookups)
+ * 
+ * If multi-language support is needed in the future, migrate to translation system
+ * using the messages/en.json structure with start.quiz.profiles namespace.
+ */
 const profiles: Record<string, Profile> = {
   developer: {
     id: "developer",
@@ -448,16 +459,6 @@ const profiles: Record<string, Profile> = {
   },
 }
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
 export default function QuizClient() {
   const [currentStep, setCurrentStep] = useState<"intro" | "quiz" | "results">("intro")
   const [currentQuestion, setCurrentQuestion] = useState(0)
@@ -472,7 +473,10 @@ export default function QuizClient() {
 
   const handleAnswerSelect = (questionId: string, optionIndex: number) => {
     const question = quizQuestions[currentQuestion]
+    if (!question) return
+    
     const selectedOption = question.options[optionIndex]
+    if (!selectedOption) return
 
     setAnswers((prev) => ({
       ...prev,
@@ -500,11 +504,17 @@ export default function QuizClient() {
     })
 
     // Find the profile with the highest score
-    const topProfile = Object.entries(profileScores).reduce((a, b) =>
-      profileScores[a[0]] > profileScores[b[0]] ? a : b,
-    )[0]
-
-    setSelectedProfile(topProfile)
+    const entries = Object.entries(profileScores)
+    if (entries.length === 0) {
+      // Default to learner if no answers
+      setSelectedProfile("learner")
+    } else {
+      const topProfile = entries.reduce((a, b) =>
+        profileScores[a[0]]! > profileScores[b[0]]! ? a : b,
+      )[0]
+      setSelectedProfile(topProfile)
+    }
+    
     setCurrentStep("results")
   }
 
@@ -519,6 +529,12 @@ export default function QuizClient() {
 
   return (
     <QuizPageWrapper>
+      {/* Hidden Breadcrumbs for SEO */}
+      <HiddenBreadcrumbs 
+        items={[{ name: 'Start', href: '/start' }]} 
+        currentPage="Quiz" 
+      />
+      
       <AnimatePresence mode="wait">
         {/* Introduction */}
         {currentStep === "intro" && (
@@ -604,14 +620,14 @@ export default function QuizClient() {
                   >
                     <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 font-mono flex items-center gap-3">
                       <Target className="w-6 h-6 text-orange-400" />
-                      {quizQuestions[currentQuestion].question}
+                      {quizQuestions[currentQuestion]?.question || ''}
                     </h2>
 
                     <div className="space-y-4">
-                      {quizQuestions[currentQuestion].options.map((option, index) => (
+                      {quizQuestions[currentQuestion]?.options.map((option, index) => (
                         <motion.button
                           key={index}
-                          onClick={() => handleAnswerSelect(quizQuestions[currentQuestion].id, index)}
+                          onClick={() => handleAnswerSelect(quizQuestions[currentQuestion]?.id || '', index)}
                           className="w-full p-6 text-left border border-orange-500/20 rounded-lg hover:border-orange-500/50 hover:bg-orange-500/5 transition-all duration-300 group"
                           whileHover={{ scale: 1.02 }}
                           whileTap={{ scale: 0.98 }}
@@ -655,181 +671,192 @@ export default function QuizClient() {
         )}
 
         {/* Results */}
-        {currentStep === "results" && selectedProfile && (
+        {currentStep === "results" && selectedProfile && profiles[selectedProfile] && (
           <motion.section
             key="results"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 1.05 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             className="pt-32 pb-20 px-4"
           >
-            <div className="max-w-6xl mx-auto">
-              <FadeIn>
-                <div className="text-center mb-16">
-                  <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.8 }}
-                    className="mb-8"
-                  >
-                    <h1 className="text-4xl md:text-6xl font-bold mb-4 text-white leading-snug pb-2">
-                      YOUR ERGO PATH: {profiles[selectedProfile].name.toUpperCase()}
-                    </h1>
-                    <h2 className="text-2xl md:text-3xl text-gray-300 font-mono">
-                      <span className="text-orange-400">[</span>
-                      {profiles[selectedProfile].title}
-                      <span className="text-orange-400">]</span>
-                    </h2>
-                  </motion.div>
-
-                  <p className="text-lg md:text-xl text-gray-400 leading-relaxed max-w-4xl mx-auto">
-                    {profiles[selectedProfile].description}
+            <div className="max-w-7xl mx-auto">
+              {/* Hero Section - Two Column Layout like ErgoScript */}
+              <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+                {/* Left Column - Profile Info */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                >
+                  <div className="text-6xl mb-6">{profiles[selectedProfile]!.icon}</div>
+                  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                    {profiles[selectedProfile]!.name}
+                  </h1>
+                  <div className="mb-6">
+                    <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 px-4 py-2 text-sm font-mono">
+                      {profiles[selectedProfile]!.title}
+                    </Badge>
+                  </div>
+                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
+                    {profiles[selectedProfile]!.description}
                   </p>
-                </div>
-              </FadeIn>
+                  <div className="flex flex-col sm:flex-row gap-4">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Link href={profiles[selectedProfile]!.nextSteps[0]?.link || '/ecosystem'}>
+                        Get Started
+                        <ArrowRight className="w-5 h-5 ml-2" />
+                      </Link>
+                    </Button>
+                    <Button
+                      onClick={resetQuiz}
+                      variant="outline"
+                      className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                    >
+                      <RotateCcw className="w-5 h-5 mr-2" />
+                      Retake Quiz
+                    </Button>
+                  </div>
+                </motion.div>
 
-              {/* Tools & Resources */}
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-                {profiles[selectedProfile].tools.map((toolCategory, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.2 }}
-                  >
-                    <Card className="bg-neutral-900/50 border-orange-500/20 backdrop-blur-sm h-full">
-                      <CardContent className="p-8">
-                        <h3 className="text-xl font-bold text-white mb-6 font-mono flex items-center gap-2">
-                          <Brain className="w-5 h-5 text-orange-400" />
-                          {toolCategory.category}
-                        </h3>
-                        <div className="space-y-4">
-                          {toolCategory.items.map((item, itemIndex) => (
-                            <div key={itemIndex} className="border-l-2 border-orange-500/30 pl-4">
-                              <Link href={item.link} className="block hover:text-orange-400 transition-colors group">
-                                <h4 className="font-medium text-white group-hover:text-orange-400 flex items-center gap-2">
-                                  {item.name}
-                                  <ExternalLink className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
-                                </h4>
-                                <p className="text-sm text-gray-400 mt-1">{item.description}</p>
-                              </Link>
+                {/* Right Column - Quick Start Card */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                >
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                    <CardContent className="p-8">
+                      <h3 className="text-2xl font-bold mb-6 text-white">🚀 Quick Start</h3>
+                      <div className="space-y-4">
+                        {profiles[selectedProfile]!.nextSteps.slice(0, 3).map((step, index) => (
+                          <Link
+                            key={index}
+                            href={step.link}
+                            className="block p-4 rounded-lg bg-black/30 hover:bg-orange-500/10 border border-transparent hover:border-orange-500/30 transition-all group"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="w-8 h-8 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0">
+                                <span className="text-orange-400 font-bold">{index + 1}</span>
+                              </div>
+                              <div className="flex-1">
+                                <p className="font-semibold text-white group-hover:text-orange-400 transition-colors">
+                                  {step.text}
+                                </p>
+                              </div>
+                              <ArrowRight className="w-5 h-5 text-neutral-600 group-hover:text-orange-400 transition-colors" />
                             </div>
-                          ))}
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
-                ))}
+                          </Link>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               </div>
 
-              {/* Next Steps */}
-              <motion.div
+              {/* Tools & Resources */}
+              <motion.section
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="py-16 px-4"
+              >
+                <div className="max-w-6xl mx-auto">
+                  <h2 className="text-4xl font-bold text-center mb-12 text-white">
+                    Recommended Tools & Resources
+                  </h2>
+
+                  <div className="grid md:grid-cols-2 gap-8">
+                    {profiles[selectedProfile]!.tools.map((toolCategory, index) => (
+                      <Card 
+                        key={index}
+                        className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-orange-500/50 transition-colors"
+                      >
+                        <CardContent className="p-8">
+                          <div className="flex items-start space-x-4">
+                            <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                              <Brain className="w-6 h-6 text-orange-400" />
+                            </div>
+                            <div className="flex-1">
+                              <h3 className="text-xl font-bold mb-4 text-white">
+                                {toolCategory.category}
+                              </h3>
+                              <div className="space-y-3">
+                                {toolCategory.items.map((item, itemIndex) => (
+                                  <Link
+                                    key={itemIndex}
+                                    href={item.link}
+                                    className="block group"
+                                  >
+                                    <h4 className="font-semibold text-white group-hover:text-orange-400 transition-colors flex items-center gap-2">
+                                      {item.name}
+                                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                    </h4>
+                                    <p className="text-sm text-neutral-400 mt-1">{item.description}</p>
+                                  </Link>
+                                ))}
+                              </div>
+                            </div>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    ))}
+                  </div>
+                </div>
+              </motion.section>
+
+              {/* Community & Explore More Section */}
+              <motion.section
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="mb-16"
+                className="py-16"
               >
-                <SectionHeading text="YOUR NEXT STEPS" />
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {profiles[selectedProfile].nextSteps.map((step, index) => (
-                    <Button
-                      key={index}
-                      asChild
-                      className="bg-transparent border-2 border-orange-500 text-orange-400 hover:bg-orange-500 hover:text-black font-mono uppercase tracking-wider h-auto py-4 transition-all duration-200"
-                    >
-                      <Link href={step.link}>
-                        <ArrowRight className="w-4 h-4 mr-2" />
-                        {step.text}
-                      </Link>
-                    </Button>
-                  ))}
+                <div className="max-w-6xl mx-auto">
+                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                    <CardContent className="p-12 text-center">
+                      <h3 className="text-4xl font-bold mb-6 text-white">
+                        Ready to Start Your Journey?
+                      </h3>
+                      <p className="text-xl text-neutral-300 mb-8 leading-relaxed max-w-3xl mx-auto">
+                        Join the Ergo community and connect with others who share your interests
+                      </p>
+                      
+                      {/* Community Channels */}
+                      <div className="flex flex-wrap justify-center gap-4 mb-8">
+                        {profiles[selectedProfile]!.communityChannels.map((channel, index) => (
+                          <Button
+                            key={index}
+                            asChild
+                            variant="outline"
+                            className="border-neutral-700 text-neutral-200 hover:border-orange-500/50 hover:bg-orange-500/10 hover:text-orange-400"
+                          >
+                            <Link href={channel.link} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                              <ExternalLink className="w-4 h-4" />
+                              {channel.name}
+                            </Link>
+                          </Button>
+                        ))}
+                      </div>
+
+                      <div className="pt-8 border-t border-neutral-800">
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                          <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                            <Link href="/ecosystem">
+                              Explore Ecosystem
+                              <ArrowRight className="w-5 h-5 ml-2" />
+                            </Link>
+                          </Button>
+                          <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl">
+                            <Link href="/learn">
+                              Continue Learning
+                            </Link>
+                          </Button>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
                 </div>
-              </motion.div>
-
-              {/* Community Channels */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8 }}
-                className="mb-16"
-              >
-                <Card className="bg-gradient-to-r from-orange-500/20 via-orange-500/10 to-orange-500/20 border-orange-500/40 backdrop-blur-sm">
-                  <CardContent className="p-8 text-center">
-                    <h3 className="text-2xl font-bold text-white mb-4 font-mono">CONNECT WITH YOUR COMMUNITY</h3>
-                    <p className="text-gray-300 mb-6">
-                      Join others who share your interests and get support on your Ergo journey
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                      {profiles[selectedProfile].communityChannels.map((channel, index) => (
-                        <Button
-                          key={index}
-                          asChild
-                          variant="outline"
-                          className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10"
-                        >
-                          <Link href={channel.link} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            {channel.name}
-                          </Link>
-                        </Button>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
-
-              {/* General Learn More */}
-              <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.0 }}>
-                <Card className="bg-neutral-900/40 border-orange-500/20 backdrop-blur-sm">
-                  <CardContent className="p-8 text-center">
-                    <h3 className="text-xl font-bold text-white mb-6 font-mono">
-                      WANT TO EXPLORE OTHER ASPECTS OF ERGO?
-                    </h3>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button
-                        asChild
-                        className="bg-orange-500 hover:bg-orange-600 text-black hover:shadow-lg font-mono uppercase tracking-wider transition-all duration-200"
-                      >
-                        <Link href="/ecosystem">
-                          <ArrowRight className="w-4 h-4 mr-2" />
-                          Explore Entire Ecosystem
-                        </Link>
-                      </Button>
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 font-mono uppercase tracking-wider"
-                      >
-                        <Link href="/start/faq">
-                          <ArrowRight className="w-4 h-4 mr-2" />
-                          Read Full FAQ
-                        </Link>
-                      </Button>
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 font-mono uppercase tracking-wider"
-                      >
-                        <Link href="/community">
-                          <ArrowRight className="w-4 h-4 mr-2" />
-                          Join Main Community
-                        </Link>
-                      </Button>
-                    </div>
-
-                    <div className="mt-8 pt-8 border-t border-orange-500/20">
-                      <Button
-                        onClick={resetQuiz}
-                        variant="ghost"
-                        className="text-gray-400 hover:text-white hover:bg-neutral-800 font-mono"
-                      >
-                        <RotateCcw className="w-4 h-4 mr-2" />
-                        Take Quiz Again
-                      </Button>
-                    </div>
-                  </CardContent>
-                </Card>
-              </motion.div>
+              </motion.section>
             </div>
           </motion.section>
         )}
