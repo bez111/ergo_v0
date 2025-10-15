@@ -5457,6 +5457,20 @@
           }
         }
       }
+    },
+    "map": {
+      "seo": {
+        "title": "Ergo Technology Map | Interactive Blockchain Architecture",
+        "description": "Explore Ergo's technology stack visually. Interactive map of blockchain components, protocols, and innovations. Understand how eUTXO, ErgoScript, and Sigma protocols work together.",
+        "keywords": "Ergo technology map, blockchain architecture, eUTXO model, ErgoScript, Sigma protocols, interactive visualization",
+        "ogTitle": "Interactive Ergo Technology Map",
+        "ogDescription": "Visual exploration of Ergo's blockchain technology stack and architecture.",
+        "ogAlt": "Ergo Technology Interactive Map",
+        "twitterTitle": "Ergo Technology Map | Interactive Architecture",
+        "twitterDescription": "Explore Ergo's technology stack visually. eUTXO, ErgoScript, Sigma protocols."
+      },
+      "title": "Technology Map",
+      "subtitle": "Interactive visualization of Ergo's technology stack"
     }
   },
   "start": {
