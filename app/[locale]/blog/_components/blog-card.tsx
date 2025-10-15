@@ -68,19 +68,19 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
         </h3>
 
         <p className="text-sm text-gray-300 mb-4 line-clamp-2">
-          {post.description}
+          {post.excerpt}
         </p>
 
         {/* ✅ ИЗМЕНЕНИЕ: Семантическая мета-информация с proper ARIA */}
         <div className="flex flex-wrap items-center gap-4 text-xs text-gray-400">
           <div className="flex items-center gap-1">
             <Calendar className="w-3 h-3 text-gray-500" aria-hidden="true" />
-            <time dateTime={new Date(post.publishedAt).toISOString()}>
+            <time dateTime={new Date(post.date).toISOString()}>
               {new Intl.DateTimeFormat('en-US', {
                 year: 'numeric',
                 month: 'short',
                 day: 'numeric'
-              }).format(new Date(post.publishedAt))}
+              }).format(new Date(post.date))}
             </time>
           </div>
 
@@ -92,15 +92,30 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           </div>
 
           <div className="flex items-center gap-1">
-            <div 
-              className="w-8 h-8 rounded-full bg-neutral-700 flex items-center justify-center"
-              aria-hidden="true"
+            <Link
+              href={`/blog/author/${post.author.id}`}
+              className="flex items-center gap-1 hover:text-orange-400 transition-colors"
             >
-              <span className="text-white font-medium text-sm">
-                {post.author.name.charAt(0)}
-              </span>
-            </div>
-            <span>{post.author.name}</span>
+              <div 
+                className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center overflow-hidden"
+                aria-hidden="true"
+              >
+                {post.author.avatar ? (
+                  <Image 
+                    src={post.author.avatar} 
+                    alt={post.author.name}
+                    width={24}
+                    height={24}
+                    className="object-cover"
+                  />
+                ) : (
+                  <span className="text-white font-medium text-xs">
+                    {post.author.name.charAt(0)}
+                  </span>
+                )}
+              </div>
+              <span className="font-medium">{post.author.name}</span>
+            </Link>
           </div>
         </div>
       </div>

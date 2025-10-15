@@ -131,7 +131,12 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
         inLanguage: "en",
         keywords: p.tags?.join(", "),
         articleSection: categories.find((c) => c.id === p.category)?.name || p.category,
-        author: { "@type": "Person", name: p.author.name },
+        author: { 
+          "@type": "Person", 
+          "@id": `https://ergoblockchain.org/blog/author/${p.author.id}`,
+          name: p.author.name,
+          jobTitle: p.author.role
+        },
         isPartOf: { "@type": "Blog", "@id": blogId },
         ...(typeof p.readTime === "number" ? { timeRequired: `PT${p.readTime}M` } : {}),
       }

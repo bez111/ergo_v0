@@ -62,16 +62,39 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         <div className="flex items-center justify-between mb-3">
           <div className="flex items-center gap-3">
             <div 
-              className="w-12 h-12 rounded-full bg-neutral-700 flex items-center justify-center"
+              className="w-12 h-12 rounded-full bg-neutral-700 flex items-center justify-center overflow-hidden"
               aria-hidden="true"
             >
-              <span className="text-white font-medium text-sm">{post.author.charAt(0)}</span>
+              {post.author.avatar ? (
+                <Image 
+                  src={post.author.avatar} 
+                  alt={post.author.name}
+                  width={48}
+                  height={48}
+                  className="object-cover"
+                />
+              ) : (
+                <span className="text-white font-medium text-sm">{post.author.name.charAt(0)}</span>
+              )}
             </div>
-            <div className="flex items-center gap-2 text-sm text-neutral-300">
-              <span className="font-medium text-white">{post.author}</span>
-              <span className="text-neutral-500">•</span>
+            <div className="flex flex-col">
+              <div className="flex items-center gap-2 text-sm">
+                <Link 
+                  href={`/blog/author/${post.author.id}`}
+                  className="font-medium text-white hover:text-orange-400 transition-colors"
+                >
+                  {post.author.name}
+                </Link>
+                {post.author.role && (
+                  <>
+                    <span className="text-neutral-500">•</span>
+                    <span className="text-neutral-400 text-xs">{post.author.role}</span>
+                  </>
+                )}
+              </div>
               <time 
-                dateTime={post.date} 
+                dateTime={post.date}
+                className="text-xs text-neutral-400"
                 title={`Published on ${new Date(post.date).toLocaleDateString('en-US', { 
                   weekday: 'long',
                   year: 'numeric', 
@@ -84,6 +107,11 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
                   day: 'numeric', 
                   year: 'numeric' 
                 })}
+                {post.lastUpdated && post.lastUpdated !== post.date && (
+                  <span className="ml-2 text-orange-400" title="Article updated">
+                    (Updated: {new Date(post.lastUpdated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })})
+                  </span>
+                )}
               </time>
             </div>
           </div>
@@ -94,17 +122,23 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
               </svg>
               <span aria-label={`${post.readTime} minute read`}>
-                {post.readTime}
+                {post.readTime} min
               </span>
             </span>
-            <span className="flex items-center gap-1" title={`${post.category} category`}>
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M17.707 9.293a1 1 0 010 1.414l-7 7a1 1 0 01-1.414 0l-7-7A.997.997 0 012 10V5a3 3 0 013-3h5c.256 0 .512.098.707.293l7 7zM5 6a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"/>
-              </svg>
-              <span aria-label={`${post.category} category`}>
-                {post.category}
+            {post.difficulty && (
+              <span className="flex items-center gap-1 px-2 py-1 rounded bg-neutral-800/50 text-xs" title={`Difficulty: ${post.difficulty}`}>
+                {post.difficulty}
               </span>
-            </span>
+            )}
+            {post.views && (
+              <span className="flex items-center gap-1" title={`${post.views.toLocaleString()} views`}>
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                  <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
+                </svg>
+                <span>{(post.views / 1000).toFixed(1)}k</span>
+              </span>
+            )}
           </div>
         </div>
 
@@ -131,3 +165,4 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
     </article>
   )
 }
+

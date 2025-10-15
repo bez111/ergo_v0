@@ -19,25 +19,24 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     "@type": "Article",
     "@id": `${baseUrl}/blog/${post.slug}#article`,
     "headline": post.title,
-    "description": post.description,
+    "description": post.excerpt,
     "image": post.image ? `${baseUrl}${post.image}` : `${baseUrl}/placeholder.svg`,
-    "datePublished": post.publishedAt,
-    "dateModified": post.updatedAt || post.publishedAt,
+    "datePublished": post.date,
+    "dateModified": post.lastUpdated || post.date,
     "mainEntityOfPage": {
       "@type": "WebPage",
       "@id": `${baseUrl}/blog/${post.slug}`
     },
     "author": {
       "@type": "Person",
-      "@id": `${baseUrl}#author-${post.author.name.toLowerCase().replace(/\s+/g, '-')}`,
+      "@id": `${baseUrl}/blog/author/${post.author.id}`,
       "name": post.author.name,
       "description": post.author.bio,
       "jobTitle": post.author.role,
-      "url": post.author.social?.twitter ? `https://twitter.com/${post.author.social.twitter}` : undefined,
+      "url": post.author.twitter ? `https://twitter.com/${post.author.twitter}` : undefined,
       "sameAs": [
-        post.author.social?.twitter && `https://twitter.com/${post.author.social.twitter}`,
-        post.author.social?.github && `https://github.com/${post.author.social.github}`,
-        post.author.social?.linkedin && `https://linkedin.com/in/${post.author.social.linkedin}`
+        post.author.twitter && `https://twitter.com/${post.author.twitter}`,
+        post.author.github && `https://github.com/${post.author.github}`,
       ].filter(Boolean)
     },
     "publisher": {
@@ -45,21 +44,18 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
       "name": "Ergo Platform",
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/logo.png`
+        "url": `${baseUrl}/icon-512x512.png`,
+        "width": 512,
+        "height": 512
       }
     },
-    "keywords": post.tags.join(", "),
+    "keywords": post.tags?.join(", "),
     "articleSection": post.category,
-    "wordCount": post.readTime * 250, // Approximation: 250 words per minute
+    "wordCount": post.wordCount || post.readTime * 250,
+    "timeRequired": `PT${post.readTime}M`,
     "inLanguage": "en-US",
     "isAccessibleForFree": true,
     "creativeWorkStatus": "Published",
-    "genre": "Technology",
-    "about": {
-      "@type": "Thing",
-      "name": "Ergo Blockchain",
-      "description": "Decentralized blockchain platform"
-    },
     // Add rating if available
     ...(rating && {
       "aggregateRating": {
@@ -71,19 +67,20 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
       }
     }),
     // Interaction statistics
-    "interactionStatistic": [
-      {
-        "@type": "InteractionCounter",
-        "interactionType": "https://schema.org/ViewAction",
-        "userInteractionCount": post.views
-      },
-      {
-        "@type": "InteractionCounter",
-        "interactionType": "https://schema.org/LikeAction",
-        "userInteractionCount": post.likes
-      }
-    ],
-    // Comments section
+    ...(post.views && {
+      "interactionStatistic": [
+        {
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/ViewAction",
+          "userInteractionCount": post.views
+        },
+        ...(post.shares ? [{
+          "@type": "InteractionCounter",
+          "interactionType": "https://schema.org/ShareAction",
+          "userInteractionCount": post.shares
+        }] : [])
+      ]
+    }),
     "commentCount": 0, // TODO: Add real comment count
     "discussionUrl": `${baseUrl}/blog/${post.slug}#comments`
   }
@@ -92,6 +89,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": `${baseUrl}/blog/${post.slug}#breadcrumb`,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -108,46 +106,14 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
       {
         "@type": "ListItem",
         "position": 3,
-        "name": post.category.charAt(0).toUpperCase() + post.category.slice(1),
-        "item": `${baseUrl}/blog?category=${post.category}`
+        "name": post.category,
+        "item": `${baseUrl}/blog/category/${post.category.toLowerCase()}`
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": post.title,
         "item": `${baseUrl}/blog/${post.slug}`
-      }
-    ]
-  }
-
-  // FAQ Schema (if FAQ content exists)
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is the minimum requirement to get started?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "You'll need a basic understanding of blockchain concepts and access to an Ergo wallet."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does the implementation typically take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The timeline depends on your specific requirements, but typically ranges from a few hours to several days."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this compatible with existing systems?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, the solution is designed to be interoperable with most existing blockchain infrastructure."
-        }
       }
     ]
   }
@@ -159,7 +125,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     "@id": `${baseUrl}/blog/${post.slug}`,
     "url": `${baseUrl}/blog/${post.slug}`,
     "name": post.title,
-    "description": post.description,
+    "description": post.excerpt,
     "isPartOf": {
       "@type": "WebSite",
       "@id": `${baseUrl}#website`,
@@ -179,36 +145,38 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     },
     "primaryImageOfPage": {
       "@type": "ImageObject",
-      "url": post.image ? `${baseUrl}${post.image}` : `${baseUrl}/placeholder.svg`
+      "url": post.image ? `${baseUrl}${post.image}` : `${baseUrl}/placeholder.svg`,
+      "width": 1200,
+      "height": 630
     },
-    "datePublished": post.publishedAt,
-    "dateModified": post.updatedAt || post.publishedAt
+    "datePublished": post.date,
+    "dateModified": post.lastUpdated || post.date
   }
 
-  // Blog Posting Schema (additional schema for blog-specific features)
+  // BlogPosting Schema (additional for blog-specific features)
   const blogPostingSchema = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
     "headline": post.title,
-    "alternativeHeadline": post.description,
+    "alternativeHeadline": post.excerpt,
     "image": post.image ? `${baseUrl}${post.image}` : `${baseUrl}/placeholder.svg`,
-    "datePublished": post.publishedAt,
-    "dateCreated": post.publishedAt,
-    "dateModified": post.updatedAt || post.publishedAt,
+    "datePublished": post.date,
+    "dateCreated": post.date,
+    "dateModified": post.lastUpdated || post.date,
     "author": {
-      "@id": `${baseUrl}#author-${post.author.name.toLowerCase().replace(/\s+/g, '-')}`
+      "@id": `${baseUrl}/blog/author/${post.author.id}`
     },
     "publisher": {
       "@type": "Organization",
       "name": "Ergo Platform",
       "logo": {
         "@type": "ImageObject",
-        "url": `${baseUrl}/logo.png`
+        "url": `${baseUrl}/icon-512x512.png`
       }
     },
-    "description": post.description,
-    "articleBody": post.description,
-    "wordCount": post.readTime * 250,
+    "description": post.excerpt,
+    "articleBody": post.excerpt,
+    "wordCount": post.wordCount || post.readTime * 250,
     "commentCount": 0,
     "potentialAction": {
       "@type": "CommentAction",
@@ -224,13 +192,12 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     }
   }
 
-  // Combined schema
+  // Combined schema using @graph
   const combinedSchema = {
     "@context": "https://schema.org",
     "@graph": [
       articleSchema,
       breadcrumbSchema,
-      faqSchema,
       webPageSchema,
       blogPostingSchema
     ]
@@ -246,4 +213,4 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
       strategy="afterInteractive"
     />
   )
-} 
+}
