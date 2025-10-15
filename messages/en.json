@@ -5470,7 +5470,23 @@
         "twitterDescription": "Explore Ergo's technology stack visually. eUTXO, ErgoScript, Sigma protocols."
       },
       "title": "Technology Map",
-      "subtitle": "Interactive visualization of Ergo's technology stack"
+      "subtitle": "Interactive visualization of Ergo's technology stack",
+      "categories": {
+        "all": "All Technologies",
+        "core": "Core Protocol",
+        "consensus": "Consensus Layer",
+        "features": "Key Features",
+        "infrastructure": "Infrastructure"
+      },
+      "legend": {
+        "title": "Legend",
+        "core": "Core Protocol",
+        "consensus": "Consensus Layer", 
+        "features": "Key Features",
+        "infrastructure": "Infrastructure",
+        "directConnection": "Direct Connection",
+        "relation": "Related Technology"
+      }
     }
   },
   "start": {
