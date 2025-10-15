@@ -1,11 +1,12 @@
 import { Suspense } from "react"
 import { blogPosts, categories } from "./_lib/blog-data"
 import { BlogHero } from "./_components/blog-hero"
-// import { BlogToolbar } from "./_components/blog-toolbar"
+import { BlogFiltersEnhanced } from "./_components/blog-filters-enhanced"
 import BlogListSSR from "./_components/blog-list-ssr"
 import TrendingNow from "./_components/trending-now"
 import { BlogPagination } from "./_components/blog-pagination"
 import { BlogPageSkeleton, BlogCompactSkeleton } from "./_components/blog-skeleton"
+import BlogClient from "./_components/blog-client"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
 import Link from "next/link"
@@ -290,6 +291,34 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               </div>
             </section>
           </Suspense>
+
+          {/* Interactive Filters */}
+          <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
+            <BlogClient 
+              posts={blogPosts}
+              categories={categories.map(cat => ({ id: cat, name: cat }))}
+              page={currentPage}
+              pageSize={pageSize}
+              total={total}
+              hasMore={hasMore}
+            >
+              {/* This will be the SSR fallback content */}
+              <div className="space-y-6">
+                {/* Search Skeleton */}
+                <div className="relative">
+                  <div className="h-12 bg-neutral-900/60 border border-neutral-700 rounded-lg animate-pulse" />
+                  <div className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-neutral-600 rounded animate-pulse" />
+                </div>
+                
+                {/* Quick Categories */}
+                <div className="flex gap-2 flex-wrap">
+                  {Array.from({ length: 6 }).map((_, i) => (
+                    <div key={i} className="h-8 w-20 bg-neutral-800/60 rounded-full animate-pulse" />
+                  ))}
+                </div>
+              </div>
+            </BlogClient>
+          </div>
 
           {/* ✅ КРИТИЧЕСКОЕ ИЗМЕНЕНИЕ: ARIA Live Region для динамических обновлений */}
           <Suspense fallback={

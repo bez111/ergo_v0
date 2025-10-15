@@ -17,9 +17,54 @@ export function BlogPageSkeleton() {
           </div>
         </div>
 
-        {/* Filters */}
-        <div className="animate-fade-in" style={{ animationDelay: '0.1s' }}>
-          <SkeletonFilters />
+        {/* Search and Filters */}
+        <div className="space-y-6 animate-fade-in" style={{ animationDelay: '0.1s' }}>
+          {/* Search Bar */}
+          <div className="relative">
+            <div className="h-12 bg-neutral-900/60 border border-neutral-700 rounded-lg animate-pulse" />
+            <div className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 bg-neutral-600 rounded animate-pulse" />
+          </div>
+
+          {/* Filter Toggle */}
+          <div className="flex items-center justify-between">
+            <div className="h-10 w-24 bg-neutral-800/60 rounded-lg animate-pulse" />
+            <div className="h-6 w-16 bg-neutral-800/60 rounded-full animate-pulse" />
+          </div>
+
+          {/* Categories Row */}
+          <div className="space-y-3">
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 bg-neutral-600 rounded animate-pulse" />
+              <div className="h-4 w-20 bg-neutral-700 rounded animate-pulse" />
+            </div>
+            <div className="flex gap-2 flex-wrap">
+              {Array.from({ length: 6 }).map((_, i) => (
+                <div 
+                  key={i} 
+                  className="h-8 bg-neutral-800/60 rounded-full animate-pulse"
+                  style={{ width: `${60 + Math.random() * 40}px` }}
+                />
+              ))}
+            </div>
+          </div>
+
+          {/* Tags Row */}
+          <div className="space-y-3">
+            <div className="flex items-center gap-2">
+              <div className="w-4 h-4 bg-neutral-600 rounded animate-pulse" />
+              <div className="h-4 w-16 bg-neutral-700 rounded animate-pulse" />
+            </div>
+            <div className="flex gap-2 flex-wrap">
+              {Array.from({ length: 8 }).map((_, i) => (
+                <div 
+                  key={i} 
+                  className="h-7 bg-neutral-800/60 rounded-full animate-pulse"
+                  style={{ width: `${40 + Math.random() * 30}px` }}
+                />
+              ))}
+              <div className="h-7 w-12 bg-neutral-700/60 border border-dashed border-neutral-600 rounded-full animate-pulse" />
+            </div>
+          </div>
         </div>
 
         {/* Featured Post */}
