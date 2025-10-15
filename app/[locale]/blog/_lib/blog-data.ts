@@ -1,14 +1,81 @@
+export interface Author {
+  id: string
+  name: string
+  bio: string
+  avatar: string
+  role: string
+  twitter?: string
+  github?: string
+}
+
 export interface BlogPost {
   id: string
   slug: string
   title: string
   excerpt: string
+  content?: string // For full content
   date: string
-  author: string
+  lastUpdated?: string // Important for SEO
+  author: Author
   category: string
-  readTime: string
+  readTime: number // Changed to number for calculations
+  wordCount?: number // For SEO
   image?: string
   tags?: string[]
+  trending?: boolean // For trending section
+  featured?: boolean // For hero section
+  difficulty?: 'Beginner' | 'Intermediate' | 'Advanced'
+  views?: number // If tracking
+  shares?: number // Social proof
+}
+
+// Author definitions
+export const authors: Record<string, Author> = {
+  'ergo-team': {
+    id: 'ergo-team',
+    name: 'Ergo Team',
+    bio: 'Core developers and contributors building the Ergo Platform',
+    avatar: '/assets/img/authors/ergo-team.jpg',
+    role: 'Core Team',
+    twitter: 'ergoplatform',
+    github: 'ergoplatform'
+  },
+  'technical-team': {
+    id: 'technical-team',
+    name: 'Technical Team',
+    bio: 'Blockchain architects and cryptography experts',
+    avatar: '/assets/img/authors/technical-team.jpg',
+    role: 'Technical Lead',
+    twitter: 'ergoplatform'
+  },
+  'dev-relations': {
+    id: 'dev-relations',
+    name: 'Developer Relations',
+    bio: 'Helping developers build on Ergo',
+    avatar: '/assets/img/authors/dev-relations.jpg',
+    role: 'Developer Advocate'
+  },
+  'mining-community': {
+    id: 'mining-community',
+    name: 'Mining Community',
+    bio: 'Ergo miners and pool operators sharing knowledge',
+    avatar: '/assets/img/authors/mining-community.jpg',
+    role: 'Community Contributor'
+  },
+  'privacy-team': {
+    id: 'privacy-team',
+    name: 'Privacy Team',
+    bio: 'Privacy and cryptography specialists',
+    avatar: '/assets/img/authors/privacy-team.jpg',
+    role: 'Privacy Expert'
+  },
+  'ecosystem-team': {
+    id: 'ecosystem-team',
+    name: 'Ecosystem Team',
+    bio: 'Growing the Ergo ecosystem and partnerships',
+    avatar: '/assets/img/authors/ecosystem-team.jpg',
+    role: 'Ecosystem Lead'
+  }
 }
 
 export const blogPosts: BlogPost[] = [
@@ -18,11 +85,18 @@ export const blogPosts: BlogPost[] = [
     title: 'The DeFi Revolution: How Ergo is Building the Future of Finance',
     excerpt: 'Explore how Ergo\'s advanced smart contract capabilities and unique economic model are powering the next generation of decentralized financial applications.',
     date: '2024-03-15',
-    author: 'Ergo Team',
+    lastUpdated: '2024-03-15',
+    author: authors['ergo-team'],
     category: 'DeFi',
-    readTime: '8 min',
+    readTime: 8,
+    wordCount: 1600,
     image: '/assets/img/blog/defi-revolution.jpg',
-    tags: ['DeFi', 'Smart Contracts', 'ErgoScript']
+    tags: ['DeFi', 'Smart Contracts', 'ErgoScript'],
+    featured: true,
+    trending: true,
+    difficulty: 'Intermediate',
+    views: 2500,
+    shares: 145
   },
   {
     id: '2',
