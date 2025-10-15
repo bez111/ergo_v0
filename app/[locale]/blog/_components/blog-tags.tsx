@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { X, Hash } from "lucide-react"
+import { X, Hash, Filter } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 
 interface BlogTagsProps {
