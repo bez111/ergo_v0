@@ -6,7 +6,7 @@ import BlogListSSR from "./_components/blog-list-ssr"
 import TrendingNow from "./_components/trending-now"
 import { BlogPagination } from "./_components/blog-pagination"
 import { BlogPageSkeleton, BlogCompactSkeleton } from "./_components/blog-skeleton"
-import BlogClient from "./_components/blog-client"
+import BlogClientAdvanced from "./_components/blog-client-advanced"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
 import Link from "next/link"
@@ -294,7 +294,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
 
           {/* Interactive Filters */}
           <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <BlogClient 
+            <BlogClientAdvanced 
               posts={blogPosts}
               categories={categories.map(cat => ({ id: cat, name: cat }))}
               page={currentPage}
@@ -317,7 +317,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                   ))}
                 </div>
               </div>
-            </BlogClient>
+            </BlogClientAdvanced>
           </div>
 
           {/* ✅ КРИТИЧЕСКОЕ ИЗМЕНЕНИЕ: ARIA Live Region для динамических обновлений */}
