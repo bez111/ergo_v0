@@ -38,15 +38,23 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
               className="h-full flex flex-col min-h-0"
             >
               <div className="flex items-start gap-4 flex-1 min-h-0">
-                <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-neutral-800/60 border border-neutral-700 group-hover:border-orange-500/30 transition-colors">
-                  <Image 
-                    src={p.image || "/placeholder.svg"} 
-                    alt={`Article image for ${p.title}`} 
-                    fill 
-                    sizes="64px" 
-                    className="object-cover transition-transform group-hover:scale-105" 
-                    loading="lazy"
-                  />
+                <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900 border border-neutral-700 group-hover:border-orange-500/30 transition-colors">
+                  {p.image ? (
+                    <Image 
+                      src={p.image} 
+                      alt={`Article image for ${p.title}`} 
+                      fill 
+                      sizes="64px" 
+                      className="object-cover transition-transform group-hover:scale-105" 
+                      loading="lazy"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center">
+                      <span className="text-2xl font-bold text-neutral-600">
+                        {p.category?.charAt(0) || 'B'}
+                      </span>
+                    </div>
+                  )}
                 </div>
                 
                 <div className="flex-1 min-w-0 flex flex-col min-h-0">
@@ -81,27 +89,27 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                     <div className="flex items-center gap-1" title={`${p.views?.toLocaleString()} views`}>
                       <Eye className="w-3 h-3" aria-hidden="true" />
                       <span aria-label={`${p.views?.toLocaleString()} views`}>
-                        {p.views?.toLocaleString()}
+                        {p.views ? (p.views > 1000 ? `${(p.views / 1000).toFixed(1)}k` : p.views) : '0'}
                       </span>
                     </div>
-                    <div className="flex items-center gap-1" title={`${p.likes} likes`}>
+                    <div className="flex items-center gap-1" title={`${p.shares || 0} shares`}>
                       <Heart className="w-3 h-3" aria-hidden="true" />
-                      <span aria-label={`${p.likes} likes`}>
-                        {p.likes}
+                      <span aria-label={`${p.shares || 0} shares`}>
+                        {p.shares || 0}
                       </span>
                     </div>
                     <time 
-                      dateTime={p.publishedAt} 
+                      dateTime={new Date(p.date).toISOString()} 
                       itemProp="datePublished"
                       className="text-neutral-500"
-                      title={`Published on ${new Date(p.publishedAt).toLocaleDateString('en-US', { 
+                      title={`Published on ${new Date(p.date).toLocaleDateString('en-US', { 
                         weekday: 'long',
                         year: 'numeric', 
                         month: 'long', 
                         day: 'numeric' 
                       })}`}
                     >
-                      {new Date(p.publishedAt).toLocaleDateString('en-US', { 
+                      {new Date(p.date).toLocaleDateString('en-US', { 
                         month: 'short', 
                         day: 'numeric', 
                         year: 'numeric' 
@@ -110,20 +118,20 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                   </div>
 
                   {/* Hidden structured data */}
-                  <meta itemProp="dateModified" content={p.updatedAt || p.publishedAt} />
+                  <meta itemProp="dateModified" content={new Date(p.lastUpdated || p.date).toISOString()} />
                   <meta itemProp="author" content={p.author.name} />
-                  {p.readTime && <meta itemProp="timeRequired" content={`PT${p.readTime}M`} />}
+                  <meta itemProp="timeRequired" content={`PT${p.readTime}M`} />
                 </div>
               </div>
 
               {/* Screen reader only description */}
               <div className="sr-only">
-                Article by {p.author.name}, published {new Date(p.publishedAt).toLocaleDateString('en-US', { 
+                Article by {p.author.name}, published {new Date(p.date).toLocaleDateString('en-US', { 
                   year: 'numeric', 
                   month: 'long', 
                   day: 'numeric' 
-                })}, {p.views?.toLocaleString()} views, {p.likes} likes
-                {p.readTime && `, ${p.readTime} minute read`}
+                })}, {p.views?.toLocaleString() || '0'} views, {p.shares || 0} shares
+                , {p.readTime} minute read
               </div>
             </article>
           </motion.div>

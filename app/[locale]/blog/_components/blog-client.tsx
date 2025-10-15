@@ -7,7 +7,8 @@ import { BlogCard } from "./blog-card"
 import { NewsletterSignup } from "./newsletter-signup"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogFilters } from "./blog-filters"
-import { HexagonalGrid, FloatingParticles, MathematicalPattern } from "@/components/ui-kit/signature-effects"
+import { BlogCompactSkeleton } from "./blog-skeleton"
+import { SkeletonCard } from "@/components/ui/skeleton"
 
 interface BlogClientProps {
   posts: BlogPost[]
@@ -85,7 +86,7 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
       filtered = filtered.filter(
         (post) =>
           post.title.toLowerCase().includes(query) ||
-          post.description.toLowerCase().includes(query) ||
+          post.excerpt.toLowerCase().includes(query) ||
           post.tags?.some((tag) => tag.toLowerCase().includes(query))
       )
     }
@@ -106,12 +107,12 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
         case "trending":
           return (b.views || 0) - (a.views || 0)
         case "popular":
-          return (b.likes || 0) - (a.likes || 0)
+          return (b.shares || 0) - (a.shares || 0)
         case "readtime":
           return (a.readTime || 0) - (b.readTime || 0)
         case "newest":
         default:
-          return new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+          return new Date(b.date).getTime() - new Date(a.date).getTime()
       }
     })
 
@@ -182,50 +183,86 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
           Blog posts results
         </h2>
         
-        {filteredPosts.length === 0 ? (
-          <div className="text-center py-8">
+        {loading && filteredPosts.length === 0 ? (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div 
+                key={i} 
+                className="animate-scale-in"
+                style={{ animationDelay: `${i * 0.1}s` }}
+              >
+                <SkeletonCard />
+              </div>
+            ))}
+          </div>
+        ) : filteredPosts.length === 0 ? (
+          <div className="text-center py-8 animate-fade-in">
             <BookOpen className="mx-auto h-12 w-12 text-neutral-400 mb-4" />
             <h3 className="text-xl font-medium text-neutral-200 mb-2">No posts found</h3>
             <p className="text-neutral-400">Try adjusting your filters or search terms.</p>
           </div>
         ) : (
           <div className="mb-16">
-            <h3 className="text-3xl font-bold text-white mb-8">Latest Articles</h3>
+            <h3 className="text-3xl font-bold text-white mb-8 animate-fade-in">Latest Articles</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.map((post) => (
-                <BlogCard key={post.id} post={post} />
+              {filteredPosts.map((post, i) => (
+                <div 
+                  key={post.id} 
+                  className="animate-scale-in"
+                  style={{ animationDelay: `${i * 0.05}s` }}
+                >
+                  <BlogCard post={post} />
+                </div>
               ))}
             </div>
           </div>
         )}
       </section>
 
-      {/* Load More Button */}
+      {/* Load More Section */}
       {hasMoreToShow && (
-        <div className="mt-8 text-center">
-          <button
-            onClick={loadMore}
-            disabled={loading}
-            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
-            aria-label="Load more blog posts"
-          >
-            {loading ? (
-              <>
-                <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Loading...
-              </>
-            ) : (
-              <>
-                <span>Load More Articles</span>
-                <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                </svg>
-              </>
-            )}
-          </button>
+        <div className="mt-8 space-y-8">
+          {/* Load More Button */}
+          <div className="text-center">
+            <button
+              onClick={loadMore}
+              disabled={loading}
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-black transition-all duration-200 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+              aria-label="Load more blog posts"
+            >
+              {loading ? (
+                <>
+                  <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                  </svg>
+                  Loading...
+                </>
+              ) : (
+                <>
+                  <span>Load More Articles</span>
+                  <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                  </svg>
+                </>
+              )}
+            </button>
+          </div>
+
+          {/* Loading Skeleton for New Posts */}
+          {loading && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {Array.from({ length: 3 }).map((_, i) => (
+                <div 
+                  key={`loading-${i}`} 
+                  className="animate-scale-in"
+                  style={{ animationDelay: `${i * 0.1}s` }}
+                >
+                  <SkeletonCard />
+                </div>
+              ))}
+            </div>
+          )}
         </div>
       )}
     </>
