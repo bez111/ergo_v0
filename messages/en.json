@@ -5469,8 +5469,8 @@
         "twitterTitle": "Ergo Technology Map | Interactive Architecture",
         "twitterDescription": "Explore Ergo's technology stack visually. eUTXO, ErgoScript, Sigma protocols."
       },
-      "title": "Technology Map",
-      "subtitle": "Interactive visualization of Ergo's technology stack",
+      "title": "Ergo: How Protocol Technologies Connect",
+      "subtitle": "7-minute interactive map of blockchain architecture and component relationships",
       "categories": {
         "all": "All Technologies",
         "core": "Core Protocol",
@@ -5486,6 +5486,177 @@
         "infrastructure": "Infrastructure",
         "directConnection": "Direct Connection",
         "relation": "Related Technology"
+      },
+      "tldr": {
+        "title": "Key Technologies at a Glance",
+        "eutxo": "Extended UTXO provides security + smart contract expressiveness",
+        "ergoscript": "Functional language with built-in cryptographic primitives",
+        "autolykos": "ASIC-resistant consensus ensuring decentralization",
+        "sigma": "Zero-knowledge proofs without trusted setup",
+        "storageRent": "Sustainable economics preventing blockchain bloat",
+        "nipopows": "Efficient light clients with cryptographic security",
+        "nativeTokens": "First-class multi-asset support at protocol level"
+      },
+      "transactionLifecycle": {
+        "title": "Transaction Lifecycle",
+        "subtitle": "How transactions flow through Ergo's architecture",
+        "steps": {
+          "creation": {
+            "title": "Transaction Creation",
+            "description": "User creates inputs and outputs with ErgoScript conditions"
+          },
+          "validation": {
+            "title": "Script Validation", 
+            "description": "ErgoScript and Sigma protocols verify transaction conditions"
+          },
+          "mining": {
+            "title": "Block Inclusion",
+            "description": "Miner includes transaction in block using Autolykos PoW"
+          },
+          "finalization": {
+            "title": "Network Finalization",
+            "description": "Transaction becomes part of immutable blockchain state"
+          },
+          "proof": {
+            "title": "Light Client Proof",
+            "description": "NIPoPoW enables efficient verification without full node"
+          }
+        }
+      },
+      "dappPatterns": {
+        "title": "Common dApp Patterns",
+        "subtitle": "Proven architectural patterns for Ergo applications",
+        "dex": {
+          "title": "DEX Order Pattern",
+          "description": "Atomic swap execution using box chaining",
+          "steps": [
+            "Create order box with swap conditions",
+            "Matcher finds compatible orders",
+            "ErgoScript validates trade terms", 
+            "New boxes created with swapped assets"
+          ]
+        },
+        "oracle": {
+          "title": "Oracle Pool Pattern",
+          "description": "Decentralized data feed consensus",
+          "steps": [
+            "Oracles collect off-chain data",
+            "Sigma protocols prove authenticity",
+            "Pool contract validates consensus",
+            "Verified data published on-chain"
+          ]
+        },
+        "dao": {
+          "title": "DAO Voting Pattern",
+          "description": "Governance with quorum and timeouts", 
+          "steps": [
+            "Proposal box created with conditions",
+            "Voting period with token locking",
+            "Quorum threshold verification",
+            "Execution or timeout handling"
+          ]
+        }
+      },
+      "strengths": {
+        "title": "Strengths & Trade-offs",
+        "advantages": {
+          "title": "Key Advantages",
+          "predictable": {
+            "title": "Predictable Execution",
+            "description": "eUTXO eliminates gas price auctions and reentrancy attacks"
+          },
+          "verifiable": {
+            "title": "Formal Verifiability", 
+            "description": "ErgoScript enables mathematical proof of contract correctness"
+          },
+          "parallel": {
+            "title": "Parallel Processing",
+            "description": "UTXO model allows concurrent transaction validation"
+          },
+          "cryptography": {
+            "title": "Built-in Cryptography",
+            "description": "Native Sigma protocols for advanced privacy features"
+          }
+        },
+        "tradeoffs": {
+          "title": "Design Trade-offs",
+          "learning": {
+            "title": "Learning Curve",
+            "description": "Functional paradigm requires different thinking than account-based"
+          },
+          "ux": {
+            "title": "UX Complexity", 
+            "description": "Box management adds complexity but enables powerful patterns"
+          },
+          "storage": {
+            "title": "Storage Costs",
+            "description": "Storage rent ensures sustainability but requires active management"
+          },
+          "ecosystem": {
+            "title": "Ecosystem Maturity",
+            "description": "Newer ecosystem with growing but smaller developer tooling"
+          }
+        }
+      },
+      "faq": {
+        "title": "Frequently Asked Questions",
+        "items": {
+          "0": {
+            "question": "How does eUTXO differ from Bitcoin's UTXO model?",
+            "answer": "eUTXO extends Bitcoin's UTXO with registers (R0-R9) for data storage and ErgoTree guard scripts for programmable spending conditions. This enables smart contracts while maintaining UTXO's security and parallelism benefits."
+          },
+          "1": {
+            "question": "What makes Sigma protocols special for blockchain?",
+            "answer": "Sigma protocols provide zero-knowledge proofs without trusted setup, enabling privacy features like ring signatures and confidential transactions. They're built directly into ErgoScript, making advanced cryptography accessible to developers."
+          },
+          "2": {
+            "question": "Why does Ergo need Storage Rent?",
+            "answer": "Storage Rent prevents blockchain bloat by recycling fees from unused UTXOs back to miners. This ensures long-term sustainability and predictable storage costs, solving the 'state explosion' problem other blockchains face."
+          },
+          "3": {
+            "question": "How do light clients trust the network without full validation?",
+            "answer": "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) provide cryptographically secure proofs that a transaction is included in the blockchain. Light clients can verify these logarithmic-size proofs without downloading the entire chain."
+          },
+          "4": {
+            "question": "What are the main dApp development patterns on Ergo?",
+            "answer": "Key patterns include: Order books for DEXs using box chaining, Oracle pools for data feeds with consensus mechanisms, DAO governance with voting and quorum logic, and Multi-stage contracts for complex workflows."
+          },
+          "5": {
+            "question": "How does Autolykos ensure decentralization?",
+            "answer": "Autolykos is memory-hard and ASIC-resistant, favoring consumer GPUs over specialized hardware. This keeps mining accessible to individuals and prevents centralization in ASIC farms."
+          },
+          "6": {
+            "question": "What are Ergo's scalability characteristics?",
+            "answer": "eUTXO enables parallel transaction processing, NIPoPoWs provide efficient light clients, and Storage Rent prevents state bloat. Layer 2 solutions can leverage these properties for further scaling."
+          },
+          "7": {
+            "question": "How do native tokens work without smart contracts?",
+            "answer": "Native tokens are built into the protocol layer, stored directly in UTXO boxes. This provides efficient creation, transfer, and management without requiring smart contract deployment or execution."
+          }
+        }
+      },
+      "glossary": {
+        "title": "Technical Glossary",
+        "terms": {
+          "eutxo": "Extended UTXO model with registers and programmable spending conditions",
+          "box": "Ergo's equivalent of Bitcoin UTXO, containing value and data in registers",
+          "ergoscript": "Functional smart contract language with built-in cryptographic primitives",
+          "ergotree": "Compiled bytecode representation of ErgoScript contracts",
+          "sigmaProtocol": "Zero-knowledge proof system enabling privacy without trusted setup",
+          "autolykos": "ASIC-resistant Proof-of-Work algorithm ensuring mining decentralization",
+          "nipopow": "Non-Interactive Proofs enabling efficient light client verification",
+          "storageRent": "Economic mechanism preventing blockchain bloat through UTXO recycling",
+          "nativeToken": "First-class tokens built into protocol without smart contracts",
+          "lightClient": "Blockchain client that verifies transactions without full node data"
+        }
+      },
+      "furtherReading": {
+        "title": "Further Reading",
+        "subtitle": "Dive deeper into Ergo's technology",
+        "ergoscript": "ErgoScript Guide",
+        "eutxo": "eUTXO Deep Dive", 
+        "documentation": "Technical Documentation",
+        "sourceCode": "Source Code"
       }
     }
   },

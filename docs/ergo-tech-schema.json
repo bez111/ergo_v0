@@ -1,0 +1,222 @@
+{
+  "techArticleSchema": {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://ergoblockchain.org/technology/map",
+    "headline": "Ergo: How Protocol Technologies Connect (7-Minute Map)",
+    "description": "Comprehensive guide to Ergo blockchain architecture showing how eUTXO, ErgoScript, Autolykos, Sigma protocols, and other components interconnect to create a secure, scalable, and sustainable blockchain platform.",
+    "image": "https://ergoblockchain.org/og/technology-map.png",
+    "datePublished": "2024-12-15",
+    "dateModified": "2024-12-15",
+    "author": {
+      "@type": "Organization",
+      "@id": "https://ergoblockchain.org#organization",
+      "name": "Ergo Platform",
+      "url": "https://ergoblockchain.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ergoblockchain.org/favicon.ico"
+      }
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://ergoblockchain.org#organization"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ergoblockchain.org/technology/map"
+    },
+    "articleSection": "Technology",
+    "keywords": [
+      "Ergo blockchain architecture",
+      "eUTXO model",
+      "ErgoScript smart contracts", 
+      "Autolykos proof of work",
+      "Sigma protocols",
+      "NIPoPoWs light clients",
+      "Storage rent mechanism",
+      "Native tokens",
+      "Blockchain technology map",
+      "Cryptocurrency architecture"
+    ],
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "eUTXO Model",
+        "description": "Extended UTXO model enabling smart contracts with UTXO security"
+      },
+      {
+        "@type": "Thing", 
+        "name": "ErgoScript",
+        "description": "Functional smart contract language with built-in cryptographic primitives"
+      },
+      {
+        "@type": "Thing",
+        "name": "Autolykos",
+        "description": "ASIC-resistant Proof-of-Work consensus algorithm"
+      },
+      {
+        "@type": "Thing",
+        "name": "Sigma Protocols",
+        "description": "Zero-knowledge proof system without trusted setup"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Ergo Node",
+        "applicationCategory": "Blockchain Node Software"
+      },
+      {
+        "@type": "SoftwareApplication", 
+        "name": "ErgoScript",
+        "applicationCategory": "Smart Contract Language"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "inLanguage": "en",
+    "copyrightHolder": {
+      "@type": "Organization",
+      "@id": "https://ergoblockchain.org#organization"
+    },
+    "copyrightYear": 2024,
+    "educationalLevel": "Intermediate",
+    "learningResourceType": "Technical Guide",
+    "timeRequired": "PT7M",
+    "interactivityType": "active"
+  },
+  
+  "breadcrumbSchema": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ergoblockchain.org"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Technology",
+        "item": "https://ergoblockchain.org/technology"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Technology Map",
+        "item": "https://ergoblockchain.org/technology/map"
+      }
+    ]
+  },
+  
+  "faqSchema": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://ergoblockchain.org/technology/map#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How does eUTXO differ from Bitcoin's UTXO model?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "eUTXO extends Bitcoin's UTXO with registers (R0-R9) for data storage and ErgoTree guard scripts for programmable spending conditions. This enables smart contracts while maintaining UTXO's security and parallelism benefits."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What makes Sigma protocols special for blockchain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sigma protocols provide zero-knowledge proofs without trusted setup, enabling privacy features like ring signatures and confidential transactions. They're built directly into ErgoScript, making advanced cryptography accessible to developers."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why does Ergo need Storage Rent?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Storage Rent prevents blockchain bloat by recycling fees from unused UTXOs back to miners. This ensures long-term sustainability and predictable storage costs, solving the 'state explosion' problem other blockchains face."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do light clients trust the network without full validation?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) provide cryptographically secure proofs that a transaction is included in the blockchain. Light clients can verify these logarithmic-size proofs without downloading the entire chain."
+        }
+      }
+    ]
+  },
+  
+  "howToSchema": {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Understand Ergo's Technology Architecture",
+    "description": "Step-by-step guide to understanding how Ergo's blockchain components work together",
+    "image": "https://ergoblockchain.org/og/technology-map.png",
+    "totalTime": "PT7M",
+    "estimatedCost": {
+      "@type": "MonetaryAmount",
+      "currency": "USD",
+      "value": "0"
+    },
+    "step": [
+      {
+        "@type": "HowToStep",
+        "name": "Understand eUTXO Basics",
+        "text": "Learn how Extended UTXO differs from Bitcoin's UTXO and Ethereum's account model",
+        "url": "https://ergoblockchain.org/technology/eutxo-model"
+      },
+      {
+        "@type": "HowToStep", 
+        "name": "Explore ErgoScript",
+        "text": "Understand the functional smart contract language and its capabilities",
+        "url": "https://ergoblockchain.org/technology/ergoscript"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Learn About Consensus",
+        "text": "Discover how Autolykos PoW ensures network security and decentralization",
+        "url": "https://ergoblockchain.org/technology/autolykos"
+      },
+      {
+        "@type": "HowToStep",
+        "name": "Understand Privacy Features", 
+        "text": "Explore Sigma protocols and their applications in privacy-preserving contracts",
+        "url": "https://ergoblockchain.org/technology/privacy"
+      }
+    ]
+  },
+  
+  "datasetSchema": {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Ergo Technology Components Dataset",
+    "description": "Comprehensive dataset of Ergo blockchain technology components and their relationships",
+    "creator": {
+      "@type": "Organization",
+      "name": "Ergo Platform"
+    },
+    "keywords": [
+      "blockchain architecture",
+      "eUTXO model", 
+      "smart contracts",
+      "consensus algorithms",
+      "cryptographic protocols"
+    ],
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "distribution": {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://ergoblockchain.org/api/technology/components"
+    },
+    "temporalCoverage": "2019/..",
+    "spatialCoverage": {
+      "@type": "Place",
+      "name": "Global"
+    }
+  }
+}
