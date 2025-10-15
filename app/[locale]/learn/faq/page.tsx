@@ -1,214 +1,105 @@
-"use client"
+import type { Metadata } from "next"
+import FAQClient from "./FAQClient"
+import FAQListServer from "./FAQListServer"
+import FAQBackground from "./FAQBackground"
+import { faqData } from "./faqData"
 
-import { useTranslations } from "next-intl"
-import { motion } from "framer-motion"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { SchemaOrg } from "@/components/seo/schema-org"
-import { Breadcrumbs } from "@/components/seo/breadcrumbs"
-import { 
-  HelpCircle, 
-  ChevronDown,
-  ExternalLink,
-  ArrowRight
-} from "lucide-react"
-import Link from "next/link"
-import { useState } from "react"
-import React from "react"
+export const revalidate = 86400
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      staggerChildren: 0.1,
-    },
-  },
+const origin = "https://ergoblockchain.org"
+const url = `${origin}/learn/faq`
+
+const slug = (s: string) => s.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "")
+const firstSentence = (s: string) => {
+  const m = s.replace(/\s+/g, " ").match(/(.+?[.!?])\s/)
+  return (m?.[1] || s).slice(0, 500)
 }
 
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
+export function generateMetadata(): Metadata {
+  const title = "Ergo Knowledge Base — FAQ about Tech, Economics, Ecosystem"
+  const description =
+    "Comprehensive answers about Ergo: eUTXO, ErgoScript, privacy, tokenomics, wallets, mining and more."
+  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE
+  return {
+    title,
+    description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      url,
+      siteName: "Ergo",
+      title,
+      description,
+      images: [{ url: `${origin}/og/faq.png`, width: 1200, height: 630 }],
+      locale: "en_US",
     },
-  },
+    twitter: {
+      card: "summary_large_image",
+      images: [`${origin}/og/faq.png`],
+      ...(twitterHandle ? { site: twitterHandle, creator: twitterHandle } : {}),
+    },
+    robots: { index: true, follow: true },
+    other: { "og:locale": "en_US" },
+  }
 }
 
-export default function FaqPage() {
-  const t = useTranslations("learn.faq")
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+export default function LearnFAQPage() {
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqData.map((q) => ({
+      "@type": "Question",
+      "@id": `${url}#${slug(q.question)}`,
+      name: q.question,
+      url: `${url}#${slug(q.question)}`,
+      acceptedAnswer: { "@type": "Answer", text: firstSentence(q.answer) },
+      inLanguage: "en",
+    })),
+  }
 
-  const lastUpdated = "2024-01-15"
-
-  const faqs = [
-    {
-      question: t("questions.0.question"),
-      answer: t("questions.0.answer")
-    },
-    {
-      question: t("questions.1.question"),
-      answer: t("questions.1.answer")
-    },
-    {
-      question: t("questions.2.question"),
-      answer: t("questions.2.answer")
-    }
-  ]
+  const breadcrumbsJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "@id": `${url}#breadcrumbs`,
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Learn", item: `${origin}/learn` },
+      { "@type": "ListItem", position: 2, name: "FAQ", item: url },
+    ],
+  }
 
   return (
-    <>
-      {/* BreadcrumbList Schema */}
-      <SchemaOrg
-        type="BreadcrumbList"
-        data={{
-          "@type": "BreadcrumbList",
-          itemListElement: [
-            {
-              "@type": "ListItem",
-              position: 1,
-              name: "Learn",
-              item: "https://ergoblockchain.org/learn"
-            },
-            {
-              "@type": "ListItem",
-              position: 2,
-              name: t("title"),
-              item: "https://ergoblockchain.org/learn/faq"
-            }
-          ]
-        }}
-      />
+    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Subtle background in UI Kit style */}
+      <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" aria-hidden />
+      <FAQBackground />
 
-      {/* FAQPage Schema */}
-      <SchemaOrg
-        type="FAQPage"
-        data={{
-          "@type": "FAQPage",
-          mainEntity: faqs.map(faq => ({
-            "@type": "Question",
-            name: faq.question,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: faq.answer
-            }
-          }))
-        }}
-      />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
 
-      <div className="min-h-screen bg-black relative overflow-hidden">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-12">
+        <header className="mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold mb-3">ERGO KNOWLEDGE BASE</h1>
+          <p className="text-lg md:text-xl text-neutral-400 max-w-3xl">Answers about Ergo’s technology, economics and ecosystem.</p>
+        </header>
 
-        {/* Breadcrumbs */}
-        <div className="sr-only">
-          <Breadcrumbs
-            items={[
-              { name: "Learn", href: "/learn" },
-              { name: t("title"), href: "/learn/faq" }
-            ]}
-            className="mb-8"
-          />
-        </div>
+        {/* Thin client controls over SSR content */}
+        <FAQClient rootId="faq-root" />
 
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="relative z-10 pb-24"
-        >
-          {/* Hero Section */}
-          <motion.section
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4"
-          >
-            <div className="max-w-4xl mx-auto text-center">
-              <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
-                {t("title")}
-              </h1>
-              <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
-              <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-                {t("subtitle")}
-              </p>
-              <p className="text-lg text-neutral-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-                {t("description")}
-              </p>
-            </div>
-          </motion.section>
+        {/* Full SSR list with anchors and categories ToC */}
+        <FAQListServer data={faqData} rootId="faq-root" />
 
-          {/* FAQ Section */}
-          <motion.section
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4"
-          >
-            <div className="max-w-4xl mx-auto">
-              <div className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <Collapsible
-                    key={index}
-                    open={openFAQ === index}
-                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  >
-                    <Card className="bg-neutral-900/50 border-neutral-700">
-                      <CollapsibleTrigger asChild>
-                        <CardContent className="p-6 cursor-pointer hover:bg-neutral-800/30 transition-colors">
-                          <div className="flex items-center justify-between">
-                            <h3 className="text-lg font-semibold text-white text-left">{faq.question}</h3>
-                            <ChevronDown className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} />
-                          </div>
-                        </CardContent>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent>
-                        <CardContent className="px-6 pb-6 pt-0">
-                          <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
-                        </CardContent>
-                      </CollapsibleContent>
-                    </Card>
-                  </Collapsible>
-                ))}
-              </div>
-            </div>
-          </motion.section>
-
-          {/* CTA */}
-          <motion.section
-            variants={itemVariants}
-            className="py-16 px-4"
-          >
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">{t("cta.title")}</h2>
-              <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-                {t("cta.subtitle")}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/start/community">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    {t("cta.buttons.askCommunity")}
-                  </Button>
-                </Link>
-                <Link href="/docs">
-                  <Button
-                    variant="outline"
-                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                  >
-                    {t("cta.buttons.browseDocs")}
-                  </Button>
-                </Link>
-              </div>
-            </div>
-          </motion.section>
-        </motion.div>
+        {/* No-JS fallback to ensure content is present if JS disabled */}
+        <noscript>
+          <div className="mt-8 space-y-6">
+            {faqData.map((q) => (
+              <section key={q.id} id={slug(q.question)}>
+                <h3 className="text-xl font-semibold text-white">{q.question}</h3>
+                <p className="text-neutral-300">{q.answer}</p>
+        </section>
+            ))}
+          </div>
+        </noscript>
       </div>
-    </>
+    </div>
   )
 }

@@ -5481,7 +5481,8 @@
       "showResults": "Show Results",
       "profiles": {
         "learner": {
-          "title": "Learner",
+          "name": "Learner",
+          "title": "Knowledge Seeker",
           "description": "Explore Ergo's technology and ecosystem at your own pace",
           "tools": {
             "0": {
@@ -5537,13 +5538,430 @@
           }
         },
         "miner": {
+          "name": "Miner",
+          "title": "Network Supporter",
+          "description": "Help secure the Ergo network while earning rewards through mining with consumer hardware",
+          "tools": {
+            "0": {
+              "category": "Mining Software",
+              "items": {
+                "0": {
+                  "name": "Autolykos Mining",
+                  "description": "Official Ergo mining implementation",
+                  "link": "/use/mining"
+                },
+                "1": {
+                  "name": "Mining Pools",
+                  "description": "Join a pool to get consistent rewards",
+                  "link": "/use/mining#pools"
+                }
+              }
+            },
+            "1": {
+              "category": "Optimization",
+              "items": {
+                "0": {
+                  "name": "Hardware Guide",
+                  "description": "GPU selection and optimization tips",
+                  "link": "/use/mining#hardware"
+                },
+                "1": {
+                  "name": "Profitability Calculator",
+                  "description": "Calculate your mining earnings",
+                  "link": "https://whattomine.com"
+                }
+              }
+            }
+          },
+          "nextSteps": {
+            "0": {
+              "text": "Download mining software and configure",
+              "link": "/use/mining"
+            },
+            "1": {
+              "text": "Join a mining pool",
+              "link": "/use/mining#pools"
+            }
+          },
           "communityChannels": {
             "0": {
+              "name": "Mining Discord",
               "link": "https://discord.gg/ergo-mining"
+            },
+            "1": {
+              "name": "Telegram Mining",
+              "link": "https://t.me/ergo_mining"
+            }
+          }
+        },
+        "developer": {
+          "name": "Developer",
+          "title": "Blockchain Developer",
+          "description": "Build decentralized applications and smart contracts on Ergo",
+          "tools": {
+            "0": {
+              "category": "Development Tools",
+              "items": {
+                "0": {
+                  "name": "ErgoScript Documentation",
+                  "description": "Smart contract language guide",
+                  "link": "/technology/ergoscript"
+                },
+                "1": {
+                  "name": "Development Toolkit",
+                  "description": "Tools and SDKs for building",
+                  "link": "/docs/developers"
+                },
+                "2": {
+                  "name": "Code Examples",
+                  "description": "Sample contracts and templates",
+                  "link": "https://github.com/ergoplatform/ergo-examples"
+                }
+              }
+            },
+            "1": {
+              "category": "Resources",
+              "items": {
+                "0": {
+                  "name": "API Documentation",
+                  "description": "Node and Explorer APIs",
+                  "link": "/docs/developers/api"
+                },
+                "1": {
+                  "name": "Testnet",
+                  "description": "Test your applications",
+                  "link": "https://testnet.ergoplatform.com"
+                }
+              }
+            }
+          },
+          "nextSteps": {
+            "0": {
+              "text": "Learn ErgoScript basics",
+              "link": "/learn/ergoscript"
+            },
+            "1": {
+              "text": "Set up development environment",
+              "link": "/docs/developers/setup"
+            },
+            "2": {
+              "text": "Join developer community",
+              "link": "https://discord.gg/ergo-dev"
+            }
+          },
+          "communityChannels": {
+            "0": {
+              "name": "Developer Discord",
+              "link": "https://discord.gg/ergo-dev"
+            },
+            "1": {
+              "name": "GitHub",
+              "link": "https://github.com/ergoplatform"
+            }
+          }
+        },
+        "investor": {
+          "name": "Investor",
+          "title": "Investor & Trader",
+          "description": "Discover investment opportunities and trading strategies in the Ergo ecosystem",
+          "tools": {
+            "0": {
+              "category": "Trading Platforms",
+              "items": {
+                "0": {
+                  "name": "Exchanges",
+                  "description": "Where to buy and trade ERG",
+                  "link": "/use/get-erg"
+                },
+                "1": {
+                  "name": "Spectrum DEX",
+                  "description": "Decentralized trading platform",
+                  "link": "https://spectrum.fi"
+                }
+              }
+            },
+            "1": {
+              "category": "Analysis Tools",
+              "items": {
+                "0": {
+                  "name": "Price Charts",
+                  "description": "Track ERG price and volume",
+                  "link": "https://www.coingecko.com/en/coins/ergo"
+                },
+                "1": {
+                  "name": "Explorer",
+                  "description": "On-chain analytics",
+                  "link": "https://explorer.ergoplatform.com"
+                }
+              }
+            }
+          },
+          "nextSteps": {
+            "0": {
+              "text": "Set up Ergo wallet",
+              "link": "/wallet"
+            },
+            "1": {
+              "text": "Research DeFi opportunities",
+              "link": "/ecosystem"
+            }
+          },
+          "communityChannels": {
+            "0": {
+              "name": "Trading Discord",
+              "link": "https://discord.gg/ergo"
+            },
+            "1": {
+              "name": "Reddit",
+              "link": "https://reddit.com/r/ergonauts"
+            }
+          }
+        },
+        "defi": {
+          "name": "DeFi User",
+          "title": "DeFi Explorer",
+          "description": "Explore decentralized finance protocols for lending, borrowing, and yield farming",
+          "tools": {
+            "0": {
+              "category": "DeFi Protocols",
+              "items": {
+                "0": {
+                  "name": "SigmaUSD",
+                  "description": "Algorithmic stablecoin protocol",
+                  "link": "/ecosystem/sigmausd"
+                },
+                "1": {
+                  "name": "Spectrum Finance",
+                  "description": "AMM and liquidity pools",
+                  "link": "https://spectrum.fi"
+                }
+              }
+            },
+            "1": {
+              "category": "Yield Opportunities",
+              "items": {
+                "0": {
+                  "name": "Liquidity Mining",
+                  "description": "Earn fees as LP",
+                  "link": "https://spectrum.fi/pools"
+                },
+                "1": {
+                  "name": "Lending Protocols",
+                  "description": "Lend and borrow assets",
+                  "link": "/ecosystem"
+                }
+              }
+            }
+          },
+          "nextSteps": {
+            "0": {
+              "text": "Explore DeFi protocols",
+              "link": "/ecosystem"
+            },
+            "1": {
+              "text": "Learn about yield strategies",
+              "link": "/use/guides/defi"
+            }
+          },
+          "communityChannels": {
+            "0": {
+              "name": "DeFi Discord",
+              "link": "https://discord.gg/ergo"
+            },
+            "1": {
+              "name": "Telegram",
+              "link": "https://t.me/ergoplatform"
+            }
+          }
+        },
+        "nft": {
+          "name": "NFT Enthusiast",
+          "title": "NFT Creator & Collector",
+          "description": "Create, trade, and collect unique digital art and collectibles on Ergo",
+          "tools": {
+            "0": {
+              "category": "NFT Platforms",
+              "items": {
+                "0": {
+                  "name": "Sky Harbor",
+                  "description": "NFT marketplace on Ergo",
+                  "link": "https://skyharbor.io"
+                },
+                "1": {
+                  "name": "Ergo Auctions",
+                  "description": "NFT auction platform",
+                  "link": "https://ergoauctions.org"
+                }
+              }
+            },
+            "1": {
+              "category": "Creation Tools",
+              "items": {
+                "0": {
+                  "name": "NFT Minting",
+                  "description": "Create your own NFTs",
+                  "link": "/use/nfts"
+                },
+                "1": {
+                  "name": "Art Guidelines",
+                  "description": "Best practices for NFT creation",
+                  "link": "/use/guides/nft-creation"
+                }
+              }
+            }
+          },
+          "nextSteps": {
+            "0": {
+              "text": "Browse NFT marketplaces",
+              "link": "https://skyharbor.io"
+            },
+            "1": {
+              "text": "Learn about NFT creation",
+              "link": "/use/nfts"
+            }
+          },
+          "communityChannels": {
+            "0": {
+              "name": "NFT Discord",
+              "link": "https://discord.gg/ergo"
+            },
+            "1": {
+              "name": "Twitter",
+              "link": "https://twitter.com/ergoplatformorg"
+            }
+          }
+        },
+        "privacy": {
+          "name": "Privacy Advocate",
+          "title": "Privacy-Focused User",
+          "description": "Use Ergo's privacy features for confidential transactions and financial sovereignty",
+          "tools": {
+            "0": {
+              "category": "Privacy Tools",
+              "items": {
+                "0": {
+                  "name": "ErgoMixer",
+                  "description": "Non-custodial mixing protocol",
+                  "link": "/use/privacy"
+                },
+                "1": {
+                  "name": "Sigma Protocols",
+                  "description": "Zero-knowledge proof system",
+                  "link": "/technology/privacy"
+                }
+              }
+            },
+            "1": {
+              "category": "Privacy Guides",
+              "items": {
+                "0": {
+                  "name": "Privacy Best Practices",
+                  "description": "Maintain financial privacy",
+                  "link": "/use/guides/privacy"
+                },
+                "1": {
+                  "name": "Anonymous Transactions",
+                  "description": "How to transact privately",
+                  "link": "/use/privacy#transactions"
+                }
+              }
+            }
+          },
+          "nextSteps": {
+            "0": {
+              "text": "Set up ErgoMixer",
+              "link": "/use/privacy"
+            },
+            "1": {
+              "text": "Learn about Sigma protocols",
+              "link": "/technology/privacy"
+            }
+          },
+          "communityChannels": {
+            "0": {
+              "name": "Privacy Discord",
+              "link": "https://discord.gg/ergo"
+            },
+            "1": {
+              "name": "Forums",
+              "link": "https://www.ergoforum.org"
             }
           }
         }
-      }
+      },
+      "questions": {
+        "0": {
+          "question": "What primarily attracts you to blockchain technology and Ergo?",
+          "options": {
+            "0": {
+              "text": "Investment potential and financial opportunities"
+            },
+            "1": {
+              "text": "Building applications and contributing to new technologies"
+            },
+            "2": {
+              "text": "Supporting network security and earning rewards through hardware"
+            },
+            "3": {
+              "text": "Collecting, creating, or trading unique digital items and art"
+            },
+            "4": {
+              "text": "Using new financial tools for borrowing, lending, or trading"
+            },
+            "5": {
+              "text": "Enhancing my financial privacy and anonymity"
+            },
+            "6": {
+              "text": "I'm new and just want to learn the basics first!"
+            }
+          }
+        },
+        "1": {
+          "question": "How would you describe your technical comfort level?",
+          "options": {
+            "0": {
+              "text": "Very comfortable; I can code or manage complex systems"
+            },
+            "1": {
+              "text": "Moderately comfortable; I can learn new software and follow guides"
+            },
+            "2": {
+              "text": "Not very technical; I prefer simple and user-friendly applications"
+            }
+          }
+        },
+        "2": {
+          "question": "What are you most interested in doing with Ergo?",
+          "options": {
+            "0": {
+              "text": "Growing my assets and exploring financial instruments"
+            },
+            "1": {
+              "text": "Creating new tools, dApps, or smart contracts"
+            },
+            "2": {
+              "text": "Securing the network and earning ERG"
+            },
+            "3": {
+              "text": "Trading, creating, or showcasing digital art and collectibles"
+            },
+            "4": {
+              "text": "Keeping my transactions and holdings private"
+            },
+            "5": {
+              "text": "Just learning about crypto and blockchain for now"
+            }
+          }
+        }
+      },
+      "results": {
+        "title": "Your Ergo Path",
+        "subtitle": "Based on your answers, here's your personalized path",
+        "nextSteps": "Recommended Next Steps",
+        "communityChannels": "Join These Communities"
+      },
+      "retakeQuiz": "Take Quiz Again",
+      "exploreMore": "Explore More"
     },
     "comparison": {
       "seo": {
@@ -5555,6 +5973,28 @@
         "ogAlt": "Ergo blockchain comparison chart",
         "twitterTitle": "Ergo vs Other Blockchains - Detailed Comparison", 
         "twitterDescription": "Compare Ergo with Bitcoin, Ethereum, and Cardano. Understand the unique advantages of Extended UTXO and Sigma Protocols."
+      },
+      "keyDifferentiators": {
+        "0": {
+          "title": "Security & Predictability",
+          "ergo": "eUTXO model provides predictable execution costs and eliminates many attack vectors like reentrancy",
+          "others": "Account-based models are prone to reentrancy attacks and unpredictable gas costs"
+        },
+        "1": {
+          "title": "Smart Contract Design",
+          "ergo": "ErgoScript enables powerful contracts with built-in cryptographic primitives and formal verification",
+          "others": "Most platforms require external libraries and complex implementations for advanced cryptography"
+        },
+        "2": {
+          "title": "Scalability & Efficiency",
+          "ergo": "Parallel transaction processing and efficient light clients via NIPoPoWs",
+          "others": "Sequential processing and resource-intensive light client implementations"
+        },
+        "3": {
+          "title": "Long-term Sustainability",
+          "ergo": "Storage rent mechanism prevents blockchain bloat and ensures miner incentives beyond block rewards",
+          "others": "Growing state size and uncertain long-term economics after emission ends"
+        }
       }
     },
     "faq": {
@@ -8348,8 +8788,18 @@
       "collection_of_technical_guides_and": "Collection of technical guides and tutorials for Ergo blockchain"
     },
     "faq": {
-      "collapse_all": "Collapse all",
-      "faq_sections_classname": "FAQ sections\" className="
+      "categories": {
+        "title": "Categories",
+        "general": "General",
+        "technology": "Technology",
+        "economics": "Economics",
+        "ecosystem": "Ecosystem",
+        "wallets": "Wallets",
+        "troubleshooting": "Troubleshooting"
+      },
+      "searchPlaceholder": "Search FAQ...",
+      "expandAll": "Expand All",
+      "collapseAll": "Collapse All"
     },
     "learnErgoscript": {
       "title": "Learn ErgoScript",
