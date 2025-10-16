@@ -55,57 +55,57 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         {cleanExcerpt}
       </p>
 
-      {/* Meta Line */}
-      <div className="mt-8 flex items-center gap-3 text-neutral-400">
-        {/* Author Avatar */}
-        <div className="h-10 w-10 rounded-full bg-neutral-800 grid place-content-center font-semibold text-neutral-200">
-          {post.author.avatar ? (
-            <Image 
-              src={post.author.avatar} 
-              alt={post.author.name}
-              width={40}
-              height={40}
-              className="object-cover rounded-full"
-            />
-          ) : (
-            post.author.name.charAt(0)
+      {/* Meta Line with CTA Button on the right */}
+      <div className="mt-8 flex items-center justify-between gap-3">
+        <div className="flex items-center gap-3 text-neutral-400">
+          {/* Author Avatar */}
+          <div className="h-10 w-10 rounded-full bg-neutral-800 grid place-content-center font-semibold text-neutral-200">
+            {post.author.avatar ? (
+              <Image 
+                src={post.author.avatar} 
+                alt={post.author.name}
+                width={40}
+                height={40}
+                className="object-cover rounded-full"
+              />
+            ) : (
+              post.author.name.charAt(0)
+            )}
+          </div>
+          
+          {/* Author Name */}
+          <Link 
+            href={`/blog/author/${post.author.id}`}
+            className="text-neutral-300 hover:text-white transition-colors font-medium"
+          >
+            {post.author.name}
+          </Link>
+          
+          <span>•</span>
+          
+          {/* Date */}
+          <time dateTime={post.date} className="whitespace-nowrap">
+            {new Date(post.date).toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'short', 
+              day: 'numeric' 
+            })}
+          </time>
+          
+          <span>•</span>
+          
+          {/* Read Time */}
+          <span>{post.readTime} min</span>
+          
+          {post.views && (
+            <>
+              <span>•</span>
+              <span>{formatViews(post.views)}</span>
+            </>
           )}
         </div>
-        
-        {/* Author Name */}
-        <Link 
-          href={`/blog/author/${post.author.id}`}
-          className="text-neutral-300 hover:text-white transition-colors font-medium"
-        >
-          {post.author.name}
-        </Link>
-        
-        <span>•</span>
-        
-        {/* Date */}
-        <time dateTime={post.date} className="whitespace-nowrap">
-          {new Date(post.date).toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'short', 
-            day: 'numeric' 
-          })}
-        </time>
-        
-        <span>•</span>
-        
-        {/* Read Time */}
-        <span>{post.readTime} min</span>
-        
-        {post.views && (
-          <>
-            <span>•</span>
-            <span>{formatViews(post.views)}</span>
-          </>
-        )}
-      </div>
 
-      {/* CTA Button */}
-      <div className="mt-8">
+        {/* CTA Button - Right side */}
         <Link
           href={`/blog/${post.slug}`}
           className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold bg-orange-500 hover:bg-orange-400 active:scale-[.98] transition-all duration-200 focus:outline-2 focus:outline-offset-2 focus:outline-orange-500 group/btn"
