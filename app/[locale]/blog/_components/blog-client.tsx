@@ -23,34 +23,36 @@ interface BlogClientProps {
 type SortKey = "newest" | "trending" | "readtime" | "popular"
 
 export default function BlogClient({ posts, categories, page, pageSize, total, hasMore, children }: BlogClientProps) {
+  const router = useRouter()
+  const params = useSearchParams()
+  
+  // Initialize state from URL params immediately to prevent flashing
+  const initialCategory = params.get("category") || "all"
+  const initialSort = (params.get("sort") as SortKey) || "newest"
+  const initialSearch = params.get("q") || ""
+
   const [hydrated, setHydrated] = useState(false)
   const [loadedPosts, setLoadedPosts] = useState(posts)
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(page)
-  
-  useEffect(() => { setHydrated(true) }, [])
-
-  // Hydration gate handled in render to preserve hook order
-  const router = useRouter()
-  const params = useSearchParams()
-
-  const [search, setSearch] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState<string>("all")
-  const [sortBy, setSortBy] = useState<SortKey>("newest")
+  const [search, setSearch] = useState(initialSearch)
+  const [selectedCategory, setSelectedCategory] = useState<string>(initialCategory)
+  const [selectedTags, setSelectedTags] = useState<string[]>([])
+  const [sortBy, setSortBy] = useState<SortKey>(initialSort)
 
   const deferredSearch = useDeferredValue(search)
 
-  // Initialize filters from URL on hydration
-  useEffect(() => {
-    if (!hydrated) return
+  useEffect(() => { 
+    setHydrated(true)
+    // Sync with URL params after hydration if they changed
     const category = params.get("category") || "all"
     const sort = (params.get("sort") as SortKey) || "newest"
     const searchQuery = params.get("q") || ""
     
-    setSelectedCategory(category)
-    setSortBy(sort)
-    setSearch(searchQuery)
-  }, [hydrated, params])
+    if (category !== selectedCategory) setSelectedCategory(category)
+    if (sort !== sortBy) setSortBy(sort)
+    if (searchQuery !== search) setSearch(searchQuery)
+  }, [params])
 
   // Load more posts
   const loadMore = async () => {
@@ -93,6 +95,12 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
       filtered = filtered.filter((post) => post.category === selectedCategory)
     }
 
+    // Tags filter
+    if (selectedTags.length > 0) {
+      filtered = filtered.filter((post) => 
+        post.tags?.some(tag => selectedTags.includes(tag))
+      )
+    }
 
     // Sort
     filtered = [...filtered].sort((a, b) => {
@@ -110,7 +118,7 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
     })
 
     return filtered
-  }, [loadedPosts, deferredSearch, selectedCategory, sortBy])
+  }, [loadedPosts, deferredSearch, selectedCategory, selectedTags, sortBy])
 
   const updateUrl = (newParams: Record<string, string | null>) => {
     if (!hydrated) return
@@ -153,10 +161,8 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
     updateUrl({ sort })
   }
 
-  // Return children (SSR content) until hydrated, then show interactive list
-  if (!hydrated) {
-    return <>{children}</>
-  }
+  // Always render the interactive content to prevent hydration mismatch
+  // The initial state is already set from URL params
 
   const hasMoreToShow = hasMore && currentPage * pageSize < total
 
