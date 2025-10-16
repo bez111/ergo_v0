@@ -31,10 +31,10 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
     >
       {/* Content Block */}
       <div>
-        {/* Title */}
+        {/* Title - ONE LINE */}
         <h2 
           id={`feat-${post.id}`} 
-          className="text-4xl md:text-5xl font-semibold leading-tight tracking-[-0.01em] text-white"
+          className="text-4xl md:text-5xl font-semibold leading-tight tracking-[-0.01em] text-white whitespace-nowrap overflow-hidden text-ellipsis"
         >
           <Link 
             href={`/blog/${post.slug}`} 
@@ -45,8 +45,8 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
           </Link>
         </h2>
         
-        {/* Excerpt */}
-        <p id={`feat-desc-${post.id}`} className="mt-4 max-w-[60ch] text-neutral-400/90 leading-relaxed text-lg">
+        {/* Excerpt - TWO LINES */}
+        <p id={`feat-desc-${post.id}`} className="mt-4 text-neutral-400/90 leading-relaxed text-base">
           {cleanExcerpt}
         </p>
 
@@ -99,8 +99,8 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
           )}
         </div>
 
-        {/* CTA Button - Moved below content */}
-        <div className="mt-8">
+        {/* CTA Button - LEFT SIDE */}
+        <div className="mt-6">
           <Link
             href={`/blog/${post.slug}`}
             className="inline-flex items-center justify-center rounded-lg px-6 py-3 text-sm font-medium bg-gradient-to-r from-orange-500 to-red-500 text-white ring-1 ring-white/0 hover:ring-white/15 transition-transform hover:-translate-y-0.5"
