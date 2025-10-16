@@ -6,7 +6,7 @@ import BlogListSSR from "./_components/blog-list-ssr"
 import TrendingNow from "./_components/trending-now"
 import { BlogPagination } from "./_components/blog-pagination"
 import { BlogPageSkeleton, BlogCompactSkeleton } from "./_components/blog-skeleton"
-import BlogClientAdvanced from "./_components/blog-client-advanced"
+import BlogClient from "./_components/blog-client"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
 import Link from "next/link"
@@ -23,7 +23,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const pageParam = typeof sp.page === "string" ? sp.page : Array.isArray(sp.page) ? sp.page[0] : undefined
   const page = Math.max(1, Number(pageParam ?? 1) || 1)
   const baseUrl = "https://ergoblockchain.org/blog"
-  const title = page > 1 ? `Ergo Blog — Page ${page}` : `Ergo Blog — news, research, guides`
+  const title = page > 1 ? `Latest News & Insights — Page ${page}` : `Latest News & Insights — Ergo Blog`
 
   const allowed = new Set(["page"]) // whitelist
   const hasJunk = Object.keys(sp).some((k) => !allowed.has(k))
@@ -36,7 +36,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
   return {
     title,
-    description: "Latest updates, deep-dives and how-tos from the Ergo ecosystem.",
+    description: "Deep-dives, tutorials, and ecosystem updates from the Ergo community.",
     alternates: { canonical: page > 1 ? `${baseUrl}?page=${page}` : baseUrl, types: { "application/rss+xml": "/blog/rss.xml" } },
     other: { ...(prev ? { "link:prev": prev } : {}), ...(next ? { "link:next": next } : {}) },
     openGraph: {
@@ -45,7 +45,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       locale: "en_US",
       url: page > 1 ? `${baseUrl}?page=${page}` : baseUrl,
       title,
-      description: "News, research and guides.",
+      description: "Deep-dives, tutorials, and ecosystem updates.",
       images: [{ url: "https://ergoblockchain.org/og/blog.png", width: 1200, height: 630, alt: "Ergo Blog" }],
     },
     twitter: { card: "summary_large_image", site: twitterHandle, creator: twitterHandle, images: ["https://ergoblockchain.org/og/blog.png"] },
@@ -249,16 +249,14 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
         <div className="max-w-7xl mx-auto px-4 py-8">
 
 
-          {/* Enhanced HERO SECTION */}
-          <header className="pt-4 pb-6" role="banner">
-            <div className="mb-4">
-              <h1 id="blog-h1" className="text-4xl md:text-5xl font-bold tracking-tight mb-3 focus:outline-none" tabIndex={-1}>
-                Ergo Blog — news, research, guides
-              </h1>
-              <p className="text-neutral-300 text-lg leading-relaxed max-w-3xl">
-                Latest updates, deep-dives and how-tos from the Ergo ecosystem.
-              </p>
-            </div>
+          {/* Minimal Header - SEO only, visually hidden like Solana */}
+          <header className="sr-only" role="banner">
+            <h1 id="blog-h1" className="focus:outline-none" tabIndex={-1}>
+              Ergo Blog — Latest News, Research & Guides
+            </h1>
+            <p>
+              Deep-dives, tutorials, and ecosystem updates from the Ergo community.
+            </p>
           </header>
 
           {/* Enhanced FEATURED + TRENDING SECTION */}
@@ -294,7 +292,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
 
           {/* Interactive Filters */}
           <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
-            <BlogClientAdvanced 
+            <BlogClient 
               posts={blogPosts}
               categories={categories.map(cat => ({ id: cat, name: cat }))}
               page={currentPage}
@@ -317,7 +315,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
                   ))}
                 </div>
               </div>
-            </BlogClientAdvanced>
+            </BlogClient>
           </div>
 
           {/* ✅ КРИТИЧЕСКОЕ ИЗМЕНЕНИЕ: ARIA Live Region для динамических обновлений */}

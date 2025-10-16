@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
 import { Separator } from "@/components/ui/separator"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import {
   Sheet,
   SheetContent,
@@ -76,6 +77,7 @@ export function BlogFiltersAdvanced({
   onSortChange
 }: BlogFiltersAdvancedProps) {
   const [isFiltersOpen, setIsFiltersOpen] = useState(false)
+  const [isTagsOpen, setIsTagsOpen] = useState(true)
 
   // Count active filters
   const activeFilterCount = useMemo(() => {
@@ -324,11 +326,11 @@ export function BlogFiltersAdvanced({
       </AnimatePresence>
 
       {/* Tags Section (Collapsible on Mobile) */}
-      <Collapsible defaultOpen className="space-y-3">
+      <Collapsible open={isTagsOpen} onOpenChange={setIsTagsOpen} className="space-y-3">
         <CollapsibleTrigger className="flex items-center justify-between w-full group">
           <span className="text-sm font-semibold text-neutral-300">Popular Tags</span>
           <motion.div
-            animate={{ rotate: isFiltersOpen ? 180 : 0 }}
+            animate={{ rotate: isTagsOpen ? 180 : 0 }}
             transition={{ duration: 0.2 }}
             className="text-neutral-500 group-hover:text-neutral-300"
           >

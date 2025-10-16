@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { BookOpen, TrendingUp, Clock, Users, X } from "lucide-react"
 import { BlogCard } from "./blog-card"
 import { NewsletterSignup } from "./newsletter-signup"
-import { BlogFiltersEnhanced } from "./blog-filters-enhanced"
+import { BlogFiltersClean } from "./blog-filters-clean"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCompactSkeleton } from "./blog-skeleton"
 import { SkeletonCard } from "@/components/ui/skeleton"
@@ -36,7 +36,6 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
 
   const [search, setSearch] = useState("")
   const [selectedCategory, setSelectedCategory] = useState<string>("all")
-  const [selectedTags, setSelectedTags] = useState<string[]>([])
   const [sortBy, setSortBy] = useState<SortKey>("newest")
 
   const deferredSearch = useDeferredValue(search)
@@ -45,13 +44,10 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
   useEffect(() => {
     if (!hydrated) return
     const category = params.get("category") || "all"
-    const tagsParam = params.get("tags") || ""
-    const tags = tagsParam ? tagsParam.split(",").filter(Boolean) : []
     const sort = (params.get("sort") as SortKey) || "newest"
     const searchQuery = params.get("q") || ""
     
     setSelectedCategory(category)
-    setSelectedTags(tags)
     setSortBy(sort)
     setSearch(searchQuery)
   }, [hydrated, params])
@@ -97,12 +93,6 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
       filtered = filtered.filter((post) => post.category === selectedCategory)
     }
 
-    // Tags filter
-    if (selectedTags.length > 0) {
-      filtered = filtered.filter((post) => 
-        selectedTags.some(tag => post.tags?.includes(tag))
-      )
-    }
 
     // Sort
     filtered = [...filtered].sort((a, b) => {
@@ -120,7 +110,7 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
     })
 
     return filtered
-  }, [loadedPosts, deferredSearch, selectedCategory, selectedTags, sortBy])
+  }, [loadedPosts, deferredSearch, selectedCategory, sortBy])
 
   const updateUrl = (newParams: Record<string, string | null>) => {
     if (!hydrated) return
@@ -173,14 +163,14 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
   return (
     <>
       {/* Enhanced Filters */}
-      <BlogFiltersEnhanced
+      <BlogFiltersClean
         posts={posts}
         searchQuery={search}
         selectedCategory={selectedCategory}
-        selectedTags={selectedTags}
+        sortBy={sortBy}
         onSearchChange={handleSearch}
         onCategoryChange={handleCategoryChange}
-        onTagsChange={handleTagsChange}
+        onSortChange={(sort) => setSortBy(sort as SortKey)}
       />
 
       {/* Results Grid */}
@@ -213,7 +203,6 @@ export default function BlogClient({ posts, categories, page, pageSize, total, h
               <h3 className="text-3xl font-bold text-white">
                 {search ? `Search Results` : 
                  selectedCategory !== 'all' ? `${selectedCategory} Articles` :
-                 selectedTags.length > 0 ? `Tagged Articles` :
                  'Latest Articles'}
               </h3>
               <div className="text-sm text-neutral-400">
