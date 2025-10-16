@@ -5,11 +5,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { 
-  ArrowLeft, ArrowRight, ArrowUp, Copy, Check, Share2, 
-  Twitter, Linkedin, Facebook, Clock, Calendar, Eye,
-  BookOpen, Hash, Star, ThumbsUp, MessageCircle,
+  ArrowUp, Copy, Check,
+  Twitter, Linkedin, Facebook,
+  BookOpen, Hash,
   ChevronRight, Info, AlertTriangle, Lightbulb,
-  Code2, ExternalLink, Download, Search
+  Code2, ExternalLink
 } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import { Button } from "@/components/ui/button"
@@ -154,11 +154,6 @@ function AuthorBox({ author }: { author: BlogPost['author'] }) {
             <Link href="#" className="text-sm text-orange-400 hover:text-orange-300">
               More articles →
             </Link>
-            {author.social?.twitter && (
-              <Link href={`https://twitter.com/${author.social.twitter}`} className="text-sm text-neutral-400 hover:text-white">
-                @{author.social.twitter}
-              </Link>
-            )}
           </div>
         </div>
       </div>
@@ -204,7 +199,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i]
         if (section && section.offsetTop <= scrollPosition) {
-          setActiveSection(toc[i].id)
+          setActiveSection(toc[i]?.id || '')
           break
         }
       }
@@ -246,80 +241,35 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
         </ol>
       </nav>
 
-      <main id="main" className="container mx-auto px-4 pt-20 pb-20">
-        <div className="grid grid-cols-12 gap-8">
-          {/* TOC Desktop - Sticky Left Sidebar */}
-          <aside className="hidden lg:block col-span-3">
-            <nav 
-              className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto"
-              aria-label="Table of contents"
-            >
-              <h2 className="text-sm font-semibold text-neutral-400 uppercase tracking-wider mb-4">
-                On this page
-              </h2>
-              <ul className="space-y-2">
-                {toc.map(item => (
-                  <li key={item.id} className={cn(item.level === 3 && "ml-4")}>
-                    <a 
-                      href={`#${item.id}`}
-                      className={cn(
-                        "block py-1 text-sm transition-all duration-200",
-                        "border-l-2 pl-4 -ml-px",
-                        activeSection === item.id 
-                          ? "border-orange-500 text-orange-500 font-medium" 
-                          : "border-transparent text-neutral-400 hover:text-white hover:border-neutral-600"
-                      )}
-                    >
-                      {item.text}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-          </aside>
-
+      <main id="main" className="max-w-6xl mx-auto px-6 pt-16 pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[1fr_280px] gap-12">
           {/* Article Content */}
-          <article className="col-span-12 lg:col-span-7">
-            <header>
-              {/* Category Badge */}
-              <Badge variant="secondary" className="mb-4 bg-orange-500/10 text-orange-400 border-orange-500/20">
-                {post.category}
-              </Badge>
-
-              {/* Title */}
-              <h1 className="text-[clamp(2rem,5vw,3rem)] font-bold leading-[0.95] tracking-tight mb-4">
+          <article className="min-w-0">
+            <header className="mb-12">
+              {/* Title - Clean and Bold */}
+              <h1 className="text-4xl lg:text-5xl font-bold leading-tight mb-6 text-white">
                 {post.title}
               </h1>
 
-              {/* Subtitle/Dek */}
-              <p className="text-xl text-neutral-300 leading-relaxed mb-6">
+              {/* Subtitle - Simple and Clear */}
+              <p className="text-lg text-neutral-400 leading-relaxed mb-8 max-w-3xl">
                 Learn how to write secure and efficient smart contracts with ErgoScript. 
                 This comprehensive guide covers everything from basic syntax to advanced DeFi patterns.
               </p>
 
-              {/* Meta Line */}
-              <div className="flex flex-wrap items-center gap-4 text-sm text-neutral-400 pb-6 border-b border-neutral-800">
-                <div className="flex items-center gap-2">
-                  <div className="w-10 h-10 rounded-full bg-neutral-800 flex items-center justify-center font-semibold">
-                    {post.author.name.charAt(0)}
-                  </div>
-                  <div>
-                    <Link href={`/blog/author/${post.author.id}`} className="text-neutral-300 hover:text-white font-medium">
-                      {post.author.name}
-                    </Link>
-                    {post.author.role && <div className="text-xs">{post.author.role}</div>}
-                  </div>
-                </div>
+              {/* Meta Line - Clean and Minimal */}
+              <div className="flex items-center gap-4 text-sm text-neutral-500 pb-8 border-b border-neutral-800/50">
+                <span className="text-neutral-400">by {post.author.name}</span>
                 <span>•</span>
-                <time dateTime={post.date}>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}</time>
+                <time dateTime={post.date}>
+                  {new Date(post.date).toLocaleDateString('en-US', { 
+                    year: 'numeric', 
+                    month: 'long', 
+                    day: 'numeric' 
+                  })}
+                </time>
                 <span>•</span>
                 <span>{post.readTime} min read</span>
-                {post.views && (
-                  <>
-                    <span>•</span>
-                    <span>{(post.views / 1000).toFixed(1)}k views</span>
-                  </>
-                )}
               </div>
             </header>
 
@@ -340,20 +290,21 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
               </figure>
             )}
 
-            {/* TOC Mobile */}
-            <details className="lg:hidden my-8 p-4 bg-neutral-900 rounded-lg border border-neutral-800">
-              <summary className="font-semibold cursor-pointer flex items-center justify-between">
+            {/* TOC Mobile - Simplified */}
+            <details className="lg:hidden my-8 border-b border-neutral-800 pb-4">
+              <summary className="text-sm font-medium text-neutral-400 cursor-pointer flex items-center justify-between mb-3">
                 Table of Contents
                 <ChevronRight className="w-4 h-4" />
               </summary>
-              <nav className="mt-4 space-y-2" aria-label="Table of contents">
+              <nav className="space-y-1" aria-label="Table of contents">
                 {toc.map(item => (
                   <a
                     key={item.id}
                     href={`#${item.id}`}
                     className={cn(
-                      "block py-1 text-sm text-neutral-400 hover:text-white",
-                      item.level === 3 && "ml-4"
+                      "block py-1 text-sm transition-colors hover:text-orange-400",
+                      item.level === 3 && "ml-4",
+                      "text-neutral-500"
                     )}
                   >
                     {item.text}
@@ -362,18 +313,18 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
               </nav>
             </details>
 
-            {/* Article Body */}
-            <div ref={contentRef} className="prose prose-invert prose-lg max-w-none
-              prose-headings:scroll-mt-24
-              prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-12 prose-h2:mb-4
-              prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-3
-              prose-p:text-neutral-300 prose-p:leading-relaxed prose-p:mb-4
-              prose-a:text-orange-500 prose-a:no-underline hover:prose-a:underline
-              prose-code:text-orange-400 prose-code:bg-neutral-800 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded
-              prose-pre:bg-transparent prose-pre:p-0
-              prose-ul:my-4 prose-ol:my-4
-              prose-li:text-neutral-300
-              prose-strong:text-white prose-strong:font-semibold
+            {/* Article Body - Clean Typography */}
+            <div ref={contentRef} className="prose prose-invert max-w-none
+              prose-headings:scroll-mt-24 prose-headings:text-white
+              prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-12 prose-h2:mb-6
+              prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-4
+              prose-p:text-neutral-300 prose-p:leading-7 prose-p:mb-6
+              prose-a:text-orange-400 prose-a:no-underline hover:prose-a:underline
+              prose-code:text-orange-400 prose-code:bg-neutral-800/50 prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-sm
+              prose-pre:bg-neutral-900 prose-pre:border prose-pre:border-neutral-800
+              prose-ul:my-6 prose-ol:my-6 prose-li:text-neutral-300
+              prose-strong:text-white prose-strong:font-medium
+              prose-blockquote:border-l-orange-400 prose-blockquote:bg-neutral-900/50 prose-blockquote:text-neutral-300
             ">
               {/* Introduction */}
               <section id="introduction">
@@ -666,7 +617,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
 
               {/* Tags */}
               <div className="mt-8 flex flex-wrap gap-2">
-                {post.tags.map(tag => (
+                {post.tags?.map(tag => (
                   <Link 
                     key={tag}
                     href={`/blog?tag=${tag}`}
@@ -701,101 +652,70 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
             <AuthorBox author={post.author} />
           </article>
 
-          {/* Right Sidebar */}
-          <aside className="hidden xl:block col-span-2">
-            <div className="sticky top-24 space-y-6">
-              {/* Share buttons */}
-              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                <h3 className="text-sm font-semibold mb-3 text-neutral-400 uppercase tracking-wider">Share</h3>
-                <div className="space-y-2">
-                  <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-orange-500/10 hover:text-orange-400">
-                    <Twitter className="w-4 h-4 mr-2" />
-                    Twitter
-                  </Button>
-                  <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-orange-500/10 hover:text-orange-400">
-                    <Linkedin className="w-4 h-4 mr-2" />
-                    LinkedIn
-                  </Button>
-                  <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-orange-500/10 hover:text-orange-400">
-                    <Copy className="w-4 h-4 mr-2" />
-                    Copy link
-                  </Button>
-                </div>
-              </div>
-
-              {/* Newsletter */}
-              <div className="p-4 bg-orange-500/10 border border-orange-500/20 rounded-lg">
-                <h3 className="font-semibold mb-2">Developer Updates</h3>
-                <p className="text-sm text-neutral-300 mb-3">
-                  Get Ergo dev news weekly
-                </p>
-                <Button size="sm" className="w-full bg-orange-500 hover:bg-orange-600 text-white">
-                  Subscribe
-                </Button>
-              </div>
-
-              {/* Download */}
-              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                <Button variant="outline" size="sm" className="w-full">
-                  <Download className="w-4 h-4 mr-2" />
-                  Download PDF
-                </Button>
-              </div>
+          {/* Right Sidebar - Clean TOC */}
+          <aside className="hidden lg:block">
+            <div className="sticky top-24">
+              <nav aria-label="Table of contents">
+                <h2 className="text-sm font-semibold text-neutral-400 mb-4">On this page</h2>
+                <ul className="space-y-2 text-sm">
+                  {toc.map(item => (
+                    <li key={item.id} className={cn(item.level === 3 && "ml-4")}>
+                      <a 
+                        href={`#${item.id}`}
+                        className={cn(
+                          "block py-1 transition-colors hover:text-orange-400",
+                          activeSection === item.id 
+                            ? "text-orange-400 font-medium" 
+                            : "text-neutral-500"
+                        )}
+                      >
+                        {item.text}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
           </aside>
         </div>
 
-        {/* Related Posts */}
-        <section className="mt-20">
-          <h2 className="text-2xl font-bold mb-8">Continue Learning</h2>
-          <div className="grid md:grid-cols-3 gap-6">
+        {/* Related Posts - Simplified */}
+        <section className="mt-16 pt-8 border-t border-neutral-800">
+          <h2 className="text-xl font-semibold mb-6 text-white">Continue Learning</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {relatedPosts.map(post => (
-              <article key={post.id} className="group">
-                <Link href={`/blog/${post.slug}`} className="block p-6 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 transition-colors">
-                  <Badge variant="secondary" className="mb-3 text-xs">
-                    {post.category}
-                  </Badge>
-                  <h3 className="font-semibold mb-2 group-hover:text-orange-400 transition-colors line-clamp-2">
-                    {post.title}
-                  </h3>
-                  <p className="text-sm text-neutral-400 mb-3 line-clamp-2">
-                    {post.excerpt}
-                  </p>
-                  <div className="flex items-center gap-3 text-xs text-neutral-500">
-                    <span>{post.readTime} min</span>
-                    {post.views && (
-                      <>
-                        <span>•</span>
-                        <span>{(post.views / 1000).toFixed(1)}k views</span>
-                      </>
-                    )}
-                  </div>
-                </Link>
-              </article>
+              <Link key={post.id} href={`/blog/${post.slug}`} className="group block p-4 rounded-lg hover:bg-neutral-900/50 transition-colors">
+                <h3 className="font-medium mb-2 group-hover:text-orange-400 transition-colors text-white line-clamp-2">
+                  {post.title}
+                </h3>
+                <p className="text-sm text-neutral-500 mb-3 line-clamp-2">
+                  {post.excerpt}
+                </p>
+                <div className="text-xs text-neutral-600">
+                  {post.readTime} min read
+                </div>
+              </Link>
             ))}
           </div>
         </section>
 
-        {/* Newsletter section */}
-        <section className="mt-20 p-12 bg-gradient-to-br from-orange-500/10 to-red-500/10 rounded-2xl border border-orange-500/20">
-          <div className="max-w-2xl mx-auto text-center">
-            <h2 className="text-3xl font-bold mb-4">Stay Updated</h2>
-            <p className="text-lg text-neutral-300 mb-8">
-              Get the latest Ergo development tutorials and ecosystem updates delivered to your inbox.
+        {/* Newsletter section - Minimal */}
+        <section className="mt-12 py-8 border-t border-neutral-800">
+          <div className="text-center">
+            <h2 className="text-lg font-semibold mb-2 text-white">Stay Updated</h2>
+            <p className="text-sm text-neutral-500 mb-4">
+              Get Ergo development insights delivered to your inbox.
             </p>
-            <form className="flex gap-3 max-w-md mx-auto">
+            <form className="flex gap-3 max-w-sm mx-auto">
               <input 
                 type="email" 
                 placeholder="Enter your email" 
-                className="flex-1 px-4 py-3 bg-black/50 border border-neutral-700 rounded-lg focus:border-orange-500 focus:outline-none focus:ring-1 focus:ring-orange-500"
+                className="flex-1 px-3 py-2 bg-neutral-900/50 border border-neutral-700 rounded text-sm focus:border-orange-500 focus:outline-none"
               />
-              <Button type="submit" className="bg-orange-500 hover:bg-orange-600 text-white px-6">
+              <Button type="submit" size="sm" className="bg-orange-500 hover:bg-orange-600 text-white px-4">
                 Subscribe
               </Button>
             </form>
-            <p className="mt-4 text-sm text-neutral-500">
-              No spam. Unsubscribe anytime.
-            </p>
           </div>
         </section>
       </main>
