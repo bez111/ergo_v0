@@ -1,16 +1,15 @@
-import { Suspense } from "react"
+// Suspense removed to prevent flashing on page reload
 import { blogPosts, categories } from "./_lib/blog-data"
 import { BlogHero } from "./_components/blog-hero"
-import { BlogFiltersEnhanced } from "./_components/blog-filters-enhanced"
+// BlogFiltersEnhanced removed - using BlogClientStable instead
 import BlogListSSR from "./_components/blog-list-ssr"
 import TrendingNow from "./_components/trending-now"
 import { BlogPagination } from "./_components/blog-pagination"
-import { BlogPageSkeleton, BlogCompactSkeleton } from "./_components/blog-skeleton"
+// Skeleton components removed - not needed without Suspense
 import BlogClientStable from "./_components/blog-client-stable"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
-import Link from "next/link"
-import { NewsletterSignup } from "./_components/newsletter-signup"
+// Link and NewsletterSignup removed - not used in this file
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
@@ -133,7 +132,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
         dateCreated: datePublishedISO,
         inLanguage: "en",
         keywords: p.tags?.join(", "),
-        articleSection: categories.find((c) => c.id === p.category)?.name || p.category,
+        articleSection: p.category,
         author: { 
           "@type": "Person", 
           "@id": `https://ergoblockchain.org/blog/author/${p.author.id}`,
@@ -260,35 +259,20 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           </header>
 
           {/* Enhanced FEATURED + TRENDING SECTION */}
-          <Suspense fallback={
-            <div className="mb-12 animate-fade-in">
-              <div className="flex flex-col lg:flex-row gap-8">
-                <div className="flex-1">
-                  <div className="h-96 bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-2xl animate-pulse" />
-                </div>
-                <div className="w-full lg:w-80 space-y-4">
-                  {Array.from({ length: 3 }).map((_, i) => (
-                    <div key={i} className="h-24 bg-neutral-800/60 rounded-xl animate-pulse" />
-                  ))}
+          <section className="mb-12 animate-fade-in" aria-labelledby="content-heading">
+            <h2 id="content-heading" className="sr-only">Featured article and trending posts</h2>
+            <div className="flex flex-col lg:flex-row gap-8">
+              <div className="flex-1" role="region" aria-labelledby="featured-heading">
+                <h3 id="featured-heading" className="sr-only">Featured article</h3>
+                <div className="relative min-h-[400px]">
+                  <BlogHero featuredPost={featuredPost} />
                 </div>
               </div>
+              <aside className="w-full lg:w-80" aria-labelledby="trending" role="complementary">
+                <TrendingNow posts={trendingPosts.slice(0, 3)} categories={categories.map(cat => ({ id: cat, name: cat }))} />
+              </aside>
             </div>
-          }>
-            <section className="mb-12 animate-fade-in" aria-labelledby="content-heading">
-              <h2 id="content-heading" className="sr-only">Featured article and trending posts</h2>
-              <div className="flex flex-col lg:flex-row gap-8">
-                <div className="flex-1" role="region" aria-labelledby="featured-heading">
-                  <h3 id="featured-heading" className="sr-only">Featured article</h3>
-                  <div className="relative min-h-[400px]">
-                    <BlogHero featuredPost={featuredPost} />
-                  </div>
-                </div>
-                <aside className="w-full lg:w-80" aria-labelledby="trending" role="complementary">
-                  <TrendingNow posts={trendingPosts.slice(0, 3)} categories={categories} />
-                </aside>
-              </div>
-            </section>
-          </Suspense>
+          </section>
 
           {/* Interactive Filters */}
           <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
@@ -302,57 +286,26 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
             />
           </div>
 
-          {/* ✅ КРИТИЧЕСКОЕ ИЗМЕНЕНИЕ: ARIA Live Region для динамических обновлений */}
-          <Suspense fallback={
-            <div className="animate-fade-in">
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
-                {Array.from({ length: 6 }).map((_, i) => (
-                  <div 
-                    key={i} 
-                    className="animate-scale-in"
-                    style={{ animationDelay: `${i * 0.1}s` }}
-                  >
-                    <div className="rounded-xl border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm p-6">
-                      <div className="space-y-4">
-                        <div className="h-48 bg-gradient-to-br from-neutral-800 to-neutral-900 rounded-lg animate-pulse" />
-                        <div className="space-y-2">
-                          <div className="h-4 bg-neutral-800/60 rounded animate-pulse" />
-                          <div className="h-4 bg-neutral-800/60 rounded animate-pulse w-3/4" />
-                        </div>
-                        <div className="flex items-center space-x-2">
-                          <div className="h-6 w-6 bg-neutral-800/60 rounded-full animate-pulse" />
-                          <div className="h-4 bg-neutral-800/60 rounded animate-pulse w-24" />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="flex justify-center">
-                <div className="h-10 w-32 bg-neutral-800/60 rounded-lg animate-pulse" />
-              </div>
-            </div>
-          }>
-            <section 
-              aria-labelledby="blog-posts"
-              aria-live="polite"
-              aria-busy="false"
-              className="transition-opacity duration-200 animate-fade-in"
-            >
-              <h2 id="blog-posts" className="sr-only">
-                {currentPage > 1 ? `Blog posts page ${currentPage}` : 'All blog posts'}
-              </h2>
-              
-              <BlogListSSR posts={initialList} categories={categories} />
-              
-              {/* ✅ НОВОЕ: Proper pagination component */}
-              <BlogPagination 
-                currentPage={currentPage}
-                totalPages={totalPages}
-                baseUrl="/blog"
-              />
-            </section>
-          </Suspense>
+          {/* Blog Posts List */}
+          <section 
+            aria-labelledby="blog-posts"
+            aria-live="polite"
+            aria-busy="false"
+            className="transition-opacity duration-200 animate-fade-in"
+          >
+            <h2 id="blog-posts" className="sr-only">
+              {currentPage > 1 ? `Blog posts page ${currentPage}` : 'All blog posts'}
+            </h2>
+            
+            <BlogListSSR posts={initialList} categories={categories.map(cat => ({ id: cat, name: cat }))} />
+            
+            {/* Pagination component */}
+            <BlogPagination 
+              currentPage={currentPage}
+              totalPages={totalPages}
+              baseUrl="/blog"
+            />
+          </section>
 
         </div>
       </main>
