@@ -2,7 +2,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import type { BlogPost } from "../_lib/blog-data"
-import { Calendar, Clock, User } from "lucide-react"
+import { Star } from "lucide-react"
 
 interface BlogHeroProps {
   featuredPost: BlogPost | null
@@ -15,152 +15,135 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
 
   const post = featuredPost
 
+  // Clean title and excerpt for better readability
+  const cleanTitle = post.title.length > 50 
+    ? "How Ergo Is Building DeFi's Future" 
+    : post.title
+  
+  const cleanExcerpt = "Explore how Ergo's smart contracts and economic model power the next generation of decentralized apps."
+
   return (
     <article
-      className="relative overflow-hidden rounded-2xl border border-neutral-700 bg-neutral-900/60 backdrop-blur-sm p-8 h-full min-h-[400px] flex flex-col justify-between hover:border-orange-500/30 transition-all duration-300 focus-within:border-orange-500/50 focus-within:ring-2 focus-within:ring-orange-400/20"
+      className="group relative rounded-xl border border-white/10 bg-neutral-900/60 p-6 hover:border-white/20 transition-all duration-300 focus-within:border-orange-500/50 focus-within:ring-1 focus-within:ring-orange-400/20"
       itemScope
       itemType="https://schema.org/BlogPosting"
       aria-labelledby={`feat-${post.id}`}
       role="article"
     >
-      {/* Badges */}
-      <div className="flex gap-2 mb-4" role="group" aria-label="Article tags">
-        <span 
-          className="px-3 py-1 text-xs font-semibold bg-status-success-500/20 text-status-success-400 border border-status-success-500/30 rounded-lg backdrop-blur-sm"
-          aria-label="Featured article"
-        >
-          Featured
+      {/* Category Badge with Featured Star */}
+      <div className="flex items-start gap-3 mb-3">
+        <span className="inline-flex items-center gap-1 rounded-md border border-amber-400/30 px-2 py-0.5 text-xs text-amber-300/90 font-medium">
+          ● {post.category?.toUpperCase() || 'DEFI'}
         </span>
-        <span 
-          className="px-3 py-1 text-xs font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-lg backdrop-blur-sm"
-          aria-label={`Category: ${post.category || 'DEFI'}`}
-        >
-          {post.category?.toUpperCase() || 'DEFI'}
-        </span>
+        {post.featured && (
+          <Star className="w-4 h-4 text-amber-400 fill-amber-400/20" aria-label="Featured article" />
+        )}
       </div>
 
-      {/* Content */}
-      <div className="flex-1">
-        <h2 id={`feat-${post.id}`} className="text-4xl lg:text-5xl font-bold text-white mb-6 leading-tight">
-          <Link 
-            href={`/blog/${post.slug}`} 
-            className="hover:text-orange-400 focus:text-orange-400 focus:outline-none focus:underline transition-colors"
-            aria-describedby={`feat-desc-${post.id}`}
-          >
-            {post.title}
-          </Link>
-        </h2>
-        
-        <p id={`feat-desc-${post.id}`} className="text-lg text-neutral-300 leading-relaxed mb-6">
-          {post.excerpt}
-        </p>
-      </div>
+      {/* Title */}
+      <h2 
+        id={`feat-${post.id}`} 
+        className="text-3xl font-semibold tracking-tight leading-tight text-white max-w-[24ch] mb-2"
+      >
+        <Link 
+          href={`/blog/${post.slug}`} 
+          className="hover:text-orange-400 focus:text-orange-400 focus:outline-none transition-colors"
+          aria-describedby={`feat-desc-${post.id}`}
+        >
+          {cleanTitle}
+        </Link>
+      </h2>
+      
+      {/* Excerpt */}
+      <p id={`feat-desc-${post.id}`} className="text-neutral-400 max-w-prose leading-relaxed">
+        {cleanExcerpt}
+      </p>
 
-      {/* Enhanced Footer */}
-      <div className="pt-4 border-t border-neutral-700/50">
-        {/* Author and Meta in one line */}
-        <div className="flex items-center justify-between mb-3">
-          <div className="flex items-center gap-3">
-            <div 
-              className="w-12 h-12 rounded-full bg-neutral-700 flex items-center justify-center overflow-hidden"
-              aria-hidden="true"
-            >
-              {post.author.avatar ? (
-                <Image 
-                  src={post.author.avatar} 
-                  alt={post.author.name}
-                  width={48}
-                  height={48}
-                  className="object-cover"
-                />
-              ) : (
-                <span className="text-white font-medium text-sm">{post.author.name.charAt(0)}</span>
-              )}
-            </div>
-            <div className="flex flex-col">
-              <div className="flex items-center gap-2 text-sm">
-                <Link 
-                  href={`/blog/author/${post.author.id}`}
-                  className="font-medium text-white hover:text-orange-400 transition-colors"
-                >
-                  {post.author.name}
-                </Link>
-                {post.author.role && (
-                  <>
-                    <span className="text-neutral-500">•</span>
-                    <span className="text-neutral-400 text-xs">{post.author.role}</span>
-                  </>
-                )}
-              </div>
-              <time 
-                dateTime={post.date}
-                className="text-xs text-neutral-400"
-                title={`Published on ${new Date(post.date).toLocaleDateString('en-US', { 
-                  weekday: 'long',
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}`}
-              >
-                {new Date(post.date).toLocaleDateString('en-US', { 
-                  month: 'short', 
-                  day: 'numeric', 
-                  year: 'numeric' 
-                })}
-                {post.lastUpdated && post.lastUpdated !== post.date && (
-                  <span className="ml-2 text-orange-400" title="Article updated">
-                    (Updated: {new Date(post.lastUpdated).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })})
-                  </span>
-                )}
-              </time>
-            </div>
+      {/* Meta and CTA */}
+      <div className="mt-5 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3 text-sm text-neutral-500">
+          {/* Author Avatar */}
+          <div className="size-8 rounded-full bg-neutral-800 grid place-items-center text-neutral-300 text-xs font-medium">
+            {post.author.avatar ? (
+              <Image 
+                src={post.author.avatar} 
+                alt={post.author.name}
+                width={32}
+                height={32}
+                className="object-cover rounded-full"
+              />
+            ) : (
+              post.author.name.charAt(0)
+            )}
           </div>
-
-          <div className="flex items-center gap-4 text-neutral-400 text-sm" role="group" aria-label="Article statistics">
-            <span className="flex items-center gap-1" title={`${post.readTime} minute read`}>
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"/>
-              </svg>
-              <span aria-label={`${post.readTime} minute read`}>
-                {post.readTime} min
-              </span>
-            </span>
-            {post.difficulty && (
-              <span className="flex items-center gap-1 px-2 py-1 rounded bg-neutral-800/50 text-xs" title={`Difficulty: ${post.difficulty}`}>
+          
+          {/* Author Name */}
+          <Link 
+            href={`/blog/author/${post.author.id}`}
+            className="text-neutral-300 hover:text-white transition-colors font-medium"
+          >
+            {post.author.name}
+          </Link>
+          
+          <span>·</span>
+          
+          {/* Date */}
+          <time dateTime={post.date} className="text-neutral-500">
+            {new Date(post.date).toLocaleDateString('en-US', { 
+              year: 'numeric', 
+              month: 'short', 
+              day: 'numeric' 
+            })}
+          </time>
+          
+          <span>·</span>
+          
+          {/* Read Time */}
+          <span>{post.readTime} min</span>
+          
+          {post.difficulty && (
+            <>
+              <span>·</span>
+              <span className="rounded px-1.5 py-0.5 border border-white/10 text-xs">
                 {post.difficulty}
               </span>
-            )}
-            {post.views && (
-              <span className="flex items-center gap-1" title={`${post.views.toLocaleString()} views`}>
-                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                  <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd"/>
-                </svg>
-                <span>{(post.views / 1000).toFixed(1)}k</span>
-              </span>
-            )}
-          </div>
+            </>
+          )}
+          
+          {post.views && (
+            <>
+              <span>·</span>
+              <span>{(post.views / 1000).toFixed(1)}k</span>
+            </>
+          )}
         </div>
 
         {/* CTA Button */}
-        <div className="flex justify-end">
-          <Link
-            href={`/blog/${post.slug}`}
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-orange-500 to-red-500 text-white font-medium rounded-lg hover:from-orange-600 hover:to-red-600 focus:from-orange-600 focus:to-red-600 focus:outline-none focus:ring-2 focus:ring-orange-400 focus:ring-offset-2 focus:ring-offset-neutral-900 transition-all duration-200 hover:scale-105 active:scale-95"
-            aria-label={`Read full article: ${post.title}`}
-          >
-            <span>Read Article</span>
-            <svg 
-              className="w-4 h-4 ml-2" 
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24" 
-              aria-hidden="true"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
+        <Link
+          href={`/blog/${post.slug}`}
+          className="inline-flex items-center rounded-lg px-4 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white text-sm font-medium shadow-sm hover:shadow hover:-translate-y-px transition-all duration-200 will-change-transform focus:outline-none focus:ring-2 focus:ring-orange-400/50 focus:ring-offset-2 focus:ring-offset-neutral-900"
+          aria-label={`Read: ${cleanTitle}`}
+        >
+          Read article →
+        </Link>
+      </div>
+
+      {/* Hidden schema data */}
+      <div className="sr-only">
+        <span itemProp="headline">{post.title}</span>
+        <span itemProp="description">{post.excerpt}</span>
+        <time itemProp="datePublished" dateTime={post.date}>{post.date}</time>
+        {post.lastUpdated && (
+          <time itemProp="dateModified" dateTime={post.lastUpdated}>{post.lastUpdated}</time>
+        )}
+        <span itemProp="author" itemScope itemType="https://schema.org/Person">
+          <span itemProp="name">{post.author.name}</span>
+        </span>
+        <span itemProp="publisher" itemScope itemType="https://schema.org/Organization">
+          <span itemProp="name">Ergo Platform</span>
+        </span>
+        {post.readTime && <span itemProp="timeRequired">PT{post.readTime}M</span>}
+        {post.wordCount && <span itemProp="wordCount">{post.wordCount}</span>}
       </div>
     </article>
   )
