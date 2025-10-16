@@ -1,10 +1,6 @@
 "use client"
 
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Send, Shield, Github, Twitter, MessageCircle } from "lucide-react"
-import { FooterNewsletter } from "./footer-newsletter"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { useTranslations } from "next-intl"
 
@@ -18,7 +14,7 @@ export function Footer() {
       <div className="absolute inset-0 bg-[linear-gradient(0deg,rgba(255,136,0,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,136,0,0.03)_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_70%,transparent_100%)]"></div>
 
       <div className="container py-12 md:py-16 relative z-20">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <div className="flex flex-col gap-4">
             <div className="font-medium font-mono text-primary">{t("platform") || "PLATFORM"}</div>
             <nav className="flex flex-col gap-2">
@@ -71,11 +67,6 @@ export function Footer() {
                 {t("twitter") || "Twitter"}
               </Link>
             </nav>
-          </div>
-
-          {/* Newsletter section with smart visibility */}
-          <div className="flex flex-col gap-4">
-            <FooterNewsletter />
           </div>
         </div>
       </div>
