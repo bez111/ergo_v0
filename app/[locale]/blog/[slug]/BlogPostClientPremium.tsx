@@ -233,20 +233,20 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
         Skip to main content
       </a>
 
-      {/* Breadcrumbs */}
-      <nav className="container mx-auto px-4 pt-20 pb-4" aria-label="Breadcrumb">
+      {/* Breadcrumbs - Hidden for UI but active for SEO */}
+      <nav className="sr-only" aria-label="Breadcrumb">
         <ol className="flex items-center gap-2 text-sm text-neutral-400">
-          <li><Link href="/" className="hover:text-white">Home</Link></li>
+          <li><Link href="/">Home</Link></li>
           <li aria-hidden="true">/</li>
-          <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+          <li><Link href="/blog">Blog</Link></li>
           <li aria-hidden="true">/</li>
-          <li><Link href={`/blog?category=${post.category.toLowerCase()}`} className="hover:text-white">{post.category}</Link></li>
+          <li><Link href={`/blog?category=${post.category.toLowerCase()}`}>{post.category}</Link></li>
           <li aria-hidden="true">/</li>
           <li className="text-neutral-200" aria-current="page">{post.title}</li>
         </ol>
       </nav>
 
-      <main id="main" className="container mx-auto px-4 pb-20">
+      <main id="main" className="container mx-auto px-4 pt-20 pb-20">
         <div className="grid grid-cols-12 gap-8">
           {/* TOC Desktop - Sticky Left Sidebar */}
           <aside className="hidden lg:block col-span-3">
