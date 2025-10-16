@@ -26,7 +26,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
           <motion.div
             key={p.id}
             role="listitem"
-            className="group relative bg-white/5 backdrop-blur-md rounded-xl p-4 border border-white/10 hover:bg-orange-500/10 hover:border-orange-500/20 transition-all duration-300 hover:scale-[1.02] focus-within:bg-orange-500/10 focus-within:border-orange-500/30 focus-within:ring-2 focus-within:ring-orange-400/20 min-h-0"
+            className="group relative rounded-xl p-4 ring-1 ring-white/10 bg-neutral-900/60 hover:ring-white/16 transition hover:-translate-y-px min-h-0"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
@@ -38,20 +38,20 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
               className="h-full flex flex-col min-h-0"
             >
               <div className="flex items-start gap-4 flex-1 min-h-0">
-                <div className="relative w-16 h-16 shrink-0 rounded-xl overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900 border border-neutral-700 group-hover:border-orange-500/30 transition-colors">
+                <div className="size-10 rounded-lg bg-neutral-800/60 ring-1 ring-white/10 shrink-0 overflow-hidden">
                   {p.image ? (
                     <Image 
                       src={p.image} 
                       alt={`Article image for ${p.title}`} 
-                      fill 
-                      sizes="64px" 
-                      className="object-cover transition-transform group-hover:scale-105" 
+                      width={40}
+                      height={40}
+                      className="object-cover w-full h-full" 
                       loading="lazy"
                     />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center">
-                      <span className="text-2xl font-bold text-neutral-600">
-                        {p.category?.charAt(0) || 'B'}
+                      <span className="text-sm font-medium text-neutral-400">
+                        {p.category?.charAt(0)?.toUpperCase() || 'B'}
                       </span>
                     </div>
                   )}
@@ -60,14 +60,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                 <div className="flex-1 min-w-0 flex flex-col min-h-0">
                   {/* Category Badge */}
                   <div className="mb-2 shrink-0">
-                    <span 
-                      className={`inline-block px-2 py-1 text-xs font-medium rounded-md text-white ${
-                        p.category === 'defi' ? 'bg-orange-500/20 border border-orange-500/30' :
-                        p.category === 'development' ? 'bg-red-500/20 border border-red-500/30' :
-                        'bg-yellow-500/20 border border-yellow-500/30'
-                      }`}
-                      aria-label={`Category: ${p.category?.toUpperCase() || 'GENERAL'}`}
-                    >
+                    <span className="inline-flex items-center rounded-md border border-amber-400/30 px-2 py-0.5 text-xs text-amber-300/90 bg-transparent">
                       {p.category?.toUpperCase() || 'GENERAL'}
                     </span>
                   </div>
@@ -76,7 +69,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                   <h3 id={`t-${p.id}`} className="text-sm font-semibold text-white leading-tight mb-2 line-clamp-2 flex-1 min-h-0">
                     <Link 
                       href={`/blog/${p.slug}`} 
-                      className="hover:text-orange-400 focus:text-orange-400 focus:outline-none focus:underline transition-colors after:absolute after:inset-0"
+                      className="hover:text-orange-400 focus:text-orange-400 focus:outline-none transition-colors after:absolute after:inset-0"
                       itemProp="url"
                       aria-describedby={`t-meta-${p.id}`}
                     >
@@ -84,30 +77,16 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                     </Link>
                   </h3>
                   
-                  {/* Meta - always at bottom */}
-                  <div id={`t-meta-${p.id}`} className="flex items-center gap-3 text-xs text-neutral-400 shrink-0">
-                    <div className="flex items-center gap-1" title={`${p.views?.toLocaleString()} views`}>
-                      <Eye className="w-3 h-3" aria-hidden="true" />
-                      <span aria-label={`${p.views?.toLocaleString()} views`}>
-                        {p.views ? (p.views > 1000 ? `${(p.views / 1000).toFixed(1)}k` : p.views) : '0'}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-1" title={`${p.shares || 0} shares`}>
-                      <Heart className="w-3 h-3" aria-hidden="true" />
-                      <span aria-label={`${p.shares || 0} shares`}>
-                        {p.shares || 0}
-                      </span>
-                    </div>
+                  {/* Meta - consistent with hero style */}
+                  <div id={`t-meta-${p.id}`} className="flex items-center gap-2 text-xs text-neutral-500 shrink-0">
+                    <span className="text-neutral-500">{p.views ? `${(p.views / 1000).toFixed(1)}k` : '0'}</span>
+                    <span className="text-neutral-500">·</span>
+                    <span className="text-neutral-500">{p.shares || 0}</span>
+                    <span className="text-neutral-500">·</span>
                     <time 
                       dateTime={new Date(p.date).toISOString()} 
                       itemProp="datePublished"
-                      className="text-neutral-500"
-                      title={`Published on ${new Date(p.date).toLocaleDateString('en-US', { 
-                        weekday: 'long',
-                        year: 'numeric', 
-                        month: 'long', 
-                        day: 'numeric' 
-                      })}`}
+                      className="text-neutral-500 whitespace-nowrap"
                     >
                       {new Date(p.date).toLocaleDateString('en-US', { 
                         month: 'short', 
