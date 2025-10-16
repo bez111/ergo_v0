@@ -3,7 +3,6 @@
 import Link from "next/link"
 import Image from "next/image"
 import { motion } from "framer-motion"
-import { Eye, Heart } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 
 interface TrendingNowProps {
@@ -12,110 +11,90 @@ interface TrendingNowProps {
 }
 
 export default function TrendingNow({ posts, categories }: TrendingNowProps) {
+  // Format views
+  const formatViews = (views: number) => {
+    if (views >= 1000) return `${(views / 1000).toFixed(1)}k`
+    return views.toString()
+  }
+
+  // Format date
+  const formatDate = (dateString: string) => {
+    return new Date(dateString).toLocaleDateString('en-US', { 
+      month: 'short', 
+      day: 'numeric',
+      year: 'numeric'
+    })
+  }
+
   return (
-    <motion.section 
+    <aside 
       className="flex flex-col w-full lg:w-80" 
       aria-labelledby="trending"
-      role="complementary"
+      aria-label="Trending Now"
     >
-      <h2 id="trending" className="text-xl font-bold text-white mb-4">
+      <h2 id="trending" className="text-3xl font-bold mb-6 text-white">
         Trending Now
       </h2>
-      <div className="space-y-4 h-full min-h-0" role="list" aria-label="Trending articles">
+      <ul className="space-y-4" role="list">
         {posts.map((p, index) => (
-          <motion.div
+          <motion.li
             key={p.id}
-            role="listitem"
-            className="group relative rounded-xl p-4 ring-1 ring-white/10 bg-neutral-900/60 hover:ring-white/16 transition hover:-translate-y-px min-h-0"
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
           >
-            <article 
-              aria-labelledby={`t-${p.id}`} 
-              itemScope 
-              itemType="https://schema.org/BlogPosting"
-              className="h-full flex flex-col min-h-0"
+            <Link
+              href={`/blog/${p.slug}`}
+              className="flex items-start gap-4 rounded-2xl bg-neutral-900/70 border border-neutral-800 p-5 hover:bg-neutral-900 transition-colors duration-200"
             >
-              <div className="flex items-start gap-4 flex-1 min-h-0">
-                <div className="size-10 rounded-lg bg-neutral-800/60 ring-1 ring-white/10 shrink-0 overflow-hidden">
-                  {p.image ? (
-                    <Image 
-                      src={p.image} 
-                      alt={`Article image for ${p.title}`} 
-                      width={40}
-                      height={40}
-                      className="object-cover w-full h-full" 
-                      loading="lazy"
-                    />
-                  ) : (
-                    <div className="w-full h-full flex items-center justify-center">
-                      <span className="text-sm font-medium text-neutral-400">
-                        {p.category?.charAt(0)?.toUpperCase() || 'B'}
-                      </span>
-                    </div>
-                  )}
+              {/* Avatar/Initial */}
+              <div className="h-12 w-12 rounded-2xl bg-neutral-800 grid place-content-center text-xl font-bold text-neutral-200 shrink-0">
+                {p.image ? (
+                  <Image 
+                    src={p.image} 
+                    alt={`Article image for ${p.title}`} 
+                    width={48}
+                    height={48}
+                    className="object-cover w-full h-full rounded-2xl" 
+                    loading="lazy"
+                  />
+                ) : (
+                  p.author.name.charAt(0)
+                )}
+              </div>
+              
+              <div className="min-w-0 flex-1">
+                {/* Category Badge (optional) */}
+                {p.category && (
+                  <span className="mb-1 inline-block px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                    {p.category.toUpperCase()}
+                  </span>
+                )}
+                
+                {/* Title - 2 lines max */}
+                <div className="text-lg md:text-xl font-semibold text-neutral-100 line-clamp-2 leading-tight">
+                  {p.title}
                 </div>
                 
-                <div className="flex-1 min-w-0 flex flex-col min-h-0">
-                  {/* Category Badge */}
-                  <div className="mb-2 shrink-0">
-                    <span className="inline-flex items-center rounded-md border border-amber-400/30 px-2 py-0.5 text-xs text-amber-300/90 bg-transparent">
-                      {p.category?.toUpperCase() || 'GENERAL'}
-                    </span>
-                  </div>
-                  
-                  {/* Title */}
-                  <h3 id={`t-${p.id}`} className="text-sm font-semibold text-white leading-tight mb-2 line-clamp-2 flex-1 min-h-0">
-                    <Link 
-                      href={`/blog/${p.slug}`} 
-                      className="hover:text-orange-400 focus:text-orange-400 focus:outline-none transition-colors after:absolute after:inset-0"
-                      itemProp="url"
-                      aria-describedby={`t-meta-${p.id}`}
-                    >
-                      <span itemProp="headline">{p.title}</span>
-                    </Link>
-                  </h3>
-                  
-                  {/* Meta - consistent with hero style */}
-                  <div id={`t-meta-${p.id}`} className="flex items-center gap-2 text-xs text-neutral-500 shrink-0">
-                    <span className="text-neutral-500">{p.views ? `${(p.views / 1000).toFixed(1)}k` : '0'}</span>
-                    <span className="text-neutral-500">·</span>
-                    <span className="text-neutral-500">{p.shares || 0}</span>
-                    <span className="text-neutral-500">·</span>
-                    <time 
-                      dateTime={new Date(p.date).toISOString()} 
-                      itemProp="datePublished"
-                      className="text-neutral-500 whitespace-nowrap"
-                    >
-                      {new Date(p.date).toLocaleDateString('en-US', { 
-                        month: 'short', 
-                        day: 'numeric', 
-                        year: 'numeric' 
-                      })}
-                    </time>
-                  </div>
-
-                  {/* Hidden structured data */}
-                  <meta itemProp="dateModified" content={new Date(p.lastUpdated || p.date).toISOString()} />
-                  <meta itemProp="author" content={p.author.name} />
-                  <meta itemProp="timeRequired" content={`PT${p.readTime}M`} />
+                {/* Metrics: views • comments • date */}
+                <div className="mt-2 text-sm text-neutral-400 flex gap-3">
+                  <span>{formatViews(p.views || 0)}</span>
+                  {p.shares != null && <span>{p.shares}</span>}
+                  <span>{formatDate(p.date)}</span>
                 </div>
               </div>
+            </Link>
 
-              {/* Screen reader only description */}
-              <div className="sr-only">
-                Article by {p.author.name}, published {new Date(p.date).toLocaleDateString('en-US', { 
-                  year: 'numeric', 
-                  month: 'long', 
-                  day: 'numeric' 
-                })}, {p.views?.toLocaleString() || '0'} views, {p.shares || 0} shares
-                , {p.readTime} minute read
-              </div>
+            {/* Hidden metadata for SEO */}
+            <article className="sr-only" itemScope itemType="https://schema.org/BlogPosting">
+              <span itemProp="headline">{p.title}</span>
+              <time itemProp="datePublished" dateTime={p.date}>{p.date}</time>
+              <meta itemProp="author" content={p.author.name} />
+              <meta itemProp="timeRequired" content={`PT${p.readTime}M`} />
             </article>
-          </motion.div>
+          </motion.li>
         ))}
-      </div>
-    </motion.section>
+      </ul>
+    </aside>
   )
-} 
+}
