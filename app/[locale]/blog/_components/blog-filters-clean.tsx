@@ -1,7 +1,21 @@
 "use client"
 
 import React, { useState, useMemo } from "react"
-import { Search, X, ChevronDown } from "lucide-react"
+import { 
+  Search, 
+  X, 
+  ChevronDown,
+  BookOpen,
+  Coins,
+  Code2,
+  Cog,
+  Network,
+  BarChart3,
+  Pickaxe,
+  Clock,
+  Flame,
+  TrendingUp
+} from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Input } from "@/components/ui/input"
@@ -13,21 +27,21 @@ import {
 } from "@/components/ui/dropdown-menu"
 import type { BlogPost } from "../_lib/blog-data"
 
-// Clean categories like Solana
+// Clean categories like Solana with Lucide icons
 const categories = [
-  { id: 'all', name: 'ALL', icon: '📚', color: 'orange' },
-  { id: 'defi', name: 'DEFI', icon: '💰', color: 'yellow' },
-  { id: 'development', name: 'DEVELOPER', icon: '💻', color: 'green' },
-  { id: 'technology', name: 'TECHNOLOGY', icon: '⚙️', color: 'blue' },
-  { id: 'ecosystem', name: 'ECOSYSTEM', icon: '🌐', color: 'indigo' },
-  { id: 'research', name: 'REPORTS', icon: '📊', color: 'purple' },
-  { id: 'mining', name: 'MINING', icon: '⛏️', color: 'yellow' }
+  { id: 'all', name: 'ALL', icon: 'BookOpen', color: 'orange' },
+  { id: 'defi', name: 'DEFI', icon: 'Coins', color: 'yellow' },
+  { id: 'development', name: 'DEVELOPER', icon: 'Code2', color: 'green' },
+  { id: 'technology', name: 'TECHNOLOGY', icon: 'Cog', color: 'blue' },
+  { id: 'ecosystem', name: 'ECOSYSTEM', icon: 'Network', color: 'indigo' },
+  { id: 'research', name: 'REPORTS', icon: 'BarChart3', color: 'purple' },
+  { id: 'mining', name: 'MINING', icon: 'Pickaxe', color: 'yellow' }
 ]
 
 const sortOptions = [
-  { id: 'latest', name: 'Latest First', icon: '🕐' },
-  { id: 'popular', name: 'Most Popular', icon: '🔥' },
-  { id: 'trending', name: 'Trending', icon: '📈' }
+  { id: 'latest', name: 'Latest First', icon: 'Clock' },
+  { id: 'popular', name: 'Most Popular', icon: 'Flame' },
+  { id: 'trending', name: 'Trending', icon: 'TrendingUp' }
 ]
 
 interface BlogFiltersCleanProps {
@@ -49,6 +63,23 @@ export function BlogFiltersClean({
   onCategoryChange,
   onSortChange
 }: BlogFiltersCleanProps) {
+  // Get icon component by name
+  const getIconComponent = (iconName: string) => {
+    const iconMap: Record<string, React.ComponentType<any>> = {
+      BookOpen,
+      Coins,
+      Code2,
+      Cog,
+      Network,
+      BarChart3,
+      Pickaxe,
+      Clock,
+      Flame,
+      TrendingUp
+    }
+    return iconMap[iconName] || BookOpen
+  }
+
   // Count posts per category
   const categoryCounts = useMemo(() => {
     const counts: Record<string, number> = { all: posts.length }
@@ -93,29 +124,35 @@ export function BlogFiltersClean({
               className="gap-2 bg-neutral-900 border-neutral-700 text-neutral-300 hover:bg-neutral-800 hover:text-white min-w-[180px]"
             >
               <span className="flex items-center gap-2">
-                {sortOptions.find(s => s.id === sortBy)?.icon}
+                {(() => {
+                  const SortIcon = getIconComponent(sortOptions.find(s => s.id === sortBy)?.icon || 'Clock')
+                  return <SortIcon className="w-4 h-4" />
+                })()}
                 {sortOptions.find(s => s.id === sortBy)?.name}
               </span>
               <ChevronDown className="h-4 w-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent className="bg-neutral-900 border-neutral-700">
-            {sortOptions.map((option) => (
-              <DropdownMenuItem
-                key={option.id}
-                onClick={() => onSortChange(option.id)}
-                className={`cursor-pointer ${
-                  sortBy === option.id 
-                    ? 'bg-orange-500/20 text-orange-400' 
-                    : 'hover:bg-neutral-800 focus:bg-neutral-800'
-                }`}
-              >
-                <span className="flex items-center gap-2">
-                  <span>{option.icon}</span>
-                  {option.name}
-                </span>
-              </DropdownMenuItem>
-            ))}
+            {sortOptions.map((option) => {
+              const OptionIcon = getIconComponent(option.icon)
+              return (
+                <DropdownMenuItem
+                  key={option.id}
+                  onClick={() => onSortChange(option.id)}
+                  className={`cursor-pointer ${
+                    sortBy === option.id 
+                      ? 'bg-orange-500/20 text-orange-400' 
+                      : 'hover:bg-neutral-800 focus:bg-neutral-800'
+                  }`}
+                >
+                  <span className="flex items-center gap-2">
+                    <OptionIcon className="w-4 h-4" />
+                    {option.name}
+                  </span>
+                </DropdownMenuItem>
+              )
+            })}
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
@@ -126,6 +163,7 @@ export function BlogFiltersClean({
           {categories.map((category) => {
             const isActive = selectedCategory === category.id
             const postCount = categoryCounts[category.id] || 0
+            const CategoryIcon = getIconComponent(category.icon)
 
             return (
               <Button
@@ -140,7 +178,7 @@ export function BlogFiltersClean({
                   }
                 `}
               >
-                <span>{category.icon}</span>
+                <CategoryIcon className="w-4 h-4" />
                 <span className="font-medium">{category.name}</span>
                 {postCount > 0 && (
                   <Badge 

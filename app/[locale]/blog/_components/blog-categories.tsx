@@ -2,7 +2,17 @@
 
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Folder, FolderOpen } from "lucide-react"
+import { 
+  Folder, 
+  FolderOpen, 
+  BookOpen,
+  Coins,
+  Cog,
+  Code2,
+  Pickaxe,
+  Shield,
+  Network
+} from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import { categoryDefinitions } from "../_lib/blog-data"
 
@@ -26,9 +36,23 @@ export function BlogCategories({
     return posts.filter(post => post.category?.toLowerCase() === categoryId).length
   }
 
+  // Get icon component by name
+  const getIconComponent = (iconName: string) => {
+    const iconMap: Record<string, React.ComponentType<any>> = {
+      BookOpen,
+      Coins,
+      Cog,
+      Code2,
+      Pickaxe,
+      Shield,
+      Network
+    }
+    return iconMap[iconName] || BookOpen
+  }
+
   // Get available categories (only show categories that have posts)
   const availableCategories = [
-    { id: 'all', name: 'All Posts', icon: '📚', color: 'neutral' },
+    { id: 'all', name: 'All Posts', icon: 'BookOpen', color: 'neutral' },
     ...categoryDefinitions.filter(cat => getCategoryCount(cat.id) > 0)
   ]
 
@@ -43,6 +67,7 @@ export function BlogCategories({
         {availableCategories.map((category) => {
           const isSelected = selectedCategory === category.id
           const count = getCategoryCount(category.id)
+          const IconComponent = getIconComponent(category.icon)
           
           return (
             <button
@@ -58,7 +83,7 @@ export function BlogCategories({
               aria-label={`Filter by ${category.name} (${count} posts)`}
               aria-pressed={isSelected}
             >
-              <span className="text-base">{category.icon}</span>
+              <IconComponent className="w-4 h-4" />
               <span>{category.name}</span>
               <Badge 
                 variant="secondary" 

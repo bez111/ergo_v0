@@ -200,7 +200,7 @@ export const categoryDefinitions: Category[] = [
     name: 'DeFi',
     slug: 'defi',
     description: 'Decentralized finance innovations, protocols, and applications on Ergo',
-    icon: '💰',
+    icon: 'Coins',
     color: 'orange'
   },
   {
@@ -208,7 +208,7 @@ export const categoryDefinitions: Category[] = [
     name: 'Technology',
     slug: 'technology',
     description: 'Deep dives into Ergo\'s technical architecture and blockchain innovations',
-    icon: '⚙️',
+    icon: 'Cog',
     color: 'blue'
   },
   {
@@ -216,7 +216,7 @@ export const categoryDefinitions: Category[] = [
     name: 'Development',
     slug: 'development',
     description: 'Developer tutorials, guides, and best practices for building on Ergo',
-    icon: '💻',
+    icon: 'Code2',
     color: 'green'
   },
   {
@@ -224,7 +224,7 @@ export const categoryDefinitions: Category[] = [
     name: 'Mining',
     slug: 'mining',
     description: 'Mining guides, hardware reviews, and optimization strategies',
-    icon: '⛏️',
+    icon: 'Pickaxe',
     color: 'purple'
   },
   {
@@ -232,7 +232,7 @@ export const categoryDefinitions: Category[] = [
     name: 'Privacy',
     slug: 'privacy',
     description: 'Privacy features, zero-knowledge proofs, and confidential transactions',
-    icon: '🔒',
+    icon: 'Shield',
     color: 'indigo'
   },
   {
@@ -240,7 +240,7 @@ export const categoryDefinitions: Category[] = [
     name: 'Ecosystem',
     slug: 'ecosystem',
     description: 'Updates, news, and highlights from the Ergo ecosystem',
-    icon: '🌐',
+    icon: 'Network',
     color: 'cyan'
   }
 ]
