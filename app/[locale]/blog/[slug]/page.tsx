@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
 import { notFound } from "next/navigation"
+import Script from 'next/script'
 import { blogPosts } from "../_lib/blog-data"
-import { BlogPostClient } from "./BlogPostClient"
+import { BlogPostClientPremium } from "./BlogPostClientPremium"
 import { BlogSchema } from "../_components/blog-schema"
 import { generateMetadata as generatePageMetadata } from '@/components/seo/page-metadata'
 import { PageMetadata } from '@/components/seo/page-metadata'
@@ -25,24 +26,36 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 
   const baseUrl = 'https://ergoblockchain.org'
   
+  // Optimize title for SEO (≤ 60 chars)
+  const seoTitle = post.title.length > 50 
+    ? `${post.title.substring(0, 47)}...` 
+    : post.title
+  const fullTitle = `${seoTitle} | Ergo Platform`
+
+  // Optimize description (150-160 chars)
+  const seoDescription = post.description || post.excerpt
+  const optimizedDescription = seoDescription.length > 155 
+    ? `${seoDescription.substring(0, 152)}...` 
+    : seoDescription
+
   return {
-    title: post.title,
-    description: post.description,
+    title: fullTitle,
+    description: optimizedDescription,
     keywords: post.tags.join(', '),
     authors: [{ name: post.author.name }],
     creator: post.author.name,
     publisher: 'Ergo Platform',
     openGraph: {
-      title: post.title,
-      description: post.description,
+      title: seoTitle,
+      description: optimizedDescription,
       type: 'article',
-      publishedTime: post.publishedAt,
-      modifiedTime: post.updatedAt || post.publishedAt,
+      publishedTime: post.date,
+      modifiedTime: post.lastUpdated || post.date,
       authors: [post.author.name],
       tags: post.tags,
       images: [
         {
-          url: post.image || '/placeholder.svg',
+          url: post.image || `${baseUrl}/og-image-blog.png`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -53,10 +66,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     },
     twitter: {
       card: 'summary_large_image',
-      title: post.title,
-      description: post.description,
-      images: [post.image || '/placeholder.svg'],
-      creator: post.author.social?.twitter ? `@${post.author.social.twitter}` : undefined,
+      title: seoTitle,
+      description: optimizedDescription,
+      images: [post.image || `${baseUrl}/og-image-blog.png`],
+      creator: post.author.social?.twitter ? `@${post.author.social.twitter}` : '@ergoplatformorg',
     },
     alternates: {
       canonical: `${baseUrl}/blog/${slug}`,
@@ -91,6 +104,53 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     count: 23
   }
 
+  // FAQ Schema for article page
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How is ErgoScript different from Solidity?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ErgoScript uses a UTXO model with functional programming, offering better predictability and security. Solidity uses an account model with imperative programming, which is more flexible but prone to reentrancy attacks."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What tools do I need to start with ErgoScript?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You'll need an Ergo node (or access to a public one), the Ergo Playground for testing, and either Ergo AppKit or ergo-lib for application development."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does ErgoScript deployment cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Deployment costs are minimal - typically less than 0.001 ERG. The exact cost depends on the script complexity and current network conditions."
+        }
+      }
+    ]
+  }
+
+  // TechArticle Schema (more specific than generic Article)
+  const techArticleSchema = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "dependencies": "Ergo node, Ergo Playground, Ergo AppKit",
+    "proficiencyLevel": "Intermediate",
+    "genre": "Tutorial",
+    "technicalAudience": ["Blockchain Developers", "Smart Contract Engineers"],
+    "about": {
+      "@type": "Thing",
+      "name": "ErgoScript",
+      "description": "A functional smart contract language for the Ergo blockchain"
+    }
+  }
+
   return (
     <>
       <BlogSchema 
@@ -98,7 +158,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         url={`https://ergoblockchain.org/blog/${slug}`}
         rating={rating}
       />
-      <BlogPostClient post={post} relatedPosts={relatedPosts} />
+      <Script
+        id="faq-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema)
+        }}
+      />
+      <Script
+        id="tech-article-schema"
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(techArticleSchema)
+        }}
+      />
+      <BlogPostClientPremium post={post} relatedPosts={relatedPosts} />
     </>
   )
 }

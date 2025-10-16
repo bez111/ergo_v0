@@ -1,0 +1,84 @@
+/* Critical CSS for blog pages - inline this in <head> for better LCP */
+
+/* Above-the-fold styles */
+.blog-header {
+  min-height: 80px;
+  background: #000;
+}
+
+.reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: #1a1a1a;
+  z-index: 50;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  background: #ff5500;
+  transition: width 0.3s ease;
+}
+
+/* Hero section critical styles */
+.blog-hero {
+  padding: 2rem 0;
+  min-height: 400px;
+}
+
+.blog-title {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  line-height: 0.95;
+  margin-bottom: 1rem;
+}
+
+.blog-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* Prevent CLS on images */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Font loading optimization */
+.font-inter {
+  font-family: Inter, system-ui, -apple-system, sans-serif;
+  font-display: swap;
+}
+
+/* Skeleton loader for better perceived performance */
+.skeleton-box {
+  background: linear-gradient(90deg, #1a1a1a 25%, #262626 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Responsive images container */
+.responsive-image-container {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+}
+
+.responsive-image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
