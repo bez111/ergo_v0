@@ -249,14 +249,14 @@ export default function EIP20Page() {
           The wallet application should request the URL and obtain the following data (in JSON format):
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`ErgoPaySigningRequest:
+          <CodeBlock language="typescript">
+    {`ErgoPaySigningRequest:
   - transaction: ReducedTransaction (optional*)
   - address: String (optional)
   - message: String (optional*)
   - messageSeverity: String (optional) "INFORMATION", "WARNING", "ERROR"
   - replyToUrl: String (optional)`}
-          />
+  </CodeBlock>
         </div>
         <div className="bg-green-500/10 border border-green-500/20 rounded-lg p-4 mt-4">
           <p className="text-green-200 font-semibold mb-2">💡 Important Notes</p>

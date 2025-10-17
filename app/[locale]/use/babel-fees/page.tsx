@@ -5,7 +5,7 @@ import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 import { getTranslations } from "next-intl/server"
 import { useTranslations } from "next-intl"
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'use.babelFees.seo' })
   

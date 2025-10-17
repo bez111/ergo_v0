@@ -78,8 +78,8 @@ export default function ThresholdSignaturesPage() {
 
         <h2 className="text-3xl font-bold mb-6 text-white">Conceptual Implementation</h2>
         <div className="mb-8">
-          <CodeBlock language="typescript"
-            children={`val thresholdSignature = prove {
+          <CodeBlock language="typescript">
+    {`val thresholdSignature = prove {
   atLeastKOutOfN(
     k = 3,  // Minimum signatures required
     n = 5,  // Total possible signers
@@ -89,7 +89,7 @@ export default function ThresholdSignaturesPage() {
     )
   )
 }`}
-          />
+  </CodeBlock>
         </div>
 
         <h2 className="text-3xl font-bold mb-6 text-white">Related Cryptographic Concepts</h2>

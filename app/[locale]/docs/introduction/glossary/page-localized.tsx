@@ -139,7 +139,7 @@ export default function GlossaryPage() {
     "GM": "GM (Good Morning)",
     "WAGMI": "WAGMI",
     "NGMI": "NGMI",
-    t('community'): t('community'),
+    "Community": t('community'),
     "Yield Farming": "Yield Farming",
     "Liquidity Pool": "Liquidity Pool",
     "Liquidity Provider": "Liquidity Provider",

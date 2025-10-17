@@ -12,6 +12,8 @@ import { notFound, redirect } from "next/navigation"
 // Link and NewsletterSignup removed - not used in this file
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
+// Import client component wrapper for background
+import BlogBackground from "./_components/blog-background"
 
 
 export const revalidate = 300
@@ -19,7 +21,7 @@ const pageSize = 12
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = (await searchParams) || {}
-  const pageParam = typeof sp.page === "string" ? sp.page : Array.isArray(sp.page) ? sp.page[0] : undefined
+  const pageParam = typeof sp['page'] === "string" ? sp['page'] : Array.isArray(sp['page']) ? sp['page'][0] : undefined
   const page = Math.max(1, Number(pageParam ?? 1) || 1)
   const baseUrl = "https://ergoblockchain.org/blog"
   const title = page > 1 ? `Latest News & Insights — Page ${page}` : `Latest News & Insights — Ergo Blog`
@@ -27,7 +29,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const allowed = new Set(["page"]) // whitelist
   const hasJunk = Object.keys(sp).some((k) => !allowed.has(k))
 
-  const twitterHandle = process.env.NEXT_PUBLIC_TWITTER_HANDLE || "@ergoplatform"
+  const twitterHandle = process.env['NEXT_PUBLIC_TWITTER_HANDLE'] || "@ergoplatform"
 
   const totalPagesMeta = Math.max(1, Math.ceil(blogPosts.length / pageSize))
   const prev = page > 2 ? `${baseUrl}?page=${page - 1}` : page === 2 ? baseUrl : undefined
@@ -54,15 +56,14 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
 
 export default async function BlogPage({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }) {
   const sp = (await searchParams) || {}
-  const pageParam = typeof sp.page === "string" ? sp.page : Array.isArray(sp.page) ? sp.page[0] : undefined
+  const pageParam = typeof sp['page'] === "string" ? sp['page'] : Array.isArray(sp['page']) ? sp['page'][0] : undefined
   const currentPage = Math.max(1, Number(pageParam ?? 1) || 1)
 
   const allowed = new Set(["page"]) // whitelist
   const hasJunk = Object.keys(sp).some((k) => !allowed.has(k))
-  const baseUrl = "https://ergoblockchain.org/blog"
 
   // Canonicalize page=1 and strip junk params
-  if (hasJunk || (typeof sp?.page !== "undefined" && currentPage === 1)) {
+  if (hasJunk || (typeof sp?.['page'] !== "undefined" && currentPage === 1)) {
     const clean = currentPage > 1 ? `/blog?page=${currentPage}` : "/blog"
     redirect(clean)
   }
@@ -244,8 +245,11 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
+      {/* Background Effects - same as /start/introduction */}
+      <BlogBackground />
+
       <main id="main" className="relative z-10" role="main">
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
 
           {/* Minimal Header - SEO only, visually hidden like Solana */}

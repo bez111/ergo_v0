@@ -95,14 +95,14 @@ export default function ExtensionBlockMerklePage() {
                 <strong>Code Reference</strong>: The implementation of this Merkle Tree construction process is handled in the <a href="https://github.com/ergoplatform/ergo/blob/master/ergo-core/src/main/scala/org/ergoplatform/modifiers/history/extension/Extension.scala" className="text-orange-400 hover:text-orange-300 underline">Extension.scala</a> file within the Ergo codebase. The relevant method for creating the Merkle Tree from key-value pairs is the <code className="bg-neutral-700 px-2 py-1 rounded">merkleTree</code> method within the <code className="bg-neutral-700 px-2 py-1 rounded">Extension</code> object.
               </p>
               <div className="mb-4">
-                <CodeBlock language="typescript"
-                  children={`def merkleTree: MerkleTree = {
+                <CodeBlock language="typescript">
+    {`def merkleTree: MerkleTree = {
   val leafData = keyValuePairs.map { case (key, value) =>
     hash(key ++ value)
   }
   MerkleTree.fromLeafData(leafData)
 }`}
-                />
+  </CodeBlock>
               </div>
               <p className="text-gray-300">
                 In this code, <code className="bg-neutral-700 px-2 py-1 rounded">keyValuePairs</code> represent the sequence of key-value data in the Extension Block. The method computes the cryptographic hash for each pair and constructs the Merkle Tree using these hashes.
@@ -138,8 +138,8 @@ export default function ExtensionBlockMerklePage() {
             Here's an example of how to verify a key-value pair using a Merkle proof:
           </p>
           <div className="mb-4">
-            <CodeBlock language="typescript"
-              children={`import scorex.crypto.authds.merkle.MerkleProof
+            <CodeBlock language="typescript">
+    {`import scorex.crypto.authds.merkle.MerkleProof
 import scorex.crypto.hash.{Blake2b256, Digest32}
 import scorex.util.encode.Base16
 
@@ -151,7 +151,7 @@ val proof = MerkleProof[Digest32](leafHash, Seq(...)) // Proof provided in the b
 val root = Base16.decode("expectedMerkleRoot").get
 
 assert(proof.valid(Digest32 @@ root))`}
-            />
+  </CodeBlock>
           </div>
           <p className="text-gray-300">
             In this example, the proof is validated by comparing the computed root from the proof with the expected Merkle Root stored in the block header.

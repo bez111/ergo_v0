@@ -43,8 +43,8 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <CodeBlock language="typescript"
-            children={`{
+          <CodeBlock language="typescript">
+    {`{
   // Retrieve GroupElement pkA, pkB, and pkC from the register R4, R5, and R6 respectively.
   val pkA  = SELF.R4[GroupElement].get
   val pkB  = SELF.R5[GroupElement].get
@@ -53,7 +53,7 @@ export default function DistributedSignaturesPage() {
   // Require at least two of the three provided public keys to be included in the spending transaction.
   atLeast(2, Coll(proveDlog(pkA), proveDlog(pkB), proveDlog(pkC)))
 }`}
-          />
+  </CodeBlock>
         </div>
 
         <p className="text-gray-300 mb-8">
@@ -65,8 +65,8 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <CodeBlock language="typescript"
-            children={`{
+          <CodeBlock language="typescript">
+    {`{
   "requests": [
     {
       "address": "4MQyML64GnzMxZgm",
@@ -80,7 +80,7 @@ export default function DistributedSignaturesPage() {
   "dataInputsRaw": [ 
   ]
 }`}
-          />
+  </CodeBlock>
         </div>
 
         <p className="text-gray-300 mb-8">
@@ -88,8 +88,8 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <CodeBlock language="typescript"
-            children={`{
+          <CodeBlock language="typescript">
+    {`{
   "secretHints": {
     "0": [
       {
@@ -120,7 +120,7 @@ export default function DistributedSignaturesPage() {
     ]
   }
 }`}
-          />
+  </CodeBlock>
         </div>
 
         <p className="text-gray-300 mb-8">
@@ -132,8 +132,8 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <CodeBlock language="typescript"
-            children={`{
+          <CodeBlock language="typescript">
+    {`{
   "tx": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
   "inputs": [
@@ -195,7 +195,7 @@ export default function DistributedSignaturesPage() {
   }
 }
 }`}
-          />
+  </CodeBlock>
         </div>
 
         <p className="text-gray-300 mb-8">
@@ -207,8 +207,8 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <CodeBlock language="typescript"
-            children={`{
+          <CodeBlock language="typescript">
+    {`{
   "transaction": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
   "inputs": [
@@ -258,7 +258,7 @@ export default function DistributedSignaturesPage() {
     }
   ]
 }`}
-          />
+  </CodeBlock>
         </div>
 
         <p className="text-gray-300 mb-8">
@@ -266,8 +266,8 @@ export default function DistributedSignaturesPage() {
         </p>
 
         <div className="mb-8">
-          <CodeBlock language="typescript"
-            children={`{
+          <CodeBlock language="typescript">
+    {`{
   "tx": {
   "id": "6c7bf7a9720d26bec5c3b5bf1bc6199e9a5b876ba5994ab5e4214b0d8eed1492",
   "inputs": [
@@ -369,7 +369,7 @@ export default function DistributedSignaturesPage() {
   }
 }
 }`}
-          />
+  </CodeBlock>
         </div>
 
         <p className="text-gray-300 mb-8">

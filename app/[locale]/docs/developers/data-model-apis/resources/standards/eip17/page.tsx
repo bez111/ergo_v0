@@ -158,9 +158,9 @@ export default function EIP17Page() {
           The below contract structure is proposed as an example for SigmaUSD minting operation:
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={contractCode}
-          />
+          <CodeBlock language="typescript">
+    {contractCode}
+  </CodeBlock>
         </div>
       </div>
 

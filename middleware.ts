@@ -19,6 +19,7 @@ export const config = {
   // Match only internationalized pathnames
   matcher: [
     '/',
+    // Поддержка всех локалей для будущего
     '/(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/:path*',
     '/((?!api|_next|_vercel|.*\\..*).*)'
   ]

@@ -53,8 +53,8 @@ export default function MerkleBatchProofsTestingPage() {
             In Rust, the <code className="bg-neutral-700 px-2 py-1 rounded">sigma-rust</code> library provides the necessary tools to create and test Merkle Batch Proofs. Below is a series of tests written using the Rust testing framework.
           </p>
 
-          <CodeBlock language="typescript"
-            children={String.raw`#[cfg(test)]
+          <CodeBlock language="typescript">
+    {String.raw`#[cfg(test)]
 mod tests {
     use sigma_merkle_tree::merkletree::MerkleTree;
     use sigma_merkle_tree::MerkleNode;
@@ -127,7 +127,7 @@ mod tests {
         assert_eq!(proof, deserialized_proof, "Deserialized proof should match the original");
     }
 }`}
-          />
+  </CodeBlock>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Code References</h3>
           
@@ -143,8 +143,8 @@ mod tests {
             For Scala, the <code className="bg-neutral-700 px-2 py-1 rounded">scrypto</code> library is used to test Merkle Batch Proofs. Below are the test cases using ScalaTest, covering tree creation, proof generation, verification, and serialization.
           </p>
 
-          <CodeBlock language="typescript"
-            children={String.raw`import org.scalatest.flatspec.AnyFlatSpec
+          <CodeBlock language="typescript">
+    {String.raw`import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
 import scorex.crypto.authds.merkle.{MerkleTree, BatchMerkleProof}
 import scorex.crypto.authds.merkle.serialization.BatchMerkleProofSerializer
@@ -190,7 +190,7 @@ class MerkleBatchProofSpec extends AnyFlatSpec with Matchers {
     proof shouldEqual deserializedProof // Check that the original and deserialized proofs are equal
   }
 }`}
-          />
+  </CodeBlock>
 
           <h3 className="text-2xl font-bold text-white mb-4 mt-8">Code References</h3>
           

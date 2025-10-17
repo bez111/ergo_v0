@@ -90,7 +90,7 @@ export default function UseClient() {
   function FAQSection() {
     // Helper to convert React nodes to plain text for JSON-LD
     function nodeToPlainText(node: React.ReactNode): string {
-      if (node == null || node === false) return ""
+      if (node === null || node === undefined || node === false) return ""
       if (typeof node === "string" || typeof node === "number") return String(node)
       if (Array.isArray(node)) return node.map(nodeToPlainText).join(" ")
       if (typeof node === "object" && "props" in (node as any)) {

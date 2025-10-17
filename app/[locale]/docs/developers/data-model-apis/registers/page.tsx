@@ -181,11 +181,11 @@ export default function BoxRegistersPage() {
 
           <p className="text-gray-300 mb-4">For instance,</p>
 
-          <CodeBlock language="typescript"
-            children={String.raw`// Assign the value of the R4 register of the current box (SELF) to the variable x
+          <CodeBlock language="typescript">
+    {String.raw`// Assign the value of the R4 register of the current box (SELF) to the variable x
 // The script expects R4 to contain an Int.
 val x = SELF.R4[Int]`}
-          />
+  </CodeBlock>
 
           <p className="text-gray-300 mb-6 mt-4">
             In the above example, the register is expected to have an <code className="bg-neutral-700 px-2 py-1 rounded">Int</code> type. Therefore, the expression <code className="bg-neutral-700 px-2 py-1 rounded">SELF.R4[Int]</code> returns an <code className="bg-neutral-700 px-2 py-1 rounded">Option[Int]</code> type value.

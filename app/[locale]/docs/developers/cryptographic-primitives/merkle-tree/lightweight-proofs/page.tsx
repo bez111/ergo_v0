@@ -111,8 +111,8 @@ export default function LightweightProofsPage() {
             The following code demonstrates how to perform step 4b: verifying that a transaction is included in the block header using a Merkle proof.
           </p>
 
-          <CodeBlock language="typescript"
-            children={String.raw`package org.ergoplatform.examples
+          <CodeBlock language="typescript">
+    {String.raw`package org.ergoplatform.examples
 
 import org.ergoplatform.utils.ErgoPropertyTest
 import scorex.crypto.authds.merkle.MerkleProof
@@ -155,7 +155,7 @@ class LiteClientExamples extends ErgoPropertyTest {
         assert(merkleProof.valid(Digest32 @@ txsRoot))
     }
 }`}
-          />
+  </CodeBlock>
 
           <h2 className="text-3xl font-bold text-white mb-6 mt-12">Explanation of the Code</h2>
           

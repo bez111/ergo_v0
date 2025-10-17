@@ -40,15 +40,15 @@ export default function PerpetualTokensPage() {
             ErgoScript allows the creation of a <em>perpetual token</em>, a token that is designed to exist indefinitely, unless it is removed by garbage collection.
           </p>
 
-          <CodeBlock language="typescript"
-            children={String.raw`{
+          <CodeBlock language="typescript">
+    {String.raw`{
   val isPerpetual = {(b: Box) =>
     b.propositionBytes == SELF.propositionBytes && b.tokens == SELF.tokens
   }
 
   sigmaProp(OUTPUTS.exists(isPerpetual))
 }`}
-          />
+  </CodeBlock>
 
           <p className="text-gray-300 mt-6">
             This code snippet ensures the persistence of a collection of perpetual tokens, even if the collection's size is zero. If you protect a single token using this script, it guarantees that the token will only be removed by garbage collection.
@@ -78,9 +78,9 @@ export default function PerpetualTokensPage() {
             In <code className="bg-neutral-700 px-2 py-1 rounded">script1</code>, we have the statement:
           </p>
 
-          <CodeBlock language="typescript"
-            children={String.raw`hash(OUTPUTS(0).propositionBytes) == script2Hash`}
-          />
+          <CodeBlock language="typescript">
+    {String.raw`hash(OUTPUTS(0).propositionBytes) == script2Hash`}
+  </CodeBlock>
 
           <p className="text-gray-300 mt-4 mb-4">
             Here, <code className="bg-neutral-700 px-2 py-1 rounded">script1</code> verifies if the hash of the first output's <code className="bg-neutral-700 px-2 py-1 rounded">propositionBytes</code> matches the hash of <code className="bg-neutral-700 px-2 py-1 rounded">script2</code>.
@@ -90,9 +90,9 @@ export default function PerpetualTokensPage() {
             But, if we want <code className="bg-neutral-700 px-2 py-1 rounded">script2</code> to refer back to <code className="bg-neutral-700 px-2 py-1 rounded">script1</code>, as shown below:
           </p>
 
-          <CodeBlock language="typescript"
-            children={String.raw`hash(OUTPUTS(0).propositionBytes) == script1Hash`}
-          />
+          <CodeBlock language="typescript">
+    {String.raw`hash(OUTPUTS(0).propositionBytes) == script1Hash`}
+  </CodeBlock>
 
           <p className="text-gray-300 mt-4 mb-4">
             We face a cyclic reference problem, as both scripts are referencing each other.

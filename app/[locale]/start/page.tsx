@@ -4,7 +4,7 @@ import StartClient from './StartClient'
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'start.seo' });
   
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   }
 }
 
-export default async function StartPage({ params }: { params: { locale: string } }) {
+export default async function StartPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'start.schema' });
   

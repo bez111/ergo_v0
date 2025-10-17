@@ -291,10 +291,10 @@ export default function MerkleTreePage() {
                     The leaf node hash computation is implemented within the Ergo codebase, primarily found in the <code className="bg-neutral-700 px-2 py-1 rounded">scorex.crypto.authds.merkle</code> package of the <a href="https://github.com/input-output-hk/scrypto" className="text-orange-400 hover:text-orange-300 underline">Scrypto</a> library, which is used by Ergo.
                   </p>
                   <div className="mb-4">
-                    <CodeBlock language="typescript"
-                      children={`val leafData = Base16.decode(txId).get
+                    <CodeBlock language="typescript">
+    {`val leafData = Base16.decode(txId).get
 val leafHash = Blake2b256(0.toByte +: leafData)`}
-                    />
+  </CodeBlock>
                   </div>
                 </div>
               </div>
@@ -314,8 +314,8 @@ val leafHash = Blake2b256(0.toByte +: leafData)`}
                     The iteration process and validation logic are crucial for verifying the correctness of the Merkle proof. This is implemented in the <a href="https://github.com/input-output-hk/scrypto/blob/master/shared/src/main/scala/scorex/crypto/authds/merkle/BatchMerkleProof.scala" className="text-orange-400 hover:text-orange-300 underline">BatchMerkleProof.scala</a> file in the <code className="bg-neutral-700 px-2 py-1 rounded">scrypto</code> repository.
                   </p>
                   <div className="mb-4">
-                    <CodeBlock language="typescript"
-                      children={`val levels = Seq("0139b79af823a92aa72ced2c6d9e7f7f4687de5b5af7fab0ad205d3e54bda3f3ae")
+                    <CodeBlock language="typescript">
+    {`val levels = Seq("0139b79af823a92aa72ced2c6d9e7f7f4687de5b5af7fab0ad205d3e54bda3f3ae")
 val computedHash = levels.foldLeft(leafHash) { case (hash, level) =>
     val bytes = Base16.decode(level).get
     val prefix = bytes.head
@@ -329,7 +329,7 @@ val computedHash = levels.foldLeft(leafHash) { case (hash, level) =>
 
     Blake2b256(prefix +: concatenated)
 }`}
-                    />
+  </CodeBlock>
                   </div>
                 </div>
               </div>
@@ -345,9 +345,9 @@ val computedHash = levels.foldLeft(leafHash) { case (hash, level) =>
                     The comparison of the computed hash with the expected Merkle root is the final step in the validation process. This ensures that the entire proof is correct and that the data has not been tampered with.
                   </p>
                   <div className="mb-4">
-                    <CodeBlock language="typescript"
-                      children={`assert(computedHash == expectedMerkleRoot)`}
-                    />
+                    <CodeBlock language="typescript">
+    {`assert(computedHash == expectedMerkleRoot)`}
+  </CodeBlock>
                   </div>
                 </div>
               </div>
@@ -384,8 +384,8 @@ val computedHash = levels.foldLeft(leafHash) { case (hash, level) =>
                 This example demonstrates how to validate a transaction's inclusion in a block using a Merkle proof. The code is based on the structures and functions provided in the <a href="https://github.com/input-output-hk/scrypto" className="text-orange-400 hover:text-orange-300 underline">Scrypto</a> library and the Ergo codebase.
               </p>
               <div className="mb-4">
-                <CodeBlock language="typescript"
-                  children={`import scorex.crypto.authds.merkle.MerkleProof
+                <CodeBlock language="typescript">
+    {`import scorex.crypto.authds.merkle.MerkleProof
 import scorex.crypto.authds.{LeafData, Side}
 import scorex.crypto.hash.{Blake2b256, Digest32}
 import scorex.util.encode.Base16
@@ -408,7 +408,7 @@ val levels = levelsEncoded.map { le =>
 
 val merkleProof = MerkleProof[Digest32](LeafData @@ Base16.decode(txId).get, levels)
 assert(merkleProof.valid(Digest32 @@ txsRoot))`}
-                />
+  </CodeBlock>
               </div>
             </div>
           </section>

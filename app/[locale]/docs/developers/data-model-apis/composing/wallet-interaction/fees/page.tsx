@@ -57,10 +57,10 @@ export default function FeesPage() {
             Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">voting mechanism among miners</Link>. Nodes can sort transactions based on these metrics, settable in the <Link href="/docs/developers/conf-node" className="text-orange-400 hover:underline">node configuration</Link>.
           </p>
           
-          <CodeBlock language="typescript"
-            children={`# Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
+          <CodeBlock language="typescript">
+    {`# Mempool transaction sorting scheme ("random", "bySize", or "byExecutionCost")
 mempoolSorting = "random"`}
-          />
+  </CodeBlock>
           
           <p className="text-gray-300 mt-4 mb-4">
             When calculating the fee per byte or the fee per validation cost unit, miners initially filter out the fee boxes by checking the <code className="bg-neutral-700 px-2 py-1 rounded">propositionBytes</code> in the R1 register using the <b>feeProposition</b> method. Subsequently, they sum up the ERG value of these boxes. This sum is then divided by either the transaction's size or the total validation cost to yield a result. This final result serves as the basis for sorting transactions in the mempool.
@@ -103,14 +103,14 @@ def feeProposition(delta: Int = 720): ErgoTree = {
             And the method to extract the transaction fee method is as follows:
           </p>
           
-          <CodeBlock language="typescript"
-            children={`private def extractFee(tx: ErgoTransaction): Long = {
+          <CodeBlock language="typescript">
+    {`private def extractFee(tx: ErgoTransaction): Long = {
   tx.outputs
     .filter(_.ergoTree == settings.chainSettings.monetary.feeProposition)
     .map(_.value)
     .sum
 }`}
-          />
+  </CodeBlock>
           
           <div className="mt-4 p-4 bg-purple-900/30 border border-purple-600/30 rounded-lg">
             <h4 className="text-sm font-semibold text-purple-300 mb-2">Why is it like this?</h4>

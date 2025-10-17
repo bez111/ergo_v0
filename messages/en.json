@@ -5635,6 +5635,16 @@
     "title": "Get Started",
     "subtitle": "Begin your Ergo journey",
     "description": "Begin your journey with Ergo",
+    "seo": {
+      "title": "Get Started with Ergo - Your Gateway to Decentralized Finance",
+      "description": "Start your journey with Ergo blockchain. Learn about wallets, mining, development tools, and join the community.",
+      "keywords": "Ergo getting started, Ergo tutorial, Ergo wallet, Ergo mining, blockchain beginner guide",
+      "ogTitle": "Get Started with Ergo Blockchain",
+      "ogDescription": "Your complete guide to getting started with Ergo - wallets, mining, development, and community resources.",
+      "twitterTitle": "Get Started with Ergo Blockchain",
+      "twitterDescription": "Your complete guide to getting started with Ergo - wallets, mining, development, and community."
+    },
+    "schema": "Getting Started with Ergo Blockchain",
     "quiz": {
       "seo": {
         "title": "Ergo Knowledge Quiz - Test Your Understanding",
@@ -7142,6 +7152,12 @@
     "mine_erg_description": "Learn how to start mining, find mining pools, requirements, and beginner tips.",
     "earn_with_defi_description": "Discover where and how to earn through staking, farming, lending, lotteries.",
     "transaction_fees_babel_fees_description": "All about network fees and paying them with different tokens.",
+    "platformComparisonDescription": "How Ergo compares to Bitcoin, Ethereum, Solana and other blockchains.",
+    "onboardingQuizDescription": "Find your personalized path—investor, developer, miner, NFT enthusiast, and more.",
+    "joinTheCommunityDescription": "Connect via Discord, Telegram, Reddit, and the official forum.",
+    "faqForBeginnersDescription": "Answers to the most common questions for newcomers.",
+    "useCasesDescription": "Explore different ways to leverage Ergo's capabilities across various domains.",
+    "getErgDescription": "Learn how to buy, exchange, or earn ERG (markets, P2P, exchanges, guides).",
     "explore_dapps_services_description": "One-stop catalog of dApps, services, and community projects with advanced search and filters.",
     "ecosystem_map_description": "Visual map of projects, tools, and teams with interactive clusters and filters.",
     "mining_pools_resources_description": "List of mining pools and useful tools for miners.",
@@ -8745,10 +8761,26 @@
     "title": "Learn",
     "subtitle": "Educational resources for everyone",
     "description": "Educational resources for Ergo blockchain",
+    "schema": "Learn Ergo Blockchain - Educational Resources",
     "seo": {
       "title": "Learn - Ergo Blockchain Education | Ergo Platform",
       "description": "Learn about Ergo blockchain technology, smart contracts, and development.",
-      "keywords": "Ergo education, blockchain learning, tutorials, documentation"
+      "keywords": "Ergo education, blockchain learning, tutorials, documentation",
+      "ogTitle": "Learn Ergo Blockchain",
+      "ogDescription": "Educational resources, tutorials, and guides for learning Ergo blockchain technology.",
+      "twitterTitle": "Learn Ergo Blockchain",
+      "twitterDescription": "Educational resources, tutorials, and guides for learning Ergo blockchain."
+    },
+    "common": {
+      "learnMore": "Learn More"
+    },
+    "resources": {
+      "ergoscript": {
+        "title": "Learn ErgoScript",
+        "description": "Master ErgoScript smart contract development",
+        "difficulty": "Intermediate",
+        "duration": "4-6 weeks"
+      }
     },
     "faq": {
       "categories": {
@@ -9771,6 +9803,10 @@
       "title": "Ecosystem",
       "subtitle": "Discover the Ergo ecosystem",
       "description": "Explore the growing Ergo ecosystem",
+      "infrastructure": "Infrastructure",
+      "applications": "Applications",
+      "financial": "Financial",
+      "nfts": "NFTs",
       "seo": {
         "title": "Ergo Ecosystem — dApps, wallets, tools, DeFi",
         "description": "Explore the Ergo ecosystem: decentralized apps, wallets, privacy tools, DeFi protocols, SDKs and infrastructure.",
@@ -11418,6 +11454,7 @@
     "title": "UI Kit",
     "subtitle": "Design system and components",
     "description": "Complete component library for modern dApps",
+    "lastUpdated": "Last updated: March 2024",
     "overview": "Overview",
     "components": "Components",
     "patterns": "Patterns",
@@ -11440,7 +11477,27 @@
     "designPrinciples": "Design Principles",
     "accessibility": "Accessibility",
     "responsive": "Responsive Design",
-    "performance": "Performance Optimized"
+    "performance": "Performance Optimized",
+    "buttons": {
+      "getStarted": "Get Started",
+      "openInFigma": "Open in Figma"
+    },
+    "features": {
+      "title": "Features",
+      "subtitle": "Powerful components for modern dApps",
+      "components": {
+        "title": "Components",
+        "description": "Reusable UI components built with React and Tailwind CSS"
+      }
+    },
+    "cta": {
+      "title": "Ready to build?",
+      "subtitle": "Start using Ergo UI Kit in your project today",
+      "buttons": {
+        "getStarted": "Get Started",
+        "openInFigma": "Open in Figma"
+      }
+    }
   },
   "ctaSection": {
     "title": "Ready to Build the Future?",

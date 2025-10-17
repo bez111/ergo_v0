@@ -74,7 +74,8 @@ const searchQueries = new Counter({
 })
 
 // Функция для записи метрик (вызывается из middleware)
-export function recordMetrics(
+// Перенесена в lib/metrics-utils.ts
+function recordMetrics(
   method: string,
   route: string,
   status: number,
@@ -92,7 +93,8 @@ export function recordMetrics(
 }
 
 // Функция для записи Web Vitals
-export function recordWebVitals(metrics: {
+// Перенесена в lib/metrics-utils.ts
+function recordWebVitals(metrics: {
   lcp?: number
   inp?: number
   cls?: number

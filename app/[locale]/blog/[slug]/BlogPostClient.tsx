@@ -1,7 +1,7 @@
 "use client"
 
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowLeft, ArrowUp, Eye, Heart, Clock, Twitter, Copy, Check, UserCircle, Calendar, MessageCircle, Share2, Hash, AlertCircle, CheckCircle, ExternalLink, Menu, X } from "lucide-react"
+import { ArrowLeft, ArrowUp, Eye, Heart, Clock, Twitter, Copy, Check, UserCircle, Calendar, MessageCircle, AlertCircle, CheckCircle, ExternalLink, Menu, X } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCard } from "../_components/blog-card"
 import { BlogBreadcrumbs } from "../_components/blog-breadcrumbs"

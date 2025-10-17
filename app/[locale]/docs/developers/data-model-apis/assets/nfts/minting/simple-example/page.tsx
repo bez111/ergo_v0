@@ -62,8 +62,8 @@ export default function SimpleExamplePage() {
             Here's an example of how to mint an NFT using the ergo-python-appkit:
           </p>
           
-          <CodeBlock language="typescript"
-            children={String.raw`from ergo_python_appkit import ErgoAppKit
+          <CodeBlock language="typescript">
+    {String.raw`from ergo_python_appkit import ErgoAppKit
 from org.ergoplatform.appkit import ErgoContract
 
 # Initialize ErgoAppKit instance
@@ -82,7 +82,7 @@ contract = ErgoContract.compile("sigmaProp(true)")
 
 # Mint the NFT
 appKit.mintToken(value, tokenId, tokenName, tokenDesc, mintAmount, decimals, contract)`}
-          />
+  </CodeBlock>
           
           <p className="text-gray-300 mt-6">
             After minting the NFT, you can use other methods provided by the ErgoAppKit class to interact with the NFT, such as transferring it to another address or querying its properties.

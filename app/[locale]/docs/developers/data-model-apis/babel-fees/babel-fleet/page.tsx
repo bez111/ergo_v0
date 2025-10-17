@@ -87,15 +87,15 @@ export default function BabelFleetPage() {
           To install the plugin, use the following commands in your project:
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`npm install @fleet-sdk/babel-fees-plugin`}
-          />
+          <CodeBlock language="typescript">
+    {`npm install @fleet-sdk/babel-fees-plugin`}
+  </CodeBlock>
         </div>
         <p className="text-gray-300 mt-4 mb-2">The core Fleet SDK is also required:</p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`npm install @fleet-sdk/core`}
-          />
+          <CodeBlock language="typescript">
+    {`npm install @fleet-sdk/core`}
+  </CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           <strong>System Requirements:</strong> Node.js version 18 or newer.
@@ -109,8 +109,8 @@ export default function BabelFleetPage() {
           This example demonstrates how to pay for transaction fees using tokens with BabelSwapPlugin.
         </p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`import { TransactionBuilder } from '@fleet-sdk/core';
+          <CodeBlock language="typescript">
+    {`import { TransactionBuilder } from '@fleet-sdk/core';
 import { BabelSwapPlugin } from '@fleet-sdk/babel-fees-plugin';
 
 const tx = new TransactionBuilder(1000000) // Replace with current block height
@@ -126,7 +126,7 @@ const tx = new TransactionBuilder(1000000) // Replace with current block height
   .build();
 
 console.log(tx);`}
-          />
+  </CodeBlock>
         </div>
         <div className="mt-4 bg-neutral-800/50 border border-neutral-700 rounded-lg p-4">
           <h3 className="text-lg font-semibold mb-2 text-purple-300">Explanation:</h3>
@@ -170,12 +170,12 @@ console.log(tx);`}
                 </li>
                 <li><strong>Usage:</strong>
                   <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 mt-2 overflow-x-auto">
-                    <CodeBlock language="typescript"
-                      children={`BabelSwapPlugin(babelBox, {
+                    <CodeBlock language="typescript">
+    {`BabelSwapPlugin(babelBox, {
   tokenId: "03faf2cb329f2e90d6d23b58d91bbb6c046aa143261cc21f52fbe2824bfcbf04",
   amount: "50"
 });`}
-                    />
+  </CodeBlock>
                   </div>
                 </li>
               </ul>
@@ -191,10 +191,10 @@ console.log(tx);`}
                 </h4>
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Calculates and returns the price of a single token unit in nanoERG based on a specific Babel Box.</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
-                  <CodeBlock language="typescript"
-                    children={`const price = getTokenPrice(babelBox);
+                  <CodeBlock language="typescript">
+                    {`const price = getTokenPrice(babelBox);
 console.log(\`Price per token: \${price}\`);`}
-                  />
+                  </CodeBlock>
                 </div>
               </div>
 
@@ -204,9 +204,9 @@ console.log(\`Price per token: \${price}\`);`}
                 </h4>
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Generates the ErgoTree (contract script) for a Babel Box using a specified token ID.</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
-                  <CodeBlock language="typescript"
-                    children={`const contract = buildBabelContract(tokenId);`}
-                  />
+                  <CodeBlock language="typescript">
+    {`const contract = buildBabelContract(tokenId);`}
+  </CodeBlock>
                 </div>
               </div>
 
@@ -216,12 +216,12 @@ console.log(\`Price per token: \${price}\`);`}
                 </h4>
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Determines if a given box is a valid Babel Box.</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
-                  <CodeBlock language="typescript"
-                    children={`const isValid = isValidBabelBox(myBox);
+                  <CodeBlock language="typescript">
+    {`const isValid = isValidBabelBox(myBox);
 if (isValid) {
     console.log('This is a valid babel box');
 }`}
-                  />
+  </CodeBlock>
                 </div>
               </div>
 
@@ -231,9 +231,9 @@ if (isValid) {
                 </h4>
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Extracts the token ID from a Babel Fee contract script (ErgoTree).</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
-                  <CodeBlock language="typescript"
-                    children={`const tokenId = extractTokenIdFromBabelContract(ergoTree);`}
-                  />
+                  <CodeBlock language="typescript">
+    {`const tokenId = extractTokenIdFromBabelContract(ergoTree);`}
+  </CodeBlock>
                 </div>
               </div>
 
@@ -243,9 +243,9 @@ if (isValid) {
                 </h4>
                 <p className="text-gray-300 mb-2"><strong>Description:</strong> Validates if an ErgoTree matches the Babel Fee contract for a specific token ID.</p>
                 <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-3 overflow-x-auto">
-                  <CodeBlock language="typescript"
-                    children={`const isForToken = isBabelContractForTokenId(ergoTree, tokenId);`}
-                  />
+                  <CodeBlock language="typescript">
+    {`const isForToken = isBabelContractForTokenId(ergoTree, tokenId);`}
+  </CodeBlock>
                 </div>
               </div>
             </div>
@@ -261,9 +261,9 @@ if (isValid) {
         </p>
         <p className="text-gray-300 mb-4">The hexadecimal representation of the Babel Fees contract:</p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`}
-          />
+          <CodeBlock language="typescript">
+    {`100604000e20{tokenId}0400040005000500d803d601e30004d602e4c6a70408d603e4c6a7050595e67201d804d604b2a5e4720100d605b2db63087204730000d606db6308a7d60799c1a7c17204d1968302019683050193c27204c2a7938c720501730193e4c672040408720293e4c672040505720393e4c67204060ec5a796830201929c998c7205029591b1720673028cb272067303000273047203720792720773057202`}
+  </CodeBlock>
         </div>
         <p className="text-gray-300 mt-4 mb-4">
           Replace <code className="bg-neutral-700 px-1 py-0.5 rounded">{`{tokenId}`}</code> with the target token ID. Use the resulting ErgoTree to discover Babel Boxes through the Ergo platform API:
@@ -273,8 +273,8 @@ if (isValid) {
         </p>
         <p className="text-gray-300 mb-4"><strong>Example of Fetching a Babel Box:</strong></p>
         <div className="bg-neutral-900 border border-neutral-600 rounded-lg p-4 overflow-x-auto">
-          <CodeBlock language="typescript"
-            children={`const fetchBabelBox = async (ergoTree: string) => {
+          <CodeBlock language="typescript">
+            {`const fetchBabelBox = async (ergoTree: string) => {
   try {
     const response = await fetch(\`https://api.ergoplatform.com/api/v1/boxes/unspent/byErgoTree/\${ergoTree}\`);
     const json = await response.json();
@@ -284,7 +284,7 @@ if (isValid) {
     return null;
   }
 };`}
-          />
+          </CodeBlock>
         </div>
         <p className="text-gray-300 mt-4">
           This snippet uses the Ergo API to locate and return a Babel Box. Developers supply an ErgoTree string, and the function queries the blockchain to find a box that matches. The returned Babel Box can then serve as the liquidity source for token-to-ERG conversions in transactions.

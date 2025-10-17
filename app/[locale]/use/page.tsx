@@ -7,7 +7,7 @@ import { getTranslations } from "next-intl/server"
 
 export const revalidate = 600
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'use' })
   const title = t('title') + " — DeFi, NFTs, Privacy, Bridges"
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   }
 }
 
-export default async function UsePage({ params }: { params: { locale: string } }) {
+export default async function UsePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: 'use' })
   const base = "https://ergoblockchain.org/use"

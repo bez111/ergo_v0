@@ -79,7 +79,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                 {/* Metrics: views • comments • date */}
                 <div className="mt-2 text-sm text-neutral-400 flex gap-3">
                   <span>{formatViews(p.views || 0)}</span>
-                  {p.shares != null && <span>{p.shares}</span>}
+                  {p.shares !== null && p.shares !== undefined && <span>{p.shares}</span>}
                   <span>{formatDate(p.date)}</span>
                 </div>
               </div>

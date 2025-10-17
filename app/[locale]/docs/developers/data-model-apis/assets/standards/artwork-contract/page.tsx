@@ -98,8 +98,8 @@ export default function ArtworkContractPage() {
           <p className="text-gray-300 mb-4">
             The following specifies the structure for traits.
           </p>
-          <CodeBlock language="typescript"
-            children={String.raw`( // properties
+          <CodeBlock language="typescript">
+    {String.raw`( // properties
   Coll[(  
     Coll[Byte],  // key
     Coll[Byte]   // value
@@ -116,7 +116,7 @@ export default function ArtworkContractPage() {
     )]
   )
 )`}
-          />
+  </CodeBlock>
           <p className="text-gray-300 mb-4 mt-4">
             If a list is empty(e.g., there is no <code className="bg-neutral-800 px-1 py-0.5 rounded text-pink-300">levels</code>) then the corresponding <code className="bg-neutral-800 px-1 py-0.5 rounded text-pink-300">Coll</code> should be empty. Keys are case-insensitive which means for example, marketplaces should treat "KeY" the same as "key". Moreover, keys should be consistent across different artworks of a specific collection. For example, if "key1" is a property trait, it should always be used as a property trait in all artworks of a specific collection.
           </p>

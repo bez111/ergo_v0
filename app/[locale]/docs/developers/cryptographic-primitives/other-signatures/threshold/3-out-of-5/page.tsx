@@ -34,8 +34,8 @@ export default function ThreeOutOfFiveThresholdPage() {
         </p>
 
         <div className="mb-8">
-          <CodeBlock language="typescript"
-            children={`val ringScript = s"""
+          <CodeBlock language="typescript">
+    {`val ringScript = s"""
 {
 atLeast(
   3, 
@@ -49,7 +49,7 @@ atLeast(
 )
 }
 """`}
-          />
+  </CodeBlock>
         </div>
 
         <p className="text-gray-300 mb-8">

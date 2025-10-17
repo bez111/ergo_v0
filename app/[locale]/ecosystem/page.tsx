@@ -9,7 +9,7 @@ export const revalidate = 600
 
 export async function generateMetadata({ searchParams, params }: { 
   searchParams: Promise<Record<string, string | string[]>>, 
-  params: { locale: string } 
+  params: Promise<{ locale: string }> 
 }): Promise<Metadata> {
   const sp = await searchParams
   const { locale } = await params

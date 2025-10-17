@@ -2,7 +2,7 @@ import { Metadata } from "next"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { getTranslations } from "next-intl/server"
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'use.bridges.seo' });
   
@@ -34,7 +34,7 @@ export default async function CrossChainBridgesLayout({
   params,
 }: {
   children: React.ReactNode
-  params: { locale: string }
+  params: Promise<{ locale: string }>
 }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'use.bridges.schema' });

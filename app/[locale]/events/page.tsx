@@ -4,7 +4,7 @@ import { Calendar } from "lucide-react"
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
 
-export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'events.seo' });
   
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   }
 }
 
-export default async function EventsPage({ params }: { params: { locale: string } }) {
+export default async function EventsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'events' });
   const schemaT = await getTranslations({ locale, namespace: 'events.schema' });

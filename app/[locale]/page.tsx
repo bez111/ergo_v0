@@ -11,7 +11,7 @@ import {
 } from "@/components/home/lazy-sections"
 
 interface HomePageProps {
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }
 
 export async function generateMetadata({ params }: HomePageProps): Promise<Metadata> {

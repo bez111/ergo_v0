@@ -150,79 +150,18 @@ export default function EcosystemClient() {
         <div className="absolute top-1/2 left-3/4 w-20 h-20 bg-orange-500/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: "4s" }} />
       </div>
 
-      <div className="relative z-10">
-        {/* Hero */}
-        <motion.section
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut" }}
-          className="pt-28 pb-10 px-4 text-center"
-        >
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-            {t("title")}
-          </h1>
-          <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-3xl mx-auto">
-            {t("subtitle")}
-          </p>
-          {/* Stats Pills */}
-          <motion.div 
-            className="flex flex-wrap items-center justify-center gap-3 mb-8"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-          >
-            <motion.div 
-              className="group flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-neutral-900/80 to-neutral-900/60 border border-neutral-800 rounded-2xl backdrop-blur-sm hover:from-neutral-900/90 hover:to-neutral-900/70 transition-all duration-300"
-              whileHover={{ scale: 1.05, borderColor: "rgb(251 146 60 / 0.3)" }}
-              transition={{ type: "spring", stiffness: 400, damping: 30 }}
-            >
-              <div className="p-2 bg-orange-500/20 rounded-lg">
-                <Activity className="w-4 h-4 text-orange-400" />
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-bold text-white">{projects.length}</span>
-                <span className="text-sm text-neutral-400">{t("stats.activeProjects")}</span>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="group flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-neutral-900/80 to-neutral-900/60 border border-neutral-800 rounded-2xl backdrop-blur-sm hover:from-neutral-900/90 hover:to-neutral-900/70 transition-all duration-300"
-              whileHover={{ scale: 1.05, borderColor: "rgb(251 146 60 / 0.3)" }}
-              transition={{ type: "spring", stiffness: 400, damping: 30 }}
-            >
-              <div className="p-2 bg-orange-500/20 rounded-lg">
-                <Layers className="w-4 h-4 text-orange-400" />
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-2xl font-bold text-white">{categoryOrder.length}</span>
-                <span className="text-sm text-neutral-400">{t("stats.categories")}</span>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="group flex items-center gap-3 px-5 py-3 bg-gradient-to-r from-neutral-900/80 to-neutral-900/60 border border-neutral-800 rounded-2xl backdrop-blur-sm hover:from-neutral-900/90 hover:to-neutral-900/70 transition-all duration-300"
-              whileHover={{ scale: 1.05, borderColor: "rgb(251 146 60 / 0.3)" }}
-              transition={{ type: "spring", stiffness: 400, damping: 30 }}
-            >
-              <div className="relative p-2 bg-green-500/20 rounded-lg">
-                <div className="absolute inset-0 bg-green-500/20 rounded-lg animate-ping"></div>
-                <CheckCircle className="w-4 h-4 text-green-400 relative z-10" />
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-sm font-semibold text-green-400 uppercase tracking-wider">Live</span>
-                <span className="text-sm text-neutral-400">{t("stats.status")}</span>
-              </div>
-            </motion.div>
-          </motion.div>
-        </motion.section>
+      <div className="relative z-10 pt-20">
+        {/* SEO Header - visually hidden */}
+        <header className="sr-only">
+          <h1>{t("title")}</h1>
+          <p>{t("subtitle")}</p>
+        </header>
 
         {/* Featured */}
-        <div className="border-y border-neutral-700">
-          <motion.section className="max-w-7xl mx-auto px-4 py-12" variants={itemVariants} initial="hidden" animate="visible">
+        <motion.section className="max-w-7xl mx-auto px-4 py-12" variants={itemVariants} initial="hidden" animate="visible">
             <div className="flex justify-between items-center mb-8">
               <div className="flex items-center gap-3">
                 <h2 className="text-3xl font-bold text-white">{t("featuredProjects.title")}</h2>
-                <div className="px-3 py-1 bg-orange-500/20 text-orange-400 rounded-full text-xs font-semibold">{t("featuredProjects.badge")}</div>
               </div>
               <div className="flex gap-2">
                 <Button variant="outline" size="icon" onClick={() => setCurrentFeaturedIndex((p) => Math.max(0, p - 1))} disabled={currentFeaturedIndex === 0} className="border-neutral-700 text-neutral-2 00 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400">
@@ -236,7 +175,7 @@ export default function EcosystemClient() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {featuredProjects.slice(currentFeaturedIndex, currentFeaturedIndex + 3).map((project) => (
                 <motion.div key={project.id} variants={itemVariants}>
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-orange-500/30 transition-all duration-200 h-full flex flex-col">
+                  <Card className="bg-neutral-900/50 border-0 rounded-xl hover:ring-1 hover:ring-orange-500/30 transition-all duration-200 h-full flex flex-col">
                     <CardContent className="p-6 flex-1 flex flex-col">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-4">
@@ -268,10 +207,9 @@ export default function EcosystemClient() {
               ))}
             </div>
           </motion.section>
-        </div>
 
         {/* Filters */}
-        <motion.div variants={itemVariants} initial="hidden" animate="visible" className="bg-black/50 backdrop-blur-lg py-6 px-4 border-b border-neutral-700">
+        <motion.div variants={itemVariants} initial="hidden" animate="visible" className="bg-black/50 backdrop-blur-lg py-6 px-4">
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row gap-4 items-center mb-6">
               <div className="flex-1">
@@ -318,7 +256,7 @@ export default function EcosystemClient() {
           {filteredProjects.map((project) => (
             <motion.div key={project.id} variants={itemVariants}>
               {viewMode === "grid" ? (
-                <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl hover:border-orange-500/30 transition-all duration-200 h-full flex flex-col">
+                <Card className="bg-neutral-900/50 border-0 rounded-xl hover:ring-1 hover:ring-orange-500/30 transition-all duration-200 h-full flex flex-col">
                   <CardContent className="p-6 flex-1 flex flex-col">
                     <div className="flex items-start justify-between mb-4">
                       <div className="flex items-center gap-4">
@@ -347,7 +285,7 @@ export default function EcosystemClient() {
                   </CardContent>
                 </Card>
               ) : (
-                <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="block p-4 rounded-lg hover:bg-neutral-900/80 border border-transparent hover:border-neutral-700 transition-colors">
+                <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="block p-4 rounded-lg hover:bg-neutral-900/80 transition-colors">
                   <div className="grid grid-cols-12 items-center gap-4">
                     <div className="col-span-12 md:col-span-3 flex items-center gap-4">
                       <div className="p-2 rounded-lg bg-orange-500/20 border border-orange-500/30">
@@ -390,7 +328,7 @@ export default function EcosystemClient() {
               Explore More
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+              <Card className="bg-neutral-900/50 border-0 backdrop-blur-sm rounded-xl hover:ring-1 hover:ring-orange-500/50 transition-colors group">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
                     <Layers className="w-6 h-6 text-orange-400" />
@@ -408,7 +346,7 @@ export default function EcosystemClient() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+              <Card className="bg-neutral-900/50 border-0 backdrop-blur-sm rounded-xl hover:ring-1 hover:ring-orange-500/50 transition-colors group">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
                     <Activity className="w-6 h-6 text-orange-400" />
@@ -426,7 +364,7 @@ export default function EcosystemClient() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
+              <Card className="bg-neutral-900/50 border-0 backdrop-blur-sm rounded-xl hover:ring-1 hover:ring-orange-500/50 transition-colors group">
                 <CardContent className="p-6">
                   <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
                     <CheckCircle className="w-6 h-6 text-orange-400" />
