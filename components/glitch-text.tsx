@@ -27,8 +27,8 @@ export function GlitchText({ text, className = "" }: GlitchTextProps) {
       <span className="relative z-10">{text}</span>
       {isGlitching && (
         <>
-          <span className="absolute top-0 left-0.5 text-cyan-400 opacity-70 animate-glitch-1">{text}</span>
-          <span className="absolute top-0 -left-0.5 text-red-500 opacity-70 animate-glitch-2">{text}</span>
+                <span className="absolute top-0 left-0.5 text-orange-400 opacity-70 animate-glitch-1">{text}</span>
+      <span className="absolute top-0 -left-0.5 text-orange-400 opacity-70 animate-glitch-2">{text}</span>
         </>
       )}
     </span>

@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://ergoplatform.org/sitemap.xml

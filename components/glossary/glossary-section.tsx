@@ -22,28 +22,28 @@ export function GlossarySection({ terms, title = "Glossary", description }: Glos
     <section className="py-12">
       <SchemaOrg type="DefinedTermSet" data={glossarySchema} />
       <FadeIn>
-        <Card className="bg-gray-900/80 backdrop-blur-sm border-gray-800">
+        <Card className="bg-neutral-900/50 backdrop-blur-sm border-neutral-700 rounded-xl">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-primary font-mono">{title}</CardTitle>
-            {description && <p className="text-gray-400 mt-2">{description}</p>}
+            <CardTitle className="text-2xl font-bold text-white">{title}</CardTitle>
+            {description && <p className="text-neutral-300 mt-2">{description}</p>}
           </CardHeader>
           <CardContent>
             <Accordion type="single" collapsible className="w-full">
               {terms.map((term, index) => (
-                <AccordionItem key={index} value={`term-${index}`} className="border-gray-700">
-                  <AccordionTrigger className="text-lg font-medium hover:text-primary">
+                <AccordionItem key={index} value={`term-${index}`} className="border-neutral-800">
+                  <AccordionTrigger className="text-lg font-medium text-neutral-200 hover:text-orange-400 data-[state=open]:text-orange-400 hover:bg-orange-500/10 rounded-md">
                     {term.name}
                   </AccordionTrigger>
-                  <AccordionContent className="space-y-4">
-                    <p className="text-gray-300">{term.description}</p>
+                  <AccordionContent className="space-y-4 text-neutral-300">
+                    <p className="text-neutral-300">{term.description}</p>
                     {term.relatedTerms && (
                       <div>
-                        <h4 className="text-sm font-medium text-primary mb-2">Related Terms:</h4>
+                        <h4 className="text-sm font-medium text-orange-400 mb-2">Related Terms:</h4>
                         <div className="flex flex-wrap gap-2">
                           {term.relatedTerms.map((relatedTerm, i) => (
                             <span
                               key={i}
-                              className="px-2 py-1 bg-primary/10 text-primary rounded-md text-sm"
+                              className="px-2 py-1 bg-neutral-900/60 text-neutral-200 border border-neutral-700 rounded-md text-xs"
                             >
                               {relatedTerm}
                             </span>
@@ -53,8 +53,8 @@ export function GlossarySection({ terms, title = "Glossary", description }: Glos
                     )}
                     {term.examples && (
                       <div>
-                        <h4 className="text-sm font-medium text-primary mb-2">Examples:</h4>
-                        <ul className="list-disc list-inside space-y-1 text-gray-300">
+                        <h4 className="text-sm font-medium text-orange-400 mb-2">Examples:</h4>
+                        <ul className="list-disc list-inside space-y-1 text-neutral-300">
                           {term.examples.map((example, i) => (
                             <li key={i}>{example}</li>
                           ))}

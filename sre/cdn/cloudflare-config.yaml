@@ -1,0 +1,189 @@
+# Cloudflare CDN & WAF Configuration for Ergo Platform
+zone: ergoblockchain.org
+plan: business
+
+# Cache Rules
+cache_rules:
+  - name: static_assets
+    pattern: "\\.(js|css|png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot|ico)$"
+    edge_ttl: 31536000  # 1 year
+    browser_ttl: 86400   # 1 day
+    cache_level: aggressive
+    
+  - name: api_responses
+    pattern: "^/api/"
+    edge_ttl: 0
+    browser_ttl: 0
+    cache_level: bypass
+    
+  - name: html_pages
+    pattern: "\\.(html|htm)$|^/$"
+    edge_ttl: 300       # 5 minutes
+    browser_ttl: 0
+    cache_level: standard
+    stale_while_revalidate: 86400
+    
+  - name: blog_content
+    pattern: "^/blog/"
+    edge_ttl: 3600      # 1 hour
+    browser_ttl: 300    # 5 minutes
+    cache_level: standard
+
+# Page Rules
+page_rules:
+  - url: "*.ergoblockchain.org/*"
+    actions:
+      ssl: flexible
+      security_level: medium
+      cache_level: aggressive
+      minify:
+        html: true
+        css: true
+        js: true
+      
+  - url: "ergoblockchain.org/api/*"
+    actions:
+      ssl: full_strict
+      security_level: high
+      cache_level: bypass
+      disable_performance: false
+
+# WAF Rules
+waf_rules:
+  - name: rate_limiting
+    expression: "http.request.uri.path contains \"/api/\""
+    action: challenge
+    ratelimit:
+      threshold: 100
+      period: 60
+      
+  - name: block_bad_bots
+    expression: |
+      (http.user_agent contains "bot" and not 
+       http.user_agent contains "googlebot" and not
+       http.user_agent contains "bingbot")
+    action: block
+    
+  - name: geo_blocking
+    expression: "ip.geoip.country in {\"CN\" \"RU\" \"KP\"}"
+    action: challenge
+    
+  - name: sql_injection_protection
+    expression: |
+      (http.request.uri.query contains "union" and 
+       http.request.uri.query contains "select") or
+      http.request.uri.query contains "1=1"
+    action: block
+
+# DDoS Protection
+ddos_protection:
+  sensitivity_level: high
+  
+  rules:
+    - name: http_flood
+      threshold: 1000
+      period: 10
+      action: challenge
+      
+    - name: layer7_attack
+      threshold: 50
+      period: 1
+      action: block
+
+# Transform Rules
+transform_rules:
+  - name: add_security_headers
+    phase: response_headers_transform
+    expression: "true"
+    actions:
+      - set_header:
+          name: "X-Frame-Options"
+          value: "SAMEORIGIN"
+      - set_header:
+          name: "X-Content-Type-Options"
+          value: "nosniff"
+      - set_header:
+          name: "Referrer-Policy"
+          value: "strict-origin-when-cross-origin"
+      - set_header:
+          name: "Permissions-Policy"
+          value: "geolocation=(), microphone=(), camera=()"
+
+# Load Balancing
+load_balancing:
+  pools:
+    - name: primary
+      origins:
+        - address: origin1.ergoblockchain.org
+          weight: 50
+          enabled: true
+        - address: origin2.ergoblockchain.org
+          weight: 50
+          enabled: true
+      
+      health_check:
+        path: /health
+        interval: 60
+        timeout: 5
+        retries: 2
+        expected_codes: [200]
+        
+  steering_policy: dynamic_latency
+  session_affinity: cookie
+  session_affinity_ttl: 1800
+
+# Analytics & Monitoring
+analytics:
+  enabled: true
+  log_to_s3: true
+  s3_bucket: ergo-cdn-logs
+  
+  metrics:
+    - cache_hit_ratio
+    - origin_response_time
+    - bandwidth_usage
+    - unique_visitors
+    - threat_blocked
+
+# Argo Smart Routing
+argo:
+  enabled: true
+  tiered_caching: true
+  
+# Workers (Edge Computing)
+workers:
+  - name: image_optimization
+    script: |
+      addEventListener('fetch', event => {
+        event.respondWith(handleRequest(event.request))
+      })
+      
+      async function handleRequest(request) {
+        const url = new URL(request.url)
+        if (url.pathname.match(/\.(jpg|jpeg|png|gif)$/)) {
+          const imageURL = url.searchParams.get('url')
+          const width = url.searchParams.get('w')
+          const quality = url.searchParams.get('q') || 85
+          
+          return fetch(imageURL, {
+            cf: {
+              image: {
+                width: width,
+                quality: quality,
+                format: 'auto'
+              }
+            }
+          })
+        }
+        return fetch(request)
+      }
+    routes:
+      - pattern: "ergoblockchain.org/images/*"
+        
+# Firewall Rules Priority
+firewall_priority:
+  1: rate_limiting
+  2: geo_blocking
+  3: block_bad_bots
+  4: sql_injection_protection
+  5: custom_rules 

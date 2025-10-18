@@ -1,0 +1,204 @@
+{
+  "securePow": {
+    "title": "Autolykos v2 — Secure, Memory-Hard Proof-of-Work",
+    "seo": {
+      "title": "Autolykos v2 — Secure, Memory-Hard Proof-of-Work",
+      "description": "Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible.",
+      "keywords": "Autolykos, ASIC-resistant, Proof-of-Work, PoW mining, GPU mining, decentralized mining, energy efficient, blockchain consensus, Ergo mining"
+    },
+    "description": {
+      "intro": "Ergo is committed to fair, transparent, and sustainable decentralization. That's why we use Proof-of-Work (PoW), but with a modern twist: Autolykos v2.",
+      "main": "Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible."
+    },
+    "buttons": {
+      "startMining": "Start Mining",
+      "readWhitepaper": "Read Whitepaper"
+    },
+    "networkStats": {
+      "title": "Live Network Statistics",
+      "note": "Example metrics. Updated: 2025-08-10 · Source: explorer · 24h avg",
+      "hashrate": {
+        "label": "Network Hashrate",
+        "value": "15.2 TH/s",
+        "change": "+5.2%"
+      },
+      "miners": {
+        "label": "Active Miners",
+        "value": "12,847",
+        "change": "+2.1%"
+      },
+      "blockTime": {
+        "label": "Block Time",
+        "value": "2 min",
+        "change": "Stable"
+      },
+      "difficulty": {
+        "label": "Difficulty",
+        "value": "1.2P",
+        "change": "+1.8%"
+      }
+    },
+    "whyPoW": {
+      "title": "Why Proof-of-Work?"
+    },
+    "features": {
+      "asicResistant": {
+        "title": "ASIC-Resistant",
+        "description": "ASIC-resistant (not ASIC-proof): specialized-hardware edge is limited; commodity GPUs remain competitive."
+      },
+      "energyEfficient": {
+        "title": "Energy Efficient",
+        "description": "Memory-hardness dampens the hash-per-watt arms race and extends GPU lifecycles, reducing e-waste."
+      },
+      "fairLaunch": {
+        "title": "Fair Launch",
+        "description": "No premine, no ICO, no VC allocation."
+      }
+    },
+    "whatIsAutolykos": {
+      "title": "What is Autolykos v2?",
+      "description": "Autolykos is Ergo's unique, ASIC-resistant mining algorithm designed to maintain network decentralization and security.",
+      "learnMore": "Learn more about the",
+      "eutxoLink": "eUTXO model",
+      "and": "and how",
+      "storageRentLink": "Storage Rent",
+      "sustainableEconomics": "supports sustainable network economics"
+    },
+    "algorithm": {
+      "features": {
+        "memoryHard": "Memory-hard algorithm",
+        "asicResistant": "ASIC-resistant design",
+        "gpuFriendly": "GPU-friendly mining"
+      },
+      "benefits": {
+        "memoryBandwidth": "Memory bandwidth bound",
+        "bluntsAsic": "Blunts ASIC advantages",
+        "decentralization": "Encourages decentralization"
+      }
+    },
+    "securityBenefits": {
+      "title": "Security Benefits"
+    },
+    "benefits": {
+      "decentralization": "Decentralization by design: a wide GPU set stays competitive.",
+      "captureResistance": "Higher capture cost: renting/buying 51% hash is harder.",
+      "battleTested": "Battle-tested PoW with an ASIC-resistant twist.",
+      "openParticipation": "Open to all participants.",
+      "gpuCompetitive": "Competitive on commodity GPUs.",
+      "sustainableEconomics": "Sustainable long-term economics."
+    },
+    "threatModel": {
+      "title": "Threat Model",
+      "memoryBottleneck": {
+        "title": "Memory bandwidth bottleneck",
+        "description": "Limits single-vendor ASIC dominance by making memory access the primary constraint."
+      },
+      "broaderParticipation": {
+        "title": "Broader participation",
+        "description": "GPU accessibility raises the bar for renting/buying majority hashpower."
+      }
+    },
+    "miningDecentralization": {
+      "title": "Mining Decentralization",
+      "description": "Distribution of mining power across the network (weekly refresh)",
+      "topPools": "Top 5 Pools",
+      "soloMiners": "Solo Miners",
+      "smallPools": "Small Pools",
+      "healthyNote": "Healthy distribution ensures no single entity can control the network. Top-5 < 50% — healthy concentration."
+    },
+    "quickStart": {
+      "title": "Quick Start: Mining Ergo",
+      "description": "Five steps to begin — see the full guide for details.",
+      "steps": {
+        "installWallet": "Install and secure an Ergo wallet.",
+        "chooseMiner": "Pick supported miner software for Autolykos v2.",
+        "choosePool": "Choose a pool (or solo) and note the connection URL.",
+        "launchMiner": "Launch with your address and pool URL if applicable.",
+        "testStability": "Test stability and thermals; avoid aggressive memory OC on day one."
+      },
+      "pitfallsTitle": "Common pitfalls",
+      "pitfalls": {
+        "memoryOverclock": "Don't start with aggressive memory overclocks.",
+        "monitorTemperatures": "Monitor VRAM temperatures and power limits.",
+        "avoidLaptops": "Avoid running laptops 24/7 for mining."
+      },
+      "sampleCommand": "Sample command",
+      "copy": "Copy",
+      "copied": "Copied",
+      "openGuide": "Open Mining Guide"
+    },
+    "exampleCommand": "./miner --algo autolykos2 --pool pool_url --wallet your_ergo_address --worker rig_name",
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "whatIsAutolykos": {
+        "question": "What is Autolykos v2?",
+        "answer": "Autolykos v2 is Ergo's memory-hard, GPU-friendly Proof-of-Work algorithm designed to keep mining decentralized and accessible."
+      },
+      "asicProof": {
+        "question": "Is Ergo's PoW completely ASIC-proof?",
+        "answer": "No. It's ASIC-resistant (not ASIC-proof). By making memory bandwidth/latency the bottleneck, specialized-hardware advantages are limited and GPUs remain competitive."
+      },
+      "minerSoftware": {
+        "question": "Which miner software works with Autolykos v2?",
+        "answer": "See the Mining Guide for current tooling and setup steps. It covers supported miners, configuration basics, and troubleshooting."
+      },
+      "poolVsSolo": {
+        "question": "Pool or solo mining?",
+        "answer": "Both are possible. Pools smooth rewards; solo depends on luck and has higher variance. Choose based on your risk tolerance and expected uptime."
+      },
+      "hashratePower": {
+        "question": "Typical hashrate/watt ranges?",
+        "answer": "They vary by GPU model, drivers, and settings. Start with stock settings, ensure stability and thermals, and consult community resources for optimization."
+      },
+      "environmentalImpact": {
+        "question": "Is this approach greener?",
+        "answer": "Memory-hardness dampens the hardware arms race and extends useful GPU lifecycles, which helps reduce e-waste and unnecessary upgrades."
+      }
+    },
+    "cta": {
+      "title": "Start Mining Ergo",
+      "description": "Join thousands of GPU miners securing Ergo — start in minutes.",
+      "buttons": {
+        "miningGuide": "Mining Guide",
+        "whitepaper": "Whitepaper"
+      },
+      "relatedText": "Related",
+      "storageRentLink": "Storage Rent",
+      "adaptiveEmissionLink": "Adaptive Emission & Governance"
+    },
+    "howTo": {
+      "title": "Start Mining Ergo",
+      "description": "Quick steps to begin mining Ergo with a GPU.",
+      "tools": {
+        "gpu": "GPU-enabled computer",
+        "minerSoftware": "Autolykos v2 miner software"
+      },
+      "supplies": {
+        "walletAddress": "Ergo wallet address",
+        "poolUrl": "Pool URL (optional)"
+      },
+      "steps": {
+        "installWallet": {
+          "title": "Install a wallet",
+          "description": "Set up a compatible Ergo wallet and secure your seed phrase."
+        },
+        "pickMiner": {
+          "title": "Pick miner software",
+          "description": "Choose supported miner software for Autolykos v2 and download from its official source."
+        },
+        "choosePool": {
+          "title": "Choose a pool or go solo",
+          "description": "Pools smooth rewards; solo mining has higher variance. Configure according to your preference."
+        },
+        "launchMiner": {
+          "title": "Launch with your address",
+          "description": "Run the miner with your wallet address and pool URL if applicable."
+        },
+        "testStability": {
+          "title": "Test stability & thermals",
+          "description": "Start at stock settings, monitor temperatures, and avoid aggressive memory overclocks on day one."
+        }
+      }
+    }
+  }
+} 

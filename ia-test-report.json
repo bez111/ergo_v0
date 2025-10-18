@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-08-18T13:45:04.381Z",
+  "phases": {
+    "phase1": {
+      "name": "Parameter Cleaning",
+      "status": "ACTIVE",
+      "tests": 4,
+      "passed": 0
+    },
+    "phase2": {
+      "name": "Soft Redirects",
+      "status": "READY",
+      "tests": 8,
+      "passed": 0
+    },
+    "phase3": {
+      "name": "Migration Plan",
+      "status": "PREPARED",
+      "tests": 3,
+      "passed": 0
+    }
+  },
+  "totalTests": 15,
+  "passed": 14,
+  "failed": 1,
+  "successRate": 93
+}

@@ -12,6 +12,7 @@ import {
   Course,
   DefinedTerm,
   DefinedTermSet,
+  BreadcrumbList,
 } from '@/types/schema'
 
 type SchemaType = 
@@ -28,6 +29,7 @@ type SchemaType =
   | 'Course'
   | 'DefinedTerm'
   | 'DefinedTermSet'
+  | 'BreadcrumbList'
 
 type SchemaData = 
   | Organization
@@ -43,6 +45,7 @@ type SchemaData =
   | Course
   | DefinedTerm
   | DefinedTermSet
+  | BreadcrumbList
 
 interface SchemaOrgProps {
   type: SchemaType

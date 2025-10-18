@@ -1,0 +1,299 @@
+{
+  "common": {
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "retry": "إعادة المحاولة",
+    "close": "إغلاق",
+    "open": "فتح",
+    "menu": "القائمة",
+    "search": "بحث",
+    "searchPlaceholder": "البحث...",
+    "readMore": "اقرأ المزيد",
+    "learnMore": "تعلم المزيد",
+    "getStarted": "ابدأ",
+    "viewAll": "عرض الكل",
+    "backToTop": "العودة لأعلى",
+    "previous": "السابق",
+    "next": "التالي",
+    "home": "الرئيسية"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "start": "ابدأ",
+    "use": "استخدم",
+    "ecosystem": "النظام البيئي",
+    "technology": "التكنولوجيا",
+    "learn": "تعلم",
+    "docs": "التوثيق",
+    "blog": "المدونة",
+    "community": "المجتمع",
+    "communityNav": "المجتمع",
+    "getWallet": "احصل على محفظة",
+    "searchAriaLabel": "بحث",
+    "quick introduction": "مقدمة سريعة",
+    "platform comparison": "مقارنة المنصات",
+    "onboarding quiz": "اختبار التأهيل",
+    "join the community": "انضم إلى المجتمع",
+    "faq for beginners": "الأسئلة الشائعة للمبتدئين",
+    "use cases": "حالات الاستخدام",
+    "get erg": "احصل على ERG",
+    "how-to guides": "أدلة إرشادية",
+    "mine erg": "تعدين ERG",
+    "earn with defi": "اكسب مع DeFi",
+    "transaction fees (babel fees)": "رسوم المعاملات (رسوم بابل)",
+    "explore dapps & services": "استكشف dApps والخدمات",
+    "ecosystem map": "خريطة النظام البيئي",
+    "mining pools & resources": "تجمعات التعدين والموارد",
+    "ecosystem grants & funding": "منح وتمويل النظام البيئي",
+    "overview": "نظرة عامة",
+    "eutxo model": "نموذج eUTXO",
+    "ergoscript": "ErgoScript",
+    "secure pow (autolykos v2)": "PoW آمن (Autolykos v2)",
+    "storage rent": "إيجار التخزين",
+    "nipopows": "NIPOPOWs",
+    "privacy features (σ-protocols)": "ميزات الخصوصية (بروتوكولات Σ)",
+    "learn ergoscript": "تعلم ErgoScript",
+    "research & papers": "البحوث والأوراق",
+    "user & developer guides": "أدلة المستخدم والمطور",
+    "faq": "الأسئلة الشائعة",
+    "a_brief_overview_of_ergo_and_its_core_purpose_description": "نظرة عامة موجزة عن Ergo وغرضه الأساسي."
+  },
+  "hero": {
+    "title": "Ergo",
+    "subtitle": "انضم إلى حركة للتمويل المفتوح، القابل للبرمجة، والمقاوم للرقابة",
+    "features": {
+      "securePow": "PoW آمن",
+      "smartContracts": "العقود الذكية",
+      "privacy": "الخصوصية",
+      "eutxoModel": "نموذج eUTXO"
+    },
+    "buttons": {
+      "start": "ابدأ الآن",
+      "docs": "اقرأ الوثائق",
+      "learn": "تعلم المزيد"
+    },
+    "message1": "أموال لامركزية لمجتمع حر",
+    "message2": "طبقة التسوية المحايدة عالمياً للأموال القابلة للبرمجة",
+    "message3": "موطن الحرية الرقمية مفتوح المصدر",
+    "message4": "انضم إلى حركة الأموال اللامركزية مفتوحة المصدر",
+    "exploreErgo": "استكشف إرجو",
+    "chooseYourPath": "اختر مسارك"
+  },
+  "whyErgo": {
+    "title": "لماذا إرجو؟",
+    "subtitle": "منصة بلوكشين مرنة تجمع بين المبادئ المثبتة والابتكار المتطور",
+    "mainFeatures": {
+      "sustainable": {
+        "title": "مستدام",
+        "subtitle": "مبني للبقاء",
+        "description": "آلية رسوم التخزين تمنع انتفاخ البلوكشين وتضمن صحة الشبكة بتكاليف يمكن التنبؤ بها لعقود قادمة."
+      },
+      "fairAndSecure": {
+        "title": "عادل وآمن",
+        "subtitle": "أساس إثبات العمل",
+        "description": "بدون ICO، بدون تعدين مسبق. التعدين المقاوم لـ ASIC يضمن اللامركزية الحقيقية والأمان طويل المدى للجميع."
+      },
+      "powerfulAndFlexible": {
+        "title": "قوي ومرن",
+        "subtitle": "عقود ذكية متقدمة",
+        "description": "نموذج eUTXO + ErgoScript يتيح تطبيقات DeFi آمنة ومعبرة تدفع حدود ما هو ممكن."
+      }
+    },
+    "additionalFeatures": {
+      "privacy": {
+        "title": "الخصوصية أولاً",
+        "description": "خصوصية اختيارية مع بروتوكولات سيجما للمعاملات السرية."
+      },
+      "community": {
+        "title": "مدفوع بالمجتمع",
+        "description": "تطوير مفتوح المصدر بقيادة مساهمين شغوفين من جميع أنحاء العالم."
+      },
+      "developer": {
+        "title": "صديق للمطورين",
+        "description": "وثائق وأدوات ودعم من الطراز العالمي تجعل البناء على إرجو سهلاً."
+      }
+    }
+  },
+  "audiencePaths": {
+    "title": "ابدأ مع إرجو",
+    "subtitle": "اختر مسارك وابدأ رحلتك في نظام إرجو البيئي",
+    "audiences": {
+      "developers": {
+        "title": "للمطورين",
+        "description": "أنشئ تطبيقات DeFi متقدمة وdApps باستخدام ErgoScript",
+        "cta": "ابدأ التطوير",
+        "links": {
+          "documentation": "الوثائق",
+          "technology": "التكنولوجيا",
+          "useCases": "حالات الاستخدام"
+        }
+      },
+      "miners": {
+        "title": "للمعدنين",
+        "description": "انضم إلى شبكة التعدين Autolykos المقاومة لـ ASIC",
+        "cta": "ابدأ التعدين",
+        "links": {
+          "miningDocs": "وثائق التعدين",
+          "miningPools": "مجمعات التعدين",
+          "calculator": "حاسبة الربحية"
+        }
+      },
+      "users": {
+        "title": "للمستخدمين",
+        "description": "استكشف النظام البيئي وابدأ باستخدام إرجو",
+        "cta": "احصل على المحفظة",
+        "links": {
+          "wallets": "المحافظ",
+          "ecosystem": "النظام البيئي",
+          "buyErg": "اشترِ ERG"
+        }
+      },
+      "investors": {
+        "title": "للمستثمرين",
+        "description": "تعرف على فرص الاستثمار في نظام إرجو البيئي",
+        "cta": "تعرف على الاستثمار",
+        "links": {
+          "whatIsErgo": "ما هو إرجو",
+          "projects": "المشاريع",
+          "community": "المجتمع"
+        }
+      }
+    }
+  },
+  "blogSection": {
+    "title": "أحدث من مدونة ERGO",
+    "subtitle": "ابق على اطلاع بأحدث الأخبار والرؤى التقنية وتحديثات المجتمع من نظام Ergo البيئي",
+    "viewAllPosts": "عرض جميع المنشورات"
+  },
+  "subscribeSection": {
+    "title": "ابق في الحلقة",
+    "subtitle": "احصل على إصدارات Ergo والمنح ومكالمات المطورين والمقالات الأفضل أسبوعياً",
+    "socialLinks": {
+      "discord": "Discord",
+      "twitter": "Twitter",
+      "telegram": "Telegram"
+    },
+    "privacyNotice": "نحن نحترم خصوصيتك. يُستخدم بريدك الإلكتروني فقط لتحديثات Ergo ولن يتم مشاركته مع أطراف ثالثة. يمكنك إلغاء الاشتراك في أي وقت بنقرة واحدة."
+  },
+  "footer": {
+    "platform": "المنصة",
+    "developers": "المطورون",
+    "community": "المجتمع",
+    "technology": "التكنولوجيا",
+    "useCases": "حالات الاستخدام",
+    "ecosystem": "النظام البيئي",
+    "wallets": "المحافظ",
+    "documentation": "التوثيق",
+    "learn": "تعلم",
+    "github": "GitHub",
+    "grants": "المنح",
+    "blog": "المدونة",
+    "discord": "Discord",
+    "telegram": "Telegram",
+    "twitter": "Twitter",
+    "copyright": "© {{year}} ERGO PLATFORM. جميع الحقوق محفوظة.",
+    "openSource": "ERGO مشروع مفتوح المصدر.",
+    "contributeOnGithub": "ساهم على GITHUB"
+  },
+  "seo": {
+    "defaultTitle": "Ergo - بلوكشين لامركزي للحرية المالية",
+    "defaultDescription": "منصة بلوكشين مرنة وآمنة مع عقود ذكية متقدمة وخصوصية اختيارية"
+  },
+  "language": {
+    "switchLanguage": "تبديل اللغة",
+    "selectLanguage": "اختر اللغة",
+    "currentLanguage": "العربية"
+  },
+  "ecosystemShowcase": {
+    "title": "لامركزية كل شيء",
+    "exploreEcosystem": "استكشاف النظام البيئي",
+    "categories": {
+      "defi": "التمويل اللامركزي",
+      "privacy": "الخصوصية",
+      "stable": "الأصول المستقرة",
+      "gaming": "الألعاب"
+    },
+    "projects": {
+      "rosenBridge": {
+        "title": "جسر روزن",
+        "subtitle": "ربط النظام البيئي لإرجو",
+        "description": "انقل الأصول بسلاسة بين إرجو وسلاسل الكتل الرائدة الأخرى مثل البيتكوين والإيثيريوم وكاردانو و BSC مع جسر روزن. نظامنا الآمن Watcher & Guard يفتح السيولة عبر السلاسل وإمكانيات DeFi الجديدة.",
+        "cta": "زيارة جسر روزن",
+        "stats": {
+          "crossChain": {
+            "label": "عبر السلاسل",
+            "value": "BTC, ETH, ADA, BSC وأكثر"
+          },
+          "secureBridge": {
+            "label": "جسر آمن",
+            "value": "نموذج Watcher & Guard"
+          },
+          "unlockLiquidity": {
+            "label": "فتح السيولة",
+            "value": "الوصول إلى أسواق جديدة"
+          }
+        }
+      },
+      "ergoMixer": {
+        "title": "خلاط إرجو",
+        "subtitle": "بروتوكول الخصوصية غير الحافظ",
+        "description": "يوفر خلاط إرجو حلول خصوصية متطورة باستخدام بروتوكولات سيجما والتوقيعات الحلقية. استمتع بخصوصية مالية كاملة مع الحفاظ على الامتثال التنظيمي من خلال ميزات الشفافية الاختيارية.",
+        "cta": "تعلم عن الخصوصية على إرجو",
+        "stats": {
+          "mixedVolume": {
+            "label": "الحجم المختلط",
+            "value": "$3.7M"
+          },
+          "privacyScore": {
+            "label": "نقاط الخصوصية",
+            "value": "99.9%"
+          },
+          "transactions": {
+            "label": "المعاملات",
+            "value": "25K+"
+          }
+        }
+      },
+      "sigmaUSD": {
+        "title": "سيجما دولار أمريكي",
+        "subtitle": "بروتوكول العملة المستقرة الخوارزمي",
+        "description": "سيجما دولار أمريكي هو بروتوكول عملة مستقرة خوارزمي مدعوم بالعملات المشفرة مبني على إرجو. يوفر طريقة لامركزية لإنشاء قيمة مستقرة دون الاعتماد على الأنظمة المصرفية التقليدية أو الاحتياطيات المركزية.",
+        "cta": "استكشاف سيجما دولار أمريكي",
+        "stats": {
+          "stabilityScore": {
+            "label": "نقاط الاستقرار",
+            "value": "99.2%"
+          },
+          "totalSupply": {
+            "label": "العرض الإجمالي",
+            "value": "$2.1M"
+          },
+          "collateralRatio": {
+            "label": "نسبة الضمان",
+            "value": "400%"
+          }
+        }
+      },
+      "gaming": {
+        "title": "النظام البيئي للألعاب إرجو",
+        "subtitle": "منصة ألعاب البلوك تشين",
+        "description": "اختبر مستقبل الألعاب مع ملكية الأصول الحقيقية وآليات اللعب من أجل الكسب والبطولات اللامركزية. مدعوم بالبنية التحتية الفعالة والآمنة لبلوك تشين إرجو.",
+        "cta": "ابدأ اللعب على إرجو",
+        "stats": {
+          "activeGames": {
+            "label": "الألعاب النشطة",
+            "value": "12"
+          },
+          "players": {
+            "label": "اللاعبون",
+            "value": "5K+"
+          },
+          "rewardsPaid": {
+            "label": "المكافآت المدفوعة",
+            "value": "$250K"
+          }
+        }
+      }
+    }
+  }
+}

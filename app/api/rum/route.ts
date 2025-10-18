@@ -1,0 +1,47 @@
+import { NextRequest, NextResponse } from 'next/server'
+import { rateLimit, apiLimiter } from '@/lib/rate-limiter'
+
+// API endpoint для Real User Monitoring метрик
+export async function POST(request: NextRequest) {
+  // Применяем rate limiting
+  const rateLimitResult = await rateLimit(request, apiLimiter)
+  if (rateLimitResult) return rateLimitResult
+  
+  try {
+    const data = await request.json()
+    
+    // В production отправляем в аналитику (Google Analytics, PostHog, etc.)
+    if (process.env.NODE_ENV === 'production') {
+      // Пример отправки в Google Analytics 4
+      // await sendToGA4(data)
+      
+      // Пример отправки в собственную систему мониторинга
+      // await sendToMonitoring(data)
+      
+      // Логируем критические метрики
+      if (data.rating === 'poor') {
+        console.warn('[RUM Alert]', {
+          metric: data.name,
+          value: data.value,
+          path: data.path,
+          device: data.device
+        })
+      }
+    } else {
+      // В development режиме данные не отправляются
+    }
+    
+    return NextResponse.json({ success: true })
+  } catch (error) {
+    console.error('[RUM Error]', error)
+    return NextResponse.json({ success: false }, { status: 500 })
+  }
+}
+
+// Опционально: GET endpoint для health check
+export async function GET() {
+  return NextResponse.json({ 
+    status: 'ok',
+    timestamp: new Date().toISOString()
+  })
+} 

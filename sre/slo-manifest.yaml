@@ -1,0 +1,67 @@
+service: ergo-platform
+tier: critical
+owner: platform-team
+
+slos:
+  - name: availability
+    target: 99.9
+    measurement_window: 28d
+    sli:
+      metric: (sum(rate(http_requests_total{status!~"5.."}[5m])) / sum(rate(http_requests_total[5m]))) * 100
+      source: prometheus
+    
+  - name: latency_p95
+    target: 400ms
+    measurement_window: 28d
+    sli:
+      metric: histogram_quantile(0.95, sum(rate(http_request_duration_seconds_bucket[5m])) by (le, route))
+      source: prometheus
+    
+  - name: error_rate
+    target: < 0.5%
+    measurement_window: 28d
+    sli:
+      metric: (sum(rate(http_requests_total{status=~"5.."}[5m])) / sum(rate(http_requests_total[5m]))) * 100
+      source: prometheus
+    
+  - name: core_web_vitals
+    targets:
+      lcp_p75: 2500ms
+      inp_p75: 200ms
+      cls_p75: 0.1
+    measurement_window: 28d
+    sli:
+      source: web-vitals-rum
+      
+error_budget_policy:
+  thresholds:
+    - level: warning
+      consumption: 30%
+      actions:
+        - notify: slack:#platform-alerts
+        - create: jira-ticket
+    
+    - level: critical
+      consumption: 50%
+      actions:
+        - feature_freeze: true
+        - page: on-call
+        - escalate: engineering-manager
+    
+    - level: emergency
+      consumption: 80%
+      actions:
+        - rollback: auto
+        - incident: declare
+        - war_room: create
+
+burn_rate_alerts:
+  - name: fast_burn_2h
+    window: 2h
+    burn_rate: 14.4
+    severity: page
+    
+  - name: slow_burn_24h
+    window: 24h
+    burn_rate: 3
+    severity: warning 

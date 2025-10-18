@@ -1,0 +1,25 @@
+
+> ergo-blockchain@0.1.0 build
+> next build
+
+   ▲ Next.js 15.5.2
+   - Experiments (use with caution):
+     ✓ optimizeCss
+     ✓ webpackBuildWorker
+     · optimizePackageImports
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully in 77s
+   Skipping validation of types
+   Skipping linting
+   Collecting page data ...
+ ⚠ Using edge runtime on a page currently disables static generation for that page
+   Generating static pages (0/530) ...
+Error occurred prerendering page "/". Read more: https://nextjs.org/docs/messages/prerender-error
+Error: 
+    at <unknown> (.next/server/chunks/9330.js:1:47241)
+    at p (.next/server/chunks/8509.js:16:231) {
+  digest: '418482266'
+}
+Export encountered an error on /page: /, exiting the build.
+ ⨯ Next.js build worker exited with code: 1 and signal: null

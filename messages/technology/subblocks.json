@@ -1,0 +1,154 @@
+{
+  "subblocks": {
+    "title": "Subblocks",
+    "subtitle": "Revolutionary Layer 1 scaling solution providing sub-second transaction confirmations",
+    "description": "Subblocks enable near-instant transaction finality without sacrificing decentralization or security. Experience blockchain speed that matches traditional payment systems.",
+    "lastUpdated": "Last updated",
+    "seo": {
+      "title": "Subblocks Technology | Sub-Second Confirmations on Ergo",
+      "description": "Learn about Subblocks on Ergo - revolutionary Layer 1 scaling providing sub-second transaction confirmations while maintaining full blockchain security.",
+      "keywords": "Subblocks, Layer 1 scaling, sub-second confirmations, Ergo blockchain, fast transactions, parallel processing"
+    },
+    "buttons": {
+      "learnMore": "Learn More",
+      "technicalDetails": "Technical Details"
+    },
+    "navigation": {
+      "keyFeatures": "Key features",
+      "technicalDetails": "Technical details",
+      "useCases": "Use cases",
+      "faq": "FAQ"
+    },
+    "keyMetrics": {
+      "title": "Key Metrics",
+      "confirmationTime": {
+        "name": "Confirmation Time",
+        "value": "< 1 second",
+        "description": "Sub-second transaction finality"
+      },
+      "throughputIncrease": {
+        "name": "Throughput Increase",
+        "value": "10x",
+        "description": "Compared to main chain"
+      },
+      "securityModel": {
+        "name": "Security Model",
+        "value": "Layer 1",
+        "description": "Same as main blocks"
+      },
+      "compatibility": {
+        "name": "Compatibility",
+        "value": "100%",
+        "description": "Backward compatible"
+      }
+    },
+    "featuresSection": {
+      "title": "Key Features",
+      "description": "Subblocks combine the best of both worlds: the security of Layer 1 and the speed of modern payment systems"
+    },
+    "features": [
+      {
+        "title": "Sub-Second Confirmations",
+        "description": "Near-instant transaction finality for improved user experience without sacrificing decentralization"
+      },
+      {
+        "title": "Layer 1 Security",
+        "description": "Full blockchain security without trusted intermediaries or bridges"
+      },
+      {
+        "title": "Seamless Integration",
+        "description": "Works with existing infrastructure - no bridges or sidechains needed"
+      },
+      {
+        "title": "Parallel Processing",
+        "description": "Multiple subblocks can be validated in parallel for increased throughput"
+      },
+      {
+        "title": "Adaptive Difficulty",
+        "description": "Dynamic adjustment ensures consistent block times even with varying hash power"
+      },
+      {
+        "title": "Miner Incentives",
+        "description": "Additional rewards for subblock miners while maintaining main chain security"
+      }
+    ],
+    "technicalSection": {
+      "title": "Technical Details",
+      "description": "Understanding the architecture and implementation of subblocks"
+    },
+    "technicalDetails": [
+      {
+        "title": "Architecture",
+        "content": "Subblocks are intermediate blocks between main blocks that provide faster confirmations. They maintain the same security model as main blocks but with adjusted difficulty targets."
+      },
+      {
+        "title": "Consensus Mechanism",
+        "content": "Uses a modified version of Autolykos that allows for variable difficulty targets. Subblocks contribute to the overall chain weight while maintaining compatibility with existing infrastructure."
+      },
+      {
+        "title": "Transaction Ordering",
+        "content": "Transactions in subblocks are ordered deterministically using a combination of timestamp and transaction ID, preventing front-running and ensuring fairness."
+      },
+      {
+        "title": "State Management",
+        "content": "Subblocks update the UTXO set incrementally, allowing for efficient state transitions without full block validation overhead."
+      }
+    ],
+    "useCasesSection": {
+      "title": "Use Cases",
+      "description": "Applications that benefit from sub-second transaction confirmations"
+    },
+    "useCases": [
+      {
+        "title": "DeFi Applications",
+        "description": "Enable high-frequency trading and instant swaps with sub-second finality"
+      },
+      {
+        "title": "Payment Systems",
+        "description": "Point-of-sale transactions with immediate confirmation"
+      },
+      {
+        "title": "Gaming",
+        "description": "Real-time game state updates without waiting for block confirmations"
+      },
+      {
+        "title": "Social Applications",
+        "description": "Instant messaging and social interactions on-chain"
+      }
+    ],
+    "faqSection": {
+      "title": "Frequently Asked Questions",
+      "description": "Common questions about subblocks and their implementation"
+    },
+    "faq": [
+      {
+        "question": "What are subblocks?",
+        "answer": "Subblocks are intermediate blocks between main blocks that provide faster confirmations while maintaining the same security model. They enable sub-second transaction finality without sacrificing decentralization."
+      },
+      {
+        "question": "How fast are subblock confirmations?",
+        "answer": "Subblocks provide confirmations in approximately 1 second, compared to the 2-minute main block time, enabling near-instant transaction finality for improved user experience."
+      },
+      {
+        "question": "Do subblocks require a hard fork?",
+        "answer": "No, subblocks are designed to be backward compatible. Existing infrastructure continues to work while new features are gradually adopted."
+      },
+      {
+        "question": "How do subblocks improve scalability?",
+        "answer": "Subblocks enable 10x throughput increase through parallel processing and more frequent block production while maintaining Layer 1 security guarantees."
+      },
+      {
+        "question": "Are subblocks secure?",
+        "answer": "Yes, subblocks maintain the same security model as main blocks with adjusted difficulty targets. They contribute to overall chain weight and are protected by the same PoW consensus."
+      }
+    ],
+    "cta": {
+      "title": "Ready to Experience Sub-Second Confirmations?",
+      "description": "Join the future of blockchain technology with subblocks - where speed meets security",
+      "buttons": {
+        "readTechnicalDetails": "Read Technical Details",
+        "exploreOtherTechnologies": "Explore Other Technologies"
+      }
+    }
+  }
+} 

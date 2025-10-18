@@ -1,0 +1,299 @@
+name: Lokalise Sync
+
+on:
+  # Trigger on push to main branch
+  push:
+    branches: [main]
+    paths: ['messages/en.json']
+  
+  # Trigger on pull request
+  pull_request:
+    branches: [main]
+    paths: ['messages/**/*.json']
+  
+  # Manual trigger
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Action to perform'
+        required: true
+        default: 'sync'
+        type: choice
+        options:
+          - sync
+          - upload
+          - download
+          - qa-check
+
+  # Scheduled sync (daily at 2 AM UTC)
+  schedule:
+    - cron: '0 2 * * *'
+
+env:
+  LOKALISE_PROJECT_ID: ${{ secrets.LOKALISE_PROJECT_ID }}
+  LOKALISE_API_TOKEN: ${{ secrets.LOKALISE_API_TOKEN }}
+  NODE_VERSION: '18'
+
+jobs:
+  # Upload source files to Lokalise
+  upload-source:
+    name: Upload Source Files
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'upload')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install Lokalise CLI
+        run: |
+          curl -sfL https://raw.githubusercontent.com/lokalise/lokalise-cli-2-go/master/install.sh | sh
+          sudo mv ./bin/lokalise2 /usr/local/bin/lokalise2
+
+      - name: Validate source file
+        run: |
+          echo "Validating messages/en.json..."
+          node -e "
+            const fs = require('fs');
+            try {
+              const data = JSON.parse(fs.readFileSync('messages/en.json', 'utf8'));
+              console.log('✅ Source file is valid JSON');
+              console.log('Keys count:', Object.keys(data).length);
+            } catch (error) {
+              console.error('❌ Invalid JSON:', error.message);
+              process.exit(1);
+            }
+          "
+
+      - name: Upload to Lokalise
+        run: |
+          lokalise2 file upload \
+            --project-id=${{ env.LOKALISE_PROJECT_ID }} \
+            --token=${{ env.LOKALISE_API_TOKEN }} \
+            --file=messages/en.json \
+            --lang-iso=en \
+            --replace-modified=true \
+            --tag-inserted-keys=true \
+            --tag-updated-keys=true \
+            --apply-tm=true \
+            --poll=true \
+            --poll-timeout=120
+
+      - name: Create upload summary
+        run: |
+          echo "## 📤 Upload Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- **Project ID**: ${{ env.LOKALISE_PROJECT_ID }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Source File**: messages/en.json" >> $GITHUB_STEP_SUMMARY
+          echo "- **Language**: English (en)" >> $GITHUB_STEP_SUMMARY
+          echo "- **Status**: ✅ Uploaded successfully" >> $GITHUB_STEP_SUMMARY
+
+  # Download translations from Lokalise
+  download-translations:
+    name: Download Translations
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'download')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install Lokalise CLI
+        run: |
+          curl -sfL https://raw.githubusercontent.com/lokalise/lokalise-cli-2-go/master/install.sh | sh
+          sudo mv ./bin/lokalise2 /usr/local/bin/lokalise2
+
+      - name: Create backup
+        run: |
+          mkdir -p messages/backup
+          cp messages/*.json messages/backup/ || true
+          echo "Backup created at $(date)" > messages/backup/backup.log
+
+      - name: Download from Lokalise
+        run: |
+          lokalise2 file download \
+            --project-id=${{ env.LOKALISE_PROJECT_ID }} \
+            --token=${{ env.LOKALISE_API_TOKEN }} \
+            --format=json \
+            --original-filenames=false \
+            --bundle-structure=%LANG_ISO%.json \
+            --dest=messages/ \
+            --export-empty-as=skip \
+            --export-sort=first_added \
+            --filter-data=reviewed
+
+      - name: Validate downloaded files
+        run: |
+          echo "Validating downloaded translation files..."
+          for file in messages/*.json; do
+            if [ -f "$file" ]; then
+              echo "Checking $file..."
+              node -e "
+                const fs = require('fs');
+                try {
+                  const data = JSON.parse(fs.readFileSync('$file', 'utf8'));
+                  console.log('✅ $file is valid');
+                } catch (error) {
+                  console.error('❌ $file is invalid:', error.message);
+                  process.exit(1);
+                }
+              "
+            fi
+          done
+
+      - name: Check for changes
+        id: changes
+        run: |
+          git add messages/
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No translation changes detected"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Translation changes detected"
+          fi
+
+      - name: Create Pull Request
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "feat(i18n): update translations from Lokalise"
+          title: "🌍 Update translations from Lokalise"
+          body: |
+            ## 🌍 Translation Update
+            
+            This PR contains updated translations downloaded from Lokalise.
+            
+            ### Changes
+            - Updated translation files from Lokalise
+            - All files validated for JSON syntax
+            - Backup created before update
+            
+            ### Review Checklist
+            - [ ] Review translation changes
+            - [ ] Test key translations in UI
+            - [ ] Verify ICU MessageFormat syntax
+            - [ ] Check for missing translations
+            
+            **Auto-generated by Lokalise Sync workflow**
+          branch: lokalise/translation-update
+          delete-branch: true
+
+  # Quality Assurance Check
+  qa-check:
+    name: Translation QA
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request' || (github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'qa-check')
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run translation analysis
+        run: |
+          echo "Running translation analysis..."
+          node scripts/analyze-i18n.js > qa-report.txt
+          cat qa-report.txt
+
+      - name: Check ICU MessageFormat syntax
+        run: |
+          echo "Checking ICU MessageFormat syntax..."
+          node -e "
+            const fs = require('fs');
+            const { validateICUMessage } = require('./lib/icu-helpers');
+            
+            let hasErrors = false;
+            
+            for (const lang of ['en', 'ru', 'de', 'fr']) {
+              try {
+                const data = JSON.parse(fs.readFileSync(\`messages/\${lang}.json\`, 'utf8'));
+                
+                function checkICU(obj, path = '') {
+                  for (const [key, value] of Object.entries(obj)) {
+                    const fullPath = path ? \`\${path}.\${key}\` : key;
+                    
+                    if (typeof value === 'string' && value.includes('{')) {
+                      if (!validateICUMessage(value)) {
+                        console.error(\`❌ Invalid ICU syntax in \${lang}.json at \${fullPath}: \${value}\`);
+                        hasErrors = true;
+                      }
+                    } else if (typeof value === 'object' && value !== null) {
+                      checkICU(value, fullPath);
+                    }
+                  }
+                }
+                
+                checkICU(data);
+                console.log(\`✅ \${lang}.json ICU syntax is valid\`);
+              } catch (error) {
+                console.error(\`❌ Error checking \${lang}.json:, error.message\`);
+                hasErrors = true;
+              }
+            }
+            
+            if (hasErrors) {
+              process.exit(1);
+            }
+          "
+
+      - name: Create QA Summary
+        if: always()
+        run: |
+          echo "## 🔍 Translation QA Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Analysis Results" >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+          cat qa-report.txt >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+  # Full sync (upload + download)
+  full-sync:
+    name: Full Sync
+    runs-on: ubuntu-latest
+    if: github.event_name == 'workflow_dispatch' && github.event.inputs.action == 'sync'
+    needs: [upload-source]
+    
+    steps:
+      - name: Trigger download
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'lokalise-sync.yml',
+              ref: 'main',
+              inputs: {
+                action: 'download'
+              }
+            });
+
+      - name: Sync Summary
+        run: |
+          echo "## 🔄 Full Sync Completed" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Source files uploaded to Lokalise" >> $GITHUB_STEP_SUMMARY
+          echo "- 🔄 Translation download triggered" >> $GITHUB_STEP_SUMMARY
+          echo "- 📋 Check for new PR with updated translations" >> $GITHUB_STEP_SUMMARY 

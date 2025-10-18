@@ -1,0 +1,115 @@
+groups:
+  - name: ergo-platform-slo
+    interval: 30s
+    rules:
+      # Availability SLO
+      - alert: HighErrorRate
+        expr: |
+          (
+            sum(rate(http_requests_total{job="ergo-web",status=~"5.."}[5m]))
+            /
+            sum(rate(http_requests_total{job="ergo-web"}[5m]))
+          ) > 0.01
+        for: 5m
+        labels:
+          severity: critical
+          team: platform
+        annotations:
+          summary: "Error rate > 1% (current: {{ $value | humanizePercentage }})"
+          description: "HTTP 5xx errors exceeding SLO threshold"
+          runbook: "https://runbook.ergo/high-error-rate"
+          dashboard: "https://grafana.ergo/d/web-overview"
+
+      # Latency SLO
+      - alert: HighLatencyP95
+        expr: |
+          histogram_quantile(0.95,
+            sum(rate(http_request_duration_seconds_bucket{job="ergo-web"}[5m])) 
+            by (le, route)
+          ) > 0.4
+        for: 10m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "P95 latency > 400ms for route {{ $labels.route }}"
+          description: "Response time degradation detected"
+          runbook: "https://runbook.ergo/high-latency"
+
+      # Error Budget Burn Rate
+      - alert: ErrorBudgetFastBurn
+        expr: |
+          (
+            1 - (
+              sum(rate(http_requests_total{job="ergo-web",status!~"5.."}[2h]))
+              /
+              sum(rate(http_requests_total{job="ergo-web"}[2h]))
+            )
+          ) > (14.4 * 0.001)
+        for: 15m
+        labels:
+          severity: page
+          team: platform
+        annotations:
+          summary: "Error budget fast burn detected (2h window)"
+          description: "Consuming error budget 14.4x faster than sustainable"
+          runbook: "https://runbook.ergo/error-budget-burn"
+
+      # Node.js Memory
+      - alert: NodeMemoryHigh
+        expr: |
+          (
+            nodejs_heap_size_used_bytes{job="ergo-web"}
+            /
+            nodejs_heap_size_total_bytes{job="ergo-web"}
+          ) > 0.85
+        for: 5m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "Node.js heap usage > 85%"
+          description: "Memory pressure on {{ $labels.instance }}"
+          runbook: "https://runbook.ergo/node-memory"
+
+      # Database Connection Pool
+      - alert: DatabaseConnectionPoolExhausted
+        expr: |
+          pg_stat_database_numbackends{datname="ergo"}
+          /
+          pg_settings_max_connections
+          > 0.8
+        for: 5m
+        labels:
+          severity: critical
+          team: database
+        annotations:
+          summary: "Database connection pool > 80% utilized"
+          description: "Connection pool exhaustion risk"
+          runbook: "https://runbook.ergo/db-connections"
+
+      # Redis Memory
+      - alert: RedisMemoryHigh
+        expr: |
+          redis_memory_used_bytes / redis_memory_max_bytes > 0.9
+        for: 5m
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "Redis memory usage > 90%"
+          description: "Cache eviction may occur"
+          runbook: "https://runbook.ergo/redis-memory"
+
+      # SSL Certificate Expiry
+      - alert: SSLCertificateExpiringSoon
+        expr: |
+          probe_ssl_earliest_cert_expiry - time() < 7 * 24 * 3600
+        for: 1h
+        labels:
+          severity: warning
+          team: platform
+        annotations:
+          summary: "SSL certificate expiring in < 7 days"
+          description: "Certificate for {{ $labels.instance }} expires soon"
+          runbook: "https://runbook.ergo/ssl-renewal" 

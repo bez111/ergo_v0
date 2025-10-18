@@ -10,8 +10,14 @@ interface GlitchTextProps {
 
 export function GlitchText({ text, className = "" }: GlitchTextProps) {
   const [isGlitching, setIsGlitching] = useState(false)
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
     const glitchInterval = setInterval(() => {
       if (Math.random() > 0.7) {
         setIsGlitching(true)
@@ -20,7 +26,7 @@ export function GlitchText({ text, className = "" }: GlitchTextProps) {
     }, 2000)
 
     return () => clearInterval(glitchInterval)
-  }, [])
+  }, [isMounted])
 
   return (
     <motion.span

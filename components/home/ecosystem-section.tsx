@@ -8,28 +8,24 @@ export function EcosystemSection() {
     {
       name: "ErgoDEX",
       description: "Decentralized exchange for Ergo and Cardano ecosystems",
-      image: "/decentralized-exchange.png",
       category: "DeFi",
       url: "/ecosystem/projects/ergodex",
     },
     {
       name: "Spectrum",
       description: "Liquidity and yield farming protocol",
-      image: "/spectrum-display.png",
       category: "DeFi",
       url: "/ecosystem/projects/spectrum",
     },
     {
       name: "SigmaUSD",
       description: "Algorithmic stablecoin protocol",
-      image: "/sigmausd-concept.png",
       category: "Stablecoin",
       url: "/ecosystem/projects/sigmausd",
     },
     {
       name: "Ergo Mixer",
       description: "Non-custodial mixing service for privacy",
-      image: "/placeholder.svg?height=100&width=100&query=Mixer",
       category: "Privacy",
       url: "/ecosystem/projects/ergomixer",
     },
@@ -53,13 +49,11 @@ export function EcosystemSection() {
               className="group flex flex-col gap-4 rounded-lg border p-6 hover:border-primary hover:bg-muted/50 transition-colors"
             >
               <div className="flex items-center gap-4">
-                <Image
-                  src={project.image || "/placeholder.svg"}
-                  alt={project.name}
-                  width={50}
-                  height={50}
-                  className="rounded-md"
-                />
+                <div className="flex items-center space-x-3">
+                  <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+                    <span className="text-white text-sm font-bold">E</span>
+                  </div>
+                </div>
                 <div>
                   <h3 className="font-medium group-hover:text-primary transition-colors">{project.name}</h3>
                   <p className="text-xs text-muted-foreground">{project.category}</p>
@@ -72,7 +66,7 @@ export function EcosystemSection() {
 
         <div className="flex justify-center">
           <Button asChild variant="outline" className="gap-2">
-            <Link href="/ecosystem/projects">
+            <Link href="/ecosystem">
               View All Projects
               <ArrowRight className="h-4 w-4" />
             </Link>

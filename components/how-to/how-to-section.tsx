@@ -1,4 +1,5 @@
 import { SchemaOrg } from '@/components/seo/schema-org'
+import Image from "next/image"
 
 interface HowToStep {
   name: string
@@ -18,9 +19,12 @@ export function HowToSection({ title, description, steps }: HowToSectionProps) {
       <SchemaOrg
         type="HowTo"
         data={{
-          title,
+          '@type': 'HowTo',
+          name: title,
           description,
-          steps: steps.map((step) => ({
+          step: steps.map((step, i) => ({
+            '@type': 'HowToStep',
+            position: i + 1,
             name: step.name,
             text: step.text,
             image: step.image,
@@ -41,10 +45,13 @@ export function HowToSection({ title, description, steps }: HowToSectionProps) {
                   <h3 className="text-xl font-semibold mb-2">{step.name}</h3>
                   <div className="prose max-w-none">{step.text}</div>
                   {step.image && (
-                    <img
+                    <Image
                       src={step.image}
                       alt={step.name}
+                      width={400}
+                      height={300}
                       className="mt-4 rounded-lg shadow-lg"
+                      loading="lazy"
                     />
                   )}
                 </div>

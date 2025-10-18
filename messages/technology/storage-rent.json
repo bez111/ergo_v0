@@ -1,0 +1,194 @@
+{
+  "storageRent": {
+    "title": "Storage Rent",
+    "subtitle": "What is Storage Rent?",
+    "description": "Ergo's storage rent system ensures long-term network health by preventing blockchain bloat and creating a predictable cost for data storage.",
+    "seo": {
+      "title": "Storage Rent on Ergo",
+      "description": "Predictable on-chain state budgeting for decades-long sustainability.",
+      "keywords": "Storage Rent, Ergo blockchain, blockchain sustainability, UTXO cleanup, network health, predictable costs"
+    },
+    "buttons": {
+      "learnMore": "Learn More",
+      "viewDetails": "View Details"
+    },
+    "navigation": {
+      "what": "What",
+      "how": "How",
+      "costs": "Costs",
+      "faq": "FAQ"
+    },
+    "corePrinciples": {
+      "title": "Core Principles",
+      "preventBloat": {
+        "name": "Prevent Bloat",
+        "description": "Keeps the blockchain lean and efficient"
+      },
+      "economicSustainability": {
+        "name": "Economic Sustainability",
+        "description": "Creates long-term incentives for miners"
+      },
+      "predictableCosts": {
+        "name": "Predictable Costs",
+        "description": "Users pay a transparent fee for data storage"
+      }
+    },
+    "problemSection": {
+      "title": "The Problem",
+      "description": "Traditional blockchains face critical sustainability challenges that threaten their long-term viability",
+      "exampleMetric": "Example metric",
+      "disclaimer": "Illustrative figure; see docs for current parameters."
+    },
+    "problems": {
+      "bloat": {
+        "title": "Blockchain Bloat",
+        "description": "Traditional blockchains accumulate unused data over time, leading to inefficiency and higher costs.",
+        "stats": "2TB+ wasted space"
+      },
+      "forgottenWallets": {
+        "title": "Forgotten Wallets",
+        "description": "Lost private keys mean funds are stuck forever, reducing the effective money supply.",
+        "stats": "4M+ lost coins"
+      },
+      "networkStagnation": {
+        "title": "Network Stagnation",
+        "description": "Accumulated dust and inactive data slow down the network and increase storage requirements.",
+        "stats": "50% slower sync"
+      }
+    },
+    "estimator": {
+      "title": "How much rent would I pay?",
+      "description": "Approximate estimator for educational purposes. Parameters may change — see docs.",
+      "boxAge": "Box age (years)",
+      "boxValue": "Box value (ERG)",
+      "estimatedRent": "Estimated rent",
+      "topUpNeeded": "Top-up needed",
+      "remainingValue": "Remaining value",
+      "disclaimer": "Illustrative; see docs for formula and current parameters."
+    },
+    "avoidRent": {
+      "title": "How to avoid rent",
+      "steps": {
+        "moveFunds": "Move funds periodically to reset the 4-year timer",
+        "consolidateDust": "Consolidate dust into larger boxes",
+        "planTopUps": "Apps: plan top-up/rotation logic into contract design"
+      }
+    },
+    "developer": {
+      "title": "For developers",
+      "tips": {
+        "avoidTinyBoxes": "Avoid spawning many tiny boxes",
+        "maintenancePath": "Provide a \"maintenance path\" for rent top-ups",
+        "trackBoxAge": "Track box age off-chain (indexer)"
+      },
+      "buttons": {
+        "designPatterns": "Design patterns",
+        "sdkSnippet": "SDK snippet"
+      }
+    },
+    "solutionSection": {
+      "title": "Ergo's Solution",
+      "description": "Revolutionary storage rent mechanics that keep the blockchain healthy and sustainable"
+    },
+    "solutions": {
+      "automaticRecycling": {
+        "title": "Automatic Fee Recycling",
+        "description": "If coins are left untouched for years, a small fee is recycled back to miners."
+      },
+      "noForgottenWallets": {
+        "title": "No Forgotten Wallets",
+        "description": "If you lose your keys, your funds aren't stuck forever in the system."
+      },
+      "predictableCosts": {
+        "title": "Predictable Costs",
+        "description": "Users pay a transparent fee for long-term data storage."
+      }
+    },
+    "timeline": {
+      "title": "How Storage Rent Works",
+      "description": "Follow the lifecycle of a UTXO through Ergo's storage rent system. Learn more about the model in the",
+      "eutxoLink": "eUTXO deep dive",
+      "noRent": {
+        "year": "Year 0–4",
+        "status": "No rent accrual period",
+        "description": "Your UTXO (box) is stored for free on the blockchain",
+        "details": "No fees, full access to your funds"
+      },
+      "rentBegins": {
+        "year": "Year 4+",
+        "status": "Storage Rent Begins",
+        "description": "Small rent fee may be deducted from box value (if applicable)",
+        "details": "Approximate; depends on protocol parameters/min box value. See docs."
+      },
+      "ownerReturns": {
+        "year": "Owner Returns",
+        "status": "Rent Top-Up",
+        "description": "Owner can pay rent and regain full access to funds",
+        "details": "Pay accumulated rent to restore full control"
+      },
+      "boxDepleted": {
+        "year": "Box Depleted",
+        "status": "Eligible for miner claim (per protocol rules)",
+        "description": "If rent isn't paid, remaining value goes to miners",
+        "details": "Funds return to active circulation"
+      }
+    },
+    "benefitsSection": {
+      "title": "Why Storage Rent Matters",
+      "description": "The benefits extend far beyond just cleaning up the blockchain"
+    },
+    "benefits": {
+      "cleanBlockchain": "The blockchain stays clean, compact, and fast",
+      "minerRewards": "Miners are rewarded for maintaining real, active data",
+      "networkHealth": "Network remains healthy — even decades from now",
+      "reduceLostFunds": "Reduces the share of permanently lost funds ('stuck' UTXOs)",
+      "predictableCosts": "Predictable, transparent storage costs",
+      "automaticCleanup": "Automatic state cleanup & miner incentives (per protocol)"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "whyStorageRent": {
+        "question": "Why does Ergo charge \"storage rent\"? Do I have to pay just to hold ERG?",
+        "answer": "No, this isn't a holding tax—it's a way to keep the blockchain \"clean.\" Fees apply only to coins (UTXOs) left untouched for more than 4 years. Think of it like long-term storage: if you abandon a box and never return, a tiny fee is charged for the space you occupy. This keeps the network from getting clogged with forgotten data."
+      },
+      "longTermInvestor": {
+        "question": "Can I lose my funds if I'm a long-term investor (HODLer)?",
+        "answer": "Almost impossible. Any action—like sending your coins, even to yourself—resets the 4-year timer. The rent is so small it only affects very low-value UTXOs (\"dust\"). The system is designed to clean up lost change, not to penalize active users or investors."
+      },
+      "whyImportant": {
+        "question": "Why is it so important to get rid of \"blockchain dust\"?",
+        "answer": "It directly affects decentralization. Every forgotten transaction increases the size of the blockchain state, which full nodes must store and process. Without cleanup, running a full node would become too expensive over time, leaving control to big corporations. Storage rent is a long-term guarantee that Ergo stays accessible and truly decentralized."
+      },
+      "whereRentGoes": {
+        "question": "Where does the collected rent go? Does anyone profit from it?",
+        "answer": "The fees aren't kept by a company or burned—they're paid out to miners. This gives miners a direct incentive to help clean up the blockchain state, which aligns perfectly with the community's long-term interests. It's a self-sustaining economic model that keeps the blockchain healthy and resilient."
+      }
+    },
+    "cta": {
+      "title": "The Future is Sustainable",
+      "description": "Storage Rent keeps Ergo efficient, fair, and ready for the decades ahead. No bloat, no dead coins, no stale data — just a healthy, sustainable blockchain economy.",
+      "buttons": {
+        "startBuilding": "Start Building on Ergo",
+        "technicalDocs": "Technical Documentation"
+      }
+    },
+    "howTo": {
+      "title": "How to avoid storage rent",
+      "description": "Actions to minimize rent accrual on Ergo.",
+      "steps": {
+        "moveFunds": {
+          "title": "Move funds periodically",
+          "description": "Any spend resets the 4‑year timer."
+        },
+        "consolidateDust": {
+          "title": "Consolidate dust",
+          "description": "Merge small UTXOs into larger boxes."
+        },
+        "planTopUps": {
+          "title": "Plan top‑ups in apps",
+          "description": "Add maintenance/top‑up paths for contract boxes."
+        }
+      }
+    }
+  }
+} 

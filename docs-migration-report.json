@@ -1,0 +1,288 @@
+{
+  "startTime": "2025-08-18T15:05:22.055Z",
+  "checks": 4,
+  "errors": [
+    {
+      "url": "/docs",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:05:32.538Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:05:33.149Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:05:33.688Z"
+    },
+    {
+      "url": "/docs/developers",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:05:34.223Z"
+    },
+    {
+      "url": "/docs",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:06:35.577Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:06:36.107Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:06:36.629Z"
+    },
+    {
+      "url": "/docs/developers",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:06:37.192Z"
+    },
+    {
+      "url": "/docs",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:07:34.853Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:07:35.442Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:07:35.980Z"
+    },
+    {
+      "url": "/docs/developers",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:07:36.674Z"
+    },
+    {
+      "url": "/docs",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:08:35.037Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:08:35.577Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:08:36.153Z"
+    },
+    {
+      "url": "/docs/developers",
+      "status": 500,
+      "message": "Server error: 500",
+      "timestamp": "2025-08-18T15:08:36.561Z"
+    }
+  ],
+  "redirects": {
+    "successful": 16,
+    "failed": 0
+  },
+  "statusCodes": {
+    "302": 16,
+    "500": 16
+  },
+  "performance": [
+    {
+      "url": "/docs",
+      "responseTime": 688,
+      "timestamp": "2025-08-18T15:05:22.759Z"
+    },
+    {
+      "url": "/docs",
+      "responseTime": 9677,
+      "timestamp": "2025-08-18T15:05:32.538Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "responseTime": 122,
+      "timestamp": "2025-08-18T15:05:32.762Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "responseTime": 286,
+      "timestamp": "2025-08-18T15:05:33.149Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "responseTime": 85,
+      "timestamp": "2025-08-18T15:05:33.336Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "responseTime": 251,
+      "timestamp": "2025-08-18T15:05:33.688Z"
+    },
+    {
+      "url": "/docs/developers",
+      "responseTime": 86,
+      "timestamp": "2025-08-18T15:05:33.875Z"
+    },
+    {
+      "url": "/docs/developers",
+      "responseTime": 246,
+      "timestamp": "2025-08-18T15:05:34.223Z"
+    },
+    {
+      "url": "/docs",
+      "responseTime": 103,
+      "timestamp": "2025-08-18T15:06:34.432Z"
+    },
+    {
+      "url": "/docs",
+      "responseTime": 1043,
+      "timestamp": "2025-08-18T15:06:35.577Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "responseTime": 77,
+      "timestamp": "2025-08-18T15:06:35.756Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "responseTime": 250,
+      "timestamp": "2025-08-18T15:06:36.107Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "responseTime": 82,
+      "timestamp": "2025-08-18T15:06:36.291Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "responseTime": 237,
+      "timestamp": "2025-08-18T15:06:36.629Z"
+    },
+    {
+      "url": "/docs/developers",
+      "responseTime": 91,
+      "timestamp": "2025-08-18T15:06:36.822Z"
+    },
+    {
+      "url": "/docs/developers",
+      "responseTime": 269,
+      "timestamp": "2025-08-18T15:06:37.192Z"
+    },
+    {
+      "url": "/docs",
+      "responseTime": 11,
+      "timestamp": "2025-08-18T15:07:34.340Z"
+    },
+    {
+      "url": "/docs",
+      "responseTime": 412,
+      "timestamp": "2025-08-18T15:07:34.853Z"
+    },
+    {
+      "url": "/Docs/introduction",
+      "responseTime": 118,
+      "timestamp": "2025-08-18T15:07:35.071Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "responseTime": 269,
+      "timestamp": "2025-08-18T15:07:35.442Z"
+    },
+    {
+      "url": "/Docs/ecosystem",
+      "responseTime": 89,
+      "timestamp": "2025-08-18T15:07:35.631Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "responseTime": 248,
+      "timestamp": "2025-08-18T15:07:35.980Z"
+    },
+    {
+      "url": "/Docs/developers",
+      "responseTime": 168,
+      "timestamp": "2025-08-18T15:07:36.249Z"
+    },
+    {
+      "url": "/docs/developers",
+      "responseTime": 324,
+      "timestamp": "2025-08-18T15:07:36.674Z"
+    },
+    {
+      "url": "/docs",
+      "responseTime": 10,
+      "timestamp": "2025-08-18T15:08:34.340Z"
+    },
+    {
+      "url": "/docs",
+      "responseTime": 596,
+      "timestamp": "2025-08-18T15:08:35.037Z"
+    },
+    {
+      "url": "/Docs/introduction",
+      "responseTime": 91,
+      "timestamp": "2025-08-18T15:08:35.230Z"
+    },
+    {
+      "url": "/docs/introduction",
+      "responseTime": 245,
+      "timestamp": "2025-08-18T15:08:35.577Z"
+    },
+    {
+      "url": "/Docs/ecosystem",
+      "responseTime": 80,
+      "timestamp": "2025-08-18T15:08:35.757Z"
+    },
+    {
+      "url": "/docs/ecosystem",
+      "responseTime": 294,
+      "timestamp": "2025-08-18T15:08:36.153Z"
+    },
+    {
+      "url": "/Docs/developers",
+      "responseTime": 91,
+      "timestamp": "2025-08-18T15:08:36.345Z"
+    },
+    {
+      "url": "/docs/developers",
+      "responseTime": 115,
+      "timestamp": "2025-08-18T15:08:36.561Z"
+    }
+  ],
+  "summary": {
+    "totalChecks": 4,
+    "totalErrors": 16,
+    "averageResponseTime": 524,
+    "uptimePercentage": "50.00",
+    "mostCommonStatusCodes": [
+      {
+        "code": "302",
+        "count": 16
+      },
+      {
+        "code": "500",
+        "count": 16
+      }
+    ]
+  }
+}

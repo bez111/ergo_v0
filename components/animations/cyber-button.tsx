@@ -24,8 +24,7 @@ export function CyberButton({
   return (
     <motion.div
       whileHover={{
-        scale: 1.05,
-        boxShadow: "0 0 20px rgba(255, 136, 0, 0.5)",
+        scale: 1.02,
       }}
       whileTap={{
         scale: 0.95,
@@ -37,14 +36,7 @@ export function CyberButton({
       }}
     >
       <Button variant={variant} size={size} onClick={onClick} className={`text-black ${className}`} asChild={asChild}>
-        <motion.div
-          initial={false}
-          whileHover={{
-            textShadow: "0 0 8px rgba(255, 255, 255, 0.8)",
-          }}
-        >
-          {children}
-        </motion.div>
+        {children}
       </Button>
     </motion.div>
   )

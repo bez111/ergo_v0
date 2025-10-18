@@ -47,11 +47,6 @@ export const mainNavItems = [
         description: "Learn how to buy, exchange, or earn ERG (markets, P2P, exchanges, guides).",
       },
       {
-        title: "How-to Guides",
-        href: "/use/guides",
-        description: "Step-by-step tutorials for wallets, using dApps, transfers, 2FA setup, and more.",
-      },
-      {
         title: "Mine ERG",
         href: "/use/mining",
         description: "Learn how to start mining, find mining pools, requirements, and beginner tips.",
@@ -79,6 +74,11 @@ export const mainNavItems = [
         description: "One-stop catalog of dApps, services, and community projects with advanced search and filters.",
       },
       {
+        title: "Ecosystem Map",
+        href: "/ecosystem/map",
+        description: "Visual map of projects, tools, and teams with interactive clusters and filters.",
+      },
+      {
         title: "Mining Pools & Resources",
         href: "/ecosystem/mining",
         description: "List of mining pools and useful tools for miners.",
@@ -90,34 +90,7 @@ export const mainNavItems = [
       },
     ],
   },
-  {
-    title: "Build",
-    href: "/build",
-    description: "Developer resources and documentation",
-    children: [
-      {
-        title: "Developer Portal",
-        href: "/build",
-        description: "The central hub for starting, supporting, and connecting as an Ergo developer.",
-      },
-      {
-        title: "SDKs, Tools & Docs",
-        href: "/build/docs",
-        description:
-          "Download official SDKs, APIs, essential tools, and explore technical documentation for ErgoScript, eUTXO, nodes, and more.",
-      },
-      {
-        title: "Tutorials & Code Examples",
-        href: "/build/tutorials",
-        description: "Practical step-by-step tutorials and code samples.",
-      },
-      {
-        title: "Grants for Developers",
-        href: "/build/grants",
-        description: "Grants, bug bounties, and support for innovative solutions.",
-      },
-    ],
-  },
+  // Removed Build section to reduce top-level items and avoid duplication with DOCS
   {
     title: "Technology",
     href: "/technology",

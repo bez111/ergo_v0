@@ -1,0 +1,172 @@
+/* Blog-specific optimizations for Core Web Vitals */
+
+/* Prevent layout shift on images */
+.blog-hero-image {
+  aspect-ratio: 1200 / 630;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(45deg, #1a1a1a 25%, #262626 25%, #262626 50%, #1a1a1a 50%, #1a1a1a 75%, #262626 75%, #262626);
+  background-size: 20px 20px;
+}
+
+/* Optimize reading experience */
+.prose-blog {
+  /* Optimal line length for reading */
+  max-width: 65ch;
+  
+  /* Better paragraph spacing */
+  --prose-p-margin: 1.5em;
+  
+  /* Improved line height */
+  line-height: 1.625;
+}
+
+/* Content visibility for long articles */
+.article-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* Smooth scroll behavior with offset for sticky header */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem;
+}
+
+/* Focus styles for accessibility */
+.skip-link:focus {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.75rem 1.5rem;
+  background: #ff5500;
+  color: white;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0 3px rgba(255, 85, 0, 0.5);
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .blog-content {
+    max-width: 100%;
+  }
+  
+  /* Show link URLs in print */
+  .prose a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 0.8em;
+    color: #666;
+  }
+  
+  /* Page breaks */
+  h2 {
+    page-break-before: auto;
+    page-break-after: avoid;
+  }
+  
+  pre, blockquote, figure {
+    page-break-inside: avoid;
+  }
+}
+
+/* Code block optimizations */
+.code-block-wrapper {
+  position: relative;
+  margin: 1.5rem 0;
+}
+
+.code-block-wrapper pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #444 #1a1a1a;
+}
+
+.code-block-wrapper pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.code-block-wrapper pre::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.code-block-wrapper pre::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+/* Table of Contents active indicator animation */
+.toc-link {
+  transition: all 0.2s ease;
+}
+
+.toc-link.active {
+  font-weight: 500;
+  padding-left: 1rem;
+  border-left: 2px solid #ff5500;
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .prose-blog {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  
+  /* Larger touch targets */
+  .prose-blog a,
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Dark mode optimizations */
+@media (prefers-color-scheme: dark) {
+  .prose-blog {
+    --prose-body: #d1d5db;
+    --prose-headings: #f3f4f6;
+    --prose-links: #ff8800;
+    --prose-code: #ffa500;
+    --prose-pre-bg: #111111;
+    --prose-pre-border: #2d2d2d;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Loading skeleton animations */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #1a1a1a 0%,
+    #2a2a2a 20%,
+    #1a1a1a 40%,
+    #1a1a1a 100%
+  );
+  background-size: 200px 100%;
+  animation: skeleton-loading 1.5s ease-in-out infinite;
+}
