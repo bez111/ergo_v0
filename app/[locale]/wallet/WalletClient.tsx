@@ -310,7 +310,7 @@ export default function WalletClient() {
                       
                       <CardContent className="p-6 flex-1 flex flex-col">
                         <div className="flex items-start justify-between mb-4">
-                          <div className="flex items-center gap-4">
+                          <div className="flex items-start gap-4">
                             <div className="p-3 rounded-xl bg-orange-500/20 border border-orange-500/30">
                               <IconComponent className="w-6 h-6 text-orange-400" />
                             </div>

@@ -5,7 +5,8 @@ import { getRequestConfig } from 'next-intl/server';
 export const locales = [
   'en',    // Английский (по умолчанию, без префикса)
   // TODO: Включить после добавления всех переводов:
-  // 'fr', 'de', 'es', 'ar', 'zh-cn', 'zh-tw', 'tr', 'ru', 'pt-br', 'it', 'ja', 'ko-kr'
+  // 'fr', 'de', 'es', 'ar', 'zh-cn', 'zh-tw', 'tr',
+  'ru' //, 'pt-br', 'it', 'ja', 'ko-kr'
 ] as const;
 
 // Локали с префиксами (все кроме английского)

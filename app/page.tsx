@@ -27,6 +27,7 @@ const RhythmBeat = () => (
 );
 
 export default async function HomePage() {
+  return (<></>)
   return (
     <main className="flex flex-col bg-black text-white relative overflow-hidden">
       {/* Cyberpunk grid background that spans all sections */}
