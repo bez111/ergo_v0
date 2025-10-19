@@ -1,5 +1,8 @@
 {
   "name": "ergo-blockchain",
+  "engines": {
+    "node": "22.x"
+  },
   "version": "0.1.0",
   "private": true,
   "scripts": {
