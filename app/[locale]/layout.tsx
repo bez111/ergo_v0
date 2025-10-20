@@ -11,6 +11,7 @@ import "../globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
+
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;

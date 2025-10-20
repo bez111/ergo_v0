@@ -597,7 +597,6 @@ export function LocalSearch() {
   const t = useTranslations('search')
   const locale = useLocale()
 
-  const t = useTranslations()
   const menuData = getLocalizedMenuData(t)
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState('');
