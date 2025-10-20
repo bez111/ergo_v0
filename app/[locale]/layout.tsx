@@ -117,8 +117,8 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <NextIntlClientProvider locale={locale} messages={messages}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          enableSystem={false}
+          defaultTheme="dark"
           disableTransitionOnChange
         >
           <ErrorBoundary>

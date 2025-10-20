@@ -1,3 +1,4 @@
+import { version } from '@/lib/version'
 import { NextResponse } from 'next/server'
 
 interface HealthStatus {
@@ -69,7 +70,7 @@ export async function GET(_request: Request) {
     status: 'healthy',
     timestamp: new Date().toISOString(),
     uptime,
-    version: process.env['NEXT_PUBLIC_VERSION'] || '1.0.0',
+    version: version.version || '1.0.0',
     checks: {},
     metrics: {
       memoryUsage: process.memoryUsage(),
