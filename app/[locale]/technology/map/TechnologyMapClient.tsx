@@ -802,7 +802,7 @@ export default function TechnologyMapClient() {
             <h2 className="text-4xl font-bold mb-8">Further Reading</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               <Link href="/technology/ergoscript" className="block">
-                <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
+                <Card className="h-full bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
                   <CardContent className="p-6 text-center">
                     <Code className="w-8 h-8 text-orange-400 mx-auto mb-3" />
                     <div className="font-semibold mb-2">ErgoScript Guide</div>
@@ -812,7 +812,7 @@ export default function TechnologyMapClient() {
               </Link>
               
               <Link href="/technology/eutxo-model" className="block">
-                <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
+                <Card className="h-full bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
                   <CardContent className="p-6 text-center">
                     <Box className="w-8 h-8 text-orange-400 mx-auto mb-3" />
                     <div className="font-semibold mb-2">eUTXO Deep Dive</div>
@@ -822,7 +822,7 @@ export default function TechnologyMapClient() {
               </Link>
 
               <a href="https://docs.ergoplatform.com" target="_blank" rel="noopener noreferrer" className="block">
-                <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
+                <Card className="h-full bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
                   <CardContent className="p-6 text-center">
                     <BookOpen className="w-8 h-8 text-orange-400 mx-auto mb-3" />
                     <div className="font-semibold mb-2">Documentation</div>
@@ -832,7 +832,7 @@ export default function TechnologyMapClient() {
               </a>
 
               <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer" className="block">
-                <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
+                <Card className="h-full bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
                   <CardContent className="p-6 text-center">
                     <GitBranch className="w-8 h-8 text-orange-400 mx-auto mb-3" />
                     <div className="font-semibold mb-2">Source Code</div>

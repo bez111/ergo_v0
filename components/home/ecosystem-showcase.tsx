@@ -205,7 +205,7 @@ export function EcosystemShowcase() {
                 className="gap-2 bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-black font-mono uppercase tracking-wider px-8 py-4"
                 asChild
               >
-                <Link href="/ecosystem/projects">{t("exploreEcosystem") || "EXPLORE ECOSYSTEM"}</Link>
+                <Link href="/ecosystem/">{t("exploreEcosystem") || "EXPLORE ECOSYSTEM"}</Link>
               </CyberButton>
             </div>
           </FadeIn>

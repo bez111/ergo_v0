@@ -11,6 +11,7 @@ import "../globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 
+
 interface LocaleLayoutProps {
   children: React.ReactNode;
   params: Promise<{ locale: string }>;
@@ -116,8 +117,8 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
       <NextIntlClientProvider locale={locale} messages={messages}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
-          enableSystem
+          enableSystem={false}
+          defaultTheme="dark"
           disableTransitionOnChange
         >
           <ErrorBoundary>
