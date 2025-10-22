@@ -1,10 +1,2541 @@
 {
-  "timestamp": "2025-08-17T22:22:12.809Z",
-  "orphanPages": [],
+  "timestamp": "2025-10-20T11:15:59.986Z",
+  "orphanPages": [
+    {
+      "url": "src/app/:param/blog/:param",
+      "file": "src/app/[locale]/blog/[slug]/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/blog",
+      "file": "src/app/[locale]/blog/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/contribute",
+      "file": "src/app/[locale]/docs/contribute/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/bounties-grants",
+      "file": "src/app/[locale]/docs/developers/bounties-grants/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/box/assets",
+      "file": "src/app/[locale]/docs/developers/box/assets/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/box/lifecycle",
+      "file": "src/app/[locale]/docs/developers/box/lifecycle/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/box/modelling",
+      "file": "src/app/[locale]/docs/developers/box/modelling/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/box",
+      "file": "src/app/[locale]/docs/developers/box/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/community-support",
+      "file": "src/app/[locale]/docs/developers/community-support/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/avl",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/avl/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/diffie",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/diffie/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/interlink-vectors",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/interlink-vectors/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs/implementation",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs/implementation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs/testing",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/merkle-tree/batch-proofs/testing/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/merkle-tree/core",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/merkle-tree/core/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/merkle-tree/extension-block",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/merkle-tree/extension-block/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/merkle-tree/lightweight-proofs",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/merkle-tree/lightweight-proofs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/merkle-tree",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/merkle-tree/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/other-signatures/distributed",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/other-signatures/distributed/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/other-signatures/improved",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/other-signatures/improved/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/other-signatures/internals",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/other-signatures/internals/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/other-signatures",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/other-signatures/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/other-signatures/ring",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/other-signatures/ring/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/other-signatures/threshold/3-out-of-5",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/other-signatures/threshold/3-out-of-5/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/other-signatures/threshold",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/other-signatures/threshold/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/popow",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/popow/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/schnorr",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/schnorr/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/cryptographic-primitives/zerojoin",
+      "file": "src/app/[locale]/docs/developers/cryptographic-primitives/zerojoin/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/address_types",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/address_types/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/address_validation",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/address_validation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/nfts/minting/on-chain",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/nfts/minting/on-chain/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/nfts/minting",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/nfts/minting/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/nfts/minting/simple-example",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/nfts/minting/simple-example/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/nfts/minting/v1-v2",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/nfts/minting/v1-v2/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/nfts",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/nfts/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/nfts/royalties",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/nfts/royalties/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/singletons",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/singletons/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/standards/artwork-contract",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/standards/artwork-contract/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/standards/asset-standard",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/standards/asset-standard/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/standards/auction-contract",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/standards/auction-contract/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/standards/genuine-token-verification",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/standards/genuine-token-verification/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/standards",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/standards/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/tokens/burning",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/tokens/burning/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/tokens",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/tokens/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/assets/tokens/perpetual",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/assets/tokens/perpetual/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/babel-fees/babel-fleet",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/babel-fees/babel-fleet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/babel-fees/how-to",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/babel-fees/how-to/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/babel-fees/implementation",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/babel-fees/implementation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/babel-fees",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/babel-fees/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/block-adproofs",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/block-adproofs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/block-header",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/block-header/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/block-transactions",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/block-transactions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/chained-transaction",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/chained-transaction/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction/data-inputs",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/data-inputs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction/fees",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/fees/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction/format",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/format/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction/merkle-tree",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/merkle-tree/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction/signing",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/signing/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction/signing-backend",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/signing-backend/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction/unified-transactions",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/unified-transactions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/composing/wallet-interaction/validation",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/composing/wallet-interaction/validation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/discrete",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/discrete/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/extension-section",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/extension-section/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/lifecycle",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/lifecycle/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/modeling",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/modeling/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/registers",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/registers/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/resources/model-transaction",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/resources/model-transaction/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/resources",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/resources/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/resources/payments",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/resources/payments/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/resources/standards/eip17",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/resources/standards/eip17/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/resources/standards/eip20",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/resources/standards/eip20/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/resources/standards/eip25",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/resources/standards/eip25/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/resources/standards/jitc",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/resources/standards/jitc/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/data-model-apis/resources/standards",
+      "file": "src/app/[locale]/docs/developers/data-model-apis/resources/standards/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/accessing-boxes",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/accessing-boxes/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/as-a-language",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/as-a-language/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/blockchain-context",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/blockchain-context/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/core-concepts",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/core-concepts/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/encoding",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/encoding/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/ergoscript-vs-ergotree",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/ergoscript-vs-ergotree/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/evaluation",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/evaluation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/anyone-can-spend",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/anyone-can-spend/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/box-structure",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/box-structure/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/code-blocks",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/code-blocks/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/context-variables",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/context-variables/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/functional-programming",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/functional-programming/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/no-one-can-spend",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/no-one-can-spend/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/public-contracts",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/public-contracts/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/public-keys",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/public-keys/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/simple-p2s-app",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/simple-p2s-app/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/examples/storing-data",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/examples/storing-data/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/global-functions",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/global-functions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/introduction",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/introduction/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/language-description",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/language-description/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/language-operations",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/language-operations/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/context-enrichment",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/context-enrichment/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/examples/fsm",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/examples/fsm/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/examples/ico",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/examples/ico/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/examples/mast",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/examples/mast/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/examples",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/examples/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/examples/reversible-address",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/examples/reversible-address/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/examples/rock-paper-scissors",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/examples/rock-paper-scissors/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/multi-stage-transactions",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/multi-stage-transactions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-chains",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-chains/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-graphs",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-graphs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-trees",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/multi-stage-protocol/transaction-trees/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/predefined-functions",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/predefined-functions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/predefined-types",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/predefined-types/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/script-optimisation",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/script-optimisation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/script-validation",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/script-validation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/serialization",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/serialization/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/sigma-6",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/sigma-6/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/sigma-propositions",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/sigma-propositions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/sigmaboolean",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/sigmaboolean/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/simple-syntax",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/simple-syntax/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/templates",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/templates/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/typing",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/typing/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/data-inputs",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/data-inputs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/fees",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/fees/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/format",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/format/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/merkle-tree",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/merkle-tree/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/multi-stage-protocols",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/multi-stage-protocols/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/signing",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/signing/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/signing-backend",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/signing-backend/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/unified-transactions",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/unified-transactions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/ergoscript-languages/wallet-interaction/validation",
+      "file": "src/app/[locale]/docs/developers/ergoscript-languages/wallet-interaction/validation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/api/how-to",
+      "file": "src/app/[locale]/docs/developers/infrastructure/api/how-to/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/api",
+      "file": "src/app/[locale]/docs/developers/infrastructure/api/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/explorer/graphql",
+      "file": "src/app/[locale]/docs/developers/infrastructure/explorer/graphql/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/explorer/local-setup",
+      "file": "src/app/[locale]/docs/developers/infrastructure/explorer/local-setup/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/explorer",
+      "file": "src/app/[locale]/docs/developers/infrastructure/explorer/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/explorer/pi-explorer",
+      "file": "src/app/[locale]/docs/developers/infrastructure/explorer/pi-explorer/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/integration/dust-collection",
+      "file": "src/app/[locale]/docs/developers/infrastructure/integration/dust-collection/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/integration",
+      "file": "src/app/[locale]/docs/developers/infrastructure/integration/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/integration/transaction-lifecycle",
+      "file": "src/app/[locale]/docs/developers/infrastructure/integration/transaction-lifecycle/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/api-try-it-out",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/api-try-it-out/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/application-conf/cache",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/application-conf/cache/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/application-conf/chain",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/application-conf/chain/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/application-conf/node",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/application-conf/node/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/application-conf",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/application-conf/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/application-conf/voting",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/application-conf/voting/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/application-conf/wallet",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/application-conf/wallet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/devnet-conf",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/devnet-conf/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/indexed-node-api",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/indexed-node-api/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/openapi-spec",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/openapi-spec/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/swagger-ui",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/swagger-ui/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/testnet-conf",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/testnet-conf/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/tor",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/tor/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/wallet/hierarchical",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/wallet/hierarchical/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/wallet/initialize",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/wallet/initialize/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/configuration/wallet/setup",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/configuration/wallet/setup/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/archival-node",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/archival-node/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/archival-node/technical-details",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/archival-node/technical-details/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/digest-state",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/digest-state/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/history-pruning",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/history-pruning/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/light-full-node",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/light-full-node/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/light-full-node/technical-details",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/light-full-node/technical-details/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/light-spv-node/overview",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/light-spv-node/overview/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/light-spv-node",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/light-spv-node/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/light-spv-node/technical-details",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/light-spv-node/technical-details/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/pruned-full-node",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/pruned-full-node/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/modes/pruned-full-node/technical-details",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/modes/pruned-full-node/technical-details/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/protocol/block-p2p",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/protocol/block-p2p/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/protocol/eips",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/protocol/eips/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/protocol/modifiers",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/protocol/modifiers/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/protocol/network-messages",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/protocol/network-messages/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/protocol/p2p-handshake",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/protocol/p2p-handshake/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/protocol/p2p-protocol-overview",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/protocol/p2p-protocol-overview/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/protocol",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/protocol/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/protocol/peer-management",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/protocol/peer-management/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/android",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/android/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/android/proot-rocksdb",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/android/proot-rocksdb/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/android/termux-digest",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/android/termux-digest/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/build",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/build/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/dependencies",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/dependencies/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/docker",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/docker/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/faq",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/faq/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/manual",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/manual/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/pi",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/pi/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/setup/troubleshooting",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/setup/troubleshooting/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/testnet/cpu-mining",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/testnet/cpu-mining/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/testnet/mine-your-own-chain",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/testnet/mine-your-own-chain/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/testnet",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/testnet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/testnet/testnet-full",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/testnet/testnet-full/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/node/testnet/testnet-resources",
+      "file": "src/app/[locale]/docs/developers/infrastructure/node/testnet/testnet-resources/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/offchain",
+      "file": "src/app/[locale]/docs/developers/infrastructure/offchain/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure",
+      "file": "src/app/[locale]/docs/developers/infrastructure/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/access-issues",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/access-issues/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/cold-wallet",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/cold-wallet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/deterministic-wallet-standard",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/deterministic-wallet-standard/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/eip-0005",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/eip-0005/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/eip-standards-overview",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/eip-standards-overview/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/minotaur",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/minotaur/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/multisig",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/multisig/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/nautilus",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/nautilus/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/paper-wallet",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/paper-wallet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/safew",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/safew/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/satergo",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/satergo/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/standards",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/standards/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/infrastructure/wallets/utxo-set-scanning-wallet-api",
+      "file": "src/app/[locale]/docs/developers/infrastructure/wallets/utxo-set-scanning-wallet-api/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers",
+      "file": "src/app/[locale]/docs/developers/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/resources",
+      "file": "src/app/[locale]/docs/developers/resources/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/students",
+      "file": "src/app/[locale]/docs/developers/students/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/appkit/frameworks/appkit/local-node",
+      "file": "src/app/[locale]/docs/developers/tooling/appkit/frameworks/appkit/local-node/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/basics-tutorial",
+      "file": "src/app/[locale]/docs/developers/tooling/basics-tutorial/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/beginner",
+      "file": "src/app/[locale]/docs/developers/tooling/beginner/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/browser",
+      "file": "src/app/[locale]/docs/developers/tooling/browser/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/bundled-dapps",
+      "file": "src/app/[locale]/docs/developers/tooling/bundled-dapps/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/compilers/cli",
+      "file": "src/app/[locale]/docs/developers/tooling/compilers/cli/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/compilers/comparison",
+      "file": "src/app/[locale]/docs/developers/tooling/compilers/comparison/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/compilers/constrained-environments",
+      "file": "src/app/[locale]/docs/developers/tooling/compilers/constrained-environments/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/compilers/ergo-scala",
+      "file": "src/app/[locale]/docs/developers/tooling/compilers/ergo-scala/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/compilers",
+      "file": "src/app/[locale]/docs/developers/tooling/compilers/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/compilers/phases",
+      "file": "src/app/[locale]/docs/developers/tooling/compilers/phases/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/compilers/sigma-rust",
+      "file": "src/app/[locale]/docs/developers/tooling/compilers/sigma-rust/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/compilers/sigmastate-interpreter",
+      "file": "src/app/[locale]/docs/developers/tooling/compilers/sigmastate-interpreter/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/debugging",
+      "file": "src/app/[locale]/docs/developers/tooling/debugging/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/desktop",
+      "file": "src/app/[locale]/docs/developers/tooling/desktop/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/development-stack",
+      "file": "src/app/[locale]/docs/developers/tooling/development-stack/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/fleet",
+      "file": "src/app/[locale]/docs/developers/tooling/fleet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/flowcards",
+      "file": "src/app/[locale]/docs/developers/tooling/flowcards/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/appkit/gradle",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/appkit/gradle/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/appkit",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/appkit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/appkit/tutorial",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/appkit/tutorial/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/ergpy",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/ergpy/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/fleet",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/fleet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/fleetsharp",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/fleetsharp/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/headless-dapp-framework/modules",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/headless-dapp-framework/modules/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/headless-dapp-framework",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/headless-dapp-framework/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/jde",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/jde/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/mosaik",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/mosaik/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/rustkit",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/rustkit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/sigmarust/constrained-environments",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/sigmarust/constrained-environments/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/frameworks/sigmarust",
+      "file": "src/app/[locale]/docs/developers/tooling/frameworks/sigmarust/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/jde",
+      "file": "src/app/[locale]/docs/developers/tooling/jde/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/libraries/deco",
+      "file": "src/app/[locale]/docs/developers/tooling/libraries/deco/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/libraries/eip12-types",
+      "file": "src/app/[locale]/docs/developers/tooling/libraries/eip12-types/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/libraries/getblok-plasma",
+      "file": "src/app/[locale]/docs/developers/tooling/libraries/getblok-plasma/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/libraries",
+      "file": "src/app/[locale]/docs/developers/tooling/libraries/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/libraries/scrypto",
+      "file": "src/app/[locale]/docs/developers/tooling/libraries/scrypto/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/libraries/sigmajs",
+      "file": "src/app/[locale]/docs/developers/tooling/libraries/sigmajs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mobile/android",
+      "file": "src/app/[locale]/docs/developers/tooling/mobile/android/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mobile/constraints",
+      "file": "src/app/[locale]/docs/developers/tooling/mobile/constraints/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mobile/ios",
+      "file": "src/app/[locale]/docs/developers/tooling/mobile/ios/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mobile",
+      "file": "src/app/[locale]/docs/developers/tooling/mobile/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mosaik/deployment",
+      "file": "src/app/[locale]/docs/developers/tooling/mosaik/deployment/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mosaik/ergopay",
+      "file": "src/app/[locale]/docs/developers/tooling/mosaik/ergopay/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mosaik/examples",
+      "file": "src/app/[locale]/docs/developers/tooling/mosaik/examples/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mosaik",
+      "file": "src/app/[locale]/docs/developers/tooling/mosaik/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mosaik/processing-data",
+      "file": "src/app/[locale]/docs/developers/tooling/mosaik/processing-data/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mosaik/simple-ui",
+      "file": "src/app/[locale]/docs/developers/tooling/mosaik/simple-ui/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mosaik/tutorial",
+      "file": "src/app/[locale]/docs/developers/tooling/mosaik/tutorial/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/mosaik/web-ui",
+      "file": "src/app/[locale]/docs/developers/tooling/mosaik/web-ui/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling",
+      "file": "src/app/[locale]/docs/developers/tooling/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/payments/assembler",
+      "file": "src/app/[locale]/docs/developers/tooling/payments/assembler/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/payments/dapp-connector",
+      "file": "src/app/[locale]/docs/developers/tooling/payments/dapp-connector/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/payments/ergoauth",
+      "file": "src/app/[locale]/docs/developers/tooling/payments/ergoauth/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/payments/ergopay/ergo-pay",
+      "file": "src/app/[locale]/docs/developers/tooling/payments/ergopay/ergo-pay/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/payments/ergopay",
+      "file": "src/app/[locale]/docs/developers/tooling/payments/ergopay/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/payments/ergopay/tutorial",
+      "file": "src/app/[locale]/docs/developers/tooling/payments/ergopay/tutorial/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/payments",
+      "file": "src/app/[locale]/docs/developers/tooling/payments/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/payments/proxy-contracts",
+      "file": "src/app/[locale]/docs/developers/tooling/payments/proxy-contracts/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/playgrounds/ergopuppet",
+      "file": "src/app/[locale]/docs/developers/tooling/playgrounds/ergopuppet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/playgrounds/kiosk",
+      "file": "src/app/[locale]/docs/developers/tooling/playgrounds/kiosk/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/playgrounds/p2s-playground",
+      "file": "src/app/[locale]/docs/developers/tooling/playgrounds/p2s-playground/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/playgrounds",
+      "file": "src/app/[locale]/docs/developers/tooling/playgrounds/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/playgrounds/scastie",
+      "file": "src/app/[locale]/docs/developers/tooling/playgrounds/scastie/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/javascript",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/javascript/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/jvm/java",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/jvm/java/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/jvm/kotlin",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/jvm/kotlin/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/jvm",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/jvm/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/jvm/scala",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/jvm/scala/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/others/csharp",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/others/csharp/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/others/go",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/others/go/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/others",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/others/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/others/python",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/others/python/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/programming-languages/rust",
+      "file": "src/app/[locale]/docs/developers/tooling/programming-languages/rust/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/rustkit",
+      "file": "src/app/[locale]/docs/developers/tooling/rustkit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/server",
+      "file": "src/app/[locale]/docs/developers/tooling/server/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/sigma-rust/constrained",
+      "file": "src/app/[locale]/docs/developers/tooling/sigma-rust/constrained/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/sigma-rust",
+      "file": "src/app/[locale]/docs/developers/tooling/sigma-rust/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/sigmajs",
+      "file": "src/app/[locale]/docs/developers/tooling/sigmajs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/starter-tutorial",
+      "file": "src/app/[locale]/docs/developers/tooling/starter-tutorial/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tooling/wallet/payments/ergopay/ergo-pay",
+      "file": "src/app/[locale]/docs/developers/tooling/wallet/payments/ergopay/ergo-pay/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tutorials/fleet-sdk-recipes",
+      "file": "src/app/[locale]/docs/developers/tutorials/fleet-sdk-recipes/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tutorials/hardware-wallet-integration",
+      "file": "src/app/[locale]/docs/developers/tutorials/hardware-wallet-integration/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/developers/tutorials",
+      "file": "src/app/[locale]/docs/developers/tutorials/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards/analytics",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/Analytics/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards/chat-bridge",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/Chat-Bridge/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards/community-admin",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/Community-Admin/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards/community-guidelines",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/Community-Guidelines/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards/development",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/Development/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards/ergotipper",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/ErgoTipper/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards/identity-security",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/Identity-Security/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards/kya",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/KYA/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/standards",
+      "file": "src/app/[locale]/docs/ecosystem/Standards/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/ai",
+      "file": "src/app/[locale]/docs/ecosystem/ai/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/applications/email-client",
+      "file": "src/app/[locale]/docs/ecosystem/applications/email-client/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/applications",
+      "file": "src/app/[locale]/docs/ecosystem/applications/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/applications/tabbypos",
+      "file": "src/app/[locale]/docs/ecosystem/applications/tabbypos/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/applications/zengateglobal",
+      "file": "src/app/[locale]/docs/ecosystem/applications/zenGateGlobal/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/daos",
+      "file": "src/app/[locale]/docs/ecosystem/daos/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/bonding-curve",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/bonding-curve/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/buyback-guarantees",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/buyback-guarantees/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/duckpools",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/duckpools/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/ergoraffle",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/ergoraffle/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/exle",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/exle/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/flash-loans",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/flash-loans/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/ico",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/ico/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/index-coins",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/index-coins/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/insurance",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/insurance/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/micro-credit",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/micro-credit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/multi-stage-protocols",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/multi-stage-protocols/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/mutual-credit",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/mutual-credit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/optionpools",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/optionpools/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/perpetual-tokens",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/perpetual-tokens/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/pow-tokens",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/pow-tokens/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/revenue-sharing",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/revenue-sharing/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/sigma-subscriptions",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/sigma-subscriptions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/sigmafi",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/sigmafi/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/sigmao",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/sigmao/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/defi/trustless-prediction-markets",
+      "file": "src/app/[locale]/docs/ecosystem/financial/defi/trustless-prediction-markets/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance/auctioncoin",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/auctioncoin/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance/grand-gambit",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/grand-gambit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance/hodlbox",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/hodlbox/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance/hodlcoin",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/hodlcoin/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance/lotteries",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/lotteries/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance/obolflip",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/obolflip/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance/optioncoin",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/optioncoin/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/degenerate-finance/the-field",
+      "file": "src/app/[locale]/docs/ecosystem/financial/degenerate-finance/the-field/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/analog-ergo",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/analog-ergo/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/crystal-pool",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/crystal-pool/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/guapswap",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/guapswap/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/machina",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/machina/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/mew",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/mew/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/palmyra",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/palmyra/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/single-tx-swap",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/single-tx-swap/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/spectrum",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/spectrum/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/token-jay",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/token-jay/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/dex/trade-house",
+      "file": "src/app/[locale]/docs/ecosystem/financial/dex/trade-house/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/monetary-systems/basic-implementation",
+      "file": "src/app/[locale]/docs/ecosystem/financial/monetary-systems/basic-implementation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/monetary-systems/chaincash",
+      "file": "src/app/[locale]/docs/ecosystem/financial/monetary-systems/chaincash/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/monetary-systems/dexygold",
+      "file": "src/app/[locale]/docs/ecosystem/financial/monetary-systems/dexygold/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/monetary-systems/gluon",
+      "file": "src/app/[locale]/docs/ecosystem/financial/monetary-systems/gluon/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/monetary-systems/lets",
+      "file": "src/app/[locale]/docs/ecosystem/financial/monetary-systems/lets/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/monetary-systems",
+      "file": "src/app/[locale]/docs/ecosystem/financial/monetary-systems/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/monetary-systems/sigmausd",
+      "file": "src/app/[locale]/docs/ecosystem/financial/monetary-systems/sigmausd/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial/monetary-systems/trustless-lets",
+      "file": "src/app/[locale]/docs/ecosystem/financial/monetary-systems/trustless-lets/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/financial",
+      "file": "src/app/[locale]/docs/ecosystem/financial/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/infrastructure/oracles",
+      "file": "src/app/[locale]/docs/ecosystem/infrastructure/oracles/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/infrastructure",
+      "file": "src/app/[locale]/docs/ecosystem/infrastructure/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/infrastructure/rosen-bridge",
+      "file": "src/app/[locale]/docs/ecosystem/infrastructure/rosen-bridge/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/infrastructure/sidechains",
+      "file": "src/app/[locale]/docs/ecosystem/infrastructure/sidechains/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/nfts/cyberverse",
+      "file": "src/app/[locale]/docs/ecosystem/nfts/Cyberverse/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/nfts/blitztcg",
+      "file": "src/app/[locale]/docs/ecosystem/nfts/blitzTCG/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/nfts",
+      "file": "src/app/[locale]/docs/ecosystem/nfts/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/nfts/pandav",
+      "file": "src/app/[locale]/docs/ecosystem/nfts/pandaV/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/nfts/skyharbor",
+      "file": "src/app/[locale]/docs/ecosystem/nfts/skyharbor/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem",
+      "file": "src/app/[locale]/docs/ecosystem/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/privacy/ergomixer",
+      "file": "src/app/[locale]/docs/ecosystem/privacy/ergomixer/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/privacy",
+      "file": "src/app/[locale]/docs/ecosystem/privacy/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/privacy/sigmajoin",
+      "file": "src/app/[locale]/docs/ecosystem/privacy/sigmajoin/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/privacy/stealth-addresses",
+      "file": "src/app/[locale]/docs/ecosystem/privacy/stealth-addresses/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/arbit",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/arbit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/celaut",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/celaut/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/crux-finance",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/crux-finance/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/ergonames",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/ergonames/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/grid-trading",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/grid-trading/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/moria-finance",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/moria-finance/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/netnotes",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/netnotes/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/off-the-grid",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/off-the-grid/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/reputation-system",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/reputation-system/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/sigmarand",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/sigmarand/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/trading",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/trading/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/ecosystem/tooling/tutorial",
+      "file": "src/app/[locale]/docs/ecosystem/tooling/tutorial/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/audit",
+      "file": "src/app/[locale]/docs/introduction/audit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/autolykos",
+      "file": "src/app/[locale]/docs/introduction/autolykos/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/cbdc",
+      "file": "src/app/[locale]/docs/introduction/cbdc/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/devdao",
+      "file": "src/app/[locale]/docs/introduction/devdao/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/entities",
+      "file": "src/app/[locale]/docs/introduction/entities/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/ergo-foundation",
+      "file": "src/app/[locale]/docs/introduction/ergo-foundation/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/ergosummit",
+      "file": "src/app/[locale]/docs/introduction/ergosummit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/eutxo",
+      "file": "src/app/[locale]/docs/introduction/eutxo/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/events",
+      "file": "src/app/[locale]/docs/introduction/events/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/faq",
+      "file": "src/app/[locale]/docs/introduction/faq/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/glossary",
+      "file": "src/app/[locale]/docs/introduction/glossary/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/howey-test",
+      "file": "src/app/[locale]/docs/introduction/howey-test/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/key-features",
+      "file": "src/app/[locale]/docs/introduction/key-features/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/light-clients",
+      "file": "src/app/[locale]/docs/introduction/light-clients/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/light-miners",
+      "file": "src/app/[locale]/docs/introduction/light-miners/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/misconceptions",
+      "file": "src/app/[locale]/docs/introduction/misconceptions/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/nipopow-sidechains",
+      "file": "src/app/[locale]/docs/introduction/nipopow-sidechains/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/nipopows",
+      "file": "src/app/[locale]/docs/introduction/nipopows/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/privacy",
+      "file": "src/app/[locale]/docs/introduction/privacy/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/privacy-guide",
+      "file": "src/app/[locale]/docs/introduction/privacy-guide/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/research-whitepapers",
+      "file": "src/app/[locale]/docs/introduction/research-whitepapers/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/resources",
+      "file": "src/app/[locale]/docs/introduction/resources/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/roadmap/atomic-composability",
+      "file": "src/app/[locale]/docs/introduction/roadmap/atomic-composability/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/roadmap",
+      "file": "src/app/[locale]/docs/introduction/roadmap/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/roadmap/scaling-roadmap",
+      "file": "src/app/[locale]/docs/introduction/roadmap/scaling-roadmap/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/roadmap/sub-blocks",
+      "file": "src/app/[locale]/docs/introduction/roadmap/sub-blocks/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/roadmap/sub-blocks/technical-details",
+      "file": "src/app/[locale]/docs/introduction/roadmap/sub-blocks/technical-details/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/roadmap/transaction-speed",
+      "file": "src/app/[locale]/docs/introduction/roadmap/transaction-speed/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/sigmanauts",
+      "file": "src/app/[locale]/docs/introduction/sigmanauts/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/social-contract",
+      "file": "src/app/[locale]/docs/introduction/social-contract/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/storage-rent",
+      "file": "src/app/[locale]/docs/introduction/storage-rent/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/utxo-state",
+      "file": "src/app/[locale]/docs/introduction/utxo-state/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/utxo-vs-account",
+      "file": "src/app/[locale]/docs/introduction/utxo-vs-account/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/introduction/wallets",
+      "file": "src/app/[locale]/docs/introduction/wallets/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/miner-tooling/cyti",
+      "file": "src/app/[locale]/docs/miners/Miner-Tooling/cyti/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/miner-tooling/guapswap",
+      "file": "src/app/[locale]/docs/miners/Miner-Tooling/guapswap/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/miner-tooling/lithos",
+      "file": "src/app/[locale]/docs/miners/Miner-Tooling/lithos/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/miner-tooling/log-space-mining",
+      "file": "src/app/[locale]/docs/miners/Miner-Tooling/log-space-mining/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/miner-tooling",
+      "file": "src/app/[locale]/docs/miners/Miner-Tooling/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/miner-tooling/smartpools",
+      "file": "src/app/[locale]/docs/miners/Miner-Tooling/smartpools/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/revenue",
+      "file": "src/app/[locale]/docs/miners/Revenue/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/governance/forking/hard-forks",
+      "file": "src/app/[locale]/docs/miners/governance/forking/hard-forks/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/governance/forking",
+      "file": "src/app/[locale]/docs/miners/governance/forking/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/governance/forking/soft-forks",
+      "file": "src/app/[locale]/docs/miners/governance/forking/soft-forks/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/governance/forking/velvet-forks",
+      "file": "src/app/[locale]/docs/miners/governance/forking/velvet-forks/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/governance",
+      "file": "src/app/[locale]/docs/miners/governance/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/governance/voting",
+      "file": "src/app/[locale]/docs/miners/governance/voting/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/host-a-pool",
+      "file": "src/app/[locale]/docs/miners/mining-guides/host-a-pool/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/operating-systems",
+      "file": "src/app/[locale]/docs/miners/mining-guides/operating-systems/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/overclocking",
+      "file": "src/app/[locale]/docs/miners/mining-guides/overclocking/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides",
+      "file": "src/app/[locale]/docs/miners/mining-guides/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/pools",
+      "file": "src/app/[locale]/docs/miners/mining-guides/pools/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/software",
+      "file": "src/app/[locale]/docs/miners/mining-guides/software/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/solo-mining/faq",
+      "file": "src/app/[locale]/docs/miners/mining-guides/solo-mining/faq/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/solo-mining/miningcore",
+      "file": "src/app/[locale]/docs/miners/mining-guides/solo-mining/miningcore/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/solo-mining/miningcore/windows",
+      "file": "src/app/[locale]/docs/miners/mining-guides/solo-mining/miningcore/windows/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/solo-mining",
+      "file": "src/app/[locale]/docs/miners/mining-guides/solo-mining/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/solo-mining/stratum",
+      "file": "src/app/[locale]/docs/miners/mining-guides/solo-mining/stratum/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/mining-guides/solo-mining/withdraw",
+      "file": "src/app/[locale]/docs/miners/mining-guides/solo-mining/withdraw/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners",
+      "file": "src/app/[locale]/docs/miners/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/miners/resources",
+      "file": "src/app/[locale]/docs/miners/resources/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs",
+      "file": "src/app/[locale]/docs/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/resources",
+      "file": "src/app/[locale]/docs/resources/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/docs/why-ergo",
+      "file": "src/app/[locale]/docs/why-ergo/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/ecosystem/grants",
+      "file": "src/app/[locale]/ecosystem/grants/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/ecosystem/map",
+      "file": "src/app/[locale]/ecosystem/map/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/ecosystem/mining",
+      "file": "src/app/[locale]/ecosystem/mining/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/ecosystem",
+      "file": "src/app/[locale]/ecosystem/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/events",
+      "file": "src/app/[locale]/events/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/learn/ergoscript",
+      "file": "src/app/[locale]/learn/ergoscript/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/learn/faq",
+      "file": "src/app/[locale]/learn/faq/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/learn/guides",
+      "file": "src/app/[locale]/learn/guides/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/learn",
+      "file": "src/app/[locale]/learn/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/learn/research",
+      "file": "src/app/[locale]/learn/research/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param",
+      "file": "src/app/[locale]/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/start/community",
+      "file": "src/app/[locale]/start/community/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/start/comparison",
+      "file": "src/app/[locale]/start/comparison/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/start/faq",
+      "file": "src/app/[locale]/start/faq/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/start/introduction",
+      "file": "src/app/[locale]/start/introduction/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/start",
+      "file": "src/app/[locale]/start/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/start/quiz",
+      "file": "src/app/[locale]/start/quiz/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/adaptive-emission",
+      "file": "src/app/[locale]/technology/adaptive-emission/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/ergoscript",
+      "file": "src/app/[locale]/technology/ergoscript/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/eutxo-model",
+      "file": "src/app/[locale]/technology/eutxo-model/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/map",
+      "file": "src/app/[locale]/technology/map/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/native-tokens",
+      "file": "src/app/[locale]/technology/native-tokens/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/nipopows",
+      "file": "src/app/[locale]/technology/nipopows/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/oracle-pools",
+      "file": "src/app/[locale]/technology/oracle-pools/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology",
+      "file": "src/app/[locale]/technology/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/privacy-features",
+      "file": "src/app/[locale]/technology/privacy-features/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/secure-pow",
+      "file": "src/app/[locale]/technology/secure-pow/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/storage-rent",
+      "file": "src/app/[locale]/technology/storage-rent/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/subblocks",
+      "file": "src/app/[locale]/technology/subblocks/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/technology/velvet-forks",
+      "file": "src/app/[locale]/technology/velvet-forks/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/ui-kit",
+      "file": "src/app/[locale]/ui-kit/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/babel-fees",
+      "file": "src/app/[locale]/use/babel-fees/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/bridges",
+      "file": "src/app/[locale]/use/bridges/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/daos",
+      "file": "src/app/[locale]/use/daos/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/gaming",
+      "file": "src/app/[locale]/use/gaming/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/get-erg",
+      "file": "src/app/[locale]/use/get-erg/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/identity",
+      "file": "src/app/[locale]/use/identity/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/mining",
+      "file": "src/app/[locale]/use/mining/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/nfts",
+      "file": "src/app/[locale]/use/nfts/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/oracles",
+      "file": "src/app/[locale]/use/oracles/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use",
+      "file": "src/app/[locale]/use/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/privacy",
+      "file": "src/app/[locale]/use/privacy/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/use/stablecoins",
+      "file": "src/app/[locale]/use/stablecoins/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/:param/wallet",
+      "file": "src/app/[locale]/wallet/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app/admin/:param]",
+      "file": "src/app/admin/[[...index]]/page.tsx",
+      "inSitemap": false
+    },
+    {
+      "url": "src/app",
+      "file": "src/app/page.tsx",
+      "inSitemap": false
+    }
+  ],
   "poorlyLinkedPages": [],
   "statistics": {
-    "totalPages": 515,
-    "orphanPages": 0,
+    "totalPages": 506,
+    "orphanPages": 506,
     "wellLinkedPages": 0,
     "poorlyLinkedPages": 0
   }

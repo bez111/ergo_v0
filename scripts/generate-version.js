@@ -14,7 +14,7 @@ export const version = ${JSON.stringify(versionInfo, null, 2)};
 `;
 
 fs.writeFileSync(
-  path.join(__dirname, '../lib/version.ts'),
+  path.join(__dirname, '../src/lib/version.ts'),
   content
 );
 

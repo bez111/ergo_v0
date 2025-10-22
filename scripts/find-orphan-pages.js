@@ -102,8 +102,8 @@ function findAllInternalLinks() {
     }
   }
   
-  scanDirectory('app');
-  scanDirectory('components');
+  scanDirectory('src/app');
+  scanDirectory('src/components');
   
   return linkMap;
 }
@@ -120,7 +120,7 @@ function isInNavigation(url) {
 
 // Проверить наличие страницы в sitemap
 function isInSitemap(url) {
-  const sitemapPath = path.join('app', 'sitemap.ts');
+  const sitemapPath = path.join('src/app', 'sitemap.ts');
   if (fs.existsSync(sitemapPath)) {
     const content = fs.readFileSync(sitemapPath, 'utf8');
     return content.toLowerCase().includes(url);
@@ -133,7 +133,7 @@ function findOrphanPages() {
   console.log(`${colors.blue}🔍 Поиск orphan страниц...${colors.reset}\n`);
   
   // Находим все страницы
-  const allPages = findAllPages('app');
+  const allPages = findAllPages('src/app');
   console.log(`Найдено страниц: ${colors.green}${allPages.length}${colors.reset}`);
   
   // Находим все внутренние ссылки
