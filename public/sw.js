@@ -12,7 +12,7 @@ const PRECACHE_ASSETS = [
   '/manifest.json',
   '/favicon.ico',
   '/logo.png',
-  '/styles/globals.css',
+  // CSS files are handled by cacheFirst strategy below
   // Critical pages for SEO
   '/wallet',
   '/technology',
