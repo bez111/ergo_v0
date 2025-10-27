@@ -1,0 +1,66 @@
+---
+description: Strict rules - only manual content changes within existing files, no structural modifications
+alwaysApply: true
+---
+
+# Cursor AI Rules for Ergo Platform Project
+
+## STRICT RULE: NO FILE STRUCTURE CHANGES
+
+**NEVER DO:**
+- Move files between directories
+- Rename files or folders
+- Create new directories
+- Delete existing files
+- Change import paths between files
+- Restructure the project layout
+- Modify file extensions
+- Change directory hierarchy
+- Create new files
+- Add new components to different directories
+- Move components between folders
+- Change file locations
+- Reorganize any part of the file structure
+- Create new folders or subdirectories
+
+**ONLY ALLOWED:**
+- Edit content inside existing files (text, code, comments)
+- Modify existing code within files
+- Fix bugs by changing code content
+- Update configuration values within existing config files
+- Add comments or documentation within existing files
+- Refactor code within the same file
+- Update dependencies in package.json (content only)
+- Modify existing CSS/styling within files
+- Change text content in existing files
+
+**EXCEPTIONS:**
+- Only if user **explicitly requests** structure changes
+- Only after **explicit confirmation** from user
+- Only for critical security fixes that require file moves
+
+## Project Structure Rules
+
+- Keep all files in their current locations
+- Maintain existing import/export patterns
+- Preserve directory naming conventions
+- Don't reorganize components or pages
+- Keep configuration files in root directory
+
+## Development Guidelines
+
+- Focus on content improvements, not structural changes
+- Ask permission before any file operations
+- Explain why changes are needed before applying
+- Respect existing code organization
+- Maintain backward compatibility
+
+## Violation Consequences
+
+If you violate this rule:
+1. Stop immediately
+2. Revert any changes made
+3. Apologize to the user
+4. Ask for explicit permission before proceeding
+
+**Remember: This project structure is intentional and should not be modified without explicit user consent.**
