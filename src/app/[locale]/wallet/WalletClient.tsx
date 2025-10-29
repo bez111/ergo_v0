@@ -303,7 +303,7 @@ export default function WalletClient() {
         </section>
 
         {/* Wallets Grid */}
-        <div className="max-w-6xl mx-auto px-4 pb-12">
+        <div className="max-w-6xl mx-auto pb-12">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {allWallets.map((wallet, index) => {
                 const IconComponent = wallet.icon
