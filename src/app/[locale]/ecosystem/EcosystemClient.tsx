@@ -110,6 +110,7 @@ export default function EcosystemClient() {
   const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("ALL")
   const [selectedStatus, setSelectedStatus] = useState("ALL")
+  const [viewMode, setViewMode] = useState<"grid" | "list">("list")
   const [currentFeaturedIndex, setCurrentFeaturedIndex] = useState(0)
   const [isAutoPlay, setIsAutoPlay] = useState(true)
 
@@ -122,6 +123,11 @@ export default function EcosystemClient() {
     setDebouncedSearchTerm("")
   }, [])
 
+
+  useEffect(() => {
+    setViewMode("list")
+    try { localStorage.setItem("ecosystemViewMode", "list") } catch {}
+  }, [])
 
   // Auto-play carousel
   useEffect(() => {
@@ -138,44 +144,17 @@ export default function EcosystemClient() {
   }, [isAutoPlay, featuredProjects.length])
 
   useEffect(() => {
-    // Если поле поиска пустое или содержит только пробелы, сбрасываем сразу
-    if (!searchTerm || searchTerm.trim() === "") {
-      setDebouncedSearchTerm("")
-      return
-    }
-    
-    // Иначе используем debounce
-    const timer = setTimeout(() => {
-      setDebouncedSearchTerm(searchTerm.trim())
-    }, 300)
-    
+    const timer = setTimeout(() => setDebouncedSearchTerm(searchTerm), 300)
     return () => clearTimeout(timer)
   }, [searchTerm])
 
   const filteredProjects = useMemo(() => {
-    const searchLower = debouncedSearchTerm.toLowerCase().trim()
-    
-    // Если поиск пустой, показываем все проекты (с учетом фильтров)
-    if (!searchLower || searchLower.length === 0) {
-      return projects.filter((project) => {
-        const matchesCategory = selectedCategory === "ALL" || project.category === selectedCategory
-        const matchesStatus = selectedStatus === "ALL" || project.status === selectedStatus
-        return matchesCategory && matchesStatus
-      })
-    }
-    
-    // Если есть поисковый запрос, фильтруем по всем критериям
-    return projects.filter((project) => {
-      const matchesSearch = 
-        project.name.toLowerCase().includes(searchLower) ||
-        project.description.toLowerCase().includes(searchLower) ||
-        project.category.toLowerCase().includes(searchLower)
-      
-      const matchesCategory = selectedCategory === "ALL" || project.category === selectedCategory
-      const matchesStatus = selectedStatus === "ALL" || project.status === selectedStatus
-      
-      return matchesSearch && matchesCategory && matchesStatus
-    })
+    return projects.filter(
+      (project) =>
+        project.name.toLowerCase().includes(debouncedSearchTerm.toLowerCase()) &&
+        (selectedCategory === "ALL" || project.category === selectedCategory) &&
+        (selectedStatus === "ALL" || project.status === selectedStatus),
+    )
   }, [debouncedSearchTerm, selectedCategory, selectedStatus, projects])
 
   return (
@@ -309,52 +288,19 @@ export default function EcosystemClient() {
               </div>
               <div className="relative w-full md:w-auto md:flex-1" style={{ contain: "layout paint" }}>
                 <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" aria-hidden="true" focusable="false" />
-                <Input 
-                  type="text" 
-                  placeholder="Search projects by name, description, or category..." 
-                  value={searchTerm} 
-                  onChange={(e) => {
-                    const value = e.target.value
-                    setSearchTerm(value)
-                    // Если поле очищено, сразу сбрасываем debounced значение
-                    if (!value || value.trim() === "") {
-                      setDebouncedSearchTerm("")
-                    }
-                  }}
-                  onKeyDown={(e) => {
-                    if (e.key === 'Escape') {
-                      clearSearch()
-                      e.currentTarget.blur()
-                    }
-                  }}
-                  className="w-full bg-neutral-900/80 border-neutral-700 pl-12 pr-12 h-12 rounded-xl focus:border-orange-500/50" 
-                />
-                {searchTerm && (
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault()
-                      e.stopPropagation()
-                      clearSearch()
-                      // Принудительно фокусируем поле ввода для лучшего UX
-                      const input = e.currentTarget.parentElement?.querySelector('input')
-                      if (input) {
-                        input.focus()
-                      }
-                    }}
-                    className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400 hover:text-white transition-colors cursor-pointer"
-                    aria-label="Clear search"
-                    type="button"
-                  >
-                    <X className="w-5 h-5" />
-                  </button>
-                )}
+                <Input type="text" placeholder={t("search.placeholder")} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-neutral-900/80 border-neutral-700 pl-12 h-12 rounded-xl focus:border-orange-500/50" />
                 <div className="h-0 md:h-0" />
               </div>
             </div>
 
             <div className="flex flex-wrap gap-2 justify-center mb-4" style={{ contain: "layout paint" }}>
               {["ALL", ...categoryOrder].map((category) => (
-                <Button key={category} variant="outline" onClick={() => setSelectedCategory(category)} className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedCategory === category ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}>
+                <Button 
+                  key={category} 
+                  variant="outline" 
+                  onClick={() => setSelectedCategory(category)} 
+                  className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedCategory === category ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}
+                >
                   {category === "ALL" ? t("filters.all") : t(`filters.${category.toLowerCase()}`)}
                 </Button>
               ))}
@@ -362,7 +308,12 @@ export default function EcosystemClient() {
             <div className="h-2" />
             <div className="flex flex-wrap gap-2 justify-center" style={{ contain: "layout paint" }}>
               {["ALL", ...statusOrder].map((status) => (
-                <Button key={status} variant="outline" onClick={() => setSelectedStatus(status)} className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedStatus === status ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}>
+                <Button 
+                  key={status} 
+                  variant="outline" 
+                  onClick={() => setSelectedStatus(status)} 
+                  className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedStatus === status ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}
+                >
                   {status}
                 </Button>
               ))}
@@ -371,13 +322,17 @@ export default function EcosystemClient() {
         </motion.div>
 
         {/* Projects List */}
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="max-w-7xl mx-auto px-4 pb-12">
-          <Card className="bg-neutral-900/50 border-0 rounded-xl backdrop-blur-sm">
-            <CardContent className="p-8">
+        <div className="max-w-7xl mx-auto px-4 pb-12">
+          <div className="bg-neutral-900/50 border-0 rounded-xl backdrop-blur-sm p-8">
+            {filteredProjects.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="text-neutral-400">No projects found</p>
+              </div>
+            ) : (
               <div className="space-y-0">
                 {filteredProjects.map((project) => (
-                  <motion.div key={project.id} variants={itemVariants}>
-                    <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="block p-4 rounded-lg hover:bg-neutral-800/30 transition-colors">
+                  <div key={project.id}>
+                    <a href={project.url} target="_blank" rel="noopener noreferrer" className="block p-4 rounded-lg hover:bg-neutral-800/30 transition-colors">
                       <div className="grid grid-cols-12 items-center gap-4">
                         <div className="col-span-12 md:col-span-3 flex items-center gap-4">
                           <div className="p-2 rounded-lg bg-orange-500/20 border border-orange-500/30">
@@ -389,7 +344,7 @@ export default function EcosystemClient() {
                           <h3 className="font-semibold text-white">{project.name}</h3>
                         </div>
                         <div className="col-span-6 md:col-span-2">
-                          <Badge variant="outline" className="border-neutral-700 text-neutral-300">{project.category}</Badge>
+                          <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-neutral-800 text-neutral-300 border border-neutral-700">{project.category}</span>
                         </div>
                         <div className={`col-span-6 md:col-span-2 flex items-center gap-2 text-sm ${(statusConfig as any)[project.status]?.color}`}>
                           {(statusConfig as any)[project.status]?.icon}
@@ -402,13 +357,13 @@ export default function EcosystemClient() {
                           <ExternalLink className="w-4 h-4" aria-hidden="true" focusable="false" />
                         </div>
                       </div>
-                    </Link>
-                  </motion.div>
+                    </a>
+                  </div>
                 ))}
               </div>
-            </CardContent>
-          </Card>
-        </motion.div>
+            )}
+          </div>
+        </div>
 
 
         {/* Related Content */}
