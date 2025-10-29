@@ -94,14 +94,15 @@ export function Header() {
 
             <LanguageSwitcher />
             
-            <ModeToggle />
+            {/* <ModeToggle /> */}
 
             <MobileNav items={mainNavItems} />
           </div>
         </div>
 
         {/* Scanline effect */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.2)_50%,transparent_100%)] bg-size-[100%_4px] animate-scanline pointer-events-none"></div>
+        {/* With rgba(0,0,0,0.2) this scanline not visible */}
+        {/* <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.2)_50%,transparent_100%)] bg-size-[100%_4px] animate-scanline pointer-events-none"></div> */}
       </header>
       <DocsSearchModal open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
