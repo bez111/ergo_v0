@@ -3,12 +3,8 @@
 import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import {
-  ArrowRight,
-  Download,
   Shield,
   Smartphone,
   HardDrive,
@@ -19,14 +15,10 @@ import {
   Lock,
   Check,
   Wallet,
-  ShieldCheck,
-  ExternalLink,
-  Globe
-} from "lucide-react"
-import { motion } from "framer-motion"
+  ShieldCheck} from "lucide-react"
 import { LucideIcon } from "lucide-react"
-import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EnhancedButton } from "@/components/ui/enhanced-button"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 
 
 interface Wallet {
@@ -172,6 +164,7 @@ const allWallets: Wallet[] = [
 export default function WalletClient() {
   const t = useTranslations("wallet")
   const [isClient, setIsClient] = useState(false)
+  const localizedPath = useLocalizedPath();
 
   useEffect(() => {
     setIsClient(true)
@@ -375,7 +368,7 @@ export default function WalletClient() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Link 
-              href="/use/get-erg"
+              href={localizedPath("/use/get-erg")}
               className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
             >
               <div className="flex items-start gap-4 mb-4">
@@ -390,8 +383,8 @@ export default function WalletClient() {
               <p className="text-gray-400 leading-relaxed">Purchase ERG from exchanges or DEXs</p>
             </Link>
             
-            <Link 
-              href="/docs/introduction"
+            <Link
+              href={localizedPath("/docs")}
               className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
             >
               <div className="flex items-start gap-4 mb-4">

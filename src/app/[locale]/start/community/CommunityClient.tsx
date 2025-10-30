@@ -6,14 +6,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
-import { GlitchText } from "@/components/glitch-text"
-import { DigitalCounter } from "@/components/digital-counter"
 import {
   MessageCircle,
   Users,
   Globe,
   Heart,
-  Zap,
   Code,
   FileText,
   Vote,
@@ -23,10 +20,6 @@ import {
   ArrowRight,
   CheckCircle,
   AlertTriangle,
-  Rocket,
-  Brain,
-  Building,
-  Shield,
 } from "lucide-react"
 import Link from "next/link"
 import { useTranslations } from "next-intl"

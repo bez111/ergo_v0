@@ -42,7 +42,12 @@ export const metadata: Metadata = {
   }
 }
 
-export default function MiningPage() {
+export default async function MiningPage({ params }: {
+  params: Promise<{ locale: string }>;
+}) {
+  const { locale } = await params;
+
+  console.debug(`Locale: ${locale}`);
   // SEO схемы для Mining
   const miningGuideSchema = {
     "@context": "https://schema.org",
@@ -95,7 +100,7 @@ export default function MiningPage() {
       }
     ]
   }
-  
+
   const faqSchema = SchemaTypes.FAQSchema([
     {
       question: "Is Ergo mining profitable?",
@@ -114,7 +119,7 @@ export default function MiningPage() {
       answer: "Earnings vary based on hashrate and costs. A typical RTX 3060 Ti (130 MH/s) can mine approximately 1-2 ERG per day, depending on network difficulty."
     }
   ])
-  
+
   const softwareApplicationSchema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
@@ -128,16 +133,16 @@ export default function MiningPage() {
     },
     description: "Calculate Ergo mining profitability based on hashrate and electricity costs"
   }
-  
+
   const knowledgeGraph = generateKnowledgeGraph('mining')
-  
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(miningGuideSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      
+
       <MiningClient />
     </>
   )
