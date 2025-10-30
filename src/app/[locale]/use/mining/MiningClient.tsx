@@ -38,6 +38,7 @@ const miningPools = [
   {
     name: "Herominers",
     url: "ergo.herominers.com:1180",
+    websiteUrl: "https://ergo.herominers.com/",
     fee: "1%",
     minPayout: "1 ERG",
     features: ["Auto-switching", "Mobile app", "24/7 support"],
@@ -46,6 +47,7 @@ const miningPools = [
   {
     name: "2Miners",
     url: "ergo.2miners.com:8560",
+    websiteUrl: "https://2miners.com/erg-mining-pool",
     fee: "1%",
     minPayout: "0.1 ERG",
     features: ["PPLNS", "Real-time stats", "Telegram bot"],
@@ -54,6 +56,7 @@ const miningPools = [
   {
     name: "Nanopool",
     url: "ergo-eu1.nanopool.org:11433",
+    websiteUrl: "https://nanopool.org/",
     fee: "1%",
     minPayout: "0.1 ERG",
     features: ["Global servers", "Mobile app", "Email alerts"],
@@ -62,6 +65,7 @@ const miningPools = [
   {
     name: "Woolypooly",
     url: "ergo.woolypooly.com:3100",
+    websiteUrl: "https://woolypooly.com/en/coin/erg",
     fee: "0.9%",
     minPayout: "0.1 ERG",
     features: ["Low fees", "MEV rewards", "Dashboard"],
@@ -114,6 +118,7 @@ const miningSteps = [
     title: "Get an Ergo Wallet",
     description: "Download and set up an official Ergo wallet to receive your mining rewards",
     action: "Download Wallet",
+    link: "/wallet",
     icon: <Shield className="w-5 h-5" />,
   },
   {
@@ -121,6 +126,7 @@ const miningSteps = [
     title: "Choose Mining Software",
     description: "Select compatible mining software like T-Rex, NBMiner, or TeamRedMiner",
     action: "View Software",
+    link: "#mining-software",
     icon: <Download className="w-5 h-5" />,
   },
   {
@@ -128,6 +134,7 @@ const miningSteps = [
     title: "Select Mining Pool",
     description: "Join a mining pool to get consistent payouts and reduce variance",
     action: "Choose Pool",
+    link: "#pools",
     icon: <Users className="w-5 h-5" />,
   },
   {
@@ -135,6 +142,7 @@ const miningSteps = [
     title: "Configure & Start",
     description: "Set up your mining configuration and start earning ERG",
     action: "Start Mining",
+    link: "https://github.com/trexminer/T-Rex/releases",
     icon: <Settings className="w-5 h-5" />,
   },
 ]
@@ -372,19 +380,38 @@ export default function MiningClient() {
                           </h3>
                           <p className="text-neutral-300 mb-4">{step.description}</p>
                         </div>
-                        <Button 
-                          variant="outline"
-                          className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300"
-                        >
-                          {step.action}
-                        </Button>
+                        {step.link.startsWith('/') ? (
+                          <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300">
+                            <Link href={step.link}>{step.action}</Link>
+                          </Button>
+                        ) : step.link.startsWith('http') ? (
+                          <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300">
+                            <a href={step.link} target="_blank" rel="noopener noreferrer">{step.action}</a>
+                          </Button>
+                        ) : (
+                          <Button 
+                            variant="outline"
+                            onClick={() => {
+                              const tabName = step.link.includes('mining-software') ? 'getting-started' : step.link.replace('#', '')
+                              setSelectedTab(tabName)
+                              if (step.link.includes('mining-software')) {
+                                setTimeout(() => {
+                                  document.getElementById('mining-software')?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+                                }, 100)
+                              }
+                            }}
+                            className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300"
+                          >
+                            {step.action}
+                          </Button>
+                        )}
                       </div>
                     </div>
                   ))}
                 </div>
 
                 {/* Mining Software */}
-                <div className="bg-black/80 border border-white/10 rounded-3xl rounded-xl p-8">
+                <div id="mining-software" className="bg-black/80 border border-white/10 rounded-3xl rounded-xl p-8">
                   <h3 className="text-2xl font-bold mb-6 text-orange-400">Recommended Mining Software</h3>
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="p-6 bg-neutral-900/50 rounded-lg border border-orange-500/20">
@@ -395,9 +422,11 @@ export default function MiningClient() {
                         <div>• 1% dev fee</div>
                         <div>• Auto-tuning</div>
                       </div>
-                      <Button variant="outline" size="sm" className="mt-4 w-full">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Download
+                      <Button asChild variant="outline" size="sm" className="mt-4 w-full">
+                        <a href="https://github.com/trexminer/T-Rex/releases" target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Download
+                        </a>
                       </Button>
                     </div>
                     <div className="p-6 bg-neutral-900/50 rounded-lg border border-orange-500/20">
@@ -408,9 +437,11 @@ export default function MiningClient() {
                         <div>• 2.5% dev fee</div>
                         <div>• Memory tuning</div>
                       </div>
-                      <Button variant="outline" size="sm" className="mt-4 w-full">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Download
+                      <Button asChild variant="outline" size="sm" className="mt-4 w-full">
+                        <a href="https://github.com/todxx/teamredminer/releases" target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Download
+                        </a>
                       </Button>
                     </div>
                     <div className="p-6 bg-neutral-900/50 rounded-lg border border-orange-500/20">
@@ -421,9 +452,11 @@ export default function MiningClient() {
                         <div>• 2% dev fee</div>
                         <div>• Dual mining</div>
                       </div>
-                      <Button variant="outline" size="sm" className="mt-4 w-full">
-                        <ExternalLink className="w-4 h-4 mr-2" />
-                        Download
+                      <Button asChild variant="outline" size="sm" className="mt-4 w-full">
+                        <a href="https://github.com/NebuTech/NBMiner/releases" target="_blank" rel="noopener noreferrer">
+                          <ExternalLink className="w-4 h-4 mr-2" />
+                          Download
+                        </a>
                       </Button>
                     </div>
                   </div>
@@ -582,7 +615,7 @@ export default function MiningClient() {
                         variant="outline" 
                         className="w-full border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300"
                       >
-                        <a href="https://ergo.herominers.com/" target="_blank" rel="noopener noreferrer">
+                        <a href={pool.websiteUrl} target="_blank" rel="noopener noreferrer">
                           <ExternalLink className="w-3 h-3 mr-2" />
                           Visit Pool
                         </a>
@@ -848,38 +881,37 @@ export default function MiningClient() {
               Ready to Mine? <span className="text-orange-400">Choose Your Next Step</span>
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+              <Link 
+                href="/technology"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
                     <Monitor className="w-6 h-6 text-orange-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white">Technology</h3>
                 </div>
-                <p className="text-neutral-300 mb-6">
+                <p className="text-neutral-300">
                   Learn about Ergo's advanced technology, consensus mechanism, and unique features
                 </p>
-                <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300">
-                  <Link href="/technology">Explore Technology</Link>
-                </Button>
-              </div>
+              </Link>
               
-              <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+              <a 
+                href="https://discord.com/invite/ergo-platform-668903786361651200" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
                 <div className="flex items-center gap-4 mb-4">
                   <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
                     <Users className="w-6 h-6 text-orange-400" />
                   </div>
                   <h3 className="text-xl font-bold text-white">Join Mining Community</h3>
                 </div>
-                <p className="text-neutral-300 mb-6">
+                <p className="text-neutral-300">
                   Connect with other miners, get support, and share your mining experience
                 </p>
-                <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300">
-                  <a href="https://discord.gg/ergo" target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Join Discord
-                  </a>
-                </Button>
-              </div>
+              </a>
             </div>
           </div>
         </section>
