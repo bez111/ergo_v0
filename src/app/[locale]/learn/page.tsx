@@ -134,7 +134,7 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourcesSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      <LearnClient locale={locale} />
+      <LearnClient />
     </>
   )
 } 

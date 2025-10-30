@@ -52,6 +52,8 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
 export default async function HomePage({ params }: HomePageProps) {
   const { locale } = await params;
   
+  console.debug(`Locale: ${locale}`);
+
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* 
