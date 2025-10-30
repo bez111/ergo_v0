@@ -172,6 +172,10 @@ export default function MiningClient() {
     electricityCost: 0.1,
   })
 
+  const showMiningCalculator = () => {
+    setSelectedTab("calculator");
+  }
+
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Background removed to follow /use minimal style */}
@@ -195,7 +199,11 @@ export default function MiningClient() {
                   GPU-friendly Autolykos2 algorithm designed for fair distribution and ASIC resistance.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
+                  <Button 
+                    asChild 
+                    className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50"
+                    onClick={showMiningCalculator}
+                  >
                     <Link href="#calculator">Mining Calculator</Link>
                   </Button>
                 </div>

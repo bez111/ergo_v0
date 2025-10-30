@@ -1,5 +1,3 @@
-"use client"
-
 export function BackgroundWrapper({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative">
