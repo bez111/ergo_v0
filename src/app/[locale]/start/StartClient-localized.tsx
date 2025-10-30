@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslations } from "next-intl"
-import { useLocalizedPath } from "@/src/hooks/use-localized-path"
+import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card } from "@/components/ui/card"
@@ -294,7 +294,6 @@ export default function StartPage() {
   const t = useTranslations('start')
   const locale = useLocale()
 
-  const t = useTranslations('start')
   const localizedPath = useLocalizedPath()
   const [selectedJourney, setSelectedJourney] = useState<Journey | null>(null)
   const [completedSteps, setCompletedSteps] = useLocalStorage<Record<string, boolean>>(

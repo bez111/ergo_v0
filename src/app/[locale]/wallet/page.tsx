@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import WalletClient from './WalletClient'
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
+import { BackgroundWrapper } from '@/components/home/background-wrapper'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -131,7 +132,12 @@ export default async function WalletPage({ params }: { params: Promise<{ locale:
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(walletsJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      <WalletClient />
+
+      <main className="min-h-screen bg-black text-white relative overflow-hidden">
+        <BackgroundWrapper>
+          <WalletClient />
+        </BackgroundWrapper>
+      </main>
     </>
   )
 } 
