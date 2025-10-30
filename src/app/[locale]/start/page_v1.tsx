@@ -55,7 +55,7 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'start.schema' });
   
-  const howToSchema = {
+    const howToSchema = {
     '@context': 'https://schema.org',
     '@type': 'HowTo',
     '@id': 'https://ergoblockchain.org/start#howto',
@@ -107,11 +107,12 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
 
   const knowledgeGraph = generateKnowledgeGraph('start')
 
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      <StartClient locale={locale} />
+      <StartClient />
     </>
   )
 } 

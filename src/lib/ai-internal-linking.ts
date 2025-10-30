@@ -1,8 +1,8 @@
 // AI-Powered Internal Linking System for Maximum SEO
 // Automatically creates contextual links between related content
 
-import { blogPosts } from '@/src/app/[locale]/blog/_lib/blog-data'
-import { menuData } from '@/src/app/[locale]/docs/menuData'
+import { blogPosts } from '@/app/[locale]/blog/_lib/blog-data'
+import { menuData } from '@/app/[locale]/docs/menuData'
 
 interface ContentNode {
   id: string

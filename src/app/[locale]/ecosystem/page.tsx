@@ -35,8 +35,10 @@ export async function generateMetadata({ searchParams, params }: {
   }
 }
 
+const sortedAllProjects = sortProjectsForListing(allProjects);
+
 export default function EcosystemPage() {
-  const sorted = sortProjectsForListing(allProjects)
+  const sorted = sortedAllProjects
 
   const itemListJsonLd = {
     "@context": "https://schema.org",
