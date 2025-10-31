@@ -49,6 +49,7 @@ import Head from "next/head"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import Script from "next/script"
 import { useTranslations } from "next-intl"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 export default function TechnologyPage() {
   const t = useTranslations('technology')
@@ -397,7 +398,7 @@ export default function TechnologyPage() {
         <h2 id="faq-heading" className="text-4xl font-bold text-center mb-4 md:mb-6 text-white">Frequently Asked Questions</h2>
         <div className="space-y-4">
               {faqs.map((faq, index) => (
-                <Card key={faq.id} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                <Card key={faq.id} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-xl">
                   <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
                     <CollapsibleTrigger asChild>
                       <button className="w-full">
@@ -418,25 +419,14 @@ export default function TechnologyPage() {
                 </Card>
               ))}
             </div>
-            <div className="mt-8 pt-6 border-t border-neutral-800">
-              <div className="flex justify-end">
-                <Button asChild variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 transition-all duration-200">
-                  <Link href="/docs">Go to Docs <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" /></Link>
-                </Button>
-              </div>
-            </div>
           </section>
         )
       }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Metadata moved to App Router layout metadata */}
-
-      {/* Background */}
-      <HexagonalGrid className="opacity-[0.03]" />
-
-      <div className="container mx-auto px-4 py-16 relative z-10">
+    <BackgroundWrapper>
+      <div className="min-h-screen text-white relative overflow-hidden">
+        <div className="container mx-auto px-4 py-16 relative z-10">
         {/* Hero */}
         <section className="pt-32 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -487,7 +477,7 @@ export default function TechnologyPage() {
                 >
                   <Link href={feature.href || "/technology"} prefetch={false}>
                     <Card
-                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
+                      className={`bg-black/80 border-white/10 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
                     >
                       <CardHeader className="text-center">
                         <div className="w-16 h-16 bg-neutral-800 rounded-lg flex items-center justify-center mx-auto mb-6">
@@ -618,7 +608,7 @@ export default function TechnologyPage() {
                           },
                         ].map((col) => (
                           <motion.div key={col.title} variants={itemVariants}>
-                            <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-orange-500/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
+                            <Card className="bg-black/80 border-white/10 rounded-xl h-full hover:border-orange-500/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
                               <CardHeader className="pb-3">
                                 <div className="flex items-center gap-3">
                                   <col.icon className="w-5 h-5 text-orange-400" />
@@ -646,7 +636,7 @@ export default function TechnologyPage() {
 
               {/* Architecture */}
               <TabsContent value="architecture" className="m-0">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                <Card className="bg-black/80 border-white/10 backdrop-blur-sm rounded-xl h-full">
                 <CardHeader>
                     <CardTitle className="text-white">
                     Ergo Tech Stack Overview
@@ -712,7 +702,7 @@ export default function TechnologyPage() {
                           return (
                             <motion.div key={res.title} variants={itemVariants}>
                               <Wrapper {...wrapperProps} className="group block focus-visible:outline-none">
-                                <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl h-full hover:border-orange-500/50 focus-visible:ring-2 focus-visible:ring-orange-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
+                                <Card className="bg-black/80 border-white/10 rounded-xl h-full hover:border-orange-500/50 focus-visible:ring-2 focus-visible:ring-orange-400 transition-colors motion-reduce:transform-none motion-reduce:transition-none">
                                   <CardHeader className="pb-4">
                                     <div className="flex items-center justify-between gap-3">
                                       <div className="flex items-center gap-3">
@@ -749,27 +739,56 @@ export default function TechnologyPage() {
 
         {/* CTA (final) */}
         <FadeIn>
-          <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl mt-8">
-            <CardContent className="text-center py-12">
-              <h3 className="text-4xl font-bold mb-6 text-white">
-                Ready to Explore Ergo Tech?
-              </h3>
-              <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                Dive deeper into the docs or start building on the most advanced UTXO blockchain.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                {ctas.map((cta) => (
-                  <Button key={cta.label} asChild className={cta.outline ? "border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm" : "bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl"} variant={cta.outline ? "outline" : "default"}>
-                    <Link href={cta.href} prefetch={false}>{cta.label}</Link>
-                  </Button>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
+          <div className="max-w-6xl mx-auto mt-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
+              What's <span className="text-orange-400">Next?</span>
+            </h2>
+            <p className="text-xl text-center text-neutral-300 mb-12">
+              Deep dive into technology or explore real-world applications
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link 
+                href="/docs"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                    <Book className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Documentation</h3>
+                    <p className="text-orange-400 text-sm">Read the Docs</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  Deep dive into Ergo's technology, protocols, and development guides
+                </p>
+              </Link>
+              
+              <Link 
+                href="/ecosystem"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                    <Rocket className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Ecosystem</h3>
+                    <p className="text-orange-400 text-sm">Explore Applications</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  Discover DeFi protocols, wallets, and dApps built on Ergo
+                </p>
+              </Link>
+            </div>
+          </div>
         </FadeIn>
 
+        </div>
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 } 
 
