@@ -120,7 +120,7 @@ export const FeatureGrid: React.FC<FeatureGridProps> = ({
         return (
           <motion.div 
             key={feature.title} 
-            className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 text-center hover:border-neutral-600 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black group cursor-pointer"
+            className="bg-black/80 border-white/10 rounded-3xl p-6 text-center hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black group cursor-pointer"
             {...animationProps}
             whileHover={{ y: -5, transition: { duration: 0.2 } }}
             tabIndex={0}

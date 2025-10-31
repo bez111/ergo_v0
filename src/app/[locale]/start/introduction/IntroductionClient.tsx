@@ -46,8 +46,7 @@ import {
   type FeatureGridItem, type StatsGridItem 
 } from "@/components/ui-kit/patterns"
 import { SchemaOrg } from "@/components/seo/schema-org"
-// Dynamic hexagonal grid for background
-const HexagonalGrid = dynamic(() => import("@/components/ui-kit/signature-effects").then(m => m.HexagonalGrid), { ssr: false })
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 // Removed animation-related imports
 
 export default function IntroductionClient() {
@@ -113,7 +112,7 @@ export default function IntroductionClient() {
   // Removed animation variants
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
+    <BackgroundWrapper>
       {/* Schema.org JSON-LD */}
       <SchemaOrg
         type="BreadcrumbList"
@@ -177,8 +176,6 @@ export default function IntroductionClient() {
           ],
         }}
       />
-      {/* Background Effects */}
-      <HexagonalGrid className="opacity-[0.02]" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         
@@ -202,7 +199,7 @@ export default function IntroductionClient() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-            <div>
+            <div className="bg-black/80 border-white/10 rounded-3xl p-8 backdrop-blur-sm">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6 flex items-center gap-3">
                 <Brain className="w-8 h-8 text-orange-400" aria-hidden="true" />
                 <span className="text-white">What is <span className="text-orange-400">Ergo</span>?</span>
@@ -230,7 +227,7 @@ export default function IntroductionClient() {
               </div>
               
               {/* Alert with key info */}
-              <Alert className="border-orange-500/30 bg-orange-500/10 rounded-xl">
+              <Alert className="border-orange-500/50 bg-orange-500/20 rounded-xl backdrop-blur-sm shadow-lg">
                 <Info className="w-4 h-4 text-orange-400" />
                 <div className="ml-3">
                   <h4 className="font-semibold text-orange-400">{t("introduction.keyInnovation.title")}</h4>
@@ -262,7 +259,7 @@ export default function IntroductionClient() {
                   ].map((feature, index) => (
                     <li
                       key={feature.title}
-                      className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4 backdrop-blur-sm hover:border-orange-500/30 transition-all duration-300"
+                      className="bg-black/80 border-white/10 rounded-3xl p-4 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300"
                     >
                       <div className="flex items-center gap-3">
                         <div className="w-10 h-10 bg-orange-500/10 border border-orange-500/30 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -316,39 +313,31 @@ export default function IntroductionClient() {
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             {technologies.map((tech, index) => (
-              <div
+              <Link 
                 key={tech.title}
-                className="h-full"
+                href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`} 
+                className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-3xl h-full"
               >
-                <Link href={`/technology/${tech.title.toLowerCase().replace(/\s+/g, '-')}`} className="group block focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 rounded-xl">
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 h-full hover:border-orange-500/50 hover:bg-neutral-900/80 transition-all duration-300 cursor-pointer">
-                    {/* Icon */}
-                    <div className="w-12 h-12 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-orange-500/20 transition-all duration-300">
-                      <tech.icon className="w-6 h-6 text-orange-400" aria-hidden="true" />
+                <Card className="bg-black/80 border-white/10 rounded-3xl p-6 h-full hover:bg-black/90 hover:border-orange-400/40 hover:scale-[1.02] transition-all duration-300 cursor-pointer flex flex-col min-h-[140px]">
+                  {/* Header with Icon and Title */}
+                  <div className="flex items-center gap-4 mb-3">
+                    <div className="w-12 h-12 bg-orange-500/10 border border-orange-500/30 rounded-xl flex items-center justify-center group-hover:bg-orange-500/20 transition-all duration-300">
+                      <tech.icon className="w-6 h-6 text-orange-400 group-hover:text-orange-500 transition-colors" aria-hidden="true" />
                     </div>
-                    
-                    {/* Content */}
-                    <h3 className="text-xl font-bold text-white mb-1 group-hover:text-orange-400 transition-colors">
-                      {tech.title}
-                    </h3>
-                    <p className="text-sm text-gray-400 mb-3">{tech.subtitle}</p>
-                    <p className="text-gray-300 text-sm mb-4 min-h-[3rem]">
-                      {tech.description}
-                    </p>
-                    
-                    {/* Footer */}
-                    <div className="flex items-center justify-between">
-                      <Badge className="bg-orange-500/10 text-orange-400 border border-orange-500/30">
-                        {tech.badge}
-                      </Badge>
-                      <div className="flex items-center text-orange-400 text-sm font-semibold">
-                        {t("introduction.keyTechnologies.learnMore")}
-                        <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
-                      </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                        {tech.title}
+                      </h3>
+                      <p className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors">{tech.subtitle}</p>
                     </div>
-                  </Card>
-                </Link>
-              </div>
+                  </div>
+                  
+                  {/* Description */}
+                  <p className="text-gray-300 text-sm flex-1 group-hover:text-white transition-colors">
+                    {tech.description}
+                  </p>
+                </Card>
+              </Link>
             ))}
           </div>
 
@@ -424,7 +413,7 @@ export default function IntroductionClient() {
               return (
                 <div
                   key={index}
-                  className="bg-neutral-900/50 border border-neutral-700 rounded-lg p-6 hover:border-orange-400/50 hover:bg-neutral-800/50 transition-all duration-300 cursor-pointer"
+                  className="bg-black/80 border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer"
                 >
                   <div className="flex items-center mb-4">
                     <div className="w-12 h-12 bg-orange-400/10 rounded-lg flex items-center justify-center mr-4">
@@ -454,7 +443,7 @@ export default function IntroductionClient() {
                 q: t("introduction.faq.pow.question"),
                 a: t("introduction.faq.pow.answer"),
               }].map(item => (
-                <div key={item.q} className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-4">
+                <div key={item.q} className="bg-black/80 border-white/10 rounded-3xl p-4 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                   <h3 className="text-lg font-semibold text-white mb-1">{item.q}</h3>
                   <p className="text-neutral-300 text-sm">{item.a}</p>
                 </div>
@@ -463,64 +452,59 @@ export default function IntroductionClient() {
           </div>
         </section>
 
-        {/* CTA Section with Glitch Effects */}
-        <section
-          className="py-16 text-center relative"
-        >
-          <Card className="bg-neutral-900/50 border border-neutral-700 rounded-2xl p-8 md:p-12 backdrop-blur-sm relative overflow-hidden hover:border-orange-500/30">
-            {/* Removed Glitch Hex decoration */}
-            
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              {t("introduction.cta.readyToDiveIn.title")}
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto mb-8">
-              {t("introduction.cta.readyToDiveIn.description")}
-            </p>
-            
-            <div className="flex flex-wrap justify-center gap-4">
-              <div>
-                <Button 
-                  asChild 
-                  className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl shadow-lg"
-                >
-                  <Link href="/wallet">
-                    <Wallet className="w-5 h-5 mr-2" aria-hidden="true" />
-                    {t("introduction.cta.getErgoWallet.button")}
-                  </Link>
-                </Button>
-              </div>
-              
-              <div>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  className="border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white px-8 py-3 rounded-xl backdrop-blur-sm"
-                >
-                  <Link href="/ecosystem" prefetch={false}>
-                    <Compass className="w-5 h-5 mr-2" aria-hidden="true" />
-                    {t("introduction.cta.exploreEcosystem.button")}
-                  </Link>
-                </Button>
-              </div>
-              
-              <div>
-                <Button 
-                  asChild 
-                  variant="outline" 
-                  className="border-neutral-700 text-gray-300 hover:bg-neutral-800 hover:text-white px-8 py-3 rounded-xl backdrop-blur-sm"
-                >
-                  <Link href="/docs" prefetch={false}>
-                    <BookOpen className="w-5 h-5 mr-2" aria-hidden="true" />
-                    {t("introduction.cta.documentation.button")}
-                  </Link>
-                </Button>
-              </div>
+        {/* What's Next Section */}
+        <section className="py-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                What's <span className="text-orange-400">Next?</span>
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Choose your path to start exploring the Ergo ecosystem
+              </p>
             </div>
-            <p className="text-xs text-neutral-500 mt-6">{t("introduction.cta.lastUpdated")}</p>
-          </Card>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <Link 
+                href="/wallet"
+                className="bg-black/80 border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                    <Wallet className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Get Ergo Wallet</h3>
+                    <p className="text-orange-400 text-sm">Start Securely</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  Download a secure wallet to store ERG and interact with dApps
+                </p>
+              </Link>
+
+              <Link 
+                href="/ecosystem"
+                className="bg-black/80 border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                    <Compass className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Explore Ecosystem</h3>
+                    <p className="text-orange-400 text-sm">Discover Applications</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo
+                </p>
+              </Link>
+            </div>
+          </div>
         </section>
 
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 }
