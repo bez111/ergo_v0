@@ -12,6 +12,7 @@ import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import Script from "next/script"
 import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 const iconNode = {
   coins: <Coins className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />,
@@ -25,9 +26,6 @@ const iconNode = {
   gamepad: <Gamepad2 className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />,
 } as const
 
-function isComingSoon(uc: { supportedProjects: string[] }) {
-  return !uc.supportedProjects || uc.supportedProjects.length === 0
-}
 
 // FAQ data
 const faqs = [
@@ -116,11 +114,11 @@ export default function UseClient() {
         </h2>
         <div className="space-y-4">
           {faqs.map((faq, index) => (
-            <Card key={faq.id} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+            <Card key={faq.id} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
               <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
                 <CollapsibleTrigger asChild>
                   <button className="w-full">
-                    <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
+                    <CardContent className="p-6 flex items-center justify-between hover:bg-black/70 transition-colors">
                       <h3 className="text-lg font-semibold text-left text-white">{faq.q}</h3>
                       <ChevronDown 
                         aria-hidden="true" 
@@ -142,21 +140,13 @@ export default function UseClient() {
             </Card>
           ))}
         </div>
-        <div className="mt-8 pt-6 border-t border-neutral-800">
-          <div className="flex justify-end">
-            <Button asChild variant="outline" className="bg-neutral-900/60 border-neutral-700 text-neutral-200 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 transition-all duration-200">
-              <Link href="/docs">
-                Explore Documentation <ExternalLink className="h-4 w-4 ml-2" aria-hidden="true" />
-              </Link>
-            </Button>
-          </div>
-        </div>
       </section>
     )
   }
 
   return (
-    <div className="min-h-screen relative pb-24">
+    <BackgroundWrapper>
+      <div className="min-h-screen relative pb-24">
       {/* Hidden Breadcrumbs for SEO */}
       <HiddenBreadcrumbs 
         items={[]} 
@@ -175,31 +165,29 @@ export default function UseClient() {
                 <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
                   <Link href="/ecosystem">{t('buttons.exploreEcosystem')}</Link>
                 </Button>
-                <Button asChild variant="outline" className="border-neutral-600 text-neutral-200 hover:bg-neutral-900/40 px-6 py-3 rounded-xl">
+                <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
                   <Link href="/docs">{t('buttons.startBuilding')}</Link>
                 </Button>
               </div>
             </div>
             <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
-              <Card className="bg-neutral-900/50 border border-neutral-700 backdrop-blur-sm p-8">
-                <CardContent className="p-0">
-                  <h3 className="text-2xl font-bold mb-6 text-center text-white">{t('featuredUseCases.title')}</h3>
-                  <div className="space-y-3">
-                    {[
-                      { name: t('featuredUseCases.defi'), icon: iconNode.coins },
-                      { name: t('featuredUseCases.nfts'), icon: iconNode.palette },
-                      { name: t('featuredUseCases.privacy'), icon: iconNode.shield },
-                    ].map((feature) => (
-                      <motion.div key={feature.name} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700" whileHover={{ scale: 1.01, x: 6 }} transition={{ type: "spring", stiffness: 400, damping: 30 }}>
-                        <div className="flex items-center gap-3">
-                          <div className="p-2.5 rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400">{feature.icon}</div>
-                          <h4 className="font-semibold text-white">{feature.name}</h4>
-                        </div>
-                      </motion.div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+              <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                <h3 className="text-2xl font-bold mb-6 text-center text-white">{t('featuredUseCases.title')}</h3>
+                <div className="grid grid-cols-1 gap-4">
+                  {[
+                    { name: t('featuredUseCases.defi'), icon: iconNode.coins, subtitle: "Decentralized Finance (DeFi)" },
+                    { name: t('featuredUseCases.nfts'), icon: iconNode.palette, subtitle: "NFTs & Digital Assets" },
+                    { name: t('featuredUseCases.privacy'), icon: iconNode.shield, subtitle: "Privacy Applications" },
+                  ].map((feature) => (
+                    <div key={feature.name} className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2.5 rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400">{feature.icon}</div>
+                        <h4 className="font-semibold text-white text-lg">{feature.subtitle}</h4>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
@@ -211,28 +199,32 @@ export default function UseClient() {
         <motion.div initial="hidden" animate="visible" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.07 } } }} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch" aria-labelledby="all-use-cases">
           {useCases.map((uc) => (
             <motion.div key={uc.id} variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }} className="relative h-full">
-              <Card className="relative bg-neutral-900/50 border border-neutral-700 rounded-xl transition-all duration-200 hover:border-orange-500/30 hover:-translate-y-0.5 h-full flex flex-col">
+              <Card className="relative bg-black/80 border border-white/10 rounded-3xl transition-all duration-300 hover:bg-black/90 hover:border-orange-400/40 h-full flex flex-col">
                 <CardContent className="p-8 flex-1 flex flex-col">
-                  {isComingSoon(uc) && (
-                    <span className="absolute top-5 right-5 px-3 py-1 rounded-md bg-neutral-900/60 border border-neutral-700 text-[10px] text-neutral-300">{t('buttons.comingSoon')}</span>
-                  )}
                   <div className="flex items-center gap-3 mb-3">
                     <div className="p-3 rounded-md bg-orange-500/20 border border-orange-500/30">{iconNode[uc.icon as keyof typeof iconNode]}</div>
                     <h3 className="text-2xl font-bold text-white">{uc.title}</h3>
                   </div>
                   <div className="flex flex-wrap gap-2 mb-2">
                     {uc.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="bg-neutral-900/60 border border-neutral-700 text-neutral-300 text-xs px-2 py-1 rounded">{tag}</span>
+                      <span key={tag} className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">{tag}</span>
                     ))}
                     {uc.tags.length > 3 && (
-                      <span className="bg-neutral-900/60 border border-neutral-700 text-neutral-300 text-xs px-2 py-1 rounded">+{uc.tags.length - 3}</span>
+                      <span className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">+{uc.tags.length - 3}</span>
                     )}
                   </div>
                   <p className="text-neutral-400 font-medium mb-1">{uc.subtitle}</p>
                   <p className="text-neutral-300 text-base mb-5">{uc.description}</p>
-                                      <Button asChild className="mt-auto w-full flex items-center justify-center gap-2 px-6 py-3 rounded-xl border border-neutral-700 bg-neutral-900/50 text-neutral-200 transition-all hover:border-orange-500/50 hover:text-orange-400 hover:bg-orange-500/10 focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black">
-                    <Link href={`/use/${uc.id}`} className="flex items-center gap-2" aria-label={`Explore ${uc.title}`}>
-                      Explore <ArrowRight className="w-4 h-4" aria-hidden="true" focusable="false" />
+                                      <Button asChild variant="outline" className="mt-auto w-full border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300 rounded-xl">
+                    <Link href={`/use/${uc.id}`} aria-label={`Learn more about ${uc.title}`}>
+                      {uc.id === 'stablecoins' ? 'Learn More' :
+                       uc.id === 'privacy' ? 'Discover Privacy' :
+                       uc.id === 'bridges' ? 'Connect Chains' :
+                       uc.id === 'daos' ? 'Join Community' :
+                       uc.id === 'nfts' ? 'Create Assets' :
+                       uc.id === 'oracles' ? 'Access Data' :
+                       uc.id === 'identity' ? 'Build Identity' :
+                       uc.id === 'gaming' ? 'Start Gaming' : 'Learn More'}
                     </Link>
                   </Button>
                 </CardContent>
@@ -254,59 +246,77 @@ export default function UseClient() {
               Learn the Technology
             </h2>
             <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                    <Code className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                    ErgoScript
-                  </h3>
-                  <p className="text-neutral-300 mb-4">
-                    Learn the smart contract language powering these use cases
-                  </p>
-                  <Link href="/learn/ergoscript" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                    Start Tutorial
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </CardContent>
-              </Card>
+              <Link href="/learn/ergoscript" className="block group">
+                <Card className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-500/50 transition-all duration-300 relative overflow-hidden h-full">
+                  <CardContent className="p-6 h-full flex flex-col">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                        <Code className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                        ErgoScript
+                      </h3>
+                    </div>
+                    <p className="text-neutral-300 flex-1">
+                      Learn the smart contract language powering these use cases
+                    </p>
+                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="inline-flex items-center text-orange-400 font-medium text-sm">
+                        Start Tutorial
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                    <Database className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                    eUTXO Model
-                  </h3>
-                  <p className="text-neutral-300 mb-4">
-                    Understand the foundation that enables these applications
-                  </p>
-                  <Link href="/technology/eutxo-model" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                    Learn More
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </CardContent>
-              </Card>
+              <Link href="/technology/eutxo-model" className="block group">
+                <Card className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-500/50 transition-all duration-300 relative overflow-hidden h-full">
+                  <CardContent className="p-6 h-full flex flex-col">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                        <Database className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                        eUTXO Model
+                      </h3>
+                    </div>
+                    <p className="text-neutral-300 flex-1">
+                      Understand the foundation that enables these applications
+                    </p>
+                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="inline-flex items-center text-orange-400 font-medium text-sm">
+                        Learn More
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
 
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                    <Layers className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                    All Technology
-                  </h3>
-                  <p className="text-neutral-300 mb-4">
-                    Explore all of Ergo's technical innovations
-                  </p>
-                  <Link href="/technology" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                    View All
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </CardContent>
-              </Card>
+              <Link href="/technology" className="block group">
+                <Card className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-500/50 transition-all duration-300 relative overflow-hidden h-full">
+                  <CardContent className="p-6 h-full flex flex-col">
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center">
+                        <Layers className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                        All Technology
+                      </h3>
+                    </div>
+                    <p className="text-neutral-300 flex-1">
+                      Explore all of Ergo's technical innovations
+                    </p>
+                    <div className="absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <span className="inline-flex items-center text-orange-400 font-medium text-sm">
+                        View All
+                        <ArrowRight className="w-4 h-4 ml-2" />
+                      </span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </div>
           </div>
         </motion.section>
@@ -316,46 +326,53 @@ export default function UseClient() {
 
       {/* Conclusion CTA */}
       <section className="py-16 px-4">
-        <div className="max-w-5xl mx-auto">
-          <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-            <CardContent className="text-center py-12 px-8">
-              <h3 className="text-4xl font-bold mb-6 text-white">
-                Ready to Start Using Ergo?
-              </h3>
-              <p className="text-xl text-neutral-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-                Whether you're looking to explore DeFi, create NFTs, build private applications, or start mining, 
-                Ergo provides the tools and infrastructure you need.
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
+            What's <span className="text-orange-400">Next?</span>
+          </h2>
+          <p className="text-xl text-center text-neutral-300 mb-12">
+            Start exploring applications or learn how to build on Ergo
+          </p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <Link 
+              href="/ecosystem"
+              className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                  <Coins className="w-6 h-6 text-orange-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Explore Ecosystem</h3>
+                  <p className="text-orange-400 text-sm">Discover Applications</p>
+                </div>
+              </div>
+              <p className="text-neutral-300">
+                Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                  <Link href="/ecosystem">
-                    Explore Ecosystem
-                    <ArrowRight className="w-5 h-5 ml-2" aria-hidden="true" />
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl">
-                  <Link href="/start">
-                    Get Started Guide
-                  </Link>
-                </Button>
+            </Link>
+            
+            <Link 
+              href="/docs"
+              className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                  <Code className="w-6 h-6 text-orange-400" />
+                </div>
+                <div>
+                  <h3 className="text-xl font-bold text-white">Start Building</h3>
+                  <p className="text-orange-400 text-sm">Developer Resources</p>
+                </div>
               </div>
-              <div className="mt-8 pt-8 border-t border-neutral-800">
-                <p className="text-sm text-neutral-400">
-                  Join our community on{" "}
-                  <a href="https://discord.gg/ergo" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">
-                    Discord
-                  </a>
-                  {" "}or{" "}
-                  <a href="https://t.me/ergoplatform" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-orange-300 underline">
-                    Telegram
-                  </a>
-                  {" "}for support and updates.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
+              <p className="text-neutral-300">
+                Access documentation, tutorials, and tools to build your own Ergo applications
+              </p>
+            </Link>
+          </div>
         </div>
       </section>
-    </div>
+      </div>
+    </BackgroundWrapper>
   )
 } 
