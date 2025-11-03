@@ -9,6 +9,8 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import OracleComparisonTable from "@/components/oracle-comparison-table"
 import { Eye, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, Database, Globe, Activity, TrendingUp, Users, Server, AlertCircle, ChevronDown, Terminal, BookOpen, Cpu, Network, Clock, BarChart3, DollarSign } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -168,8 +170,6 @@ export default function OraclePoolsPage() {
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
-
   return (
     <>
       {/* BreadcrumbList Schema */}
@@ -210,10 +210,7 @@ export default function OraclePoolsPage() {
         }}
       />
       
-      <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
-
+      <BackgroundWrapper>
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
@@ -225,134 +222,82 @@ export default function OraclePoolsPage() {
           />
         </div>
 
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none pb-24">
-        {/* Hero Section */}
-          <motion.section 
-            variants={itemVariants} 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 motion-reduce:transform-none"
-          >
-            <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <FadeIn>
+          {/* Hero Section */}
+          <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
                   {t("title")}
                 </h1>
-                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
-                  <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    {t("subtitle")}
-                  </p>
-                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    {t("description")}
+                <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
+                  {t("subtitle")}
+                </p>
+                <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                  {t("description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <a href="https://oracle-core.ergoplatform.com/" target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                  <a href="https://oracle-core.ergoplatform.com/" target="_blank" rel="noopener noreferrer">
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       {t("buttons.exploreOracles")}
-                  </Button>
-                    </a>
-                    <a href="https://github.com/ergoplatform/oracle-core" target="_blank" rel="noopener noreferrer">
-                  <Button
-                    variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                  >
+                    </Button>
+                  </a>
+                  <a href="https://github.com/ergoplatform/oracle-core" target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="outline"
+                      className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                    >
                       {t("buttons.readDocs")}
-                                    </Button>
-                    </a>
-                  </div>
-                  <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
-                    <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
-                      <li><a href="#technical" className="hover:text-orange-400">Technical Details</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
-                    </ul>
-                  </nav>
+                    </Button>
+                  </a>
+                </div>
               </div>
-              <div className="relative">
-                  <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                    <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          {t("quickStart.title")}
-                      </h3>
-                        <div className="space-y-4">
-                          {[
-                            {
-                              name: t("buttons.exploreOracles"),
-                              description: t("quickStart.exploreOracles"),
-                              icon: <BarChart3 className="w-6 h-6" />,
-                              link: "https://oracle-core.ergoplatform.com/",
-                              external: true
-                            },
-                            {
-                              name: t("buttons.readDocs"),
-                              description: t("quickStart.viewLivePools"),
-                              icon: <BookOpen className="w-6 h-6" />,
-                              link: "/docs",
-                              external: false
-                            },
-                            {
-                              name: t("buttons.joinNetwork"),
-                              description: t("quickStart.viewLivePools"),
-                              icon: <Users className="w-6 h-6" />,
-                              link: "https://discord.gg/ergo",
-                              external: true
-                            },
-                          ].map((item) => (
-                            <div key={item.name}>
-                              {item.external ? (
-                                <a
-                                  href={item.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                            >
-                              <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                </div>
-                                    <ExternalLink className="w-4 h-4 text-neutral-400" />
-                              </div>
-                                </a>
-                              ) : (
-                                <Link
-                                  href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
-                                    <ArrowRight className="w-4 h-4 text-neutral-400" />
-                                  </div>
-                                </Link>
-                              )}
-                            </div>
-                          ))}
+              <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold text-white">Quick Start</h3>
+                  </div>
+                  <div className="space-y-4">
+                    {[
+                      {
+                        number: "01",
+                        title: "Explore Live Pools",
+                        description: "View active oracle pools and price feeds",
+                        link: "https://oracle-core.ergoplatform.com/"
+                      },
+                      {
+                        number: "02", 
+                        title: "Read Documentation",
+                        description: "Learn how to integrate oracle data",
+                        link: "/docs"
+                      },
+                      {
+                        number: "03",
+                        title: "Join Network",
+                        description: "Connect with oracle operators",
+                        link: "https://discord.gg/ergo"
+                      },
+                    ].map((item) => (
+                      <div key={item.number} className="flex items-center gap-4 p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center text-orange-400 font-bold text-sm">
+                          {item.number}
                         </div>
-                    </CardContent>
-                  </Card>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-white text-lg">{item.title}</h4>
+                          <p className="text-sm text-neutral-400">{item.description}</p>
+                        </div>
+                      </div>
+                    ))}
                   </div>
-              </div>
+                </div>
+              </motion.div>
             </div>
-            </div>
-          </motion.section>
+          </section>
+        </FadeIn>
 
+        <FadeIn delay={0.2}>
           {/* Features Section */}
-          <motion.section 
-            id="features"
-            variants={itemVariants} 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4 motion-reduce:transform-none"
-          >
+          <section id="features" className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -365,37 +310,24 @@ export default function OraclePoolsPage() {
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="motion-reduce:transform-none"
-                  >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
-                      <CardContent className="p-6">
-                        <feature.icon className="w-12 h-12 text-orange-400 mb-4" />
-                        <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
-                        <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                  <div key={feature.title} className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <feature.icon className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">{feature.description}</p>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.section>
+          </section>
+        </FadeIn>
 
+        <FadeIn delay={0.4}>
           {/* Technical Details Section */}
-          <motion.section 
-            id="technical"
-            variants={itemVariants} 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4 bg-neutral-900/20 motion-reduce:transform-none"
-          >
+          <section id="technical" className="py-16 px-4 bg-neutral-900/20">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -430,28 +362,21 @@ export default function OraclePoolsPage() {
                         viewport={{ once: true, amount: 0.2 }}
                         className="motion-reduce:transform-none"
                       >
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
-                          <CardHeader>
-                            <CardTitle className="text-white">{detail.title}</CardTitle>
-                          </CardHeader>
-                          <CardContent>
-                            <p className="text-neutral-400 leading-relaxed">
-                              {detail.content}
-                            </p>
-                          </CardContent>
-                        </Card>
+                        <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm h-full hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                          <h3 className="text-white text-xl font-semibold mb-4">{detail.title}</h3>
+                          <p className="text-neutral-300 leading-relaxed">
+                            {detail.content}
+                          </p>
+                        </div>
                       </motion.div>
                     ))}
                   </div>
                 </TabsContent>
 
                 <TabsContent value="pools" className="mt-8">
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
-                    <CardHeader>
-                      <CardTitle className="text-white">Live Oracle Pools</CardTitle>
-                      <p className="text-neutral-400">Current oracle pools providing price feeds</p>
-                    </CardHeader>
-                    <CardContent>
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+                    <h3 className="text-white text-xl font-semibold mb-2">Live Oracle Pools</h3>
+                    <p className="text-neutral-400 mb-6">Current oracle pools providing price feeds</p>
                       <div className="overflow-x-auto">
                         <table className="w-full">
                           <thead>
@@ -484,17 +409,14 @@ export default function OraclePoolsPage() {
                           </tbody>
                         </table>
                       </div>
-                    </CardContent>
-                  </Card>
+                  </div>
                 </TabsContent>
 
                 <TabsContent value="details" className="mt-8">
                   <div className="space-y-8">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
-                      <CardHeader>
-                        <CardTitle className="text-white">Oracle Pool Architecture</CardTitle>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
+                    <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+                      <h3 className="text-white text-xl font-semibold mb-4">Oracle Pool Architecture</h3>
+                      <div className="space-y-4">
                         <div className="text-neutral-400 leading-relaxed">
                           <p className="mb-4">
                             Oracle pools are implemented as a collection of smart contracts that manage data aggregation, 
@@ -507,14 +429,11 @@ export default function OraclePoolsPage() {
                             <li>Reward distribution mechanism for honest participants</li>
                           </ul>
                         </div>
-                      </CardContent>
-                    </Card>
+                      </div>
+                    </div>
 
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
-                      <CardHeader>
-                        <CardTitle className="text-white">Integration Guide</CardTitle>
-                      </CardHeader>
-                      <CardContent>
+                    <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+                      <h3 className="text-white text-xl font-semibold mb-4">Integration Guide</h3>
                         <div className="text-neutral-400 leading-relaxed">
                           <p className="mb-4">
                             Any Ergo smart contract can read oracle data by accessing the oracle pool box. 
@@ -527,22 +446,26 @@ export default function OraclePoolsPage() {
                             <li>Confidence interval and deviation metrics</li>
                           </ul>
                         </div>
-                      </CardContent>
-                    </Card>
+                    </div>
                   </div>
                 </TabsContent>
               </Tabs>
             </div>
-          </motion.section>
+          </section>
+        </FadeIn>
 
+        <FadeIn delay={0.6}>
+          {/* Oracle Comparison Section */}
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <OracleComparisonTable />
+            </div>
+          </section>
+        </FadeIn>
+
+        <FadeIn delay={0.8}>
           {/* Use Cases Section */}
-          <motion.section 
-            variants={itemVariants} 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4 motion-reduce:transform-none"
-          >
+          <section className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
@@ -555,49 +478,24 @@ export default function OraclePoolsPage() {
               
               <div className="grid md:grid-cols-3 gap-8">
                 {useCases.map((useCase, index) => (
-                  <motion.div
-                    key={useCase.title}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="motion-reduce:transform-none"
-                  >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-orange-500/50 transition-colors">
-                      <CardContent className="p-6">
-                        <useCase.icon className="w-12 h-12 text-orange-400 mb-4" />
-                        <h3 className="text-xl font-semibold mb-3 text-white">{useCase.title}</h3>
-                        <p className="text-neutral-400 leading-relaxed mb-4">{useCase.description}</p>
-                        <a 
-                          href={useCase.link} 
-                          target={useCase.link.startsWith('http') ? '_blank' : undefined}
-                          rel={useCase.link.startsWith('http') ? 'noopener noreferrer' : undefined}
-                          className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
-                        >
-                          Learn more
-                          {useCase.link.startsWith('http') ? (
-                            <ExternalLink className="ml-1 w-4 h-4" />
-                          ) : (
-                            <ArrowRight className="ml-1 w-4 h-4" />
-                          )}
-                        </a>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                  <div key={useCase.title} className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <useCase.icon className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">{useCase.description}</p>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.section>
+          </section>
+        </FadeIn>
 
+        <FadeIn delay={1.0}>
           {/* FAQ Section */}
-          <motion.section 
-            id="faq"
-            variants={itemVariants} 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4 bg-neutral-900/20 motion-reduce:transform-none"
+          <section id="faq" className="py-16 px-4 bg-neutral-900/20"
           >
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
@@ -611,57 +509,92 @@ export default function OraclePoolsPage() {
               
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <Collapsible
-                    key={index}
-                    open={openFAQ === index}
-                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  >
-                    <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg bg-neutral-900/50 border border-neutral-700 p-6 text-left hover:bg-neutral-900/70 transition-colors">
-                      <span className="text-lg font-medium text-white">{faq.question}</span>
-                      <ChevronDown className={`h-5 w-5 text-neutral-400 transition-transform ${openFAQ === index ? 'rotate-180' : ''}`} />
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="px-6 pb-6 pt-2">
-                      <p className="text-neutral-400 leading-relaxed">{faq.answer}</p>
-                    </CollapsibleContent>
-                  </Collapsible>
+                  <div key={index}>
+                    <Collapsible
+                      open={openFAQ === index}
+                      onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    >
+                      <div className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm">
+                        <CollapsibleTrigger asChild>
+                          <div className="cursor-pointer hover:bg-neutral-800/30 transition-colors p-8">
+                            <div className="flex items-center justify-between">
+                              <h3 className="text-white text-left font-semibold">{faq.question}</h3>
+                              <ChevronDown 
+                                className={`w-5 h-5 text-neutral-400 transition-transform ${
+                                  openFAQ === index ? 'rotate-180' : ''
+                                }`} 
+                              />
+                            </div>
+                          </div>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                          <div className="px-8 pb-8">
+                            <p className="text-neutral-300 leading-relaxed">
+                              {faq.answer}
+                            </p>
+                          </div>
+                        </CollapsibleContent>
+                      </div>
+                    </Collapsible>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.section>
+          </section>
+        </FadeIn>
 
-          {/* CTA Section */}
-          <motion.section 
-            variants={itemVariants} 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4 motion-reduce:transform-none"
-          >
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                Ready to Use Oracle Data?
-              </h2>
-              <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                Start integrating reliable, decentralized price feeds into your Ergo applications today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://oracle-core.ergoplatform.com/" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    View Oracle Dashboard
-                    <ExternalLink className="ml-2 w-4 h-4" />
-                  </Button>
+        <FadeIn delay={1.2}>
+          {/* What's Next Section */}
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  What's <span className="text-orange-400">Next?</span>
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Ready to integrate oracle data? Explore the tools and resources available.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <a href="https://github.com/ergoplatform/oracle-core" target="_blank" rel="noopener noreferrer" className="group block">
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <BarChart3 className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">View Oracle Core</h3>
+                        <p className="text-orange-400 font-medium">Source Code</p>
+                      </div>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">
+                      Explore the Oracle Core repository with setup guides, documentation, and source code.
+                    </p>
+                  </div>
                 </a>
-                                    <Link href="/docs">
-                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    Read Documentation
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                
+                <Link href="/docs" className="group block">
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">Technical Documentation</h3>
+                        <p className="text-orange-400 font-medium">Learn More</p>
+                      </div>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">
+                      Learn how to integrate oracle data into your smart contracts and applications.
+                    </p>
+                  </div>
                 </Link>
               </div>
             </div>
-          </motion.section>
-        </motion.div>
-      </div>
+          </section>
+        </FadeIn>
+      </BackgroundWrapper>
     </>
   )
 } 

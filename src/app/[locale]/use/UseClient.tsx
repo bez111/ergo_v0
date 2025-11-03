@@ -180,9 +180,11 @@ export default function UseClient() {
                     { name: t('featuredUseCases.privacy'), icon: iconNode.shield, subtitle: "Privacy Applications" },
                   ].map((feature) => (
                     <div key={feature.name} className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2.5 rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400">{feature.icon}</div>
-                        <h4 className="font-semibold text-white text-lg">{feature.subtitle}</h4>
+                      <div className="flex items-start gap-3">
+                        <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">{feature.icon}</div>
+                        <div>
+                          <h4 className="font-semibold text-white text-lg">{feature.subtitle}</h4>
+                        </div>
                       </div>
                     </div>
                   ))}

@@ -242,7 +242,7 @@ export default function EcosystemClient() {
                   exit={{ opacity: 0, x: -50 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Card className="bg-neutral-900/50 border-0 rounded-xl hover:ring-1 hover:ring-orange-500/30 transition-all duration-200 h-full flex flex-col">
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full flex flex-col backdrop-blur-sm">
                     <CardContent className="p-6 flex-1 flex flex-col">
                       <div className="flex items-start justify-between mb-4">
                         <div className="flex items-center gap-4">
@@ -262,7 +262,7 @@ export default function EcosystemClient() {
                         </div>
                       </div>
                       <p className="text-neutral-400 mb-6 flex-1">{project.description}</p>
-                      <Button asChild variant="outline" className="w-full mt-auto border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500 hover:text-orange-400">
+                      <Button asChild variant="outline" className="w-full mt-auto border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300">
                         <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="flex items-center gap-2">
                           Visit Project
                           <ExternalLink className="w-4 h-4" aria-hidden="true" focusable="false" />

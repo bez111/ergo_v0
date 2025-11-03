@@ -536,19 +536,19 @@ export default function TechnologyPage() {
             <TabsList className="flex w-full gap-2 bg-transparent p-0">
               <TabsTrigger
                 value="usecases"
-                className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
+                className="flex-1 rounded-md border border-white/20 bg-black px-4 py-2 text-white hover:bg-black/90 hover:border-primary/40 data-[state=active]:border-primary/60 data-[state=active]:text-primary data-[state=active]:bg-primary/20"
               >
                 Use Cases
               </TabsTrigger>
               <TabsTrigger
                 value="architecture"
-                className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
+                className="flex-1 rounded-md border border-white/20 bg-black px-4 py-2 text-white hover:bg-black/90 hover:border-primary/40 data-[state=active]:border-primary/60 data-[state=active]:text-primary data-[state=active]:bg-primary/20"
               >
                 Architecture
               </TabsTrigger>
               <TabsTrigger
                 value="resources"
-                className="flex-1 rounded-md border border-neutral-700 bg-neutral-900/60 px-4 py-2 text-neutral-300 hover:bg-neutral-900 data-[state=active]:border-orange-500/50 data-[state=active]:text-orange-400 data-[state=active]:bg-orange-500/10"
+                className="flex-1 rounded-md border border-white/20 bg-black px-4 py-2 text-white hover:bg-black/90 hover:border-primary/40 data-[state=active]:border-primary/60 data-[state=active]:text-primary data-[state=active]:bg-primary/20"
               >
                 Resources
               </TabsTrigger>

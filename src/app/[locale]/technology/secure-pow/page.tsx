@@ -7,18 +7,17 @@ import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
-import { Shield, Cpu, Zap, Users, ExternalLink, CheckCircle, TrendingUp, ChevronDown, Link as LinkIcon, BookOpen, Copy } from "lucide-react"
+import { Shield, Cpu, Zap, Users, CheckCircle, TrendingUp, ChevronDown, Pickaxe, BookOpen } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 export default function SecurePowPage() {
   const t = useTranslations("technology.securePow")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
-  const [copied, setCopied] = useState(false)
   const exampleCmd = t("exampleCommand")
 
   const containerVariants = {
@@ -214,13 +213,14 @@ export default function SecurePowPage() {
         }}
       />
       
-      <div className="min-h-screen bg-black text-white">
+      <BackgroundWrapper>
+        <div className="min-h-screen text-white">
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
             items={[
-              { label: "Technology", href: "/technology" },
-              { label: "Secure PoW", href: "/technology/secure-pow" }
+              { name: "Technology", href: "/technology" },
+              { name: "Secure PoW", href: "/technology/secure-pow" }
             ]}
             className="mb-8"
           />
@@ -234,23 +234,20 @@ export default function SecurePowPage() {
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">{t("title")}</h1>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    {t("description.intro")}
-                  </p>
-                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    {t("description.main")}
+                    Ergo uses Autolykos v2 — a memory-hard, GPU-friendly Proof-of-Work that keeps mining decentralized and accessible.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                      <Link href="/use/mining">{t("buttons.startMining")}</Link>
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
+                      {t("buttons.startMining")}
                     </Button>
-                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
-                      <Link href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer">{t("buttons.readWhitepaper")}</Link>
+                    <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl">
+                      {t("buttons.readWhitepaper")}
                     </Button>
                   </div>
                 </div>
                 <div className="relative">
                   <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors">
+                    <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                       <CardContent className="p-0">
                         <h3 className="text-2xl font-bold mb-6 text-center text-white">
                           {t("networkStats.title")}
@@ -273,7 +270,7 @@ export default function SecurePowPage() {
                           {t("networkStats.note")}
                         </p>
                       </CardContent>
-                    </Card>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -293,14 +290,16 @@ export default function SecurePowPage() {
                     className="group"
                   >
                     <Card
-                      className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors h-full`}
+                      className={`bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 hover:border-orange-500/30 transition-colors h-full`}
                     >
-                      <CardContent className="p-8 text-center">
-                        <div className="w-16 h-16 bg-orange-500/20 rounded-lg flex items-center justify-center mx-auto mb-6">
-                          <feature.icon className="w-8 h-8 text-orange-400" aria-hidden="true" />
+                      <CardContent className="p-6">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            <feature.icon className="w-6 h-6 text-orange-400" aria-hidden="true" />
+                          </div>
+                          <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                         </div>
-                        <h3 className="text-xl font-semibold mb-4 text-white">{feature.title}</h3>
-                        <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
+                        <p className="text-neutral-200 leading-relaxed">{feature.description}</p>
                       </CardContent>
                     </Card>
                   </div>
@@ -312,7 +311,7 @@ export default function SecurePowPage() {
           {/* What is Autolykos v2 */}
           <FadeIn delay={0.6}>
             <div id="what-is-autolykos" className="space-y-8 mb-16">
-              <Card className="bg-gradient-to-br from-neutral-900/90 to-neutral-900/50 border border-orange-500/20 backdrop-blur-sm rounded-xl overflow-hidden relative group hover:border-orange-500/40 transition-all duration-300">
+              <Card className="bg-black border border-white/10 backdrop-blur-sm rounded-3xl overflow-hidden relative group hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <CardHeader className="relative z-10 pb-3">
                   <div className="flex items-center gap-3 mb-2">
@@ -323,12 +322,9 @@ export default function SecurePowPage() {
                       {t("whatIsAutolykos.title")}
                     </CardTitle>
                   </div>
-                  <p className="text-neutral-300 text-lg leading-relaxed">
-                    {t("whatIsAutolykos.description")}
-                  </p>
                 </CardHeader>
                 <CardContent className="relative z-10 space-y-6">
-                  <div className="bg-neutral-800/50 rounded-lg p-4 border border-neutral-700/50">
+                  <div className="bg-black/60 rounded-lg p-4 border border-white/20">
                     <p className="text-neutral-300 text-sm">
                       {t("whatIsAutolykos.learnMore")} <Link href="/technology/eutxo-model" className="text-orange-400 hover:text-orange-300 underline transition-colors">{t("whatIsAutolykos.eutxoLink")}</Link> {t("whatIsAutolykos.and")}
                       <Link href="/technology/storage-rent" className="text-orange-400 hover:text-orange-300 underline transition-colors ml-1">{t("whatIsAutolykos.storageRentLink")}</Link> {t("whatIsAutolykos.sustainableEconomics")}.
@@ -337,7 +333,7 @@ export default function SecurePowPage() {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-3">
                       {algorithmFeatures.map((feature, index) => (
-                        <div key={index} className="flex items-center gap-3 p-3 bg-neutral-800/30 rounded-lg border border-neutral-700/30">
+                        <div key={index} className="flex items-center gap-3 p-3 bg-black/60 rounded-lg border border-white/20">
                           <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                             <Cpu className="w-4 h-4 text-orange-400" />
                           </div>
@@ -347,7 +343,7 @@ export default function SecurePowPage() {
                     </div>
                     <div className="space-y-3">
                       {algorithmBenefits.map((benefit, index) => (
-                        <div key={index} className="flex items-center gap-3 p-3 bg-neutral-800/30 rounded-lg border border-neutral-700/30">
+                        <div key={index} className="flex items-center gap-3 p-3 bg-black/60 rounded-lg border border-white/20">
                           <div className="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center">
                             {index === 0 ? <Cpu className="w-4 h-4 text-orange-400" /> : 
                              index === 1 ? <Shield className="w-4 h-4 text-orange-400" /> : 
@@ -361,7 +357,7 @@ export default function SecurePowPage() {
                 </CardContent>
               </Card>
 
-              <Card id="security-benefits" className="bg-gradient-to-br from-neutral-900/90 to-neutral-900/50 border border-green-500/20 backdrop-blur-sm rounded-xl overflow-hidden relative group hover:border-green-500/40 transition-all duration-300">
+              <Card id="security-benefits" className="bg-black border border-white/10 backdrop-blur-sm rounded-3xl overflow-hidden relative group hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <CardHeader className="relative z-10 pb-3">
                   <div className="flex items-center gap-3 mb-2">
@@ -378,7 +374,7 @@ export default function SecurePowPage() {
                     {benefits.map((benefit, index) => (
                       <div
                         key={benefit}
-                        className="flex items-start gap-3 p-4 bg-neutral-800/30 rounded-lg border border-neutral-700/30 hover:bg-neutral-800/50 transition-colors"
+                        className="flex items-start gap-3 p-4 bg-black/60 rounded-lg border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-colors"
                       >
                         <div className="w-6 h-6 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
                           <CheckCircle className="w-4 h-4 text-green-400" />
@@ -387,7 +383,7 @@ export default function SecurePowPage() {
                       </div>
                     ))}
                   </div>
-                  <div className="bg-gradient-to-r from-neutral-800/50 to-neutral-700/30 rounded-lg p-6 border border-neutral-700/50">
+                  <div className="bg-black/60 rounded-lg p-6 border border-white/20">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-8 h-8 bg-red-500/20 rounded-lg flex items-center justify-center">
                         <Shield className="w-5 h-5 text-red-400" />
@@ -410,7 +406,7 @@ export default function SecurePowPage() {
 
           {/* Mining Progress */}
           <FadeIn delay={0.8}>
-            <Card className="mb-16 bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+            <Card className="mb-16 bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
               <CardHeader>
                 <CardTitle className="text-xl text-white flex items-center gap-2">
                   <TrendingUp className="w-5 h-5 text-orange-400" aria-hidden="true" />
@@ -450,7 +446,7 @@ export default function SecurePowPage() {
           {/* Quick Start */}
           <FadeIn delay={0.85}>
             <div id="quick-start" className="max-w-5xl mx-auto mb-16">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+              <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <CardHeader>
                   <CardTitle className="text-xl text-white">{t("quickStart.title")}</CardTitle>
                   <CardDescription>{t("quickStart.description")}</CardDescription>
@@ -494,23 +490,8 @@ export default function SecurePowPage() {
                     </motion.ul>
                   </div>
                   <div className="mt-4">
-                    <div className="flex items-center justify-between mb-2">
+                    <div className="mb-2">
                       <span className="text-xs text-neutral-400">{t("quickStart.sampleCommand")}</span>
-                      <button
-                        onClick={async () => {
-                          try {
-                            await navigator.clipboard.writeText(exampleCmd)
-                            setCopied(true)
-                            setTimeout(() => setCopied(false), 1500)
-                          } catch {}
-                        }}
-                        className="inline-flex items-center gap-1 text-xs text-neutral-400 hover:text-orange-400 transition-colors p-1 rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
-                        aria-label="Copy sample command"
-                        title="Copy"
-                      >
-                        <Copy className="w-3.5 h-3.5" aria-hidden="true" />
-                        {copied ? t("quickStart.copied") : t("quickStart.copy")}
-                      </button>
                     </div>
                     <pre className="bg-neutral-950/80 p-3 rounded-lg text-sm font-mono text-neutral-200 overflow-x-auto"><code>{exampleCmd}</code></pre>
                   </div>
@@ -535,7 +516,7 @@ export default function SecurePowPage() {
                 {faqs.map((faq, index) => (
                   <Card
                     key={index}
-                    className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
+                    className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300"
                   >
                     <Collapsible
                       open={openFAQ === index}
@@ -564,36 +545,59 @@ export default function SecurePowPage() {
             </div>
           </FadeIn>
 
-          {/* CTA */}
+          {/* What's Next Section */}
           <FadeIn delay={1.0}>
-            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-              <CardContent className="text-center py-12">
-                <h3 className="text-4xl font-bold mb-6 text-white">
-                  {t("cta.title")}
-                </h3>
-                <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                  {t("cta.description")}
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    <Link href="/use/mining">{t("cta.buttons.miningGuide")}</Link>
-                  </Button>
-                  <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm gap-2">
-                    <Link href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer">
-                      {t("cta.buttons.whitepaper")}
-                      <ExternalLink className="w-4 h-4" aria-hidden="true" />
-                    </Link>
-                  </Button>
-                </div>
-                <p className="text-sm text-neutral-400 mt-6">
-                  {t("cta.relatedText")}: <Link href="/technology/storage-rent" className="underline hover:opacity-80">{t("cta.storageRentLink")}</Link> ·
-                  <Link href="/technology#adaptive-emission-governance" className="underline hover:opacity-80 ml-2">{t("cta.adaptiveEmissionLink")}</Link>
-                </p>
-              </CardContent>
-            </Card>
+            <div className="max-w-6xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+                What's <span className="text-orange-400">Next</span>?
+              </h2>
+              <p className="text-xl text-center text-neutral-300 mb-12">
+                Continue your journey with Ergo mining
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Link 
+                  href="/use/mining"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <Pickaxe className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Start Mining</h3>
+                      <p className="text-orange-400 text-sm">Get Started</p>
+                    </div>
+                  </div>
+                  <p className="text-neutral-300">
+                    Learn how to set up your mining operation and join the Ergo network
+                  </p>
+                </Link>
+                
+                <a 
+                  href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Read Whitepaper</h3>
+                      <p className="text-orange-400 text-sm">Technical Details</p>
+                    </div>
+                  </div>
+                  <p className="text-neutral-300">
+                    Deep dive into the technical specifications of Autolykos v2 consensus algorithm
+                  </p>
+                </a>
+              </div>
+            </div>
           </FadeIn>
         </div>
-      </div>
+        </div>
+      </BackgroundWrapper>
     </>
   )
 }

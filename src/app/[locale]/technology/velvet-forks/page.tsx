@@ -2,204 +2,99 @@
 
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { 
-  GitBranch, Shield, ExternalLink, Lock, CheckCircle, Layers, RefreshCw, Settings, Users, TrendingUp, AlertTriangle, ChevronDown, Terminal, BookOpen, Cpu, Network
+  GitBranch, Shield, Lock, CheckCircle, Layers, RefreshCw, Settings, Users, TrendingUp, ChevronDown, Terminal, BookOpen
 } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import React from "react"
-import { useTranslations } from "next-intl"
-
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      duration: 0.6,
-      staggerChildren: 0.1,
-    },
-  },
-}
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-    },
-  },
-}
 
 export default function VelvetForksPage() {
-  const t = useTranslations("technology.velvetForks")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
-  const [activeTab, setActiveTab] = useState("overview")
 
   const features = [
     {
-      title: t("features.0.title"),
-      description: t("features.0.description"),
+      title: "Backward Compatibility",
+      description: "No breaking changes for existing applications and infrastructure",
       icon: RefreshCw,
     },
     {
-      title: t("features.1.title"),
-      description: t("features.1.description"),
+      title: "Gradual Adoption", 
+      description: "New features can be adopted incrementally by the network",
       icon: TrendingUp,
     },
     {
-      title: t("features.2.title"),
-      description: t("features.2.description"),
+      title: "Flexible Updates",
+      description: "Protocol parameters can be adjusted without hard forks", 
       icon: Settings,
     },
     {
-      title: t("features.3.title"),
-      description: t("features.3.description"),
+      title: "Community Consensus",
+      description: "Changes require broad community agreement and miner support",
       icon: Users,
     },
     {
-      title: t("features.4.title"),
-      description: t("features.4.description"),
+      title: "Security Preservation",
+      description: "Maintains network security while enabling protocol evolution",
       icon: Shield,
     },
     {
-      title: t("features.5.title"),
-      description: t("features.5.description"),
+      title: "Reduced Risk",
+      description: "Lower risk of network splits and ecosystem fragmentation",
       icon: CheckCircle,
     },
   ]
 
   const useCases = [
     {
-      title: t("useCases.0.title"),
-      description: t("useCases.0.description"),
+      title: "Light Client Upgrades",
+      description: "Enable new features for light clients without breaking existing implementations",
       icon: Layers,
-      link: "/technology/nipopows",
-      linkText: t("useCases.0.linkText"),
     },
     {
-      title: t("useCases.1.title"),
-      description: t("useCases.1.description"),
+      title: "Privacy Enhancements", 
+      description: "Gradually introduce new privacy features while maintaining backward compatibility",
       icon: Lock,
-      link: "/technology/privacy-features",
-      linkText: t("useCases.1.linkText"),
     },
     {
-      title: t("useCases.2.title"),
-      description: t("useCases.2.description"),
+      title: "Smart Contract Evolution",
+      description: "Upgrade ErgoScript capabilities without requiring ecosystem-wide changes",
       icon: Terminal,
-      link: "/docs/ergoscript",
-      linkText: t("useCases.2.linkText"),
-    },
-    {
-      title: t("useCases.3.title"),
-      description: t("useCases.3.description"),
-      icon: Cpu,
-      link: "/use/mining",
-      linkText: t("useCases.3.linkText"),
     },
   ]
-
-  const steps = [
-    {
-      title: t("howItWorks.steps.0.title"),
-      description: t("howItWorks.steps.0.description"),
-      icon: GitBranch,
-    },
-    {
-      title: t("howItWorks.steps.1.title"),
-      description: t("howItWorks.steps.1.description"),
-      icon: RefreshCw,
-    },
-    {
-      title: t("howItWorks.steps.2.title"),
-      description: t("howItWorks.steps.2.description"),
-      icon: CheckCircle,
-    },
-    {
-      title: t("howItWorks.steps.3.title"),
-      description: t("howItWorks.steps.3.description"),
-      icon: Network,
-    },
-  ]
-
-  const comparisonData = {
-    hardFork: {
-      title: t("comparison.hardFork.title"),
-      description: t("comparison.hardFork.description"),
-      pros: [
-        t("comparison.hardFork.pros.0"),
-        t("comparison.hardFork.pros.1")
-      ],
-      cons: [
-        t("comparison.hardFork.cons.0"),
-        t("comparison.hardFork.cons.1"),
-        t("comparison.hardFork.cons.2")
-      ]
-    },
-    softFork: {
-      title: t("comparison.softFork.title"),
-      description: t("comparison.softFork.description"),
-      pros: [
-        t("comparison.softFork.pros.0"),
-        t("comparison.softFork.pros.1")
-      ],
-      cons: [
-        t("comparison.softFork.cons.0"),
-        t("comparison.softFork.cons.1")
-      ]
-    },
-    velvetFork: {
-      title: t("comparison.velvetFork.title"),
-      description: t("comparison.velvetFork.description"),
-      pros: [
-        t("comparison.velvetFork.pros.0"),
-        t("comparison.velvetFork.pros.1"),
-        t("comparison.velvetFork.pros.2"),
-        t("comparison.velvetFork.pros.3")
-      ],
-      cons: [
-        t("comparison.velvetFork.cons.0"),
-        t("comparison.velvetFork.cons.1")
-      ]
-    }
-  }
 
   const faqs = [
     {
-      question: t("faq.items.0.question"),
-      answer: t("faq.items.0.answer"),
+      question: "What exactly is a velvet fork?",
+      answer: "A velvet fork is Ergo's approach to protocol upgrades that maintains complete backward compatibility while enabling new features. Unlike hard or soft forks, velvet forks never break existing functionality.",
     },
     {
-      question: t("faq.items.1.question"),
-      answer: t("faq.items.1.answer"),
+      question: "How do velvet forks differ from soft forks?",
+      answer: "While soft forks tighten existing rules, velvet forks can add entirely new features without affecting nodes that don't upgrade. This allows for more flexible protocol evolution.",
     },
     {
-      question: t("faq.items.2.question"),
-      answer: t("faq.items.2.answer"),
+      question: "Are velvet forks secure?",
+      answer: "Yes, velvet forks maintain the same security guarantees as the base protocol. New features are designed to be optional and don't compromise the security of existing functionality.",
     },
     {
-      question: t("faq.items.3.question"),
-      answer: t("faq.items.3.answer"),
+      question: "Do I need to upgrade my node for velvet forks?",
+      answer: "No, upgrades are optional. Your node will continue to work normally, though you won't have access to new features until you choose to upgrade.",
     },
   ]
 
   return (
     <>
-      {/* SEO Schema */}
       <SchemaOrg
         type="TechArticle"
         data={{
           "@type": "TechArticle",
-          headline: t("title"),
-          description: t("description"),
-          keywords: "velvet forks, protocol upgrades, backward compatibility, soft forks, blockchain evolution",
+          headline: "Velvet Forks",
+          description: "Backward-compatible protocol upgrades that enable evolution without breaking changes",
+          keywords: "velvet forks, protocol upgrades, backward compatibility, blockchain evolution",
           datePublished: "2023-11-10",
           dateModified: "2025-08-10",
           author: {
@@ -207,282 +102,417 @@ export default function VelvetForksPage() {
             name: "Ergo Platform",
             url: "https://ergoplatform.org",
           },
-          image: "https://ergoplatform.org/img/velvet-forks.png",
-          publisher: {
-            "@type": "Organization",
-            name: "Ergo Platform",
-            url: "https://ergoplatform.org",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://ergoplatform.org/img/logo-dark.svg",
-            },
-          },
         }}
       />
 
-      {/* Breadcrumbs */}
-      <Breadcrumbs
-        items={[
-          { name: "Technology", href: "/technology" },
-          { name: "Velvet Forks", href: "/technology/velvet-forks" },
-        ]}
-        className="mb-8"
-      />
+      <BackgroundWrapper>
+        <div className="sr-only">
+          <Breadcrumbs
+            items={[
+              { name: "Technology", href: "/technology" },
+              { name: "Velvet Forks", href: "/technology/velvet-forks" },
+            ]}
+            className="mb-8"
+          />
+        </div>
 
-      <div className="min-h-screen bg-black text-white relative overflow-hidden">
-        {/* Background Elements */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-tr from-orange-900/10 via-transparent to-red-900/10" aria-hidden />
+        <FadeIn>
+          <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
+                  Velvet Forks
+                </h1>
+                <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
+                  Backward-compatible protocol upgrades
+                </p>
+                <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                  Enable protocol evolution without breaking changes or forced upgrades. Velvet forks allow gradual feature adoption while preserving ecosystem stability.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Link href="/docs/protocol/velvet-forks">
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      Read Documentation
+                    </Button>
+                  </Link>
+                  <Link href="/technology">
+                    <Button
+                      variant="outline"
+                      className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                    >
+                      Explore Other Technologies
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+              <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <div className="mb-8">
+                    <h3 className="text-2xl font-bold text-white">Quick Start</h3>
+                  </div>
+                  <div className="space-y-4">
+                    {[
+                      {
+                        number: "01",
+                        title: "Learn Concepts",
+                        description: "Understand velvet fork principles",
+                      },
+                      {
+                        number: "02", 
+                        title: "View Examples",
+                        description: "See velvet forks in action",
+                      },
+                      {
+                        number: "03",
+                        title: "Join Discussion",
+                        description: "Participate in governance",
+                      },
+                    ].map((item) => (
+                      <div key={item.number} className="flex items-center gap-4 p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                        <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center text-orange-400 font-bold text-sm">
+                          {item.number}
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-white text-lg">{item.title}</h4>
+                          <p className="text-sm text-neutral-400">{item.description}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        </FadeIn>
 
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={containerVariants}
-          className="container mx-auto px-4 py-16 relative z-10"
-        >
-          {/* Hero Section */}
-          <motion.section variants={itemVariants} className="text-center mb-16">
-            <FadeIn>
-              <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-400 via-white to-cyan-400 bg-clip-text text-transparent">
-                {t("title")}
-              </h1>
-              <p className="text-xl md:text-2xl text-neutral-300 max-w-3xl mx-auto">
-                {t("subtitle")}
-              </p>
-            </FadeIn>
-          </motion.section>
-
-          {/* Features Grid */}
-          <motion.section variants={containerVariants} className="grid md:grid-cols-3 gap-8 mb-16">
-            {features.map((feature, i) => (
-              <motion.div key={feature.title} variants={itemVariants}>
-                <Card className="bg-gradient-to-br from-orange-500/20 to-orange-500/5 border-gray-700/50 backdrop-blur-xl h-full">
-                  <CardHeader>
-                    <div className="flex items-center space-x-3 mb-4">
-                      <div className="p-2 bg-orange-500/10 rounded-lg">
+        <FadeIn delay={0.2}>
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Key Features
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Why velvet forks are the future of blockchain protocol upgrades
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature) => (
+                  <div key={feature.title} className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
                         <feature.icon className="w-6 h-6 text-orange-400" />
                       </div>
-                      <CardTitle className="text-xl">{feature.title}</CardTitle>
+                      <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
                     </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-neutral-300">{feature.description}</p>
-                  </CardContent>
-                </Card>
-              </motion.div>
-            ))}
-          </motion.section>
-
-          {/* How It Works */}
-          <motion.section variants={itemVariants} className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">{t("howItWorks.title")}</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {steps.map((step, index) => (
-                <Card key={step.title} className="bg-neutral-900/50 border-neutral-700 relative">
-                  <CardContent className="p-6">
-                    <div className="absolute -top-3 -left-3 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
-                      {index + 1}
-                    </div>
-                    <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center mb-4 mt-2">
-                      <step.icon className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
-                    <p className="text-neutral-300 text-sm">{step.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </motion.section>
-
-          {/* Use Cases */}
-          <motion.section variants={itemVariants} className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">Use Cases for Velvet Forks</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {useCases.map((useCase) => (
-                <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 bg-orange-500/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <useCase.icon className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-lg font-semibold mb-2">{useCase.title}</h3>
-                        <p className="text-neutral-300 text-sm mb-4">{useCase.description}</p>
-                        <Link href={useCase.link} className="text-orange-400 hover:text-orange-300 text-sm font-medium">
-                          {useCase.linkText}
-                        </Link>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </motion.section>
-
-          {/* Fork Comparison */}
-          <motion.section variants={itemVariants} className="mb-16">
-            <h2 className="text-3xl font-bold mb-8 text-center">{t("comparison.title")}</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              <Card className="bg-neutral-900/50 border-neutral-700">
-                <CardHeader>
-                  <CardTitle className="text-xl text-red-400">{comparisonData.hardFork.title}</CardTitle>
-                  <p className="text-neutral-400 text-sm">{comparisonData.hardFork.description}</p>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
-                      <ul className="space-y-1">
-                        {comparisonData.hardFork.pros.map((pro, index) => (
-                          <li key={index} className="text-neutral-300 text-sm flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            {pro}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-red-400 font-semibold mb-2">Cons</h4>
-                      <ul className="space-y-1">
-                        {comparisonData.hardFork.cons.map((con, index) => (
-                          <li key={index} className="text-neutral-300 text-sm flex items-center gap-2">
-                            <AlertTriangle className="w-4 h-4 text-red-400" />
-                            {con}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                    <p className="text-neutral-300 leading-relaxed">{feature.description}</p>
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-neutral-900/50 border-neutral-700">
-                <CardHeader>
-                  <CardTitle className="text-xl text-yellow-400">{comparisonData.softFork.title}</CardTitle>
-                  <p className="text-neutral-400 text-sm">{comparisonData.softFork.description}</p>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
-                      <ul className="space-y-1">
-                        {comparisonData.softFork.pros.map((pro, index) => (
-                          <li key={index} className="text-neutral-300 text-sm flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            {pro}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-red-400 font-semibold mb-2">Cons</h4>
-                      <ul className="space-y-1">
-                        {comparisonData.softFork.cons.map((con, index) => (
-                          <li key={index} className="text-neutral-300 text-sm flex items-center gap-2">
-                            <AlertTriangle className="w-4 h-4 text-red-400" />
-                            {con}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-gradient-to-br from-orange-500/20 to-orange-500/5 border-orange-500/30">
-                <CardHeader>
-                  <CardTitle className="text-xl text-orange-400">{comparisonData.velvetFork.title}</CardTitle>
-                  <p className="text-neutral-400 text-sm">{comparisonData.velvetFork.description}</p>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
-                      <ul className="space-y-1">
-                        {comparisonData.velvetFork.pros.map((pro, index) => (
-                          <li key={index} className="text-neutral-300 text-sm flex items-center gap-2">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            {pro}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div>
-                      <h4 className="text-red-400 font-semibold mb-2">Cons</h4>
-                      <ul className="space-y-1">
-                        {comparisonData.velvetFork.cons.map((con, index) => (
-                          <li key={index} className="text-neutral-300 text-sm flex items-center gap-2">
-                            <AlertTriangle className="w-4 h-4 text-red-400" />
-                            {con}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </motion.section>
-
-          {/* FAQ Section */}
-          <motion.section variants={itemVariants} className="mb-16">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">{t("faq.title")}</h2>
-              <div className="space-y-4">
-                {faqs.map((faq, index) => (
-                  <Collapsible
-                    key={index}
-                    open={openFAQ === index}
-                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  >
-                    <Card className="bg-neutral-900/50 border-neutral-700">
-                      <CollapsibleTrigger asChild>
-                        <CardHeader className="cursor-pointer hover:bg-neutral-800/50">
-                          <div className="flex items-center justify-between">
-                            <CardTitle className="text-lg">{faq.question}</CardTitle>
-                            <ChevronDown
-                              className={`w-5 h-5 text-neutral-400 transition-transform ${
-                                openFAQ === index ? "rotate-180" : ""
-                              }`}
-                            />
-                          </div>
-                        </CardHeader>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent>
-                        <CardContent>
-                          <p className="text-neutral-300">{faq.answer}</p>
-                        </CardContent>
-                      </CollapsibleContent>
-                    </Card>
-                  </Collapsible>
                 ))}
               </div>
             </div>
-          </motion.section>
+          </section>
+        </FadeIn>
 
-          {/* CTA Section */}
-          <motion.section variants={itemVariants} className="text-center">
-            <h2 className="text-3xl font-bold mb-8">{t("cta.title")}</h2>
-            <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-              {t("cta.subtitle")}
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Link href="/docs">
-                <Button className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-black font-semibold px-8 py-3 rounded-xl">
-                  {t("cta.buttons.readDocumentation")}
-                  <BookOpen className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
-              <Link href="https://github.com/ergoplatform/ergo" target="_blank">
-                <Button variant="outline" className="border-cyan-500/50 text-cyan-400 hover:bg-cyan-500/10 px-8 py-3 rounded-xl">
-                  {t("cta.buttons.viewCode")}
-                  <ExternalLink className="ml-2 w-4 h-4" />
-                </Button>
-              </Link>
+        <FadeIn delay={0.4}>
+          <section className="py-16 px-4 bg-neutral-900/20">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  How It Works
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  The velvet fork process ensures smooth protocol evolution
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                {[
+                  {
+                    title: "Proposal Phase",
+                    description: "Community proposes protocol improvements through EIPs",
+                    icon: GitBranch,
+                  },
+                  {
+                    title: "Discussion & Review",
+                    description: "Technical review and community discussion",
+                    icon: Users,
+                  },
+                  {
+                    title: "Implementation",
+                    description: "Developers implement backward-compatible changes",
+                    icon: CheckCircle,
+                  },
+                  {
+                    title: "Gradual Activation",
+                    description: "Network adopts features without forced upgrades",
+                    icon: TrendingUp,
+                  },
+                ].map((step, index) => (
+                  <div key={step.title} className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full relative">
+                    <div className="absolute -top-3 -left-3 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
+                      {index + 1}
+                    </div>
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center mb-4 mt-2">
+                      <step.icon className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <h3 className="text-xl font-semibold mb-4 text-white">{step.title}</h3>
+                    <p className="text-neutral-300 leading-relaxed">{step.description}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </motion.section>
-        </motion.div>
-      </div>
+          </section>
+        </FadeIn>
+
+        <FadeIn delay={0.6}>
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Fork Comparison
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Understanding different approaches to blockchain protocol upgrades
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+                  <h3 className="text-xl font-semibold mb-4 text-red-400">Hard Fork</h3>
+                  <p className="text-neutral-400 text-sm mb-6">Breaking changes that require all nodes to upgrade</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
+                      <ul className="space-y-1">
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          Complete protocol redesign possible
+                        </li>
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          Can fix fundamental issues
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-red-400 font-semibold mb-2">Cons</h4>
+                      <ul className="space-y-1">
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <Shield className="w-4 h-4 text-red-400" />
+                          Risk of network split
+                        </li>
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <Shield className="w-4 h-4 text-red-400" />
+                          Requires coordinated upgrade
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+                  <h3 className="text-xl font-semibold mb-4 text-yellow-400">Soft Fork</h3>
+                  <p className="text-neutral-400 text-sm mb-6">Backward-compatible changes that tighten rules</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
+                      <ul className="space-y-1">
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          Maintains backward compatibility
+                        </li>
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          No forced upgrades required
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-red-400 font-semibold mb-2">Cons</h4>
+                      <ul className="space-y-1">
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <Shield className="w-4 h-4 text-red-400" />
+                          Limited to rule tightening
+                        </li>
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <Shield className="w-4 h-4 text-red-400" />
+                          Cannot add new features easily
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm border-orange-400/40">
+                  <h3 className="text-xl font-semibold mb-4 text-orange-400">Velvet Fork</h3>
+                  <p className="text-neutral-400 text-sm mb-6">Ergo's approach: gradual feature introduction with full compatibility</p>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
+                      <ul className="space-y-1">
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          No breaking changes ever
+                        </li>
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          Gradual feature adoption
+                        </li>
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <CheckCircle className="w-4 h-4 text-green-400" />
+                          Preserves ecosystem stability
+                        </li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="text-yellow-400 font-semibold mb-2">Trade-offs</h4>
+                      <ul className="space-y-1">
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <TrendingUp className="w-4 h-4 text-yellow-400" />
+                          Slower feature rollout
+                        </li>
+                        <li className="text-neutral-300 text-sm flex items-center gap-2">
+                          <TrendingUp className="w-4 h-4 text-yellow-400" />
+                          Requires careful design
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        <FadeIn delay={0.8}>
+          <section className="py-16 px-4 bg-neutral-900/20">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Use Cases
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Real-world applications of velvet fork technology
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                {useCases.map((useCase) => (
+                  <div key={useCase.title} className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <useCase.icon className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{useCase.title}</h3>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">{useCase.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        <FadeIn delay={1.0}>
+          <section className="py-16 px-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Frequently Asked Questions
+                </h2>
+                <p className="text-xl text-neutral-400">
+                  Common questions about velvet forks and their implementation
+                </p>
+              </div>
+              
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <div key={index}>
+                    <Collapsible
+                      open={openFAQ === index}
+                      onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    >
+                      <div className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm">
+                        <CollapsibleTrigger asChild>
+                          <div className="cursor-pointer hover:bg-neutral-800/30 transition-colors p-8">
+                            <div className="flex items-center justify-between">
+                              <h3 className="text-white text-left font-semibold">{faq.question}</h3>
+                              <ChevronDown 
+                                className={`w-5 h-5 text-neutral-400 transition-transform ${
+                                  openFAQ === index ? 'rotate-180' : ''
+                                }`} 
+                              />
+                            </div>
+                          </div>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                          <div className="px-8 pb-8">
+                            <p className="text-neutral-300 leading-relaxed">
+                              {faq.answer}
+                            </p>
+                          </div>
+                        </CollapsibleContent>
+                      </div>
+                    </Collapsible>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+
+        <FadeIn delay={1.2}>
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  What's <span className="text-orange-400">Next?</span>
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Ready to explore velvet forks? Dive deeper into the technology and implementation.
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <Link href="/docs/protocol/velvet-forks" className="group block">
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">Read Documentation</h3>
+                        <p className="text-orange-400 font-medium">Learn More</p>
+                      </div>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">
+                      Explore comprehensive guides and technical details about velvet fork implementation.
+                    </p>
+                  </div>
+                </Link>
+                
+                <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="group block">
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Terminal className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">View Source Code</h3>
+                        <p className="text-orange-400 font-medium">GitHub</p>
+                      </div>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">
+                      Explore the Ergo protocol source code and see velvet fork implementations.
+                    </p>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </section>
+        </FadeIn>
+      </BackgroundWrapper>
     </>
   )
-} 
+}

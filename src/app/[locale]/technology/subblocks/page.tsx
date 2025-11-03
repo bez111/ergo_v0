@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Rocket, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCircle, Layers, Clock, Network, GitBranch, Activity, Cpu, Database, Server, Users, Globe, Terminal, BookOpen } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -138,8 +139,6 @@ export default function SubblocksPage() {
     },
   ]
 
-  const lastUpdated = new Date().toISOString().slice(0, 10)
-
   return (
     <>
       {/* BreadcrumbList Schema */}
@@ -180,10 +179,7 @@ export default function SubblocksPage() {
         }}
       />
       
-      <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
-
+      <BackgroundWrapper>
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
@@ -195,112 +191,86 @@ export default function SubblocksPage() {
           />
         </div>
 
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none pb-24">
-        {/* Hero Section */}
-          <motion.section 
-            variants={itemVariants} 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 motion-reduce:transform-none"
-          >
-            <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <FadeIn>
+          {/* Hero Section */}
+          <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
+            <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
+                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
                   {t("title")}
                 </h1>
-                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
-                  <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    {t("subtitle")}
-                  </p>
-                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    {t("description")}
+                <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
+                  {t("subtitle")}
+                </p>
+                <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                  {t("description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/docs">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                  <Link href="/docs">
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
                       {t("buttons.learnMore")}
-                  </Button>
-                    </Link>
-                    <Link href="/docs/introduction/roadmap/sub-blocks">
-                  <Button
-                    variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                  >
+                    </Button>
+                  </Link>
+                  <Link href="/docs/introduction/roadmap/sub-blocks">
+                    <Button
+                      variant="outline"
+                      className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                    >
                       {t("buttons.technicalDetails")}
-                                    </Button>
-                    </Link>
-                  </div>
-                  <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
-                    <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.keyFeatures")}</a></li>
-                      <li><a href="#technical" className="hover:text-orange-400">{t("navigation.technicalDetails")}</a></li>
-                      <li><a href="#use-cases" className="hover:text-orange-400">{t("navigation.useCases")}</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
-                    </ul>
-                  </nav>
+                    </Button>
+                  </Link>
+                </div>
               </div>
-              <div className="relative">
-                  <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                    <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          {t("keyMetrics.title")}
-                      </h3>
-                        <div className="space-y-4">
-                          {[
-                            {
-                              name: t("keyMetrics.confirmationTime.name"),
-                              value: t("keyMetrics.confirmationTime.value"),
-                              description: t("keyMetrics.confirmationTime.description")
-                            },
-                            {
-                              name: t("keyMetrics.throughputIncrease.name"),
-                              value: t("keyMetrics.throughputIncrease.value"),
-                              description: t("keyMetrics.throughputIncrease.description")
-                            },
-                            {
-                              name: t("keyMetrics.securityModel.name"),
-                              value: t("keyMetrics.securityModel.value"),
-                              description: t("keyMetrics.securityModel.description")
-                            },
-                            {
-                              name: t("keyMetrics.compatibility.name"),
-                              value: t("keyMetrics.compatibility.value"),
-                              description: t("keyMetrics.compatibility.description")
-                            },
-                          ].map((item) => (
-                            <div key={item.name} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
-                              <div className="flex items-center justify-between">
-                                <div>
-                                  <h4 className="font-semibold text-white">{item.name}</h4>
-                                  <p className="text-sm text-neutral-400">{item.description}</p>
-                                </div>
-                                <div className="text-right">
-                                  <div className="text-2xl font-bold text-orange-400">{item.value}</div>
-                                </div>
-                              </div>
-                            </div>
-                          ))}
+              <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                    {t("keyMetrics.title")}
+                  </h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    {[
+                      {
+                        name: t("keyMetrics.confirmationTime.name"),
+                        value: t("keyMetrics.confirmationTime.value"),
+                        description: t("keyMetrics.confirmationTime.description")
+                      },
+                      {
+                        name: t("keyMetrics.throughputIncrease.name"),
+                        value: t("keyMetrics.throughputIncrease.value"),
+                        description: t("keyMetrics.throughputIncrease.description")
+                      },
+                      {
+                        name: t("keyMetrics.securityModel.name"),
+                        value: t("keyMetrics.securityModel.value"),
+                        description: t("keyMetrics.securityModel.description")
+                      },
+                      {
+                        name: t("keyMetrics.compatibility.name"),
+                        value: t("keyMetrics.compatibility.value"),
+                        description: t("keyMetrics.compatibility.description")
+                      },
+                    ].map((item) => (
+                      <div key={item.name} className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                        <div className="flex items-center justify-between">
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">{item.name}</h4>
+                            <p className="text-sm text-neutral-400">{item.description}</p>
+                          </div>
+                          <div className="text-right">
+                            <div className="text-2xl font-bold text-orange-400">{item.value}</div>
+                          </div>
                         </div>
-                    </CardContent>
-                    </Card>
+                      </div>
+                    ))}
                   </div>
-              </div>
+                </div>
+              </motion.div>
             </div>
-            </div>
-          </motion.section>
+          </section>
+        </FadeIn>
 
+        <FadeIn delay={0.2}>
           {/* Features Section */}
-          <motion.section 
-            id="features"
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4"
-          >
+          <section id="features" className="py-16 px-4">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -313,33 +283,20 @@ export default function SubblocksPage() {
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => (
-                  <motion.div
-                    key={feature.title}
-                    variants={itemVariants}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.2 }}
-                  >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
-                      <CardHeader>
-                        <div className="flex items-center space-x-3">
-                          <div className="p-2 bg-orange-500/10 rounded-lg">
-                            <feature.icon className="w-6 h-6 text-orange-400" />
-                          </div>
-                          <CardTitle className="text-white">{feature.title}</CardTitle>
-                        </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-neutral-400 leading-relaxed">
-                          {feature.description}
-                        </p>
-                      </CardContent>
-                    </Card>
-                  </motion.div>
+                  <div key={feature.title} className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <feature.icon className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">{feature.description}</p>
+                  </div>
                 ))}
               </div>
             </div>
-          </motion.section>
+          </section>
+        </FadeIn>
 
           {/* Technical Details Section */}
           <motion.section 
@@ -370,16 +327,12 @@ export default function SubblocksPage() {
                     viewport={{ once: true, amount: 0.2 }}
                     className="h-full"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full flex flex-col">
-                      <CardHeader>
-                        <CardTitle className="text-white">{detail.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent className="flex-1">
-                        <p className="text-neutral-400 leading-relaxed">
-                          {detail.content}
-                        </p>
-                      </CardContent>
-                    </Card>
+                    <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm h-full flex flex-col hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                      <h3 className="text-white text-xl font-semibold mb-4">{detail.title}</h3>
+                      <p className="text-neutral-300 leading-relaxed flex-1">
+                        {detail.content}
+                      </p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -414,21 +367,17 @@ export default function SubblocksPage() {
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.2 }}
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
-                      <CardHeader>
-                        <div className="flex items-center space-x-3 mb-4">
-                          <div className="p-2 bg-orange-500/10 rounded-lg">
-                            <useCase.icon className="w-6 h-6 text-orange-400" />
-                          </div>
-                          <CardTitle className="text-white text-lg">{useCase.title}</CardTitle>
+                    <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm h-full hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                      <div className="flex items-center gap-4 mb-6">
+                        <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                          <useCase.icon className="w-6 h-6 text-orange-400" />
                         </div>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-neutral-400 leading-relaxed">
-                          {useCase.description}
-                        </p>
-                      </CardContent>
-                    </Card>
+                        <h3 className="text-white text-xl font-semibold">{useCase.title}</h3>
+                      </div>
+                      <p className="text-neutral-300 leading-relaxed">
+                        {useCase.description}
+                      </p>
+                    </div>
                   </motion.div>
                 ))}
               </div>
@@ -467,27 +416,27 @@ export default function SubblocksPage() {
                       open={openFAQ === index}
                       onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
                     >
-                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                      <div className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm">
                         <CollapsibleTrigger asChild>
-                          <CardHeader className="cursor-pointer hover:bg-neutral-800/50 transition-colors">
+                          <div className="cursor-pointer hover:bg-neutral-800/30 transition-colors p-8">
                             <div className="flex items-center justify-between">
-                              <CardTitle className="text-white text-left">{faq.question}</CardTitle>
+                              <h3 className="text-white text-left font-semibold">{faq.question}</h3>
                               <ChevronDown 
                                 className={`w-5 h-5 text-neutral-400 transition-transform ${
                                   openFAQ === index ? 'rotate-180' : ''
                                 }`} 
                               />
                             </div>
-                          </CardHeader>
+                          </div>
                         </CollapsibleTrigger>
                         <CollapsibleContent>
-                          <CardContent>
-                            <p className="text-neutral-400 leading-relaxed">
+                          <div className="px-8 pb-8">
+                            <p className="text-neutral-300 leading-relaxed">
                               {faq.answer}
                             </p>
-                          </CardContent>
+                          </div>
                         </CollapsibleContent>
-                      </Card>
+                      </div>
                     </Collapsible>
                   </motion.div>
                 ))}
@@ -495,40 +444,58 @@ export default function SubblocksPage() {
             </div>
           </motion.section>
 
-          {/* CTA Section */}
-          <motion.section 
-            variants={itemVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4"
-          >
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                {t("cta.title")}
-              </h2>
-              <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                {t("cta.description")}
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/docs/introduction/roadmap/sub-blocks">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    {t("cta.buttons.readTechnicalDetails")}
-                  </Button>
+        <FadeIn delay={1.4}>
+          {/* What's Next Section */}
+          <section className="py-16 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                  Ready to Experience Sub-Second Confirmations?
+                </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Join the future of blockchain technology with subblocks - where speed meets security
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <Link href="/docs/introduction/roadmap/sub-blocks" className="group block">
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <Terminal className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">Read Technical Details</h3>
+                        <p className="text-orange-400 font-medium">Implementation Guide</p>
+                      </div>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">
+                      Dive deep into the technical architecture and implementation of subblocks
+                    </p>
+                  </div>
                 </Link>
-                <Link href="/technology">
-                  <Button
-                    variant="outline"
-                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                  >
-                    {t("cta.buttons.exploreOtherTechnologies")}
-                  </Button>
+                
+                <Link href="/technology" className="group block">
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <BookOpen className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-white">Explore Other Technologies</h3>
+                        <p className="text-orange-400 font-medium">Learn More</p>
+                      </div>
+                    </div>
+                    <p className="text-neutral-300 leading-relaxed">
+                      Discover more innovative technologies powering the Ergo blockchain
+                    </p>
+                  </div>
                 </Link>
               </div>
             </div>
-          </motion.section>
-        </motion.div>
-      </div>
+          </section>
+        </FadeIn>
+      </BackgroundWrapper>
     </>
   )
 } 

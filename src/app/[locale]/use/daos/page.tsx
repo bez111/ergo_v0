@@ -8,6 +8,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Users, Vote, Coins, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, TrendingUp, Shield, Code, Terminal, BookOpen, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -87,17 +88,6 @@ export default function DAOsAlternativeEconomiesPage() {
       link: "https://paideia.im",
     },
     {
-      name: t("projects.ergoPadDao.name"),
-      description: t("projects.ergoPadDao.description"),
-      status: t("projects.ergoPadDao.status"),
-      features: [
-        t("projects.ergoPadDao.features.feature1"),
-        t("projects.ergoPadDao.features.feature2"),
-        t("projects.ergoPadDao.features.feature3")
-      ],
-      link: "https://ergopad.io",
-    },
-    {
       name: t("projects.sigmaDao.name"),
       description: t("projects.sigmaDao.description"),
       status: t("projects.sigmaDao.status"),
@@ -174,9 +164,7 @@ export default function DAOsAlternativeEconomiesPage() {
         }}
       />
       
-      <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
+      <BackgroundWrapper>
 
         {/* Breadcrumbs */}
         <div className="sr-only">
@@ -196,114 +184,92 @@ export default function DAOsAlternativeEconomiesPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="pt-28 md:pt-32 pb-12 md:pb-16 px-4 motion-reduce:transform-none"
+            className="pt-28 pb-10 px-4 motion-reduce:transform-none"
           >
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
+                  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
                     {t("title")}
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")} {lastUpdated}</p>
-                  <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
+                  <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
                     {t("subtitle")}
                   </p>
-                  <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                  <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                     {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="https://paideia.im" target="_blank" rel="noopener noreferrer">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50 transition-all duration-300">
                         {t("cta.tryPaideia")}
                       </Button>
                     </a>
                     <Link href="https://github.com/paideiadao" target="_blank">
                       <Button
                         variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                        className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl transition-all duration-300"
                       >
                         {t("cta.viewCode")}
                       </Button>
                     </Link>
                   </div>
-                  <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
-                    <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">{t("navigation.daoFeatures")}</a></li>
-                      <li><a href="#projects" className="hover:text-orange-400">{t("navigation.liveDaos")}</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">{t("navigation.faq")}</a></li>
-                    </ul>
-                  </nav>
                 </div>
-                <div className="relative">
-                  <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                      <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          {t("quickStart.title")}
-                        </h3>
-                        <div className="space-y-4">
-                          {[
-                            {
-                              name: t("quickStart.createDao.name"),
-                              description: t("quickStart.createDao.description"),
-                              icon: <Users className="w-6 h-6" />,
-                              link: "https://paideia.im",
-                              external: true
-                            },
-                            {
-                              name: t("quickStart.daoGuide.name"),
-                              description: t("quickStart.daoGuide.description"),
-                              icon: <BookOpen className="w-6 h-6" />,
-                              link: "/docs/ecosystem/daos",
-                              external: false
-                            },
-                            {
-                              name: t("quickStart.developerDocs.name"),
-                              description: t("quickStart.developerDocs.description"),
-                              icon: <Terminal className="w-6 h-6" />,
-                              link: "/docs/developers",
-                              external: false
-                            },
-                          ].map((item) => (
-                            <div key={item.name}>
-                              {item.external ? (
-                                <a
-                                  href={item.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
-                                    <ExternalLink className="w-4 h-4 text-neutral-400" />
-                                  </div>
-                                </a>
-                              ) : (
-                                <Link
-                                  href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
-                                    <ArrowRight className="w-4 h-4 text-neutral-400" />
-                                  </div>
-                                </Link>
-                              )}
-                            </div>
-                          ))}
+                <motion.div 
+                  className="relative"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                      {t("quickStart.title")}
+                    </h3>
+                    <div className="grid grid-cols-1 gap-4">
+                      <a
+                        href="https://paideia.im"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <Users className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">{t("quickStart.createDao.name")}</h4>
+                          </div>
                         </div>
-                      </CardContent>
-                    </Card>
+                      </a>
+                      
+                      <Link
+                        href="/docs/ecosystem/daos"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <BookOpen className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">{t("quickStart.daoGuide.name")}</h4>
+                          </div>
+                        </div>
+                      </Link>
+                      
+                      <Link
+                        href="/docs/developers"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <Terminal className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">{t("quickStart.developerDocs.name")}</h4>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </motion.section>
@@ -338,10 +304,14 @@ export default function DAOsAlternativeEconomiesPage() {
                     transition={{ delay: index * 0.1 }}
                     className="motion-reduce:transform-none"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full">
+                    <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm h-full hover:bg-black/90 hover:border-orange-400/40 transition-colors">
                       <CardContent className="p-6">
-                        <feature.icon className="w-12 h-12 text-orange-400 mb-4" />
-                        <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-orange-500/20 border border-orange-500/30">
+                            <feature.icon className="w-6 h-6 text-orange-400" />
+                          </div>
+                          <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                        </div>
                         <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
                       </CardContent>
                     </Card>
@@ -370,20 +340,20 @@ export default function DAOsAlternativeEconomiesPage() {
               </div>
 
               <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-                <TabsList className="grid w-full grid-cols-3 bg-neutral-900/50 border border-neutral-700">
-                  <TabsTrigger value="overview" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
+                <TabsList className="bg-black/60 border border-white/20 rounded-2xl p-1">
+                  <TabsTrigger value="overview" className="data-[state=active]:bg-white/10 data-[state=active]:text-orange-400 data-[state=active]:border data-[state=active]:border-orange-400/50 text-neutral-400 hover:text-white rounded-xl transition-all duration-300">
                     {t("technical.tabs.overview")}
                   </TabsTrigger>
-                  <TabsTrigger value="governance" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
+                  <TabsTrigger value="governance" className="data-[state=active]:bg-white/10 data-[state=active]:text-orange-400 data-[state=active]:border data-[state=active]:border-orange-400/50 text-neutral-400 hover:text-white rounded-xl transition-all duration-300">
                     {t("technical.tabs.governance")}
                   </TabsTrigger>
-                  <TabsTrigger value="code" className="data-[state=active]:bg-orange-500 data-[state=active]:text-black">
+                  <TabsTrigger value="code" className="data-[state=active]:bg-white/10 data-[state=active]:text-orange-400 data-[state=active]:border data-[state=active]:border-orange-400/50 text-neutral-400 hover:text-white rounded-xl transition-all duration-300">
                     {t("technical.tabs.code")}
                   </TabsTrigger>
                 </TabsList>
 
                 <TabsContent value="overview" className="mt-8">
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                  <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm">
                     <CardHeader>
                       <CardTitle className="text-white">{t("technical.overview.title")}</CardTitle>
                     </CardHeader>
@@ -406,7 +376,7 @@ export default function DAOsAlternativeEconomiesPage() {
 
                 <TabsContent value="governance" className="mt-8">
                   <div className="space-y-6">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                    <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm">
                       <CardHeader>
                         <CardTitle className="text-white">{t("technical.governance.title")}</CardTitle>
                       </CardHeader>
@@ -434,7 +404,7 @@ export default function DAOsAlternativeEconomiesPage() {
                       </CardContent>
                     </Card>
 
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                    <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm">
                       <CardHeader>
                         <CardTitle className="text-white">{t("technical.governance.proposalLifecycle.title")}</CardTitle>
                       </CardHeader>
@@ -463,7 +433,7 @@ export default function DAOsAlternativeEconomiesPage() {
                 </TabsContent>
 
                 <TabsContent value="code" className="mt-8">
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                  <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm">
                     <CardHeader>
                       <CardTitle className="text-white">{t("technical.codeExample.title")}</CardTitle>
                       <p className="text-neutral-400">{t("technical.codeExample.description")}</p>
@@ -526,7 +496,7 @@ export default function DAOsAlternativeEconomiesPage() {
                 </p>
               </div>
               
-              <div className="grid md:grid-cols-3 gap-8">
+              <div className="grid md:grid-cols-2 gap-8">
                 {existingProjects.map((project, index) => (
                   <motion.div
                     key={project.name}
@@ -537,43 +507,67 @@ export default function DAOsAlternativeEconomiesPage() {
                     transition={{ delay: index * 0.1 }}
                     className="motion-reduce:transform-none"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-orange-500/50 transition-colors">
-                      <CardHeader>
-                        <div className="flex items-center justify-between">
-                          <CardTitle className="text-white">{project.name}</CardTitle>
-                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                            project.status === t("projects.paideia.status")
-                              ? 'bg-green-500/20 text-green-400' 
-                              : 'bg-yellow-500/20 text-yellow-400'
-                          }`}>
-                            {project.status}
-                          </span>
-                        </div>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <p className="text-neutral-400">{project.description}</p>
-                        <div className="flex flex-wrap gap-2">
-                          {project.features.map((feature) => (
-                            <span key={feature} className="px-2 py-1 bg-neutral-800 rounded text-xs text-neutral-300">
-                              {feature}
+                    {project.link !== "#" ? (
+                      <a 
+                        href={project.link} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="group"
+                      >
+                        <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm h-full hover:bg-black/90 hover:border-orange-400/40 transition-colors group-hover:shadow-lg group-hover:shadow-orange-500/10">
+                          <CardHeader>
+                            <div className="flex items-center justify-between">
+                              <CardTitle className="text-white group-hover:text-orange-400 transition-colors">{project.name}</CardTitle>
+                              <div className="flex items-center gap-2">
+                                <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                                  project.status === t("projects.paideia.status")
+                                    ? 'bg-green-500/20 text-green-400' 
+                                    : 'bg-yellow-500/20 text-yellow-400'
+                                }`}>
+                                  {project.status}
+                                </span>
+                                <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-orange-400 transition-colors" />
+                              </div>
+                            </div>
+                          </CardHeader>
+                          <CardContent className="space-y-4">
+                            <p className="text-neutral-400">{project.description}</p>
+                            <div className="flex flex-wrap gap-2">
+                              {project.features.map((feature) => (
+                                <span key={feature} className="px-2 py-1 bg-neutral-800 rounded text-xs text-neutral-300">
+                                  {feature}
+                                </span>
+                              ))}
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </a>
+                    ) : (
+                      <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm h-full">
+                        <CardHeader>
+                          <div className="flex items-center justify-between">
+                            <CardTitle className="text-white">{project.name}</CardTitle>
+                            <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                              project.status === t("projects.paideia.status")
+                                ? 'bg-green-500/20 text-green-400' 
+                                : 'bg-yellow-500/20 text-yellow-400'
+                            }`}>
+                              {project.status}
                             </span>
-                          ))}
-                        </div>
-                        {project.link !== "#" ? (
-                          <a 
-                            href={project.link} 
-                            target="_blank" 
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center text-orange-400 hover:text-orange-300 transition-colors"
-                          >
-                            {t("projects.visitDao")}
-                            <ExternalLink className="ml-1 w-4 h-4" />
-                          </a>
-                        ) : (
-                          <span className="text-neutral-500">{t("projects.comingSoon")}</span>
-                        )}
-                      </CardContent>
-                    </Card>
+                          </div>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                          <p className="text-neutral-400">{project.description}</p>
+                          <div className="flex flex-wrap gap-2">
+                            {project.features.map((feature) => (
+                              <span key={feature} className="px-2 py-1 bg-neutral-800 rounded text-xs text-neutral-300">
+                                {feature}
+                              </span>
+                            ))}
+                          </div>
+                        </CardContent>
+                      </Card>
+                    )}
                   </motion.div>
                 ))}
               </div>
@@ -587,71 +581,90 @@ export default function DAOsAlternativeEconomiesPage() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4 bg-neutral-900/20 motion-reduce:transform-none"
+            className="py-16 px-4 motion-reduce:transform-none"
           >
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-5xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                   {t("faq.title")}
                 </h2>
-                <p className="text-xl text-neutral-400">
-                  {t("faq.subtitle")}
-                </p>
               </div>
               
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <Collapsible
-                    key={index}
-                    open={openFAQ === index}
-                    onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
-                  >
-                    <CollapsibleTrigger className="flex w-full items-center justify-between rounded-lg bg-neutral-900/50 border border-neutral-700 p-6 text-left hover:bg-neutral-900/70 transition-colors">
-                      <span className="text-lg font-medium text-white">{faq.question}</span>
-                      <ChevronDown className={`h-5 w-5 text-neutral-400 transition-transform ${openFAQ === index ? 'rotate-180' : ''}`} />
-                    </CollapsibleTrigger>
-                    <CollapsibleContent className="px-6 pb-6 pt-2">
-                      <p className="text-neutral-400 leading-relaxed">{faq.answer}</p>
-                    </CollapsibleContent>
-                  </Collapsible>
+                  <Card key={index} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
+                    <Collapsible
+                      open={openFAQ === index}
+                      onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}
+                    >
+                      <CollapsibleTrigger asChild>
+                        <button className="flex w-full items-center justify-between p-6 text-left hover:bg-black/70 transition-colors rounded-3xl">
+                          <span className="text-lg font-medium text-white">{faq.question}</span>
+                          <ChevronDown className={`h-5 w-5 text-neutral-400 transition-transform ${openFAQ === index ? 'rotate-180' : ''}`} />
+                        </button>
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="px-6 pb-6">
+                        <p className="text-neutral-400 leading-relaxed">{faq.answer}</p>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </Card>
                 ))}
               </div>
             </div>
           </motion.section>
 
-          {/* CTA Section */}
-          <motion.section 
-            variants={itemVariants} 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            className="py-16 px-4 motion-reduce:transform-none"
-          >
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                {t("cta.title")}
+          {/* What's Next Section */}
+          <section className="py-16 px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
+                What's <span className="text-orange-400">Next?</span>
               </h2>
-              <p className="text-xl text-neutral-400 mb-8 max-w-2xl mx-auto">
-                {t("cta.subtitle")}
+              <p className="text-xl text-center text-neutral-300 mb-12">
+                Start building your DAO or learn how to participate in decentralized governance
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://paideia.im" target="_blank" rel="noopener noreferrer">
-                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                    {t("cta.launchWithPaideia")}
-                    <ExternalLink className="ml-2 w-4 h-4" />
-                  </Button>
+              <div className="grid md:grid-cols-2 gap-6">
+                <a 
+                  href="https://paideia.im"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <Users className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Launch with Paideia</h3>
+                      <p className="text-orange-400 text-sm">Start Building</p>
+                    </div>
+                  </div>
+                  <p className="text-neutral-300">
+                    Create and manage your decentralized autonomous organization with Paideia's comprehensive DAO toolkit
+                  </p>
                 </a>
-                <Link href="/docs/ecosystem/daos">
-                  <Button size="lg" variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400">
-                    {t("cta.daoGuide")}
-                    <ArrowRight className="ml-2 w-4 h-4" />
-                  </Button>
+                
+                <Link 
+                  href="/docs/ecosystem/daos"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">DAO Guide</h3>
+                      <p className="text-orange-400 text-sm">Learn More</p>
+                    </div>
+                  </div>
+                  <p className="text-neutral-300">
+                    Explore comprehensive documentation on DAO governance models, treasury management, and best practices
+                  </p>
                 </Link>
               </div>
             </div>
-          </motion.section>
+          </section>
         </motion.div>
-      </div>
+      </BackgroundWrapper>
     </>
   )
 } 
