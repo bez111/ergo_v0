@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 import { ExternalLink, ZoomIn, ZoomOut, RefreshCw, Plus, Star, Download } from "lucide-react"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 // OPERATIONAL projects from /ecosystem
 const projects = [
@@ -248,8 +249,9 @@ function MapClient() {
   const trendingCount = projects.filter((p) => featuredSet.has(p.name)).length
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="relative z-10 max-w-7xl mx-auto px-4 pt-28 pb-16">
+    <BackgroundWrapper>
+      <div className="container mx-auto px-4 py-16">
+        <div className="relative z-10 max-w-7xl mx-auto pt-28 pb-16">
         {/* Hero */}
         <div className="pt-6 pb-6">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
@@ -341,10 +343,10 @@ function MapClient() {
         </div>
 
         {/* Map Area */}
-        <Card className="bg-neutral-900/40 border-neutral-800 rounded-xl">
+        <Card className="bg-black border-neutral-800 rounded-xl">
           <CardContent className="p-2">
             <div
-              className="relative overflow-hidden rounded-lg cursor-grab active:cursor-grabbing"
+              className="relative overflow-hidden rounded-lg cursor-grab active:cursor-grabbing bg-black"
               onWheel={onWheel}
               onMouseDown={onMouseDown}
               onMouseMove={onMouseMove}
@@ -463,8 +465,9 @@ function MapClient() {
             </span>
           ))}
         </div>
+        </div>
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 }
 

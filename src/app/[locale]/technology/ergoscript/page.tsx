@@ -9,6 +9,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCircle, Microscope, ShieldCheck, Layers, FileText, KeyRound, Puzzle, Copy, Coins, Eye, ArrowLeftRight, BookOpen, Terminal, Users } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -184,9 +185,8 @@ export default function ErgoScriptPage() {
         }}
       />
       
-      <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
-        {/* Background */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
+      <BackgroundWrapper>
+        <div className="min-h-screen text-white relative overflow-hidden motion-reduce:animate-none">
 
         {/* Breadcrumbs */}
         <div className="sr-only">
@@ -211,10 +211,9 @@ export default function ErgoScriptPage() {
             <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
                   {t("title")}
                 </h1>
-                  <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
                     {t("subtitle")}
                   </p>
@@ -222,98 +221,74 @@ export default function ErgoScriptPage() {
                     {t("description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/docs">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
                       {t("quickStart.learnErgoScript")}
                   </Button>
-                    </Link>
-                    <a href="https://wallet.plutomonkey.com/p2s/" target="_blank" rel="noopener noreferrer">
                   <Button
                     variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                        className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl"
                   >
-                      {t("quickStart.viewCode")}
+                      Try Playground
                                     </Button>
+                  </div>
+              </div>
+              <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                    Quick Start
+                  </h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    <a
+                      href="https://wallet.plutomonkey.com/p2s/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                          <Terminal className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white text-lg">Try Online Playground</h4>
+                          <p className="text-neutral-400 text-sm">Write and test ErgoScript in your browser</p>
+                        </div>
+                      </div>
+                    </a>
+                    
+                    <Link
+                      href="/docs"
+                      className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                          <BookOpen className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white text-lg">Read Documentation</h4>
+                          <p className="text-neutral-400 text-sm">Comprehensive guides and API references</p>
+                        </div>
+                      </div>
+                    </Link>
+                    
+                    <a
+                      href="https://discord.com/invite/ergo-platform-668903786361651200"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                    >
+                      <div className="flex items-start gap-3">
+                        <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                          <Users className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white text-lg">Join Community</h4>
+                          <p className="text-neutral-400 text-sm">Get help from experienced developers</p>
+                        </div>
+                      </div>
                     </a>
                   </div>
-                  <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
-                    <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
-                      <li><a href="#comparison" className="hover:text-orange-400">Comparison</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
-                    </ul>
-                  </nav>
-              </div>
-              <div className="relative">
-                  <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                    <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
-                      </h3>
-                        <div className="space-y-4">
-                          {[
-                            {
-                              name: "Try Online Playground",
-                              description: "Write and test ErgoScript in your browser",
-                              icon: <Terminal className="w-6 h-6" />,
-                              link: "https://wallet.plutomonkey.com/p2s/",
-                              external: true
-                            },
-                            {
-                              name: "Read Documentation",
-                              description: "Comprehensive guides and API references",
-                              icon: <BookOpen className="w-6 h-6" />,
-                              link: "/docs",
-                              external: false
-                            },
-                            {
-                              name: "Join Community",
-                              description: "Get help from experienced developers",
-                              icon: <Users className="w-6 h-6" />,
-                              link: "https://discord.gg/ergo",
-                              external: true
-                            },
-                          ].map((item) => (
-                            <div key={item.name}>
-                              {item.external ? (
-                                <a
-                                  href={item.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                            >
-                              <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                </div>
-                                    <ExternalLink className="w-4 h-4 text-neutral-400" />
-                              </div>
-                                </a>
-                              ) : (
-                                <Link
-                                  href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
-                                    <ArrowRight className="w-4 h-4 text-neutral-400" />
-                                  </div>
-                                </Link>
-                              )}
-                            </div>
-                          ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                  </div>
-              </div>
+                </div>
+              </motion.div>
             </div>
           </div>
           </motion.section>
@@ -345,12 +320,14 @@ export default function ErgoScriptPage() {
                         whileHover={{ y: -5 }}
                       className="motion-reduce:transform-none motion-reduce:transition-none"
                   >
-                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors h-full">
+                      <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 hover:border-orange-500/50 transition-colors h-full">
                         <CardContent className="p-6">
-                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
-                            <feature.icon className="w-6 h-6 text-orange-400" />
-                      </div>
-                          <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+                          <div className="flex items-center gap-4 mb-4">
+                            <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <feature.icon className="w-6 h-6 text-orange-400" />
+                            </div>
+                            <h3 className="text-xl font-bold text-white">{feature.title}</h3>
+                          </div>
                           <p className="text-neutral-200 leading-relaxed">{feature.description}</p>
                     </CardContent>
                   </Card>
@@ -390,7 +367,7 @@ export default function ErgoScriptPage() {
                     <div className="grid lg:grid-cols-2 gap-6 h-full">
                 {/* Security Features Card */}
                       <div>
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                        <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -440,7 +417,7 @@ export default function ErgoScriptPage() {
 
                 {/* Developer Experience Card */}
                       <div>
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                        <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -494,7 +471,7 @@ export default function ErgoScriptPage() {
                     <div className="grid lg:grid-cols-2 gap-6 h-full">
                       {/* DeFi & Finance Card */}
                       <div>
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                        <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -529,7 +506,7 @@ export default function ErgoScriptPage() {
 
                       {/* Privacy & Governance Card */}
                       <div>
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                        <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -568,7 +545,7 @@ export default function ErgoScriptPage() {
                     <div className="grid lg:grid-cols-2 gap-6 h-full">
                       {/* Learning Resources Card */}
                       <div>
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                        <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -609,7 +586,7 @@ export default function ErgoScriptPage() {
 
                       {/* Developer Tools Card */}
                       <div>
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                        <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                           <CardHeader className="pb-2">
                             <div className="flex items-center gap-3">
                               <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -663,7 +640,7 @@ export default function ErgoScriptPage() {
                   <div className="grid lg:grid-cols-2 gap-6 mb-12">
                   {/* ErgoScript's Key Advantages Card */}
                   <div>
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                    <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                       <CardHeader className="pb-2">
                         <div className="flex items-center gap-3">
                           <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -717,7 +694,7 @@ export default function ErgoScriptPage() {
 
                   {/* Philosophy & Design Card */}
                   <div>
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                    <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                       <CardHeader className="pb-2">
                         <div className="flex items-center gap-3">
                           <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center">
@@ -771,7 +748,7 @@ export default function ErgoScriptPage() {
                 </div>
 
             {/* Comparison Table */}
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl mb-12 overflow-hidden">
+                <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 mb-12 overflow-hidden">
               <CardHeader>
                     <CardTitle className="text-white text-center">
                   ErgoScript vs. Other Smart Contract Languages
@@ -937,7 +914,7 @@ export default function ErgoScriptPage() {
                   transition={{ delay: 0.8 }}
                   className="mt-12"
                 >
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl overflow-hidden">
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 overflow-hidden">
                     <CardHeader className="text-center">
                       <CardTitle className="text-white">
                         Code Comparison: 2-of-3 Multisig
@@ -1000,7 +977,7 @@ export default function ErgoScriptPage() {
                   {faqs.map((faq, index) => (
                     <Card
                       key={index}
-                      className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
+                      className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300"
                     >
                       <Collapsible
                         open={openFAQ === index}
@@ -1031,38 +1008,61 @@ export default function ErgoScriptPage() {
               </div>
             </FadeIn>
 
-        {/* CTA */}
+        {/* What's Next Section */}
         <FadeIn delay={0.8}>
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                  <CardContent className="text-center py-16">
-                    <h3 className="text-4xl font-bold mb-6 text-white">
-                Ready to Start Building?
-              </h3>
-                    <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                Explore ErgoScript and start developing secure smart contracts today.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Link href="https://wallet.plutomonkey.com/p2s/?source=bXkgPSBzaWdtYVByb3AocHJvcGVyVGFibGVJZCkNCg0KLy8gZXhhbXBsZSBzcGVuZGluZyBjb25kaXRpb24NCm15VmFsaWRhdGlvbiA9IGZhbHNl" target="_blank" rel="noopener noreferrer">
-                        <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    Try Playground
-                  </Button>
-                </Link>
-                      <Link href="/docs/developers/ergoscript-languages">
-                  <Button
-                    variant="outline"
-                          className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                  >
-                    View Documentation
-                  </Button>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="max-w-6xl mx-auto mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+              What's <span className="text-orange-400">Next</span>?
+            </h2>
+            <p className="text-xl text-center text-neutral-300 mb-12">
+              Continue your ErgoScript development journey
+            </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <a 
+                href="https://wallet.plutomonkey.com/p2s/?source=bXkgPSBzaWdtYVByb3AocHJvcGVyVGFibGVJZCkNCg0KLy8gZXhhbXBsZSBzcGVuZGluZyBjb25kaXRpb24NCm15VmFsaWRhdGlvbiA9IGZhbHNl"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                    <Code className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Try Playground</h3>
+                    <p className="text-orange-400 text-sm">Interactive Editor</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  Experiment with ErgoScript in our interactive online playground
+                </p>
+              </a>
+              
+              <Link 
+                href="/docs/developers/ergoscript-languages"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                    <BookOpen className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">View Documentation</h3>
+                    <p className="text-orange-400 text-sm">Learn More</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  Explore comprehensive guides and tutorials for ErgoScript development
+                </p>
+              </Link>
+            </div>
+          </div>
         </FadeIn>
             </div>
       </div>
         </motion.div>
-    </div>
+        </div>
+      </BackgroundWrapper>
     </>
   )
 }

@@ -18,6 +18,7 @@ import {
   Coins,
   Timer,
   BarChart3,
+  BookOpen,
   RefreshCw,
   Target,
   ChevronDown,
@@ -26,6 +27,9 @@ import { useState } from "react"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { FadeIn } from "@/components/animations/fade-in"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { motion } from "framer-motion"
 import { useMemo } from "react"
 
 const PUBLISHED = "2023-11-10"
@@ -71,7 +75,7 @@ export default function StorageRentPage() {
     {
       title: t("problems.bloat.title"),
       description: t("problems.bloat.description"),
-      icon: <Database className="w-8 h-8" aria-hidden="true" />,
+      icon: <Database className="w-6 h-6 text-orange-400" aria-hidden="true" />,
       color: "from-red-500 to-pink-500",
       bgColor: "bg-red-500/10",
       borderColor: "border-red-500/30",
@@ -80,7 +84,7 @@ export default function StorageRentPage() {
     {
       title: t("problems.forgottenWallets.title"),
       description: t("problems.forgottenWallets.description"),
-      icon: <AlertTriangle className="w-8 h-8" aria-hidden="true" />,
+      icon: <AlertTriangle className="w-6 h-6 text-orange-400" aria-hidden="true" />,
       color: "from-yellow-500 to-orange-500",
       bgColor: "bg-yellow-500/10",
       borderColor: "border-yellow-500/30",
@@ -89,7 +93,7 @@ export default function StorageRentPage() {
     {
       title: t("problems.networkStagnation.title"),
       description: t("problems.networkStagnation.description"),
-      icon: <TrendingUp className="w-8 h-8" aria-hidden="true" />,
+      icon: <TrendingUp className="w-6 h-6 text-orange-400" aria-hidden="true" />,
       color: "from-purple-500 to-indigo-500",
       bgColor: "bg-purple-500/10",
       borderColor: "border-purple-500/30",
@@ -277,79 +281,66 @@ export default function StorageRentPage() {
         }}
       />
 
-      <main className="min-h-screen relative">
+      <BackgroundWrapper>
+        <div className="min-h-screen text-white">
         {/* Breadcrumbs */}
         <div className="sr-only">
-                      <Breadcrumbs
-              items={[
-                { name: "Technology", href: "/technology" },
-                { name: "Storage Rent", href: "/technology/storage-rent" }
-              ]}
-              className="mb-8"
-            />
+          <Breadcrumbs
+            items={[
+              { name: "Technology", href: "/technology" },
+              { name: "Storage Rent", href: "/technology/storage-rent" }
+            ]}
+            className="mb-8"
+          />
         </div>
 
-        <div className="relative z-10">
+        <div className="container mx-auto px-4 py-16 relative z-10">
           {/* Hero Section */}
-          <section className="pt-32 pb-20 px-4">
-            <div className="max-w-7xl mx-auto">
+          <FadeIn delay={0.1}>
+            <div className="max-w-7xl mx-auto mb-16">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">{t("title")}</h1>
-                  <h2 className="text-xl md:text-2xl text-neutral-300 mb-6 max-w-2xl">{t("subtitle")}</h2>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
                     {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
                       <Link href="#how-it-works">{t("buttons.learnMore")}</Link>
                     </Button>
-                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
+                    <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl">
                       <Link href="https://docs.ergoplatform.com/protocol/storage-rent/" target="_blank" rel="noopener noreferrer">{t("buttons.viewDetails")}</Link>
                     </Button>
                   </div>
-                  <div className="mt-6 text-sm text-neutral-400 space-x-3">
-                    <Link href="#problem" className="underline hover:opacity-80">{t("navigation.what")}</Link>
-                    <span>·</span>
-                    <Link href="#how-it-works" className="underline hover:opacity-80">{t("navigation.how")}</Link>
-                    <span>·</span>
-                    <Link href="#estimator" className="underline hover:opacity-80">{t("navigation.costs")}</Link>
-                    <span>·</span>
-                    <Link href="#faq" className="underline hover:opacity-80">{t("navigation.faq")}</Link>
-                  </div>
                 </div>
-                <div className="relative">
-                  <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30">
-                      <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">{t("corePrinciples.title")}</h3>
-                        <div className="space-y-4">
-                          {corePrinciples.map((feature, index) => (
-                            <div
-                              key={feature.name}
-                              className={`p-4 rounded-lg bg-neutral-900/60 border border-neutral-700`}
-                            >
-                              <div className="flex items-center space-x-3">
-                                <div>{feature.icon}</div>
-                                <div>
-                                  <h4 className="font-semibold text-white">{feature.name}</h4>
-                                  <p className="text-sm text-neutral-400">{feature.description}</p>
-                                </div>
-                              </div>
+                <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">{t("corePrinciples.title")}</h3>
+                    <div className="space-y-4">
+                      {corePrinciples.map((feature, index) => (
+                        <div
+                          key={feature.name}
+                          className={`p-4 rounded-lg bg-black/60 border border-white/20`}
+                        >
+                          <div className="flex items-center space-x-3">
+                            <div>{feature.icon}</div>
+                            <div>
+                              <h4 className="font-semibold text-white">{feature.name}</h4>
+                              <p className="text-sm text-neutral-400">{feature.description}</p>
                             </div>
-                          ))}
+                          </div>
                         </div>
-                      </CardContent>
-                    </Card>
+                      ))}
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
-          </section>
+          </FadeIn>
 
           {/* Problems Section - Enhanced */}
-          <section className="py-20 px-4" id="problem">
-            <div className="max-w-7xl mx-auto">
+          <FadeIn delay={0.2}>
+            <div className="max-w-7xl mx-auto mb-16" id="problem">
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("problemSection.title")}</h2>
                 <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
@@ -363,38 +354,38 @@ export default function StorageRentPage() {
                     key={problem.title}
                     className="group cursor-pointer"
                   >
-                    <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors h-full`}>
-                      <CardContent className="p-8 relative">
-                        <div className="p-3 bg-neutral-800 rounded-xl text-orange-400 w-fit mb-6">
-                          {problem.icon}
+                    <Card className={`bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full`}>
+                      <CardContent className="p-8 relative flex flex-col h-full">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            {problem.icon}
+                          </div>
+                          <h3 className="text-2xl font-bold text-white">
+                            {problem.title}
+                          </h3>
                         </div>
 
-                        <h3 className="text-2xl font-bold mb-4 text-white">
-                          {problem.title}
-                        </h3>
+                        <p className="text-neutral-300 leading-relaxed mb-4 flex-grow">{problem.description}</p>
 
-                        <p className="text-neutral-300 leading-relaxed mb-4">{problem.description}</p>
-
-                        <div className="flex items-center justify-between">
+                        <div className="mt-auto">
                           <div className="flex items-center gap-2">
                             <Badge variant="outline" className="text-neutral-400 border-neutral-600">{t("problemSection.exampleMetric")}</Badge>
                             <span className="text-xs text-neutral-500">{problem.stats}</span>
                           </div>
-                          <ArrowRight className="w-5 h-5 text-neutral-400" aria-hidden="true" />
+                          <p className="text-xs text-neutral-500 mt-2">{t("problemSection.disclaimer")}</p>
                         </div>
-                        <p className="text-xs text-neutral-500 mt-2">{t("problemSection.disclaimer")}</p>
                       </CardContent>
                     </Card>
                   </div>
                 ))}
               </div>
             </div>
-          </section>
+          </FadeIn>
 
           {/* Quick estimator */}
-          <section className="py-20 px-4" id="estimator">
-            <div className="max-w-4xl mx-auto">
-              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
+          <FadeIn delay={0.3}>
+            <div className="max-w-4xl mx-auto mb-16" id="estimator">
+              <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <CardContent className="p-6">
                   <h3 className="text-2xl font-bold mb-2 text-white">{t("estimator.title")}</h3>
                   <p className="text-neutral-300 text-sm mb-4">{t("estimator.description")}</p>
@@ -402,12 +393,12 @@ export default function StorageRentPage() {
                 </CardContent>
               </Card>
             </div>
-          </section>
+          </FadeIn>
 
           {/* Avoid rent / Developer tips */}
           <section className="py-12 px-4" id="tips">
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-6">
-              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
+              <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{t("avoidRent.title")}</h3>
                   <ol className="list-decimal list-inside text-sm text-neutral-300 space-y-1">
@@ -417,7 +408,7 @@ export default function StorageRentPage() {
                   </ol>
                 </CardContent>
               </Card>
-              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
+              <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-white mb-2">{t("developer.title")}</h3>
                   <ul className="list-disc list-inside text-sm text-neutral-300 space-y-1">
@@ -426,10 +417,10 @@ export default function StorageRentPage() {
                     ))}
                   </ul>
                   <div className="mt-3 flex gap-3">
-                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-4 py-2 rounded-xl" data-cta="design-patterns">
+                    <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-4 py-2 rounded-xl" data-cta="design-patterns">
                       <Link href="/docs/developers">{t("developer.buttons.designPatterns")}</Link>
                     </Button>
-                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-4 py-2 rounded-xl" data-cta="sdk-snippet">
+                    <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-4 py-2 rounded-xl" data-cta="sdk-snippet">
                       <Link href="/docs/developers/tutorials">{t("developer.buttons.sdkSnippet")}</Link>
                     </Button>
                   </div>
@@ -454,10 +445,14 @@ export default function StorageRentPage() {
                     key={solution.title}
                     className="group cursor-pointer"
                   >
-                    <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors h-full`}>
-                      <CardContent className="p-8 text-center relative overflow-hidden">
-                        <div className="mx-auto mb-6 text-orange-400">{solution.icon}</div>
-                        <h3 className="text-2xl font-bold mb-4 text-white">{solution.title}</h3>
+                    <Card className={`bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full`}>
+                      <CardContent className="p-8 relative overflow-hidden">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center text-orange-400 flex-shrink-0">
+                            {solution.icon}
+                          </div>
+                          <h3 className="text-2xl font-bold text-white">{solution.title}</h3>
+                        </div>
                         <p className="text-neutral-300 leading-relaxed">{solution.description}</p>
                       </CardContent>
                     </Card>
@@ -488,10 +483,10 @@ export default function StorageRentPage() {
                       className={`flex items-center ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"}`}
                     >
                       <div className="flex-1 px-8">
-                        <Card className={`bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors`}>
+                        <Card className={`bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300`}>
                           <CardContent className="p-8">
                             <div className="flex items-center mb-4">
-                              <div className={`p-3 bg-neutral-800 rounded-xl text-orange-400 mr-4`} aria-hidden="true">{phase.icon}</div>
+                              <div className={`w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center text-orange-400 mr-4`} aria-hidden="true">{phase.icon}</div>
                               <div>
                                 <h3 className={`text-2xl font-bold text-white`}>{phase.status}</h3>
                                 <p className="text-neutral-400 font-medium">{phase.year}</p>
@@ -528,9 +523,9 @@ export default function StorageRentPage() {
                 {benefits.map((benefit, index) => (
                   <div
                     key={index}
-                    className="group cursor-pointer"
+                    className="group cursor-pointer h-full"
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-colors rounded-xl overflow-hidden">
+                    <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 overflow-hidden h-full">
                       <CardContent className="p-6">
                         <div className="flex items-start space-x-4">
                           <div className="text-orange-400" aria-hidden="true">
@@ -555,14 +550,14 @@ export default function StorageRentPage() {
 
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <Card key={index} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                  <Card key={index} className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                     <Collapsible
                       open={openFAQ === index}
                       onOpenChange={(open) => setOpenFAQ(open ? index : null)}
                     >
                       <CollapsibleTrigger asChild>
                         <button className="w-full" aria-expanded={openFAQ === index} aria-controls={`faq-panel-${index}`} id={`faq-trigger-${index}`}>
-                          <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
+                          <CardContent className="p-6 flex items-center justify-between hover:bg-black/70 transition-colors">
                             <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
                             <ChevronDown className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} aria-hidden="true" />
                           </CardContent>
@@ -580,35 +575,57 @@ export default function StorageRentPage() {
             </div>
           </section>
 
-          {/* CTA Section */}
-          <section className="py-20 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30">
-                <CardContent className="p-12">
-                  <h2 className="text-4xl font-bold mb-6 text-white">{t("cta.title")}</h2>
-                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                    {t("cta.description")}
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="start-building">
-                      <Link href="/ecosystem" className="flex items-center">
-                        <ArrowRight className="mr-2 w-4 h-4" aria-hidden="true" />
-                        {t("cta.buttons.startBuilding")}
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm" data-cta="view-details">
-                      <Link href="https://docs.ergoplatform.com/protocol/storage-rent/" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        <ExternalLink className="mr-2 w-4 h-4" aria-hidden="true" />
-                        {t("cta.buttons.technicalDocs")}
-                      </Link>
-                    </Button>
+          {/* What's Next Section */}
+          <FadeIn delay={0.8}>
+            <div className="max-w-6xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+                What's <span className="text-orange-400">Next</span>?
+              </h2>
+              <p className="text-xl text-center text-neutral-300 mb-12">
+                Continue exploring Ergo's sustainable blockchain technology
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Link 
+                  href="/ecosystem"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <ArrowRight className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Start Building</h3>
+                      <p className="text-orange-400 text-sm">Explore Ecosystem</p>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                  <p className="text-neutral-300">
+                    Discover tools and applications built on Ergo's sustainable blockchain
+                  </p>
+                </Link>
+                
+                <Link 
+                  href="/docs/introduction/storage-rent"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Technical Documentation</h3>
+                      <p className="text-orange-400 text-sm">Learn More</p>
+                    </div>
+                  </div>
+                  <p className="text-neutral-300">
+                    Deep dive into the technical details of Storage Rent implementation
+                  </p>
+                </Link>
+              </div>
             </div>
-          </section>
+          </FadeIn>
         </div>
-      </main>
+        </div>
+      </BackgroundWrapper>
     </>
   )
 }

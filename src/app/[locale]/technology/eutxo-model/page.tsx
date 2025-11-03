@@ -10,6 +10,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -183,9 +184,8 @@ export default function EUTXOModelPage() {
         }}
       />
       
-      <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
-        {/* Background - точно такой же как на ergoscript */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black"></div>
+      <BackgroundWrapper>
+        <div className="min-h-screen text-white relative overflow-hidden motion-reduce:animate-none">
 
         {/* Breadcrumbs */}
         <div className="sr-only">
@@ -210,10 +210,9 @@ export default function EUTXOModelPage() {
             <div className="max-w-7xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
-                  <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">
+                  <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
                     eUTXO Model
                   </h1>
-                  <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
                     The foundation of Ergo's advanced smart contract capabilities
                   </p>
@@ -222,99 +221,72 @@ export default function EUTXOModelPage() {
                     enabling parallel execution and eliminating entire classes of vulnerabilities.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
-                    <Link href="/docs">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Learn More
-                      </Button>
-                    </Link>
-                    <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer">
-                      <Button
-                        variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                    <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
+                      Learn More
+                    </Button>
+                    <Button
+                      variant="outline"
+                      className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl"
+                    >
+                      View Code
+                    </Button>
+                  </div>
+                </div>
+                <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                      Quick Start
+                    </h3>
+                    <div className="grid grid-cols-1 gap-4">
+                      <Link
+                        href="/docs/protocol/eutxo"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
                       >
-                        View Code
-                      </Button>
-                    </a>
-                  </div>
-                  <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
-                    <ul className="flex flex-wrap gap-4">
-                      <li><a href="#features" className="hover:text-orange-400">Key features</a></li>
-                      <li><a href="#comparison" className="hover:text-orange-400">Comparison</a></li>
-                      <li><a href="#use-cases" className="hover:text-orange-400">Use cases</a></li>
-                      <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
-                    </ul>
-                  </nav>
-                </div>
-                <div className="relative">
-                  <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                      <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                          Quick Start
-                        </h3>
-                        <div className="space-y-4">
-                          {[
-                            {
-                              name: "Explore eUTXO",
-                              description: "Interactive visualization of the model",
-                              icon: <Box className="w-6 h-6" />,
-                              link: "/docs/protocol/eutxo",
-                              external: false
-                            },
-                            {
-                              name: "Developer Guide",
-                              description: "Build with eUTXO patterns",
-                              icon: <BookOpen className="w-6 h-6" />,
-                              link: "/docs",
-                              external: false
-                            },
-                            {
-                              name: "Join Community",
-                              description: "Get help from experienced developers",
-                              icon: <Users className="w-6 h-6" />,
-                              link: "https://discord.gg/ergo",
-                              external: true
-                            },
-                          ].map((item) => (
-                            <div key={item.name}>
-                              {item.external ? (
-                                <a
-                                  href={item.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
-                                    <ExternalLink className="w-4 h-4 text-neutral-400" />
-                                  </div>
-                                </a>
-                              ) : (
-                                <Link
-                                  href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
-                                    <ArrowRight className="w-4 h-4 text-neutral-400" />
-                                  </div>
-                                </Link>
-                              )}
-                            </div>
-                          ))}
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <Box className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">Explore eUTXO</h4>
+                            <p className="text-neutral-400 text-sm">Interactive visualization of the model</p>
+                          </div>
                         </div>
-                      </CardContent>
-                    </Card>
+                      </Link>
+                      
+                      <Link
+                        href="/docs"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <BookOpen className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">Developer Guide</h4>
+                            <p className="text-neutral-400 text-sm">Build with eUTXO patterns</p>
+                          </div>
+                        </div>
+                      </Link>
+                      
+                      <a
+                        href="https://discord.com/invite/ergo-platform-668903786361651200"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <Users className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">Join Community</h4>
+                            <p className="text-neutral-400 text-sm">Get help from experienced developers</p>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </motion.section>
@@ -345,12 +317,14 @@ export default function EUTXOModelPage() {
                       whileHover={{ y: -5 }}
                       className="motion-reduce:transform-none motion-reduce:transition-none"
                     >
-                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors h-full">
+                      <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                         <CardContent className="p-6">
-                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center mb-4">
-                            <Icon className="w-6 h-6 text-orange-400" />
+                          <div className="flex items-center gap-4 mb-4">
+                            <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <Icon className="w-6 h-6 text-orange-400" />
+                            </div>
+                            <h3 className="text-xl font-bold text-white">{feature.title}</h3>
                           </div>
-                          <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
                           <p className="text-neutral-200 leading-relaxed">{feature.description}</p>
                         </CardContent>
                       </Card>
@@ -374,45 +348,47 @@ export default function EUTXOModelPage() {
               <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
                 eUTXO vs Account Model
               </h2>
-              <div className="overflow-x-auto">
-                <table className="w-full">
-                  <thead>
-                    <tr className="border-b border-neutral-700">
-                      <th className="text-left p-4 font-semibold text-white">Aspect</th>
-                      <th className="text-left p-4 font-semibold text-white">eUTXO Model</th>
-                      <th className="text-left p-4 font-semibold text-white">Account Model</th>
-                      <th className="text-center p-4 font-semibold text-white">Advantage</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {modelComparison.map((row, index) => (
-                      <motion.tr
-                        key={row.aspect}
-                        className="border-b border-neutral-800 hover:bg-neutral-900/50 transition-colors"
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: index * 0.1 }}
-                      >
-                        <td className="p-4 font-medium text-neutral-200">{row.aspect}</td>
-                        <td className="p-4 text-neutral-400">{row.utxo}</td>
-                        <td className="p-4 text-neutral-400">{row.account}</td>
-                        <td className="p-4 text-center">
-                          <Badge 
-                            variant="secondary"
-                            className={
-                              row.advantage === "eUTXO"
-                                ? "bg-green-500/20 text-green-400 border-green-500/50"
-                                : "bg-neutral-500/20 text-neutral-400 border-neutral-500/50"
-                            }
-                          >
-                            {row.advantage}
-                          </Badge>
-                        </td>
-                      </motion.tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="bg-black/80 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="bg-black/60 border-b border-white/10">
+                        <th className="text-left p-4 font-semibold text-white">Aspect</th>
+                        <th className="text-left p-4 font-semibold text-white">eUTXO Model</th>
+                        <th className="text-left p-4 font-semibold text-white">Account Model</th>
+                        <th className="text-center p-4 font-semibold text-white">Advantage</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {modelComparison.map((row, index) => (
+                        <motion.tr
+                          key={row.aspect}
+                          className="border-b border-white/10 hover:bg-white/5 transition-colors"
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ delay: index * 0.1 }}
+                        >
+                          <td className="p-4 font-medium text-white">{row.aspect}</td>
+                          <td className="p-4 text-neutral-300">{row.utxo}</td>
+                          <td className="p-4 text-neutral-300">{row.account}</td>
+                          <td className="p-4 text-center">
+                            <Badge 
+                              variant="secondary"
+                              className={
+                                row.advantage === "eUTXO"
+                                  ? "bg-green-500/20 text-green-400 border-green-500/50"
+                                  : "bg-neutral-500/20 text-neutral-400 border-neutral-500/50"
+                              }
+                            >
+                              {row.advantage}
+                            </Badge>
+                          </td>
+                        </motion.tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
               </div>
             </div>
           </motion.section>
@@ -439,7 +415,7 @@ export default function EUTXOModelPage() {
                     viewport={{ once: true }}
                     transition={{ delay: index * 0.1 }}
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                    <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
                       <CardHeader>
                         <CardTitle className="text-xl text-white">{useCase.title}</CardTitle>
                       </CardHeader>
@@ -484,7 +460,7 @@ export default function EUTXOModelPage() {
                     ))}
                   </ul>
                 </div>
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
+                <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="font-mono text-sm">
                       <div className="text-neutral-500 mb-2"># Box Structure</div>
@@ -522,30 +498,33 @@ export default function EUTXOModelPage() {
               </h2>
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
-                  <Collapsible key={index} open={openFAQ === index}>
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                      <CollapsibleTrigger
-                        onClick={() => setOpenFAQ(openFAQ === index ? null : index)}
-                        className="w-full"
-                      >
-                        <CardHeader className="cursor-pointer">
-                          <div className="flex justify-between items-center">
-                            <CardTitle className="text-left text-lg text-white">{faq.question}</CardTitle>
-                            <ChevronDown
-                              className={`w-5 h-5 text-neutral-400 transition-transform ${
-                                openFAQ === index ? "rotate-180" : ""
-                              }`}
-                            />
-                          </div>
-                        </CardHeader>
-                      </CollapsibleTrigger>
-                      <CollapsibleContent>
-                        <CardContent className="pt-0">
-                          <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
-                        </CardContent>
-                      </CollapsibleContent>
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.1 }}
+                  >
+                    <Card className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
+                      <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
+                        <CollapsibleTrigger asChild>
+                          <button className="w-full">
+                            <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
+                              <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                              <ChevronDown aria-hidden="true" className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} />
+                            </CardContent>
+                          </button>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                          <CardContent className="px-6 pb-6 pt-0">
+                            <div className="text-neutral-300 leading-relaxed">
+                              {faq.answer}
+                            </div>
+                          </CardContent>
+                        </CollapsibleContent>
+                      </Collapsible>
                     </Card>
-                  </Collapsible>
+                  </motion.div>
                 ))}
               </div>
             </div>
@@ -564,64 +543,64 @@ export default function EUTXOModelPage() {
                 Continue Learning
               </h2>
               <div className="grid md:grid-cols-3 gap-6">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                      <Code className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                      ErgoScript Tutorial
-                    </h3>
-                    <p className="text-neutral-300 mb-4">
-                      Learn to program smart contracts with ErgoScript on the eUTXO model
-                    </p>
-                    <Link href="/learn/ergoscript" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                      Start Learning
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </CardContent>
-                </Card>
+                <Link href="/learn/ergoscript" className="block h-full group focus:outline-none focus:ring-2 focus:ring-orange-500/60 rounded-3xl">
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/30 transition-colors">
+                          <Code className="w-6 h-6 text-orange-400 group-hover:text-orange-300" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                          ErgoScript Tutorial
+                        </h3>
+                      </div>
+                      <p className="text-neutral-300 group-hover:text-neutral-200 transition-colors">
+                        Learn to program smart contracts with ErgoScript on the eUTXO model
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
 
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                      <Coins className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                      Native Tokens
-                    </h3>
-                    <p className="text-neutral-300 mb-4">
-                      How eUTXO enables first-class token support without smart contracts
-                    </p>
-                    <Link href="/technology/native-tokens" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                      Learn More
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </CardContent>
-                </Card>
+                <Link href="/technology/native-tokens" className="block h-full group focus:outline-none focus:ring-2 focus:ring-orange-500/60 rounded-3xl">
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/30 transition-colors">
+                          <Coins className="w-6 h-6 text-orange-400 group-hover:text-orange-300" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                          Native Tokens
+                        </h3>
+                      </div>
+                      <p className="text-neutral-300 group-hover:text-neutral-200 transition-colors">
+                        How eUTXO enables first-class token support without smart contracts
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
 
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                  <CardContent className="p-6">
-                    <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                      <Shield className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                      Privacy Features
-                    </h3>
-                    <p className="text-neutral-300 mb-4">
-                      Privacy capabilities built on the eUTXO foundation
-                    </p>
-                    <Link href="/technology/privacy-features" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                      Explore Privacy
-                      <ArrowRight className="w-4 h-4 ml-2" />
-                    </Link>
-                  </CardContent>
-                </Card>
+                <Link href="/technology/privacy-features" className="block h-full group focus:outline-none focus:ring-2 focus:ring-orange-500/60 rounded-3xl">
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-center gap-4 mb-4">
+                        <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-orange-500/30 transition-colors">
+                          <Shield className="w-6 h-6 text-orange-400 group-hover:text-orange-300" />
+                        </div>
+                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">
+                          Privacy Features
+                        </h3>
+                      </div>
+                      <p className="text-neutral-300 group-hover:text-neutral-200 transition-colors">
+                        Privacy capabilities built on the eUTXO foundation
+                      </p>
+                    </CardContent>
+                  </Card>
+                </Link>
               </div>
             </div>
           </motion.section>
 
-          {/* CTA Section */}
+          {/* What's Next Section */}
           <motion.section 
             className="py-16 md:py-24 px-4"
             variants={itemVariants}
@@ -629,38 +608,57 @@ export default function EUTXOModelPage() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                <CardContent className="p-8 md:p-12">
-                  <h2 className="text-4xl font-bold mb-6 text-white">
-                    Ready to Build on eUTXO?
-                  </h2>
-                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                    Start learning ErgoScript and harness the power of the extended UTXO model for your next project.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link href="/learn/ergoscript">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        Learn ErgoScript
-                        <ArrowRight className="ml-2 w-4 h-4" />
-                      </Button>
-                    </Link>
-                    <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer">
-                      <Button 
-                        variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
-                      >
-                        Explore GitHub
-                        <ExternalLink className="ml-2 w-4 h-4" />
-                      </Button>
-                    </a>
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+                What's <span className="text-orange-400">Next</span>?
+              </h2>
+              <p className="text-xl text-center text-neutral-300 mb-12">
+                Continue your journey with eUTXO development
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Link 
+                  href="/learn/ergoscript"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <Code className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Learn ErgoScript</h3>
+                      <p className="text-orange-400 text-sm">Start Building</p>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                  <p className="text-neutral-300">
+                    Master smart contract development on the eUTXO model with our comprehensive guides
+                  </p>
+                </Link>
+                
+                <a 
+                  href="https://github.com/ergoplatform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Explore Code</h3>
+                      <p className="text-orange-400 text-sm">GitHub Repository</p>
+                    </div>
+                  </div>
+                  <p className="text-neutral-300">
+                    Dive into the source code and examples to understand eUTXO implementation
+                  </p>
+                </a>
+              </div>
             </div>
           </motion.section>
         </motion.div>
-      </div>
+        </div>
+      </BackgroundWrapper>
     </>
   )
 }

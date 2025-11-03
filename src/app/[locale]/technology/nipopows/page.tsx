@@ -1,14 +1,18 @@
 "use client"
 
-import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { Link2, Smartphone, Zap, Shield, ArrowRight, ExternalLink, Network, CheckCircle, ChevronDown } from "lucide-react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Link2, Smartphone, Zap, Shield, ArrowRight, ExternalLink, Network, CheckCircle, ChevronDown, BookOpen, Terminal } from "lucide-react"
 import Link from "next/link"
 import { useState, type ReactNode } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { FadeIn } from "@/components/animations/fade-in"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { useTranslations } from "next-intl"
 
 // Types and hoisted data
@@ -68,7 +72,6 @@ const allFaqs = [...baseFaqs, ...extraFaqs]
 
 export default function NIPOPOWsPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
-  const lastUpdated = new Date().toISOString().slice(0, 10)
   const t = useTranslations('technology.nipopows')
   
   const features = [
@@ -193,7 +196,7 @@ export default function NIPOPOWsPage() {
         }}
       />
 
-      <div className="min-h-screen bg-black text-white">
+      <BackgroundWrapper>
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
@@ -201,14 +204,12 @@ export default function NIPOPOWsPage() {
             className="mb-8"
           />
         </div>
-
-        <div className="relative z-10">
+        <FadeIn>
           {/* Hero */}
           <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-2 text-white">NIPoPoWs — Non-Interactive Proofs of Proof-of-Work</h1>
-                <p className="text-sm text-neutral-500 mb-4">Last updated: {lastUpdated}</p>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">NIPoPoWs — Non-Interactive Proofs of Proof-of-Work</h1>
                 <p className="text-xl md:text-2xl text-neutral-300 mb-6">Succinct proofs of chain work for trust-minimized verification.</p>
                 <p className="text-lg text-neutral-400 mb-8">Verify Ergo from mobile, browsers, or other chains using compact proofs instead of full sync. Learn how PoW works in <Link href="/technology/secure-pow" className="underline hover:opacity-80">Secure PoW</Link>.</p>
                 <div className="flex flex-col sm:flex-row gap-4">
@@ -219,164 +220,206 @@ export default function NIPOPOWsPage() {
                     <Link href="https://docs.ergoplatform.com/protocol/nipopows/" target="_blank" rel="noopener noreferrer">View Docs</Link>
                   </Button>
                 </div>
-                <nav aria-label="On this page" className="mt-6 text-sm text-neutral-400">
-                  <ul className="flex flex-wrap gap-4">
-                    <li><a href="#what" className="hover:text-orange-400">What are NIPoPoWs</a></li>
-                    <li><a href="#benefits" className="hover:text-orange-400">Benefits</a></li>
-                    <li><a href="#use-cases" className="hover:text-orange-400">Use cases</a></li>
-                    <li><a href="#faq" className="hover:text-orange-400">FAQ</a></li>
-                  </ul>
-                </nav>
-
               </div>
-              <div>
-                <Card className="bg-neutral-900/50 border-neutral-700 p-8 rounded-xl">
-                  <CardContent className="p-0">
-                    <h3 className="text-2xl font-bold mb-6 text-center text-white">Process Overview</h3>
-                    <div className="space-y-4">
-                      {workingSteps.map(step => (
-                        <div key={step.step} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 rounded-full bg-orange-500 text-black font-bold grid place-items-center">{step.step}</div>
-                            <div className="text-orange-400" aria-hidden="true">{step.icon}</div>
-                            <div>
-                              <h4 className="font-semibold text-white">{step.title}</h4>
-                              <p className="text-sm text-neutral-400">{step.description}</p>
-                            </div>
+              <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                    Quick Start
+                  </h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    {workingSteps.map(step => (
+                      <div key={step.step} className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <div className="w-6 h-6 rounded-full bg-orange-500 text-black font-bold text-sm grid place-items-center">{step.step}</div>
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">{step.title}</h4>
+                            <p className="text-neutral-400 text-sm">{step.description}</p>
                           </div>
                         </div>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </motion.div>
             </div>
           </section>
+        </FadeIn>
 
+        <FadeIn delay={0.2}>
           {/* What */}
           <section id="what" className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="bg-neutral-900/50 border-neutral-700">
-                <CardContent className="p-8">
-                  <h2 className="text-3xl font-bold mb-6 text-white">What are NIPoPoWs?</h2>
-                  <p className="text-neutral-300 text-lg leading-relaxed mb-6">NIPoPoWs are cryptographic proofs that let you verify blockchain events without downloading the entire chain — ideal for mobile and cross-chain use.</p>
-                  <p className="text-neutral-300 text-lg leading-relaxed mb-4">Proof size and verification grow <strong>logarithmically</strong> with chain length via sampling of <strong>superblocks</strong> from headers.</p>
-                  <p className="text-neutral-300 text-lg leading-relaxed">Compared with classic SPV, NIPoPoWs give formal guarantees to compare competing chains by accumulated work without full state.</p>
-                  <ul className="list-disc list-inside text-neutral-400 mt-4">
-                    <li>Requires observing a finality window for short reorgs</li>
-                    <li>Proofs depend on current network parameters/headers</li>
-                  </ul>
-                </CardContent>
-              </Card>
+              <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                <h2 className="text-3xl font-bold mb-6 text-white">What are NIPoPoWs?</h2>
+                <p className="text-neutral-300 text-lg leading-relaxed mb-6">NIPoPoWs are cryptographic proofs that let you verify blockchain events without downloading the entire chain — ideal for mobile and cross-chain use.</p>
+                <p className="text-neutral-300 text-lg leading-relaxed mb-4">Proof size and verification grow <strong>logarithmically</strong> with chain length via sampling of <strong>superblocks</strong> from headers.</p>
+                <p className="text-neutral-300 text-lg leading-relaxed">Compared with classic SPV, NIPoPoWs give formal guarantees to compare competing chains by accumulated work without full state.</p>
+                <ul className="list-disc list-inside text-neutral-400 mt-4">
+                  <li>Requires observing a finality window for short reorgs</li>
+                  <li>Proofs depend on current network parameters/headers</li>
+                </ul>
+              </div>
             </div>
           </section>
+        </FadeIn>
 
+        <FadeIn delay={0.4}>
           {/* Why it matters */}
           <section id="benefits" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-white">Why NIPoPoWs Matter</h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {benefits.map((benefit) => (
-                  <Card key={benefit.title} className="bg-neutral-900/50 border-neutral-700 h-full">
-                    <CardContent className="p-8">
-                      <div className="flex items-start gap-4">
-                        <div className="p-3 bg-neutral-800 rounded-lg text-orange-400" aria-hidden="true">{benefit.icon}</div>
-                        <div>
-                          <h3 className="text-xl font-semibold mb-2 text-white">{benefit.title}</h3>
-                          <p className="text-neutral-400 leading-relaxed">{benefit.description}</p>
-                        </div>
+                  <div key={benefit.title} className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <div className="text-orange-400 w-6 h-6" aria-hidden="true">{benefit.icon}</div>
                       </div>
-                    </CardContent>
-                  </Card>
-                ))}
-                <Card className="bg-neutral-900/50 border-neutral-700 h-full">
-                  <CardContent className="p-8">
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 bg-neutral-800 rounded-lg text-orange-400" aria-hidden="true"><Shield className="w-8 h-8" /></div>
-                      <div>
-                        <h3 className="text-xl font-semibold mb-2 text-white">Reorg-resilience & finality windows</h3>
-                        <p className="text-neutral-400 leading-relaxed">Light clients should observe a finality window; new proofs can supersede earlier ones if a short reorg occurs.</p>
-                      </div>
+                      <h3 className="text-xl font-semibold text-white">{benefit.title}</h3>
                     </div>
-                  </CardContent>
-                </Card>
+                    <p className="text-neutral-300 leading-relaxed">{benefit.description}</p>
+                  </div>
+                ))}
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                      <Shield className="w-6 h-6 text-orange-400" aria-hidden="true" />
+                    </div>
+                    <h3 className="text-xl font-semibold text-white">Reorg-resilience & finality windows</h3>
+                  </div>
+                  <p className="text-neutral-300 leading-relaxed">Light clients should observe a finality window; new proofs can supersede earlier ones if a short reorg occurs.</p>
+                </div>
               </div>
             </div>
           </section>
+        </FadeIn>
 
+        <FadeIn delay={0.6}>
           {/* Comparison */}
           <section id="comparison" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-white">NIPoPoWs vs Traditional Verification</h2>
               <p id="comparison-desc" className="text-neutral-300 text-center max-w-3xl mx-auto mb-6">NIPoPoWs preserve PoW security assumptions while cutting verification data from full history to compact proofs.</p>
-              <Card className="bg-neutral-900/50 border-neutral-700 overflow-hidden">
-                <CardContent className="p-0">
-                  <div className="overflow-x-auto">
-                    <table aria-describedby="comparison-desc" className="w-full">
-                      <caption className="sr-only">Comparison of verification properties</caption>
-                      <thead className="bg-neutral-900">
-                        <tr>
-                          <th scope="col" className="px-6 py-4 text-left text-neutral-300 font-semibold">Aspect</th>
-                          <th scope="col" className="px-6 py-4 text-left text-neutral-300 font-semibold">Traditional</th>
-                          <th scope="col" className="px-6 py-4 text-left text-neutral-300 font-semibold">NIPoPoWs</th>
-                          <th scope="col" className="px-6 py-4 text-left text-neutral-300 font-semibold">Advantage</th>
+              <div className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 mb-12 overflow-hidden">
+                <div className="overflow-x-auto">
+                  <table aria-describedby="comparison-desc" className="w-full text-sm">
+                    <caption className="sr-only">Comparison of verification properties</caption>
+                    <thead>
+                      <tr className="border-b border-neutral-700">
+                        <th className="text-left p-4 font-semibold text-orange-400">Aspect</th>
+                        <th className="text-left p-4 font-semibold text-red-400">Traditional</th>
+                        <th className="text-left p-4 font-semibold text-green-400">NIPoPoWs</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-neutral-300">
+                      {comparisonData.map((row, index) => (
+                        <tr key={row.aspect} className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                          <th scope="row" className="p-4 font-medium">{row.aspect}</th>
+                          <td className="p-4">
+                            <span className="text-red-400">{row.traditional}</span>
+                          </td>
+                          <td className="p-4">
+                            <span className="text-green-400">{row.nipopows}</span>
+                          </td>
                         </tr>
-                      </thead>
-                      <tbody>
-                        {comparisonData.map((row, index) => (
-                          <tr key={row.aspect} className={index % 2 === 0 ? "bg-neutral-900/30" : undefined}>
-                            <th scope="row" className="px-6 py-4 font-medium text-white text-left">{row.aspect}</th>
-                            <td className="px-6 py-4 text-neutral-300 text-sm">{row.traditional}</td>
-                            <td className="px-6 py-4 text-neutral-300 text-sm">{row.nipopows}</td>
-                            <td className="px-6 py-4">
-                              <Badge variant="outline" className="text-neutral-300 border-neutral-600">{row.advantage}</Badge>
-                            </td>
-                          </tr>
-                        ))}
-                      </tbody>
-                    </table>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              
+              {/* Color Legend */}
+              <div className="mt-4 mb-6">
+                <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-orange-400 rounded-full"></div>
+                    <span className="text-sm text-neutral-300">Comparison aspects</span>
                   </div>
-                </CardContent>
-              </Card>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-red-400 rounded-full"></div>
+                    <span className="text-sm text-neutral-300">Traditional limitations</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-4 h-4 bg-green-400 rounded-full"></div>
+                    <span className="text-sm text-neutral-300">NIPoPoW advantages</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </section>
+        </FadeIn>
 
+        <FadeIn delay={0.8}>
           {/* Real use cases */}
           <section id="use-cases" className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-12 text-white">Real Use Cases</h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {useCases.map((useCase) => (
-                  <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 h-full">
-                    <CardContent className="p-8">
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className="p-3 bg-neutral-800 rounded-lg text-orange-400" aria-hidden="true">{useCase.icon}</div>
-                        <div>
-                          <h3 className="text-xl font-semibold mb-2 text-white">{useCase.title}</h3>
-                          <p className="text-neutral-400 mb-4">{useCase.description}</p>
-                          {useCase.href ? (
-                            useCase.external ? (
-                              <a href={`${useCase.href}${useCase.href.includes('?') ? '&' : '?'}utm_source=site&utm_medium=referral&utm_campaign=nipopows`} target="_blank" rel="noopener noreferrer" aria-label={`${useCase.example} (opens in a new tab)`} className="inline-flex items-center gap-1 underline hover:opacity-80">
-                                {useCase.example} <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                              </a>
-                            ) : (
-                              <Link href={useCase.href} className="inline-flex items-center gap-1 underline hover:opacity-80">
-                                {useCase.example} <ArrowRight className="w-4 h-4" aria-hidden="true" />
-                              </Link>
-                            )
-                          ) : null}
+                {useCases.map((useCase) => {
+                  const CardComponent = useCase.href ? (
+                    useCase.external ? (
+                      <a 
+                        key={useCase.title}
+                        href={`${useCase.href}${useCase.href.includes('?') ? '&' : '?'}utm_source=site&utm_medium=referral&utm_campaign=nipopows`} 
+                        target="_blank" 
+                        rel="noopener noreferrer" 
+                        aria-label={`${useCase.title} - ${useCase.example} (opens in a new tab)`}
+                        className="group bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 cursor-pointer block"
+                      >
+                        <div className="p-8">
+                          <div className="flex items-center gap-4 mb-6">
+                            <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0 text-orange-400 group-hover:bg-orange-500/30 group-hover:text-orange-300 transition-all duration-300">
+                              <div className="w-6 h-6" aria-hidden="true">{useCase.icon}</div>
+                            </div>
+                            <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors duration-300">{useCase.title}</h3>
+                          </div>
+                          <p className="text-neutral-200 leading-relaxed group-hover:text-neutral-100 transition-colors duration-300">{useCase.description}</p>
                         </div>
+                      </a>
+                    ) : (
+                      <Link 
+                        key={useCase.title}
+                        href={useCase.href}
+                        className="group bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1 cursor-pointer block"
+                      >
+                        <div className="p-8">
+                          <div className="flex items-center gap-4 mb-6">
+                            <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0 text-orange-400 group-hover:bg-orange-500/30 group-hover:text-orange-300 transition-all duration-300">
+                              <div className="w-6 h-6" aria-hidden="true">{useCase.icon}</div>
+                            </div>
+                            <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors duration-300">{useCase.title}</h3>
+                          </div>
+                          <p className="text-neutral-200 leading-relaxed group-hover:text-neutral-100 transition-colors duration-300">{useCase.description}</p>
+                        </div>
+                      </Link>
+                    )
+                  ) : (
+                    <div 
+                      key={useCase.title}
+                      className="group bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1"
+                    >
+                      <div className="p-8">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0 text-orange-400 group-hover:bg-orange-500/30 group-hover:text-orange-300 transition-all duration-300">
+                            <div className="w-6 h-6" aria-hidden="true">{useCase.icon}</div>
+                          </div>
+                          <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors duration-300">{useCase.title}</h3>
+                        </div>
+                        <p className="text-neutral-200 leading-relaxed group-hover:text-neutral-100 transition-colors duration-300">{useCase.description}</p>
                       </div>
-                    </CardContent>
-                  </Card>
-                ))}
+                    </div>
+                  );
+                  
+                  return CardComponent;
+                })}
               </div>
               {/* Developer quick-start */}
               <div className="max-w-6xl mx-auto mt-8">
-                <Card className="bg-neutral-900/50 border-neutral-700">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-white mb-3">Developer quick-start</h3>
-                    <pre className="text-sm text-neutral-200 overflow-x-auto bg-neutral-950/60 rounded p-4"><code className="language-ts">{`// TypeScript pseudo: verify NiPoPoW proof against best header
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-6 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <h3 className="text-xl font-bold text-white mb-3">Developer quick-start</h3>
+                  <pre className="text-sm text-neutral-200 overflow-x-auto bg-neutral-950/60 rounded p-4"><code className="language-ts">{`// TypeScript pseudo: verify NiPoPoW proof against best header
 import { verifyProof } from "@ergo/nipopow"; // replace with actual lib
 
 const proof = await fetch("/api/proof?txId=...").then(r => r.json());
@@ -386,68 +429,97 @@ const ok = verifyProof(proof, headers);
 if (!ok) throw new Error("Invalid proof");
 // continue: accept event / show confirmed state
 `}</code></pre>
-                    <div className="mt-3 text-sm text-neutral-500">Library names/endpoints are illustrative — see docs/SDK.</div>
-                  </CardContent>
-                </Card>
+                  <div className="mt-3 text-sm text-neutral-500">Library names/endpoints are illustrative — see docs/SDK.</div>
+                </div>
               </div>
             </div>
           </section>
 
+        </FadeIn>
+
+        <FadeIn delay={1.0}>
           {/* FAQ */}
           <section className="py-20 px-4" id="faq">
             <div className="max-w-4xl mx-auto" aria-live="polite">
               <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Frequently Asked Questions</h2>
               <div className="space-y-4">
                 {allFaqs.map((faq, index) => (
-                  <Card key={index} className="bg-neutral-900/50 border-neutral-700 rounded-xl">
+                  <div key={index} className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                     <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
                       <CollapsibleTrigger asChild>
                         <button className="w-full" aria-expanded={openFAQ === index} aria-controls={`faq-panel-${index}`} id={`faq-trigger-${index}`}>
-                          <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
+                          <div className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
                             <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
                             <ChevronDown className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} aria-hidden="true" />
-                          </CardContent>
+                          </div>
                         </button>
                       </CollapsibleTrigger>
                       <CollapsibleContent id={`faq-panel-${index}`} aria-labelledby={`faq-trigger-${index}`}>
-                        <CardContent className="px-6 pb-6 pt-0">
+                        <div className="px-6 pb-6 pt-0">
                           <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
-                        </CardContent>
+                        </div>
                       </CollapsibleContent>
                     </Collapsible>
-                  </Card>
+                  </div>
                 ))}
               </div>
             </div>
           </section>
+        </FadeIn>
 
-          {/* CTA */}
+        <FadeIn delay={1.2}>
+          {/* What's Next */}
           <section className="py-20 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
-                <CardContent className="p-12">
-                  <h2 className="text-4xl font-bold mb-6 text-white">The Future of Interoperability</h2>
-                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">NIPoPoWs enable a new generation of lightweight, trust-minimized applications across devices and chains.</p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="explore-apps">
-                      <Link href="/ecosystem" className="flex items-center">
-                        <ArrowRight className="mr-2 w-4 h-4" aria-hidden="true" />
-                        Explore Applications
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl" data-cta="docs">
-                      <Link href="https://docs.ergoplatform.com/protocol/nipopows/" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        <ExternalLink className="mr-2 w-4 h-4" aria-hidden="true" />
-                        Technical Documentation
-                      </Link>
-                    </Button>
+            <div className="max-w-6xl mx-auto mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+                What's <span className="text-orange-400">Next</span>?
+              </h2>
+              <p className="text-xl text-center text-neutral-300 mb-12">
+                Continue exploring Ergo's innovative blockchain technology
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Link 
+                  href="/ecosystem"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <ArrowRight className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Explore Applications</h3>
+                      <p className="text-orange-400 text-sm">Discover Ecosystem</p>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                  <p className="text-neutral-300">
+                    Discover applications and tools built with NIPoPoW technology
+                  </p>
+                </Link>
+                
+                <a 
+                  href="https://docs.ergoplatform.com/protocol/nipopows/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Technical Documentation</h3>
+                      <p className="text-orange-400 text-sm">Learn More</p>
+                    </div>
+                  </div>
+                  <p className="text-neutral-300">
+                    Deep dive into NIPoPoW implementation details and specifications
+                  </p>
+                </a>
+              </div>
             </div>
           </section>
-        </div>
-      </div>
+        </FadeIn>
+      </BackgroundWrapper>
     </>
   )
 }

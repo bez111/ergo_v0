@@ -49,7 +49,7 @@ export default function CommunityPage() {
     url: "https://ergoblockchain.org/start/community",
     logo: "https://ergoblockchain.org/logo.png",
     sameAs: [
-      "https://discord.gg/ergo-platform",
+      "https://discord.com/invite/ergo-platform-668903786361651200",
       "https://t.me/ergoplatform",
       "https://reddit.com/r/ergonauts",
       "https://twitter.com/ergoplatform",
@@ -94,7 +94,7 @@ export default function CommunityPage() {
         "@type": "ListItem",
         position: 1,
         name: "Discord",
-        url: "https://discord.gg/ergo-platform",
+        url: "https://discord.com/invite/ergo-platform-668903786361651200",
         description: "Main community hub with 15K+ members"
       },
       {

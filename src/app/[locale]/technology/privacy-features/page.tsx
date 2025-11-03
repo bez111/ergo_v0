@@ -1,17 +1,20 @@
 "use client"
 
 import { useTranslations } from "next-intl"
-import { LazyMotion, domAnimation, m, useReducedMotion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { Eye, Shield, Shuffle, Vote, ArrowRight, ExternalLink, CheckCircle, Lock, ChevronDown } from "lucide-react"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Eye, Shield, Shuffle, Vote, ArrowRight, ExternalLink, CheckCircle, Lock, ChevronDown, BookOpen, Terminal } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
-import dynamic from "next/dynamic"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { FadeIn } from "@/components/animations/fade-in"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import PrivacyComparisonTable from "@/components/privacy-comparison-table"
 
 // Removed HexagonalGrid due to loading issues
 
@@ -33,41 +36,39 @@ const itemVariants = {
 export default function PrivacyFeaturesPage() {
   const t = useTranslations("technology.privacyFeatures")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
-  const prefersReduced = useReducedMotion()
-  const lastUpdated = new Date().toISOString().slice(0, 10)
 
   const TECHNOLOGIES = [
     {
       icon: <Shield className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      title: t("technologies.sigmaProtocols.title"),
-      description: t("technologies.sigmaProtocols.description"),
+      title: "Sigma Protocols",
+      description: "Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
       features: [
-        t("technologies.sigmaProtocols.features.zeroKnowledge"),
-        t("technologies.sigmaProtocols.features.ringSignatures"),
-        t("technologies.sigmaProtocols.features.thresholdSignatures"),
-        t("technologies.sigmaProtocols.features.composablePrivacy"),
+        "Zero-knowledge proofs",
+        "Ring signatures",
+        "Threshold signatures",
+        "Composable privacy",
       ],
     },
     {
       icon: <Shuffle className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      title: t("technologies.ergoMixer.title"),
-      description: t("technologies.ergoMixer.description"),
+      title: "ErgoMixer",
+      description: "On-chain, non-custodial mixing for transaction privacy and anonymity.",
       features: [
-        t("technologies.ergoMixer.features.nonCustodial"),
-        t("technologies.ergoMixer.features.onChain"),
-        t("technologies.ergoMixer.features.tokenSupport"),
-        t("technologies.ergoMixer.features.configurableAnonymity"),
+        "Non-custodial mixing",
+        "On-chain privacy",
+        "Token mixing support",
+        "Configurable anonymity",
       ],
     },
     {
       icon: <Eye className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      title: t("technologies.confidentialAssets.title"),
-      description: t("technologies.confidentialAssets.description"),
+      title: "Confidential Assets",
+      description: "Issue tokens with hidden amounts and rules for maximum privacy.",
       features: [
-        t("technologies.confidentialAssets.features.hiddenAmounts"),
-        t("technologies.confidentialAssets.features.privateContracts"),
-        t("technologies.confidentialAssets.features.confidentialTransactions"),
-        t("technologies.confidentialAssets.features.selectiveDisclosure"),
+        "Hidden token amounts",
+        "Private smart contracts",
+        "Confidential transactions",
+        "Selective disclosure",
       ],
     },
   ]
@@ -83,77 +84,77 @@ export default function PrivacyFeaturesPage() {
 
   const USE_CASES = [
     {
-      title: t("useCases.privateTransactions.title"),
-      description: t("useCases.privateTransactions.description"),
-      icon: <Shuffle className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      example: t("useCases.privateTransactions.example"),
+      title: "Private Transactions",
+      description: "Mix your ERG and tokens to achieve strong on-chain anonymity (within the current anonymity set)",
+      icon: <Shuffle className="w-6 h-6" aria-hidden="true" focusable="false" />,
+      example: "ErgoMixer",
     },
     {
-      title: t("useCases.confidentialDefi.title"),
-      description: t("useCases.confidentialDefi.description"),
-      icon: <Lock className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      example: t("useCases.confidentialDefi.example"),
+      title: "Confidential DeFi",
+      description: "Build DeFi applications with private balances and logic",
+      icon: <Lock className="w-6 h-6" aria-hidden="true" focusable="false" />,
+      example: "Private DEX orders",
     },
     {
-      title: t("useCases.anonymousVoting.title"),
-      description: t("useCases.anonymousVoting.description"),
-      icon: <Vote className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      example: t("useCases.anonymousVoting.example"),
+      title: "Anonymous Voting",
+      description: "Create DAOs and voting systems with secret ballots",
+      icon: <Vote className="w-6 h-6" aria-hidden="true" focusable="false" />,
+      example: "DAO governance",
     },
     {
-      title: t("useCases.privateNfts.title"),
-      description: t("useCases.privateNfts.description"),
-      icon: <Eye className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      example: t("useCases.privateNfts.example"),
+      title: "Private NFTs",
+      description: "NFTs with hidden metadata or ownership information",
+      icon: <Eye className="w-6 h-6" aria-hidden="true" focusable="false" />,
+      example: "Confidential collectibles",
     },
   ]
 
   const FAQS = [
     {
-      question: t("faq.privacyLevel.question"),
-      answer: t("faq.privacyLevel.answer"),
+      question: "What level of privacy does Ergo offer? Is it just coin mixing?",
+      answer: "Ergo offers multi-layered privacy, not just a single feature. At its core are Sigma protocols—powerful cryptography that allows data to be hidden. On top of this runs ErgoMixer (non-custodial community tool), the first non-interactive and trustless mixer in the eUTXO space. It helps break the link between your transactions, providing strong anonymity on-chain.",
     },
     {
-      question: t("faq.suspicious.question"),
-      answer: t("faq.suspicious.answer"),
+      question: "If I use privacy features, won't my transactions look suspicious?",
+      answer: "On the contrary. Because privacy tools are a core part of the Ergo ecosystem, using them is the norm. When many people mix their coins, they create a large anonymity set where it's easy to blend in. On Ergo, protecting your financial data is standard practice, not a reason for suspicion.",
     },
     {
-      question: t("faq.criminals.question"),
-      answer: t("faq.criminals.answer"),
+      question: "Doesn't this kind of privacy attract criminals?",
+      answer: "Privacy is a fundamental right, not an admission of guilt. You don't use curtains on your windows because you're doing something illegal. Businesses need privacy for trade secrets and payrolls, and individuals need it to protect themselves from tracking and profiling.",
     },
     {
-      question: t("faq.auditProof.question"),
-      answer: t("faq.auditProof.answer"),
+      question: "What if I need to prove a transaction for taxes or an audit?",
+      answer: "Ergo applies a 'privacy by choice' approach with selective disclosure. When needed, you can provide viewing keys for specific transactions to an auditor or regulator without revealing your entire financial history.",
     },
   ]
 
   const privacyLevels = [
     {
-      level: t("privacyLevels.basic.title"),
-      description: t("privacyLevels.basic.description"),
+      level: "Basic Privacy",
+      description: "Standard transactions with pseudonymous addresses",
       features: [
-        t("privacyLevels.basic.features.pseudonymous"),
-        t("privacyLevels.basic.features.utxoBenefits"),
-        t("privacyLevels.basic.features.basicPrivacy"),
+        "Pseudonymous addresses",
+        "UTXO model benefits",
+        "Basic transaction privacy",
       ],
     },
     {
-      level: t("privacyLevels.enhanced.title"),
-      description: t("privacyLevels.enhanced.description"),
+      level: "Enhanced Privacy",
+      description: "Using ErgoMixer for transaction mixing and unlinkability",
       features: [
-        t("privacyLevels.enhanced.features.mixing"),
-        t("privacyLevels.enhanced.features.unlinkability"),
-        t("privacyLevels.enhanced.features.amountObfuscation"),
+        "Transaction mixing",
+        "Address unlinkability",
+        "Amount obfuscation",
       ],
     },
     {
-      level: t("privacyLevels.maximum.title"),
-      description: t("privacyLevels.maximum.description"),
+      level: "Maximum Privacy",
+      description: "Sigma protocols with zero-knowledge proofs and ring signatures",
       features: [
-        t("privacyLevels.maximum.features.zeroKnowledge"),
-        t("privacyLevels.maximum.features.ringSignatures"),
-        t("privacyLevels.maximum.features.confidentialAssets"),
-        t("privacyLevels.maximum.features.privateContracts"),
+        "Zero-knowledge proofs",
+        "Ring signatures",
+        "Confidential assets",
+        "Private smart contracts",
       ],
     },
   ]
@@ -253,10 +254,8 @@ export default function PrivacyFeaturesPage() {
         }}
       />
 
-      <div className="min-h-screen relative">
-        <a href="#what" className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 bg-black/80 text-white px-3 py-2 rounded">
-          {t("skipToContent")}
-        </a>
+      <BackgroundWrapper>
+        <div className="min-h-screen text-white">
         <div className="sr-only">
           <Breadcrumbs
             items={[
@@ -267,192 +266,153 @@ export default function PrivacyFeaturesPage() {
           />
         </div>
 
-        <div className="absolute inset-0 pointer-events-none" aria-hidden="true" role="presentation">
-          <div className="opacity-[0.02] w-full h-full bg-gradient-to-br from-orange-500/5 to-transparent" />
-        </div>
-
-        <LazyMotion features={domAnimation}>
-          <m.main
-            variants={containerVariants}
-            initial={prefersReduced ? false : "hidden"}
-            animate={prefersReduced ? false : "visible"}
-            className="relative z-10 motion-reduce:animate-none"
-          >
-            <section className="pt-28 md:pt-32 pb-12 md:pb-16 px-4">
-              <div className="max-w-7xl mx-auto">
+          <div className="container mx-auto px-4 py-16 relative z-10">
+            {/* Hero Section */}
+            <FadeIn delay={0.1}>
+              <div className="max-w-7xl mx-auto mb-16">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                   <div>
-                    <h1 className="text-5xl md:text-7xl font-bold mb-2 text-white">{t("title")}</h1>
-                    <p className="text-sm text-neutral-500 mb-4">{t("lastUpdated")}: {lastUpdated}</p>
-                    <p className="lead text-xl md:text-2xl text-neutral-300 mb-6 max-w-2xl">{t("subtitle")}</p>
-                    <p className="text-lg text-neutral-400 mb-6 max-w-2xl leading-relaxed">
-                      {t("description")}
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">Privacy Features</h1>
+                    <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                      Financial freedom and privacy go hand in hand. Ergo bakes privacy features directly into its core — not as an afterthought.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
-                      <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        <Link href="/docs">{t("buttons.explorePrivacy")}</Link>
+                      <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
+                        <Link href="/docs">Explore Privacy</Link>
                       </Button>
-                      <Button
-                        asChild
-                        variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm"
-                      >
-                        <Link href="/ecosystem">{t("buttons.tryErgoMixer")}</Link>
+                      <Button asChild variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl">
+                        <Link href="/ecosystem">Try ErgoMixer</Link>
                       </Button>
                     </div>
-                    <nav aria-label="On-page navigation" className="sticky top-16 z-[5] mt-6 flex flex-wrap gap-3 text-sm text-neutral-400">
-                      <Link href="#what" className="underline hover:opacity-80">{t("navigation.what")}</Link>
-                      <span aria-hidden>·</span>
-                      <Link href="#technologies" className="underline hover:opacity-80">{t("navigation.technologies")}</Link>
-                      <span aria-hidden>·</span>
-                      <Link href="#use-cases" className="underline hover:opacity-80">{t("navigation.useCases")}</Link>
-                      <span aria-hidden>·</span>
-                      <Link href="#faq" className="underline hover:opacity-80">{t("navigation.faq")}</Link>
-                    </nav>
                   </div>
-                  <div className="relative">
-                    <div className="relative z-10">
-                      <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors">
-                        <CardContent className="p-0">
-                          <h3 className="text-2xl font-bold mb-6 text-center text-white">{t("privacyLevels.title")}</h3>
-                          <div className="space-y-4">
-                            {privacyLevels.map((level) => (
-                              <div key={level.level} className="p-4 rounded-lg bg-neutral-900/60 border border-neutral-700">
-                                <h4 className="font-semibold text-white mb-2">{level.level}</h4>
-                                <p className="text-sm text-neutral-400 mb-3">{level.description}</p>
-                                <div className="flex flex-wrap gap-1">
-                                  {level.features.map((feature, featureIndex) => (
-                                    <Badge key={featureIndex} variant="outline" className="text-xs border-neutral-600 text-neutral-300">
-                                      {feature}
-                                    </Badge>
-                                  ))}
-                                </div>
-                              </div>
-                            ))}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Limits & Best Practices */}
-                <div className="mt-8">
-                  <Card className="bg-neutral-900/50 border-neutral-700">
-                    <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold text-white mb-2">{t("bestPractices.title")}</h3>
-                      <ul className="list-disc list-inside text-neutral-400 space-y-1 text-sm">
-                        {bestPractices.map((practice, index) => (
-                          <li key={index}>{practice}</li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </section>
-
-            <section id="what" className="py-20 px-4">
-              <div className="max-w-4xl mx-auto">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors" aria-describedby="why-privacy-desc">
-                  <CardContent className="p-8">
-                    <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text:white md:text-white">{t("whyPrivacyMatters.title")}</h2>
-                    <p id="why-privacy-desc" className="text-neutral-300 text-lg leading-relaxed mb-6">
-                      {t("whyPrivacyMatters.description1")}
-                    </p>
-                    <p className="text-neutral-300 text-lg leading-relaxed">
-                      {t("whyPrivacyMatters.description2")}
-                    </p>
-                  </CardContent>
-                </Card>
-              </div>
-            </section>
-
-            <section id="technologies" className="py-20 px-4">
-              <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("technologiesSection.title")}</h2>
-                <div className="space-y-8">
-                  {TECHNOLOGIES.map((tech) => (
-                    <Card key={tech.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors">
-                      <CardContent className="p-8">
-                        <div className="flex items-start gap-6">
-                          <span aria-hidden="true" className="p-4 bg-orange-500/20 rounded-lg text-orange-400">{tech.icon}</span>
-                          <div className="flex-1">
-                            <h3 className="text-2xl font-semibold mb-4 text-white">
-                              {tech.title}
-                              {tech.title === t("technologies.sigmaProtocols.title") && (
-                                <>
-                                  {" "}
-                                  <Link href="/docs/developers/ergoscript-languages/sigma/intro" className="underline text-neutral-400 hover:text-neutral-300">({t("technologiesSection.docsLink")})</Link>
-                                </>
-                              )}
-                            </h3>
-                            <p className="text-neutral-400 text-lg mb-6 leading-relaxed">{tech.description}</p>
-                            <div className="grid md:grid-cols-2 gap-3">
-                              {tech.features.map((feature, featureIndex) => (
-                                <div key={featureIndex} className="flex items-center gap-2">
-                                  <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0" aria-hidden="true" focusable="false" />
-                                  <span className="text-neutral-300 text-sm">{feature}</span>
-                                </div>
-                              ))}
-                            </div>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            <section id="use-cases" className="py-20 px-4">
-              <div className="max-w-6xl mx-auto">
-                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("useCasesSection.title")}</h2>
-                <div className="grid md:grid-cols-2 gap-8">
-                  {USE_CASES.map((useCase) => (
-                    <Card key={useCase.title} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full hover:border-orange-500/30 transition-colors">
-                      <CardContent className="p-8">
-                        <div className="flex items-start gap-4 mb-4">
-                          <span aria-hidden="true" className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{useCase.icon}</span>
-                          <div>
-                            <h3 className="text-xl font-semibold mb-2 text-white">{useCase.title}</h3>
-                            <p className="text-neutral-400 mb-4">{useCase.description}</p>
-                            <Badge variant="outline" className="border-neutral-700 text-neutral-300 hover:border-orange-500/50">
-                              {useCase.example}
-                            </Badge>{" "}
-                            {useCase.title === t("useCases.privateTransactions.title") && (
-                              <Link href="/learn/guides/ergomixer" className="underline text-neutral-400 hover:text-neutral-300 ml-2">({t("useCasesSection.guideLink")})</Link>
-                            )}
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </section>
-
-            <section id="faq" aria-labelledby="faq-heading" className="py-20 px-4">
-              <div className="max-w-4xl mx-auto">
-                <h2 id="faq-heading" className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("faq.title")}</h2>
-                <div role="list" className="space-y-4">
-                  {FAQS.map((faq, index) => (
-                    <Card role="listitem" key={index} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                      <Collapsible open={openFAQ === index} onOpenChange={() => setOpenFAQ(openFAQ === index ? null : index)}>
-                        <CollapsibleTrigger asChild>
-                          <button
-                            id={`faq-trigger-${index}`}
-                            aria-expanded={openFAQ === index}
-                            aria-controls={`faq-panel-${index}`}
-                            className="w-full"
+                  <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                    <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                      <h3 className="text-2xl font-bold mb-6 text-center text-white">Privacy Levels</h3>
+                      <div className="space-y-4">
+                        {privacyLevels.map((level) => (
+                          <Link
+                            key={level.level}
+                            href="/docs/ecosystem/privacy"
+                            className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300 block"
                           >
+                            <div className="flex items-start gap-3">
+                              <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                                <Shield className="w-6 h-6" />
+                              </div>
+                              <div>
+                                <h4 className="font-semibold text-white text-lg">{level.level}</h4>
+                                <p className="text-neutral-400 text-sm mt-1">{level.description}</p>
+                              </div>
+                            </div>
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Features Section */}
+            <FadeIn delay={0.2}>
+              <div className="max-w-7xl mx-auto mb-16" id="what">
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Privacy Technologies</h2>
+                  <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
+                    Explore the cryptographic foundations that make Ergo's privacy features possible
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {TECHNOLOGIES.map((tech, index) => (
+                    <Card key={tech.title} className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full">
+                      <CardContent className="p-6">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                            {tech.icon}
+                          </div>
+                          <h3 className="text-xl font-bold text-white">{tech.title}</h3>
+                        </div>
+                        <p className="text-neutral-200 leading-relaxed mb-4">{tech.description}</p>
+                        <div className="space-y-2">
+                          {tech.features.map((feature, idx) => (
+                            <div key={idx} className="flex items-center gap-2">
+                              <CheckCircle className="w-4 h-4 text-orange-400 flex-shrink-0" />
+                              <span className="text-neutral-300 text-sm">{feature}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* Privacy Comparison Table */}
+            <FadeIn delay={0.3}>
+              <div className="max-w-7xl mx-auto mb-16">
+                <PrivacyComparisonTable />
+              </div>
+            </FadeIn>
+
+            {/* Use Cases Section */}
+            <FadeIn delay={0.5}>
+              <div className="max-w-7xl mx-auto mb-16" id="use-cases">
+                <div className="text-center mb-16">
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Privacy Use Cases</h2>
+                  <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
+                    Real-world applications of Ergo's privacy features in decentralized applications
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  {USE_CASES.map((useCase, index) => (
+                    <Card key={useCase.title} className="group bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full hover:shadow-lg hover:shadow-orange-500/10 hover:-translate-y-1">
+                      <CardContent className="p-8">
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="w-12 h-12 bg-orange-500/20 rounded-lg flex items-center justify-center flex-shrink-0 text-orange-400 group-hover:bg-orange-500/30 group-hover:text-orange-300 transition-all duration-300">
+                            {useCase.icon}
+                          </div>
+                          <h3 className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors duration-300">{useCase.title}</h3>
+                        </div>
+                        <p className="text-neutral-200 leading-relaxed group-hover:text-neutral-100 transition-colors duration-300">{useCase.description}</p>
+                      </CardContent>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+            {/* FAQ Section */}
+            <FadeIn delay={0.7}>
+              <div id="faq" className="max-w-4xl mx-auto mb-16">
+                <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
+                  Frequently Asked Questions
+                </h2>
+
+                <div className="space-y-4">
+                  {FAQS.map((faq, index) => (
+                    <Card
+                      key={index}
+                      className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300"
+                    >
+                      <Collapsible
+                        open={openFAQ === index}
+                        onOpenChange={(open) => setOpenFAQ(open ? index : null)}
+                      >
+                        <CollapsibleTrigger asChild>
+                          <button className="w-full">
                             <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
                               <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
-                              <ChevronDown className={`w-5 h-5 text-neutral-400 transition-transform ${openFAQ === index ? "rotate-180" : ""}`} aria-hidden="true" focusable="false" />
+                              <ChevronDown
+                                aria-hidden="true"
+                                className={`w-5 h-5 text-neutral-400 transition-transform ${
+                                  openFAQ === index ? "rotate-180" : ""
+                                }`}
+                              />
                             </CardContent>
                           </button>
                         </CollapsibleTrigger>
-                        <CollapsibleContent id={`faq-panel-${index}`} aria-labelledby={`faq-trigger-${index}`}>
+                        <CollapsibleContent>
                           <CardContent className="px-6 pb-6 pt-0">
                             <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
                           </CardContent>
@@ -462,37 +422,59 @@ export default function PrivacyFeaturesPage() {
                   ))}
                 </div>
               </div>
-            </section>
+            </FadeIn>
 
-            <section className="py-20 px-4">
-              <div className="max-w-4xl mx-auto text-center">
-                <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-                  <CardContent className="p-12">
-                    <h2 className="text-4xl font-bold mb-6 text-white">{t("cta.title")}</h2>
-                    <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                      {t("cta.description")}
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                      <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                        <Link href="/use/defi" className="flex items-center">
-                          <ArrowRight className="mr-2 w-4 h-4" aria-hidden="true" focusable="false" />
-                          {t("cta.buttons.tryErgoMixer")}
-                        </Link>
-                      </Button>
-                      <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl backdrop-blur-sm">
-                        <a href="https://docs.ergoplatform.com/protocol/privacy/?utm_source=site&utm_medium=cta&utm_campaign=privacy" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                          <ExternalLink className="mr-2 w-4 h-4" aria-hidden="true" focusable="false" />
-                          {t("cta.buttons.privacyDocs")}
-                        </a>
-                      </Button>
+            {/* What's Next Section */}
+            <FadeIn delay={0.9}>
+              <div className="max-w-6xl mx-auto mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
+                  What's <span className="text-orange-400">Next</span>?
+                </h2>
+                <p className="text-xl text-center text-neutral-300 mb-12">
+                  Continue exploring Ergo's privacy features and ecosystem
+                </p>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <Link 
+                    href="/ecosystem"
+                    className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                  >
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                        <Shield className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">Try ErgoMixer</h3>
+                        <p className="text-orange-400 text-sm">Privacy Tool</p>
+                      </div>
                     </div>
-                  </CardContent>
-                </Card>
+                    <p className="text-neutral-300">
+                      Experience privacy-preserving transactions with Ergo's non-custodial mixer
+                    </p>
+                  </Link>
+                  
+                  <Link 
+                    href="/docs/ecosystem/privacy"
+                    className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                  >
+                    <div className="flex items-center gap-4 mb-4">
+                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                        <BookOpen className="w-6 h-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-xl font-bold text-white">Privacy Documentation</h3>
+                        <p className="text-orange-400 text-sm">Learn More</p>
+                      </div>
+                    </div>
+                    <p className="text-neutral-300">
+                      Deep dive into the technical details of Ergo's privacy implementation
+                    </p>
+                  </Link>
+                </div>
               </div>
-            </section>
-          </m.main>
-        </LazyMotion>
-      </div>
+            </FadeIn>
+          </div>
+        </div>
+      </BackgroundWrapper>
     </>
   )
 }

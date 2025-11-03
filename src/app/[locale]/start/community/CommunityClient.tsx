@@ -53,7 +53,7 @@ const platforms = [
     activity: "24/7",
     icon: MessageCircle,
     buttonText: "Join Discord",
-    href: "https://discord.gg/ergo-platform",
+    href: "https://discord.com/invite/ergo-platform-668903786361651200",
     features: ["Live Support", "AMA Sessions", "Hardware Channels", "Pool Discussions"],
   },
   {

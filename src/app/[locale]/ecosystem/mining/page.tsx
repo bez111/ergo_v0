@@ -46,6 +46,7 @@ import {
 import Link from "next/link"
 import Script from "next/script"
 import { PoolCard, PoolCardSkeleton } from "@/components/mining/PoolCard"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -265,8 +266,9 @@ export default function MiningEcosystemPage() {
   ]
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="relative z-10">
+    <BackgroundWrapper>
+      <div className="min-h-screen text-white relative overflow-hidden">
+        <div className="relative z-10">
         {/* Hero Section */}
         <motion.section
           initial={{ opacity: 0, y: 30 }}
@@ -288,20 +290,17 @@ export default function MiningEcosystemPage() {
                 </p>
                 
                   <div className="flex flex-col sm:flex-row gap-4">
-                  <Button asChild size="lg" className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50 group">
+                  <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
                     <Link href="/use/mining">
-                      <Sparkles className="w-5 h-5 mr-2 group-hover:rotate-12 transition-transform" />
-                      I'm New - Start Here
+                      Start Mining
                     </Link>
                     </Button>
                     <Button
-                    size="lg"
                       variant="outline"
-                    className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 px-6 py-3 rounded-xl transition-all group"
-                    onClick={() => document.getElementById('pools')?.scrollIntoView({ behavior: 'smooth' })}
+                      className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl"
+                      onClick={() => document.getElementById('pools')?.scrollIntoView({ behavior: 'smooth' })}
                     >
-                    Browse Pools Directory
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      View Pools
                     </Button>
                   </div>
                 </div>
@@ -312,7 +311,7 @@ export default function MiningEcosystemPage() {
                 whileHover={{ scale: 1.02 }} 
                 transition={{ type: "spring", stiffness: 300, damping: 24 }}
               >
-                <Card className="bg-neutral-900/50 border border-neutral-700 backdrop-blur-sm p-8 rounded-xl hover:border-orange-500/30 transition-colors">
+                <Card className="bg-black/80 border border-white/10 backdrop-blur-sm p-8 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                     <CardContent className="p-0">
                     <h3 className="text-2xl font-bold mb-6 text-center text-white">Network Overview</h3>
                     <div className="grid grid-cols-2 gap-4">
@@ -455,14 +454,14 @@ export default function MiningEcosystemPage() {
               <SectionHeading text="MINING SOFTWARE" />
               
               {/* Quick tip for beginners */}
-              <Alert className="mb-6 bg-orange-500/10 border-orange-500/30">
-                <Sparkles className="h-4 w-4" />
-                <AlertDescription>
-                  <strong>New to mining?</strong> Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.
+              <Alert className="mb-6 bg-black border-white/20 text-white rounded-xl">
+                <Sparkles className="h-4 w-4 text-orange-400" />
+                <AlertDescription className="text-white">
+                  <strong className="text-orange-400">New to mining?</strong> Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.
                 </AlertDescription>
               </Alert>
               
-              <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl">
+              <Card className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <CardContent className="p-0">
                   <div className="overflow-x-auto">
                     <table className="w-full" aria-label="Ergo mining software options">
@@ -533,7 +532,7 @@ export default function MiningEcosystemPage() {
               
               <div className="grid md:grid-cols-3 gap-6">
                 <FadeIn>
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full hover:border-orange-500/30 transition-colors">
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl h-full hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                     <CardContent className="p-6">
                       <h3 className="font-semibold mb-2 text-orange-400 flex items-center gap-2">
                         <HelpCircle className="w-4 h-4" />
@@ -547,7 +546,7 @@ export default function MiningEcosystemPage() {
                   </Card>
                 </FadeIn>
                 <FadeIn delay={0.1}>
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full hover:border-orange-500/30 transition-colors">
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl h-full hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                     <CardContent className="p-6">
                       <h3 className="font-semibold mb-2 text-orange-400 flex items-center gap-2">
                         <Cpu className="w-4 h-4" />
@@ -560,7 +559,7 @@ export default function MiningEcosystemPage() {
                   </Card>
         </FadeIn>
                 <FadeIn delay={0.2}>
-                  <Card className="bg-neutral-900/50 border border-neutral-700 rounded-xl h-full hover:border-orange-500/30 transition-colors">
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl h-full hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                     <CardContent className="p-6">
                       <h3 className="font-semibold mb-2 text-orange-400 flex items-center gap-2">
                         <DollarSign className="w-4 h-4" />
@@ -587,7 +586,7 @@ export default function MiningEcosystemPage() {
 
             {/* Final CTA */}
             <FadeIn>
-              <Card className="bg-gradient-to-r from-orange-500/10 to-transparent border border-orange-500/30 rounded-xl hover:border-orange-500/50 transition-colors">
+              <Card className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <CardContent className="p-8 text-center">
                   <h3 className="text-2xl font-bold mb-4 text-white">Ready to Start Mining?</h3>
                   <p className="text-neutral-400 mb-6 max-w-2xl mx-auto">
@@ -595,14 +594,12 @@ export default function MiningEcosystemPage() {
                   </p>
                   <div className="flex gap-4 justify-center">
                     <Link href="/use/mining">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold group">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl">
                         Step-by-Step Guide
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Button>
                     </Link>
                     <Link href="https://discord.gg/ergo" target="_blank">
-                      <Button variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 transition-all">
-                        <MessageCircle className="w-4 h-4 mr-2" />
+                      <Button variant="outline" className="border-white/20 text-white hover:bg-white/10 hover:border-orange-400/40 px-6 py-3 rounded-xl">
                         Get Help
                     </Button>
                     </Link>
@@ -612,7 +609,8 @@ export default function MiningEcosystemPage() {
             </FadeIn>
           </div>
         </section>
+        </div>
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 }
