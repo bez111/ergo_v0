@@ -3,34 +3,14 @@ import Link from 'next/link'
 import { Download, ShoppingCart, Send, Shield, CheckCircle, Smartphone, Globe } from 'lucide-react'
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EnhancedButton } from "@/components/ui/enhanced-button"
+import { getTranslations } from 'next-intl/server'
+import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
+import { getMetadata } from './metadata'
 
-export async function generateMetadata(): Promise<Metadata> {
-  return {
-    title: "Get Started with Ergo Blockchain — Download Wallet & Buy ERG",
-    description: "Start using Ergo in 3 simple steps: Download a secure wallet, buy ERG tokens, and send your first transaction. Complete beginner's guide to Ergo blockchain.",
-    keywords: "ergo wallet download, buy erg tokens, ergo blockchain tutorial, cryptocurrency wallet, decentralized finance getting started",
-    openGraph: {
-      title: "Get Started with Ergo Blockchain",
-      description: "Download wallet, buy ERG, send transactions. Complete beginner's guide to Ergo blockchain.",
-      url: "https://ergoblockchain.org/start",
-      siteName: "Ergo Blockchain",
-      type: "website",
-      images: [{
-        url: "https://ergoblockchain.org/og/start.png",
-        width: 1200,
-        height: 630,
-        alt: "Get Started with Ergo Blockchain"
-      }]
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Get Started with Ergo Blockchain",
-      description: "Download wallet, buy ERG, send transactions. Complete beginner's guide.",
-      images: ["https://ergoblockchain.org/og/start.png"],
-      creator: "@ergoblockchain",
-      site: "@ergoblockchain"
-    }
-  }
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'start.seo' });
+  return getMetadata()
 }
 
 const steps = [
@@ -139,240 +119,299 @@ const quickFacts = [
   }
 ]
 
-export default function StartPage() {
+export default async function StartPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: 'start.schema' });
+  
+  const howToSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    '@id': 'https://ergoblockchain.org/start#howto',
+    name: t('howTo.name'),
+    description: t('howTo.description'),
+    image: 'https://ergoblockchain.org/og/start.png',
+    totalTime: 'PT30M',
+    estimatedCost: {
+      '@type': 'MonetaryAmount',
+      currency: 'USD',
+      value: '0'
+    },
+    supply: [
+      { '@type': 'HowToSupply', name: 'Computer or smartphone' },
+      { '@type': 'HowToSupply', name: 'Internet connection' }
+    ],
+    tool: [
+      { '@type': 'HowToTool', name: 'Ergo wallet (Nautilus or Satergo)' },
+      { '@type': 'HowToTool', name: 'Web browser' }
+    ],
+    step: [
+      {
+        '@type': 'HowToStep',
+        name: t('howTo.steps.choosePath.name'),
+        text: t('howTo.steps.choosePath.text'),
+        url: 'https://ergoblockchain.org/start',
+        image: 'https://ergoblockchain.org/images/start-paths.png'
+      },
+      {
+        '@type': 'HowToStep',
+        name: t('howTo.steps.understandWhy.name'),
+        text: t('howTo.steps.understandWhy.text'),
+        url: 'https://ergoblockchain.org/start/introduction'
+      },
+      {
+        '@type': 'HowToStep',
+        name: t('howTo.steps.getWallet.name'),
+        text: t('howTo.steps.getWallet.text'),
+        url: 'https://ergoblockchain.org/wallet'
+      },
+      {
+        '@type': 'HowToStep',
+        name: t('howTo.steps.tryTestnet.name'),
+        text: t('howTo.steps.tryTestnet.text'),
+        url: 'https://ergoblockchain.org/wallet/testnet-faucet'
+      }
+    ]
+  }
+
+  const knowledgeGraph = generateKnowledgeGraph('start')
+
   return (
-    <main className="min-h-screen bg-black text-white relative overflow-hidden">
-      <BackgroundWrapper>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
 
-      {/* Hero Section */}
-      <section className="relative py-24 md:py-32">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
-              Start Using <span className="text-orange-400">Ergo</span>
-            </h1>
-            
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
-              Get started with Ergo blockchain in 3 simple steps.
-              Download a wallet, buy ERG tokens, and send your first transaction.
-            </p>
 
-          {/* Quick Facts */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
-            {quickFacts.map((fact, index) => (
-              <div key={index} className="text-center">
-                <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
-                  <fact.icon className="h-6 w-6 text-orange-400" />
+      <main className="min-h-screen bg-black text-white relative overflow-hidden">
+        <BackgroundWrapper>
+
+          {/* Hero Section */}
+          <section className="relative py-24 md:py-32">
+            <div className="container px-4 md:px-6 mx-auto">
+              <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
+
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
+                  Start Using <span className="text-orange-400">Ergo</span>
+                </h1>
+
+                <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
+                  Get started with Ergo blockchain in 3 simple steps.
+                  Download a wallet, buy ERG tokens, and send your first transaction.
+                </p>
+
+                {/* Quick Facts */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
+                  {quickFacts.map((fact, index) => (
+                    <div key={index} className="text-center">
+                      <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
+                        <fact.icon className="h-6 w-6 text-orange-400" />
+                      </div>
+                      <h3 className="text-lg font-semibold text-white mb-2">{fact.title}</h3>
+                      <p className="text-gray-400 text-sm">{fact.description}</p>
+                    </div>
+                  ))}
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">{fact.title}</h3>
-                <p className="text-gray-400 text-sm">{fact.description}</p>
               </div>
-            ))}
-          </div>
-          </div>
-        </div>
-      </section>
+            </div>
+          </section>
 
-      {/* Steps Section */}
-      <section className="py-16">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="max-w-6xl mx-auto">
-            <div className="space-y-20">
-              {steps.map((step, index) => (
-                <div key={index} className="relative">
-                  
-                  {/* Step Header */}
-                  <div className="flex items-center gap-6 mb-12">
-                    <div className="w-12 h-12 rounded-lg bg-orange-500 flex items-center justify-center text-xl font-bold text-black">
-                      {step.number}
-                    </div>
-                    <div>
-                      <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                        {step.title}
-                      </h2>
-                      <p className="text-lg text-gray-400">
-                        {step.description}
-                      </p>
-                    </div>
-                  </div>
+          {/* Steps Section */}
+          <section className="py-16">
+            <div className="container px-4 md:px-6 mx-auto">
+              <div className="max-w-6xl mx-auto">
+                <div className="space-y-20">
+                  {steps.map((step, index) => (
+                    <div key={index} className="relative">
 
-                {/* Step Content */}
-                <div className="ml-18">
-                  {/* Wallets */}
-                  {step.wallets && (
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                      {step.wallets.map((wallet, walletIndex) => (
-                        <div key={walletIndex} className={`group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 ${
-                          wallet.recommended ? 'ring-2 ring-orange-500/20' : ''
-                        }`}>
-                          {wallet.recommended && (
-                            <div className="absolute -top-3 left-6 bg-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
-                              Recommended
-                            </div>
-                          )}
-                          <div className="flex items-start gap-4 mb-4">
-                            <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                              <wallet.icon className="h-6 w-6 text-orange-400" />
-                            </div>
-                            <div>
-                              <h3 className="text-white font-bold text-xl mb-1">{wallet.name}</h3>
-                              <p className="text-orange-400/80 text-sm font-medium">{wallet.type}</p>
-                            </div>
-                          </div>
-                          <p className="text-gray-400 leading-relaxed mb-6">{wallet.description}</p>
-                          <div className="space-y-3">
-                            <EnhancedButton
-                              href={wallet.link}
-                              external={true}
-                              variant="primary"
-                              size="lg"
-                              className="w-full"
-                              icon={<wallet.icon className="h-5 w-5" />}
-                              ariaLabel={`Download ${wallet.name} wallet`}
-                            >
-                              {wallet.buttonText}
-                            </EnhancedButton>
-                            {wallet.recommended && (
-                              <p className="text-xs text-gray-500 text-center">
-                                Verify checksum after download
-                              </p>
-                            )}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-
-                  {/* Exchanges */}
-                  {step.exchanges && (
-                    <>
-                      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        {step.exchanges.map((exchange, exchangeIndex) => (
-                          <div key={exchangeIndex} className={`group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 ${
-                            exchange.recommended ? 'ring-2 ring-orange-500/20' : ''
-                          }`}>
-                            {exchange.recommended && (
-                              <div className="absolute -top-3 left-6 bg-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
-                                Recommended
-                              </div>
-                            )}
-                            <div className="flex items-start gap-4 mb-4">
-                              <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                                <ShoppingCart className="h-6 w-6 text-orange-400" />
-                              </div>
-                              <div>
-                                <h3 className="text-white font-bold text-xl mb-1">{exchange.name}</h3>
-                                <p className="text-orange-400/80 text-sm font-medium">{exchange.type}</p>
-                              </div>
-                            </div>
-                            <p className="text-gray-400 leading-relaxed mb-6">{exchange.description}</p>
-                            <div className="space-y-3">
-                              <EnhancedButton
-                                href={exchange.link}
-                                external={true}
-                                variant={exchange.recommended ? "primary" : "secondary"}
-                                size="lg"
-                                className="w-full"
-                                icon={<ShoppingCart className="h-5 w-5" />}
-                                ariaLabel={`Trade ERG on ${exchange.name}`}
-                              >
-                                {exchange.buttonText}
-                              </EnhancedButton>
-                            </div>
-                          </div>
-                        ))}
-                      </div>
-                      <div className="mt-6 p-4 bg-neutral-900/50 border border-neutral-700/50 rounded-lg">
-                        <p className="text-xs text-gray-500 text-center">
-                          <strong>Disclaimer:</strong> Links are informational. Do your own research. Trading involves risk.
-                        </p>
-                      </div>
-                    </>
-                  )}
-
-                  {/* Tips */}
-                  {step.tips && (
-                    <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5">
-                      <div className="flex items-start gap-4 mb-6">
-                        <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                          <Send className="h-6 w-6 text-orange-400" />
+                      {/* Step Header */}
+                      <div className="flex items-center gap-6 mb-12">
+                        <div className="w-12 h-12 rounded-lg bg-orange-500 flex items-center justify-center text-xl font-bold text-black">
+                          {step.number}
                         </div>
                         <div>
-                          <h3 className="text-white font-bold text-xl mb-1">Pro Tips</h3>
-                          <p className="text-orange-400/80 text-sm font-medium">Best practices for success</p>
+                          <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                            {step.title}
+                          </h2>
+                          <p className="text-lg text-gray-400">
+                            {step.description}
+                          </p>
                         </div>
                       </div>
-                      <ul className="space-y-4">
-                        {step.tips.map((tip, tipIndex) => (
-                          <li key={tipIndex} className="flex items-start gap-3">
-                            <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                            <span className="text-gray-400 leading-relaxed">{tip}</span>
-                          </li>
-                        ))}
-                      </ul>
+
+                      {/* Step Content */}
+                      <div className="ml-18">
+                        {/* Wallets */}
+                        {step.wallets && (
+                          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                            {step.wallets.map((wallet, walletIndex) => (
+                              <div key={walletIndex} className={`group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 ${wallet.recommended ? 'ring-2 ring-orange-500/20' : ''
+                                }`}>
+                                {wallet.recommended && (
+                                  <div className="absolute -top-3 left-6 bg-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
+                                    Recommended
+                                  </div>
+                                )}
+                                <div className="flex items-start gap-4 mb-4">
+                                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                                    <wallet.icon className="h-6 w-6 text-orange-400" />
+                                  </div>
+                                  <div>
+                                    <h3 className="text-white font-bold text-xl mb-1">{wallet.name}</h3>
+                                    <p className="text-orange-400/80 text-sm font-medium">{wallet.type}</p>
+                                  </div>
+                                </div>
+                                <p className="text-gray-400 leading-relaxed mb-6">{wallet.description}</p>
+                                <div className="space-y-3">
+                                  <EnhancedButton
+                                    href={wallet.link}
+                                    external={true}
+                                    variant="primary"
+                                    size="lg"
+                                    className="w-full"
+                                    icon={<wallet.icon className="h-5 w-5" />}
+                                    ariaLabel={`Download ${wallet.name} wallet`}
+                                  >
+                                    {wallet.buttonText}
+                                  </EnhancedButton>
+                                  {wallet.recommended && (
+                                    <p className="text-xs text-gray-500 text-center">
+                                      Verify checksum after download
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Exchanges */}
+                        {step.exchanges && (
+                          <>
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                              {step.exchanges.map((exchange, exchangeIndex) => (
+                                <div key={exchangeIndex} className={`group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 ${exchange.recommended ? 'ring-2 ring-orange-500/20' : ''
+                                  }`}>
+                                  {exchange.recommended && (
+                                    <div className="absolute -top-3 left-6 bg-orange-500 text-black px-4 py-2 rounded-full text-sm font-bold">
+                                      Recommended
+                                    </div>
+                                  )}
+                                  <div className="flex items-start gap-4 mb-4">
+                                    <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                                      <ShoppingCart className="h-6 w-6 text-orange-400" />
+                                    </div>
+                                    <div>
+                                      <h3 className="text-white font-bold text-xl mb-1">{exchange.name}</h3>
+                                      <p className="text-orange-400/80 text-sm font-medium">{exchange.type}</p>
+                                    </div>
+                                  </div>
+                                  <p className="text-gray-400 leading-relaxed mb-6">{exchange.description}</p>
+                                  <div className="space-y-3">
+                                    <EnhancedButton
+                                      href={exchange.link}
+                                      external={true}
+                                      variant={exchange.recommended ? "primary" : "secondary"}
+                                      size="lg"
+                                      className="w-full"
+                                      icon={<ShoppingCart className="h-5 w-5" />}
+                                      ariaLabel={`Trade ERG on ${exchange.name}`}
+                                    >
+                                      {exchange.buttonText}
+                                    </EnhancedButton>
+                                  </div>
+                                </div>
+                              ))}
+                            </div>
+                            <div className="mt-6 p-4 bg-neutral-900/50 border border-neutral-700/50 rounded-lg">
+                              <p className="text-xs text-gray-500 text-center">
+                                <strong>Disclaimer:</strong> Links are informational. Do your own research. Trading involves risk.
+                              </p>
+                            </div>
+                          </>
+                        )}
+
+                        {/* Tips */}
+                        {step.tips && (
+                          <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5">
+                            <div className="flex items-start gap-4 mb-6">
+                              <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                                <Send className="h-6 w-6 text-orange-400" />
+                              </div>
+                              <div>
+                                <h3 className="text-white font-bold text-xl mb-1">Pro Tips</h3>
+                                <p className="text-orange-400/80 text-sm font-medium">Best practices for success</p>
+                              </div>
+                            </div>
+                            <ul className="space-y-4">
+                              {step.tips.map((tip, tipIndex) => (
+                                <li key={tipIndex} className="flex items-start gap-3">
+                                  <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                                  <span className="text-gray-400 leading-relaxed">{tip}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </div>
+
                     </div>
-                  )}
+                  ))}
                 </div>
-
               </div>
-            ))}
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
-      {/* Next Steps Section */}
-      <section className="py-16">
-        <div className="container px-4 md:px-6 mx-auto">
-          <div className="max-w-4xl mx-auto text-center">
-            
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              What's <span className="text-orange-400">Next</span>?
-            </h2>
-            <p className="text-lg text-gray-400 mb-12">
-              Now that you have ERG, explore the Ergo ecosystem
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Link 
-                href="/ecosystem"
-                className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-6 w-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-xl mb-1">Explore dApps</h3>
-                    <p className="text-orange-400/80 text-sm font-medium">Ecosystem Applications</p>
-                  </div>
+          {/* Next Steps Section */}
+          <section className="py-16">
+            <div className="container px-4 md:px-6 mx-auto">
+              <div className="max-w-4xl mx-auto text-center">
+
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  What's <span className="text-orange-400">Next</span>?
+                </h2>
+                <p className="text-lg text-gray-400 mb-12">
+                  Now that you have ERG, explore the Ergo ecosystem
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <Link
+                    href="/ecosystem"
+                    className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                        <Shield className="h-6 w-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-bold text-xl mb-1">Explore dApps</h3>
+                        <p className="text-orange-400/80 text-sm font-medium">Ecosystem Applications</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-400 leading-relaxed">Discover decentralized applications built on Ergo</p>
+                  </Link>
+
+                  <Link
+                    href="/docs"
+                    className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
+                  >
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                        <Shield className="h-6 w-6 text-orange-400" />
+                      </div>
+                      <div>
+                        <h3 className="text-white font-bold text-xl mb-1">Learn More</h3>
+                        <p className="text-orange-400/80 text-sm font-medium">Technical Documentation</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-400 leading-relaxed">Deep dive into Ergo's technology and features</p>
+                  </Link>
                 </div>
-                <p className="text-gray-400 leading-relaxed">Discover decentralized applications built on Ergo</p>
-              </Link>
-              
-              <Link 
-                href="/docs"
-                className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 text-left"
-              >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                    <Shield className="h-6 w-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-bold text-xl mb-1">Learn More</h3>
-                    <p className="text-orange-400/80 text-sm font-medium">Technical Documentation</p>
-                  </div>
-                </div>
-                <p className="text-gray-400 leading-relaxed">Deep dive into Ergo's technology and features</p>
-              </Link>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
+          </section>
 
 
-      </BackgroundWrapper>
-    </main>
+        </BackgroundWrapper>
+      </main>
+    </>
   )
 }
