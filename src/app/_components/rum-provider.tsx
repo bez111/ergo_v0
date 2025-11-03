@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
-import { initRUM } from '@/src/app/_lib/rum'
+import { initRUM } from '@/app/_lib/rum'
 
 export function RUMProvider() {
   useEffect(() => {

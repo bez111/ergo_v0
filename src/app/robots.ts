@@ -1,7 +1,8 @@
+import { siteConfig } from '@/config/site-config'
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = siteConfig.siteUrl;
   
   return {
     rules: [

@@ -1,7 +1,8 @@
+import { siteConfig } from '@/config/site-config';
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ergoblockchain.org'
+  const baseUrl = siteConfig.siteUrl;
   const currentDate = new Date().toISOString()
   
   const sitemaps = [

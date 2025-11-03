@@ -14,22 +14,24 @@ import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 // Import client component wrapper for background
 import BlogBackground from "./_components/blog-background"
+import { siteConfig } from "@/config/site-config"
 
 
 export const revalidate = 300
 const pageSize = 12
+const siteUrl = siteConfig.siteUrl
 
 export async function generateMetadata({ searchParams }: { searchParams: Promise<Record<string, string | string[] | undefined>> }): Promise<Metadata> {
   const sp = (await searchParams) || {}
   const pageParam = typeof sp['page'] === "string" ? sp['page'] : Array.isArray(sp['page']) ? sp['page'][0] : undefined
   const page = Math.max(1, Number(pageParam ?? 1) || 1)
-  const baseUrl = "https://ergoblockchain.org/blog"
+  const baseUrl = `${siteUrl}/blog`
   const title = page > 1 ? `Latest News & Insights — Page ${page}` : `Latest News & Insights — Ergo Blog`
 
   const allowed = new Set(["page"]) // whitelist
   const hasJunk = Object.keys(sp).some((k) => !allowed.has(k))
 
-  const twitterHandle = process.env['NEXT_PUBLIC_TWITTER_HANDLE'] || "@ergoplatform"
+  const twitterHandle = siteConfig.twitterHandle
 
   const totalPagesMeta = Math.max(1, Math.ceil(blogPosts.length / pageSize))
   const prev = page > 2 ? `${baseUrl}?page=${page - 1}` : page === 2 ? baseUrl : undefined
@@ -47,7 +49,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
       url: page > 1 ? `${baseUrl}?page=${page}` : baseUrl,
       title,
       description: "Deep-dives, tutorials, and ecosystem updates.",
-      images: [{ url: "https://ergoblockchain.org/og/blog.png", width: 1200, height: 630, alt: "Ergo Blog" }],
+      images: [{ url: `${baseUrl}/og/blog.png`, width: 1200, height: 630, alt: "Ergo Blog" }],
     },
     twitter: { card: "summary_large_image", site: twitterHandle, creator: twitterHandle, images: ["https://ergoblockchain.org/og/blog.png"] },
     robots: hasJunk ? { index: false, follow: true } : { index: true, follow: true, googleBot: { "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
@@ -221,7 +223,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
   const speakableSchema = SchemaTypes.SpeakableSchema({
     headline: "Ergo Blog - Latest Updates",
     summary: "News, research, technical guides and ecosystem updates from Ergo blockchain",
-    url: "https://ergoblockchain.org/blog"
+    url: `${siteConfig.siteUrl}/blog`
   })
 
   return (
