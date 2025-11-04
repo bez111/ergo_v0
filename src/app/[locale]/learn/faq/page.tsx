@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
 import FAQClient from "./FAQClient"
 import FAQListServer from "./FAQListServer"
-import FAQBackground from "./FAQBackground"
 import { faqData } from "./faqData"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 export const revalidate = 86400
 
@@ -68,15 +68,13 @@ export default function LearnFAQPage() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Subtle background in UI Kit style */}
-      <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" aria-hidden />
-      <FAQBackground />
-
+    <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 pb-12">
+      
+      <BackgroundWrapper>
+        <div className="container mx-auto px-4 py-16">
+          <div className="relative z-10">
         <header className="mb-8">
           <h1 className="text-5xl md:text-7xl font-bold mb-3">ERGO KNOWLEDGE BASE</h1>
           <p className="text-lg md:text-xl text-neutral-400 max-w-3xl">Answers about Ergo’s technology, economics and ecosystem.</p>
@@ -99,7 +97,9 @@ export default function LearnFAQPage() {
             ))}
           </div>
         </noscript>
+        </div>
       </div>
-    </div>
+      </BackgroundWrapper>
+    </>
   )
 }

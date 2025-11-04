@@ -19,7 +19,7 @@ export const projects: EcosystemProject[] = [
   { id: 9, name: "Oracle Pools", category: "ORACLES", status: "OPERATIONAL", description: "A decentralized oracle system on Ergo that connects smart contracts with external data without needing to trust centralized sources.", icon: "🔮", url: "https://explorer.ergoplatform.com/en/oracle-pools-list" },
   { id: 10, name: "Ergo Explorer", category: "TOOLS", status: "OPERATIONAL", description: "The main official block explorer for Ergo. It allows users to track transactions, blocks, addresses, tokens, and view general network statistics.", icon: "🔍", url: "https://explorer.ergoplatform.com" },
   { id: 11, name: "ErgoPad", category: "DEFI", status: "TESTING", description: "A token launch (IDO) and fundraising platform on the Ergo blockchain. It gives token holders the opportunity to participate in IDOs.", icon: "🚀", url: "https://ergopad.io" },
-  { id: 13, name: "Mew Finance", category: "DEFI", status: "OPERATIONAL", description: "A decentralized finance (DeFi) platform offering a suite of financial applications including DEX, NFT marketplace, and various financial tools.", icon: "💎", url: "#" },
+  { id: 13, name: "Mew Finance", category: "DEFI", status: "OPERATIONAL", description: "A decentralized finance (DeFi) platform offering a suite of financial applications including DEX, NFT marketplace, and various financial tools.", icon: "💎", url: "https://www.mewfinance.com" },
   { id: 14, name: "SatErgo", category: "WALLETS", status: "OPERATIONAL", description: "A comprehensive desktop wallet for Ergo with the option to integrate a full node to support network decentralization. Privacy-focused with offline vault.", icon: "💼", url: "https://satergo.com" },
   { id: 15, name: "SAFEW", category: "WALLETS", status: "OPERATIONAL", description: "A browser extension wallet for Ergo that integrates with ErgoMixer for enhanced transaction privacy.", icon: "🛡️", url: "https://safew.org" },
   { id: 16, name: "ErgoWatch", category: "TOOLS", status: "OPERATIONAL", description: "An analytical block explorer providing Ergo network metrics, DeFi statistics (e.g., TVL), charts, and dashboards for monitoring blockchain activity.", icon: "🔍", url: "https://ergo.watch" },
@@ -44,14 +44,16 @@ export const projects: EcosystemProject[] = [
   { id: 36, name: "ChainCash", category: "TOOLS", status: "PROTOTYPE", description: "A framework for creating decentralized P2P monetary systems on Ergo, allowing users to issue their own currencies backed by trust or collateral.", icon: "💰", url: "#" },
   { id: 37, name: "SigRSV", category: "DEFI", status: "OPERATIONAL", description: "The reserve coin for the SigmaUSD stablecoin protocol. Users mint SigRSV by depositing ERG into reserves and can profit from ERG price increases.", icon: "🏛️", url: "#" },
   { id: 38, name: "EXLE", category: "DEFI", status: "TESTING", description: "A lending/borrowing protocol within the Ergo ecosystem, integrated with Crux Finance.", icon: "🏪", url: "#" },
+  { id: 39, name: "ErgoRaffle", category: "DEFI", status: "OPERATIONAL", description: "A decentralized raffle platform on Ergo where users can participate in fair, transparent lottery games with provable randomness and automated payouts.", icon: "🎲", url: "https://ergoraffle.com" },
 ]
 
 export const featuredProjects: EcosystemProject[] = [
   { id: 3, name: "Rosen Bridge", category: "INFRASTRUCTURE", status: "OPERATIONAL", description: "An open-source protocol for cross-chain asset transfers between Ergo and other blockchains like Cardano, Bitcoin Runes, and Dogecoin.", icon: "🌉", url: "https://rosen.tech" },
-  { id: 13, name: "Mew Finance", category: "DEFI", status: "OPERATIONAL", description: "A decentralized finance (DeFi) platform offering a suite of financial applications including DEX, NFT marketplace, and various financial tools.", icon: "💎", url: "#" },
+  { id: 13, name: "Mew Finance", category: "DEFI", status: "OPERATIONAL", description: "A decentralized finance (DeFi) platform offering a suite of financial applications including DEX, NFT marketplace, and various financial tools.", icon: "💎", url: "https://www.mewfinance.com" },
   { id: 7, name: "DuckPools", category: "DEFI", status: "TESTING", description: "A collateralized lending platform with algorithmic lending pools. Users provide ERG or native assets to earn income or borrow assets against ERG collateral.", icon: "🦆", url: "https://duckpools.io" },
   { id: 2, name: "SigmaUSD", category: "DEFI", status: "OPERATIONAL", description: "The first eUTXO-based stablecoin, implementing the AgeUSD protocol. It is pegged to the US dollar and backed by ERG with a floating reserve ratio (400%-800%).", icon: "💵", url: "https://sigmausd.io" },
   { id: 8, name: "Paideia", category: "DAO", status: "OPERATIONAL", description: "A suite of tools for creating and managing Decentralized Autonomous Organizations (DAOs) on Ergo and Cardano with governance and treasury management.", icon: "🏛️", url: "https://paideia.im" },
+  { id: 39, name: "ErgoRaffle", category: "DEFI", status: "OPERATIONAL", description: "A decentralized raffle platform on Ergo where users can participate in fair, transparent lottery games with provable randomness and automated payouts.", icon: "🎲", url: "https://ergoraffle.com" },
 ]
 
 export const categoryOrder: string[] = [

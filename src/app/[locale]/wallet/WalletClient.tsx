@@ -19,6 +19,7 @@ import {
 import { LucideIcon } from "lucide-react"
 import { EnhancedButton } from "@/components/ui/enhanced-button"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 
 interface Wallet {
@@ -204,44 +205,86 @@ export default function WalletClient() {
   return (
     <div className="container mx-auto px-4 py-16">
       {/* Hero Section */}
-      <section className="relative py-24 md:py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
-            Ergo <span className="text-orange-400">Wallets</span>
-          </h1>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
-            Secure your ERG with production-ready wallets. From browser extensions to hardware devices - choose the perfect wallet for your security needs.
-          </p>
-          
-          {/* Quick Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
-                <Wallet className="h-6 w-6 text-orange-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">7 Total Wallets</h3>
-              <p className="text-gray-400 text-sm">Multiple options available</p>
+      <section className="pt-28 pb-10 px-4">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                Ergo <span className="text-orange-400">Wallets</span>
+              </h1>
+              <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
+                Secure your ERG with production-ready wallets
+              </p>
+              <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                From browser extensions to hardware devices - choose the perfect wallet for your security needs. 
+                All wallets are non-custodial, giving you full control of your funds.
+              </p>
             </div>
-            <div className="text-center">
-              <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
-                <ShieldCheck className="h-6 w-6 text-orange-400" />
+            <div className="relative z-10">
+              <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                  Quick Start
+                </h3>
+                <div className="grid grid-cols-1 gap-4">
+                  <a
+                    href="https://chrome.google.com/webstore/detail/nautilus-wallet"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                        <Chrome className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white text-lg">Nautilus Wallet</h4>
+                        <p className="text-gray-400 text-sm">Browser • Most Popular</p>
+                      </div>
+                    </div>
+                  </a>
+                  
+                  <a
+                    href="https://github.com/Satergo/Satergo/releases"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                        <Monitor className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white text-lg">Satergo Wallet</h4>
+                        <p className="text-gray-400 text-sm">Desktop • Full Node</p>
+                      </div>
+                    </div>
+                  </a>
+                  
+                  <a
+                    href="https://www.ledger.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                  >
+                    <div className="flex items-start gap-3">
+                      <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                        <HardDrive className="w-6 h-6" />
+                      </div>
+                      <div>
+                        <h4 className="font-semibold text-white text-lg">Ledger Hardware</h4>
+                        <p className="text-gray-400 text-sm">Hardware • Maximum Security</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
               </div>
-              <h3 className="text-lg font-semibold text-white mb-2">4 Official</h3>
-              <p className="text-gray-400 text-sm">Verified by Ergo Platform</p>
-            </div>
-            <div className="text-center">
-              <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
-                <Lock className="h-6 w-6 text-orange-400" />
-              </div>
-              <h3 className="text-lg font-semibold text-white mb-2">3 Security Levels</h3>
-              <p className="text-gray-400 text-sm">From high to maximum</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Security Notice */}
-      <section className="pb-16">
+      <section className="pt-8 pb-16">
         <div className="max-w-6xl mx-auto px-4">
           <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300">
             <div className="flex items-start gap-4 mb-6">
@@ -401,6 +444,13 @@ export default function WalletClient() {
           </div>
         </div>
       </section>
+
+      {/* Email Capture Form */}
+      <FinalCTASimple 
+        title="Wallet Security Tips"
+        description="Get the latest wallet security updates, best practices, and safety tips delivered to your inbox"
+      />
+
     </div>
   )
 }

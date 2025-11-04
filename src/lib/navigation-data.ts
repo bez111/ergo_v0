@@ -5,6 +5,11 @@ export const mainNavItems = [
     description: "Begin your journey with Ergo",
     children: [
       {
+        title: "Start Here",
+        href: "/start",
+        description: "Get started with Ergo blockchain in 3 simple steps. Download a wallet, buy ERG tokens, and send your first transaction.",
+      },
+      {
         title: "Quick Introduction",
         href: "/start/introduction",
         description: "A brief overview of Ergo and its core purpose.",
@@ -55,11 +60,6 @@ export const mainNavItems = [
         title: "Earn with DeFi",
         href: "/use/defi",
         description: "Discover where and how to earn through staking, farming, lending, lotteries.",
-      },
-      {
-        title: "Transaction Fees (Babel Fees)",
-        href: "/use/babel-fees",
-        description: "All about network fees and paying them with different tokens.",
       },
     ],
   },

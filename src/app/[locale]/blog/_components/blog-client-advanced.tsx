@@ -5,7 +5,6 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { BookOpen, TrendingUp, Clock, Users, FileText, Hash } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { BlogCard } from "./blog-card"
-import { NewsletterSignup } from "./newsletter-signup"
 import { BlogFiltersAdvanced } from "./blog-filters-advanced"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCompactSkeleton } from "./blog-skeleton"
@@ -402,12 +401,7 @@ function BlogClientAdvanced({
         )}
       </section>
 
-      {/* Newsletter Section */}
-      {filteredPosts.length > 6 && (
-        <div className="mt-16">
-          <NewsletterSignup />
-        </div>
-      )}
+      {/* Newsletter Section - Removed */}
 
       {/* Additional children (pagination etc) */}
       {children}

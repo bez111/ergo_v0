@@ -7,8 +7,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import {
   ChevronRight,
+  ChevronDown,
   Code,
   Shield,
   Cpu,
@@ -38,6 +40,8 @@ import {
   TrendingUp
 } from "lucide-react"
 import Link from "next/link"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 interface TechnologyNode {
   id: string
@@ -391,6 +395,7 @@ export default function TechnologyMapClient() {
   const [activeCategory, setActiveCategory] = useState<string>("all")
   const [selectedNode, setSelectedNode] = useState<TechnologyNode | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   const categories = [
     { id: "all", name: t("categories.all"), icon: Sparkles },
@@ -425,59 +430,77 @@ export default function TechnologyMapClient() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" />
-      
-      <motion.div
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-        className="relative z-10 pb-24"
-      >
-        {/* Hero Section */}
-        <motion.section
-          variants={itemVariants}
-          className="pt-28 md:pt-32 pb-16 px-4"
+    <BackgroundWrapper>
+      <div className="container mx-auto px-4 py-16">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="relative z-10 pb-24"
         >
-          <div className="max-w-7xl mx-auto text-center">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-              {t("title")}
-            </h1>
-            <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-4xl mx-auto">
-              {t("subtitle")}
-            </p>
-            
-            {/* TL;DR Section */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mb-12">
-              <div className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-lg border border-neutral-700">
-                <Box className="w-8 h-8 text-orange-400" />
-                <div className="text-left">
-                  <div className="font-semibold">eUTXO Model</div>
-                  <div className="text-sm text-neutral-400">Security + Smart Contracts</div>
+        {/* Hero Section */}
+        <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} className="pt-28 pb-10 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">{t("title")}</h1>
+                <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">{t("subtitle")}</p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
+                    <Link href="/technology">Explore All Technology</Link>
+                  </Button>
+                  <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
+                    <Link href="/docs">Developer Docs</Link>
+                  </Button>
                 </div>
               </div>
-              <div className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-lg border border-neutral-700">
-                <Code className="w-8 h-8 text-orange-400" />
-                <div className="text-left">
-                  <div className="font-semibold">ErgoScript</div>
-                  <div className="text-sm text-neutral-400">Functional + Crypto</div>
+              <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">Core Technologies</h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    <div className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                      <div className="flex items-start gap-3">
+                        <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                          <Box className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white text-lg">eUTXO Model</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                      <div className="flex items-start gap-3">
+                        <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                          <Code className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white text-lg">ErgoScript</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                      <div className="flex items-start gap-3">
+                        <div className="w-11 h-11 flex items-center justify-center rounded-md bg-blue-500/20 border border-blue-500/30 text-blue-400 flex-shrink-0">
+                          <Shield className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white text-lg">Autolykos PoW</h4>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                      <div className="flex items-start gap-3">
+                        <div className="w-11 h-11 flex items-center justify-center rounded-md bg-green-500/20 border border-green-500/30 text-green-400 flex-shrink-0">
+                          <Lock className="w-6 h-6" />
+                        </div>
+                        <div>
+                          <h4 className="font-semibold text-white text-lg">Sigma Protocols</h4>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-lg border border-neutral-700">
-                <Shield className="w-8 h-8 text-blue-400" />
-                <div className="text-left">
-                  <div className="font-semibold">Autolykos PoW</div>
-                  <div className="text-sm text-neutral-400">ASIC-Resistant</div>
-                </div>
-              </div>
-              <div className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-lg border border-neutral-700">
-                <Lock className="w-8 h-8 text-green-400" />
-                <div className="text-left">
-                  <div className="font-semibold">Sigma Protocols</div>
-                  <div className="text-sm text-neutral-400">Zero-Knowledge</div>
-                </div>
-              </div>
+              </motion.div>
             </div>
           </div>
         </motion.section>
@@ -527,10 +550,10 @@ export default function TechnologyMapClient() {
                     className="cursor-pointer"
                     onClick={() => setSelectedNode(tech)}
                   >
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full hover:border-orange-500/50 transition-colors">
+                    <Card className="bg-black/80 border-white/10 backdrop-blur-sm h-full hover:border-orange-400/40 transition-colors">
                       <CardHeader>
                         <div className="flex items-center gap-3">
-                          <div className={`p-3 rounded-lg bg-gradient-to-r ${tech.color}`}>
+                          <div className={`p-3 rounded-3xl bg-gradient-to-r ${tech.color}`}>
                             <Icon className="w-6 h-6 text-white" />
                           </div>
                           <div>
@@ -558,7 +581,7 @@ export default function TechnologyMapClient() {
             </div>
 
             {/* Legend */}
-            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+            <Card className="bg-black/80 border-white/10 backdrop-blur-sm">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2 text-white">
                   <Info className="w-5 h-5 text-orange-400" />
@@ -616,7 +639,7 @@ export default function TechnologyMapClient() {
                 return (
                   <div key={step.id} className="text-center">
                     <div className="relative mb-4">
-                      <div className="w-16 h-16 mx-auto bg-neutral-900 border-2 border-neutral-700 rounded-full flex items-center justify-center">
+                      <div className="w-16 h-16 mx-auto bg-black/80 border-2 border-white/20 rounded-full flex items-center justify-center">
                         <Icon className={`w-8 h-8 ${step.color}`} />
                       </div>
                       {index < transactionSteps.length - 1 && (
@@ -641,7 +664,7 @@ export default function TechnologyMapClient() {
             <h2 className="text-4xl font-bold text-center mb-12">Common dApp Patterns</h2>
             <div className="grid lg:grid-cols-3 gap-8">
               {dappPatterns.map((pattern) => (
-                <Card key={pattern.id} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
+                <Card key={pattern.id} className="bg-black/80 border-white/10 backdrop-blur-sm">
                   <CardHeader>
                     <CardTitle className="text-white">{pattern.title}</CardTitle>
                     <p className="text-neutral-400">{pattern.description}</p>
@@ -672,7 +695,7 @@ export default function TechnologyMapClient() {
           <div className="max-w-7xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12">Strengths & Trade-offs</h2>
             <div className="grid lg:grid-cols-2 gap-8">
-              <Card className="bg-neutral-900/50 border-green-700/50 backdrop-blur-sm">
+              <Card className="bg-black/80 border-green-700/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-green-400 flex items-center gap-2">
                     <CheckCircle className="w-6 h-6" />
@@ -711,7 +734,7 @@ export default function TechnologyMapClient() {
                 </CardContent>
               </Card>
 
-              <Card className="bg-neutral-900/50 border-orange-700/50 backdrop-blur-sm">
+              <Card className="bg-black/80 border-orange-700/50 backdrop-blur-sm">
                 <CardHeader>
                   <CardTitle className="text-orange-400 flex items-center gap-2">
                     <AlertCircle className="w-6 h-6" />
@@ -754,21 +777,43 @@ export default function TechnologyMapClient() {
         </motion.section>
 
         {/* FAQ Section */}
-        <motion.section
-          variants={itemVariants}
-          className="py-16 px-4"
+        <motion.section 
+          id="faq"
+          variants={itemVariants} 
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          className="py-16 px-4 motion-reduce:transform-none"
         >
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12">Frequently Asked Questions</h2>
-            <div className="space-y-6">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-8 text-white">
+              Frequently Asked Questions
+            </h2>
+            <div className="space-y-4">
               {faqItems.map((faq, index) => (
-                <Card key={index} className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm">
-                  <CardHeader>
-                    <CardTitle className="text-lg text-white">{faq.question}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
-                  </CardContent>
+                <Card key={index} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
+                  <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
+                    <CollapsibleTrigger asChild>
+                      <button className="w-full">
+                        <CardContent className="p-6 flex items-center justify-between hover:bg-black/70 transition-colors">
+                          <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
+                          <ChevronDown 
+                            aria-hidden="true" 
+                            className={`w-5 h-5 text-neutral-400 transition-transform ${
+                              openFAQ === index ? "rotate-180" : ""
+                            }`} 
+                          />
+                        </CardContent>
+                      </button>
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <CardContent className="px-6 pb-6 pt-0">
+                        <div className="text-neutral-300 leading-relaxed [&>a]:text-orange-400 [&>a]:underline [&>a]:hover:text-orange-300 [&>b]:text-white [&>br]:mb-2">
+                          {faq.answer}
+                        </div>
+                      </CardContent>
+                    </CollapsibleContent>
+                  </Collapsible>
                 </Card>
               ))}
             </div>
@@ -784,7 +829,7 @@ export default function TechnologyMapClient() {
             <h2 className="text-4xl font-bold text-center mb-12">Technical Glossary</h2>
             <div className="grid md:grid-cols-2 gap-4">
               {glossaryTerms.map((item, index) => (
-                <div key={index} className="p-4 bg-neutral-900/30 border border-neutral-800 rounded-lg">
+                <div key={index} className="p-4 bg-black/60 border border-white/20 rounded-3xl">
                   <div className="font-semibold text-orange-400 mb-1">{item.term}</div>
                   <div className="text-sm text-neutral-300">{item.definition}</div>
                 </div>
@@ -802,7 +847,7 @@ export default function TechnologyMapClient() {
             <h2 className="text-4xl font-bold mb-8">Further Reading</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               <Link href="/technology/ergoscript" className="block">
-                <Card className="h-full bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
+                <Card className="h-full bg-black/80 border-white/10 hover:border-orange-400/40 transition-colors">
                   <CardContent className="p-6 text-center">
                     <Code className="w-8 h-8 text-orange-400 mx-auto mb-3" />
                     <div className="font-semibold mb-2">ErgoScript Guide</div>
@@ -812,7 +857,7 @@ export default function TechnologyMapClient() {
               </Link>
               
               <Link href="/technology/eutxo-model" className="block">
-                <Card className="h-full bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
+                <Card className="h-full bg-black/80 border-white/10 hover:border-orange-400/40 transition-colors">
                   <CardContent className="p-6 text-center">
                     <Box className="w-8 h-8 text-orange-400 mx-auto mb-3" />
                     <div className="font-semibold mb-2">eUTXO Deep Dive</div>
@@ -822,7 +867,7 @@ export default function TechnologyMapClient() {
               </Link>
 
               <a href="https://docs.ergoplatform.com" target="_blank" rel="noopener noreferrer" className="block">
-                <Card className="h-full bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
+                <Card className="h-full bg-black/80 border-white/10 hover:border-orange-400/40 transition-colors">
                   <CardContent className="p-6 text-center">
                     <BookOpen className="w-8 h-8 text-orange-400 mx-auto mb-3" />
                     <div className="font-semibold mb-2">Documentation</div>
@@ -832,7 +877,7 @@ export default function TechnologyMapClient() {
               </a>
 
               <a href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer" className="block">
-                <Card className="h-full bg-neutral-900/50 border-neutral-700 hover:border-orange-500/50 transition-colors">
+                <Card className="h-full bg-black/80 border-white/10 hover:border-orange-400/40 transition-colors">
                   <CardContent className="p-6 text-center">
                     <GitBranch className="w-8 h-8 text-orange-400 mx-auto mb-3" />
                     <div className="font-semibold mb-2">Source Code</div>
@@ -859,12 +904,12 @@ export default function TechnologyMapClient() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="bg-neutral-900 border border-neutral-700 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+              className="bg-black/90 border border-white/20 rounded-xl p-6 max-w-2xl w-full max-h-[80vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center gap-3">
-                  <div className={`p-3 rounded-lg bg-gradient-to-r ${selectedNode.color}`}>
+                  <div className={`p-3 rounded-3xl bg-gradient-to-r ${selectedNode.color}`}>
                     <selectedNode.icon className="w-6 h-6 text-white" />
                   </div>
                   <div>
@@ -887,7 +932,7 @@ export default function TechnologyMapClient() {
               <p className="text-neutral-300 mb-6 text-lg">{selectedNode.description}</p>
 
               <Tabs value={activeTab} onValueChange={setActiveTab}>
-                <TabsList className="grid w-full grid-cols-3 bg-neutral-800">
+                <TabsList className="grid w-full grid-cols-3 bg-black/60">
                   <TabsTrigger value="overview">Overview</TabsTrigger>
                   <TabsTrigger value="technical">Technical</TabsTrigger>
                   <TabsTrigger value="usage">Usage</TabsTrigger>
@@ -952,6 +997,15 @@ export default function TechnologyMapClient() {
           </motion.div>
         )}
       </AnimatePresence>
-    </div>
+
+      {/* Email Capture Form */}
+      <FinalCTASimple 
+        title="Stay Updated on Ergo Technology"
+        description="Get the latest technical insights, protocol updates, and development news delivered to your inbox."
+        className=""
+      />
+      
+      </div>
+    </BackgroundWrapper>
   )
 }

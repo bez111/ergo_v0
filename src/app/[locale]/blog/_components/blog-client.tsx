@@ -2,9 +2,8 @@
 
 import { useEffect, useMemo, useState, useDeferredValue } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { BookOpen, TrendingUp, Clock, Users, X } from "lucide-react"
+import { BookOpen } from "lucide-react"
 import { BlogCard } from "./blog-card"
-import { NewsletterSignup } from "./newsletter-signup"
 import { BlogFiltersClean } from "./blog-filters-clean"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCompactSkeleton } from "./blog-skeleton"

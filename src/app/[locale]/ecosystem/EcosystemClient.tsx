@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import {
   Search,
   CheckCircle,
@@ -412,6 +413,13 @@ export default function EcosystemClient() {
 
             </div>
           </motion.section>
+
+          {/* Email Capture Form */}
+          <FinalCTASimple 
+            title="Stay Connected with Ecosystem Updates"
+            description="Get notified about new dApps, protocol updates, and ecosystem developments"
+          />
+
         </div>
       </BackgroundWrapper>
     </main>

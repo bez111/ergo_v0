@@ -25,6 +25,7 @@ import {
   Timer,
   ExternalLink,
   ArrowRight,
+  ArrowRightLeft,
   Users,
   RefreshCw,
   Monitor,
@@ -47,6 +48,7 @@ import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
 import { useState, useEffect, useMemo } from "react"
 import Head from "next/head"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import Script from "next/script"
 import { useTranslations } from "next-intl"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -185,6 +187,18 @@ export default function TechnologyPage() {
         { icon: CircleDollarSign, title: t('features.adaptiveEmission.details.parameterTuning.title'), description: t('features.adaptiveEmission.details.parameterTuning.description') },
         { icon: TrendingUp, title: t('features.adaptiveEmission.details.economicFlexibility.title'), description: t('features.adaptiveEmission.details.economicFlexibility.description') },
         { icon: Users, title: t('features.adaptiveEmission.details.communityInput.title'), description: t('features.adaptiveEmission.details.communityInput.description') },
+      ],
+    },
+    {
+      icon: ArrowRightLeft,
+      title: "Babel Fees",
+      description: "Pay transaction fees with any token instead of ERG through automated intermediaries",
+      color: "",
+      href: "/technology/babel-fees",
+      details: [
+        { icon: Coins, title: "Token Flexibility", description: "Use any token to pay transaction fees" },
+        { icon: Users, title: "Automated Exchange", description: "Intermediaries handle ERG conversion automatically" },
+        { icon: Zap, title: "Seamless UX", description: "No need to hold ERG for transactions" },
       ],
     },
   ]
@@ -785,6 +799,12 @@ export default function TechnologyPage() {
             </div>
           </div>
         </FadeIn>
+
+        {/* Email Capture Form */}
+        <FinalCTASimple 
+          title="Deep Dive into Ergo Technology"
+          description="Get the latest technical insights, protocol updates, and development guides delivered to your inbox"
+        />
 
         </div>
       </div>

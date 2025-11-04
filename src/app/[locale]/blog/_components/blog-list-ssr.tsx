@@ -18,7 +18,7 @@ export default function BlogListSSR({ posts, categories }: { posts: BlogPost[]; 
             <article
               itemScope
               itemType="https://schema.org/BlogPosting"
-              className="group relative h-full overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm hover:border-orange-500/30 hover:bg-neutral-900/80 transition-all duration-300 hover:-translate-y-1"
+              className="group relative h-full overflow-hidden rounded-xl border border-white/10 bg-black/80 backdrop-blur-sm hover:border-orange-500/30 hover:bg-black/90 transition-all duration-300 hover:-translate-y-1"
             >
               {/* Image or Placeholder */}
               <div className="relative w-full aspect-[16/9] overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900">

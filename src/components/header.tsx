@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { MainNav } from "@/components/main-nav"
@@ -57,7 +58,17 @@ export function Header() {
       >
         <div className="container flex h-16 items-center justify-between">
           <div className="flex items-center gap-6 md:gap-10">
-            <Link href="/" className="hidden items-center space-x-2 md:flex">
+            <Link href="/" className="hidden items-center space-x-3 md:flex">
+              <Image
+                src="/logo-ergo.svg"
+                alt="Ergo"
+                width={36}
+                height={32}
+                className={cn(
+                  "transition-all duration-300",
+                  glitchActive && "ergo-glitch",
+                )}
+              />
               <span
                 className={cn(
                   "font-bold text-xl text-primary transition-all duration-300",

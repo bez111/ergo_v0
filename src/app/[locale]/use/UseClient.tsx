@@ -13,6 +13,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import Script from "next/script"
 import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 const iconNode = {
   coins: <Coins className="w-6 h-6 text-orange-400" aria-hidden="true" focusable="false" />,
@@ -201,36 +202,40 @@ export default function UseClient() {
         <motion.div initial="hidden" animate="visible" variants={{ hidden: { opacity: 0, y: 24 }, visible: { opacity: 1, y: 0, transition: { staggerChildren: 0.07 } } }} className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 items-stretch" aria-labelledby="all-use-cases">
           {useCases.map((uc) => (
             <motion.div key={uc.id} variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }} className="relative h-full">
-              <Card className="relative bg-black/80 border border-white/10 rounded-3xl transition-all duration-300 hover:bg-black/90 hover:border-orange-400/40 h-full flex flex-col">
-                <CardContent className="p-8 flex-1 flex flex-col">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="p-3 rounded-md bg-orange-500/20 border border-orange-500/30">{iconNode[uc.icon as keyof typeof iconNode]}</div>
-                    <h3 className="text-2xl font-bold text-white">{uc.title}</h3>
-                  </div>
-                  <div className="flex flex-wrap gap-2 mb-2">
-                    {uc.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">{tag}</span>
-                    ))}
-                    {uc.tags.length > 3 && (
-                      <span className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">+{uc.tags.length - 3}</span>
-                    )}
-                  </div>
-                  <p className="text-neutral-400 font-medium mb-1">{uc.subtitle}</p>
-                  <p className="text-neutral-300 text-base mb-5">{uc.description}</p>
-                                      <Button asChild variant="outline" className="mt-auto w-full border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300 rounded-xl">
-                    <Link href={`/use/${uc.id}`} aria-label={`Learn more about ${uc.title}`}>
-                      {uc.id === 'stablecoins' ? 'Learn More' :
-                       uc.id === 'privacy' ? 'Discover Privacy' :
-                       uc.id === 'bridges' ? 'Connect Chains' :
-                       uc.id === 'daos' ? 'Join Community' :
-                       uc.id === 'nfts' ? 'Create Assets' :
-                       uc.id === 'oracles' ? 'Access Data' :
-                       uc.id === 'identity' ? 'Build Identity' :
-                       uc.id === 'gaming' ? 'Start Gaming' : 'Learn More'}
-                    </Link>
-                  </Button>
-                </CardContent>
-              </Card>
+              <Link href={`/use/${uc.id}`} aria-label={`Learn more about ${uc.title}`} className="block h-full">
+                <Card className="relative bg-black/80 border border-white/10 rounded-3xl transition-all duration-300 hover:bg-black/90 hover:border-orange-400/40 h-full flex flex-col cursor-pointer group">
+                  <CardContent className="p-8 flex-1 flex flex-col">
+                    <div className="flex items-center gap-3 mb-3">
+                      <div className="p-3 rounded-md bg-orange-500/20 border border-orange-500/30">{iconNode[uc.icon as keyof typeof iconNode]}</div>
+                      <h3 className="text-2xl font-bold text-white group-hover:text-orange-400 transition-colors">{uc.title}</h3>
+                    </div>
+                    <div className="flex flex-wrap gap-2 mb-2">
+                      {uc.tags.slice(0, 3).map((tag) => (
+                        <span key={tag} className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">{tag}</span>
+                      ))}
+                      {uc.tags.length > 3 && (
+                        <span className="bg-black/60 border border-white/20 text-neutral-300 text-xs px-2 py-1 rounded">+{uc.tags.length - 3}</span>
+                      )}
+                    </div>
+                    <p className="text-neutral-400 font-medium mb-1">{uc.subtitle}</p>
+                    <p className="text-neutral-300 text-base mb-5 flex-1">{uc.description}</p>
+                    
+                    {/* Hover text that appears in bottom right corner */}
+                    <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="text-orange-400 font-medium text-right">
+                        {uc.id === 'stablecoins' ? 'Learn More' :
+                         uc.id === 'privacy' ? 'Discover Privacy' :
+                         uc.id === 'bridges' ? 'Connect Chains' :
+                         uc.id === 'daos' ? 'Join Community' :
+                         uc.id === 'nfts' ? 'Create Assets' :
+                         uc.id === 'oracles' ? 'Access Data' :
+                         uc.id === 'identity' ? 'Build Identity' :
+                         uc.id === 'gaming' ? 'Start Gaming' : 'Learn More'}
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             </motion.div>
           ))}
         </motion.div>
@@ -374,6 +379,13 @@ export default function UseClient() {
           </div>
         </div>
       </section>
+
+      {/* Email Capture Form */}
+      <FinalCTASimple 
+        title="Discover New Use Cases"
+        description="Get notified about new practical applications, real-world implementations, and use case studies"
+      />
+
       </div>
     </BackgroundWrapper>
   )

@@ -36,7 +36,7 @@ export default function MewPage() {
           <Link href="/docs/ecosystem/financial/dex" className="inline-flex items-center px-6 py-3 bg-orange-500 rounded-xl font-semibold text-black hover:bg-orange-600 transition-transform hover:scale-105">
             <ChevronRight className="w-5 h-5 mr-2" /> Back to DEX
           </Link>
-          <a href="https://mewfinance.com/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
+          <a href="https://www.mewfinance.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700">
             <Globe className="w-5 h-5 mr-2" /> Mew Finance Platform
           </a>
         </div>

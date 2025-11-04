@@ -17,7 +17,7 @@ export function BlogCard({ post }: BlogCardProps) {
   return (
     <Link
       href={post.link}
-      className="group block bg-neutral-900/50 rounded-xl p-6 border border-neutral-700 hover:border-orange-500/30 hover:bg-neutral-800/50 transition-all duration-300 backdrop-blur-sm hover:scale-[1.02] active:scale-[0.98]"
+      className="group block bg-black/80 rounded-3xl p-6 border border-white/10 hover:border-orange-400/40 hover:bg-black/90 transition-all duration-300 backdrop-blur-sm hover:scale-[1.02] active:scale-[0.98]"
       role="listitem"
     >
       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-orange-400 transition-colors duration-200">

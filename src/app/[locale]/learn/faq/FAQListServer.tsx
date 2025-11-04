@@ -47,15 +47,15 @@ export default async function FAQListServer({
                   data-faq-item
                   data-faq-question={q.question.toLowerCase()}
                   data-faq-answer={q.answer.toLowerCase()}
-                  className="group bg-neutral-900/30 border border-neutral-800 rounded-lg overflow-hidden"
+                  className="group bg-black/80 border border-white/10 rounded-3xl overflow-hidden hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300"
                 >
                   <summary
                     id={slug(q.question)}
-                    className="cursor-pointer p-4 hover:bg-neutral-800/50 transition-colors"
+                    className="cursor-pointer p-6 hover:bg-black/70 transition-colors"
                   >
                     <h3 className="text-lg font-medium inline">{q.question}</h3>
                   </summary>
-                  <div className="px-4 pb-4 text-neutral-300 leading-relaxed">
+                  <div className="px-6 pb-6 text-neutral-300 leading-relaxed [&>a]:text-orange-400 [&>a]:underline [&>a]:hover:text-orange-300 [&>b]:text-white [&>br]:mb-2">
                     {q.answer}
                   </div>
                 </details>

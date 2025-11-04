@@ -218,6 +218,17 @@ const nextConfig: NextConfig = {
         destination: '/:locale/use/:slug',
         permanent: true,
       },
+      // Babel Fees moved from use to technology
+      {
+        source: '/use/babel-fees',
+        destination: '/technology/babel-fees',
+        permanent: true,
+      },
+      {
+        source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/use/babel-fees',
+        destination: '/:locale/technology/babel-fees',
+        permanent: true,
+      },
     ];
   },
 

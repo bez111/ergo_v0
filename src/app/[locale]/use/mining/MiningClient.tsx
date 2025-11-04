@@ -32,6 +32,7 @@ import {
 } from "lucide-react"
 import Link from "next/link"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 
 const miningPools = [
@@ -915,6 +916,13 @@ export default function MiningClient() {
             </div>
           </div>
         </section>
+
+        {/* Email Capture Form */}
+        <FinalCTASimple 
+          title="Mining Updates & Profitability Alerts"
+          description="Get the latest mining updates, profitability alerts, and hardware recommendations delivered to your inbox"
+        />
+
       </div>
     </BackgroundWrapper>
   )

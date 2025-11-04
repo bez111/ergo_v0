@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { useTranslations } from "next-intl"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 export default function GetErgClient() {
   const t = useTranslations("use.getErg")
@@ -272,6 +273,13 @@ export default function GetErgClient() {
             </div>
           </div>
         </section>
+
+        {/* Email Capture Form */}
+        <FinalCTASimple 
+          title="Market Updates & Analysis"
+          description="Get the latest ERG market analysis, price alerts, and investment insights delivered to your inbox"
+        />
+
       </div>
     </BackgroundWrapper>
   )

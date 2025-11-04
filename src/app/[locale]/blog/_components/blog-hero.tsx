@@ -30,7 +30,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
 
   return (
     <article
-      className="group rounded-3xl bg-neutral-900/90 border border-neutral-800 p-10 md:p-12 shadow-[inset_0_1px_0_0_rgba(255,255,255,.04)] hover:translate-y-[-2px] transition-transform duration-200"
+      className="group rounded-3xl bg-black/90 border border-white/10 p-10 md:p-12 shadow-[inset_0_1px_0_0_rgba(255,255,255,.04)] hover:translate-y-[-2px] transition-transform duration-200"
       itemScope
       itemType="https://schema.org/BlogPosting"
       aria-labelledby={`feat-${post.id}`}

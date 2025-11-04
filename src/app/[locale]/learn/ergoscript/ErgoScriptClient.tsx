@@ -1,34 +1,48 @@
 "use client"
 
-import { useState } from "react"
 import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { useTranslations } from "next-intl"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { SchemaOrg } from "@/components/seo/schema-org"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { FadeIn } from "@/components/animations/fade-in"
 import {
-  ChevronDown,
-  ArrowRight,
-  Clock,
   Code,
-  Users,
   Shield,
   Zap,
+  ExternalLink, 
+  ArrowRight, 
+  Lock, 
+  CheckCircle, 
+  Layers, 
+  Terminal, 
+  BookOpen, 
+  ChevronDown, 
+  Cpu,
   Database,
-  Layers,
-  ExternalLink,
-  CheckCircle,
-  BookOpen,
+  Settings,
+  Eye,
+  Box,
+  Rocket,
+  Timer,
+  Users,
+  FileText,
+  Play
 } from "lucide-react"
 import Link from "next/link"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { useState } from "react"
+import React from "react"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 const containerVariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
     transition: {
+      duration: 0.6,
       staggerChildren: 0.1,
     },
   },
@@ -36,463 +50,520 @@ const containerVariants = {
 
 const itemVariants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.6,
+    },
+  },
 }
 
-// Define difficulty levels with their corresponding colors
-const difficultyColors = {
-  Beginner: "bg-green-500/20 text-green-400 border-green-500/30",
-  Basic: "bg-blue-500/20 text-blue-400 border-blue-500/30",
-  Intermediate: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
-  Advanced: "bg-orange-500/20 text-orange-400 border-orange-500/30",
-  Expert: "bg-red-500/20 text-red-400 border-red-500/30",
-}
+export default function ErgoScriptPage() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  const [activeTab, setActiveTab] = useState("basics")
 
-export default function ErgoScriptClient() {
-  const [expandedModule, setExpandedModule] = useState<number | null>(null)
-  const t = useTranslations("learnErgoscript")
-
-  const toggleModule = (moduleIndex: number) => {
-    if (expandedModule === moduleIndex) {
-      setExpandedModule(null)
-    } else {
-      setExpandedModule(moduleIndex)
-    }
-  }
-
-  const whyLearnFeatures = [
+  const features = [
     {
-      title: t("whyLearnFeatures.secureByDesign.title"),
-      description: t("whyLearnFeatures.secureByDesign.description"),
-      icon: <Shield className="w-6 h-6" aria-hidden="true" focusable="false" />,
-      color: "",
+      title: "Sigma Protocols",
+      description: "Built-in zero-knowledge proofs for privacy and complex multi-party contracts",
+      icon: Shield,
     },
     {
-      title: t("whyLearnFeatures.powerfulExpressive.title"),
-      description: t("whyLearnFeatures.powerfulExpressive.description"),
-      icon: <Zap className="w-6 h-6" aria-hidden="true" focusable="false" />,
-      color: "",
+      title: "UTXO Model",
+      description: "Extended UTXO model with data and logic attached to boxes for enhanced security",
+      icon: Box,
     },
     {
-      title: t("whyLearnFeatures.leverageEutxo.title"),
-      description: t("whyLearnFeatures.leverageEutxo.description"),
-      icon: <Database className="w-6 h-6" aria-hidden="true" focusable="false" />,
-      color: "",
+      title: "Functional Programming",
+      description: "Immutable data structures and functional paradigms for safer smart contracts",
+      icon: Code,
     },
     {
-      title: t("whyLearnFeatures.builtInCryptography.title"),
-      description: t("whyLearnFeatures.builtInCryptography.description"),
-      icon: <Code className="w-6 h-6" aria-hidden="true" focusable="false" />,
-      color: "",
+      title: "Oracle Integration",
+      description: "Native oracle support for real-world data integration without external dependencies",
+      icon: Database,
+    },
+    {
+      title: "Multi-Stage Contracts",
+      description: "Complex contracts that evolve through multiple stages with different conditions",
+      icon: Layers,
+    },
+    {
+      title: "Predictable Fees",
+      description: "Know exact execution costs before deployment with deterministic fee calculation",
+      icon: Zap,
     },
   ]
 
-  const targetAudience = [
+  const tutorials = [
     {
-      title: t("targetAudience.newToSmartContracts.title"),
-      description: t("targetAudience.newToSmartContracts.description"),
-      icon: <Users className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      examples: t("targetAudience.newToSmartContracts.examples"),
-      color: "",
+      title: "Hello World Contract",
+      description: "Your first ErgoScript contract - basic syntax and structure",
+      difficulty: "Beginner",
+      time: "15 min",
+      link: "/docs/ergoscript/hello-world",
     },
     {
-      title: t("targetAudience.experiencedDevelopers.title"),
-      description: t("targetAudience.experiencedDevelopers.description"),
-      icon: <Code className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      examples: t("targetAudience.experiencedDevelopers.examples"),
-      color: "",
+      title: "Token Minting",
+      description: "Create and manage custom tokens on Ergo blockchain",
+      difficulty: "Intermediate",
+      time: "30 min",
+      link: "/docs/ergoscript/token-minting",
     },
     {
-      title: t("targetAudience.scalaFunctionalProgrammers.title"),
-      description: t("targetAudience.scalaFunctionalProgrammers.description"),
-      icon: <Layers className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      examples: t("targetAudience.scalaFunctionalProgrammers.examples"),
-      color: "",
+      title: "Multi-Signature Wallet",
+      description: "Build a secure multi-sig wallet with ErgoScript",
+      difficulty: "Advanced",
+      time: "45 min",
+      link: "/docs/ergoscript/multisig",
     },
     {
-      title: t("targetAudience.defiEnthusiasts.title"),
-      description: t("targetAudience.defiEnthusiasts.description"),
-      icon: <Zap className="w-8 h-8" aria-hidden="true" focusable="false" />,
-      examples: t("targetAudience.defiEnthusiasts.examples"),
-      color: "",
-    },
-  ]
-
-  const modules = [
-    {
-      title: t("modules.foundations.title"),
-      number: 1,
-      totalDuration: t("modules.foundations.totalDuration"),
-      lessons: [
-        { title: t("modules.foundations.lessons.0.title"), duration: t("modules.foundations.lessons.0.duration"), level: t("modules.foundations.lessons.0.level") },
-        { title: t("modules.foundations.lessons.1.title"), duration: t("modules.foundations.lessons.1.duration"), level: t("modules.foundations.lessons.1.level") },
-        { title: t("modules.foundations.lessons.2.title"), duration: t("modules.foundations.lessons.2.duration"), level: t("modules.foundations.lessons.2.level") },
-        { title: t("modules.foundations.lessons.3.title"), duration: t("modules.foundations.lessons.3.duration"), level: t("modules.foundations.lessons.3.level") },
-        { title: t("modules.foundations.lessons.4.title"), duration: t("modules.foundations.lessons.4.duration"), level: t("modules.foundations.lessons.4.level") },
-        { title: "Anatomy of an Ergo Transaction", duration: "35 min", level: "Beginner" },
-      ],
-    },
-    {
-      title: "Creating Basic Contracts",
-      number: 2,
-      totalDuration: "165 min",
-      lessons: [
-        { title: 'Your First Contract: "Always True"', duration: "20 min", level: "Beginner" },
-        { title: "Simple P2PK Scripts", duration: "30 min", level: "Beginner" },
-        { title: "Time-Locked Contracts", duration: "45 min", level: "Intermediate" },
-        { title: "ErgoTree & Compilation", duration: "40 min", level: "Intermediate" },
-        { title: "Fees & Transaction Size", duration: "30 min", level: "Intermediate" },
-      ],
-    },
-    {
-      title: "Working with Data and Tokens",
-      number: 3,
-      totalDuration: "230 min",
-      lessons: [
-        { title: "Reading/Writing Registers", duration: "40 min", level: "Intermediate" },
-        { title: "Handling ERG & Native Tokens", duration: "45 min", level: "Intermediate" },
-        { title: "Minting/Burning Tokens", duration: "50 min", level: "Intermediate" },
-        { title: "NFTs in ErgoScript", duration: "55 min", level: "Intermediate" },
-        { title: "Token Standards (EIP-004)", duration: "40 min", level: "Intermediate" },
-      ],
-    },
-    {
-      title: "Intermediate Contract Logic",
-      number: 4,
-      totalDuration: "285 min",
-      lessons: [
-        { title: "Multi-Stage Contracts & State Transitions", duration: "60 min", level: "Intermediate" },
-        { title: "Using Oracles", duration: "50 min", level: "Advanced" },
-        { title: "Basic Escrow", duration: "45 min", level: "Intermediate" },
-        { title: "Sigma Protocols & Proofs of Knowledge", duration: "70 min", level: "Advanced" },
-        { title: "DAOs & Voting", duration: "60 min", level: "Advanced" },
-      ],
-    },
-    {
-      title: "Advanced ErgoScript & Cryptography",
-      number: 5,
-      totalDuration: "360 min",
-      lessons: [
-        { title: "Ring Signatures, Mixing", duration: "75 min", level: "Advanced" },
-        { title: "Threshold Signatures", duration: "65 min", level: "Advanced" },
-        { title: "Designing DeFi Primitives", duration: "90 min", level: "Advanced" },
-        { title: "Gas Optimization & Script Complexity", duration: "60 min", level: "Advanced" },
-        { title: "Advanced Context Extensions", duration: "70 min", level: "Expert" },
-      ],
-    },
-    {
-      title: "Testing, Debugging & Best Practices",
-      number: 6,
-      totalDuration: "330 min",
-      lessons: [
-        { title: "Unit & Integration Testing", duration: "60 min", level: "Intermediate" },
-        { title: "Debugging Techniques", duration: "55 min", level: "Intermediate" },
-        { title: "Pitfalls & Vulnerabilities", duration: "65 min", level: "Advanced" },
-        { title: "Secure Development Best Practices", duration: "70 min", level: "Advanced" },
-        { title: "Intro to Formal Verification", duration: "80 min", level: "Expert" },
-      ],
-    },
-    {
-      title: "Practical Projects & dApp Examples",
-      number: 7,
-      totalDuration: "600 min",
-      lessons: [
-        { title: "NFT Marketplace", duration: "120 min", level: "Advanced" },
-        { title: "Decentralized Lottery", duration: "100 min", level: "Advanced" },
-        { title: "DeFi Lending Protocol", duration: "140 min", level: "Expert" },
-        { title: "Privacy-Preserving Payment Channel", duration: "130 min", level: "Expert" },
-        { title: "Custom Oracle Implementation", duration: "110 min", level: "Expert" },
-      ],
+      title: "Oracle Data Usage",
+      description: "Integrate external data sources into your contracts",
+      difficulty: "Intermediate",
+      time: "25 min",
+      link: "/docs/ergoscript/oracles",
     },
   ]
 
   const faqs = [
     {
-      question: t("faqs.needPriorExperience.question"),
-      answer:
-        t("faqs.needPriorExperience.answer"),
+      question: "What makes ErgoScript different from Solidity?",
+      answer: "ErgoScript is based on the extended UTXO model, making it more secure and predictable than account-based models. It uses functional programming principles, has built-in zero-knowledge proofs, and offers deterministic fee calculation."
     },
     {
-      question: t("faqs.ergoScriptDifferentFromSolidity.question"),
-      answer:
-        t("faqs.ergoScriptDifferentFromSolidity.answer"),
+      question: "Do I need to know Scala to write ErgoScript?",
+      answer: "While ErgoScript is inspired by Scala, you don't need prior Scala knowledge. The syntax is designed to be accessible to developers familiar with any modern programming language. However, understanding functional programming concepts helps."
     },
     {
-      question: t("faqs.developmentTools.question"),
-      answer:
-        t("faqs.developmentTools.answer"),
+      question: "How do I test ErgoScript contracts?",
+      answer: "You can test contracts using the Ergo Playground, local testnet, or the official Ergo testing framework. The Ergo SDK provides comprehensive testing tools for contract development and debugging."
     },
     {
-      question: t("faqs.completeSeriesDuration.question"),
-      answer:
-        t("faqs.completeSeriesDuration.answer"),
+      question: "What are the gas fees like for ErgoScript?",
+      answer: "ErgoScript contracts have predictable, low fees typically under $0.01. The extended UTXO model allows for efficient execution and the ability to calculate exact costs before deployment."
+    },
+    {
+      question: "Can I build DeFi protocols with ErgoScript?",
+      answer: "Yes! ErgoScript is perfect for DeFi. Examples include SigmaUSD (algorithmic stablecoin), DEXs like ErgoDEX, and various DeFi primitives. The language's security features make it ideal for financial applications."
     },
   ]
 
   return (
-    <div className="min-h-screen relative">
-      {/* Hidden Breadcrumbs for SEO */}
-      <HiddenBreadcrumbs 
-        items={[{ name: 'Learn', href: '/learn' }]} 
-        currentPage="ErgoScript" 
+    <>
+      {/* SEO Schemas */}
+      <SchemaOrg
+        type="BreadcrumbList"
+        data={{
+          "@type": "BreadcrumbList",
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Learn",
+              item: "https://ergoblockchain.org/learn"
+            },
+            {
+              "@type": "ListItem", 
+              position: 2,
+              name: "ErgoScript",
+              item: "https://ergoblockchain.org/learn/ergoscript"
+            }
+          ]
+        }}
+      />
+
+      <SchemaOrg
+        type="FAQPage"
+        data={{
+          "@type": "FAQPage",
+          mainEntity: faqs.map(faq => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+              "@type": "Answer", 
+              text: faq.answer
+            }
+          }))
+        }}
       />
       
-      {/* Background simplified to match technology style */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" />
+      <BackgroundWrapper>
+        <div className="container mx-auto px-4 py-16">
+
+        {/* Breadcrumbs */}
+        <div className="sr-only">
+          <Breadcrumbs
+            items={[
+              { name: "Learn", href: "/learn" },
+              { name: "ErgoScript", href: "/learn/ergoscript" }
+            ]}
+            className="mb-8"
+          />
       </div>
 
-      <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="relative z-10 motion-reduce:animate-none pb-24">
         {/* Hero Section */}
-        <motion.section variants={itemVariants} className="pt-32 pb-20 px-4">
+          <motion.section 
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="pt-28 pb-10 px-4 motion-reduce:transform-none"
+          >
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-                  ErgoScript Tutorial Series
-                </h1>
-                <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                  Master ErgoScript: Your path to building secure and powerful smart contracts on Ergo
-                </p>
-                <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                  Step-by-step tutorials covering everything from basics to advanced DeFi protocols, designed for
-                  developers of all experience levels.
+                  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">ErgoScript</h1>
+                  <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">Smart Contract Language for the Future</p>
+                  <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                    ErgoScript is a powerful, secure smart contract language built on Sigma protocols and the extended UTXO model. 
+                    Create complex financial contracts with built-in privacy, predictable fees, and mathematical guarantees.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                    Start Learning
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50 transition-all duration-300">
+                      <a href="https://storage.googleapis.com/ergo-cms-media/docs/AdvancedErgoScriptTutorial.pdf" target="_blank" rel="noopener noreferrer">Start Learning</a>
                   </Button>
-                  <Button
-                    variant="outline"
-                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl backdrop-blur-sm"
-                  >
-                    View Documentation
+                    <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl transition-all duration-300">
+                      <a href="https://github.com/ScorexFoundation/sigmastate-interpreter" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                   </Button>
                 </div>
               </div>
-              <div className="relative">
-                <div className="relative z-10">
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm p-8 rounded-xl">
-                    <CardContent className="p-0">
+                <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                       <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                        Your First ErgoScript Contract
+                      Quick Start
                       </h3>
-                      <div className="bg-neutral-950/80 rounded-lg p-4 font-mono text-sm">
-                        <div className="flex items-center justify-between mb-2">
-                          <div className="flex items-center gap-2">
-                            <div className="w-3 h-3 rounded-full bg-red-500"></div>
-                            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
-                            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+                    <div className="grid grid-cols-1 gap-4">
+                      <Link
+                        href="/docs/ergoscript/playground"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <Play className="w-6 h-6" />
                           </div>
-                          <div className="text-xs text-neutral-400">contract.es</div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">Try Playground</h4>
+                          </div>
                         </div>
-                        <pre className="text-neutral-300">
-{`{
-  val verifyInput = INPUTS(0).propositionBytes == 
-                    SELF.propositionBytes
-  val heightIncreased = HEIGHT > SELF.creationInfo._1
-  verifyInput && heightIncreased
-}`}
+                      </Link>
+                      
+                      <Link
+                        href="/docs/ergoscript/tutorial"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <BookOpen className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">Read Tutorial</h4>
+                          </div>
+                        </div>
+                      </Link>
+                      
+                      <Link
+                        href="/docs/ergoscript/examples"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <Code className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">View Examples</h4>
+                          </div>
+                        </div>
+                      </Link>
+                      </div>
+                </div>
+                </motion.div>
+            </div>
+          </div>
+        </motion.section>
+
+          {/* Features Section */}
+          <motion.section 
+            id="features"
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 motion-reduce:transform-none"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Why ErgoScript?
+            </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Built for security, privacy, and developer productivity with cutting-edge cryptographic features
+                </p>
+              </div>
+              
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {features.map((feature, index) => (
+                  <motion.div
+                    key={feature.title}
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="motion-reduce:transform-none"
+                  >
+                    <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm h-full">
+                      <CardContent className="p-6">
+                        <div className="flex items-center gap-4 mb-4">
+                          <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-orange-500/20 border border-orange-500/30">
+                            <feature.icon className="w-6 h-6 text-orange-400" />
+                          </div>
+                          <h3 className="text-xl font-semibold text-white">{feature.title}</h3>
+                        </div>
+                        <p className="text-neutral-400 leading-relaxed">{feature.description}</p>
+                    </CardContent>
+                  </Card>
+                  </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.section>
+
+          {/* Technical Implementation */}
+          <motion.section 
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 bg-neutral-900/20 motion-reduce:transform-none"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Learn by Example
+            </h2>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Explore ErgoScript through practical examples and interactive tutorials
+                </p>
+              </div>
+
+              <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+                <TabsList className="grid w-full grid-cols-3 bg-black/60 border border-white/20 rounded-2xl p-1">
+                  <TabsTrigger value="basics" className="data-[state=active]:bg-white/10 data-[state=active]:text-orange-400 data-[state=active]:border data-[state=active]:border-orange-400/50 text-neutral-400 hover:text-white rounded-xl transition-all duration-300">
+                    Basics
+                  </TabsTrigger>
+                  <TabsTrigger value="advanced" className="data-[state=active]:bg-white/10 data-[state=active]:text-orange-400 data-[state=active]:border data-[state=active]:border-orange-400/50 text-neutral-400 hover:text-white rounded-xl transition-all duration-300">
+                    Advanced
+                  </TabsTrigger>
+                  <TabsTrigger value="defi" className="data-[state=active]:bg-white/10 data-[state=active]:text-orange-400 data-[state=active]:border data-[state=active]:border-orange-400/50 text-neutral-400 hover:text-white rounded-xl transition-all duration-300">
+                    DeFi
+                  </TabsTrigger>
+                </TabsList>
+
+                <TabsContent value="basics" className="mt-8">
+                  <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm">
+                    <CardHeader>
+                      <CardTitle className="text-white">Simple Payment Contract</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="bg-neutral-950/50 rounded-lg p-4">
+                        <pre className="text-sm text-orange-300 overflow-x-auto">
+                          <code>{`{
+  // Simple payment to a public key
+  val recipientPK = PK("9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v")
+  
+  // Check that the output goes to the recipient
+  val validRecipient = OUTPUTS(0).propositionBytes == recipientPK.propBytes
+  
+  // Check minimum amount
+  val validAmount = OUTPUTS(0).value >= 1000000L // 0.001 ERG
+  
+  sigmaProp(validRecipient && validAmount)
+}`}</code>
+                        </pre>
+                        </div>
+                      <p className="text-neutral-400">
+                        This basic contract ensures that funds can only be spent to a specific recipient with a minimum amount.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+
+                <TabsContent value="advanced" className="mt-8">
+                  <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm">
+                    <CardHeader>
+                      <CardTitle className="text-white">Multi-Signature with Timelock</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="bg-neutral-950/50 rounded-lg p-4">
+                        <pre className="text-sm text-orange-300 overflow-x-auto">
+                          <code>{`{
+  // Multi-sig with timelock fallback
+  val alice = PK("9f4QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8v")
+  val bob   = PK("9f5QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8w")
+  val carol = PK("9f6QF8AD1nQ3nJahQVkMj8hFSVVzVom77b52JU7EW71Zexg6N8x")
+  
+  val lockTime = 1000000L // Block height
+  
+  // Either 2-of-3 multisig OR timelock + alice
+  val multiSig = atLeast(2, Coll(alice, bob, carol))
+  val timelock = alice && (HEIGHT > lockTime)
+  
+  sigmaProp(multiSig || timelock)
+}`}</code>
                         </pre>
                       </div>
+                      <p className="text-neutral-400">
+                        Advanced contract combining multi-signature security with timelock recovery mechanism.
+                      </p>
                     </CardContent>
                   </Card>
-                </div>
-              </div>
-            </div>
+                </TabsContent>
+
+                <TabsContent value="defi" className="mt-8">
+                  <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm">
+                    <CardHeader>
+                      <CardTitle className="text-white">DEX Order Contract</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-4">
+                      <div className="bg-neutral-950/50 rounded-lg p-4">
+                        <pre className="text-sm text-orange-300 overflow-x-auto">
+                          <code>{`{
+  // DEX order: sell tokenA for tokenB at specific rate
+  val tokenAId = fromBase64("tokenA_id_here")
+  val tokenBId = fromBase64("tokenB_id_here")
+  
+  val rate = 1000L // 1 tokenA = 1000 nanoERG worth of tokenB
+  val sellerPK = PK("seller_public_key")
+  
+  val tokenAAmount = SELF.tokens(0)._2
+  val expectedTokenB = tokenAAmount * rate
+  
+  val validSwap = {
+    val output = OUTPUTS(0)
+    output.propositionBytes == sellerPK.propBytes &&
+    output.tokens.exists { (id, amount) =>
+      id == tokenBId && amount >= expectedTokenB
+    }
+  }
+  
+  sigmaProp(validSwap)
+}`}</code>
+                        </pre>
+                      </div>
+                      <p className="text-neutral-400">
+                        DeFi contract for decentralized token exchange with price validation and atomic swaps.
+                      </p>
+                    </CardContent>
+                  </Card>
+                </TabsContent>
+              </Tabs>
           </div>
         </motion.section>
 
-        {/* Why Learn ErgoScript */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              Why Learn ErgoScript?
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {whyLearnFeatures.map((feature) => (
-                <div key={feature.title}>
-                  <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-orange-500/50 transition-colors`}>
-                    <CardContent className="p-8">
-                      <div className="flex items-start space-x-4">
-                        <div className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{feature.icon}</div>
-                        <div>
-                          <h3 className="text-xl font-semibold mb-2 text-white">{feature.title}</h3>
-                          <p className="text-neutral-400">{feature.description}</p>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Target Audience */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              Who Is This Tutorial Series For?
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              {targetAudience.map((audience) => (
-                <div key={audience.title} className="group">
-                  <Card className={`bg-neutral-900/50 border-neutral-700 backdrop-blur-sm h-full rounded-xl hover:border-orange-500/50 transition-colors`}>
-                    <CardContent className="p-8">
-                      <div className="flex items-start space-x-4 mb-4">
-                        <div className="p-3 bg-orange-500/20 rounded-lg text-orange-400">{audience.icon}</div>
-                        <div>
-                          <h3 className="text-xl font-semibold mb-2 text-white">{audience.title}</h3>
-                          <p className="text-neutral-400 mb-4">{audience.description}</p>
-                        </div>
-                      </div>
-
-                      <div className="space-y-2">
-                        <p className="text-sm font-medium text-orange-400 mb-2">You'll learn:</p>
-                        <p className="text-sm text-neutral-300">
-                          {audience.examples}
-                        </p>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </motion.section>
-
-        {/* Curriculum Overview */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-              <CardContent className="p-8">
-                <h2 className="text-3xl font-bold mb-6 text-white">
-                  What You Will Learn
+          {/* Tutorials Section */}
+          <motion.section 
+            id="tutorials"
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 motion-reduce:transform-none"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="text-center mb-16">
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
+                  Interactive Tutorials
                 </h2>
-                <p className="text-xl text-neutral-300 mb-6">Your Path to ErgoScript Mastery</p>
-
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <ul className="space-y-3 text-neutral-300">
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
-                      <span>ErgoScript language fundamentals</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
-                      <span>eUTXO model and box management</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
-                      <span>Advanced contract logic patterns</span>
-                    </li>
-                  </ul>
-                  <ul className="space-y-3 text-neutral-300">
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
-                      <span>Tokens, NFTs, and Sigma-protocols</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
-                      <span>Multi-stage dApps and DeFi</span>
-                    </li>
-                    <li className="flex items-center space-x-2">
-                      <CheckCircle className="w-5 h-5 text-green-400" aria-hidden="true" focusable="false" />
-                      <span>Testing and security best practices</span>
-                    </li>
-                  </ul>
+                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
+                  Step-by-step guides to master ErgoScript development
+                </p>
                 </div>
 
-                <div className="flex justify-center items-center gap-4 flex-wrap">
-                  <div className="flex items-center gap-2 px-4 py-2 bg-green-500/20 border border-green-500/50 rounded-full">
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                    <span>Beginner</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-yellow-500/20 border border-yellow-500/50 rounded-full">
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <span>Intermediate</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-orange-500/20 border border-orange-500/50 rounded-full">
-                    <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
-                    <span>Advanced</span>
-                  </div>
-                  <div className="flex items-center gap-2 px-4 py-2 bg-red-500/20 border border-red-500/50 rounded-full">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <span>Expert</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </motion.section>
-
-        {/* Module Structure */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              Tutorial Series Structure
-            </h2>
-
-            <div className="space-y-4">
-              {modules.map((module, index) => (
-                <Card
-                  key={index}
-                  className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
-                >
-                  <Collapsible open={expandedModule === index} onOpenChange={() => toggleModule(index)}>
-                    <CollapsibleTrigger className="w-full">
-                      <CardContent className="p-6 flex items-center justify-between hover:bg-neutral-800/30 transition-colors">
-                        <div className="flex items-center space-x-4">
-                          <div className="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center text-black font-bold text-lg">
-                            {module.number}
-                          </div>
-                          <div className="text-left">
-                            <h3 className="text-xl font-semibold text-white">{module.title}</h3>
-                            <div className="flex items-center space-x-4 text-sm text-neutral-400">
-                              <span className="flex items-center space-x-1">
-                                <Clock className="w-4 h-4" aria-hidden="true" focusable="false" />
-                                <span>{module.totalDuration}</span>
+              <div className="grid md:grid-cols-2 gap-8">
+                {tutorials.map((tutorial, index) => (
+                  <motion.div
+                    key={tutorial.title}
+                    variants={itemVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, amount: 0.2 }}
+                    transition={{ delay: index * 0.1 }}
+                    className="motion-reduce:transform-none"
+                  >
+                    <Link 
+                      href={tutorial.link}
+                      className="block h-full group focus:outline-none focus:ring-2 focus:ring-orange-500/60 rounded-3xl"
+                    >
+                      <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm h-full hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/10 cursor-pointer">
+                        <CardHeader>
+                          <div className="flex items-center justify-between">
+                            <CardTitle className="text-white group-hover:text-orange-400 transition-colors">{tutorial.title}</CardTitle>
+                            <div className="flex items-center gap-2">
+                              <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                                tutorial.difficulty === 'Beginner'
+                                  ? 'bg-green-500/20 text-green-400' 
+                                  : tutorial.difficulty === 'Intermediate'
+                                  ? 'bg-yellow-500/20 text-yellow-400'
+                                  : 'bg-red-500/20 text-red-400'
+                              }`}>
+                                {tutorial.difficulty}
                               </span>
-                              <span>{module.lessons.length} lessons</span>
+                              <ArrowRight className="w-4 h-4 text-neutral-400 group-hover:text-orange-400 transition-colors" />
                             </div>
                           </div>
+                        </CardHeader>
+                        <CardContent className="space-y-4">
+                          <p className="text-neutral-400">{tutorial.description}</p>
+                          <div className="flex items-center gap-2">
+                            <Timer className="w-4 h-4 text-orange-400" />
+                            <span className="text-sm text-neutral-300">{tutorial.time}</span>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </motion.div>
+                ))}
+                          </div>
                         </div>
+          </motion.section>
+
+          {/* FAQ Section */}
+          <motion.section 
+            id="faq"
+            variants={itemVariants} 
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
+            className="py-16 px-4 motion-reduce:transform-none"
+          >
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-4xl font-bold text-center mb-8 text-white">
+                Frequently Asked Questions
+              </h2>
+              <div className="space-y-4">
+                {faqs.map((faq, index) => (
+                  <Card key={index} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
+                    <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
+                      <CollapsibleTrigger asChild>
+                        <button className="w-full">
+                          <CardContent className="p-6 flex items-center justify-between hover:bg-black/70 transition-colors">
+                            <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
                         <ChevronDown
+                              aria-hidden="true" 
                           className={`w-5 h-5 text-neutral-400 transition-transform ${
-                            expandedModule === index ? "rotate-180" : ""
+                                openFAQ === index ? "rotate-180" : ""
                           }`}
-                          aria-hidden="true"
-                          focusable="false"
                         />
                       </CardContent>
+                        </button>
                     </CollapsibleTrigger>
                     <CollapsibleContent>
                       <CardContent className="px-6 pb-6 pt-0">
-                        <div className="space-y-3">
-                          {module.lessons.map((lesson, lessonIndex) => (
-                            <div
-                              key={lessonIndex}
-                              className="flex flex-col sm:flex-row sm:items-center justify-between p-3 bg-neutral-900/60 rounded-lg hover:bg-neutral-800 transition-colors"
-                            >
-                              <div className="flex items-center gap-2 mb-2 sm:mb-0">
-                                <span className="text-neutral-400">
-                                  {module.number}.{lessonIndex + 1}
-                                </span>
-                                <span>{lesson.title}</span>
-                              </div>
-                              <div className="flex items-center gap-3">
-                                <div className="flex items-center gap-1 text-neutral-400">
-                                  <Clock className="w-4 h-4" aria-hidden="true" focusable="false" />
-                                  <span className="text-sm">{lesson.duration}</span>
-                                </div>
-                                <Badge className={difficultyColors[lesson.level as keyof typeof difficultyColors]}>
-                                  {lesson.level}
-                                </Badge>
-                              </div>
-                            </div>
-                          ))}
+                          <div className="text-neutral-300 leading-relaxed">
+                            {faq.answer}
                         </div>
                       </CardContent>
                     </CollapsibleContent>
@@ -503,131 +574,64 @@ export default function ErgoScriptClient() {
           </div>
         </motion.section>
 
-        {/* FAQ Section */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              Frequently Asked Questions
+          {/* What's Next Section */}
+          <section className="py-16 px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
+                What's <span className="text-orange-400">Next?</span>
             </h2>
-
-            <div className="space-y-4">
-              {faqs.map((faq, index) => (
-                <Card
-                  key={index}
-                  className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl"
+              <p className="text-xl text-center text-neutral-300 mb-12">
+                Start building with ErgoScript today
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Link 
+                  href="/docs/ergoscript/playground"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
                 >
-                  <CardContent className="p-6">
-                    <h3 className="text-lg font-semibold mb-3 text-white">{faq.question}</h3>
-                    <p className="text-neutral-300 leading-relaxed">{faq.answer}</p>
-                  </CardContent>
-                </Card>
-              ))}
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <Play className="w-6 h-6 text-orange-400" />
             </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Try Playground</h3>
+                      <p className="text-orange-400 text-sm">Interactive Learning</p>
           </div>
-        </motion.section>
-
-        {/* Conclusion */}
-        {/* Related Content */}
-        <motion.section variants={itemVariants} className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              What to Learn Next
-            </h2>
-            <div className="grid md:grid-cols-3 gap-6">
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                    <Database className="w-6 h-6 text-orange-400" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                    eUTXO Model
-                  </h3>
-                  <p className="text-neutral-300 mb-4">
-                    Understand the data model that ErgoScript operates on
+                  <p className="text-neutral-300">
+                    Experiment with ErgoScript in an interactive online environment
                   </p>
-                  <Link href="/technology/eutxo-model" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                    Learn eUTXO
-                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                    <Zap className="w-6 h-6 text-orange-400" />
+                
+                <Link 
+                  href="/docs/developers"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <BookOpen className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Full Documentation</h3>
+                      <p className="text-orange-400 text-sm">Complete Guide</p>
+                    </div>
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                    Build DeFi Apps
-                  </h3>
-                  <p className="text-neutral-300 mb-4">
-                    Apply your ErgoScript skills to real DeFi projects
+                  <p className="text-neutral-300">
+                    Access comprehensive documentation, API references, and advanced tutorials
                   </p>
-                  <Link href="/use/defi" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                    Start Building
-                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/50 transition-colors group">
-                <CardContent className="p-6">
-                  <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center mb-4">
-                    <BookOpen className="w-6 h-6 text-orange-400" />
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
-                    Developer Docs
-                  </h3>
-                  <p className="text-neutral-300 mb-4">
-                    Tools and SDKs for ErgoScript development
-                  </p>
-                  <Link href="/docs/developers" className="inline-flex items-center text-orange-400 hover:text-orange-300 font-medium">
-                    View Docs
-                    <ArrowRight className="w-4 h-4 ml-2" />
-                  </Link>
-                </CardContent>
-              </Card>
             </div>
-          </div>
-        </motion.section>
+          </section>
 
-        {/* CTA Section */}
-        <motion.section variants={itemVariants} className="py-20 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl">
-              <CardContent className="p-8 md:p-12">
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  Start Your ErgoScript Journey
-                </h2>
-                <p className="text-xl text-neutral-300 mb-8 max-w-2xl mx-auto">
-                  Join thousands of developers building the future of decentralized finance on Ergo
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button
-                    asChild
-                    className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl"
-                  >
-                    <Link href="/docs/developers" className="flex items-center">
-                      Start Learning Now
-                      <ArrowRight className="ml-2 w-4 h-4" aria-hidden="true" focusable="false" />
-                    </Link>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 px-8 py-3 rounded-xl backdrop-blur-sm"
-                  >
-                    <Link href="https://discord.gg/ergo" target="_blank" className="flex items-center">
-                      Join Community
-                      <ExternalLink className="ml-2 w-4 h-4" aria-hidden="true" focusable="false" />
-                    </Link>
-                  </Button>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </motion.section>
+          {/* Email Capture Form */}
+          <FinalCTASimple 
+            title="Advanced ErgoScript Tutorials"
+            description="Get the latest ErgoScript guides, advanced tutorials, and developer resources delivered to your inbox"
+          />
+
       </motion.div>
     </div>
+      </BackgroundWrapper>
+    </>
   )
 }

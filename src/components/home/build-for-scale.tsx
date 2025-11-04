@@ -78,7 +78,7 @@ function LeftCopy() {
           maxWidth: "60ch"
         }}
       >
-        Deterministic execution, predictable fees, MEV-resistant by design.
+        Sound Money principles, Open Money access.
       </p>
 
         <ul className="space-y-3 text-white/90 mb-8">

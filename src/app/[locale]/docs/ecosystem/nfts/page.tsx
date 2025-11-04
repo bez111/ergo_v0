@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
-import { CheckCircle, Zap, TrendingUp, Info, Coins, Layers, Gift, ExternalLink, Gamepad2, Store, ShoppingBag, Image, Globe } from "lucide-react";
+import { Info, Gift, ExternalLink, Gamepad2, Store, ShoppingBag, Image, Globe } from "lucide-react";
 import Link from "next/link";
 
 const nftSectors = [
@@ -36,7 +36,7 @@ const nftSectors = [
         name: "Mew Finance",
         description: "Mew Finance offers NFT marketplace capabilities through Mew Mart (for NFTs/tokens) and Mew Store (for physical assets). Higher tiers share platform revenue and get fee discounts.",
         icon: <ShoppingBag className="w-7 h-7 text-pink-400" />,
-        link: "https://mewfinance.com/",
+        link: "https://www.mewfinance.com",
         more: "/docs/ecosystem/financial/dex/mew",
       },
       {

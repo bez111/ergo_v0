@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { BookOpen } from "lucide-react"
 import { useTranslations } from "next-intl"
 import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 export default function GuidesClient() {
   const t = useTranslations('use.guides')
@@ -35,15 +36,15 @@ export default function GuidesClient() {
   }
 
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      {/* Hidden Breadcrumbs for SEO */}
-      <HiddenBreadcrumbs 
-        items={[{ name: 'Learn', href: '/learn' }]} 
-        currentPage="Guides" 
-      />
-      
-      <div className="relative z-10">
-        <div className="max-w-7xl mx-auto px-4 py-8">
+    <BackgroundWrapper>
+      <div className="container mx-auto px-4 py-16">
+        {/* Hidden Breadcrumbs for SEO */}
+        <HiddenBreadcrumbs 
+          items={[{ name: 'Learn', href: '/learn' }]} 
+          currentPage="Guides" 
+        />
+        
+        <div className="relative z-10">
           {/* Hero */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
@@ -105,6 +106,6 @@ export default function GuidesClient() {
           </section>
         </div>
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 } 

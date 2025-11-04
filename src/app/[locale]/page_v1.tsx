@@ -6,8 +6,7 @@ import { GridBackground } from "@/components/animations/grid-background"
 import { 
   LazyEcosystemShowcase, 
   LazyAudiencePaths, 
-  LazyBlogSection,
-  LazySubscribeSection
+  LazyBlogSection
 } from "@/components/home/lazy-sections"
 
 interface HomePageProps {
@@ -71,8 +70,7 @@ export default async function HomePage({ params }: HomePageProps) {
         {/* Blog: Fresh content */}
         <LazyBlogSection />
         
-        {/* Subscribe: Final CTA */}
-        <LazySubscribeSection />
+        {/* Subscribe: Final CTA - Removed */}
       </div>
     </main>
   );
