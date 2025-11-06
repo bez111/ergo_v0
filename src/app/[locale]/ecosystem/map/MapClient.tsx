@@ -21,7 +21,7 @@ const projects = [
   { name: "Paideia", category: "DAO", url: "https://paideia.im" },
   { name: "Oracle Pools", category: "ORACLES", url: "https://explorer.ergoplatform.com/en/oracle-pools-list" },
   { name: "Ergo Explorer", category: "TOOLS", url: "https://explorer.ergoplatform.com" },
-  { name: "Mew Finance", category: "DEFI", url: "#" },
+  { name: "Mew Finance", category: "DEFI", url: "https://www.mewfinance.com" },
   { name: "SatErgo", category: "WALLETS", url: "https://satergo.com" },
   { name: "SAFEW", category: "WALLETS", url: "https://safew.org" },
   { name: "ErgoWatch", category: "TOOLS", url: "https://ergo.watch" },

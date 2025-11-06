@@ -17,8 +17,3 @@ export const LazyBlogSection = dynamic(() => import("@/components/home/blog-sect
   loading: () => <div className="h-64 bg-neutral-900/50 animate-pulse rounded-lg mx-4" />,
   ssr: true
 })
-
-export const LazySubscribeSection = dynamic(() => import("@/components/home/subscribe-section").then(mod => ({ default: mod.SubscribeSection })), {
-  loading: () => <div className="h-32 bg-neutral-900/50 animate-pulse rounded-lg mx-4" />,
-  ssr: true
-}) 

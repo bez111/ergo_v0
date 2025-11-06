@@ -43,7 +43,7 @@ export function BlogSectionHome() {
               href={`/blog/${post.slug}`}
               className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-xl"
             >
-              <Card className="bg-neutral-900/50 border-0 rounded-xl hover:ring-1 hover:ring-orange-500/30 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-200 h-full flex flex-col overflow-hidden cursor-pointer">
+              <Card className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 h-full flex flex-col overflow-hidden cursor-pointer">
                 {/* Image placeholder */}
                 <div className="aspect-video bg-gradient-to-br from-neutral-900 to-neutral-950 flex items-center justify-center group-hover:from-neutral-800 group-hover:to-neutral-900 transition-all duration-300">
                   <div className="text-6xl font-bold text-neutral-800 group-hover:text-neutral-700 transition-colors">

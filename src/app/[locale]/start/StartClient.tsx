@@ -20,6 +20,7 @@ import {
 import { useLocalStorage } from "@/hooks/use-local-storage"
 import { useIsMobile, usePrefersReducedMotion, getAnimationConfig } from "@/lib/theme-system"
 import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import {
   ArrowRight,
   User,
@@ -978,6 +979,13 @@ export default function StartPage() {
             </motion.div>
           </div>
         </motion.section>
+
+        {/* Email Capture Form */}
+        <FinalCTASimple 
+          title="Get Started with Ergo"
+          description="Get the latest updates, beginner guides, and step-by-step tutorials delivered to your inbox"
+        />
+
       </div>
     </div>
   )

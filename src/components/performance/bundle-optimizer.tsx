@@ -56,11 +56,6 @@ export const BelowFoldComponents = {
   BlogSection: dynamic(() => import('@/src/components/home/blog-section').then(mod => ({ default: mod.BlogSection })), {
     loading: () => <SkeletonCard />,
     ssr: true
-  }),
-  
-  SubscribeSection: dynamic(() => import('@/src/components/home/subscribe-section').then(mod => ({ default: mod.SubscribeSection })), {
-    loading: () => <SkeletonCard />,
-    ssr: true
   })
 }
 

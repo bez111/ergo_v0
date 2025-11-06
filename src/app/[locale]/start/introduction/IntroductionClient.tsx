@@ -128,7 +128,7 @@ export default function IntroductionClient() {
         type="TechArticle"
         data={{
           "@type": "TechArticle",
-          headline: "Ergo — PoW smart‑contract platform (eUTXO & Sigma Protocols)",
+          headline: "Ergo Blockchain — PoW eUTXO Smart Contracts & Sigma Protocols",
           description:
             "Introduction to Ergo: ASIC-resistant PoW, eUTXO smart contracts, Sigma (ZK) protocols, storage rent, NIPoPoWs.",
           image: "https://ergoblockchain.org/og/intro.png",
@@ -191,10 +191,10 @@ export default function IntroductionClient() {
             className="text-center mb-16"
           >
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-white">
-              Ergo — PoW smart‑contract platform with eUTXO & Sigma Protocols
+              Ergo Blockchain — PoW eUTXO Smart Contracts & Sigma Protocols
             </h1>
             <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-              A next‑generation, ASIC‑resistant Proof‑of‑Work platform with predictable, auditable smart contracts and native privacy.
+              ASIC-resistant Layer-1 PoW with eUTXO, auditable smart contracts, and Sigma-based privacy. Built for open, verifiable money.
             </p>
           </div>
 
@@ -289,9 +289,14 @@ export default function IntroductionClient() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
               Core <span className="text-orange-400">{t("introduction.corePrinciples.title")}</span>
             </h2>
-            <p className="text-gray-400 max-w-2xl mx-auto">
+            <p className="text-gray-400 max-w-3xl mx-auto mb-6">
               Built on fundamental values that ensure long-term sustainability and real-world utility
             </p>
+            <div className="bg-black/60 border border-white/20 rounded-2xl p-6">
+              <p className="text-base text-gray-300 leading-relaxed text-center whitespace-nowrap">
+                Ergo combines <strong className="text-orange-400">Sound Money</strong> (hard, predictable supply) with <strong className="text-orange-400">Open Money</strong> (permissionless, verifiable access) — creating the foundation for truly free finance.
+              </p>
+            </div>
           </div>
           
           <FeatureGrid items={principlesGridItems} columns={4} />

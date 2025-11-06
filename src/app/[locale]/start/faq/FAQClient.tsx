@@ -2,11 +2,12 @@
 
 import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ChevronDown, Search, HelpCircle, Users, Shield, Code, Zap, Cpu } from "lucide-react"
+import { ChevronDown, Search, HelpCircle, Users, Shield, Code, Zap, Cpu, Mail, Send, CheckCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 const faqData = [
   // Basics
@@ -120,6 +121,8 @@ export default function FAQClient() {
   const [searchTerm, setSearchTerm] = useState("")
   const [activeCategory, setActiveCategory] = useState("All")
   const [expanded, setExpanded] = useState<number | null>(null)
+  const [email, setEmail] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const filteredFaqs = useMemo(() => {
     return faqData.filter(faq => {
@@ -129,9 +132,23 @@ export default function FAQClient() {
     })
   }, [searchTerm, activeCategory])
 
+  const handleEmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email) {
+      setIsSubmitted(true)
+      // Here you would typically send the email to your backend
+      console.log('Email submitted:', email)
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setEmail('')
+      }, 3000)
+    }
+  }
+
   return (
-    <div className="min-h-screen bg-black text-white relative overflow-hidden">
-      <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+    <BackgroundWrapper>
+      <div className="min-h-screen text-white relative overflow-hidden">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
         {/* Hero Section */}
         <motion.div 
           initial={{ opacity: 0, y: -20 }} 
@@ -150,7 +167,7 @@ export default function FAQClient() {
         </motion.div>
 
         {/* Search and Filters */}
-        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm mb-12 sticky top-4 z-20">
+                <Card className="bg-black border-neutral-700 backdrop-blur-sm mb-12 sticky top-4 z-20">
           <CardContent className="p-6">
             <div className="relative mb-6">
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -185,7 +202,7 @@ export default function FAQClient() {
           {filteredFaqs.length > 0 ? (
             filteredFaqs.map((faq, index) => (
               <motion.div key={index} variants={itemVariants}>
-                <Card className="bg-neutral-900/50 border-neutral-700 hover:border-orange-500/30 transition-all duration-300">
+                <Card className="bg-black border-neutral-700 hover:border-orange-500/30 transition-all duration-300">
                   <button
                     onClick={() => setExpanded(expanded === index ? null : index)}
                     className="w-full p-6 flex justify-between items-start text-left group"
@@ -233,7 +250,7 @@ export default function FAQClient() {
             ))
           ) : (
             <motion.div variants={itemVariants}>
-              <Card className="bg-neutral-900/50 border-neutral-700">
+              <Card className="bg-black border-neutral-700">
                 <CardContent className="text-center py-12">
                   <p className="text-gray-400 text-lg">No questions found. Try a different search or filter.</p>
                 </CardContent>
@@ -241,7 +258,57 @@ export default function FAQClient() {
             </motion.div>
           )}
         </motion.div>
+
+        {/* Email Capture Section */}
+        <section className="py-20 px-4">
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-black border-neutral-700 hover:border-orange-400/40 transition-all duration-300 backdrop-blur-sm rounded-3xl">
+              <CardContent className="p-12 text-center">
+                <div className="mb-8">
+                  <div className="inline-flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                      <Mail className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">Still Have <span className="text-orange-400">Questions?</span></h2>
+                  </div>
+                  <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+                    Subscribe to get the latest updates, announcements, and answers to new questions from the Ergo community
+                  </p>
+                </div>
+
+                {isSubmitted ? (
+                  <div className="bg-green-500/20 border border-green-500/50 rounded-xl p-6 mb-6">
+                    <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                    <p className="text-green-400 font-semibold">Thank you for subscribing!</p>
+                    <p className="text-gray-300 text-sm">You'll receive updates about Ergo and answers to new questions.</p>
+                  </div>
+                ) : (
+                  <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto mb-8">
+                    <div className="flex gap-3">
+                      <Input
+                        type="email"
+                        placeholder="Enter your email address"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        className="flex-1 bg-neutral-800 border-neutral-600 text-white placeholder:text-gray-400 focus:border-orange-400/50 focus:ring-orange-400/20 rounded-xl"
+                        required
+                      />
+                      <Button
+                        type="submit"
+                        className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 rounded-xl border border-orange-500/50 transition-all duration-300"
+                      >
+                        <Send className="w-4 h-4 mr-2" />
+                        Subscribe
+                      </Button>
+                    </div>
+                  </form>
+                )}
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+        </div>
       </div>
-    </div>
+    </BackgroundWrapper>
   )
 }

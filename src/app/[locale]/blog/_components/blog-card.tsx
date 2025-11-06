@@ -8,20 +8,20 @@ interface BlogCardProps {
   featured?: boolean
 }
 
-// ✅ ИЗМЕНЕНИЕ: Убираем 'use client' - теперь это RSC
+// ✅ ИСПРАВЛЕНИЕ A11y: Одна большая ссылка вместо nested links
 export function BlogCard({ post, featured = false }: BlogCardProps) {
   return (
-    <article
-      className={`relative h-full overflow-hidden rounded-xl border border-neutral-700 bg-neutral-900/50 backdrop-blur-sm hover:border-orange-500/30 hover:bg-neutral-900/80 transition-colors ${featured ? 'col-span-full lg:col-span-2' : ''}`}
-      itemScope
-      itemType="https://schema.org/BlogPosting"
+    <Link 
+      href={`/blog/${post.slug}`}
+      className="block h-full group focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-xl"
     >
-      {/* ✅ ИЗМЕНЕНИЕ: Изображение с фиксированными размерами для предотвращения CLS */}
-      <div className="relative w-full aspect-[16/9] overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900">
-        <Link 
-          href={`/blog/${post.slug}`} 
-          className="block w-full h-full focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
-        >
+      <article
+        className={`relative h-full overflow-hidden rounded-xl border border-white/10 bg-black/80 backdrop-blur-sm group-hover:border-orange-500/30 group-hover:bg-black/90 transition-colors ${featured ? 'col-span-full lg:col-span-2' : ''}`}
+        itemScope
+        itemType="https://schema.org/BlogPosting"
+      >
+        {/* ✅ ИЗМЕНЕНИЕ: Изображение с фиксированными размерами для предотвращения CLS */}
+        <div className="relative w-full aspect-[16/9] overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900">
           {post.image ? (
             <Image
               src={post.image}
@@ -45,17 +45,13 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
               </div>
             </div>
           )}
-        </Link>
         
-        {/* ✅ КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ: Категория как отдельная ссылка, НЕ вложенная */}
+        {/* ✅ A11y FIX: Категория как badge, не ссылка (чтобы избежать nested links) */}
         <div className="absolute top-4 left-4">
           {post.category && (
-            <Link
-              href={`/blog/category/${encodeURIComponent(post.category)}`}
-              className="px-3 py-1 text-xs font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-xl backdrop-blur-sm hover:bg-orange-500/30 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
-            >
+            <span className="px-3 py-1 text-xs font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-xl backdrop-blur-sm">
               {post.category}
-            </Link>
+            </span>
           )}
         </div>
 
@@ -70,13 +66,8 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
 
       {/* ✅ Контент с улучшенной семантикой */}
       <div className="p-6">
-        <h3 className="text-xl font-bold mb-3 text-white">
-          <Link 
-            href={`/blog/${post.slug}`}
-            className="hover:text-orange-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2"
-          >
-            {post.title}
-          </Link>
+        <h3 className="text-xl font-bold mb-3 text-white group-hover:text-orange-400 transition-colors">
+          {post.title}
         </h3>
 
         <p className="text-sm text-gray-300 mb-4 line-clamp-2">
@@ -104,33 +95,29 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
           </div>
 
           <div className="flex items-center gap-1">
-            <Link
-              href={`/blog/author/${post.author.id}`}
-              className="flex items-center gap-1 hover:text-orange-400 transition-colors"
+            <div 
+              className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center overflow-hidden"
+              aria-hidden="true"
             >
-              <div 
-                className="w-6 h-6 rounded-full bg-neutral-700 flex items-center justify-center overflow-hidden"
-                aria-hidden="true"
-              >
-                {post.author.avatar ? (
-                  <Image 
-                    src={post.author.avatar} 
-                    alt={post.author.name}
-                    width={24}
-                    height={24}
-                    className="object-cover"
-                  />
-                ) : (
-                  <span className="text-white font-medium text-xs">
-                    {post.author.name.charAt(0)}
-                  </span>
-                )}
-              </div>
-              <span className="font-medium">{post.author.name}</span>
-            </Link>
+              {post.author.avatar ? (
+                <Image 
+                  src={post.author.avatar} 
+                  alt={post.author.name}
+                  width={24}
+                  height={24}
+                  className="object-cover"
+                />
+              ) : (
+                <span className="text-white font-medium text-xs">
+                  {post.author.name.charAt(0)}
+                </span>
+              )}
+            </div>
+            <span className="font-medium">{post.author.name}</span>
           </div>
         </div>
       </div>
-    </article>
+      </article>
+    </Link>
   )
 }

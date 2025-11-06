@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, useDeferredValue } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { BookOpen, TrendingUp, Clock, Users, X } from "lucide-react"
 import { BlogCard } from "./blog-card"
-import { NewsletterSignup } from "./newsletter-signup"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { BlogFiltersClean } from "./blog-filters-clean"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCompactSkeleton } from "./blog-skeleton"
@@ -284,7 +284,11 @@ export default function BlogClientStable({
 
         {/* Newsletter Signup */}
         <div className="mt-16">
-          <NewsletterSignup />
+          <FinalCTASimple 
+            title="Stay Updated with Ergo"
+            description="Get the latest news, technical insights, and ecosystem updates delivered to your inbox."
+            className=""
+          />
         </div>
       </section>
     </>

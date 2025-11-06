@@ -13,7 +13,7 @@ import { notFound, redirect } from "next/navigation"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 // Import client component wrapper for background
-import BlogBackground from "./_components/blog-background"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { siteConfig } from "@/config/site-config"
 
 
@@ -247,10 +247,9 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
 
-      {/* Background Effects - same as /start/introduction */}
-      <BlogBackground />
-
-      <main id="main" className="relative z-10" role="main">
+      {/* Background Effects */}
+      <BackgroundWrapper>
+        <main id="main" className="relative z-10" role="main">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
           {/* Minimal Header - SEO only, visually hidden like Solana */}
@@ -316,7 +315,8 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           </section>
 
         </div>
-      </main>
+        </main>
+      </BackgroundWrapper>
     </div>
   )
 }

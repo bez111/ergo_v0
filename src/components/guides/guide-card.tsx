@@ -18,7 +18,7 @@ export function GuideCard({ guide, index }: GuideCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1, duration: 0.6 }}
       whileHover={{ scale: 1.02, y: -5 }}
-      className="group relative bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 hover:bg-orange-500/10 hover:border-orange-400/30 transition-all duration-300"
+      className="group relative bg-black/80 backdrop-blur-sm rounded-3xl overflow-hidden border border-white/10 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300"
     >
       <Link href={`/use/guides/${guide.slug}`}>
         <div className="relative">
@@ -61,7 +61,7 @@ export function GuideCard({ guide, index }: GuideCardProps) {
       </Link>
 
       {/* Hover effect overlay */}
-      <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
+      <div className="absolute inset-0 rounded-3xl bg-gradient-to-r from-orange-500/5 to-red-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
     </motion.div>
   )
 } 

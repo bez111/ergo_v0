@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Download, ShoppingCart, Send, Shield, CheckCircle, Smartphone, Globe } from 'lucide-react'
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EnhancedButton } from "@/components/ui/enhanced-button"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { getTranslations } from 'next-intl/server'
 import { getMetadata } from './metadata'
 import { howToSchema, knowledgeGraph } from './json-ld'
@@ -134,30 +135,42 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
         <BackgroundWrapper>
 
           {/* Hero Section */}
-          <section className="relative py-24 md:py-32">
-            <div className="container px-4 md:px-6 mx-auto">
-              <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
-                  Start Using <span className="text-orange-400">Ergo</span>
-                </h1>
-
-                <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
-                  Get started with Ergo blockchain in 3 simple steps.
-                  Download a wallet, buy ERG tokens, and send your first transaction.
-                </p>
-
-                {/* Quick Facts */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl">
-                  {quickFacts.map((fact, index) => (
-                    <div key={index} className="text-center">
-                      <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
-                        <fact.icon className="h-6 w-6 text-orange-400" />
-                      </div>
-                      <h3 className="text-lg font-semibold text-white mb-2">{fact.title}</h3>
-                      <p className="text-gray-400 text-sm">{fact.description}</p>
+          <section className="pt-28 pb-10 px-4">
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                    Start Using <span className="text-orange-400">Ergo</span>
+                  </h1>
+                  <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
+                    Get started with Ergo blockchain in 3 simple steps
+                  </p>
+                  <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                    Download a wallet, buy ERG tokens, and send your first transaction. 
+                    Join the decentralized finance revolution with predictable fees and enhanced security.
+                  </p>
+                </div>
+                <div className="relative z-10">
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                      Quick Facts
+                    </h3>
+                    <div className="grid grid-cols-1 gap-4">
+                      {quickFacts.map((fact, index) => (
+                        <div key={index} className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
+                          <div className="flex items-start gap-3">
+                            <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                              <fact.icon className="w-6 h-6" />
+                            </div>
+                            <div>
+                              <h4 className="font-semibold text-white text-lg">{fact.title}</h4>
+                              <p className="text-gray-400 text-sm">{fact.description}</p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  </div>
                 </div>
               </div>
             </div>
@@ -358,6 +371,11 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
             </div>
           </section>
 
+          {/* Email Capture Form */}
+          <FinalCTASimple 
+            title="Get Started with Ergo"
+            description="Get the latest updates, beginner guides, and step-by-step tutorials delivered to your inbox"
+          />
 
         </BackgroundWrapper>
       </main>

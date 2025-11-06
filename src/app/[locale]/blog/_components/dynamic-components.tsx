@@ -1,21 +1,6 @@
 import dynamic from 'next/dynamic'
 
 // Динамические импорты для компонентов ниже фолда
-export const NewsletterSignupDynamic = dynamic(
-  () => import('./newsletter-signup').then(mod => ({ default: mod.NewsletterSignup })),
-  { 
-    ssr: false,
-    loading: () => (
-      <div className="rounded-2xl bg-gray-900/50 border border-gray-800 p-8 md:p-12">
-        <div className="animate-pulse space-y-4">
-          <div className="h-8 bg-gray-700 rounded-lg w-3/4 mx-auto" />
-          <div className="h-4 bg-gray-700 rounded w-1/2 mx-auto" />
-          <div className="h-12 bg-gray-700 rounded-lg" />
-        </div>
-      </div>
-    )
-  }
-)
 
 export const ShareButtonsDynamic = dynamic(
   () => import('./share-buttons').then(mod => ({ default: mod.ShareButtons })),

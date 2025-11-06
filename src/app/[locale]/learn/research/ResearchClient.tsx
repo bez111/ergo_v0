@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import {
   BookOpen,
   Users,
@@ -136,9 +137,8 @@ export default function ResearchClient() {
         }}
       />
 
-      <div className="min-h-screen bg-black relative overflow-hidden motion-reduce:animate-none">
-        {/* Background overlay to match technology pages */}
-        <div className="absolute inset-0 bg-gradient-to-b from-neutral-900/20 to-black" />
+      <BackgroundWrapper>
+        <div className="container mx-auto px-4 py-16">
 
         {/* Breadcrumbs (hidden visually, present for screen readers) */}
         <div className="sr-only">
@@ -171,88 +171,72 @@ export default function ResearchClient() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <a href="#key-docs">
-                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
+                      <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50 transition-all duration-300">
                         Key Documents
                       </Button>
                     </a>
                     <Link href="/start/community">
                       <Button
                         variant="outline"
-                        className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
+                        className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl transition-all duration-300"
                       >
                         Community
                       </Button>
                     </Link>
                   </div>
                 </div>
-                <div className="relative">
-                  <div className="relative z-10">
-                    <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl p-8">
-                      <CardContent className="p-0">
-                        <h3 className="text-2xl font-bold mb-6 text-center text-white">Quick Start</h3>
-                        <div className="space-y-4">
-                          {[
-                            {
-                              name: "Read Ergo Whitepaper",
-                              description: "Core protocol design and philosophy",
-                              icon: <FileText className="w-6 h-6" />,
-                              link: "https://ergoplatform.org/docs/whitepaper.pdf",
-                              external: true,
-                            },
-                            {
-                              name: "Explore Research Library",
-                              description: "Cryptography, consensus, and architecture",
-                              icon: <BookOpen className="w-6 h-6" />,
-                              link: "#key-docs",
-                              external: false,
-                            },
-                            {
-                              name: "Join the Community",
-                              description: "Discuss research and collaborate",
-                              icon: <Users className="w-6 h-6" />,
-                              link: "/start/community",
-                              external: false,
-                            },
-                          ].map((item) => (
-                            <div key={item.name}>
-                              {item.external ? (
-                                <a
-                                  href={item.link}
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
-                                    <ExternalLink className="w-4 h-4 text-neutral-400" />
-                                  </div>
-                                </a>
-                              ) : (
-                                <Link
-                                  href={item.link}
-                                  className="block p-4 rounded-lg bg-neutral-900/60 border border-neutral-700 hover:border-orange-500/50 transition-colors"
-                                >
-                                  <div className="flex items-center space-x-3">
-                                    <div className="text-orange-400">{item.icon}</div>
-                                    <div className="flex-1">
-                                      <h4 className="font-semibold text-white">{item.name}</h4>
-                                      <p className="text-sm text-neutral-400">{item.description}</p>
-                                    </div>
-                                    <ExternalLink className="w-4 h-4 text-neutral-400" />
-                                  </div>
-                                </Link>
-                              )}
-                            </div>
-                          ))}
+                <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                    <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                      Quick Start
+                    </h3>
+                    <div className="grid grid-cols-1 gap-4">
+                      <a
+                        href="https://ergoplatform.org/docs/whitepaper.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <FileText className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">Read Ergo Whitepaper</h4>
+                          </div>
                         </div>
-                      </CardContent>
-                    </Card>
+                      </a>
+                      
+                      <a
+                        href="#key-docs"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <BookOpen className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">Explore Research Library</h4>
+                          </div>
+                        </div>
+                      </a>
+                      
+                      <Link
+                        href="/start/community"
+                        className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                      >
+                        <div className="flex items-start gap-3">
+                          <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                            <Users className="w-6 h-6" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-white text-lg">Join the Community</h4>
+                          </div>
+                        </div>
+                      </Link>
+                    </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </motion.section>
@@ -271,7 +255,7 @@ export default function ResearchClient() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {keyPapers.map((paper) => (
                       <motion.div key={paper.title} variants={itemVariants}>
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                        <Card className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl h-full">
                           <CardContent className="p-6 h-full flex flex-col">
                             <div className="flex items-start gap-4 mb-4">
                               <paper.icon className="w-8 h-8 text-orange-400" />
@@ -281,11 +265,11 @@ export default function ResearchClient() {
                               </div>
                             </div>
                             <p className="text-neutral-300 mb-6 flex-1">{paper.description}</p>
-                            <Button asChild variant="outline" className="mt-auto border-neutral-700 text-neutral-300 hover:bg-orange-500/10">
-                              <Link href={paper.url} target="_blank" className="flex items-center gap-2">
+                            <Button asChild variant="outline" className="mt-auto border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl transition-all duration-300">
+                              <a href={paper.url} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
                                 Read Paper
                                 <ExternalLink className="w-4 h-4" />
-                              </Link>
+                              </a>
                             </Button>
                           </CardContent>
                         </Card>
@@ -308,7 +292,7 @@ export default function ResearchClient() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {researchCategories.map((category) => (
                       <motion.div key={category.title} variants={itemVariants}>
-                        <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl h-full">
+                        <Card className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl h-full">
                           <CardContent className="p-6">
                             <div className="flex items-center gap-3 mb-6">
                               <category.icon className={`w-5 h-5 ${category.color} flex-shrink-0`} />
@@ -317,9 +301,10 @@ export default function ResearchClient() {
                             <ul className="space-y-3">
                               {category.papers.map((paper) => (
                                 <li key={paper.title}>
-                                  <Link
+                                  <a
                                     href={paper.url}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className="group flex items-center justify-between text-sm text-neutral-400 hover:text-orange-400 transition-colors"
                                   >
                                     <div className="flex items-center gap-3">
@@ -327,7 +312,7 @@ export default function ResearchClient() {
                                       <span className="flex-1 leading-snug">{paper.title}</span>
                                     </div>
                                     <ExternalLink className="w-4 h-4 text-neutral-600 opacity-50 group-hover:opacity-100 group-hover:text-orange-400 transition-all" />
-                                  </Link>
+                                  </a>
                                 </li>
                               ))}
                             </ul>
@@ -350,14 +335,14 @@ export default function ResearchClient() {
                 <div className="max-w-4xl mx-auto">
                   <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">Developer Resources</h2>
                   
-                  <Card className="bg-neutral-900/50 border-neutral-700 backdrop-blur-sm rounded-xl hover:border-orange-500/30 transition-colors">
+                  <Card className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-400/40 transition-all duration-300">
                     <CardContent className="p-8">
                       <div className="space-y-4">
                         {developerResources.map((resource) => (
                           <div key={resource.title} className="flex items-center space-x-6 hover:translate-x-2 transition-transform">
-                            <Card className="flex-1 bg-neutral-800/30 border-neutral-700/50 backdrop-blur-sm rounded-xl hover:border-orange-500/30">
+                            <Card className="flex-1 bg-black/60 border-white/20 backdrop-blur-sm rounded-2xl hover:border-orange-400/40 transition-all duration-300">
                               <CardContent className="p-6">
-                                <Link
+                                <a
                                   href={resource.url}
                                   target="_blank"
                                   rel="noopener noreferrer"
@@ -368,7 +353,7 @@ export default function ResearchClient() {
                                     <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">{resource.title}</h3>
                                   </div>
                                   <ExternalLink className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
-                                </Link>
+                                </a>
                               </CardContent>
                             </Card>
                           </div>
@@ -379,41 +364,59 @@ export default function ResearchClient() {
                 </div>
               </motion.section>
 
-          {/* Join the Discussion */}
-          <motion.section
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.2 }}
-            variants={itemVariants}
-            className="py-20 px-4"
-          >
-            <div className="max-w-4xl mx-auto text-center">
-              <Card className="bg-neutral-900/50 border-neutral-700 rounded-xl">
-                <CardContent className="p-12">
-                  <h2 className="text-4xl font-bold mb-6 text-white">Join the Discussion</h2>
-                  <p className="text-xl text-neutral-300 mb-8 leading-relaxed">
-                    Have an idea or want to contribute? Join community channels to discuss research and collaborate.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                      <Link href="/start/community" className="flex items-center">
-                        <Users className="mr-2 w-4 h-4" />
-                        Community Channels
-                      </Link>
-                    </Button>
-                    <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl">
-                      <Link href="https://github.com/ergoplatform" target="_blank" rel="noopener noreferrer" className="flex items-center">
-                        <ExternalLink className="mr-2 w-4 h-4" />
-                        GitHub Research
-                      </Link>
-                    </Button>
+          {/* What's Next Section */}
+          <section className="py-16 px-4">
+            <div className="max-w-6xl mx-auto">
+              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
+                What's <span className="text-orange-400">Next?</span>
+              </h2>
+              <p className="text-xl text-center text-neutral-300 mb-12">
+                Dive deeper into Ergo research or join the community discussion
+              </p>
+              <div className="grid md:grid-cols-2 gap-6">
+                <Link 
+                  href="/start/community"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <Users className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">Join Community</h3>
+                      <p className="text-orange-400 text-sm">Discuss & Collaborate</p>
+                    </div>
                   </div>
-                </CardContent>
-              </Card>
+                  <p className="text-neutral-300">
+                    Connect with researchers, developers, and enthusiasts to discuss Ergo's latest innovations
+                  </p>
+                </Link>
+                
+                <a 
+                  href="https://github.com/ergoplatform"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                      <GitBranch className="w-6 h-6 text-orange-400" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-white">GitHub Research</h3>
+                      <p className="text-orange-400 text-sm">Contribute Code</p>
+                    </div>
+                  </div>
+                  <p className="text-neutral-300">
+                    Explore open-source implementations and contribute to Ergo's research codebase
+                  </p>
+                </a>
+              </div>
             </div>
-          </motion.section>
+          </section>
         </motion.div>
-      </div>
+        </div>
+      </BackgroundWrapper>
     </>
   )
 }

@@ -45,7 +45,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
           >
             <Link
               href={`/blog/${p.slug}`}
-              className="flex items-start gap-4 rounded-2xl bg-neutral-900/70 border border-neutral-800 p-5 hover:bg-neutral-900 transition-colors duration-200"
+              className="flex items-start gap-4 rounded-2xl bg-black/80 border border-white/10 p-5 hover:bg-black/90 transition-colors duration-200"
             >
               {/* Avatar/Initial */}
               <div className="h-12 w-12 rounded-2xl bg-neutral-800 grid place-content-center text-xl font-bold text-neutral-200 shrink-0">

@@ -31,6 +31,11 @@ export function MobileNav({ items }: MobileNavProps) {
 
   // Function to get translated navigation title
   const getNavTitle = (title: string) => {
+    // Hardcode "Start Here" to avoid localization issues
+    if (title === "Start Here") {
+      return "Start Here"
+    }
+    
     const titleKey = title.toLowerCase()
     
     try {

@@ -1,87 +1,91 @@
 "use client"
 
 import { useState } from "react"
-import Link from "next/link"
-import { CyberButton } from "@/components/animations/cyber-button"
+import { motion } from "framer-motion"
+import { Button } from "@/components/ui/button"
+import { Card, CardContent } from "@/components/ui/card"
+import { Input } from "@/components/ui/input"
+import { CheckCircle, Mail, Send } from "lucide-react"
 
-export function FinalCTASimple() {
-  const [email, setEmail] = useState("")
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
-  const [message, setMessage] = useState("")
+interface EmailCaptureProps {
+  title?: string
+  description?: string
+  className?: string
+}
 
-  const handleSubmit = async (e: React.FormEvent) => {
+export function FinalCTASimple({ 
+  title = "Join the resistance",
+  description = "Fight for financial freedom. Build censorship-resistant money. No banks, no middlemen.",
+  className = ""
+}: EmailCaptureProps = {}) {
+  const [email, setEmail] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  
+  const handleEmailSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    
-    if (!email || !email.includes("@")) {
-      setStatus("error")
-      setMessage("Please enter a valid email address")
-      return
-    }
-
-    setStatus("loading")
-    
-    try {
-      // Simulate email submission
-      await new Promise(resolve => setTimeout(resolve, 1000))
-      setStatus("success")
-      setMessage("Thanks! We'll keep you updated on Ergo developments.")
-      setEmail("")
-    } catch (error) {
-      setStatus("error")
-      setMessage("Something went wrong. Please try again.")
+    if (email) {
+      setIsSubmitted(true)
+      // Here you would typically send the email to your backend
+      console.log('Email submitted:', email)
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setEmail('')
+      }, 3000)
     }
   }
 
   return (
-    <section className="py-20 bg-gradient-to-br from-neutral-950 via-black to-neutral-900 relative overflow-hidden">
-      {/* Background effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-orange-500/5 rounded-full blur-[120px]"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-80 h-80 bg-orange-400/8 rounded-full blur-[100px]"></div>
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-radial from-orange-500/3 to-transparent rounded-full"></div>
-      </div>
-      
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-          <span className="text-white">Join the</span> <span className="text-orange-400">resistance</span>
-        </h2>
+    <section className={`py-20 px-4 ${className}`}>
+      <div className="max-w-5xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+        >
+          <Card className="bg-black/80 border-white/10 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 backdrop-blur-sm rounded-3xl">
+            <CardContent className="p-12 text-center">
+              <div className="mb-8">
+                <div className="inline-flex items-center gap-4 mb-6">
+                  <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
+                </div>
+                <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+                  {description}
+                </p>
+              </div>
 
-        <p className="text-lg md:text-xl text-gray-400 mb-8 max-w-3xl mx-auto leading-relaxed">
-          Fight for financial freedom. Build censorship-resistant money. No banks, no middlemen.
-        </p>
-
-        {/* Email capture form */}
-        <form onSubmit={handleSubmit} className="max-w-lg mx-auto mb-8">
-          <div className="flex flex-col sm:flex-row gap-3 p-1 bg-neutral-900/60 backdrop-blur-sm border border-neutral-700 rounded-xl shadow-2xl">
-            <input
-              type="email"
-              placeholder="Enter your email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="flex-1 px-6 py-4 bg-transparent text-white placeholder-gray-400 focus:outline-none text-base"
-              disabled={status === "loading"}
-            />
-            <CyberButton
-              type="submit"
-              disabled={status === "loading"}
-              className="px-6 py-4 bg-orange-500 text-black hover:bg-transparent hover:text-orange-500 hover:border-orange-500 font-mono uppercase tracking-wider border-2 border-orange-500 font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2 focus:ring-offset-black transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed whitespace-nowrap h-full"
-            >
-              {status === "loading" ? "..." : "Join the resistance"}
-            </CyberButton>
-          </div>
-          
-          {message && (
-            <p className={`mt-4 text-sm text-center ${
-              status === "success" ? "text-green-400" : "text-red-400"
-            }`}>
-              {message}
-            </p>
-          )}
-        </form>
-
-
-
+              {isSubmitted ? (
+                <div className="bg-green-500/20 border border-green-500/50 rounded-xl p-6 mb-6">
+                  <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
+                  <p className="text-green-400 font-semibold">Thank you for subscribing!</p>
+                  <p className="text-gray-300 text-sm">You'll receive updates about the Ergo community.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto mb-8">
+                  <div className="flex gap-3">
+                    <Input
+                      type="email"
+                      placeholder="Enter your email address"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                      className="flex-1 bg-black/60 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400/50 focus:ring-orange-400/20 rounded-xl"
+                      required
+                    />
+                    <Button
+                      type="submit"
+                      className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 rounded-xl border border-orange-500/50 transition-all duration-300"
+                    >
+                      <Send className="w-4 h-4 mr-2" />
+                      Subscribe
+                    </Button>
+                  </div>
+                </form>
+              )}
+            </CardContent>
+          </Card>
+        </motion.div>
       </div>
     </section>
   )
