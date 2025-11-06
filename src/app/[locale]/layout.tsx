@@ -9,6 +9,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { organizationSchema, websiteSchema } from "@/lib/schema-generator";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { siteConfig } from "@/config/site-config";
 
 
 interface LocaleLayoutProps {
@@ -28,7 +29,6 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
   const localeConfig = getLocaleConfig(locale);
 
   return {
-    metadataBase: new URL('https://ergoblockchain.org'),
     title: {
       default: t('defaultTitle'),
       template: `%s | ${localeConfig.name} - Ergo Platform`

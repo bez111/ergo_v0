@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css"
+import { siteConfig } from "@/config/site-config";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -17,7 +18,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://ergoblockchain.org'),
+  metadataBase: new URL(siteConfig.siteUrl),
   title: {
     default: "Ergo Platform - Resilient Blockchain for Contractual Money",
     template: "%s | Ergo Platform"
@@ -46,7 +47,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://ergoblockchain.org',
+    url: siteConfig.siteUrl,
     siteName: 'Ergo Platform',
     title: 'Ergo Platform - Resilient Blockchain for Contractual Money',
     description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     creator: '@ergoplatformorg',
   },
   alternates: {
-    canonical: 'https://ergoblockchain.org',
+    canonical: siteConfig.siteUrl,
     languages: {
       'en': 'https://ergoblockchain.org',
       'ru': 'https://ergoblockchain.org/ru',
@@ -98,6 +99,9 @@ export const metadata: Metadata = {
   verification: {
     google: 'your-google-verification-code',
     yandex: 'your-yandex-verification-code',
+  },
+  icons: {
+    icon: "/logo-ergo.svg", // <- путь из public/
   },
 }
 
