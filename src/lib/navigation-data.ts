@@ -142,6 +142,11 @@ export const mainNavItems = [
     description: "Educational resources and learning materials",
     children: [
       {
+        title: "Ergo in 5 Minutes",
+        href: "/learn/ergo-in-5-minutes",
+        description: "Quick introduction to Ergo: fair launch, eUTXO, Sigma protocols, and DeFi ecosystem",
+      },
+      {
         title: "Learn ErgoScript",
         href: "/learn/ergoscript",
         description: "Comprehensive ErgoScript tutorial series from beginner to expert level",
