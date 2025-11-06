@@ -4,7 +4,9 @@ export const metadata: Metadata = {
   title: "Ergo Technology — eUTXO, ErgoScript, Autolykos | ergoblockchain.org",
   description:
     "Ergo tech: eUTXO, ErgoScript, Autolykos PoW, Storage Rent, Sigma Protocols, NIPoPoWs, and more. How Ergo differs from account-based systems.",
-  alternates: { canonical: "https://ergoblockchain.org/technology" },
+  alternates: { 
+    canonical: "https://ergoblockchain.org/technology" 
+  },
   openGraph: {
     type: "website",
     url: "https://ergoblockchain.org/technology",
