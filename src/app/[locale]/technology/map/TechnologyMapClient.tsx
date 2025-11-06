@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { useTranslations } from "next-intl"
 import { Button } from "@/components/ui/button"
@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
+import Script from "next/script"
 import {
   ChevronRight,
   ChevronDown,
@@ -344,38 +345,119 @@ const dappPatterns = [
 
 const faqItems = [
   {
-    question: "How does eUTXO differ from Bitcoin's UTXO model?",
-    answer: "eUTXO extends Bitcoin's UTXO with registers (R0-R9) for data storage and ErgoTree guard scripts for programmable spending conditions. This enables smart contracts while maintaining UTXO's security and parallelism benefits."
+    id: "eutxo-vs-utxo",
+    q: "How does eUTXO differ from Bitcoin's UTXO model?",
+    a: "eUTXO extends Bitcoin's UTXO with registers (R0-R9) for data storage and ErgoTree guard scripts for programmable spending conditions. This enables smart contracts while maintaining UTXO's security and parallelism benefits."
   },
   {
-    question: "What makes Sigma protocols special for blockchain?",
-    answer: "Sigma protocols provide zero-knowledge proofs without trusted setup, enabling privacy features like ring signatures and confidential transactions. They're built directly into ErgoScript, making advanced cryptography accessible to developers."
+    id: "sigma-protocols",
+    q: "What makes Sigma protocols special for blockchain?",
+    a: "Sigma protocols provide zero-knowledge proofs without trusted setup, enabling privacy features like ring signatures and confidential transactions. They're built directly into ErgoScript, making advanced cryptography accessible to developers."
   },
   {
-    question: "Why does Ergo need Storage Rent?",
-    answer: "Storage Rent prevents blockchain bloat by recycling fees from unused UTXOs back to miners. This ensures long-term sustainability and predictable storage costs, solving the 'state explosion' problem other blockchains face."
+    id: "storage-rent",
+    q: "Why does Ergo need Storage Rent?",
+    a: "Storage Rent prevents blockchain bloat by recycling fees from unused UTXOs back to miners. This ensures long-term sustainability and predictable storage costs, solving the 'state explosion' problem other blockchains face."
   },
   {
-    question: "How do light clients trust the network without full validation?",
-    answer: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) provide cryptographically secure proofs that a transaction is included in the blockchain. Light clients can verify these logarithmic-size proofs without downloading the entire chain."
+    id: "light-clients",
+    q: "How do light clients trust the network without full validation?",
+    a: "NIPoPoWs (Non-Interactive Proofs of Proof-of-Work) provide cryptographically secure proofs that a transaction is included in the blockchain. Light clients can verify these logarithmic-size proofs without downloading the entire chain."
   },
   {
-    question: "What are the main dApp development patterns on Ergo?",
-    answer: "Key patterns include: Order books for DEXs using box chaining, Oracle pools for data feeds with consensus mechanisms, DAO governance with voting and quorum logic, and Multi-stage contracts for complex workflows."
+    id: "dapp-patterns",
+    q: "What are the main dApp development patterns on Ergo?",
+    a: "Key patterns include: Order books for DEXs using box chaining, Oracle pools for data feeds with consensus mechanisms, DAO governance with voting and quorum logic, and Multi-stage contracts for complex workflows."
   },
   {
-    question: "How does Autolykos ensure decentralization?",
-    answer: "Autolykos is memory-hard and ASIC-resistant, favoring consumer GPUs over specialized hardware. This keeps mining accessible to individuals and prevents centralization in ASIC farms."
+    id: "autolykos-decentralization",
+    q: "How does Autolykos ensure decentralization?",
+    a: "Autolykos is memory-hard and ASIC-resistant, favoring consumer GPUs over specialized hardware. This keeps mining accessible to individuals and prevents centralization in ASIC farms."
   },
   {
-    question: "What are Ergo's scalability characteristics?",
-    answer: "eUTXO enables parallel transaction processing, NIPoPoWs provide efficient light clients, and Storage Rent prevents state bloat. Layer 2 solutions can leverage these properties for further scaling."
+    id: "scalability",
+    q: "What are Ergo's scalability characteristics?",
+    a: "eUTXO enables parallel transaction processing, NIPoPoWs provide efficient light clients, and Storage Rent prevents state bloat. Layer 2 solutions can leverage these properties for further scaling."
   },
   {
-    question: "How do native tokens work without smart contracts?",
-    answer: "Native tokens are built into the protocol layer, stored directly in UTXO boxes. This provides efficient creation, transfer, and management without requiring smart contract deployment or execution."
+    id: "native-tokens",
+    q: "How do native tokens work without smart contracts?",
+    a: "Native tokens are built into the protocol layer, stored directly in UTXO boxes. This provides efficient creation, transfer, and management without requiring smart contract deployment or execution."
   }
 ]
+
+// FAQ Section Component
+function FAQSection() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  
+  // Helper to convert React nodes to plain text for JSON-LD
+  function nodeToPlainText(node: React.ReactNode): string {
+    if (node === null || node === undefined || node === false) return ""
+    if (typeof node === "string" || typeof node === "number") return String(node)
+    if (Array.isArray(node)) return node.map(nodeToPlainText).join(" ")
+    if (typeof node === "object" && "props" in (node as any)) {
+      const { children } = (node as any).props ?? {}
+      return nodeToPlainText(children)
+    }
+    return ""
+  }
+
+  const faqJsonLd = useMemo(() => {
+    const items = faqItems.map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: typeof f.a === "string" ? f.a : nodeToPlainText(f.a) },
+    }))
+    return { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: items }
+  }, [])
+
+  return (
+    <motion.section 
+      aria-labelledby="faq-heading" 
+      className="max-w-5xl mx-auto py-16 px-4"
+      variants={{
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.6 } }
+      }}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+    >
+      <Script id="tech-map-faq-jsonld" type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <h2 id="faq-heading" className="text-4xl font-bold text-center mb-8 text-white">
+        Frequently Asked Questions
+      </h2>
+      <div className="space-y-4">
+        {faqItems.map((faq, index) => (
+          <Card key={faq.id} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
+            <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
+              <CollapsibleTrigger asChild>
+                <button className="w-full">
+                  <CardContent className="p-6 flex items-center justify-between hover:bg-black/70 transition-colors">
+                    <h3 className="text-lg font-semibold text-left text-white">{faq.q}</h3>
+                    <ChevronDown 
+                      aria-hidden="true" 
+                      className={`w-5 h-5 text-neutral-400 transition-transform ${
+                        openFAQ === index ? "rotate-180" : ""
+                      }`} 
+                    />
+                  </CardContent>
+                </button>
+              </CollapsibleTrigger>
+              <CollapsibleContent>
+                <CardContent className="px-6 pb-6 pt-0">
+                  <div className="text-neutral-300 leading-relaxed [&>a]:text-orange-400 [&>a]:underline [&>a]:hover:text-orange-300 [&>b]:text-white [&>br]:mb-2">
+                    {faq.a}
+                  </div>
+                </CardContent>
+              </CollapsibleContent>
+            </Collapsible>
+          </Card>
+        ))}
+      </div>
+    </motion.section>
+  )
+}
 
 const glossaryTerms = [
   { term: "eUTXO", definition: "Extended UTXO model with registers and programmable spending conditions" },
@@ -395,7 +477,6 @@ export default function TechnologyMapClient() {
   const [activeCategory, setActiveCategory] = useState<string>("all")
   const [selectedNode, setSelectedNode] = useState<TechnologyNode | null>(null)
   const [activeTab, setActiveTab] = useState("overview")
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   const categories = [
     { id: "all", name: t("categories.all"), icon: Sparkles },
@@ -777,48 +858,7 @@ export default function TechnologyMapClient() {
         </motion.section>
 
         {/* FAQ Section */}
-        <motion.section 
-          id="faq"
-          variants={itemVariants} 
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.2 }}
-          className="py-16 px-4 motion-reduce:transform-none"
-        >
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-8 text-white">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-4">
-              {faqItems.map((faq, index) => (
-                <Card key={index} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl">
-                  <Collapsible open={openFAQ === index} onOpenChange={(open) => setOpenFAQ(open ? index : null)}>
-                    <CollapsibleTrigger asChild>
-                      <button className="w-full">
-                        <CardContent className="p-6 flex items-center justify-between hover:bg-black/70 transition-colors">
-                          <h3 className="text-lg font-semibold text-left text-white">{faq.question}</h3>
-                          <ChevronDown 
-                            aria-hidden="true" 
-                            className={`w-5 h-5 text-neutral-400 transition-transform ${
-                              openFAQ === index ? "rotate-180" : ""
-                            }`} 
-                          />
-                        </CardContent>
-                      </button>
-                    </CollapsibleTrigger>
-                    <CollapsibleContent>
-                      <CardContent className="px-6 pb-6 pt-0">
-                        <div className="text-neutral-300 leading-relaxed [&>a]:text-orange-400 [&>a]:underline [&>a]:hover:text-orange-300 [&>b]:text-white [&>br]:mb-2">
-                          {faq.answer}
-                        </div>
-                      </CardContent>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </motion.section>
+        <FAQSection />
 
         {/* Glossary */}
         <motion.section

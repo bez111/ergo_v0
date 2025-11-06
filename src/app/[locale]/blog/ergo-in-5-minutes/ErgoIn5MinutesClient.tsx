@@ -119,6 +119,51 @@ export function ErgoIn5MinutesClient() {
     }
   ]
 
+  const privacyComparison = [
+    {
+      feature: "Privacy Approach",
+      ergo: "Optional, auditable privacy via Sigma protocols",
+      zcash: "Optional privacy (shielded/transparent pools)",
+      monero: "Privacy by default (mandatory)"
+    },
+    {
+      feature: "Zero-Knowledge Proofs",
+      ergo: "Native Sigma protocols (no trusted setup)",
+      zcash: "zk-SNARKs (trusted setup required)",
+      monero: "Ring signatures + stealth addresses"
+    },
+    {
+      feature: "Auditability",
+      ergo: "Selective disclosure - auditable when needed",
+      zcash: "Viewing keys for compliance",
+      monero: "View keys for specific transactions"
+    },
+    {
+      feature: "Transaction Privacy",
+      ergo: "Amounts, recipients can be hidden (optional)",
+      zcash: "Fully shielded or transparent",
+      monero: "All transactions private by default"
+    },
+    {
+      feature: "Compliance Features",
+      ergo: "Built-in selective disclosure for regulations",
+      zcash: "Viewing keys, memo fields",
+      monero: "Limited compliance tools"
+    },
+    {
+      feature: "Smart Contracts",
+      ergo: "Full smart contract support with privacy",
+      zcash: "Limited programmability",
+      monero: "No smart contracts"
+    },
+    {
+      feature: "Performance Impact",
+      ergo: "Minimal when privacy not used",
+      zcash: "Higher for shielded transactions",
+      monero: "Always higher due to mandatory privacy"
+    }
+  ]
+
   const faqItems = [
     {
       question: "What is the Ergo blockchain?",
@@ -156,74 +201,70 @@ export function ErgoIn5MinutesClient() {
 
   return (
     <BackgroundWrapper>
-      <div className="container mx-auto px-4 py-16">
+      <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           
-          {/* Hero Section */}
+          {/* Hero Section - Compact */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-10"
           >
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <Clock className="w-6 h-6 text-orange-400" />
-              <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <Clock className="w-5 h-5 text-orange-400" />
+              <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30 text-sm">
                 5 min read
               </Badge>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-white">
               Ergo in 5 Minutes: Why It Matters & How It Works
             </h1>
             
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               A fair-launch PoW chain that fuses Bitcoin-grade security with eUTXO smart contracts and Sigma-protocol privacy.
             </p>
           </motion.div>
 
-          {/* TL;DR Section */}
+          {/* TL;DR Section - Compact */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-16"
+            className="mb-12"
           >
-            <h2 className="text-3xl font-bold text-center mb-8 text-white">
+            <h2 className="text-2xl font-bold text-center mb-6 text-white">
               TL;DR
             </h2>
             
-            <div className="grid gap-6">
+            <div className="grid gap-2">
               {tldrItems.map((item, index) => (
                 <motion.div
                   key={item.title}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
+                  transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
-                  <Card className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
-                    <CardContent className="p-6">
-                      <div className="flex items-start gap-4">
-                        <div className="flex-shrink-0">
-                          <item.icon className="w-8 h-8 text-orange-400" />
+                  <Link href={item.link}>
+                    <Card className="bg-black/80 border border-white/10 rounded-xl hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer">
+                      <CardContent className="p-3">
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0">
+                            <item.icon className="w-5 h-5 text-orange-400" />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-sm font-semibold text-white mb-1">
+                              {item.title}
+                            </h3>
+                            <p className="text-gray-300 text-xs leading-relaxed">
+                              {item.description}
+                            </p>
+                          </div>
                         </div>
-                        <div className="flex-1">
-                          <h3 className="text-lg font-semibold text-white mb-2">
-                            {item.title}
-                          </h3>
-                          <p className="text-gray-300 mb-3">
-                            {item.description}
-                          </p>
-                          <Link 
-                            href={item.link}
-                            className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 transition-colors text-sm"
-                          >
-                            Learn more <ExternalLink className="w-3 h-3" />
-                          </Link>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                      </CardContent>
+                    </Card>
+                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -342,6 +383,77 @@ export function ErgoIn5MinutesClient() {
                     </p>
                   </div>
                 </div>
+
+                {/* Privacy Comparison Table */}
+                <div className="mt-12 mb-8">
+                  <h3 className="text-2xl font-bold text-white mb-6 text-center">
+                    Privacy Features: Ergo vs Leading Privacy Coins
+                  </h3>
+                  
+                  <div className="overflow-x-auto">
+                    <div className="bg-black/80 border border-white/10 rounded-3xl p-6">
+                      <div className="min-w-full">
+                        {/* Table Header */}
+                        <div className="grid grid-cols-4 gap-4 mb-4 pb-4 border-b border-white/20">
+                          <div className="font-semibold text-white">Feature</div>
+                          <div className="font-semibold text-orange-400">Ergo (Sigma)</div>
+                          <div className="font-semibold text-yellow-400">Zcash (ZEC)</div>
+                          <div className="font-semibold text-purple-400">Monero (XMR)</div>
+                        </div>
+                        
+                        {/* Table Rows */}
+                        {privacyComparison.map((row, index) => (
+                          <motion.div
+                            key={row.feature}
+                            initial={{ opacity: 0, x: -20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.4, delay: index * 0.05 }}
+                            className="grid grid-cols-4 gap-4 py-3 border-b border-white/10 last:border-b-0"
+                          >
+                            <div className="font-medium text-white text-sm">{row.feature}</div>
+                            <div className="text-orange-300 text-sm">{row.ergo}</div>
+                            <div className="text-gray-300 text-sm">{row.zcash}</div>
+                            <div className="text-gray-300 text-sm">{row.monero}</div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div className="mt-6 bg-orange-500/10 border border-orange-500/30 rounded-2xl p-4">
+                    <p className="text-orange-100 text-sm leading-relaxed">
+                      <strong className="text-orange-400">Key Advantage:</strong> Ergo's Sigma protocols provide the best of both worlds - strong privacy when needed, full auditability for compliance, and seamless integration with smart contracts. Unlike mandatory privacy coins, Ergo lets users choose their privacy level while maintaining regulatory compatibility.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Future Section */}
+              <div className="mb-16">
+                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                  <ArrowRight className="w-8 h-8 text-orange-400" />
+                  Towards A Sustainable Future
+                </h2>
+                
+                <div className="bg-black/60 border border-white/20 rounded-3xl p-8 space-y-6">
+                  <p className="text-gray-300 leading-relaxed">
+                    Ergo paved the way for the future right from the start, prioritizing infrastructure and features that would ensure long-term stability and sustainability.
+                  </p>
+                  
+                  <p className="text-gray-300 leading-relaxed">
+                    Chief among these has been the nature of Ergo's mining ecosystem. While Ergo is based on proof of work, like Bitcoin, it uses the memory-hard Autolykos algorithm, making it far more ASIC-resistant and energy efficient than Bitcoin. This also ensures greater accessibility, meaning more users can join the network without expensive specialist hardware, ensuring a high and ongoing level of decentralization.
+                  </p>
+                  
+                  <div className="bg-green-500/10 border border-green-500/30 rounded-2xl p-6">
+                    <p className="text-green-100 leading-relaxed">
+                      <strong className="text-green-400">Storage Rent Innovation:</strong> One of Ergo's most noteworthy features is storage rent. This slowly recycles coins that have not been moved in over four years, bringing lost ERG back into circulation and increasing revenues for miners. This "demurrage" acts as a small tax on dormant accounts, but can easily be avoided by moving coins every few years.
+                    </p>
+                  </div>
+                  
+                  <p className="text-gray-300 leading-relaxed">
+                    Finally, Ergo's development team keeps the same academic rigor with which it started out, meaning that future upgrades are thoroughly researched before implementation, ensuring the best possible technical foundation for the network.
+                  </p>
+                </div>
               </div>
 
               {/* Comparison Table */}
@@ -378,34 +490,6 @@ export function ErgoIn5MinutesClient() {
                       ))}
                     </div>
                   </div>
-                </div>
-              </div>
-
-              {/* Future Section */}
-              <div className="mb-16">
-                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
-                  <ArrowRight className="w-8 h-8 text-orange-400" />
-                  Towards A Sustainable Future
-                </h2>
-                
-                <div className="bg-black/60 border border-white/20 rounded-3xl p-8 space-y-6">
-                  <p className="text-gray-300 leading-relaxed">
-                    Ergo paved the way for the future right from the start, prioritizing infrastructure and features that would ensure long-term stability and sustainability.
-                  </p>
-                  
-                  <p className="text-gray-300 leading-relaxed">
-                    Chief among these has been the nature of Ergo's mining ecosystem. While Ergo is based on proof of work, like Bitcoin, it uses the memory-hard Autolykos algorithm, making it far more ASIC-resistant and energy efficient than Bitcoin. This also ensures greater accessibility, meaning more users can join the network without expensive specialist hardware, ensuring a high and ongoing level of decentralization.
-                  </p>
-                  
-                  <div className="bg-green-500/10 border border-green-500/30 rounded-2xl p-6">
-                    <p className="text-green-100 leading-relaxed">
-                      <strong className="text-green-400">Storage Rent Innovation:</strong> One of Ergo's most noteworthy features is storage rent. This slowly recycles coins that have not been moved in over four years, bringing lost ERG back into circulation and increasing revenues for miners. This "demurrage" acts as a small tax on dormant accounts, but can easily be avoided by moving coins every few years.
-                    </p>
-                  </div>
-                  
-                  <p className="text-gray-300 leading-relaxed">
-                    Finally, Ergo's development team keeps the same academic rigor with which it started out, meaning that future upgrades are thoroughly researched before implementation, ensuring the best possible technical foundation for the network.
-                  </p>
                 </div>
               </div>
 

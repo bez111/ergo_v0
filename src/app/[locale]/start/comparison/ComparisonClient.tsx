@@ -98,9 +98,6 @@ const enhancedComparison = [
 ]
 
 // Corporate brand-accent styling - neutral content with brand headers
-const getFeatureCellStyle = (item: { value: string; color: string; bg: string }) => {
-  return `${item.color} ${item.bg} px-4 py-3 text-sm font-medium text-center`
-}
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -552,69 +549,49 @@ export default function ComparisonClient() {
               Blockchain <span className="text-orange-400">Platform</span> Comparison
             </h2>
             </motion.div>
-            <motion.div 
-              variants={itemVariants}
-              className="bg-black/80 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300"
-            >
-              <div className="overflow-x-auto">
-                <table className="w-full min-w-[900px] bg-transparent">
-                  <caption className="text-2xl font-bold text-white mb-6 p-6 text-center">
-                    Comparison (EN): Ergo Vs BTC/ETH/ADA/SOL/SUI
-                  </caption>
-                  <thead>
-                    <tr className="border-b border-white/10">
-                      <th scope="col" className="text-left p-4 text-white font-semibold bg-black/60">Parameter</th>
-                      <th scope="col" className="text-center p-4 text-orange-400 font-semibold bg-black/60 border-b-2 border-orange-400/40">Ergo</th>
-                      <th scope="col" className="text-center p-4 text-[#F7931A] font-semibold bg-black/60 border-b-2 border-[#F7931A]/40">Bitcoin</th>
-                      <th scope="col" className="text-center p-4 text-[#627EEA] font-semibold bg-black/60 border-b-2 border-[#627EEA]/40">Ethereum</th>
-                      <th scope="col" className="text-center p-4 text-[#2F6DFE] font-semibold bg-black/60 border-b-2 border-[#2F6DFE]/40">Cardano</th>
-                      <th scope="col" className="text-center p-4 text-[#14F195] font-semibold bg-black/60 border-b-2 border-[#14F195]/40">Solana</th>
-                      <th scope="col" className="text-center p-4 text-[#6FBCF0] font-semibold bg-black/60 border-b-2 border-[#6FBCF0]/40">Sui</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                                          {enhancedComparison.map((row, index) => (
-                        <tr key={row.feature} className="border-b border-white/10 hover:bg-white/5 transition-colors">
-                          <td className="text-left p-4 font-medium text-white bg-black/40">{row.feature}</td>
-                          <td className="p-0 bg-black/40">
-                            <div className={getFeatureCellStyle(row.ergo)}>
-                              {row.ergo.value}
-                            </div>
-                          </td>
-                          <td className="p-0 bg-black/40">
-                            <div className={getFeatureCellStyle(row.bitcoin)}>
-                              {row.bitcoin.value}
-                            </div>
-                          </td>
-                          <td className="p-0 bg-black/40">
-                            <div className={getFeatureCellStyle(row.ethereum)}>
-                              {row.ethereum.value}
-                            </div>
-                          </td>
-                          <td className="p-0 bg-black/40">
-                            <div className={getFeatureCellStyle(row.cardano)}>
-                              {row.cardano.value}
-                            </div>
-                          </td>
-                          <td className="p-0 bg-black/40">
-                            <div className={getFeatureCellStyle(row.solana)}>
-                              {row.solana.value}
-                            </div>
-                          </td>
-                          <td className="p-0 bg-black/40">
-                            <div className={getFeatureCellStyle(row.sui)}>
-                              {row.sui.value}
-                            </div>
-                          </td>
+            <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 mb-12 overflow-hidden">
+              <CardHeader>
+                <CardTitle className="text-white text-center">
+                  Blockchain Platform Comparison: Ergo vs BTC/ETH/ADA/SOL/SUI
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="p-0">
+                <div className="overflow-x-auto">
+                  <table className="w-full text-sm min-w-[900px]">
+                    <caption className="sr-only">Platform comparison</caption>
+                    <thead>
+                      <tr className="border-b border-neutral-700">
+                        <th className="text-left p-4 font-semibold text-orange-400">Feature</th>
+                        <th className="text-left p-4 font-semibold text-orange-400">Ergo</th>
+                        <th className="text-left p-4 font-semibold text-[#F7931A]">Bitcoin</th>
+                        <th className="text-left p-4 font-semibold text-[#627EEA]">Ethereum</th>
+                        <th className="text-left p-4 font-semibold text-[#2F6DFE]">Cardano</th>
+                        <th className="text-left p-4 font-semibold text-[#14F195]">Solana</th>
+                        <th className="text-left p-4 font-semibold text-[#6FBCF0]">Sui</th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-neutral-300">
+                      {enhancedComparison.map((row, index) => (
+                        <tr key={row.feature} className="border-b border-neutral-800 hover:bg-neutral-800/30">
+                          <th scope="row" className="p-4 font-medium text-white">{row.feature}</th>
+                          <td className="p-4 text-orange-400">{row.ergo.value}</td>
+                          <td className="p-4">{row.bitcoin.value}</td>
+                          <td className="p-4">{row.ethereum.value}</td>
+                          <td className="p-4">{row.cardano.value}</td>
+                          <td className="p-4">{row.solana.value}</td>
+                          <td className="p-4">{row.sui.value}</td>
                         </tr>
                       ))}
-                  </tbody>
-                </table>
-                <p className="text-xs text-neutral-400 mt-6 p-6 bg-black/20">
-                  Comprehensive comparison of major blockchain platforms including consensus mechanisms, state models, smart contract capabilities, and distinctive features. Updated: {isoDate}.
-                </p>
-              </div>
-            </motion.div>
+                    </tbody>
+                  </table>
+                </div>
+                <div className="p-6 bg-black/20 border-t border-neutral-700">
+                  <p className="text-xs text-neutral-400 text-center">
+                    Comprehensive comparison of major blockchain platforms including consensus mechanisms, state models, smart contract capabilities, and distinctive features. Updated: {isoDate}.
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
           </motion.section>
 
           {/* Features Grid */}

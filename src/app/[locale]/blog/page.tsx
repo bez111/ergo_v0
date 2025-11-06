@@ -265,14 +265,12 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           {/* Enhanced FEATURED + TRENDING SECTION */}
           <section className="mb-12 animate-fade-in" aria-labelledby="content-heading">
             <h2 id="content-heading" className="sr-only">Featured article and trending posts</h2>
-            <div className="flex flex-col lg:flex-row gap-8">
-              <div className="flex-1" role="region" aria-labelledby="featured-heading">
+            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 lg:items-stretch">
+              <div role="region" aria-labelledby="featured-heading">
                 <h3 id="featured-heading" className="sr-only">Featured article</h3>
-                <div className="relative min-h-[400px]">
-                  <BlogHero featuredPost={featuredPost} />
-                </div>
+                <BlogHero featuredPost={featuredPost} />
               </div>
-              <aside className="w-full lg:w-80" aria-labelledby="trending" role="complementary">
+              <aside aria-labelledby="trending" role="complementary">
                 <TrendingNow posts={trendingPosts.slice(0, 3)} categories={categories.map(cat => ({ id: cat, name: cat }))} />
               </aside>
             </div>

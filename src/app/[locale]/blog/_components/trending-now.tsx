@@ -28,34 +28,35 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
 
   return (
     <aside 
-      className="flex flex-col w-full lg:w-80" 
+      className="flex flex-col w-full h-full" 
       aria-labelledby="trending"
       aria-label="Trending Now"
     >
-      <h2 id="trending" className="text-3xl font-bold mb-6 text-white">
+      <h2 id="trending" className="text-2xl font-bold mb-6 text-white">
         Trending Now
       </h2>
-      <ul className="space-y-4" role="list">
+      <ul className="space-y-4 flex-1 flex flex-col" role="list">
         {posts.map((p, index) => (
           <motion.li
             key={p.id}
             initial={{ opacity: 0, y: 8 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
+            className="flex-1"
           >
             <Link
               href={`/blog/${p.slug}`}
-              className="flex items-start gap-4 rounded-2xl bg-black/80 border border-white/10 p-5 hover:bg-black/90 transition-colors duration-200"
+              className="flex items-start gap-3 rounded-2xl bg-black/80 border border-white/10 p-4 hover:bg-black/90 transition-colors duration-200 h-full"
             >
               {/* Avatar/Initial */}
-              <div className="h-12 w-12 rounded-2xl bg-neutral-800 grid place-content-center text-xl font-bold text-neutral-200 shrink-0">
+              <div className="h-10 w-10 rounded-xl bg-neutral-800 grid place-content-center text-lg font-bold text-neutral-200 shrink-0">
                 {p.image ? (
                   <Image 
                     src={p.image} 
                     alt={`Article image for ${p.title}`} 
-                    width={48}
-                    height={48}
-                    className="object-cover w-full h-full rounded-2xl" 
+                    width={40}
+                    height={40}
+                    className="object-cover w-full h-full rounded-xl" 
                     loading="lazy"
                   />
                 ) : (
@@ -72,7 +73,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                 )}
                 
                 {/* Title - 2 lines max */}
-                <div className="text-lg md:text-xl font-semibold text-neutral-100 line-clamp-2 leading-tight">
+                <div className="text-base font-semibold text-neutral-100 line-clamp-2 leading-tight">
                   {p.title}
                 </div>
                 

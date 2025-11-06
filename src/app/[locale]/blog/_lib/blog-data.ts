@@ -80,6 +80,25 @@ export const authors: Record<string, Author> = {
 
 export const blogPosts: BlogPost[] = [
   {
+    id: 'ergo-in-5-minutes',
+    slug: 'ergo-in-5-minutes',
+    title: 'Ergo in 5 Minutes: Why It Matters & How It Works',
+    excerpt: 'Quick introduction to Ergo: fair launch, eUTXO, Sigma protocols, and DeFi ecosystem. Proof-of-Work blockchain with privacy and security.',
+    date: '2024-01-01',
+    lastUpdated: new Date().toISOString().split('T')[0],
+    author: authors['ergo-team'],
+    category: 'Technology',
+    readTime: 5,
+    wordCount: 1500,
+    image: '/og/ergo-5-minutes.png',
+    tags: ['Introduction', 'eUTXO', 'Sigma Protocols', 'Fair Launch'],
+    featured: true,
+    trending: true,
+    difficulty: 'Beginner',
+    views: 5000,
+    shares: 300
+  },
+  {
     id: '1',
     slug: 'ergo-defi-revolution',
     title: 'The DeFi Revolution: How Ergo is Building the Future of Finance',
