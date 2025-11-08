@@ -45,15 +45,15 @@ export function SocialProofSection() {
   const stats = [
     {
       icon: Users,
-      value: "50K+",
-      label: "Active Community",
+      value: "Active",
+      label: "Community",
       description: "Developers, miners, and users worldwide"
     },
     {
       icon: TrendingUp,
-      value: "$150M+",
-      label: "Market Cap",
-      description: "Growing ecosystem value"
+      value: "Growing",
+      label: "Ecosystem",
+      description: "Expanding ecosystem value"
     },
     {
       icon: Activity,
@@ -63,9 +63,9 @@ export function SocialProofSection() {
     },
     {
       icon: DollarSign,
-      value: "$50M+",
-      label: "Total Value Locked",
-      description: "In DeFi applications"
+      value: "Secure",
+      label: "DeFi",
+      description: "Proven smart contract security"
     }
   ]
 

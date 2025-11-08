@@ -255,17 +255,6 @@ export function BlogAdvancedCategories({
           })}
         </div>
 
-        {/* SEE MORE + Button (like Solana) */}
-        <div className="absolute right-0 top-0 bg-gradient-to-l from-black to-transparent pl-8">
-          <Button
-            variant="ghost"
-            size="sm"
-            className="text-neutral-400 hover:text-white"
-            onClick={() => {/* Open modal with all categories */}}
-          >
-            SEE MORE +
-          </Button>
-        </div>
       </div>
 
       {/* Active Subcategory Display */}

@@ -49,8 +49,8 @@ export function MobileNav({ items }: MobileNavProps) {
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>
-        <Button variant="ghost" size="icon" className="md:hidden">
-          <Menu className="h-5 w-5" />
+        <Button variant="ghost" size="icon" className="md:hidden h-11 w-11">
+          <Menu className="h-6 w-6" />
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
@@ -66,17 +66,17 @@ export function MobileNav({ items }: MobileNavProps) {
               item.children ? (
                 <Accordion key={item.title} type="single" collapsible className="w-full">
                   <AccordionItem value={item.title} className="border-b-0">
-                    <AccordionTrigger className="py-2 text-base">{getNavTitle(item.title)}</AccordionTrigger>
+                    <AccordionTrigger className="py-3 text-base min-h-[44px]">{getNavTitle(item.title)}</AccordionTrigger>
                     <AccordionContent>
-                      <div className="flex flex-col space-y-2">
+                      <div className="flex flex-col space-y-1">
                         {item.children.map((child) => (
                           <Link
                             key={child.href}
                             href={child.href}
                             onClick={() => setOpen(false)}
                             className={cn(
-                              "py-1 text-base transition-colors hover:text-foreground/80",
-                              pathname === child.href ? "text-foreground" : "text-foreground/60",
+                              "py-3 px-2 text-base transition-colors hover:text-foreground/80 rounded-md min-h-[44px] flex items-center",
+                              pathname === child.href ? "text-foreground bg-orange-500/10" : "text-foreground/60",
                             )}
                           >
                             {getNavTitle(child.title)}
@@ -92,8 +92,8 @@ export function MobileNav({ items }: MobileNavProps) {
                   href={item.href || "#"}
                   onClick={() => setOpen(false)}
                   className={cn(
-                    "py-2 text-base transition-colors hover:text-foreground/80",
-                    pathname === item.href ? "text-foreground font-medium" : "text-foreground/60",
+                    "py-3 px-2 text-base transition-colors hover:text-foreground/80 rounded-md min-h-[44px] flex items-center",
+                    pathname === item.href ? "text-foreground font-medium bg-orange-500/10" : "text-foreground/60",
                     item.disabled && "opacity-50 pointer-events-none",
                   )}
                 >

@@ -59,7 +59,7 @@ export function Breadcrumbs({
         className={`flex items-center space-x-2 text-sm text-neutral-400 ${className}`}
       >
         {finalItems.map((item, index) => (
-          <div key={item.href} className="flex items-center">
+          <div key={`${item.href}-${index}`} className="flex items-center">
             {index > 0 && (
               <ChevronRight className="w-4 h-4 mx-2" aria-hidden="true" />
             )}

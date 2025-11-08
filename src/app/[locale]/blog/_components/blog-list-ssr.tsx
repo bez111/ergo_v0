@@ -5,8 +5,7 @@ import type { BlogPost } from "../_lib/blog-data"
 
 export default function BlogListSSR({ posts, categories }: { posts: BlogPost[]; categories: { id: string; name: string }[] }) {
   return (
-    <section aria-labelledby="posts-h2">
-      <h2 id="posts-h2" className="text-3xl font-bold text-white mb-8">Latest Articles</h2>
+    <section>
       <ul role="list" className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {posts.map((post, index) => (
           <li 

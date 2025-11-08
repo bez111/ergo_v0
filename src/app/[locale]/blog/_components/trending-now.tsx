@@ -28,7 +28,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
 
   return (
     <aside 
-      className="flex flex-col w-full h-full" 
+      className="flex flex-col w-full h-full overflow-hidden" 
       aria-labelledby="trending"
       aria-label="Trending Now"
     >
@@ -53,7 +53,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                 {p.image ? (
                   <Image 
                     src={p.image} 
-                    alt={`Article image for ${p.title}`} 
+                    alt="" 
                     width={40}
                     height={40}
                     className="object-cover w-full h-full rounded-xl" 
@@ -64,7 +64,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                 )}
               </div>
               
-              <div className="min-w-0 flex-1">
+              <div className="min-w-0 flex-1 overflow-hidden">
                 {/* Category Badge (optional) */}
                 {p.category && (
                   <span className="mb-1 inline-block px-2.5 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
@@ -73,7 +73,7 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
                 )}
                 
                 {/* Title - 2 lines max */}
-                <div className="text-base font-semibold text-neutral-100 line-clamp-2 leading-tight">
+                <div className="text-base font-semibold text-neutral-100 line-clamp-2 leading-tight break-words">
                   {p.title}
                 </div>
                 

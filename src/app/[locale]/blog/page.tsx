@@ -1,11 +1,7 @@
 // Suspense removed to prevent flashing on page reload
 import { blogPosts, categories } from "./_lib/blog-data"
 import { BlogHero } from "./_components/blog-hero"
-// BlogFiltersEnhanced removed - using BlogClientStable instead
-import BlogListSSR from "./_components/blog-list-ssr"
 import TrendingNow from "./_components/trending-now"
-import { BlogPagination } from "./_components/blog-pagination"
-// Skeleton components removed - not needed without Suspense
 import BlogClientStable from "./_components/blog-client-stable"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
@@ -28,7 +24,7 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   const baseUrl = `${siteUrl}/blog`
   const title = page > 1 ? `Latest News & Insights — Page ${page}` : `Latest News & Insights — Ergo Blog`
 
-  const allowed = new Set(["page"]) // whitelist
+  const allowed = new Set(["page", "cat", "sort", "q"]) // whitelist
   const hasJunk = Object.keys(sp).some((k) => !allowed.has(k))
 
   const twitterHandle = siteConfig.twitterHandle
@@ -61,7 +57,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
   const pageParam = typeof sp['page'] === "string" ? sp['page'] : Array.isArray(sp['page']) ? sp['page'][0] : undefined
   const currentPage = Math.max(1, Number(pageParam ?? 1) || 1)
 
-  const allowed = new Set(["page"]) // whitelist
+  const allowed = new Set(["page", "cat", "sort", "q"]) // whitelist
   const hasJunk = Object.keys(sp).some((k) => !allowed.has(k))
 
   // Canonicalize page=1 and strip junk params
@@ -250,7 +246,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       {/* Background Effects */}
       <BackgroundWrapper>
         <main id="main" className="relative z-10" role="main">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8">
 
           {/* Minimal Header - SEO only, visually hidden like Solana */}
           <header className="sr-only" role="banner">
@@ -265,7 +261,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
           {/* Enhanced FEATURED + TRENDING SECTION */}
           <section className="mb-12 animate-fade-in" aria-labelledby="content-heading">
             <h2 id="content-heading" className="sr-only">Featured article and trending posts</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-8 lg:items-stretch">
+            <div className="grid grid-cols-1 lg:grid-cols-[2fr_1fr] gap-6 lg:gap-8 lg:items-stretch">
               <div role="region" aria-labelledby="featured-heading">
                 <h3 id="featured-heading" className="sr-only">Featured article</h3>
                 <BlogHero featuredPost={featuredPost} />
@@ -276,7 +272,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
             </div>
           </section>
 
-          {/* Interactive Filters */}
+          {/* Interactive Filters & Articles */}
           <div className="mb-12 animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <BlogClientStable 
               posts={blogPosts}
@@ -287,30 +283,6 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
               hasMore={hasMore}
             />
           </div>
-
-          {/* Blog Posts List */}
-          <section 
-            aria-labelledby="blog-posts"
-            aria-live="polite"
-            aria-busy="false"
-            className="transition-opacity duration-200 animate-fade-in"
-          >
-            <h2 id="blog-posts" className="sr-only">
-              {currentPage > 1 ? `Blog posts page ${currentPage}` : 'All blog posts'}
-            </h2>
-            
-            <BlogListSSR
-              posts={initialList} 
-              categories={categories.map(cat => ({ id: cat, name: cat }))} 
-            />
-            
-            {/* Pagination component */}
-            <BlogPagination 
-              currentPage={currentPage}
-              totalPages={totalPages}
-              baseUrl="/blog"
-            />
-          </section>
 
         </div>
         </main>

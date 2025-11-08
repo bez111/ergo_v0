@@ -26,8 +26,8 @@ export function generateMetadata(): Metadata {
     twitter: {
       card: "summary_large_image",
       images: [`${origin}/og/ergo-5-minutes.png`],
-      site: "@ergoplatform",
-      creator: "@ergoplatform",
+      site: "@BuildOnErgo",
+      creator: "@BuildOnErgo",
     },
     robots: { index: true, follow: true },
     keywords: [

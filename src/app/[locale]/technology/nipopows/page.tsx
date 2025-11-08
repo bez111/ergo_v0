@@ -217,7 +217,7 @@ export default function NIPOPOWsPage() {
                     <Link href="#what">Learn More</Link>
                   </Button>
                   <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 px-8 py-3 rounded-xl" data-cta="view-docs">
-                    <Link href="https://docs.ergoplatform.com/protocol/nipopows/" target="_blank" rel="noopener noreferrer">View Docs</Link>
+                    <Link href="/api/pdf/documents/Non-Interactive%20Proofs%20of%20Proof-of-Work.pdf" target="_blank" rel="noopener noreferrer">View Docs</Link>
                   </Button>
                 </div>
               </div>

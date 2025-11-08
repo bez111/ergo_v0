@@ -57,6 +57,13 @@ const keyPapers = [
     category: "Privacy",
     icon: Eye,
   },
+  {
+    title: "Non-Interactive Proofs of Proof-of-Work",
+    description: "Foundational research on NIPoPoWs enabling light clients and cross-chain verification.",
+    url: "/api/pdf/documents/Non-Interactive Proofs of Proof-of-Work.pdf",
+    category: "Cryptography",
+    icon: ShieldCheck,
+  },
 ]
 
 const researchCategories = [
@@ -76,6 +83,7 @@ const researchCategories = [
     color: "text-orange-400",
     papers: [
       { title: "ErgoScript & Noninteractive Zero-Knowledge Proofs", url: "/api/pdf/documents/ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs.pdf" },
+      { title: "Non-Interactive Proofs of Proof-of-Work", url: "/api/pdf/documents/Non-Interactive Proofs of Proof-of-Work.pdf" },
       { title: "Zerojoin: Combining Zerocoin and CoinJoin", url: "/api/pdf/documents/Zerojoin- Combining Zerocoin and CoinJoin.pdf" },
       { title: "Succinct, Non-Interactive Share Proofs", url: "/api/pdf/documents/Succinct, Non-Interactive Share Proofs.pdf" },
     ],

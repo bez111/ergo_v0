@@ -907,6 +907,31 @@ export default function ErgoScriptPage() {
               </CardContent>
             </Card>
 
+            {/* Color Legend */}
+            <div className="mt-4 mb-6">
+              <div className="flex flex-wrap justify-center gap-4 md:gap-6">
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-orange-400 rounded-full"></div>
+                  <span className="text-sm text-neutral-300">ErgoScript advantages</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-green-400 rounded-full"></div>
+                  <span className="text-sm text-neutral-300">Strong features</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-yellow-400 rounded-full"></div>
+                  <span className="text-sm text-neutral-300">Moderate capabilities</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <div className="w-4 h-4 bg-red-400 rounded-full"></div>
+                  <span className="text-sm text-neutral-300">Limitations</span>
+                </div>
+              </div>
+              <p className="text-xs text-neutral-400 text-center mt-4">
+                Comprehensive comparison of smart contract languages including platform types, language bases, security features, and development characteristics.
+              </p>
+            </div>
+
                 {/* Code Example Comparison - Simplified */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}

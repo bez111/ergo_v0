@@ -39,11 +39,11 @@ export function WhyErgo() {
             </p>
           </div>
 
-          {/* All Features - Large Cards in 2x3 Grid */}
+          {/* All Features - Large Cards in 2x3 Grid - Mobile Optimized */}
           <div className="w-full max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-stretch">
               {/* 1. FAIR & SECURE */}
-              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
                     <Shield className="h-6 w-6 text-orange-400" />
@@ -57,7 +57,7 @@ export function WhyErgo() {
               </div>
 
               {/* 2. PRIVACY FIRST */}
-              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
                     <Lock className="h-6 w-6 text-orange-400" />
@@ -71,7 +71,7 @@ export function WhyErgo() {
               </div>
 
               {/* 3. POWERFUL & FLEXIBLE */}
-              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
                     <Zap className="h-6 w-6 text-orange-400" />
@@ -85,7 +85,7 @@ export function WhyErgo() {
               </div>
 
               {/* 4. SUSTAINABLE */}
-              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
                     <Database className="h-6 w-6 text-orange-400" />
@@ -99,7 +99,7 @@ export function WhyErgo() {
               </div>
 
               {/* 5. DEVELOPER FRIENDLY */}
-              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
                     <Cpu className="h-6 w-6 text-orange-400" />
@@ -113,7 +113,7 @@ export function WhyErgo() {
               </div>
 
               {/* 6. COMMUNITY DRIVEN */}
-              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
                 <div className="flex items-start gap-4 mb-4">
                   <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
                     <Users className="h-6 w-6 text-orange-400" />
