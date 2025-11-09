@@ -18,16 +18,48 @@ export function EmailCapture({
 }: EmailCaptureProps) {
   const [email, setEmail] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [message, setMessage] = useState('')
   
-  const handleEmailSubmit = (e: React.FormEvent) => {
+  const handleEmailSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    if (email) {
-      setIsSubmitted(true)
-      console.log('Email submitted:', email)
-      setTimeout(() => {
-        setIsSubmitted(false)
+    if (!email) return
+    
+    setIsLoading(true)
+    setMessage('')
+    
+    try {
+      const response = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          email,
+          source: 'blog_email_capture',
+          utmSource: 'blog',
+          utmMedium: 'email_capture',
+          utmCampaign: 'ergo_newsletter'
+        })
+      })
+
+      const result = await response.json()
+
+      if (result.success) {
+        setIsSubmitted(true)
         setEmail('')
-      }, 3000)
+        // Auto-hide success message after 5 seconds
+        setTimeout(() => {
+          setIsSubmitted(false)
+        }, 5000)
+      } else {
+        setMessage(result.error || 'Subscription failed. Please try again.')
+      }
+    } catch (error) {
+      setMessage('Network error. Please try again.')
+      console.error('Email subscription error:', error)
+    } finally {
+      setIsLoading(false)
     }
   }
 
@@ -72,12 +104,22 @@ export function EmailCapture({
                     />
                     <Button
                       type="submit"
-                      className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 rounded-xl border border-orange-500/50 transition-all duration-300"
+                      disabled={isLoading || !email}
+                      className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 rounded-xl border border-orange-500/50 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <Send className="w-4 h-4 mr-2" />
-                      Subscribe
+                      {isLoading ? (
+                        <div className="w-4 h-4 mr-2 animate-spin rounded-full border-2 border-black border-t-transparent" />
+                      ) : (
+                        <Send className="w-4 h-4 mr-2" />
+                      )}
+                      {isLoading ? 'Subscribing...' : 'Subscribe'}
                     </Button>
                   </div>
+                  {message && (
+                    <div className="mt-3 text-sm text-red-400 text-center">
+                      {message}
+                    </div>
+                  )}
                 </form>
               )}
             </CardContent>

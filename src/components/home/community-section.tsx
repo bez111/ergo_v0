@@ -15,7 +15,7 @@ export function CommunitySection() {
       name: "Twitter",
       description: "Follow for updates",
       icon: Twitter,
-      url: "https://twitter.com/ergoplatform",
+      url: "https://x.com/BuildOnErgo",
       color: "bg-[#1DA1F2]/10 text-[#1DA1F2]",
     },
     {

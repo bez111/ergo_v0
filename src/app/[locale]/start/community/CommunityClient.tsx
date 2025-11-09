@@ -63,7 +63,7 @@ const platforms = [
     activity: "Active",
     icon: Users,
     buttonText: "Join Telegram",
-    href: "https://t.me/ergoplatform",
+    href: "https://t.me/BuildOnErgo",
     features: ["Quick Updates", "Mobile Alerts", "Instant News", "Global Community"],
   },
   {
@@ -93,7 +93,7 @@ const platforms = [
     activity: "Daily",
     icon: Twitter,
     buttonText: "Follow @ergoplatform",
-    href: "https://twitter.com/ergoplatform",
+    href: "https://x.com/BuildOnErgo",
     features: ["Breaking News", "Network Status", "Announcements", "Quick Updates"],
   },
   {
