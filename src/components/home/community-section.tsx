@@ -22,7 +22,7 @@ export function CommunitySection() {
       name: "Forum",
       description: "Discuss and propose ideas",
       icon: MessageSquare,
-      url: "https://forum.ergoplatform.org",
+      url: "https://ergoforum.org",
       color: "bg-orange-500/10 text-orange-500",
     },
     {

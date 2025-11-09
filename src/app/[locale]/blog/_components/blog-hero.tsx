@@ -30,14 +30,25 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
 
   return (
     <article
-      className="group rounded-3xl bg-black/90 border border-white/10 p-8 md:p-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,.04)] hover:translate-y-[-2px] transition-transform duration-200 h-full flex flex-col"
+      className="group rounded-3xl bg-black/90 border border-white/10 p-8 md:p-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,.04)] hover:translate-y-[-2px] transition-transform duration-200 h-full flex flex-col relative overflow-hidden"
       itemScope
       itemType="https://schema.org/BlogPosting"
       aria-labelledby={`feat-${post.id}`}
       role="article"
+      style={{
+        backgroundImage: post.image ? `url(${post.image})` : undefined,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
     >
+      {/* Background Overlay */}
+      {post.image && (
+        <div className="absolute inset-0 bg-black/80" />
+      )}
+
       {/* Top Content */}
-      <div className="flex-1">
+      <div className="flex-1 relative z-10">
         {/* Title - Reduced Size */}
         <h1 
           id={`feat-${post.id}`} 
@@ -59,7 +70,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
       </div>
 
       {/* Bottom Meta Line with CTA Button */}
-      <div className="flex items-center justify-between gap-3 mt-auto pt-6">
+      <div className="flex items-center justify-between gap-3 mt-auto pt-6 relative z-10">
         <div className="flex items-center gap-3 text-neutral-400">
           {/* Author Avatar */}
           <div className="h-10 w-10 rounded-full bg-neutral-800 grid place-content-center font-semibold text-neutral-200">

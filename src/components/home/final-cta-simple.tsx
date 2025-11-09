@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { CheckCircle, Mail, Send, Twitter, MessageCircle, Youtube, Instagram } from "lucide-react"
+import { CheckCircle, Mail, Send, Twitter, MessageCircle, Github } from "lucide-react"
 
 interface EmailCaptureProps {
   title?: string
@@ -292,13 +292,13 @@ export function FinalCTASimple({
                   </motion.a>
                   
                   <motion.a
-                    href="https://t.me/BuildOnErgo"
+                    href="https://discord.com/invite/ergo-platform-668903786361651200"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300"
+                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-indigo-400 hover:bg-indigo-500/10 hover:border-indigo-500/30 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    aria-label="Join our Telegram"
+                    aria-label="Join our Discord"
                   >
                     <MessageCircle className="w-4 h-4" />
                   </motion.a>
@@ -331,7 +331,7 @@ export function FinalCTASimple({
                     href="https://www.tiktok.com/@buildonergo"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-white hover:bg-gray-500/10 hover:border-gray-500/30 transition-all duration-300"
+                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-gray-300 hover:bg-gray-500/10 hover:border-gray-500/30 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                     aria-label="Follow us on TikTok"
