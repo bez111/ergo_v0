@@ -61,7 +61,7 @@ export function Footer() {
               <Link href="https://discord.com/invite/ergo-platform-668903786361651200" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("discord") || "Discord"}
               </Link>
-              <Link href="https://t.me/ergoplatform" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
+              <Link href="https://t.me/BuildOnErgo" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
                 {t("telegram") || "Telegram"}
               </Link>
               <Link href="https://x.com/BuildOnErgo" className="text-sm text-gray-400 hover:text-primary transition-colors font-mono">
