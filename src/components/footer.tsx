@@ -3,7 +3,6 @@
 import Link from "next/link"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { useTranslations } from "next-intl"
-import { version } from '@/lib/version';
 
 export function Footer() {
   const t = useTranslations("footer")
@@ -74,7 +73,7 @@ export function Footer() {
       <div className="border-t border-primary/20 py-6 relative z-20">
         <div className="container flex flex-col items-center justify-between gap-4 md:flex-row">
           <p className="text-sm text-gray-300 font-mono">
-            © {new Date().getFullYear()} ERGO {t("platform") || "PLATFORM"}. ALL RIGHTS RESERVED. v{version.version}
+            © {new Date().getFullYear()} ERGO {t("platform") || "PLATFORM"}. ALL RIGHTS RESERVED.
           </p>
           <p className="text-sm text-gray-300 font-mono">
             {t("openSource") || "ERGO IS AN OPEN-SOURCE PROJECT."}{" "}
@@ -85,7 +84,7 @@ export function Footer() {
         </div>
 
         {/* Scanline effect */}
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.2)_50%,transparent_100%)] bg-size-[100%_4px] animate-scanline pointer-events-none"></div>
+        {/* <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent_0%,rgba(0,0,0,0.2)_50%,transparent_100%)] bg-size-[100%_4px] animate-scanline pointer-events-none"></div> */}
       </div>
     </footer>
   )
