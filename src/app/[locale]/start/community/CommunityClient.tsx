@@ -63,7 +63,7 @@ const platforms = [
     activity: "Active",
     icon: Users,
     buttonText: "Join Telegram",
-    href: "https://t.me/BuildOnErgo",
+    href: "https://t.me/ergoplatform",
     features: ["Quick Updates", "Mobile Alerts", "Instant News", "Global Community"],
   },
   {

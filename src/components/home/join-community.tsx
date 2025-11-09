@@ -26,7 +26,7 @@ export function JoinCommunity() {
       title: "Telegram",
       desc: "Chat with the community",
       members: "Global reach",
-      href: "https://t.me/BuildOnErgo"
+      href: "https://t.me/ergoplatform"
     },
     {
       icon: Twitter,

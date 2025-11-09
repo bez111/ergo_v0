@@ -305,15 +305,15 @@ export function FinalCTASimple({
                   </motion.a>
 
                   <motion.a
-                    href="https://www.youtube.com/@ErgoPlatform"
+                    href="https://github.com/ergoplatform"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-red-400 hover:bg-red-500/10 hover:border-red-500/30 transition-all duration-300"
+                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-gray-300 hover:bg-gray-500/10 hover:border-gray-500/30 transition-all duration-300"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    aria-label="Follow us on YouTube"
+                    aria-label="Follow us on GitHub"
                   >
-                    <Youtube className="w-4 h-4" />
+                    <Github className="w-4 h-4" />
                   </motion.a>
 
                   <motion.a
