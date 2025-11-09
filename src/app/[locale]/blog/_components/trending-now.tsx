@@ -48,19 +48,21 @@ export default function TrendingNow({ posts, categories }: TrendingNowProps) {
               href={`/blog/${p.slug}`}
               className="flex items-start gap-3 rounded-2xl bg-black/80 border border-white/10 p-4 hover:bg-black/90 transition-colors duration-200 h-full"
             >
-              {/* Avatar/Initial */}
-              <div className="h-10 w-10 rounded-xl bg-neutral-800 grid place-content-center text-lg font-bold text-neutral-200 shrink-0">
+              {/* Preview Image */}
+              <div className="relative h-10 w-10 rounded-xl bg-neutral-800 overflow-hidden shrink-0">
                 {p.image ? (
                   <Image 
                     src={p.image} 
                     alt="" 
-                    width={40}
-                    height={40}
-                    className="object-cover w-full h-full rounded-xl" 
+                    fill
+                    className="object-cover rounded-xl" 
                     loading="lazy"
+                    sizes="40px"
                   />
                 ) : (
-                  p.author.name.charAt(0)
+                  <div className="w-full h-full flex items-center justify-center text-lg font-bold text-neutral-200">
+                    {p.author.name.charAt(0)}
+                  </div>
                 )}
               </div>
               

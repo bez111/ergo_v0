@@ -29,7 +29,6 @@ interface Wallet {
   platforms: string[]
   features: string[]
   category: "Desktop" | "Mobile" | "Browser" | "Hardware" | "Paper"
-  isOfficial?: boolean
   websiteUrl: string
   downloadUrl?: string
   rating: number
@@ -49,7 +48,6 @@ const allWallets: Wallet[] = [
     platforms: ["Chrome", "Firefox", "Edge"],
     features: ["dApp Integration", "Hardware Wallet Support", "Multi-signature", "Token Management", "DeFi Ready"],
     category: "Browser",
-    isOfficial: true,
     isRecommended: true,
     websiteUrl: "https://nautilus-wallet.org",
     downloadUrl: "https://chrome.google.com/webstore/detail/nautilus-wallet",
@@ -67,7 +65,6 @@ const allWallets: Wallet[] = [
     platforms: ["Windows", "macOS", "Linux"],
     features: ["Full Node", "ErgoMixer Integration", "Advanced Privacy", "Multi-Account", "Cold Storage"],
     category: "Desktop",
-    isOfficial: true,
     websiteUrl: "https://satergo.com",
     downloadUrl: "https://github.com/Satergo/Satergo/releases",
     rating: 4.9,
@@ -84,7 +81,6 @@ const allWallets: Wallet[] = [
     platforms: ["Android"],
     features: ["QR Scanning", "Simple Interface", "Backup & Restore", "Multi-language", "Offline Signing"],
     category: "Mobile",
-    isOfficial: true,
     websiteUrl: "https://ergoplatform.org/en/wallets/",
     downloadUrl: "https://play.google.com/store/apps/details?id=org.ergoplatform.android",
     rating: 4.6,
@@ -101,7 +97,6 @@ const allWallets: Wallet[] = [
     platforms: ["iOS"],
     features: ["Touch ID", "Face ID", "iCloud Backup", "Simple Interface", "Secure Enclave"],
     category: "Mobile",
-    isOfficial: true,
     websiteUrl: "https://ergoplatform.org/en/wallets/",
     downloadUrl: "https://apps.apple.com/app/ergo-wallet/id1542086230",
     rating: 4.7,
@@ -373,11 +368,6 @@ export default function WalletClient() {
                     <Badge className={`text-xs border ${getTypeColor(wallet.type)}`}>
                       {wallet.type}
                     </Badge>
-                    {wallet.isOfficial && (
-                      <Badge className="text-xs border border-green-400/30 bg-green-400/10 text-green-400">
-                        Official
-                      </Badge>
-                    )}
                   </div>
                   
                   <div className="mt-auto">

@@ -44,11 +44,23 @@ export function BlogSectionHome() {
               className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-xl"
             >
               <Card className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 h-full flex flex-col overflow-hidden cursor-pointer">
-                {/* Image placeholder */}
-                <div className="aspect-video bg-gradient-to-br from-neutral-900 to-neutral-950 flex items-center justify-center group-hover:from-neutral-800 group-hover:to-neutral-900 transition-all duration-300">
-                  <div className="text-6xl font-bold text-neutral-800 group-hover:text-neutral-700 transition-colors">
-                    {post.category?.charAt(0) || 'E'}
-                  </div>
+                {/* Preview Image */}
+                <div 
+                  className="aspect-video bg-gradient-to-br from-neutral-900 to-neutral-950 flex items-center justify-center group-hover:from-neutral-800 group-hover:to-neutral-900 transition-all duration-300 relative overflow-hidden"
+                  style={{
+                    backgroundImage: post.image ? `url(${post.image})` : undefined,
+                    backgroundSize: 'cover',
+                    backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat'
+                  }}
+                >
+                  {post.image ? (
+                    <div className="absolute inset-0 bg-black/20" />
+                  ) : (
+                    <div className="text-6xl font-bold text-neutral-800 group-hover:text-neutral-700 transition-colors">
+                      {post.category?.charAt(0) || 'E'}
+                    </div>
+                  )}
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col">
