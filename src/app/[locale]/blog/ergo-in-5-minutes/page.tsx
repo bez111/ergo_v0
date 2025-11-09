@@ -4,7 +4,7 @@ import { ErgoIn5MinutesClient } from "./ErgoIn5MinutesClient"
 export const revalidate = 86400
 
 const origin = "https://ergoblockchain.org"
-const url = `${origin}/learn/ergo-in-5-minutes`
+const url = `${origin}/blog/ergo-in-5-minutes`
 
 export function generateMetadata(): Metadata {
   const title = "Ergo in 5 Minutes: Why It Matters & How It Works"
@@ -26,8 +26,8 @@ export function generateMetadata(): Metadata {
     twitter: {
       card: "summary_large_image",
       images: [`${origin}/og/ergo-5-minutes.png`],
-      site: "@ergoplatform",
-      creator: "@ergoplatform",
+      site: "@BuildOnErgo",
+      creator: "@BuildOnErgo",
     },
     robots: { index: true, follow: true },
     keywords: [
@@ -95,7 +95,7 @@ export default function ErgoIn5MinutesPage() {
     "@type": "BreadcrumbList",
     "@id": `${url}#breadcrumbs`,
     itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Learn", item: `${origin}/learn` },
+      { "@type": "ListItem", position: 1, name: "Blog", item: `${origin}/blog` },
       { "@type": "ListItem", position: 2, name: "Ergo in 5 Minutes", item: url },
     ],
   }

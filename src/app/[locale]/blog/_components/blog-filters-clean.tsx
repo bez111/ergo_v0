@@ -14,7 +14,8 @@ import {
   Pickaxe,
   Clock,
   Flame,
-  TrendingUp
+  TrendingUp,
+  Eye
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -30,6 +31,8 @@ import type { BlogPost } from "../_lib/blog-data"
 // Clean categories like Solana with Lucide icons
 const categories = [
   { id: 'all', name: 'ALL', icon: 'BookOpen', color: 'orange' },
+  { id: 'vision', name: 'VISION', icon: 'Eye', color: 'orange' },
+  { id: 'philosophy', name: 'PHILOSOPHY', icon: 'BookOpen', color: 'purple' },
   { id: 'defi', name: 'DEFI', icon: 'Coins', color: 'yellow' },
   { id: 'development', name: 'DEVELOPER', icon: 'Code2', color: 'green' },
   { id: 'technology', name: 'TECHNOLOGY', icon: 'Cog', color: 'blue' },
@@ -197,12 +200,6 @@ export function BlogFiltersClean({
           })}
         </div>
 
-        {/* SEE MORE + Button */}
-        <div className="absolute right-0 top-0 bg-gradient-to-l from-black to-transparent pl-8 pointer-events-none">
-          <span className="text-neutral-500 text-sm font-medium pointer-events-auto">
-            SEE MORE +
-          </span>
-        </div>
       </div>
 
       {/* Active Search Filter Display */}

@@ -5,7 +5,7 @@ import { useRouter, useSearchParams } from "next/navigation"
 import { BookOpen, TrendingUp, Clock, Users, X } from "lucide-react"
 import { BlogCard } from "./blog-card"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
-import { BlogFiltersClean } from "./blog-filters-clean"
+import { BlogFiltersNew } from "./blog-filters-new"
 import type { BlogPost } from "../_lib/blog-data"
 import { BlogCompactSkeleton } from "./blog-skeleton"
 import { SkeletonCard } from "@/components/ui/skeleton"
@@ -36,7 +36,7 @@ export default function BlogClientStable({
   
   // Initialize state from URL params to prevent hydration mismatch
   const [search, setSearch] = useState(() => params.get("q") || "")
-  const [selectedCategory, setSelectedCategory] = useState(() => params.get("category") || "all")
+  const [selectedCategory, setSelectedCategory] = useState(() => params.get("cat") || "all")
   const [sortBy, setSortBy] = useState<SortKey>(() => (params.get("sort") as SortKey) || "newest")
   
   const [loadedPosts, setLoadedPosts] = useState(posts)
@@ -54,7 +54,7 @@ export default function BlogClientStable({
   useEffect(() => {
     if (!mounted) return
     
-    const category = params.get("category") || "all"
+    const category = params.get("cat") || "all"
     const sort = (params.get("sort") as SortKey) || "newest"
     const searchQuery = params.get("q") || ""
     
@@ -98,6 +98,7 @@ export default function BlogClientStable({
 
     // Category filter
     if (selectedCategory !== "all") {
+      // Direct comparison since categories are now case-sensitive
       filtered = filtered.filter((post) => post.category === selectedCategory)
     }
 
@@ -133,8 +134,8 @@ export default function BlogClientStable({
     })
 
     // Remove default values to keep URLs clean
-    if (url.searchParams.get('category') === 'all') {
-      url.searchParams.delete('category')
+    if (url.searchParams.get('cat') === 'all') {
+      url.searchParams.delete('cat')
     }
     if (url.searchParams.get('sort') === 'newest') {
       url.searchParams.delete('sort')
@@ -150,7 +151,7 @@ export default function BlogClientStable({
 
   const handleCategoryChange = (category: string) => {
     setSelectedCategory(category)
-    updateUrl({ category: category === "all" ? null : category })
+    updateUrl({ cat: category === "all" ? null : category })
   }
 
   const handleSortChange = (sort: string) => {
@@ -164,7 +165,7 @@ export default function BlogClientStable({
   return (
     <>
       {/* Enhanced Filters */}
-      <BlogFiltersClean
+      <BlogFiltersNew
         posts={posts}
         searchQuery={search}
         selectedCategory={selectedCategory}

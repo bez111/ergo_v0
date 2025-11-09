@@ -66,6 +66,14 @@ export default function GetErgClient() {
       description: "Decentralized perpetual contracts exchange",
       link: "https://www.asterdex.com",
       icon: RefreshCw,
+      badge: "soon",
+    },
+    {
+      name: "Hyperliquid",
+      description: "There is a bounty for adding Ergo to spot trading on Hyperliquid",
+      link: "https://app.hyperliquid.xyz",
+      icon: RefreshCw,
+      badge: "bounty",
     },
     {
       name: "PancakeSwap",
@@ -90,36 +98,67 @@ export default function GetErgClient() {
   return (
     <BackgroundWrapper>
       <div className="container mx-auto px-4 py-16">
-        <section className="relative py-24 md:py-32">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-bold tracking-tight text-white mb-6">
-              Get <span className="text-orange-400">ERG</span>
-            </h1>
-            <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-12">
-              {t("subtitle")}
-            </p>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl mx-auto">
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
-                  <CreditCard className="h-6 w-6 text-orange-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Buy with Fiat</h3>
-                <p className="text-gray-400 text-sm">Credit card & bank transfer</p>
+        {/* Hero Section */}
+        <section className="pt-28 pb-10 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                  Get <span className="text-orange-400">ERG</span>
+                </h1>
+                <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
+                  Buy ERG through multiple secure channels
+                </p>
+                <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                  From fiat on-ramps to decentralized exchanges - choose the method that works best for you. 
+                  All options provide direct access to ERG tokens for your wallet.
+                </p>
               </div>
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
-                  <Cpu className="h-6 w-6 text-orange-400" />
+              <div className="relative z-10">
+                <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <h3 className="text-2xl font-bold mb-6 text-center text-white">
+                    Quick Start
+                  </h3>
+                  <div className="grid grid-cols-1 gap-4">
+                    <a
+                      href="https://banxa.com/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                    >
+                      <div className="flex items-start gap-3">
+                        <CreditCard className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-white mb-1">Buy with Fiat</h4>
+                          <p className="text-sm text-gray-400">Credit card & bank transfer via Banxa</p>
+                        </div>
+                      </div>
+                    </a>
+                    <a
+                      href="https://www.gate.io/trade/ERG_USDT"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"
+                    >
+                      <div className="flex items-start gap-3">
+                        <Cpu className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-white mb-1">Trade on Gate.io</h4>
+                          <p className="text-sm text-gray-400">Popular CEX with ERG/USDT pair</p>
+                        </div>
+                      </div>
+                    </a>
+                    <div className="p-4 rounded-2xl bg-black/60 border border-white/20">
+                      <div className="flex items-start gap-3">
+                        <RefreshCw className="w-6 h-6 text-orange-400 mt-1 flex-shrink-0" />
+                        <div className="flex-1">
+                          <h4 className="font-semibold text-white mb-1">DEX Trading</h4>
+                          <p className="text-sm text-gray-400">Swap wrapped ERG on various chains</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">5 CEX Platforms</h3>
-                <p className="text-gray-400 text-sm">Major cryptocurrency exchanges</p>
-              </div>
-              <div className="text-center">
-                <div className="w-12 h-12 rounded-lg bg-neutral-800 border border-neutral-700 flex items-center justify-center mx-auto mb-4">
-                  <RefreshCw className="h-6 w-6 text-orange-400" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">4 DEX Options</h3>
-                <p className="text-gray-400 text-sm">Decentralized exchanges</p>
               </div>
             </div>
           </div>
@@ -212,7 +251,22 @@ export default function GetErgClient() {
                       <CardContent className="p-6 flex-1 flex flex-col">
                         <div className="flex items-center gap-4 mb-4">
                           <exchange.icon className="w-10 h-10 text-orange-400 flex-shrink-0" />
-                          <h3 className="text-xl font-bold text-white">{exchange.name}</h3>
+                          <div className="flex-1">
+                            <div className="flex items-center gap-2">
+                              <h3 className="text-xl font-bold text-white">{exchange.name}</h3>
+                              {exchange.badge && (
+                                <span className={`px-2 py-1 text-xs font-semibold rounded-full ${
+                                  exchange.badge === 'soon' 
+                                    ? 'bg-blue-500/20 text-blue-400 border border-blue-500/30' 
+                                    : exchange.badge === 'bounty'
+                                    ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/30'
+                                    : 'bg-gray-500/20 text-gray-400 border border-gray-500/30'
+                                }`}>
+                                  {exchange.badge}
+                                </span>
+                              )}
+                            </div>
+                          </div>
                         </div>
                         <p className="text-sm text-neutral-400 flex-1 mb-4 leading-relaxed">{exchange.description}</p>
                         <Button asChild size="sm" variant="outline" className="mt-auto border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 transition-all duration-300">

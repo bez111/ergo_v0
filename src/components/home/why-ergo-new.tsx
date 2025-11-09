@@ -39,91 +39,91 @@ export function WhyErgo() {
             </p>
           </div>
 
-          {/* Main Features - Larger Cards */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full max-w-6xl mb-12">
-            {/* FAIR & SECURE */}
-            <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                  <Shield className="h-6 w-6 text-orange-400" />
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.fairAndSecure.title")}</h3>
-                  <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.fairAndSecure.subtitle")}</p>
-                </div>
-              </div>
-              <p className="text-gray-400 leading-relaxed">{t("mainFeatures.fairAndSecure.description")}</p>
-            </div>
-
-            {/* POWERFUL & FLEXIBLE */}
-            <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                  <Zap className="h-6 w-6 text-orange-400" />
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.powerfulAndFlexible.title")}</h3>
-                  <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.powerfulAndFlexible.subtitle")}</p>
-                </div>
-              </div>
-              <p className="text-gray-400 leading-relaxed">{t("mainFeatures.powerfulAndFlexible.description")}</p>
-            </div>
-
-            {/* SUSTAINABLE */}
-            <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5">
-              <div className="flex items-start gap-4 mb-4">
-                <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                  <Database className="h-6 w-6 text-orange-400" />
-                </div>
-                <div>
-                  <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.sustainable.title")}</h3>
-                  <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.sustainable.subtitle")}</p>
-                </div>
-              </div>
-              <p className="text-gray-400 leading-relaxed">{t("mainFeatures.sustainable.description")}</p>
-            </div>
-          </div>
-
-          {/* Additional Features - Smaller Cards */}
+          {/* All Features - Large Cards in 2x3 Grid - Mobile Optimized */}
           <div className="w-full max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {/* PRIVACY FIRST */}
-              <div className="group p-6 bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                    <Lock className="h-5 w-5 text-orange-400" />
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 items-stretch">
+              {/* 1. FAIR & SECURE */}
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                    <Shield className="h-6 w-6 text-orange-400" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold text-sm mb-1 uppercase tracking-wide">{t("additionalFeatures.privacy.title")}</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">{t("additionalFeatures.privacy.description")}</p>
+                    <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.fairAndSecure.title")}</h3>
+                    <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.fairAndSecure.subtitle")}</p>
                   </div>
                 </div>
+                <p className="text-gray-400 leading-relaxed">{t("mainFeatures.fairAndSecure.description")}</p>
               </div>
 
-              {/* COMMUNITY DRIVEN */}
-              <div className="group p-6 bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                    <Users className="h-5 w-5 text-orange-400" />
+              {/* 2. PRIVACY FIRST */}
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                    <Lock className="h-6 w-6 text-orange-400" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold text-sm mb-1 uppercase tracking-wide">{t("additionalFeatures.community.title")}</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">{t("additionalFeatures.community.description")}</p>
+                    <h3 className="text-white font-bold text-xl mb-1">{t("additionalFeatures.privacy.title")}</h3>
+                    <p className="text-orange-400/80 text-sm font-medium">{t("additionalFeatures.privacy.subtitle")}</p>
                   </div>
                 </div>
+                <p className="text-gray-400 leading-relaxed">{t("additionalFeatures.privacy.description")}</p>
               </div>
 
-              {/* DEVELOPER FRIENDLY */}
-              <div className="group p-6 bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5">
-                <div className="flex items-start gap-3">
-                  <div className="w-10 h-10 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
-                    <Cpu className="h-5 w-5 text-orange-400" />
+              {/* 3. POWERFUL & FLEXIBLE */}
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                    <Zap className="h-6 w-6 text-orange-400" />
                   </div>
                   <div>
-                    <h4 className="text-white font-semibold text-sm mb-1 uppercase tracking-wide">{t("additionalFeatures.developer.title")}</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">{t("additionalFeatures.developer.description")}</p>
+                    <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.powerfulAndFlexible.title")}</h3>
+                    <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.powerfulAndFlexible.subtitle")}</p>
                   </div>
                 </div>
+                <p className="text-gray-400 leading-relaxed">{t("mainFeatures.powerfulAndFlexible.description")}</p>
+              </div>
+
+              {/* 4. SUSTAINABLE */}
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                    <Database className="h-6 w-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-xl mb-1">{t("mainFeatures.sustainable.title")}</h3>
+                    <p className="text-orange-400/80 text-sm font-medium">{t("mainFeatures.sustainable.subtitle")}</p>
+                  </div>
+                </div>
+                <p className="text-gray-400 leading-relaxed">{t("mainFeatures.sustainable.description")}</p>
+              </div>
+
+              {/* 5. DEVELOPER FRIENDLY */}
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                    <Cpu className="h-6 w-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-xl mb-1">{t("additionalFeatures.developer.title")}</h3>
+                    <p className="text-orange-400/80 text-sm font-medium">{t("additionalFeatures.developer.subtitle")}</p>
+                  </div>
+                </div>
+                <p className="text-gray-400 leading-relaxed">{t("additionalFeatures.developer.description")}</p>
+              </div>
+
+              {/* 6. COMMUNITY DRIVEN */}
+              <div className="group relative bg-black/80 border border-white/10 rounded-3xl p-6 sm:p-8 hover:bg-black/90 hover:border-orange-400/50 transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col">
+                <div className="flex items-start gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex items-center justify-center flex-shrink-0">
+                    <Users className="h-6 w-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-bold text-xl mb-1">{t("additionalFeatures.community.title")}</h3>
+                    <p className="text-orange-400/80 text-sm font-medium">{t("additionalFeatures.community.subtitle")}</p>
+                  </div>
+                </div>
+                <p className="text-gray-400 leading-relaxed">{t("additionalFeatures.community.description")}</p>
               </div>
             </div>
           </div>

@@ -3,31 +3,29 @@ import { BookOpen, FileText, Video, Star, ExternalLink, Quote, Users } from "luc
 import Link from "next/link";
 
 const overviews = [
-  { title: "Whitepaper I: Ergo: The Resilient Platform For Contractual Money", url: "https://ergoplatform.org/docs/whitepaper.pdf" },
-  { title: "Whitepaper II: ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs", url: "https://ergoplatform.org/docs/ErgoScript.pdf" },
-  { title: "Teaser: The Ergo Platform Project Overview", url: "https://ergoplatform.org/docs/teaser.pdf" },
-  { title: "Whitepaper III: Advanced ErgoScript Tutorial", url: "https://ergoplatform.org/docs/AdvancedErgoScriptTutorial.pdf" },
+  { title: "Whitepaper I: Ergo: The Resilient Platform For Contractual Money", url: "/api/pdf/documents/Ergo- A Resilient Platform For Contractual Money.pdf" },
+  { title: "Whitepaper II: ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs", url: "/api/pdf/documents/ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs.pdf" },
+  { title: "Teaser: The Ergo Platform Project Overview", url: "/api/pdf/documents/The Ergo Platform Project Overview.pdf" },
+  { title: "Whitepaper III: Advanced ErgoScript Tutorial", url: "/api/pdf/documents/Advanced ErgoScript Tutorial.pdf" },
 ];
 const foundational = [
-  { title: "On Contractual Money", url: "https://pdfs.semanticscholar.org/d51b/51fd136b1b74ece7caa6a7cb9c8f74b1b829.pdf" },
-  { title: "Improving authenticated dynamic dictionaries, with applications to cryptocurrencies", url: "https://eprint.iacr.org/2016/994.pdf" },
-  { title: "Self-reproducing Coins as Universal Turing Machine", url: "https://arxiv.org/pdf/1806.10116" },
-  { title: "Multi-mode Cryptocurrency Systems", url: "https://eprint.iacr.org/2018/129.pdf" },
-  { title: "Multi-stage Contracts in the UTXO Model", url: "https://ergoplatform.org/docs/paper_26.pdf" },
-  { title: "EDRAX: A Cryptocurrency with Stateless Transaction Validation", url: "https://eprint.iacr.org/2018/968.pdf" },
-  { title: "Revisiting Difficulty Control for Blockchain Systems", url: "https://eprint.iacr.org/2017/731.pdf" },
-  { title: "Storage Rent: A Systematic Approach To Cryptocurrency Fees", url: "/docs/introduction/storage-rent" },
-  { title: "ZeroJoin: Combining ZeroCoin and CoinJoin", url: "https://eprint.iacr.org/2020/560.pdf" },
-  { title: "Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks", url: "https://eprint.iacr.org/2021/577.pdf" },
+  { title: "Improving Authenticated Dynamic Dictionaries", url: "/api/pdf/documents/Improving Authenticated Dynamic Dictionaries.pdf" },
+  { title: "Self-Reproducing Coins as Universal Turing Machine", url: "/api/pdf/documents/Self-Reproducing Coins as Universal Turing Machine.pdf" },
+  { title: "Multi-mode Cryptocurrency Systems", url: "/api/pdf/documents/Multi-mode Cryptocurrency Systems.pdf" },
+  { title: "Multi-Stage Contracts in the UTXO Model", url: "/api/pdf/documents/Multi-Stage Contracts in the UTXO Model.pdf" },
+  { title: "EDRAX: A Cryptocurrency with Stateless Transaction Validation", url: "/api/pdf/documents/EDRAX- A Cryptocurrency with Stateless Transaction Validation.pdf" },
+  { title: "Revisiting Difficulty Control for Blockchain Systems", url: "/api/pdf/documents/Revisiting Difficulty Control for Blockchain Systems.pdf" },
+  { title: "A Systematic Approach To Cryptocurrency Fees", url: "/api/pdf/documents/A Systematic Approach To Cryptocurrency Fees.pdf" },
+  { title: "Zerojoin: Combining Zerocoin and CoinJoin", url: "/api/pdf/documents/Zerojoin- Combining Zerocoin and CoinJoin.pdf" },
+  { title: "Soft Power: Upgrading Chain Macroeconomic Policy Through Soft Forks", url: "/api/pdf/documents/Soft Power- Upgrading Chain Macroeconomic Policy Through Soft Forks.pdf" },
+  { title: "Chaincash", url: "/api/pdf/documents/Сhaincash.pdf" },
 ];
 const postMainnet = [
-  { title: "Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts", url: "https://eprint.iacr.org/2020/044.pdf" },
-  { title: "Ergo Hackathon: Crowdfunded Smart Contract Pools Research and Conceptualization", url: "https://eprint.iacr.org/2021/846" },
-  { title: "Succinct, Non-Interactive Share Proofs (See Lithos Protocol)", url: "/docs/introduction/lithos" },
-  { title: "Dexy (See Dexy)", url: "/docs/introduction/dexy" },
-  { title: "Sigmajoin", url: "https://github.com/ergoplatform/ergo-jde/blob/main/kiosk/src/test/scala/kiosk/mixer/doc/main.pdf" },
-  { title: "ChainCash", url: "https://github.com/kushti/chaincash/blob/master/paper/chaincash.pdf" },
-  { title: "KYA - A Treatise On Assumptions in Cryptocurrencies and Defi", url: "https://github.com/kushti/kya/blob/master/kya.pdf" },
+  { title: "Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts", url: "/api/pdf/documents/Bypassing Non-Outsourceable Proof-of-Work Schemes Using Collateralized Smart Contracts.pdf" },
+  { title: "Ergo Hackathon: Crowdfunded Smart Contract Pools Research and Conceptualization", url: "/api/pdf/documents/Ergo Hackathon- Crowdfunded Smart Contract Pools Research and Conceptualization.pdf" },
+  { title: "Succinct, Non-Interactive Share Proofs", url: "/api/pdf/documents/Succinct, Non-Interactive Share Proofs.pdf" },
+  { title: "Dexy: A Stablecoin Based On Algorithmic Central Bank", url: "/api/pdf/documents/Dexy - A Stablecoin Based On Algorithmic Central Bank.pdf" },
+  { title: "Know Your Assumptions", url: "/api/pdf/documents/Know Your Assumptions .pdf" },
 ];
 const videos = [
   { title: "Blockchain at Berkeley CESC2017 - Dmitry Meshkov - On Space-Scare Economy - October 17, 2017.", url: "https://youtu.be/gBy-pu1kzdQ" },

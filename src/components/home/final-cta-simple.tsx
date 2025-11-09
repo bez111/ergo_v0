@@ -1,11 +1,11 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { CheckCircle, Mail, Send } from "lucide-react"
+import { CheckCircle, Mail, Send, Twitter, MessageCircle, Github, Youtube } from "lucide-react"
 
 interface EmailCaptureProps {
   title?: string
@@ -14,28 +14,178 @@ interface EmailCaptureProps {
 }
 
 export function FinalCTASimple({ 
-  title = "Join the resistance",
-  description = "Fight for financial freedom. Build censorship-resistant money. No banks, no middlemen.",
+  title = "Join the Ergo Builders List",
+  description = "Weekly builder updates: guides, patterns, tools. No spam.",
   className = ""
 }: EmailCaptureProps = {}) {
   const [email, setEmail] = useState('')
   const [isSubmitted, setIsSubmitted] = useState(false)
+  const [isLoading, setIsLoading] = useState(false)
+  const [isAlreadySubscribed, setIsAlreadySubscribed] = useState(false)
+  const [emailError, setEmailError] = useState('')
+  const inputRef = useRef<HTMLInputElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
   
-  const handleEmailSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (email) {
-      setIsSubmitted(true)
-      // Here you would typically send the email to your backend
-      console.log('Email submitted:', email)
-      setTimeout(() => {
-        setIsSubmitted(false)
-        setEmail('')
-      }, 3000)
+  // Check if already subscribed on mount
+  useEffect(() => {
+    const subscribed = localStorage.getItem('ergo-newsletter-subscribed')
+    if (subscribed === 'true') {
+      setIsAlreadySubscribed(true)
+    }
+  }, [])
+
+  // Intersection Observer for autofocus
+  useEffect(() => {
+    if (!sectionRef.current || isAlreadySubscribed) return
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            setTimeout(() => {
+              inputRef.current?.focus()
+            }, 500)
+          }
+        })
+      },
+      { threshold: 0.5 }
+    )
+
+    observer.observe(sectionRef.current)
+    return () => observer.disconnect()
+  }, [isAlreadySubscribed])
+
+  // Hotkeys for focus
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.key === '/' || e.key.toLowerCase() === 's') && !e.ctrlKey && !e.metaKey && !e.altKey) {
+        const target = e.target as HTMLElement
+        if (target.tagName !== 'INPUT' && target.tagName !== 'TEXTAREA') {
+          e.preventDefault()
+          inputRef.current?.focus()
+        }
+      }
+    }
+
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [])
+
+  const validateEmail = (email: string) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    return emailRegex.test(email)
+  }
+
+  const handleEmailBlur = () => {
+    if (email && !validateEmail(email)) {
+      setEmailError('Please enter a valid email address')
+    } else {
+      setEmailError('')
     }
   }
 
+  const handleEmailSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    if (!email || !validateEmail(email)) {
+      setEmailError('Please enter a valid email address')
+      return
+    }
+
+    setIsLoading(true)
+    setEmailError('')
+
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 1500))
+      
+      // Save subscription status
+      localStorage.setItem('ergo-newsletter-subscribed', 'true')
+      setIsSubmitted(true)
+      setIsAlreadySubscribed(true)
+      
+      console.log('Email submitted:', email)
+    } catch (error) {
+      setEmailError('Something went wrong. Please try again.')
+    } finally {
+      setIsLoading(false)
+    }
+  }
+
+  // Show "already subscribed" state
+  if (isAlreadySubscribed && !isSubmitted) {
+    return (
+      <section ref={sectionRef} className={`py-20 px-4 ${className}`}>
+        <div className="max-w-5xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <Card className="bg-black/80 border-white/10 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 backdrop-blur-sm rounded-3xl">
+              <CardContent className="p-12 text-center">
+                <div className="mb-8">
+                  <div className="inline-flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-green-500/20 border border-green-500/30 rounded-xl flex items-center justify-center">
+                      <CheckCircle className="w-6 h-6 text-green-400" />
+                    </div>
+                    <h2 className="text-3xl md:text-4xl font-bold text-white">You're on the list ✓</h2>
+                  </div>
+                  <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                    Thanks for being part of the Ergo builders community!
+                  </p>
+                </div>
+
+                {/* Social Media Follow Section */}
+                <div className="mt-8">
+                  <p className="text-gray-300 text-sm mb-4">Follow for daily updates</p>
+                  <div className="flex justify-center items-center gap-4">
+                    <motion.a
+                      href="https://twitter.com/ergo_platform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-blue-400 hover:bg-blue-500/10 hover:border-blue-500/30 transition-all duration-300"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      aria-label="Follow us on Twitter"
+                    >
+                      <Twitter className="w-4 h-4" />
+                    </motion.a>
+                    
+                    <motion.a
+                      href="https://t.me/ergoplatform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      aria-label="Join our Telegram"
+                    >
+                      <MessageCircle className="w-4 h-4" />
+                    </motion.a>
+
+                    <motion.a
+                      href="https://github.com/ergoplatform"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-gray-400 hover:bg-gray-500/10 hover:border-gray-500/30 transition-all duration-300"
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      aria-label="Follow us on GitHub"
+                    >
+                      <Github className="w-4 h-4" />
+                    </motion.a>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </motion.div>
+        </div>
+      </section>
+    )
+  }
+
   return (
-    <section className={`py-20 px-4 ${className}`}>
+    <section ref={sectionRef} className={`py-20 px-4 ${className}`}>
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -51,7 +201,7 @@ export function FinalCTASimple({
                   </div>
                   <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
                 </div>
-                <p className="text-lg text-gray-400 max-w-2xl mx-auto mb-8">
+                <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
                   {description}
                 </p>
               </div>
@@ -59,30 +209,82 @@ export function FinalCTASimple({
               {isSubmitted ? (
                 <div className="bg-green-500/20 border border-green-500/50 rounded-xl p-6 mb-6">
                   <CheckCircle className="w-8 h-8 text-green-400 mx-auto mb-2" />
-                  <p className="text-green-400 font-semibold">Thank you for subscribing!</p>
-                  <p className="text-gray-300 text-sm">You'll receive updates about the Ergo community.</p>
+                  <p className="text-green-400 font-semibold">✓ Subscribed</p>
+                  <p className="text-gray-300 text-sm">Welcome to the Ergo builders community!</p>
                 </div>
               ) : (
                 <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto mb-8">
-                  <div className="flex gap-3">
+                  <div className="flex flex-col sm:flex-row gap-3">
                     <Input
+                      ref={inputRef}
                       type="email"
-                      placeholder="Enter your email address"
+                      placeholder="you@domain.com"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      onBlur={handleEmailBlur}
                       className="flex-1 bg-black/60 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400/50 focus:ring-orange-400/20 rounded-xl"
                       required
                     />
                     <Button
                       type="submit"
-                      className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 rounded-xl border border-orange-500/50 transition-all duration-300"
+                      disabled={isLoading || !!emailError}
+                      className="bg-orange-500 hover:bg-gradient-to-r hover:from-orange-500 hover:to-orange-400 hover:shadow-orange-500/25 hover:shadow-lg text-black font-semibold px-6 rounded-xl border border-orange-500/50 transition-all duration-300 min-w-[170px]"
                     >
-                      <Send className="w-4 h-4 mr-2" />
-                      Subscribe
+                      {isLoading ? (
+                        <div className="w-4 h-4 mr-2 border-2 border-black border-t-transparent rounded-full animate-spin" />
+                      ) : (
+                        <Send className="w-4 h-4 mr-2" />
+                      )}
+                      {isLoading ? 'Subscribing...' : 'Get Starter Kit'}
                     </Button>
                   </div>
+                  {emailError && (
+                    <p className="text-orange-400/70 text-sm mt-2">{emailError}</p>
+                  )}
                 </form>
               )}
+
+              {/* Social Media Follow Section */}
+              <div className="mt-8">
+                <p className="text-gray-300 text-sm mb-4">Follow for daily updates</p>
+                <div className="flex justify-center items-center gap-4">
+                  <motion.a
+                    href="https://twitter.com/ergo_platform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-blue-400 hover:bg-blue-500/10 hover:border-blue-500/30 transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="Follow us on Twitter"
+                  >
+                    <Twitter className="w-4 h-4" />
+                  </motion.a>
+                  
+                  <motion.a
+                    href="https://t.me/ergoplatform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-cyan-400 hover:bg-cyan-500/10 hover:border-cyan-500/30 transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="Join our Telegram"
+                  >
+                    <MessageCircle className="w-4 h-4" />
+                  </motion.a>
+
+                  <motion.a
+                    href="https://github.com/ergoplatform"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-gray-400 hover:bg-gray-500/10 hover:border-gray-500/30 transition-all duration-300"
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    aria-label="Follow us on GitHub"
+                  >
+                    <Github className="w-4 h-4" />
+                  </motion.a>
+                </div>
+              </div>
             </CardContent>
           </Card>
         </motion.div>

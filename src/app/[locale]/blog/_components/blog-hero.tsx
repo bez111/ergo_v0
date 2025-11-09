@@ -30,33 +30,36 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
 
   return (
     <article
-      className="group rounded-3xl bg-black/90 border border-white/10 p-10 md:p-12 shadow-[inset_0_1px_0_0_rgba(255,255,255,.04)] hover:translate-y-[-2px] transition-transform duration-200"
+      className="group rounded-3xl bg-black/90 border border-white/10 p-8 md:p-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,.04)] hover:translate-y-[-2px] transition-transform duration-200 h-full flex flex-col"
       itemScope
       itemType="https://schema.org/BlogPosting"
       aria-labelledby={`feat-${post.id}`}
       role="article"
     >
-      {/* Title - Large Typography */}
-      <h1 
-        id={`feat-${post.id}`} 
-        className="text-[clamp(32px,6vw,72px)] leading-[0.95] font-extrabold tracking-tight text-white"
-      >
-        <Link 
-          href={`/blog/${post.slug}`} 
-          className="hover:text-orange-400 focus:text-orange-400 focus:outline-none transition-colors"
-          aria-describedby={`feat-desc-${post.id}`}
+      {/* Top Content */}
+      <div className="flex-1">
+        {/* Title - Reduced Size */}
+        <h1 
+          id={`feat-${post.id}`} 
+          className="text-[clamp(28px,5vw,48px)] leading-[1.1] font-extrabold tracking-tight text-white"
         >
-          {cleanTitle}
-        </Link>
-      </h1>
-      
-      {/* Dek (Subtitle) */}
-      <p id={`feat-desc-${post.id}`} className="mt-6 text-neutral-300 text-lg md:text-xl leading-relaxed">
-        {cleanExcerpt}
-      </p>
+          <Link 
+            href={`/blog/${post.slug}`} 
+            className="hover:text-orange-400 focus:text-orange-400 focus:outline-none transition-colors"
+            aria-describedby={`feat-desc-${post.id}`}
+          >
+            {cleanTitle}
+          </Link>
+        </h1>
+        
+        {/* Dek (Subtitle) */}
+        <p id={`feat-desc-${post.id}`} className="mt-4 text-neutral-300 text-lg leading-relaxed">
+          {cleanExcerpt}
+        </p>
+      </div>
 
-      {/* Meta Line with CTA Button on the right */}
-      <div className="mt-8 flex items-center justify-between gap-3">
+      {/* Bottom Meta Line with CTA Button */}
+      <div className="flex items-center justify-between gap-3 mt-auto pt-6">
         <div className="flex items-center gap-3 text-neutral-400">
           {/* Author Avatar */}
           <div className="h-10 w-10 rounded-full bg-neutral-800 grid place-content-center font-semibold text-neutral-200">

@@ -1,7 +1,7 @@
 import React from "react";
 
 /**
- * Ergo vs Zcash vs zkSync — Privacy Comparison
+ * Ergo vs Zcash vs Monero — Privacy Comparison
  * Styled to match /technology/ergoscript page design
  */
 
@@ -16,7 +16,7 @@ interface Row {
   k: string; 
   ergo: string; 
   zec: string; 
-  zks: string; 
+  xmr: string; 
 }
 
 const rows: Row[] = [
@@ -24,73 +24,73 @@ const rows: Row[] = [
     k: "Layer / Model",
     ergo: "L1 eUTXO + Sigma‑protocol scripts (privacy optional)",
     zec: "L1 UTXO with shielded pools (Sapling/Orchard)",
-    zks: "L2 zk‑rollup (account model) for Ethereum; privacy not by default",
+    xmr: "L1 UTXO with mandatory ring signatures & stealth addresses",
   },
   {
     k: "Privacy Scope",
     ergo: "Payments/mixes, selective proofs in dApps; can build stealth‑like flows",
     zec: "Private transfers in shielded pool (values/senders/receivers hidden)",
-    zks: "Public by default; apps can embed zk circuits for app‑level privacy",
+    xmr: "All transactions private by default (amounts, senders, receivers)",
   },
   {
     k: "Core Tech",
     ergo: "Sigma‑protocols (ZK PoK), ring/threshold constructs, ErgoMixer",
     zec: "zk‑SNARKs (Halo 2 in Orchard; Sapling earlier)",
-    zks: "Validity proofs (zk‑SNARKs/PLONK‑family) for scalability",
+    xmr: "Ring signatures, stealth addresses, RingCT (confidential transactions)",
   },
   {
     k: "Trusted Setup",
     ergo: "No (sigma protocols don't require trusted setup)",
     zec: "NO in Orchard (Halo 2); was required in Sapling/older params",
-    zks: "Prover/verifier parameters; not privacy-critical since DA is public",
+    xmr: "No (cryptographic primitives don't require trusted setup)",
   },
   {
     k: "Default Privacy",
     ergo: "No (opt-in via scripts/mixer)",
     zec: "Yes — with shielded addresses (z-addr)",
-    zks: "No (tx and balances are public on L1 DA)",
+    xmr: "Yes — all transactions are private by protocol design",
   },
   {
     k: "Viewing / Selective Disclosure",
     ergo: "Property proofs (by script) + off-chain audit by keys",
     zec: "Viewing keys (full/partial disclosure of shielded history)",
-    zks: "App-dependent; no standard viewing semantics",
+    xmr: "View keys (read-only access) + audit capabilities",
   },
   {
     k: "Smart‑Contracts & DeFi",
     ergo: "Scripts with ZK proofs; privacy composable in dApps",
     zec: "Limited L1 scripting; main focus on private payments",
-    zks: "Full smart contracts (EVM-compatible); privacy at dApp level",
+    xmr: "Very limited scripting; focus on private digital cash",
   },
   {
     k: "Data Availability",
     ergo: "On-chain UTXO; privacy from ZK conditions/mixes, not DA hiding",
     zec: "Encrypted shielded pool records on L1",
-    zks: "Public DA on Ethereum (calldata/blobs); zk-proofs for validity",
+    xmr: "Obfuscated transaction graph; amounts/parties hidden on-chain",
   },
   {
     k: "Compliance/Audit Options",
     ergo: "Selective ZK proofs of facts (without data disclosure)",
     zec: "Viewing keys/proof of ownership for compliance",
-    zks: "App-level (proof-of-KYC, allowlists, etc.)",
+    xmr: "View keys for auditing; optional transaction keys for compliance",
   },
   {
     k: "UX / Wallets",
     ergo: "Regular wallets + opt-in ErgoMixer/stealth schemes",
     zec: "Shielded-friendly wallets (z-tx may require more resources)",
-    zks: "EVM wallets; UX like L2, privacy depends on dApp",
+    xmr: "Privacy-first wallets; longer sync times due to ring signatures",
   },
   {
     k: "Typical Strength",
     ergo: "Script flexibility, no trusted setup, simple private patterns",
     zec: "Strong payment privacy by default (shielded)",
-    zks: "Ethereum scaling + possibility of private logic in contracts",
+    xmr: "Strongest default privacy; battle-tested anonymity set",
   },
   {
     k: "Typical Trade‑off",
     ergo: "Opt-in (not by default); requires proper scheme design",
     zec: "Complexity/resources of shielded-tx; UX of 'two worlds' (t/z addr)",
-    zks: "Privacy not foundational; privacy UX/guarantees are dApp responsibility",
+    xmr: "Limited programmability; larger transaction sizes; regulatory scrutiny",
   },
 ];
 
@@ -99,10 +99,10 @@ export default function PrivacyComparisonTable() {
     <section className="w-full">
       <header className="mb-8 text-center">
         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Privacy Comparison: <span className="text-orange-400">Ergo vs Zcash vs zkSync</span>
+          Privacy Comparison: <span className="text-orange-400">Ergo vs Zcash vs Monero</span>
         </h2>
         <p className="text-xl text-neutral-300 max-w-4xl mx-auto">
-          Three different paradigms: eUTXO + Sigma protocols (Ergo), shielded pools (Zcash), and zk‑rollup for scalability (zkSync).
+          Three different paradigms: eUTXO + Sigma protocols (Ergo), shielded pools (Zcash), and mandatory privacy (Monero).
         </p>
       </header>
       
@@ -110,20 +110,20 @@ export default function PrivacyComparisonTable() {
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <caption className="sr-only">
-              Privacy feature comparison between Ergo, Zcash, and zkSync protocols
+              Privacy feature comparison between Ergo, Zcash, and Monero protocols
             </caption>
             <thead>
               <tr className="border-b border-neutral-700">
                 <th className="text-left p-4 font-semibold text-orange-400">Dimension</th>
                 <th className="text-left p-4 font-semibold text-orange-400">Ergo</th>
                 <th className="text-left p-4 font-semibold text-blue-400">Zcash</th>
-                <th className="text-left p-4 font-semibold text-purple-400">zkSync</th>
+                <th className="text-left p-4 font-semibold text-red-400">Monero</th>
               </tr>
             </thead>
             <tbody className="text-neutral-300">
               {rows.map((row, idx) => {
                 // Определяем цвета для каждой строки на основе содержания
-                const getColoredContent = (content: string, platform: 'ergo' | 'zec' | 'zks') => {
+                const getColoredContent = (content: string, platform: 'ergo' | 'zec' | 'xmr') => {
                   const lower = content.toLowerCase();
                   
                   // Сильные стороны (зеленый)
@@ -155,6 +155,14 @@ export default function PrivacyComparisonTable() {
                     return <span className="text-orange-400">{content}</span>;
                   }
                   
+                  // Особенности Monero (красный)
+                  if (platform === 'xmr' && (lower.includes('ring signatures') || lower.includes('stealth') || 
+                      lower.includes('mandatory') || lower.includes('strongest') || lower.includes('battle-tested') ||
+                      lower.includes('all transactions private') || lower.includes('obfuscated') ||
+                      lower.includes('ringct') || lower.includes('privacy-first'))) {
+                    return <span className="text-red-400">{content}</span>;
+                  }
+                  
                   return content;
                 };
 
@@ -173,7 +181,7 @@ export default function PrivacyComparisonTable() {
                       {getColoredContent(row.zec, 'zec')}
                     </td>
                     <td className="p-4">
-                      {getColoredContent(row.zks, 'zks')}
+                      {getColoredContent(row.xmr, 'xmr')}
                     </td>
                   </tr>
                 );
@@ -208,8 +216,8 @@ export default function PrivacyComparisonTable() {
       <div className="mt-6 flex justify-center">
         <div className="bg-red-900/90 border border-red-700/50 rounded-xl p-4 max-w-4xl backdrop-blur-sm">
           <p className="text-sm text-red-100 leading-relaxed">
-            <strong className="text-red-200">Note:</strong> zkSync focuses on scalability; privacy is app‑level. 
-            Zcash provides default private transfers in shielded pools. 
+            <strong className="text-red-200">Note:</strong> Monero enforces privacy by default with ring signatures and stealth addresses. 
+            Zcash provides optional private transfers in shielded pools. 
             Ergo offers composable privacy via Sigma proofs without trusted setup.
           </p>
         </div>

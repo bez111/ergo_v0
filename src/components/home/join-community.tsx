@@ -10,30 +10,30 @@ export function JoinCommunity() {
     {
       icon: MessageSquare,
       title: "Discord",
-      desc: "Join 15,000+ members",
-      members: "15K online",
+      desc: "Join our community",
+      members: "Active daily",
       href: "https://discord.gg/Q86PNMwRsu"
     },
     {
       icon: Code2,
       title: "GitHub",
       desc: "Contribute to the code",
-      members: "500+ repos",
+      members: "Open source",
       href: "https://github.com/ergoplatform"
     },
     {
       icon: Users,
       title: "Telegram",
       desc: "Chat with the community",
-      members: "8K members",
+      members: "Global reach",
       href: "https://t.me/ergoplatform"
     },
     {
       icon: Twitter,
       title: "Twitter/X",
       desc: "Follow latest updates",
-      members: "12K followers",
-      href: "https://twitter.com/ergoplatformorg"
+      members: "Daily updates",
+      href: "https://twitter.com/BuildOnErgo"
     }
   ]
 
@@ -53,7 +53,7 @@ export function JoinCommunity() {
             <span className="text-white">Join a community of</span> <span className="text-orange-400">cypherpunks</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            2,800+ developers building the future of money
+            Active community building the future of money
           </p>
         </div>
 

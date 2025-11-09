@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: 'Ergo Platform - Resilient Blockchain for Contractual Money',
     description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
     images: ['/og-image.png'],
-    creator: '@ergoplatformorg',
+    creator: '@BuildOnErgo',
   },
   alternates: {
     canonical: siteConfig.siteUrl,
@@ -114,7 +114,7 @@ const jsonLd = {
   logo: 'https://ergoblockchain.org/logo.png',
   description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
   sameAs: [
-    'https://twitter.com/ergoplatformorg',
+    'https://twitter.com/BuildOnErgo',
     'https://github.com/ergoplatform',
     'https://www.reddit.com/r/ergonauts/',
     'https://t.me/ergoplatform'

@@ -9257,31 +9257,34 @@
       "fairAndSecure": {
         "title": "FAIR & SECURE",
         "subtitle": "Proof-of-Work Foundation",
-        "description": "No ICO, no premine. ASIC-resistant mining ensures true decentralization and long-term security for everyone."
+        "description": "No ICO. No VC. No premine. Memory-hard mining → broad participation and durable security."
       },
       "powerfulAndFlexible": {
         "title": "POWERFUL & FLEXIBLE",
         "subtitle": "Advanced Smart Contracts",
-        "description": "eUTXO model + ErgoScript enable secure, expressive DeFi applications that push the boundaries of what is possible."
+        "description": "eUTXO + ErgoScript deliver deterministic, composable logic without a hidden global state."
       },
       "sustainable": {
         "title": "SUSTAINABLE",
         "subtitle": "Built to Last",
-        "description": "Storage rent mechanism prevents blockchain bloat and ensures network health with predictable costs for decades to come."
+        "description": "Storage Rent cleans forgotten state and funds miners with predictable costs for decades."
       }
     },
     "additionalFeatures": {
       "privacy": {
         "title": "PRIVACY FIRST",
-        "description": "Optional privacy with Sigma protocols for confidential transactions."
+        "subtitle": "Auditable, Optional Privacy",
+        "description": "Sigma-protocols enable selective disclosure and ring/threshold proofs when needed."
       },
       "community": {
         "title": "COMMUNITY DRIVEN",
-        "description": "Open-source development led by passionate contributors worldwide."
+        "subtitle": "Open Source, No Foundation Tax",
+        "description": "Global contributors and EIPs drive the roadmap—not token treasuries."
       },
       "developer": {
         "title": "DEVELOPER FRIENDLY",
-        "description": "World-class docs, tools, and support make building on Ergo easy."
+        "subtitle": "Docs, Tools, Templates",
+        "description": "Playground, CI templates, explorer APIs—ship contracts fast and safely."
       }
     }
   },
