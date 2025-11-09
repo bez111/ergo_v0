@@ -5,7 +5,8 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
-import { CheckCircle, Mail, Send, Twitter, MessageCircle, Github } from "lucide-react"
+import { CheckCircle, Mail, Send, Twitter, MessageCircle, Github, Youtube, Instagram } from "lucide-react"
+import { siteConfig } from "@/config/site-config"
 
 interface EmailCaptureProps {
   title?: string
@@ -145,7 +146,7 @@ export function FinalCTASimple({
                   <p className="text-gray-300 text-sm mb-4">Follow for daily updates</p>
                   <div className="flex justify-center items-center gap-4">
                     <motion.a
-                      href="https://x.com/BuildOnErgo"
+                      href={siteConfig.twitterLink}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-10 h-10 bg-black/60 border border-white/20 rounded-xl flex items-center justify-center text-blue-400 hover:bg-blue-500/10 hover:border-blue-500/30 transition-all duration-300"

@@ -1,6 +1,8 @@
 // Beehiiv API Integration
 // Сервис для работы с Beehiiv API для сбора email подписчиков
 
+import { siteConfig } from "@/config/site-config"
+
 export interface BeehiivSubscriber {
   email: string
   status?: 'active' | 'unconfirmed' | 'unsubscribed'
@@ -82,7 +84,6 @@ export class BeehiivAPI {
       return {
         success: false,
         error: error instanceof Error ? error.message : 'Network error occurred',
-        details: error
       }
     }
   }
@@ -158,8 +159,8 @@ export class BeehiivAPI {
 
 // Создание экземпляра API (будет использовать переменные окружения)
 export function createBeehiivAPI(): BeehiivAPI | null {
-  const apiKey = process.env.BEEHIIV_API_KEY
-  const publicationId = process.env.BEEHIIV_PUBLICATION_ID
+  const apiKey = siteConfig.beehiivApiKey
+  const publicationId = siteConfig.beehiivPublicationId
 
   if (!apiKey || !publicationId) {
     console.warn('Beehiiv API credentials not found in environment variables')
