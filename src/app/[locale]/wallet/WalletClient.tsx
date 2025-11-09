@@ -49,7 +49,7 @@ const allWallets: Wallet[] = [
     features: ["dApp Integration", "Hardware Wallet Support", "Multi-signature", "Token Management", "DeFi Ready"],
     category: "Browser",
     isRecommended: true,
-    websiteUrl: "https://nautilus-wallet.org",
+    websiteUrl: "https://github.com/capt-nemo429/nautilus-wallet",
     downloadUrl: "https://chrome.google.com/webstore/detail/nautilus-wallet",
     rating: 4.8,
     users: "50K+",

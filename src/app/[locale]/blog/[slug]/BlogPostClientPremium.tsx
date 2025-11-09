@@ -514,7 +514,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
                   </h4>
                   <ul className="space-y-2">
                     <li>
-                      <a href="https://playground.ergoplatform.com" target="_blank" rel="noopener noreferrer" 
+                      <a href="https://scastie.scala-lang.org" target="_blank" rel="noopener noreferrer" 
                          className="text-orange-400 hover:text-orange-300 flex items-center gap-2">
                         Ergo Playground - Interactive contract testing
                         <ExternalLink className="w-3 h-3" />
@@ -608,7 +608,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
                     </Link>
                   </Button>
                   <Button variant="outline" asChild>
-                    <Link href="https://playground.ergoplatform.com" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://scastie.scala-lang.org" target="_blank" rel="noopener noreferrer">
                       <Code2 className="w-4 h-4 mr-2" />
                       Try Playground
                     </Link>

@@ -1,0 +1,91 @@
+{
+  "timestamp": "2025-11-09T12:37:40.746Z",
+  "summary": {
+    "total": 18,
+    "successful": 12,
+    "failed": 6,
+    "successRate": "66.7%"
+  },
+  "details": {
+    "social": {
+      "Twitter": {
+        "status": "failed",
+        "error": "HTTP 403"
+      },
+      "Discord": {
+        "status": "success",
+        "code": 200
+      },
+      "Telegram": {
+        "status": "success",
+        "code": 200
+      },
+      "GitHub": {
+        "status": "success",
+        "code": 200
+      },
+      "Forum": {
+        "status": "failed",
+        "error": "getaddrinfo ENOTFOUND forum.ergoplatform.org"
+      },
+      "Reddit": {
+        "status": "success",
+        "code": 301
+      },
+      "YouTube": {
+        "status": "success",
+        "code": 301
+      }
+    },
+    "wallets": {
+      "Nautilus Wallet": {
+        "status": "failed",
+        "error": "getaddrinfo ENOTFOUND nautilus-wallet.org"
+      },
+      "Satergo": {
+        "status": "success",
+        "code": 200
+      },
+      "Android Wallet": {
+        "status": "success",
+        "code": 200
+      },
+      "iOS Wallet": {
+        "status": "failed",
+        "error": "HTTP 404"
+      },
+      "SAFEW": {
+        "status": "success",
+        "code": 200
+      },
+      "Ledger": {
+        "status": "success",
+        "code": 200
+      }
+    },
+    "dev_tools": {
+      "ErgoScript Playground": {
+        "status": "failed",
+        "error": "getaddrinfo ENOTFOUND playground.ergoplatform.com"
+      },
+      "Ergo AppKit": {
+        "status": "success",
+        "code": 200
+      },
+      "Chrome Extension": {
+        "status": "success",
+        "code": 301
+      }
+    },
+    "api": {
+      "Beehiiv API": {
+        "status": "failed",
+        "error": "HTTP 404"
+      },
+      "Schema.org": {
+        "status": "success",
+        "code": 200
+      }
+    }
+  }
+}
