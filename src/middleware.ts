@@ -18,16 +18,7 @@ const intlMiddleware = createMiddleware({
 
 // Экспортируем общий обработчик
 export default function middleware(request: NextRequest) {
-  const host = request.headers.get('host') || '';
 
-  // --- 1. Редирект с www.domain.com на domain.com ---
-  if (host.startsWith('www.')) {
-    const url = request.nextUrl.clone();
-    url.host = host.replace(/^www\./, '');
-    return NextResponse.redirect(url, 308);
-  }
-
-  // --- 2. Передаём дальше в next-intl ---
   return intlMiddleware(request);
 }
 
