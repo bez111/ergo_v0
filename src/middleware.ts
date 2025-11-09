@@ -1,7 +1,8 @@
 import createMiddleware from 'next-intl/middleware';
 import { locales } from '../i18n';
+import { NextRequest, NextResponse } from 'next/server';
 
-export default createMiddleware({
+const intlMiddleware = createMiddleware({
   // A list of all locales that are supported
   locales,
   
@@ -14,6 +15,21 @@ export default createMiddleware({
   // Disable automatic locale detection to rely on our cookie
   localeDetection: false
 });
+
+// Экспортируем общий обработчик
+export default function middleware(request: NextRequest) {
+  const host = request.headers.get('host') || '';
+
+  // --- 1. Редирект с www.domain.com на domain.com ---
+  if (host.startsWith('www.')) {
+    const url = request.nextUrl.clone();
+    url.host = host.replace(/^www\./, '');
+    return NextResponse.redirect(url, 308);
+  }
+
+  // --- 2. Передаём дальше в next-intl ---
+  return intlMiddleware(request);
+}
 
 export const config = {
   // Match only internationalized pathnames
