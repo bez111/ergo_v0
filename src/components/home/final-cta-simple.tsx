@@ -267,7 +267,7 @@ export function FinalCTASimple({
                       ) : (
                         <Send className="w-4 h-4 mr-2" />
                       )}
-                      {isLoading ? 'Subscribing...' : 'Get Starter Kit'}
+                      {isLoading ? 'Subscribing...' : 'Subscribe'}
                     </Button>
                   </div>
                   {emailError && (
