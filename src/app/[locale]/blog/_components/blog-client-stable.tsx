@@ -184,7 +184,7 @@ export default function BlogClientStable({
         </h2>
         
         <div className="mb-16">
-          <div className="flex items-center justify-between mb-8 animate-fade-in">
+          <div className="flex items-baseline gap-4 mb-8 animate-fade-in">
             <h3 className="text-3xl font-bold text-white">
               {search ? `Search Results` : 
                selectedCategory !== 'all' ? `${selectedCategory} Articles` :
@@ -195,30 +195,6 @@ export default function BlogClientStable({
             </div>
           </div>
 
-          {/* Clear filters */}
-          {hasActiveFilters && (
-            <div className="mb-6 flex items-center gap-2">
-              <span className="text-sm text-neutral-400">Active filters:</span>
-              {search && (
-                <button
-                  onClick={() => handleSearch("")}
-                  className="inline-flex items-center gap-1 px-2 py-1 text-xs bg-orange-500/20 text-orange-400 rounded-md hover:bg-orange-500/30 transition-colors"
-                >
-                  Search: "{search}"
-                  <X className="w-3 h-3" />
-                </button>
-              )}
-              {selectedCategory !== "all" && (
-                <button
-                  onClick={() => handleCategoryChange("all")}
-                  className="inline-flex items-center gap-1 px-2 py-1 text-xs bg-blue-500/20 text-blue-400 rounded-md hover:bg-blue-500/30 transition-colors"
-                >
-                  Category: {selectedCategory}
-                  <X className="w-3 h-3" />
-                </button>
-              )}
-            </div>
-          )}
 
           {/* Posts Grid */}
           {filteredPosts.length > 0 ? (

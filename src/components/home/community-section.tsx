@@ -15,14 +15,14 @@ export function CommunitySection() {
       name: "Twitter",
       description: "Follow for updates",
       icon: Twitter,
-      url: "https://twitter.com/ergoplatform",
+      url: "https://x.com/BuildOnErgo",
       color: "bg-[#1DA1F2]/10 text-[#1DA1F2]",
     },
     {
       name: "Forum",
       description: "Discuss and propose ideas",
       icon: MessageSquare,
-      url: "https://forum.ergoplatform.org",
+      url: "https://ergoforum.org",
       color: "bg-orange-500/10 text-orange-500",
     },
     {

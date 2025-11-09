@@ -63,7 +63,7 @@ const platforms = [
     activity: "Active",
     icon: Users,
     buttonText: "Join Telegram",
-    href: "https://t.me/ergoplatform",
+    href: "https://t.me/BuildOnErgo",
     features: ["Quick Updates", "Mobile Alerts", "Instant News", "Global Community"],
   },
   {
@@ -92,8 +92,8 @@ const platforms = [
     members: "25K+",
     activity: "Daily",
     icon: Twitter,
-    buttonText: "Follow @ergoplatform",
-    href: "https://twitter.com/ergoplatform",
+    buttonText: "Follow @BuildOnErgo",
+    href: "https://x.com/BuildOnErgo",
     features: ["Breaking News", "Network Status", "Announcements", "Quick Updates"],
   },
   {
@@ -112,8 +112,8 @@ const platforms = [
     members: "3K+",
     activity: "Regular",
     icon: Instagram,
-    buttonText: "Follow @ergoplatform",
-    href: "https://instagram.com/ergoplatform",
+    buttonText: "Follow @BuildOnErgo",
+    href: "https://instagram.com/BuildOnErgo",
     features: ["Visual Stories", "Behind-the-Scenes", "Team Updates", "Community Highlights"],
   },
   {
@@ -122,8 +122,8 @@ const platforms = [
     members: "2K+",
     activity: "Regular",
     icon: TikTokIcon,
-    buttonText: "Follow @ergo",
-    href: "https://tiktok.com/@ergoplatform",
+    buttonText: "Follow @BuildOnErgo",
+    href: "https://tiktok.com/@BuildOnErgo",
     features: ["Short Highlights", "Viral Content", "Quick Tips", "Community Memes"],
   },
   {
@@ -133,7 +133,7 @@ const platforms = [
     activity: "Weekly",
     icon: PinterestIcon,
     buttonText: "Follow Boards",
-    href: "https://pinterest.com/ergoplatform",
+    href: "https://pinterest.com/BuildOnErgo",
     features: ["Infographics", "Visual Assets", "Educational Pins", "Design Resources"],
   },
 ]

@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useMemo, useEffect, useState } from "react"
-import { 
+import {
   BookOpen,
   Cog,
   Code2,
@@ -9,12 +9,10 @@ import {
   Network,
   Eye,
   Brain,
-  X,
   ChevronDown,
   Search
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
 import type { BlogPost } from "../_lib/blog-data"
 
@@ -97,8 +95,7 @@ export function BlogFiltersNew({
       aria-label="Blog filters"
       role="tablist"
     >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center gap-3 py-2">
+      <div className="flex items-center gap-3 py-2">
           {/* Scrollable filter pills */}
           <div className="flex-1 overflow-x-auto scrollbar-none snap-x snap-mandatory">
             <ul className="flex items-center gap-2 min-w-max" role="none">
@@ -232,37 +229,6 @@ export function BlogFiltersNew({
             </select>
           </div>
         </div>
-
-        {/* Active filter chip */}
-        {selectedCategory !== 'all' && activeCategory && (
-          <div className="pb-2">
-            <Badge 
-              variant="secondary" 
-              className="bg-orange-500/20 text-orange-400 border-orange-500/30 text-xs"
-            >
-              {activeCategory.name}
-              <button
-                onClick={() => onCategoryChange('all')}
-                className="ml-1 hover:text-orange-300"
-                aria-label={`Remove ${activeCategory.name} filter`}
-              >
-                <X className="h-3 w-3" />
-              </button>
-            </Badge>
-          </div>
-        )}
-      </div>
-
-
-      <style jsx>{`
-        .scrollbar-none {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .scrollbar-none::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </nav>
   )
 }

@@ -16,6 +16,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
+import { NewsletterSection } from "@/components/blog/newsletter-section"
 
 interface BlogPostClientPremiumProps {
   post: BlogPost
@@ -513,7 +514,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
                   </h4>
                   <ul className="space-y-2">
                     <li>
-                      <a href="https://playground.ergoplatform.com" target="_blank" rel="noopener noreferrer" 
+                      <a href="https://scastie.scala-lang.org" target="_blank" rel="noopener noreferrer" 
                          className="text-orange-400 hover:text-orange-300 flex items-center gap-2">
                         Ergo Playground - Interactive contract testing
                         <ExternalLink className="w-3 h-3" />
@@ -607,7 +608,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
                     </Link>
                   </Button>
                   <Button variant="outline" asChild>
-                    <Link href="https://playground.ergoplatform.com" target="_blank" rel="noopener noreferrer">
+                    <Link href="https://scastie.scala-lang.org" target="_blank" rel="noopener noreferrer">
                       <Code2 className="w-4 h-4 mr-2" />
                       Try Playground
                     </Link>
@@ -700,24 +701,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
         </section>
 
         {/* Newsletter section - Minimal */}
-        <section className="mt-12 py-8 border-t border-neutral-800">
-          <div className="text-center">
-            <h2 className="text-lg font-semibold mb-2 text-white">Stay Updated</h2>
-            <p className="text-sm text-neutral-500 mb-4">
-              Get Ergo development insights delivered to your inbox.
-            </p>
-            <form className="flex gap-3 max-w-sm mx-auto">
-              <input 
-                type="email" 
-                placeholder="Enter your email" 
-                className="flex-1 px-3 py-2 bg-neutral-900/50 border border-neutral-700 rounded text-sm focus:border-orange-500 focus:outline-none"
-              />
-              <Button type="submit" size="sm" className="bg-orange-500 hover:bg-orange-600 text-white px-4">
-                Subscribe
-              </Button>
-            </form>
-          </div>
-        </section>
+        <NewsletterSection />
       </main>
 
       {/* Scroll to top button */}

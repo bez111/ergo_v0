@@ -1,39 +1,34 @@
 import type { Metadata } from "next"
-import GuidesClient from "./GuidesClient"
-import { SchemaTypes } from "@/lib/schema-ultimate"
-import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
-import { getTranslations } from "next-intl/server"
-import { useTranslations } from "next-intl"
+import GuidesUnderConstructionClient from "./GuidesUnderConstructionClient"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
-  const t = await getTranslations({ locale, namespace: 'use.guides.seo' })
   
   return {
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
+    title: "Ergo Guides - Coming Soon",
+    description: "Comprehensive guides to master the Ergo ecosystem. From beginner tutorials to advanced development patterns - launching soon.",
+    keywords: "Ergo guides, tutorials, blockchain education, ErgoScript, DeFi guides, wallet setup, smart contracts",
     alternates: {
-      canonical: "https://ergoblockchain.org/use/guides"
+      canonical: "https://ergoblockchain.org/learn/guides"
     },
     openGraph: {
-      title: t('ogTitle'),
-      description: t('ogDescription'),
-      url: "https://ergoblockchain.org/use/guides",
+      title: "Ergo Guides - Coming Soon",
+      description: "Comprehensive guides to master the Ergo ecosystem - launching soon.",
+      url: "https://ergoblockchain.org/learn/guides",
       siteName: "Ergo Platform",
       images: [{
         url: "https://ergoblockchain.org/og/guides.png",
         width: 1200,
         height: 630,
-        alt: "Ergo User Guides"
+        alt: "Ergo Guides - Coming Soon"
       }],
       type: "website",
       locale: "en_US"
     },
     twitter: {
       card: "summary_large_image",
-      title: t('twitterTitle'),
-      description: t('twitterDescription'),
+      title: "Ergo Guides - Coming Soon",
+      description: "Comprehensive guides to master the Ergo ecosystem - launching soon.",
       images: ["https://ergoblockchain.org/og/guides.png"],
       creator: "@ergoplatform",
       site: "@ergoplatform"
@@ -50,82 +45,5 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 export default function GuidesPage() {
-  const t = useTranslations('use.guides.schema')
-
-  // SEO схемы для Guides
-  const guidesCollectionSchema = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": "https://ergoblockchain.org/use/guides",
-    name: t('collection.name'),
-    description: t('collection.description'),
-    hasPart: [
-      {
-        "@type": "HowTo",
-        name: t('collection.guides.wallet.name'),
-        description: t('collection.guides.wallet.description')
-      },
-      {
-        "@type": "HowTo",
-        name: t('collection.guides.defi.name'),
-        description: t('collection.guides.defi.description')
-      },
-      {
-        "@type": "HowTo",
-        name: t('collection.guides.mining.name'),
-        description: t('collection.guides.mining.description')
-      },
-      {
-        "@type": "HowTo",
-        name: t('collection.guides.nft.name'),
-        description: t('collection.guides.nft.description')
-      }
-    ]
-  }
-  
-  const faqSchema = SchemaTypes.FAQSchema([
-    {
-      question: t('faq.available.question'),
-      answer: t('faq.available.answer')
-    },
-    {
-      question: t('faq.beginners.question'),
-      answer: t('faq.beginners.answer')
-    },
-    {
-      question: t('faq.updates.question'),
-      answer: t('faq.updates.answer')
-    },
-    {
-      question: t('faq.help.question'),
-      answer: t('faq.help.answer')
-    }
-  ])
-  
-  const learningResourceSchema = {
-    "@context": "https://schema.org",
-    "@type": "LearningResource",
-    name: t('learningResource.name'),
-    description: t('learningResource.description'),
-    learningResourceType: "Guide",
-    educationalLevel: t('learningResource.level'),
-    teaches: t('learningResource.teaches'),
-    provider: {
-      "@type": "Organization",
-      name: "Ergo Platform"
-    }
-  }
-  
-  const knowledgeGraph = generateKnowledgeGraph('guides')
-  
-  return (
-    <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(guidesCollectionSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      
-      <GuidesClient />
-    </>
-  )
+  return <GuidesUnderConstructionClient />
 } 

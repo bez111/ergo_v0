@@ -304,7 +304,7 @@ export function ErgoManifestoClient() {
             <div className="bg-black border border-white/10 rounded-3xl p-6 sm:p-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6 flex items-center gap-3">
                 <Zap className="w-7 h-7 text-orange-400" />
-                Ergo.nomic Money
+                Ergonomic Money
               </h2>
               
               <div className="space-y-6 text-gray-300 leading-relaxed">
