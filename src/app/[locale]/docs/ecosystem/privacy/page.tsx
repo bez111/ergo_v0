@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { EyeOff, Shuffle, KeyRound, UserCheck, ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -50,7 +48,7 @@ export default function PrivacyPage() {
             <Link
               key={index}
               href={section.link}
-              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[220px] cursor-pointer group relative"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[220px] cursor-pointer group relative"
             >
               <div>
                 <h3 className="text-xl font-bold mb-3 flex items-center gap-2">

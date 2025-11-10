@@ -4,6 +4,7 @@ import { useCases } from "./_data"
 import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 import { getTranslations } from "next-intl/server"
+import { siteConfig } from "@/config/site-config"
 
 export const revalidate = 600
 
@@ -13,7 +14,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const title = t('title') + " — DeFi, NFTs, Privacy, Bridges"
   const description = t('description')
   const url = "https://ergoblockchain.org/use"
-  const twitterHandle = process.env['NEXT_PUBLIC_TWITTER_HANDLE']
+  const twitterHandle = siteConfig.twitterHandle
   return {
     title,
     description,

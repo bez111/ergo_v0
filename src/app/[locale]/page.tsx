@@ -12,6 +12,7 @@ import { BlogSectionHome } from "@/components/home/blog-section-home"
 import { JoinCommunity } from "@/components/home/join-community"
 import { FAQSimple } from "@/components/home/faq-simple"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { siteConfig } from '@/config/site-config';
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -28,7 +29,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     openGraph: {
       title: "Ergo Blockchain — Money Without Masters",
       description: "Decentralized, programmable, censorship-resistant finance. Built by cypherpunks for freedom seekers. No MEV, no VC control, no compromises.",
-      url: "https://ergoblockchain.org",
+      url: siteConfig.siteUrl,
       siteName: "Ergo Blockchain",
       type: "website",
       images: [{
@@ -43,8 +44,8 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
       title: "Ergo Blockchain — Money Without Masters",
       description: "Decentralized, programmable, censorship-resistant finance. Built by cypherpunks for freedom.",
       images: ["https://ergoblockchain.org/og/homepage.png"],
-      creator: "@ergoplatform",
-      site: "@ergoplatform"
+      creator: siteConfig.twitterHandle,
+      site: siteConfig.twitterHandle
     }
   };
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css"
 import { siteConfig } from "@/config/site-config";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { Suspense } from "react";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -65,7 +67,7 @@ export const metadata: Metadata = {
     title: 'Ergo Platform - Resilient Blockchain for Contractual Money',
     description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
     images: ['/og-image.png'],
-    creator: '@BuildOnErgo',
+    creator: siteConfig.twitterHandle,
   },
   alternates: {
     canonical: siteConfig.siteUrl,
@@ -110,8 +112,8 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Organization',
   name: 'Ergo Platform',
-  url: 'https://ergoblockchain.org',
-  logo: 'https://ergoblockchain.org/logo.png',
+  url: siteConfig.siteUrl,
+  logo: `${siteConfig.siteUrl}/logo-ergo.svg`,
   description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
   sameAs: [
     'https://twitter.com/BuildOnErgo',
@@ -149,6 +151,9 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased" suppressHydrationWarning>
+        <Suspense>
+          <GoogleAnalytics />
+        </Suspense>
         {children}
       </body>
     </html>

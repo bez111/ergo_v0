@@ -1,32 +1,21 @@
-"use client";
+"use client"
 
 import React from 'react';
 import { 
-  Shield, 
   Server, 
   Settings, 
   ExternalLink, 
   ArrowLeft,
   CheckCircle,
   AlertTriangle,
-  Download,
   ChevronRight,
   Target,
   Users,
-  DollarSign,
-  Zap,
-  Code,
   Terminal,
-  HardDrive,
-  Network,
-  Clock,
-  TrendingUp,
   Copy,
   Check,
   BarChart3,
-  GitBranch,
   Database,
-  Lock,
   HelpCircle,
   Calculator,
   Key,
