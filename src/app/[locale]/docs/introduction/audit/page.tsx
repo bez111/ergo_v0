@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import { Shield, FileText, Lock, Cpu, CheckCircle, AlertTriangle, ExternalLink } from "lucide-react";
 

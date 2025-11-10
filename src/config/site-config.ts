@@ -4,5 +4,7 @@ export const siteConfig = {
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://ergoblockchain.org',
   
   beehiivApiKey: process.env.BEEHIIV_API_KEY,
-  beehiivPublicationId: process.env.BEEHIIV_PUBLICATION_ID
+  beehiivPublicationId: process.env.BEEHIIV_PUBLICATION_ID,
+
+  googleAnalyticsId: process.env.NEXT_PUBLIC_GA_ID
 };

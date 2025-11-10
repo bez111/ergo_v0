@@ -2,22 +2,17 @@
 
 import React from "react";
 import {
-  Wrench,
   Shield,
   Layers,
-  BookOpen,
   ExternalLink,
   ChevronRight,
-  Star,
   Cpu,
   Users,
   List,
   Puzzle,
   Code,
   CheckCircle,
-  Brain,
-  Globe
-} from "lucide-react";
+  Brain} from "lucide-react";
 import Link from "next/link";
 
 export default function CruxFinancePage() {

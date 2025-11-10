@@ -1,49 +1,26 @@
-"use client";
-
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import {
   Users,
   Shield,
   CheckCircle,
-  XCircle,
-  ArrowRightLeft,
-  Lock,
-  Eye,
   TrendingUp,
-  AlertCircle,
   BookOpen,
   Target,
-  Coins,
   GitBranch,
   ExternalLink,
-  Globe,
-  MessageCircle,
   Cpu,
-  Network,
-  KeyRound,
   Settings,
-  Clock,
-  Rocket,
   ChevronRight,
-  Wallet,
-  DollarSign,
   Info,
-  ListChecks,
-  Database,
-  Handshake,
-  CreditCard,
-  Building2,
   BarChart3,
   Zap,
-  CheckSquare,
   AlertTriangle,
   Infinity,
   Code,
   Layers
 } from "lucide-react";
 import Link from "next/link";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Alert } from "@/components/ui/alert";
 
 export default function PerpetualTokensPage() {

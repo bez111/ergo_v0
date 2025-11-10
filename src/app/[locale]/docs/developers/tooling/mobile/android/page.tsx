@@ -48,7 +48,8 @@ function CardGrid({ items }: { items: any[] }) {
         <a
           key={item.title}
           href={item.url}
-          className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-neutral-600 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative"
+          target="_blank"
+          className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-400 transition-all duration-300 flex flex-col justify-between min-h-[140px] cursor-pointer group relative"
         >
           <div>
             <h3 className="text-xl font-bold mb-2 flex items-center gap-2">

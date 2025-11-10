@@ -1,27 +1,16 @@
-"use client";
-
 import React from "react";
 import {
   TrendingUp,
   ExternalLink,
   GitBranch,
-  Layers,
   Zap,
-  Shield,
-  Repeat,
-  Lock,
-  Database,
   Terminal,
   Code2,
   ChevronRight,
-  Star,
-  Cpu,
-  List,
   BookOpen,
   Users,
   Wallet,
   Clock,
-  Key,
   ArrowLeftRight,
   DollarSign
 } from "lucide-react";

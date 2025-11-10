@@ -1,17 +1,85 @@
 "use client"
 
+import { siteConfig } from "@/config/site-config";
+import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script"
+import { useEffect } from "react";
 
-interface GoogleAnalyticsProps {
-  id: string
+/**
+ * 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'ID');
+</script> 
+ 
+ */
+
+const GA_ID = siteConfig.googleAnalyticsId
+
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag?: (...args: any[]) => void;
+  }
 }
 
-export function GoogleAnalytics({ id }: GoogleAnalyticsProps) {
-  if (!id) return null
+/**
+ * pageview helper (also exported below)
+ */
+export const pageview = (path: string) => {
+  if (!GA_ID || typeof window === "undefined" || !window.gtag) return;
+  window.gtag("config", GA_ID, {
+    page_path: path,
+  });
+};
+
+/**
+ * event helper
+ * category/action/label/value are optional metadata for your events
+ */
+export const event = ({
+  action,
+  category,
+  label,
+  value,
+}: {
+  action: string;
+  category?: string;
+  label?: string;
+  value?: number;
+}) => {
+  if (!GA_ID || typeof window === "undefined" || !window.gtag) return;
+  window.gtag("event", action, {
+    event_category: category,
+    event_label: label,
+    value,
+  });
+};
+
+export function GoogleAnalytics() {
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    // On route/path change, report a pageview
+    // build full path with query
+    const query = searchParams?.toString();
+    const path = query ? `${pathname}?${query}` : pathname;
+    pageview(path);
+  }, [pathname, searchParams]);
+  
+  if (!GA_ID) { 
+    return null 
+  }
   return (
     <>
       <Script
-        src={`https://www.googletagmanager.com/gtag/js?id=${id}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
         strategy="afterInteractive"
       />
       <Script id="ga4-init" strategy="afterInteractive">
@@ -19,7 +87,7 @@ export function GoogleAnalytics({ id }: GoogleAnalyticsProps) {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);} 
           gtag('js', new Date());
-          gtag('config', '${id}', { anonymize_ip: true });
+          gtag('config', '${GA_ID}', { anonymize_ip: true, page_path: window.location.pathname });
         `}
       </Script>
     </>
