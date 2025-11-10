@@ -234,11 +234,6 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
                                   >
                                     {wallet.buttonText}
                                   </EnhancedButton>
-                                  {wallet.recommended && (
-                                    <p className="text-xs text-gray-500 text-center">
-                                      Verify checksum after download
-                                    </p>
-                                  )}
                                 </div>
                               </div>
                             ))}
