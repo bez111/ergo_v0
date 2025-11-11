@@ -1,18 +1,21 @@
 "use client"
 
 import Link from "next/link"
-import { Users, MessageSquare, Code2, Twitter } from "lucide-react"
+import { Code2, Twitter } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { CyberButton } from "@/components/animations/cyber-button"
+import { siteConfig } from "@/config/site-config"
+import { FaDiscord, FaTelegram } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6";
 
 export function JoinCommunity() {
   const channels = [
     {
-      icon: MessageSquare,
+      icon: FaDiscord,
       title: "Discord",
       desc: "Join our community",
       members: "Active daily",
-      href: "https://discord.gg/Q86PNMwRsu"
+      href: `${siteConfig.discordLink}`
     },
     {
       icon: Code2,
@@ -22,18 +25,18 @@ export function JoinCommunity() {
       href: "https://github.com/ergoplatform"
     },
     {
-      icon: Users,
+      icon: FaTelegram,
       title: "Telegram",
       desc: "Chat with the community",
       members: "Global reach",
-      href: "https://t.me/ergoplatform"
+      href: `${siteConfig.telegramLink}`
     },
     {
-      icon: Twitter,
+      icon: FaXTwitter,
       title: "Twitter/X",
       desc: "Follow latest updates",
       members: "Daily updates",
-      href: "https://twitter.com/BuildOnErgo"
+      href: `${siteConfig.twitterLink}`
     }
   ]
 
