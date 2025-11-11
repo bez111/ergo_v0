@@ -47,12 +47,6 @@ export default function GetErgClient() {
       icon: Cpu,
     },
     {
-      name: "HTX",
-      description: "Leading digital asset exchange",
-      link: "https://www.htx.com/en-us/trade/erg_usdt/",
-      icon: Cpu,
-    },
-    {
       name: "CoinEx",
       description: "Professional cryptocurrency exchange",
       link: "https://www.coinex.com/exchange/ERG-USDT",
