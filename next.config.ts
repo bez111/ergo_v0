@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 // Подключаем next-intl
-const withNextIntl = createNextIntlPlugin('./i18n.ts');
+const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
@@ -75,7 +75,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, max-age=86400, immutable',
           },
         ],
       },
@@ -84,7 +84,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, max-age=86400, immutable',
           },
         ],
       },
@@ -93,7 +93,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=86400, s-maxage=31536000, stale-while-revalidate=86400',
+            value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=86400',
           },
         ],
       },
@@ -102,7 +102,7 @@ const nextConfig: NextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
+            value: 'public, max-age=86400, immutable',
           },
         ],
       },
@@ -169,68 +169,68 @@ const nextConfig: NextConfig = {
   },
 
   // Redirects — старая структура URL → новая
-  async redirects() {
-    return [
-      // Old use-cases structure → New simplified structure (301 permanent)
-      {
-        source: '/use/use-cases/algorithmic-stablecoins',
-        destination: '/use/stablecoins',
-        permanent: true,
-      },
-      {
-        source: '/use/use-cases/privacy-confidentiality',
-        destination: '/use/privacy',
-        permanent: true,
-      },
-      {
-        source: '/use/use-cases/cross-chain-bridges',
-        destination: '/use/bridges',
-        permanent: true,
-      },
-      {
-        source: '/use/use-cases/daos-alternative-economies',
-        destination: '/use/daos',
-        permanent: true,
-      },
-      {
-        source: '/use/use-cases/nfts-digital-assets',
-        destination: '/use/nfts',
-        permanent: true,
-      },
-      {
-        source: '/use/use-cases/oracles-data-feeds',
-        destination: '/use/oracles',
-        permanent: true,
-      },
-      {
-        source: '/use/use-cases/identity-reputation',
-        destination: '/use/identity',
-        permanent: true,
-      },
-      {
-        source: '/use/use-cases/gaming-metaverse',
-        destination: '/use/gaming',
-        permanent: true,
-      },
-      // Catch-all для старой структуры с локалями
-      {
-        source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/use/use-cases/:slug',
-        destination: '/:locale/use/:slug',
-        permanent: true,
-      },
-      // Babel Fees moved from use to technology
-      {
-        source: '/use/babel-fees',
-        destination: '/technology/babel-fees',
-        permanent: true,
-      },
-      {
-        source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/use/babel-fees',
-        destination: '/:locale/technology/babel-fees',
-        permanent: true,
-      },
-    ];
-  },
+  // async redirects() {
+  //   return [
+  //     // Old use-cases structure → New simplified structure (301 permanent)
+  //     {
+  //       source: '/use/use-cases/algorithmic-stablecoins',
+  //       destination: '/use/stablecoins',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/use/use-cases/privacy-confidentiality',
+  //       destination: '/use/privacy',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/use/use-cases/cross-chain-bridges',
+  //       destination: '/use/bridges',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/use/use-cases/daos-alternative-economies',
+  //       destination: '/use/daos',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/use/use-cases/nfts-digital-assets',
+  //       destination: '/use/nfts',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/use/use-cases/oracles-data-feeds',
+  //       destination: '/use/oracles',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/use/use-cases/identity-reputation',
+  //       destination: '/use/identity',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/use/use-cases/gaming-metaverse',
+  //       destination: '/use/gaming',
+  //       permanent: true,
+  //     },
+  //     // Catch-all для старой структуры с локалями
+  //     {
+  //       source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/use/use-cases/:slug',
+  //       destination: '/:locale/use/:slug',
+  //       permanent: true,
+  //     },
+  //     // Babel Fees moved from use to technology
+  //     {
+  //       source: '/use/babel-fees',
+  //       destination: '/technology/babel-fees',
+  //       permanent: true,
+  //     },
+  //     {
+  //       source: '/:locale(de|fr|es|ar|zh-cn|zh-tw|tr|ru|pt-br|it|ja|ko-kr)/use/babel-fees',
+  //       destination: '/:locale/technology/babel-fees',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 
   // Оптимизация бандла
   poweredByHeader: false,

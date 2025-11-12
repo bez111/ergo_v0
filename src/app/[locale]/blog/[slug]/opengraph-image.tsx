@@ -114,7 +114,7 @@ export default async function Image({ params }: { params: { slug: string } }) {
             overflow: 'hidden',
           }}
         >
-          {post.description}
+          {post.excerpt}
         </p>
 
         {/* Footer */}

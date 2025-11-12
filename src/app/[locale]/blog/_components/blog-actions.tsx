@@ -2,8 +2,8 @@
 
 import { useState } from 'react'
 import { Printer, Download, Share2, BookmarkPlus, Volume2, VolumeX } from 'lucide-react'
-import { Button } from '@/src/components/ui/button'
 import { motion } from 'framer-motion'
+import { Button } from '@/components/ui/button'
 
 interface BlogActionsProps {
   title: string

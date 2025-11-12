@@ -4,8 +4,8 @@ import Script from 'next/script'
 import { blogPosts } from "../_lib/blog-data"
 import { BlogPostClientPremium } from "./BlogPostClientPremium"
 import { BlogSchema } from "../_components/blog-schema"
-import { generateMetadata as generatePageMetadata } from '@/src/components/seo/page-metadata'
-import { PageMetadata } from '@/src/components/seo/page-metadata'
+// import { generateMetadata as generatePageMetadata } from '@/src/components/seo/page-metadata'
+// import { PageMetadata } from '@/src/components/seo/page-metadata'
 import { siteConfig } from '@/config/site-config'
 
 export function generateStaticParams() {
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const fullTitle = `${seoTitle} | Ergo Platform`
 
   // Optimize description (150-160 chars)
-  const seoDescription = post.description || post.excerpt
+  const seoDescription = post.excerpt
   const optimizedDescription = seoDescription.length > 155 
     ? `${seoDescription.substring(0, 152)}...` 
     : seoDescription
