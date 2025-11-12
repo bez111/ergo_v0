@@ -1,4 +1,4 @@
-import { locales, localeConfig } from '../../../i18n';
+import { locales, localeConfig } from '../../i18n';
 
 interface HreflangTagsProps {
   pathname: string;

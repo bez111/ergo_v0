@@ -1,4 +1,4 @@
-import { locales, type Locale } from '../../i18n';
+import { locales, type Locale } from '../i18n';
 
 export async function getMessages(locale: Locale) {
   // Fallback to 'en' if locale is undefined

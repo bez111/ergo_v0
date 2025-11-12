@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from 'next/navigation';
-import { locales, isRtlLocale, getLocaleConfig, type Locale } from '../../../i18n';
+import { locales, isRtlLocale, getLocaleConfig, type Locale } from '../../i18n';
 import { getMessages, getTranslations } from '@/lib/messages';
 import { ThemeProvider } from "@/components/theme-provider";
 import { ErrorBoundary } from "@/components/error-boundary";
@@ -57,7 +57,7 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
     openGraph: {
       type: 'website',
       locale: localeConfig.hreflang,
-      url: 'https://ergoblockchain.org',
+      url: `${siteConfig.siteUrl}`,
       siteName: 'Ergo Platform',
       title: t('defaultTitle'),
       description: t('defaultDescription'),
@@ -75,14 +75,14 @@ export async function generateMetadata({ params }: LocaleLayoutProps): Promise<M
       title: t('defaultTitle'),
       description: t('defaultDescription'),
       images: ['/og-image.png'],
-      creator: '@ergoplatformorg',
+      creator: `${siteConfig.twitterHandle}`,
     },
     alternates: {
-      canonical: 'https://ergoblockchain.org',
+      canonical: `${siteConfig.siteUrl}`,
       languages: Object.fromEntries(
         locales.map(loc => [
           getLocaleConfig(loc).hreflang,
-          loc === 'en' ? 'https://ergoblockchain.org' : `https://ergoblockchain.org/${loc}`
+          loc === 'en' ? `${siteConfig.siteUrl}` : `${siteConfig.siteUrl}/${loc}`
         ])
       ),
     },

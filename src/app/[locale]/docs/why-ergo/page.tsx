@@ -4,7 +4,6 @@ import {
   Shield, 
   Users, 
   Code, 
-  Globe, 
   Zap, 
   CheckCircle, 
   ExternalLink,
@@ -12,7 +11,6 @@ import {
   Brain,
   Lock,
   Cpu,
-  Database,
   Coins,
   GitBranch
 } from 'lucide-react';

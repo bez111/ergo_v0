@@ -4,8 +4,9 @@ import Script from 'next/script'
 import { blogPosts } from "../_lib/blog-data"
 import { BlogPostClientPremium } from "./BlogPostClientPremium"
 import { BlogSchema } from "../_components/blog-schema"
-import { generateMetadata as generatePageMetadata } from '@/src/components/seo/page-metadata'
-import { PageMetadata } from '@/src/components/seo/page-metadata'
+// import { generateMetadata as generatePageMetadata } from '@/src/components/seo/page-metadata'
+// import { PageMetadata } from '@/src/components/seo/page-metadata'
+import { siteConfig } from '@/config/site-config'
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({
@@ -33,7 +34,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const fullTitle = `${seoTitle} | Ergo Platform`
 
   // Optimize description (150-160 chars)
-  const seoDescription = post.description || post.excerpt
+  const seoDescription = post.excerpt
   const optimizedDescription = seoDescription.length > 155 
     ? `${seoDescription.substring(0, 152)}...` 
     : seoDescription
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: fullTitle,
     description: optimizedDescription,
-    keywords: post.tags.join(', '),
+    keywords: post.tags?.join(', '),
     authors: [{ name: post.author.name }],
     creator: post.author.name,
     publisher: 'Ergo Platform',
@@ -69,7 +70,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       title: seoTitle,
       description: optimizedDescription,
       images: [post.image || `${baseUrl}/og-image-blog.png`],
-      creator: post.author.social?.twitter ? `@${post.author.social.twitter}` : '@ergoplatformorg',
+      creator: post.author.twitter ? `@${post.author.twitter}` : `${siteConfig.twitterHandle}`,
     },
     alternates: {
       canonical: `${baseUrl}/blog/${slug}`,

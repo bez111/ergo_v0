@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState, useDeferredValue } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { BookOpen, TrendingUp, Clock, Users, FileText, Hash } from "lucide-react"
+import { BookOpen, FileText, Hash } from "lucide-react"
 import { motion, AnimatePresence } from "framer-motion"
 import { BlogCard } from "./blog-card"
 import { BlogFiltersAdvanced } from "./blog-filters-advanced"
@@ -10,7 +10,6 @@ import type { BlogPost } from "../_lib/blog-data"
 import { BlogCompactSkeleton } from "./blog-skeleton"
 import { SkeletonCard } from "@/components/ui/skeleton"
 import { Button } from "@/components/ui/button"
-import { Badge } from "@/components/ui/badge"
 
 interface BlogClientAdvancedProps {
   posts: BlogPost[]
@@ -26,7 +25,7 @@ type SortKey = "latest" | "popular" | "trending" | "discussed"
 
 function BlogClientAdvanced({ 
   posts, 
-  categories, 
+  // categories, 
   page, 
   pageSize, 
   total, 
