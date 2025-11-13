@@ -107,7 +107,7 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     "@type": "Blog",
     "@id": blogId,
     name: "Ergo Blog",
-    url: "https://ergoblockchain.org/blog",
+    url: `${siteConfig.siteUrl}/blog`,
     inLanguage: "en",
     publisher: {
       "@type": "Organization",

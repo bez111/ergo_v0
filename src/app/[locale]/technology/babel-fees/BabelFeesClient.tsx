@@ -21,8 +21,9 @@ import {
   ArrowDown,
   ArrowRight,
 } from "lucide-react"
-import { useState } from "react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+
+const EIP31_URL = "https://github.com/ergoplatform/eips/blob/master/eip-0031.md"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -40,7 +41,7 @@ const itemVariants = {
 }
 
 export default function BabelFeesClient() {
-  const [isExpanded, setIsExpanded] = useState(false)
+  // const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <BackgroundWrapper>
@@ -67,9 +68,9 @@ export default function BabelFeesClient() {
                     <Link href="#how-it-works">How It Works</Link>
                   </Button>
                   <Button asChild variant="outline" className="border-neutral-600 text-neutral-200 hover:bg-neutral-900/40 px-6 py-3 rounded-xl">
-                    <Link href="https://github.com/ergoplatform/eips/blob/master/eip-0019.md" target="_blank">
+                    <Link href={EIP31_URL} target="_blank">
                       <ExternalLink className="w-5 h-5 mr-2" />
-                      Read EIP-0019
+                      Read EIP-0031
                     </Link>
                   </Button>
                 </div>
@@ -435,7 +436,7 @@ export default function BabelFeesClient() {
                     <Alert className="border-yellow-500/30 bg-yellow-500/10">
                       <Info className="h-4 w-4 text-yellow-400" />
                       <AlertDescription className="text-neutral-300">
-                        <strong className="text-white">Development Status:</strong> Babel Fees are specified in EIP-0019 and are currently being implemented by wallet developers and dApp creators
+                        <strong className="text-white">Development Status:</strong> Babel Fees are specified in EIP-0031 and are currently being implemented by wallet developers and dApp creators
                       </AlertDescription>
                     </Alert>
                     <div className="space-y-4">
@@ -462,7 +463,7 @@ export default function BabelFeesClient() {
                       </div>
                     </div>
                     <Button asChild variant="outline" className="border-orange-500/50 hover:bg-orange-500/10 text-orange-400">
-                      <Link href="https://github.com/ergoplatform/eips/blob/master/eip-0019.md" target="_blank">
+                      <Link href={EIP31_URL} target="_blank">
                         <ExternalLink className="w-4 h-4 mr-2" />
                         Check Latest Updates
                       </Link>
@@ -585,7 +586,7 @@ export default function BabelFeesClient() {
                   </Link>
                 </Button>
                 <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                  <Link href="https://github.com/ergoplatform/eips/blob/master/eip-0019.md" target="_blank">
+                  <Link href={EIP31_URL} target="_blank">
                     <ExternalLink className="w-5 h-5 mr-2" />
                     Learn More
                   </Link>

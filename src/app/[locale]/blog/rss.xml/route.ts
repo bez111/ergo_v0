@@ -1,7 +1,8 @@
+import { siteConfig } from '@/config/site-config'
 import { blogPosts } from '../_lib/blog-data'
 
 export async function GET() {
-  const baseUrl = 'https://ergoblockchain.org'
+  const baseUrl = siteConfig.siteUrl
   const buildDate = new Date().toUTCString()
   
   const rss = `<?xml version="1.0" encoding="UTF-8"?>
@@ -34,7 +35,7 @@ ${blogPosts
     const postUrl = `${baseUrl}/blog/${post.slug}`
     const pubDate = new Date(post.date).toUTCString()
     
-    return `    <item>
+    return `<item>
       <title><![CDATA[${post.title}]]></title>
       <link>${postUrl}</link>
       <guid isPermaLink="true">${postUrl}</guid>
