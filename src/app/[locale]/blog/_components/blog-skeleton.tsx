@@ -1,4 +1,4 @@
-import { SkeletonCard, SkeletonHero, SkeletonFilters, SkeletonPagination } from "@/components/ui/skeleton"
+import { SkeletonCard, SkeletonHero, SkeletonPagination } from "@/components/ui/skeleton"
 
 export function BlogPageSkeleton() {
   return (

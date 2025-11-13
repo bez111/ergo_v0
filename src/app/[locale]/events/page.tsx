@@ -3,6 +3,7 @@ import { getTranslations } from 'next-intl/server'
 import { Calendar } from "lucide-react"
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
+import { siteConfig } from '@/config/site-config'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -34,8 +35,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t('twitterTitle'),
       description: t('twitterDescription'),
       images: ['https://ergoblockchain.org/og/events.png'],
-      creator: '@ergoplatform',
-      site: '@ergoplatform'
+      creator: siteConfig.twitterHandle,
+      site: siteConfig.twitterHandle
     },
     robots: {
       index: false, // Временно скрываем от индексации пока страница в разработке

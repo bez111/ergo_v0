@@ -2,13 +2,13 @@
 
 import { useEffect, useMemo, useState, useDeferredValue } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
-import { BookOpen, TrendingUp, Clock, Users, X } from "lucide-react"
+import { BookOpen, TrendingUp } from "lucide-react"
 import { BlogCard } from "./blog-card"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { BlogFiltersNew } from "./blog-filters-new"
 import type { BlogPost } from "../_lib/blog-data"
-import { BlogCompactSkeleton } from "./blog-skeleton"
-import { SkeletonCard } from "@/components/ui/skeleton"
+// import { BlogCompactSkeleton } from "./blog-skeleton"
+// import { SkeletonCard } from "@/components/ui/skeleton"
 
 interface BlogClientStableProps {
   posts: BlogPost[]
@@ -17,19 +17,19 @@ interface BlogClientStableProps {
   pageSize: number
   total: number
   hasMore: boolean
-  children?: React.ReactNode
+  // children?: React.ReactNode
 }
 
 type SortKey = "newest" | "trending" | "readtime" | "popular"
 
 export default function BlogClientStable({ 
   posts, 
-  categories, 
+  // categories, 
   page, 
   pageSize, 
   total, 
   hasMore, 
-  children 
+  // children 
 }: BlogClientStableProps) {
   const router = useRouter()
   const params = useSearchParams()
@@ -39,6 +39,7 @@ export default function BlogClientStable({
   const [selectedCategory, setSelectedCategory] = useState(() => params.get("cat") || "all")
   const [sortBy, setSortBy] = useState<SortKey>(() => (params.get("sort") as SortKey) || "newest")
   
+  //@ts-ignore
   const [loadedPosts, setLoadedPosts] = useState(posts)
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(page)

@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useMemo, useEffect, useState } from "react"
+import React, { useMemo, useEffect } from "react"
 import {
   BookOpen,
   Cog,
@@ -9,10 +9,9 @@ import {
   Network,
   Eye,
   Brain,
-  ChevronDown,
-  Search
+  Search,
+  X
 } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import type { BlogPost } from "../_lib/blog-data"
 
@@ -52,10 +51,10 @@ export function BlogFiltersNew({
   onCategoryChange,
   onSortChange
 }: BlogFiltersNewProps) {
-  const [mounted, setMounted] = useState(false)
+  // const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    setMounted(true)
+    // setMounted(true)
     
     // Hotkey: "/" для фокуса на поиск
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -86,8 +85,8 @@ export function BlogFiltersNew({
   }, [posts])
 
 
-  const activeCategory = categories.find(cat => cat.id === selectedCategory)
-  const activeCategoryCount = categoryCounts[selectedCategory] || 0
+  // const activeCategory = categories.find(cat => cat.id === selectedCategory)
+  // const activeCategoryCount = categoryCounts[selectedCategory] || 0
 
   return (
     <nav
