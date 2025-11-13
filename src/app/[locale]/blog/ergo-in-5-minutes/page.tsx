@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 import { ErgoIn5MinutesClient } from "./ErgoIn5MinutesClient"
+import { siteConfig } from "@/config/site-config"
 
-export const revalidate = 86400
+export const revalidate = 86400 // 24 часа
 
-const origin = "https://ergoblockchain.org"
+const origin = siteConfig.siteUrl
 const url = `${origin}/blog/ergo-in-5-minutes`
 
 export function generateMetadata(): Metadata {
@@ -26,8 +27,8 @@ export function generateMetadata(): Metadata {
     twitter: {
       card: "summary_large_image",
       images: [`${origin}/og/ergo-5-minutes.png`],
-      site: "@BuildOnErgo",
-      creator: "@BuildOnErgo",
+      site: siteConfig.twitterHandle,
+      creator: siteConfig.twitterHandle,
     },
     robots: { index: true, follow: true },
     keywords: [

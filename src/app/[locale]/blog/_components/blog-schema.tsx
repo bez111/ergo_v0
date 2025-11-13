@@ -25,7 +25,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     "dateModified": post.lastUpdated || post.date,
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": `${baseUrl}/blog/${post.slug}`
+      "@id": `${url}`
     },
     "author": {
       "@type": "Person",
@@ -113,7 +113,7 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
         "@type": "ListItem",
         "position": 4,
         "name": post.title,
-        "item": `${baseUrl}/blog/${post.slug}`
+        "item": `${url}`
       }
     ]
   }

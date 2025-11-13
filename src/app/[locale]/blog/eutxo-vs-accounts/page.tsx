@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 import { EutxoVsAccountsClient } from './EutxoVsAccountsClient';
+import { siteConfig } from '@/config/site-config';
 
-const origin = process.env.NEXT_PUBLIC_SITE_URL || 'https://ergoblockchain.org';
+const origin = siteConfig.siteUrl;
 
 export const metadata: Metadata = {
   title: "Two Blockchain Models: Why Ergo Chose Differently | Ergo Blog",
@@ -36,8 +37,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     images: [`${origin}/og/eutxo-vs-accounts.png`],
-    site: "@BuildOnErgo",
-    creator: "@BuildOnErgo",
+    site: siteConfig.twitterHandle,
+    creator: siteConfig.twitterHandle,
   },
   robots: { index: true, follow: true },
   keywords: [

@@ -156,7 +156,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     <>
       <BlogSchema 
         post={post} 
-        url={`https://ergoblockchain.org/blog/${slug}`}
+        url={`${siteConfig.siteUrl}/blog/${slug}`}
         rating={rating}
       />
       <Script
