@@ -69,18 +69,18 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     
     return {
       slug,
-      title: data.title || slug,
-      description: data.description || '',
-      date: data.date || new Date().toISOString(),
-      author: data.author || 'Ergo Team',
-      authorImage: data.authorImage,
-      authorRole: data.authorRole,
-      category: data.category || 'General',
-      tags: data.tags || [],
-      image: data.image || '/blog-placeholder.jpg',
+      title: data['title'] || slug,
+      description: data['description'] || '',
+      date: data['date'] || new Date().toISOString(),
+      author: data['author'] || 'Ergo Team',
+      authorImage: data['authorImage'],
+      authorRole: data['authorRole'],
+      category: data['category'] || 'General',
+      tags: data['tags'] || [],
+      image: data['image'] || '/blog-placeholder.jpg',
       readingTime: calculateReadingTime(content),
-      featured: data.featured || false,
-      draft: data.draft || false,
+      featured: data['featured'] || false,
+      draft: data['draft'] || false,
       content,
       htmlContent
     }
@@ -126,43 +126,43 @@ export async function getAllPosts(options?: {
 }
 
 // Get related posts based on tags and category
-export async function getRelatedPosts(
-  currentSlug: string, 
-  limit: number = 3
-): Promise<BlogPost[]> {
-  const currentPost = await getPostBySlug(currentSlug)
-  if (!currentPost) return []
+// export async function getRelatedPosts(
+//   currentSlug: string, 
+//   limit: number = 3
+// ): Promise<BlogPost[]> {
+//   const currentPost = await getPostBySlug(currentSlug)
+//   if (!currentPost) return []
   
-  const allPosts = await getAllPosts()
+//   const allPosts = await getAllPosts()
   
-  // Calculate relevance score for each post
-  const scoredPosts = allPosts
-    .filter(post => post.slug !== currentSlug)
-    .map(post => {
-      let score = 0
+//   // Calculate relevance score for each post
+//   const scoredPosts = allPosts
+//     .filter(post => post.slug !== currentSlug)
+//     .map(post => {
+//       let score = 0
       
-      // Same category = 3 points
-      if (post.category === currentPost.category) score += 3
+//       // Same category = 3 points
+//       if (post.category === currentPost.category) score += 3
       
-      // Each matching tag = 2 points
-      currentPost.tags.forEach(tag => {
-        if (post.tags.includes(tag)) score += 2
-      })
+//       // Each matching tag = 2 points
+//       currentPost.tags.forEach(tag => {
+//         if (post.tags.includes(tag)) score += 2
+//       })
       
-      return { post, score }
-    })
-    .filter(item => item.score > 0)
-    .sort((a, b) => b.score - a.score)
+//       return { post, score }
+//     })
+//     .filter(item => item.score > 0)
+//     .sort((a, b) => b.score - a.score)
   
-  return scoredPosts.slice(0, limit).map(item => item.post)
-}
+//   return scoredPosts.slice(0, limit).map(item => item.post)
+// }
 
 // Get all unique categories
-export async function getAllCategories(): Promise<string[]> {
-  const posts = await getAllPosts({ includeDrafts: false })
-  const categories = new Set(posts.map(post => post.category))
-  return Array.from(categories).sort()
-}
+// export async function getAllCategories(): Promise<string[]> {
+//   const posts = await getAllPosts({ includeDrafts: false })
+//   const categories = new Set(posts.map(post => post.category))
+//   return Array.from(categories).sort()
+// }
 
 // Get all unique tags
 export async function getAllTags(): Promise<string[]> {
