@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "next/link";
 import { 
   Users, MessageCircle, Heart, Globe, BookOpen, Code, 
   ExternalLink, Github, MessageSquare, HelpCircle, 
