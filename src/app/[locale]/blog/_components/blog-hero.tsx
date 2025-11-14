@@ -48,7 +48,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
       )}
 
       {/* Top Content */}
-      <div className="flex-1 relative z-10">
+      <div className="flex-1 relative z-20 pointer-events-none">
         {/* Title - Reduced Size */}
         <h1 
           id={`feat-${post.id}`} 
@@ -70,8 +70,8 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
       </div>
 
       {/* Bottom Meta Line with CTA Button */}
-      <div className="flex items-center justify-between gap-3 mt-auto pt-6 relative z-10">
-        <div className="flex items-center gap-3 text-neutral-400">
+      <div className="flex items-center justify-between gap-3 mt-auto pt-6 relative z-20 pointer-events-none">
+        <div className="flex items-center gap-3 text-neutral-400 pointer-events-auto">
           {/* Author Avatar */}
           <div className="h-10 w-10 rounded-full bg-neutral-800 grid place-content-center font-semibold text-neutral-200">
             {post.author.avatar ? (
@@ -90,7 +90,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
           {/* Author Name */}
           <Link 
             href={`/blog/author/${post.author.id}`}
-            className="text-neutral-300 hover:text-white transition-colors font-medium"
+            className="text-neutral-300 hover:text-white transition-colors font-medium pointer-events-auto"
           >
             {post.author.name}
           </Link>
@@ -122,7 +122,7 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         {/* CTA Button - Right side */}
         <Link
           href={`/blog/${post.slug}`}
-          className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold bg-orange-500 hover:bg-orange-400 active:scale-[.98] transition-all duration-200 focus:outline-2 focus:outline-offset-2 focus:outline-orange-500 group/btn"
+          className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-semibold bg-orange-500 hover:bg-orange-400 active:scale-[.98] transition-all duration-200 focus:outline-2 focus:outline-offset-2 focus:outline-orange-500 group/btn relative z-30 pointer-events-auto"
           aria-label={`Read article: ${cleanTitle}`}
         >
           Read article 
@@ -147,6 +147,14 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
         {post.readTime && <span itemProp="timeRequired">PT{post.readTime}M</span>}
         {post.wordCount && <span itemProp="wordCount">{post.wordCount}</span>}
       </div>
+      <Link
+        href={`/blog/${post.slug}`}
+        className="absolute inset-0 z-10 pointer-events-auto"
+        aria-label={`Open article: ${cleanTitle}`}
+        tabIndex={-1}
+      >
+        <span className="sr-only">Read article</span>
+      </Link>
     </article>
   )
 }

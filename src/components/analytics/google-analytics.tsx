@@ -4,6 +4,7 @@ import { siteConfig } from "@/config/site-config";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script"
 import { useEffect } from "react";
+import { WebVitals } from "./web-vitals";
 
 /**
  * 
@@ -87,9 +88,19 @@ export function GoogleAnalytics() {
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);} 
           gtag('js', new Date());
-          gtag('config', '${GA_ID}', { anonymize_ip: true, page_path: window.location.pathname });
+          gtag('config', '${GA_ID}', { 
+            anonymize_ip: true, 
+            page_path: window.location.pathname,
+            // Enhanced measurement for Web Vitals
+            send_page_view: true,
+            custom_map: {
+              'custom_parameter_1': 'metric_id',
+              'custom_parameter_2': 'metric_value'
+            }
+          });
         `}
       </Script>
+      <WebVitals debug={process.env.NODE_ENV === 'development'} />
     </>
   )
 } 

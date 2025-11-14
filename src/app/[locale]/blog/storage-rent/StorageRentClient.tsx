@@ -6,7 +6,7 @@ import Link from "next/link"
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
-import { EmailCapture } from "@/components/blog/email-capture"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -608,7 +608,10 @@ export function StorageRentArticleClient() {
                  </motion.section>
 
           {/* Email capture */}
-          <EmailCapture />
+          <FinalCTASimple 
+            title="Join the resistance"
+            description="Fight for financial freedom. Build censorship-resistant money. No banks, no middlemen."
+          />
         </div>
       </div>
     </BackgroundWrapper>

@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { Badge } from "@/components/ui/badge"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
@@ -497,7 +498,10 @@ export default function ErgoScriptPage() {
                       href={tutorial.link}
                       className="block h-full group focus:outline-none focus:ring-2 focus:ring-orange-500/60 rounded-3xl"
                     >
-                      <Card className="bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm h-full hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/10 cursor-pointer">
+                      <Card className="relative bg-black/80 border-white/10 rounded-3xl backdrop-blur-sm h-full hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-orange-500/10 cursor-pointer">
+                        <Badge className="absolute top-4 right-4 bg-orange-500/20 text-orange-400 border-orange-500/30 z-10">
+                          Soon
+                        </Badge>
                         <CardHeader>
                           <div className="flex items-center justify-between">
                             <CardTitle className="text-white group-hover:text-orange-400 transition-colors">{tutorial.title}</CardTitle>

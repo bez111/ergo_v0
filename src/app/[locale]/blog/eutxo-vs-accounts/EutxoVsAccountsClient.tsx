@@ -4,7 +4,7 @@ import React, { useState } from "react"
 import { motion } from "framer-motion"
 
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
-import { EmailCapture } from "@/components/blog/email-capture"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ViewCounter } from "@/components/blog/ViewCounter"
@@ -608,7 +608,10 @@ export function EutxoVsAccountsClient() {
       </div>
       
       {/* 3. Subscribe */}
-      <EmailCapture />
+      <FinalCTASimple 
+        title="Join the resistance"
+        description="Fight for financial freedom. Build censorship-resistant money. No banks, no middlemen."
+      />
     </BackgroundWrapper>
   )
 }

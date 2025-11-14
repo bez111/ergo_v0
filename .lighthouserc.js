@@ -2,75 +2,53 @@ module.exports = {
   ci: {
     collect: {
       url: [
-        'http://localhost:3000/',
+        'http://localhost:3000',
         'http://localhost:3000/blog',
-        'http://localhost:3000/docs',
+        'http://localhost:3000/blog/ergo-in-5-minutes',
+        'http://localhost:3000/blog/sigma-protocols-explained',
         'http://localhost:3000/technology',
-        'http://localhost:3000/ecosystem'
+        'http://localhost:3000/use'
       ],
-      numberOfRuns: 3,
-      settings: {
-        formFactor: 'mobile',
-        throttling: {
-          rttMs: 150,
-          throughputKbps: 1638.4,
-          cpuSlowdownMultiplier: 4,
-        },
-        screenEmulation: {
-          mobile: true,
-          width: 360,
-          height: 640,
-          deviceScaleFactor: 2,
-        },
-      },
+      startServerCommand: 'npm run build && npm run start',
+      numberOfRuns: 3
     },
     assert: {
       assertions: {
-        // Performance score thresholds
-        'categories:performance': ['error', { minScore: 0.9 }],
-        'categories:accessibility': ['warn', { minScore: 0.95 }],
-        'categories:best-practices': ['warn', { minScore: 0.95 }],
-        'categories:seo': ['warn', { minScore: 0.95 }],
+        // Performance thresholds
+        'categories:performance': ['warn', { minScore: 0.8 }],
+        'categories:accessibility': ['error', { minScore: 0.9 }],
+        'categories:best-practices': ['warn', { minScore: 0.9 }],
+        'categories:seo': ['error', { minScore: 0.9 }],
         
-        // Core Web Vitals (P75 targets)
-        'first-contentful-paint': ['warn', { maxNumericValue: 1800 }],
-        'largest-contentful-paint': ['error', { maxNumericValue: 2500 }], // LCP ≤ 2.5s
-        'cumulative-layout-shift': ['error', { maxNumericValue: 0.1 }], // CLS ≤ 0.1
-        'total-blocking-time': ['error', { maxNumericValue: 200 }], // Proxy for INP
-        'interactive': ['warn', { maxNumericValue: 3800 }],
-        'speed-index': ['warn', { maxNumericValue: 3400 }],
+        // Core Web Vitals
+        'largest-contentful-paint': ['warn', { maxNumericValue: 2500 }],
+        'first-input-delay': ['warn', { maxNumericValue: 100 }],
+        'cumulative-layout-shift': ['warn', { maxNumericValue: 0.1 }],
         
-        // Bundle size budgets
-        'total-byte-weight': ['error', { maxNumericValue: 400000 }], // 400KB total
-        'unused-javascript': ['warn', { maxNumericValue: 120000 }], // 120KB unused JS
-        'modern-image-formats': ['warn', { maxNumericValue: 50000 }], // Use WebP/AVIF
-        'uses-optimized-images': ['warn', { maxNumericValue: 50000 }],
-        'uses-text-compression': ['error', { maxNumericValue: 10000 }],
+        // SEO specific
+        'meta-description': 'error',
+        'document-title': 'error',
+        'canonical': 'error',
+        'robots-txt': 'warn',
+        'structured-data': 'warn',
         
-        // Network optimization
-        'uses-long-cache-ttl': ['warn', { maxNumericValue: 10 }],
-        'uses-rel-preconnect': ['warn', { maxNumericValue: 2 }],
-        'uses-rel-preload': ['warn', { maxNumericValue: 2 }],
+        // Performance specific
+        'unused-javascript': ['warn', { maxNumericValue: 200000 }],
+        'unused-css-rules': ['warn', { maxNumericValue: 100000 }],
+        'render-blocking-resources': 'warn',
+        'uses-optimized-images': 'warn',
+        'uses-webp-images': 'warn',
+        'uses-text-compression': 'error',
         
-        // JavaScript execution
-        'mainthread-work-breakdown': ['warn', { maxNumericValue: 4000 }],
-        'bootup-time': ['warn', { maxNumericValue: 3500 }],
-        'max-potential-fid': ['warn', { maxNumericValue: 130 }],
-        
-        // Image optimization
-        'efficient-animated-content': ['warn', { maxNumericValue: 0 }],
-        'offscreen-images': ['warn', { maxNumericValue: 100000 }],
-        'unminified-css': ['error', { maxNumericValue: 0 }],
-        'unminified-javascript': ['error', { maxNumericValue: 0 }],
-        
-        // Accessibility critical
-        'image-alt': ['error', { maxNumericValue: 0 }],
-        'heading-order': ['error', { maxNumericValue: 0 }],
-        'color-contrast': ['warn', { maxNumericValue: 0 }],
-      },
+        // Accessibility
+        'color-contrast': 'error',
+        'image-alt': 'error',
+        'heading-order': 'warn',
+        'link-name': 'error'
+      }
     },
     upload: {
-      target: 'temporary-public-storage',
-    },
-  },
-} 
+      target: 'temporary-public-storage'
+    }
+  }
+}

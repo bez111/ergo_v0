@@ -15,10 +15,10 @@ const viewEvents: Array<{
 // Получить просмотры статьи
 export async function GET(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const slug = params.slug
+    const { slug } = await params
     const data = viewCounts.get(slug) || { views: 0, shares: 0 }
     
     return NextResponse.json(data)
@@ -31,10 +31,10 @@ export async function GET(
 // Увеличить просмотры статьи
 export async function POST(
   request: NextRequest,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
-    const slug = params.slug
+    const { slug } = await params
     const body = await request.json()
     const { title } = body
     

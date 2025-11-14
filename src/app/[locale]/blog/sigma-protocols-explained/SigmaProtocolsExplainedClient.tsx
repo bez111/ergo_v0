@@ -6,13 +6,14 @@ import Link from "next/link"
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
-import { EmailCapture } from "@/components/blog/email-capture"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ViewCounter } from "@/components/blog/ViewCounter"
+import { RelatedContent } from "@/components/seo/related-content"
 import { 
   GraduationCap,
   Eye,
@@ -856,8 +857,49 @@ export function SigmaProtocolsExplainedClient() {
             </div>
           </motion.section>
 
+          {/* Related Content */}
+          <RelatedContent
+            title="Further Reading"
+            links={[
+              {
+                title: "Ergo Privacy Features",
+                href: "/technology/privacy-features",
+                description: "Complete overview of Ergo's privacy capabilities and tools",
+                type: "technology",
+                category: "Privacy"
+              },
+              {
+                title: "Two Blockchain Models: eUTXO vs Accounts",
+                href: "/blog/eutxo-vs-accounts",
+                description: "How Ergo's eUTXO model enables better privacy and composability",
+                type: "blog",
+                category: "Technology"
+              },
+              {
+                title: "ErgoScript Privacy Examples",
+                href: "/docs/ergoscript/privacy",
+                description: "Code examples for implementing privacy features with Sigma Protocols",
+                type: "docs",
+                category: "Developer"
+              },
+              {
+                title: "Ergo Platform Whitepaper",
+                href: "/api/pdf/documents/Ergo- A Resilient Platform For Contractual Money.pdf",
+                description: "Technical deep-dive into Sigma Protocols implementation (advanced)",
+                type: "docs",
+                category: "Research"
+              }
+            ]}
+            showForumLink={true}
+            forumThreadUrl="https://forum.ergoblockchain.org/t/sigma-protocols-discussion"
+            className="mb-12"
+          />
+
           {/* Email capture */}
-          <EmailCapture />
+          <FinalCTASimple 
+            title="Join the resistance"
+            description="Fight for financial freedom. Build censorship-resistant money. No banks, no middlemen."
+          />
         </div>
       </div>
     </BackgroundWrapper>

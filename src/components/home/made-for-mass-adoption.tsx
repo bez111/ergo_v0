@@ -10,28 +10,28 @@ export function MadeForMassAdoption() {
     {
       icon: Wallet,
       title: "Freedom seekers",
-      desc: "Self-custody wallet. True ownership. Financial sovereignty.",
+      desc: "Self-custody by default. Private on demand via Sigma proofs. True financial sovereignty.",
       cta: "Get started",
       href: "/start/introduction"
     },
     {
       icon: Code,
       title: "Cypherpunks",
-      desc: "Open-source ErgoScript. No MEV. Build censorship-resistant dApps.",
+      desc: "Write deterministic eUTXO contracts in ErgoScript. Compose Sigma proofs for auditable, programmable privacy.",
       cta: "Start building",
       href: "/docs"
     },
     {
       icon: Pickaxe,
-      title: "Decentralizers",
-      desc: "ASIC-resistant mining. Fair distribution. Secure the network.",
+      title: "Miners",
+      desc: "Autolykos PoW — GPU-friendly and ASIC-resistant. Fair issuance, secure the network, earn ERG.",
       cta: "Start mining",
       href: "/use/mining"
     },
     {
       icon: TrendingUp,
-      title: "Believers",
-      desc: "No pre-mine. No VC control. Community-driven since 2019.",
+      title: "Community",
+      desc: "Fair launch. No pre-mine, no VC control. Open, community-driven since 2019.",
       cta: "Learn more",
       href: "/technology"
     }
@@ -50,7 +50,7 @@ export function MadeForMassAdoption() {
               lineHeight: 1
             }}
           >
-            <span className="text-white">Powered by</span> <span className="text-orange-400">cypherpunks</span><span className="text-white"> for</span> <span className="text-orange-400">freedom</span><span className="text-white">.</span>
+            <span className="text-white">Powered by</span> <span className="text-orange-400">builders</span><span className="text-white">. Designed for</span> <span className="text-orange-400">freedom</span><span className="text-white">.</span>
           </h2>
           <p 
             className="text-gray-400 mx-auto"
@@ -88,11 +88,6 @@ export function MadeForMassAdoption() {
                   <p className="text-gray-400 mb-4 leading-relaxed flex-1 group-hover:text-gray-300 transition-colors text-sm">
                     {path.desc}
                   </p>
-                  
-                  {/* CTA indicator - appears on hover, aligned right */}
-                  <div className="flex items-center justify-end gap-2 text-orange-400 group-hover:text-orange-300 transition-all duration-300 font-semibold mt-auto opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0">
-                    <span>{path.cta}</span>
-                  </div>
                 </div>
               </Card>
             </Link>

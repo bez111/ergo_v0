@@ -76,9 +76,11 @@ export function FinalCTASimple({
 
   // Check if already subscribed on mount
   useEffect(() => {
-    const subscribed = localStorage.getItem('ergo-newsletter-subscribed')
-    if (subscribed === 'true') {
-      setIsAlreadySubscribed(true)
+    if (typeof window !== 'undefined') {
+      const subscribed = localStorage.getItem('ergo-newsletter-subscribed')
+      if (subscribed === 'true') {
+        setIsAlreadySubscribed(true)
+      }
     }
   }, [])
 
@@ -149,7 +151,9 @@ export function FinalCTASimple({
 
       if (result.success) {
         // Save subscription status
-        localStorage.setItem('ergo-newsletter-subscribed', 'true')
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('ergo-newsletter-subscribed', 'true')
+        }
         setIsSubmitted(true)
         setIsAlreadySubscribed(true)
         setEmail('')
