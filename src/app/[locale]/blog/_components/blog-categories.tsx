@@ -11,7 +11,8 @@ import {
   Code2,
   Pickaxe,
   Shield,
-  Network
+  Network,
+  Eye
 } from "lucide-react"
 import type { BlogPost } from "../_lib/blog-data"
 import { categoryDefinitions } from "../_lib/blog-data"
@@ -45,7 +46,8 @@ export function BlogCategories({
       Code2,
       Pickaxe,
       Shield,
-      Network
+      Network,
+      Eye
     }
     return iconMap[iconName] || BookOpen
   }

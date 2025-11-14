@@ -2,8 +2,6 @@ import type { Metadata } from "next"
 import { ErgoIn5MinutesClient } from "./ErgoIn5MinutesClient"
 import { siteConfig } from "@/config/site-config"
 
-export const revalidate = 86400 // 24 часа
-
 const origin = siteConfig.siteUrl
 const url = `${origin}/blog/ergo-in-5-minutes`
 
@@ -18,15 +16,26 @@ export function generateMetadata(): Metadata {
     openGraph: {
       type: "article",
       url,
-      siteName: "Ergo Blockchain",
+      siteName: "Ergo Platform",
       title,
       description,
-      images: [{ url: `${origin}/og/ergo-5-minutes.png`, width: 1200, height: 630 }],
+      images: [{ 
+        url: `${origin}/og/ergo-5-minutes.svg`, 
+        width: 1200, 
+        height: 630,
+        alt: "Ergo in 5 Minutes: Why It Matters & How It Works"
+      }],
       locale: "en_US",
+      publishedTime: "2024-01-01T00:00:00Z",
+      modifiedTime: new Date().toISOString(),
+      authors: ["Ergo Team"],
+      tags: ["Ergo", "Blockchain", "eUTXO", "Sigma Protocols", "DeFi"]
     },
     twitter: {
       card: "summary_large_image",
-      images: [`${origin}/og/ergo-5-minutes.png`],
+      title,
+      description,
+      images: [`${origin}/og/ergo-5-minutes.svg`],
       site: siteConfig.twitterHandle,
       creator: siteConfig.twitterHandle,
     },
@@ -52,7 +61,7 @@ export default function ErgoIn5MinutesPage() {
     "@id": `${url}#article`,
     headline: "Ergo in 5 Minutes: Why It Matters & How It Works",
     description: "Proof-of-Work blockchain with eUTXO and Sigma protocols: fair launch (no ICO), privacy, Storage Rent, and the Ergo DeFi ecosystem.",
-    image: `${origin}/og/ergo-5-minutes.png`,
+    image: `${origin}/og/ergo-5-minutes.svg`,
     datePublished: "2024-01-01T00:00:00Z",
     dateModified: new Date().toISOString(),
     author: {

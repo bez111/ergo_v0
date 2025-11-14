@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EmailCapture } from "@/components/blog/email-capture"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ResponsiveTable } from "@/components/ui/responsive-table"
@@ -14,6 +14,7 @@ import { StorageRentTimeline } from "@/components/diagrams/storage-rent-timeline
 import { ErgoScriptExamples } from "@/components/code/ergoscript-examples"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ViewCounter } from "@/components/blog/ViewCounter"
 import { 
   ChevronDown,
   Shield,
@@ -70,9 +71,20 @@ export function ErgoIn5MinutesClient() {
     { name: "Spectrum Finance", description: "Decentralized exchange", type: "DEX" },
     { name: "SigmaUSD", description: "Algorithmic stablecoin", type: "Stablecoin" },
     { name: "DuckPools", description: "Algorithmic lending platform", type: "Lending" },
-    { name: "Paideia", description: "DAO management platform", type: "DAO" },
-    { name: "Ergo Auction House", description: "NFT Marketplace", type: "NFT" },
-    { name: "ErgoMixer", description: "Privacy application", type: "Privacy" }
+    { name: "Rosen Bridge", description: "Cross-chain bridge connecting Ergo with Cardano and beyond", type: "Bridge" },
+    { name: "ErgoMixer", description: "Privacy application", type: "Privacy" },
+    { name: "Paideia", description: "DAO management platform", type: "DAO" }
+  ]
+
+  const articleContents = [
+    { label: "Quick Overview", href: "#introduction" },
+    { label: "Origins & Fair Launch", href: "#origins" },
+    { label: "Ergo Today & Ecosystem", href: "#ergo-today" },
+    { label: "Smart Contracts & Privacy", href: "#smart-contracts" },
+    { label: "Sustainable Future", href: "#future" },
+    { label: "Conclusion", href: "#conclusion" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Essential Documents", href: "#documents" }
   ]
 
 
@@ -184,12 +196,19 @@ export function ErgoIn5MinutesClient() {
               A fair-launch PoW chain that fuses Bitcoin-grade security with eUTXO smart contracts and Sigma-protocol privacy.
             </p>
 
-            {/* Inline Share */}
-            <ShareInline 
-              title="Ergo in 5 Minutes: Why It Matters & How It Works" 
-              url="https://ergoblockchain.org/blog/ergo-in-5-minutes" 
-              utm="?utm_source=share_hero"
-            />
+            {/* Inline Share & Views */}
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <ShareInline 
+                title="Ergo in 5 Minutes: Why It Matters & How It Works" 
+                url="https://ergoblockchain.org/blog/ergo-in-5-minutes" 
+                utm="?utm_source=share_hero"
+              />
+              <ViewCounter 
+                postId="ergo-in-5-minutes" 
+                title="Ergo in 5 Minutes: Why It Matters & How It Works"
+                className="text-gray-400 text-sm"
+              />
+            </div>
           </motion.div>
 
           {/* TL;DR Section - Compact */}
@@ -235,6 +254,36 @@ export function ErgoIn5MinutesClient() {
             </div>
           </motion.section>
 
+          {/* Article Contents */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mb-12"
+          >
+            <Card className="bg-black/80 border border-orange-500/20 rounded-2xl">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-lg text-white flex items-center gap-2">
+                  <Eye className="w-5 h-5 text-orange-400" />
+                  Article Contents
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <nav className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm">
+                  {articleContents.map((item) => (
+                    <a
+                      key={item.href}
+                      href={item.href}
+                      className="text-gray-300 hover:text-orange-400 transition-colors py-1"
+                    >
+                      → {item.label}
+                    </a>
+                  ))}
+                </nav>
+              </CardContent>
+            </Card>
+          </motion.section>
+
           {/* Main Content */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
@@ -245,7 +294,7 @@ export function ErgoIn5MinutesClient() {
             <div className="prose prose-lg prose-invert max-w-none">
               
               {/* Introduction */}
-              <div className="bg-black border border-white/20 rounded-3xl p-8 mb-12">
+              <div id="introduction" className="bg-black border border-white/20 rounded-3xl p-8 mb-12 scroll-mt-24">
                 <p className="text-lg text-gray-300 leading-relaxed mb-6">
                   In a sea of altcoins, clones, and supposed "Bitcoin killers", few crypto platforms truly offer anything special. The Ergo blockchain might just be one of them.
                 </p>
@@ -260,7 +309,7 @@ export function ErgoIn5MinutesClient() {
               </div>
 
               {/* The Past */}
-              <div className="mb-12">
+              <div id="origins" className="mb-12 scroll-mt-24">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Shield className="w-8 h-8 text-orange-400" />
                   The Past: Ergo Platform Origins And Fair Launch
@@ -292,7 +341,7 @@ export function ErgoIn5MinutesClient() {
               </div>
 
               {/* Ergo Today */}
-              <div className="mb-12">
+              <div id="ergo-today" className="mb-12 scroll-mt-24">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <Network className="w-8 h-8 text-orange-400" />
                   Ergo Today: Secure, Private DeFi
@@ -333,7 +382,7 @@ export function ErgoIn5MinutesClient() {
                 </div>
 
                 {/* Technical Details */}
-                <div className="bg-black border border-white/20 rounded-3xl p-8 space-y-6">
+                <div id="smart-contracts" className="bg-black border border-white/20 rounded-3xl p-8 space-y-6 scroll-mt-24">
                   <p className="text-gray-300 leading-relaxed">
                     Ergo's smart contracts are written in <strong className="text-orange-400">ErgoScript</strong>, a language based on Scala, which was formulated specifically to work with the Ergo blockchain's eUTXO model.
                   </p>
@@ -389,7 +438,7 @@ export function ErgoIn5MinutesClient() {
               </div>
 
               {/* Future Section */}
-              <div className="mb-16">
+              <div id="future" className="mb-16 scroll-mt-24">
                 <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
                   <ArrowRight className="w-8 h-8 text-orange-400" />
                   Towards A Sustainable Future
@@ -409,21 +458,30 @@ export function ErgoIn5MinutesClient() {
                       <strong className="text-green-400">Storage Rent Innovation:</strong> One of Ergo's most noteworthy features is storage rent. This slowly recycles coins that have not been moved in over four years, bringing lost ERG back into circulation and increasing revenues for miners. This "demurrage" acts as a small tax on dormant accounts, but can easily be avoided by moving coins every few years.
                     </p>
                   </div>
-                  
+
+                  {/* Storage Rent Timeline */}
+                  <div className="my-8">
+                    <StorageRentTimeline />
+                  </div>
+                </div>
+              </div>
+
+              {/* Conclusion */}
+              <div id="conclusion" className="mb-16 scroll-mt-24">
+                <h2 className="text-3xl font-bold text-white mb-6 flex items-center gap-3">
+                  <CheckCircle className="w-8 h-8 text-orange-400" />
+                  Conclusion
+                </h2>
+                
+                <div className="bg-black border border-white/20 rounded-3xl p-8">
                   <p className="text-gray-300 leading-relaxed">
                     Finally, Ergo's development team keeps the same academic rigor with which it started out, meaning that future upgrades are thoroughly researched before implementation, ensuring the best possible technical foundation for the network.
                   </p>
                 </div>
-
-                {/* Storage Rent Timeline */}
-                <div className="my-12">
-                  <StorageRentTimeline />
-                </div>
               </div>
 
-
               {/* FAQ Section */}
-              <div className="mb-16">
+              <div id="faq" className="mb-16 scroll-mt-24">
                 <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
                   Frequently Asked Questions
                 </h2>
@@ -458,6 +516,7 @@ export function ErgoIn5MinutesClient() {
 
               {/* Essential Documents */}
               <motion.div
+                id="documents"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.7 }}

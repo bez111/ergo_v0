@@ -9,19 +9,21 @@ import {
   Network,
   Eye,
   Brain,
+  Shield,
   Search,
   X
 } from "lucide-react"
 import { cn } from "@/lib/utils"
 import type { BlogPost } from "../_lib/blog-data"
 
-// Категории в нужном порядке: All → Technology → Developer → DeFi → Ecosystem → Vision → Philosophy
+// Категории в нужном порядке: All → Technology → Developer → DeFi → Privacy → Ecosystem → Vision → Philosophy
 const categories = [
   { id: 'all', name: 'All', icon: BookOpen, color: 'orange' },
   { id: 'Technology', name: 'Technology', icon: Cog, color: 'blue' },
   { id: 'Developer', name: 'Developer', icon: Code2, color: 'green' },
   { id: 'DeFi', name: 'DeFi', icon: Coins, color: 'yellow' },
-  { id: 'Ecosystem', name: 'Ecosystem', icon: Network, color: 'indigo' },
+  { id: 'Privacy', name: 'Privacy', icon: Shield, color: 'indigo' },
+  { id: 'Ecosystem', name: 'Ecosystem', icon: Network, color: 'cyan' },
   { id: 'Vision', name: 'Vision', icon: Eye, color: 'orange' },
   { id: 'Philosophy', name: 'Philosophy', icon: Brain, color: 'purple' }
 ]

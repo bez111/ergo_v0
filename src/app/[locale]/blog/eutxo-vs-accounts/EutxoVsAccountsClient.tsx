@@ -7,6 +7,7 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EmailCapture } from "@/components/blog/email-capture"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ViewCounter } from "@/components/blog/ViewCounter"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -133,12 +134,19 @@ export function EutxoVsAccountsClient() {
               </span>
             </div>
 
-            {/* Inline Share */}
-            <ShareInline 
-              title="Two Blockchain Models: Why Ergo Chose Differently" 
-              url="https://ergoblockchain.org/blog/eutxo-vs-accounts" 
-              utm="?utm_source=share_hero"
-            />
+            {/* Inline Share & Views */}
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <ShareInline 
+                title="Two Blockchain Models: Why Ergo Chose Differently" 
+                url="https://ergoblockchain.org/blog/eutxo-vs-accounts" 
+                utm="?utm_source=share_hero"
+              />
+              <ViewCounter 
+                postId="eutxo-vs-accounts" 
+                title="Two Blockchain Models: Why Ergo Chose Differently"
+                className="text-gray-400 text-sm"
+              />
+            </div>
           </motion.div>
 
           {/* TL;DR Section - Compact */}
