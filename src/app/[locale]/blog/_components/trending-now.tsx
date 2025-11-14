@@ -10,7 +10,8 @@ interface TrendingNowProps {
   categories: { id: string; name: string; color?: string }[]
 }
 
-export default function TrendingNow({ posts, categories }: TrendingNowProps) {
+export default function TrendingNow(props: TrendingNowProps) {
+  const { posts } = props;
   // Format views
   const formatViews = (views: number) => {
     if (views >= 1000) return `${(views / 1000).toFixed(1)}k`

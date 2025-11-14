@@ -7,10 +7,8 @@ import { EmailCapture } from "@/components/blog/email-capture"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ShareCTA } from "@/components/blog/share-cta"
-import { CompactSocialShare } from "@/components/social/social-share"
 import { ShareInline } from "@/components/blog/share-inline"
 import { 
-  BookOpen,
   Shield,
   Users,
   Heart,
@@ -18,14 +16,11 @@ import {
   Lock,
   Coins,
   Target,
-  Clock,
   User,
   Building,
   Zap,
-  Code,
-  Eye
+  Code
 } from "lucide-react"
-import Link from "next/link"
 
 export function ErgoManifestoClient() {
   const principles = [

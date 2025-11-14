@@ -1,9 +1,10 @@
 import type { Metadata } from "next"
 import { ErgoManifestoClient } from "./ErgoManifestoClient"
+import { siteConfig } from "@/config/site-config"
 
-export const revalidate = 86400
+export const revalidate = 86400 // 24 часа
 
-const origin = "https://ergoblockchain.org"
+const origin = siteConfig.siteUrl
 const url = `${origin}/blog/ergo-manifesto`
 
 export function generateMetadata(): Metadata {

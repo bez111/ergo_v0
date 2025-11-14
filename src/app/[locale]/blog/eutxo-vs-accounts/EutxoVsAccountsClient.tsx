@@ -6,7 +6,6 @@ import { motion } from "framer-motion"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EmailCapture } from "@/components/blog/email-capture"
 import { ShareCTA } from "@/components/blog/share-cta"
-import { CompactSocialShare } from "@/components/social/social-share"
 import { ShareInline } from "@/components/blog/share-inline"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -97,9 +96,9 @@ export function EutxoVsAccountsClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs 
             items={[
-              { label: "Home", href: "/" },
-              { label: "Blog", href: "/blog" },
-              { label: "Two Blockchain Models: Why Ergo Chose Differently", href: "/blog/eutxo-vs-accounts" }
+              { name: "Home", href: "/" },
+              { name: "Blog", href: "/blog" },
+              { name: "Two Blockchain Models: Why Ergo Chose Differently", href: "/blog/eutxo-vs-accounts" }
             ]}
             className="mb-8"
           />

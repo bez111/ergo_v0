@@ -5,6 +5,11 @@ import { siteConfig } from "@/config/site-config";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { Suspense } from "react";
 
+/* Отключаем любое кеширование */
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
+
 const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
