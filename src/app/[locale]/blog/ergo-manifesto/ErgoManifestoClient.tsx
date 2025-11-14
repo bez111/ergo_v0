@@ -2,6 +2,7 @@
 
 import React from "react"
 import { motion } from "framer-motion"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EmailCapture } from "@/components/blog/email-capture"
 import { Card, CardContent } from "@/components/ui/card"
@@ -70,7 +71,15 @@ export function ErgoManifestoClient() {
     <BackgroundWrapper>
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          
+          {/* Breadcrumbs */}
+          <Breadcrumbs 
+            items={[
+              { name: "Home", href: "/" },
+              { name: "Blog", href: "/blog" },
+              { name: "The Ergo Manifesto", href: "/blog/ergo-manifesto" }
+            ]}
+            className="mb-8"
+          />
           {/* Hero Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}

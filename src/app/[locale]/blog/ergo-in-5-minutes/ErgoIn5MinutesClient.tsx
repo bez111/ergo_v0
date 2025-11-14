@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import { motion } from "framer-motion"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EmailCapture } from "@/components/blog/email-capture"
 import { Card, CardContent } from "@/components/ui/card"
@@ -159,7 +160,15 @@ export function ErgoIn5MinutesClient() {
     <BackgroundWrapper>
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
-          
+          {/* Breadcrumbs */}
+          <Breadcrumbs 
+            items={[
+              { name: "Home", href: "/" },
+              { name: "Blog", href: "/blog" },
+              { name: "Ergo in 5 Minutes: Why It Matters & How It Works", href: "/blog/ergo-in-5-minutes" }
+            ]}
+            className="mb-8"
+          />
           {/* Hero Section - Compact */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
