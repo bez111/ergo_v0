@@ -39,7 +39,7 @@ export async function POST(
     const { title } = body
     
     // Получаем данные о пользователе для аналитики
-    const headersList = headers()
+    const headersList = await headers()
     const userAgent = headersList.get('user-agent') || ''
     const forwarded = headersList.get('x-forwarded-for')
     const ipAddress = forwarded ? forwarded.split(',')[0] : 

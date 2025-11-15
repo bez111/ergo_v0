@@ -16,6 +16,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/sitemap-ecosystem.xml`,
       lastModified: new Date(),
-    }
+    },
+    {
+      url: `${baseUrl}/news-sitemap.xml`,
+      lastModified: new Date(),
+    },
   ]
 }
