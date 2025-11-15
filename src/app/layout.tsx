@@ -3,6 +3,8 @@ import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css"
 import { siteConfig } from "@/config/site-config";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
+import { GlobalSchemas } from "@/components/seo/global-schemas";
+import { SEOMonitor } from "@/components/seo/seo-monitor";
 import { Suspense } from "react";
 
 /* Отключаем любое кеширование */
@@ -156,9 +158,11 @@ export default function RootLayout({
         />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased" suppressHydrationWarning>
+        <GlobalSchemas />
         <Suspense>
           <GoogleAnalytics />
         </Suspense>
+        <SEOMonitor debug={process.env.NODE_ENV === 'development'} />
         {children}
       </body>
     </html>

@@ -53,10 +53,10 @@ export function JoinCommunity() {
               lineHeight: 1
             }}
           >
-            <span className="text-white">Join a community of</span> <span className="text-orange-400">cypherpunks</span>
+            <span className="text-white">Where</span> <span className="text-orange-400">cypherpunks</span> <span className="text-white">still build</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Active community building the future of money
+            Active community shipping real tools, not hype.
           </p>
         </div>
 

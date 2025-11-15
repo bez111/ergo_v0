@@ -1,7 +1,7 @@
 export const siteConfig = {
   twitterHandle: process.env.NEXT_PUBLIC_TWITTER_HANDLE || "@BuildOnErgo",
   twitterLink: "https://x.com/BuildOnErgo",
-  telegramLink: "https://t.me/BuildOnErgo",
+  telegramLink: "https://t.me/ergoplatform",
   discordLink: "https://discord.com/invite/ergo-platform-668903786361651200",
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL || 'https://ergoblockchain.org',
   

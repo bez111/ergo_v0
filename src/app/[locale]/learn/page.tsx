@@ -1,41 +1,52 @@
-import type { Metadata } from 'next'
-import { getTranslations } from 'next-intl/server'
-import LearnClient from './LearnClient'
-import { SchemaTypes } from '@/lib/schema-ultimate'
-import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
+import type { Metadata } from "next"
+import LearnClient from "./LearnClient"
+import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
-export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'learn.seo' });
-  
+const learnUrl = "https://ergoblockchain.org/learn"
+
+export async function generateMetadata(): Promise<Metadata> {
+  const title = "Learn Ergo Development — ErgoScript Tutorials & Smart Contracts"
+  const description = "Master ErgoScript programming, eUTXO smart contracts, and Sigma protocols. Hands-on tutorials, structured learning paths, and expert mentorship for Ergo blockchain development."
+
   return {
-    title: t('title'),
-    description: t('description'),
-    keywords: t('keywords'),
+    title,
+    description,
+    keywords: [
+      "ErgoScript tutorial",
+      "Ergo smart contracts",
+      "eUTXO programming",
+      "Sigma protocols guide",
+      "blockchain development course",
+      "Ergo developer tutorial",
+      "ErgoScript programming",
+      "Ergo dApp development"
+    ],
     alternates: {
-      canonical: 'https://ergoblockchain.org/learn'
+      canonical: learnUrl
     },
     openGraph: {
-      title: t('ogTitle'),
-      description: t('ogDescription'),
-      url: 'https://ergoblockchain.org/learn',
-      siteName: 'Ergo Platform',
-      images: [{
-        url: 'https://ergoblockchain.org/og/learn.png',
-        width: 1200,
-        height: 630,
-        alt: 'Learn Ergo - Educational Resources'
-      }],
-      type: 'website',
-      locale: 'en_US'
+      title,
+      description,
+      url: learnUrl,
+      siteName: "Ergo Platform",
+      images: [
+        {
+          url: "https://ergoblockchain.org/og/learn.png",
+          width: 1200,
+          height: 630,
+          alt: "Ergo Learn — Build with Sigma Protocols"
+        }
+      ],
+      type: "website",
+      locale: "en_US"
     },
     twitter: {
-      card: 'summary_large_image',
-      title: t('twitterTitle'),
-      description: t('twitterDescription'),
-      images: ['https://ergoblockchain.org/og/learn.png'],
-      creator: '@ergoplatform',
-      site: '@ergoplatform'
+      card: "summary_large_image",
+      title,
+      description,
+      images: ["https://ergoblockchain.org/og/learn.png"],
+      site: "@ergoplatform",
+      creator: "@ergoplatform"
     },
     robots: {
       index: true,
@@ -43,91 +54,88 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1
       }
     }
   }
 }
 
-export default async function LearnPage({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'learn.schema' });
-  
+export default function LearnPage() {
   const courseSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Course',
-    '@id': 'https://ergoblockchain.org/learn#course',
-    name: t('course.name'),
-    description: t('course.description'),
+    "@context": "https://schema.org",
+    "@type": "Course",
+    "@id": `${learnUrl}#course`,
+    name: "Ergo Learning Hub",
+    description: "A structured set of paths that teach Ergo fundamentals, developer tooling, privacy design, and research-grade economics.",
     provider: {
-      '@type': 'Organization',
-      name: 'Ergo Platform',
-      url: 'https://ergoblockchain.org'
+      "@type": "Organization",
+      name: "Ergo Platform",
+      url: "https://ergoblockchain.org"
     },
     audience: {
-      '@type': 'Audience',
-      audienceType: t('course.audience')
+      "@type": "Audience",
+      audienceType: "Developers, founders, researchers, privacy builders"
     },
-    educationalLevel: t('course.educationalLevel'),
+    educationalLevel: "Beginner to advanced",
     hasCourseInstance: [
       {
-        '@type': 'CourseInstance',
-        name: t('course.instances.ergoscript.name'),
-        description: t('course.instances.ergoscript.description'),
-        courseMode: 'online',
-        duration: 'PT20H'
+        "@type": "CourseInstance",
+        name: "ErgoScript Builder Path",
+        description: "Hands-on lessons that walk through ErgoScript patterns, determinism, and deployment.",
+        courseMode: "online",
+        duration: "PT20H"
       },
       {
-        '@type': 'CourseInstance',
-        name: t('course.instances.faq.name'),
-        description: t('course.instances.faq.description'),
-        courseMode: 'online'
+        "@type": "CourseInstance",
+        name: "Privacy & Sigma Protocols",
+        description: "Interactive explainer of Σ-protocols, mixers, and selective disclosure flows.",
+        courseMode: "online"
       },
       {
-        '@type': 'CourseInstance',
-        name: t('course.instances.research.name'),
-        description: t('course.instances.research.description'),
-        courseMode: 'online'
+        "@type": "CourseInstance",
+        name: "Research & Tokenomics Library",
+        description: "Original whitepapers, Storage Rent models, and Autolykos research decks.",
+        courseMode: "online"
       }
     ]
   }
 
   const learningResourcesSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: t('resources.name'),
-    description: t('resources.description'),
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Featured learning resources",
+    description: "Top hand-picked paths to get productive on Ergo.",
     numberOfItems: 3,
     itemListElement: [
       {
-        '@type': 'Course',
+        "@type": "Course",
         position: 1,
-        name: t('course.instances.ergoscript.name'),
-        description: t('course.instances.ergoscript.description'),
+        name: "ErgoScript Builder Path",
+        description: "Deploy contracts, test locally, and hook into wallet UX.",
         provider: {
-          '@type': 'Organization',
-          name: 'Ergo Platform',
-          url: 'https://ergoblockchain.org'
+          "@type": "Organization",
+          name: "Ergo Platform",
+          url: learnUrl
         }
       },
       {
-        '@type': 'FAQPage',
+        "@type": "FAQPage",
         position: 2,
-        name: t('course.instances.faq.name'),
-        description: t('course.instances.faq.description')
+        name: "Ergo Learning FAQ",
+        description: "Wallet setup, community onboarding, and key differences."
       },
       {
-        '@type': 'Article',
+        "@type": "Article",
         position: 3,
-        name: t('course.instances.research.name'),
-        description: t('course.instances.research.description')
+        name: "Research Vault",
+        description: "Storage Rent economics, Autolykos proofs, and governance proposals."
       }
     ]
   }
 
-  const knowledgeGraph = generateKnowledgeGraph('learn')
+  const knowledgeGraph = generateKnowledgeGraph("learn")
 
   return (
     <>
@@ -137,4 +145,4 @@ export default async function LearnPage({ params }: { params: Promise<{ locale: 
       <LearnClient />
     </>
   )
-} 
+}

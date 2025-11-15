@@ -64,6 +64,19 @@ export const advancedCategories = [
     ]
   },
   {
+    id: 'privacy',
+    name: 'PRIVACY',
+    description: 'Privacy & Zero-Knowledge',
+    icon: '🔒',
+    color: 'indigo',
+    subcategories: [
+      { id: 'sigma-protocols', name: 'Sigma Protocols' },
+      { id: 'zero-knowledge', name: 'Zero Knowledge' },
+      { id: 'mixers', name: 'Mixers' },
+      { id: 'confidential', name: 'Confidential Transactions' }
+    ]
+  },
+  {
     id: 'ecosystem',
     name: 'ECOSYSTEM',
     description: 'Community & Growth',

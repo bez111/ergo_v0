@@ -25,7 +25,7 @@ export interface BlogPost {
   trending?: boolean // For trending section
   featured?: boolean // For hero section
   difficulty?: 'Beginner' | 'Intermediate' | 'Advanced'
-  views?: number // If tracking
+  views?: number // Dynamic - loaded from analytics
   shares?: number // Social proof
 }
 
@@ -142,6 +142,63 @@ export const blogPosts: BlogPost[] = [
     trending: true,
     difficulty: 'Intermediate',
     views: 0,
+    shares: 0
+  },
+  {
+    id: 'storage-rent',
+    slug: 'storage-rent',
+    title: 'How Ergo\'s Storage Rent Solves Blockchain State Bloat',
+    excerpt: 'Ergo\'s miners can charge small fees on dormant accounts, clearing dust transactions and ensuring blockchain state stays manageable.',
+    date: '2024-11-14',
+    lastUpdated: new Date().toISOString().split('T')[0] || '',
+    author: authors['ergo-team']!,
+    category: 'Technology',
+    readTime: 8,
+    wordCount: 2000,
+    image: '/og/blog-default.svg',
+    tags: ['Storage Rent', 'State Bloat', 'Demurrage', 'Scalability', 'Decentralization'],
+    featured: false,
+    trending: true,
+    difficulty: 'Intermediate',
+    views: 0,
+    shares: 0
+  },
+  {
+    id: 'sigma-protocols-privacy',
+    slug: 'sigma-protocols-privacy',
+    title: 'Ergo And Sigma Protocols: The Next Step In Blockchain Privacy',
+    excerpt: 'As first-gen privacy coins see a resurgence of activity, Ergo\'s composable zero-knowledge signatures offer new options for compliant confidentiality.',
+    date: '2024-11-14',
+    lastUpdated: new Date().toISOString().split('T')[0] || '',
+    author: authors['ergo-team']!,
+    category: 'Privacy',
+    readTime: 9,
+    wordCount: 2200,
+    image: '/og/blog-default.svg',
+    tags: ['Sigma Protocols', 'Privacy', 'Zero Knowledge', 'Compliance', 'DeFi Privacy'],
+    featured: true,
+    trending: true,
+    difficulty: 'Intermediate',
+    views: undefined,
+    shares: 0
+  },
+  {
+    id: 'sigma-protocols-explained',
+    slug: 'sigma-protocols-explained',
+    title: 'Sigma Protocols Explained (Without A PhD)',
+    excerpt: 'A plain-English guide to Sigma Protocols – the powerful, flexible zero-knowledge cryptography that powers Ergo\'s privacy and smart contracts.',
+    date: '2024-11-14',
+    lastUpdated: new Date().toISOString().split('T')[0] || '',
+    author: authors['privacy-team']!,
+    category: 'Privacy',
+    readTime: 10,
+    wordCount: 2400,
+    image: '/og/blog-default.svg',
+    tags: ['Sigma Protocols', 'Zero Knowledge', 'Beginner Guide', 'Cryptography', 'Privacy Tutorial'],
+    featured: false,
+    trending: true,
+    difficulty: 'Beginner',
+    views: undefined,
     shares: 0
   }
 ]

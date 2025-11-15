@@ -1,177 +1,116 @@
-'use client'
+"use client"
 
-import Link from 'next/link'
-import { ArrowRight, BookOpen, Code, Cpu, FileText } from 'lucide-react'
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
+import Link from "next/link"
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Badge } from "@/components/ui/badge"
+import { ArrowRight, BookOpen, MessageCircle, FileText } from "lucide-react"
 
-interface RelatedItem {
+interface RelatedLink {
   title: string
-  description: string
   href: string
-  type: 'article' | 'guide' | 'technology' | 'use-case'
-  readTime?: number
+  description: string
+  type: 'blog' | 'docs' | 'technology' | 'forum'
+  category?: string
 }
 
 interface RelatedContentProps {
-  items: RelatedItem[]
   title?: string
+  links: RelatedLink[]
   className?: string
-}
-
-const typeIcons = {
-  article: FileText,
-  guide: BookOpen,
-  technology: Cpu,
-  'use-case': Code,
+  showForumLink?: boolean
+  forumThreadUrl?: string
 }
 
 export function RelatedContent({ 
-  items, 
-  title = 'Related Content',
-  className = '' 
+  title = "Related Content", 
+  links, 
+  className = "",
+  showForumLink = true,
+  forumThreadUrl 
 }: RelatedContentProps) {
-  if (!items || items.length === 0) return null
+  const getIcon = (type: RelatedLink['type']) => {
+    switch (type) {
+      case 'blog': return <BookOpen className="w-4 h-4" />
+      case 'docs': return <FileText className="w-4 h-4" />
+      case 'technology': return <FileText className="w-4 h-4" />
+      case 'forum': return <MessageCircle className="w-4 h-4" />
+      default: return <ArrowRight className="w-4 h-4" />
+    }
+  }
+
+  const getTypeColor = (type: RelatedLink['type']) => {
+    switch (type) {
+      case 'blog': return 'bg-blue-500/10 border-blue-500/30 text-blue-400'
+      case 'docs': return 'bg-green-500/10 border-green-500/30 text-green-400'
+      case 'technology': return 'bg-purple-500/10 border-purple-500/30 text-purple-400'
+      case 'forum': return 'bg-orange-500/10 border-orange-500/30 text-orange-400'
+      default: return 'bg-gray-500/10 border-gray-500/30 text-gray-400'
+    }
+  }
 
   return (
-    <section className={`py-12 ${className}`}>
-      <div className="container mx-auto px-4">
-        <h2 className="text-2xl font-bold text-neutral-100 mb-8">
-          {title}
-        </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {items.map((item) => {
-            const Icon = typeIcons[item.type] || FileText
-            
-            return (
-              <Link key={item.href} href={item.href}>
-                <Card className="h-full hover:border-orange-500/50 transition-all duration-300 hover:shadow-lg hover:shadow-orange-500/10">
-                  <CardHeader>
-                    <div className="flex items-start justify-between">
-                      <Icon className="w-5 h-5 text-orange-400" />
-                      {item.readTime && (
-                        <span className="text-xs text-neutral-400">
-                          {item.readTime} min read
-                        </span>
-                      )}
-                    </div>
-                    <CardTitle className="text-lg mt-2">
-                      {item.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="line-clamp-2">
-                      {item.description}
-                    </CardDescription>
-                    <div className="flex items-center mt-4 text-orange-400 text-sm font-medium">
-                      Read more
-                      <ArrowRight className="w-4 h-4 ml-1" />
-                    </div>
-                  </CardContent>
-                </Card>
+    <div className={`space-y-6 ${className}`}>
+      <Card className="bg-black/80 border border-white/10 rounded-2xl">
+        <CardHeader>
+          <CardTitle className="text-white flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-orange-400" />
+            {title}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          {links.map((link, index) => (
+            <Link 
+              key={index}
+              href={link.href}
+              className="block group hover:bg-white/5 rounded-lg p-3 transition-colors"
+            >
+              <div className="flex items-start gap-3">
+                <div className="text-orange-400 mt-1">
+                  {getIcon(link.type)}
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-white font-medium group-hover:text-orange-400 transition-colors">
+                    {link.title}
+                  </h3>
+                  <p className="text-gray-400 text-sm mt-1">
+                    {link.description}
+                  </p>
+                  <div className="flex items-center gap-2 mt-2">
+                    <Badge 
+                      variant="outline" 
+                      className={`text-xs ${getTypeColor(link.type)}`}
+                    >
+                      {link.type}
+                    </Badge>
+                    {link.category && (
+                      <Badge variant="outline" className="text-xs bg-gray-500/10 border-gray-500/30 text-gray-400">
+                        {link.category}
+                      </Badge>
+                    )}
+                  </div>
+                </div>
+                <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-orange-400 transition-colors" />
+              </div>
+            </Link>
+          ))}
+          
+          {/* Forum discussion link */}
+          {showForumLink && (
+            <div className="border-t border-white/10 pt-4">
+              <Link 
+                href={forumThreadUrl || "https://forum.ergoblockchain.org"}
+                className="flex items-center gap-3 text-orange-400 hover:text-orange-300 transition-colors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <MessageCircle className="w-4 h-4" />
+                <span className="text-sm font-medium">Discuss on Forum</span>
+                <ArrowRight className="w-4 h-4" />
               </Link>
-            )
-          })}
-        </div>
-      </div>
-    </section>
+            </div>
+          )}
+        </CardContent>
+      </Card>
+    </div>
   )
 }
-
-// Pre-defined related content for common topics
-export const relatedContentMap: Record<string, RelatedItem[]> = {
-  ergoscript: [
-    {
-      title: 'ErgoScript Tutorial',
-      description: 'Learn the basics of ErgoScript programming',
-      href: '/docs/developers/ergoscript-languages',
-      type: 'guide',
-      readTime: 15
-    },
-    {
-      title: 'Smart Contract Examples',
-      description: 'Real-world ErgoScript contract examples',
-      href: '/docs/developers/tutorials',
-      type: 'guide',
-      readTime: 10
-    },
-    {
-      title: 'Sigma Protocols',
-      description: 'Understanding Sigma protocols in Ergo',
-      href: '/technology/privacy-features',
-      type: 'technology',
-      readTime: 8
-    }
-  ],
-  stablecoins: [
-    {
-      title: 'AgeUSD Protocol',
-      description: 'How the AgeUSD stablecoin protocol works',
-      href: '/use/stablecoins',
-      type: 'use-case',
-      readTime: 12
-    },
-    {
-      title: 'DeFi on Ergo',
-      description: 'Building decentralized finance applications',
-      href: '/ecosystem/financial',
-      type: 'article',
-      readTime: 10
-    },
-    {
-      title: 'Oracle Pools',
-      description: 'Decentralized price feeds for DeFi',
-      href: '/technology/oracle-pools',
-      type: 'technology',
-      readTime: 8
-    }
-  ],
-  mining: [
-    {
-      title: 'Start Mining Ergo',
-      description: 'Complete guide to mining ERG',
-      href: '/docs/miners/mining-guides',
-      type: 'guide',
-      readTime: 20
-    },
-    {
-      title: 'Autolykos Algorithm',
-      description: 'Understanding Ergo\'s mining algorithm',
-      href: '/docs/introduction/autolykos',
-      type: 'technology',
-      readTime: 15
-    },
-    {
-      title: 'Mining Profitability',
-      description: 'Calculate your mining rewards',
-      href: '/use/mining',
-      type: 'use-case',
-      readTime: 5
-    }
-  ],
-  privacy: [
-    {
-      title: 'Sigma Protocols',
-      description: 'Zero-knowledge proofs in Ergo',
-      href: '/technology/privacy-features',
-      type: 'technology',
-      readTime: 12
-    },
-    {
-      title: 'Privacy Guide',
-      description: 'Best practices for privacy on Ergo',
-      href: '/docs/introduction/privacy-guide',
-      type: 'guide',
-      readTime: 10
-    },
-    {
-      title: 'Mixer & ErgoMix',
-      description: 'Privacy tools for transactions',
-      href: '/use/privacy',
-      type: 'use-case',
-      readTime: 8
-    }
-  ]
-}
-
-export default RelatedContent 

@@ -139,6 +139,11 @@ export const mainNavItems = [
     description: "Educational resources and learning materials",
     children: [
       {
+        title: "Learning Hub",
+        href: "/learn",
+        description: "Master Ergo development with structured learning paths, hands-on tutorials, and expert mentorship.",
+      },
+      {
         title: "Learn ErgoScript",
         href: "/learn/ergoscript",
         description: "Step-by-step ErgoScript tutorials from basics to advanced secure contract patterns.",

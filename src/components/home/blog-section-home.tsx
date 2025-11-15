@@ -45,22 +45,22 @@ export function BlogSectionHome() {
             >
               <Card className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 h-full flex flex-col overflow-hidden cursor-pointer">
                 {/* Preview Image */}
-                <div 
-                  className="aspect-video bg-gradient-to-br from-neutral-900 to-neutral-950 flex items-center justify-center group-hover:from-neutral-800 group-hover:to-neutral-900 transition-all duration-300 relative overflow-hidden"
-                  style={{
-                    backgroundImage: post.image ? `url(${post.image})` : undefined,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat'
-                  }}
-                >
-                  {post.image ? (
-                    <div className="absolute inset-0 bg-black/20" />
-                  ) : (
-                    <div className="text-6xl font-bold text-neutral-800 group-hover:text-neutral-700 transition-colors">
-                      {post.category?.charAt(0) || 'E'}
+                <div className="aspect-video relative overflow-hidden">
+                  <div className="absolute inset-0 border border-orange-500/30 rounded-3xl m-4 blur-[40px] opacity-60"></div>
+                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-orange-900/20 via-black to-black">
+                    <div className="absolute top-4 left-4">
+                      {post.category && (
+                        <span className="px-4 py-1 rounded-full bg-orange-500/20 border border-orange-500/40 text-orange-200 text-sm font-semibold">
+                          {post.category}
+                        </span>
+                      )}
                     </div>
-                  )}
+                    <div className="h-full w-full flex flex-col items-center justify-center gap-2 text-center">
+                      <span className="text-sm uppercase tracking-[0.3em] text-orange-400">Ergo</span>
+                      <span className="text-3xl font-bold text-white tracking-wider">Blockchain</span>
+                      <span className="text-sm text-orange-200/80">Blog Article</span>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col">
@@ -100,10 +100,6 @@ export function BlogSectionHome() {
                     </time>
                   </div>
 
-                  {/* Read article link - appears on hover, aligned right */}
-                  <div className="mt-4 text-orange-400 group-hover:text-orange-300 font-semibold flex items-center justify-end gap-2 text-sm opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                    <span>Read article</span>
-                  </div>
                 </div>
               </Card>
             </Link>

@@ -36,19 +36,45 @@ export async function generateMetadata({ searchParams }: { searchParams: Promise
   return {
     title,
     description: "Deep-dives, tutorials, and ecosystem updates from the Ergo community.",
-    alternates: { canonical: page > 1 ? `${baseUrl}?page=${page}` : baseUrl, types: { "application/rss+xml": "/blog/rss.xml" } },
-    other: { ...(prev ? { "link:prev": prev } : {}), ...(next ? { "link:next": next } : {}) },
+    alternates: { 
+      canonical: baseUrl, // Always point to page 1 for canonical
+      types: { "application/rss+xml": "/blog/rss.xml" } 
+    },
+    other: { 
+      ...(prev ? { "link:prev": prev } : {}), 
+      ...(next ? { "link:next": next } : {}) 
+    },
     openGraph: {
       type: "website",
-      siteName: "Ergo",
+      siteName: "Ergo Platform",
       locale: "en_US",
       url: page > 1 ? `${baseUrl}?page=${page}` : baseUrl,
       title,
-      description: "Deep-dives, tutorials, and ecosystem updates.",
-      images: [{ url: `${baseUrl}/og/blog.png`, width: 1200, height: 630, alt: "Ergo Blog" }],
+      description: "Deep-dives, tutorials, and ecosystem updates from the Ergo community.",
+      images: [{ 
+        url: "/og/blog.svg", 
+        width: 1200, 
+        height: 630, 
+        alt: "Ergo Blog - Latest Updates, Research & Guides" 
+      }],
     },
-    twitter: { card: "summary_large_image", site: twitterHandle, creator: twitterHandle, images: ["https://ergoblockchain.org/og/blog.png"] },
-    robots: hasJunk ? { index: false, follow: true } : { index: true, follow: true, googleBot: { "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 } },
+    twitter: { 
+      card: "summary_large_image", 
+      site: twitterHandle, 
+      creator: twitterHandle, 
+      images: ["/og/blog.svg"] 
+    },
+    robots: hasJunk || page > 1 
+      ? { index: false, follow: true } // noindex for pagination and junk params
+      : { 
+          index: true, 
+          follow: true, 
+          googleBot: { 
+            "max-image-preview": "large", 
+            "max-snippet": -1, 
+            "max-video-preview": -1 
+          } 
+        },
   }
 }
 

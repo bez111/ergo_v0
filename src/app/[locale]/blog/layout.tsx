@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     siteName: 'Ergo Platform',
     images: [
       {
-        url: '/og/blog.png',
+        url: '/og/blog.svg',
         width: 1200,
         height: 630,
-        alt: 'Ergo Blog'
+        alt: 'Ergo Blog - Latest Updates, Research & Guides'
       }
     ]
   },
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Ergo Blog',
     description: 'News, research deep-dives, and how-tos from the Ergo ecosystem.',
-    images: ['/og/blog.png']
+    images: ['/og/blog.svg']
   },
   alternates: {
     canonical: 'https://ergoblockchain.org/blog',
