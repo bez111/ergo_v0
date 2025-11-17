@@ -22,6 +22,7 @@ alwaysApply: true
 - Change file locations
 - Reorganize any part of the file structure
 - Create new folders or subdirectories
+- Modify tsconfig.json, next.config.ts
 
 **ONLY ALLOWED:**
 - Edit content inside existing files (text, code, comments)

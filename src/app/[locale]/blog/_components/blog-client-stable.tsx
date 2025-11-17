@@ -39,8 +39,7 @@ export default function BlogClientStable({
   const [selectedCategory, setSelectedCategory] = useState(() => params.get("cat") || "all")
   const [sortBy, setSortBy] = useState<SortKey>(() => (params.get("sort") as SortKey) || "newest")
   
-  //@ts-ignore
-  const [loadedPosts, setLoadedPosts] = useState(posts)
+  const [loadedPosts] = useState(posts)
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(page)
   const [mounted, setMounted] = useState(false)
