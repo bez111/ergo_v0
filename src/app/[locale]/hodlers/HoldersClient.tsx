@@ -20,13 +20,11 @@ import {
   Wallet,
   Code,
   Eye,
-  Activity,
-  DollarSign,
   Clock
 } from "lucide-react"
 
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -279,7 +277,7 @@ export function HoldersClient() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                  Ergo: sound money with programmable privacy
+                  Ergo - sound money with programmable privacy
                 </h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">
                   Built on Proof-of-Work like Bitcoin, with smart contracts and privacy built in for real-world use.

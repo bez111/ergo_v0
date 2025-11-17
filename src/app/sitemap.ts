@@ -6,15 +6,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: `${baseUrl}/sitemap-pages.xml`,
+      url: `${baseUrl}/sitemaps/sitemap-pages.xml`,
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/sitemap-blog.xml`, 
+      url: `${baseUrl}/sitemaps/sitemap-blog.xml`,
       lastModified: new Date(),
     },
     {
-      url: `${baseUrl}/sitemap-ecosystem.xml`,
+      url: `${baseUrl}/sitemaps/sitemap-ecosystem.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sitemaps/sitemap-technology.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sitemaps/sitemap-use-cases.xml`,
       lastModified: new Date(),
     },
     {

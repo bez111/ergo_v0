@@ -3,7 +3,7 @@ description: Strict rules - only manual content changes within existing files, n
 alwaysApply: true
 ---
 
-# Cursor AI Rules for Ergo Platform Project
+# Cursor AI Rules for Ergo Blockchain website
 
 ## STRICT RULE: NO FILE STRUCTURE CHANGES
 

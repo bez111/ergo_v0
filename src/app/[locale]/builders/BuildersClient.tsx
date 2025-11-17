@@ -11,40 +11,24 @@ import {
   ExternalLink,
   ChevronDown,
   ArrowRight,
-  CheckCircle,
-  Target,
   BookOpen,
   MessageSquare,
   Github,
-  Cpu,
   DollarSign,
   Eye,
   GitFork,
-  Hammer,
   LayoutGrid,
   Wallet,
-  FileText,
   Rocket,
   Lightbulb,
   FlaskConical,
   Lock,
   Coins,
-  TrendingUp,
   Terminal,
-  Puzzle,
   Network,
-  Gauge,
   Activity,
   Package,
-  LifeBuoy,
-  Bug,
-  CalendarDays,
-  Hourglass,
-  Settings,
-  ClipboardList,
-  Mail,
-  Play
-} from "lucide-react"
+  Hourglass} from "lucide-react"
 
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -53,7 +37,7 @@ import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
-import { networkMetrics, formatHashrate, formatTVL, formatSupplyShort, formatBlockTime, formatActiveNodes, formatTransactionsPerDay } from "@/lib/network-metrics"
+import { networkMetrics, formatHashrate, formatTVL, formatSupplyShort, formatActiveNodes, formatTransactionsPerDay } from "@/lib/network-metrics"
 
 export function BuildersClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
