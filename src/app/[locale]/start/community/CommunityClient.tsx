@@ -337,35 +337,51 @@ export default function CommunityClient() {
 
               <StaggerContainer>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {contributions.map((contribution, index) => (
-                    <motion.div
-                      key={index}
-                      className="group"
-                      whileHover={{ scale: 1.02 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      <Card className="bg-black/80 border-white/10 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full backdrop-blur-sm rounded-3xl">
-                        <CardContent className="p-8">
-                          <div className="flex items-center gap-4 mb-6">
-                            <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
-                              <contribution.icon className="w-6 h-6 text-orange-400" />
-                            </div>
-                            <h3 className="text-xl font-bold text-white font-mono">{contribution.title}</h3>
-                          </div>
-                          <p className="text-gray-400 mb-6">{contribution.description}</p>
-
-                          <div className="space-y-2">
-                            {contribution.tasks.map((task, taskIndex) => (
-                              <div key={taskIndex} className="flex items-center gap-2 text-sm text-gray-300">
-                                <div className="w-1 h-1 bg-orange-400 rounded-full"></div>
-                                <span>{task}</span>
+                  {contributions.map((contribution, index) => {
+                    const isMarketing = index === 5 // Marketing card
+                    const CardWrapper = isMarketing ? Link : 'div'
+                    const cardProps = isMarketing ? { href: '/start/community/marketing' } : {}
+                    
+                    return (
+                      <motion.div
+                        key={index}
+                        className="group"
+                        whileHover={{ scale: 1.02 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                      >
+                        <CardWrapper {...cardProps} className={isMarketing ? "block focus:outline-none focus:ring-2 focus:ring-orange-500/60 rounded-3xl" : ""}>
+                          <Card className={`bg-black/80 border-white/10 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full backdrop-blur-sm rounded-3xl ${isMarketing ? 'cursor-pointer group-hover:shadow-lg group-hover:shadow-orange-500/10' : ''}`}>
+                            <CardContent className="p-8">
+                              <div className="flex items-center gap-4 mb-6">
+                                <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                                  <contribution.icon className="w-6 h-6 text-orange-400" />
+                                </div>
+                                <div className="flex-1">
+                                  <h3 className="text-xl font-bold text-white font-mono">{contribution.title}</h3>
+                                  {isMarketing && (
+                                    <div className="flex items-center gap-2 mt-1">
+                                      <span className="text-xs text-orange-400 font-medium">Click for detailed guide</span>
+                                      <ArrowRight className="w-3 h-3 text-orange-400 group-hover:translate-x-1 transition-transform duration-300" />
+                                    </div>
+                                  )}
+                                </div>
                               </div>
-                            ))}
-                          </div>
-                        </CardContent>
-                      </Card>
-                    </motion.div>
-                  ))}
+                              <p className="text-gray-400 mb-6">{contribution.description}</p>
+
+                              <div className="space-y-2">
+                                {contribution.tasks.map((task, taskIndex) => (
+                                  <div key={taskIndex} className="flex items-center gap-2 text-sm text-gray-300">
+                                    <div className="w-1 h-1 bg-orange-400 rounded-full"></div>
+                                    <span>{task}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </CardWrapper>
+                      </motion.div>
+                    )
+                  })}
                 </div>
               </StaggerContainer>
             </div>

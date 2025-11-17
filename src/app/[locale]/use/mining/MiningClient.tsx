@@ -33,6 +33,7 @@ import {
 import Link from "next/link"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { networkMetrics } from "@/lib/network-metrics"
 
 
 const miningPools = [
@@ -204,14 +205,14 @@ export default function MiningClient() {
                           <Activity className="w-5 h-5 text-orange-400" />
                           <span className="text-sm text-neutral-400">Hashrate</span>
                         </div>
-                        <DigitalCounter value={210} suffix=" TH/s" duration={3000} className="text-lg font-mono text-white" />
+                        <DigitalCounter value={networkMetrics.hashrate.value} suffix=" TH/s" duration={3000} className="text-lg font-mono text-white" />
                       </div>
                       <div className="p-4 rounded-lg bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40">
                         <div className="flex items-center gap-3 mb-2">
                           <Clock className="w-5 h-5 text-orange-400" />
                           <span className="text-sm text-neutral-400">Block Time</span>
                         </div>
-                        <DigitalCounter value={2} suffix=" min" duration={3000} className="text-lg font-mono text-white" />
+                        <DigitalCounter value={networkMetrics.blockTime.value} suffix=" min" duration={3000} className="text-lg font-mono text-white" />
                       </div>
                       <div className="p-4 rounded-lg bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40">
                         <div className="flex items-center gap-3 mb-2">

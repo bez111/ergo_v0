@@ -12,28 +12,28 @@ export function MadeForMassAdoption() {
       title: "Freedom seekers",
       desc: "Self-custody by default. Private on demand via Sigma proofs. True financial sovereignty.",
       cta: "Get started",
-      href: "/start/introduction"
+      href: "/hodlers"
     },
     {
       icon: Code,
       title: "Cypherpunks",
       desc: "Write deterministic eUTXO contracts in ErgoScript. Compose Sigma proofs for auditable, programmable privacy.",
       cta: "Start building",
-      href: "/docs"
+      href: "/builders"
     },
     {
       icon: Pickaxe,
       title: "Miners",
       desc: "Autolykos PoW — GPU-friendly and ASIC-resistant. Fair issuance, secure the network, earn ERG.",
       cta: "Start mining",
-      href: "/use/mining"
+      href: "/miners"
     },
     {
       icon: TrendingUp,
       title: "Community",
       desc: "Fair launch. No pre-mine, no VC control. Open, community-driven since 2019.",
       cta: "Learn more",
-      href: "/technology"
+      href: "/start/community"
     }
   ]
 
