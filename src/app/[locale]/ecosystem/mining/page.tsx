@@ -47,6 +47,7 @@ import Link from "next/link"
 import Script from "next/script"
 import { PoolCard, PoolCardSkeleton } from "@/components/mining/PoolCard"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { networkMetrics } from "@/lib/network-metrics"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -77,7 +78,7 @@ export default function MiningEcosystemPage() {
       fee: "1%",
       paymentSystem: "PPLNS",
       minPayout: "0.5 ERG",
-      hashrate: "45.2 TH/s",
+      hashrate: "3.2 TH/s",
       miners: 2543,
       poolShare: "21.5%",
       uptime: "99.9%",
@@ -94,7 +95,7 @@ export default function MiningEcosystemPage() {
       fee: "1%",
       paymentSystem: "PPLNS",
       minPayout: "0.1 ERG",
-      hashrate: "38.7 TH/s",
+      hashrate: "2.7 TH/s",
       miners: 3218,
       poolShare: "18.4%",
       uptime: "99.8%",
@@ -111,7 +112,7 @@ export default function MiningEcosystemPage() {
       fee: "0.9%",
       paymentSystem: "PROP",
       minPayout: "0.5 ERG",
-      hashrate: "28.3 TH/s",
+      hashrate: "2.0 TH/s",
       miners: 1847,
       poolShare: "13.5%",
       uptime: "99.7%",
@@ -128,7 +129,7 @@ export default function MiningEcosystemPage() {
       fee: "0.9%",
       paymentSystem: "PPLNS",
       minPayout: "0.5 ERG",
-      hashrate: "22.1 TH/s",
+      hashrate: "1.5 TH/s",
       miners: 1234,
       poolShare: "10.5%",
       uptime: "99.6%",
@@ -145,7 +146,7 @@ export default function MiningEcosystemPage() {
       fee: "2%",
       paymentSystem: "PPS+",
       minPayout: "1 ERG",
-      hashrate: "18.5 TH/s",
+      hashrate: "1.3 TH/s",
       miners: 892,
       poolShare: "8.8%",
       uptime: "99.9%",
@@ -162,7 +163,7 @@ export default function MiningEcosystemPage() {
       fee: "1%",
       paymentSystem: "PPLNS",
       minPayout: "0.5 ERG",
-      hashrate: "12.4 TH/s",
+      hashrate: "0.9 TH/s",
       miners: 623,
       poolShare: "5.9%",
       uptime: "99.5%",
@@ -179,7 +180,7 @@ export default function MiningEcosystemPage() {
       fee: "1%",
       paymentSystem: "PPLNS",
       minPayout: "1 ERG",
-      hashrate: "15.8 TH/s",
+      hashrate: "1.1 TH/s",
       miners: 1456,
       poolShare: "7.5%",
       uptime: "99.7%",
@@ -230,7 +231,8 @@ export default function MiningEcosystemPage() {
     ? miningPools 
     : miningPools.filter(pool => pool.tags.includes(selectedFilter))
 
-  const totalHashrate = miningPools.reduce((acc, pool) => acc + parseFloat(pool.hashrate), 0)
+  // Use centralized network metrics for total hashrate
+  const totalHashrate = networkMetrics.hashrate.value
   const totalMiners = miningPools.reduce((acc, pool) => acc + pool.miners, 0)
 
   // Filter button configs with colors

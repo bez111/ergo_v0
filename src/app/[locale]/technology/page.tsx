@@ -4,6 +4,7 @@ import TechnologyClient from './TechnologyClient'
 import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
 import { targetQuestions } from '@/lib/featured-snippets-optimizer'
+import { siteConfig } from '@/config/site-config'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -35,8 +36,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       title: t('twitterTitle'),
       description: t('twitterDescription'),
       images: ['https://ergoblockchain.org/og/technology.png'],
-      creator: '@ergoplatform',
-      site: '@ergoplatform'
+      creator: siteConfig.twitterHandle,
+      site: siteConfig.twitterHandle
     },
     robots: {
       index: true,
