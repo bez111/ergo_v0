@@ -40,6 +40,32 @@ import { networkMetrics, formatHashrate, formatDifficulty, formatBlockTime, form
 
 export function MinersClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
+  
+  // Mining Calculator State
+  const [hashrate, setHashrate] = useState(130) // MH/s
+  const [powerConsumption, setPowerConsumption] = useState(120) // Watts
+  const [electricityCost, setElectricityCost] = useState(0.10) // USD per kWh
+  const [ergPrice, setErgPrice] = useState(1.50) // USD
+  const [poolFee, setPoolFee] = useState(1) // %
+  
+  // Network metrics for calculations
+  const networkHashrate = 15000 // TH/s (example)
+  const blockReward = 9 // ERG
+  const blocksPerDay = 720 // ~2 min blocks
+  
+  // Calculate daily earnings
+  const dailyErgEarned = (hashrate / 1000 / networkHashrate) * blockReward * blocksPerDay * (1 - poolFee / 100)
+  const dailyRevenue = dailyErgEarned * ergPrice
+  const dailyPowerCost = (powerConsumption / 1000) * 24 * electricityCost
+  const dailyProfit = dailyRevenue - dailyPowerCost
+  
+  // Monthly and yearly projections
+  const monthlyProfit = dailyProfit * 30
+  const yearlyProfit = dailyProfit * 365
+  
+  // ROI calculation (assuming $500 GPU cost)
+  const gpuCost = 500
+  const roiDays = gpuCost / dailyProfit
 
   const breadcrumbItems = [
     { name: "Home", href: "/" },
@@ -51,26 +77,26 @@ export function MinersClient() {
     {
       icon: Cpu,
       title: "ASIC-Resistant",
-      description: "Autolykos algorithm designed for GPUs, keeping mining accessible and fair",
-      highlight: "GPU-friendly forever"
+      description: "GPU-only mining. No ASICs. No industrial farms squeezing you out. Your gaming rig stays competitive.",
+      highlight: "Level playing field"
     },
     {
       icon: Shield,
       title: "Fair Launch",
-      description: "No premine, no dev tax, no VC control - pure community-driven project",
-      highlight: "No insider advantage"
+      description: "Zero pre-mine. Zero dev tax. Zero VC allocation. Every ERG mined fairly since day one.",
+      highlight: "No insider dumps"
     },
     {
       icon: TrendingUp,
       title: "Real Use Cases",
-      description: "DeFi, privacy, programmable money create genuine demand for network security",
+      description: "DeFi, DEXs, privacy features create actual demand. Not just speculation - real utility driving value.",
       highlight: "Sustainable demand"
     },
     {
       icon: Coins,
       title: "Long-term Economics",
-      description: "Storage rent mechanism ensures miner rewards beyond emission schedule",
-      highlight: "Future-proof incentives"
+      description: "Storage rent pays miners forever. When emissions end, you still earn. Built for decades, not pump & dump.",
+      highlight: "Earn after emissions"
     }
   ]
 
@@ -310,10 +336,10 @@ export function MinersClient() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                  Mine Ergo with your GPUs — secure the network, earn ERG
+                  Mine with GPUs. Earn forever. Stay profitable.
                 </h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">
-                  ASIC-resistant PoW, fair launch, real-world use cases and a cypherpunk-minded community.
+                  ASIC-resistant algorithm. Fair rewards. Storage rent keeps miners paid after emissions end.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
@@ -366,32 +392,301 @@ export function MinersClient() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 }}
         >
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-white">
               Why mine Ergo instead of other coins?
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {coreValues.map((value) => (
-                <Card key={value.title} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-500/50 transition-all duration-300 relative overflow-hidden h-full">
-                  <CardContent className="p-6 h-full flex flex-col">
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-lg bg-orange-500/20 flex items-center justify-center">
-                        <value.icon className="w-6 h-6 text-orange-400" />
+            <div className="space-y-6">
+              {coreValues.map((value, index) => (
+                <motion.div
+                  key={value.title}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                >
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                        <value.icon className="w-6 h-6" aria-hidden="true" />
                       </div>
-                      <h3 className="text-xl font-bold text-white">
-                        {value.title}
-                      </h3>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                        <p className="text-neutral-400 leading-relaxed mb-3">{value.description}</p>
+                        <Badge variant="outline" className="bg-orange-500/10 border-orange-500/30 text-orange-400">
+                          {value.highlight}
+                        </Badge>
+                      </div>
                     </div>
-                    <p className="text-neutral-300 flex-1 mb-3">
-                      {value.description}
-                    </p>
-                    <Badge variant="outline" className="bg-orange-500/10 border-orange-500/30 text-orange-400 w-fit">
-                      {value.highlight}
-                    </Badge>
-                  </CardContent>
-                </Card>
+                  </Card>
+                </motion.div>
               ))}
             </div>
+          </div>
+        </motion.section>
+
+        {/* Mining Profitability Calculator */}
+        <motion.section 
+          className="py-16 px-4 bg-gradient-to-b from-transparent via-orange-500/5 to-transparent"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+        >
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold mb-4 text-white">
+                Mining <span className="text-orange-400">Profitability</span> Calculator
+              </h2>
+              <p className="text-xl text-neutral-300">
+                Calculate your potential earnings mining Ergo
+              </p>
+            </div>
+
+            <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm overflow-hidden">
+              <CardContent className="p-8">
+                <div className="grid lg:grid-cols-2 gap-8">
+                  {/* Left: Input Controls */}
+                  <div className="space-y-6">
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <label className="text-white font-semibold flex items-center gap-2">
+                          <Zap className="w-5 h-5 text-orange-400" />
+                          Hashrate (MH/s)
+                        </label>
+                        <span className="text-orange-400 font-bold text-lg">{hashrate}</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="10"
+                        max="500"
+                        step="10"
+                        value={hashrate}
+                        onChange={(e) => setHashrate(Number(e.target.value))}
+                        className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                      />
+                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                        <span>10 MH/s</span>
+                        <span>500 MH/s</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <label className="text-white font-semibold flex items-center gap-2">
+                          <Cpu className="w-5 h-5 text-orange-400" />
+                          Power Consumption (W)
+                        </label>
+                        <span className="text-orange-400 font-bold text-lg">{powerConsumption}W</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="50"
+                        max="400"
+                        step="10"
+                        value={powerConsumption}
+                        onChange={(e) => setPowerConsumption(Number(e.target.value))}
+                        className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                      />
+                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                        <span>50W</span>
+                        <span>400W</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <label className="text-white font-semibold flex items-center gap-2">
+                          <DollarSign className="w-5 h-5 text-orange-400" />
+                          Electricity Cost ($/kWh)
+                        </label>
+                        <span className="text-orange-400 font-bold text-lg">${electricityCost.toFixed(3)}</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="0.01"
+                        max="0.50"
+                        step="0.01"
+                        value={electricityCost}
+                        onChange={(e) => setElectricityCost(Number(e.target.value))}
+                        className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                      />
+                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                        <span>$0.01</span>
+                        <span>$0.50</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <label className="text-white font-semibold flex items-center gap-2">
+                          <TrendingUp className="w-5 h-5 text-orange-400" />
+                          ERG Price (USD)
+                        </label>
+                        <span className="text-orange-400 font-bold text-lg">${ergPrice.toFixed(2)}</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="0.50"
+                        max="10.00"
+                        step="0.10"
+                        value={ergPrice}
+                        onChange={(e) => setErgPrice(Number(e.target.value))}
+                        className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                      />
+                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                        <span>$0.50</span>
+                        <span>$10.00</span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <div className="flex items-center justify-between mb-3">
+                        <label className="text-white font-semibold flex items-center gap-2">
+                          <Users className="w-5 h-5 text-orange-400" />
+                          Pool Fee (%)
+                        </label>
+                        <span className="text-orange-400 font-bold text-lg">{poolFee}%</span>
+                      </div>
+                      <input
+                        type="range"
+                        min="0"
+                        max="3"
+                        step="0.1"
+                        value={poolFee}
+                        onChange={(e) => setPoolFee(Number(e.target.value))}
+                        className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
+                      />
+                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                        <span>0%</span>
+                        <span>3%</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right: Results */}
+                  <div className="space-y-4">
+                    <div className="bg-gradient-to-br from-orange-500/20 to-orange-900/20 border border-orange-500/30 rounded-2xl p-6">
+                      <div className="flex items-center gap-3 mb-4">
+                        <div className="w-12 h-12 rounded-full bg-orange-500/30 flex items-center justify-center">
+                          <Coins className="w-6 h-6 text-orange-400" />
+                        </div>
+                        <div>
+                          <p className="text-sm text-neutral-400">Daily ERG Mined</p>
+                          <p className="text-2xl font-bold text-white">{dailyErgEarned.toFixed(4)} ERG</p>
+                        </div>
+                      </div>
+                      <div className="text-sm text-neutral-300">
+                        ≈ ${dailyRevenue.toFixed(2)} USD/day
+                      </div>
+                    </div>
+
+                    <div className="bg-black/60 border border-white/10 rounded-2xl p-6 space-y-4">
+                      <div className="flex justify-between items-center pb-3 border-b border-neutral-700">
+                        <span className="text-neutral-400">Daily Revenue</span>
+                        <span className="text-green-400 font-bold">${dailyRevenue.toFixed(2)}</span>
+                      </div>
+                      <div className="flex justify-between items-center pb-3 border-b border-neutral-700">
+                        <span className="text-neutral-400">Daily Power Cost</span>
+                        <span className="text-red-400 font-bold">-${dailyPowerCost.toFixed(2)}</span>
+                      </div>
+                      <div className="flex justify-between items-center pt-2">
+                        <span className="text-white font-semibold text-lg">Daily Profit</span>
+                        <span className={`font-bold text-xl ${dailyProfit > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                          ${dailyProfit.toFixed(2)}
+                        </span>
+                      </div>
+                    </div>
+
+                    <div className="grid grid-cols-2 gap-4">
+                      <div className="bg-black/60 border border-white/10 rounded-xl p-4">
+                        <p className="text-sm text-neutral-400 mb-1">Monthly</p>
+                        <p className={`text-xl font-bold ${monthlyProfit > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                          ${monthlyProfit.toFixed(2)}
+                        </p>
+                      </div>
+                      <div className="bg-black/60 border border-white/10 rounded-xl p-4">
+                        <p className="text-sm text-neutral-400 mb-1">Yearly</p>
+                        <p className={`text-xl font-bold ${yearlyProfit > 0 ? 'text-green-400' : 'text-red-400'}`}>
+                          ${yearlyProfit.toFixed(2)}
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="bg-gradient-to-br from-blue-500/20 to-purple-900/20 border border-blue-500/30 rounded-xl p-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <Clock className="w-4 h-4 text-blue-400" />
+                        <p className="text-sm text-neutral-400">ROI Time (GPU @ $500)</p>
+                      </div>
+                      <p className="text-2xl font-bold text-white">
+                        {roiDays > 0 ? `${Math.round(roiDays)} days` : 'Not profitable'}
+                      </p>
+                      {roiDays > 0 && (
+                        <p className="text-xs text-neutral-400 mt-1">
+                          ≈ {(roiDays / 30).toFixed(1)} months
+                        </p>
+                      )}
+                    </div>
+
+                    <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-4">
+                      <p className="text-xs text-orange-300 leading-relaxed">
+                        <strong>Note:</strong> Calculations are estimates based on current network difficulty and price. 
+                        Actual earnings may vary with network hashrate changes and ERG price fluctuations.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Popular GPU Presets */}
+                <div className="mt-8 pt-8 border-t border-neutral-700">
+                  <p className="text-white font-semibold mb-4">Popular GPU Presets:</p>
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <button
+                      onClick={() => { setHashrate(130); setPowerConsumption(120); }}
+                      className="bg-black/60 hover:bg-black/80 border border-white/10 hover:border-orange-500/50 rounded-lg p-3 transition-all duration-200"
+                    >
+                      <p className="text-white font-medium text-sm">RTX 3060 Ti</p>
+                      <p className="text-xs text-neutral-400">130 MH/s · 120W</p>
+                    </button>
+                    <button
+                      onClick={() => { setHashrate(180); setPowerConsumption(150); }}
+                      className="bg-black/60 hover:bg-black/80 border border-white/10 hover:border-orange-500/50 rounded-lg p-3 transition-all duration-200"
+                    >
+                      <p className="text-white font-medium text-sm">RTX 3070</p>
+                      <p className="text-xs text-neutral-400">180 MH/s · 150W</p>
+                    </button>
+                    <button
+                      onClick={() => { setHashrate(150); setPowerConsumption(130); }}
+                      className="bg-black/60 hover:bg-black/80 border border-white/10 hover:border-orange-500/50 rounded-lg p-3 transition-all duration-200"
+                    >
+                      <p className="text-white font-medium text-sm">RX 6600 XT</p>
+                      <p className="text-xs text-neutral-400">150 MH/s · 130W</p>
+                    </button>
+                    <button
+                      onClick={() => { setHashrate(220); setPowerConsumption(180); }}
+                      className="bg-black/60 hover:bg-black/80 border border-white/10 hover:border-orange-500/50 rounded-lg p-3 transition-all duration-200"
+                    >
+                      <p className="text-white font-medium text-sm">RX 6800</p>
+                      <p className="text-xs text-neutral-400">220 MH/s · 180W</p>
+                    </button>
+                  </div>
+                </div>
+
+                {/* CTA to start mining */}
+                <div className="mt-8 pt-8 border-t border-neutral-700">
+                  <div className="bg-gradient-to-r from-green-500/10 to-green-900/10 border border-green-500/30 rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-bold text-white mb-2">Ready to start mining?</h3>
+                    <p className="text-neutral-300 mb-4">
+                      Follow our step-by-step guide to get your GPU mining ERG in 10 minutes
+                    </p>
+                    <Button asChild className="bg-green-500 hover:bg-green-600 text-black font-semibold px-6 py-3 rounded-xl border border-green-500/50">
+                      <Link href="/use/mining">
+                        <Pickaxe className="w-4 h-4 mr-2" />
+                        Start Mining Now
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </motion.section>
 

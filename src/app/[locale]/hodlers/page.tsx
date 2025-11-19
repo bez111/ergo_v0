@@ -9,17 +9,17 @@ export async function generateMetadata({ params }: HodlersPageProps): Promise<Me
   const { locale } = await params
 
   return {
-    title: "Ergo for Hodlers & Newcomers - Sound Money with Programmable Privacy",
+    title: "Ergo - Store Wealth, Keep Privacy, Stay Sovereign",
     description:
-      "Discover Ergo: Proof-of-Work blockchain with Bitcoin's security, Ethereum's smart contracts, and programmable privacy. Fair launch, no premine, built for freedom seekers.",
+      "97.7M fixed supply. Bitcoin's proven security + Smart contracts + Optional privacy. Zero pre-mine, zero VC control. Built for long-term holders.",
     keywords:
-      "Ergo blockchain, cryptocurrency hodlers, Bitcoin alternative, privacy coins, DeFi, proof of work, sound money, programmable money",
+      "Ergo blockchain, cryptocurrency holders, Bitcoin alternative, privacy coins, DeFi, proof of work, sound money, store of value, financial sovereignty",
     alternates: {
       canonical: "https://ergoblockchain.org/hodlers",
     },
     openGraph: {
-      title: "Ergo: sound money with programmable privacy",
-      description: "Built on Proof-of-Work like Bitcoin, with smart contracts and privacy built in for real-world use.",
+      title: "Ergo: Store Wealth, Keep Privacy, Stay Sovereign",
+      description: "97.7M fixed supply. Bitcoin's security + Smart contracts + Privacy. Zero pre-mine, zero VC control.",
       url: "https://ergoblockchain.org/hodlers",
       siteName: "Ergo Platform",
       images: [
@@ -35,8 +35,8 @@ export async function generateMetadata({ params }: HodlersPageProps): Promise<Me
     },
     twitter: {
       card: "summary_large_image",
-      title: "Ergo: sound money with programmable privacy",
-      description: "Built on Proof-of-Work like Bitcoin, with smart contracts and privacy built in for real-world use.",
+      title: "Ergo: Store Wealth, Keep Privacy, Stay Sovereign",
+      description: "97.7M fixed supply. Bitcoin's security + Smart contracts + Privacy. Built for long-term holders.",
       images: ["https://ergoblockchain.org/og/holders.png"],
     },
   }

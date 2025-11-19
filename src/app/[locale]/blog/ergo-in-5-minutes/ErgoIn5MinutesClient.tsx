@@ -14,7 +14,6 @@ import { StorageRentTimeline } from "@/components/diagrams/storage-rent-timeline
 import { ErgoScriptExamples } from "@/components/code/ergoscript-examples"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
-import { ViewCounter } from "@/components/blog/ViewCounter"
 import { 
   ChevronDown,
   Shield,
@@ -202,11 +201,6 @@ export function ErgoIn5MinutesClient() {
                 title="Ergo in 5 Minutes: Why It Matters & How It Works" 
                 url="https://ergoblockchain.org/blog/ergo-in-5-minutes" 
                 utm="?utm_source=share_hero"
-              />
-              <ViewCounter 
-                postId="ergo-in-5-minutes" 
-                title="Ergo in 5 Minutes: Why It Matters & How It Works"
-                className="text-gray-400 text-sm"
               />
             </div>
           </motion.div>

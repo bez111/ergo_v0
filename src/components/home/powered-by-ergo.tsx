@@ -41,8 +41,7 @@ export function PoweredByErgo() {
               lineHeight: 1
             }}
           >
-            <span className="text-orange-400">Open-source</span> <span className="text-white">ecosystem<br />
-            thriving</span> <span className="text-orange-400">together</span><span className="text-white">.</span>
+            <span className="text-white">Powered by</span> <span className="text-orange-400">builders</span><span className="text-white">. Designed for</span> <span className="text-orange-400">freedom</span><span className="text-white">.</span>
           </h2>
           <p 
             className="text-gray-400 mx-auto"
@@ -53,7 +52,7 @@ export function PoweredByErgo() {
               opacity: 0.85
             }}
           >
-            Collaborative innovation, decentralized by design
+            Open-source, decentralized, permissionless
           </p>
         </div>
 

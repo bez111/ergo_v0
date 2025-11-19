@@ -9,15 +9,15 @@ export async function generateMetadata({ params }: MinersPageProps): Promise<Met
   const { locale } = await params
 
   return {
-    title: "Ergo for Miners - GPU-Friendly ASIC-Resistant Mining",
-    description: "Mine Ergo with your GPUs. ASIC-resistant Autolykos algorithm, fair launch, sustainable economics with storage rent. Start mining ERG today.",
-    keywords: "Ergo mining, GPU mining, ASIC resistant, Autolykos, cryptocurrency mining, proof of work, mining profitability, ERG mining",
+    title: "Ergo Mining - Mine with GPUs, Earn Forever, Stay Profitable",
+    description: "GPU-only mining. ASIC-resistant. Storage rent pays miners forever. Fair launch, zero pre-mine. Your gaming rig stays competitive.",
+    keywords: "Ergo mining, GPU mining, ASIC resistant, Autolykos, cryptocurrency mining, proof of work, mining profitability, ERG mining, storage rent",
     alternates: {
       canonical: "https://ergoblockchain.org/miners"
     },
     openGraph: {
-      title: "Ergo for Miners: GPU-Friendly ASIC-Resistant Mining",
-      description: "Mine Ergo with your GPUs. ASIC-resistant algorithm, fair launch, and sustainable long-term economics.",
+      title: "Ergo Mining: Mine with GPUs, Earn Forever",
+      description: "GPU-only mining. ASIC-resistant. Storage rent pays miners forever. Your gaming rig stays competitive.",
       url: "https://ergoblockchain.org/miners",
       siteName: "Ergo Platform",
       images: [{
@@ -31,9 +31,9 @@ export async function generateMetadata({ params }: MinersPageProps): Promise<Met
     },
     twitter: {
       card: "summary_large_image",
-      title: "Ergo for Miners: GPU-Friendly ASIC-Resistant Mining",
-      description: "Mine Ergo with your GPUs. ASIC-resistant algorithm, fair launch, and sustainable long-term economics.",
-      images: ["https://ergoblockchain.org/og/miners.png"] // Placeholder, needs actual image
+      title: "Ergo Mining: Mine with GPUs, Earn Forever",
+      description: "GPU-only mining. ASIC-resistant. Storage rent pays miners forever. Fair launch, zero pre-mine.",
+      images: ["https://ergoblockchain.org/og/miners.png"]
     }
   }
 }

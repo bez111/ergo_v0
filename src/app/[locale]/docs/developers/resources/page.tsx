@@ -204,7 +204,7 @@ export default function DeveloperResourcesHub() {
       </section>
 
       {/* Related Content */}
-      <RelatedContent items={relatedContent} title="Additional Resources" />
+      <RelatedContent links={relatedContent} title="Additional Resources" />
     </div>
   )
 } 

@@ -12,7 +12,6 @@ import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
-import { ViewCounter } from "@/components/blog/ViewCounter"
 import { 
   Shield,
   Eye,
@@ -182,11 +181,6 @@ export function SigmaProtocolsClient() {
                 title="Ergo And Sigma Protocols: The Next Step In Blockchain Privacy"
                 url="https://ergoblockchain.org/blog/sigma-protocols-privacy"
                 utm="?utm_source=share_hero"
-              />
-              <ViewCounter 
-                postId="sigma-protocols-privacy" 
-                title="Ergo And Sigma Protocols: The Next Step In Blockchain Privacy"
-                className="text-gray-400 text-sm"
               />
             </div>
           </motion.header>

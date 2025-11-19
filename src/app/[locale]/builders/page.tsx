@@ -9,15 +9,15 @@ export async function generateMetadata({ params }: BuildersPageProps): Promise<M
   const { locale } = await params
   
   return {
-    title: "Ergo for Builders & Developers - Build Secure dApps on eUTXO",
-    description: "Build on Ergo: Bitcoin-style security with smart contracts, Sigma protocols, and clean developer experience. eUTXO model for predictable, parallelizable dApps.",
-    keywords: "Ergo blockchain, developers, builders, smart contracts, eUTXO, ErgoScript, dApps, DeFi, Sigma protocols, blockchain development",
+    title: "Ergo for Developers - Build DeFi That Doesn't Break",
+    description: "Bitcoin-level security meets smart contracts. No reentrancy attacks, no hidden state, predictable costs. eUTXO model for dApps that actually work.",
+    keywords: "Ergo blockchain, developers, builders, smart contracts, eUTXO, ErgoScript, dApps, DeFi, Sigma protocols, blockchain development, secure smart contracts",
     alternates: {
       canonical: "https://ergoblockchain.org/builders"
     },
     openGraph: {
-      title: "Build secure, expressive dApps on Ergo's eUTXO",
-      description: "Bitcoin-style security with smart contracts, Sigma protocols and a clean developer experience.",
+      title: "Build DeFi That Doesn't Break - Ergo for Developers",
+      description: "Bitcoin-level security meets smart contracts. No reentrancy attacks. No hidden state. Predictable costs.",
       url: "https://ergoblockchain.org/builders",
       siteName: "Ergo Platform",
       images: [{
@@ -31,8 +31,8 @@ export async function generateMetadata({ params }: BuildersPageProps): Promise<M
     },
     twitter: {
       card: "summary_large_image",
-      title: "Build secure, expressive dApps on Ergo's eUTXO",
-      description: "Bitcoin-style security with smart contracts, Sigma protocols and a clean developer experience.",
+      title: "Build DeFi That Doesn't Break - Ergo for Developers",
+      description: "Bitcoin-level security meets smart contracts. No reentrancy attacks. No hidden state.",
       images: ["https://ergoblockchain.org/og/builders.png"]
     }
   }

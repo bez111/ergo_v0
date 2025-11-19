@@ -60,23 +60,23 @@ export function BuildersClient() {
   const whyBuildOnErgo = [
     {
       icon: Shield,
-      title: "eUTXO Model: Predictable & Secure",
-      description: "Enjoy Bitcoin-style security with predictable transaction costs and parallelizable execution, minimizing common smart contract vulnerabilities.",
+      title: "eUTXO Model: No Surprises",
+      description: "No reentrancy attacks. No MEV exploitation. No hidden global state. Know exactly what your contract will cost before execution.",
     },
     {
       icon: Lock,
-      title: "Sigma Protocols: Native ZK Privacy",
-      description: "Leverage built-in zero-knowledge proofs for advanced privacy, complex authentication, and confidential dApps directly at the protocol level.",
+      title: "Sigma Protocols: Privacy Without PhD",
+      description: "Built-in zero-knowledge proofs. Add privacy features without cryptography expertise. Ring signatures, threshold proofs, all native.",
     },
     {
       icon: Zap,
-      title: "Proof-of-Work Base Layer: Credible Security",
-      description: "Build on a robust, time-tested Proof-of-Work blockchain, offering high security and alignment with cypherpunk principles.",
+      title: "Proof-of-Work: No Chain Halts",
+      description: "No rollbacks. No governance attacks. No validator cartels. Battle-tested security that just works.",
     },
     {
       icon: Users,
-      title: "Fair Launch Ecosystem: Open & Decentralized",
-      description: "Join a community-driven ecosystem with no VC premines or corporate overlords, fostering open governance and true decentralization.",
+      title: "Fair Launch: No Corporate BS",
+      description: "Zero VC premines. Zero foundation tax. Build on a chain where the community actually owns the network.",
     },
   ]
 
@@ -314,10 +314,10 @@ export function BuildersClient() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                  Build secure, expressive dApps on Ergo's eUTXO
+                  Build DeFi that doesn't break. Ship dApps that actually work.
                 </h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">
-                  Bitcoin-style security with smart contracts, Sigma-protocols and a clean developer experience.
+                  Bitcoin-level security meets smart contracts. No reentrancy attacks. No hidden state. Predictable costs.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
@@ -350,11 +350,11 @@ export function BuildersClient() {
 
         {/* Why Build on Ergo Section */}
         <section className="py-16 px-4">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-4xl font-bold text-center mb-12 text-white">
               Why Build on <span className="text-orange-400">Ergo</span>?
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="space-y-6">
               {whyBuildOnErgo.map((value, index) => (
                 <motion.div
                   key={index}
@@ -362,12 +362,16 @@ export function BuildersClient() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                 >
-                  <Card className="h-full bg-black/80 border border-white/10 rounded-3xl p-6 flex flex-col items-center text-center hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
-                    <div className="w-14 h-14 flex items-center justify-center rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 mb-4">
-                      <value.icon className="w-7 h-7" aria-hidden="true" />
+                  <Card className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                    <div className="flex items-start gap-4">
+                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
+                        <value.icon className="w-6 h-6" aria-hidden="true" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
+                        <p className="text-neutral-400 leading-relaxed">{value.description}</p>
+                      </div>
                     </div>
-                    <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
-                    <p className="text-neutral-400 text-sm flex-1">{value.description}</p>
                   </Card>
                 </motion.div>
               ))}

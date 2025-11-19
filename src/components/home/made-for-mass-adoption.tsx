@@ -10,29 +10,29 @@ export function MadeForMassAdoption() {
     {
       icon: Wallet,
       title: "Freedom seekers",
-      desc: "Self-custody by default. Private on demand via Sigma proofs. True financial sovereignty.",
+      desc: "Take control of your money. Private transactions when you need them. No banks, no permissions, just freedom.",
       cta: "Get started",
       href: "/hodlers"
     },
     {
       icon: Code,
       title: "Cypherpunks",
-      desc: "Write deterministic eUTXO contracts in ErgoScript. Compose Sigma proofs for auditable, programmable privacy.",
+      desc: "Build unstoppable smart contracts with ErgoScript. Create privacy-preserving dApps that actually work.",
       cta: "Start building",
       href: "/builders"
     },
     {
       icon: Pickaxe,
       title: "Miners",
-      desc: "Autolykos PoW — GPU-friendly and ASIC-resistant. Fair issuance, secure the network, earn ERG.",
+      desc: "GPU-friendly mining that stays decentralized. Secure the network, earn rewards, resist ASICs.",
       cta: "Start mining",
       href: "/miners"
     },
     {
       icon: TrendingUp,
       title: "Community",
-      desc: "Fair launch. No pre-mine, no VC control. Open, community-driven since 2019.",
-      cta: "Learn more",
+      desc: "No VCs, no pre-mine, no corporate control. Built by the community, for the community since 2019.",
+      cta: "Join us",
       href: "/start/community"
     }
   ]
@@ -50,7 +50,7 @@ export function MadeForMassAdoption() {
               lineHeight: 1
             }}
           >
-            <span className="text-white">Powered by</span> <span className="text-orange-400">builders</span><span className="text-white">. Designed for</span> <span className="text-orange-400">freedom</span><span className="text-white">.</span>
+            <span className="text-orange-400">Choose your</span> <span className="text-white">path. Build your</span> <span className="text-orange-400">future</span><span className="text-white">.</span>
           </h2>
           <p 
             className="text-gray-400 mx-auto"
@@ -61,7 +61,7 @@ export function MadeForMassAdoption() {
               opacity: 0.85
             }}
           >
-            Open-source, decentralized, permissionless
+            Find your role in the decentralized future
           </p>
         </div>
 
@@ -88,6 +88,16 @@ export function MadeForMassAdoption() {
                   <p className="text-gray-400 mb-4 leading-relaxed flex-1 group-hover:text-gray-300 transition-colors text-sm">
                     {path.desc}
                   </p>
+                  
+                  {/* Hover Button */}
+                  <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full text-orange-400 text-sm font-medium hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-200">
+                      {path.cta}
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </div>
+                  </div>
                 </div>
               </Card>
             </Link>

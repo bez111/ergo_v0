@@ -44,19 +44,19 @@ export function HoldersClient() {
     {
       icon: Zap,
       title: "Mining Access",
-      ergo: "Anyone with a GPU can mine",
+      ergo: "GPU-friendly. ASIC-resistant. Anyone can secure the network.",
       others: "BTC: ASICs only · ETH: Proof-of-Stake"
     },
     {
       icon: Shield,
       title: "Fair Launch",
-      ergo: "Zero premine, no VC allocation",
+      ergo: "0% pre-mine. 0% VC allocation. 100% fair distribution.",
       others: "BTC: Fair · ETH: 70M premined"
     },
     {
       icon: TrendingUp,
       title: "Long-term Security",
-      ergo: "Storage rent sustains miners",
+      ergo: "Storage rent ensures miners get paid forever. Built for decades.",
       others: "BTC: Fees only · ETH: Token burn"
     }
   ]
@@ -66,25 +66,25 @@ export function HoldersClient() {
     {
       icon: Shield,
       title: "Sound Money",
-      description: "Fixed supply, no VC premine, Proof-of-Work security like Bitcoin",
-      highlight: "No inflation surprises"
+      description: "97.7M max supply. No inflation. No VCs dumping on you. Proof-of-Work security proven since 2019.",
+      highlight: "Protect your wealth"
     },
     {
       icon: Code,
       title: "Smart Contracts", 
-      description: "DeFi, dApps, programmable money without compromising security",
-      highlight: "Real utility"
+      description: "DeFi, DEXs, stablecoins that actually work. Programmable money with Bitcoin-level security.",
+      highlight: "Utility without risk"
     },
     {
       icon: Lock,
       title: "Programmable Privacy",
-      description: "Sigma protocols enable programmable privacy when you need it",
-      highlight: "Financial sovereignty"
+      description: "Hide what you want. Show what you need. Optional privacy without trusted setup or backdoors.",
+      highlight: "Your data, your choice"
     },
     {
       icon: Users,
       title: "Fair & Accessible",
-      description: "GPU mining, open community, no corporate control",
+      description: "Zero pre-mine. Zero VC allocation. Zero corporate control. 100% community-driven since day one.",
       highlight: "True decentralization"
     }
   ]
@@ -277,10 +277,10 @@ export function HoldersClient() {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
-                  Ergo - sound money with programmable privacy
+                  Store wealth. Keep privacy. Stay sovereign.
                 </h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-8 max-w-2xl">
-                  Built on Proof-of-Work like Bitcoin, with smart contracts and privacy built in for real-world use.
+                  Bitcoin's proven security + Smart contracts + Optional privacy. Fixed supply, fair launch, no corporate control.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
