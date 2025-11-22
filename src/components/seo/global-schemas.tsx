@@ -1,5 +1,3 @@
-"use client"
-
 import { siteConfig } from "@/config/site-config"
 
 interface GlobalSchemasProps {
