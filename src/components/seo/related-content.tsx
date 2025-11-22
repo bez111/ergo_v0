@@ -23,7 +23,7 @@ interface RelatedContentProps {
 
 export function RelatedContent({ 
   title = "Related Content", 
-  links, 
+  links = [], 
   className = "",
   showForumLink = true,
   forumThreadUrl 
@@ -58,7 +58,7 @@ export function RelatedContent({
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          {links.map((link, index) => (
+          {links && links.length > 0 ? links.map((link, index) => (
             <Link 
               key={index}
               href={link.href}
@@ -92,7 +92,11 @@ export function RelatedContent({
                 <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-orange-400 transition-colors" />
               </div>
             </Link>
-          ))}
+          )) : (
+            <div className="text-center py-4">
+              <p className="text-gray-400 text-sm">No related content available</p>
+            </div>
+          )}
           
           {/* Forum discussion link */}
           {showForumLink && (

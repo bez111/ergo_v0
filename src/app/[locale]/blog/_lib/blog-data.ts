@@ -200,6 +200,44 @@ export const blogPosts: BlogPost[] = [
     difficulty: 'Beginner',
     views: undefined,
     shares: 0
+  },
+  {
+    id: 'nipopows-explained',
+    slug: 'nipopows-explained',
+    title: 'How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo',
+    excerpt: 'Learn how Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) enable lightweight blockchain verification, stateless clients, and trustless cross-chain bridges on Ergo.',
+    date: '2025-01-15',
+    lastUpdated: '2025-01-15',
+    author: authors['technical-team']!,
+    category: 'Technology',
+    readTime: 8,
+    wordCount: 1200,
+    image: '/og/blog-default.svg',
+    tags: ['NiPoPoW', 'Non-interactive Proofs of Proof-of-Work', 'Light Clients', 'Cross-Chain Bridges', 'Blockchain Scalability', 'Trustless Bridges', 'Superblocks', 'Succinct Proofs'],
+    featured: false,
+    trending: true,
+    difficulty: 'Intermediate',
+    views: undefined,
+    shares: 0
+  },
+  {
+    id: 'oracle-pools-explained',
+    slug: 'oracle-pools-explained',
+    title: 'Ergo Oracle Pools: A Trust-Minimised Oracle Model Explained',
+    excerpt: 'Learn how Ergo\'s decentralized oracle pools minimize trust assumptions through on-chain aggregation, permissionless participation, and transparent data storage in eUTXOs.',
+    date: '2025-01-20',
+    lastUpdated: '2025-01-20',
+    author: authors['technical-team']!,
+    category: 'Technology',
+    readTime: 12,
+    wordCount: 2800,
+    image: '/og/blog-default.svg',
+    tags: ['Oracle Pools', 'Decentralized Oracles', 'Trust-Minimized Oracles', 'On-Chain Aggregation', 'Permissionless Oracles', 'eUTXO Oracles', 'DeFi Oracles', 'Oracle Security'],
+    featured: false,
+    trending: true,
+    difficulty: 'Intermediate',
+    views: undefined,
+    shares: 0
   }
 ]
 

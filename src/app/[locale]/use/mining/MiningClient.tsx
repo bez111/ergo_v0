@@ -25,7 +25,6 @@ import {
   Thermometer,
   Activity,
   Clock,
-  Calculator,
   BookOpen,
   Wrench,
   Globe,
@@ -36,6 +35,7 @@ import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { networkMetrics } from "@/lib/network-metrics"
 
 
+// Top 3 recommended pools - for full list see /ecosystem/mining
 const miningPools = [
   {
     name: "Herominers",
@@ -45,6 +45,7 @@ const miningPools = [
     minPayout: "1 ERG",
     features: ["Auto-switching", "Mobile app", "24/7 support"],
     status: "active",
+    recommended: true,
   },
   {
     name: "2Miners",
@@ -54,15 +55,7 @@ const miningPools = [
     minPayout: "0.1 ERG",
     features: ["PPLNS", "Real-time stats", "Telegram bot"],
     status: "active",
-  },
-  {
-    name: "Nanopool",
-    url: "ergo-eu1.nanopool.org:11433",
-    websiteUrl: "https://nanopool.org/",
-    fee: "1%",
-    minPayout: "0.1 ERG",
-    features: ["Global servers", "Mobile app", "Email alerts"],
-    status: "active",
+    recommended: true,
   },
   {
     name: "Woolypooly",
@@ -72,6 +65,7 @@ const miningPools = [
     minPayout: "0.1 ERG",
     features: ["Low fees", "MEV rewards", "Dashboard"],
     status: "active",
+    recommended: true,
   },
 ]
 
@@ -160,11 +154,6 @@ const profitabilityFactors = [
 
 export default function MiningClient() {
   const [selectedTab, setSelectedTab] = useState("overview")
-  const [calculatorValues, setCalculatorValues] = useState({
-    hashrate: 100,
-    power: 300,
-    electricityCost: 0.1,
-  })
 
 
   return (
@@ -180,19 +169,24 @@ export default function MiningClient() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Mine Ergo</h1>
+                <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">Start Mining Ergo in 10 Minutes</h1>
                 <p className="text-lg md:text-xl text-neutral-300 mb-6 max-w-2xl">
-                  Join the decentralized mining network and earn ERG while securing the blockchain.
+                  Step-by-step guide to get your GPU mining ERG. No technical expertise required.
                 </p>
                 <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                  GPU-friendly Autolykos2 algorithm designed for fair distribution and ASIC resistance.
+                  GPU-friendly Autolykos2 algorithm. Join 15,000+ miners securing the network and earning rewards.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
                     onClick={() => setSelectedTab("getting-started")}
                     className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50"
                   >
-                    Start Mining
+                    Start Mining Now
+                  </Button>
+                  <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
+                    <Link href="/miners">
+                      Calculate Profitability
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -255,12 +249,6 @@ export default function MiningClient() {
                   </TabsTrigger>
                   <TabsTrigger value="pools" className="data-[state=active]:bg-white/10 data-[state=active]:text-orange-400 data-[state=active]:border data-[state=active]:border-orange-400/50 text-neutral-400 hover:text-white rounded-xl">
                     Pools
-                  </TabsTrigger>
-                  <TabsTrigger
-                    value="calculator"
-                    className="data-[state=active]:bg-white/10 data-[state=active]:text-orange-400 data-[state=active]:border data-[state=active]:border-orange-400/50 text-neutral-400 hover:text-white rounded-xl"
-                  >
-                    Calculator
                   </TabsTrigger>
                   <TabsTrigger
                     value="troubleshooting"
@@ -626,8 +614,24 @@ export default function MiningClient() {
                   ))}
                 </div>
 
+                {/* Link to full pools list */}
+                <div className="mt-8">
+                  <div className="bg-gradient-to-r from-orange-500/10 to-orange-900/10 border border-orange-500/30 rounded-2xl p-6 text-center">
+                    <h3 className="text-xl font-bold text-white mb-2">Need more options?</h3>
+                    <p className="text-neutral-300 mb-4">
+                      Explore the complete mining ecosystem with all pools, software, and monitoring tools
+                    </p>
+                    <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
+                      <Link href="/ecosystem/mining">
+                        <Globe className="w-4 h-4 mr-2" />
+                        View All Mining Resources
+                      </Link>
+                    </Button>
+                  </div>
+                </div>
+
                 {/* Pool Configuration Example */}
-                <div className="bg-black/80 border border-white/10 rounded-3xl rounded-xl p-8">
+                <div className="bg-black/80 border border-white/10 rounded-3xl rounded-xl p-8 mt-8">
                   <h3 className="text-2xl font-bold mb-6 text-orange-400">Configuration Example</h3>
                   <div className="bg-neutral-900 p-6 rounded-lg border border-orange-500/20">
                     <h4 className="font-semibold mb-4">T-Rex Miner Configuration:</h4>
@@ -648,114 +652,6 @@ export default function MiningClient() {
                 </div>
               </TabsContent>
 
-              {/* Calculator Tab */}
-              <TabsContent value="calculator" className="space-y-8">
-                <SectionHeading text="PROFITABILITY CALCULATOR" />
-
-                <div className="bg-black/80 border border-white/10 rounded-3xl rounded-xl p-8">
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="space-y-6">
-                      <h3 className="text-xl font-bold text-orange-400">Mining Parameters</h3>
-
-                      <div>
-                        <label className="block text-sm font-medium mb-2">Hash Rate (MH/s)</label>
-                        <input
-                          type="number"
-                          value={calculatorValues.hashrate}
-                          onChange={(e) =>
-                            setCalculatorValues({ ...calculatorValues, hashrate: Number(e.target.value) })
-                          }
-                          className="w-full p-3 bg-neutral-900 border border-orange-500/20 rounded-lg text-white"
-                          placeholder="100"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium mb-2">Power Consumption (W)</label>
-                        <input
-                          type="number"
-                          value={calculatorValues.power}
-                          onChange={(e) => setCalculatorValues({ ...calculatorValues, power: Number(e.target.value) })}
-                          className="w-full p-3 bg-neutral-900 border border-orange-500/20 rounded-lg text-white"
-                          placeholder="300"
-                        />
-                      </div>
-
-                      <div>
-                        <label className="block text-sm font-medium mb-2">Electricity Cost ($/kWh)</label>
-                        <input
-                          type="number"
-                          step="0.01"
-                          value={calculatorValues.electricityCost}
-                          onChange={(e) =>
-                            setCalculatorValues({ ...calculatorValues, electricityCost: Number(e.target.value) })
-                          }
-                          className="w-full p-3 bg-neutral-900 border border-orange-500/20 rounded-lg text-white"
-                          placeholder="0.10"
-                        />
-                      </div>
-
-                      <Button className="w-full bg-orange-500 hover:bg-orange-600 text-black font-semibold rounded-xl border border-orange-500/50">
-                        <Calculator className="w-4 h-4 mr-2" />
-                        Calculate Profitability
-                      </Button>
-                    </div>
-
-                    <div className="space-y-6">
-                      <h3 className="text-xl font-bold text-orange-400">Estimated Earnings</h3>
-
-                      <div className="space-y-4">
-                        <div className="p-4 bg-neutral-900/50 rounded-lg border border-orange-500/20">
-                          <div className="flex justify-between items-center">
-                            <span>Daily ERG:</span>
-                            <span className="text-orange-400 font-bold">
-                              {(calculatorValues.hashrate * 0.001).toFixed(3)} ERG
-                            </span>
-                          </div>
-                        </div>
-
-                        <div className="p-4 bg-neutral-900/50 rounded-lg border border-orange-500/20">
-                          <div className="flex justify-between items-center">
-                            <span>Daily Revenue:</span>
-                            <span className="text-green-400 font-bold">
-                              ${(calculatorValues.hashrate * 0.001 * 2.5).toFixed(2)}
-                            </span>
-                          </div>
-                        </div>
-
-                        <div className="p-4 bg-neutral-900/50 rounded-lg border border-orange-500/20">
-                          <div className="flex justify-between items-center">
-                            <span>Daily Power Cost:</span>
-                            <span className="text-red-400 font-bold">
-                              ${((calculatorValues.power * 24 * calculatorValues.electricityCost) / 1000).toFixed(2)}
-                            </span>
-                          </div>
-                        </div>
-
-                        <div className="p-4 bg-orange-500/20 rounded-lg border border-orange-500">
-                          <div className="flex justify-between items-center">
-                            <span className="font-bold">Daily Profit:</span>
-                            <span className="text-orange-400 font-bold text-lg">
-                              $
-                              {(
-                                calculatorValues.hashrate * 0.001 * 2.5 -
-                                (calculatorValues.power * 24 * calculatorValues.electricityCost) / 1000
-                              ).toFixed(2)}
-                            </span>
-                          </div>
-                        </div>
-                      </div>
-
-                      <Alert className="bg-black/60 border border-white/20 rounded-2xl">
-                        <AlertTriangle className="h-4 w-4" />
-                        <AlertDescription className="text-neutral-300">
-                          Estimates based on current network conditions. Actual results may vary.
-                        </AlertDescription>
-                      </Alert>
-                    </div>
-                  </div>
-                </div>
-              </TabsContent>
 
               {/* Troubleshooting Tab */}
               <TabsContent value="troubleshooting" className="space-y-8">

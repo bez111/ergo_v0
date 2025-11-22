@@ -13,7 +13,6 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { StorageRentTimeline } from "@/components/diagrams/storage-rent-timeline"
-import { ViewCounter } from "@/components/blog/ViewCounter"
 import { 
   Database,
   Coins,
@@ -136,11 +135,6 @@ export function StorageRentArticleClient() {
                      title="How Ergo's Storage Rent Solves Blockchain State Bloat"
                      url="https://ergoblockchain.org/blog/storage-rent"
                      utm="?utm_source=share_hero"
-                   />
-                   <ViewCounter 
-                     postId="storage-rent" 
-                     title="How Ergo's Storage Rent Solves Blockchain State Bloat"
-                     className="text-gray-400 text-sm"
                    />
                  </div>
                </motion.header>

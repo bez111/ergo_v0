@@ -182,152 +182,152 @@ export function getRelatedContent(
 }
 
 // Generate contextual link suggestions for content
-export function generateLinkSuggestions(
-  content: string,
-  currentUrl: string,
-  maxLinks: number = 10
-): LinkSuggestion[] {
-  const suggestions: LinkSuggestion[] = []
-  const graph = buildContentGraph()
-  const currentNode = graph.find(n => n.url === currentUrl)
+// export function generateLinkSuggestions(
+//   content: string,
+//   currentUrl: string,
+//   maxLinks: number = 10
+// ): LinkSuggestion[] {
+//   const suggestions: LinkSuggestion[] = []
+//   const graph = buildContentGraph()
+//   const currentNode = graph.find(n => n.url === currentUrl)
   
-  if (!currentNode) return suggestions
+//   if (!currentNode) return suggestions
   
-  // Find potential anchor texts in content
-  const contentLower = content.toLowerCase()
+//   // Find potential anchor texts in content
+//   const contentLower = content.toLowerCase()
   
-  // Priority linking targets
-  const priorityTargets = [
-    { text: 'ergo wallet', url: '/wallet', weight: 10 },
-    { text: 'nautilus', url: '/wallet', weight: 9 },
-    { text: 'mining', url: '/use/mining', weight: 9 },
-    { text: 'mine ergo', url: '/use/mining', weight: 10 },
-    { text: 'buy ergo', url: '/use/get-erg', weight: 10 },
-    { text: 'ergoscript', url: '/technology/ergoscript', weight: 9 },
-    { text: 'eutxo', url: '/technology/eutxo', weight: 8 },
-    { text: 'nipopows', url: '/technology/nipopows', weight: 8 },
-    { text: 'defi', url: '/ecosystem', weight: 7 },
-    { text: 'ecosystem', url: '/ecosystem', weight: 7 },
-    { text: 'documentation', url: '/docs', weight: 6 },
-    { text: 'getting started', url: '/start', weight: 8 },
-    { text: 'sigma protocols', url: '/docs/introduction/privacy', weight: 8 },
-    { text: 'smart contracts', url: '/docs/developers/ergoscript', weight: 8 },
-  ]
+//   // Priority linking targets
+//   const priorityTargets = [
+//     { text: 'ergo wallet', url: '/wallet', weight: 10 },
+//     { text: 'nautilus', url: '/wallet', weight: 9 },
+//     { text: 'mining', url: '/use/mining', weight: 9 },
+//     { text: 'mine ergo', url: '/use/mining', weight: 10 },
+//     { text: 'buy ergo', url: '/use/get-erg', weight: 10 },
+//     { text: 'ergoscript', url: '/technology/ergoscript', weight: 9 },
+//     { text: 'eutxo', url: '/technology/eutxo', weight: 8 },
+//     { text: 'nipopows', url: '/technology/nipopows', weight: 8 },
+//     { text: 'defi', url: '/ecosystem', weight: 7 },
+//     { text: 'ecosystem', url: '/ecosystem', weight: 7 },
+//     { text: 'documentation', url: '/docs', weight: 6 },
+//     { text: 'getting started', url: '/start', weight: 8 },
+//     { text: 'sigma protocols', url: '/docs/introduction/privacy', weight: 8 },
+//     { text: 'smart contracts', url: '/docs/developers/ergoscript', weight: 8 },
+//   ]
   
-  // Check for priority terms
-  priorityTargets.forEach(target => {
-    if (contentLower.includes(target.text) && target.url !== currentUrl) {
-      const index = contentLower.indexOf(target.text)
-      const context = content.substring(
-        Math.max(0, index - 50),
-        Math.min(content.length, index + target.text.length + 50)
-      )
+//   // Check for priority terms
+//   priorityTargets.forEach(target => {
+//     if (contentLower.includes(target.text) && target.url !== currentUrl) {
+//       const index = contentLower.indexOf(target.text)
+//       const context = content.substring(
+//         Math.max(0, index - 50),
+//         Math.min(content.length, index + target.text.length + 50)
+//       )
       
-      suggestions.push({
-        text: target.text,
-        url: target.url,
-        title: graph.find(n => n.url === target.url)?.title || target.text,
-        relevance: target.weight,
-        context: context,
-      })
-    }
-  })
+//       suggestions.push({
+//         text: target.text,
+//         url: target.url,
+//         title: graph.find(n => n.url === target.url)?.title || target.text,
+//         relevance: target.weight,
+//         context: context,
+//       })
+//     }
+//   })
   
-  // Add related content links
-  const related = getRelatedContent(currentUrl, 20)
-  related.forEach(node => {
-    // Try to find matching text in content
-    const keywords = node.keywords
-    for (const keyword of keywords) {
-      if (contentLower.includes(keyword) && suggestions.length < maxLinks) {
-        const index = contentLower.indexOf(keyword)
-        const context = content.substring(
-          Math.max(0, index - 50),
-          Math.min(content.length, index + keyword.length + 50)
-        )
+//   // Add related content links
+//   const related = getRelatedContent(currentUrl, 20)
+//   related.forEach(node => {
+//     // Try to find matching text in content
+//     const keywords = node.keywords
+//     for (const keyword of keywords) {
+//       if (contentLower.includes(keyword) && suggestions.length < maxLinks) {
+//         const index = contentLower.indexOf(keyword)
+//         const context = content.substring(
+//           Math.max(0, index - 50),
+//           Math.min(content.length, index + keyword.length + 50)
+//         )
         
-        // Avoid duplicate links
-        if (!suggestions.some(s => s.url === node.url)) {
-          suggestions.push({
-            text: keyword,
-            url: node.url,
-            title: node.title,
-            relevance: node.relevanceScore || 5,
-            context: context,
-          })
-          break
-        }
-      }
-    }
-  })
+//         // Avoid duplicate links
+//         if (!suggestions.some(s => s.url === node.url)) {
+//           suggestions.push({
+//             text: keyword,
+//             url: node.url,
+//             title: node.title,
+//             relevance: node.relevanceScore || 5,
+//             context: context,
+//           })
+//           break
+//         }
+//       }
+//     }
+//   })
   
-  // Sort by relevance and limit
-  return suggestions
-    .sort((a, b) => b.relevance - a.relevance)
-    .slice(0, maxLinks)
-}
+//   // Sort by relevance and limit
+//   return suggestions
+//     .sort((a, b) => b.relevance - a.relevance)
+//     .slice(0, maxLinks)
+// }
 
 // Apply links to HTML content
-export function applyInternalLinks(
-  html: string,
-  currentUrl: string,
-  options = { maxLinks: 10, nofollow: false }
-): string {
-  const suggestions = generateLinkSuggestions(html, currentUrl, options.maxLinks)
-  let linkedHtml = html
+// export function applyInternalLinks(
+//   html: string,
+//   currentUrl: string,
+//   options = { maxLinks: 10, nofollow: false }
+// ): string {
+//   const suggestions = generateLinkSuggestions(html, currentUrl, options.maxLinks)
+//   let linkedHtml = html
   
-  // Track already linked texts to avoid duplicates
-  const linkedTexts = new Set<string>()
+//   // Track already linked texts to avoid duplicates
+//   const linkedTexts = new Set<string>()
   
-  suggestions.forEach(suggestion => {
-    if (!linkedTexts.has(suggestion.text)) {
-      const regex = new RegExp(`\\b(${escapeRegex(suggestion.text)})\\b`, 'gi')
-      const replacement = `<a href="${suggestion.url}" title="${suggestion.title}"${
-        options.nofollow ? ' rel="nofollow"' : ''
-      } class="internal-link" data-relevance="${suggestion.relevance}">$1</a>`
+//   suggestions.forEach(suggestion => {
+//     if (!linkedTexts.has(suggestion.text)) {
+//       const regex = new RegExp(`\\b(${escapeRegex(suggestion.text)})\\b`, 'gi')
+//       const replacement = `<a href="${suggestion.url}" title="${suggestion.title}"${
+//         options.nofollow ? ' rel="nofollow"' : ''
+//       } class="internal-link" data-relevance="${suggestion.relevance}">$1</a>`
       
-      // Replace only first occurrence
-      linkedHtml = linkedHtml.replace(regex, (match, ...args) => {
-        if (linkedTexts.has(suggestion.text)) {
-          return match
-        }
-        linkedTexts.add(suggestion.text)
-        return replacement
-      })
-    }
-  })
+//       // Replace only first occurrence
+//       linkedHtml = linkedHtml.replace(regex, (match, ...args) => {
+//         if (linkedTexts.has(suggestion.text)) {
+//           return match
+//         }
+//         linkedTexts.add(suggestion.text)
+//         return replacement
+//       })
+//     }
+//   })
   
-  return linkedHtml
-}
+//   return linkedHtml
+// }
 
 function escapeRegex(str: string): string {
   return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
 // Generate link graph for visualization
-export function generateLinkGraph() {
-  const nodes = buildContentGraph()
-  const edges: Array<{ source: string, target: string, weight: number }> = []
+// export function generateLinkGraph() {
+//   const nodes = buildContentGraph()
+//   const edges: Array<{ source: string, target: string, weight: number }> = []
   
-  nodes.forEach(node => {
-    const related = getRelatedContent(node.url, 5)
-    related.forEach(relatedNode => {
-      edges.push({
-        source: node.id,
-        target: relatedNode.id,
-        weight: relatedNode.relevanceScore || 1,
-      })
-    })
-  })
+//   nodes.forEach(node => {
+//     const related = getRelatedContent(node.url, 5)
+//     related.forEach(relatedNode => {
+//       edges.push({
+//         source: node.id,
+//         target: relatedNode.id,
+//         weight: relatedNode.relevanceScore || 1,
+//       })
+//     })
+//   })
   
-  return { nodes, edges }
-}
+//   return { nodes, edges }
+// }
 
 // Export for use in components
-export const InternalLinking = {
-  getRelatedContent,
-  generateLinkSuggestions,
-  applyInternalLinks,
-  buildContentGraph,
-  generateLinkGraph,
-} 
+// export const InternalLinking = {
+//   getRelatedContent,
+//   generateLinkSuggestions,
+//   applyInternalLinks,
+//   buildContentGraph,
+//   generateLinkGraph,
+// } 
