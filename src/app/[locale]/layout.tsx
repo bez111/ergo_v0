@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from 'next/navigation';
-import { locales, isRtlLocale, getLocaleConfig, type Locale } from '../../i18n';
+import { locales, isRtlLocale, getLocaleConfig, type Locale } from '../../i18n/request';
 import { getMessages, getTranslations } from '@/lib/messages';
 import { ThemeProvider } from "@/components/theme-provider";
 import { ErrorBoundary } from "@/components/error-boundary";

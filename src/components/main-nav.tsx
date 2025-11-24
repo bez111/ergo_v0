@@ -90,7 +90,6 @@ export function MainNav() {
       <NavigationMenu>
         <NavigationMenuList>
           {mainNavItems
-            .filter((item) => item.title.toLowerCase() !== "community")
             .map((item) =>
               item.children ? (
                 <NavigationMenuItem key={item.title}>

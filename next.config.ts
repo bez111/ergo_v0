@@ -2,7 +2,7 @@ import type { NextConfig } from 'next';
 import createNextIntlPlugin from 'next-intl/plugin';
 
 // Подключаем next-intl
-const withNextIntl = createNextIntlPlugin('./src/i18n.ts');
+const withNextIntl = createNextIntlPlugin('./src/i18n/request.ts');
 
 /** @type {import('next').NextConfig} */
 const nextConfig: NextConfig = {
@@ -236,11 +236,6 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   reactStrictMode: true,
 
-  // Временно игнорируем ESLint errors для production build
-  // TODO: Исправить все children prop errors
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
 
   // Игнорируем TypeScript errors для быстрого билда
   typescript: {

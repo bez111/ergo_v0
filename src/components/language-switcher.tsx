@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';
-import { locales, localeConfig, type Locale } from '../i18n';
+import { locales, localeConfig, type Locale } from '../i18n/request';
 import { Globe, ChevronDown } from 'lucide-react';
 
 export default function LanguageSwitcher() {
