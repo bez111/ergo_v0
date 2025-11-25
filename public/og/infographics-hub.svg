@@ -1,0 +1,68 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+  
+  <!-- Hex pattern background -->
+  <defs>
+    <pattern id="hexPattern" x="0" y="0" width="60" height="52" patternUnits="userSpaceOnUse">
+      <polygon points="30,4 52,17 52,39 30,52 8,39 8,17" fill="none" stroke="#333333" stroke-width="1" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#hexPattern)"/>
+  
+  <!-- Main content area -->
+  <rect x="80" y="80" width="1040" height="470" fill="#111111" stroke="#FF9500" stroke-width="3" rx="20"/>
+  
+  <!-- Title -->
+  <text x="600" y="200" text-anchor="middle" fill="#FFFFFF" font-family="Arial" font-size="56" font-weight="bold">
+    Ergo Blockchain
+  </text>
+  <text x="600" y="270" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="56" font-weight="bold">
+    Infographics
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="600" y="330" text-anchor="middle" fill="#CCCCCC" font-family="Arial" font-size="28">
+    Visual Guides to PoW, DeFi, Storage Rent &amp; Privacy
+  </text>
+  
+  <!-- Sample infographic previews -->
+  <g opacity="0.8">
+    <!-- Left preview -->
+    <rect x="150" y="380" width="120" height="90" fill="#1a1a1a" stroke="#FF9500" stroke-width="2" rx="8"/>
+    <text x="210" y="415" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="12" font-weight="bold">Storage</text>
+    <text x="210" y="430" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="12" font-weight="bold">Rent</text>
+    <text x="210" y="450" text-anchor="middle" fill="#CCCCCC" font-family="Arial" font-size="10">Infographic</text>
+    
+    <!-- Center preview -->
+    <rect x="320" y="380" width="120" height="90" fill="#1a1a1a" stroke="#FF9500" stroke-width="2" rx="8"/>
+    <text x="380" y="415" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="12" font-weight="bold">eUTXO</text>
+    <text x="380" y="430" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="12" font-weight="bold">Model</text>
+    <text x="380" y="450" text-anchor="middle" fill="#CCCCCC" font-family="Arial" font-size="10">Infographic</text>
+    
+    <!-- Right preview -->
+    <rect x="490" y="380" width="120" height="90" fill="#1a1a1a" stroke="#FF9500" stroke-width="2" rx="8"/>
+    <text x="550" y="415" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="12" font-weight="bold">Sigma</text>
+    <text x="550" y="430" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="12" font-weight="bold">Protocols</text>
+    <text x="550" y="450" text-anchor="middle" fill="#CCCCCC" font-family="Arial" font-size="10">Infographic</text>
+  </g>
+  
+  <!-- Right side previews -->
+  <g opacity="0.6">
+    <rect x="780" y="380" width="120" height="90" fill="#1a1a1a" stroke="#FF9500" stroke-width="2" rx="8"/>
+    <text x="840" y="415" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="12" font-weight="bold">NiPoPoWs</text>
+    <text x="840" y="450" text-anchor="middle" fill="#CCCCCC" font-family="Arial" font-size="10">Infographic</text>
+    
+    <rect x="930" y="380" width="120" height="90" fill="#1a1a1a" stroke="#FF9500" stroke-width="2" rx="8"/>
+    <text x="990" y="415" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="12" font-weight="bold">Autolykos</text>
+    <text x="990" y="450" text-anchor="middle" fill="#CCCCCC" font-family="Arial" font-size="10">Infographic</text>
+  </g>
+  
+  <!-- Sigma symbol -->
+  <text x="600" y="520" text-anchor="middle" fill="#FF9500" font-family="Arial" font-size="40" opacity="0.7">Σ</text>
+  
+  <!-- Bottom text -->
+  <text x="600" y="580" text-anchor="middle" fill="#888888" font-family="Arial" font-size="18">
+    ergoblockchain.org/infographics
+  </text>
+</svg>

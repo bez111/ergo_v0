@@ -3,6 +3,8 @@
  * Централизованное управление URL структурой и канонизацией
  */
 
+import { siteConfig } from "@/config/site-config"
+
 export const URL_PATTERNS = {
   // Основные разделы - всегда lowercase
   main: {
@@ -82,7 +84,7 @@ export function normalizeUrl(url: string): string {
  * Получить канонический URL для страницы
  */
 export function getCanonicalUrl(path: string, params?: URLSearchParams): string {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://ergoblockchain.org'
+  const baseUrl = siteConfig.siteUrl
   let canonical = normalizeUrl(path)
   
   // Обработка параметров
