@@ -39,7 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const ogDescription =
     "Infographic showing how capital controls, frozen accounts, sanctions, KYC overreach and CBDCs reduce control over your money, and how Ergo offers censorship-resistant settlement, gatekeeper-free programmability and opt-in privacy instead.";
 
-  const url = `${siteConfig.url}/${resolved.locale}/infographics/${SLUG}`;
+  const url = `${siteConfig.siteUrl}/${resolved.locale}/infographics/${SLUG}`;
 
   return {
     title: seoTitle,

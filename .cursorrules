@@ -10,8 +10,8 @@
 The following files should not be modified without team consensus:
 
 ### Configuration Files
-- `next.config.js` - Core Next.js configuration
-- `tailwind.config.js` - Styling system configuration
+- `next.config.ts` - Core Next.js configuration
+- `tailwind.config.ts` - Styling system configuration
 - `eslint.config.js` / `.eslintrc.json` - Linting rules
 - `postcss.config.js` - PostCSS configuration
 - `tsconfig.json` - TypeScript configuration
