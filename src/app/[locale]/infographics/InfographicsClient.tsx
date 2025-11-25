@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo, useId } from 'react';
+import React, { useState, useMemo, useId, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Grid, Eye, ExternalLink, Share2, Download, ChevronDown, ArrowRight, Twitter, Linkedin, MessageCircle, Link2, X } from 'lucide-react';
 import { BackgroundWrapper } from '@/components/home/background-wrapper';
@@ -51,6 +51,7 @@ export function InfographicsClient() {
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   // Filter and paginate infographics
   const filteredInfographics = useMemo(() => {
@@ -62,9 +63,14 @@ export function InfographicsClient() {
   const paginatedInfographics = filteredInfographics.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
   // Reset page when filters change
-  React.useEffect(() => {
+  useEffect(() => {
     setCurrentPage(1);
   }, [filters]);
+
+  // Avoid hydration mismatch for count text
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   const handleFilterChange = (key: string, value: string) => {
     setFilters(prev => ({ ...prev, [key]: value }));
@@ -251,11 +257,13 @@ export function InfographicsClient() {
             </div>
 
             {/* Results Count */}
-            <div className="mt-4 text-center">
-              <p className="text-neutral-400">
-                Showing {paginatedInfographics.length} of {filteredInfographics.length} infographics
-              </p>
-            </div>
+            {isMounted && (
+              <div className="mt-4 text-center">
+                <p className="text-neutral-400">
+                  Showing {paginatedInfographics.length} of {filteredInfographics.length} infographics
+                </p>
+              </div>
+            )}
           </motion.section>
 
           {/* Infographics Grid */}

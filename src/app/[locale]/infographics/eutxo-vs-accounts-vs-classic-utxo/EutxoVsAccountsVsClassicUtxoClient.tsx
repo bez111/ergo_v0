@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
 
-import { BackgroundWrapper } from "@/components/layout/BackgroundWrapper";
+import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { EmbedCode } from "@/components/infographics/EmbedCode";
