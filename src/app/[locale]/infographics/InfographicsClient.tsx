@@ -51,7 +51,6 @@ export function InfographicsClient() {
   });
   const [currentPage, setCurrentPage] = useState(1);
   const [isFilterOpen, setIsFilterOpen] = useState(false);
-  const [isMounted, setIsMounted] = useState(false);
 
   // Filter and paginate infographics
   const filteredInfographics = useMemo(() => {
@@ -66,11 +65,6 @@ export function InfographicsClient() {
   useEffect(() => {
     setCurrentPage(1);
   }, [filters]);
-
-  // Avoid hydration mismatch for count text
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
 
   const handleFilterChange = (key: string, value: string) => {
     setFilters(prev => ({ ...prev, [key]: value }));
@@ -256,14 +250,7 @@ export function InfographicsClient() {
               </Collapsible>
             </div>
 
-            {/* Results Count */}
-            {isMounted && (
-              <div className="mt-4 text-center">
-                <p className="text-neutral-400">
-                  Showing {paginatedInfographics.length} of {filteredInfographics.length} infographics
-                </p>
-              </div>
-            )}
+            {/* Results Count (optional UX element removed to avoid any hydration drift) */}
           </motion.section>
 
           {/* Infographics Grid */}

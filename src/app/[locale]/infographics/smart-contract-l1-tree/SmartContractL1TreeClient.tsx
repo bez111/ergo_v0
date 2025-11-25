@@ -395,12 +395,7 @@ export function SmartContractL1TreeClient({ infographic }: Props) {
                   deck? Copy the HTML snippet below to embed it with proper
                   attribution.
                 </p>
-                <EmbedCode
-                  title={title}
-                  imageUrl={fullImageUrl}
-                  pageUrl={infographicUrl}
-                  altText={imageAlt}
-                />
+                <EmbedCode infographic={infographic} />
               </CardContent>
             </Card>
           </div>

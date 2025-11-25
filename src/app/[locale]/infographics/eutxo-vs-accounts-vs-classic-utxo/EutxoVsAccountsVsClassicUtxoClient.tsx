@@ -36,7 +36,7 @@ export function EutxoVsAccountsVsClassicUtxoClient({ infographic }: Props) {
     fullImageUrl,
     publishDate,
     readingTimeMinutes,
-    slug,
+    // slug,
     tags,
   } = infographic;
 
@@ -50,10 +50,11 @@ export function EutxoVsAccountsVsClassicUtxoClient({ infographic }: Props) {
     });
   }, [publishDate]);
 
-  const infographicUrl = useMemo(
-    () => `https://ergoblockchain.org/en/infographics/${slug}`,
-    [slug],
-  );
+  // Kept for future use if we need absolute URLs in this component
+  // const infographicUrl = useMemo(
+  //   () => `https://ergoblockchain.org/en/infographics/${slug}`,
+  //   [slug],
+  // );
 
   return (
     <BackgroundWrapper>
@@ -392,12 +393,7 @@ export function EutxoVsAccountsVsClassicUtxoClient({ infographic }: Props) {
                   slide deck? Copy the HTML snippet below to embed the
                   infographic with proper attribution.
                 </p>
-                <EmbedCode
-                  title={title}
-                  imageUrl={fullImageUrl}
-                  pageUrl={infographicUrl}
-                  altText={imageAlt}
-                />
+                <EmbedCode infographic={infographic} />
               </CardContent>
             </Card>
           </div>
