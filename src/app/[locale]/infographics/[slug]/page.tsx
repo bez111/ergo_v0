@@ -5,12 +5,13 @@ import { infographics } from '@/data/infographics';
 import { siteConfig } from '@/config/site-config';
 
 interface Props {
-  params: { slug: string; locale: string };
+  params: Promise<{ slug: string; locale: string }>;
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const infographic = infographics.find(item => item.slug === params.slug);
-  
+
   if (!infographic) {
     return {
       title: 'Infographic Not Found',
@@ -60,9 +61,10 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function InfographicDetailPage({ params }: Props) {
+export default async function InfographicDetailPage(props: Props) {
+  const params = await props.params;
   const infographic = infographics.find(item => item.slug === params.slug);
-  
+
   if (!infographic) {
     notFound();
   }

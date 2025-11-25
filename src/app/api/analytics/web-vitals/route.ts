@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Get request metadata
-    const headersList = headers()
+    const headersList = await headers()
     const userAgent = headersList.get('user-agent') || ''
     const forwarded = headersList.get('x-forwarded-for')
     const ipAddress = forwarded ? forwarded.split(',')[0] : 
