@@ -1,20 +1,29 @@
 'use client';
 
-import React, { useState, useMemo, useId, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
+import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { Search, Filter, Grid, Eye, ExternalLink, Share2, Download, ChevronDown, ArrowRight, Twitter, Linkedin, MessageCircle, Link2, X } from 'lucide-react';
+import { Search, Filter, Grid, Eye, ExternalLink, Share2, Download, ChevronDown, ArrowRight, Twitter, Linkedin, MessageCircle, Link2, X, Copy, Sparkles, BookOpen, HelpCircle } from 'lucide-react';
 import { BackgroundWrapper } from '@/components/home/background-wrapper';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { ShareCTA } from '@/components/blog/share-cta';
 import { FinalCTASimple } from '@/components/home/final-cta-simple';
 import { infographics, filterInfographics } from '@/data/infographics';
 import { InfographicMeta, CATEGORY_LABELS } from '@/types/infographic';
 import { toast } from '@/components/ui/use-toast';
 
 const ITEMS_PER_PAGE = 12;
+
+// Helper to check if infographic is "new" (published within last 14 days)
+function isNewInfographic(publishDate: string): boolean {
+  const published = new Date(publishDate);
+  const now = new Date();
+  const diffDays = Math.floor((now.getTime() - published.getTime()) / (1000 * 60 * 60 * 24));
+  return diffDays <= 14;
+}
 
 // Helper function to get short category labels
 function getShortCategoryLabel(category: string): string {
@@ -44,13 +53,55 @@ const RedditIcon = (props: React.SVGProps<SVGSVGElement>) => (
 );
 
 export function InfographicsClient() {
+  const searchParams = useSearchParams();
+  const pathname = usePathname();
+  const router = useRouter();
+  const didMountRef = useRef(false);
+  const didMountPageRef = useRef(false);
+
+  const getInitialPage = () => {
+    const pageParam = searchParams?.get('page');
+    const page = pageParam ? parseInt(pageParam, 10) : 1;
+    return Number.isNaN(page) || page < 1 ? 1 : page;
+  };
+
   const [filters, setFilters] = useState({
     category: 'all',
     search: '',
     sort: 'newest'
   });
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(() => getInitialPage());
   const [isFilterOpen, setIsFilterOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
+  const updatePageInUrl = (page: number) => {
+    const params = new URLSearchParams(searchParams?.toString());
+    if (page <= 1) {
+      params.delete('page');
+    } else {
+      params.set('page', String(page));
+    }
+    const query = params.toString();
+    router.replace(query ? `${pathname}?${query}` : pathname, { scroll: false });
+  };
+
+  // Sync page change with URL and scroll to top (except on initial mount)
+  useEffect(() => {
+    if (!didMountPageRef.current) {
+      didMountPageRef.current = true;
+      return;
+    }
+    // Show loading skeleton briefly
+    setIsLoading(true);
+    updatePageInUrl(currentPage);
+    if (typeof window !== 'undefined') {
+      // Small delay to ensure content is rendered
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+        setIsLoading(false);
+      }, 150);
+    }
+  }, [currentPage]);
 
   // Filter and paginate infographics
   const filteredInfographics = useMemo(() => {
@@ -61,9 +112,14 @@ export function InfographicsClient() {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const paginatedInfographics = filteredInfographics.slice(startIndex, startIndex + ITEMS_PER_PAGE);
 
-  // Reset page when filters change
+  // Reset page when filters change (but not on initial mount)
   useEffect(() => {
-    setCurrentPage(1);
+    if (didMountRef.current) {
+      setCurrentPage(1);
+      updatePageInUrl(1);
+    } else {
+      didMountRef.current = true;
+    }
   }, [filters]);
 
   const handleFilterChange = (key: string, value: string) => {
@@ -260,11 +316,42 @@ export function InfographicsClient() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mb-16"
           >
-            {paginatedInfographics.length === 0 ? (
+            {isLoading ? (
+              /* Skeleton loader */
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                {Array.from({ length: 6 }).map((_, i) => (
+                  <div key={i} className="bg-black/60 border border-white/10 rounded-xl overflow-hidden animate-pulse">
+                    <div className="aspect-[16/10] bg-neutral-800" />
+                    <div className="p-6 space-y-3">
+                      <div className="flex justify-between">
+                        <div className="h-5 bg-neutral-800 rounded w-3/4" />
+                        <div className="h-5 bg-neutral-800 rounded w-16" />
+                      </div>
+                      <div className="h-3 bg-neutral-800 rounded w-1/3" />
+                      <div className="space-y-2">
+                        <div className="h-3 bg-neutral-800 rounded w-full" />
+                        <div className="h-3 bg-neutral-800 rounded w-5/6" />
+                      </div>
+                      <div className="pt-4 border-t border-white/10 flex gap-2">
+                        <div className="h-9 bg-neutral-800 rounded-xl flex-1" />
+                        <div className="h-9 bg-neutral-800 rounded-xl flex-1" />
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            ) : paginatedInfographics.length === 0 ? (
               <div className="text-center py-16">
                 <Grid className="h-16 w-16 text-neutral-600 mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-white mb-2">No infographics found</h3>
-                <p className="text-neutral-400">Try adjusting your filters or search terms.</p>
+                <p className="text-neutral-400 mb-4">Try adjusting your filters or search terms.</p>
+                <Button
+                  variant="outline"
+                  onClick={() => setFilters({ category: 'all', search: '', sort: 'newest' })}
+                  className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black"
+                >
+                  Reset filters
+                </Button>
               </div>
             ) : (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
@@ -294,7 +381,10 @@ export function InfographicsClient() {
                 <Button
                   variant="outline"
                   disabled={currentPage === 1}
-                  onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+                  onClick={() => {
+                    const newPage = Math.max(1, currentPage - 1);
+                    setCurrentPage(newPage);
+                  }}
                   className="border-white/20 text-white disabled:opacity-50"
                 >
                   Previous
@@ -304,7 +394,9 @@ export function InfographicsClient() {
                   <Button
                     key={page}
                     variant={currentPage === page ? "default" : "outline"}
-                    onClick={() => setCurrentPage(page)}
+                    onClick={() => {
+                      setCurrentPage(page);
+                    }}
                     className={currentPage === page 
                       ? "bg-orange-400 text-black hover:bg-orange-500" 
                       : "border-white/20 text-white"
@@ -317,7 +409,10 @@ export function InfographicsClient() {
                 <Button
                   variant="outline"
                   disabled={currentPage === totalPages}
-                  onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+                  onClick={() => {
+                    const newPage = Math.min(totalPages, currentPage + 1);
+                    setCurrentPage(newPage);
+                  }}
                   className="border-white/20 text-white disabled:opacity-50"
                 >
                   Next
@@ -333,8 +428,8 @@ export function InfographicsClient() {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="mb-16"
           >
-            <div className="bg-black/40 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
-              <h2 className="text-3xl font-bold text-white mb-6">How to use these infographics</h2>
+            <div className="bg-black border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+              <h2 className="text-3xl font-bold text-white mb-6 text-center">How to use these infographics</h2>
               <div className="grid md:grid-cols-3 gap-6 mb-8">
                 <div className="text-center">
                   <div className="w-12 h-12 bg-orange-400/20 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -375,13 +470,88 @@ export function InfographicsClient() {
             </div>
           </motion.section>
 
-          {/* Share CTA */}
-          <ShareCTA
-            title="Ergo Blockchain Infographics Hub"
-            url={`${typeof window !== 'undefined' ? window.location.origin : 'https://ergoblockchain.org'}/infographics`}
-            description="Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement. Educational infographics for learning and sharing."
-            subtitle="Help spread the word about Ergo's visual learning resources"
-          />
+          {/* Related Resources Section */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="mb-16"
+          >
+            <div className="bg-black/40 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+              <h2 className="text-2xl font-bold text-white mb-6 text-center">Related Resources</h2>
+              <div className="grid md:grid-cols-2 gap-6">
+                {/* Related Questions */}
+                <div className="bg-black/60 border border-white/10 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-orange-400/20 rounded-xl flex items-center justify-center">
+                      <HelpCircle className="h-5 w-5 text-orange-400" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">Common Questions</h3>
+                  </div>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <a href="/questions/what-is-ergo" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> What is Ergo blockchain?
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/questions/what-is-eutxo" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> What is the eUTXO model?
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/questions/what-is-mev-resistance" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> How does MEV resistance work?
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/questions/what-is-storage-rent" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> What is storage rent?
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/questions" className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 text-sm mt-4 font-medium">
+                    View all questions <ArrowRight className="h-3 w-3" />
+                  </a>
+                </div>
+
+                {/* Related Playbooks */}
+                <div className="bg-black/60 border border-white/10 rounded-2xl p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-10 h-10 bg-orange-400/20 rounded-xl flex items-center justify-center">
+                      <BookOpen className="h-5 w-5 text-orange-400" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">Playbooks & Guides</h3>
+                  </div>
+                  <ul className="space-y-2 text-sm">
+                    <li>
+                      <a href="/playbooks/first-ergo-wallet" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> Set up your first Ergo wallet
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/playbooks/start-mining-ergo" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> Start mining Ergo
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/playbooks/ergo-defi-basics" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> Ergo DeFi basics
+                      </a>
+                    </li>
+                    <li>
+                      <a href="/playbooks/privacy-on-ergo" className="text-neutral-300 hover:text-orange-400 transition-colors flex items-center gap-2">
+                        <span className="text-orange-400">→</span> Privacy tools on Ergo
+                      </a>
+                    </li>
+                  </ul>
+                  <a href="/playbooks" className="inline-flex items-center gap-1 text-orange-400 hover:text-orange-300 text-sm mt-4 font-medium">
+                    View all playbooks <ArrowRight className="h-3 w-3" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </motion.section>
 
           {/* FAQ Section */}
           <motion.section
@@ -390,26 +560,44 @@ export function InfographicsClient() {
             transition={{ duration: 0.6, delay: 1.0 }}
             className="mb-16"
           >
-            <div className="bg-black/40 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
-              <h2 className="text-3xl font-bold text-white mb-8 text-center">Frequently Asked Questions</h2>
-              <div className="space-y-4">
-                <FAQItem 
-                  key="commercial-reuse"
-                  question="Can I reuse these infographics commercially?"
-                  answer="Yes, you can reuse any infographic in presentations, blog posts or educational materials. Please credit ergoblockchain.org and link back to the original page."
-                />
-                <FAQItem 
-                  key="translations"
-                  question="Will there be translations/localized versions?"
-                  answer="We are working on providing infographics in multiple languages. Contact the Ergo community if you'd like to help with translations."
-                />
-                <FAQItem 
-                  key="request-topic"
-                  question="Where can I request a new infographic topic?"
-                  answer="You can request new infographic topics through the Ergo community channels on Discord, Telegram, or by creating an issue on the official GitHub repository."
-                />
+            <section className="py-0">
+              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="text-center mb-8">
+                  <h2
+                    className="font-bold tracking-tight mb-4"
+                    style={{
+                      fontSize: 'clamp(32px, 4.5vw, 56px)',
+                      letterSpacing: '-0.02em',
+                      lineHeight: 1,
+                    }}
+                  >
+                    <span className="text-orange-400">Infographics</span>{' '}
+                    <span className="text-white">FAQ</span>
+                  </h2>
+                  <p className="text-gray-400 text-lg">
+                    Everything you need to know to reuse these visual guides correctly.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <FAQItem 
+                    key="commercial-reuse"
+                    question="Can I reuse these infographics commercially?"
+                    answer="Yes, you can reuse any infographic in presentations, blog posts or educational materials. Please credit ergoblockchain.org and link back to the original page."
+                  />
+                  <FAQItem 
+                    key="translations"
+                    question="Will there be translations/localized versions?"
+                    answer="We are working on providing infographics in multiple languages. Contact the Ergo community if you'd like to help with translations."
+                  />
+                  <FAQItem 
+                    key="request-topic"
+                    question="Where can I request a new infographic topic?"
+                    answer="You can request new infographic topics through the Ergo community channels on Discord, Telegram, or by creating an issue on the official GitHub repository."
+                  />
+                </div>
               </div>
-            </div>
+            </section>
           </motion.section>
 
           {/* Email Capture Section */}
@@ -441,7 +629,22 @@ function InfographicShareMenu({
   const [isShareModalOpen, setIsShareModalOpen] = useState(false);
   const [copied, setCopied] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
-  const shareUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://ergoblockchain.org'}/infographics#${infographic.slug}`;
+  const [embedCopied, setEmbedCopied] = useState(false);
+  const shareUrl = `${typeof window !== 'undefined' ? window.location.origin : 'https://ergoblockchain.org'}/infographics/${infographic.slug}`;
+
+  // Close modals on Escape key
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setIsDownloadModalOpen(false);
+        setIsShareModalOpen(false);
+      }
+    };
+    if (isDownloadModalOpen || isShareModalOpen) {
+      document.addEventListener('keydown', handleEscape);
+      return () => document.removeEventListener('keydown', handleEscape);
+    }
+  }, [isDownloadModalOpen, isShareModalOpen]);
   const encodedTitle = encodeURIComponent(`${infographic.title} - Ergo Infographics`);
   const encodedDescription = encodeURIComponent(infographic.shortDescription);
   const encodedUrl = encodeURIComponent(shareUrl);
@@ -471,8 +674,6 @@ function InfographicShareMenu({
 
   const downloadSizes = [
     { name: "PNG — Standard (1920×1080)", size: "png", description: "Landscape PNG for desktop and social feeds" },
-    { name: "PNG — Vertical (1080×1920)", size: "vertical", description: "Portrait PNG for mobile stories and feeds" },
-    { name: "SVG — Vector", size: "svg", description: "Crisp vector for articles, decks and docs" },
     { name: "Embed code (HTML)", size: "embed", description: "Copy HTML snippet to embed this infographic" },
   ];
 
@@ -495,6 +696,17 @@ function InfographicShareMenu({
     }
   };
 
+  const copyEmbedCode = async () => {
+    const embedCode = `<img src="${infographic.fullImageUrl}" alt="${infographic.imageAlt}" loading="lazy" />`;
+    try {
+      await navigator.clipboard.writeText(embedCode);
+      setEmbedCopied(true);
+      setTimeout(() => setEmbedCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy embed code:', err);
+    }
+  };
+
   const handleLocalDownload = async (size?: string) => {
     setIsProcessing(true);
     try {
@@ -510,7 +722,7 @@ function InfographicShareMenu({
       <Button
         type="button"
         variant="default"
-        className="flex-1 inline-flex items-center justify-center gap-2 font-mono uppercase tracking-wider border-2 border-orange-500 bg-orange-500 text-white hover:bg-transparent hover:text-orange-500 hover:border-orange-500 rounded-[14px] h-9 text-[10px] sm:text-xs px-3"
+        className="flex-1 inline-flex items-center justify-center gap-2 font-mono uppercase tracking-wider border border-white/20 bg-white/5 text-neutral-100 hover:border-orange-400 hover:text-orange-300 hover:bg-orange-400/10 rounded-[14px] h-9 text-[10px] sm:text-xs px-3"
         onClick={(e) => {
           e.stopPropagation();
           setIsShareModalOpen(true);
@@ -525,7 +737,7 @@ function InfographicShareMenu({
         <Button
           type="button"
           variant="outline"
-          className="w-full inline-flex items-center justify-center gap-2 font-mono uppercase tracking-wider border-2 border-orange-500 bg-transparent text-orange-500 hover:bg-orange-500 hover:text-black rounded-[14px] h-9 text-[10px] sm:text-xs px-3"
+          className="w-full inline-flex items-center justify-center gap-2 font-mono uppercase tracking-wider border border-white/20 bg-transparent text-neutral-200 hover:border-orange-400 hover:text-orange-300 hover:bg-orange-400/10 rounded-[14px] h-9 text-[10px] sm:text-xs px-3"
           onClick={(e) => {
             e.stopPropagation();
             setIsDownloadModalOpen(true);
@@ -538,21 +750,25 @@ function InfographicShareMenu({
         </Button>
       </div>
 
-      {/* Mobile share modal */}
-      {isShareModalOpen && (
+      {/* Share modal - rendered via Portal to avoid hover issues */}
+      {isShareModalOpen && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70"
           onClick={() => setIsShareModalOpen(false)}
+          role="presentation"
         >
           <div
-            className="w-full max-w-sm mx-4 rounded-2xl bg-neutral-900 border border-white/10 p-4"
+            className="w-full max-w-sm mx-4 rounded-2xl bg-neutral-900 border border-white/10 p-4 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="share-modal-title"
           >
             <div className="mb-2 flex items-center justify-between">
-              <span className="text-sm font-medium text-white">Share</span>
+              <span id="share-modal-title" className="text-sm font-medium text-white">Share</span>
               <button
                 type="button"
-                className="h-8 w-8 flex items-center justify-center rounded-full border border-transparent text-slate-300 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors"
+                className="h-8 w-8 flex items-center justify-center rounded-full border border-transparent text-slate-300 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                 onClick={() => setIsShareModalOpen(false)}
                 aria-label="Close share options"
                 title="Close"
@@ -598,24 +814,29 @@ function InfographicShareMenu({
               </button>
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
 
-      {/* Download modal */}
-      {isDownloadModalOpen && (
+      {/* Download modal - rendered via Portal to avoid hover issues */}
+      {isDownloadModalOpen && typeof document !== 'undefined' && createPortal(
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/70"
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/70"
           onClick={() => setIsDownloadModalOpen(false)}
+          role="presentation"
         >
           <div
-            className="w-full max-w-sm mx-4 rounded-2xl bg-neutral-900 border border-white/10 p-4"
+            className="w-full max-w-sm mx-4 rounded-2xl bg-neutral-900 border border-white/10 p-4 shadow-2xl"
             onClick={(e) => e.stopPropagation()}
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="download-modal-title"
           >
             <div className="mb-2 flex items-center justify-between">
-              <span className="text-sm font-medium text-white">Download</span>
+              <span id="download-modal-title" className="text-sm font-medium text-white">Download</span>
               <button
                 type="button"
-                className="h-8 w-8 flex items-center justify-center rounded-full border border-transparent text-slate-300 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors"
+                className="h-8 w-8 flex items-center justify-center rounded-full border border-transparent text-slate-300 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
                 onClick={() => setIsDownloadModalOpen(false)}
                 aria-label="Close download options"
                 title="Close"
@@ -635,14 +856,11 @@ function InfographicShareMenu({
                   type="button"
                   onClick={() => {
                     if (sizeOption.size === 'embed') {
-                      const embedCode = `<img src="${infographic.fullImageUrl}" alt="${infographic.imageAlt}" loading="lazy" />`;
-                      navigator.clipboard.writeText(embedCode).catch((err) =>
-                        console.error('Failed to copy embed code:', err)
-                      );
+                      copyEmbedCode();
                     } else {
                       handleLocalDownload(sizeOption.size === 'original' ? undefined : sizeOption.size);
+                      setIsDownloadModalOpen(false);
                     }
-                    setIsDownloadModalOpen(false);
                   }}
                   disabled={isProcessing}
                   className="w-full flex items-center justify-between rounded-lg border border-white/10 bg-black/40 px-3 py-2 text-sm text-slate-100 hover:border-orange-400 hover:bg-orange-400/10 hover:text-orange-300 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
@@ -651,16 +869,25 @@ function InfographicShareMenu({
                 >
                   <div className="flex flex-col items-start">
                     <span>{sizeOption.name}</span>
-                    <span className="text-[11px] text-neutral-500">{sizeOption.description}</span>
+                    <span className="text-[11px] text-neutral-500">
+                      {sizeOption.size === 'embed'
+                        ? (embedCopied ? 'Embed code copied to your clipboard.' : sizeOption.description)
+                        : sizeOption.description}
+                    </span>
                   </div>
-                  <Download
-                    className={`w-4 h-4 ${isProcessing ? 'animate-pulse opacity-70' : ''}`}
-                  />
+                  {sizeOption.size === 'embed' ? (
+                    <Copy className="w-4 h-4" />
+                  ) : (
+                    <Download
+                      className={`w-4 h-4 ${isProcessing ? 'animate-pulse opacity-70' : ''}`}
+                    />
+                  )}
                 </button>
               ))}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </div>
   );
@@ -686,6 +913,11 @@ function InfographicCard({
     : infographic.shortDescription;
 
   const handleCardClick = () => {
+    // Save current page to sessionStorage for back navigation
+    if (typeof window !== 'undefined') {
+      const currentUrl = window.location.href;
+      sessionStorage.setItem('infographics-return-url', currentUrl);
+    }
     window.location.href = `/infographics/${infographic.slug}`;
   };
 
@@ -700,6 +932,16 @@ function InfographicCard({
       <div className="relative aspect-[16/10] overflow-hidden">
         {/* Light gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent z-10" />
+        
+        {/* New badge */}
+        {infographic.publishDate && isNewInfographic(infographic.publishDate) && (
+          <div className="absolute top-3 left-3 z-30">
+            <Badge className="bg-orange-500 text-white border-0 text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 flex items-center gap-1">
+              <Sparkles className="h-3 w-3" />
+              New
+            </Badge>
+          </div>
+        )}
         
         <img
           src={infographic.previewImageUrl}
@@ -726,7 +968,10 @@ function InfographicCard({
           <h3 className="text-lg font-semibold text-white leading-tight flex-1">
             {truncatedTitle}
           </h3>
-          <Badge variant="secondary" className="bg-orange-400/20 text-orange-400 border-orange-400/30 text-xs shrink-0">
+          <Badge
+            variant="outline"
+            className="border-white/15 bg-white/5 text-neutral-200 text-xs shrink-0"
+          >
             {getShortCategoryLabel(infographic.category)}
           </Badge>
         </div>
@@ -755,23 +1000,31 @@ function InfographicCard({
 
 function FAQItem({ question, answer }: { question: string; answer: string }) {
   const [isOpen, setIsOpen] = useState(false);
-  const id = useId();
 
   return (
-    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
-      <CollapsibleTrigger 
-        className="flex w-full items-center justify-between p-4 text-left hover:bg-white/5 rounded-lg transition-colors"
-        aria-controls={`faq-content-${id}`}
+    <Card className="bg-black border-neutral-800 rounded-xl overflow-hidden">
+      <button
+        onClick={() => setIsOpen((prev) => !prev)}
+        className="w-full p-6 flex items-center justify-between text-left hover:bg-neutral-900/50 transition-colors"
+        type="button"
       >
-        <h3 className="text-lg font-medium text-white">{question}</h3>
-        <ChevronDown className={`h-5 w-5 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
-      </CollapsibleTrigger>
-      <CollapsibleContent 
-        className="px-4 pb-4"
-        id={`faq-content-${id}`}
-      >
-        <p className="text-neutral-400">{answer}</p>
-      </CollapsibleContent>
-    </Collapsible>
+        <h3 className="text-lg font-semibold text-white pr-4">
+          {question}
+        </h3>
+        <ChevronDown
+          className={`w-5 h-5 text-neutral-500 flex-shrink-0 transition-transform ${
+            isOpen ? 'rotate-180' : ''
+          }`}
+        />
+      </button>
+
+      {isOpen && (
+        <div className="px-6 pb-6">
+          <p className="text-gray-300 leading-relaxed">
+            {answer}
+          </p>
+        </div>
+      )}
+    </Card>
   );
 }

@@ -14,6 +14,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { useTranslations } from "next-intl"
+import { GlossaryLink } from "@/components/glossary"
 
 // Types and hoisted data
 type UseCase = {
@@ -211,7 +212,7 @@ export default function NIPOPOWsPage() {
               <div>
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">NIPoPoWs — Non-Interactive Proofs of Proof-of-Work</h1>
                 <p className="text-xl md:text-2xl text-neutral-300 mb-6">Succinct proofs of chain work for trust-minimized verification.</p>
-                <p className="text-lg text-neutral-400 mb-8">Verify Ergo from mobile, browsers, or other chains using compact proofs instead of full sync. Learn how PoW works in <Link href="/technology/secure-pow" className="underline hover:opacity-80">Secure PoW</Link>.</p>
+                <p className="text-lg text-neutral-400 mb-8">Verify Ergo from mobile, browsers, or other chains using compact proofs instead of full sync. Learn how <GlossaryLink term="proof-of-work" variant="subtle" /> works in <Link href="/technology/secure-pow" className="underline hover:opacity-80">Secure PoW</Link>.</p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl" data-cta="learn-more">
                     <Link href="#what">Learn More</Link>
@@ -253,7 +254,7 @@ export default function NIPOPOWsPage() {
             <div className="max-w-4xl mx-auto">
               <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <h2 className="text-3xl font-bold mb-6 text-white">What are NIPoPoWs?</h2>
-                <p className="text-neutral-300 text-lg leading-relaxed mb-6">NIPoPoWs are cryptographic proofs that let you verify blockchain events without downloading the entire chain — ideal for mobile and cross-chain use.</p>
+                <p className="text-neutral-300 text-lg leading-relaxed mb-6"><GlossaryLink term="nipopows" showTooltip={false}>NIPoPoWs</GlossaryLink> are cryptographic proofs that let you verify blockchain events without downloading the entire chain — ideal for mobile and cross-chain use via <GlossaryLink term="light-clients" variant="subtle" />.</p>
                 <p className="text-neutral-300 text-lg leading-relaxed mb-4">Proof size and verification grow <strong>logarithmically</strong> with chain length via sampling of <strong>superblocks</strong> from headers.</p>
                 <p className="text-neutral-300 text-lg leading-relaxed">Compared with classic SPV, NIPoPoWs give formal guarantees to compare competing chains by accumulated work without full state.</p>
                 <ul className="list-disc list-inside text-neutral-400 mt-4">

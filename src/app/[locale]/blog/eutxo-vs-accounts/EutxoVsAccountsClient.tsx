@@ -12,6 +12,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ResponsiveTable } from "@/components/ui/responsive-table"
+import { GlossaryLink } from "@/components/glossary"
 
 import {
   ChevronDown,
@@ -38,6 +39,7 @@ export function EutxoVsAccountsClient() {
       title: "eUTXO: Specific Outputs",
       description:
         "Like cash payments - transactions move specific 'boxes' with attached logic. Deterministic and predictable execution.",
+      glossaryTerm: "eutxo",
     },
     {
       icon: Coins,

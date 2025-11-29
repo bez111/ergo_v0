@@ -11,6 +11,7 @@ import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { GlossaryLink } from "@/components/glossary"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -217,7 +218,8 @@ export default function EUTXOModelPage() {
                     The foundation of Ergo's advanced smart contract capabilities
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Extended UTXO combines Bitcoin's proven security model with powerful smart contract functionality, 
+                    Extended UTXO combines Bitcoin's proven security model with powerful smart contract functionality via{" "}
+                    <GlossaryLink term="ergoscript" variant="subtle" />, 
                     enabling parallel execution and eliminating entire classes of vulnerabilities.
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -443,7 +445,8 @@ export default function EUTXOModelPage() {
                 <div>
                   <h2 className="text-4xl font-bold mb-6 text-white">Simple Yet Powerful</h2>
                   <p className="text-neutral-300 mb-6 leading-relaxed">
-                    The eUTXO model simplifies smart contract development by treating everything as boxes with clear 
+                    The <GlossaryLink term="eutxo" variant="subtle" /> model simplifies smart contract development by treating everything as{" "}
+                    <GlossaryLink term="boxes" variant="subtle" /> with clear 
                     spending conditions. No complex state management, no re-entrancy concerns — just straightforward logic.
                   </p>
                   <ul className="space-y-4">

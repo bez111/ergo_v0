@@ -31,6 +31,7 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { motion } from "framer-motion"
 import { useMemo } from "react"
+import { GlossaryLink } from "@/components/glossary"
 
 const PUBLISHED = "2023-11-10"
 const UPDATED = "2025-08-10"
@@ -468,7 +469,7 @@ export default function StorageRentPage() {
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">{t("timeline.title")}</h2>
                 <p className="text-xl text-neutral-300 max-w-3xl mx-auto">
-                  {t("timeline.description")} <Link href="/technology/eutxo-model" className="underline hover:opacity-80">{t("timeline.eutxoLink")}</Link>.
+                  {t("timeline.description")} <GlossaryLink term="eutxo" variant="subtle">{t("timeline.eutxoLink")}</GlossaryLink>.
                 </p>
               </div>
 

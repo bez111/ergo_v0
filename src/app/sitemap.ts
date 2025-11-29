@@ -26,6 +26,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
+      url: `${baseUrl}/sitemaps/sitemap-compare.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sitemaps/sitemap-playbooks.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sitemaps/sitemap-glossary.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sitemaps/sitemap-infographics.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sitemaps/sitemap-questions.xml`,
+      lastModified: new Date(),
+    },
+    {
+      url: `${baseUrl}/sitemaps/sitemap-topics.xml`,
+      lastModified: new Date(),
+    },
+    {
       url: `${baseUrl}/news-sitemap.xml`,
       lastModified: new Date(),
     },

@@ -63,6 +63,8 @@ export function Header() {
                 height="32" 
                 viewBox="0 0 100 90" 
                 xmlns="http://www.w3.org/2000/svg"
+                role="img"
+                aria-label="Ergo Blockchain logo - hexagon with Sigma symbol"
                 className={cn(
                   "transition-all duration-300",
                   glitchActive && "ergo-glitch",

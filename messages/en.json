@@ -12126,5 +12126,50 @@
     "title": "Stablecoins",
     "description": "Algorithmic stablecoins built on Ergo",
     "subtitle": "Decentralized stable value storage"
+  },
+  "compare": {
+    "hub": {
+      "title": "Ergo vs The World",
+      "subtitle": "Understand how Ergo compares to other blockchain platforms. Honest, technical comparisons with no marketing fluff.",
+      "chooseComparison": "Choose a Comparison",
+      "whyMatters": "Why These Comparisons Matter",
+      "whyMattersSubtitle": "Every blockchain makes tradeoffs. Understanding these tradeoffs helps you choose the right tool for your needs.",
+      "securityFirst": "Security First",
+      "securityFirstDesc": "Ergo's eUTXO model eliminates entire classes of vulnerabilities that affect account-based chains.",
+      "fairLaunch": "Fair Launch",
+      "fairLaunchDesc": "No ICO, no premine, no VC allocation. All ERG is earned through mining, like Bitcoin.",
+      "programmablePrivacy": "Programmable Privacy",
+      "programmablePrivacyDesc": "Sigma Protocols enable zero-knowledge proofs without trusted setup, built into the core protocol.",
+      "readyToBuild": "Ready to Build on Ergo?",
+      "readyToBuildDesc": "Join a community of builders creating the future of decentralized finance.",
+      "startBuilding": "Start Building",
+      "exploreEcosystem": "Explore Ecosystem"
+    },
+    "detail": {
+      "allComparisons": "All Comparisons",
+      "featureComparison": "Feature Comparison",
+      "deepDive": "Deep Dive",
+      "ergoAdvantage": "Ergo Advantage",
+      "relatedInfographics": "Related Infographics",
+      "faq": "Frequently Asked Questions",
+      "moreComparisons": "More Comparisons",
+      "readyToExperience": "Ready to Experience Ergo?",
+      "readyToExperienceDesc": "Join thousands of users who chose decentralization, security, and financial freedom.",
+      "getWallet": "Get a Wallet",
+      "startBuilding": "Start Building",
+      "lastUpdated": "Last updated"
+    },
+    "features": {
+      "consensus": "Consensus",
+      "stateModel": "State Model",
+      "smartContracts": "Smart Contracts",
+      "privacy": "Privacy",
+      "sustainability": "Sustainability",
+      "lightClients": "Light Clients",
+      "miningAlgorithm": "Mining Algorithm",
+      "blockTime": "Block Time",
+      "launchModel": "Launch Model",
+      "networkEffect": "Network Effect"
+    }
   }
 }

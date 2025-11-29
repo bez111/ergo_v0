@@ -6,13 +6,13 @@
   "version": "0.1.5",
   "private": true,
   "scripts": {
-    "dev": "node scripts/generate-version.js && next dev",
-    "build": "node scripts/generate-version.js && next build",
-    "start": "next start",
+    "dev": "node scripts/generate-version.js && npx next dev",
+    "build": "node scripts/generate-version.js && npx next build",
+    "start": "npx next start",
     "lint": "eslint",
-    "analyze": "ANALYZE=true next build",
+    "analyze": "ANALYZE=true npx next build",
     "type-check": "tsc --noEmit",
-    "lint:fix": "next lint --fix",
+    "lint:fix": "npx next lint --fix",
     "clean": "rm -rf .next node_modules package-lock.json",
     "audit:deps": "npx depcheck",
     "audit:bundle": "npx @next/bundle-analyzer",
@@ -20,7 +20,7 @@
     "lighthouse:mobile": "lhci autorun --collect.settings.preset=mobile",
     "lighthouse:desktop": "lhci autorun --collect.settings.preset=desktop",
     "perf:test": "npm run build && npm run lighthouse",
-    "perf:analyze": "ANALYZE=true next build",
+    "perf:analyze": "ANALYZE=true npx next build",
     "i18n:analyze": "node scripts/analyze-i18n.js",
     "i18n:upload": "node scripts/lokalise-cli.js upload",
     "i18n:download": "node scripts/lokalise-cli.js download",
@@ -108,6 +108,6 @@
     "eslint": "^9.39.1",
     "eslint-config-next": "^16.0.1",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "5.9.3"
   }
 }

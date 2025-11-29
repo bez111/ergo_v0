@@ -20,28 +20,28 @@ export function BuildForScale() {
       value: "~2 min",
       label: "Block time",
       hint: "Fast, predictable finality",
-      href: "/metrics#block-time",
+      href: "/technology/subblocks",
     },
     {
       icon: <Shield className="w-4 h-4" />,
       value: "MEV-resistant",
       label: "Front-running",
       hint: "Local ordering, no global priority auctions",
-      href: "/learn/mev",
+      href: "/questions/what-is-mev-resistance",
     },
     {
       icon: <Coins className="w-4 h-4" />,
       value: "≈ $0.01",
       label: "Typical fee",
       hint: "Pennies, not dollars",
-      href: "/metrics#fees",
+      href: "/technology/babel-fees",
     },
     {
       icon: <Code2 className="w-4 h-4" />,
       value: "ErgoScript",
       label: "Smart contracts",
       hint: "Short, auditable logic",
-      href: "/build/smart-contracts",
+      href: "/technology/ergoscript",
     },
   ];
 
@@ -66,8 +66,8 @@ function LeftCopy() {
           lineHeight: 1
         }}
       >
-        Engineered for <span style={{ color: BRAND.orange }}>global</span>{" "}
-        settlement
+        Engineered for <span style={{ color: BRAND.orange }}>global</span>,{" "}
+        censorship-resistant settlement
       </h2>
 
       <p

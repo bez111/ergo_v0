@@ -11,6 +11,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import OracleComparisonTable from "@/components/oracle-comparison-table"
+import { GlossaryLink } from "@/components/glossary"
 import { 
   ChevronDown,
   Shield,

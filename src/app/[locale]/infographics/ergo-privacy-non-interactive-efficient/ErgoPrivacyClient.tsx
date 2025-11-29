@@ -1,10 +1,10 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
   ArrowLeft,
-  Calendar,
   Tag,
   Eye,
   Shield,
@@ -18,6 +18,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { EmbedCode } from '@/components/infographics/EmbedCode';
+import { InfographicHero } from '@/components/infographics/InfographicHero';
 import { InfographicMeta, CATEGORY_LABELS, LEVEL_LABELS } from '@/types/infographic';
 
 interface ErgoPrivacyClientProps {
@@ -25,14 +26,23 @@ interface ErgoPrivacyClientProps {
 }
 
 export function ErgoPrivacyClient({ infographic }: ErgoPrivacyClientProps) {
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    });
+  const router = useRouter();
+  
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (typeof window !== 'undefined') {
+      const returnUrl = sessionStorage.getItem('infographics-return-url');
+      if (returnUrl && returnUrl.includes('/infographics')) {
+        sessionStorage.removeItem('infographics-return-url');
+        window.location.href = returnUrl;
+      } else {
+        router.push('/infographics');
+      }
+    } else {
+      router.push('/infographics');
+    }
   };
-
+  
   const keyPoints = [
     'Sigma Protocols provide zero-knowledge proofs that enable private transactions and complex spending conditions.',
     'Ergo’s eUTXO model is a privacy-enhancing transaction model with discrete, one-time use outputs.',
@@ -101,53 +111,17 @@ export function ErgoPrivacyClient({ infographic }: ErgoPrivacyClientProps) {
             transition={{ duration: 0.6 }}
             className="mb-8"
           >
-            <Button variant="ghost" className="text-neutral-400 hover:text-white" asChild>
-              <a href="/infographics">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Infographics
-              </a>
+            <Button variant="ghost" className="text-neutral-400 hover:text-white" onClick={handleBackClick}>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Infographics
             </Button>
           </motion.div>
 
           {/* Header */}
-          <motion.header
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center mb-12"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              {infographic.title}
-            </h1>
-            <p className="text-xl text-neutral-300 mb-6 max-w-3xl mx-auto">
-              How Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs deliver built-in privacy without trusted
-              third parties.
-            </p>
-
-            {/* Meta information */}
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-400">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                <span>{formatDate(infographic.publishDate)}</span>
-              </div>
-              {infographic.readingTimeMinutes && (
-                <div className="flex items-center gap-2">
-                  <Eye className="h-4 w-4" />
-                  <span>{infographic.readingTimeMinutes} min read</span>
-                </div>
-              )}
-              <Badge
-                className="bg-orange-500/20 text-orange-400 border-orange-500/30"
-                variant="secondary"
-              >
-                <Tag className="h-3 w-3 mr-1" />
-                {CATEGORY_LABELS[infographic.category] || infographic.category}
-              </Badge>
-              <Badge variant="outline" className="border-neutral-600 text-neutral-300">
-                {LEVEL_LABELS[infographic.level] || infographic.level}
-              </Badge>
-            </div>
-          </motion.header>
+          <InfographicHero
+            infographic={infographic}
+            subtitle="How Sigma Protocols, eUTXO, ErgoMixer and NiPoPoWs deliver built-in privacy without trusted third parties."
+          />
 
           {/* Main infographic */}
           <motion.div

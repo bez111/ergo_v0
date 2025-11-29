@@ -14,6 +14,7 @@ import { useState } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { GlossaryLink } from "@/components/glossary"
 
 export default function SecurePowPage() {
   const t = useTranslations("technology.securePow")

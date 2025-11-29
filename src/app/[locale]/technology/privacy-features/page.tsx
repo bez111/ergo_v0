@@ -15,6 +15,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import PrivacyComparisonTable from "@/components/privacy-comparison-table"
+import { GlossaryLink } from "@/components/glossary"
 
 // Removed HexagonalGrid due to loading issues
 
@@ -41,6 +42,7 @@ export default function PrivacyFeaturesPage() {
     {
       icon: <Shield className="w-8 h-8" aria-hidden="true" focusable="false" />,
       title: "Sigma Protocols",
+      titleComponent: <GlossaryLink term="sigma-protocols" showTooltip={false}>Sigma Protocols</GlossaryLink>,
       description: "Enable powerful privacy tools like ring signatures and zero-knowledge proofs at the protocol level.",
       features: [
         "Zero-knowledge proofs",

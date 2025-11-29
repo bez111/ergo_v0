@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
+import { useRouter } from "next/navigation";
 
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { Badge } from "@/components/ui/badge";
@@ -27,6 +28,8 @@ type Props = {
 };
 
 export function MevResistanceVsDarkForestClient({ infographic }: Props) {
+  const router = useRouter();
+  
   const {
     title,
     shortDescription,
@@ -36,7 +39,7 @@ export function MevResistanceVsDarkForestClient({ infographic }: Props) {
     fullImageUrl,
     publishDate,
     readingTimeMinutes,
-    slug,
+    // slug,
     tags,
   } = infographic;
 
@@ -50,11 +53,6 @@ export function MevResistanceVsDarkForestClient({ infographic }: Props) {
     });
   }, [publishDate]);
 
-  const infographicUrl = useMemo(
-    () => `https://ergoblockchain.org/en/infographics/${slug}`,
-    [slug],
-  );
-
   return (
     <BackgroundWrapper>
       <div className="mx-auto flex w-full max-w-5xl flex-col gap-8 px-4 pb-16 pt-8 sm:px-6 lg:px-8">
@@ -66,7 +64,23 @@ export function MevResistanceVsDarkForestClient({ infographic }: Props) {
             size="sm"
             className="group inline-flex items-center gap-2 px-0 text-xs font-medium text-muted-foreground hover:text-foreground"
           >
-            <Link href="/infographics">
+            <Link 
+              href="/infographics"
+              onClick={(e) => {
+                e.preventDefault();
+                if (typeof window !== 'undefined') {
+                  const returnUrl = sessionStorage.getItem('infographics-return-url');
+                  if (returnUrl && returnUrl.includes('/infographics')) {
+                    sessionStorage.removeItem('infographics-return-url');
+                    window.location.href = returnUrl;
+                  } else {
+                    router.push('/infographics');
+                  }
+                } else {
+                  router.push('/infographics');
+                }
+              }}
+            >
               <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
               <span>Back to all infographics</span>
             </Link>
@@ -150,9 +164,7 @@ export function MevResistanceVsDarkForestClient({ infographic }: Props) {
           </div>
         </section>
 
-        <div className="grid gap-6 md:grid-cols-[minmax(0,2fr)_minmax(0,1.3fr)]">
-          {/* Left column: explanation */}
-          <div className="flex flex-col gap-6">
+        <div className="flex flex-col gap-6">
             {/* About */}
             <Card className="border-white/10 bg-black/40">
               <CardHeader>
@@ -303,10 +315,7 @@ export function MevResistanceVsDarkForestClient({ infographic }: Props) {
                 </ul>
               </CardContent>
             </Card>
-          </div>
 
-          {/* Right column: how to read, related, embed */}
-          <div className="flex flex-col gap-6">
             {/* How to read */}
             <Card className="border-white/10 bg-black/40">
               <CardHeader>
@@ -354,24 +363,12 @@ export function MevResistanceVsDarkForestClient({ infographic }: Props) {
               </CardContent>
             </Card>
 
-            {/* Embed code */}
-            <Card className="border-white/10 bg-black/40">
-              <CardHeader>
-                <CardTitle className="text-base font-semibold">
-                  Embed This Infographic
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-3 text-sm text-muted-foreground">
-                <p>
-                  Want to include this MEV comparison in your article or docs?
-                  Copy the HTML snippet below to embed it with proper
-                  attribution.
-                </p>
-                <EmbedCode infographic={infographic} />
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+                    </div>
+
+        {/* Embed code section */}
+        <section className="mt-12">
+          <EmbedCode infographic={infographic} />
+        </section>
       </div>
     </BackgroundWrapper>
   );

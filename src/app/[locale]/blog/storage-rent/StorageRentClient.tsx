@@ -13,6 +13,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { StorageRentTimeline } from "@/components/diagrams/storage-rent-timeline"
+import { GlossaryLink } from "@/components/glossary"
 import { 
   Database,
   Coins,

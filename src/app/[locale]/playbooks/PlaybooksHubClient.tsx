@@ -1,0 +1,392 @@
+"use client";
+
+import { useState, useMemo } from "react";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import {
+  Code,
+  Shield,
+  Pickaxe,
+  Leaf,
+  Scale,
+  Globe,
+  TrendingUp,
+  Layers,
+  ArrowRight,
+  Clock,
+  BookOpen,
+  Zap,
+} from "lucide-react";
+import { Playbook } from "@/data/playbooks";
+import { BackgroundWrapper } from "@/components/home/background-wrapper";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+
+interface Props {
+  playbooks: Playbook[];
+  clusters: readonly { id: string; name: string; icon: string; description: string }[];
+}
+
+const iconMap: Record<string, React.ElementType> = {
+  Code,
+  Shield,
+  Pickaxe,
+  Leaf,
+  Scale,
+  Globe,
+  TrendingUp,
+  Layers,
+};
+
+const difficultyColors: Record<string, string> = {
+  beginner: "bg-green-500/20 text-green-400 border-green-500/30",
+  intermediate: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
+  advanced: "bg-red-500/20 text-red-400 border-red-500/30",
+};
+
+const clusterColors: Record<string, string> = {
+  defi: "from-orange-500 to-red-500",
+  privacy: "from-purple-500 to-blue-500",
+  mining: "from-amber-500 to-orange-500",
+  sustainability: "from-emerald-500 to-green-500",
+  "vc-alternative": "from-green-500 to-teal-500",
+  "global-settlement": "from-indigo-500 to-purple-500",
+  developer: "from-cyan-500 to-blue-500",
+  investor: "from-blue-500 to-cyan-500",
+};
+
+const clusterLabels: Record<string, string> = {
+  defi: "DeFi",
+  privacy: "Privacy",
+  mining: "Mining",
+  sustainability: "Sustainability",
+  "vc-alternative": "VC Alternative",
+  "global-settlement": "Global Settlement",
+  developer: "Developer",
+  investor: "Investor",
+};
+
+// Logical order from simple onboarding to advanced building
+const playbookOrder: Record<string, number> = {
+  "first-transaction-10-minutes": 1,
+  "escape-financial-repression": 2,
+  "fair-launch-alternative": 3,
+  "add-ergo-to-portfolio": 4,
+  "private-transaction-ergomixer": 5,
+  "start-mining-ergo": 6,
+  "provide-liquidity-spectrum": 7,
+  "launch-token-on-ergo": 8,
+  "sustainable-blockchain-economics": 9,
+  "ergo-global-settlement": 10,
+  "build-defi-on-ergo": 11,
+};
+
+const difficultyRank: Record<string, number> = {
+  beginner: 1,
+  intermediate: 2,
+  advanced: 3,
+};
+
+export function PlaybooksHubClient({ playbooks, clusters }: Props) {
+  const [selectedCluster, setSelectedCluster] = useState<string>("all");
+
+  const filteredPlaybooks = useMemo(() => {
+    const base =
+      selectedCluster === "all"
+        ? playbooks
+        : playbooks.filter((p) => p.cluster === selectedCluster);
+
+    return [...base].sort((a, b) => {
+      const orderA = playbookOrder[a.slug] ?? 999;
+      const orderB = playbookOrder[b.slug] ?? 999;
+      if (orderA !== orderB) return orderA - orderB;
+
+      const diffA = difficultyRank[a.difficulty] ?? 99;
+      const diffB = difficultyRank[b.difficulty] ?? 99;
+      if (diffA !== diffB) return diffA - diffB;
+
+      return a.title.localeCompare(b.title);
+    });
+  }, [playbooks, selectedCluster]);
+
+  return (
+    <BackgroundWrapper>
+      <div className="min-h-screen text-white">
+        <div className="container mx-auto px-4 py-16 relative z-10">
+          {/* Hero Section - Standard two-column layout (like /use) */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="pt-28 pb-14 px-4"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Left column: text + stats */}
+                <div>
+                  <h1 className="text-5xl md:text-6xl font-bold mb-8 text-white">
+                    Ergo Playbooks
+                  </h1>
+                  <p className="text-lg md:text-xl text-neutral-300 mb-4 max-w-2xl">
+                    Curated guides for every use case. Each playbook combines infographics,
+                    articles, and actionable steps.
+                  </p>
+                  <p className="text-base text-neutral-400 mb-8 max-w-2xl leading-relaxed">
+                    Start from your first Ergo transaction and move step-by-step towards
+                    mining, DeFi, and building your own applications.
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                    <Button
+                      asChild
+                      className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50"
+                    >
+                      <Link href="/playbooks/first-transaction-10-minutes">
+                        Start with first transaction
+                      </Link>
+                    </Button>
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl"
+                    >
+                      <Link href="/questions">
+                        Browse Q&A
+                      </Link>
+                    </Button>
+                  </div>
+
+                  {/* Stats inline */}
+                  <div className="flex flex-wrap gap-4 text-sm text-neutral-400">
+                    <span>
+                      <strong className="text-orange-400">{playbooks.length}</strong> playbooks
+                    </span>
+                    <span>
+                      <strong className="text-orange-400">{clusters.length}</strong> categories
+                    </span>
+                    <span>
+                      <strong className="text-orange-400">
+                        {playbooks.reduce((acc, p) => acc + p.steps.length, 0)}
+                      </strong>{" "}
+                      steps
+                    </span>
+                  </div>
+                </div>
+
+                {/* Right column: compact featured playbooks card */}
+                <motion.div
+                  className="relative z-10"
+                  whileHover={{ scale: 1.02 }}
+                  transition={{ type: "spring", stiffness: 260, damping: 24 }}
+                >
+                  <div className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                    <h3 className="text-2xl font-bold mb-4 text-center text-white">
+                      Featured playbooks
+                    </h3>
+                    <div className="space-y-3">
+                      {[
+                        "first-transaction-10-minutes",
+                        "start-mining-ergo",
+                        "build-defi-on-ergo",
+                      ]
+                        .map((slug) => playbooks.find((p) => p.slug === slug))
+                        .filter(Boolean)
+                        .map((playbook) => {
+                          const Icon = iconMap[playbook!.icon] || BookOpen;
+                          return (
+                            <Link
+                              key={playbook!.slug}
+                              href={`/playbooks/${playbook!.slug}`}
+                              className="block"
+                            >
+                              <div className="flex items-center gap-3 p-3 rounded-2xl bg-black/60 border border-white/10 hover:border-orange-400/50 hover:bg-black/80 transition-all duration-300">
+                                <div
+                                  className={`w-10 h-10 rounded-xl bg-gradient-to-br ${
+                                    clusterColors[playbook!.cluster] || "from-orange-500 to-red-500"
+                                  } flex items-center justify-center flex-shrink-0`}
+                                >
+                                  <Icon className="w-5 h-5 text-white" />
+                                </div>
+                                <div className="flex-1 min-w-0">
+                                  <div className="text-sm font-semibold text-white group-hover:text-orange-400 transition-colors truncate">
+                                    {playbook!.title}
+                                  </div>
+                                  <div className="text-[11px] text-neutral-400 truncate">
+                                    {playbook!.subtitle}
+                                  </div>
+                                </div>
+                              </div>
+                            </Link>
+                          );
+                        })}
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </motion.section>
+
+          {/* Filter Buttons */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="pb-8"
+          >
+            <div className="max-w-6xl mx-auto">
+              <div className="flex flex-wrap justify-center gap-2">
+                <Button
+                  variant={selectedCluster === "all" ? "default" : "outline"}
+                  size="sm"
+                  onClick={() => setSelectedCluster("all")}
+                  className={selectedCluster === "all" 
+                    ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500" 
+                    : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50"
+                  }
+                >
+                  All
+                </Button>
+                {clusters.map((cluster) => {
+                  const Icon = iconMap[cluster.icon] || BookOpen;
+                  return (
+                    <Button
+                      key={cluster.id}
+                      variant={selectedCluster === cluster.id ? "default" : "outline"}
+                      size="sm"
+                      onClick={() => setSelectedCluster(cluster.id)}
+                      className={selectedCluster === cluster.id 
+                        ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500" 
+                        : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50"
+                      }
+                    >
+                      <Icon className="w-3 h-3 mr-1" />
+                      {cluster.name}
+                    </Button>
+                  );
+                })}
+              </div>
+            </div>
+          </motion.section>
+
+          {/* All Playbooks in One Grid */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="pb-16"
+          >
+            <div className="max-w-7xl mx-auto">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                {filteredPlaybooks.map((playbook, index) => {
+                  const PlaybookIcon = iconMap[playbook.icon] || BookOpen;
+                  return (
+                    <motion.div
+                      key={playbook.slug}
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: index * 0.05 }}
+                    >
+                      <Link href={`/playbooks/${playbook.slug}`}>
+                        <Card className="bg-black border border-white/10 rounded-2xl hover:border-orange-400/40 transition-all duration-300 h-full group cursor-pointer">
+                          <CardContent className="p-5">
+                            {/* Header - Compact */}
+                            <div className="flex items-center gap-3 mb-3">
+                              <div
+                                className={`w-10 h-10 rounded-xl bg-gradient-to-br ${
+                                  clusterColors[playbook.cluster] || "from-orange-500 to-red-500"
+                                } flex items-center justify-center flex-shrink-0`}
+                              >
+                                <PlaybookIcon className="w-5 h-5 text-white" />
+                              </div>
+                                <div className="flex-1 min-w-0">
+                                <h3
+                                  className="text-sm font-bold text-white group-hover:text-orange-400 transition-colors line-clamp-2"
+                                >
+                                  {playbook.title}
+                                </h3>
+                                <div className="flex items-center gap-2 text-[10px] text-neutral-500">
+                                  <span>{playbook.timeToComplete}</span>
+                                  <span>·</span>
+                                  <span>{playbook.steps.length} steps</span>
+                                </div>
+                              </div>
+                            </div>
+
+                            {/* Description - Compact */}
+                            <p className="text-neutral-400 text-xs mb-3 line-clamp-2">
+                              {playbook.subtitle}
+                            </p>
+
+                            {/* Footer */}
+                            <div className="flex items-center justify-between">
+                              <div className="flex gap-1">
+                                <Badge
+                                  variant="outline"
+                                  className="text-[9px] px-1.5 py-0 border-white/15 text-neutral-400"
+                                >
+                                  {clusterLabels[playbook.cluster] || playbook.cluster}
+                                </Badge>
+                                <Badge
+                                  className={`text-[9px] px-1.5 py-0 ${difficultyColors[playbook.difficulty]}`}
+                                >
+                                  {playbook.difficulty}
+                                </Badge>
+                              </div>
+                              <ArrowRight className="w-3 h-3 text-neutral-500 group-hover:text-orange-400 transition-colors" />
+                            </div>
+                          </CardContent>
+                        </Card>
+                      </Link>
+                    </motion.div>
+                  );
+                })}
+              </div>
+              
+              {filteredPlaybooks.length === 0 && (
+                <div className="text-center py-12">
+                  <BookOpen className="w-12 h-12 text-neutral-600 mx-auto mb-4" />
+                  <p className="text-neutral-400">No playbooks in this category yet.</p>
+                </div>
+              )}
+            </div>
+          </motion.section>
+
+          {/* CTA Section */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="py-16"
+          >
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center bg-black border border-white/10 rounded-3xl px-6 py-10 sm:px-10 shadow-xl shadow-black/40">
+                <h2 className="text-3xl font-bold text-white mb-4">
+                  Can't find what you're looking for?
+                </h2>
+                <p className="text-neutral-400 mb-8">
+                  Explore our documentation, join the community, or suggest a new playbook.
+                </p>
+                <div className="flex flex-wrap justify-center gap-4">
+                  <Link
+                    href="/docs"
+                    className="px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-black font-semibold transition-colors"
+                  >
+                    Browse Docs
+                  </Link>
+                  <Link
+                    href="/start/community"
+                    className="px-6 py-3 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold border border-white/20 transition-colors"
+                  >
+                    Join Community
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </motion.section>
+        </div>
+      </div>
+    </BackgroundWrapper>
+  );
+}
+

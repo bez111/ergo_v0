@@ -41,9 +41,7 @@ import {
 
 } from "lucide-react"
 import Link from "next/link"
-// Removed glossary imports
-// import { GlossarySection } from "@/components/glossary/glossary-section"
-// import { ERGO_GLOSSARY } from "@/lib/glossary-constants"
+import { GlossaryLink } from "@/components/glossary"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
 import { useState, useEffect, useMemo } from "react"
 import Head from "next/head"

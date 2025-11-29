@@ -170,7 +170,8 @@ const roadmap = [
 
 const quickLinks = [
   { label: "Docs & SDKs", href: "/docs", icon: Layers },
-  { label: "Tutorial library", href: "/learn/ergoscript", icon: BookOpen },
+  { label: "Glossary", href: "/learn/glossary", icon: BookOpen },
+  { label: "Tutorial library", href: "/learn/ergoscript", icon: Code },
   { label: "Watch workshops", href: "https://youtube.com/@ErgoPlatform", icon: Sparkles },
   { label: "Join community", href: "/start/community", icon: Users }
 ]
@@ -462,6 +463,7 @@ export default function LearnClient() {
                       </div>
                       <p className="text-neutral-300 text-base flex-1 group-hover:text-neutral-200 transition-colors">
                         {item.label === "Docs & SDKs" && "Technical documentation, API references, and software development kits for building on Ergo."}
+                        {item.label === "Glossary" && "Complete dictionary of Ergo terminology: eUTXO, NiPoPoWs, Sigma Protocols, and more."}
                         {item.label === "Tutorial library" && "Step-by-step guides and tutorials covering everything from basics to advanced topics."}
                         {item.label === "Watch workshops" && "Video workshops and presentations from Ergo developers and community experts."}
                         {item.label === "Join community" && "Connect with developers, miners, and enthusiasts in the Ergo ecosystem."}

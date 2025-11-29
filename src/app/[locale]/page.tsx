@@ -25,12 +25,12 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
   const t = await getTranslations({ locale, namespace: 'seo' });
   
   return {
-    title: "Ergo Blockchain — Decentralized Money Without Masters | MEV-Resistant PoW",
-    description: "Open-source blockchain for programmable, censorship-resistant finance. eUTXO smart contracts, predictable $0.01 fees, ASIC-resistant mining. No pre-mine, no VC control. Built by cypherpunks for financial freedom.",
-    keywords: "ergo blockchain, decentralized finance, MEV resistant blockchain, eUTXO model, censorship resistant money, ASIC resistant mining, fair launch cryptocurrency, programmable money, financial sovereignty, cypherpunk blockchain",
+    title: "Ergo Blockchain — MEV-Resistant PoW Smart Contracts",
+    description: "PoW eUTXO blockchain for DeFi, privacy and sound money. Predictable low fees, no pre-mine, no VC – built by a cypherpunk community for financial freedom.",
+    keywords: "ergo blockchain, decentralized finance, MEV resistant blockchain, eUTXO model, censorship resistant money, ASIC resistant mining, fair launch cryptocurrency, programmable money, financial sovereignty, cypherpunk blockchain, DeFi, privacy, sound money",
     openGraph: {
       title: "Ergo Blockchain — Money Without Masters",
-      description: "Decentralized, programmable, censorship-resistant finance. Built by cypherpunks for freedom seekers. No MEV, no VC control, no compromises.",
+      description: "PoW eUTXO blockchain for DeFi, privacy and sound money. No MEV, no VC control – built by cypherpunks for financial freedom.",
       url: siteConfig.siteUrl,
       siteName: "Ergo Blockchain",
       type: "website",
@@ -44,7 +44,7 @@ export async function generateMetadata({ params }: HomePageProps): Promise<Metad
     twitter: {
       card: "summary_large_image",
       title: "Ergo Blockchain — Money Without Masters",
-      description: "Decentralized, programmable, censorship-resistant finance. Built by cypherpunks for freedom.",
+      description: "PoW eUTXO blockchain for DeFi, privacy and sound money. No MEV, no VC – built by cypherpunks for freedom.",
       images: ["https://ergoblockchain.org/og/homepage.png"],
       creator: siteConfig.twitterHandle,
       site: siteConfig.twitterHandle

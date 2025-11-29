@@ -7,7 +7,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { 
   ArrowUp, Copy, Check,
   Twitter, Linkedin, Facebook,
-  BookOpen, Hash,
+  BookOpen, Hash, Eye,
   ChevronRight, Info, AlertTriangle, Lightbulb,
   Code2, ExternalLink
 } from "lucide-react"
@@ -17,6 +17,8 @@ import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { cn } from "@/lib/utils"
 import { NewsletterSection } from "@/components/blog/newsletter-section"
+import { getRelatedInfographics } from "@/lib/related-content"
+import { Card, CardContent } from "@/components/ui/card"
 
 interface BlogPostClientPremiumProps {
   post: BlogPost
@@ -130,6 +132,49 @@ function NewsletterCTA() {
       </div>
     </div>
   )
+}
+
+// Recommended Infographics component - shows related infographics based on post tags
+function RecommendedInfographics({ tags }: { tags: string[] }) {
+  const relatedInfographics = getRelatedInfographics(tags, 4);
+  
+  if (relatedInfographics.length === 0) return null;
+  
+  return (
+    <section className="mt-16 pt-8 border-t border-neutral-800">
+      <h2 className="text-xl font-semibold mb-6 text-white flex items-center gap-2">
+        <Eye className="w-5 h-5 text-orange-400" />
+        Recommended Infographics
+      </h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        {relatedInfographics.map((infographic) => (
+          <Link 
+            key={infographic.slug} 
+            href={`/infographics/${infographic.slug}?utm_source=blog&utm_medium=related&utm_campaign=internal_linking`}
+            className="group block"
+          >
+            <Card className="bg-black/60 border border-white/10 rounded-2xl hover:border-orange-400/40 transition-all duration-300 h-full overflow-hidden">
+              <div className="aspect-[4/3] relative overflow-hidden">
+                <img
+                  src={infographic.previewImageUrl}
+                  alt={infographic.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <CardContent className="p-4">
+                <h3 className="font-medium text-white group-hover:text-orange-400 transition-colors line-clamp-2 text-sm">
+                  {infographic.title}
+                </h3>
+                <p className="text-xs text-neutral-500 mt-2 line-clamp-2">
+                  {infographic.shortDescription}
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+        ))}
+      </div>
+    </section>
+  );
 }
 
 // Author box component
@@ -679,6 +724,9 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
             </div>
           </aside>
         </div>
+
+        {/* Recommended Infographics */}
+        <RecommendedInfographics tags={post.tags || []} />
 
         {/* Related Posts - Simplified */}
         <section className="mt-16 pt-8 border-t border-neutral-800">

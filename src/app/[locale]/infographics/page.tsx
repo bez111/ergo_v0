@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { InfographicsClient } from "./InfographicsClient";
 import { siteConfig } from "@/config/site-config";
+import { infographics } from "@/data/infographics";
 
 const origin = siteConfig.siteUrl;
 const url = `${origin}/infographics`;
@@ -135,12 +136,41 @@ export default function InfographicsPage() {
     ]
   };
 
+  // ItemList JSON-LD for individual infographics
+  const itemListJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "@id": `${url}#itemlist`,
+    name: "Ergo Blockchain Infographics Collection",
+    description: "Visual guides to Ergo's PoW, eUTXO smart contracts, storage rent, privacy and global settlement.",
+    numberOfItems: infographics.length,
+    itemListElement: infographics.slice(0, 20).map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "ImageObject",
+        "@id": `${origin}/infographics/${item.slug}`,
+        name: item.title,
+        description: item.shortDescription,
+        url: `${origin}/infographics/${item.slug}`,
+        contentUrl: `${origin}${item.fullImageUrl}`,
+        thumbnailUrl: `${origin}${item.previewImageUrl}`,
+        datePublished: item.publishDate,
+        author: {
+          "@type": "Organization",
+          name: "Ergo Platform"
+        }
+      }
+    }))
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       
       <InfographicsClient />
     </>

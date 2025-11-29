@@ -13,6 +13,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { RelatedContent } from "@/components/seo/related-content"
+import { GlossaryLink } from "@/components/glossary"
 import { 
   GraduationCap,
   Eye,

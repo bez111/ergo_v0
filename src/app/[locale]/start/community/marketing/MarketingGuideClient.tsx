@@ -93,16 +93,14 @@ export function MarketingGuideClient() {
                   </Button>
                   <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
                     <a 
-                      href="https://t.me/ErgoSocials" 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      aria-label="Join Marketing Chat - Opens Telegram"
-                      title="Join ErgoSocials Telegram channel"
+                      href="/infographics"
+                      aria-label="Open Ergo infographics hub"
+                      title="Open Ergo infographics hub"
                     >
-                      Join Marketing Chat
+                      Explore Infographics
                     </a>
                   </Button>
-            </div>
+                </div>
                       </div>
                       <motion.div
                 className="relative z-10" 

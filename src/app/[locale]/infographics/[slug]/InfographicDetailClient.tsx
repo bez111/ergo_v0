@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { ArrowLeft, Calendar, Tag, Eye } from 'lucide-react';
 import { BackgroundWrapper } from '@/components/home/background-wrapper';
@@ -14,6 +15,23 @@ interface InfographicDetailClientProps {
 }
 
 export function InfographicDetailClient({ infographic }: InfographicDetailClientProps) {
+  const router = useRouter();
+  
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (typeof window !== 'undefined') {
+      const returnUrl = sessionStorage.getItem('infographics-return-url');
+      if (returnUrl && returnUrl.includes('/infographics')) {
+        sessionStorage.removeItem('infographics-return-url');
+        window.location.href = returnUrl;
+      } else {
+        router.push('/infographics');
+      }
+    } else {
+      router.push('/infographics');
+    }
+  };
+  
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
       year: 'numeric',
@@ -37,12 +55,10 @@ export function InfographicDetailClient({ infographic }: InfographicDetailClient
             <Button
               variant="ghost"
               className="text-neutral-400 hover:text-white"
-              asChild
+              onClick={handleBackClick}
             >
-              <a href="/infographics">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Infographics
-              </a>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Infographics
             </Button>
           </motion.div>
 
@@ -155,11 +171,9 @@ export function InfographicDetailClient({ infographic }: InfographicDetailClient
                 variant="outline"
                 size="lg"
                 className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black"
-                asChild
+                onClick={handleBackClick}
               >
-                <a href="/infographics">
-                  Browse All Infographics
-                </a>
+                Browse All Infographics
               </Button>
             </div>
           </motion.section>

@@ -1,28 +1,39 @@
 'use client';
 
 import React from 'react';
+import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
-import { ArrowLeft, Calendar, Tag, Eye, Shield, Coins, Users, Zap, Target, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Coins, Users, Zap, Target, CheckCircle, Tag, Shield, Eye } from 'lucide-react';
 import { BackgroundWrapper } from '@/components/home/background-wrapper';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { EmbedCode } from '@/components/infographics/EmbedCode';
-import { InfographicMeta, CATEGORY_LABELS, LEVEL_LABELS } from '@/types/infographic';
+import { InfographicHero } from '@/components/infographics/InfographicHero';
+import { InfographicMeta } from '@/types/infographic';
 
 interface VCChainVsErgoClientProps {
   infographic: InfographicMeta;
 }
 
 export function VCChainVsErgoClient({ infographic }: VCChainVsErgoClientProps) {
-  const formatDate = (dateString: string) => {
-    return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
+  const router = useRouter();
+  
+  const handleBackClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (typeof window !== 'undefined') {
+      const returnUrl = sessionStorage.getItem('infographics-return-url');
+      if (returnUrl && returnUrl.includes('/infographics')) {
+        sessionStorage.removeItem('infographics-return-url');
+        window.location.href = returnUrl;
+      } else {
+        router.push('/infographics');
+      }
+    } else {
+      router.push('/infographics');
+    }
   };
-
+  
   const keyPoints = [
     "Typical VC chains launch with private sales, ICOs and large insider allocations.",
     "In VC chains, teams, funds and foundations are first in line; the public is last.",
@@ -65,48 +76,18 @@ export function VCChainVsErgoClient({ infographic }: VCChainVsErgoClientProps) {
             <Button
               variant="ghost"
               className="text-neutral-400 hover:text-white"
-              asChild
+              onClick={handleBackClick}
             >
-              <a href="/infographics">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                Back to Infographics
-              </a>
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Infographics
             </Button>
           </motion.div>
 
-          {/* Header */}
-          <motion.header
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-center mb-12"
-          >
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-              {infographic.title}
-            </h1>
-            <p className="text-xl text-neutral-300 mb-6 max-w-3xl mx-auto">
-              How Ergo's fair PoW launch and Autolykos design differ from typical VC chains.
-            </p>
-            
-            {/* Meta information */}
-            <div className="flex flex-wrap justify-center gap-4 text-sm text-neutral-400">
-              <div className="flex items-center gap-2">
-                <Calendar className="h-4 w-4" />
-                <span>{formatDate(infographic.publishDate)}</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Eye className="h-4 w-4" />
-                <span>{infographic.readingTimeMinutes} min read</span>
-              </div>
-              <Badge variant="secondary" className="bg-orange-500/20 text-orange-400 border-orange-500/30">
-                <Tag className="h-3 w-3 mr-1" />
-                {CATEGORY_LABELS[infographic.category] || infographic.category}
-              </Badge>
-              <Badge variant="outline" className="border-neutral-600 text-neutral-300">
-                {LEVEL_LABELS[infographic.level] || infographic.level}
-              </Badge>
-            </div>
-          </motion.header>
+          {/* Header (shared hero layout) */}
+          <InfographicHero
+            infographic={infographic}
+            subtitle="How Ergo's fair PoW launch and Autolykos design differ from typical VC chains."
+          />
 
           {/* Main infographic */}
           <motion.div
