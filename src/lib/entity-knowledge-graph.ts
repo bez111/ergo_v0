@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any, import/no-anonymous-default-export */
 // Entity-based SEO & Knowledge Graph Optimization
 // Helps Google understand entities and relationships for better ranking
 

@@ -36,7 +36,7 @@ export function QuickActions() {
       title: t('actions.mineErg.title'),
       description: t('actions.mineErg.description'),
       iconName: "Cpu" as const,
-      href: "/use/mining",
+      href: "/miners",
       ariaLabel: "Start mining Ergo and secure the network",
       analytics: "quick-action-mine"
     },

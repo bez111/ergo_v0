@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
 import { Metadata } from 'next'
 import { SchemaOrg } from './schema-org'
 

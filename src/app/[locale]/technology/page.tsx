@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from 'next'
 import { getTranslations } from 'next-intl/server'
 import TechnologyClient from './TechnologyClient'
@@ -5,6 +7,7 @@ import { SchemaTypes } from '@/lib/schema-ultimate'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
 import { targetQuestions } from '@/lib/featured-snippets-optimizer'
 import { siteConfig } from '@/config/site-config'
+import { technologyTopics, categoryLabels } from '@/data/technology-topics'
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -161,6 +164,38 @@ export default async function TechnologyPage({ params }: { params: Promise<{ loc
   
   const datasetSchema = SchemaTypes.DatasetSchema()
 
+  // ItemList schema for technology topics (data-driven SEO)
+  const itemListSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    '@id': 'https://ergoblockchain.org/technology#itemlist',
+    name: 'Ergo Blockchain Technology Features',
+    description: 'Comprehensive list of Ergo blockchain technology features including eUTXO, ErgoScript, Autolykos PoW, and more.',
+    numberOfItems: technologyTopics.length,
+    itemListElement: technologyTopics.map((topic, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      item: {
+        '@type': 'TechArticle',
+        '@id': `https://ergoblockchain.org/technology/${topic.slug}`,
+        name: topic.title,
+        description: topic.description,
+        url: `https://ergoblockchain.org/technology/${topic.slug}`,
+        about: {
+          '@type': 'Thing',
+          name: topic.title,
+          description: topic.shortDescription || topic.description,
+        },
+        keywords: topic.keywords.join(', '),
+        articleSection: categoryLabels[topic.category],
+        author: {
+          '@type': 'Organization',
+          name: 'Ergo Platform',
+        },
+      },
+    })),
+  }
+
   return (
     <>
       {/* Существующие схемы */}
@@ -172,6 +207,9 @@ export default async function TechnologyPage({ params }: { params: Promise<{ loc
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetSchema) }} />
+      
+      {/* ItemList schema for technology topics */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }} />
       
       <TechnologyClient />
     </>

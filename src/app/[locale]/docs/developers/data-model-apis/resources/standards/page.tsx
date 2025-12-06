@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @next/next/no-html-link-for-pages */
+
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Shield, Smartphone, CreditCard, Zap, FileText, Settings, Globe, Code } from "lucide-react";

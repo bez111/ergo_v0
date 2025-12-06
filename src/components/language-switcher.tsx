@@ -1,5 +1,7 @@
 'use client';
 
+/* eslint-disable react-compiler/react-compiler, @typescript-eslint/no-unused-vars */
+
 import { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { useLocale, useTranslations } from 'next-intl';

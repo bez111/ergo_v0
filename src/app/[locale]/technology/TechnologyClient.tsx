@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/exhaustive-deps */
+
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -41,7 +43,6 @@ import {
 
 } from "lucide-react"
 import Link from "next/link"
-import { GlossaryLink } from "@/components/glossary"
 import { HexagonalGrid } from "@/components/ui-kit/signature-effects"
 import { useState, useEffect, useMemo } from "react"
 import Head from "next/head"
@@ -50,156 +51,33 @@ import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import Script from "next/script"
 import { useTranslations } from "next-intl"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
+import { technologyTopics, categoryLabels, categoryColors, type TechnologyTopic } from "@/data/technology-topics"
 
 export default function TechnologyPage() {
   const t = useTranslations('technology')
   
-  const techFeatures = [
-    {
-      icon: Layers,
-      title: t('features.eutxo.title'),
-      description: t('features.eutxo.description'),
-      color: "",
-      href: "/technology/eutxo-model",
-      details: [
-        { icon: Layers, title: t('features.eutxo.details.parallel.title'), description: t('features.eutxo.details.parallel.description') },
-        { icon: LinkIcon, title: t('features.eutxo.details.composability.title'), description: t('features.eutxo.details.composability.description') },
-        { icon: Shield, title: t('features.eutxo.details.security.title'), description: t('features.eutxo.details.security.description') },
-      ],
-    },
-    {
-      icon: Code,
-      title: t('features.ergoscript.title'),
-      description: t('features.ergoscript.description'),
-      color: "",
-      href: "/technology/ergoscript",
-      details: [
-        { icon: ShieldCheck, title: t('features.ergoscript.details.verification.title'), description: t('features.ergoscript.details.verification.description') },
-        { icon: Lock, title: t('features.ergoscript.details.privacy.title'), description: t('features.ergoscript.details.privacy.description') },
-        { icon: Code, title: t('features.ergoscript.details.safety.title'), description: t('features.ergoscript.details.safety.description') },
-      ],
-    },
-    {
-      icon: Cpu,
-      title: t('features.autolykos.title'),
-      description: t('features.autolykos.description'),
-      color: "",
-      href: "/technology/secure-pow",
-      details: [
-        { icon: Zap, title: t('features.autolykos.details.efficiency.title'), description: t('features.autolykos.details.efficiency.description') },
-        { icon: Users, title: t('features.autolykos.details.solo.title'), description: t('features.autolykos.details.solo.description') },
-        { icon: Shield, title: t('features.autolykos.details.asic.title'), description: t('features.autolykos.details.asic.description') },
-      ],
-    },
-    {
-      icon: Database,
-      title: t('features.storageRent.title'),
-      description: t('features.storageRent.description'),
-      color: "",
-      href: "/technology/storage-rent",
-      details: [
-        { icon: RefreshCw, title: t('features.storageRent.details.sustainable.title'), description: t('features.storageRent.details.sustainable.description') },
-        { icon: Timer, title: t('features.storageRent.details.rewards.title'), description: t('features.storageRent.details.rewards.description') },
-        { icon: Box, title: t('features.storageRent.details.prevention.title'), description: t('features.storageRent.details.prevention.description') },
-      ],
-    },
-    {
-      icon: Lock,
-      title: t('features.sigmaProtocols.title'),
-      description: t('features.sigmaProtocols.description'),
-      color: "",
-      href: "/technology/privacy-features",
-      details: [
-        { icon: Eye, title: t('features.sigmaProtocols.details.optionalPrivacy.title'), description: t('features.sigmaProtocols.details.optionalPrivacy.description') },
-        { icon: ShieldCheck, title: t('features.sigmaProtocols.details.advancedSecurity.title'), description: t('features.sigmaProtocols.details.advancedSecurity.description') },
-        { icon: Sparkles, title: t('features.sigmaProtocols.details.developerFriendly.title'), description: t('features.sigmaProtocols.details.developerFriendly.description') },
-      ],
-    },
-    {
-      icon: InfinityIcon,
-      title: t('features.nipopows.title'),
-      description: t('features.nipopows.description'),
-      color: "",
-      href: "/technology/nipopows",
-      details: [
-        { icon: Smartphone, title: t('features.nipopows.details.instantMobileSync.title'), description: t('features.nipopows.details.instantMobileSync.description') },
-        { icon: LinkIcon, title: t('features.nipopows.details.trustlessBridges.title'), description: t('features.nipopows.details.trustlessBridges.description') },
-        { icon: ShieldCheck, title: t('features.nipopows.details.cryptographicSecurity.title'), description: t('features.nipopows.details.cryptographicSecurity.description') },
-      ],
-    },
-    {
-      icon: Rocket,
-      title: t('features.subblocks.title'),
-      description: t('features.subblocks.description'),
-      color: "",
-      href: "/technology/subblocks",
-      details: [
-        { icon: Timer, title: t('features.subblocks.details.subSecondConfirmations.title'), description: t('features.subblocks.details.subSecondConfirmations.description') },
-        { icon: Lock, title: t('features.subblocks.details.layer1Security.title'), description: t('features.subblocks.details.layer1Security.description') },
-        { icon: Globe, title: t('features.subblocks.details.seamlessIntegration.title'), description: t('features.subblocks.details.seamlessIntegration.description') },
-      ],
-    },
-    {
-      icon: Box,
-      title: t('features.nativeTokens.title'),
-      description: t('features.nativeTokens.description'),
-      color: "",
-      href: "/technology/native-tokens",
-      details: [
-        { icon: Coins, title: t('features.nativeTokens.details.oneClickCreation.title'), description: t('features.nativeTokens.details.oneClickCreation.description') },
-        { icon: Layers, title: t('features.nativeTokens.details.defiReady.title'), description: t('features.nativeTokens.details.defiReady.description') },
-        { icon: Zap, title: t('features.nativeTokens.details.trueNativeAssets.title'), description: t('features.nativeTokens.details.trueNativeAssets.description') },
-      ],
-    },
-    {
-      icon: Eye,
-      title: t('features.oraclePools.title'),
-      description: t('features.oraclePools.description'),
-      color: "",
-      href: "/technology/oracle-pools",
-      details: [
-        { icon: BarChart3, title: t('features.oraclePools.details.reliablePriceFeeds.title'), description: t('features.oraclePools.details.reliablePriceFeeds.description') },
-        { icon: Layers, title: t('features.oraclePools.details.universalCompatibility.title'), description: t('features.oraclePools.details.universalCompatibility.description') },
-        { icon: ShieldCheck, title: t('features.oraclePools.details.fullyDecentralized.title'), description: t('features.oraclePools.details.fullyDecentralized.description') },
-      ],
-    },
-    {
-      icon: Settings,
-      title: t('features.velvetForks.title'),
-      description: t('features.velvetForks.description'),
-      color: "",
-      href: "/technology/velvet-forks",
-      details: [
-        { icon: RefreshCw, title: t('features.velvetForks.details.backwardCompatible.title'), description: t('features.velvetForks.details.backwardCompatible.description') },
-        { icon: TrendingUp, title: t('features.velvetForks.details.futureProof.title'), description: t('features.velvetForks.details.futureProof.description') },
-        { icon: Timer, title: t('features.velvetForks.details.gradualAdoption.title'), description: t('features.velvetForks.details.gradualAdoption.description') },
-      ],
-    },
-    {
-      icon: CircleDollarSign,
-      title: t('features.adaptiveEmission.title'),
-      description: t('features.adaptiveEmission.description'),
-      color: "",
-      href: "/technology/adaptive-emission",
-      details: [
-        { icon: CircleDollarSign, title: t('features.adaptiveEmission.details.parameterTuning.title'), description: t('features.adaptiveEmission.details.parameterTuning.description') },
-        { icon: TrendingUp, title: t('features.adaptiveEmission.details.economicFlexibility.title'), description: t('features.adaptiveEmission.details.economicFlexibility.description') },
-        { icon: Users, title: t('features.adaptiveEmission.details.communityInput.title'), description: t('features.adaptiveEmission.details.communityInput.description') },
-      ],
-    },
-    {
-      icon: ArrowRightLeft,
-      title: "Babel Fees",
-      description: "Pay transaction fees with any token instead of ERG through automated intermediaries",
-      color: "",
-      href: "/technology/babel-fees",
-      details: [
-        { icon: Coins, title: "Token Flexibility", description: "Use any token to pay transaction fees" },
-        { icon: Users, title: "Automated Exchange", description: "Intermediaries handle ERG conversion automatically" },
-        { icon: Zap, title: "Seamless UX", description: "No need to hold ERG for transactions" },
-      ],
-    },
-  ]
+  // Use centralized data from technology-topics.ts
+  // Map to format expected by the UI, with translations as fallback
+  const techFeatures = technologyTopics.map((topic) => ({
+    icon: topic.icon,
+    title: topic.title,
+    description: topic.description,
+    shortDescription: topic.shortDescription,
+    color: "",
+    href: `/technology/${topic.slug}`,
+    category: topic.category,
+    status: topic.status,
+    details: topic.details.map((d) => ({
+      icon: d.icon,
+      title: d.title,
+      description: d.description,
+    })),
+    // Relations for internal linking
+    relatedTopics: topic.relatedTopics,
+    relatedPatterns: topic.relatedPatterns,
+    relatedPlaybooks: topic.relatedPlaybooks,
+  }))
 
   const ctas = [
   {
@@ -436,9 +314,10 @@ export default function TechnologyPage() {
       }
 
   return (
-    <BackgroundWrapper>
+  <BackgroundWrapper>
       <div className="min-h-screen text-white relative overflow-hidden">
         <div className="container mx-auto px-4 py-16 relative z-10">
+        <Breadcrumbs items={[{ name: "Technology", href: "#" }]} variant="hidden" />
         {/* Hero */}
         <section className="pt-32 pb-16 px-4">
           <div className="max-w-7xl mx-auto text-center">
@@ -460,7 +339,7 @@ export default function TechnologyPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="mt-8"
+                className="mt-8 flex flex-col sm:flex-row gap-4 justify-center sm:justify-center"
               >
                 <Link href="/technology/map">
                   <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-4 rounded-xl text-lg">
@@ -469,12 +348,21 @@ export default function TechnologyPage() {
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </Button>
                 </Link>
+                <Link href="/compare">
+                  <Button
+                    variant="outline"
+                    className="border-white/40 text-white hover:bg-white/10 hover:border-orange-400/60 px-8 py-4 rounded-xl text-lg"
+                  >
+                    <BarChart3 className="w-5 h-5 mr-2" />
+                    See how Ergo compares
+                  </Button>
+                </Link>
               </motion.div>
             </FadeIn>
           </div>
         </section>
 
-        {/* Main Tech Features Grid */}
+        {/* Main Tech Features Grid - Original Design */}
         <FadeIn>
           <div className="max-w-7xl mx-auto mb-20">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -488,47 +376,55 @@ export default function TechnologyPage() {
                   className="group motion-reduce:transform-none motion-reduce:transition-none"
                 >
                   <Link href={feature.href || "/technology"} prefetch={false}>
-                    <Card
-                      className={`bg-black/80 border-white/10 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl`}
-                    >
-                      <CardHeader className="text-center">
-                        <div className="w-16 h-16 bg-neutral-800 rounded-lg flex items-center justify-center mx-auto mb-6">
-                          <feature.icon className="w-8 h-8 text-orange-400" aria-hidden="true" />
-                        </div>
-                        <CardTitle className="text-2xl font-bold mb-2 text-white">
-                          <div className="flex items-center justify-center gap-2 flex-wrap">
-                            {feature.title.includes("Research/In development") ? (
-                              <>
-                                {feature.title.replace(" (Research/In development)", "")}
-                                <Badge className="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-xs font-medium">
-                                  Research
-                                </Badge>
-                              </>
-                            ) : (
-                              feature.title
-                            )}
+                    <Card className="bg-black/80 border-white/10 backdrop-blur-sm hover:border-orange-500/50 transition-all duration-300 h-full cursor-pointer rounded-xl flex flex-col">
+                      <CardHeader className="flex-shrink-0 pb-3">
+                        {/* Compact header */}
+                        <div className="h-[100px] flex flex-col">
+                          <div className="flex items-start gap-3">
+                            <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">
+                              <feature.icon className="w-6 h-6 text-orange-400" aria-hidden="true" />
+                            </div>
+                            <div className="flex-1 min-w-0">
+                              <div className="flex items-start justify-between gap-2">
+                                <CardTitle className="text-lg font-bold text-white text-left line-clamp-2 leading-tight">
+                                  {feature.title}
+                                </CardTitle>
+                                <div className="flex items-center gap-1 flex-shrink-0">
+                                  {feature.status === "research" && (
+                                    <Badge className="bg-orange-500/10 text-orange-400 border border-orange-500/30 text-[9px] font-medium px-1.5 py-0">
+                                      Research
+                                    </Badge>
+                                  )}
+                                  <Badge className={`text-[9px] font-medium border px-1.5 py-0 ${categoryColors[feature.category]}`}>
+                                    {categoryLabels[feature.category]}
+                                  </Badge>
+                                </div>
+                              </div>
+                              <p className="text-neutral-400 text-sm line-clamp-2 text-left mt-1">
+                                {feature.shortDescription || feature.description}
+                              </p>
+                            </div>
                           </div>
-                        </CardTitle>
-                        <p className="text-neutral-300 leading-relaxed text-base min-h-[72px]">{feature.description}</p>
+                        </div>
                       </CardHeader>
-                      <CardContent>
-                        <div className="space-y-2 pt-4">
-                          {feature.details.map((d, i) => (
+                      <CardContent className="flex-1 pt-0">
+                        <div className="space-y-1.5">
+                          {feature.details.slice(0, 3).map((d, i) => (
                             <motion.div
                               key={d.title}
                               initial={{ opacity: 0, x: 10 }}
                               animate={{ opacity: 1, x: 0 }}
                               transition={{ delay: 0.35 + i * 0.06 }}
-                              className="flex items-start gap-3 p-2 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none"
+                              className="flex items-start gap-2 p-2 bg-neutral-900/60 rounded-lg hover:bg-orange-500/10 transition-all duration-200 motion-reduce:transform-none motion-reduce:transition-none"
                             >
                               {d.icon ? (
-                                <d.icon className="w-4 h-4 text-orange-400 mt-0.5" aria-hidden="true" />
+                                <d.icon className="w-4 h-4 text-orange-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
                               ) : (
-                                <span className="text-lg">•</span>
+                                <span className="text-sm flex-shrink-0">•</span>
                               )}
-                              <div>
-                                <h4 className="font-semibold text-white mb-0">{d.title}</h4>
-                                <p className="text-neutral-400 text-sm">{d.description}</p>
+                              <div className="flex-1 min-w-0">
+                                <h4 className="font-semibold text-white text-sm leading-tight">{d.title}</h4>
+                                <p className="text-neutral-400 text-xs line-clamp-1">{d.description}</p>
                               </div>
                             </motion.div>
                           ))}

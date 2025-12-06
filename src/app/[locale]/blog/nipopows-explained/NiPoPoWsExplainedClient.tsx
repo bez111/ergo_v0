@@ -1,7 +1,10 @@
 "use client"
 
-import React, { useState } from "react"
+/* eslint-disable react/no-unescaped-entities */
+
+import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
@@ -10,7 +13,7 @@ import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
-import { GlossaryLink } from "@/components/glossary"
+import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
 import { 
   ChevronDown,
   Shield,
@@ -151,7 +154,6 @@ export default function NiPoPoWsExplainedClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs 
             items={[
-              { name: "Home", href: "/" },
               { name: "Blog", href: "/blog" },
               { name: "How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo", href: "/blog/nipopows-explained" }
             ]}
@@ -180,6 +182,8 @@ export default function NiPoPoWsExplainedClient() {
               />
             </div>
           </motion.div>
+
+          
 
           {/* TL;DR Section - Compact */}
           <motion.section
@@ -285,6 +289,19 @@ export default function NiPoPoWsExplainedClient() {
             </div>
           </motion.section>
 
+          {/* NiPoPoWs Infographic */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="mb-12"
+          >
+            <ExpandableInfographic
+              src="/og/infographics/nipopows-explained.png"
+              alt="NiPoPoWs Explained: Compact Proofs for Light Clients & Interoperability"
+            />
+          </motion.section>
+
           {/* What Are NiPoPoWs */}
           <motion.section
             id="what-are-nipopows"
@@ -354,40 +371,6 @@ export default function NiPoPoWsExplainedClient() {
                 bringing more processing power with them, so that block time is always roughly the same – in Ergo's case, around two minutes.
               </p>
             </div>
-
-            <Card className="bg-gradient-to-br from-neutral-900 to-black border border-white/10 rounded-3xl p-8 mb-8">
-              <div className="flex flex-col items-center space-y-4">
-                {/* Pyramid visualization */}
-                <div className="flex flex-col items-center space-y-2">
-                  <div className="w-16 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded flex items-center justify-center text-xs font-bold">
-                    16x
-                  </div>
-                  <div className="flex space-x-1">
-                    <div className="w-12 h-6 bg-gradient-to-r from-orange-400 to-orange-500 rounded flex items-center justify-center text-xs">8x</div>
-                    <div className="w-12 h-6 bg-gradient-to-r from-orange-400 to-orange-500 rounded flex items-center justify-center text-xs">8x</div>
-                  </div>
-                  <div className="flex space-x-1">
-                    {[...Array(4)].map((_, i) => (
-                      <div key={i} className="w-8 h-4 bg-gradient-to-r from-orange-300 to-orange-400 rounded flex items-center justify-center text-xs">4x</div>
-                    ))}
-                  </div>
-                  <div className="flex space-x-1">
-                    {[...Array(8)].map((_, i) => (
-                      <div key={i} className="w-6 h-3 bg-gradient-to-r from-orange-200 to-orange-300 rounded text-xs"></div>
-                    ))}
-                  </div>
-                  <div className="flex space-x-1">
-                    {[...Array(16)].map((_, i) => (
-                      <div key={i} className="w-4 h-2 bg-gradient-to-r from-neutral-400 to-neutral-500 rounded text-xs"></div>
-                    ))}
-                  </div>
-                </div>
-                <div className="text-center mt-4">
-                  <p className="text-sm text-neutral-400">Superblock Hierarchy</p>
-                  <p className="text-xs text-neutral-500 mt-1">Higher levels = Rarer blocks with more difficulty</p>
-                </div>
-              </div>
-            </Card>
 
             <div className="bg-black border border-white/20 rounded-3xl p-8 space-y-6">
               <p className="text-gray-300 leading-relaxed">

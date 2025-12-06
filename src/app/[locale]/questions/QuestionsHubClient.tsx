@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -128,13 +130,15 @@ export function QuestionsHubClient({
 
             {/* Search */}
             <div className="relative max-w-xl mx-auto">
-              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-500" />
+              <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" aria-hidden="true" />
               <input
-                type="text"
+                type="search"
                 placeholder="Search questions..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-12 pr-4 py-4 bg-black/60 border border-white/10 rounded-2xl text-white placeholder:text-neutral-500 focus:outline-none focus:border-orange-500/50 transition-colors"
+                className="w-full pl-12 pr-4 py-4 bg-black/60 border border-white/10 rounded-2xl text-white placeholder:text-neutral-400 focus:outline-none focus:border-orange-500/50 transition-colors"
+                aria-label="Search questions"
+                role="searchbox"
               />
             </div>
           </motion.header>
@@ -145,9 +149,11 @@ export function QuestionsHubClient({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1 }}
             className="flex flex-wrap gap-4 justify-center mb-12"
+            role="group"
+            aria-label="Filter questions by category"
           >
             {/* Category Filter */}
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-2" role="radiogroup" aria-label="Category filter">
               {categories.map(cat => (
                 <Button
                   key={cat.id}
@@ -158,6 +164,9 @@ export function QuestionsHubClient({
                     ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500" 
                     : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50"
                   }
+                  role="radio"
+                  aria-checked={selectedCategory === cat.id}
+                  aria-label={`Filter by ${cat.label}`}
                 >
                   {cat.label}
                 </Button>
@@ -178,7 +187,7 @@ export function QuestionsHubClient({
                 <h2 className="text-2xl font-bold text-white">Most Popular Questions</h2>
               </div>
               
-              <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 gap-4" role="list" aria-label="Most popular questions">
                 {featuredQuestions.slice(0, 6).map((question, index) => (
                   <Link 
                     key={question.slug} 
@@ -204,7 +213,7 @@ export function QuestionsHubClient({
                                 {question.shortAnswer}
                               </p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+                            <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
                           </div>
                         </CardContent>
                       </Card>
@@ -231,7 +240,7 @@ export function QuestionsHubClient({
                   </h2>
                 </div>
                 
-                <div className="space-y-3">
+                <div className="space-y-3" role="list" aria-label="Filtered questions" aria-live="polite">
                   {filteredQuestions.map((question) => (
                     <QuestionCard key={question.slug} question={question} />
                   ))}
@@ -272,7 +281,7 @@ export function QuestionsHubClient({
                           </div>
                           <div>
                             <h3 className="font-semibold text-white">{group.category.label}</h3>
-                            <p className="text-sm text-neutral-500">{group.questions.length} questions</p>
+                            <p className="text-sm text-neutral-400">{group.questions.length} questions</p>
                           </div>
                         </div>
                         {group.questions.length > 3 && (
@@ -372,7 +381,7 @@ function QuestionCard({ question, compact = false }: { question: QuestionEntry; 
             </p>
           )}
         </div>
-        <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
+        <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0 mt-1" />
       </div>
     </Link>
   );

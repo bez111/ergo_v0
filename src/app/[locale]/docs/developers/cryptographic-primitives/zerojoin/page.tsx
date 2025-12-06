@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import { ArrowLeft, Shield, Eye, Lock, Users, Zap, BookOpen } from "lucide-react";
 import Link from "next/link";

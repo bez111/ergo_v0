@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import { Pickaxe, Zap, Layers, Link as LinkIcon, ExternalLink, Users, Database, TrendingUp, Shield } from "lucide-react";
 

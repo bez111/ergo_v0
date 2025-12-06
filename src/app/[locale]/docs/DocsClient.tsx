@@ -1,4 +1,6 @@
 "use client"
+
+/* eslint-disable react/no-unescaped-entities */
 import { 
   BookOpen, 
   Code, 
@@ -55,7 +57,7 @@ export default function DocsPage() {
             <BookOpen className="w-5 h-5 mr-2" /> Why Ergo?
           </Link>
           <Link
-            href="/docs/introduction/glossary"
+            href="/learn/glossary"
             className="inline-flex items-center px-6 py-3 bg-neutral-800 rounded-xl font-semibold text-white hover:bg-neutral-700"
           >
             <Search className="w-5 h-5 mr-2" /> Glossary
@@ -115,7 +117,7 @@ export default function DocsPage() {
           </Link>
 
           <Link 
-            href="/docs/introduction/glossary"
+            href="/learn/glossary"
             className="group bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:border-orange-500/50 hover:bg-neutral-800/50 transition-all duration-300 flex items-start gap-4"
           >
             <div className="w-12 h-12 bg-neutral-800 rounded-lg flex items-center justify-center flex-shrink-0">

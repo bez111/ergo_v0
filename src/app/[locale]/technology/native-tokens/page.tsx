@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, jsx-a11y/alt-text */
+
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -14,6 +16,7 @@ import { Coins, Package, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircl
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { RelatedTechnologies, RelatedPatterns, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -654,57 +657,20 @@ println(s"Token created in TX: \${token.creationTx}")`}</code>
           </section>
         </FadeIn>
 
-        <FadeIn delay={1.4}>
-          {/* What's Next Section */}
-          <section className="py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  What's <span className="text-orange-400">Next?</span>
-                </h2>
-                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Continue your native token development journey
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <a href="https://docs.ergoplatform.com/dev/tokens/" target="_blank" rel="noopener noreferrer" className="group block">
-                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Coins className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">Try Token Creator</h3>
-                        <p className="text-orange-400 font-medium">Interactive Tool</p>
-                      </div>
-                    </div>
-                    <p className="text-neutral-300 leading-relaxed">
-                      Create your first native token with our step-by-step interactive tool
-                    </p>
-                  </div>
-                </a>
-                
-                <Link href="/docs/ecosystem/nfts" className="group block">
-                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <BookOpen className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">View Documentation</h3>
-                        <p className="text-orange-400 font-medium">Learn More</p>
-                      </div>
-                    </div>
-                    <p className="text-neutral-300 leading-relaxed">
-                      Explore comprehensive guides and tutorials for native token development
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
+        {/* Related Technologies - Data-driven */}
+        <RelatedTechnologies 
+          currentSlug="native-tokens"
+          title="Related Technologies"
+        />
+
+        {/* Related Dev Patterns - Data-driven */}
+        <RelatedPatterns currentSlug="native-tokens" />
+
+        {/* Related Blog Articles - lightweight */}
+        <RelatedBlogPostsForTechnology currentSlug="native-tokens" />
+
+        {/* What's Next - CTA Section */}
+        <WhatsNextCTA currentSlug="native-tokens" />
       </BackgroundWrapper>
     </>
   )

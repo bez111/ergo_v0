@@ -10,7 +10,7 @@ export function MadeForMassAdoption() {
     {
       icon: Wallet,
       title: "Freedom seekers",
-      desc: "Take control of your money. Private transactions when you need them. No banks, no permissions, just freedom.",
+      desc: "Control your money. Private transactions when needed. No banks, no permissions, just freedom.",
       cta: "Get started",
       href: "/hodlers"
     },
@@ -61,7 +61,7 @@ export function MadeForMassAdoption() {
               opacity: 0.85
             }}
           >
-            Find your role in the decentralized future
+            Find your role in the decentralized economy
           </p>
         </div>
 
@@ -72,32 +72,36 @@ export function MadeForMassAdoption() {
               href={path.href}
               className="group block focus:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 focus-visible:ring-offset-black rounded-2xl"
             >
-              <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 rounded-3xl transition-all duration-300 hover:-translate-y-0.5 h-full flex flex-col cursor-pointer">
-                <div className="p-6 flex-1 flex flex-col">
+              <Card className="bg-black/80 border border-white/10 hover:bg-black/90 hover:border-orange-500/50 rounded-3xl transition-all duration-300 hover:-translate-y-0.5 cursor-pointer">
+                <div className="p-5">
                   {/* Icon and Title in same line */}
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex-shrink-0">
-                      <path.icon className="w-6 h-6 text-orange-400 group-hover:text-orange-300 transition-colors" />
+                    <div className="flex items-center gap-3">
+                      <div className="w-12 h-12 rounded-full bg-orange-500/10 border border-orange-500/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-orange-500/20 group-hover:border-orange-500/50 transition-all duration-300 flex-shrink-0">
+                        <path.icon className="w-6 h-6 text-orange-400 group-hover:text-orange-300 transition-colors" />
+                      </div>
+                      <h3 className="text-xl font-bold text-white group-hover:text-orange-100 transition-colors leading-tight">
+                        {path.title}
+                      </h3>
                     </div>
-                    <h3 className="text-xl font-bold text-white group-hover:text-orange-100 transition-colors leading-tight">
-                      {path.title}
-                    </h3>
+                    {/* Small arrow - always visible on mobile, hover on desktop */}
+                    <svg
+                      className="ml-auto w-4 h-4 text-orange-400 md:opacity-0 md:translate-x-1 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-200"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden="true"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </div>
                   
                   {/* Description */}
-                  <p className="text-gray-400 mb-4 leading-relaxed flex-1 group-hover:text-gray-300 transition-colors text-sm">
+                  <p className="text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors text-sm">
                     {path.desc}
                   </p>
                   
-                  {/* Hover Button */}
-                  <div className="opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/30 rounded-full text-orange-400 text-sm font-medium hover:bg-orange-500/20 hover:border-orange-500/50 transition-all duration-200">
-                      {path.cta}
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </div>
-                  </div>
+                  {/* Arrow now in header; no extra bottom element */}
                 </div>
               </Card>
             </Link>

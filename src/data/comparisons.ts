@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Comparison data for "Ergo vs X" landing pages
  * Used to generate /compare/ergo-vs-[competitor] pages
@@ -1081,6 +1083,225 @@ export const comparisons: ComparisonData[] = [
       {
         question: "Which is more decentralized?",
         answer: "Ergo, due to ASIC-resistant mining. Litecoin mining is dominated by ASIC farms, while Ergo remains GPU-mineable.",
+      },
+    ],
+    
+    publishDate: "2025-01-01",
+  },
+
+  // ============================================
+  // AVALANCHE (VC-funded Smart Contracts)
+  // ============================================
+  {
+    slug: "avalanche",
+    name: "Avalanche",
+    logo: "/logos/avalanche.svg",
+    color: "#E84142",
+    
+    seoTitle: "Ergo vs Avalanche 2025: Fair Launch PoW vs VC-Funded PoS Compared",
+    seoDescription: "Ergo vs Avalanche comparison: fair launch vs VC funding, ASIC-resistant PoW vs PoS, eUTXO vs account model, and true decentralization.",
+    keywords: [
+      "ergo vs avalanche",
+      "avalanche ergo comparison",
+      "avax smart contracts",
+      "pow vs pos",
+      "vc funded blockchain",
+      "ergo avalanche",
+      "fair launch vs ico",
+    ],
+    
+    summary: {
+      headline: "Grassroots PoW vs VC-Backed PoS",
+      subheadline: "Avalanche raised $290M+ from VCs with insider allocations. Ergo had zero pre-mine, zero VC money - just fair mining from block 1.",
+      points: [
+        {
+          title: "Token Distribution",
+          description: "Ergo: 100% mined, no pre-mine. Avalanche: 50% to insiders/team/foundation",
+          icon: "PieChart",
+        },
+        {
+          title: "Consensus",
+          description: "Ergo: GPU-mineable PoW. Avalanche: PoS requiring 2000 AVAX ($50K+) to validate",
+          icon: "Shield",
+        },
+        {
+          title: "Censorship Resistance",
+          description: "Ergo: permissionless mining. Avalanche: validators can be identified and pressured",
+          icon: "Lock",
+        },
+        {
+          title: "MEV Protection",
+          description: "Ergo: no front-running by design. Avalanche: MEV extraction is possible",
+          icon: "Eye",
+        },
+      ],
+    },
+    
+    matrixRows: [
+      { feature: "Consensus", ergo: "Autolykos PoW", competitor: "Avalanche PoS", ergoAdvantage: true, notes: "PoW is more censorship-resistant" },
+      { feature: "Token Distribution", ergo: "100% mined", competitor: "~50% insider allocation", ergoAdvantage: true, notes: "Fair launch vs ICO" },
+      { feature: "VC Funding", ergo: "None", competitor: "$290M+ raised", ergoAdvantage: true, notes: "No VC influence on Ergo" },
+      { feature: "Validator Requirements", ergo: "GPU (any)", competitor: "2000 AVAX (~$50K)", ergoAdvantage: true, notes: "Lower barrier to participate" },
+      { feature: "Smart Contracts", ergo: "ErgoScript (eUTXO)", competitor: "Solidity (EVM)", notes: "Different paradigms" },
+      { feature: "MEV", ergo: "Resistant by design", competitor: "Present", ergoAdvantage: true, notes: "eUTXO prevents front-running" },
+      { feature: "Privacy", ergo: "Sigma Protocols", competitor: "None native", ergoAdvantage: true, notes: "Ergo has L1 privacy" },
+      { feature: "TPS (claimed)", ergo: "~47 (scaling via L2)", competitor: "4500+", notes: "Different tradeoffs" },
+      { feature: "Finality", ergo: "~10 min (probabilistic)", competitor: "~1 second", notes: "Speed vs security tradeoff" },
+      { feature: "Decentralization", ergo: "Thousands of miners", competitor: "~1200 validators", ergoAdvantage: true, notes: "Mining is more permissionless" },
+    ],
+    
+    sections: [
+      {
+        title: "Token Distribution & Fairness",
+        content: "Avalanche conducted multiple funding rounds, raising over $290M from VCs including Andreessen Horowitz, Polychain, and Three Arrows Capital. Approximately 50% of tokens went to team, foundation, and investors. Ergo had zero pre-mine, zero ICO - every ERG was mined through PoW, ensuring no insider advantage.",
+        ergoAdvantage: "True fair launch with no insider allocation or VC influence.",
+      },
+      {
+        title: "Consensus & Censorship Resistance",
+        content: "Avalanche uses Proof-of-Stake where validators must stake 2000 AVAX (worth $50,000+). This creates barriers to entry and validators are identifiable, making them targets for regulatory pressure. Ergo's PoW allows anyone with a GPU to mine anonymously.",
+        ergoAdvantage: "Permissionless, anonymous participation in consensus.",
+      },
+      {
+        title: "MEV & Front-Running",
+        content: "Avalanche's account model and fast finality enable MEV extraction - validators and bots can front-run user transactions for profit. Ergo's eUTXO model makes front-running structurally impossible because transaction outputs are deterministic.",
+        ergoAdvantage: "No MEV extraction means fairer trading for users.",
+      },
+      {
+        title: "Smart Contract Model",
+        content: "Avalanche uses the EVM with Solidity - familiar to developers but with known issues (reentrancy, MEV). Ergo's ErgoScript on eUTXO is different but offers unique benefits: deterministic execution, parallel processing, and no reentrancy attacks.",
+        ergoAdvantage: "Safer smart contract execution model.",
+      },
+    ],
+    
+    relatedTags: ["Avalanche", "PoS", "VC funding", "EVM", "smart contracts", "AVAX"],
+    
+    faq: [
+      {
+        question: "Is Avalanche faster than Ergo?",
+        answer: "Yes, Avalanche has ~1 second finality vs Ergo's ~10 minutes. But this speed comes with tradeoffs: PoS centralization, MEV vulnerability, and less censorship resistance.",
+      },
+      {
+        question: "Why does VC funding matter?",
+        answer: "VC-backed chains have insiders who received tokens cheaply and may have influence over development. This creates misaligned incentives. Ergo's fair launch means no one has privileged access.",
+      },
+      {
+        question: "Can I build the same apps on both?",
+        answer: "Similar apps, different approaches. Avalanche uses Solidity/EVM, Ergo uses ErgoScript/eUTXO. Ergo's model prevents MEV and reentrancy attacks that affect EVM chains.",
+      },
+      {
+        question: "Which is more decentralized?",
+        answer: "Ergo. Anyone can mine with a GPU anonymously. Avalanche requires staking $50K+ and validators are identifiable, making them targets for regulation.",
+      },
+    ],
+    
+    publishDate: "2025-01-01",
+  },
+
+  // ============================================
+  // ALGORAND (Pure PoS, Centralization)
+  // ============================================
+  {
+    slug: "algorand",
+    name: "Algorand",
+    logo: "/logos/algorand.svg",
+    color: "#000000",
+    
+    seoTitle: "Ergo vs Algorand 2025: Decentralized PoW vs Corporate PoS Compared",
+    seoDescription: "Ergo vs Algorand comparison: grassroots PoW vs MIT-backed PoS, fair launch vs foundation control, and true decentralization vs corporate blockchain.",
+    keywords: [
+      "ergo vs algorand",
+      "algorand ergo comparison",
+      "algo smart contracts",
+      "pow vs pure pos",
+      "algorand centralization",
+      "ergo algorand",
+    ],
+    
+    summary: {
+      headline: "Cypherpunk PoW vs Corporate PoS",
+      subheadline: "Algorand is MIT-backed with foundation-controlled tokenomics. Ergo is community-built with fair distribution and no central authority.",
+      points: [
+        {
+          title: "Governance",
+          description: "Ergo: community-driven. Algorand: foundation-controlled with relay node requirements",
+          icon: "Users",
+        },
+        {
+          title: "Token Distribution",
+          description: "Ergo: 100% mined. Algorand: foundation controls billions of ALGO",
+          icon: "PieChart",
+        },
+        {
+          title: "Consensus",
+          description: "Ergo: permissionless PoW. Algorand: Pure PoS with participation requirements",
+          icon: "Shield",
+        },
+        {
+          title: "Philosophy",
+          description: "Ergo: cypherpunk, privacy-focused. Algorand: enterprise, compliance-friendly",
+          icon: "Heart",
+        },
+      ],
+    },
+    
+    matrixRows: [
+      { feature: "Consensus", ergo: "Autolykos PoW", competitor: "Pure PoS", ergoAdvantage: true, notes: "PoW is more censorship-resistant" },
+      { feature: "Token Distribution", ergo: "100% mined", competitor: "Foundation-controlled", ergoAdvantage: true, notes: "Fair launch vs controlled release" },
+      { feature: "Governance", ergo: "Community", competitor: "Foundation-led", ergoAdvantage: true, notes: "No central authority on Ergo" },
+      { feature: "Relay Nodes", ergo: "Not required", competitor: "Foundation-run", ergoAdvantage: true, notes: "Ergo is fully permissionless" },
+      { feature: "Smart Contracts", ergo: "ErgoScript (eUTXO)", competitor: "TEAL/PyTeal", notes: "Different paradigms" },
+      { feature: "Privacy", ergo: "Sigma Protocols", competitor: "None native", ergoAdvantage: true, notes: "Ergo has L1 privacy" },
+      { feature: "MEV", ergo: "Resistant by design", competitor: "Limited due to randomness", notes: "Both have MEV mitigation" },
+      { feature: "TPS", ergo: "~47 (L2 scaling)", competitor: "~1000", notes: "Different tradeoffs" },
+      { feature: "Finality", ergo: "~10 min", competitor: "~4 seconds", notes: "Speed vs decentralization" },
+      { feature: "Philosophy", ergo: "Cypherpunk", competitor: "Enterprise", ergoAdvantage: true, notes: "Depends on your values" },
+    ],
+    
+    sections: [
+      {
+        title: "Centralization Concerns",
+        content: "Algorand's network relies on foundation-run relay nodes for block propagation. While anyone can run a participation node, the relay infrastructure is centralized. The foundation also controls billions of ALGO tokens and has significant influence over the ecosystem. Ergo has no such central points of control.",
+        ergoAdvantage: "Fully decentralized with no foundation-controlled infrastructure.",
+      },
+      {
+        title: "Token Distribution",
+        content: "Algorand's tokenomics include foundation reserves, ecosystem funds, and controlled release schedules - all managed by a central entity. Ergo's entire supply was distributed through mining, with no pre-mine, no foundation allocation, and no controlled release.",
+        ergoAdvantage: "Fair distribution with no central entity controlling supply.",
+      },
+      {
+        title: "Philosophical Approach",
+        content: "Algorand positions itself for enterprise adoption with compliance-friendly features and academic backing from MIT. Ergo embraces cypherpunk values: privacy, censorship resistance, and financial sovereignty. Different target audiences, different design decisions.",
+        ergoAdvantage: "Built for individual freedom, not corporate compliance.",
+      },
+      {
+        title: "Smart Contract Capabilities",
+        content: "Algorand uses TEAL (Transaction Execution Approval Language) and PyTeal. Ergo uses ErgoScript. Both are capable but different. Ergo's eUTXO model provides unique benefits for DeFi: no reentrancy, deterministic execution, parallel processing.",
+        ergoAdvantage: "eUTXO model is safer for financial applications.",
+      },
+    ],
+    
+    relatedTags: ["Algorand", "PoS", "enterprise", "MIT", "ALGO", "Pure PoS"],
+    
+    faq: [
+      {
+        question: "Is Algorand decentralized?",
+        answer: "Partially. While anyone can run participation nodes, relay nodes are foundation-controlled. The foundation also controls significant token supply. Ergo is fully permissionless with no central infrastructure.",
+      },
+      {
+        question: "Which is faster?",
+        answer: "Algorand has ~4 second finality vs Ergo's ~10 minutes. But Algorand achieves this through centralized relay nodes and PoS, which have different security assumptions.",
+      },
+      {
+        question: "Can both do DeFi?",
+        answer: "Yes, both support DeFi. Algorand has growing DeFi with TEAL contracts. Ergo has active DeFi with unique MEV resistance due to eUTXO model.",
+      },
+      {
+        question: "Which is better for privacy?",
+        answer: "Ergo. Sigma Protocols enable zero-knowledge proofs at L1. Algorand has no native privacy features and is designed to be compliance-friendly.",
+      },
+      {
+        question: "Why choose Ergo over Algorand?",
+        answer: "If you value true decentralization, privacy, fair distribution, and cypherpunk principles over speed and enterprise adoption, Ergo aligns better with those values.",
       },
     ],
     

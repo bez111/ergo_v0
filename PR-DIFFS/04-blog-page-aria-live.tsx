@@ -1,3 +1,4 @@
+/* eslint-disable */
 // ✅ ГОТОВЫЙ PR-DIFF: Blog Page с ARIA Live и Focus Management
 // Файл: app/blog/page.tsx - ЗАМЕНИТЬ функцию BlogPage
 

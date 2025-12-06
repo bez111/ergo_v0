@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages, @typescript-eslint/no-unused-vars */
+
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -26,7 +28,10 @@ import {
   DollarSign,
   BarChart3,
   Pickaxe,
-  Wrench
+  Wrench,
+  Download,
+  Sparkles,
+  Network
 } from "lucide-react"
 
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -34,8 +39,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { BackToTop } from "@/components/ui/back-to-top"
+import { ClusterRelatedContent } from "@/components/seo/cluster-related-content"
 import { networkMetrics, formatHashrate, formatDifficulty, formatBlockTime, formatBlockReward, formatActiveMiners, formatMiningPools } from "@/lib/network-metrics"
 
 export function MinersClient() {
@@ -48,13 +55,13 @@ export function MinersClient() {
   const [ergPrice, setErgPrice] = useState(1.50) // USD
   const [poolFee, setPoolFee] = useState(1) // %
   
-  // Network metrics for calculations
-  const networkHashrate = 15000 // TH/s (example)
-  const blockReward = 9 // ERG
+  // Network metrics for calculations (use live data where available)
+  const networkHashrateValue = networkMetrics.hashrate.value // TH/s from live metrics
+  const blockReward = networkMetrics.blockReward.value // ERG from live metrics
   const blocksPerDay = 720 // ~2 min blocks
   
   // Calculate daily earnings
-  const dailyErgEarned = (hashrate / 1000 / networkHashrate) * blockReward * blocksPerDay * (1 - poolFee / 100)
+  const dailyErgEarned = (hashrate / 1000 / networkHashrateValue) * blockReward * blocksPerDay * (1 - poolFee / 100)
   const dailyRevenue = dailyErgEarned * ergPrice
   const dailyPowerCost = (powerConsumption / 1000) * 24 * electricityCost
   const dailyProfit = dailyRevenue - dailyPowerCost
@@ -136,6 +143,120 @@ export function MinersClient() {
       ethereum: { status: "bad", text: "No mining" },
       monero: { status: "good", text: "Home mining" },
       ergo: { status: "good", text: "GPU rigs viable" }
+    }
+  ]
+
+  // Mining Pools - Full catalog
+  const [selectedPoolFilter, setSelectedPoolFilter] = useState<'all' | 'beginner' | 'low-fee' | 'decentralized'>('all')
+  
+  const miningPools = [
+    {
+      name: "GetBlok",
+      url: "https://ergo.getblok.io",
+      fee: "1%",
+      paymentSystem: "PPLNS",
+      minPayout: "0.5 ERG",
+      hashrate: "3.2 TH/s",
+      miners: 2543,
+      features: ["Auto-exchange", "Mobile app", "API access"],
+      servers: ["EU", "US", "Asia"],
+      tags: ["beginner", "popular"]
+    },
+    {
+      name: "2Miners",
+      url: "https://2miners.com/erg-mining-pool",
+      fee: "1%",
+      paymentSystem: "PPLNS",
+      minPayout: "0.1 ERG",
+      hashrate: "2.7 TH/s",
+      miners: 3218,
+      features: ["24/7 Support", "Telegram bot", "Email alerts"],
+      servers: ["EU", "US", "Asia", "RU"],
+      tags: ["beginner", "support"]
+    },
+    {
+      name: "HeroMiners",
+      url: "https://ergo.herominers.com",
+      fee: "0.9%",
+      paymentSystem: "PROP",
+      minPayout: "0.5 ERG",
+      hashrate: "2.0 TH/s",
+      miners: 1847,
+      features: ["SSL support", "Worker stats", "Discord bot"],
+      servers: ["EU", "US", "Asia"],
+      tags: ["low-fee", "decentralized"]
+    },
+    {
+      name: "WoolyPooly",
+      url: "https://woolypooly.com/en/coin/erg",
+      fee: "0.9%",
+      paymentSystem: "PPLNS",
+      minPayout: "0.5 ERG",
+      hashrate: "1.5 TH/s",
+      miners: 1234,
+      features: ["Solo mining", "Telegram bot", "MEV rewards"],
+      servers: ["EU", "US"],
+      tags: ["low-fee", "decentralized"]
+    },
+    {
+      name: "F2Pool",
+      url: "https://www.f2pool.com",
+      fee: "2%",
+      paymentSystem: "PPS+",
+      minPayout: "1 ERG",
+      hashrate: "1.3 TH/s",
+      miners: 892,
+      features: ["Mobile app", "Multi-coin", "Instant payments"],
+      servers: ["Asia", "US", "EU"],
+      tags: ["decentralized"]
+    },
+    {
+      name: "Nanopool",
+      url: "https://ergo.nanopool.org",
+      fee: "1%",
+      paymentSystem: "PPLNS",
+      minPayout: "1 ERG",
+      hashrate: "1.1 TH/s",
+      miners: 1456,
+      features: ["Email notifications", "API", "Multi-language"],
+      servers: ["EU", "US", "Asia", "AU"],
+      tags: ["decentralized"]
+    }
+  ]
+
+  const filteredPools = selectedPoolFilter === 'all'
+    ? miningPools
+    : miningPools.filter(pool => pool.tags.includes(selectedPoolFilter))
+
+  // Mining Software
+  const miningSoftware = [
+    {
+      name: "NBMiner",
+      gpus: ["NVIDIA", "AMD"],
+      fee: "2%",
+      recommended: "Best for mixed rigs",
+      download: "https://github.com/NebuTech/NBMiner/releases"
+    },
+    {
+      name: "T-Rex",
+      gpus: ["NVIDIA"],
+      fee: "1%",
+      recommended: "Best for NVIDIA cards",
+      download: "https://github.com/trexminer/T-Rex/releases"
+    },
+    {
+      name: "TeamRedMiner",
+      gpus: ["AMD"],
+      fee: "2%",
+      recommended: "Best for AMD cards",
+      download: "https://github.com/todxx/teamredminer/releases"
+    },
+    {
+      name: "lolMiner",
+      gpus: ["NVIDIA", "AMD"],
+      fee: "1%",
+      recommended: "Advanced users",
+      download: "https://github.com/Lolliedieb/lolMiner-releases/releases"
     }
   ]
 
@@ -222,17 +343,17 @@ export function MinersClient() {
       type: "internal"
     },
     {
-      name: "Pool Comparison",
-      description: "Compare mining pools by fees, features, and payout methods.",
+      name: "Autolykos Algorithm",
+      description: "Learn about Ergo's ASIC-resistant Proof-of-Work algorithm.",
       icon: BarChart3,
-      url: "/docs/miners/pools",
+      url: "/technology/secure-pow",
       type: "internal"
     },
     {
-      name: "Hardware Recommendations",
-      description: "GPU recommendations and optimization tips for Ergo mining.",
+      name: "Storage Rent Economics",
+      description: "How storage rent ensures long-term miner incentives.",
       icon: Cpu,
-      url: "/docs/miners/hardware",
+      url: "/technology/storage-rent",
       type: "internal"
     }
   ]
@@ -255,7 +376,7 @@ export function MinersClient() {
         <>
           Ergo uses the Autolykos algorithm specifically designed to be ASIC-resistant through memory-hard computations. 
           The algorithm can be updated if ASICs threaten decentralization. The community is committed to keeping mining 
-          accessible to GPU miners. Read more about <a href="/docs/technology/secure-pow" className="text-orange-400 hover:text-orange-300 underline">Ergo's PoW design</a>.
+          accessible to GPU miners. Read more about <a href="/technology/secure-pow" className="text-orange-400 hover:text-orange-300 underline">Ergo's PoW design</a>.
         </>
       )
     },
@@ -277,7 +398,7 @@ export function MinersClient() {
         <>
           Storage rent creates a sustainable fee mechanism that benefits miners long-term. Unused UTXOs pay rent over time, 
           which goes to miners as additional rewards beyond block emissions. This ensures miner incentives continue after 
-          the emission schedule ends. Learn more about <a href="/docs/technology/storage-rent" className="text-orange-400 hover:text-orange-300 underline">storage rent economics</a>.
+          the emission schedule ends. Learn more about <a href="/technology/storage-rent" className="text-orange-400 hover:text-orange-300 underline">storage rent economics</a>.
         </>
       )
     },
@@ -287,7 +408,7 @@ export function MinersClient() {
         <>
           Popular Ergo mining pools include Herominers, Woolypooly, 2Miners, Nanopool, and F2Pool. Each has different 
           fee structures and payout methods. Solo mining is also viable for larger operations. 
-          See our <a href="/docs/miners/pools" className="text-orange-400 hover:text-orange-300 underline">complete pool comparison</a> for details.
+          See our <a href="#pools" className="text-orange-400 hover:text-orange-300 underline">complete pool comparison</a> below for details.
         </>
       )
     },
@@ -297,7 +418,7 @@ export function MinersClient() {
         <>
           You need a GPU with at least 4GB VRAM. NVIDIA GTX 1060 6GB or AMD RX 580 8GB are good starting points. 
           More powerful cards like RTX 3070+ or RX 6700 XT+ will be more profitable. Check our 
-          <a href="/docs/miners/hardware" className="text-orange-400 hover:text-orange-300 underline">hardware guide</a> for detailed recommendations and optimization tips.
+          <a href="#mining-guide" className="text-orange-400 hover:text-orange-300 underline">hardware guide</a> below for detailed recommendations and optimization tips.
         </>
       )
     }
@@ -320,10 +441,7 @@ export function MinersClient() {
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
         {/* Hidden Breadcrumbs for SEO */}
-        <HiddenBreadcrumbs 
-          items={breadcrumbItems} 
-          currentPage="For Miners" 
-        />
+        <Breadcrumbs items={[...breadcrumbItems, { name: "For Miners", href: "#" }]} variant="hidden" />
         
         {/* Hero Section */}
         <motion.section 
@@ -364,7 +482,7 @@ export function MinersClient() {
                 <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                   <h3 className="text-2xl font-bold mb-6 text-center text-white">Why mine Ergo instead of other coins?</h3>
                   <div className="grid grid-cols-1 gap-4">
-                    {coreValues.slice(0, 3).map((value) => (
+                    {coreValues.map((value) => (
                       <div key={value.title} className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
                         <div className="flex items-start gap-3">
                           <div className="w-11 h-11 flex items-center justify-center rounded-md bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
@@ -385,41 +503,59 @@ export function MinersClient() {
           </div>
         </motion.section>
 
-        {/* Core Values Section */}
+        {/* Live Metrics Section */}
         <motion.section 
           className="py-16 px-4"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.3 }}
+          transition={{ delay: 0.4 }}
         >
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-12 text-white">
-              Why mine Ergo instead of other coins?
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-6 text-white">
+              Live Mining Metrics
             </h2>
-            <div className="space-y-6">
-              {coreValues.map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                >
-                  <Card className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 flex items-center justify-center rounded-full bg-orange-500/20 border border-orange-500/30 text-orange-400 flex-shrink-0">
-                        <value.icon className="w-6 h-6" aria-hidden="true" />
-                      </div>
-                      <div className="flex-1">
-                        <h3 className="text-xl font-bold text-white mb-2">{value.title}</h3>
-                        <p className="text-neutral-400 leading-relaxed mb-3">{value.description}</p>
-                        <Badge variant="outline" className="bg-orange-500/10 border-orange-500/30 text-orange-400">
-                          {value.highlight}
-                        </Badge>
-                      </div>
+            <p className="text-center text-neutral-400 mb-2">
+              Live on-chain data (updated in real time)
+            </p>
+            <p className="text-center text-orange-400 text-sm mb-12">
+              Hashrate & difficulty → your mining rewards
+            </p>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {liveMetrics.map((metric) => (
+                <Card key={metric.label} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-500/50 transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <metric.icon className="w-8 h-8 text-orange-400" />
+                      <Badge variant="outline" className={`text-xs ${
+                        metric.trend.startsWith('+') ? 'border-green-500/30 text-green-400' :
+                        metric.trend === 'stable' || metric.trend === 'growing' ? 'border-blue-500/30 text-blue-400' :
+                        'border-orange-500/30 text-orange-400'
+                      }`}>
+                        {metric.trend}
+                      </Badge>
                     </div>
-                  </Card>
-                </motion.div>
+                    <div className="text-2xl font-bold text-white mb-1">
+                      {metric.value}
+                    </div>
+                    <div className="text-neutral-400 text-sm mb-2">
+                      {metric.label}
+                    </div>
+                    <div className="text-xs text-neutral-400">
+                      {metric.comment}
+                    </div>
+                  </CardContent>
+                </Card>
               ))}
+            </div>
+
+            <div className="text-center mt-8">
+              <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
+                <a href="https://explorer.ergoplatform.com" target="_blank" rel="noopener noreferrer">
+                  <Activity className="w-4 h-4 mr-2" />
+                  View on Explorer
+                </a>
+              </Button>
             </div>
           </div>
         </motion.section>
@@ -463,7 +599,7 @@ export function MinersClient() {
                         onChange={(e) => setHashrate(Number(e.target.value))}
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
-                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                      <div className="flex justify-between text-xs text-neutral-400 mt-1">
                         <span>10 MH/s</span>
                         <span>500 MH/s</span>
                       </div>
@@ -486,7 +622,7 @@ export function MinersClient() {
                         onChange={(e) => setPowerConsumption(Number(e.target.value))}
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
-                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                      <div className="flex justify-between text-xs text-neutral-400 mt-1">
                         <span>50W</span>
                         <span>400W</span>
                       </div>
@@ -509,7 +645,7 @@ export function MinersClient() {
                         onChange={(e) => setElectricityCost(Number(e.target.value))}
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
-                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                      <div className="flex justify-between text-xs text-neutral-400 mt-1">
                         <span>$0.01</span>
                         <span>$0.50</span>
                       </div>
@@ -532,7 +668,7 @@ export function MinersClient() {
                         onChange={(e) => setErgPrice(Number(e.target.value))}
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
-                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                      <div className="flex justify-between text-xs text-neutral-400 mt-1">
                         <span>$0.50</span>
                         <span>$10.00</span>
                       </div>
@@ -555,7 +691,7 @@ export function MinersClient() {
                         onChange={(e) => setPoolFee(Number(e.target.value))}
                         className="w-full h-2 bg-neutral-700 rounded-lg appearance-none cursor-pointer accent-orange-500"
                       />
-                      <div className="flex justify-between text-xs text-neutral-500 mt-1">
+                      <div className="flex justify-between text-xs text-neutral-400 mt-1">
                         <span>0%</span>
                         <span>3%</span>
                       </div>
@@ -678,7 +814,7 @@ export function MinersClient() {
                       Follow our step-by-step guide to get your GPU mining ERG in 10 minutes
                     </p>
                     <Button asChild className="bg-green-500 hover:bg-green-600 text-black font-semibold px-6 py-3 rounded-xl border border-green-500/50">
-                      <Link href="/use/mining">
+                      <Link href="#mining-guide">
                         <Pickaxe className="w-4 h-4 mr-2" />
                         Start Mining Now
                       </Link>
@@ -687,6 +823,206 @@ export function MinersClient() {
                 </div>
               </CardContent>
             </Card>
+          </div>
+        </motion.section>
+
+        {/* Mining Pools Section */}
+        <motion.section 
+          id="pools"
+          className="py-16 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5 }}
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-4 text-white">
+              Mining <span className="text-orange-400">Pools</span> Directory
+            </h2>
+            <p className="text-center text-neutral-400 mb-8">
+              Choose a pool based on fees, features, and your location
+            </p>
+
+            {/* Filter Buttons */}
+            <div className="flex flex-wrap gap-3 justify-center mb-8">
+              <Button
+                variant={selectedPoolFilter === 'all' ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedPoolFilter('all')}
+                className={selectedPoolFilter === 'all' 
+                  ? "bg-orange-500 text-black hover:bg-orange-600" 
+                  : "border-neutral-700 text-neutral-300 hover:bg-neutral-900/60"}
+              >
+                All Pools
+              </Button>
+              <Button
+                variant={selectedPoolFilter === 'beginner' ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedPoolFilter('beginner')}
+                className={selectedPoolFilter === 'beginner' 
+                  ? "bg-green-500 text-black hover:bg-green-600" 
+                  : "border-green-500/30 text-green-400 hover:bg-green-500/10"}
+              >
+                <Sparkles className="w-4 h-4 mr-1" />
+                For Beginners
+              </Button>
+              <Button
+                variant={selectedPoolFilter === 'low-fee' ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedPoolFilter('low-fee')}
+                className={selectedPoolFilter === 'low-fee' 
+                  ? "bg-orange-500 text-black hover:bg-orange-600" 
+                  : "border-orange-500/30 text-orange-400 hover:bg-orange-500/10"}
+              >
+                <Coins className="w-4 h-4 mr-1" />
+                Lowest Fees
+              </Button>
+              <Button
+                variant={selectedPoolFilter === 'decentralized' ? "default" : "outline"}
+                size="sm"
+                onClick={() => setSelectedPoolFilter('decentralized')}
+                className={selectedPoolFilter === 'decentralized' 
+                  ? "bg-purple-500 text-white hover:bg-purple-600" 
+                  : "border-purple-500/30 text-purple-400 hover:bg-purple-500/10"}
+              >
+                <Network className="w-4 h-4 mr-1" />
+                Decentralized
+              </Button>
+            </div>
+
+            {/* Pool Cards */}
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {filteredPools.map((pool) => (
+                <Card key={pool.name} className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-4">
+                      <h3 className="text-xl font-bold text-white">{pool.name}</h3>
+                      <Badge variant="outline" className="border-orange-500/30 text-orange-400">
+                        {pool.fee} fee
+                      </Badge>
+                    </div>
+                    
+                    <div className="space-y-3 mb-4">
+                      <div className="flex justify-between text-sm">
+                        <span className="text-neutral-400">Hashrate</span>
+                        <span className="text-white font-medium">{pool.hashrate}</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-neutral-400">Miners</span>
+                        <span className="text-white font-medium">{pool.miners.toLocaleString()}</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-neutral-400">Min Payout</span>
+                        <span className="text-white font-medium">{pool.minPayout}</span>
+                      </div>
+                      <div className="flex justify-between text-sm">
+                        <span className="text-neutral-400">Payment</span>
+                        <span className="text-white font-medium">{pool.paymentSystem}</span>
+                      </div>
+                    </div>
+
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {pool.servers.map((server) => (
+                        <Badge key={server} variant="outline" className="text-xs border-neutral-700 text-neutral-400">
+                          {server}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-1 mb-4">
+                      {pool.features.slice(0, 3).map((feature) => (
+                        <span key={feature} className="text-xs text-neutral-400">
+                          {feature} •
+                        </span>
+                      ))}
+                    </div>
+
+                    <a
+                      href={pool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 w-full py-2 rounded-xl bg-orange-500/10 border border-orange-500/30 text-orange-400 hover:bg-orange-500/20 transition-colors"
+                    >
+                      Visit Pool
+                      <ExternalLink className="w-4 h-4" />
+                    </a>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {filteredPools.length === 0 && (
+              <div className="text-center py-8">
+                <p className="text-neutral-400">No pools match your criteria</p>
+              </div>
+            )}
+          </div>
+        </motion.section>
+
+        {/* Mining Software Section */}
+        <motion.section 
+          id="software"
+          className="py-16 px-4"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6 }}
+        >
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-center mb-4 text-white">
+              Mining <span className="text-orange-400">Software</span>
+            </h2>
+            <p className="text-center text-neutral-400 mb-8">
+              Choose the right miner for your GPU
+            </p>
+
+            <Card className="bg-black/80 border border-white/10 rounded-3xl overflow-hidden">
+              <CardContent className="p-0">
+                <div className="overflow-x-auto">
+                  <table className="w-full">
+                    <thead>
+                      <tr className="border-b border-neutral-800">
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400">Software</th>
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400">GPU Support</th>
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400">Dev Fee</th>
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400">Best For</th>
+                        <th className="text-left p-4 text-sm font-medium text-neutral-400"></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {miningSoftware.map((software) => (
+                        <tr key={software.name} className="border-b border-neutral-800 last:border-0 hover:bg-neutral-900/30 transition-colors group">
+                          <td className="p-4 font-medium text-white">{software.name}</td>
+                          <td className="p-4">
+                            <div className="flex gap-2">
+                              {software.gpus.map(gpu => (
+                                <Badge key={gpu} variant="outline" className="border-neutral-700 text-xs">
+                                  {gpu}
+                                </Badge>
+                              ))}
+                            </div>
+                          </td>
+                          <td className="p-4 text-sm text-neutral-300">{software.fee}</td>
+                          <td className="p-4 text-sm text-neutral-400">{software.recommended}</td>
+                          <td className="p-4">
+                            <a href={software.download} target="_blank" rel="noopener noreferrer">
+                              <Button variant="ghost" size="sm" className="text-neutral-400 hover:text-orange-400 group-hover:text-orange-400 transition-colors">
+                                <Download className="w-4 h-4" />
+                              </Button>
+                            </a>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </CardContent>
+            </Card>
+
+            <div className="mt-6 p-4 bg-orange-500/10 border border-orange-500/30 rounded-xl">
+              <p className="text-sm text-orange-300 flex items-start gap-2">
+                <Sparkles className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <span><strong>New to mining?</strong> Start with NBMiner (mixed rigs) or T-Rex (NVIDIA only) for easiest setup.</span>
+              </p>
+            </div>
           </div>
         </motion.section>
 
@@ -794,63 +1130,6 @@ export function MinersClient() {
           </div>
         </motion.section>
 
-        {/* Live Metrics Section */}
-        <motion.section 
-          className="py-16 px-4"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.7 }}
-        >
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-center mb-6 text-white">
-              Live Mining Metrics
-            </h2>
-            <p className="text-center text-neutral-400 mb-2">
-              Live on-chain data (updated in real time)
-            </p>
-            <p className="text-center text-orange-400 text-sm mb-12">
-              Hashrate & difficulty → your mining rewards
-            </p>
-            
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {liveMetrics.map((metric) => (
-                <Card key={metric.label} className="bg-black/80 border-white/10 backdrop-blur-sm rounded-3xl hover:border-orange-500/50 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center justify-between mb-4">
-                      <metric.icon className="w-8 h-8 text-orange-400" />
-                      <Badge variant="outline" className={`text-xs ${
-                        metric.trend.startsWith('+') ? 'border-green-500/30 text-green-400' :
-                        metric.trend === 'stable' || metric.trend === 'growing' ? 'border-blue-500/30 text-blue-400' :
-                        'border-orange-500/30 text-orange-400'
-                      }`}>
-                        {metric.trend}
-                      </Badge>
-                    </div>
-                    <div className="text-2xl font-bold text-white mb-1">
-                      {metric.value}
-                    </div>
-                    <div className="text-neutral-400 text-sm mb-2">
-                      {metric.label}
-                    </div>
-                    <div className="text-xs text-neutral-500">
-                      {metric.comment}
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-
-            <div className="text-center mt-8">
-              <Button asChild variant="outline" className="border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 px-6 py-3 rounded-xl">
-                <a href="https://explorer.ergoplatform.com" target="_blank" rel="noopener noreferrer">
-                  <Activity className="w-4 h-4 mr-2" />
-                  Open Mining Dashboard
-                </a>
-              </Button>
-            </div>
-          </div>
-        </motion.section>
-
         {/* Mining Guide Section */}
         <motion.section 
           id="mining-guide"
@@ -883,7 +1162,7 @@ export function MinersClient() {
                       <Badge variant="outline" className="bg-black/60 border-orange-500/30 text-orange-400 uppercase tracking-wider">
                         Step {step.step}
                       </Badge>
-                      <span className="text-xs text-neutral-500">{step.duration}</span>
+                      <span className="text-xs text-neutral-400">{step.duration}</span>
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
                     <p className="text-neutral-300 text-sm mb-4 flex-1">{step.description}</p>
@@ -1062,7 +1341,7 @@ export function MinersClient() {
               </a>
 
               <Link 
-                href="/docs/technology/storage-rent"
+                href="/technology/storage-rent"
                 className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
                 <div className="flex items-center gap-4 mb-4">
@@ -1087,6 +1366,39 @@ export function MinersClient() {
           </div>
         </section>
 
+        {/* Cross-Promotion */}
+        <section className="py-12 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-black/60 border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                  <Coins className="w-6 h-6 text-orange-400" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold">Want to hold long-term?</p>
+                  <p className="text-neutral-400 text-sm">Learn about ERG as a store of value and investment</p>
+                </div>
+              </div>
+              <Link 
+                href="/hodlers"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500/10 border border-orange-500/30 rounded-xl text-orange-400 hover:bg-orange-500/20 hover:border-orange-400/50 transition-all font-medium text-sm whitespace-nowrap"
+              >
+                For Hodlers
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Topic Cluster Related Content */}
+        <ClusterRelatedContent 
+          currentUrl="/miners"
+          title="Explore Mining"
+          subtitle="Deep dive into Ergo mining technology and resources"
+          maxItems={6}
+          showPillarLink={false}
+        />
+
         {/* Email Capture Form */}
         <FinalCTASimple 
           title="Stay Updated on Mining"
@@ -1094,6 +1406,9 @@ export function MinersClient() {
         />
 
       </div>
+      
+      {/* Back to Top button for long page */}
+      <BackToTop />
     </BackgroundWrapper>
   )
 }

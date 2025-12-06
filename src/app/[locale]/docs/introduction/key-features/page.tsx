@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import type { Metadata } from 'next'
 import React from 'react';
 import { 

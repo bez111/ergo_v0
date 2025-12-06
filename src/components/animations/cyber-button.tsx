@@ -39,7 +39,7 @@ export function CyberButton({
         variant={variant} 
         size={size} 
         onClick={onClick} 
-        className={`text-black ${className}`} 
+        className={className} 
         asChild={asChild}
       >
         {children}

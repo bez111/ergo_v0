@@ -57,7 +57,7 @@ export async function GET() {
       },
       {
         title: "Wallets",
-        url: "/start/wallets",
+        url: "/wallet",
         description: "Choose the right Ergo wallet for your needs",
         keywords: ["wallets", "nautilus", "ergo mobile", "safew", "satergo"],
         content: "Secure your ERG with various wallet options for desktop, mobile, and browser",

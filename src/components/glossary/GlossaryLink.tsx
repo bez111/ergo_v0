@@ -1,10 +1,12 @@
 "use client";
 
+/* eslint-disable react-hooks/set-state-in-effect */
+
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ExternalLink } from "lucide-react";
-import { getTermBySlug, glossaryTerms, GlossaryTerm } from "@/data/glossary";
+import { getTermBySlug, glossaryTerms } from "@/data/glossary";
 
 interface GlossaryLinkProps {
   /** The term slug or exact term name to link to */
@@ -47,7 +49,6 @@ export function GlossaryLink({
     if (isHovered && linkRef.current) {
       const rect = linkRef.current.getBoundingClientRect();
       const spaceAbove = rect.top;
-      const spaceBelow = window.innerHeight - rect.bottom;
       
       // Show tooltip below if not enough space above
       setTooltipPosition(spaceAbove < 150 ? "bottom" : "top");
@@ -85,25 +86,25 @@ export function GlossaryLink({
       {showTooltip && (
         <AnimatePresence>
           {isHovered && (
-            <motion.div
+            <motion.span
               initial={{ opacity: 0, y: tooltipPosition === "top" ? 10 : -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: tooltipPosition === "top" ? 10 : -10 }}
               transition={{ duration: 0.15 }}
-              className={`absolute z-50 w-72 p-4 bg-neutral-900 border border-white/10 rounded-xl shadow-xl
+              className={`absolute z-50 w-72 p-4 bg-neutral-900 border border-white/10 rounded-xl shadow-xl block
                          ${tooltipPosition === "top" ? "bottom-full mb-2" : "top-full mt-2"} left-1/2 -translate-x-1/2`}
               style={{ pointerEvents: "none" }}
             >
               {/* Arrow */}
-              <div
-                className={`absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-neutral-900 border-white/10 rotate-45
+              <span
+                className={`absolute left-1/2 -translate-x-1/2 w-3 h-3 bg-neutral-900 border-white/10 rotate-45 block
                            ${tooltipPosition === "top" ? "bottom-[-6px] border-r border-b" : "top-[-6px] border-l border-t"}`}
               />
 
               {/* Content */}
-              <div className="relative">
-                <div className="flex items-center justify-between mb-2">
-                  <h4 className="font-bold text-white">{glossaryTerm.term}</h4>
+              <span className="relative block">
+                <span className="flex items-center justify-between mb-2">
+                  <strong className="font-bold text-white">{glossaryTerm.term}</strong>
                   <span className={`text-xs px-2 py-0.5 rounded-full
                     ${glossaryTerm.difficulty === 'beginner' ? 'bg-green-500/20 text-green-400' :
                       glossaryTerm.difficulty === 'intermediate' ? 'bg-yellow-500/20 text-yellow-400' :
@@ -111,16 +112,16 @@ export function GlossaryLink({
                   >
                     {glossaryTerm.difficulty}
                   </span>
-                </div>
-                <p className="text-sm text-neutral-400 line-clamp-3">
+                </span>
+                <span className="text-sm text-neutral-400 line-clamp-3 block">
                   {glossaryTerm.shortDefinition}
-                </p>
-                <div className="flex items-center gap-1 mt-3 text-xs text-orange-400">
+                </span>
+                <span className="flex items-center gap-1 mt-3 text-xs text-orange-400">
                   <ExternalLink className="w-3 h-3" />
                   <span>Click to learn more</span>
-                </div>
-              </div>
-            </motion.div>
+                </span>
+              </span>
+            </motion.span>
           )}
         </AnimatePresence>
       )}

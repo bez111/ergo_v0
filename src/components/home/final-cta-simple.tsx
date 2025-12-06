@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities */
+
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -204,7 +206,7 @@ export function FinalCTASimple({
   }
 
   return (
-    <section ref={sectionRef} className={`py-20 px-4 ${className}`}>
+    <section ref={sectionRef} className={`py-20 px-4 ${className}`} aria-labelledby="newsletter-heading">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -215,10 +217,10 @@ export function FinalCTASimple({
             <CardContent className="p-12 text-center">
               <div className="mb-8">
                 <div className="inline-flex items-center gap-4 mb-6">
-                  <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center">
+                  <div className="w-12 h-12 bg-orange-500/20 border border-orange-500/30 rounded-xl flex items-center justify-center" aria-hidden="true">
                     <Mail className="w-6 h-6 text-orange-400" />
                   </div>
-                  <h2 className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
+                  <h2 id="newsletter-heading" className="text-3xl md:text-4xl font-bold text-white">{title}</h2>
                 </div>
                 <p className="text-lg text-gray-300 max-w-2xl mx-auto mb-8">
                   {description}
@@ -232,7 +234,7 @@ export function FinalCTASimple({
                   <p className="text-gray-300 text-sm">Welcome to the Ergo builders community!</p>
                 </div>
               ) : (
-                <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto mb-8">
+                <form onSubmit={handleEmailSubmit} className="max-w-md mx-auto mb-8" aria-label="Newsletter subscription form">
                   <div className="flex flex-col sm:flex-row gap-3">
                     <Input
                       ref={inputRef}
@@ -243,6 +245,8 @@ export function FinalCTASimple({
                       onBlur={handleEmailBlur}
                       className="flex-1 bg-black/60 border-white/20 text-white placeholder:text-gray-400 focus:border-orange-400/50 focus:ring-orange-400/20 rounded-xl"
                       required
+                      aria-label="Email address"
+                      aria-describedby={emailError ? "email-error" : undefined}
                     />
                     <Button
                       type="submit"

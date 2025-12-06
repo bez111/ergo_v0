@@ -17,7 +17,7 @@ const SkeletonTable = () => (
 
 // Critical components (load immediately)
 export const CriticalComponents = {
-  HeroSection: dynamic(() => import('@/src/components/home/hero-section').then(mod => ({ default: mod.HeroSection })), {
+  HeroSection: dynamic(() => import('@/components/home/hero-section').then(mod => ({ default: mod.HeroSection })), {
     ssr: true // Critical for LCP
   }),
   
@@ -28,12 +28,12 @@ export const CriticalComponents = {
 
 // Above-the-fold components (high priority)
 export const AboveFoldComponents = {
-  QuickActions: dynamic(() => import('@/src/components/home/quick-actions').then(mod => ({ default: mod.QuickActions })), {
+  QuickActions: dynamic(() => import('@/components/home/quick-actions').then(mod => ({ default: mod.QuickActions })), {
     loading: () => <SkeletonCard />,
     ssr: true
   }),
   
-  CorePillars: dynamic(() => import('@/src/components/home/core-pillars').then(mod => ({ default: mod.CorePillars })), {
+  CorePillars: dynamic(() => import('@/components/home/core-pillars').then(mod => ({ default: mod.CorePillars })), {
     loading: () => <SkeletonCard />,
     ssr: true
   })
@@ -42,18 +42,18 @@ export const AboveFoldComponents = {
 // Below-the-fold components (lazy load)
 export const BelowFoldComponents = {
   // Heavy animation components
-  Differentiation: dynamic(() => import('@/src/components/home/differentiation').then(mod => ({ default: mod.Differentiation })), {
+  Differentiation: dynamic(() => import('@/components/home/differentiation').then(mod => ({ default: mod.Differentiation })), {
     loading: () => <SkeletonCard />,
     ssr: true
   }),
   
-  EcosystemShowcase: dynamic(() => import('@/src/components/home/ecosystem-showcase').then(mod => ({ default: mod.EcosystemShowcase })), {
+  EcosystemShowcase: dynamic(() => import('@/components/home/ecosystem-showcase').then(mod => ({ default: mod.EcosystemShowcase })), {
     loading: () => <SkeletonCard />,
     ssr: true
   }),
   
   // Interactive components
-  BlogSection: dynamic(() => import('@/src/components/home/blog-section').then(mod => ({ default: mod.BlogSection })), {
+  BlogSection: dynamic(() => import('@/components/home/blog-section').then(mod => ({ default: mod.BlogSection })), {
     loading: () => <SkeletonCard />,
     ssr: true
   })
@@ -71,7 +71,7 @@ export const InteractiveComponents = {
     ssr: true
   }),
   
-  LivePlayground: dynamic(() => import('@/src/components/ui-kit/live-playground').then(mod => ({ default: mod.LivePlayground })), {
+  LivePlayground: dynamic(() => import('@/components/ui-kit/live-playground').then(mod => ({ default: mod.LivePlayground })), {
     loading: () => <SkeletonCard />,
     ssr: true
   })

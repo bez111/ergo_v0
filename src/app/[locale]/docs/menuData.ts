@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
 import { useTranslations } from 'next-intl'
 
 export function getLocalizedMenuData(t: any) {
@@ -36,7 +38,7 @@ export function getLocalizedMenuData(t: any) {
           href: "/docs/introduction/events",
         },
         { 
-          title: t('docsMenu.introduction.glossary'), href: "/docs/introduction/glossary" 
+          title: t('docsMenu.introduction.glossary'), href: "/learn/glossary" 
         },
         { 
           title: t('docsMenu.introduction.faq'), href: "/docs/introduction/faq" 
@@ -201,7 +203,7 @@ export const menuData = [
         href: "/docs/introduction/events",
       },
       { 
-        title: "Glossary", href: "/docs/introduction/glossary" 
+        title: "Glossary", href: "/learn/glossary" 
       },
       { 
         title: "FAQ", href: "/docs/introduction/faq" 

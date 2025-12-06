@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+
 import React from "react";
 import { Shield, Zap, Code2, Coins } from "lucide-react";
 

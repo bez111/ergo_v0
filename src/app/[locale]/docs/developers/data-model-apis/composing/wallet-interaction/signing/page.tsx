@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
 import Link from "next/link";
 
@@ -46,7 +48,7 @@ export default function SigningPage() {
         <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4">Complex Expressions</h2>
           <p className="text-gray-300 mb-4">
-            Complex expressions, such as <code className="bg-neutral-700 px-2 py-1 rounded">dlog(x₁) ∨ (dlog(x₂) ∧ dlog(x₃))</code>, where <code className="bg-neutral-700 px-2 py-1 rounded">dlog(x)</code> means "prove me knowledge of a secret <code className="bg-neutral-700 px-2 py-1 rounded">w</code>, such as for a known group with generator <code className="bg-neutral-700 px-2 py-1 rounded">g</code>, <code className="bg-neutral-700 px-2 py-1 rounded">g^w = x</code>, via a non-interactive form of the Schnorr protocol", may be encountered. Internally, this expression is represented as a tree (TODO). This proof is to be proven and then serialized into a binary spending proof (which could be included in a transaction) as follows:
+            Complex expressions, such as <code className="bg-neutral-700 px-2 py-1 rounded">dlog(x₁) ∨ (dlog(x₂) ∧ dlog(x₃))</code>, where <code className="bg-neutral-700 px-2 py-1 rounded">dlog(x)</code> means "prove me knowledge of a secret <code className="bg-neutral-700 px-2 py-1 rounded">w</code>, such as for a known group with generator <code className="bg-neutral-700 px-2 py-1 rounded">g</code>, <code className="bg-neutral-700 px-2 py-1 rounded">g^w = x</code>, via a non-interactive form of the Schnorr protocol", may be encountered. Internally, this expression is represented as a tree structure. This proof is to be proven and then serialized into a binary spending proof (which could be included in a transaction) as follows:
           </p>
         </div>
 
@@ -89,7 +91,7 @@ export default function SigningPage() {
         <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4">Binary Serialization</h2>
           <p className="text-gray-300">
-            Finally, to obtain a flat binary string containing <code className="bg-neutral-700 px-2 py-1 rounded">(e, z)</code> pairs (challenge and prover's response for a leaf sub-protocol) from the tree, follow these steps: (TODO)
+            Finally, to obtain a flat binary string containing <code className="bg-neutral-700 px-2 py-1 rounded">(e, z)</code> pairs (challenge and prover's response for a leaf sub-protocol) from the tree, traverse the tree in depth-first order and collect all leaf responses.
           </p>
         </div>
       </div>

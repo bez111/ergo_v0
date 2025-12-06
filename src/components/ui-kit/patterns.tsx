@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React from "react"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"

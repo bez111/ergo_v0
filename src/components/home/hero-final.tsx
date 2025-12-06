@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/exhaustive-deps, react-hooks/set-state-in-effect */
+
 import { useState, useEffect } from "react"
 import Link from "next/link"
 import { Code, Shield, Zap, Layers } from "lucide-react"
@@ -79,17 +81,21 @@ export function HeroFinal() {
       className="relative min-h-screen flex items-center justify-center overflow-hidden"
       style={{ 
         paddingTop: 'clamp(80px, 15vh, 140px)', 
-        paddingBottom: 'clamp(60px, 12vh, 100px)' 
+        paddingBottom: 'clamp(60px, 12vh, 100px)',
+        // Prevent CLS by reserving space
+        minHeight: '100svh'
       }}
+      role="banner"
+      aria-label="Ergo Blockchain - Money Without Masters"
     >
       {/* Semi-transparent overlay for depth */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/20 to-black/40 z-0"></div>
 
       <div className="container relative z-20 px-4 md:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center max-w-6xl mx-auto">
-          {/* ERGO Title */}
-          <div className="relative">
-            <h2 
+          {/* ERGO Title - decorative, not semantic heading */}
+          <div className="relative" aria-hidden="true">
+            <p 
               className="font-bold tracking-tight text-white font-mono mb-4"
               style={{
                 fontSize: 'clamp(40px, 6vw, 88px)',
@@ -98,7 +104,7 @@ export function HeroFinal() {
               }}
             >
               <GlitchText text="ERGO" className="text-primary" />
-            </h2>
+            </p>
           </div>
 
           {/* Dynamic typing text */}
@@ -151,9 +157,9 @@ export function HeroFinal() {
           </div>
 
           {/* Action buttons */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-lg mt-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full max-w-lg mx-auto mt-8">
             <CyberButton
-              className="inline-flex items-center justify-center gap-3 bg-orange-500 text-white hover:bg-transparent hover:text-orange-500 hover:border-orange-500 font-mono uppercase tracking-wider border-2 border-orange-500 w-full sm:flex-1"
+              className="inline-flex items-center justify-center gap-3 bg-orange-500 text-black hover:bg-orange-600 font-mono uppercase tracking-wider border-2 border-orange-500 hover:border-orange-600 w-full sm:flex-1"
               style={{ 
                 height: 'clamp(50px, 8vw, 58px)',
                 fontSize: 'clamp(15px, 2.5vw, 17px)',
@@ -163,9 +169,9 @@ export function HeroFinal() {
               }}
               asChild
             >
-              <Link href={locale === 'en' ? '/start/introduction' : `/${locale}/start/introduction`}>
+              <Link href={locale === 'en' ? '/start' : `/${locale}/start`}>
                 <span>&gt;</span>
-                <span>{t('exploreErgo') || "Explore Ergo"}</span>
+                <span>{t('startHere') || "Start Here"}</span>
                 <span className="animate-pulse">_</span>
               </Link>
             </CyberButton>
@@ -181,18 +187,23 @@ export function HeroFinal() {
               }}
               asChild
             >
-              <Link href="#cypherpunks-freedom">
-                {t('chooseYourPath') || "Choose Your Path"}
+              <Link href={locale === 'en' ? '/start/introduction' : `/${locale}/start/introduction`}>
+                {t('exploreErgo') || "Explore Ergo"}
               </Link>
             </CyberButton>
           </div>
 
           {/* Feature icons */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full max-w-5xl mt-12">
+          <div 
+            className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 w-full max-w-5xl mt-12"
+            role="list"
+            aria-label="Key features of Ergo blockchain"
+          >
             {features.map((feature, index) => (
               <div 
                 key={feature.label} 
                 className="flex flex-col items-center gap-3 text-center group cursor-pointer"
+                role="listitem"
               >
                 <div 
                   className="rounded-full bg-orange-500/10 border border-orange-500/30 group-hover:bg-orange-500/20 transition-all duration-300 group-hover:scale-110 flex items-center justify-center"
@@ -200,6 +211,7 @@ export function HeroFinal() {
                     width: 'clamp(40px, 6vw, 48px)',
                     height: 'clamp(40px, 6vw, 48px)'
                   }}
+                  aria-hidden="true"
                 >
                   <feature.icon 
                     className="text-orange-500" 
@@ -207,6 +219,7 @@ export function HeroFinal() {
                       width: 'clamp(20px, 4vw, 26px)',
                       height: 'clamp(20px, 4vw, 26px)'
                     }}
+                    aria-hidden="true"
                   />
                 </div>
                 <p 

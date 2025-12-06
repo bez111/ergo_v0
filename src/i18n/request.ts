@@ -1,12 +1,12 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { getRequestConfig } from 'next-intl/server';
 
-// Поддерживаемые локали
-// PRODUCTION: Временно оставлен только английский до завершения всех переводов
+// Supported locales
+// English is default (no prefix), Russian enabled
 export const locales = [
-  'en',    // Английский (по умолчанию, без префикса)
-  // TODO: Включить после добавления всех переводов:
-  // 'fr', 'de', 'es', 'ar', 'zh-cn', 'zh-tw', 'tr',
-  'ru' //, 'pt-br', 'it', 'ja', 'ko-kr'
+  'en',
+  'ru'
 ] as const;
 
 // Локали с префиксами (все кроме английского)

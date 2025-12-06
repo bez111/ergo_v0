@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { useState, useRef } from "react"
 import { useTranslations, useLocale } from "next-intl"
 import Image from "next/image"

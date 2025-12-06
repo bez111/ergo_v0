@@ -17,7 +17,6 @@ export async function GET() {
     { url: '/use/gaming', priority: 0.8, changeFreq: 'monthly' },
     // Other use pages
     { url: '/use/get-erg', priority: 0.7, changeFreq: 'weekly' },
-    { url: '/use/mining', priority: 0.7, changeFreq: 'weekly' },
     { url: '/use/babel-fees', priority: 0.7, changeFreq: 'monthly' },
     { url: '/use/guides', priority: 0.7, changeFreq: 'monthly' },
   ]

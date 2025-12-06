@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -24,6 +26,8 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { GlossaryRichText } from "@/components/glossary";
 
 interface Props {
   question: QuestionEntry;
@@ -87,7 +91,9 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
         // User cancelled or error
       }
     } else {
-      handleCopy();
+      // On desktop, open Twitter/X share
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(question.query)}&url=${encodeURIComponent(window.location.href)}`;
+      window.open(twitterUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
     }
   };
 
@@ -103,6 +109,19 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
     <BackgroundWrapper>
       <div className="container mx-auto px-4 pt-24 pb-12">
         <div className="max-w-4xl mx-auto">
+          {/* Breadcrumbs */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6"
+          >
+            <Breadcrumbs
+              type="questions"
+              currentTitle={question.query}
+              category={question.category}
+            />
+          </motion.div>
+
           {/* Question Header */}
           <motion.header
             initial={{ opacity: 0, y: 20 }}
@@ -131,10 +150,10 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
             {/* Share + Back buttons */}
             <div className="flex items-center gap-2 flex-wrap">
               <Button
-                variant="outline"
+                variant="default"
                 size="sm"
                 onClick={handleShare}
-                className="border-white/20 text-neutral-300 hover:text-white"
+                className="bg-orange-500 hover:bg-orange-600 text-black font-semibold"
               >
                 <Share2 className="w-4 h-4 mr-2" />
                 Share
@@ -159,7 +178,7 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
               </Button>
               <Button
                 variant="ghost"
-                className="text-neutral-500 hover:text-white"
+                className="text-neutral-400 hover:text-white"
                 asChild
               >
                 <Link href="/questions">
@@ -178,22 +197,29 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
           >
             <Card className="bg-black border border-white/10 rounded-2xl">
               <CardContent className="p-6 md:p-8">
-                {/* Short answer - optimized for featured snippets */}
-                <p className="text-lg md:text-xl text-white leading-relaxed mb-6">
-                  {question.shortAnswer}
-                </p>
+                <GlossaryRichText 
+                  maxLinksPerNode={3} 
+                  firstOccurrenceOnly={true}
+                  variant="subtle"
+                  showTooltip={true}
+                >
+                  {/* Short answer - optimized for featured snippets */}
+                  <p className="text-lg md:text-xl text-white leading-relaxed mb-6">
+                    {question.shortAnswer}
+                  </p>
 
-                {/* Key points as bullet list */}
-                {question.keyPoints && question.keyPoints.length > 0 && (
-                  <ul className="space-y-3">
-                    {question.keyPoints.map((point, index) => (
-                      <li key={index} className="flex items-start gap-3">
-                        <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
-                        <span className="text-neutral-300">{point}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                  {/* Key points as bullet list */}
+                  {question.keyPoints && question.keyPoints.length > 0 && (
+                    <ul className="space-y-3">
+                      {question.keyPoints.map((point, index) => (
+                        <li key={index} className="flex items-start gap-3">
+                          <CheckCircle className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                          <span className="text-neutral-300">{point}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </GlossaryRichText>
               </CardContent>
             </Card>
           </motion.section>
@@ -228,7 +254,7 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
                           </div>
                           <div className="flex-1 min-w-0">
                             <div className="flex items-center gap-2 mb-1">
-                              <span className="text-xs text-neutral-500">
+                              <span className="text-xs text-neutral-400">
                                 {resourceTypeLabels[resource.type]}
                               </span>
                               {resource.badge && (
@@ -241,7 +267,7 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
                               {resource.title}
                             </h3>
                           </div>
-                          <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                          <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
                         </div>
                       </CardContent>
                     </Card>
@@ -273,12 +299,12 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
                   >
                     <div className="flex items-center justify-between gap-4 p-4 bg-black border border-white/10 rounded-xl hover:border-orange-500/30 transition-all">
                       <div className="flex items-center gap-3">
-                        <HelpCircle className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 transition-colors" />
+                        <HelpCircle className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
                         <span className="text-white group-hover:text-orange-400 transition-colors">
                           {related.query}
                         </span>
                       </div>
-                      <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
                     </div>
                   </Link>
                 ))}

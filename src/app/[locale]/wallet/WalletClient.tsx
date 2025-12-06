@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
+
 import { useState, useEffect } from "react"
 import { useTranslations } from "next-intl"
 import Link from "next/link"
@@ -50,7 +52,7 @@ const allWallets: Wallet[] = [
     category: "Browser",
     isRecommended: true,
     websiteUrl: "https://github.com/capt-nemo429/nautilus-wallet",
-    downloadUrl: "https://chrome.google.com/webstore/detail/nautilus-wallet",
+    downloadUrl: "https://chromewebstore.google.com/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai",
     rating: 4.8,
     users: "50K+",
     icon: Chrome,
@@ -222,7 +224,7 @@ export default function WalletClient() {
                 </h3>
                 <div className="grid grid-cols-1 gap-4">
                   <a
-                    href="https://chrome.google.com/webstore/detail/nautilus-wallet"
+                    href="https://chromewebstore.google.com/detail/nautilus-wallet/gjlmehlldlphhljhpnlddaodbjjcchai"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300"

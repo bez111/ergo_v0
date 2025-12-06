@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, import/no-anonymous-default-export */
 // Featured Snippets Optimization System
 // Structures content to maximize chances of appearing in Google's Featured Snippets
 

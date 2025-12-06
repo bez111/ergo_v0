@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React, { useState } from "react"
 import { Lock, Zap, RefreshCw, Users, BookOpen, Shield } from "lucide-react"
 import { cn } from "@/lib/utils"

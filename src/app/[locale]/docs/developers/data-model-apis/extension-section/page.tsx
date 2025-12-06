@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import Link from "next/link";
 import { Settings, FileText, Zap, Database, Layers, CheckCircle, Network, BookOpen } from "lucide-react";
@@ -64,7 +66,7 @@ export default function ExtensionSectionPage() {
             <div>
               <h3 className="text-lg font-semibold text-purple-300 mb-1">0x01: NiPoPoWs Interlinks</h3>
               <p className="text-gray-300 text-sm">
-                Interlinks for <Link href="/docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> (efficient <Link href="/docs/technology/autolykos" className="text-orange-400 hover:underline">proof-of-work</Link> verification).
+                Interlinks for <Link href="/docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> (efficient <Link href="/technology/secure-pow" className="text-orange-400 hover:underline">proof-of-work</Link> verification).
               </p>
             </div>
           </div>

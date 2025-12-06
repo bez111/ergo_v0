@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
+
 import React, { useState, useEffect } from "react"
 import { useTranslations, useLocale } from "next-intl"
 import Link from "next/link"
@@ -54,11 +56,11 @@ export function AudiencePaths() {
       description: t('audiences.miners.description'),
       iconName: "Cpu",
       cta: t('audiences.miners.cta').toUpperCase(),
-      ctaLink: "/use/mining",
+      ctaLink: "/miners",
       links: [
         { label: t('audiences.miners.links.miningDocs'), href: "/docs/miners" },
-        { label: t('audiences.miners.links.miningPools'), href: "/mining/pools" },
-        { label: t('audiences.miners.links.calculator'), href: "/use/mining#calculator" },
+        { label: t('audiences.miners.links.miningPools'), href: "/miners#pools" },
+        { label: t('audiences.miners.links.calculator'), href: "/miners#calculator" },
       ],
     },
     {

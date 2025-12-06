@@ -29,7 +29,6 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     },
     "author": {
       "@type": "Person",
-      "@id": `${baseUrl}/blog/author/${post.author.id}`,
       "name": post.author.name,
       "description": post.author.bio,
       "jobTitle": post.author.role,
@@ -67,21 +66,16 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
       }
     }),
     // Interaction statistics
-    ...(post.views && {
+    ...(post.shares && {
       "interactionStatistic": [
         {
           "@type": "InteractionCounter",
-          "interactionType": "https://schema.org/ViewAction",
-          "userInteractionCount": post.views
-        },
-        ...(post.shares ? [{
-          "@type": "InteractionCounter",
           "interactionType": "https://schema.org/ShareAction",
           "userInteractionCount": post.shares
-        }] : [])
+        }
       ]
     }),
-    "commentCount": 0, // TODO: Add real comment count
+    "commentCount": 0,
     "discussionUrl": `${baseUrl}/blog/${post.slug}#comments`
   }
 
@@ -164,7 +158,8 @@ export function BlogSchema({ post, url, rating }: BlogSchemaProps) {
     "dateCreated": post.date,
     "dateModified": post.lastUpdated || post.date,
     "author": {
-      "@id": `${baseUrl}/blog/author/${post.author.id}`
+      "@type": "Person",
+      "name": post.author.name
     },
     "publisher": {
       "@type": "Organization",

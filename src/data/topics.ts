@@ -75,8 +75,8 @@ export const topics: TopicHub[] = [
     slug: "ergo-defi",
     title: "DeFi on Ergo",
     subtitle: "Decentralized Finance Without MEV, Without Permission",
-    seoTitle: "Ergo DeFi: MEV-Resistant Decentralized Finance on eUTXO",
-    seoDescription: "Complete guide to DeFi on Ergo blockchain. MEV-resistant trading, predictable fees, Oracle Pools, SigmaUSD stablecoin, and Spectrum DEX. Build secure financial applications.",
+    seoTitle: "Ergo DeFi — MEV-Resistant DEX & Stablecoins | Ergo",
+    seoDescription: "DeFi without MEV. Explore Ergo's DEXs, stablecoins, oracles & lending. No front-running, predictable fees, fair for all.",
     keywords: ["Ergo DeFi", "eUTXO DeFi", "MEV resistant DEX", "SigmaUSD", "Spectrum Finance", "Oracle Pools", "decentralized finance"],
     
     heroStatement: "DeFi that actually works for users, not extractors.",
@@ -156,8 +156,8 @@ export const topics: TopicHub[] = [
     slug: "ergo-privacy",
     title: "Privacy on Ergo",
     subtitle: "Programmable Privacy with Sigma Protocols",
-    seoTitle: "Ergo Privacy: Sigma Protocols, Zero-Knowledge Proofs, ErgoMixer",
-    seoDescription: "Complete guide to privacy on Ergo. Sigma Protocols for zero-knowledge proofs, ErgoMixer for non-custodial mixing, optional privacy with selective disclosure.",
+    seoTitle: "Ergo Privacy — Sigma Protocols & ErgoMixer | Ergo",
+    seoDescription: "Optional privacy with Sigma Protocols. ErgoMixer for non-custodial mixing, zero-knowledge proofs, selective disclosure. Private but auditable.",
     keywords: ["Ergo privacy", "Sigma Protocols", "zero-knowledge proofs", "ErgoMixer", "private blockchain", "selective disclosure", "ring signatures"],
     
     heroStatement: "Privacy is not about hiding. It's about control.",
@@ -233,8 +233,8 @@ export const topics: TopicHub[] = [
     slug: "ergo-mining",
     title: "Mining Ergo",
     subtitle: "Fair, Accessible, ASIC-Resistant Proof-of-Work",
-    seoTitle: "Ergo Mining: Autolykos GPU Mining Guide, Pools, Profitability",
-    seoDescription: "Complete guide to mining Ergo. Autolykos ASIC-resistant algorithm, GPU mining setup, pool selection, profitability calculators, and sustainability features.",
+    seoTitle: "Ergo Mining — Autolykos GPU Mining Guide | Ergo",
+    seoDescription: "GPU mining with Autolykos. ASIC-resistant, fair rewards, storage rent income. Pool selection, profitability calculator, setup guides.",
     keywords: ["Ergo mining", "Autolykos", "GPU mining", "ASIC resistant", "proof of work", "mining pools", "ERG mining"],
     
     heroStatement: "Mining without masters. Proof-of-Work for everyone.",
@@ -267,7 +267,7 @@ export const topics: TopicHub[] = [
     buildWithIt: [
       { type: "doc", title: "Mining Setup Guide", url: "/docs/miners/mining-setup", description: "Detailed configuration instructions", badge: "Guide", priority: 1 },
       { type: "glossary", title: "Autolykos", url: "/learn/glossary/autolykos", description: "Algorithm definition and properties", badge: "Concept", priority: 1 },
-      { type: "doc", title: "Pool Selection", url: "/ecosystem/mining", description: "Choosing a mining pool", badge: "Pools", priority: 2 }
+      { type: "doc", title: "Pool Selection", url: "/miners#pools", description: "Choosing a mining pool", badge: "Pools", priority: 2 }
     ],
     
     philosophy: [
@@ -309,8 +309,8 @@ export const topics: TopicHub[] = [
     slug: "ergo-technology",
     title: "Ergo Technology",
     subtitle: "Research-Driven Innovation for Real-World Use",
-    seoTitle: "Ergo Technology: eUTXO, ErgoScript, NiPoPoWs, Sigma Protocols",
-    seoDescription: "Complete guide to Ergo's technology stack. eUTXO model, ErgoScript smart contracts, NiPoPoWs light clients, Sigma Protocols, and more innovations.",
+    seoTitle: "Ergo Technology — eUTXO, ErgoScript & NiPoPoWs | Ergo",
+    seoDescription: "Ergo's tech stack explained. eUTXO model, ErgoScript smart contracts, NiPoPoWs light clients, Sigma Protocols. Research-driven innovation.",
     keywords: ["Ergo technology", "eUTXO", "ErgoScript", "NiPoPoWs", "Sigma Protocols", "blockchain innovation", "smart contracts"],
     
     heroStatement: "Technology that solves real problems, not hype cycles.",
@@ -389,8 +389,8 @@ export const topics: TopicHub[] = [
     slug: "ergo-philosophy",
     title: "Ergo Philosophy",
     subtitle: "Cypherpunk Values for Financial Freedom",
-    seoTitle: "Ergo Philosophy: Fair Launch, Cypherpunk Values, Financial Freedom",
-    seoDescription: "Understand Ergo's philosophy: fair launch principles, cypherpunk values, financial sovereignty, and the vision for money without masters.",
+    seoTitle: "Ergo Philosophy — Fair Launch & Cypherpunk Values | Ergo",
+    seoDescription: "Money without masters. Fair launch, no pre-mine, no VC control. Cypherpunk values, financial sovereignty, open-source community.",
     keywords: ["Ergo philosophy", "cypherpunk", "fair launch", "financial freedom", "decentralization", "money without masters"],
     
     heroStatement: "Money without masters. Finance without permission.",
@@ -467,8 +467,8 @@ export const topics: TopicHub[] = [
     slug: "ergo-sustainability",
     title: "Ergo Sustainability",
     subtitle: "Built to Last: Long-Term Economics and Security",
-    seoTitle: "Ergo Sustainability: Storage Rent, Emission Schedule, Long-Term Security",
-    seoDescription: "How Ergo ensures long-term sustainability. Storage rent for miner revenue, emission schedule, state management, and economic security beyond block rewards.",
+    seoTitle: "Ergo Sustainability — Storage Rent & Long-Term Security | Ergo",
+    seoDescription: "How Ergo stays sustainable forever. Storage rent for miner revenue, capped emission, state management. Economic security beyond block rewards.",
     keywords: ["Ergo sustainability", "storage rent", "emission schedule", "blockchain sustainability", "miner revenue", "state bloat"],
     
     heroStatement: "A blockchain designed for centuries, not quarters.",

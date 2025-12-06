@@ -1,3 +1,5 @@
+
+/* eslint-disable import/no-anonymous-default-export */
 // CDN Configuration for static assets
 const CDN_BASE_URL = process.env.NEXT_PUBLIC_CDN_URL || 'https://cdn.ergoblockchain.org'
 const USE_CDN = process.env.NEXT_PUBLIC_USE_CDN === 'true'

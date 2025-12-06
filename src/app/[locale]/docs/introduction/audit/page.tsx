@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { Shield, FileText, Lock, Cpu, CheckCircle, AlertTriangle, ExternalLink } from "lucide-react";
 

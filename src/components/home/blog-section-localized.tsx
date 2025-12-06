@@ -1,6 +1,5 @@
 'use client'
 
-import React from "react"
 import { useTranslations, useLocale } from "next-intl"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
@@ -8,8 +7,8 @@ import { BlogCard } from "./blog-card"
 import { blogPosts } from "@/app/[locale]/blog/_lib/blog-data"
 
 export function BlogSection() {
-  const t = useTranslations('blog')
-  const locale = useLocale()
+  useTranslations('blog')
+  useLocale()
 
   const posts = blogPosts.slice(0, 3).map(p => ({
     title: p.title,

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { useEffect } from 'react'
 import { onCLS, onFCP, onLCP, onTTFB, onINP } from 'web-vitals'
 

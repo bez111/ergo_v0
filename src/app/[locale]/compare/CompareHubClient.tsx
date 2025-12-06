@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { comparisons } from "@/data/comparisons";
@@ -90,16 +92,22 @@ export function CompareHubClient() {
               whileInView="visible"
               viewport={{ once: true }}
             >
-              <motion.h2
-                variants={itemVariants}
-                className="text-2xl md:text-3xl font-bold text-center mb-8 text-white"
-              >
-                Choose a Comparison
-              </motion.h2>
+              <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-between gap-4 mb-8">
+                <h2 className="text-2xl md:text-3xl font-bold text-white">
+                  Choose a Comparison
+                </h2>
+                <Link
+                  href="/start/comparison"
+                  className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-orange-400 transition-colors"
+                >
+                  See full comparison table
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </motion.div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="Blockchain comparisons">
                 {comparisons.map((comparison) => (
-                  <motion.div key={comparison.slug} variants={itemVariants} className="h-full">
+                  <motion.div key={comparison.slug} variants={itemVariants} className="h-full" role="listitem">
                     <Link
                       href={`/compare/ergo-vs-${comparison.slug}`}
                       className="block group h-full"
@@ -127,7 +135,7 @@ export function CompareHubClient() {
                               </h3>
                             </div>
                           </div>
-                          <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
+                          <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
                         </div>
 
                         {/* Summary */}

@@ -1,4 +1,9 @@
+/* eslint-disable react-compiler/react-compiler */
 import { SkeletonCard, SkeletonHero, SkeletonPagination } from "@/components/ui/skeleton"
+
+// Pre-computed widths to avoid Math.random() during render
+const CATEGORY_WIDTHS = [72, 88, 65, 95, 78, 82];
+const TAG_WIDTHS = [52, 45, 68, 58, 42, 55, 62, 48];
 
 export function BlogPageSkeleton() {
   return (
@@ -38,11 +43,11 @@ export function BlogPageSkeleton() {
               <div className="h-4 w-20 bg-neutral-700 rounded animate-pulse" />
             </div>
             <div className="flex gap-2 flex-wrap">
-              {Array.from({ length: 6 }).map((_, i) => (
+              {CATEGORY_WIDTHS.map((width, i) => (
                 <div 
                   key={i} 
                   className="h-8 bg-neutral-800/60 rounded-full animate-pulse"
-                  style={{ width: `${60 + Math.random() * 40}px` }}
+                  style={{ width: `${width}px` }}
                 />
               ))}
             </div>
@@ -55,11 +60,11 @@ export function BlogPageSkeleton() {
               <div className="h-4 w-16 bg-neutral-700 rounded animate-pulse" />
             </div>
             <div className="flex gap-2 flex-wrap">
-              {Array.from({ length: 8 }).map((_, i) => (
+              {TAG_WIDTHS.map((width, i) => (
                 <div 
                   key={i} 
                   className="h-7 bg-neutral-800/60 rounded-full animate-pulse"
-                  style={{ width: `${40 + Math.random() * 30}px` }}
+                  style={{ width: `${width}px` }}
                 />
               ))}
               <div className="h-7 w-12 bg-neutral-700/60 border border-dashed border-neutral-600 rounded-full animate-pulse" />

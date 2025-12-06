@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
 // SEO Monitoring and Analytics for Ergo Platform
 // Track Core Web Vitals, Search Console metrics, and SEO KPIs
 

@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Beehiiv API Integration
 // Сервис для работы с Beehiiv API для сбора email подписчиков
 

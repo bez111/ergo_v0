@@ -6,9 +6,7 @@ const origin = siteConfig.siteUrl
 const url = `${origin}/blog/sigma-protocols-explained`
 
 export function generateMetadata(): Metadata {
-  const title = "Sigma Protocols Explained (Without A PhD)"
   const seoTitle = "Sigma Protocols Explained: Zero-Knowledge Privacy Made Simple | Ergo"
-  const description = "A plain-English guide to Sigma Protocols – the powerful, flexible zero-knowledge cryptography that powers Ergo's privacy and smart contracts."
   const optimizedDescription = "Learn Sigma Protocols through simple analogies and real-world examples. No advanced mathematics required! Discover how Ergo's composable zero-knowledge proofs enable programmable privacy."
   
   return {

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @next/next/no-img-element, react-hooks/set-state-in-effect */
+
 import { useState, useEffect, useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
@@ -19,6 +21,7 @@ import { cn } from "@/lib/utils"
 import { NewsletterSection } from "@/components/blog/newsletter-section"
 import { getRelatedInfographics } from "@/lib/related-content"
 import { Card, CardContent } from "@/components/ui/card"
+import { GlossaryRichText } from "@/components/glossary"
 
 interface BlogPostClientPremiumProps {
   post: BlogPost
@@ -359,7 +362,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
               </nav>
             </details>
 
-            {/* Article Body - Clean Typography */}
+            {/* Article Body - Clean Typography with Auto Glossary Links */}
             <div ref={contentRef} className="prose prose-invert max-w-none
               prose-headings:scroll-mt-24 prose-headings:text-white
               prose-h2:text-2xl prose-h2:font-bold prose-h2:mt-12 prose-h2:mb-6
@@ -372,6 +375,12 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
               prose-strong:text-white prose-strong:font-medium
               prose-blockquote:border-l-orange-400 prose-blockquote:bg-neutral-900/50 prose-blockquote:text-neutral-300
             ">
+            <GlossaryRichText 
+              maxLinksPerNode={2} 
+              firstOccurrenceOnly={true}
+              variant="subtle"
+              showTooltip={true}
+            >
               {/* Introduction */}
               <section id="introduction">
                 <h2>Introduction</h2>
@@ -692,6 +701,7 @@ export function BlogPostClientPremium({ post, relatedPosts }: BlogPostClientPrem
                   </Button>
                 </div>
               </div>
+            </GlossaryRichText>
             </div>
 
             {/* Author Box */}

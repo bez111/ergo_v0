@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -14,7 +16,7 @@ import { useState } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
-import { GlossaryLink } from "@/components/glossary"
+import { RelatedTechnologies, WhatsNextCTA } from "@/components/technology"
 
 export default function SecurePowPage() {
   const t = useTranslations("technology.securePow")
@@ -498,7 +500,7 @@ export default function SecurePowPage() {
                   </div>
                   <div className="mt-4">
                     <Button asChild variant="outline" className="border-neutral-700 text-neutral-300 hover:bg-neutral-900/60 rounded-xl">
-                      <Link href="/use/mining">{t("quickStart.openGuide")}</Link>
+                      <Link href="/miners">{t("quickStart.openGuide")}</Link>
                     </Button>
                   </div>
                 </CardContent>
@@ -546,56 +548,14 @@ export default function SecurePowPage() {
             </div>
           </FadeIn>
 
-          {/* What's Next Section */}
-          <FadeIn delay={1.0}>
-            <div className="max-w-6xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
-                What's <span className="text-orange-400">Next</span>?
-              </h2>
-              <p className="text-xl text-center text-neutral-300 mb-12">
-                Continue your journey with Ergo mining
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <Link 
-                  href="/use/mining"
-                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                      <Pickaxe className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Start Mining</h3>
-                      <p className="text-orange-400 text-sm">Get Started</p>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300">
-                    Learn how to set up your mining operation and join the Ergo network
-                  </p>
-                </Link>
-                
-                <a 
-                  href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Read Whitepaper</h3>
-                      <p className="text-orange-400 text-sm">Technical Details</p>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300">
-                    Deep dive into the technical specifications of Autolykos v2 consensus algorithm
-                  </p>
-                </a>
-              </div>
-            </div>
-          </FadeIn>
+          {/* Related Technologies - Data-driven */}
+          <RelatedTechnologies 
+            currentSlug="secure-pow"
+            title="Related Technologies"
+          />
+
+          {/* What's Next - CTA Section */}
+          <WhatsNextCTA currentSlug="secure-pow" />
         </div>
         </div>
       </BackgroundWrapper>

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useTranslations } from "next-intl"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -32,6 +34,7 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { motion } from "framer-motion"
 import { useMemo } from "react"
 import { GlossaryLink } from "@/components/glossary"
+import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 const PUBLISHED = "2023-11-10"
 const UPDATED = "2025-08-10"
@@ -576,54 +579,17 @@ export default function StorageRentPage() {
             </div>
           </section>
 
-          {/* What's Next Section */}
-          <FadeIn delay={0.8}>
-            <div className="max-w-6xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
-                What's <span className="text-orange-400">Next</span>?
-              </h2>
-              <p className="text-xl text-center text-neutral-300 mb-12">
-                Continue exploring Ergo's sustainable blockchain technology
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <Link 
-                  href="/ecosystem"
-                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                      <ArrowRight className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Start Building</h3>
-                      <p className="text-orange-400 text-sm">Explore Ecosystem</p>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300">
-                    Discover tools and applications built on Ergo's sustainable blockchain
-                  </p>
-                </Link>
-                
-                <Link 
-                  href="/docs/introduction/storage-rent"
-                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Technical Documentation</h3>
-                      <p className="text-orange-400 text-sm">Learn More</p>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300">
-                    Deep dive into the technical details of Storage Rent implementation
-                  </p>
-                </Link>
-              </div>
-            </div>
-          </FadeIn>
+          {/* Related Technologies - Data-driven */}
+          <RelatedTechnologies 
+            currentSlug="storage-rent"
+            title="Related Technologies"
+          />
+
+          {/* Related Blog Articles - lightweight */}
+          <RelatedBlogPostsForTechnology currentSlug="storage-rent" />
+
+          {/* What's Next - CTA Section */}
+          <WhatsNextCTA currentSlug="storage-rent" />
         </div>
         </div>
       </BackgroundWrapper>

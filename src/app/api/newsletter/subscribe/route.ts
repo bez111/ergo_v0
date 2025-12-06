@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextRequest, NextResponse } from 'next/server'
 import { subscribeToNewsletter } from '@/lib/beehiiv-api'
 import { newsletterAnalytics } from '@/lib/newsletter-analytics'

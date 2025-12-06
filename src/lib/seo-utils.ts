@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any, import/no-anonymous-default-export */
 import { Metadata } from 'next'
 
 const BASE_URL = 'https://ergoblockchain.org'

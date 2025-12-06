@@ -160,7 +160,6 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
         articleSection: p.category,
         author: { 
           "@type": "Person", 
-          "@id": `https://ergoblockchain.org/blog/author/${p.author.id}`,
           name: p.author.name,
           jobTitle: p.author.role
         },

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -14,6 +16,7 @@ import { Code, Shield, Zap, ExternalLink, ArrowRight, ChevronDown, Lock, CheckCi
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { RelatedTechnologies, RelatedPatterns, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 function CopyButton({ code, label }: { code: string; label: string }) {
   const [copied, setCopied] = useState(false)
@@ -563,7 +566,7 @@ export default function ErgoScriptPage() {
                                 { name: "ErgoScript Playground", url: "https://wallet.plutomonkey.com/p2s/", external: true },
                                 { name: "Official Documentation", url: "https://docs.ergoplatform.com/ergo-script/", external: true },
                                 { name: "Code Examples & Tutorials", url: "/docs/developers/tutorials", external: false },
-                                { name: "Community Guides", url: "/learn/guides", external: false },
+                                { name: "Playbooks", url: "/playbooks", external: false },
                               ].map((resource, index) => (
                                 <div key={resource.name}>
                                   <Link href={resource.url} {...(resource.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}>
@@ -1033,56 +1036,21 @@ export default function ErgoScriptPage() {
               </div>
             </FadeIn>
 
-        {/* What's Next Section */}
-        <FadeIn delay={0.8}>
-          <div className="max-w-6xl mx-auto mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
-              What's <span className="text-orange-400">Next</span>?
-            </h2>
-            <p className="text-xl text-center text-neutral-300 mb-12">
-              Continue your ErgoScript development journey
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <a 
-                href="https://wallet.plutomonkey.com/p2s/?source=bXkgPSBzaWdtYVByb3AocHJvcGVyVGFibGVJZCkNCg0KLy8gZXhhbXBsZSBzcGVuZGluZyBjb25kaXRpb24NCm15VmFsaWRhdGlvbiA9IGZhbHNl"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                    <Code className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">Try Playground</h3>
-                    <p className="text-orange-400 text-sm">Interactive Editor</p>
-                  </div>
-                </div>
-                <p className="text-neutral-300">
-                  Experiment with ErgoScript in our interactive online playground
-                </p>
-              </a>
-              
-              <Link 
-                href="/docs/developers/ergoscript-languages"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                    <BookOpen className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">View Documentation</h3>
-                    <p className="text-orange-400 text-sm">Learn More</p>
-                  </div>
-                </div>
-                <p className="text-neutral-300">
-                  Explore comprehensive guides and tutorials for ErgoScript development
-                </p>
-              </Link>
-            </div>
-          </div>
-        </FadeIn>
+        {/* Related Technologies - Data-driven */}
+        <RelatedTechnologies 
+          currentSlug="ergoscript"
+          title="Related Technologies"
+          subtitle="Explore connected Ergo features"
+        />
+
+        {/* Related Dev Patterns - Data-driven */}
+        <RelatedPatterns currentSlug="ergoscript" />
+
+        {/* Related Blog Articles - lightweight */}
+        <RelatedBlogPostsForTechnology currentSlug="ergoscript" />
+
+        {/* What's Next - CTA Section */}
+        <WhatsNextCTA currentSlug="ergoscript" />
             </div>
       </div>
         </motion.div>

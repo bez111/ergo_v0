@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /**
  * Resilience patterns for SRE
  * Circuit Breaker, Retry with Jitter, Timeout, Bulkhead

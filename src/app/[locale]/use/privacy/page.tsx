@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -14,6 +16,7 @@ import { useState } from "react"
 import React from "react"
 import { useTranslations } from "next-intl"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { ClusterPillarBreadcrumb, ClusterRelatedContent } from "@/components/seo/cluster-related-content"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -177,6 +180,12 @@ export default function PrivacyConfidentialityPage() {
       
       <BackgroundWrapper>
         <div className="min-h-screen relative overflow-hidden motion-reduce:animate-none pb-24">
+        
+        {/* Pillar Page Link */}
+        <div className="max-w-7xl mx-auto px-4 pt-24">
+          <ClusterPillarBreadcrumb currentUrl="/use/privacy" />
+        </div>
+        
         {/* Breadcrumbs */}
         <div className="sr-only">
           <Breadcrumbs
@@ -603,56 +612,13 @@ export default function PrivacyConfidentialityPage() {
             </div>
           </motion.section>
 
-          {/* What's Next Section */}
-          <section className="py-16 px-4">
-            <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-6 text-white">
-                What's <span className="text-orange-400">Next?</span>
-              </h2>
-              <p className="text-xl text-center text-neutral-300 mb-12">
-                Start using privacy tools or learn how to build private applications on Ergo
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <a 
-                  href="https://ergomixer.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Try ErgoMixer</h3>
-                      <p className="text-orange-400 text-sm">Start Mixing</p>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300">
-                    Experience the first non-custodial mixer on Ergo for enhanced transaction privacy
-                  </p>
-                </a>
-                
-                <Link 
-                  href="/docs/introduction/privacy"
-                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Privacy Guide</h3>
-                      <p className="text-orange-400 text-sm">Learn More</p>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300">
-                    Access comprehensive guides and documentation for building privacy-focused applications
-                  </p>
-                </Link>
-              </div>
-            </div>
-          </section>
+          {/* Topic Cluster Related Content */}
+          <ClusterRelatedContent 
+            currentUrl="/use/privacy"
+            title="Explore Privacy"
+            subtitle="Dive deeper into Ergo's privacy features and technology"
+            maxItems={6}
+          />
         </motion.div>
         </div>
       </BackgroundWrapper>

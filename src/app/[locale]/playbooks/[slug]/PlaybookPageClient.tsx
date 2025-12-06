@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @next/next/no-img-element, react-hooks/set-state-in-effect */
+
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
@@ -36,6 +38,9 @@ import { getRelatedInfographics, getRelatedBlogPosts } from "@/lib/related-conte
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { GlossaryRichText } from "@/components/glossary";
 
 interface Props {
   playbook: Playbook;
@@ -132,6 +137,18 @@ export function PlaybookPageClient({ playbook }: Props) {
     <BackgroundWrapper>
       <div className="min-h-screen text-white">
         <div className="container mx-auto px-4 pt-24 pb-12 relative z-10">
+          {/* Breadcrumbs */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6 max-w-4xl mx-auto"
+          >
+            <Breadcrumbs
+              type="playbooks"
+              currentTitle={playbook.title}
+            />
+          </motion.div>
+
           {/* Hero Section */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
@@ -147,38 +164,48 @@ export function PlaybookPageClient({ playbook }: Props) {
               <p className="text-xl text-neutral-300 mb-6">{playbook.subtitle}</p>
 
               {/* Hero Description */}
-              <p className="text-neutral-400 leading-relaxed mb-8">
+              <GlossaryRichText 
+                maxLinksPerNode={2} 
+                firstOccurrenceOnly={true}
+                variant="subtle"
+                showTooltip={true}
+              >
+                <p className="text-neutral-400 leading-relaxed mb-8">
                 {playbook.heroDescription}
               </p>
+              </GlossaryRichText>
 
               {/* CTAs */}
-              <div className="flex flex-wrap gap-4">
-                <Link
-                  href={playbook.primaryCTA.href}
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-black font-semibold transition-colors"
+              <div className="flex flex-wrap gap-3">
+                <Button
+                  asChild
+                  className="bg-orange-500 hover:bg-orange-600 text-black font-semibold"
                 >
-                  {playbook.primaryCTA.label}
-                  <ArrowRight className="w-4 h-4" />
-                </Link>
-                {playbook.secondaryCTA && (
-                  <Link
-                    href={playbook.secondaryCTA.href}
-                    className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold border border-white/10 transition-colors"
-                  >
-                    {playbook.secondaryCTA.label}
+                  <Link href={playbook.primaryCTA.href}>
+                    {playbook.primaryCTA.label}
+                    <ArrowRight className="w-4 h-4 ml-2" />
                   </Link>
+                </Button>
+                {playbook.secondaryCTA && (
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="border-white/20 text-white hover:bg-white/10"
+                  >
+                    <Link href={playbook.secondaryCTA.href}>
+                      {playbook.secondaryCTA.label}
+                    </Link>
+                  </Button>
                 )}
-              </div>
-
-              {/* Back link moved lower in hero */}
-              <div className="mt-6">
-                <Link
-                  href="/playbooks"
-                  className="inline-flex items-center gap-2 text-neutral-500 hover:text-white transition-colors text-sm"
+                <Button
+                  asChild
+                  variant="ghost"
+                  className="text-neutral-400 hover:text-white"
                 >
-                  <ArrowLeft className="w-4 h-4" />
-                  <span>All Playbooks</span>
-                </Link>
+                  <Link href="/playbooks">
+                    <span>All Playbooks</span>
+                  </Link>
+                </Button>
               </div>
             </div>
           </motion.section>
@@ -191,22 +218,29 @@ export function PlaybookPageClient({ playbook }: Props) {
             className="pb-12"
           >
             <div className="max-w-4xl mx-auto">
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="bg-black border border-red-500/20 rounded-2xl p-5">
-                  <div className="flex items-center gap-2 mb-3">
-                    <AlertCircle className="w-5 h-5 text-red-400" />
-                    <h3 className="font-semibold text-white">The Problem</h3>
+              <GlossaryRichText 
+                maxLinksPerNode={2} 
+                firstOccurrenceOnly={true}
+                variant="subtle"
+                showTooltip={true}
+              >
+                <div className="grid md:grid-cols-2 gap-4">
+                  <div className="bg-black border border-red-500/20 rounded-2xl p-5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <AlertCircle className="w-5 h-5 text-red-400" />
+                      <h3 className="font-semibold text-white">The Problem</h3>
+                    </div>
+                    <p className="text-neutral-400 text-sm leading-relaxed">{playbook.problemStatement}</p>
                   </div>
-                  <p className="text-neutral-400 text-sm leading-relaxed">{playbook.problemStatement}</p>
-                </div>
-                <div className="bg-black border border-green-500/20 rounded-2xl p-5">
-                  <div className="flex items-center gap-2 mb-3">
-                    <CheckCircle className="w-5 h-5 text-green-400" />
-                    <h3 className="font-semibold text-white">The Solution</h3>
-                  </div>
-                  <p className="text-neutral-400 text-sm leading-relaxed">{playbook.solution}</p>
-                </div>
+                  <div className="bg-black border border-green-500/20 rounded-2xl p-5">
+                    <div className="flex items-center gap-2 mb-3">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
+                      <h3 className="font-semibold text-white">The Solution</h3>
+                    </div>
+                    <p className="text-neutral-400 text-sm leading-relaxed">{playbook.solution}</p>
               </div>
+            </div>
+              </GlossaryRichText>
             </div>
           </motion.section>
 
@@ -252,12 +286,12 @@ export function PlaybookPageClient({ playbook }: Props) {
                           onClick={() => setActiveStep(isActive ? -1 : index)}
                         >
                           <CardContent className="p-5 flex items-start gap-4">
-                            {/* Step Number / Check */}
+                              {/* Step Number / Check */}
                             <div
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                toggleStep(index);
-                              }}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  toggleStep(index);
+                                }}
                               className={`w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all cursor-pointer ${
                                 isStepCompleted
                                   ? "bg-green-500 text-white shadow-lg shadow-green-500/20"
@@ -267,47 +301,47 @@ export function PlaybookPageClient({ playbook }: Props) {
                               }`}
                             >
                               {isStepCompleted ? (
-                                <Check className="w-5 h-5" />
-                              ) : (
-                                <span className="font-bold">{index + 1}</span>
-                              )}
+                                  <Check className="w-5 h-5" />
+                                ) : (
+                                  <span className="font-bold">{index + 1}</span>
+                                )}
                             </div>
 
-                            {/* Content */}
+                              {/* Content */}
                             <div className="flex-1 min-w-0">
                               <div className="flex items-center justify-between gap-4">
                                 <h3
                                   className={`text-lg font-semibold transition-colors ${
                                     isStepCompleted
-                                      ? "text-neutral-500"
+                                      ? "text-neutral-400"
                                       : "text-white"
                                   }`}
                                 >
-                                  {step.title}
-                                </h3>
+                                    {step.title}
+                                  </h3>
                                 <div className="flex items-center gap-3 flex-shrink-0">
-                                  {step.duration && (
-                                    <span className="text-xs text-neutral-500 bg-white/5 px-2 py-1 rounded">
-                                      {step.duration}
-                                    </span>
-                                  )}
-                                  <ChevronDown
-                                    className={`w-5 h-5 text-neutral-500 transition-transform ${
+                                    {step.duration && (
+                                    <span className="text-xs text-neutral-400 bg-white/5 px-2 py-1 rounded">
+                                        {step.duration}
+                                      </span>
+                                    )}
+                                    <ChevronDown
+                                    className={`w-5 h-5 text-neutral-400 transition-transform ${
                                       isActive ? "rotate-180" : ""
-                                    }`}
-                                  />
+                                      }`}
+                                    />
+                                  </div>
                                 </div>
-                              </div>
                               <p
                                 className={`text-sm mt-1 line-clamp-2 ${
                                   isStepCompleted ? "text-neutral-600" : "text-neutral-400"
                                 }`}
                               >
-                                {step.description}
-                              </p>
-                            </div>
-                          </CardContent>
-                        </button>
+                                  {step.description}
+                                </p>
+                              </div>
+                            </CardContent>
+                          </button>
 
                         {/* Expanded Content */}
                         <AnimatePresence>
@@ -325,37 +359,37 @@ export function PlaybookPageClient({ playbook }: Props) {
                                 </p>
 
                                 {/* Resources */}
-                                {step.resources && step.resources.length > 0 && (
+                            {step.resources && step.resources.length > 0 && (
                                   <div className="space-y-3">
-                                    <span className="text-xs text-neutral-500 uppercase tracking-wide font-medium">
-                                      Resources
-                                    </span>
-                                    <div className="flex flex-wrap gap-2">
-                                      {step.resources.map((resource, rIndex) => {
-                                        const ResourceIcon =
-                                          resourceIconMap[resource.type] || LinkIcon;
-                                        const isExternal = resource.href.startsWith("http");
-                                        return (
-                                          <Link
-                                            key={rIndex}
-                                            href={resource.href}
-                                            target={isExternal ? "_blank" : undefined}
-                                            rel={isExternal ? "noopener noreferrer" : undefined}
+                                    <span className="text-xs text-neutral-400 uppercase tracking-wide font-medium">
+                                  Resources
+                                </span>
+                                <div className="flex flex-wrap gap-2">
+                                  {step.resources.map((resource, rIndex) => {
+                                    const ResourceIcon =
+                                      resourceIconMap[resource.type] || LinkIcon;
+                                    const isExternal = resource.href.startsWith("http");
+                                    return (
+                                      <Link
+                                        key={rIndex}
+                                        href={resource.href}
+                                        target={isExternal ? "_blank" : undefined}
+                                        rel={isExternal ? "noopener noreferrer" : undefined}
                                             className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white/5 border border-white/10 hover:border-orange-400/40 hover:bg-orange-500/5 transition-all text-sm group"
-                                          >
-                                            <ResourceIcon className="w-4 h-4 text-orange-400" />
+                                      >
+                                        <ResourceIcon className="w-4 h-4 text-orange-400" />
                                             <span className="text-neutral-300 group-hover:text-white transition-colors">
-                                              {resource.title}
-                                            </span>
-                                            {isExternal && (
-                                              <ExternalLink className="w-3 h-3 text-neutral-500" />
-                                            )}
-                                          </Link>
-                                        );
-                                      })}
-                                    </div>
-                                  </div>
-                                )}
+                                          {resource.title}
+                                        </span>
+                                        {isExternal && (
+                                          <ExternalLink className="w-3 h-3 text-neutral-400" />
+                                        )}
+                                      </Link>
+                                    );
+                                  })}
+                                </div>
+                              </div>
+                            )}
 
                                 {/* Mark Complete Button */}
                                 <div className="mt-5 pt-4 border-t border-white/5">
@@ -380,11 +414,11 @@ export function PlaybookPageClient({ playbook }: Props) {
                                     )}
                                   </button>
                                 </div>
-                              </div>
+                          </div>
                             </motion.div>
                           )}
                         </AnimatePresence>
-                      </Card>
+                    </Card>
                     </motion.div>
                   );
                 })}
@@ -435,7 +469,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                                     {post.excerpt}
                                   </p>
                                   {post.date && (
-                                    <div className="flex items-center gap-3 mt-2 text-xs text-neutral-500">
+                                    <div className="flex items-center gap-3 mt-2 text-xs text-neutral-400">
                                       <span className="flex items-center gap-1">
                                         <Calendar className="w-3 h-3" />
                                         {new Date(post.date).toLocaleDateString("en-US", {
@@ -448,7 +482,7 @@ export function PlaybookPageClient({ playbook }: Props) {
                                     </div>
                                   )}
                                 </div>
-                                <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 flex-shrink-0" />
+                                <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 flex-shrink-0" />
                               </div>
                             </div>
                           </Link>
@@ -465,38 +499,49 @@ export function PlaybookPageClient({ playbook }: Props) {
                       </h3>
                       <div className="grid md:grid-cols-2 gap-4">
                         {relatedInfographics.slice(0, 2).map((infographic) => (
-                          <Link
-                            key={infographic.slug}
-                            href={`/infographics/${infographic.slug}`}
+                    <Link
+                      key={infographic.slug}
+                      href={`/infographics/${infographic.slug}`}
                             className="block group h-full"
                           >
                             <div className="bg-black/60 border border-white/10 rounded-xl p-4 hover:border-orange-400/40 transition-all hover:bg-black/70 h-full flex flex-col">
                               <div className="flex items-start gap-4 flex-1">
                                 <div className="w-20 h-20 bg-neutral-800 rounded-lg flex-shrink-0 overflow-hidden">
                                   {infographic.previewImageUrl && (
-                                    <img
-                                      src={infographic.previewImageUrl}
-                                      alt={infographic.title}
-                                      className="w-full h-full object-cover"
-                                      loading="lazy"
-                                    />
+                                    <picture>
+                                      <source 
+                                        srcSet={infographic.previewImageUrl.replace(/\.(png|jpg|jpeg)$/i, '.avif')} 
+                                        type="image/avif" 
+                                      />
+                                      <source 
+                                        srcSet={infographic.previewImageUrl.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
+                                        type="image/webp" 
+                                      />
+                                      <img
+                                        src={infographic.previewImageUrl}
+                                        alt={infographic.title}
+                                        className="w-full h-full object-cover"
+                                        loading="lazy"
+                                        decoding="async"
+                                      />
+                                    </picture>
                                   )}
                                 </div>
                                 <div className="flex-1 min-w-0">
                                   <h3 className="font-semibold text-white group-hover:text-orange-400 transition-colors line-clamp-2">
-                                    {infographic.title}
-                                  </h3>
+                            {infographic.title}
+                          </h3>
                                   <p className="text-sm text-neutral-400 mt-1 line-clamp-2">
                                     {infographic.shortDescription}
                                   </p>
                                 </div>
-                                <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 flex-shrink-0" />
+                                <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 flex-shrink-0" />
                               </div>
-                            </div>
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
+                          </div>
+                    </Link>
+                  ))}
+                </div>
+              </div>
                   )}
 
                   {/* Related Playbooks – оставляем компактным блоком */}
@@ -522,18 +567,18 @@ export function PlaybookPageClient({ playbook }: Props) {
                                   <div className="flex-1 min-w-0">
                                     <h3 className="font-semibold text-white group-hover:text-orange-400 transition-colors line-clamp-2">
                                       {related.title}
-                                    </h3>
-                                    <p className="text-xs text-neutral-500 mt-1 line-clamp-2">
+                          </h3>
+                                    <p className="text-xs text-neutral-400 mt-1 line-clamp-2">
                                       {related.subtitle}
                                     </p>
                                   </div>
                                 </div>
-                                <div className="flex items-center justify-between text-[11px] text-neutral-500">
+                                <div className="flex items-center justify-between text-[11px] text-neutral-400">
                                   <span>{related.timeToComplete}</span>
                                   <span>{related.steps.length} steps</span>
                                 </div>
-                              </div>
-                            </Link>
+                          </div>
+                    </Link>
                           );
                         })}
                       </div>
@@ -565,30 +610,30 @@ export function PlaybookPageClient({ playbook }: Props) {
                       <Card className="bg-black border border-white/10 rounded-2xl hover:border-orange-400/40 transition-all duration-300">
                         <CardContent className="p-5">
                           <div className="flex items-start justify-between gap-4">
-                            <div>
+                          <div>
                               <h3 className="text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors">
-                                {caseStudy.title}
-                              </h3>
+                              {caseStudy.title}
+                            </h3>
                               <p className="text-neutral-400 text-sm mb-3">
-                                {caseStudy.description}
-                              </p>
-                              {caseStudy.outcome && (
-                                <div className="flex items-center gap-2">
+                              {caseStudy.description}
+                            </p>
+                            {caseStudy.outcome && (
+                              <div className="flex items-center gap-2">
                                   <CheckCircle className="w-4 h-4 text-green-400" />
-                                  <span className="text-green-400 text-sm">
-                                    {caseStudy.outcome}
-                                  </span>
-                                </div>
-                              )}
-                            </div>
-                            {caseStudy.link && (
-                              <div className="flex-shrink-0 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
-                                <ExternalLink className="w-5 h-5 text-neutral-400" />
+                                <span className="text-green-400 text-sm">
+                                  {caseStudy.outcome}
+                                </span>
                               </div>
                             )}
                           </div>
-                        </CardContent>
-                      </Card>
+                          {caseStudy.link && (
+                              <div className="flex-shrink-0 p-2 rounded-lg bg-white/5 group-hover:bg-white/10 transition-colors">
+                              <ExternalLink className="w-5 h-5 text-neutral-400" />
+                              </div>
+                          )}
+                        </div>
+                      </CardContent>
+                    </Card>
                     );
 
                     return caseStudy.link ? (
@@ -635,28 +680,28 @@ export function PlaybookPageClient({ playbook }: Props) {
                   ) : (
                     <>
                       <h2 className="text-2xl font-bold text-white mb-2">
-                        Ready to Get Started?
-                      </h2>
+                Ready to Get Started?
+              </h2>
                       <p className="text-neutral-400 mb-6">
-                        Complete this playbook and join the Ergo community.
-                      </p>
+                Complete this playbook and join the Ergo community.
+              </p>
                     </>
                   )}
-                  <div className="flex flex-wrap justify-center gap-4">
-                    <Link
-                      href={playbook.primaryCTA.href}
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href={playbook.primaryCTA.href}
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-orange-500 hover:bg-orange-600 text-black font-semibold transition-colors"
-                    >
-                      {playbook.primaryCTA.label}
+                >
+                  {playbook.primaryCTA.label}
                       <ArrowRight className="w-4 h-4" />
-                    </Link>
-                    <Link
-                      href="/playbooks"
+                </Link>
+                <Link
+                  href="/playbooks"
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 hover:bg-white/10 text-white font-semibold border border-white/10 transition-colors"
-                    >
-                      Browse All Playbooks
-                    </Link>
-                  </div>
+                >
+                  Browse All Playbooks
+                </Link>
+              </div>
                 </CardContent>
               </Card>
             </div>

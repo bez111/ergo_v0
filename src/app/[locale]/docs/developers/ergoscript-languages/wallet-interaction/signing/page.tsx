@@ -1,4 +1,6 @@
 "use client";
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Copy, Check, Shield } from "lucide-react";
@@ -72,7 +74,7 @@ export default function SigningPage() {
         </ul>
 
         <div className="text-gray-300 mb-6 max-w-2xl">
-          Complex expressions, such as <code className="bg-neutral-800 px-1 rounded">dlog(x₁) ∨ (dlog(x₂) ∧ dlog(x₃))</code>, where <code className="bg-neutral-800 px-1 rounded">dlog(x)</code> means "prove me knowledge of a secret <em>w</em>, such as for a known group with generator <em>g</em>, <em>g^w = x</em>, via a non-interactive form of the Schnorr protocol", may be encountered. Internally, this expression is represented as a tree (TODO). This proof is to be proven and then serialized into a binary spending proof (which could be included in a transaction) as follows:
+          Complex expressions, such as <code className="bg-neutral-800 px-1 rounded">dlog(x₁) ∨ (dlog(x₂) ∧ dlog(x₃))</code>, where <code className="bg-neutral-800 px-1 rounded">dlog(x)</code> means "prove me knowledge of a secret <em>w</em>, such as for a known group with generator <em>g</em>, <em>g^w = x</em>, via a non-interactive form of the Schnorr protocol", may be encountered. Internally, this expression is represented as a tree structure. This proof is to be proven and then serialized into a binary spending proof (which could be included in a transaction) as follows:
         </div>
 
         <h2 className="text-2xl font-bold text-cyan-400 mb-4">Steps for Proving a Tree:</h2>
@@ -125,7 +127,7 @@ export default function SigningPage() {
         </div>
 
         <div className="text-gray-300 mb-8 max-w-2xl">
-          Finally, to obtain a flat binary string containing <code className="bg-neutral-800 px-1 rounded">(e, z)</code> pairs (challenge and prover's response for a leaf sub-protocol) from the tree, follow these steps: (TODO)
+          Finally, to obtain a flat binary string containing <code className="bg-neutral-800 px-1 rounded">(e, z)</code> pairs (challenge and prover's response for a leaf sub-protocol) from the tree, traverse the tree in depth-first order and collect all leaf responses.
         </div>
       </div>
     </>

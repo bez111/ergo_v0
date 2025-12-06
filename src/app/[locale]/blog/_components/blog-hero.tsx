@@ -22,55 +22,40 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
   
   const cleanExcerpt = "Explore how Ergo's smart contracts and economic model power the next generation of decentralized apps."
 
-  // Format views
-  const formatViews = (views: number) => {
-    if (views >= 1000) return `${(views / 1000).toFixed(1)}k`
-    return views.toString()
-  }
-
   return (
     <article
-      className="group rounded-3xl bg-black/90 border border-white/10 p-8 md:p-10 shadow-[inset_0_1px_0_0_rgba(255,255,255,.04)] hover:translate-y-[-2px] transition-transform duration-200 h-full flex flex-col relative overflow-hidden"
+      className="group rounded-3xl bg-black/90 border border-white/10 p-8 md:p-10 hover:translate-y-[-2px] transition-transform duration-200 h-full flex flex-col relative overflow-hidden"
       itemScope
       itemType="https://schema.org/BlogPosting"
       aria-labelledby={`feat-${post.id}`}
       role="article"
       style={{
         backgroundImage: post.image ? `url(${post.image})` : undefined,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
       }}
     >
-      {/* Background Overlay */}
+      {/* Bottom gradient overlay for meta + CTA readability */}
       {post.image && (
-        <div className="absolute inset-0 bg-black/80" />
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black via-black/60 to-transparent z-0" />
       )}
 
-      {/* Top Content */}
-      <div className="flex-1 relative z-20 pointer-events-none">
-        {/* Title - Reduced Size */}
-        <h1 
-          id={`feat-${post.id}`} 
-          className="text-[clamp(28px,5vw,48px)] leading-[1.1] font-extrabold tracking-tight text-white"
+      {/* Top Content (spacer) */}
+      <div className="flex-1 relative z-20 pointer-events-none" />
+
+      {/* Compact Title */}
+      <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight line-clamp-2 relative z-20 mb-3">
+        <Link 
+          href={`/blog/${post.slug}`}
+          className="hover:text-orange-400 transition-colors"
         >
-          <Link 
-            href={`/blog/${post.slug}`} 
-            className="hover:text-orange-400 focus:text-orange-400 focus:outline-none transition-colors"
-            aria-describedby={`feat-desc-${post.id}`}
-          >
-            {cleanTitle}
-          </Link>
-        </h1>
-        
-        {/* Dek (Subtitle) */}
-        <p id={`feat-desc-${post.id}`} className="mt-4 text-neutral-300 text-lg leading-relaxed">
-          {cleanExcerpt}
-        </p>
-      </div>
+          {post.title}
+        </Link>
+      </h1>
 
       {/* Bottom Meta Line with CTA Button */}
-      <div className="flex items-center justify-between gap-3 mt-auto pt-6 relative z-20 pointer-events-none">
+      <div className="flex items-center justify-between gap-3 mt-auto relative z-20 pointer-events-none">
         <div className="flex items-center gap-3 text-neutral-400 pointer-events-auto">
           {/* Author Avatar */}
           <div className="h-10 w-10 rounded-full bg-neutral-800 grid place-content-center font-semibold text-neutral-200">
@@ -88,12 +73,9 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
           </div>
           
           {/* Author Name */}
-          <Link 
-            href={`/blog/author/${post.author.id}`}
-            className="text-neutral-300 hover:text-white transition-colors font-medium pointer-events-auto"
-          >
+          <span className="text-neutral-300 font-medium">
             {post.author.name}
-          </Link>
+          </span>
           
           <span>•</span>
           
@@ -110,13 +92,6 @@ export function BlogHero({ featuredPost }: BlogHeroProps) {
           
           {/* Read Time */}
           <span>{post.readTime} min</span>
-          
-          {post.views && (
-            <>
-              <span>•</span>
-              <span>{formatViews(post.views)}</span>
-            </>
-          )}
         </div>
 
         {/* CTA Button - Right side */}

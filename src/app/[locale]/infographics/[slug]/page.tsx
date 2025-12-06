@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { InfographicDetailClient } from './InfographicDetailClient';
+import { UniversalInfographicClient } from '@/components/infographics/UniversalInfographicClient';
 import { infographics } from '@/data/infographics';
 import { siteConfig } from '@/config/site-config';
 
@@ -69,5 +69,5 @@ export default async function InfographicDetailPage(props: Props) {
     notFound();
   }
 
-  return <InfographicDetailClient infographic={infographic} />;
+  return <UniversalInfographicClient infographic={infographic} />;
 }

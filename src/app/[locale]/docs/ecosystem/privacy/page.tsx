@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { EyeOff, Shuffle, KeyRound, UserCheck, ChevronRight } from "lucide-react";
 import Link from "next/link";

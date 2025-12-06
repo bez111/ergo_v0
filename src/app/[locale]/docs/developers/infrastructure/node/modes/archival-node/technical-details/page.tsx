@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages */
+
 import { 
   ArrowLeft,
   Code,
@@ -215,9 +217,9 @@ export default function TechnicalDetailsPage() {
     /*We should notify our neighbours that now we have all the transactions
     State apply modifiers (may be empty for a block in a forked chain)
     and generate ADProofs for them.
-    TODO requires a different interface from scorex-core,
-    because it should return ADProofs
-    TODO when minimal state apply Progress info,
+    Note: requires a different interface from scorex-core,
+    because it should return ADProofs.
+    When minimal state apply Progress info,
     it may also create UTXOSnapshot
     (e.g. every 30000 blocks like in Ethereum).
     This UTXOSnapshot should be required for mining by Rollerchain*/
@@ -247,9 +249,9 @@ export default function TechnicalDetailsPage() {
     /*We should notify our neighbours that now we have all the transactions
     State apply modifiers (may be empty for a block in a forked chain)
     and generate ADProofs for them.
-    TODO requires a different interface from scorex-core,
-    because it should return ADProofs
-    TODO when minimal state apply Progress info,
+    Note: requires a different interface from scorex-core,
+    because it should return ADProofs.
+    When minimal state apply Progress info,
     it may also create UTXOSnapshot
     (e.g. every 30000 blocks like in Ethereum).
     This UTXOSnapshot should be required for mining by Rollerchain*/

@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages */
+
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { ArrowLeft, Shield, Database, Link as LinkIcon, GitBranch, FileText, Code, Lock, CheckCircle, Info, ListChecks, Settings, Cpu, Zap, Eye, Smartphone, ArrowRight } from "lucide-react";

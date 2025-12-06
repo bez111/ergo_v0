@@ -22,9 +22,7 @@ export function PerformanceOptimizations({
 }: PerformanceOptimizationsProps) {
   return (
     <>
-      {/* Preconnect to external domains */}
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+      {/* Google Fonts preconnect removed - fonts are self-hosted via next/font */}
       <link rel="dns-prefetch" href="https://ergoblockchain.org" />
       
       {preconnectDomains.map(domain => (
@@ -71,17 +69,7 @@ export function PerformanceOptimizations({
         <style dangerouslySetInnerHTML={{ __html: criticalCSS }} />
       )}
 
-      {/* Font display optimization */}
-      <style>{`
-        @font-face {
-          font-family: 'Inter';
-          font-display: swap;
-        }
-        @font-face {
-          font-family: 'JetBrains Mono';
-          font-display: swap;
-        }
-      `}</style>
+      {/* Font display optimization handled by next/font in layout.tsx */}
     </>
   )
 }

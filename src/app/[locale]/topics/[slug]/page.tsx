@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';

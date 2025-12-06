@@ -1,9 +1,10 @@
 "use client";
 
+/* eslint-disable @next/next/no-img-element */
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import {
   ArrowRight,
   ArrowLeft,
@@ -33,7 +34,8 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { PageTransition } from "@/components/animations/page-transition";
 import { Card, CardContent } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
-import { GlossaryLink } from "@/components/glossary";
+import { GlossaryRichText } from "@/components/glossary";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 
 interface Props {
   comparison: ComparisonData;
@@ -92,6 +94,18 @@ export function ComparePageClient({ comparison }: Props) {
       <div className="container mx-auto px-4 py-16">
         <PageTransition>
           <div className="max-w-5xl mx-auto">
+            {/* Breadcrumbs */}
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6"
+            >
+              <Breadcrumbs
+                type="compare"
+                currentTitle={`Ergo vs ${comparison.name}`}
+              />
+            </motion.div>
+
             {/* Back Link */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
@@ -120,7 +134,7 @@ export function ComparePageClient({ comparison }: Props) {
                   <div className="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center">
                     <span className="text-2xl font-bold text-orange-400">E</span>
                   </div>
-                  <span className="text-3xl text-neutral-500">vs</span>
+                  <span className="text-3xl text-neutral-400">vs</span>
                   {/* Competitor Logo */}
                   <div
                     className="w-16 h-16 rounded-full flex items-center justify-center"
@@ -247,7 +261,7 @@ export function ComparePageClient({ comparison }: Props) {
                       </table>
                     </div>
                     <div className="p-4 bg-black/30 border-t border-white/5">
-                      <p className="text-xs text-neutral-500 text-center">
+                      <p className="text-xs text-neutral-400 text-center">
                         <Check className="w-4 h-4 text-green-400 inline mr-1" />
                         indicates advantage in that category. Last updated:{" "}
                         {comparison.updatedDate || comparison.publishDate}
@@ -273,33 +287,40 @@ export function ComparePageClient({ comparison }: Props) {
                 Deep <span className="text-orange-400">Dive</span>
               </motion.h2>
 
-              <div className="space-y-6">
-                {comparison.sections.map((section, idx) => (
-                  <motion.div
-                    key={idx}
-                    variants={itemVariants}
-                    className="bg-black/60 border border-white/10 rounded-2xl p-6 hover:border-orange-400/30 transition-colors"
-                  >
-                    <h3 className="text-xl font-bold text-white mb-4">
-                      {section.title}
-                    </h3>
-                    <p className="text-neutral-400 mb-4 leading-relaxed">
-                      {section.content}
-                    </p>
-                    <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-4">
-                      <div className="flex items-start gap-3">
-                        <Check className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <span className="text-xs font-semibold text-orange-400 uppercase tracking-wider">
-                            Ergo Advantage
-                          </span>
-                          <p className="text-white mt-1">{section.ergoAdvantage}</p>
+              <GlossaryRichText 
+                maxLinksPerNode={2} 
+                firstOccurrenceOnly={true}
+                variant="subtle"
+                showTooltip={true}
+              >
+                <div className="space-y-6">
+                  {comparison.sections.map((section, idx) => (
+                    <motion.div
+                      key={idx}
+                      variants={itemVariants}
+                      className="bg-black/60 border border-white/10 rounded-2xl p-6 hover:border-orange-400/30 transition-colors"
+                    >
+                      <h3 className="text-xl font-bold text-white mb-4">
+                        {section.title}
+                      </h3>
+                      <p className="text-neutral-400 mb-4 leading-relaxed">
+                        {section.content}
+                      </p>
+                      <div className="bg-orange-500/10 border border-orange-500/20 rounded-xl p-4">
+                        <div className="flex items-start gap-3">
+                          <Check className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" />
+                          <div>
+                            <span className="text-xs font-semibold text-orange-400 uppercase tracking-wider">
+                              Ergo Advantage
+                            </span>
+                            <p className="text-white mt-1">{section.ergoAdvantage}</p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+                    </motion.div>
+                  ))}
+                </div>
+              </GlossaryRichText>
             </motion.section>
 
             {/* Related Blog Posts */}
@@ -337,7 +358,7 @@ export function ComparePageClient({ comparison }: Props) {
                               <p className="text-sm text-neutral-400 mt-1 line-clamp-2">
                                 {post.excerpt}
                               </p>
-                              <div className="flex items-center gap-3 mt-2 text-xs text-neutral-500">
+                              <div className="flex items-center gap-3 mt-2 text-xs text-neutral-400">
                                 <span className="flex items-center gap-1">
                                   <Calendar className="w-3 h-3" />
                                   {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
@@ -345,7 +366,7 @@ export function ComparePageClient({ comparison }: Props) {
                                 <span>{post.readTime} min read</span>
                               </div>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 flex-shrink-0" />
+                            <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 flex-shrink-0" />
                           </div>
                         </div>
                       </Link>
@@ -397,7 +418,7 @@ export function ComparePageClient({ comparison }: Props) {
                                 {infographic.shortDescription}
                               </p>
                             </div>
-                            <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 flex-shrink-0" />
+                            <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 flex-shrink-0" />
                           </div>
                         </div>
                       </Link>

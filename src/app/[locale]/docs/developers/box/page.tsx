@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities */
 import { Metadata } from 'next'
 import Link from 'next/link'
 import { Database, Package, GitBranch, Key, Coins, Clock, Shield, Code, ChevronRight, ExternalLink, Info } from 'lucide-react'

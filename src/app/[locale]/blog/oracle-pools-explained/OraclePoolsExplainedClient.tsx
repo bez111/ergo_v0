@@ -1,6 +1,8 @@
 "use client"
 
-import React, { useState } from "react"
+/* eslint-disable react/no-unescaped-entities */
+
+import { useState } from "react"
 import { motion } from "framer-motion"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -10,15 +12,14 @@ import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
 import OracleComparisonTable from "@/components/oracle-comparison-table"
-import { GlossaryLink } from "@/components/glossary"
 import { 
   ChevronDown,
   Shield,
   Network,
   Eye,
   CheckCircle,
-  ArrowRight,
   ExternalLink,
   FileText,
   BookOpen,
@@ -184,7 +185,6 @@ export function OraclePoolsExplainedClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs 
             items={[
-              { name: "Home", href: "/" },
               { name: "Blog", href: "/blog" },
               { name: "Ergo Oracle Pools: A Trust-Minimised Oracle Model Explained", href: "/blog/oracle-pools-explained" }
             ]}
@@ -213,6 +213,8 @@ export function OraclePoolsExplainedClient() {
               />
             </div>
           </motion.div>
+
+          
 
           {/* TL;DR Section - Compact */}
           <motion.section
@@ -314,6 +316,19 @@ export function OraclePoolsExplainedClient() {
                 Ergo approaches the problem differently. Ergo's oracle pools offer predictable incentives and involve minimal trust assumptions. It's a decentralized answer to the challenge of bringing real-world data on-chain, closely matching the decentralization of the blockchain itself.
               </p>
             </div>
+          </motion.section>
+
+          {/* Oracle Pools Infographic */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.45 }}
+            className="mb-12"
+          >
+            <ExpandableInfographic
+              src="/og/infographics/oracle-pools-explained.png"
+              alt="Ergo Oracle Pools Explained: Decentralized, Reliable Data for dApps"
+            />
           </motion.section>
 
           {/* Why Oracles Fail */}

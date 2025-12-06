@@ -12,11 +12,6 @@ interface TrendingNowProps {
 
 export default function TrendingNow(props: TrendingNowProps) {
   const { posts } = props;
-  // Format views
-  const formatViews = (views: number) => {
-    if (views >= 1000) return `${(views / 1000).toFixed(1)}k`
-    return views.toString()
-  }
 
   // Format date
   const formatDate = (dateString: string) => {
@@ -50,21 +45,15 @@ export default function TrendingNow(props: TrendingNowProps) {
               className="flex items-start gap-3 rounded-2xl bg-black/80 border border-white/10 p-4 hover:bg-black/90 transition-colors duration-200 h-full"
             >
               {/* Preview Image */}
-              <div className="relative h-10 w-10 rounded-xl bg-neutral-800 overflow-hidden shrink-0">
-                {p.image ? (
-                  <Image 
-                    src={p.image} 
-                    alt="" 
-                    fill
-                    className="object-cover rounded-xl" 
-                    loading="lazy"
-                    sizes="40px"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-lg font-bold text-neutral-200">
-                    {p.author.name.charAt(0)}
-                  </div>
-                )}
+              <div className="relative h-10 w-10 rounded-xl bg-neutral-900 overflow-hidden shrink-0 border border-white/10">
+                <Image 
+                  src="/logo-ergo.svg"
+                  alt="" 
+                  fill
+                  className="object-cover rounded-xl" 
+                  loading="lazy"
+                  sizes="40px"
+                />
               </div>
               
               <div className="min-w-0 flex-1 overflow-hidden">
@@ -80,10 +69,8 @@ export default function TrendingNow(props: TrendingNowProps) {
                   {p.title}
                 </div>
                 
-                {/* Metrics: views • comments • date */}
+                {/* Metrics: date */}
                 <div className="mt-2 text-sm text-neutral-400 flex gap-3">
-                  <span>{formatViews(p.views || 0)}</span>
-                  {p.shares !== null && p.shares !== undefined && <span>{p.shares}</span>}
                   <span>{formatDate(p.date)}</span>
                 </div>
               </div>

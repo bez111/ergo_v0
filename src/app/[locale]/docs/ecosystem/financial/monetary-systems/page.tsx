@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages */
+
 import React from "react";
 import { CheckCircle, Zap, TrendingUp, ExternalLink, Info, Coins, FlaskConical, Users } from "lucide-react";
 

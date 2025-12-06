@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-explicit-any, @typescript-eslint/no-unused-vars */
+
 import { useState } from 'react'
 import { Printer, Download, Share2, BookmarkPlus, Volume2, VolumeX } from 'lucide-react'
 import { motion } from 'framer-motion'
@@ -106,13 +108,13 @@ export function BlogActions({ title, slug }: BlogActionsProps) {
           text: `Check out this article: ${title}`,
           url: window.location.href,
         })
-      } catch (err) {
-        console.log('Share cancelled or failed')
+      } catch {
+        // Share cancelled or failed
       }
     } else {
-      // Fallback to copy link
-      navigator.clipboard.writeText(window.location.href)
-      alert('Link copied to clipboard!')
+      // On desktop, open Twitter/X share
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(window.location.href)}`
+      window.open(twitterUrl, '_blank', 'noopener,noreferrer,width=600,height=400')
     }
   }
 

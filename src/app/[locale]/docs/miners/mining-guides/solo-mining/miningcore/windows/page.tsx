@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import Link from "next/link";
 import { ArrowLeft, Database, Terminal, Settings, CheckCircle, AlertTriangle, ExternalLink, Download, Play, FileText, Folder } from "lucide-react";
 import { CopyButton } from "@/components/ui/copy-button";

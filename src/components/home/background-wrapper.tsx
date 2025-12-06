@@ -1,6 +1,16 @@
 export function BackgroundWrapper({ children }: { children: React.ReactNode }) {
   return (
     <div className="relative">
+      {/* Preload critical background image for LCP */}
+      <link 
+        rel="preload" 
+        href="/cyberpunk-grid.png" 
+        as="image" 
+        type="image/png"
+        // @ts-expect-error - fetchPriority is valid but not in React types yet
+        fetchPriority="high"
+      />
+      
       {/* Cyberpunk grid background image */}
       <div 
         className="fixed inset-0 pointer-events-none opacity-30"

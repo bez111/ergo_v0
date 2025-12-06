@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
+
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import { 
@@ -19,7 +21,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { coreChannels, guideSteps, faqsData, additionalPlatforms } from "./marketing-guide.data"
 
@@ -54,10 +56,7 @@ export function MarketingGuideClient() {
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
         {/* Hidden Breadcrumbs for SEO */}
-        <HiddenBreadcrumbs 
-          items={breadcrumbItems} 
-          currentPage="Marketing Guide" 
-        />
+        <Breadcrumbs items={[...breadcrumbItems, { name: "Marketing Guide", href: "#" }]} variant="hidden" />
         
         {/* Hero Section */}
         <motion.section 

@@ -1,8 +1,9 @@
 "use client"
 
-import React, { useState } from "react"
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
+
+import { useState } from "react"
 import { motion } from "framer-motion"
-import Link from "next/link"
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -12,8 +13,8 @@ import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
 import { StorageRentTimeline } from "@/components/diagrams/storage-rent-timeline"
-import { GlossaryLink } from "@/components/glossary"
 import { 
   Database,
   Coins,
@@ -22,9 +23,7 @@ import {
   CheckCircle,
   ChevronDown,
   Code,
-  Eye,
-  Zap,
-  Clock
+  Eye
 } from "lucide-react"
 
 export function StorageRentArticleClient() {
@@ -108,7 +107,6 @@ export function StorageRentArticleClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs
             items={[
-              { name: "Home", href: "/" },
               { name: "Blog", href: "/blog" },
               { name: "How Ergo's Storage Rent Solves Blockchain State Bloat", href: "/blog/storage-rent" }
             ]}
@@ -252,6 +250,19 @@ export function StorageRentArticleClient() {
                 centralization risk.
               </p>
             </section>
+
+            {/* Storage Rent Infographic */}
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-12"
+            >
+              <ExpandableInfographic
+                src="/og/infographics/storage-rent.png"
+                alt="Ergo Storage Rent: Solving Blockchain State Bloat"
+              />
+            </motion.section>
 
             {/* Ergo's Answer */}
             <section

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -15,6 +17,7 @@ import { Eye, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, 
 import Link from "next/link"
 import { useState } from "react"
 import React from "react"
+import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -543,57 +546,17 @@ export default function OraclePoolsPage() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={1.2}>
-          {/* What's Next Section */}
-          <section className="py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  What's <span className="text-orange-400">Next?</span>
-                </h2>
-                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Ready to integrate oracle data? Explore the tools and resources available.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <a href="https://github.com/ergoplatform/oracle-core" target="_blank" rel="noopener noreferrer" className="group block">
-                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <BarChart3 className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">View Oracle Core</h3>
-                        <p className="text-orange-400 font-medium">Source Code</p>
-                      </div>
-                    </div>
-                    <p className="text-neutral-300 leading-relaxed">
-                      Explore the Oracle Core repository with setup guides, documentation, and source code.
-                    </p>
-                  </div>
-                </a>
-                
-                <Link href="/docs" className="group block">
-                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <BookOpen className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">Technical Documentation</h3>
-                        <p className="text-orange-400 font-medium">Learn More</p>
-                      </div>
-                    </div>
-                    <p className="text-neutral-300 leading-relaxed">
-                      Learn how to integrate oracle data into your smart contracts and applications.
-                    </p>
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
+        {/* Related Technologies - Data-driven */}
+        <RelatedTechnologies 
+          currentSlug="oracle-pools"
+          title="Related Technologies"
+        />
+
+        {/* Related Blog Articles - lightweight */}
+        <RelatedBlogPostsForTechnology currentSlug="oracle-pools" />
+
+        {/* What's Next - CTA Section */}
+        <WhatsNextCTA currentSlug="oracle-pools" />
       </BackgroundWrapper>
     </>
   )

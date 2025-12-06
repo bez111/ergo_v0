@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -16,6 +18,7 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import PrivacyComparisonTable from "@/components/privacy-comparison-table"
 import { GlossaryLink } from "@/components/glossary"
+import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 // Removed HexagonalGrid due to loading issues
 
@@ -426,54 +429,17 @@ export default function PrivacyFeaturesPage() {
               </div>
             </FadeIn>
 
-            {/* What's Next Section */}
-            <FadeIn delay={0.9}>
-              <div className="max-w-6xl mx-auto mb-16">
-                <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
-                  What's <span className="text-orange-400">Next</span>?
-                </h2>
-                <p className="text-xl text-center text-neutral-300 mb-12">
-                  Continue exploring Ergo's privacy features and ecosystem
-                </p>
-                <div className="grid md:grid-cols-2 gap-6">
-                  <Link 
-                    href="/ecosystem"
-                    className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                        <Shield className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">Try ErgoMixer</h3>
-                        <p className="text-orange-400 text-sm">Privacy Tool</p>
-                      </div>
-                    </div>
-                    <p className="text-neutral-300">
-                      Experience privacy-preserving transactions with Ergo's non-custodial mixer
-                    </p>
-                  </Link>
-                  
-                  <Link 
-                    href="/docs/ecosystem/privacy"
-                    className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                  >
-                    <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                        <BookOpen className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-xl font-bold text-white">Privacy Documentation</h3>
-                        <p className="text-orange-400 text-sm">Learn More</p>
-                      </div>
-                    </div>
-                    <p className="text-neutral-300">
-                      Deep dive into the technical details of Ergo's privacy implementation
-                    </p>
-                  </Link>
-                </div>
-              </div>
-            </FadeIn>
+            {/* Related Technologies - Data-driven */}
+            <RelatedTechnologies 
+              currentSlug="privacy-features"
+              title="Related Technologies"
+            />
+
+            {/* Related Blog Articles - lightweight */}
+            <RelatedBlogPostsForTechnology currentSlug="privacy-features" />
+
+            {/* What's Next - CTA Section */}
+            <WhatsNextCTA currentSlug="privacy-features" />
           </div>
         </div>
       </BackgroundWrapper>

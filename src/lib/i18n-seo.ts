@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // International SEO Configuration for Ergo Platform
 // Supports: en (default), ru, pt-BR
 

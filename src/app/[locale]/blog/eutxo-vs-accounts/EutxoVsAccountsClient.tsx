@@ -1,18 +1,21 @@
 "use client"
 
-import React, { useState } from "react"
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
+
+import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ResponsiveTable } from "@/components/ui/responsive-table"
-import { GlossaryLink } from "@/components/glossary"
 
 import {
   ChevronDown,
@@ -98,7 +101,6 @@ export function EutxoVsAccountsClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs 
             items={[
-              { name: "Home", href: "/" },
               { name: "Blog", href: "/blog" },
               { name: "Two Blockchain Models: Why Ergo Chose Differently", href: "/blog/eutxo-vs-accounts" }
             ]}
@@ -274,6 +276,19 @@ export function EutxoVsAccountsClient() {
                 </div>
               </div>
             </div>
+          </motion.section>
+
+          {/* eUTXO vs Accounts Infographic */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mb-14"
+          >
+            <ExpandableInfographic
+              src="/og/infographics/eutxo-vs-accounts.png"
+              alt="eUTXO vs Accounts: Two Blockchain Transaction Models Compared"
+            />
           </motion.section>
 
           {/* Ethereum's Account Model */}

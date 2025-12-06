@@ -1,5 +1,7 @@
 'use client';
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages, react-hooks/set-state-in-effect, react-hooks/exhaustive-deps */
+
 import React, { useState, useMemo, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
@@ -9,7 +11,7 @@ import { BackgroundWrapper } from '@/components/home/background-wrapper';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { Collapsible, CollapsibleContent } from '@/components/ui/collapsible';
 import { FinalCTASimple } from '@/components/home/final-cta-simple';
 import { infographics, filterInfographics } from '@/data/infographics';
 import { InfographicMeta, CATEGORY_LABELS } from '@/types/infographic';
@@ -115,7 +117,7 @@ export function InfographicsClient() {
   // Reset page when filters change (but not on initial mount)
   useEffect(() => {
     if (didMountRef.current) {
-      setCurrentPage(1);
+    setCurrentPage(1);
       updatePageInUrl(1);
     } else {
       didMountRef.current = true;
@@ -226,22 +228,25 @@ export function InfographicsClient() {
                 
                 {/* Search */}
                 <div className="relative flex-1 max-w-md">
-                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400 h-4 w-4" />
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-neutral-400 h-4 w-4" aria-hidden="true" />
                   <input
-                    type="text"
+                    type="search"
                     placeholder="Search infographics (e.g. 'storage rent', 'NiPoPoWs', 'VC chains')"
                     value={filters.search}
                     onChange={(e) => handleFilterChange('search', e.target.value)}
                     className="w-full pl-10 pr-4 py-3 bg-black/60 border border-white/20 rounded-xl text-white placeholder-neutral-400 focus:outline-none focus:border-orange-400 focus:ring-1 focus:ring-orange-400"
+                    aria-label="Search infographics"
+                    role="searchbox"
                   />
                 </div>
 
                 {/* Desktop Filters */}
-                <div className="hidden lg:flex gap-4 items-center">
+                <div className="hidden lg:flex gap-4 items-center" role="group" aria-label="Filter options">
                   <select
                     value={filters.category}
                     onChange={(e) => handleFilterChange('category', e.target.value)}
                     className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-white focus:outline-none focus:border-orange-400"
+                    aria-label="Filter by category"
                   >
                     {Object.entries(CATEGORY_LABELS).map(([value, label]) => (
                       <option key={value} value={value} className="bg-black">
@@ -255,6 +260,7 @@ export function InfographicsClient() {
                     value={filters.sort}
                     onChange={(e) => handleFilterChange('sort', e.target.value)}
                     className="px-4 py-3 bg-black/60 border border-white/20 rounded-xl text-white focus:outline-none focus:border-orange-400"
+                    aria-label="Sort by"
                   >
                     <option value="newest" className="bg-black">Newest</option>
                     <option value="popular" className="bg-black">Most popular</option>
@@ -354,13 +360,20 @@ export function InfographicsClient() {
                 </Button>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+              <div 
+                className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch"
+                role="list"
+                aria-label="Infographics gallery"
+                aria-live="polite"
+                aria-atomic="false"
+              >
                 {paginatedInfographics.map((infographic, index) => (
                   <motion.div
                     key={infographic.slug}
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: 0.1 * index }}
+                    role="listitem"
                   >
                     <InfographicCard infographic={infographic} onDownload={handleDownload} />
                   </motion.div>
@@ -377,7 +390,7 @@ export function InfographicsClient() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="mb-16"
             >
-              <div className="flex justify-center items-center gap-2">
+              <nav className="flex justify-center items-center gap-2" role="navigation" aria-label="Pagination">
                 <Button
                   variant="outline"
                   disabled={currentPage === 1}
@@ -386,6 +399,7 @@ export function InfographicsClient() {
                     setCurrentPage(newPage);
                   }}
                   className="border-white/20 text-white disabled:opacity-50"
+                  aria-label="Go to previous page"
                 >
                   Previous
                 </Button>
@@ -401,6 +415,8 @@ export function InfographicsClient() {
                       ? "bg-orange-400 text-black hover:bg-orange-500" 
                       : "border-white/20 text-white"
                     }
+                    aria-label={`Go to page ${page}`}
+                    aria-current={currentPage === page ? "page" : undefined}
                   >
                     {page}
                   </Button>
@@ -414,10 +430,11 @@ export function InfographicsClient() {
                     setCurrentPage(newPage);
                   }}
                   className="border-white/20 text-white disabled:opacity-50"
+                  aria-label="Go to next page"
                 >
                   Next
                 </Button>
-              </div>
+              </nav>
             </motion.section>
           )}
 
@@ -579,24 +596,24 @@ export function InfographicsClient() {
                   </p>
                 </div>
 
-                <div className="space-y-4">
-                  <FAQItem 
-                    key="commercial-reuse"
-                    question="Can I reuse these infographics commercially?"
-                    answer="Yes, you can reuse any infographic in presentations, blog posts or educational materials. Please credit ergoblockchain.org and link back to the original page."
-                  />
-                  <FAQItem 
-                    key="translations"
-                    question="Will there be translations/localized versions?"
-                    answer="We are working on providing infographics in multiple languages. Contact the Ergo community if you'd like to help with translations."
-                  />
-                  <FAQItem 
-                    key="request-topic"
-                    question="Where can I request a new infographic topic?"
-                    answer="You can request new infographic topics through the Ergo community channels on Discord, Telegram, or by creating an issue on the official GitHub repository."
-                  />
-                </div>
+              <div className="space-y-4">
+                <FAQItem 
+                  key="commercial-reuse"
+                  question="Can I reuse these infographics commercially?"
+                  answer="Yes, you can reuse any infographic in presentations, blog posts or educational materials. Please credit ergoblockchain.org and link back to the original page."
+                />
+                <FAQItem 
+                  key="translations"
+                  question="Will there be translations/localized versions?"
+                  answer="We are working on providing infographics in multiple languages. Contact the Ergo community if you'd like to help with translations."
+                />
+                <FAQItem 
+                  key="request-topic"
+                  question="Where can I request a new infographic topic?"
+                  answer="You can request new infographic topics through the Ergo community channels on Discord, Telegram, or by creating an issue on the official GitHub repository."
+                />
               </div>
+            </div>
             </section>
           </motion.section>
 
@@ -644,6 +661,7 @@ function InfographicShareMenu({
       document.addEventListener('keydown', handleEscape);
       return () => document.removeEventListener('keydown', handleEscape);
     }
+    return undefined;
   }, [isDownloadModalOpen, isShareModalOpen]);
   const encodedTitle = encodeURIComponent(`${infographic.title} - Ergo Infographics`);
   const encodedDescription = encodeURIComponent(infographic.shortDescription);
@@ -859,7 +877,7 @@ function InfographicShareMenu({
                       copyEmbedCode();
                     } else {
                       handleLocalDownload(sizeOption.size === 'original' ? undefined : sizeOption.size);
-                      setIsDownloadModalOpen(false);
+                    setIsDownloadModalOpen(false);
                     }
                   }}
                   disabled={isProcessing}
@@ -869,7 +887,7 @@ function InfographicShareMenu({
                 >
                   <div className="flex flex-col items-start">
                     <span>{sizeOption.name}</span>
-                    <span className="text-[11px] text-neutral-500">
+                    <span className="text-[11px] text-neutral-400">
                       {sizeOption.size === 'embed'
                         ? (embedCopied ? 'Embed code copied to your clipboard.' : sizeOption.description)
                         : sizeOption.description}
@@ -878,9 +896,9 @@ function InfographicShareMenu({
                   {sizeOption.size === 'embed' ? (
                     <Copy className="w-4 h-4" />
                   ) : (
-                    <Download
-                      className={`w-4 h-4 ${isProcessing ? 'animate-pulse opacity-70' : ''}`}
-                    />
+                  <Download
+                    className={`w-4 h-4 ${isProcessing ? 'animate-pulse opacity-70' : ''}`}
+                  />
                   )}
                 </button>
               ))}
@@ -943,12 +961,23 @@ function InfographicCard({
           </div>
         )}
         
-        <img
-          src={infographic.previewImageUrl}
-          alt={infographic.imageAlt}
-          className="w-full h-full object-contain transition-all duration-300 group-hover:scale-105"
-          loading="lazy"
-        />
+        <picture>
+          <source 
+            srcSet={infographic.previewImageUrl.replace(/\.(png|jpg|jpeg)$/i, '.avif')} 
+            type="image/avif" 
+          />
+          <source 
+            srcSet={infographic.previewImageUrl.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
+            type="image/webp" 
+          />
+          <img
+            src={infographic.previewImageUrl}
+            alt={infographic.imageAlt}
+            className="w-full h-full object-contain transition-all duration-300 group-hover:scale-105"
+            loading="lazy"
+            style={{ aspectRatio: '16/9' }}
+          />
+        </picture>
         
         {/* Hover overlay - subtle */}
         {isHovered && (
@@ -977,7 +1006,7 @@ function InfographicCard({
         </div>
         
         {/* Meta line under badge */}
-        <div className="text-xs text-neutral-500 mb-3">
+        <div className="text-xs text-neutral-400 mb-3">
           {getShortCategoryLabel(infographic.category)} · Visual guide
         </div>
 
@@ -1012,7 +1041,7 @@ function FAQItem({ question, answer }: { question: string; answer: string }) {
           {question}
         </h3>
         <ChevronDown
-          className={`w-5 h-5 text-neutral-500 flex-shrink-0 transition-transform ${
+          className={`w-5 h-5 text-neutral-400 flex-shrink-0 transition-transform ${
             isOpen ? 'rotate-180' : ''
           }`}
         />

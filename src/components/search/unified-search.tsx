@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities */
+
 import { useState, useEffect, useRef } from "react"
 import { Search, X, FileText, MessageCircle, BookOpen, Code } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"

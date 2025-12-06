@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 
 /**
  * Скрипт для поиска orphan страниц (страниц без входящих ссылок)

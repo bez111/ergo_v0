@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
 import React from "react";
 import { ArrowLeft, Database, Code, GitBranch, Shield, Eye, Zap } from "lucide-react";
 import Link from "next/link";

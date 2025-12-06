@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities */
+
 import type React from "react"
 import { useState } from "react"
 import { motion } from "framer-motion"

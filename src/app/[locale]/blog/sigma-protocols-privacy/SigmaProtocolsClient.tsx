@@ -1,8 +1,10 @@
 "use client"
 
-import React, { useState } from "react"
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
+
+import { useState } from "react"
 import { motion } from "framer-motion"
-import Link from "next/link"
+import Image from "next/image"
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -12,6 +14,7 @@ import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
 import { 
   Shield,
   Eye,
@@ -154,7 +157,6 @@ export function SigmaProtocolsClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs
             items={[
-              { name: "Home", href: "/" },
               { name: "Blog", href: "/blog" },
               { name: "Ergo And Sigma Protocols: The Next Step In Blockchain Privacy", href: "/blog/sigma-protocols-privacy" }
             ]}
@@ -286,6 +288,19 @@ export function SigmaProtocolsClient() {
                 That's exactly the kind of functionality that both institutions and individuals need in this brave new world of blockchain surveillance.
               </p>
             </section>
+
+            {/* Sigma Protocols Privacy Infographic */}
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-12"
+            >
+              <ExpandableInfographic
+                src="/og/infographics/sigma-protocols-privacy.png"
+                alt="Ergo & Sigma Protocols: The Next Step In Blockchain Privacy"
+              />
+            </motion.section>
 
             {/* The Return Of Privacy Coins */}
             <section

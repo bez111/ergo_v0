@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
+
 import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -65,7 +67,7 @@ export function CTASection() {
       icon: Zap,
       title: "For Miners",
       description: "Secure the network",
-      href: "/use/mining",
+      href: "/miners",
       primary: false,
       label: "START MINING"
     }

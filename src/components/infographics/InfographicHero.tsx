@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import { CalendarDays, Clock, Shield, Sparkles } from 'lucide-react';
 
 import { Badge } from '@/components/ui/badge';

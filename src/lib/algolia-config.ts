@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Algolia DocSearch Configuration
 export const algoliaConfig = {
   appId: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || 'your-app-id',

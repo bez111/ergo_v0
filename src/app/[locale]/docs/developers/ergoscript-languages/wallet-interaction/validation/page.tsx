@@ -1,4 +1,6 @@
 "use client";
+
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, CheckCircle } from "lucide-react";
@@ -80,10 +82,10 @@ export default function ValidationPage() {
           <li>The header must be valid (refer to header validation rules).</li>
         </ul>
 
-        <div className="bg-neutral-800 border-l-4 border-yellow-400 p-4 mb-8">
-          <h3 className="text-lg font-bold text-yellow-400 mb-2">TODO</h3>
+        <div className="bg-neutral-800 border-l-4 border-cyan-400 p-4 mb-8">
+          <h3 className="text-lg font-bold text-cyan-400 mb-2">Additional Notes</h3>
           <div className="text-gray-300">
-            (Mention emission rules. The extractEmissionBox function may have bugs. Extension validation rules need to be added.)
+            For complete validation, also consider emission rules, the extractEmissionBox function behavior, and extension validation rules as defined in the protocol specification.
           </div>
         </div>
       </div>

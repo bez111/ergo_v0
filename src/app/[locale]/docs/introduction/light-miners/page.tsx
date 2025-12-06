@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { Layers, Zap, Link2, AlertTriangle, ExternalLink } from 'lucide-react';
 

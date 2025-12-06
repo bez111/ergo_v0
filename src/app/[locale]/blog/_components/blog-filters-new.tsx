@@ -1,6 +1,8 @@
 "use client"
 
-import React, { useMemo, useEffect } from "react"
+/* eslint-disable jsx-a11y/role-supports-aria-props */
+
+import { useMemo, useEffect } from "react"
 import {
   BookOpen,
   Cog,

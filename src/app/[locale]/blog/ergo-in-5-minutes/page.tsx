@@ -20,7 +20,7 @@ export function generateMetadata(): Metadata {
       title,
       description,
       images: [{ 
-        url: `${origin}/og/ergo-5-minutes.svg`, 
+        url: `${origin}/og/ergo-in-five-minutes.png`, 
         width: 1200, 
         height: 630,
         alt: "Ergo in 5 Minutes: Why It Matters & How It Works"
@@ -35,7 +35,7 @@ export function generateMetadata(): Metadata {
       card: "summary_large_image",
       title,
       description,
-      images: [`${origin}/og/ergo-5-minutes.svg`],
+      images: [`${origin}/og/ergo-in-five-minutes.png`],
       site: siteConfig.twitterHandle,
       creator: siteConfig.twitterHandle,
     },
@@ -61,7 +61,7 @@ export default function ErgoIn5MinutesPage() {
     "@id": `${url}#article`,
     headline: "Ergo in 5 Minutes: Why It Matters & How It Works",
     description: "Proof-of-Work blockchain with eUTXO and Sigma protocols: fair launch (no ICO), privacy, Storage Rent, and the Ergo DeFi ecosystem.",
-    image: `${origin}/og/ergo-5-minutes.svg`,
+    image: `${origin}/og/ergo-in-five-minutes.png`,
     datePublished: "2024-01-01T00:00:00Z",
     dateModified: new Date().toISOString(),
     author: {

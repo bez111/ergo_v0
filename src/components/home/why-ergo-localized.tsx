@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React from "react"
 import { useTranslations, useLocale } from "next-intl"
 import { Shield, Zap, Database, Lock, Users, Cpu } from "lucide-react"

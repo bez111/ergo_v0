@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities */
+
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
@@ -22,6 +24,7 @@ import {
   ArrowRight,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { RelatedTechnologies } from "@/components/technology"
 
 const EIP31_URL = "https://github.com/ergoplatform/eips/blob/master/eip-0031.md"
 
@@ -569,6 +572,12 @@ export default function BabelFeesClient() {
             </motion.div>
           </div>
         </section>
+
+        {/* Related Technologies - Data-driven */}
+        <RelatedTechnologies 
+          currentSlug="babel-fees"
+          title="Related Technologies"
+        />
 
         {/* Call to Action */}
         <section className="py-16 px-4">

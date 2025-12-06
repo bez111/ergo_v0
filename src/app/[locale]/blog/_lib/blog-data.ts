@@ -25,7 +25,6 @@ export interface BlogPost {
   trending?: boolean // For trending section
   featured?: boolean // For hero section
   difficulty?: 'Beginner' | 'Intermediate' | 'Advanced'
-  views?: number // Dynamic - loaded from analytics
   shares?: number // Social proof
 }
 
@@ -79,13 +78,32 @@ export const authors: Record<string, Author> = {
 }
 
 export const blogPosts: BlogPost[] = [
+  // Ordered by newest first (for "Newest" sort). Starting 2025-11-11 and stepping 4 days back.
+  {
+    id: 'ergo-in-5-minutes',
+    slug: 'ergo-in-5-minutes',
+    title: 'Ergo in 5 Minutes: Why It Matters & How It Works',
+    excerpt: 'Quick introduction to Ergo: fair launch, eUTXO, Sigma protocols, and DeFi ecosystem. Proof-of-Work blockchain with privacy and security.',
+    date: '2025-11-11',
+    lastUpdated: '2025-11-11',
+    author: authors['ergo-team']!,
+    category: 'Technology',
+    readTime: 5,
+    wordCount: 1500,
+    image: '/og/ergo-in-five-minutes.png',
+    tags: ['Introduction', 'eUTXO', 'Sigma Protocols', 'Fair Launch'],
+    featured: false,
+    trending: true,
+    difficulty: 'Beginner',
+    shares: 300
+  },
   {
     id: 'ergo-manifesto',
     slug: 'ergo-manifesto',
     title: 'The Ergo Manifesto: Building Ergonomic Money for Regular People',
     excerpt: 'The foundational vision of Ergo Platform - creating decentralized financial tools that empower ordinary people, not corporations. A manifesto for true peer-to-peer economic freedom.',
-    date: '2025-11-01',
-    lastUpdated: '2025-11-15',
+    date: '2025-11-14',
+    lastUpdated: '2025-11-14',
     author: {
       id: 'kushti',
       name: 'Kushti',
@@ -103,35 +121,15 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     trending: true,
     difficulty: 'Beginner',
-    views: 8000,
     shares: 450
-  },
-  {
-    id: 'ergo-in-5-minutes',
-    slug: 'ergo-in-5-minutes',
-    title: 'Ergo in 5 Minutes: Why It Matters & How It Works',
-    excerpt: 'Quick introduction to Ergo: fair launch, eUTXO, Sigma protocols, and DeFi ecosystem. Proof-of-Work blockchain with privacy and security.',
-    date: '2025-11-05',
-    lastUpdated: '2025-11-15',
-    author: authors['ergo-team']!,
-    category: 'Technology',
-    readTime: 5,
-    wordCount: 1500,
-    image: '/og/ergo-5-minutes.svg',
-    tags: ['Introduction', 'eUTXO', 'Sigma Protocols', 'Fair Launch'],
-    featured: false,
-    trending: true,
-    difficulty: 'Beginner',
-    views: 5000,
-    shares: 300
   },
   {
     id: 'eutxo-vs-accounts',
     slug: 'eutxo-vs-accounts',
     title: 'Two Blockchain Models: Why Ergo Chose Differently',
     excerpt: 'Deterministic execution, explicit state transitions, and auditable privacy patterns — how Ergo\'s eUTXO model differs from Ethereum\'s account model for secure, scalable DeFi.',
-    date: '2025-11-07',
-    lastUpdated: '2025-11-15',
+    date: '2025-11-17',
+    lastUpdated: '2025-11-17',
     author: authors['technical-team']!,
     category: 'Technology',
     readTime: 8,
@@ -141,7 +139,25 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     trending: true,
     difficulty: 'Intermediate',
-    views: 0,
+    shares: 0
+  },
+  {
+    id: 'autolykos-proof-of-work',
+    slug: 'autolykos-proof-of-work',
+    title: 'Autolykos Proof-of-Work: Why Ergo’s Mining Algorithm Is Sustainable',
+    excerpt:
+      'Autolykos is the Ergo mining algorithm: a memory-hard proof-of-work designed for ASIC-resistant mining, sustainable PoW, and a more decentralised, GPU-friendly Ergo blockchain.',
+    date: '2025-11-21',
+    lastUpdated: '2025-11-21',
+    author: authors['technical-team']!,
+    category: 'Technology',
+    readTime: 10,
+    wordCount: 2400,
+    image: '/og/blog-default.svg',
+    tags: ['Autolykos', 'Proof-of-Work', 'GPU mining Ergo', 'ASIC resistance', 'Sustainable PoW'],
+    featured: false,
+    trending: true,
+    difficulty: 'Intermediate',
     shares: 0
   },
   {
@@ -149,8 +165,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'storage-rent',
     title: 'How Ergo\'s Storage Rent Solves Blockchain State Bloat',
     excerpt: 'Ergo\'s miners can charge small fees on dormant accounts, clearing dust transactions and ensuring blockchain state stays manageable.',
-    date: '2025-11-10',
-    lastUpdated: '2025-11-15',
+    date: '2025-11-24',
+    lastUpdated: '2025-11-24',
     author: authors['ergo-team']!,
     category: 'Technology',
     readTime: 8,
@@ -160,26 +176,25 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     trending: true,
     difficulty: 'Intermediate',
-    views: 0,
     shares: 0
   },
   {
-    id: 'sigma-protocols-privacy',
-    slug: 'sigma-protocols-privacy',
-    title: 'Ergo And Sigma Protocols: The Next Step In Blockchain Privacy',
-    excerpt: 'As first-gen privacy coins see a resurgence of activity, Ergo\'s composable zero-knowledge signatures offer new options for compliant confidentiality.',
-    date: '2025-11-12',
-    lastUpdated: '2025-11-15',
-    author: authors['ergo-team']!,
-    category: 'Privacy',
-    readTime: 9,
-    wordCount: 2200,
+    id: 'ergoscript-introduction',
+    slug: 'ergoscript-introduction',
+    title: 'ErgoScript in 30 Minutes: A Practical Introduction to Ergo’s Smart Contract Language',
+    excerpt:
+      'ErgoScript is the Ergo blockchain’s functional smart contract language, purpose-built for the eUTXO model. Learn how it works and what makes Ergo smart contracts secure and predictable.',
+    date: '2025-11-27',
+    lastUpdated: '2025-11-27',
+    author: authors['technical-team']!,
+    category: 'Technology',
+    readTime: 12,
+    wordCount: 2600,
     image: '/og/blog-default.svg',
-    tags: ['Sigma Protocols', 'Privacy', 'Zero Knowledge', 'Compliance', 'DeFi Privacy'],
-    featured: true,
+    tags: ['ErgoScript', 'Smart Contracts', 'eUTXO', 'Ergo Developers', 'Functional Programming'],
+    featured: false,
     trending: true,
     difficulty: 'Intermediate',
-    views: undefined,
     shares: 0
   },
   {
@@ -187,8 +202,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'sigma-protocols-explained',
     title: 'Sigma Protocols Explained (Without A PhD)',
     excerpt: 'A plain-English guide to Sigma Protocols – the powerful, flexible zero-knowledge cryptography that powers Ergo\'s privacy and smart contracts.',
-    date: '2025-11-13',
-    lastUpdated: '2025-11-15',
+    date: '2025-12-01',
+    lastUpdated: '2025-12-01',
     author: authors['privacy-team']!,
     category: 'Privacy',
     readTime: 10,
@@ -198,7 +213,24 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     trending: true,
     difficulty: 'Beginner',
-    views: undefined,
+    shares: 0
+  },
+  {
+    id: 'sigma-protocols-privacy',
+    slug: 'sigma-protocols-privacy',
+    title: 'Ergo And Sigma Protocols: The Next Step In Blockchain Privacy',
+    excerpt: 'As first-gen privacy coins see a resurgence of activity, Ergo\'s composable zero-knowledge signatures offer new options for compliant confidentiality.',
+    date: '2025-12-04',
+    lastUpdated: '2025-12-04',
+    author: authors['ergo-team']!,
+    category: 'Privacy',
+    readTime: 9,
+    wordCount: 2200,
+    image: '/og/blog-default.svg',
+    tags: ['Sigma Protocols', 'Privacy', 'Zero Knowledge', 'Compliance', 'DeFi Privacy'],
+    featured: true,
+    trending: true,
+    difficulty: 'Intermediate',
     shares: 0
   },
   {
@@ -206,8 +238,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'nipopows-explained',
     title: 'How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo',
     excerpt: 'Learn how Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) enable lightweight blockchain verification, stateless clients, and trustless cross-chain bridges on Ergo.',
-    date: '2025-01-15',
-    lastUpdated: '2025-01-15',
+    date: '2025-12-07',
+    lastUpdated: '2025-12-07',
     author: authors['technical-team']!,
     category: 'Technology',
     readTime: 8,
@@ -217,7 +249,6 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     trending: true,
     difficulty: 'Intermediate',
-    views: undefined,
     shares: 0
   },
   {
@@ -225,8 +256,8 @@ export const blogPosts: BlogPost[] = [
     slug: 'oracle-pools-explained',
     title: 'Ergo Oracle Pools: A Trust-Minimised Oracle Model Explained',
     excerpt: 'Learn how Ergo\'s decentralized oracle pools minimize trust assumptions through on-chain aggregation, permissionless participation, and transparent data storage in eUTXOs.',
-    date: '2025-01-20',
-    lastUpdated: '2025-01-20',
+    date: '2025-12-11',
+    lastUpdated: '2025-12-11',
     author: authors['technical-team']!,
     category: 'Technology',
     readTime: 12,
@@ -236,7 +267,25 @@ export const blogPosts: BlogPost[] = [
     featured: false,
     trending: true,
     difficulty: 'Intermediate',
-    views: undefined,
+    shares: 0
+  },
+  {
+    id: 'babel-fees',
+    slug: 'babel-fees',
+    title: "Ergo's Babel Fees: Pay Transaction Fees In Any Token",
+    excerpt:
+      "Ergo’s Babel Fees turn gas payments into an on-chain market, letting users pay transaction fees in almost any token while miners still receive ERG.",
+    date: '2025-12-14',
+    lastUpdated: '2025-12-14',
+    author: authors['technical-team']!,
+    category: 'Technology',
+    readTime: 9,
+    wordCount: 2200,
+    image: '/og/blog-default.svg',
+    tags: ['Babel Fees', 'Gas Abstraction', 'eUTXO', 'DeFi UX', 'On-chain Markets'],
+    featured: false,
+    trending: true,
+    difficulty: 'Intermediate',
     shares: 0
   }
 ]

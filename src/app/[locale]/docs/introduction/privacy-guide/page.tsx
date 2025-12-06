@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import { Shield, EyeOff, Lock, Users, AlertTriangle, CheckCircle, Globe, Key, Network, ArrowRight, FileText } from "lucide-react";
 

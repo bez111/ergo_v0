@@ -1,12 +1,40 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Download, ShoppingCart, Send, Shield, CheckCircle, Smartphone, Globe } from 'lucide-react'
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EnhancedButton } from "@/components/ui/enhanced-button"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { FAQSchema } from '@/components/seo/faq-schema'
+import { siteConfig } from '@/config/site-config'
 import { getTranslations } from 'next-intl/server'
 import { getMetadata } from './metadata'
 import { howToSchema, knowledgeGraph } from './json-ld'
+
+// FAQ data for start page
+const startFAQ = [
+  {
+    question: "How to get started with Ergo?",
+    answer: "Getting started with Ergo is easy: 1) Download a wallet like Nautilus (browser) or Ergo Mobile Wallet (phone). 2) Securely back up your 15-word seed phrase. 3) Buy ERG from exchanges (KuCoin, Gate.io) or DEXs (Spectrum Finance). 4) Send a small test transaction. 5) Explore DeFi apps in the ecosystem."
+  },
+  {
+    question: "What is the best Ergo wallet?",
+    answer: "The best Ergo wallet depends on your needs: Nautilus (browser extension) is best for DeFi and dApp interactions. Ergo Mobile Wallet is great for everyday use on phone. SAFEW offers advanced features for power users. For maximum security, use Ledger hardware wallet with Nautilus integration."
+  },
+  {
+    question: "How to buy ERG?",
+    answer: "You can buy ERG on centralized exchanges like KuCoin, Gate.io, Bitpanda, or on decentralized exchanges like Spectrum Finance (no KYC). Create an account, deposit funds, buy ERG, then withdraw to your personal Ergo wallet for self-custody."
+  },
+  {
+    question: "What are Ergo transaction fees?",
+    answer: "Ergo transaction fees are very low, typically around 0.001-0.002 ERG (approximately $0.01 USD). Fees are predictable and shown before you confirm. Unlike Ethereum, there's no gas price volatility or MEV extraction."
+  },
+  {
+    question: "Is Ergo safe for beginners?",
+    answer: "Yes, Ergo is safe for beginners when following best practices: use official wallets, never share your seed phrase, start with small amounts, double-check addresses before sending. Ergo's eUTXO model prevents many common smart contract exploits that affect other chains."
+  }
+]
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -129,7 +157,10 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema(t)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-
+      <FAQSchema 
+        faqs={startFAQ}
+        pageUrl={`${siteConfig.siteUrl}/start`}
+      />
 
       <main className="min-h-screen bg-black text-white relative overflow-hidden">
         <BackgroundWrapper>

@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars, jsx-a11y/alt-text */
+
 import React from "react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Info, Gift, ExternalLink, Gamepad2, Store, ShoppingBag, Image, Globe } from "lucide-react";

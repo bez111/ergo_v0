@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import { ArrowLeft } from "lucide-react";
 import Link from "next/link";

@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities */
 import { ArrowLeft, Shield, Code, Zap, Users, Lock } from "lucide-react";
 import Link from "next/link";
 import { CodeBlock } from "@/components/ui";

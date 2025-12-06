@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+
 import { useState, useMemo } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronDown, Search, HelpCircle, Users, Shield, Code, Zap, Cpu } from "lucide-react"

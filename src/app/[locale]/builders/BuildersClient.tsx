@@ -1,6 +1,8 @@
 "use client"
 
-import React, { useState } from "react"
+/* eslint-disable react/no-unescaped-entities */
+
+import { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
 import {
@@ -35,8 +37,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { ClusterRelatedContent } from "@/components/seo/cluster-related-content"
 import { networkMetrics, formatHashrate, formatTVL, formatSupplyShort, formatActiveNodes, formatTransactionsPerDay } from "@/lib/network-metrics"
 
 export function BuildersClient() {
@@ -298,10 +301,7 @@ export function BuildersClient() {
   return (
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
-        <HiddenBreadcrumbs
-          items={breadcrumbItems}
-          currentPage="For Builders"
-        />
+        <Breadcrumbs items={[...breadcrumbItems, { name: "For Builders", href: "#" }]} variant="hidden" />
 
         {/* Hero Section */}
         <motion.section
@@ -828,65 +828,104 @@ export function BuildersClient() {
             <p className="text-xl text-center text-neutral-300 mb-12">
               Choose your next step and join a growing ecosystem of innovative dApps.
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link
+                href="/patterns"
+                className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <Code className="w-5 h-5 text-orange-400" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Dev Patterns</h3>
+                </div>
+                <p className="text-neutral-400 text-sm">
+                  Copy-paste ready smart contract patterns
+                </p>
+              </Link>
+
+              <Link
+                href="/playbooks"
+                className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <BookOpen className="w-5 h-5 text-orange-400" aria-hidden="true" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Playbooks</h3>
+                </div>
+                <p className="text-neutral-400 text-sm">
+                  Step-by-step guides for DeFi, privacy, and more
+                </p>
+              </Link>
+
               <Link
                 href="/docs/developers/quickstart"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+                className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                    <Rocket className="w-6 h-6 text-orange-400" aria-hidden="true" />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <Rocket className="w-5 h-5 text-orange-400" aria-hidden="true" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">10-Minute Quickstart</h3>
-                    <p className="text-orange-400 text-sm">Get your dev environment ready</p>
-                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Quickstart</h3>
                 </div>
-                <p className="text-neutral-300">
-                  Follow our step-by-step guide to set up your development environment and deploy your first contract.
+                <p className="text-neutral-400 text-sm">
+                  Set up your dev environment in 10 minutes
                 </p>
               </Link>
 
-              <Link
-                href="/docs/developers/ergoscript-languages/examples"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                    <Code className="w-6 h-6 text-orange-400" aria-hidden="true" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Browse Contract Examples</h3>
-                    <p className="text-orange-400 text-sm">Learn from real-world code</p>
-                  </div>
-                </div>
-                <p className="text-neutral-300">
-                  Explore a library of ErgoScript contract examples for various use cases, from DeFi to NFTs.
-                </p>
-              </Link>
-
-              <Link
+              <a
                 href="https://discord.gg/ergo-platform-668903786361651200"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+                className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                    <Users className="w-6 h-6 text-orange-400" aria-hidden="true" />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <Users className="w-5 h-5 text-orange-400" aria-hidden="true" />
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Talk to Developers</h3>
-                    <p className="text-orange-400 text-sm">Get direct support</p>
-                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Dev Discord</h3>
                 </div>
-                <p className="text-neutral-300">
-                  Join our Discord to connect with core developers and the community for real-time assistance.
+                <p className="text-neutral-400 text-sm">
+                  Get help from core developers
                 </p>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Cross-Promotion */}
+        <section className="py-12 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-black/60 border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                  <LayoutGrid className="w-6 h-6 text-orange-400" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold">See what others built</p>
+                  <p className="text-neutral-400 text-sm">Explore live dApps, tools, and projects on Ergo</p>
+                </div>
+              </div>
+              <Link 
+                href="/ecosystem"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500/10 border border-orange-500/30 rounded-xl text-orange-400 hover:bg-orange-500/20 hover:border-orange-400/50 transition-all font-medium text-sm whitespace-nowrap"
+              >
+                Explore Ecosystem
+                <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
           </div>
         </section>
+
+        {/* Topic Cluster Related Content */}
+        <ClusterRelatedContent 
+          currentUrl="/builders"
+          title="Developer Resources"
+          subtitle="Explore ErgoScript patterns, playbooks, and documentation"
+          maxItems={6}
+          showPillarLink={false}
+        />
 
         {/* Email Capture Form */}
         <FinalCTASimple

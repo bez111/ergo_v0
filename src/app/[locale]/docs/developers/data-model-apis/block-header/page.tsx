@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import Link from "next/link";
 import { FileText, Network, Shield, Server, Hash, Clock, Layers, Vote, Package, Database } from "lucide-react";
@@ -35,7 +37,7 @@ export default function BlockHeaderPage() {
               <b>Chain Synchronization:</b> Headers enable efficient synchronization between <Link href="/docs/developers/install" className="text-orange-400 hover:underline">nodes</Link> on the network. By exchanging and validating headers, nodes can quickly agree on the current state of the blockchain without downloading every full block.
             </li>
             <li>
-              <b><Link href="/docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work</Link> Validation:</b> The header contains information necessary to verify the miner's Proof-of-Work (PoW) solution, ensuring that the block meets the network's <Link href="/docs/developers/difficulty" className="text-orange-400 hover:underline">difficulty</Link> requirements.
+              <b><Link href="/technology/secure-pow" className="text-orange-400 hover:underline">Proof-of-Work</Link> Validation:</b> The header contains information necessary to verify the miner's Proof-of-Work (PoW) solution, ensuring that the block meets the network's <Link href="/docs/developers/difficulty" className="text-orange-400 hover:underline">difficulty</Link> requirements.
             </li>
             <li>
               <b>Block Integrity:</b> Headers include hashes that link to other sections of the block (<Link href="/docs/developers/data-model-apis/block-transactions" className="text-orange-400 hover:underline">transactions</Link>, <Link href="/docs/developers/data-model-apis/block-adproofs" className="text-orange-400 hover:underline">proofs</Link>, <Link href="/docs/developers/data-model-apis/extension-section" className="text-orange-400 hover:underline">extension</Link>), guaranteeing the integrity of the entire block. Any tampering with the block's content would result in a mismatch of these hashes.

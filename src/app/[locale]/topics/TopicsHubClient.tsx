@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -82,24 +84,18 @@ export function TopicsHubClient({ topics }: Props) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-16"
+            className="text-center mb-10"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-500/10 border border-orange-500/20 rounded-full mb-6">
-              <Layers className="w-4 h-4 text-orange-400" />
-              <span className="text-sm text-orange-400">Topic Authority</span>
-            </div>
-            
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
               Explore Ergo by <span className="text-orange-400">Topic</span>
             </h1>
             
             <p className="text-xl text-neutral-300 max-w-3xl mx-auto mb-6">
-              Deep dives into every aspect of Ergo. Each topic hub brings together 
-              all relevant resources: documentation, articles, infographics, glossary terms, 
-              and practical guides.
+              Deep dives into every major part of Ergo. Each topic hub brings together guides, docs,
+              infographics, glossary terms, and practical playbooks.
             </p>
 
-            <div className="flex flex-wrap gap-3 justify-center">
+            <div className="flex flex-wrap gap-3 justify-center mt-4">
               <Badge variant="outline" className="border-white/20 text-neutral-300">
                 <BookOpen className="w-3 h-3 mr-1" />
                 {topics.length} Topic Hubs
@@ -120,8 +116,9 @@ export function TopicsHubClient({ topics }: Props) {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {topics.map((topic, index) => {
                 const Icon = iconMap[topic.icon] || Code;
-                const colors = colorMap[topic.color] || colorMap['orange'];
-                
+                const colors = colorMap[topic.color] || colorMap["orange"];
+                const resourceCount = topic.startHere.length + topic.buildWithIt.length + topic.philosophy.length;
+
                 return (
                   <motion.div
                     key={topic.slug}
@@ -144,29 +141,29 @@ export function TopicsHubClient({ topics }: Props) {
                           <p className={`text-sm ${colors.text} mb-4`}>
                             {topic.subtitle}
                           </p>
-                          
-                          {/* Description */}
-                          <p className="text-neutral-400 text-sm mb-6 line-clamp-3">
-                            {topic.introduction.substring(0, 150)}...
-                          </p>
-                          
-                          {/* Key differentiators preview */}
+
+                          {/* Ergo-angle differentiators (what makes this topic unique on Ergo) */}
                           <div className="space-y-2 mb-6">
-                            {topic.keyDifferentiators.slice(0, 2).map((diff, i) => (
+                            {topic.keyDifferentiators.slice(0, 3).map((diff, i) => (
                               <div key={i} className="flex items-start gap-2">
                                 <div className={`w-1.5 h-1.5 rounded-full ${colors.text.replace('text-', 'bg-')} mt-2`} />
-                                <span className="text-xs text-neutral-500 line-clamp-1">{diff}</span>
+                                <span className="text-xs text-neutral-400 line-clamp-1">{diff}</span>
                               </div>
                             ))}
                           </div>
                           
                           {/* Stats */}
                           <div className="flex items-center justify-between pt-4 border-t border-white/10">
-                            <div className="flex gap-4 text-xs text-neutral-500">
-                              <span>{topic.keyTerms.length} terms</span>
-                              <span>{topic.startHere.length + topic.buildWithIt.length + topic.philosophy.length} resources</span>
+                            <div className="flex flex-wrap gap-3 text-xs text-neutral-500">
+                              <span>{topic.keyTerms.length} key terms</span>
+                              <span>{resourceCount} guides &amp; docs</span>
                             </div>
-                            <ArrowRight className={`w-5 h-5 ${colors.text} group-hover:translate-x-1 transition-transform`} />
+                            <div className="flex items-center gap-2 text-xs text-neutral-400">
+                              <span className="group-hover:text-neutral-200 transition-colors">
+                                Open hub
+                              </span>
+                              <ArrowRight className={`w-5 h-5 ${colors.text} group-hover:translate-x-1 transition-transform`} />
+                            </div>
                           </div>
                         </CardContent>
                       </Card>

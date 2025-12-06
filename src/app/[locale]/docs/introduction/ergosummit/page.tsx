@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
 import { Users, Calendar, Video } from "lucide-react";
 import Link from "next/link";

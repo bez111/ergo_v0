@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, CircleDollarSign, Info, AlertTriangle, Database, FileText, ExternalLink, Video, Code, BookOpen, Users, Zap } from 'lucide-react';

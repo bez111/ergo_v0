@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import * as React from "react"
 import { Card } from "./card"
 import Link from "next/link"

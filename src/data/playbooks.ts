@@ -1117,6 +1117,498 @@ export const playbooks: Playbook[] = [
     
     publishDate: "2025-01-01",
   },
+
+  // ============================================
+  // NEW PLAYBOOKS - v1.0 additions
+  // ============================================
+  {
+    slug: "run-ergo-full-node",
+    title: "Run an Ergo Full Node & Help Secure the Network",
+    subtitle: "Contribute to decentralization while getting the best blockchain experience",
+    
+    seoTitle: "Run Ergo Full Node 2025: Complete Setup Guide for Linux, Mac & Windows",
+    seoDescription: "Step-by-step guide to running an Ergo full node. Help secure the network, verify transactions yourself, and get faster wallet sync.",
+    keywords: ["ergo full node", "run ergo node", "ergo node setup", "ergo decentralization", "blockchain node", "ergo network"],
+    
+    cluster: "sustainability",
+    difficulty: "intermediate",
+    timeToComplete: "1-2 hours",
+    
+    heroDescription: "Running a full node is the ultimate way to participate in Ergo. You verify every transaction yourself, contribute to network decentralization, and get the fastest wallet experience.",
+    
+    problemStatement: "Light wallets rely on third-party servers. You're trusting someone else to give you accurate blockchain data. This creates centralization points and potential privacy leaks.",
+    
+    solution: "Run your own full node to independently verify the entire blockchain. You become a first-class network participant, helping relay transactions and blocks while enjoying trustless verification.",
+    
+    steps: [
+      {
+        title: "Check System Requirements",
+        description: "Ensure your system meets the minimum requirements: 8GB RAM, 50GB+ SSD storage, stable internet connection. Any modern computer from the last 5 years should work.",
+        duration: "5 min",
+        resources: [
+          { type: "doc", title: "Node Requirements", href: "/docs/developers/infrastructure/node" },
+        ],
+      },
+      {
+        title: "Download Ergo Node",
+        description: "Download the latest Ergo node release from GitHub. Choose the JAR file for your platform or use Docker for easier deployment.",
+        duration: "5 min",
+        resources: [
+          { type: "link", title: "Ergo Node Releases", href: "https://github.com/ergoplatform/ergo/releases" },
+          { type: "doc", title: "Docker Setup", href: "/docs/developers/infrastructure/node/docker" },
+        ],
+      },
+      {
+        title: "Configure Your Node",
+        description: "Create a configuration file with your settings. Enable the API for wallet connectivity, set memory limits, and configure network ports.",
+        duration: "15 min",
+        resources: [
+          { type: "doc", title: "Node Configuration", href: "/docs/developers/infrastructure/node/config" },
+        ],
+      },
+      {
+        title: "Start Initial Sync",
+        description: "Launch the node and begin syncing the blockchain. Initial sync takes 4-12 hours depending on your hardware and internet speed.",
+        duration: "4-12 hours",
+        resources: [
+          { type: "doc", title: "Sync Troubleshooting", href: "/docs/developers/infrastructure/node/troubleshooting" },
+        ],
+      },
+      {
+        title: "Connect Your Wallet",
+        description: "Configure Nautilus or other wallets to use your local node. Enjoy instant transaction verification and maximum privacy.",
+        duration: "10 min",
+        resources: [
+          { type: "tool", title: "Nautilus Wallet", href: "https://nautilus.io" },
+        ],
+      },
+      {
+        title: "Keep Your Node Running",
+        description: "Set up the node as a system service for automatic startup. Monitor health and keep it updated with new releases.",
+        duration: "15 min",
+        resources: [
+          { type: "doc", title: "Node Maintenance", href: "/docs/developers/infrastructure/node/maintenance" },
+        ],
+      },
+    ],
+    
+    relatedInfographicTags: ["decentralization", "pow", "security"],
+    relatedBlogTags: ["node", "infrastructure", "decentralization"],
+    relatedDocsTags: ["node", "infrastructure"],
+    
+    caseStudies: [
+      {
+        title: "Community Node Operators",
+        description: "Hundreds of independent node operators around the world help keep Ergo decentralized.",
+        outcome: "True peer-to-peer network without central points of failure",
+      },
+    ],
+    
+    primaryCTA: {
+      label: "Download Ergo Node",
+      href: "https://github.com/ergoplatform/ergo/releases",
+    },
+    secondaryCTA: {
+      label: "Node Documentation",
+      href: "/docs/developers/infrastructure/node",
+    },
+    
+    icon: "Server",
+    gradient: "from-emerald-500 to-teal-500",
+    
+    publishDate: "2025-01-15",
+  },
+
+  {
+    slug: "use-sigmausd-as-crypto-dollar",
+    title: "Use SigmaUSD as a Crypto Dollar Hedge",
+    subtitle: "Protect your crypto value with an algorithmic stablecoin backed by ERG",
+    
+    seoTitle: "SigmaUSD Guide 2025: How to Use Ergo's Algorithmic Stablecoin",
+    seoDescription: "Complete guide to SigmaUSD - Ergo's decentralized algorithmic stablecoin. Learn how to mint, redeem, and use SigUSD for hedging and payments.",
+    keywords: ["sigmausd", "ergo stablecoin", "sigUSD", "crypto dollar", "algorithmic stablecoin", "ergo hedge"],
+    
+    cluster: "defi",
+    difficulty: "intermediate",
+    timeToComplete: "30 minutes",
+    
+    heroDescription: "SigmaUSD is a crypto-native dollar hedge backed by ERG reserves. No bank accounts, no centralized custodians - just math and smart contracts keeping your value stable.",
+    
+    problemStatement: "Centralized stablecoins like USDT and USDC can freeze your funds, require KYC, and depend on traditional banking. You need a truly decentralized alternative.",
+    
+    solution: "SigmaUSD uses an overcollateralized reserve pool of ERG to maintain its peg. Mint SigUSD when you want stability, redeem for ERG when you're ready to exit. No permissions needed.",
+    
+    steps: [
+      {
+        title: "Understand the Mechanism",
+        description: "SigmaUSD uses a reserve pool of ERG. SigUSD holders have a claim on the dollar value, while SigRSV holders absorb volatility in exchange for fees. The system maintains 400-800% collateralization.",
+        duration: "10 min",
+        resources: [
+          { type: "doc", title: "SigmaUSD Explained", href: "/docs/developers/defi/sigmausd" },
+          { type: "link", title: "SigmaUSD Whitepaper", href: "https://github.com/ergoplatform/ergo/wiki/SigmaUSD" },
+        ],
+      },
+      {
+        title: "Check Reserve Ratio",
+        description: "Before minting, check the current reserve ratio on the SigmaUSD dashboard. Minting is only available when the reserve ratio is within healthy bounds.",
+        duration: "2 min",
+        resources: [
+          { type: "tool", title: "SigmaUSD Dashboard", href: "https://sigmausd.io" },
+        ],
+      },
+      {
+        title: "Connect Your Wallet",
+        description: "Connect Nautilus wallet to the SigmaUSD interface. Ensure you have ERG for minting and transaction fees.",
+        duration: "5 min",
+        resources: [
+          { type: "tool", title: "Nautilus Wallet", href: "https://nautilus.io" },
+        ],
+      },
+      {
+        title: "Mint SigUSD",
+        description: "Enter the amount of ERG you want to convert to SigUSD. Review the exchange rate and fees, then confirm the transaction.",
+        duration: "5 min",
+        resources: [
+          { type: "tool", title: "Mint SigUSD", href: "https://sigmausd.io/#/mint" },
+        ],
+      },
+      {
+        title: "Use or Hold Your SigUSD",
+        description: "Your SigUSD is now in your wallet. Use it for payments, trading on Spectrum, or simply hold as a stable store of value.",
+        duration: "Ongoing",
+        resources: [
+          { type: "tool", title: "Trade on Spectrum", href: "https://spectrum.fi" },
+        ],
+      },
+      {
+        title: "Redeem When Ready",
+        description: "When you want to exit, redeem your SigUSD for ERG at the current rate. The process is permissionless and instant.",
+        duration: "5 min",
+        resources: [
+          { type: "tool", title: "Redeem SigUSD", href: "https://sigmausd.io/#/redeem" },
+        ],
+      },
+    ],
+    
+    relatedInfographicTags: ["defi", "stablecoin", "sigmausd"],
+    relatedBlogTags: ["sigmausd", "stablecoin", "defi"],
+    relatedDocsTags: ["sigmausd", "defi"],
+    
+    caseStudies: [
+      {
+        title: "SigmaUSD Protocol",
+        description: "First algorithmic stablecoin on eUTXO, inspired by AgeUSD protocol design.",
+        outcome: "Millions in TVL with no centralized dependencies",
+        link: "https://sigmausd.io",
+      },
+    ],
+    
+    primaryCTA: {
+      label: "Go to SigmaUSD",
+      href: "https://sigmausd.io",
+    },
+    secondaryCTA: {
+      label: "Learn How It Works",
+      href: "/docs/developers/defi/sigmausd",
+    },
+    
+    icon: "DollarSign",
+    gradient: "from-green-500 to-emerald-500",
+    
+    publishDate: "2025-01-15",
+  },
+
+  {
+    slug: "bridge-assets-with-rosen",
+    title: "Bridge Assets with Rosen Bridge (ERG <-> BTC & More)",
+    subtitle: "Move assets between Ergo and other blockchains trustlessly",
+    
+    seoTitle: "Rosen Bridge Guide 2025: Bridge ERG, BTC, and More Between Chains",
+    seoDescription: "Complete guide to using Rosen Bridge for cross-chain transfers. Bridge ERG to Bitcoin, Cardano, and other networks securely.",
+    keywords: ["rosen bridge", "ergo bridge", "cross chain ergo", "bridge btc ergo", "ergo cardano bridge", "blockchain bridge"],
+    
+    cluster: "defi",
+    difficulty: "intermediate",
+    timeToComplete: "15-30 minutes",
+    
+    heroDescription: "Rosen Bridge connects Ergo to other blockchains through a decentralized network of watchers. Move your assets between chains without trusting a central custodian.",
+    
+    problemStatement: "Moving assets between blockchains traditionally requires centralized exchanges or custodial bridges. These create single points of failure and require trust.",
+    
+    solution: "Rosen Bridge uses a decentralized network of watchers who collectively verify cross-chain transfers. No single entity controls your funds during the bridging process.",
+    
+    steps: [
+      {
+        title: "Understand Rosen Bridge",
+        description: "Rosen uses a network of independent watchers who monitor both chains. Transfers require consensus among watchers, making it trust-minimized.",
+        duration: "5 min",
+        resources: [
+          { type: "doc", title: "Rosen Bridge Docs", href: "https://docs.rosen.tech" },
+        ],
+      },
+      {
+        title: "Check Supported Assets",
+        description: "Review which assets can be bridged and to which chains. Currently supports ERG, rsERG, and wrapped assets on multiple networks.",
+        duration: "2 min",
+        resources: [
+          { type: "tool", title: "Rosen Bridge App", href: "https://app.rosen.tech" },
+        ],
+      },
+      {
+        title: "Connect Source Wallet",
+        description: "Connect your wallet on the source chain. For Ergo, use Nautilus. For other chains, use compatible wallets like MetaMask or Nami.",
+        duration: "5 min",
+        resources: [
+          { type: "tool", title: "Nautilus Wallet", href: "https://nautilus.io" },
+        ],
+      },
+      {
+        title: "Initiate Bridge Transfer",
+        description: "Select source and destination chains, enter amount, and provide destination address. Review fees and confirmation times.",
+        duration: "5 min",
+        resources: [
+          { type: "tool", title: "Start Bridge", href: "https://app.rosen.tech" },
+        ],
+      },
+      {
+        title: "Wait for Confirmations",
+        description: "Watchers need to observe and verify your transaction. This typically takes 10-30 minutes depending on the chains involved.",
+        duration: "10-30 min",
+      },
+      {
+        title: "Receive Bridged Assets",
+        description: "Once confirmed, your bridged assets appear in your destination wallet. You can now use them on the new chain.",
+        duration: "Automatic",
+      },
+    ],
+    
+    relatedInfographicTags: ["bridge", "cross-chain", "interoperability"],
+    relatedBlogTags: ["rosen", "bridge", "cross-chain"],
+    relatedDocsTags: ["bridge", "interoperability"],
+    
+    caseStudies: [
+      {
+        title: "Rosen Bridge",
+        description: "Decentralized bridge connecting Ergo to Bitcoin, Cardano, and EVM chains.",
+        outcome: "Trustless cross-chain asset transfers",
+        link: "https://rosen.tech",
+      },
+    ],
+    
+    primaryCTA: {
+      label: "Go to Rosen Bridge",
+      href: "https://app.rosen.tech",
+    },
+    secondaryCTA: {
+      label: "Bridge Documentation",
+      href: "https://docs.rosen.tech",
+    },
+    
+    icon: "ArrowLeftRight",
+    gradient: "from-purple-500 to-pink-500",
+    
+    publishDate: "2025-01-15",
+  },
+
+  {
+    slug: "ergo-crowdfunding-campaign-playbook",
+    title: "Launch a Simple Crowdfunding Campaign on Ergo",
+    subtitle: "Raise funds for your project with trustless, refundable contributions",
+    
+    seoTitle: "Ergo Crowdfunding 2025: Launch a Trustless Fundraising Campaign",
+    seoDescription: "Step-by-step guide to launching a crowdfunding campaign on Ergo. Learn assurance contracts for automatic refunds if goals aren't met.",
+    keywords: ["ergo crowdfunding", "assurance contract", "ergo fundraising", "crypto crowdfunding", "trustless fundraising", "ergo campaign"],
+    
+    cluster: "defi",
+    difficulty: "intermediate",
+    timeToComplete: "2-4 hours",
+    
+    heroDescription: "Ergo's assurance contracts enable trustless crowdfunding. Contributors know they'll get refunds if the goal isn't met - no trust in the project creator required.",
+    
+    problemStatement: "Traditional crowdfunding platforms take fees, can censor projects, and require trusting the platform to handle refunds. Crypto crowdfunding often lacks refund guarantees.",
+    
+    solution: "Use Ergo's assurance contract pattern: contributions are locked in a smart contract that automatically refunds if the goal isn't reached by the deadline. Success means funds go to the project.",
+    
+    steps: [
+      {
+        title: "Define Your Campaign",
+        description: "Set clear goals: funding target, deadline, and what contributors receive. Be realistic about what you can deliver.",
+        duration: "1 hour",
+        resources: [
+          { type: "doc", title: "Crowdfunding Patterns", href: "/patterns/ergo-crowdfunding-assurance-contract" },
+        ],
+      },
+      {
+        title: "Create Campaign Smart Contract",
+        description: "Deploy an assurance contract with your funding goal, deadline, and receiving address. Use ErgoRaffle or build custom with Fleet SDK.",
+        duration: "30 min",
+        resources: [
+          { type: "tool", title: "ErgoRaffle", href: "https://ergoraffle.com" },
+          { type: "doc", title: "Fleet SDK", href: "/docs/developers/fleet-sdk" },
+        ],
+      },
+      {
+        title: "Prepare Campaign Materials",
+        description: "Create a compelling description, visuals, and roadmap. Explain how funds will be used and what backers receive.",
+        duration: "1-2 hours",
+      },
+      {
+        title: "Launch and Promote",
+        description: "Share your campaign with the Ergo community. Use Discord, Twitter, and Reddit to reach potential contributors.",
+        duration: "Ongoing",
+        resources: [
+          { type: "link", title: "Ergo Discord", href: "https://discord.gg/ergo-platform-668903786361651200" },
+          { type: "link", title: "Ergo Reddit", href: "https://reddit.com/r/ergonauts" },
+        ],
+      },
+      {
+        title: "Track Progress",
+        description: "Monitor contributions and engage with your community. Provide updates and answer questions to build trust.",
+        duration: "Ongoing",
+      },
+      {
+        title: "Campaign Resolution",
+        description: "If goal is met: claim funds and deliver on promises. If not met: contributors automatically get refunds. Either way, the contract handles it trustlessly.",
+        duration: "Automatic",
+      },
+    ],
+    
+    relatedInfographicTags: ["crowdfunding", "defi", "community"],
+    relatedBlogTags: ["crowdfunding", "community", "fundraising"],
+    relatedDocsTags: ["crowdfunding", "contracts"],
+    
+    featuredInfographics: ["ergo-vs-privacy-coins"],
+    
+    caseStudies: [
+      {
+        title: "ErgoRaffle",
+        description: "Platform for community raffles and crowdfunding on Ergo.",
+        outcome: "Multiple successful community fundraising campaigns",
+        link: "https://ergoraffle.com",
+      },
+    ],
+    
+    primaryCTA: {
+      label: "Launch on ErgoRaffle",
+      href: "https://ergoraffle.com",
+    },
+    secondaryCTA: {
+      label: "Learn Crowdfunding Pattern",
+      href: "/patterns/ergo-crowdfunding-assurance-contract",
+    },
+    
+    icon: "Users",
+    gradient: "from-amber-500 to-orange-500",
+    
+    publishDate: "2025-01-15",
+  },
+
+  {
+    slug: "ergo-dao-treasury-multisig-playbook",
+    title: "Set Up a Project Treasury & Multisig for Your DAO",
+    subtitle: "Secure shared funds with multi-signature governance",
+    
+    seoTitle: "Ergo DAO Treasury 2025: Set Up Multisig Governance for Your Project",
+    seoDescription: "Complete guide to setting up a DAO treasury on Ergo. Learn multi-signature patterns for secure, decentralized fund management.",
+    keywords: ["ergo dao", "ergo multisig", "dao treasury", "ergo governance", "multi signature wallet", "project treasury"],
+    
+    cluster: "developer",
+    difficulty: "advanced",
+    timeToComplete: "4-8 hours",
+    
+    heroDescription: "A proper treasury setup is crucial for any serious project. Ergo's native multi-sig and Sigma protocols enable secure, privacy-preserving governance without trusting a single keyholder.",
+    
+    problemStatement: "Single-signature treasuries are a security risk. One compromised key means total loss. But coordinating multi-sig can be complex and error-prone.",
+    
+    solution: "Use Ergo's native threshold signatures (M-of-N) for treasury control. Combine with timelock for large transactions and optional DAO voting for full governance.",
+    
+    steps: [
+      {
+        title: "Define Governance Structure",
+        description: "Decide on signers, threshold (e.g., 3-of-5), and any additional rules (timelocks, spending limits). Document roles and responsibilities.",
+        duration: "1 hour",
+        resources: [
+          { type: "doc", title: "Multisig Pattern", href: "/patterns/ergo-multisig-wallet-m-of-n" },
+        ],
+      },
+      {
+        title: "Collect Signer Public Keys",
+        description: "Each signer generates a keypair and shares their public key. Use secure channels and verify key ownership.",
+        duration: "30 min",
+        resources: [
+          { type: "tool", title: "Nautilus Wallet", href: "https://nautilus.io" },
+        ],
+      },
+      {
+        title: "Create Multi-Sig Contract",
+        description: "Deploy the multi-sig contract with the collected public keys and threshold. Use Paideia for full DAO features or custom ErgoScript for simple treasury.",
+        duration: "1 hour",
+        resources: [
+          { type: "tool", title: "Paideia DAO", href: "https://paideia.im" },
+          { type: "doc", title: "DAO Pattern", href: "/patterns/ergo-dao-treasury-voting-pattern" },
+        ],
+      },
+      {
+        title: "Fund the Treasury",
+        description: "Transfer initial funds to the multi-sig address. Start with a small test amount to verify the setup works correctly.",
+        duration: "30 min",
+      },
+      {
+        title: "Test Spending Flow",
+        description: "Create a test transaction requiring multiple signatures. Verify the signing process works and all signers can participate.",
+        duration: "1 hour",
+        resources: [
+          { type: "doc", title: "Multi-Sig Signing", href: "/docs/developers/contracts/multisig" },
+        ],
+      },
+      {
+        title: "Document Procedures",
+        description: "Create clear documentation for how spending proposals are created, discussed, signed, and executed. Include emergency procedures.",
+        duration: "1-2 hours",
+      },
+      {
+        title: "Set Up Monitoring",
+        description: "Configure alerts for treasury activity. Use explorers and notification services to track all transactions.",
+        duration: "30 min",
+        resources: [
+          { type: "tool", title: "Ergo Explorer", href: "https://explorer.ergoplatform.com" },
+        ],
+      },
+    ],
+    
+    relatedInfographicTags: ["dao", "governance", "multisig", "treasury"],
+    relatedBlogTags: ["dao", "governance", "treasury"],
+    relatedDocsTags: ["dao", "multisig", "contracts"],
+    
+    caseStudies: [
+      {
+        title: "Paideia DAO",
+        description: "Full-featured DAO platform on Ergo with treasury management, voting, and proposals.",
+        outcome: "Multiple DAOs managing treasuries worth millions",
+        link: "https://paideia.im",
+      },
+      {
+        title: "Ergo Foundation",
+        description: "The Ergo Foundation uses multi-sig for treasury management.",
+        outcome: "Secure management of ecosystem development funds",
+        link: "https://ergoplatform.org",
+      },
+    ],
+    
+    primaryCTA: {
+      label: "Create DAO on Paideia",
+      href: "https://paideia.im",
+    },
+    secondaryCTA: {
+      label: "Learn DAO Patterns",
+      href: "/patterns/ergo-dao-treasury-voting-pattern",
+    },
+    
+    icon: "Building2",
+    gradient: "from-indigo-500 to-purple-500",
+    
+    publishDate: "2025-01-15",
+  },
 ];
 
 // Helper functions

@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { locales, type Locale } from '../i18n/request';
 
 export async function getMessages(locale: Locale) {

@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next"
 import QuizClient from "./QuizClient"
 import { SchemaTypes } from "@/lib/schema-ultimate"

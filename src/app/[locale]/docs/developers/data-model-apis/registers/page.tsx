@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react/no-children-prop */
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Database, Box, Key, FileText, Info, AlertTriangle } from 'lucide-react';

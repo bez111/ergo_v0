@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Centralized logging system
  * Only logs in development mode, silent in production

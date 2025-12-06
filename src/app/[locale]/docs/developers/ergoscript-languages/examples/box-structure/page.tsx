@@ -1,4 +1,6 @@
 "use client";
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Copy, Check, Database } from "lucide-react";

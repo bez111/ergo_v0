@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Search, Filter, X } from "lucide-react"

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import Link from "next/link"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { useTranslations } from "next-intl"
@@ -35,7 +37,9 @@ import {
   Info,
   Brain,
   Sparkles,
-  Code2
+  Code2,
+  Pickaxe,
+  LineChart
 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
@@ -433,6 +437,76 @@ export default function IntroductionClient() {
           </div>
         </section>
 
+        {/* Choose Your Path Section */}
+        <section className="py-16">
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Choose Your <span className="text-orange-400">Path</span>
+              </h2>
+              <p className="text-gray-400 max-w-2xl mx-auto">
+                Tailored guides for different types of Ergo users
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <Link 
+                href="/miners"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <Pickaxe className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">For Miners</h3>
+                    <p className="text-orange-400 text-sm">GPU-friendly PoW</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  ASIC-resistant Autolykos algorithm, fair mining rewards, and accessible hardware requirements
+                </p>
+              </Link>
+
+              <Link 
+                href="/hodlers"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <LineChart className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">For Holders</h3>
+                    <p className="text-orange-400 text-sm">Long-term value</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  Sound tokenomics, DeFi opportunities, and a sustainable ecosystem built for the future
+                </p>
+              </Link>
+
+              <Link 
+                href="/builders"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <Code className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">For Builders</h3>
+                    <p className="text-orange-400 text-sm">Powerful smart contracts</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  ErgoScript, eUTXO model, SDKs, and developer grants to build the next generation of dApps
+                </p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* Visible mini-FAQ matching JSON-LD */}
         <section className="py-16">
           <div className="max-w-3xl mx-auto">
@@ -458,18 +532,18 @@ export default function IntroductionClient() {
         </section>
 
         {/* What's Next Section */}
-        <section className="py-16">
+        <section className="py-16 border-t border-neutral-800">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 What's <span className="text-orange-400">Next?</span>
               </h2>
               <p className="text-gray-400 max-w-2xl mx-auto">
-                Choose your path to start exploring the Ergo ecosystem
+                Start exploring the Ergo ecosystem
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-3 gap-6">
               <Link 
                 href="/wallet"
                 className="bg-black/80 border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
@@ -503,6 +577,24 @@ export default function IntroductionClient() {
                 </div>
                 <p className="text-neutral-300">
                   Find DeFi protocols, wallets, NFT platforms, and other dApps built on Ergo
+                </p>
+              </Link>
+
+              <Link 
+                href="/compare"
+                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
+              >
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                    <TrendingUp className="w-6 h-6 text-orange-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-white">Compare Blockchains</h3>
+                    <p className="text-orange-400 text-sm">Why Ergo vs others</p>
+                  </div>
+                </div>
+                <p className="text-neutral-300">
+                  See how Ergo's PoW, eUTXO, privacy, and sustainability stack up against Bitcoin, Ethereum, Cardano, and others
                 </p>
               </Link>
             </div>

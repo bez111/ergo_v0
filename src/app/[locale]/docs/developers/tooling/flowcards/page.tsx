@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Zap, ExternalLink } from "lucide-react";
@@ -14,11 +16,6 @@ export default function FlowCardsPage() {
       </h1>
       
       <div className="space-y-8">
-        <div className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg p-4 mb-6">
-          <p className="text-yellow-200 text-sm">
-            <strong>TODO:</strong> Split Paradigm out of this
-          </p>
-        </div>
 
         <div className="text-gray-300 mb-8">
           <p className="mb-4">

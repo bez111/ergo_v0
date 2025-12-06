@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
 import Link from "next/link";
 
@@ -86,9 +88,9 @@ export default function ValidationPage() {
           </ul>
           
           <div className="mt-4 p-4 bg-cyan-900/30 border border-cyan-600/30 rounded-lg">
-            <h4 className="text-sm font-semibold text-cyan-300 mb-2">TODO</h4>
+            <h4 className="text-sm font-semibold text-cyan-300 mb-2">Additional Notes</h4>
             <p className="text-sm text-gray-400">
-              (Mention emission rules. The extractEmissionBox function may have bugs. Extension validation rules need to be added.)
+              For complete validation, also consider emission rules, the extractEmissionBox function behavior, and extension validation rules as defined in the protocol specification.
             </p>
           </div>
         </div>

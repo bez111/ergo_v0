@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { Clock } from "lucide-react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -8,8 +9,8 @@ import { CyberButton } from "@/components/animations/cyber-button"
 import { blogPosts } from "@/app/[locale]/blog/_lib/blog-data"
 
 export function BlogSectionHome() {
-  // Get 3 latest posts
-  const latestPosts = blogPosts
+  // Get 3 latest posts (do not mutate original array)
+  const latestPosts = [...blogPosts]
     .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
     .slice(0, 3)
 
@@ -37,7 +38,33 @@ export function BlogSectionHome() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {latestPosts.map((post) => (
+          {latestPosts.map((post) => {
+            const cardImage =
+              post.slug === "sigma-protocols-privacy"
+                ? "/og/sigma-protocols-privacy.png"
+                : post.slug === "sigma-protocols-explained"
+                ? "/og/sigma-protocols-explained.png"
+                : post.slug === "ergo-in-5-minutes"
+                ? "/og/ergo-in-five-minutes.png"
+                : post.slug === "ergo-manifesto"
+                ? "/og/ergo-manifesto.png"
+                : post.slug === "nipopows-explained"
+                ? "/og/nipopows-explained.png"
+                : post.slug === "eutxo-vs-accounts"
+                ? "/og/eutxo-vs-accounts.png"
+                : post.slug === "oracle-pools-explained"
+                ? "/og/oracle-pools-explained.png"
+                : post.slug === "storage-rent"
+                ? "/og/storage-rent.png"
+                : post.slug === "ergoscript-introduction"
+                ? "/og/ergoscript-introduction.png"
+                : post.slug === "babel-fees"
+                ? "/og/babel-fees.png"
+                : post.slug === "autolykos-proof-of-work"
+                ? "/og/autolykos-proof-of-work.png"
+                : post.image
+
+            return (
             <Link 
               key={post.id}
               href={`/blog/${post.slug}`}
@@ -46,21 +73,17 @@ export function BlogSectionHome() {
               <Card className="bg-black/80 border border-white/10 rounded-3xl hover:bg-black/90 hover:border-orange-400/40 hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-300 h-full flex flex-col overflow-hidden cursor-pointer">
                 {/* Preview Image */}
                 <div className="aspect-video relative overflow-hidden">
-                  <div className="absolute inset-0 border border-orange-500/30 rounded-3xl m-4 blur-[40px] opacity-60"></div>
-                  <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-orange-900/20 via-black to-black">
-                    <div className="absolute top-4 left-4">
-                      {post.category && (
-                        <span className="px-4 py-1 rounded-full bg-orange-500/20 border border-orange-500/40 text-orange-200 text-sm font-semibold">
-                          {post.category}
-                        </span>
-                      )}
-                    </div>
-                    <div className="h-full w-full flex flex-col items-center justify-center gap-2 text-center">
-                      <span className="text-sm uppercase tracking-[0.3em] text-orange-400">Ergo</span>
-                      <span className="text-3xl font-bold text-white tracking-wider">Blockchain</span>
-                      <span className="text-sm text-orange-200/80">Blog Article</span>
-                    </div>
-                  </div>
+                  {cardImage && (
+                    <Image
+                      src={cardImage}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      loading="lazy"
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 </div>
 
                 <div className="p-6 flex-1 flex flex-col">
@@ -103,7 +126,7 @@ export function BlogSectionHome() {
                 </div>
               </Card>
             </Link>
-          ))}
+          )})}
         </div>
 
         {/* Mobile view all button */}

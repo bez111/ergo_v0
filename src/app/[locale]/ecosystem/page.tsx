@@ -50,9 +50,21 @@ export default function EcosystemPage() {
       "@type": "ListItem",
       position: i + 1,
       item: {
-        "@type": "WebSite",
+        "@type": "SoftwareApplication",
         name: p.name,
         url: p.url,
+        description: p.description,
+        applicationCategory: p.category === "DEFI" ? "FinanceApplication" :
+                             p.category === "WALLETS" ? "FinanceApplication" :
+                             p.category === "GAMING" ? "GameApplication" :
+                             p.category === "TOOLS" ? "DeveloperApplication" :
+                             "WebApplication",
+        operatingSystem: "Web, Windows, macOS, Linux, iOS, Android",
+        offers: {
+          "@type": "Offer",
+          price: "0",
+          priceCurrency: "USD"
+        }
       },
     })),
   }

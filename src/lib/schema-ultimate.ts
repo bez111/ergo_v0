@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Ultimate Schema.org Implementation for Maximum SEO
 // Covers all possible schema types for cryptocurrency and blockchain
 
@@ -129,7 +131,7 @@ export const SchemaTypes = {
     "operatingSystem": ["Windows", "Linux", "macOS"],
     "softwareVersion": "2.0",
     "description": "Mine Ergo (ERG) with GPU using Autolykos v2 algorithm",
-    "url": "https://ergoblockchain.org/use/mining",
+    "url": "https://ergoblockchain.org/miners",
     "downloadUrl": "https://github.com/ergoplatform/Autolykos-GPU-miner",
     "softwareRequirements": "4GB+ GPU, 8GB RAM",
     "offers": {
@@ -190,21 +192,21 @@ export const SchemaTypes = {
         "@type": "HowToStep",
         "name": "Choose Mining Pool",
         "text": "Select a mining pool like HeroMiners or Leafpool",
-        "url": "https://ergoblockchain.org/use/mining#pools",
+        "url": "https://ergoblockchain.org/miners#pools",
         "image": "https://ergoblockchain.org/step2.jpg"
       },
       {
         "@type": "HowToStep",
         "name": "Download Mining Software",
         "text": "Download NBMiner or TeamRedMiner for your OS",
-        "url": "https://ergoblockchain.org/use/mining#software",
+        "url": "https://ergoblockchain.org/miners#mining-guide",
         "image": "https://ergoblockchain.org/step3.jpg"
       },
       {
         "@type": "HowToStep",
         "name": "Configure and Start Mining",
         "text": "Configure your miner with pool and wallet address",
-        "url": "https://ergoblockchain.org/use/mining#config",
+        "url": "https://ergoblockchain.org/miners#mining-guide",
         "image": "https://ergoblockchain.org/step4.jpg"
       }
     ],

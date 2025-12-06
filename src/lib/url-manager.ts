@@ -1,3 +1,5 @@
+
+/* eslint-disable import/no-anonymous-default-export */
 /**
  * Centralized URL Management System
  * Единая точка управления всей URL архитектурой

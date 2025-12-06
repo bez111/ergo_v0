@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -14,6 +16,7 @@ import Link from "next/link"
 import { useState } from "react"
 import React from "react"
 import { useTranslations } from "next-intl"
+import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -607,56 +610,17 @@ export default function AdaptiveEmissionPage() {
           </section>
         </FadeIn>
 
-        {/* What's Next Section */}
-        <FadeIn delay={1.4}>
-          <div className="max-w-6xl mx-auto mb-16 px-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
-              What's <span className="text-orange-400">Next</span>?
-            </h2>
-            <p className="text-xl text-center text-neutral-300 mb-12">
-              Ready to participate in Ergo's governance? Explore the tools and resources available.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6">
-              <Link 
-                href="/docs/miners/governance"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                    <BookOpen className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">Governance Documentation</h3>
-                    <p className="text-orange-400 text-sm">Learn More</p>
-                  </div>
-                </div>
-                <p className="text-neutral-300">
-                  Learn how Ergo's governance system works and how you can participate in decision-making.
-                </p>
-              </Link>
-              
-              <a 
-                href="https://discord.com/invite/ergo-platform-668903786361651200" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                    <Users className="w-6 h-6 text-orange-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">Join Governance</h3>
-                    <p className="text-orange-400 text-sm">Community</p>
-                  </div>
-                </div>
-                <p className="text-neutral-300">
-                  Connect with the community and participate in governance discussions and voting.
-                </p>
-              </a>
-            </div>
-          </div>
-        </FadeIn>
+        {/* Related Technologies - Data-driven */}
+        <RelatedTechnologies 
+          currentSlug="adaptive-emission"
+          title="Related Technologies"
+        />
+
+        {/* Related Blog Articles - lightweight */}
+        <RelatedBlogPostsForTechnology currentSlug="adaptive-emission" />
+
+        {/* What's Next - CTA Section */}
+        <WhatsNextCTA currentSlug="adaptive-emission" />
       </BackgroundWrapper>
     </>
   )

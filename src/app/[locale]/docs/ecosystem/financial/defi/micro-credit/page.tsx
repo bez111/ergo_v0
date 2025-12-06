@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import Link from "next/link";
 import { BookOpen, Users, Coins, ExternalLink, Info, Copy, Check, ChevronRight } from "lucide-react";

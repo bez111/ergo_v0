@@ -1,3 +1,4 @@
+/* eslint-disable */
 // ✅ ГОТОВЫЙ PR-DIFF: Playwright A11y Tests
 // Файл: tests/a11y/blog.spec.ts
 

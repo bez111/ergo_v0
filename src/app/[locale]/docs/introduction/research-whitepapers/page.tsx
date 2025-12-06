@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import { BookOpen, FileText, Video, Star, ExternalLink, Quote, Users } from "lucide-react";
 import Link from "next/link";

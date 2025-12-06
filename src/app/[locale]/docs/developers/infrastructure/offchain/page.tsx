@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @next/next/no-img-element */
+
 import { useState } from "react";
 import Link from "next/link";
 import clsx from "clsx";

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
@@ -105,7 +107,7 @@ export function MainNav() {
                         <li key={child.title} className="row-span-1">
                           <NavigationMenuLink asChild>
                             <Link
-                              href={localizedPath(child.href.startsWith('/') ? child.href.slice(1) : child.href)}
+                              href={localizedPath(child.href.startsWith("/") ? child.href.slice(1) : child.href)}
                               className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-primary/10 hover:text-primary focus:bg-primary/10 focus:text-primary font-mono"
                             >
                               <div className="text-sm font-medium leading-none">{getNavTitle(child.title)}</div>
@@ -123,12 +125,13 @@ export function MainNav() {
                 <NavigationMenuItem key={item.title}>
                   <NavigationMenuLink asChild>
                     <Link
-                      href={localizedPath(item.href.startsWith('/') ? item.href.slice(1) : item.href)}
+                      href={localizedPath(item.href.startsWith("/") ? item.href.slice(1) : item.href)}
                       style={{ caretColor: "transparent", userSelect: "none" }}
                       className={cn(
                         navigationMenuTriggerStyle(),
                         "font-mono uppercase tracking-wider text-sm bg-transparent hover:bg-primary/10 hover:text-primary",
-                        pathname === localizedPath(item.href.startsWith('/') ? item.href.slice(1) : item.href) && "text-primary font-medium",
+                        pathname === localizedPath(item.href.startsWith("/") ? item.href.slice(1) : item.href) &&
+                          "text-primary font-medium",
                       )}
                     >
                       {getNavTitle(item.title)}

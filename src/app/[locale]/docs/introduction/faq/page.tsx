@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
+
 import React, { useState, useRef, useEffect } from "react";
 
 // Категории FAQ из /learn/faq

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities */
+
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
@@ -8,10 +10,11 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { 
-  GitBranch, Shield, Lock, CheckCircle, Layers, RefreshCw, Settings, Users, TrendingUp, ChevronDown, Terminal, BookOpen
+  GitBranch, Shield, Lock, CheckCircle, Layers, RefreshCw, Settings, Users, TrendingUp, ChevronDown, Terminal
 } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 export default function VelvetForksPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
@@ -462,56 +465,17 @@ export default function VelvetForksPage() {
           </section>
         </FadeIn>
 
-        <FadeIn delay={1.2}>
-          <section className="py-16 px-4">
-            <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-16">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  What's <span className="text-orange-400">Next?</span>
-                </h2>
-                <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Ready to explore velvet forks? Dive deeper into the technology and implementation.
-                </p>
-              </div>
-              
-              <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <Link href="/docs/protocol/velvet-forks" className="group block">
-                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <BookOpen className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">Read Documentation</h3>
-                        <p className="text-orange-400 font-medium">Learn More</p>
-                      </div>
-                    </div>
-                    <p className="text-neutral-300 leading-relaxed">
-                      Explore comprehensive guides and technical details about velvet fork implementation.
-                    </p>
-                  </div>
-                </Link>
-                
-                <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="group block">
-                  <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full cursor-pointer">
-                    <div className="flex items-center gap-4 mb-6">
-                      <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center flex-shrink-0">
-                        <Terminal className="w-6 h-6 text-orange-400" />
-                      </div>
-                      <div>
-                        <h3 className="text-2xl font-bold text-white">View Source Code</h3>
-                        <p className="text-orange-400 font-medium">GitHub</p>
-                      </div>
-                    </div>
-                    <p className="text-neutral-300 leading-relaxed">
-                      Explore the Ergo protocol source code and see velvet fork implementations.
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
+        {/* Related Technologies - Data-driven */}
+        <RelatedTechnologies 
+          currentSlug="velvet-forks"
+          title="Related Technologies"
+        />
+
+        {/* Related Blog Articles - lightweight */}
+        <RelatedBlogPostsForTechnology currentSlug="velvet-forks" />
+
+        {/* What's Next - CTA Section */}
+        <WhatsNextCTA currentSlug="velvet-forks" />
       </BackgroundWrapper>
     </>
   )

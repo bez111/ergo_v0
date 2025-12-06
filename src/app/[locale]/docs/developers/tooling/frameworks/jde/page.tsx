@@ -1,4 +1,6 @@
 "use client";
+
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";

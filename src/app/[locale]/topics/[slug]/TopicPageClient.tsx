@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -33,6 +35,8 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { BackToTop } from "@/components/ui/back-to-top";
+import { ClusterRelatedContent } from "@/components/seo/cluster-related-content";
 
 interface Props {
   topic: TopicHub;
@@ -91,30 +95,17 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
         // User cancelled
       }
     } else {
-      handleCopy();
+      // On desktop, open Twitter/X share
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(topic.title)}&url=${encodeURIComponent(window.location.href)}`;
+      window.open(twitterUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
     }
   };
 
   return (
-    <BackgroundWrapper>
-      <div className="container mx-auto px-4 py-12">
+  <BackgroundWrapper>
+      <div className="container mx-auto px-4 pt-24 pb-12">
         <div className="max-w-5xl mx-auto">
           
-          {/* Back Button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-8"
-          >
-            <Button variant="ghost" className="text-neutral-400 hover:text-white" asChild>
-              <Link href="/topics">
-                <ArrowLeft className="h-4 w-4 mr-2" />
-                All Topics
-              </Link>
-            </Button>
-          </motion.div>
-
           {/* Hero Section */}
           <motion.header
             initial={{ opacity: 0, y: 20 }}
@@ -136,14 +127,27 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
               </div>
             </div>
 
-            {/* Share buttons */}
-            <div className="flex items-center gap-2">
-              <Button variant="outline" size="sm" onClick={handleShare} className="border-white/20 text-neutral-300 hover:text-white">
+            {/* Share + Back buttons */}
+            <div className="flex items-center gap-2 flex-wrap">
+              <Button
+                size="sm"
+                onClick={handleShare}
+                className="bg-orange-500 hover:bg-orange-600 text-black border-orange-500 hover:border-orange-600"
+              >
                 <Share2 className="w-4 h-4 mr-2" />
                 Share
               </Button>
               <Button variant="outline" size="sm" onClick={handleCopy} className="border-white/20 text-neutral-300 hover:text-white">
                 {copied ? <><Check className="w-4 h-4 mr-2 text-green-400" />Copied</> : <><Copy className="w-4 h-4 mr-2" />Copy link</>}
+              </Button>
+              <Button
+                variant="ghost"
+                className="text-neutral-400 hover:text-white"
+                asChild
+              >
+                <Link href="/topics">
+                  Back to Topics
+                </Link>
               </Button>
             </div>
           </motion.header>
@@ -155,7 +159,7 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-12"
           >
-            <Card className={`bg-gradient-to-br ${colors.gradient} to-transparent border ${colors.border} rounded-2xl`}>
+            <Card className={`bg-black/80 border ${colors.border} rounded-2xl`}>
               <CardContent className="p-8">
                 <blockquote className="text-2xl md:text-3xl font-bold text-white mb-6 leading-tight">
                   "{topic.heroStatement}"
@@ -184,11 +188,11 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
               Key Differentiators
             </h2>
             
-            <div className="grid md:grid-cols-2 gap-4">
+              <div className="grid md:grid-cols-2 gap-4">
               {topic.keyDifferentiators.map((diff, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-3 p-4 bg-black/40 border border-white/10 rounded-xl"
+                  className="flex items-start gap-3 p-4 bg-black/80 border border-white/10 rounded-xl"
                 >
                   <CheckCircle className={`w-5 h-5 ${colors.text} flex-shrink-0 mt-0.5`} />
                   <span className="text-neutral-300">{diff}</span>
@@ -284,7 +288,7 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="mb-12"
           >
-            <Card className="bg-black/60 border border-white/10 rounded-2xl">
+            <Card className="bg-black/80 border border-white/10 rounded-2xl">
               <CardHeader>
                 <CardTitle className="text-2xl text-white flex items-center gap-2">
                   <Lightbulb className={`w-6 h-6 ${colors.text}`} />
@@ -302,14 +306,14 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
           </motion.section>
 
           {/* Related Questions */}
-          {topic.relatedQuestions.length > 0 && (
+            {topic.relatedQuestions.length > 0 && (
             <motion.section
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.9 }}
               className="mb-12"
             >
-              <Card className="bg-black/60 border border-white/10 rounded-2xl">
+              <Card className="bg-black/80 border border-white/10 rounded-2xl">
                 <CardHeader>
                   <CardTitle className="text-2xl text-white flex items-center gap-2">
                     <HelpCircle className={`w-6 h-6 ${colors.text}`} />
@@ -347,7 +351,7 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
                   
                   return (
                     <Link key={related.slug} href={`/topics/${related.slug}`} className="group block">
-                      <Card className={`bg-gradient-to-br ${relatedColors.gradient} to-transparent border ${relatedColors.border} rounded-2xl hover:border-opacity-60 transition-all`}>
+                      <Card className={`bg-black/80 border ${relatedColors.border} rounded-2xl hover:border-opacity-60 transition-all`}>
                         <CardContent className="p-5">
                           <div className="flex items-center gap-4">
                             <div className={`p-3 ${relatedColors.bg} rounded-xl`}>
@@ -376,7 +380,7 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.1 }}
           >
-            <Card className={`bg-gradient-to-br ${colors.gradient} to-transparent border ${colors.border} rounded-2xl`}>
+            <Card className={`bg-black/80 border ${colors.border} rounded-2xl`}>
               <CardContent className="p-8 text-center">
                 <h3 className="text-2xl font-bold text-white mb-2">
                   Ready to dive deeper?
@@ -403,6 +407,17 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
 
         </div>
       </div>
+
+      {/* Topic Cluster Related Content */}
+      <ClusterRelatedContent 
+        currentUrl={`/topics/${topic.slug}`}
+        title="Related Resources"
+        subtitle="Explore more content in this topic cluster"
+        maxItems={6}
+      />
+      
+      {/* Back to Top button for long page */}
+      <BackToTop />
     </BackgroundWrapper>
   );
 }
@@ -427,7 +442,7 @@ function ResourceCard({
 
   return (
     <Link href={href} className="group block" target={isExternal ? "_blank" : undefined}>
-      <Card className="bg-black/40 border border-white/10 rounded-2xl hover:border-orange-500/30 transition-all h-full">
+      <Card className="bg-black/80 border border-white/10 rounded-2xl hover:border-orange-500/30 transition-all h-full">
         <CardContent className={compact ? "p-4" : "p-5"}>
           <div className="flex items-start gap-3">
             <div className={`p-2 ${colors.bg} rounded-lg group-hover:bg-orange-500/20 transition-colors`}>
@@ -449,9 +464,9 @@ function ResourceCard({
               )}
             </div>
             {isExternal ? (
-              <ExternalLink className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 flex-shrink-0" />
+              <ExternalLink className="w-4 h-4 text-neutral-400 group-hover:text-orange-400 flex-shrink-0" />
             ) : (
-              <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+              <ArrowRight className="w-4 h-4 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
             )}
           </div>
         </CardContent>
@@ -475,7 +490,7 @@ function TermCard({
       href={`/learn/glossary/${term.slug}?utm_source=topic&utm_medium=term&utm_campaign=${topicSlug}`} 
       className="group block"
     >
-      <div className="p-4 bg-black/40 border border-white/10 rounded-xl hover:border-orange-500/30 transition-all">
+      <div className="p-4 bg-black/80 border border-white/10 rounded-xl hover:border-orange-500/30 transition-all">
         <div className="flex items-start justify-between gap-2">
           <div>
             <h4 className={`font-semibold ${colors.text} group-hover:text-orange-400 transition-colors`}>
@@ -485,7 +500,7 @@ function TermCard({
               {term.shortDefinition}
             </p>
           </div>
-          <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+          <ArrowRight className="w-4 h-4 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
         </div>
       </div>
     </Link>
@@ -507,14 +522,14 @@ function QuestionCard({
       href={`/questions/${question.slug}?utm_source=topic&utm_medium=question&utm_campaign=${topicSlug}`} 
       className="group block"
     >
-      <div className="flex items-center justify-between gap-4 p-4 bg-black/40 border border-white/10 rounded-xl hover:border-orange-500/30 transition-all">
+      <div className="flex items-center justify-between gap-4 p-4 bg-black/80 border border-white/10 rounded-xl hover:border-orange-500/30 transition-all">
         <div className="flex items-center gap-3">
           <HelpCircle className={`w-5 h-5 ${colors.text}`} />
           <span className="text-white group-hover:text-orange-400 transition-colors">
             {question.question}
           </span>
         </div>
-        <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
+        <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
       </div>
     </Link>
   );

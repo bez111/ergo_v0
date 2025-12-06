@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useState, useMemo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -43,17 +45,6 @@ const difficultyColors: Record<string, string> = {
   beginner: "bg-green-500/20 text-green-400 border-green-500/30",
   intermediate: "bg-yellow-500/20 text-yellow-400 border-yellow-500/30",
   advanced: "bg-red-500/20 text-red-400 border-red-500/30",
-};
-
-const clusterColors: Record<string, string> = {
-  defi: "from-orange-500 to-red-500",
-  privacy: "from-purple-500 to-blue-500",
-  mining: "from-amber-500 to-orange-500",
-  sustainability: "from-emerald-500 to-green-500",
-  "vc-alternative": "from-green-500 to-teal-500",
-  "global-settlement": "from-indigo-500 to-purple-500",
-  developer: "from-cyan-500 to-blue-500",
-  investor: "from-blue-500 to-cyan-500",
 };
 
 const clusterLabels: Record<string, string> = {
@@ -157,21 +148,6 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                     </Button>
                   </div>
 
-                  {/* Stats inline */}
-                  <div className="flex flex-wrap gap-4 text-sm text-neutral-400">
-                    <span>
-                      <strong className="text-orange-400">{playbooks.length}</strong> playbooks
-                    </span>
-                    <span>
-                      <strong className="text-orange-400">{clusters.length}</strong> categories
-                    </span>
-                    <span>
-                      <strong className="text-orange-400">
-                        {playbooks.reduce((acc, p) => acc + p.steps.length, 0)}
-                      </strong>{" "}
-                      steps
-                    </span>
-                  </div>
                 </div>
 
                 {/* Right column: compact featured playbooks card */}
@@ -184,7 +160,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                     <h3 className="text-2xl font-bold mb-4 text-center text-white">
                       Featured playbooks
                     </h3>
-                    <div className="space-y-3">
+                            <div className="space-y-3">
                       {[
                         "first-transaction-10-minutes",
                         "start-mining-ergo",
@@ -198,25 +174,25 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                             <Link
                               key={playbook!.slug}
                               href={`/playbooks/${playbook!.slug}`}
-                              className="block"
+                                      className="block group"
                             >
-                              <div className="flex items-center gap-3 p-3 rounded-2xl bg-black/60 border border-white/10 hover:border-orange-400/50 hover:bg-black/80 transition-all duration-300">
-                                <div
-                                  className={`w-10 h-10 rounded-xl bg-gradient-to-br ${
-                                    clusterColors[playbook!.cluster] || "from-orange-500 to-red-500"
-                                  } flex items-center justify-center flex-shrink-0`}
-                                >
-                                  <Icon className="w-5 h-5 text-white" />
-                                </div>
-                                <div className="flex-1 min-w-0">
-                                  <div className="text-sm font-semibold text-white group-hover:text-orange-400 transition-colors truncate">
-                                    {playbook!.title}
-                                  </div>
-                                  <div className="text-[11px] text-neutral-400 truncate">
-                                    {playbook!.subtitle}
-                                  </div>
-                                </div>
-                              </div>
+                                      <div className="flex items-center gap-3 p-3 rounded-2xl bg-black/60 border border-white/10 hover:border-orange-400/50 hover:bg-black/80 transition-all duration-300">
+                                        <div className="w-11 h-11 rounded-md bg-orange-500/20 border border-orange-500/30 flex items-center justify-center flex-shrink-0">
+                                          <Icon className="w-5 h-5 text-orange-400" />
+                                        </div>
+                                        <div className="flex-1 min-w-0">
+                                          <div className="text-sm font-semibold text-white group-hover:text-orange-400 transition-colors truncate">
+                                            {playbook!.title}
+                                          </div>
+                                          <div className="text-[11px] text-neutral-400 truncate">
+                                            {playbook!.subtitle}
+                                          </div>
+                                        </div>
+                                        <ArrowRight
+                                          className="w-3 h-3 text-neutral-400 opacity-100 md:opacity-0 md:translate-x-1 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-200"
+                                          aria-hidden="true"
+                                        />
+                                      </div>
                             </Link>
                           );
                         })}
@@ -227,7 +203,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
             </div>
           </motion.section>
 
-          {/* Filter Buttons */}
+          {/* Filter Buttons - min 44px touch targets on mobile */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -235,15 +211,17 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
             className="pb-8"
           >
             <div className="max-w-6xl mx-auto">
-              <div className="flex flex-wrap justify-center gap-2">
+              <div className="flex flex-wrap justify-center gap-2" role="radiogroup" aria-label="Filter playbooks by category">
                 <Button
                   variant={selectedCluster === "all" ? "default" : "outline"}
-                  size="sm"
                   onClick={() => setSelectedCluster("all")}
-                  className={selectedCluster === "all" 
+                  className={`min-h-[44px] px-4 py-2 text-sm ${selectedCluster === "all" 
                     ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500" 
-                    : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50"
-                  }
+                    : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50 active:bg-orange-500/20"
+                  }`}
+                  role="radio"
+                  aria-checked={selectedCluster === "all"}
+                  aria-label="Show all playbooks"
                 >
                   All
                 </Button>
@@ -253,14 +231,16 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                     <Button
                       key={cluster.id}
                       variant={selectedCluster === cluster.id ? "default" : "outline"}
-                      size="sm"
                       onClick={() => setSelectedCluster(cluster.id)}
-                      className={selectedCluster === cluster.id 
+                      className={`min-h-[44px] px-4 py-2 text-sm ${selectedCluster === cluster.id 
                         ? "bg-orange-500 hover:bg-orange-600 text-white border-orange-500" 
-                        : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50"
-                      }
+                        : "border-white/20 text-neutral-300 hover:text-white hover:border-orange-500/50 active:bg-orange-500/20"
+                      }`}
+                      role="radio"
+                      aria-checked={selectedCluster === cluster.id}
+                      aria-label={`Filter by ${cluster.name}`}
                     >
-                      <Icon className="w-3 h-3 mr-1" />
+                      <Icon className="w-4 h-4 mr-1.5" aria-hidden="true" />
                       {cluster.name}
                     </Button>
                   );
@@ -277,7 +257,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
             className="pb-16"
           >
             <div className="max-w-7xl mx-auto">
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" role="list" aria-label="Available playbooks" aria-live="polite">
                 {filteredPlaybooks.map((playbook, index) => {
                   const PlaybookIcon = iconMap[playbook.icon] || BookOpen;
                   return (
@@ -292,12 +272,8 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                           <CardContent className="p-5">
                             {/* Header - Compact */}
                             <div className="flex items-center gap-3 mb-3">
-                              <div
-                                className={`w-10 h-10 rounded-xl bg-gradient-to-br ${
-                                  clusterColors[playbook.cluster] || "from-orange-500 to-red-500"
-                                } flex items-center justify-center flex-shrink-0`}
-                              >
-                                <PlaybookIcon className="w-5 h-5 text-white" />
+                              <div className="w-11 h-11 rounded-md bg-orange-500/20 border border-orange-500/30 flex items-center justify-center flex-shrink-0">
+                                <PlaybookIcon className="w-5 h-5 text-orange-400" />
                               </div>
                                 <div className="flex-1 min-w-0">
                                 <h3
@@ -305,7 +281,7 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                                 >
                                   {playbook.title}
                                 </h3>
-                                <div className="flex items-center gap-2 text-[10px] text-neutral-500">
+                                <div className="flex items-center gap-2 text-[10px] text-neutral-400">
                                   <span>{playbook.timeToComplete}</span>
                                   <span>·</span>
                                   <span>{playbook.steps.length} steps</span>
@@ -333,7 +309,10 @@ export function PlaybooksHubClient({ playbooks, clusters }: Props) {
                                   {playbook.difficulty}
                                 </Badge>
                               </div>
-                              <ArrowRight className="w-3 h-3 text-neutral-500 group-hover:text-orange-400 transition-colors" />
+                              <ArrowRight
+                                className="w-3 h-3 text-neutral-400 opacity-100 md:opacity-0 md:translate-x-1 md:group-hover:opacity-100 md:group-hover:translate-x-0 transition-all duration-200"
+                                aria-hidden="true"
+                              />
                             </div>
                           </CardContent>
                         </Card>

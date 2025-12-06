@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import { ArrowLeft, Shield, BookOpen, Code, Lock, Users, Zap } from "lucide-react";
 import Link from "next/link";
 import { BlockMath, InlineMath } from "react-katex";

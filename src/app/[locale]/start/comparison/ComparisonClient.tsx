@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useState } from "react"
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
@@ -13,7 +15,7 @@ import { StaggerContainer } from "@/components/animations/stagger-container"
 import Link from "next/link"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { useTranslations } from "next-intl"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
@@ -217,17 +219,17 @@ export default function ComparisonClient() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl transition-all duration-300 hover:scale-105" asChild>
-                    <Link href="/docs">
-                      <Rocket className="w-5 h-5 mr-2" aria-hidden="true" />
-                      Start Building
-                    </Link>
-                  </Button>
+                      <Link href="/docs">
+                        <Rocket className="w-5 h-5 mr-2" aria-hidden="true" />
+                        Start Building
+                      </Link>
+                    </Button>
                     <Button
                       variant="outline"
                       className="border-white/20 text-white hover:bg-white/10 px-8 py-3 rounded-xl backdrop-blur-sm transition-all duration-300 hover:border-orange-400/40"
                       asChild
                     >
-                      <Link href="#comparison">
+                      <Link href="/compare">
                         <Target className="w-5 h-5 mr-2" aria-hidden="true" />
                         View Comparison
                       </Link>
@@ -508,7 +510,7 @@ export default function ComparisonClient() {
                           <div className="w-full border-t border-neutral-700/50" />
                         </div>
                         <div className="relative flex justify-center">
-                          <span className="px-3 bg-black/80 text-xs text-neutral-500">VS</span>
+                          <span className="px-3 bg-black/80 text-xs text-neutral-400">VS</span>
                         </div>
                       </div>
 
@@ -517,8 +519,8 @@ export default function ComparisonClient() {
                         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-neutral-600 to-neutral-700 rounded-full" />
                         <div className="pl-6">
                           <div className="flex items-center gap-2 mb-2">
-                            <X className="w-5 h-5 text-neutral-500" aria-hidden="true" />
-                            <span className="text-sm font-semibold text-neutral-500 uppercase tracking-wider">Others</span>
+                            <X className="w-5 h-5 text-neutral-400" aria-hidden="true" />
+                            <span className="text-sm font-semibold text-neutral-400 uppercase tracking-wider">Others</span>
                           </div>
                           <p className="text-gray-400">{item.others}</p>
                         </div>
@@ -544,10 +546,17 @@ export default function ComparisonClient() {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
           >
-            <motion.div variants={itemVariants}>
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white">
-              Blockchain <span className="text-orange-400">Platform</span> Comparison
-            </h2>
+            <motion.div variants={itemVariants} className="flex flex-col md:flex-row items-center justify-between gap-4 mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">
+                Blockchain <span className="text-orange-400">Platform</span> Comparison
+              </h2>
+              <Link
+                href="/compare"
+                className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-orange-400 transition-colors"
+              >
+                Detailed 1-on-1 comparisons
+                <ArrowRight className="w-4 h-4" />
+              </Link>
             </motion.div>
             <Card className="bg-black/80 border border-white/10 rounded-3xl backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 mb-12 overflow-hidden">
               <CardHeader>
@@ -754,7 +763,7 @@ export default function ComparisonClient() {
               </div>
               
               <div className="mt-8 text-center">
-                <p className="text-xs text-neutral-500">
+                <p className="text-xs text-neutral-400">
                   Last updated: {isoDate}. Sources: <a href="https://ergoplatform.org/en/blog/2021-07-20-autolykosv2/" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">Autolykos v2</a> · <a href="https://github.com/ergoplatform/ergo" target="_blank" rel="noopener noreferrer" className="underline hover:opacity-80">ergo (GitHub)</a>
                 </p>
               </div>

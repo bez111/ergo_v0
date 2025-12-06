@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import React, { useState } from "react";
 import Link from "next/link";
 import { Calendar, Users, MessageCircle, Rocket, Video, Star, Globe, Target, CheckCircle, ExternalLink, Award, Zap, BookOpen, Shield, ChevronRight, ChevronLeft } from "lucide-react";

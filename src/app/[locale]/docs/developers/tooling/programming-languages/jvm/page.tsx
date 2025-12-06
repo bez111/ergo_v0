@@ -1,3 +1,5 @@
+
+/* eslint-disable react-compiler/react-compiler, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Layers } from "lucide-react";

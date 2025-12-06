@@ -34,7 +34,7 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     },
     {
       title: 'Smart Contract Security',
-      href: '/learn/guides/security',
+      href: '/patterns',
       description: 'Best practices for secure ErgoScript development',
       type: 'guide',
       readTime: 12,
@@ -80,7 +80,7 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     },
     {
       title: 'Sigma Protocols Deep Dive',
-      href: '/learn/guides/sigma-protocols',
+      href: '/topics/privacy',
       description: 'Technical explanation of zero-knowledge proofs',
       type: 'guide',
       readTime: 15,
@@ -143,7 +143,7 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     },
     {
       title: 'ErgoScript for NFTs',
-      href: '/learn/guides/nft-contracts',
+      href: '/patterns',
       description: 'Build advanced NFT contracts with royalties',
       type: 'guide',
       readTime: 18,
@@ -162,7 +162,7 @@ export const relatedContentMap: Record<string, RelatedItem[]> = {
     },
     {
       title: 'Mining Ecosystem',
-      href: '/ecosystem/mining',
+      href: '/miners',
       description: 'Discover mining pools and tools',
       type: 'use-case',
       readTime: 8,
@@ -297,7 +297,7 @@ export const topicClusters = {
     pages: [
       '/technology/eutxo-model',
       '/use/defi',
-      '/learn/guides/contracts',
+      '/patterns',
       '/docs/developers'
     ]
   },
@@ -306,7 +306,7 @@ export const topicClusters = {
     hub: '/technology/privacy-features',
     pages: [
       '/use/privacy',
-      '/learn/guides/sigma-protocols',
+      '/topics/privacy',
       '/ecosystem/projects/ergomixer'
     ]
   },
@@ -322,10 +322,10 @@ export const topicClusters = {
   },
   
   'mining': {
-    hub: '/use/mining',
+    hub: '/miners',
     pages: [
       '/technology/secure-pow',
-      '/ecosystem/mining',
+      '/miners',
       '/technology/storage-rent'
     ]
   },
@@ -335,7 +335,7 @@ export const topicClusters = {
     pages: [
       '/technology/native-tokens',
       '/ecosystem/projects/auction-house',
-      '/learn/guides/nft-contracts'
+      '/patterns'
     ]
   }
 }
@@ -385,7 +385,7 @@ export const contextualLinks = {
   'ergomixer': '/use/privacy',
   'defi': '/use/defi',
   'nft': '/use/nfts',
-  'mining': '/use/mining',
+  'mining': '/miners',
   'stablecoins': '/use/stablecoins',
   'bridges': '/use/bridges',
   'daos': '/use/daos'

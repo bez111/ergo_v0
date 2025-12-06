@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import Link from "next/link"
 import { Card } from "@/components/ui/card"
 import { CyberButton } from "@/components/animations/cyber-button"
@@ -29,11 +31,12 @@ export function PoweredByErgo() {
   }))
 
   return (
-    <section className="py-32 relative">
+    <section className="py-32 relative" aria-labelledby="powered-by-ergo-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center mb-16">
           <h2 
+            id="powered-by-ergo-heading"
             className="font-bold tracking-tight mb-6"
             style={{
               fontSize: 'clamp(32px, 4.5vw, 56px)',
@@ -56,7 +59,7 @@ export function PoweredByErgo() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6" role="list" aria-label="Featured Ergo ecosystem projects">
           {apps.map((app, i) => (
             <Link 
               key={i}

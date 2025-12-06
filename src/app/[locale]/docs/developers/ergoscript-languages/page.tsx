@@ -1,4 +1,6 @@
 "use client";
+
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Link from "next/link";
 import { ExternalLink, Code, Settings, Database, Zap, BookOpen, Info, Cpu } from "lucide-react";

@@ -10,6 +10,31 @@ interface BlogCardProps {
 
 // ✅ ИСПРАВЛЕНИЕ A11y: Одна большая ссылка вместо nested links
 export function BlogCard({ post, featured = false }: BlogCardProps) {
+  const cardImage =
+    post.slug === "sigma-protocols-privacy"
+      ? "/og/sigma-protocols-privacy.png"
+      : post.slug === "sigma-protocols-explained"
+      ? "/og/sigma-protocols-explained.png"
+      : post.slug === "ergo-in-5-minutes"
+      ? "/og/ergo-in-five-minutes.png"
+      : post.slug === "ergo-manifesto"
+      ? "/og/ergo-manifesto.png"
+      : post.slug === "nipopows-explained"
+      ? "/og/nipopows-explained.png"
+      : post.slug === "eutxo-vs-accounts"
+      ? "/og/eutxo-vs-accounts.png"
+      : post.slug === "oracle-pools-explained"
+      ? "/og/oracle-pools-explained.png"
+      : post.slug === "storage-rent"
+      ? "/og/storage-rent.png"
+      : post.slug === "ergoscript-introduction"
+      ? "/og/ergoscript-introduction.png"
+      : post.slug === "babel-fees"
+      ? "/og/babel-fees.png"
+      : post.slug === "autolykos-proof-of-work"
+      ? "/og/autolykos-proof-of-work.png"
+      : post.image
+
   return (
     <Link 
       href={`/blog/${post.slug}`}
@@ -22,9 +47,9 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
       >
         {/* ✅ ИЗМЕНЕНИЕ: Изображение с фиксированными размерами для предотвращения CLS */}
         <div className="relative w-full aspect-[16/9] overflow-hidden bg-gradient-to-br from-neutral-800 to-neutral-900">
-          {post.image ? (
+          {cardImage ? (
             <Image
-              src={post.image}
+              src={cardImage}
               alt={post.title}  // ✅ Содержательный ALT для контентных изображений
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
@@ -46,22 +71,6 @@ export function BlogCard({ post, featured = false }: BlogCardProps) {
             </div>
           )}
         
-        {/* ✅ A11y FIX: Категория как badge, не ссылка (чтобы избежать nested links) */}
-        <div className="absolute top-4 left-4">
-          {post.category && (
-            <span className="px-3 py-1 text-xs font-semibold bg-orange-500/20 text-orange-400 border border-orange-500/30 rounded-xl backdrop-blur-sm">
-              {post.category}
-            </span>
-          )}
-        </div>
-
-        {featured && (
-          <div className="absolute top-4 right-4">
-            <span className="px-3 py-1 text-xs font-semibold bg-status-success-500/20 text-status-success-400 border border-status-success-500/30 rounded-lg backdrop-blur-sm">
-              Featured
-            </span>
-          </div>
-        )}
       </div>
 
       {/* ✅ Контент с улучшенной семантикой */}

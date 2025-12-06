@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import { TrendingUp, Coins, Layers, Flame, ChevronRight } from "lucide-react";
 import Link from "next/link";

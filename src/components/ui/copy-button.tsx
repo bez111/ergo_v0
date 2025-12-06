@@ -44,17 +44,17 @@ export const CopyButton: React.FC<CopyButtonProps> = ({
     return (
       <button
         onClick={handleCopy}
-        className={`inline-flex items-center gap-1 text-xs hover:text-orange-400 transition-colors ${className}`}
-        title="Copy"
+        className={`inline-flex items-center gap-1 text-xs hover:text-orange-400 transition-colors min-h-[44px] ${className}`}
+        aria-label={copied ? "Copied to clipboard" : "Copy to clipboard"}
       >
         {copied ? (
           <>
-            <Check className={iconSizes[size]} />
+            <Check className={iconSizes[size]} aria-hidden="true" />
             <span>Copied!</span>
           </>
         ) : (
           <>
-            <Copy className={iconSizes[size]} />
+            <Copy className={iconSizes[size]} aria-hidden="true" />
             <span>Copy</span>
           </>
         )}
@@ -65,13 +65,13 @@ export const CopyButton: React.FC<CopyButtonProps> = ({
   return (
     <button
       onClick={handleCopy}
-      className={`${sizeClasses[size]} rounded bg-neutral-800 hover:bg-neutral-700 transition-colors ${className}`}
-      title="Copy code"
+      className={`${sizeClasses[size]} rounded bg-neutral-800 hover:bg-neutral-700 transition-colors min-h-[44px] min-w-[44px] flex items-center justify-center ${className}`}
+      aria-label={copied ? "Code copied to clipboard" : "Copy code to clipboard"}
     >
       {copied ? (
-        <Check className={`${iconSizes[size]} text-green-400`} />
+        <Check className={`${iconSizes[size]} text-green-400`} aria-hidden="true" />
       ) : (
-        <Copy className={`${iconSizes[size]} text-gray-400`} />
+        <Copy className={`${iconSizes[size]} text-neutral-300`} aria-hidden="true" />
       )}
     </button>
   )

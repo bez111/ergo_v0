@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages */
+
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Clock, Zap, Cpu, TrendingUp, Shield, FileText, ExternalLink, Calculator, Layers } from "lucide-react";

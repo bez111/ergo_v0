@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useLayoutEffect, useState, useRef } from 'react'
 
 interface CLSPreventionProps {

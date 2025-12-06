@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import Link from "next/link";
 import { GraduationCap, BookOpen, Cpu, Database, Code, Network, Server, Terminal, Cloud, Lock, Shield, Users, MessageCircle, GitBranch, ExternalLink, Zap, Layers, Globe, Wrench, Key, ChevronRight } from "lucide-react";

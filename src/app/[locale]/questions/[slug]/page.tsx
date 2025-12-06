@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import Script from 'next/script';
@@ -38,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: 'Ergo Blockchain',
       type: 'article',
       images: [{
-        url: `${siteConfig.siteUrl}/og/questions/${slug}.png`,
+        url: `${siteConfig.siteUrl}/og/blog-default.svg`,
         width: 1200,
         height: 630,
         alt: question.query
@@ -48,7 +50,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${siteConfig.siteUrl}/og/questions/${slug}.png`]
+      images: [`${siteConfig.siteUrl}/og/blog-default.svg`]
     },
     alternates: {
       canonical: `${siteConfig.siteUrl}/questions/${slug}`

@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+/* eslint-disable @typescript-eslint/no-require-imports */
 /**
  * Advanced script to fix ALL Framer Motion and CodeBlock children prop errors
  */

@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { motion } from "framer-motion"
 import { Card, CardContent } from "@/components/ui/card"
 import { Clock, Coins, RefreshCw, TrendingUp } from "lucide-react"

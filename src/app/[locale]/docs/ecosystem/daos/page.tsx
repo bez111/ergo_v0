@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import { Users, BookOpen, Link as LinkIcon, ExternalLink, CheckCircle, Info, Shield, TrendingUp, Youtube, MessageCircle } from "lucide-react";
 import Link from "next/link";

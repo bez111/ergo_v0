@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages, @typescript-eslint/no-unused-vars */
+
 import React, { useState } from "react"
 import { motion } from "framer-motion"
 import Link from "next/link"
@@ -28,8 +30,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
+import { ClusterRelatedContent } from "@/components/seo/cluster-related-content"
 import { networkMetrics, formatHashrate, formatTVL, formatSupplyShort, formatBlockTime, formatActiveAddresses, formatActiveNodes } from "@/lib/network-metrics"
 
 export function HoldersClient() {
@@ -261,10 +264,7 @@ export function HoldersClient() {
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
         {/* Hidden Breadcrumbs for SEO */}
-        <HiddenBreadcrumbs 
-          items={breadcrumbItems} 
-          currentPage="For Hodlers" 
-        />
+        <Breadcrumbs items={[...breadcrumbItems, { name: "For Hodlers", href: "#" }]} variant="hidden" />
         
         {/* Hero Section */}
         <motion.section 
@@ -573,78 +573,102 @@ export function HoldersClient() {
             <p className="text-xl text-center text-neutral-300 mb-12">
               Ready to get started? Pick what interests you most
             </p>
-            <div className="grid md:grid-cols-3 gap-6">
-              <a 
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <Link 
                 href="/use/get-erg"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+                className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                    <Wallet className="w-6 h-6 text-orange-400" />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <Wallet className="w-5 h-5 text-orange-400" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Buy & Hold ERG</h3>
-                        <p className="text-orange-400 text-sm">Get Started</p>
-                      </div>
-                      <ExternalLink className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
-                    </div>
-                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Buy & Hold</h3>
                 </div>
-                <p className="text-neutral-300">
-                  Complete guide to buying, storing, and securing your ERG holdings
+                <p className="text-neutral-400 text-sm">
+                  Get ERG and secure your holdings
                 </p>
-              </a>
+              </Link>
               
               <Link 
                 href="/ecosystem"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+                className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                    <TrendingUp className="w-6 h-6 text-orange-400" />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <TrendingUp className="w-5 h-5 text-orange-400" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Explore DeFi</h3>
-                        <p className="text-orange-400 text-sm">Earn Yield</p>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
-                    </div>
-                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Explore DeFi</h3>
                 </div>
-                <p className="text-neutral-300">
-                  Discover DeFi protocols, DEXs, and earning opportunities on Ergo
+                <p className="text-neutral-400 text-sm">
+                  DEXs, lending, and earning opportunities
+                </p>
+              </Link>
+
+              <Link 
+                href="/miners"
+                className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <Zap className="w-5 h-5 text-orange-400" />
+                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Start Mining</h3>
+                </div>
+                <p className="text-neutral-400 text-sm">
+                  GPU-friendly, ASIC-resistant mining
                 </p>
               </Link>
 
               <Link 
                 href="/builders"
-                className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
+                className="bg-black/80 border border-white/10 rounded-3xl p-6 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
-                    <Code className="w-6 h-6 text-orange-400" />
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 bg-orange-500/20 rounded-xl flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                    <Code className="w-5 h-5 text-orange-400" />
                   </div>
-                  <div className="flex-1">
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">Build on Ergo</h3>
-                        <p className="text-orange-400 text-sm">For Developers</p>
-                      </div>
-                      <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 transition-colors" />
-                    </div>
-                  </div>
+                  <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">Build dApps</h3>
                 </div>
-                <p className="text-neutral-300">
-                  Learn ErgoScript, explore developer tools, and start building dApps
+                <p className="text-neutral-400 text-sm">
+                  ErgoScript, SDKs, and dev tools
                 </p>
               </Link>
             </div>
           </div>
         </section>
+
+        {/* Cross-Promotion */}
+        <section className="py-12 px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-black/60 border border-white/10 rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                  <Zap className="w-6 h-6 text-orange-400" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold">Interested in mining?</p>
+                  <p className="text-neutral-400 text-sm">Earn ERG by securing the network with your GPU</p>
+                </div>
+              </div>
+              <Link 
+                href="/miners"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-orange-500/10 border border-orange-500/30 rounded-xl text-orange-400 hover:bg-orange-500/20 hover:border-orange-400/50 transition-all font-medium text-sm whitespace-nowrap"
+              >
+                Explore Mining
+                <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Topic Cluster Related Content */}
+        <ClusterRelatedContent 
+          currentUrl="/hodlers"
+          title="Learn More"
+          subtitle="Explore Ergo's sound money principles and tokenomics"
+          maxItems={6}
+          showPillarLink={false}
+        />
 
         {/* Email Capture Form */}
         <FinalCTASimple 

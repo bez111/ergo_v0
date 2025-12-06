@@ -1,3 +1,5 @@
+
+/* eslint-disable @next/next/no-html-link-for-pages */
 import React from "react";
 import { ArrowLeft, Shield, Database, Link as LinkIcon, BookOpen, Clock, BarChart3 } from "lucide-react";
 import Link from "next/link";

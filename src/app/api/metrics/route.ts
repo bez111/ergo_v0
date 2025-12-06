@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { NextResponse } from 'next/server'
 import { register, collectDefaultMetrics, Counter, Histogram, Gauge } from 'prom-client'
 

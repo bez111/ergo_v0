@@ -1,7 +1,10 @@
 "use client"
 
-import React, { useState } from "react"
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
+
+import { useState } from "react"
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
@@ -14,6 +17,7 @@ import { StorageRentTimeline } from "@/components/diagrams/storage-rent-timeline
 import { ErgoScriptExamples } from "@/components/code/ergoscript-examples"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
 import { 
   ChevronDown,
   Shield,
@@ -174,7 +178,6 @@ export function ErgoIn5MinutesClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs 
             items={[
-              { name: "Home", href: "/" },
               { name: "Blog", href: "/blog" },
               { name: "Ergo in 5 Minutes: Why It Matters & How It Works", href: "/blog/ergo-in-5-minutes" }
             ]}
@@ -204,6 +207,8 @@ export function ErgoIn5MinutesClient() {
               />
             </div>
           </motion.div>
+
+          
 
           {/* TL;DR Section - Compact */}
           <motion.section
@@ -300,6 +305,14 @@ export function ErgoIn5MinutesClient() {
                 <p className="text-gray-300 leading-relaxed">
                   The crypto space is crowded with different networks, each claiming to bring something unique to the Web3 space. Scalability, privacy, security, community support – everyone says they have an edge. There are now many tens or even hundreds of thousands of coins and tokens. Just a handful are worth anything: CoinMarketCap lists barely over 1,000 networks with a total value over $10 million – practically nothing by crypto standards.
                 </p>
+              </div>
+
+              {/* Ergo in 5 Minutes Infographic */}
+              <div className="mb-12">
+                <ExpandableInfographic
+                  src="/og/infographics/ergo-in-five-minutes.png"
+                  alt="Ergo in 5 Minutes: A Brief Introduction to the Ergo Platform"
+                />
               </div>
 
               {/* The Past */}

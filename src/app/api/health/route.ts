@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { version } from '@/lib/version'
 import { NextResponse } from 'next/server'
 

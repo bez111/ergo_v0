@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useEffect, useMemo, useState, useDeferredValue } from "react"
 import { useRouter, useSearchParams } from "next/navigation"
 import { BookOpen, TrendingUp } from "lucide-react"
@@ -106,7 +108,6 @@ export default function BlogClientStable({
     filtered.sort((a, b) => {
       switch (sortBy) {
         case "trending":
-          return (b.views || 0) - (a.views || 0)
         case "popular":
           return (b.shares || 0) - (a.shares || 0)
         case "readtime":

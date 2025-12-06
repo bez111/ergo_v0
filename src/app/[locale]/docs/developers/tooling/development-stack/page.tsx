@@ -1,4 +1,6 @@
 "use client";
+
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
 import React from "react";
 import Link from "next/link";
 import { Server, Globe, Monitor, Smartphone, Key, User, Wrench, BookOpen, Rocket, Package, Box, MessageCircle, HelpCircle, TestTube, Link2, Users, Cpu, Code, Layers, FileText, Database, Zap, FileQuestion, ExternalLink } from "lucide-react";

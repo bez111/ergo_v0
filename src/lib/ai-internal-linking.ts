@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any */
 // AI-Powered Internal Linking System for Maximum SEO
 // Automatically creates contextual links between related content
 
@@ -84,7 +86,7 @@ export function buildContentGraph(): ContentNode[] {
       description: 'Explore Ergo ecosystem',
     },
     {
-      url: '/use/mining',
+      url: '/miners',
       title: 'Mine Ergo',
       keywords: ['mining', 'autolykos', 'gpu', 'pools', 'hashrate'],
       description: 'Start mining Ergo',

@@ -214,25 +214,25 @@ export function CompactSocialShare({ title, url, className }: SocialShareProps) 
           key={social.name}
           variant="ghost"
           size="sm"
-          className={cn("h-8 w-8 p-0", social.color)}
+          className={cn("h-10 w-10 p-0", social.color)}
           onClick={() => handleShare(social.url)}
-          title={`Share on ${social.name}`}
+          aria-label={`Share on ${social.name}`}
         >
-          <social.icon className="w-4 h-4" />
+          <social.icon className="w-4 h-4" aria-hidden="true" />
         </Button>
       ))}
       
       <Button
         variant="ghost"
         size="sm"
-        className="h-8 w-8 p-0 text-orange-400 hover:text-orange-300"
+        className="h-10 w-10 p-0 text-orange-400 hover:text-orange-300"
         onClick={copyToClipboard}
-        title="Copy link"
+        aria-label={copied ? "Link copied" : "Copy link to clipboard"}
       >
         {copied ? (
-          <Check className="w-4 h-4" />
+          <Check className="w-4 h-4" aria-hidden="true" />
         ) : (
-          <Link2 className="w-4 h-4" />
+          <Link2 className="w-4 h-4" aria-hidden="true" />
         )}
       </Button>
     </div>

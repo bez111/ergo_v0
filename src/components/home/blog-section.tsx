@@ -1,8 +1,7 @@
-import React from "react"
 import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import { BlogCard } from "./blog-card"
-import { blogPosts } from "@/src/app/[locale]/blog/_lib/blog-data"
+import { blogPosts } from "@/app/[locale]/blog/_lib/blog-data"
 import { useTranslations } from "next-intl"
 
 export function BlogSection() {

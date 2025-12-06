@@ -1,20 +1,52 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from 'next';
 import { getTranslations } from 'next-intl/server';
+import dynamic from 'next/dynamic';
 
-// Solana-inspired structure with Ergo cypherpunk style
+// Critical above-the-fold components (loaded immediately)
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { HeroFinal } from "@/components/home/hero-final"
 import { WhyErgo } from "@/components/home/why-ergo-new"
-import { BuildForScale } from "@/components/home/build-for-scale"
-import { MadeForMassAdoption } from "@/components/home/made-for-mass-adoption"
-import { PoweredByErgo } from "@/components/home/powered-by-ergo"
-import { BlogSectionHome } from "@/components/home/blog-section-home"
-import { JoinCommunity } from "@/components/home/join-community"
-import { FAQSimple } from "@/components/home/faq-simple"
-import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { FAQSchema } from "@/components/seo/faq-schema"
 import { PerformanceOptimizations } from "@/components/seo/performance-optimizations"
 import { siteConfig } from '@/config/site-config';
+
+// Lazy-load below-the-fold components for better LCP
+const BuildForScale = dynamic(() => import("@/components/home/build-for-scale").then(mod => mod.BuildForScale), {
+  loading: () => <div className="h-96 bg-neutral-900/30 animate-pulse" />,
+  ssr: true
+});
+
+const MadeForMassAdoption = dynamic(() => import("@/components/home/made-for-mass-adoption").then(mod => mod.MadeForMassAdoption), {
+  loading: () => <div className="h-96 bg-neutral-900/30 animate-pulse" />,
+  ssr: true
+});
+
+const PoweredByErgo = dynamic(() => import("@/components/home/powered-by-ergo").then(mod => mod.PoweredByErgo), {
+  loading: () => <div className="h-64 bg-neutral-900/30 animate-pulse" />,
+  ssr: true
+});
+
+const BlogSectionHome = dynamic(() => import("@/components/home/blog-section-home").then(mod => mod.BlogSectionHome), {
+  loading: () => <div className="h-64 bg-neutral-900/30 animate-pulse" />,
+  ssr: true
+});
+
+const JoinCommunity = dynamic(() => import("@/components/home/join-community").then(mod => mod.JoinCommunity), {
+  loading: () => <div className="h-48 bg-neutral-900/30 animate-pulse" />,
+  ssr: true
+});
+
+const FAQSimple = dynamic(() => import("@/components/home/faq-simple").then(mod => mod.FAQSimple), {
+  loading: () => <div className="h-64 bg-neutral-900/30 animate-pulse" />,
+  ssr: true
+});
+
+const FinalCTASimple = dynamic(() => import("@/components/home/final-cta-simple").then(mod => mod.FinalCTASimple), {
+  loading: () => <div className="h-32 bg-neutral-900/30 animate-pulse" />,
+  ssr: true
+});
 
 interface HomePageProps {
   params: Promise<{ locale: string }>;
@@ -57,31 +89,31 @@ export default async function HomePage({ params }: HomePageProps) {
   
   console.debug(`Locale: ${locale}`);
 
-  // FAQ data for schema
+  // FAQ data for schema - commercially important questions
   const faqData = [
     {
-      question: "What is Ergo in one sentence?",
-      answer: "Ergo is a secure, open-source PoW blockchain for programmable, censorship-resistant money using the eUTXO model."
+      question: "What is Ergo?",
+      answer: "Ergo is a secure, open-source Proof-of-Work blockchain for programmable, censorship-resistant money. It uses the eUTXO model combining Bitcoin's security with smart contract capabilities, optional privacy, and predictable low fees (~$0.01)."
     },
     {
-      question: "How do I get started (wallet + first transaction)?",
-      answer: "Install a supported wallet, back up your seed offline, get ERG (DEX/exchange/faucet), then send your first test transaction."
+      question: "How to buy ERG?",
+      answer: "You can buy ERG on exchanges like KuCoin, Gate.io, Bitpanda, or decentralized exchanges like Spectrum Finance. First get a wallet (Nautilus, SAFEW, or Ergo Mobile Wallet), then purchase ERG and withdraw to your wallet address."
     },
     {
-      question: "How much are network fees and who gets them?",
-      answer: "Typical fees are ≈ $0.01 and go to miners for processing blocks; the exact fee is shown before you confirm. Fees vary with network load."
+      question: "Is Ergo a good investment?",
+      answer: "Ergo has a fixed supply of 97.7M ERG with no pre-mine and fair launch. It's a Proof-of-Work blockchain with unique technology (eUTXO, Sigma Protocols). As with any cryptocurrency, do your own research and only invest what you can afford to lose."
     },
     {
-      question: "What makes Ergo different from other smart-contract chains?",
-      answer: "Ergo uses the eUTXO model for safer composition and predictable parallel execution, plus ErgoScript and Sigma protocols for short, auditable contracts and optional privacy tooling."
+      question: "What makes Ergo different from other blockchains?",
+      answer: "Ergo uses the eUTXO model for MEV-resistant, predictable transactions. It features Sigma Protocols for optional privacy, Storage Rent for long-term sustainability, and Autolykos for ASIC-resistant GPU mining. Fair launch with no VC funding."
     },
     {
-      question: "How is Ergo secured?",
-      answer: "Ergo is secured by the Autolykos Proof-of-Work algorithm, open code, and community audits. Users should keep seed phrases offline, verify downloads/URLs, and prefer hardware wallets."
+      question: "How to get started with Ergo?",
+      answer: "1) Download a wallet (Nautilus for browser, Ergo Mobile Wallet for phone). 2) Back up your seed phrase securely. 3) Get ERG from an exchange or DEX. 4) Explore DeFi apps like Spectrum Finance, SigmaUSD, or ErgoMixer."
     },
     {
-      question: "What risks should I know before using Ergo?",
-      answer: "Self-custody means irreversible transactions; markets are volatile; third-party dApps carry smart-contract and operational risk; watch for phishing."
+      question: "What wallets support Ergo?",
+      answer: "Popular Ergo wallets include Nautilus (browser extension), SAFEW (full-featured web wallet), Ergo Mobile Wallet (iOS/Android), Terminus (mobile), and Satergo (desktop). Hardware wallet support is available through Ledger integration."
     }
   ]
 
@@ -96,10 +128,6 @@ export default async function HomePage({ params }: HomePageProps) {
           alt: "Ergo Platform - Resilient Blockchain for Contractual Money",
           format: "png"
         }}
-        preconnectDomains={[
-          "https://fonts.googleapis.com",
-          "https://fonts.gstatic.com"
-        ]}
       />
       
       {/* FAQ Schema */}

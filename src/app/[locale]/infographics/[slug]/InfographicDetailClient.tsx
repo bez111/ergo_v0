@@ -1,5 +1,7 @@
 'use client';
 
+/* eslint-disable react/no-unescaped-entities, @next/next/no-img-element */
+
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
@@ -108,12 +110,24 @@ export function InfographicDetailClient({ infographic }: InfographicDetailClient
             className="mb-12"
           >
             <div className="bg-black/60 border border-white/10 rounded-2xl p-8">
-              <img
-                src={infographic.fullImageUrl}
-                alt={infographic.imageAlt}
-                className="w-full h-auto rounded-lg"
-                loading="eager"
-              />
+              <picture>
+                <source 
+                  srcSet={infographic.fullImageUrl.replace(/\.(png|jpg|jpeg)$/i, '.avif')} 
+                  type="image/avif" 
+                />
+                <source 
+                  srcSet={infographic.fullImageUrl.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
+                  type="image/webp" 
+                />
+                <img
+                  src={infographic.fullImageUrl}
+                  alt={infographic.imageAlt}
+                  className="w-full h-auto rounded-lg"
+                  loading="eager"
+                  decoding="async"
+                  fetchPriority="high"
+                />
+              </picture>
             </div>
           </motion.div>
 

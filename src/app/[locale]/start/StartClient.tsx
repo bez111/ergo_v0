@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
+
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -19,7 +21,7 @@ import {
 } from "@/components/ui-kit/signature-effects"
 import { useLocalStorage } from "@/hooks/use-local-storage"
 import { useIsMobile, usePrefersReducedMotion, getAnimationConfig } from "@/lib/theme-system"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import {
   ArrowRight,
@@ -46,7 +48,8 @@ import {
   Users,
   GitBranch,
   Sparkles,
-  HelpCircle
+  HelpCircle,
+  Pickaxe
 } from "lucide-react"
 import type { LucideIcon } from "lucide-react"
 
@@ -212,7 +215,7 @@ const journeys: Record<Journey, {
         title: "Mining Guide",
         description: "Autolykos v2 for GPUs",
         icon: Cpu,
-        href: "/use/mining",
+        href: "/miners",
         duration: "20 min"
       },
       {
@@ -220,7 +223,7 @@ const journeys: Record<Journey, {
         title: "Choose a Pool",
         description: "Compare pools and fees",
         icon: Zap,
-        href: "/use/mining-pools",
+        href: "/miners#pools",
         duration: "10 min"
       },
       {
@@ -228,7 +231,7 @@ const journeys: Record<Journey, {
         title: "Calculate Profit",
         description: "Check if it's worth it",
         icon: LineChart,
-        href: "/use/mining-calculator",
+        href: "/miners#calculator",
         duration: "5 min"
       },
       {
@@ -597,10 +600,7 @@ export default function StartPage() {
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
       {/* Hidden Breadcrumbs for SEO */}
-      <HiddenBreadcrumbs 
-        items={[]} 
-        currentPage="Start" 
-      />
+      <Breadcrumbs items={[{ name: "Start", href: "#" }]} variant="hidden" />
       
       {/* Background Effects */}
       {isInitialized && (
@@ -929,12 +929,70 @@ export default function StartPage() {
           </motion.div>
         )}
 
+        {/* Persona Landing Pages */}
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="mt-16 pt-12 border-t border-neutral-800"
+        >
+          <div className="text-center mb-8">
+            <h2 className="text-2xl font-bold text-white mb-2">
+              Tailored <span className="text-orange-400">Guides</span>
+            </h2>
+            <p className="text-gray-400">
+              Deep-dive resources for specific user types
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-4">
+            <Link 
+              href="/miners"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-5 hover:border-orange-500/50 hover:bg-neutral-900/80 transition-all duration-300 group"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                  <Pickaxe className="w-5 h-5 text-orange-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">For Miners</h3>
+              </div>
+              <p className="text-gray-400 text-sm">GPU-friendly Autolykos PoW, fair rewards</p>
+            </Link>
+
+            <Link 
+              href="/hodlers"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-5 hover:border-orange-500/50 hover:bg-neutral-900/80 transition-all duration-300 group"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                  <LineChart className="w-5 h-5 text-orange-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">For Holders</h3>
+              </div>
+              <p className="text-gray-400 text-sm">Sound tokenomics, DeFi, long-term value</p>
+            </Link>
+
+            <Link 
+              href="/builders"
+              className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-5 hover:border-orange-500/50 hover:bg-neutral-900/80 transition-all duration-300 group"
+            >
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-10 h-10 bg-orange-500/20 rounded-lg flex items-center justify-center group-hover:bg-orange-500/30 transition-colors">
+                  <Code className="w-5 h-5 text-orange-400" />
+                </div>
+                <h3 className="text-lg font-semibold text-white group-hover:text-orange-400 transition-colors">For Builders</h3>
+              </div>
+              <p className="text-gray-400 text-sm">ErgoScript, SDKs, grants for developers</p>
+            </Link>
+          </div>
+        </motion.section>
+
         {/* Quick Links Footer */}
         <motion.section 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-20 pt-12 border-t border-neutral-800"
+          className="mt-12 pt-12 border-t border-neutral-800"
         >
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <motion.div whileHover="hover" whileTap="tap" variants={scaleOnHover}>

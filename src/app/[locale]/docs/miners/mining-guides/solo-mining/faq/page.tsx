@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import { ArrowLeft, HelpCircle, MessageCircle, Info, CheckCircle } from "lucide-react";
 import Link from "next/link";

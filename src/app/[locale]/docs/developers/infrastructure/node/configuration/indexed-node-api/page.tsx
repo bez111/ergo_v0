@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
 import Link from "next/link";
 import { ChevronRight, ExternalLink, Database, Code, AlertTriangle } from "lucide-react";

@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Schema Factory for automatic structured data application
 // Principal Structured Data Engineer implementation
 

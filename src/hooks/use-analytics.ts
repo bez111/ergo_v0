@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 import { siteConfig } from "@/config/site-config";
 import { useCallback } from "react";
 

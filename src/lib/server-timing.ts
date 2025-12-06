@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /**
  * Server-Timing utilities for performance monitoring
  * Provides metrics for edge, origin, cache status tracking

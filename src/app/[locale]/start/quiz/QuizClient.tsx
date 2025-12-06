@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronRight, ChevronLeft, RotateCcw, ExternalLink, ArrowRight, Target, Brain, Rocket } from "lucide-react"
@@ -10,7 +12,7 @@ import { Badge } from "@/components/ui/badge"
 import { FadeIn } from "@/components/animations/fade-in"
 import Link from "next/link"
 import { QuizPageWrapper } from "@/components/quiz/quiz-page-wrapper"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 
 interface QuizQuestion {
@@ -316,28 +318,28 @@ const profiles: Record<string, Profile> = {
       {
         category: "Mining Information",
         items: [
-          { name: "Autolykos v2 Guide", description: "Understanding the algorithm", link: "/use/mining" },
-          { name: "Mining Pools", description: "Popular Ergo mining pools", link: "/ecosystem/mining" },
-          { name: "Profitability Calculator", description: "Estimate mining returns", link: "/use/mining/calculator" },
+          { name: "Autolykos v2 Guide", description: "Understanding the algorithm", link: "/miners" },
+          { name: "Mining Pools", description: "Popular Ergo mining pools", link: "/miners#pools" },
+          { name: "Profitability Calculator", description: "Estimate mining returns", link: "/miners#calculator" },
         ],
       },
       {
         category: "Mining Software",
         items: [
-          { name: "Official Miner", description: "Reference implementation", link: "/use/mining/software" },
-          { name: "Community Miners", description: "Third-party mining software", link: "/use/mining/software" },
+          { name: "Official Miner", description: "Reference implementation", link: "/miners#mining-guide" },
+          { name: "Community Miners", description: "Third-party mining software", link: "/miners#mining-guide" },
         ],
       },
     ],
     nextSteps: [
       { text: "Learn About Autolykos v2", link: "/technology/secure-pow" },
-      { text: "Find Mining Pools", link: "/ecosystem/mining" },
-      { text: "Calculate Mining Profitability", link: "/use/mining/calculator" },
+      { text: "Find Mining Pools", link: "/miners#pools" },
+      { text: "Calculate Mining Profitability", link: "/miners#calculator" },
       { text: "Join Mining Community", link: "https://discord.gg/ergo-platform" },
     ],
     communityChannels: [
       { name: "Mining Discord Channels", link: "https://discord.gg/ergo-platform" },
-      { name: "Mining Pools Community", link: "/ecosystem/mining" },
+      { name: "Mining Pools Community", link: "/miners#pools" },
       { name: "Technical Support", link: "https://ergoforum.org" },
     ],
   },
@@ -531,10 +533,7 @@ export default function QuizClient() {
   return (
     <QuizPageWrapper>
       {/* Hidden Breadcrumbs for SEO */}
-      <HiddenBreadcrumbs 
-        items={[{ name: 'Start', href: '/start' }]} 
-        currentPage="Quiz" 
-      />
+      <Breadcrumbs items={[{ name: 'Start', href: '/start' }, { name: "Quiz", href: "#" }]} variant="hidden" />
       
       <AnimatePresence mode="wait">
         {/* Introduction */}

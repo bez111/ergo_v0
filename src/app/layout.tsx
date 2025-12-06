@@ -148,8 +148,7 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {/* Google Fonts preconnect removed - fonts are self-hosted via next/font */}
         <link rel="dns-prefetch" href="https://ergoblockchain.org" />
         <link rel="preload" href="/og-image.png" as="image" type="image/png" />
         <script

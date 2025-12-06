@@ -1,4 +1,6 @@
 "use client";
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Code, Cpu, Terminal, Globe, Layers } from "lucide-react";

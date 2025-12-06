@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from "react";
 import Link from "next/link";
 import { BookOpen, Hammer, Camera, Package, LifeBuoy, HelpCircle, Cpu, Smartphone, Dock, ChevronRight, ChevronLeft } from "lucide-react";

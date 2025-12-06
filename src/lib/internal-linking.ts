@@ -130,11 +130,11 @@ export const linkingRules: LinkRule[] = [
   // Mining
   {
     keywords: ['mining', 'mine Ergo', 'mining pools'],
-    targetUrl: '/use/mining',
+    targetUrl: '/miners',
     title: 'Start Mining Ergo',
     priority: 8,
     maxLinksPerPage: 1,
-    excludePages: ['/use/mining']
+    excludePages: ['/miners']
   },
 
   // Community

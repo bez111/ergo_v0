@@ -17,7 +17,6 @@ export const URL_PATTERNS = {
     use: '/use',
     wallet: '/wallet',
     start: '/start',
-    events: '/events',
   },
   
   // Паттерны для разных типов страниц
@@ -209,8 +208,8 @@ export const INTERLINKING_MATRIX = {
       related: ['/technology', '/learn', '/use']
     },
     '/ecosystem': {
-      children: ['/ecosystem/map', '/ecosystem/grants', '/ecosystem/mining'],
-      related: ['/use', '/technology']
+      children: ['/ecosystem/map', '/ecosystem/grants'],
+      related: ['/use', '/technology', '/miners']
     },
     '/technology': {
       children: [
@@ -222,12 +221,12 @@ export const INTERLINKING_MATRIX = {
       related: ['/docs', '/learn']
     },
     '/learn': {
-      children: ['/learn/faq', '/learn/guides', '/learn/research', '/learn/ergoscript'],
+      children: ['/learn/glossary', '/learn/research', '/learn/ergoscript', '/faq'],
       related: ['/start', '/docs']
     },
     '/use': {
-      children: ['/use/mining', '/use/guides', '/use/get-erg', '/use/babel-fees'],
-      related: ['/ecosystem', '/wallet']
+      children: ['/use/guides', '/use/get-erg', '/use/babel-fees'],
+      related: ['/ecosystem', '/wallet', '/miners']
     }
   },
   

@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars, @next/next/no-html-link-for-pages */
 import React from "react";
 import { ArrowLeft, ListChecks, Code, Shield, Eye, Zap, Database, GitBranch } from "lucide-react";
 import Link from "next/link";

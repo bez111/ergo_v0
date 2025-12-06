@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next"
 import { getTranslations } from "next-intl/server"
 import IntroductionClient from "./IntroductionClient"

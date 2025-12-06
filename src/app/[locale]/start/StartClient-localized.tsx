@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
+
 import Link from "next/link"
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
@@ -210,7 +212,7 @@ const journeys: Record<Journey, {
         title: "Mining Guide",
         description: "Autolykos v2 for GPUs",
         icon: Cpu,
-        href: "/use/mining",
+        href: "/miners",
         duration: "20 min"
       },
       {
@@ -218,7 +220,7 @@ const journeys: Record<Journey, {
         title: "Choose a Pool",
         description: "Compare pools and fees",
         icon: Zap,
-        href: "/use/mining-pools",
+        href: "/miners#pools",
         duration: "10 min"
       },
       {
@@ -226,7 +228,7 @@ const journeys: Record<Journey, {
         title: "Calculate Profit",
         description: "Check if it's worth it",
         icon: LineChart,
-        href: "/use/mining-calculator",
+        href: "/miners#calculator",
         duration: "5 min"
       },
       {

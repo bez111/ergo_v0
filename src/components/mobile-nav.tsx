@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import * as React from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
@@ -54,13 +56,13 @@ export function MobileNav({ items }: MobileNavProps) {
           <span className="sr-only">Toggle menu</span>
         </Button>
       </SheetTrigger>
-      <SheetContent side="right" className="pr-0">
+      <SheetContent side="right" className="pr-0" aria-label="Mobile navigation menu">
         <div className="px-7">
-          <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
+          <Link href="/" className="flex items-center" onClick={() => setOpen(false)} aria-label="Go to homepage">
             <span className="font-bold text-xl text-[hsl(30,98%,50%)]">ERGO</span>
           </Link>
         </div>
-        <div className="flex flex-col gap-4 mt-8">
+        <nav className="flex flex-col gap-4 mt-8" role="navigation" aria-label="Main navigation">
           <div className="flex flex-col space-y-3">
             {items.map((item) =>
               item.children ? (
@@ -102,7 +104,7 @@ export function MobileNav({ items }: MobileNavProps) {
               ),
             )}
           </div>
-        </div>
+        </nav>
       </SheetContent>
     </Sheet>
   )

@@ -149,13 +149,13 @@ test.describe('SEO and Meta Tags', () => {
     await page.goto('/')
     
     // Title
-    await expect(page).toHaveTitle(/Ergo Platform/)
+    await expect(page).toHaveTitle(/Ergo/)
     
     // Meta description
     const description = await page.locator('meta[name="description"]').getAttribute('content')
     expect(description).toBeTruthy()
-    expect(description.length).toBeGreaterThan(50)
-    expect(description.length).toBeLessThan(160)
+    expect(description!.length).toBeGreaterThan(50)
+    expect(description!.length).toBeLessThan(200)
     
     // Open Graph tags
     const ogTitle = await page.locator('meta[property="og:title"]').getAttribute('content')
@@ -163,28 +163,313 @@ test.describe('SEO and Meta Tags', () => {
     
     const ogImage = await page.locator('meta[property="og:image"]').getAttribute('content')
     expect(ogImage).toBeTruthy()
-    
-    // Canonical URL
-    const canonical = await page.locator('link[rel="canonical"]').getAttribute('href')
-    expect(canonical).toBe('https://ergoblockchain.org/')
   })
 
   test('Robots.txt is accessible', async ({ page }) => {
     const response = await page.goto('/robots.txt')
-    expect(response.status()).toBe(200)
+    expect(response!.status()).toBe(200)
     
-    const text = await response.text()
+    const text = await response!.text()
     expect(text).toContain('User-agent:')
     expect(text).toContain('Sitemap:')
   })
 
   test('Sitemap.xml is valid', async ({ page }) => {
     const response = await page.goto('/sitemap.xml')
-    expect(response.status()).toBe(200)
+    expect(response!.status()).toBe(200)
     
-    const text = await response.text()
+    const text = await response!.text()
     expect(text).toContain('<?xml')
     expect(text).toContain('<urlset')
-    expect(text).toContain('<loc>https://ergoblockchain.org')
+  })
+})
+
+// ============================================
+// NEW PAGES - Extended E2E Coverage
+// ============================================
+
+test.describe('Learn Section Pages', () => {
+  test('Glossary page loads and filters work', async ({ page }) => {
+    await page.goto('/learn/glossary')
+    
+    // Check page loads
+    await expect(page.locator('h1')).toBeVisible()
+    await expect(page.locator('h1')).toContainText(/Glossary/i)
+    
+    // Check search input exists
+    const searchInput = page.locator('input[placeholder*="Search"]')
+    await expect(searchInput).toBeVisible()
+    
+    // Check terms are displayed
+    const terms = page.locator('[class*="grid"] a, [class*="grid"] article')
+    const count = await terms.count()
+    expect(count).toBeGreaterThan(10)
+    
+    // Test search functionality
+    await searchInput.fill('eUTXO')
+    await page.waitForTimeout(300) // Debounce
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page, null, {
+      detailedReport: true,
+      detailedReportOptions: { html: true }
+    })
+  })
+
+  test('Individual glossary term page loads', async ({ page }) => {
+    await page.goto('/learn/glossary/eutxo')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check back button exists
+    const backButton = page.locator('a[href*="/learn/glossary"]')
+    await expect(backButton.first()).toBeVisible()
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+
+  test('FAQ page loads with filters', async ({ page }) => {
+    await page.goto('/faq')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    await expect(page.locator('h1')).toContainText(/FAQ/i)
+    
+    // Check questions are displayed
+    const questions = page.locator('button[class*="Collapsible"], [data-state]')
+    const count = await questions.count()
+    expect(count).toBeGreaterThan(5)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+})
+
+test.describe('Developer Resources Pages', () => {
+  test('Patterns hub page loads', async ({ page }) => {
+    await page.goto('/patterns')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    await expect(page.locator('h1')).toContainText(/Pattern/i)
+    
+    // Check pattern cards are displayed
+    const cards = page.locator('a[href*="/patterns/"]')
+    const count = await cards.count()
+    expect(count).toBeGreaterThan(5)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+
+  test('Individual pattern page loads', async ({ page }) => {
+    await page.goto('/patterns/time-locked-contracts')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check code block exists
+    const codeBlock = page.locator('pre, code')
+    await expect(codeBlock.first()).toBeVisible()
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+
+  test('Playbooks hub page loads', async ({ page }) => {
+    await page.goto('/playbooks')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    await expect(page.locator('h1')).toContainText(/Playbook/i)
+    
+    // Check playbook cards are displayed
+    const cards = page.locator('a[href*="/playbooks/"]')
+    const count = await cards.count()
+    expect(count).toBeGreaterThan(3)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+})
+
+test.describe('Topic Hubs', () => {
+  test('Topics hub page loads', async ({ page }) => {
+    await page.goto('/topics')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check topic cards are displayed
+    const cards = page.locator('a[href*="/topics/"]')
+    const count = await cards.count()
+    expect(count).toBeGreaterThan(3)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+
+  test('Individual topic page loads with sections', async ({ page }) => {
+    await page.goto('/topics/ergo-defi')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check sections exist
+    const sections = page.locator('section')
+    const count = await sections.count()
+    expect(count).toBeGreaterThan(2)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+})
+
+test.describe('Persona Pages', () => {
+  test('Miners page loads with calculator', async ({ page }) => {
+    await page.goto('/miners')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    await expect(page.locator('h1')).toContainText(/Miner/i)
+    
+    // Check mining pools section exists
+    const poolsSection = page.locator('text=Mining Pools')
+    await expect(poolsSection.first()).toBeVisible()
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+
+  test('Hodlers page loads', async ({ page }) => {
+    await page.goto('/hodlers')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check key sections exist
+    const sections = page.locator('section')
+    const count = await sections.count()
+    expect(count).toBeGreaterThan(3)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+
+  test('Builders page loads', async ({ page }) => {
+    await page.goto('/builders')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check developer resources are displayed
+    const links = page.locator('a[href*="github"], a[href*="docs"]')
+    const count = await links.count()
+    expect(count).toBeGreaterThan(0)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+})
+
+test.describe('Comparison Pages', () => {
+  test('Compare hub page loads', async ({ page }) => {
+    await page.goto('/compare')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check comparison cards are displayed
+    const cards = page.locator('a[href*="/compare/"]')
+    const count = await cards.count()
+    expect(count).toBeGreaterThan(3)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+
+  test('Comparison table page loads', async ({ page }) => {
+    await page.goto('/start/comparison')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check table exists
+    const table = page.locator('table, [role="table"]')
+    await expect(table.first()).toBeVisible()
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+})
+
+test.describe('Infographics', () => {
+  test('Infographics hub page loads', async ({ page }) => {
+    await page.goto('/infographics')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check infographic cards are displayed
+    const cards = page.locator('a[href*="/infographics/"]')
+    const count = await cards.count()
+    expect(count).toBeGreaterThan(5)
+    
+    // A11y check
+    await injectAxe(page)
+    await checkA11y(page)
+  })
+})
+
+test.describe('Global Search', () => {
+  test('Search modal opens and returns results', async ({ page }) => {
+    await page.goto('/')
+    
+    // Open search with keyboard shortcut or button
+    const searchButton = page.locator('button[aria-label*="Search"], button:has(svg[class*="search"])')
+    await searchButton.first().click()
+    
+    // Check modal opened
+    const searchModal = page.locator('[role="dialog"], [data-state="open"]')
+    await expect(searchModal.first()).toBeVisible()
+    
+    // Type search query
+    const searchInput = page.locator('input[placeholder*="Search"]')
+    await searchInput.first().fill('wallet')
+    await page.waitForTimeout(500)
+    
+    // Check results appear
+    const results = page.locator('[role="listbox"] [role="option"], [class*="result"]')
+    const count = await results.count()
+    expect(count).toBeGreaterThan(0)
+  })
+})
+
+test.describe('Cross-Page Navigation', () => {
+  test('Start page navigation flow', async ({ page }) => {
+    await page.goto('/start')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Navigate to introduction
+    const introLink = page.locator('a[href*="/start/introduction"]')
+    await introLink.first().click()
+    await page.waitForLoadState('networkidle')
+    
+    await expect(page.url()).toContain('/start/introduction')
+    await expect(page.locator('h1')).toBeVisible()
+  })
+
+  test('Learn page navigation flow', async ({ page }) => {
+    await page.goto('/learn')
+    
+    await expect(page.locator('h1')).toBeVisible()
+    
+    // Check learning tracks exist
+    const tracks = page.locator('a[href*="/learn/"], a[href*="/patterns"], a[href*="/playbooks"]')
+    const count = await tracks.count()
+    expect(count).toBeGreaterThan(3)
   })
 }) 

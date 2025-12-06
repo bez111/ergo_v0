@@ -4,22 +4,22 @@ import { useState, useMemo } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  ArrowRight,
   Search,
-  Code,
-  Shield,
-  Zap,
-  Eye,
+  Filter,
+  GraduationCap,
+  ArrowRight,
   BookOpen,
   Cpu,
+  Code,
+  Eye,
+  Zap,
   Coins,
   Pickaxe,
-  GraduationCap,
-  Filter,
 } from "lucide-react";
 import { glossaryTerms, glossaryCategories, GlossaryTerm } from "@/data/glossary";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { PageTransition } from "@/components/animations/page-transition";
+import { BackToTop } from "@/components/ui/back-to-top";
 
 const categoryIconMap: Record<string, React.ElementType> = {
   Cpu,
@@ -98,123 +98,163 @@ export function GlossaryHubClient() {
 
   const sortedLetters = Object.keys(groupedTerms).sort();
 
+  const totalTerms = glossaryTerms.length;
+  const totalCategories = Object.keys(glossaryCategories).length;
+
   return (
     <BackgroundWrapper>
       <div className="container mx-auto px-4 py-16">
         <PageTransition>
-          <div className="max-w-6xl mx-auto">
-            {/* Hero Section */}
+          <div className="max-w-5xl mx-auto">
+            {/* Compact Search Header */}
             <motion.section
-              className="text-center mb-12"
+              className="mb-10"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
             >
-              <motion.div variants={itemVariants}>
-                <h1 className="text-4xl md:text-6xl font-bold mb-6 text-white">
-                  Ergo <span className="text-orange-400">Glossary</span>
-                </h1>
-                <p className="text-xl text-neutral-300 max-w-3xl mx-auto mb-8">
-                  Master the terminology of Ergo blockchain. From eUTXO to Sigma Protocols,
-                  understand the concepts that power decentralized finance.
-                </p>
-              </motion.div>
+              <div className="bg-black/60 border border-white/10 rounded-2xl px-6 py-5 md:px-8 md:py-6 shadow-lg shadow-black/40 backdrop-blur-md">
+                {/* Title + stats */}
+                <motion.div
+                  variants={itemVariants}
+                  className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 mb-3"
+                >
+                  <h1 className="text-3xl md:text-4xl font-bold text-white">
+                    Ergo <span className="text-orange-400">Glossary</span>
+                  </h1>
+                  <div className="flex flex-wrap gap-2 text-xs md:text-sm text-neutral-300">
+                    <span className="inline-flex items-center gap-1 rounded-full bg-black/70 border border-white/10 px-3 py-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
+                      {totalTerms}+ terms
+                    </span>
+                    <span className="inline-flex items-center gap-1 rounded-full bg-black/70 border border-white/10 px-3 py-1">
+                      <span className="w-1.5 h-1.5 rounded-full bg-orange-400" />
+                      {totalCategories} categories
+                    </span>
+                  </div>
+                </motion.div>
 
-              {/* Search Bar */}
-              <motion.div variants={itemVariants} className="max-w-2xl mx-auto mb-8">
-                <div className="relative">
-                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-500" />
-                  <input
-                    type="text"
-                    placeholder="Search terms..."
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    className="w-full bg-black/60 border border-white/10 rounded-xl pl-12 pr-4 py-4 
-                              text-white placeholder-neutral-500 focus:outline-none focus:border-orange-500/50
-                              transition-colors"
-                  />
-                </div>
-              </motion.div>
+                {/* Subtitle */}
+                <motion.p
+                  variants={itemVariants}
+                  className="text-sm md:text-base text-neutral-300 mb-4"
+                >
+                  Master Ergo terminology in one searchable reference.
+                </motion.p>
 
-              {/* Filters */}
-              <motion.div variants={itemVariants} className="flex flex-wrap justify-center gap-4 mb-8">
-                {/* Category Filter */}
-                <div className="flex items-center gap-2">
-                  <Filter className="w-4 h-4 text-neutral-500" />
-                  <select
-                    value={categoryFilter}
-                    onChange={(e) => setCategoryFilter(e.target.value as CategoryFilter)}
-                    className="bg-black/60 border border-white/10 rounded-lg px-3 py-2 text-sm text-white
-                              focus:outline-none focus:border-orange-500/50 cursor-pointer"
-                  >
-                    <option value="all">All Categories</option>
-                    {Object.entries(glossaryCategories).map(([key, meta]) => (
-                      <option key={key} value={key}>{meta.name}</option>
-                    ))}
-                  </select>
-                </div>
+                {/* Search + category filter */}
+                <motion.div
+                  variants={itemVariants}
+                  className="flex flex-col md:flex-row gap-3 mb-3"
+                  role="group"
+                  aria-label="Search and filter"
+                >
+                  <div className="relative flex-1">
+                    <Search
+                      className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400"
+                      aria-hidden="true"
+                    />
+                    <input
+                      type="search"
+                      placeholder="Search terms..."
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      className="w-full bg-black/60 border border-white/10 rounded-xl pl-12 pr-4 py-3 text-sm md:text-base
+                                text-white placeholder-neutral-500 focus:outline-none focus:border-orange-500/50
+                                transition-colors"
+                      aria-label="Search glossary terms"
+                      role="searchbox"
+                    />
+                  </div>
 
-                {/* Difficulty Filter */}
-                <div className="flex items-center gap-2">
-                  <GraduationCap className="w-4 h-4 text-neutral-500" />
+                  <div className="flex items-center md:w-64">
+                    <Filter className="w-4 h-4 text-neutral-400 mr-2" aria-hidden="true" />
+                    <select
+                      value={categoryFilter}
+                      onChange={(e) => setCategoryFilter(e.target.value as CategoryFilter)}
+                      className="w-full bg-black/60 border border-white/10 rounded-xl px-3 py-3 text-sm text-white
+                                focus:outline-none focus:border-orange-500/50 cursor-pointer"
+                      aria-label="Filter by category"
+                    >
+                      <option value="all">All Categories</option>
+                      {Object.entries(glossaryCategories).map(([key, meta]) => (
+                        <option key={key} value={key}>
+                          {meta.name}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                </motion.div>
+
+                {/* Difficulty – compact pill with 44px touch target on mobile */}
+                <motion.div
+                  variants={itemVariants}
+                  className="flex items-center gap-2 text-xs text-neutral-400 mb-3"
+                >
+                  <span className="hidden md:inline">Level:</span>
+                  <GraduationCap className="w-3 h-3" aria-hidden="true" />
                   <select
                     value={difficultyFilter}
                     onChange={(e) => setDifficultyFilter(e.target.value as DifficultyFilter)}
-                    className="bg-black/60 border border-white/10 rounded-lg px-3 py-2 text-sm text-white
+                    className="bg-black/60 border border-white/10 rounded-full px-4 py-3 md:px-3 md:py-1 min-h-[44px] md:min-h-0 text-sm md:text-xs text-white
                               focus:outline-none focus:border-orange-500/50 cursor-pointer"
+                    aria-label="Filter by difficulty level"
                   >
-                    <option value="all">All Levels</option>
+                    <option value="all">All levels</option>
                     <option value="beginner">Beginner</option>
                     <option value="intermediate">Intermediate</option>
                     <option value="advanced">Advanced</option>
                   </select>
-                </div>
-              </motion.div>
+                </motion.div>
 
-              {/* Quick Stats */}
-              <motion.div
-                variants={itemVariants}
-                className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto"
-              >
-                <div className="bg-black border border-white/10 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-orange-400">{glossaryTerms.length}</div>
-                  <div className="text-sm text-neutral-400">Total Terms</div>
-                </div>
-                <div className="bg-black border border-white/10 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-green-400">
-                    {glossaryTerms.filter(t => t.difficulty === 'beginner').length}
-                  </div>
-                  <div className="text-sm text-neutral-400">Beginner</div>
-                </div>
-                <div className="bg-black border border-white/10 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-yellow-400">
-                    {glossaryTerms.filter(t => t.difficulty === 'intermediate').length}
-                  </div>
-                  <div className="text-sm text-neutral-400">Intermediate</div>
-                </div>
-                <div className="bg-black border border-white/10 rounded-xl p-4">
-                  <div className="text-2xl font-bold text-red-400">
-                    {glossaryTerms.filter(t => t.difficulty === 'advanced').length}
-                  </div>
-                  <div className="text-sm text-neutral-400">Advanced</div>
-                </div>
-              </motion.div>
+                {/* Popular chips - min 44px touch target on mobile */}
+                <motion.div
+                  variants={itemVariants}
+                  className="text-xs md:text-sm text-neutral-400 flex flex-wrap gap-2 items-center"
+                >
+                  <span className="font-medium text-neutral-300">Popular:</span>
+                  <Link
+                    href="/learn/glossary/eutxo"
+                    className="px-3 py-2 md:px-2 md:py-1 min-h-[44px] md:min-h-0 flex items-center rounded-full bg-black/70 border border-white/10 hover:border-orange-400 hover:text-orange-300 transition-colors"
+                  >
+                    eUTXO
+                  </Link>
+                  <Link
+                    href="/learn/glossary/autolykos"
+                    className="px-3 py-2 md:px-2 md:py-1 min-h-[44px] md:min-h-0 flex items-center rounded-full bg-black/70 border border-white/10 hover:border-orange-400 hover:text-orange-300 transition-colors"
+                  >
+                    Autolykos
+                  </Link>
+                  <Link
+                    href="/learn/glossary/sigma-protocols"
+                    className="px-3 py-2 md:px-2 md:py-1 min-h-[44px] md:min-h-0 flex items-center rounded-full bg-black/70 border border-white/10 hover:border-orange-400 hover:text-orange-300 transition-colors"
+                  >
+                    Sigma Protocols
+                  </Link>
+                  <Link
+                    href="/learn/glossary/babel-fees"
+                    className="px-3 py-2 md:px-2 md:py-1 min-h-[44px] md:min-h-0 flex items-center rounded-full bg-black/70 border border-white/10 hover:border-orange-400 hover:text-orange-300 transition-colors"
+                  >
+                    Babel Fees
+                  </Link>
+                </motion.div>
+              </div>
             </motion.section>
 
-            {/* Alphabetical Navigation */}
+            {/* Alphabetical Navigation - 44px touch targets */}
             {sortedLetters.length > 0 && (
               <motion.div
                 variants={itemVariants}
                 initial="hidden"
                 animate="visible"
-                className="flex flex-wrap justify-center gap-2 mb-12"
+                className="flex flex-wrap justify-center gap-1.5 md:gap-2 mb-12"
               >
                 {sortedLetters.map((letter) => (
                   <a
                     key={letter}
                     href={`#letter-${letter}`}
-                    className="w-10 h-10 bg-black border border-white/10 rounded-lg flex items-center justify-center
-                              text-neutral-400 hover:text-orange-400 hover:border-orange-500/50 transition-colors font-mono"
+                    className="w-11 h-11 md:w-10 md:h-10 bg-black border border-white/10 rounded-lg flex items-center justify-center
+                              text-neutral-400 hover:text-orange-400 hover:border-orange-500/50 active:bg-orange-500/20 transition-colors font-mono text-sm"
                   >
                     {letter}
                   </a>
@@ -225,6 +265,7 @@ export function GlossaryHubClient() {
             {/* Terms List */}
             {sortedLetters.length > 0 ? (
               <motion.section
+                key={`${categoryFilter}-${difficultyFilter}-${searchQuery}`}
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -266,14 +307,14 @@ export function GlossaryHubClient() {
                                         {term.term}
                                       </h3>
                                       <div className="flex items-center gap-2 mt-1">
-                                        <span className="text-xs text-neutral-500">{categoryMeta.name}</span>
+                                        <span className="text-xs text-neutral-400">{categoryMeta.name}</span>
                                         <span className={`text-xs px-2 py-0.5 rounded-full ${difficultyStyle.bg} ${difficultyStyle.text}`}>
                                           {term.difficulty}
                                         </span>
                                       </div>
                                     </div>
                                   </div>
-                                  <ArrowRight className="w-5 h-5 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
+                                  <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all flex-shrink-0" />
                                 </div>
 
                                 {/* Short Definition */}
@@ -351,6 +392,9 @@ export function GlossaryHubClient() {
           </div>
         </PageTransition>
       </div>
+      
+      {/* Back to Top button for long glossary */}
+      <BackToTop />
     </BackgroundWrapper>
   );
 }

@@ -1,7 +1,9 @@
 "use client"
 
-import React from "react"
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
+
 import { motion } from "framer-motion"
+import Image from "next/image"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
@@ -9,6 +11,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
 import { 
   Shield,
   Users,
@@ -74,7 +77,6 @@ export function ErgoManifestoClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs 
             items={[
-              { name: "Home", href: "/" },
               { name: "Blog", href: "/blog" },
               { name: "The Ergo Manifesto", href: "/blog/ergo-manifesto" }
             ]}
@@ -146,6 +148,19 @@ export function ErgoManifestoClient() {
                 </p>
               </div>
             </div>
+          </motion.section>
+
+          {/* Ergo Manifesto Infographic */}
+          <motion.section
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.25 }}
+            className="mb-16"
+          >
+            <ExpandableInfographic
+              src="/og/infographics/ergo-manifesto.png"
+              alt="The Ergo Manifesto: Building Ergonomic Money for Regular People"
+            />
           </motion.section>
 
           {/* Bitcoin Origins */}

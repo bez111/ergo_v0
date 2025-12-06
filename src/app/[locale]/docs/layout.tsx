@@ -1,4 +1,6 @@
 "use client"
+
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useState } from "react"
 import Link from "next/link"
 import { BookOpen, Globe, Code, Pickaxe, Menu } from "lucide-react"
@@ -72,7 +74,7 @@ const introductionNav = [
     { title: "Audit", href: "/docs/introduction/audit" },
     { title: "The Howey Test", href: "/docs/introduction/howey-test" },
     { title: "Privacy Guide", href: "/docs/introduction/privacy-guide" },
-    { title: "Glossary", href: "/docs/introduction/glossary" },
+    { title: "Glossary", href: "/learn/glossary" },
     { title: "FAQ", href: "/docs/introduction/faq" },
     { title: "Common Misconceptions", href: "/docs/introduction/misconceptions" },
     { title: "A CBDC For All", href: "/docs/introduction/cbdc" },

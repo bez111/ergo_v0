@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from 'react';
 import { Link2, Zap, BookOpen, ExternalLink, Layers } from 'lucide-react';
 

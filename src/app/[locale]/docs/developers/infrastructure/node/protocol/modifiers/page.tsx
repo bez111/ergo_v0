@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
+
 import React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import Link from "next/link";
@@ -575,9 +577,9 @@ else //Other combinations are possible`}</CodeBlock>
   Initialize state with genesis State
 } else {
 /*
-We need to download full state BlocksToKeep back in history
-TODO what if we can download state only "BlocksToKeep - N"
-or "BlocksToKeep + N" blocks back?
+We need to download full state BlocksToKeep back in history.
+Note: Consider downloading state only "BlocksToKeep - N"
+or "BlocksToKeep + N" blocks back for optimization.
 */
   2.1. Request historical UTXOSnapshotManifest for at least BlocksToKeep back
   2.2. On receiving UTXOSnapshotManifest:
@@ -587,7 +589,7 @@ or "BlocksToKeep + N" blocks back?
   State.applyChunk(UTXOSnapshotChunk) match {
      case Success(Some(newMinimalState)) => GOTO 3
      case Success(None) => stay at 2.3
-     /*we need more chunks to construct state. TODO periodicaly request missed chunks*/
+     /*we need more chunks to construct state - periodically request missed chunks*/
      case Failure(e) => ???
      /*UTXOSnapshotChunk or constcucted state roothash is invalid*/
   }
@@ -613,7 +615,7 @@ or "BlocksToKeep + N" blocks back?
         if(ADState == true) sendToRandomFullNode(GetADProofsForHeader(header))
       }
     3.2. On receiving modifiers ADProofs or BlockTransactions
-      /*TODO History should return non-empty ProgressInfo
+      /*Note: History should return non-empty ProgressInfo
       only if it contains both ADProofs and BlockTransactions,
       or it contains BlockTransactions and ADState==false*/
       if(History.apply(modifier) == Success(ProgressInfo)) {

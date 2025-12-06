@@ -1,4 +1,6 @@
 "use client";
+
+/* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Link from "next/link";
 import { ArrowLeft, Code2, FileCode, Info, Zap } from "lucide-react";

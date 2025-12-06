@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import { motion } from "framer-motion"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -15,6 +17,7 @@ import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { useTranslations } from "next-intl"
 import { GlossaryLink } from "@/components/glossary"
+import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 // Types and hoisted data
 type UseCase = {
@@ -36,7 +39,7 @@ const benefits = [
 const useCases: UseCase[] = [
   { title: "Cross-Chain Protocols", description: "Trust-minimized bridges and SPV-style interoperability.", example: "Rosen Bridge", icon: <Link2 className="w-8 h-8" aria-hidden="true" />, href: "https://rosen.tech", external: true },
   { title: "Mobile Wallets", description: "Light wallets that prove chain work with succinct proofs.", example: "Ergo Mobile", icon: <Smartphone className="w-8 h-8" aria-hidden="true" />, href: "/wallet", external: false },
-  { title: "Oracle Systems", description: "Efficient verification of external chain data.", example: "Oracle Pools", icon: <Network className="w-8 h-8" aria-hidden="true" />, href: "/learn/guides/oracle-pool", external: false },
+  { title: "Oracle Systems", description: "Efficient verification of external chain data.", example: "Oracle Pools", icon: <Network className="w-8 h-8" aria-hidden="true" />, href: "/topics/technology", external: false },
   { title: "Sidechains", description: "Sidechains can verify L1 succinctly for security and liveness.", example: "Research", icon: <Zap className="w-8 h-8" aria-hidden="true" />, href: "/docs/introduction/research-whitepapers", external: false },
 ]
 
@@ -468,58 +471,17 @@ if (!ok) throw new Error("Invalid proof");
           </section>
         </FadeIn>
 
-        <FadeIn delay={1.2}>
-          {/* What's Next */}
-          <section className="py-20 px-4">
-            <div className="max-w-6xl mx-auto mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">
-                What's <span className="text-orange-400">Next</span>?
-              </h2>
-              <p className="text-xl text-center text-neutral-300 mb-12">
-                Continue exploring Ergo's innovative blockchain technology
-              </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <Link 
-                  href="/ecosystem"
-                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                      <ArrowRight className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Explore Applications</h3>
-                      <p className="text-orange-400 text-sm">Discover Ecosystem</p>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300">
-                    Discover applications and tools built with NIPoPoW technology
-                  </p>
-                </Link>
-                
-                <a 
-                  href="https://docs.ergoplatform.com/protocol/nipopows/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block"
-                >
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="w-12 h-12 bg-orange-500/20 rounded-xl flex items-center justify-center">
-                      <BookOpen className="w-6 h-6 text-orange-400" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-white">Technical Documentation</h3>
-                      <p className="text-orange-400 text-sm">Learn More</p>
-                    </div>
-                  </div>
-                  <p className="text-neutral-300">
-                    Deep dive into NIPoPoW implementation details and specifications
-                  </p>
-                </a>
-              </div>
-            </div>
-          </section>
-        </FadeIn>
+        {/* Related Technologies - Data-driven */}
+        <RelatedTechnologies 
+          currentSlug="nipopows"
+          title="Related Technologies"
+        />
+
+        {/* Related Blog Articles - lightweight */}
+        <RelatedBlogPostsForTechnology currentSlug="nipopows" />
+
+        {/* What's Next - CTA Section */}
+        <WhatsNextCTA currentSlug="nipopows" />
       </BackgroundWrapper>
     </>
   )

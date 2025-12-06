@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, jsx-a11y/alt-text */
 import React from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Coins, Image, Layers, FileText, CircleDollarSign, Palette, Shield, Zap } from 'lucide-react';

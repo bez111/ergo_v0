@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/exhaustive-deps */
+
 import { motion } from "framer-motion"
 import { Coins, Shield, Palette, Users, TrendingUp, Link2, Eye, Brain, Gamepad2, ArrowRight, ChevronDown, ExternalLink, Code, Database, Layers } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -11,7 +13,7 @@ import { useTranslations } from "next-intl"
 import { useLocalizedPath } from "@/hooks/use-localized-path"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import Script from "next/script"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
@@ -149,10 +151,7 @@ export default function UseClient() {
     <BackgroundWrapper>
       <div className="min-h-screen relative pb-24">
       {/* Hidden Breadcrumbs for SEO */}
-      <HiddenBreadcrumbs 
-        items={[]} 
-        currentPage="Use Cases" 
-      />
+      <Breadcrumbs items={[{ name: "Use Cases", href: "#" }]} variant="hidden" />
       
       {/* Hero Section */}
       <motion.section initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7, ease: "easeOut" }} className="pt-28 pb-10 px-4">
@@ -170,6 +169,12 @@ export default function UseClient() {
                   <Link href="/docs">{t('buttons.startBuilding')}</Link>
                 </Button>
               </div>
+              <p className="mt-4 text-sm text-neutral-400">
+                Why Ergo for DeFi & mining?{" "}
+                <Link href="/compare" className="text-orange-400 underline-offset-2 hover:underline">
+                  See how it compares
+                </Link>
+              </p>
             </div>
             <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
               <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">

@@ -6,21 +6,22 @@ import { GlossaryHubClient } from "./GlossaryHubClient";
 const glossaryUrl = `${siteConfig.siteUrl}/learn/glossary`;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Ergo Blockchain Glossary | Technical Terms & Definitions";
-  const description = "Complete glossary of Ergo blockchain terminology: eUTXO, NiPoPoWs, Sigma Protocols, ErgoScript, Storage Rent, and more. Learn the concepts that power Ergo.";
+  const title = "Ergo Glossary — 250+ Blockchain Terms Explained | Ergo";
+  const description = "250+ blockchain terms explained simply. From eUTXO to Sigma Protocols — your complete Ergo & crypto glossary. Search, filter, learn.";
 
   return {
     title,
     description,
     keywords: [
-      "ergo glossary",
+      "Ergo glossary",
       "blockchain terminology",
-      "eutxo explained",
-      "nipopows meaning",
-      "sigma protocols definition",
-      "ergoscript tutorial",
+      "eUTXO explained",
+      "NiPoPoWs meaning",
+      "Sigma Protocols definition",
+      "ErgoScript tutorial",
       "storage rent explained",
       "cryptocurrency terms",
+      "blockchain definitions",
     ],
     alternates: { canonical: glossaryUrl },
     openGraph: {

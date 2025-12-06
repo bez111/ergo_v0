@@ -1,8 +1,6 @@
 /**
  * Centralized network metrics data
  * Source: https://explorer.ergoplatform.com/
- * 
- * TODO: Replace with API integration from Ergo Explorer when backend is ready
  * API endpoint: https://api.ergoplatform.com/
  */
 

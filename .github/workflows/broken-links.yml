@@ -1,0 +1,130 @@
+name: Broken Links Check
+
+on:
+  # Run weekly on Monday at 9:00 UTC
+  schedule:
+    - cron: '0 9 * * 1'
+  # Allow manual trigger
+  workflow_dispatch:
+  # Run on PRs that modify content/data files
+  pull_request:
+    paths:
+      - 'src/data/**'
+      - 'src/app/**/page.tsx'
+      - 'messages/**'
+
+jobs:
+  check-links:
+    runs-on: ubuntu-latest
+    name: Check for broken links
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build site
+        run: npm run build
+        env:
+          NODE_ENV: production
+
+      - name: Start server
+        run: npm run start &
+        env:
+          PORT: 3000
+
+      - name: Wait for server
+        run: |
+          echo "Waiting for server to start..."
+          sleep 10
+          curl --retry 10 --retry-delay 2 --retry-connrefused http://localhost:3000 || exit 1
+
+      - name: Install link checker
+        run: npm install -g broken-link-checker
+
+      - name: Check internal links
+        id: internal-links
+        continue-on-error: true
+        run: |
+          echo "## Internal Links Check" >> $GITHUB_STEP_SUMMARY
+          blc http://localhost:3000 \
+            --recursive \
+            --ordered \
+            --exclude-external \
+            --filter-level 3 \
+            --host-requests 10 \
+            --requests 50 \
+            2>&1 | tee internal-links.log
+          
+          # Count broken links
+          BROKEN=$(grep -c "BROKEN" internal-links.log || echo "0")
+          echo "broken_internal=$BROKEN" >> $GITHUB_OUTPUT
+          
+          if [ "$BROKEN" -gt "0" ]; then
+            echo "::warning::Found $BROKEN broken internal links"
+            echo "Found **$BROKEN** broken internal links" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "All internal links OK" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Check external links (ecosystem, docs)
+        id: external-links
+        continue-on-error: true
+        run: |
+          echo "## External Links Check" >> $GITHUB_STEP_SUMMARY
+          
+          # Check key pages with external links
+          blc http://localhost:3000/ecosystem \
+            --ordered \
+            --exclude "localhost" \
+            --exclude "127.0.0.1" \
+            --host-requests 5 \
+            --requests 20 \
+            2>&1 | tee external-links.log
+          
+          # Count broken links
+          BROKEN=$(grep -c "BROKEN" external-links.log || echo "0")
+          echo "broken_external=$BROKEN" >> $GITHUB_OUTPUT
+          
+          if [ "$BROKEN" -gt "0" ]; then
+            echo "::warning::Found $BROKEN broken external links"
+            echo "Found **$BROKEN** broken external links" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### Broken External Links:" >> $GITHUB_STEP_SUMMARY
+            grep "BROKEN" external-links.log >> $GITHUB_STEP_SUMMARY || true
+          else
+            echo "All external links OK" >> $GITHUB_STEP_SUMMARY
+          fi
+
+      - name: Upload link check reports
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: link-check-reports
+          path: |
+            internal-links.log
+            external-links.log
+          retention-days: 7
+
+      - name: Summary
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "---" >> $GITHUB_STEP_SUMMARY
+          echo "### Summary" >> $GITHUB_STEP_SUMMARY
+          echo "- Internal broken links: ${{ steps.internal-links.outputs.broken_internal || '0' }}" >> $GITHUB_STEP_SUMMARY
+          echo "- External broken links: ${{ steps.external-links.outputs.broken_external || '0' }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Fail if critical broken links found
+        if: steps.internal-links.outputs.broken_internal > 10
+        run: |
+          echo "::error::Too many broken internal links found!"
+          exit 1
+

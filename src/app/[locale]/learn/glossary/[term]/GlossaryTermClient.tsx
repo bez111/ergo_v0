@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable @typescript-eslint/no-unused-vars, @next/next/no-img-element */
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -21,14 +23,22 @@ import {
   Lightbulb,
   Target,
   GraduationCap,
+  Share2,
+  Copy,
+  Clock,
 } from "lucide-react";
 import { GlossaryTerm, glossaryTerms, glossaryCategories } from "@/data/glossary";
 import { infographics } from "@/data/infographics";
-import { getRelatedBlogPosts } from "@/lib/related-content";
+import { topics } from "@/data/topics";
+import { getRelatedBlogPosts, getQuestionsForGlossaryTerm } from "@/lib/related-content";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { PageTransition } from "@/components/animations/page-transition";
 import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { RelatedQuestions } from "@/components/seo/RelatedQuestions";
 
 interface Props {
   term: GlossaryTerm;
@@ -72,6 +82,31 @@ const itemVariants = {
 
 export function GlossaryTermClient({ term }: Props) {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    await navigator.clipboard.writeText(window.location.href);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({
+          title: `What is ${term.term}?`,
+          text: term.shortDefinition,
+          url: window.location.href
+        });
+      } catch {
+        // User cancelled or error
+      }
+    } else {
+      // On desktop, open Twitter/X share
+      const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(`What is ${term.term}?`)}&url=${encodeURIComponent(window.location.href)}`;
+      window.open(twitterUrl, '_blank', 'noopener,noreferrer,width=600,height=400');
+    }
+  };
 
   // Get related infographics by matching tags
   const relatedInfographics = infographics
@@ -86,6 +121,21 @@ export function GlossaryTermClient({ term }: Props) {
 
   // Get related blog posts by matching tags
   const relatedBlogPosts = getRelatedBlogPosts(term.relatedTags, 4);
+
+  // Get related questions for this term
+  const relatedQuestions = getQuestionsForGlossaryTerm(term.slug, 4);
+
+  // Get related topics by matching tags
+  const relatedTopics = topics
+    .filter((topic) =>
+      topic.relatedTags.some((tag) =>
+        term.relatedTags.some(
+          (relatedTag) => tag.toLowerCase().includes(relatedTag.toLowerCase()) ||
+            relatedTag.toLowerCase().includes(tag.toLowerCase())
+        )
+      )
+    )
+    .slice(0, 3);
 
   // Get other terms for navigation (same category first, then others)
   const otherTerms = glossaryTerms
@@ -106,65 +156,111 @@ export function GlossaryTermClient({ term }: Props) {
       <div className="container mx-auto px-4 py-16">
         <PageTransition>
           <div className="max-w-4xl mx-auto">
-            {/* Back Link */}
+            {/* Breadcrumbs */}
             <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="mb-8"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              className="mb-6"
             >
-              <Link
-                href="/learn/glossary"
-                className="inline-flex items-center gap-2 text-neutral-400 hover:text-orange-400 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                All Terms
-              </Link>
+              <Breadcrumbs
+                type="glossary"
+                currentTitle={term.term}
+                category={glossaryCategories[term.category]?.name}
+              />
             </motion.div>
 
-            {/* Hero Section */}
-            <motion.section
-              className="mb-12"
-              variants={containerVariants}
-              initial="hidden"
-              animate="visible"
+            {/* Hero Section - Questions Style */}
+            <motion.header
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="mb-10"
             >
-              {/* Category & Difficulty Badges */}
-              <motion.div variants={itemVariants} className="flex flex-wrap gap-3 mb-6">
-                <div className="inline-flex items-center gap-2 bg-orange-500/10 text-orange-400 px-3 py-1.5 rounded-full text-sm">
-                  <CategoryIcon className="w-4 h-4" />
+              {/* Badges Row */}
+              <div className="flex flex-wrap items-center gap-2 mb-4">
+                <Badge className="bg-orange-500/20 text-orange-400 border-orange-500/30">
+                  <CategoryIcon className="w-3 h-3 mr-1" />
                   {categoryMeta.name}
-                </div>
-                <div className={`inline-flex items-center gap-2 ${difficultyStyle.bg} ${difficultyStyle.text} ${difficultyStyle.border} border px-3 py-1.5 rounded-full text-sm`}>
-                  <GraduationCap className="w-4 h-4" />
+                </Badge>
+                <Badge className={`${difficultyStyle.bg} ${difficultyStyle.text} ${difficultyStyle.border}`}>
+                  <GraduationCap className="w-3 h-3 mr-1" />
                   {term.difficulty.charAt(0).toUpperCase() + term.difficulty.slice(1)}
-                </div>
-              </motion.div>
+                </Badge>
+                {term.updatedDate && (
+                  <Badge variant="outline" className="border-white/20 text-neutral-400 text-xs">
+                    <Clock className="w-3 h-3 mr-1" />
+                    Updated {new Date(term.updatedDate || term.publishDate).toLocaleDateString()}
+                  </Badge>
+                )}
+              </div>
 
               {/* Title */}
-              <motion.div variants={itemVariants}>
-                <p className="text-neutral-400 text-lg mb-2">What is</p>
-                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-                  {term.term}
-                  <span className="text-orange-400">?</span>
-                </h1>
-              </motion.div>
+              <p className="text-neutral-400 text-lg mb-2">What is</p>
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                {term.term}
+                <span className="text-orange-400">?</span>
+              </h1>
 
-              {/* Short Definition */}
-              <motion.div
-                variants={itemVariants}
-                className="bg-gradient-to-r from-orange-500/10 to-transparent border-l-4 border-orange-500 pl-6 py-4 mb-8"
-              >
-                <p className="text-xl text-neutral-200 leading-relaxed">
-                  {term.shortDefinition}
-                </p>
-              </motion.div>
+              {/* Share + Back buttons */}
+              <div className="flex items-center gap-2 flex-wrap">
+                <Button
+                  size="sm"
+                  onClick={handleShare}
+                  className="bg-orange-500 hover:bg-orange-600 text-black border-orange-500 hover:border-orange-600"
+                >
+                  <Share2 className="w-4 h-4 mr-2" />
+                  Share
+                </Button>
+                <Button
+                  variant="outline"
+                  size="sm"
+                  onClick={handleCopy}
+                  className="border-white/20 text-neutral-300 hover:text-white"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="w-4 h-4 mr-2 text-green-400" />
+                      Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-4 h-4 mr-2" />
+                      Copy link
+                    </>
+                  )}
+                </Button>
+                <Button
+                  variant="ghost"
+                  className="text-neutral-400 hover:text-white"
+                  asChild
+                >
+                  <Link href="/learn/glossary">
+                    Back to Glossary
+                  </Link>
+                </Button>
+              </div>
+            </motion.header>
 
-              {/* Full Definition */}
-              <motion.div variants={itemVariants}>
-                <p className="text-neutral-300 text-lg leading-relaxed">
-                  {term.definition}
-                </p>
-              </motion.div>
+            {/* Definition Section */}
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="mb-10"
+            >
+              <Card className="bg-black border border-white/10 rounded-2xl">
+                <CardContent className="p-6 md:p-8">
+                  {/* Short Definition */}
+                  <p className="text-xl md:text-2xl text-white font-medium leading-relaxed mb-6">
+                    {term.shortDefinition}
+                  </p>
+                  
+                  {/* Full Definition */}
+                  <p className="text-neutral-300 text-lg leading-relaxed">
+                    {term.definition}
+                  </p>
+                </CardContent>
+              </Card>
             </motion.section>
 
             {/* Key Points */}
@@ -295,11 +391,23 @@ export function GlossaryTermClient({ term }: Props) {
                           <div className="flex items-start gap-4">
                             <div className="w-16 h-16 bg-neutral-800 rounded-lg flex-shrink-0 overflow-hidden">
                               {infographic.previewImageUrl && (
-                                <img
-                                  src={infographic.previewImageUrl}
-                                  alt={infographic.title}
-                                  className="w-full h-full object-cover"
-                                />
+                                <picture>
+                                  <source 
+                                    srcSet={infographic.previewImageUrl.replace(/\.(png|jpg|jpeg)$/i, '.avif')} 
+                                    type="image/avif" 
+                                  />
+                                  <source 
+                                    srcSet={infographic.previewImageUrl.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
+                                    type="image/webp" 
+                                  />
+                                  <img
+                                    src={infographic.previewImageUrl}
+                                    alt={infographic.title}
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    decoding="async"
+                                  />
+                                </picture>
                               )}
                             </div>
                             <div className="flex-1 min-w-0">
@@ -310,7 +418,7 @@ export function GlossaryTermClient({ term }: Props) {
                                 {infographic.shortDescription}
                               </p>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 flex-shrink-0" />
+                            <ArrowRight className="w-4 h-4 text-neutral-400 group-hover:text-orange-400 flex-shrink-0" />
                           </div>
                         </div>
                       </Link>
@@ -347,11 +455,23 @@ export function GlossaryTermClient({ term }: Props) {
                           <div className="flex items-start gap-4">
                             <div className="w-16 h-16 bg-neutral-800 rounded-lg flex-shrink-0 overflow-hidden">
                               {post.image && (
-                                <img
-                                  src={post.image}
-                                  alt={post.title}
-                                  className="w-full h-full object-cover"
-                                />
+                                <picture>
+                                  <source 
+                                    srcSet={post.image.replace(/\.(png|jpg|jpeg)$/i, '.avif')} 
+                                    type="image/avif" 
+                                  />
+                                  <source 
+                                    srcSet={post.image.replace(/\.(png|jpg|jpeg)$/i, '.webp')} 
+                                    type="image/webp" 
+                                  />
+                                  <img
+                                    src={post.image}
+                                    alt={post.title}
+                                    className="w-full h-full object-cover"
+                                    loading="lazy"
+                                    decoding="async"
+                                  />
+                                </picture>
                               )}
                             </div>
                             <div className="flex-1 min-w-0">
@@ -362,7 +482,7 @@ export function GlossaryTermClient({ term }: Props) {
                                 {post.excerpt}
                               </p>
                             </div>
-                            <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 flex-shrink-0" />
+                            <ArrowRight className="w-4 h-4 text-neutral-400 group-hover:text-orange-400 flex-shrink-0" />
                           </div>
                         </div>
                       </Link>
@@ -419,6 +539,57 @@ export function GlossaryTermClient({ term }: Props) {
                           </CollapsibleContent>
                         </Collapsible>
                       </Card>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.section>
+            )}
+
+            {/* Related Questions */}
+            {relatedQuestions.length > 0 && (
+              <RelatedQuestions
+                questions={relatedQuestions}
+                title={`Questions about ${term.term}`}
+                className="mb-12"
+              />
+            )}
+
+            {/* Related Topics */}
+            {relatedTopics.length > 0 && (
+              <motion.section
+                className="mb-12"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <motion.h2
+                  variants={itemVariants}
+                  className="text-2xl font-bold mb-6 text-white"
+                >
+                  Related <span className="text-orange-400">Topics</span>
+                </motion.h2>
+
+                <div className="grid md:grid-cols-3 gap-4">
+                  {relatedTopics.map((topic) => (
+                    <motion.div key={topic.slug} variants={itemVariants}>
+                      <Link
+                        href={`/topics/${topic.slug}`}
+                        className="block group h-full"
+                      >
+                        <div className="bg-black/60 border border-white/10 rounded-xl p-5 hover:border-orange-400/40 transition-all hover:bg-black/70 h-full flex flex-col">
+                          <h3 className="font-semibold text-white group-hover:text-orange-400 transition-colors mb-2">
+                            {topic.title}
+                          </h3>
+                          <p className="text-sm text-neutral-400 line-clamp-2 flex-1">
+                            {topic.subtitle}
+                          </p>
+                          <div className="flex items-center gap-1 mt-3 text-orange-400 text-sm">
+                            <span>Explore topic</span>
+                            <ArrowRight className="w-4 h-4" />
+                          </div>
+                        </div>
+                      </Link>
                     </motion.div>
                   ))}
                 </div>

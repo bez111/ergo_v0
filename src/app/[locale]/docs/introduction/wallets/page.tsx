@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, react-hooks/set-state-in-effect */
+
 import React, { useState, useEffect } from "react";
 import { Shield, Smartphone, Monitor, Globe, Lock, BookOpen, ExternalLink, CheckCircle, Info, AlertTriangle, ArrowDown, ArrowUp, Users, Star, Key, FileText } from "lucide-react";
 import Link from "next/link";

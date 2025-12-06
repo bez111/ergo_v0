@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import React from "react";
 import Link from "next/link";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
@@ -935,7 +937,7 @@ export default function DataModelApisPage() {
 
           <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-6">
             <p className="text-gray-300 mb-4">
-              <Link href="/docs/technology/autolykos" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link> is a consensus mechanism that requires <Link href="/docs/miners" className="text-orange-400 hover:underline">miners</Link> to solve complex mathematical problems to add new blocks to the blockchain. This process, known as "<Link href="/docs/miners" className="text-orange-400 hover:underline">mining</Link>," involves significant computational effort, ensuring the security and immutability of the blockchain.
+              <Link href="/technology/secure-pow" className="text-orange-400 hover:underline">Proof-of-Work (PoW)</Link> is a consensus mechanism that requires <Link href="/docs/miners" className="text-orange-400 hover:underline">miners</Link> to solve complex mathematical problems to add new blocks to the blockchain. This process, known as "<Link href="/docs/miners" className="text-orange-400 hover:underline">mining</Link>," involves significant computational effort, ensuring the security and immutability of the blockchain.
             </p>
             <p className="text-gray-300">
               Ergo, like other Proof-of-Work (PoW) blockchains such as Bitcoin, uses blocks to record transactions and ensure the integrity of the network. However, Ergo's block structure is more sophisticated, offering enhanced functionality and efficiency.

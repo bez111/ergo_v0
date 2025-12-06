@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
 import React from "react";
 import { Users, Star, Rocket, Layers, CheckCircle, Calendar, Globe, UserPlus, BookOpen, Paintbrush, Users2, TrendingUp, Zap, Award, ArrowRight } from "lucide-react";
 

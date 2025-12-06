@@ -10,6 +10,47 @@
   @apply transition-all duration-200;
 }
 
+/* Performance - CLS Prevention */
+/* Reserve space for images to prevent layout shift */
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+/* Aspect ratio containers for common image sizes */
+.aspect-og {
+  aspect-ratio: 1200 / 630;
+}
+
+.aspect-card {
+  aspect-ratio: 16 / 9;
+}
+
+.aspect-square {
+  aspect-ratio: 1 / 1;
+}
+
+/* Prevent font-swap CLS */
+.font-loading body {
+  visibility: hidden;
+}
+
+.fonts-loaded body {
+  visibility: visible;
+}
+
+/* Reduce motion for accessibility and performance */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 
 
 /* RTL Support */
@@ -907,6 +948,358 @@ aside .sticky-toc {
   animation: watermarkFloat 8s ease-in-out infinite; 
 }
 
+/* =============================================================================
+   CORE WEB VITALS OPTIMIZATIONS
+   ============================================================================= */
 
+/* CLS Prevention: Add aspect-ratio to images without explicit dimensions */
+img:not([width]):not([height]) {
+  aspect-ratio: 16 / 9;
+}
 
+/* Common aspect ratios for different image types */
+img[data-aspect="square"] {
+  aspect-ratio: 1 / 1;
+}
 
+img[data-aspect="video"] {
+  aspect-ratio: 16 / 9;
+}
+
+img[data-aspect="portrait"] {
+  aspect-ratio: 3 / 4;
+}
+
+img[data-aspect="og"] {
+  aspect-ratio: 1200 / 630;
+}
+
+/* Card images - prevent CLS */
+.card img,
+[class*="Card"] img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* Avatar images - prevent CLS */
+.avatar img,
+[class*="avatar"] img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* Infographic images - prevent CLS */
+.infographic img {
+  aspect-ratio: 1600 / 900;
+  object-fit: contain;
+}
+
+/* LCP Optimization: Prioritize above-the-fold content */
+[data-priority="high"] {
+  content-visibility: visible;
+}
+
+/* Defer below-the-fold content rendering */
+[data-priority="low"] {
+  content-visibility: auto;
+  contain-intrinsic-size: 0 500px;
+}
+
+/* INP Optimization: Reduce animation work during interactions */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Optimize touch targets for mobile INP */
+button,
+a,
+[role="button"],
+input[type="submit"],
+input[type="button"] {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Font display optimization */
+@font-face {
+  font-display: swap;
+}
+
+/* Skeleton loading states for lazy content */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes skeleton-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Optimize scroll performance */
+.scroll-container {
+  will-change: scroll-position;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* GPU acceleration for animated elements */
+.gpu-accelerated {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* =============================================================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================================================= */
+
+/* Improved contrast for muted text - WCAG AA compliance */
+/* Replace low-contrast grays with accessible alternatives */
+.a11y-text-muted {
+  color: #a1a1aa; /* neutral-400 -> lighter for better contrast on dark bg */
+}
+
+.a11y-text-secondary {
+  color: #d4d4d8; /* neutral-300 for secondary text */
+}
+
+/* High contrast mode overrides */
+@media (prefers-contrast: high) {
+  .text-neutral-400,
+  .text-gray-400 {
+    color: #e5e5e5 !important; /* Much lighter for high contrast */
+  }
+  
+  .text-neutral-500,
+  .text-gray-500 {
+    color: #d4d4d4 !important;
+  }
+  
+  .text-neutral-300,
+  .text-gray-300 {
+    color: #f5f5f5 !important;
+  }
+  
+  .border-neutral-700,
+  .border-neutral-800,
+  .border-white\/10 {
+    border-color: #525252 !important;
+  }
+}
+
+/* Touch target improvements for mobile */
+@media (max-width: 768px) {
+  /* Ensure all interactive elements have adequate touch targets */
+  button,
+  a,
+  [role="button"],
+  [role="link"],
+  [role="tab"],
+  [role="menuitem"],
+  input[type="checkbox"],
+  input[type="radio"],
+  select {
+    min-height: 48px; /* Apple HIG recommends 44px, Google 48px */
+    min-width: 48px;
+  }
+  
+  /* Allow inline links to be smaller but add padding */
+  p a,
+  li a,
+  span a {
+    min-height: auto;
+    min-width: auto;
+    padding: 8px 4px;
+    margin: -8px -4px;
+  }
+  
+  /* Icon buttons need explicit sizing */
+  .icon-button,
+  button:has(> svg:only-child),
+  a:has(> svg:only-child) {
+    min-height: 48px;
+    min-width: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Navigation items */
+  nav a,
+  nav button {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+  
+  /* Form inputs */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="search"],
+  input[type="url"],
+  input[type="tel"],
+  textarea,
+  select {
+    min-height: 48px;
+    padding: 12px 16px;
+  }
+}
+
+/* Focus visible improvements for all interactive elements */
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible,
+[role="link"]:focus-visible,
+[role="tab"]:focus-visible,
+[role="menuitem"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #f59e0b !important;
+  outline-offset: 2px !important;
+  border-radius: 4px;
+}
+
+/* Ensure focus is visible on dark backgrounds */
+.dark button:focus-visible,
+.dark a:focus-visible {
+  box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* Skip navigation link - enhanced */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 999999;
+}
+
+.skip-to-main:focus {
+  position: fixed;
+  left: 16px;
+  top: 16px;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  padding: 16px 24px;
+  background: #f59e0b;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  border: 2px solid #000;
+}
+
+/* Ensure disabled states are visually distinct */
+[disabled],
+[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* Loading states - accessible */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* Error states - accessible colors */
+.error-text,
+[aria-invalid="true"] {
+  color: #ef4444; /* red-500 - good contrast */
+  border-color: #ef4444;
+}
+
+/* Success states - accessible colors */
+.success-text {
+  color: #22c55e; /* green-500 - good contrast */
+}
+
+/* Warning states - accessible colors */
+.warning-text {
+  color: #eab308; /* yellow-500 - good contrast */
+}
+
+/* Ensure images have proper alt text indicators for screen readers */
+img:not([alt]) {
+  outline: 3px dashed #ef4444;
+}
+
+/* Hide decorative images from screen readers */
+img[alt=""],
+img[role="presentation"] {
+  speak: none;
+}
+
+/* Ensure proper line height for readability */
+p, li, dd, blockquote {
+  line-height: 1.6;
+}
+
+/* Ensure adequate spacing between interactive elements */
+.button-group > *:not(:last-child) {
+  margin-right: 8px;
+}
+
+/* Card focus styles */
+.card:focus-within,
+[class*="Card"]:focus-within {
+  outline: 2px solid #f59e0b;
+  outline-offset: 2px;
+}
+
+/* Table accessibility */
+table {
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  font-weight: 600;
+}
+
+/* Ensure proper contrast for placeholder text */
+::placeholder {
+  color: #71717a; /* neutral-500 - meets WCAG AA for large text */
+  opacity: 1;
+}
+
+/* Link underlines handled by Tailwind classes where needed */
+
+/* Ensure motion is reduced for vestibular disorders */
+@media (prefers-reduced-motion: reduce) {
+  .animate-pulse,
+  .animate-bounce,
+  .animate-spin {
+    animation: none !important;
+  }
+  
+  .transition-all,
+  .transition-colors,
+  .transition-opacity,
+  .transition-transform {
+    transition: none !important;
+  }
+}

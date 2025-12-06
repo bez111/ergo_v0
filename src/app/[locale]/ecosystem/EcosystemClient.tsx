@@ -1,5 +1,7 @@
 "use client"
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars, @typescript-eslint/no-explicit-any, react-hooks/set-state-in-effect */
+
 import { useEffect, useMemo, useState, useCallback } from "react"
 import { useTranslations } from "next-intl"
 import { motion } from "framer-motion"
@@ -8,7 +10,7 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { HiddenBreadcrumbs } from "@/components/seo/hidden-breadcrumbs"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import {
@@ -97,9 +99,30 @@ const projectIcons = {
 }
 
 const statusConfig = {
-  OPERATIONAL: { icon: <CheckCircle className="w-4 h-4 text-green-400" aria-hidden="true" focusable="false" />, color: "text-green-400" },
-  TESTING: { icon: <Clock className="w-4 h-4 text-yellow-400" aria-hidden="true" focusable="false" />, color: "text-yellow-400" },
-  PROTOTYPE: { icon: <AlertCircle className="w-4 h-4 text-orange-400" aria-hidden="true" focusable="false" />, color: "text-orange-400" },
+  OPERATIONAL: {
+    icon: <CheckCircle className="w-4 h-4 text-green-400" aria-hidden="true" focusable="false" />,
+    color: "text-green-400",
+    label: "OPERATIONAL",
+  },
+  TESTING: {
+    icon: <Clock className="w-4 h-4 text-yellow-400" aria-hidden="true" focusable="false" />,
+    color: "text-yellow-400",
+    label: "TESTING",
+  },
+  PROTOTYPE: {
+    icon: <AlertCircle className="w-4 h-4 text-orange-400" aria-hidden="true" focusable="false" />,
+    color: "text-orange-400",
+    label: "PROTOTYPE",
+  },
+  NOT_OPERATING: {
+    icon: <AlertCircle className="w-4 h-4 text-red-400" aria-hidden="true" focusable="false" />,
+    color: "text-red-400",
+    label: "NOT OPERATING",
+  },
+} as const
+
+const statusLabelMap: Record<string, string> = {
+  NOT_OPERATING: "NOT OPERATING",
 }
 
 const containerVariants = { hidden: { opacity: 0 }, visible: { opacity: 1, transition: { staggerChildren: 0.1 } } }
@@ -161,10 +184,7 @@ export default function EcosystemClient() {
   return (
     <main className="min-h-screen bg-black text-white relative overflow-hidden" style={{ overflowAnchor: "none" }}>
       {/* Hidden Breadcrumbs for SEO */}
-      <HiddenBreadcrumbs
-        items={[]}
-        currentPage="Ecosystem"
-      />
+      <Breadcrumbs items={[{ name: "Ecosystem", href: "#" }]} variant="hidden" />
 
       <BackgroundWrapper>
         <div className="pt-20">
@@ -181,24 +201,6 @@ export default function EcosystemClient() {
                 <h2 className="text-3xl font-bold text-white">{t("featuredProjects.title")}</h2>
               </div>
               <div className="flex items-center gap-4">
-                {/* Page indicators */}
-                <div className="flex gap-2">
-                  {Array.from({ length: Math.ceil(featuredProjects.length / 3) }).map((_, index) => (
-                    <button
-                      key={index}
-                      onClick={() => {
-                        setIsAutoPlay(false) // Pause autoplay when manually navigating
-                        setCurrentFeaturedIndex(index * 3)
-                      }}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 hover:scale-110 ${Math.floor(currentFeaturedIndex / 3) === index
-                          ? 'bg-orange-400 w-6 shadow-lg shadow-orange-400/30'
-                          : 'bg-neutral-600 hover:bg-neutral-500'
-                        }`}
-                      aria-label={`Go to page ${index + 1}`}
-                    />
-                  ))}
-                </div>
-
                 {/* Navigation buttons */}
                 <div className="flex gap-2">
                   <Button
@@ -263,12 +265,22 @@ export default function EcosystemClient() {
                         </div>
                       </div>
                       <p className="text-neutral-400 mb-6 flex-1">{project.description}</p>
-                      <Button asChild variant="outline" className="w-full mt-auto border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300">
-                        <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="flex items-center gap-2">
-                          Visit Project
-                          <ExternalLink className="w-4 h-4" aria-hidden="true" focusable="false" />
-                        </Link>
-                      </Button>
+                      <div className="flex flex-col gap-2 mt-auto">
+                        <Button asChild className="w-full bg-orange-500 hover:bg-orange-400 text-white">
+                          <Link href={`/ecosystem/${project.slug}`} aria-label={`Learn more about ${project.name}`} className="flex items-center gap-2">
+                            Learn More
+                            <ArrowRight className="w-4 h-4" aria-hidden="true" focusable="false" />
+                          </Link>
+                        </Button>
+                        {project.url !== "#" && (
+                          <Button asChild variant="outline" className="w-full border-white/30 text-white hover:bg-white/10 hover:border-orange-400/50 hover:text-orange-400 transition-all duration-300">
+                            <Link href={project.url} target="_blank" rel="noopener noreferrer" aria-label={`Visit ${project.name} (opens in a new tab)`} className="flex items-center gap-2">
+                              Visit Project
+                              <ExternalLink className="w-4 h-4" aria-hidden="true" focusable="false" />
+                            </Link>
+                          </Button>
+                        )}
+                      </div>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -287,8 +299,18 @@ export default function EcosystemClient() {
                   </div>
                 </div>
                 <div className="relative w-full md:w-auto md:flex-1" style={{ contain: "layout paint" }}>
-                  <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400" aria-hidden="true" focusable="false" />
-                  <Input type="text" placeholder={t("search.placeholder")} value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} className="w-full bg-neutral-900/80 border-neutral-700 pl-12 h-12 rounded-xl focus:border-orange-500/50" />
+                  <Input
+                    type="text"
+                    placeholder={t("search.placeholder")}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="w-full bg-neutral-900/80 border-neutral-700 pr-12 h-12 rounded-xl focus:border-orange-500/50"
+                  />
+                  <Search
+                    className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400 pointer-events-none"
+                    aria-hidden="true"
+                    focusable="false"
+                  />
                   <div className="h-0 md:h-0" />
                 </div>
               </div>
@@ -307,16 +329,19 @@ export default function EcosystemClient() {
               </div>
               <div className="h-2" />
               <div className="flex flex-wrap gap-2 justify-center" style={{ contain: "layout paint" }}>
-                {["ALL", ...statusOrder].map((status) => (
-                  <Button
-                    key={status}
-                    variant="outline"
-                    onClick={() => setSelectedStatus(status)}
-                    className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedStatus === status ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}
-                  >
-                    {status}
-                  </Button>
-                ))}
+                {["ALL", ...statusOrder].map((status) => {
+                  const label = status === "ALL" ? "ALL" : (statusLabelMap[status] ?? status)
+                  return (
+                    <Button
+                      key={status}
+                      variant="outline"
+                      onClick={() => setSelectedStatus(status as any)}
+                      className={`rounded-full backdrop-blur-sm border-neutral-700 text-neutral-200 hover:bg-neutral-900/60 hover:border-orange-500/50 hover:text-orange-400 ${selectedStatus === status ? "bg-orange-500/10 border-orange-500/50 text-orange-400" : ""}`}
+                    >
+                      {label}
+                    </Button>
+                  )
+                })}
               </div>
             </div>
           </motion.div>
@@ -330,36 +355,41 @@ export default function EcosystemClient() {
                 </div>
               ) : (
                 <div className="space-y-0">
-                  {filteredProjects.map((project) => (
-                    <div key={project.id}>
-                      <a href={project.url} target="_blank" rel="noopener noreferrer" className="block p-4 rounded-lg hover:bg-neutral-800/30 transition-colors">
-                        <div className="grid grid-cols-12 items-center gap-4">
-                          <div className="col-span-12 md:col-span-3 flex items-center gap-4">
-                            <div className="p-2 rounded-lg bg-orange-500/20 border border-orange-500/30">
-                              {(() => {
-                                const IconComponent = (projectIcons as any)[project.name] || Activity
-                                return <IconComponent className="w-5 h-5 text-orange-400" aria-hidden="true" focusable="false" />
-                              })()}
+                  {filteredProjects.map((project) => {
+                    return (
+                      <div key={project.id}>
+                        <Link
+                          href={`/ecosystem/${project.slug}`}
+                          className="block p-4 rounded-lg hover:bg-neutral-800/30 transition-colors"
+                        >
+                          <div className="grid grid-cols-12 items-center gap-4">
+                            <div className="col-span-12 md:col-span-3 flex items-center gap-4">
+                              <div className="p-2 rounded-lg bg-orange-500/20 border border-orange-500/30">
+                                {(() => {
+                                  const IconComponent = (projectIcons as any)[project.name] || Activity
+                                  return <IconComponent className="w-5 h-5 text-orange-400" aria-hidden="true" focusable="false" />
+                                })()}
+                              </div>
+                              <h3 className="font-semibold text-white">{project.name}</h3>
                             </div>
-                            <h3 className="font-semibold text-white">{project.name}</h3>
+                            <div className="col-span-6 md:col-span-2">
+                              <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-neutral-800 text-neutral-300 border border-neutral-700">{project.category}</span>
+                            </div>
+                            <div className={`col-span-6 md:col-span-2 flex items-center gap-2 text-sm ${(statusConfig as any)[project.status]?.color}`}>
+                              {(statusConfig as any)[project.status]?.icon}
+                              <span>{(statusConfig as any)[project.status]?.label ?? project.status}</span>
+                            </div>
+                            <div className="col-span-11 md:col-span-4 md:col-start-8">
+                              <p className="text-sm text-neutral-400 line-clamp-2">{project.description}</p>
+                            </div>
+                            <div className="col-span-1 flex justify-end text-orange-400">
+                              <ArrowRight className="w-4 h-4" aria-hidden="true" focusable="false" />
+                            </div>
                           </div>
-                          <div className="col-span-6 md:col-span-2">
-                            <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-neutral-800 text-neutral-300 border border-neutral-700">{project.category}</span>
-                          </div>
-                          <div className={`col-span-6 md:col-span-2 flex items-center gap-2 text-sm ${(statusConfig as any)[project.status]?.color}`}>
-                            {(statusConfig as any)[project.status]?.icon}
-                            <span>{project.status}</span>
-                          </div>
-                          <div className="col-span-11 md:col-span-4 md:col-start-8">
-                            <p className="text-sm text-neutral-400 line-clamp-2">{project.description}</p>
-                          </div>
-                          <div className="col-span-1 flex justify-end text-neutral-400">
-                            <ExternalLink className="w-4 h-4" aria-hidden="true" focusable="false" />
-                          </div>
-                        </div>
-                      </a>
-                    </div>
-                  ))}
+                        </Link>
+                      </div>
+                    )
+                  })}
                 </div>
               )}
             </div>

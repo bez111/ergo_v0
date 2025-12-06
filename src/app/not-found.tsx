@@ -1,3 +1,5 @@
+
+/* eslint-disable react/no-unescaped-entities */
 import Link from "next/link"
 import { Card, CardContent } from "@/components/ui/card"
 import { Search, Home, ArrowLeft, ExternalLink } from "lucide-react"

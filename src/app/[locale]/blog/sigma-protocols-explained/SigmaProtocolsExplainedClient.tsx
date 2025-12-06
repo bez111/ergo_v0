@@ -1,8 +1,10 @@
 "use client"
 
-import React, { useState } from "react"
+/* eslint-disable react/no-unescaped-entities, @next/next/no-html-link-for-pages */
+
+import { useState } from "react"
 import { motion } from "framer-motion"
-import Link from "next/link"
+import Image from "next/image"
 
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -12,13 +14,12 @@ import { Badge } from "@/components/ui/badge"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
+import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
 import { RelatedContent } from "@/components/seo/related-content"
-import { GlossaryLink } from "@/components/glossary"
 import { 
   GraduationCap,
   Eye,
   Lock,
-  Unlock,
   Key,
   CheckCircle,
   ChevronDown,
@@ -168,7 +169,6 @@ export function SigmaProtocolsExplainedClient() {
           {/* Breadcrumbs */}
           <Breadcrumbs
             items={[
-              { name: "Home", href: "/" },
               { name: "Blog", href: "/blog" },
               { name: "Sigma Protocols Explained (Without A PhD)", href: "/blog/sigma-protocols-explained" }
             ]}
@@ -313,6 +313,19 @@ export function SigmaProtocolsExplainedClient() {
                 In Ergo's case, a special class of cryptographic proofs is used, known as Sigma Protocols. Below, we'll take a high-level look at what they are, how they work, and why they offer such powerful privacy functionality for Ergo's users.
               </p>
             </section>
+
+            {/* Sigma Protocols Explained Infographic */}
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="mb-12"
+            >
+              <ExpandableInfographic
+                src="/og/infographics/sigma-protocols-explained.png"
+                alt="Sigma Protocols Explained: Intuitive Zero-Knowledge Cryptography on Ergo"
+              />
+            </motion.section>
 
             {/* Why Zero-Knowledge Proofs Matter */}
             <section

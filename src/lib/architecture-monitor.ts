@@ -1,3 +1,5 @@
+
+/* eslint-disable @typescript-eslint/no-unused-vars, import/no-anonymous-default-export */
 /**
  * Architecture Monitoring System
  * Следит за качеством и консистентностью архитектуры

@@ -1,5 +1,7 @@
 "use client";
 
+/* eslint-disable react/no-unescaped-entities, @typescript-eslint/no-unused-vars */
+
 import React, { useEffect, useRef, useState } from 'react';
 import { Search, X, Tag, FileText, ArrowUp, ArrowDown, Command } from 'lucide-react';
 import { algoliaConfig } from '@/lib/algolia-config';
