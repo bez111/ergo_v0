@@ -14,6 +14,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
+import { StickyTOC } from "@/components/blog/sticky-toc"
 import { 
   ChevronDown,
   Shield,
@@ -34,26 +35,22 @@ export default function NiPoPoWsExplainedClient() {
     {
       icon: CheckCircle,
       title: "Lightweight Verification",
-      description: "Verify blockchain integrity with just kilobytes instead of gigabytes - 1000x smaller than full blockchain",
-      link: "/docs/introduction/nipopows"
+      description: "Verify blockchain integrity with just kilobytes instead of gigabytes - 1000x smaller than full blockchain"
     },
     {
       icon: Smartphone,
       title: "Mobile-First",
-      description: "Enable smartphones and low-power devices to verify PoW chains without downloading headers",
-      link: "/docs/light-clients"
+      description: "Enable smartphones and low-power devices to verify PoW chains without downloading headers"
     },
     {
       icon: LinkIcon,
       title: "Cross-Chain Bridges",
-      description: "Trustless bridges between blockchains without relying on multi-sig or centralized services",
-      link: "/docs/bridges"
+      description: "Trustless bridges between blockchains without relying on multi-sig or centralized services"
     },
     {
       icon: Shield,
       title: "Same Security",
-      description: "Cryptographically equivalent security to full nodes with mathematical proof guarantees",
-      link: "/docs/security"
+      description: "Cryptographically equivalent security to full nodes with mathematical proof guarantees"
     }
   ]
 
@@ -112,8 +109,7 @@ export default function NiPoPoWsExplainedClient() {
     { label: "How NiPoPoWs Work", href: "#superblocks" },
     { label: "Size Comparison", href: "#comparison" },
     { label: "Why NiPoPoWs Matter", href: "#benefits" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Technical Resources", href: "#resources" }
+    { label: "FAQ", href: "#faq" }
   ]
 
   const faqItems = [
@@ -149,6 +145,9 @@ export default function NiPoPoWsExplainedClient() {
 
   return (
     <BackgroundWrapper>
+      {/* Sticky TOC for wide screens */}
+      <StickyTOC items={articleContents} />
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
@@ -183,8 +182,6 @@ export default function NiPoPoWsExplainedClient() {
             </div>
           </motion.div>
 
-          
-
           {/* TL;DR Section - Compact */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
@@ -204,36 +201,34 @@ export default function NiPoPoWsExplainedClient() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
-                  <Link href={item.link}>
-                    <Card className="bg-black border border-white/10 rounded-xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300 cursor-pointer">
-                      <CardContent className="p-3">
-                        <div className="flex items-start gap-3">
+                  <Card className="bg-black border border-white/10 rounded-xl">
+                    <CardContent className="p-3">
+                      <div className="flex items-start gap-3">
                         <div className="flex-shrink-0">
-                            <item.icon className="w-5 h-5 text-orange-400" />
+                          <item.icon className="w-5 h-5 text-orange-400" />
                         </div>
                         <div className="flex-1">
-                            <h3 className="text-sm md:text-base font-semibold text-white mb-1">
+                          <h3 className="text-sm md:text-base font-semibold text-white mb-1">
                             {item.title}
                           </h3>
-                            <p className="text-gray-300 text-sm md:text-sm leading-relaxed">
+                          <p className="text-gray-300 text-sm md:text-sm leading-relaxed">
                             {item.description}
                           </p>
-                          </div>
+                        </div>
                       </div>
                     </CardContent>
-                    </Card>
-                  </Link>
+                  </Card>
                 </motion.div>
               ))}
             </div>
           </motion.section>
 
-          {/* Article Contents */}
+          {/* Article Contents - Hidden on 2xl where sticky TOC shows */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12"
+            className="mb-12 2xl:hidden"
           >
             <Card className="bg-black/80 border border-orange-500/20 rounded-2xl">
               <CardHeader className="pb-4">
@@ -281,7 +276,7 @@ export default function NiPoPoWsExplainedClient() {
               <div className="bg-black border border-orange-500/30 rounded-2xl p-6">
                 <h3 className="text-xl font-bold text-orange-400 mb-3">Ergo's Solution</h3>
                 <p className="text-orange-100 leading-relaxed">
-                  <strong className="text-orange-400">Non-Interactive Proofs of Proof-of-Work (NiPoPoWs)</strong> are lightweight blockchain proofs that 
+                  <strong className="text-orange-400"><Link href="/technology/nipopows" className="hover:underline">Non-Interactive Proofs of Proof-of-Work (NiPoPoWs)</Link></strong> are lightweight blockchain proofs that 
                   provide almost all of the security of the full blockchain. These succinct proofs enable any device to verify 
                   PoW chains, without needing to download gigabytes of data.
                 </p>
@@ -563,78 +558,6 @@ export default function NiPoPoWsExplainedClient() {
                   </Collapsible>
                 </motion.div>
               ))}
-            </div>
-          </motion.section>
-
-          {/* Technical Resources */}
-          <motion.section
-            id="resources"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.1 }}
-            className="mb-16"
-          >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-              Technical Resources
-            </h2>
-            <p className="text-gray-300 mb-8">
-              Ready to dive deeper? Explore these foundational documents to understand NiPoPoWs technology and implementation.
-            </p>
-            
-            <div className="grid gap-4">
-              <Link
-                href="https://eprint.iacr.org/2017/963.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group"
-              >
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center shrink-0">
-                          <FileText className="w-6 h-6 text-orange-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">
-                            Original Research Paper
-                          </h3>
-                          <p className="text-gray-400 text-sm">
-                            The foundational paper on Non-Interactive Proofs of Proof-of-Work by IOHK researchers
-                          </p>
-                        </div>
-                      </div>
-                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors shrink-0" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link
-                href="/docs/introduction/nipopows"
-                className="group"
-              >
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
-                          <BookOpen className="w-6 h-6 text-blue-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">
-                            Developer Documentation
-                          </h3>
-                          <p className="text-gray-400 text-sm">
-                            Technical implementation details and API references for NiPoPoWs
-                          </p>
-                        </div>
-                      </div>
-                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors shrink-0" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
             </div>
           </motion.section>
 

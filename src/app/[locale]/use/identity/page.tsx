@@ -16,6 +16,7 @@ import { useState } from "react"
 import React from "react"
 import { useTranslations } from "next-intl"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -610,9 +611,15 @@ export default function IdentityReputationPage() {
               </div>
             </div>
           </section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Stay Updated on Digital Identity"
+            description="Get notified about self-sovereign identity solutions and privacy-preserving credentials."
+          />
         </motion.div>
         </div>
       </BackgroundWrapper>
     </>
   )
-} 
+}

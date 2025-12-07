@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
+import { StickyTOC } from "@/components/blog/sticky-toc"
 import { 
   Shield,
   Users,
@@ -25,8 +26,18 @@ import {
   Zap,
   Code
 } from "lucide-react"
+import Link from "next/link"
 
 export function ErgoManifestoClient() {
+  const articleContents = [
+    { label: "The Vision", href: "#vision" },
+    { label: "Current Market Mindset", href: "#market" },
+    { label: "Weaponization of Money", href: "#weaponization" },
+    { label: "Privacy", href: "#privacy" },
+    { label: "Core Principles", href: "#principles" },
+    { label: "Take Action", href: "#action" }
+  ]
+
   const principles = [
     {
       icon: Users,
@@ -72,6 +83,9 @@ export function ErgoManifestoClient() {
 
   return (
     <BackgroundWrapper>
+      {/* Sticky TOC for wide screens */}
+      <StickyTOC items={articleContents} />
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
@@ -140,7 +154,7 @@ export function ErgoManifestoClient() {
                 </div>
 
                 <p>
-                  The tools should allow people to make contracts (digital, self-enforcing, reasonable smart contracts) regardless of the differences in jurisdictions, traditions, followed business practices, etc.
+                  The tools should allow people to make contracts (digital, self-enforcing, reasonable <Link href="/technology/ergoscript" className="text-orange-400 hover:underline">smart contracts</Link>) regardless of the differences in jurisdictions, traditions, followed business practices, etc.
                 </p>
 
                 <p className="font-medium text-orange-300">
@@ -165,6 +179,7 @@ export function ErgoManifestoClient() {
 
           {/* Bitcoin Origins */}
           <motion.section
+            id="vision"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -203,6 +218,7 @@ export function ErgoManifestoClient() {
 
           {/* Current Market Problems */}
           <motion.section
+            id="market"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -234,6 +250,7 @@ export function ErgoManifestoClient() {
 
           {/* Weaponization of Money */}
           <motion.section
+            id="weaponization"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
@@ -276,6 +293,7 @@ export function ErgoManifestoClient() {
 
           {/* Privacy Section */}
           <motion.section
+            id="privacy"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.6 }}
@@ -303,7 +321,7 @@ export function ErgoManifestoClient() {
                 </p>
 
                 <p>
-                  <strong className="text-orange-400">Financial privacy is especially vital</strong> because it can be the difference between survival and systematic suppression of an opposition group in a country with an authoritarian government.
+                  <strong className="text-orange-400"><Link href="/technology/privacy-features" className="hover:underline">Financial privacy</Link> is especially vital</strong> because it can be the difference between survival and systematic suppression of an opposition group in a country with an authoritarian government.
                 </p>
 
                 <p>
@@ -346,6 +364,7 @@ export function ErgoManifestoClient() {
 
           {/* Ergo Basic Principles */}
           <motion.section
+            id="principles"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.8 }}
@@ -436,6 +455,7 @@ export function ErgoManifestoClient() {
           </motion.section>
 
           {/* 1. Share this post */}
+          <div id="action" />
           <ShareCTA
             title="The Ergo Manifesto: A Vision for Ergonomic Money"
             url="https://ergoblockchain.org/blog/ergo-manifesto"

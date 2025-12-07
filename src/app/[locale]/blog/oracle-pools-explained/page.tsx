@@ -20,7 +20,7 @@ export function generateMetadata(): Metadata {
       title,
       description,
       images: [{ 
-        url: `${origin}/og/blog-default.svg`, 
+        url: `${origin}/og/oracle-pools-explained.png`, 
         width: 1200, 
         height: 630,
         alt: "Ergo Oracle Pools: A Trust-Minimised Oracle Model Explained"
@@ -66,7 +66,7 @@ export default function OraclePoolsExplainedPage() {
     "@id": `${url}#article`,
     headline: "Ergo Oracle Pools: A Trust-Minimised Oracle Model Explained",
     description: "Learn how Ergo's decentralized oracle pools minimize trust assumptions through on-chain aggregation, permissionless participation, and transparent data storage in eUTXOs.",
-    image: `${origin}/og/blog-default.svg`,
+    image: `${origin}/og/oracle-pools-explained.png`,
     datePublished: "2024-01-20T00:00:00Z",
     dateModified: new Date().toISOString(),
     author: {
@@ -142,6 +142,30 @@ export default function OraclePoolsExplainedPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "Unlike Chainlink's off-chain aggregation and trusted node operators, Ergo Oracle Pools use on-chain aggregation, permissionless participation, and store all data points directly in eUTXOs, eliminating the need for trusted aggregators."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "How can I become an oracle data provider on Ergo?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Oracle pools are permissionless — anyone can run a data provider node. You need to stake pool tokens, run reliable infrastructure, and submit accurate data. Providers earn rewards proportional to their stake and data accuracy."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What data feeds are available on Ergo Oracle Pools?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Current feeds include ERG/USD price (used by SigmaUSD), ADA/USD, and other crypto pairs. The infrastructure supports any external data — weather, sports, stocks — limited only by community interest and provider participation."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "How often are oracle pool data points updated?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Update frequency depends on pool configuration. The ERG/USD pool typically updates every epoch (around 30 minutes), balancing freshness with cost efficiency. High-frequency feeds can be configured for time-sensitive applications."
         }
       }
     ]

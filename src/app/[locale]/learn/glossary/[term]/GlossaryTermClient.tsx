@@ -32,6 +32,7 @@ import { infographics } from "@/data/infographics";
 import { topics } from "@/data/topics";
 import { getRelatedBlogPosts, getQuestionsForGlossaryTerm } from "@/lib/related-content";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
+import { FinalCTASimple } from "@/components/home/final-cta-simple";
 import { PageTransition } from "@/components/animations/page-transition";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -201,7 +202,7 @@ export function GlossaryTermClient({ term }: Props) {
                 <span className="text-orange-400">?</span>
               </h1>
 
-              {/* Share + Back buttons */}
+              {/* Share + Copy buttons */}
               <div className="flex items-center gap-2 flex-wrap">
                 <Button
                   size="sm"
@@ -228,15 +229,6 @@ export function GlossaryTermClient({ term }: Props) {
                       Copy link
                     </>
                   )}
-                </Button>
-                <Button
-                  variant="ghost"
-                  className="text-neutral-400 hover:text-white"
-                  asChild
-                >
-                  <Link href="/learn/glossary">
-                    Back to Glossary
-                  </Link>
                 </Button>
               </div>
             </motion.header>
@@ -666,6 +658,12 @@ export function GlossaryTermClient({ term }: Props) {
                 </div>
               </motion.section>
             )}
+
+            {/* Email Capture */}
+            <FinalCTASimple
+              title="Master Ergo Terminology"
+              description="Get more educational content and deep dives into Ergo technology delivered to your inbox."
+            />
           </div>
         </PageTransition>
       </div>

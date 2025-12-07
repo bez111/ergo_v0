@@ -3,11 +3,14 @@
 import type { Metadata } from "next"
 import { HoldersClient } from "./HoldersClient"
 import { FAQSchema } from '@/components/seo/faq-schema'
+import { SchemaTypes } from '@/lib/schema-ultimate'
 import { siteConfig } from '@/config/site-config'
 
 interface HodlersPageProps {
   params: Promise<{ locale: string }>
 }
+
+const hodlersUrl = "https://ergoblockchain.org/hodlers"
 
 // FAQ data for hodlers page
 const hodlersFAQ = [
@@ -41,12 +44,12 @@ export async function generateMetadata({ params }: HodlersPageProps): Promise<Me
     description: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + optional privacy. Wallets, tokenomics & more.",
     keywords: "hold ERG, Ergo investment, sound money, cryptocurrency holders, Bitcoin alternative, fair launch, no pre-mine, store of value, financial sovereignty, ERG tokenomics",
     alternates: {
-      canonical: "https://ergoblockchain.org/hodlers",
+      canonical: hodlersUrl,
     },
     openGraph: {
       title: "Hold ERG — Sound Money with No Pre-mine",
       description: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + optional privacy.",
-      url: "https://ergoblockchain.org/hodlers",
+      url: hodlersUrl,
       siteName: "Ergo Platform",
       images: [
         {
@@ -71,11 +74,38 @@ export async function generateMetadata({ params }: HodlersPageProps): Promise<Me
 export default async function HodlersPage({ params }: HodlersPageProps) {
   const { locale } = await params
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Holders",
+        item: hodlersUrl
+      }
+    ]
+  }
+
+  const speakableSchema = SchemaTypes.SpeakableSchema({
+    headline: "Hold ERG - Sound Money with No Pre-mine",
+    summary: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + optional privacy.",
+    url: hodlersUrl
+  })
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <FAQSchema 
         faqs={hodlersFAQ}
-        pageUrl={`${siteConfig.siteUrl}/hodlers`}
+        pageUrl={hodlersUrl}
       />
       <HoldersClient />
     </>

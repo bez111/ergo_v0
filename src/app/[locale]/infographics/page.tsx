@@ -105,36 +105,6 @@ export default function InfographicsPage() {
     }
   };
 
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: [
-      {
-        "@type": "Question",
-        name: "Can I reuse these infographics commercially?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "Yes, you can reuse any infographic in presentations, blog posts or educational materials. Please credit ergoblockchain.org and link back to the original page."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "Will there be translations/localized versions?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "We are working on providing infographics in multiple languages. Contact the Ergo community if you'd like to help with translations."
-        }
-      },
-      {
-        "@type": "Question",
-        name: "Where can I request a new infographic topic?",
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: "You can request new infographic topics through the Ergo community channels on Discord, Telegram, or by creating an issue on the official GitHub repository."
-        }
-      }
-    ]
-  };
 
   // ItemList JSON-LD for individual infographics
   const itemListJsonLd = {
@@ -169,7 +139,6 @@ export default function InfographicsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       
       <InfographicsClient />

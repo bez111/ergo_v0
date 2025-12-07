@@ -1,62 +1,95 @@
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Metadata } from "next"
-import { getTranslations } from "next-intl/server"
-import { SchemaTypes } from "@/lib/schema-ultimate"
-import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 export const metadata: Metadata = {
-  title: "Storage Rent Explained | Sustainable Blockchain Economics on Ergo",
-  description: "Revolutionary economic model solving blockchain bloat forever. Learn how Storage Rent ensures sustainable blockchain size, perpetual miner rewards, and efficient resource usage.",
-  keywords: ["storage rent", "blockchain sustainability", "ergo economics", "utxo cleanup", "miner rewards", "blockchain bloat"],
-  alternates: { canonical: "https://ergoblockchain.org/technology/storage-rent" },
+  title: "Storage Rent: Sustainable Blockchain | Ergo",
+  description: "Discover how Ergo's storage rent prevents state bloat and ensures long-term sustainability. Lost coins are recycled, miners earn forever.",
+  keywords: [
+    "storage rent",
+    "state bloat",
+    "blockchain sustainability",
+    "demurrage",
+    "Ergo tokenomics",
+    "lost coins recovery",
+    "miner revenue",
+    "UTXO maintenance",
+    "blockchain economics",
+    "long-term sustainability"
+  ],
+  alternates: {
+    canonical: "https://ergoblockchain.org/technology/storage-rent"
+  },
   openGraph: {
-    type: "article",
-    title: "Storage Rent | The Solution to Blockchain Sustainability",
-    description: "How Ergo prevents blockchain bloat while ensuring perpetual network security through Storage Rent.",
+    title: "Storage Rent - Sustainable Blockchain Economics",
+    description: "Ergo's solution to state bloat. Lost coins are recycled, miners earn forever. True long-term sustainability.",
     url: "https://ergoblockchain.org/technology/storage-rent",
-    images: [{ url: "https://ergoblockchain.org/og/storage-rent.png" }],
+    siteName: "Ergo Platform",
+    images: [{
+      url: "https://ergoblockchain.org/og/storage-rent.png",
+      width: 1200,
+      height: 630,
+      alt: "Ergo Storage Rent"
+    }],
+    type: "article",
+    locale: "en_US"
   },
-  twitter: { 
+  twitter: {
     card: "summary_large_image",
-    title: "Storage Rent | Solving Blockchain Bloat Forever",
-    description: "Sustainable economics: automatic cleanup, perpetual miner rewards, efficient blockchain."
+    title: "Storage Rent - Sustainable Blockchain | Ergo",
+    description: "Prevent state bloat, recycle lost coins, ensure miner revenue forever.",
+    images: ["https://ergoblockchain.org/og/storage-rent.png"],
+    creator: "@ergoplatform",
+    site: "@ergoplatform"
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  }
 }
 
 export default function StorageRentLayout({ children }: { children: React.ReactNode }) {
-  // SEO схемы для Storage Rent
   const techArticleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: 'Storage Rent: Sustainable Blockchain Economics',
-    description: 'How Storage Rent solves blockchain bloat and ensures long-term sustainability',
-    author: { '@type': 'Organization', name: 'Ergo Platform' }
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://ergoblockchain.org/technology/storage-rent",
+    headline: "Storage Rent: Ergo's Solution to State Bloat",
+    description: "How storage rent ensures blockchain sustainability and prevents infinite state growth",
+    image: "https://ergoblockchain.org/og/storage-rent.png",
+    datePublished: "2023-01-15",
+    dateModified: new Date().toISOString().split('T')[0],
+    author: {
+      "@type": "Organization",
+      name: "Ergo Platform",
+      url: "https://ergoblockchain.org"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ergo Platform",
+      url: "https://ergoblockchain.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ergoblockchain.org/favicon.ico"
+      }
+    },
+    mainEntityOfPage: "https://ergoblockchain.org/technology/storage-rent",
+    about: [
+      { "@type": "Thing", name: "Blockchain economics" },
+      { "@type": "Thing", name: "State management" },
+      { "@type": "Thing", name: "Cryptocurrency sustainability" }
+    ],
+    proficiencyLevel: "Intermediate",
+    technicalAudience: "Developers and economists"
   }
-  
-  const faqSchema = SchemaTypes.FAQSchema([
-    {
-      question: "What is Storage Rent?",
-      answer: "Storage Rent is a mechanism where unused coins pay a minimal fee after 4 years of inactivity, preventing blockchain bloat and providing permanent miner rewards beyond emission."
-    },
-    {
-      question: "How much does Storage Rent cost?",
-      answer: "Storage Rent costs approximately 0.14 ERG per UTXO every 4 years. Active users never pay rent as any transaction resets the timer."
-    },
-    {
-      question: "Why is Storage Rent important?",
-      answer: "Storage Rent ensures blockchain sustainability by preventing unlimited growth, keeping the network lightweight, and providing perpetual security through miner rewards after emission ends."
-    }
-  ])
-  
-  const knowledgeGraph = generateKnowledgeGraph('technology')
-  
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
       {children}
     </>
   )
-} 
+}

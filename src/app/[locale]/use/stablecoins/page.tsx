@@ -16,6 +16,7 @@ import { useState } from "react"
 import React from "react"
 import { useTranslations } from "next-intl"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -631,9 +632,15 @@ When ERG price falls:
               </div>
             </div>
           </section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Stay Updated on Ergo Stablecoins"
+            description="Get notified about SigmaUSD updates, new stablecoin protocols, and DeFi innovations."
+          />
         </motion.div>
         </div>
       </BackgroundWrapper>
     </>
   )
-} 
+}

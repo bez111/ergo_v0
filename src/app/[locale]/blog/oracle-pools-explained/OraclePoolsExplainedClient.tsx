@@ -13,6 +13,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
+import { StickyTOC } from "@/components/blog/sticky-toc"
 import OracleComparisonTable from "@/components/oracle-comparison-table"
 import { 
   ChevronDown,
@@ -39,26 +40,22 @@ export function OraclePoolsExplainedClient() {
     {
       icon: Network,
       title: "Decentralized Data Feeds",
-      description: "Open participation oracle pools where anyone can join and provide data without permissions or whitelists",
-      link: "/docs/oracles/pools"
+      description: "Open participation oracle pools where anyone can join and provide data without permissions or whitelists"
     },
     {
       icon: Shield,
       title: "On-Chain Aggregation",
-      description: "Smart contracts deterministically compute median values from all submissions - no trusted aggregators",
-      link: "/docs/oracles/aggregation"
+      description: "Smart contracts deterministically compute median values from all submissions - no trusted aggregators"
     },
     {
       icon: Eye,
       title: "Transparent & Immutable",
-      description: "All data points stored in eUTXOs on-chain - anyone can audit historical submissions and verify integrity",
-      link: "/docs/oracles/transparency"
+      description: "All data points stored in eUTXOs on-chain - anyone can audit historical submissions and verify integrity"
     },
     {
       icon: Target,
       title: "Aligned Incentives",
-      description: "Providers only get paid for accurate, timely submissions - malicious or erroneous data gets no reward",
-      link: "/docs/oracles/incentives"
+      description: "Providers only get paid for accurate, timely submissions - malicious or erroneous data gets no reward"
     }
   ]
 
@@ -69,8 +66,7 @@ export function OraclePoolsExplainedClient() {
     { label: "Comparison vs Other Models", href: "#comparison" },
     { label: "eUTXO Integration", href: "#eutxo-model" },
     { label: "Use Cases", href: "#use-cases" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Technical Resources", href: "#resources" }
+    { label: "FAQ", href: "#faq" }
   ]
 
   const oracleProblems = [
@@ -180,6 +176,9 @@ export function OraclePoolsExplainedClient() {
 
   return (
     <BackgroundWrapper>
+      {/* Sticky TOC for wide screens */}
+      <StickyTOC items={articleContents} />
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
@@ -203,7 +202,7 @@ export function OraclePoolsExplainedClient() {
             </h1>
             
             <p className="text-lg sm:text-xl text-gray-300 max-w-4xl leading-relaxed mb-8">
-              Decentralized oracle pools that minimize trust assumptions through on-chain aggregation and permissionless participation.
+              Decentralized <Link href="/technology/oracle-pools" className="text-orange-400 hover:underline">oracle pools</Link> that minimize trust assumptions through on-chain aggregation and permissionless participation.
             </p>
 
             <div className="flex items-center justify-between flex-wrap gap-4">
@@ -213,8 +212,6 @@ export function OraclePoolsExplainedClient() {
               />
             </div>
           </motion.div>
-
-          
 
           {/* TL;DR Section - Compact */}
           <motion.section
@@ -235,36 +232,34 @@ export function OraclePoolsExplainedClient() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
-                  <Link href={item.link}>
-                    <Card className="bg-black border border-white/10 rounded-xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300 cursor-pointer">
-                      <CardContent className="p-3">
-                        <div className="flex items-start gap-3">
+                  <Card className="bg-black border border-white/10 rounded-xl">
+                    <CardContent className="p-3">
+                      <div className="flex items-start gap-3">
                         <div className="flex-shrink-0">
-                            <item.icon className="w-5 h-5 text-orange-400" />
+                          <item.icon className="w-5 h-5 text-orange-400" />
                         </div>
                         <div className="flex-1">
-                            <h3 className="text-sm md:text-base font-semibold text-white mb-1">
+                          <h3 className="text-sm md:text-base font-semibold text-white mb-1">
                             {item.title}
                           </h3>
-                            <p className="text-gray-300 text-sm md:text-sm leading-relaxed">
+                          <p className="text-gray-300 text-sm md:text-sm leading-relaxed">
                             {item.description}
                           </p>
-                          </div>
+                        </div>
                       </div>
                     </CardContent>
-                    </Card>
-                  </Link>
+                  </Card>
                 </motion.div>
               ))}
             </div>
           </motion.section>
 
-          {/* Article Contents */}
+          {/* Article Contents - Hidden on 2xl where sticky TOC shows */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12"
+            className="mb-12 2xl:hidden"
           >
             <Card className="bg-black/80 border border-orange-500/20 rounded-2xl">
               <CardHeader className="pb-4">
@@ -508,7 +503,7 @@ export function OraclePoolsExplainedClient() {
             
             <div className="bg-black border border-white/20 rounded-3xl p-8 space-y-6">
               <p className="text-gray-300 leading-relaxed">
-                Ergo's transaction model is different to other smart contract platforms. While Ethereum and most other blockchains use the Account model, Ergo uses the eUTXO model. This has fundamentally different properties, and supports Ergo's oracle model at the protocol level.
+                Ergo's transaction model is different to other smart contract platforms. While Ethereum and most other blockchains use the Account model, Ergo uses the <Link href="/technology/eutxo-model" className="text-orange-400 hover:underline">eUTXO model</Link>. This has fundamentally different properties, and supports Ergo's oracle model at the protocol level.
               </p>
               <p className="text-gray-300 leading-relaxed">
                 Ergo's smart contracts are built around eUTXOs: discrete, self-contained outputs on the blockchain. While Bitcoin's unspent transaction outputs (UTXOs) contain only tranches of coins, Ergo extends this approach to allow data and arbitrary logic to be attached to these outputs. Every data submission by an oracle exists in its own eUTXO, with its own guard script. Contract logic enforces participation rules, aggregation rules, and payout conditions.
@@ -628,76 +623,6 @@ export function OraclePoolsExplainedClient() {
                   </Collapsible>
                 </motion.div>
               ))}
-            </div>
-          </motion.section>
-
-          {/* Technical Resources */}
-          <motion.section
-            id="resources"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.3 }}
-            className="mb-16"
-          >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-              Technical Resources
-            </h2>
-            <p className="text-gray-300 mb-8">
-              Ready to dive deeper? Explore these foundational documents to understand Oracle Pools technology and implementation.
-            </p>
-            
-            <div className="grid gap-4">
-              <Link
-                href="/docs/oracles/pools"
-                className="group"
-              >
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center shrink-0">
-                          <FileText className="w-6 h-6 text-orange-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">
-                            Oracle Pools Documentation
-                          </h3>
-                          <p className="text-gray-400 text-sm">
-                            Technical implementation details and API references for Ergo Oracle Pools
-                          </p>
-                        </div>
-                      </div>
-                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors shrink-0" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link
-                href="/docs/eutxo/overview"
-                className="group"
-              >
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
-                          <BookOpen className="w-6 h-6 text-blue-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">
-                            eUTXO Model Guide
-                          </h3>
-                          <p className="text-gray-400 text-sm">
-                            Understanding Ergo's extended UTXO model and how it enables oracle pools
-                          </p>
-                        </div>
-                      </div>
-                      <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors shrink-0" />
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
             </div>
           </motion.section>
 

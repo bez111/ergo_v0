@@ -7,10 +7,13 @@ import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { EnhancedButton } from "@/components/ui/enhanced-button"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { FAQSchema } from '@/components/seo/faq-schema'
+import { SchemaTypes } from '@/lib/schema-ultimate'
 import { siteConfig } from '@/config/site-config'
 import { getTranslations } from 'next-intl/server'
 import { getMetadata } from './metadata'
 import { howToSchema, knowledgeGraph } from './json-ld'
+
+const startUrl = "https://ergoblockchain.org/start"
 
 // FAQ data for start page
 const startFAQ = [
@@ -152,14 +155,40 @@ export default async function StartPage({ params }: { params: Promise<{ locale: 
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: 'start.schema' });
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Start",
+        item: startUrl
+      }
+    ]
+  }
+
+  const speakableSchema = SchemaTypes.SpeakableSchema({
+    headline: "Start Using Ergo",
+    summary: "Get started with Ergo blockchain in 3 simple steps. Download a wallet, buy ERG tokens, and send your first transaction.",
+    url: startUrl
+  })
 
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema(t)) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <FAQSchema 
         faqs={startFAQ}
-        pageUrl={`${siteConfig.siteUrl}/start`}
+        pageUrl={startUrl}
       />
 
       <main className="min-h-screen bg-black text-white relative overflow-hidden">

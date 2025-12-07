@@ -70,6 +70,16 @@ const intentLabels: Record<string, string> = {
   'philosophy': 'Philosophy'
 };
 
+// Category to Topic mapping for internal linking
+const categoryToTopic: Record<string, { slug: string; title: string }> = {
+  'DeFi': { slug: 'ergo-defi', title: 'DeFi on Ergo' },
+  'Privacy': { slug: 'ergo-privacy', title: 'Privacy on Ergo' },
+  'Technology': { slug: 'ergo-technology', title: 'Ergo Technology' },
+  'Mining': { slug: 'ergo-mining', title: 'Mining on Ergo' },
+  'Sustainability': { slug: 'ergo-sustainability', title: 'Sustainability on Ergo' },
+  'Philosophy': { slug: 'ergo-philosophy', title: 'Ergo Philosophy' },
+};
+
 export function QuestionPageClient({ question, relatedQuestions }: Props) {
   const [copied, setCopied] = useState(false);
 
@@ -147,7 +157,7 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
               {question.query}
             </h1>
 
-            {/* Share + Back buttons */}
+            {/* Share + Copy buttons */}
             <div className="flex items-center gap-2 flex-wrap">
               <Button
                 variant="default"
@@ -175,15 +185,6 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
                     Copy link
                   </>
                 )}
-              </Button>
-              <Button
-                variant="ghost"
-                className="text-neutral-400 hover:text-white"
-                asChild
-              >
-                <Link href="/questions">
-                  Back to Q&A
-                </Link>
               </Button>
             </div>
           </motion.header>
@@ -276,6 +277,46 @@ export function QuestionPageClient({ question, relatedQuestions }: Props) {
               })}
             </div>
           </motion.section>
+
+          {/* Related Topic */}
+          {categoryToTopic[question.category] && (
+            <motion.section
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.35 }}
+              className="mb-12"
+            >
+              <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                <Layers className="w-5 h-5 text-orange-400" />
+                Explore This Topic
+              </h2>
+              <Link
+                href={`/topics/${categoryToTopic[question.category].slug}?utm_source=qa&utm_medium=topic&utm_campaign=${question.slug}`}
+                className="group block"
+              >
+                <Card className="bg-black border border-white/10 rounded-xl hover:border-orange-500/30 transition-all">
+                  <CardContent className="p-5">
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className="p-2 bg-orange-500/10 rounded-lg group-hover:bg-orange-500/20 transition-colors">
+                          <Layers className="w-5 h-5 text-orange-400" />
+                        </div>
+                        <div>
+                          <span className="text-white font-medium group-hover:text-orange-400 transition-colors">
+                            {categoryToTopic[question.category].title}
+                          </span>
+                          <p className="text-sm text-neutral-400">
+                            Deep dive into all {question.category} resources
+                          </p>
+                        </div>
+                      </div>
+                      <ArrowRight className="w-5 h-5 text-neutral-400 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            </motion.section>
+          )}
 
           {/* Related Questions */}
           {relatedQuestions.length > 0 && (

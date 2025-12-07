@@ -37,6 +37,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { BackToTop } from "@/components/ui/back-to-top";
 import { ClusterRelatedContent } from "@/components/seo/cluster-related-content";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { FinalCTASimple } from "@/components/home/final-cta-simple";
 
 interface Props {
   topic: TopicHub;
@@ -106,6 +108,20 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
       <div className="container mx-auto px-4 pt-24 pb-12">
         <div className="max-w-5xl mx-auto">
           
+          {/* Breadcrumbs */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6"
+          >
+            <Breadcrumbs
+              items={[
+                { name: 'Topics', href: '/topics' },
+                { name: topic.title, href: `/topics/${topic.slug}` }
+              ]}
+            />
+          </motion.div>
+
           {/* Hero Section */}
           <motion.header
             initial={{ opacity: 0, y: 20 }}
@@ -127,7 +143,7 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
               </div>
             </div>
 
-            {/* Share + Back buttons */}
+            {/* Share buttons */}
             <div className="flex items-center gap-2 flex-wrap">
               <Button
                 size="sm"
@@ -139,15 +155,6 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
               </Button>
               <Button variant="outline" size="sm" onClick={handleCopy} className="border-white/20 text-neutral-300 hover:text-white">
                 {copied ? <><Check className="w-4 h-4 mr-2 text-green-400" />Copied</> : <><Copy className="w-4 h-4 mr-2" />Copy link</>}
-              </Button>
-              <Button
-                variant="ghost"
-                className="text-neutral-400 hover:text-white"
-                asChild
-              >
-                <Link href="/topics">
-                  Back to Topics
-                </Link>
               </Button>
             </div>
           </motion.header>
@@ -409,11 +416,17 @@ export function TopicPageClient({ topic, relatedTopics }: Props) {
       </div>
 
       {/* Topic Cluster Related Content */}
-      <ClusterRelatedContent 
+<ClusterRelatedContent
         currentUrl={`/topics/${topic.slug}`}
         title="Related Resources"
         subtitle="Explore more content in this topic cluster"
         maxItems={6}
+      />
+
+      {/* Email Capture */}
+      <FinalCTASimple
+        title={`Master ${topic.title}`}
+        description="Get weekly insights on Ergo technology, tutorials, and ecosystem updates."
       />
       
       {/* Back to Top button for long page */}

@@ -1,58 +1,95 @@
 import { Metadata } from "next"
-import { SchemaTypes } from "@/lib/schema-ultimate"
-import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 
 export const metadata: Metadata = {
-  title: "Ergo Privacy Features | Zero-Knowledge Proofs & Confidential Transactions",
-  description: "Built-in privacy technology: Sigma protocols for zero-knowledge proofs, ErgoMixer for anonymous transactions, ring signatures, and confidential DeFi. No trusted setup required.",
-  alternates: { canonical: "https://ergoblockchain.org/technology/privacy-features" },
+  title: "Sigma Protocols: Zero-Knowledge Privacy | Ergo",
+  description: "Native zero-knowledge proofs and ring signatures on Ergo. Optional privacy with ErgoMixer, confidential assets, and Sigma protocols.",
+  keywords: [
+    "Sigma protocols",
+    "zero knowledge proofs",
+    "ZKP",
+    "ring signatures",
+    "ErgoMixer",
+    "blockchain privacy",
+    "confidential transactions",
+    "privacy coins",
+    "optional privacy",
+    "cryptographic privacy"
+  ],
+  alternates: {
+    canonical: "https://ergoblockchain.org/technology/privacy-features"
+  },
   openGraph: {
-    type: "article",
-    title: "Ergo Privacy Technology | Optional Confidentiality for DeFi",
-    description: "Native zero-knowledge proofs, mixer protocols, and confidential assets built into Ergo blockchain.",
+    title: "Sigma Protocols - Zero-Knowledge Privacy on Ergo",
+    description: "Native ZK proofs, ring signatures, and ErgoMixer. Optional privacy without compromising auditability.",
     url: "https://ergoblockchain.org/technology/privacy-features",
-    images: [{ url: "https://ergoblockchain.org/og/privacy.png" }],
+    siteName: "Ergo Platform",
+    images: [{
+      url: "https://ergoblockchain.org/og/sigma-protocols-explained.png",
+      width: 1200,
+      height: 630,
+      alt: "Ergo Sigma Protocols Privacy"
+    }],
+    type: "article",
+    locale: "en_US"
   },
-  twitter: { 
+  twitter: {
     card: "summary_large_image",
-    title: "Ergo Privacy Features | ZK Proofs Without Trusted Setup",
-    description: "Optional privacy for all transactions using Sigma protocols and ErgoMixer."
+    title: "Sigma Protocols - Zero-Knowledge Privacy | Ergo",
+    description: "Native ZK proofs, ring signatures, ErgoMixer. Optional privacy for everyone.",
+    images: ["https://ergoblockchain.org/og/sigma-protocols-explained.png"],
+    creator: "@ergoplatform",
+    site: "@ergoplatform"
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1
+    }
+  }
 }
 
-export default function PrivacyLayout({ children }: { children: React.ReactNode }) {
-  // SEO схемы для Privacy Features
+export default function PrivacyFeaturesLayout({ children }: { children: React.ReactNode }) {
   const techArticleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: 'Ergo Privacy Features: Sigma Protocols and Zero-Knowledge Proofs',
-    description: 'Complete guide to privacy features on Ergo blockchain',
-    author: { '@type': 'Organization', name: 'Ergo Platform' }
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://ergoblockchain.org/technology/privacy-features",
+    headline: "Sigma Protocols: Zero-Knowledge Privacy on Ergo",
+    description: "Comprehensive guide to Ergo's privacy features including Sigma protocols and ErgoMixer",
+    image: "https://ergoblockchain.org/og/sigma-protocols-explained.png",
+    datePublished: "2023-01-15",
+    dateModified: new Date().toISOString().split('T')[0],
+    author: {
+      "@type": "Organization",
+      name: "Ergo Platform",
+      url: "https://ergoblockchain.org"
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Ergo Platform",
+      url: "https://ergoblockchain.org",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://ergoblockchain.org/favicon.ico"
+      }
+    },
+    mainEntityOfPage: "https://ergoblockchain.org/technology/privacy-features",
+    about: [
+      { "@type": "Thing", name: "Zero-knowledge proof" },
+      { "@type": "Thing", name: "Cryptographic privacy" },
+      { "@type": "Thing", name: "Ring signatures" }
+    ],
+    proficiencyLevel: "Intermediate",
+    technicalAudience: "Privacy advocates and cryptographers"
   }
-  
-  const faqSchema = SchemaTypes.FAQSchema([
-    {
-      question: "How does Ergo implement privacy?",
-      answer: "Ergo uses Sigma protocols for zero-knowledge proofs, enabling optional privacy features like ErgoMixer, ring signatures, and confidential transactions without trusted setup."
-    },
-    {
-      question: "Is Ergo a privacy coin?",
-      answer: "Ergo offers optional privacy. Users can choose transparent or confidential transactions. Privacy is a feature, not mandatory, maintaining regulatory compliance."
-    },
-    {
-      question: "What is ErgoMixer?",
-      answer: "ErgoMixer is a non-custodial, trustless mixing protocol that breaks transaction links using Sigma protocols, providing strong privacy without centralized operators."
-    }
-  ])
-  
-  const knowledgeGraph = generateKnowledgeGraph('technology')
-  
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
       {children}
     </>
   )
-} 
+}

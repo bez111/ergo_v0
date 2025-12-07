@@ -3,6 +3,7 @@ import { siteConfig } from "@/config/site-config";
 import { comparisons } from "@/data/comparisons";
 import { CompareHubClient } from "./CompareHubClient";
 import { FAQSchema } from "@/components/seo/faq-schema";
+import { SchemaTypes } from "@/lib/schema-ultimate";
 
 const origin = siteConfig.siteUrl;
 const url = `${origin}/compare`;
@@ -113,6 +114,12 @@ export default function ComparePage() {
     },
   };
 
+  const speakableSchema = SchemaTypes.SpeakableSchema({
+    headline: "Ergo vs Bitcoin, Ethereum, Cardano",
+    summary: "Compare Ergo to Bitcoin, Ethereum, Cardano, Monero & more. Side-by-side analysis of consensus, smart contracts, privacy & tokenomics.",
+    url
+  });
+
   return (
     <>
       <script
@@ -122,6 +129,10 @@ export default function ComparePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }}
       />
       <FAQSchema 
         faqs={compareFAQ}

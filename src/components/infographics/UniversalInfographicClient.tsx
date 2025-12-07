@@ -4,10 +4,8 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
-  ArrowLeft,
   CalendarDays,
   Clock,
   Shield,
@@ -35,6 +33,7 @@ import {
   Download,
 } from 'lucide-react';
 import { BackgroundWrapper } from '@/components/home/background-wrapper';
+import { Breadcrumbs } from '@/components/seo/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -78,14 +77,14 @@ const getIcon = (iconName?: string) => {
 };
 
 export function UniversalInfographicClient({ infographic }: UniversalInfographicClientProps) {
-  const router = useRouter();
   const [isImageExpanded, setIsImageExpanded] = useState(false);
   const [copied, setCopied] = useState(false);
   const [shareUrl, setShareUrl] = useState('');
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
     if (typeof window !== 'undefined') {
-      // eslint-disable-next-line react-hooks/set-state-in-effect
       setShareUrl(window.location.href);
     }
   }, []);
@@ -140,21 +139,6 @@ export function UniversalInfographicClient({ infographic }: UniversalInfographic
       window.open(imageUrl, '_blank');
     }
   };
-  
-  const handleBackClick = (e: React.MouseEvent) => {
-    e.preventDefault();
-    if (typeof window !== 'undefined') {
-      const returnUrl = sessionStorage.getItem('infographics-return-url');
-      if (returnUrl && returnUrl.includes('/infographics')) {
-        sessionStorage.removeItem('infographics-return-url');
-        window.location.href = returnUrl;
-      } else {
-        router.push('/infographics');
-      }
-    } else {
-      router.push('/infographics');
-    }
-  };
 
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
@@ -191,28 +175,14 @@ export function UniversalInfographicClient({ infographic }: UniversalInfographic
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-5xl mx-auto">
           
-          {/* Back button */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="mb-6"
-          >
-            <Button
-              asChild
-              variant="ghost"
-              size="sm"
-              className="group inline-flex items-center gap-2 px-0 text-xs font-medium text-muted-foreground hover:text-foreground"
-            >
-              <Link 
-                href="/infographics"
-                onClick={handleBackClick}
-              >
-                <ArrowLeft className="h-3.5 w-3.5 transition-transform group-hover:-translate-x-0.5" />
-                <span>Back to all infographics</span>
-              </Link>
-            </Button>
-          </motion.div>
+          {/* Breadcrumbs */}
+          <Breadcrumbs
+            items={[
+              { name: 'Infographics', href: '/infographics' },
+              { name: title, href: `/infographics/${infographic.slug}` },
+            ]}
+            className="mb-8"
+          />
 
           {/* Header */}
           <motion.header
@@ -321,87 +291,87 @@ export function UniversalInfographicClient({ infographic }: UniversalInfographic
             </div>
           </motion.section>
 
-          {/* Share bar */}
-          <section className="mb-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-            <div className="text-sm text-neutral-400">
-              <span className="font-medium text-neutral-100">Share this infographic</span>
-              <span className="hidden sm:inline"> — help others discover Ergo's research-driven design.</span>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              {/* Twitter/Telegram share PAGE URL for SEO (og:image shows as preview) */}
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="border-white/15 bg-black/40 text-xs"
-                disabled={!shareUrl}
-                onClick={() =>
-                  openSharePopup(
-                    `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(shareUrl)}`
-                  )
-                }
-              >
-                <Share2 className="mr-1.5 h-3.5 w-3.5" />
-                <span>X</span>
-              </Button>
+          {/* Share bar - suppressHydrationWarning to handle client-only content */}
+          <section className="mb-10" suppressHydrationWarning>
+            {isMounted ? (
+              <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+                <div className="text-sm text-neutral-400">
+                  <span className="font-medium text-neutral-100">Share this infographic</span>
+                  <span className="hidden sm:inline text-neutral-500"> — help others discover Ergo</span>
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+                    onClick={() =>
+                      openSharePopup(
+                        `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${title}\n${shareUrl}\n@BuildOnErgo $ERG`)}`
+                      )
+                    }
+                  >
+                    <Share2 className="h-3.5 w-3.5" />
+                    <span>X</span>
+                  </Button>
 
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="border-white/15 bg-black/40 text-xs"
-                disabled={!shareUrl}
-                onClick={() =>
-                  openSharePopup(
-                    `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(title)}`
-                  )
-                }
-              >
-                <Send className="mr-1.5 h-3.5 w-3.5" />
-                <span>Telegram</span>
-              </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+                    onClick={() =>
+                      openSharePopup(
+                        `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(title)}`
+                      )
+                    }
+                  >
+                    <Send className="h-3.5 w-3.5" />
+                    <span>Telegram</span>
+                  </Button>
 
-              {/* Pinterest uses image URL + page URL as source */}
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="border-white/15 bg-black/40 text-xs"
-                disabled={!shareUrl}
-                onClick={() => {
-                  const imageUrl = getImageUrl();
-                  openSharePopup(
-                    `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(shareUrl)}&media=${encodeURIComponent(imageUrl)}&description=${encodeURIComponent(title)}`
-                  );
-                }}
-              >
-                <Share2 className="mr-1.5 h-3.5 w-3.5" />
-                <span>Pinterest</span>
-              </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+                    onClick={() => {
+                      const imageUrl = getImageUrl();
+                      openSharePopup(
+                        `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(shareUrl)}&media=${encodeURIComponent(imageUrl)}&description=${encodeURIComponent(title)}`
+                      );
+                    }}
+                  >
+                    <Share2 className="h-3.5 w-3.5" />
+                    <span>Pinterest</span>
+                  </Button>
 
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="border-white/15 bg-black/40 text-xs"
-                onClick={handleDownload}
-              >
-                <Download className="mr-1.5 h-3.5 w-3.5" />
-                <span>Download</span>
-              </Button>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+                    onClick={handleDownload}
+                  >
+                    <Download className="h-3.5 w-3.5" />
+                    <span>Download</span>
+                  </Button>
 
-              <Button
-                type="button"
-                variant="outline"
-                size="sm"
-                className="border-white/15 bg-black/40 text-xs"
-                onClick={handleCopyLink}
-                disabled={!shareUrl}
-              >
-                <Copy className="mr-1.5 h-3.5 w-3.5" />
-                <span>{copied ? 'Link copied' : 'Copy link'}</span>
-              </Button>
-            </div>
+                  <Button
+                    type="button"
+                    variant="outline"
+                    size="sm"
+                    className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+                    onClick={handleCopyLink}
+                  >
+                    <Copy className="h-3.5 w-3.5" />
+                    <span>{copied ? 'Copied!' : 'Copy link'}</span>
+                  </Button>
+                </div>
+              </div>
+            ) : (
+              <div className="h-12" /> 
+            )}
           </section>
 
           {/* Expanded image dialog */}
@@ -665,9 +635,11 @@ export function UniversalInfographicClient({ infographic }: UniversalInfographic
                 variant="outline"
                 size="lg"
                 className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black"
-                onClick={handleBackClick}
+                asChild
               >
-                Browse All Infographics
+                <Link href="/infographics">
+                  Browse All Infographics
+                </Link>
               </Button>
             </div>
           </motion.section>

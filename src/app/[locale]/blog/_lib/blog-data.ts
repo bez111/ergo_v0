@@ -100,8 +100,8 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'ergo-manifesto',
     slug: 'ergo-manifesto',
-    title: 'The Ergo Manifesto: Building Ergonomic Money for Regular People',
-    excerpt: 'The foundational vision of Ergo Platform - creating decentralized financial tools that empower ordinary people, not corporations. A manifesto for true peer-to-peer economic freedom.',
+    title: 'The Ergo Manifesto: Ergonomic Money for Everyone',
+    excerpt: 'The foundational vision of Ergo Platform by Kushti - creating decentralized financial tools that empower ordinary people. A manifesto for true peer-to-peer economic freedom.',
     date: '2025-11-14',
     lastUpdated: '2025-11-14',
     author: {
@@ -144,7 +144,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'autolykos-proof-of-work',
     slug: 'autolykos-proof-of-work',
-    title: 'Autolykos Proof-of-Work: Why Ergo’s Mining Algorithm Is Sustainable',
+    title: "Autolykos: Ergo's Sustainable GPU Mining Algorithm",
     excerpt:
       'Autolykos is the Ergo mining algorithm: a memory-hard proof-of-work designed for ASIC-resistant mining, sustainable PoW, and a more decentralised, GPU-friendly Ergo blockchain.',
     date: '2025-11-21',
@@ -181,9 +181,9 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'ergoscript-introduction',
     slug: 'ergoscript-introduction',
-    title: 'ErgoScript in 30 Minutes: A Practical Introduction to Ergo’s Smart Contract Language',
+    title: 'ErgoScript Tutorial: Smart Contracts on Ergo Blockchain',
     excerpt:
-      'ErgoScript is the Ergo blockchain’s functional smart contract language, purpose-built for the eUTXO model. Learn how it works and what makes Ergo smart contracts secure and predictable.',
+      "ErgoScript is the Ergo blockchain's functional smart contract language, purpose-built for the eUTXO model. Learn how it works and what makes Ergo smart contracts secure and predictable.",
     date: '2025-11-27',
     lastUpdated: '2025-11-27',
     author: authors['technical-team']!,
@@ -236,7 +236,7 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'nipopows-explained',
     slug: 'nipopows-explained',
-    title: 'How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo',
+    title: 'NiPoPoWs: Trustless Light Clients & Bridges on Ergo',
     excerpt: 'Learn how Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) enable lightweight blockchain verification, stateless clients, and trustless cross-chain bridges on Ergo.',
     date: '2025-12-07',
     lastUpdated: '2025-12-07',
@@ -272,16 +272,16 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'babel-fees',
     slug: 'babel-fees',
-    title: "Ergo's Babel Fees: Pay Transaction Fees In Any Token",
+    title: 'Babel Fees: Pay Ergo Transaction Fees in Any Token',
     excerpt:
-      "Ergo’s Babel Fees turn gas payments into an on-chain market, letting users pay transaction fees in almost any token while miners still receive ERG.",
+      "Ergo's Babel Fees turn gas payments into an on-chain market, letting users pay transaction fees in almost any token while miners still receive ERG.",
     date: '2025-12-14',
     lastUpdated: '2025-12-14',
     author: authors['technical-team']!,
     category: 'Technology',
     readTime: 9,
     wordCount: 2200,
-    image: '/og/blog-default.svg',
+    image: '/og/babel-fees.png',
     tags: ['Babel Fees', 'Gas Abstraction', 'eUTXO', 'DeFi UX', 'On-chain Markets'],
     featured: false,
     trending: true,

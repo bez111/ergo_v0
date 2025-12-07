@@ -4,11 +4,14 @@ import type { Metadata } from 'next'
 import { MinersClient } from './MinersClient'
 import { FAQSchema } from '@/components/seo/faq-schema'
 import { HowToSchema } from '@/components/seo/howto-schema'
+import { SchemaTypes } from '@/lib/schema-ultimate'
 import { siteConfig } from '@/config/site-config'
 
 interface MinersPageProps {
   params: Promise<{ locale: string }>
 }
+
+const minersUrl = "https://ergoblockchain.org/miners"
 
 // HowTo steps for mining Ergo
 const miningHowToSteps = [
@@ -98,8 +101,35 @@ export async function generateMetadata({ params }: MinersPageProps): Promise<Met
 export default async function MinersPage({ params }: MinersPageProps) {
   const { locale } = await params
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Miners",
+        item: minersUrl
+      }
+    ]
+  }
+
+  const speakableSchema = SchemaTypes.SpeakableSchema({
+    headline: "Mine Ergo (ERG) - GPU-Friendly, ASIC-Resistant",
+    summary: "Start mining Ergo with any GPU. ASIC-resistant Autolykos algorithm, fair rewards, active pools. Calculator, guides & software included.",
+    url: minersUrl
+  })
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
       <HowToSchema
         name="How to Mine Ergo (ERG)"
         description="Complete guide to mining Ergo cryptocurrency with your GPU. Learn how to set up mining software, choose a pool, and start earning ERG rewards."
@@ -110,7 +140,7 @@ export default async function MinersPage({ params }: MinersPageProps) {
       />
       <FAQSchema 
         faqs={minersFAQ}
-        pageUrl={`${siteConfig.siteUrl}/miners`}
+        pageUrl={minersUrl}
       />
       <MinersClient />
     </>

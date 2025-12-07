@@ -11,6 +11,7 @@ import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { Users, Vote, Coins, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, TrendingUp, Shield, Code, Terminal, BookOpen, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -665,8 +666,14 @@ export default function DAOsAlternativeEconomiesPage() {
               </div>
             </div>
           </section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Stay Updated on DAOs"
+            description="Get notified about DAO governance updates, treasury innovations, and community initiatives."
+          />
         </motion.div>
       </BackgroundWrapper>
     </>
   )
-} 
+}

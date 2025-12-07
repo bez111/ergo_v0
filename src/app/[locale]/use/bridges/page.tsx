@@ -11,6 +11,7 @@ import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { Link2, Shield, Zap, ExternalLink, ArrowRight, Lock, CheckCircle, Layers, Globe, Network, Code, Terminal, BookOpen, ChevronDown } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
@@ -671,8 +672,14 @@ export default function CrossChainBridgesPage() {
               </div>
             </div>
           </section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Stay Updated on Cross-Chain Bridges"
+            description="Get notified about new bridge integrations, security updates, and cross-chain opportunities."
+          />
         </motion.div>
       </BackgroundWrapper>
     </>
   )
-} 
+}

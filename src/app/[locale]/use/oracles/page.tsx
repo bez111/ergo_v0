@@ -16,6 +16,7 @@ import { useState } from "react"
 import React from "react"
 import { useTranslations } from "next-intl"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import OracleComparisonTable from "@/components/oracle-comparison-table"
 
 const containerVariants = {
@@ -709,9 +710,15 @@ export default function OraclesDataFeedsPage() {
               </div>
             </div>
           </section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Stay Updated on Oracle Pools"
+            description="Get notified about oracle updates, data feed improvements, and DeFi integrations."
+          />
         </motion.div>
         </div>
       </BackgroundWrapper>
     </>
   )
-} 
+}

@@ -6,8 +6,8 @@ const origin = siteConfig.siteUrl
 const url = `${origin}/blog/nipopows-explained`
 
 export function generateMetadata(): Metadata {
-  const title = "How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo"
-  const description = "Learn how Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) enable lightweight blockchain verification, stateless clients, and trustless cross-chain bridges on Ergo."
+  const title = "NiPoPoWs: Trustless Light Clients & Bridges on Ergo"
+  const description = "Learn how NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) enable lightweight blockchain verification, stateless clients, and trustless cross-chain bridges on Ergo."
   
   return {
     title,
@@ -20,7 +20,7 @@ export function generateMetadata(): Metadata {
       title,
       description,
       images: [{ 
-        url: `${origin}/og/blog-default.svg`, 
+        url: `${origin}/og/nipopows-explained.png`, 
         width: 1200, 
         height: 630,
         alt: "How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo"
@@ -63,9 +63,9 @@ export default function NiPoPoWsExplainedPage() {
     "@context": "https://schema.org",
     "@type": "TechArticle",
     "@id": `${url}#article`,
-    headline: "How NiPoPoWs Enable Trustless Light Clients And Cross-Chain Bridges On Ergo",
-    description: "Learn how Non-Interactive Proofs of Proof-of-Work (NiPoPoWs) enable lightweight blockchain verification, stateless clients, and trustless cross-chain bridges on Ergo.",
-    image: `${origin}/og/blog-default.svg`,
+    headline: "NiPoPoWs: Trustless Light Clients & Bridges on Ergo",
+    description: "Learn how NiPoPoWs (Non-Interactive Proofs of Proof-of-Work) enable lightweight blockchain verification, stateless clients, and trustless cross-chain bridges on Ergo.",
+    image: `${origin}/og/nipopows-explained.png`,
     datePublished: "2024-01-15T00:00:00Z",
     dateModified: new Date().toISOString(),
     author: {
@@ -141,6 +141,30 @@ export default function NiPoPoWsExplainedPage() {
         acceptedAnswer: {
           "@type": "Answer",
           text: "NiPoPoWs enable trustless light clients, cross-chain bridges, mobile wallets, IoT applications, and any scenario where you need to verify blockchain state without full node requirements."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "How do NiPoPoWs enable cross-chain bridges?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "NiPoPoWs allow one blockchain to verify events on another without trusting intermediaries. A smart contract on Chain B can verify a transaction happened on Ergo by checking a compact NiPoPoW proof, enabling trustless asset transfers."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "What are superblocks in NiPoPoWs?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Superblocks are rare blocks with unusually high proof-of-work difficulty. They form a 'spine' of the blockchain that can be verified quickly. The probability of finding superblocks follows a geometric distribution, enabling logarithmic proof sizes."
+        }
+      },
+      {
+        "@type": "Question",
+        name: "Can NiPoPoWs work with Bitcoin?",
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: "Bitcoin's block headers don't natively support NiPoPoWs. Ergo was designed from the start with NiPoPoW-friendly headers, making it one of the few PoW chains with native support for these proofs."
         }
       }
     ]

@@ -4,7 +4,6 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
-
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { FinalCTASimple } from "@/components/home/final-cta-simple"
@@ -14,6 +13,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
+import { StickyTOC } from "@/components/blog/sticky-toc"
 import { StorageRentTimeline } from "@/components/diagrams/storage-rent-timeline"
 import { 
   Database,
@@ -96,12 +96,14 @@ export function StorageRentArticleClient() {
     { label: "How Storage Rent Reduces State Bloat", href: "#reduces-bloat" },
     { label: "Why It Matters For Decentralization", href: "#why-it-matters" },
     { label: "Conclusion", href: "#conclusion" },
-    { label: "Frequently Asked Questions", href: "#faq" },
-    { label: "Essential Documents", href: "#documents" }
+    { label: "Frequently Asked Questions", href: "#faq" }
   ]
 
   return (
     <BackgroundWrapper>
+      {/* Sticky TOC for wide screens */}
+      <StickyTOC items={articleContents} />
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
@@ -174,12 +176,12 @@ export function StorageRentArticleClient() {
                  </div>
                </motion.section>
 
-               {/* Article Contents */}
+               {/* Article Contents - Hidden on 2xl where sticky TOC shows */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mb-12"
+            className="mb-12 2xl:hidden"
           >
             <Card className="bg-black/80 border border-orange-500/20 rounded-2xl">
               <CardHeader className="pb-4">
@@ -443,6 +445,7 @@ export function StorageRentArticleClient() {
                  </motion.article>
 
                  {/* FAQ */}
+                 {/* FAQ */}
                  <motion.section
                    initial={{ opacity: 0, y: 20 }}
                    animate={{ opacity: 1, y: 0 }}
@@ -451,7 +454,7 @@ export function StorageRentArticleClient() {
                    id="faq"
                  >
                    <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-                     ❓ Frequently Asked Questions
+                     Frequently Asked Questions
                    </h2>
                    <div className="space-y-4">
                      {faqItems.map((faq, index) => (
@@ -477,80 +480,6 @@ export function StorageRentArticleClient() {
                          </Collapsible>
                        </Card>
                      ))}
-                   </div>
-                 </motion.section>
-
-                 {/* Essential Documents - Storage Rent specific */}
-                 <motion.section
-                   initial={{ opacity: 0, y: 20 }}
-                   animate={{ opacity: 1, y: 0 }}
-                   transition={{ duration: 0.6, delay: 1.2 }}
-                   className="mb-16"
-                   id="documents"
-                 >
-                   <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-                     📚 Essential Storage Rent Documents
-                   </h2>
-                   <p className="text-gray-300 mb-8">Dive deeper into Ergo's storage rent mechanism and blockchain sustainability.</p>
-
-                   <div className="grid gap-4">
-                     <a href="/api/pdf/documents/Ergo- A Resilient Platform For Contractual Money.pdf" target="_blank" rel="noopener noreferrer" className="group">
-                       <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                         <CardContent className="p-6">
-                           <div className="flex items-start justify-between gap-4">
-                             <div className="flex items-start gap-4">
-                               <div className="w-12 h-12 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center shrink-0">
-                                 <CheckCircle className="w-6 h-6 text-orange-400" />
-                               </div>
-                               <div>
-                                 <h3 className="text-white font-semibold text-lg mb-2">Ergo Platform Whitepaper</h3>
-                                 <p className="text-gray-400 text-sm">Core storage rent mechanism, demurrage economics, and sustainability design.</p>
-                               </div>
-                             </div>
-                             <div className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors shrink-0">→</div>
-                           </div>
-                         </CardContent>
-                       </Card>
-                     </a>
-
-                     <a href="/doc/mining/rent" className="group">
-                       <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-blue-400/40 transition-all duration-300">
-                         <CardContent className="p-6">
-                           <div className="flex items-start justify-between gap-4">
-                             <div className="flex items-start gap-4">
-                               <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
-                                 <Code className="w-6 h-6 text-blue-400" />
-                               </div>
-                               <div>
-                                 <h3 className="text-white font-semibold text-lg mb-2">Storage Rent Implementation</h3>
-                                 <p className="text-gray-400 text-sm">Technical details on how storage rent works in practice for miners and users.</p>
-                               </div>
-                             </div>
-                             <div className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors shrink-0">→</div>
-                           </div>
-                         </CardContent>
-                       </Card>
-                     </a>
-
-                     <a href="/doc/introduction/sustainability" className="group">
-                       <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-green-400/40 transition-all duration-300">
-                         <CardContent className="p-6">
-                           <div className="flex items-start justify-between gap-4">
-                             <div className="flex items-start gap-4">
-                               <div className="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center shrink-0">
-                                 <Eye className="w-6 h-6 text-green-400" />
-                               </div>
-                               <div>
-                                 <h3 className="text-white font-semibold text-lg mb-2">Blockchain Sustainability Guide</h3>
-                                 <p className="text-gray-400 text-sm">Understanding long-term blockchain health and decentralization principles.</p>
-                               </div>
-                             </div>
-                             <div className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors shrink-0">→</div>
-                           </div>
-                         </CardContent>
-                       </Card>
-                     </a>
-
                    </div>
                  </motion.section>
 

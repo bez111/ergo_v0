@@ -1,35 +1,44 @@
-import type { Metadata } from 'next'
-import { SchemaTypes } from '@/lib/schema-ultimate'
-import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
+import { Metadata } from "next"
 
 export const metadata: Metadata = {
-  title: 'Adaptive Emission & Governance - Sustainable Economics | Ergo',
-  description: 'Consensus-driven tuning of economic parameters with miner voting and community input. Learn how Ergo ensures long-term sustainability through adaptive emission and storage rent.',
-  keywords: ['adaptive emission', 'blockchain governance', 'miner voting', 'economic parameters', 'sustainable blockchain', 'storage rent', 'ergo governance', 'emission schedule', 'consensus mechanism', 'economic sustainability'],
+  title: "Adaptive Emission: Governance & Economics | Ergo",
+  description: "Community-governed monetary policy on Ergo. Miner voting adjusts emission, storage rent ensures perpetual sustainability.",
+  keywords: [
+    "adaptive emission",
+    "Ergo tokenomics",
+    "miner governance",
+    "emission schedule",
+    "cryptocurrency governance",
+    "EIP-27",
+    "soft fork voting",
+    "monetary policy",
+    "sustainable blockchain",
+    "re-emission"
+  ],
   alternates: {
-    canonical: 'https://ergoblockchain.org/technology/adaptive-emission'
+    canonical: "https://ergoblockchain.org/technology/adaptive-emission"
   },
   openGraph: {
-    title: 'Adaptive Emission & Governance - Ergo Economics',
-    description: 'Sustainable blockchain economics through consensus-driven parameter tuning and community governance.',
-    url: 'https://ergoblockchain.org/technology/adaptive-emission',
-    siteName: 'Ergo Platform',
+    title: "Adaptive Emission - Governance & Economics on Ergo",
+    description: "Community-governed monetary policy. Miners vote on emission, storage rent ensures sustainability.",
+    url: "https://ergoblockchain.org/technology/adaptive-emission",
+    siteName: "Ergo Platform",
     images: [{
-      url: 'https://ergoblockchain.org/og/adaptive-emission.png',
+      url: "https://ergoblockchain.org/og/technology-1200x630.png",
       width: 1200,
       height: 630,
-      alt: 'Ergo Adaptive Emission & Governance'
+      alt: "Ergo Adaptive Emission"
     }],
-    type: 'article',
-    locale: 'en_US'
+    type: "article",
+    locale: "en_US"
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Adaptive Emission & Governance',
-    description: 'Emission ends 2057, 4.43% storage fee, 90% miner consensus. Sustainable blockchain economics.',
-    images: ['https://ergoblockchain.org/og/adaptive-emission.png'],
-    creator: '@ergoplatform',
-    site: '@ergoplatform'
+    card: "summary_large_image",
+    title: "Adaptive Emission - Governance | Ergo",
+    description: "Community-governed monetary policy. Miners vote, storage rent sustains.",
+    images: ["https://ergoblockchain.org/og/technology-1200x630.png"],
+    creator: "@ergoplatform",
+    site: "@ergoplatform"
   },
   robots: {
     index: true,
@@ -37,84 +46,50 @@ export const metadata: Metadata = {
     googleBot: {
       index: true,
       follow: true,
-      'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1
+      "max-image-preview": "large",
+      "max-snippet": -1
     }
   }
 }
 
 export default function AdaptiveEmissionLayout({ children }: { children: React.ReactNode }) {
   const techArticleSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: 'Adaptive Emission & Governance: Sustainable Blockchain Economics',
-    description: 'How Ergo implements adaptive emission schedules and governance mechanisms for long-term sustainability',
-    datePublished: '2024-01-01',
-    dateModified: '2024-12-15',
-    author: { '@type': 'Organization', name: 'Ergo Platform' },
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "@id": "https://ergoblockchain.org/technology/adaptive-emission",
+    headline: "Adaptive Emission: Ergo's Governance-Driven Economics",
+    description: "How Ergo's emission schedule adapts through miner governance for long-term sustainability",
+    image: "https://ergoblockchain.org/og/technology-1200x630.png",
+    datePublished: "2023-01-15",
+    dateModified: new Date().toISOString().split('T')[0],
+    author: {
+      "@type": "Organization",
+      name: "Ergo Platform",
+      url: "https://ergoblockchain.org"
+    },
     publisher: {
-      '@type': 'Organization',
-      name: 'Ergo Platform',
+      "@type": "Organization",
+      name: "Ergo Platform",
+      url: "https://ergoblockchain.org",
       logo: {
-        '@type': 'ImageObject',
-        url: 'https://ergoblockchain.org/logo.png'
+        "@type": "ImageObject",
+        url: "https://ergoblockchain.org/favicon.ico"
       }
     },
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': 'https://ergoblockchain.org/technology/adaptive-emission'
-    }
+    mainEntityOfPage: "https://ergoblockchain.org/technology/adaptive-emission",
+    about: [
+      { "@type": "Thing", name: "Cryptocurrency economics" },
+      { "@type": "Thing", name: "Blockchain governance" },
+      { "@type": "Thing", name: "Token emission" }
+    ],
+    proficiencyLevel: "Intermediate",
+    technicalAudience: "Economists and governance researchers"
   }
-  
-  const faqSchema = SchemaTypes.FAQSchema([
-    {
-      question: "What is adaptive emission?",
-      answer: "Adaptive emission allows economic parameters like block rewards and fees to be adjusted based on network conditions through miner voting, ensuring long-term sustainability without hard forks."
-    },
-    {
-      question: "When does Ergo emission end?",
-      answer: "Ergo's emission is scheduled to end around 2057, after which network security will be maintained through storage rent fees and transaction fees."
-    },
-    {
-      question: "How does miner voting work?",
-      answer: "Miners vote on parameter changes by including preferences in block headers over 1024 epochs (about 32 days). Changes require 90% consensus to activate."
-    },
-    {
-      question: "What is storage rent?",
-      answer: "Storage rent is a fee charged on UTXOs unspent for 4+ years, preventing state bloat and providing sustainable miner revenue after emission ends."
-    },
-    {
-      question: "Can the maximum supply be changed?",
-      answer: "No, core consensus rules like the 97.7M ERG maximum supply cap are immutable. Only certain economic parameters can be adjusted through governance."
-    }
-  ])
-  
-  const knowledgeGraph = generateKnowledgeGraph('technology')
-  
-  const governanceSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'GovernmentService',
-    name: 'Ergo Blockchain Governance',
-    description: 'Decentralized governance through miner voting and community consensus',
-    serviceType: 'Blockchain Governance',
-    provider: {
-      '@type': 'Organization',
-      name: 'Ergo Network Miners'
-    },
-    areaServed: {
-      '@type': 'Place',
-      name: 'Global'
-    }
-  }
-  
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(governanceSchema) }} />
       {children}
     </>
   )
-} 
+}

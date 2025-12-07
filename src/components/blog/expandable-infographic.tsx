@@ -3,19 +3,71 @@
 import { useState, useCallback, useEffect } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { X, ZoomIn } from "lucide-react"
+import { X, ZoomIn, Share2, Send, Download, Copy } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 interface ExpandableInfographicProps {
   src: string
   alt: string
+  title?: string
   className?: string
 }
 
-export function ExpandableInfographic({ src, alt, className = "" }: ExpandableInfographicProps) {
+export function ExpandableInfographic({ src, alt, title, className = "" }: ExpandableInfographicProps) {
   const [isOpen, setIsOpen] = useState(false)
+  const [copied, setCopied] = useState(false)
+  const [shareUrl, setShareUrl] = useState("")
+  const [isMounted, setIsMounted] = useState(false)
 
   const openModal = useCallback(() => setIsOpen(true), [])
   const closeModal = useCallback(() => setIsOpen(false), [])
+
+  useEffect(() => {
+    setIsMounted(true)
+    if (typeof window !== "undefined") {
+      setShareUrl(window.location.href)
+    }
+  }, [])
+
+  const openSharePopup = (url: string) => {
+    window.open(url, "share", "width=600,height=400,menubar=no,toolbar=no")
+  }
+
+  const handleCopyLink = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch {
+      const textarea = document.createElement("textarea")
+      textarea.value = shareUrl
+      document.body.appendChild(textarea)
+      textarea.select()
+      document.execCommand("copy")
+      document.body.removeChild(textarea)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    }
+  }
+
+  const handleDownload = () => {
+    const link = document.createElement("a")
+    link.href = src
+    const filename = title 
+      ? `${title.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase()}.png`
+      : src.split("/").pop() || "infographic.png"
+    link.download = filename
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
+  const getFullImageUrl = () => {
+    if (typeof window === "undefined") return src
+    return src.startsWith("http") ? src : `${window.location.origin}${src}`
+  }
+
+  const shareTitle = title || alt
 
   // Close on Escape key
   useEffect(() => {
@@ -56,6 +108,84 @@ export function ExpandableInfographic({ src, alt, className = "" }: ExpandableIn
           </div>
         </div>
       </button>
+
+      {/* Share Bar */}
+      {isMounted && (
+        <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm text-neutral-400 text-center sm:text-left">
+            Share this infographic — help others discover Ergo
+          </p>
+          <div className="flex flex-wrap justify-center gap-2">
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+              onClick={() =>
+                openSharePopup(
+                  `https://twitter.com/intent/tweet?text=${encodeURIComponent(`${shareTitle}\n${shareUrl}\n@BuildOnErgo $ERG`)}`
+                )
+              }
+            >
+              <Share2 className="h-3.5 w-3.5" />
+              <span>X</span>
+            </Button>
+
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+              onClick={() =>
+                openSharePopup(
+                  `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}`
+                )
+              }
+            >
+              <Send className="h-3.5 w-3.5" />
+              <span>Telegram</span>
+            </Button>
+
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+              onClick={() => {
+                const imageUrl = getFullImageUrl()
+                openSharePopup(
+                  `https://pinterest.com/pin/create/button/?url=${encodeURIComponent(shareUrl)}&media=${encodeURIComponent(imageUrl)}&description=${encodeURIComponent(shareTitle)}`
+                )
+              }}
+            >
+              <Share2 className="h-3.5 w-3.5" />
+              <span>Pinterest</span>
+            </Button>
+
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+              onClick={handleDownload}
+            >
+              <Download className="h-3.5 w-3.5" />
+              <span>Download</span>
+            </Button>
+
+            <Button
+              type="button"
+              variant="outline"
+              size="sm"
+              className="border-white/10 bg-black/60 text-xs hover:bg-white/10 hover:border-orange-500/50"
+              onClick={handleCopyLink}
+            >
+              <Copy className="h-3.5 w-3.5" />
+              <span>{copied ? "Copied!" : "Copy link"}</span>
+            </Button>
+          </div>
+        </div>
+      )}
 
       {/* Fullscreen Modal */}
       <AnimatePresence>

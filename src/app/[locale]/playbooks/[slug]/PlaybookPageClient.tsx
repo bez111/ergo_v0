@@ -41,6 +41,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { GlossaryRichText } from "@/components/glossary";
+import { FinalCTASimple } from "@/components/home/final-cta-simple";
 
 interface Props {
   playbook: Playbook;
@@ -706,6 +707,12 @@ export function PlaybookPageClient({ playbook }: Props) {
               </Card>
             </div>
           </motion.section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title={`Master ${playbook.title}`}
+            description="Get weekly playbooks, tutorials, and actionable Ergo guides delivered to your inbox."
+          />
         </div>
       </div>
     </BackgroundWrapper>

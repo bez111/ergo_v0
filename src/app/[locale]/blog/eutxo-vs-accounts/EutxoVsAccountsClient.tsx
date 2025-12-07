@@ -11,6 +11,7 @@ import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
+import { StickyTOC } from "@/components/blog/sticky-toc"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -25,6 +26,7 @@ import {
   Coins,
   CheckCircle,
 } from "lucide-react"
+import Link from "next/link"
 
 export function EutxoVsAccountsClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
@@ -95,6 +97,9 @@ export function EutxoVsAccountsClient() {
 
   return (
     <BackgroundWrapper>
+      {/* Sticky TOC for wide screens */}
+      <StickyTOC items={articleContents} />
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           
@@ -183,12 +188,12 @@ export function EutxoVsAccountsClient() {
             </div>
           </motion.section>
 
-          {/* Table of Contents */}
+          {/* Table of Contents - Hidden on 2xl where sticky TOC shows */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mb-12"
+            className="mb-12 2xl:hidden"
           >
             <Card className="bg-black/80 border border-orange-500/20 rounded-2xl">
               <CardHeader className="pb-4">
@@ -236,7 +241,7 @@ export function EutxoVsAccountsClient() {
                   Blockchains come in all different forms, and use different approaches to record transactions and update state trustlessly. The specific transaction model can have far-reaching implications for the way the blockchain operates, its reliability, and risk factors.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  Two of the most influential blockchain architectures are Ergo's <strong className="text-white">eUTXO model</strong> and Ethereum's <strong className="text-white">account model</strong>. These represent fundamentally different ways of managing transactions and smart contracts. Understanding their differences helps explain why and how Ergo takes a distinctive approach to scalability, security, and decentralized finance.
+                  Two of the most influential blockchain architectures are Ergo's <Link href="/technology/eutxo-model" className="text-orange-400 hover:underline font-bold">eUTXO model</Link> and Ethereum's <strong className="text-white">account model</strong>. These represent fundamentally different ways of managing transactions and smart contracts. Understanding their differences helps explain why and how Ergo takes a distinctive approach to scalability, security, and decentralized finance.
                 </p>
                 <div className="bg-black border border-orange-500/30 rounded-2xl p-6">
                   <p className="text-orange-100 leading-relaxed">
@@ -359,7 +364,7 @@ export function EutxoVsAccountsClient() {
                 </p>
               </div>
               <p className="text-gray-300 leading-relaxed">
-                That's why Ergo's eUTXO model has such significant benefits for security, scalability, and auditability. It also works seamlessly with Ergo's Sigma protocols and privacy features.
+                That's why Ergo's eUTXO model has such significant benefits for security, scalability, and auditability. It also works seamlessly with Ergo's <Link href="/technology/privacy-features" className="text-orange-400 hover:underline">Sigma protocols and privacy features</Link>.
               </p>
             </div>
           </motion.section>
@@ -455,7 +460,7 @@ export function EutxoVsAccountsClient() {
             id="faq"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-              ❓ Frequently Asked Questions
+              Frequently Asked Questions
             </h2>
             <div className="space-y-4">
               {faqItems.map((faq, index) => (
@@ -485,80 +490,7 @@ export function EutxoVsAccountsClient() {
           </motion.section>
 
 
-          {/* Essential Documents - eUTXO specific */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="mb-16"
-          >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-              📚 Essential eUTXO Documents
-            </h2>
-            <p className="text-gray-300 mb-8">Dive deeper into Ergo's eUTXO model and development resources.</p>
-
-            <div className="grid gap-4">
-              <a href="/api/pdf/documents/Ergo- A Resilient Platform For Contractual Money.pdf" target="_blank" rel="noopener noreferrer" className="group">
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center shrink-0">
-                          <CheckCircle className="w-6 h-6 text-orange-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">Ergo Platform Whitepaper</h3>
-                          <p className="text-gray-400 text-sm">Core eUTXO architecture, transaction model, and smart contract design.</p>
-                        </div>
-                      </div>
-                      <div className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors shrink-0">→</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
-
-              <a href="/api/pdf/documents/Multi-Stage Contracts in the UTXO Model.pdf" target="_blank" rel="noopener noreferrer" className="group">
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-blue-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
-                          <Code className="w-6 h-6 text-blue-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">Multi-Stage Contracts in UTXO</h3>
-                          <p className="text-gray-400 text-sm">Advanced patterns for complex dApps using the eUTXO model.</p>
-                        </div>
-                      </div>
-                      <div className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors shrink-0">→</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
-
-              <a href="/docs/introduction/eutxo" className="group">
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-green-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center shrink-0">
-                          <Eye className="w-6 h-6 text-green-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">eUTXO Model Documentation</h3>
-                          <p className="text-gray-400 text-sm">Complete guide to understanding and working with eUTXO.</p>
-                        </div>
-                      </div>
-                      <div className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors shrink-0">→</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
-
-            </div>
-          </motion.section>
-
-          {/* 1. Share this post */}
+          {/* Share this post */}
           <ShareCTA
             title="Two Blockchain Models: Why Ergo Chose Differently"
             url="https://ergoblockchain.org/blog/eutxo-vs-accounts"

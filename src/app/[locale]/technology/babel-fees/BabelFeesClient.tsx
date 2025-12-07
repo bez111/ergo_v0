@@ -24,7 +24,7 @@ import {
   ArrowRight,
 } from "lucide-react"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
-import { RelatedTechnologies } from "@/components/technology"
+import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 const EIP31_URL = "https://github.com/ergoplatform/eips/blob/master/eip-0031.md"
 
@@ -579,31 +579,11 @@ export default function BabelFeesClient() {
           title="Related Technologies"
         />
 
-        {/* Call to Action */}
-        <section className="py-16 px-4">
-          <div className="max-w-4xl mx-auto text-center">
-            <Card className="bg-black border border-neutral-700 rounded-xl p-12">
-              <h2 className="text-3xl font-bold mb-6 text-white">Ready to Experience Babel Fees?</h2>
-              <p className="text-xl text-neutral-300 mb-8">
-                Explore wallets and dApps that support this revolutionary fee payment system
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold">
-                  <Link href="/use/get-erg">
-                    <Wallet className="w-5 h-5 mr-2" />
-                    Explore Wallets
-                  </Link>
-                </Button>
-                <Button asChild variant="outline" className="border-neutral-700 text-neutral-200 hover:bg-neutral-900/60">
-                  <Link href={EIP31_URL} target="_blank">
-                    <ExternalLink className="w-5 h-5 mr-2" />
-                    Learn More
-                  </Link>
-                </Button>
-              </div>
-            </Card>
-          </div>
-        </section>
+        {/* Related Blog Articles - lightweight */}
+        <RelatedBlogPostsForTechnology currentSlug="babel-fees" />
+
+        {/* What's Next - CTA Section */}
+        <WhatsNextCTA currentSlug="babel-fees" />
       </div>
     </BackgroundWrapper>
   )

@@ -1,8 +1,35 @@
 import type { Metadata } from "next"
 import LearnClient from "./LearnClient"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
+import { FAQSchema } from '@/components/seo/faq-schema'
+import { SchemaTypes } from '@/lib/schema-ultimate'
+import { siteConfig } from '@/config/site-config'
 
 const learnUrl = "https://ergoblockchain.org/learn"
+
+// FAQ data for learn page
+const learnFAQ = [
+  {
+    question: "How do I start learning Ergo development?",
+    answer: "Start with the Foundations track to understand eUTXO and ErgoScript basics. Then move to hands-on tutorials in the Developers track. Join the Discord developer channel for support and explore example contracts on GitHub."
+  },
+  {
+    question: "What prerequisites do I need for ErgoScript?",
+    answer: "Basic programming knowledge is helpful. Familiarity with functional programming concepts (like Scala or Haskell) makes ErgoScript easier, but it's not required. Understanding of blockchain concepts (UTXOs, transactions, addresses) is beneficial."
+  },
+  {
+    question: "How long does it take to learn ErgoScript?",
+    answer: "Basic ErgoScript takes 2-4 weeks with consistent practice. Building production dApps typically takes 2-3 months. The eUTXO model has a learning curve, but once understood, development becomes faster and safer than account-based chains."
+  },
+  {
+    question: "Are there Ergo development courses?",
+    answer: "Yes! The Learn hub offers structured paths: Foundations (basics), Developers (hands-on), Privacy (Sigma Protocols), and Research (advanced). Community members also create tutorials on YouTube and the Ergo blog."
+  },
+  {
+    question: "Where can I find Ergo code examples?",
+    answer: "Explore the Patterns section for reusable contract patterns, check GitHub repos of ecosystem projects, read technical blog articles, and browse the Ergo docs for code snippets. The /patterns page has copy-paste blueprints."
+  }
+]
 
 export async function generateMetadata(): Promise<Metadata> {
   const title = "Learn Ergo Development — ErgoScript Tutorials & Smart Contracts"
@@ -137,11 +164,39 @@ export default function LearnPage() {
 
   const knowledgeGraph = generateKnowledgeGraph("learn")
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: siteConfig.siteUrl
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Learn",
+        item: learnUrl
+      }
+    ]
+  }
+
+  const speakableSchema = SchemaTypes.SpeakableSchema({
+    headline: "Learn Ergo Development",
+    summary: "Master ErgoScript programming, eUTXO smart contracts, and Sigma protocols. Hands-on tutorials, structured learning paths, and expert mentorship.",
+    url: learnUrl
+  })
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(courseSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourcesSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      <FAQSchema faqs={learnFAQ} pageUrl={learnUrl} />
       <LearnClient />
     </>
   )

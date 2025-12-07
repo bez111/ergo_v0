@@ -17,6 +17,7 @@ import { SchemaOrg } from "@/components/seo/schema-org"
 import { useTranslations } from "next-intl"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
 
 // Metadata is defined in this route's layout.tsx (server-only)
@@ -769,6 +770,12 @@ export default function ComparisonClient() {
               </div>
             </div>
           </section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Stay Updated"
+            description="Get the latest Ergo news, technical comparisons, and ecosystem updates delivered to your inbox."
+          />
 
         </PageTransition>
       </div>

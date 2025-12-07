@@ -16,7 +16,7 @@ import { useState } from "react"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
-import { RelatedTechnologies, WhatsNextCTA } from "@/components/technology"
+import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
 export default function SecurePowPage() {
   const t = useTranslations("technology.securePow")
@@ -553,6 +553,9 @@ export default function SecurePowPage() {
             currentSlug="secure-pow"
             title="Related Technologies"
           />
+
+          {/* Related Blog Articles - lightweight */}
+          <RelatedBlogPostsForTechnology currentSlug="secure-pow" />
 
           {/* What's Next - CTA Section */}
           <WhatsNextCTA currentSlug="secure-pow" />

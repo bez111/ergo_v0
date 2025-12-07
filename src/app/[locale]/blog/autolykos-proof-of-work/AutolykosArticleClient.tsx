@@ -14,6 +14,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
+import { StickyTOC } from "@/components/blog/sticky-toc"
 
 import {
   Cpu,
@@ -25,6 +26,7 @@ import {
   Network,
   Activity,
 } from "lucide-react"
+import Link from "next/link"
 
 export default function AutolykosArticleClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
@@ -58,7 +60,7 @@ export default function AutolykosArticleClient() {
       icon: Shield,
       title: "Robust Chain Security",
       description:
-        "Memory-hard constraints raise the cost of 51% and reorg attacks, aligning with Ergo’s eUTXO sustainability goals and stateless, lightweight verification.",
+        "Memory-hard constraints raise the cost of 51% and reorg attacks, aligning with Ergo's eUTXO sustainability goals and stateless, lightweight verification.",
     },
   ]
 
@@ -99,11 +101,13 @@ export default function AutolykosArticleClient() {
     { label: "Autolykos & Security", href: "#security" },
     { label: "Conclusion", href: "#conclusion" },
     { label: "Frequently Asked Questions", href: "#faq" },
-    { label: "Essential Documents", href: "#documents" },
   ]
 
   return (
     <BackgroundWrapper>
+      {/* Sticky TOC for wide screens */}
+      <StickyTOC items={articleContents} />
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
@@ -136,7 +140,7 @@ export default function AutolykosArticleClient() {
 
             <div className="flex items-center justify-between flex-wrap gap-4">
               <ShareInline
-                title="Autolykos Proof-of-Work: Why Ergo’s Mining Algorithm Is Sustainable"
+                title="Autolykos Proof-of-Work: Why Ergo's Mining Algorithm Is Sustainable"
                 url="https://ergoblockchain.org/blog/autolykos-proof-of-work"
                 utm="?utm_source=share_hero"
               />
@@ -175,12 +179,12 @@ export default function AutolykosArticleClient() {
             </div>
           </motion.section>
 
-          {/* Contents */}
+          {/* Contents - Hidden on 2xl where sticky TOC shows */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mb-12"
+            className="mb-12 2xl:hidden"
           >
             <Card className="bg-black/80 border border-orange-500/20 rounded-2xl">
               <CardHeader className="pb-4">
@@ -223,7 +227,7 @@ export default function AutolykosArticleClient() {
               </div>
 
               <p className="text-gray-300 leading-relaxed mb-4">
-                Proof-of-work (PoW) cryptocurrencies rely on miners, who carry out large numbers of
+                <Link href="/technology/secure-pow" className="text-orange-400 hover:underline">Proof-of-work (PoW)</Link> cryptocurrencies rely on miners, who carry out large numbers of
                 computationally-intensive calculations to secure the network and maintain the integrity of
                 the decentralized ledger.
               </p>
@@ -448,7 +452,7 @@ export default function AutolykosArticleClient() {
                   <p className="text-blue-100 leading-relaxed">
                     Each Autolykos block can be checked independently using the block header, the nonce, and
                     the network Difficulty. The node doesn't have to reproduce the entire memory-hard mining
-                    process to know that a block is valid. This fits naturally with Ergo's eUTXO model,
+                    process to know that a block is valid. This fits naturally with Ergo's <Link href="/technology/eutxo-model" className="text-orange-400 hover:underline">eUTXO model</Link>,
                     where each box carries its own state and validation rules. Because boxes are
                     self-contained, verification remains lightweight and deterministic.
                   </p>
@@ -500,7 +504,7 @@ export default function AutolykosArticleClient() {
             className="mb-16"
             id="faq"
           >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">❓ Frequently Asked Questions</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">Frequently Asked Questions</h2>
             <div className="space-y-4">
               {faqItems.map((faq, index) => (
                 <Card key={index} className="bg-black border border-white/10 rounded-2xl">
@@ -528,76 +532,6 @@ export default function AutolykosArticleClient() {
                   </Collapsible>
                 </Card>
               ))}
-            </div>
-          </motion.section>
-
-          {/* Essential Documents */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="mb-16"
-            id="documents"
-          >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-              📚 Essential Autolykos & Mining Documents
-            </h2>
-            <p className="text-gray-300 mb-8">
-              Learn more about Autolykos, Ergo’s PoW design, and how GPU mining Ergo supports sustainable
-              decentralisation.
-            </p>
-            <div className="grid gap-4">
-              <a href="/doc/mining/autolykos" className="group">
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-blue-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
-                          <Cpu className="w-6 h-6 text-blue-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">
-                            Autolykos Mining Specification
-                          </h3>
-                          <p className="text-gray-400 text-sm">
-                            Technical details of the Autolykos algorithm, memory layout, and miner
-                            implementation guidance.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors shrink-0">
-                        →
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
-
-              <a href="/doc/introduction/mining" className="group">
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-green-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center shrink-0">
-                          <Leaf className="w-6 h-6 text-green-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">
-                            Ergo Mining & Sustainability Guide
-                          </h3>
-                          <p className="text-gray-400 text-sm">
-                            Background on ASIC-resistant mining, sustainable PoW, and the role of Autolykos in
-                            eUTXO sustainability.
-                          </p>
-                        </div>
-                      </div>
-                      <div className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors shrink-0">
-                        →
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
             </div>
           </motion.section>
 

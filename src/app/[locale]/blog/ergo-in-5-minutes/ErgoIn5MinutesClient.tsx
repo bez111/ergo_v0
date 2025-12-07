@@ -18,6 +18,7 @@ import { ErgoScriptExamples } from "@/components/code/ergoscript-examples"
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
+import { StickyTOC } from "@/components/blog/sticky-toc"
 import { 
   ChevronDown,
   Shield,
@@ -41,32 +42,27 @@ export function ErgoIn5MinutesClient() {
     {
       icon: CheckCircle,
       title: "Fair launch",
-      description: "no ICO, no pre-mine, PoW only. Decentralized from day one.",
-      link: "/start/introduction"
+      description: "no ICO, no pre-mine, PoW only. Decentralized from day one."
     },
     {
       icon: Code,
       title: "eUTXO + ErgoScript",
-      description: "Deterministic contracts with explicit state encoded in boxes (UTXOs) — no shared global state, fewer side effects, natural parallelism.",
-      link: "/docs/introduction/eutxo"
+      description: "Deterministic contracts with explicit state encoded in boxes (UTXOs) — no shared global state, fewer side effects, natural parallelism."
     },
     {
       icon: Eye,
       title: "Sigma protocols",
-      description: "Native zero-knowledge proofs with composable logic (AND/OR, ring, threshold) enabling confidential yet auditable flows and selective disclosure.",
-      link: "/docs/introduction/privacy"
+      description: "Native zero-knowledge proofs with composable logic (AND/OR, ring, threshold) enabling confidential yet auditable flows and selective disclosure."
     },
     {
       icon: Zap,
       title: "Autolykos (PoW)",
-      description: "Memory-hard, GPU-friendly, and resistant to ASIC dominance.",
-      link: "/docs/introduction/autolykos"
+      description: "Memory-hard, GPU-friendly, and resistant to ASIC dominance."
     },
     {
       icon: Coins,
       title: "Storage Rent",
-      description: "Dormant boxes pay small rent after ~4 years; moving funds resets the clock. Lost ERG are gradually recycled to miners, curbing state bloat and securing the network.",
-      link: "/docs/introduction/storage-rent"
+      description: "Dormant boxes pay small rent after ~4 years; moving funds resets the clock. Lost ERG are gradually recycled to miners, curbing state bloat and securing the network."
     }
   ]
 
@@ -86,8 +82,7 @@ export function ErgoIn5MinutesClient() {
     { label: "Smart Contracts & Privacy", href: "#smart-contracts" },
     { label: "Sustainable Future", href: "#future" },
     { label: "Conclusion", href: "#conclusion" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Essential Documents", href: "#documents" }
+    { label: "FAQ", href: "#faq" }
   ]
 
 
@@ -173,6 +168,9 @@ export function ErgoIn5MinutesClient() {
 
   return (
     <BackgroundWrapper>
+      {/* Sticky TOC for wide screens */}
+      <StickyTOC items={articleContents} />
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
@@ -208,8 +206,6 @@ export function ErgoIn5MinutesClient() {
             </div>
           </motion.div>
 
-          
-
           {/* TL;DR Section - Compact */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
@@ -229,36 +225,34 @@ export function ErgoIn5MinutesClient() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.4, delay: index * 0.05 }}
                 >
-                  <Link href={item.link}>
-                    <Card className="bg-black border border-white/10 rounded-xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300 cursor-pointer">
-                      <CardContent className="p-3">
-                        <div className="flex items-start gap-3">
+                  <Card className="bg-black border border-white/10 rounded-xl">
+                    <CardContent className="p-3">
+                      <div className="flex items-start gap-3">
                         <div className="flex-shrink-0">
-                            <item.icon className="w-5 h-5 text-orange-400" />
+                          <item.icon className="w-5 h-5 text-orange-400" />
                         </div>
                         <div className="flex-1">
-                            <h3 className="text-sm md:text-base font-semibold text-white mb-1">
+                          <h3 className="text-sm md:text-base font-semibold text-white mb-1">
                             {item.title}
                           </h3>
-                            <p className="text-gray-300 text-sm md:text-sm leading-relaxed">
+                          <p className="text-gray-300 text-sm md:text-sm leading-relaxed">
                             {item.description}
                           </p>
-                          </div>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>
-                  </Link>
                 </motion.div>
               ))}
             </div>
           </motion.section>
 
-          {/* Article Contents */}
+          {/* Article Contents - Hidden on 2xl where sticky TOC shows */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
-            className="mb-12"
+            className="mb-12 2xl:hidden"
           >
             <Card className="bg-black/80 border border-orange-500/20 rounded-2xl">
               <CardHeader className="pb-4">
@@ -360,7 +354,7 @@ export function ErgoIn5MinutesClient() {
                   </p>
                   
                   <p className="text-gray-300 leading-relaxed">
-                    Just some of the many projects launched on Ergo include:
+                    Just some of the many projects launched on <Link href="/ecosystem" className="text-orange-400 hover:underline">Ergo's ecosystem</Link> include:
                   </p>
                 </div>
 
@@ -391,7 +385,7 @@ export function ErgoIn5MinutesClient() {
                 {/* Technical Details */}
                 <div id="smart-contracts" className="bg-black border border-white/20 rounded-3xl p-8 space-y-6 scroll-mt-24">
                   <p className="text-gray-300 leading-relaxed">
-                    Ergo's smart contracts are written in <strong className="text-orange-400">ErgoScript</strong>, a language based on Scala, which was formulated specifically to work with the Ergo blockchain's eUTXO model.
+                    Ergo's smart contracts are written in <Link href="/technology/ergoscript" className="text-orange-400 hover:underline font-bold">ErgoScript</Link>, a language based on Scala, which was formulated specifically to work with the Ergo blockchain's <Link href="/technology/eutxo-model" className="text-orange-400 hover:underline">eUTXO model</Link>.
                   </p>
                   
                   <p className="text-gray-300 leading-relaxed">
@@ -457,12 +451,12 @@ export function ErgoIn5MinutesClient() {
                   </p>
                   
                   <p className="text-gray-300 leading-relaxed">
-                    Chief among these has been the nature of Ergo's mining ecosystem. While Ergo is based on proof of work, like Bitcoin, it uses the memory-hard Autolykos algorithm, making it far more ASIC-resistant and energy efficient than Bitcoin. This also ensures greater accessibility, meaning more users can join the network without expensive specialist hardware, ensuring a high and ongoing level of decentralization.
+                    Chief among these has been the nature of Ergo's mining ecosystem. While Ergo is based on <Link href="/technology/secure-pow" className="text-orange-400 hover:underline">proof of work</Link>, like Bitcoin, it uses the memory-hard Autolykos algorithm, making it far more ASIC-resistant and energy efficient than Bitcoin. This also ensures greater accessibility, meaning more users can join the network without expensive specialist hardware, ensuring a high and ongoing level of decentralization.
                   </p>
                   
                   <div className="bg-black border border-green-500/30 rounded-2xl p-6">
                     <p className="text-green-100 leading-relaxed">
-                      <strong className="text-green-400">Storage Rent Innovation:</strong> One of Ergo's most noteworthy features is storage rent. This slowly recycles coins that have not been moved in over four years, bringing lost ERG back into circulation and increasing revenues for miners. This "demurrage" acts as a small tax on dormant accounts, but can easily be avoided by moving coins every few years.
+                      <strong className="text-green-400">Storage Rent Innovation:</strong> One of Ergo's most noteworthy features is <Link href="/technology/storage-rent" className="text-green-400 hover:underline">storage rent</Link>. This slowly recycles coins that have not been moved in over four years, bringing lost ERG back into circulation and increasing revenues for miners. This "demurrage" acts as a small tax on dormant accounts, but can easily be avoided by moving coins every few years.
                     </p>
                   </div>
 
@@ -521,110 +515,7 @@ export function ErgoIn5MinutesClient() {
                 </div>
               </div>
 
-              {/* Essential Documents */}
-              <motion.div
-                id="documents"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.7 }}
-                className="mb-16"
-              >
-                <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-                  Essential Documents
-                </h2>
-                <p className="text-gray-300 mb-8">
-                  Ready to dive deeper? Explore these foundational documents to understand Ergo's technology and vision.
-                </p>
-                
-                <div className="grid gap-4">
-                  <Link
-                    href="/api/pdf/documents/Ergo- A Resilient Platform For Contractual Money.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                  >
-                    <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center shrink-0">
-                              <FileText className="w-6 h-6 text-orange-400" />
-                            </div>
-                            <div>
-                              <h3 className="text-white font-semibold text-lg mb-2">
-                                Ergo Platform Whitepaper
-                              </h3>
-                              <p className="text-gray-400 text-sm">
-                                The foundational document describing Ergo's architecture, eUTXO model, and key innovations.
-                              </p>
-                            </div>
-                          </div>
-                          <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors shrink-0" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-
-                  <Link
-                    href="/api/pdf/documents/ErgoScript, a Cryptocurrency Scripting Language Supporting Noninteractive Zero-Knowledge Proofs.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                  >
-                    <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
-                              <Code className="w-6 h-6 text-blue-400" />
-                            </div>
-                            <div>
-                              <h3 className="text-white font-semibold text-lg mb-2">
-                                ErgoScript & Sigma Protocols
-                  </h3>
-                              <p className="text-gray-400 text-sm">
-                                Technical paper on ErgoScript language design and zero-knowledge proof integration.
-                              </p>
-                            </div>
-                          </div>
-                          <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors shrink-0" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                  </Link>
-
-                    <Link 
-                    href="/api/pdf/documents/Advanced ErgoScript Tutorial.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group"
-                  >
-                    <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                      <CardContent className="p-6">
-                        <div className="flex items-start justify-between gap-4">
-                          <div className="flex items-start gap-4">
-                            <div className="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center shrink-0">
-                              <BookOpen className="w-6 h-6 text-green-400" />
-                            </div>
-                            <div>
-                              <h3 className="text-white font-semibold text-lg mb-2">
-                                Advanced ErgoScript Tutorial
-                              </h3>
-                              <p className="text-gray-400 text-sm">
-                                Comprehensive guide to advanced ErgoScript programming patterns and best practices.
-                              </p>
-                            </div>
-                          </div>
-                          <ExternalLink className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors shrink-0" />
-                        </div>
-                      </CardContent>
-                    </Card>
-                    </Link>
-
-                </div>
-              </motion.div>
-
-              {/* 1. Share this post */}
+              {/* Share this post */}
               <ShareCTA
                 title="Ergo in 5 Minutes: Why It Matters & How It Works"
                 url="https://ergoblockchain.org/blog/ergo-in-5-minutes"

@@ -14,6 +14,7 @@ import Link from "next/link"
 import { QuizPageWrapper } from "@/components/quiz/quiz-page-wrapper"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 interface QuizQuestion {
   id: string
@@ -841,6 +842,12 @@ export default function QuizClient() {
                   </div>
                 </div>
               </section>
+
+              {/* Email Capture */}
+              <FinalCTASimple
+                title="Stay Updated"
+                description="Get personalized Ergo content based on your interests delivered to your inbox."
+              />
             </div>
           </motion.section>
           </BackgroundWrapper>

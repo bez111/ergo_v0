@@ -59,6 +59,25 @@ const learningTracks = [
     }
   },
   {
+    id: "topics",
+    label: "Topics",
+    badge: "Explore",
+    gradient: "from-sky-500 to-indigo-500",
+    description: "Curated topic clusters that group related concepts, articles, and resources together.",
+    bullets: [
+      "Privacy & Sigma Protocols",
+      "Mining & Autolykos",
+      "DeFi & Smart Contracts"
+    ],
+    cta: { label: "Browse topics", href: "/topics" },
+    stack: {
+      core: "Topic clusters · Related content",
+      tooling: "Articles · Glossary · Guides",
+      mentors: "Community curators",
+      deliverable: "Deep topic understanding"
+    }
+  },
+  {
     id: "privacy",
     label: "Privacy",
     badge: "Sigma",
@@ -149,7 +168,7 @@ export default function LearnClient() {
                   From beginner wallet setup to advanced privacy dApps — structured paths with real projects and community support.
                 </p>
                 <Button asChild className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl border border-orange-500/50">
-                  <Link href="/start/introduction">Start the beginner path</Link>
+                  <Link href="/start">Start</Link>
                 </Button>
               </div>
               <motion.div
@@ -162,16 +181,16 @@ export default function LearnClient() {
                   <div className="grid grid-cols-1 gap-4">
                     {[
                       {
-                        name: "Glossary",
-                        href: "/learn/glossary",
-                        icon: <BookOpen className="w-6 h-6 text-orange-400" />,
-                        subtitle: "Ergo terminology & core concepts",
-                      },
-                      {
                         name: "Visual Guides",
                         href: "/infographics",
                         icon: <ImageIcon className="w-6 h-6 text-orange-400" />,
                         subtitle: "Infographics that explain Ergo at a glance",
+                      },
+                      {
+                        name: "Glossary",
+                        href: "/learn/glossary",
+                        icon: <BookOpen className="w-6 h-6 text-orange-400" />,
+                        subtitle: "Ergo terminology & core concepts",
                       },
                       {
                         name: "Playbooks",

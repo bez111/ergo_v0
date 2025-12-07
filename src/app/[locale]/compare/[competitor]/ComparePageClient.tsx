@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import {
   ArrowRight,
-  ArrowLeft,
   Check,
   ChevronDown,
   Code,
@@ -104,21 +103,6 @@ export function ComparePageClient({ comparison }: Props) {
                 type="compare"
                 currentTitle={`Ergo vs ${comparison.name}`}
               />
-            </motion.div>
-
-            {/* Back Link */}
-            <motion.div
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              className="mb-8"
-            >
-              <Link
-                href="/compare"
-                className="inline-flex items-center gap-2 text-neutral-400 hover:text-orange-400 transition-colors"
-              >
-                <ArrowLeft className="w-4 h-4" />
-                All Comparisons
-              </Link>
             </motion.div>
 
             {/* Hero Section */}

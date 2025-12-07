@@ -8,6 +8,7 @@ import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import { Search, Filter, Grid, Eye, ExternalLink, Share2, Download, ChevronDown, ArrowRight, Twitter, Linkedin, MessageCircle, Link2, X, Copy, Sparkles, BookOpen, HelpCircle } from 'lucide-react';
 import { BackgroundWrapper } from '@/components/home/background-wrapper';
+import { Breadcrumbs } from '@/components/seo/breadcrumbs';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -184,6 +185,14 @@ export function InfographicsClient() {
     <BackgroundWrapper>
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-7xl mx-auto">
+          
+          {/* Breadcrumbs */}
+          <Breadcrumbs
+            items={[
+              { name: 'Infographics', href: '/infographics' },
+            ]}
+            className="mb-8"
+          />
           
           {/* Hero Section */}
           <motion.section
@@ -568,53 +577,6 @@ export function InfographicsClient() {
                 </div>
               </div>
             </div>
-          </motion.section>
-
-          {/* FAQ Section */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.0 }}
-            className="mb-16"
-          >
-            <section className="py-0">
-              <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-8">
-                  <h2
-                    className="font-bold tracking-tight mb-4"
-                    style={{
-                      fontSize: 'clamp(32px, 4.5vw, 56px)',
-                      letterSpacing: '-0.02em',
-                      lineHeight: 1,
-                    }}
-                  >
-                    <span className="text-orange-400">Infographics</span>{' '}
-                    <span className="text-white">FAQ</span>
-                  </h2>
-                  <p className="text-gray-400 text-lg">
-                    Everything you need to know to reuse these visual guides correctly.
-                  </p>
-                </div>
-
-              <div className="space-y-4">
-                <FAQItem 
-                  key="commercial-reuse"
-                  question="Can I reuse these infographics commercially?"
-                  answer="Yes, you can reuse any infographic in presentations, blog posts or educational materials. Please credit ergoblockchain.org and link back to the original page."
-                />
-                <FAQItem 
-                  key="translations"
-                  question="Will there be translations/localized versions?"
-                  answer="We are working on providing infographics in multiple languages. Contact the Ergo community if you'd like to help with translations."
-                />
-                <FAQItem 
-                  key="request-topic"
-                  question="Where can I request a new infographic topic?"
-                  answer="You can request new infographic topics through the Ergo community channels on Discord, Telegram, or by creating an issue on the official GitHub repository."
-                />
-              </div>
-            </div>
-            </section>
           </motion.section>
 
           {/* Email Capture Section */}
@@ -1027,33 +989,3 @@ function InfographicCard({
   );
 }
 
-function FAQItem({ question, answer }: { question: string; answer: string }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <Card className="bg-black border-neutral-800 rounded-xl overflow-hidden">
-      <button
-        onClick={() => setIsOpen((prev) => !prev)}
-        className="w-full p-6 flex items-center justify-between text-left hover:bg-neutral-900/50 transition-colors"
-        type="button"
-      >
-        <h3 className="text-lg font-semibold text-white pr-4">
-          {question}
-        </h3>
-        <ChevronDown
-          className={`w-5 h-5 text-neutral-400 flex-shrink-0 transition-transform ${
-            isOpen ? 'rotate-180' : ''
-          }`}
-        />
-      </button>
-
-      {isOpen && (
-        <div className="px-6 pb-6">
-          <p className="text-gray-300 leading-relaxed">
-            {answer}
-          </p>
-        </div>
-      )}
-    </Card>
-  );
-}

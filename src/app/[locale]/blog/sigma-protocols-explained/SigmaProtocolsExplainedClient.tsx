@@ -15,6 +15,7 @@ import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/component
 import { ShareCTA } from "@/components/blog/share-cta"
 import { ShareInline } from "@/components/blog/share-inline"
 import { ExpandableInfographic } from "@/components/blog/expandable-infographic"
+import { StickyTOC } from "@/components/blog/sticky-toc"
 import { RelatedContent } from "@/components/seo/related-content"
 import { 
   GraduationCap,
@@ -35,6 +36,7 @@ import {
   Coins,
   Zap
 } from "lucide-react"
+import Link from "next/link"
 
 export function SigmaProtocolsExplainedClient() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
@@ -119,8 +121,7 @@ export function SigmaProtocolsExplainedClient() {
     { label: "Programmable Privacy on Ergo", href: "#programmable-privacy" },
     { label: "Sigma Protocols vs Other Privacy Tech", href: "#comparison" },
     { label: "The Future of Accessible Privacy", href: "#future" },
-    { label: "Frequently Asked Questions", href: "#faq" },
-    { label: "Essential Documents", href: "#documents" }
+    { label: "Frequently Asked Questions", href: "#faq" }
   ]
 
   // Simple comparison data for privacy technologies
@@ -164,6 +165,9 @@ export function SigmaProtocolsExplainedClient() {
 
   return (
     <BackgroundWrapper>
+      {/* Sticky TOC for wide screens */}
+      <StickyTOC items={articleContents} />
+
       <div className="container mx-auto px-4 py-12">
         <div className="max-w-4xl mx-auto">
           {/* Breadcrumbs */}
@@ -188,7 +192,7 @@ export function SigmaProtocolsExplainedClient() {
             </h1>
 
             <p className="text-lg sm:text-xl text-gray-300 max-w-3xl leading-relaxed mb-6">
-              A plain-English guide to Sigma Protocols – the powerful, flexible zero-knowledge cryptography that powers Ergo's privacy and smart contracts.
+              A plain-English guide to Sigma Protocols – the powerful, flexible zero-knowledge cryptography that powers Ergo's <Link href="/technology/privacy-features" className="text-orange-400 hover:underline">privacy features</Link> and smart contracts.
             </p>
 
             {/* Article Meta */}
@@ -252,12 +256,12 @@ export function SigmaProtocolsExplainedClient() {
             </div>
           </motion.section>
 
-          {/* Article Contents */}
+          {/* Article Contents - Hidden on 2xl where sticky TOC shows */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15 }}
-            className="mb-12"
+            className="mb-12 2xl:hidden"
           >
             <Card className="bg-black/80 border border-orange-500/20 rounded-2xl">
               <CardHeader className="pb-4">
@@ -704,7 +708,7 @@ export function SigmaProtocolsExplainedClient() {
             id="faq"
           >
             <h2 className="text-2xl sm:text-3xl font-bold text-white mb-8">
-              ❓ Frequently Asked Questions
+              Frequently Asked Questions
             </h2>
             <div className="space-y-4">
               {faqItems.map((faq, index) => (
@@ -730,79 +734,6 @@ export function SigmaProtocolsExplainedClient() {
                   </Collapsible>
                 </Card>
               ))}
-            </div>
-          </motion.section>
-
-          {/* Essential Documents - Beginner friendly */}
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.2 }}
-            className="mb-16"
-            id="documents"
-          >
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-6">
-              📚 Essential Documents (Beginner Friendly)
-            </h2>
-            <p className="text-gray-300 mb-8">Start your journey into Sigma Protocols with these accessible resources.</p>
-
-            <div className="grid gap-4">
-              <a href="/doc/privacy/sigma-protocols-intro" className="group">
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-green-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-green-500/20 border border-green-500/30 flex items-center justify-center shrink-0">
-                          <GraduationCap className="w-6 h-6 text-green-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">Sigma Protocols Introduction</h3>
-                          <p className="text-gray-400 text-sm">Beginner-friendly guide to understanding Sigma Protocols with examples and analogies.</p>
-                        </div>
-                      </div>
-                      <div className="w-5 h-5 text-gray-400 group-hover:text-green-400 transition-colors shrink-0">→</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
-
-              <a href="/doc/ergoscript/privacy-examples" className="group">
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-blue-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0">
-                          <Code className="w-6 h-6 text-blue-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">ErgoScript Privacy Examples</h3>
-                          <p className="text-gray-400 text-sm">Simple code examples showing how to implement privacy features with Sigma Protocols.</p>
-                        </div>
-                      </div>
-                      <div className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors shrink-0">→</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
-
-              <a href="/api/pdf/documents/Ergo- A Resilient Platform For Contractual Money.pdf" target="_blank" rel="noopener noreferrer" className="group">
-                <Card className="bg-black border border-white/10 rounded-2xl hover:bg-neutral-900 hover:border-orange-400/40 transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between gap-4">
-                      <div className="flex items-start gap-4">
-                        <div className="w-12 h-12 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center shrink-0">
-                          <CheckCircle className="w-6 h-6 text-orange-400" />
-                        </div>
-                        <div>
-                          <h3 className="text-white font-semibold text-lg mb-2">Ergo Platform Whitepaper</h3>
-                          <p className="text-gray-400 text-sm">Technical deep-dive into Sigma Protocols and their implementation on Ergo (advanced reading).</p>
-                        </div>
-                      </div>
-                      <div className="w-5 h-5 text-gray-400 group-hover:text-orange-400 transition-colors shrink-0">→</div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </a>
             </div>
           </motion.section>
 

@@ -18,6 +18,8 @@ import {
 } from "lucide-react";
 import { glossaryTerms, glossaryCategories, GlossaryTerm } from "@/data/glossary";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
+import { FinalCTASimple } from "@/components/home/final-cta-simple";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { PageTransition } from "@/components/animations/page-transition";
 import { BackToTop } from "@/components/ui/back-to-top";
 
@@ -106,6 +108,15 @@ export function GlossaryHubClient() {
       <div className="container mx-auto px-4 py-16">
         <PageTransition>
           <div className="max-w-5xl mx-auto">
+            {/* Breadcrumbs */}
+            <Breadcrumbs
+              items={[
+                { name: 'Learn', href: '/learn' },
+                { name: 'Glossary', href: '/learn/glossary' },
+              ]}
+              className="mb-8"
+            />
+            
             {/* Compact Search Header */}
             <motion.section
               className="mb-10"
@@ -389,6 +400,12 @@ export function GlossaryHubClient() {
                 </div>
               </motion.div>
             </motion.section>
+
+            {/* Email Capture */}
+            <FinalCTASimple
+              title="Learn More About Ergo"
+              description="Get educational content, terminology guides, and blockchain insights delivered to your inbox."
+            />
           </div>
         </PageTransition>
       </div>

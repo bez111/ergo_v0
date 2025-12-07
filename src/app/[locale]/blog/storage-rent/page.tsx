@@ -7,7 +7,7 @@ const url = `${origin}/blog/storage-rent`
 
 export function generateMetadata(): Metadata {
   const title = "How Ergo's Storage Rent Solves Blockchain State Bloat"
-  const description = "Ergo's miners can charge small fees on dormant accounts, clearing dust transactions and ensuring blockchain state stays manageable."
+  const description = "Ergo's storage rent charges small fees on dormant accounts, clearing dust and keeping blockchain state manageable. Learn how this ensures long-term sustainability."
   
   return {
     title,
@@ -19,16 +19,32 @@ export function generateMetadata(): Metadata {
       siteName: "Ergo Blockchain",
       title,
       description,
-      images: [{ url: `${origin}/og/storage-rent.png`, width: 1200, height: 630 }],
+      images: [{ url: `${origin}/og/storage-rent.png`, width: 1200, height: 630, alt: title }],
       locale: "en_US",
+      publishedTime: "2024-11-14T00:00:00Z",
+      modifiedTime: new Date().toISOString(),
+      authors: ["Ergo Team"],
+      tags: ["Storage Rent", "State Bloat", "Scalability", "Sustainability"]
     },
     twitter: {
       card: "summary_large_image",
+      title,
+      description,
       images: [`${origin}/og/storage-rent.png`],
       site: siteConfig.twitterHandle,
       creator: siteConfig.twitterHandle,
     },
-    robots: { index: true, follow: true },
+    robots: { 
+      index: true, 
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      }
+    },
     keywords: [
       "storage rent",
       "blockchain state bloat", 
@@ -38,7 +54,9 @@ export function generateMetadata(): Metadata {
       "decentralization",
       "proof of work",
       "mining economics",
-      "state management"
+      "state management",
+      "lost coins recovery",
+      "dust cleanup"
     ],
   }
 }

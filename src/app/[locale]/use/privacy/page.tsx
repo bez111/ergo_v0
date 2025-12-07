@@ -17,6 +17,7 @@ import React from "react"
 import { useTranslations } from "next-intl"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { ClusterPillarBreadcrumb, ClusterRelatedContent } from "@/components/seo/cluster-related-content"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -619,9 +620,15 @@ export default function PrivacyConfidentialityPage() {
             subtitle="Dive deeper into Ergo's privacy features and technology"
             maxItems={6}
           />
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Stay Updated on Ergo Privacy"
+            description="Get notified about privacy features, Sigma Protocols updates, and security innovations."
+          />
         </motion.div>
         </div>
       </BackgroundWrapper>
     </>
   )
-} 
+}

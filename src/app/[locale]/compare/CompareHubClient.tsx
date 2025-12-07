@@ -7,6 +7,7 @@ import Link from "next/link";
 import { comparisons } from "@/data/comparisons";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { PageTransition } from "@/components/animations/page-transition";
+import { FinalCTASimple } from "@/components/home/final-cta-simple";
 import { ArrowRight, Scale, Shield, Zap, Eye, Users, TrendingUp } from "lucide-react";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -256,6 +257,8 @@ export function CompareHubClient() {
           </div>
         </PageTransition>
       </div>
+
+      <FinalCTASimple />
     </BackgroundWrapper>
   );
 }

@@ -10,6 +10,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 import {
   BookOpen,
   Users,
@@ -438,6 +439,12 @@ export default function ResearchClient() {
               </div>
             </div>
           </section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Stay Updated on Ergo Research"
+            description="Get the latest research papers, academic publications, and technical innovations delivered to your inbox."
+          />
         </motion.div>
         </div>
       </BackgroundWrapper>

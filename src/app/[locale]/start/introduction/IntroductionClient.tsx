@@ -50,7 +50,9 @@ import {
   type FeatureGridItem, type StatsGridItem 
 } from "@/components/ui-kit/patterns"
 import { SchemaOrg } from "@/components/seo/schema-org"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { FinalCTASimple } from "@/components/home/final-cta-simple"
 // Removed animation-related imports
 
 export default function IntroductionClient() {
@@ -183,11 +185,18 @@ export default function IntroductionClient() {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 relative z-10">
         
-        {/* Removed jump links per request */}
+        {/* Breadcrumbs */}
+        <Breadcrumbs
+          items={[
+            { name: 'Start', href: '/start' },
+            { name: 'Introduction', href: '/start/introduction' },
+          ]}
+          className="mb-8 pt-24"
+        />
 
         {/* What is Ergo Section */}
         <section 
-          className="py-16 pt-32"
+          className="py-16 pt-8"
           id="what-is-ergo"
         >
           {/* Mission Statement - Hero Slogan */}
@@ -600,6 +609,12 @@ export default function IntroductionClient() {
             </div>
           </div>
         </section>
+
+        {/* Email Capture */}
+        <FinalCTASimple
+          title="Start Your Ergo Journey"
+          description="Get beginner-friendly guides, tutorials, and updates delivered to your inbox."
+        />
 
       </div>
     </BackgroundWrapper>

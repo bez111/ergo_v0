@@ -10,6 +10,7 @@ import { SectionHeading } from "@/components/section-heading"
 import { FadeIn } from "@/components/animations/fade-in"
 import { StaggerContainer } from "@/components/animations/stagger-container"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import {
   MessageCircle,
   Users,
@@ -232,8 +233,17 @@ export default function CommunityClient() {
     <BackgroundWrapper>
       <div className="relative z-10">
         <div className="max-w-7xl mx-auto px-4 py-8">
+          {/* Breadcrumbs */}
+          <Breadcrumbs
+            items={[
+              { name: 'Start', href: '/start' },
+              { name: 'Community', href: '/start/community' },
+            ]}
+            className="mb-8 pt-24"
+          />
+          
           {/* Hero Section */}
-          <section className="pt-32 pb-16 px-4">
+          <section className="pt-8 pb-16 px-4">
             <div className="max-w-7xl mx-auto text-center">
               <FadeIn>
                 <motion.div

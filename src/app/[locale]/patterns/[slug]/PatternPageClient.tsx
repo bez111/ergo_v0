@@ -30,6 +30,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Breadcrumbs } from "@/components/seo/breadcrumbs";
+import { FinalCTASimple } from "@/components/home/final-cta-simple";
 
 interface Props {
   pattern: DevPattern;
@@ -81,6 +83,20 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
     <BackgroundWrapper>
       <div className="min-h-screen text-white">
         <div className="container mx-auto px-4 pt-28 pb-16 relative z-10">
+          {/* Breadcrumbs */}
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-6"
+          >
+            <Breadcrumbs
+              items={[
+                { name: 'Dev Patterns', href: '/patterns' },
+                { name: pattern.title, href: `/patterns/${pattern.slug}` }
+              ]}
+            />
+          </motion.div>
+
           {/* Hero Section */}
           <motion.section
             initial={{ opacity: 0, y: 20 }}
@@ -141,15 +157,6 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                     </a>
                   </Button>
                 )}
-                <Button
-                  variant="ghost"
-                  className="text-neutral-400 hover:text-white"
-                  asChild
-                >
-                  <Link href="/patterns">
-                    Back to Patterns
-                  </Link>
-                </Button>
               </div>
             </div>
           </motion.section>
@@ -490,6 +497,12 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
               </CardContent>
             </Card>
           </motion.section>
+
+          {/* Email Capture */}
+          <FinalCTASimple
+            title="Level Up Your ErgoScript Skills"
+            description="Get notified about new patterns, tutorials, and developer resources."
+          />
 
         </div>
       </div>
