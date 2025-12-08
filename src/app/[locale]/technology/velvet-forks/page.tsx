@@ -9,6 +9,7 @@ import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { FadeIn } from "@/components/animations/fade-in"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
+import { useTranslations } from "next-intl"
 import { 
   GitBranch, Shield, Lock, CheckCircle, Layers, RefreshCw, Settings, Users, TrendingUp, ChevronDown, Terminal
 } from "lucide-react"
@@ -16,78 +17,44 @@ import Link from "next/link"
 import { useState } from "react"
 import { RelatedTechnologies, WhatsNextCTA, RelatedBlogPostsForTechnology } from "@/components/technology"
 
+// Feature icons mapping
+const featureIcons = [RefreshCw, TrendingUp, Settings, Users, Shield, CheckCircle] as const
+const useCaseIcons = [Layers, Lock, Terminal] as const
+const howItWorksIcons = [GitBranch, Users, CheckCircle, TrendingUp] as const
+
 export default function VelvetForksPage() {
+  const t = useTranslations("technologyPages.velvetForks")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
-  const features = [
-    {
-      title: "Backward Compatibility",
-      description: "No breaking changes for existing applications and infrastructure",
-      icon: RefreshCw,
-    },
-    {
-      title: "Gradual Adoption", 
-      description: "New features can be adopted incrementally by the network",
-      icon: TrendingUp,
-    },
-    {
-      title: "Flexible Updates",
-      description: "Protocol parameters can be adjusted without hard forks", 
-      icon: Settings,
-    },
-    {
-      title: "Community Consensus",
-      description: "Changes require broad community agreement and miner support",
-      icon: Users,
-    },
-    {
-      title: "Security Preservation",
-      description: "Maintains network security while enabling protocol evolution",
-      icon: Shield,
-    },
-    {
-      title: "Reduced Risk",
-      description: "Lower risk of network splits and ecosystem fragmentation",
-      icon: CheckCircle,
-    },
-  ]
+  // Build data arrays from translations
+  const features = Array.from({ length: 6 }, (_, i) => ({
+    title: t(`features.${i}.title`),
+    description: t(`features.${i}.description`),
+    icon: featureIcons[i]!,
+  }))
 
-  const useCases = [
-    {
-      title: "Light Client Upgrades",
-      description: "Enable new features for light clients without breaking existing implementations",
-      icon: Layers,
-    },
-    {
-      title: "Privacy Enhancements", 
-      description: "Gradually introduce new privacy features while maintaining backward compatibility",
-      icon: Lock,
-    },
-    {
-      title: "Smart Contract Evolution",
-      description: "Upgrade ErgoScript capabilities without requiring ecosystem-wide changes",
-      icon: Terminal,
-    },
-  ]
+  const useCases = Array.from({ length: 3 }, (_, i) => ({
+    title: t(`useCases.${i}.title`),
+    description: t(`useCases.${i}.description`),
+    icon: useCaseIcons[i]!,
+  }))
 
-  const faqs = [
-    {
-      question: "What exactly is a velvet fork?",
-      answer: "A velvet fork is Ergo's approach to protocol upgrades that maintains complete backward compatibility while enabling new features. Unlike hard or soft forks, velvet forks never break existing functionality.",
-    },
-    {
-      question: "How do velvet forks differ from soft forks?",
-      answer: "While soft forks tighten existing rules, velvet forks can add entirely new features without affecting nodes that don't upgrade. This allows for more flexible protocol evolution.",
-    },
-    {
-      question: "Are velvet forks secure?",
-      answer: "Yes, velvet forks maintain the same security guarantees as the base protocol. New features are designed to be optional and don't compromise the security of existing functionality.",
-    },
-    {
-      question: "Do I need to upgrade my node for velvet forks?",
-      answer: "No, upgrades are optional. Your node will continue to work normally, though you won't have access to new features until you choose to upgrade.",
-    },
-  ]
+  const howItWorks = Array.from({ length: 4 }, (_, i) => ({
+    title: t(`howItWorks.${i}.title`),
+    description: t(`howItWorks.${i}.description`),
+    icon: howItWorksIcons[i]!,
+  }))
+
+  const quickStartSteps = Array.from({ length: 3 }, (_, i) => ({
+    number: t(`quickStart.steps.${i}.number`),
+    title: t(`quickStart.steps.${i}.title`),
+    description: t(`quickStart.steps.${i}.description`),
+  }))
+
+  const faqs = Array.from({ length: 4 }, (_, i) => ({
+    question: t(`faq.${i}.question`),
+    answer: t(`faq.${i}.answer`),
+  }))
 
   return (
     <>
@@ -95,15 +62,25 @@ export default function VelvetForksPage() {
         type="TechArticle"
         data={{
           "@type": "TechArticle",
-          headline: "Velvet Forks",
-          description: "Backward-compatible protocol upgrades that enable evolution without breaking changes",
+          headline: t("title"),
+          description: t("description"),
           keywords: "velvet forks, protocol upgrades, backward compatibility, blockchain evolution",
           datePublished: "2023-11-10",
           dateModified: "2025-08-10",
+          image: "https://ergoblockchain.org/og/technology/velvet-forks.png",
           author: {
             "@type": "Organization",
             name: "Ergo Platform",
             url: "https://ergoplatform.org",
+          },
+          publisher: {
+            "@type": "Organization",
+            name: "Ergo Platform",
+            url: "https://ergoblockchain.org",
+            logo: {
+              "@type": "ImageObject",
+              url: "https://ergoblockchain.org/favicon.ico"
+            }
           },
         }}
       />
@@ -113,7 +90,7 @@ export default function VelvetForksPage() {
           <Breadcrumbs
             items={[
               { name: "Technology", href: "/technology" },
-              { name: "Velvet Forks", href: "/technology/velvet-forks" },
+              { name: t("title"), href: "/technology/velvet-forks" },
             ]}
             className="mb-8"
           />
@@ -124,18 +101,18 @@ export default function VelvetForksPage() {
             <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-                  Velvet Forks
+                  {t("title")}
                 </h1>
                 <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                  Backward-compatible protocol upgrades
+                  {t("subtitle")}
                 </p>
                 <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                  Enable protocol evolution without breaking changes or forced upgrades. Velvet forks allow gradual feature adoption while preserving ecosystem stability.
+                  {t("description")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/docs/protocol/velvet-forks">
                     <Button className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-8 py-3 rounded-xl">
-                      Read Documentation
+                      {t("buttons.readDocumentation")}
                     </Button>
                   </Link>
                   <Link href="/technology">
@@ -143,7 +120,7 @@ export default function VelvetForksPage() {
                       variant="outline"
                       className="border-neutral-700 text-neutral-300 hover:bg-orange-500/10 hover:border-orange-500/50 hover:text-orange-400 px-8 py-3 rounded-xl"
                     >
-                      Explore Other Technologies
+                      {t("buttons.exploreOther")}
                     </Button>
                   </Link>
                 </div>
@@ -151,26 +128,10 @@ export default function VelvetForksPage() {
               <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
                 <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                   <div className="mb-8">
-                    <h3 className="text-2xl font-bold text-white">Quick Start</h3>
+                    <h3 className="text-2xl font-bold text-white">{t("quickStart.title")}</h3>
                   </div>
                   <div className="space-y-4">
-                    {[
-                      {
-                        number: "01",
-                        title: "Learn Concepts",
-                        description: "Understand velvet fork principles",
-                      },
-                      {
-                        number: "02", 
-                        title: "View Examples",
-                        description: "See velvet forks in action",
-                      },
-                      {
-                        number: "03",
-                        title: "Join Discussion",
-                        description: "Participate in governance",
-                      },
-                    ].map((item) => (
+                    {quickStartSteps.map((item) => (
                       <div key={item.number} className="flex items-center gap-4 p-4 rounded-2xl bg-black/60 border border-white/20 hover:bg-black/70 hover:border-orange-400/40 transition-all duration-300">
                         <div className="w-8 h-8 bg-orange-500/20 rounded-lg flex items-center justify-center text-orange-400 font-bold text-sm">
                           {item.number}
@@ -193,10 +154,10 @@ export default function VelvetForksPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Key Features
+                  {t("featuresTitle")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Why velvet forks are the future of blockchain protocol upgrades
+                  {t("featuresSubtitle")}
                 </p>
               </div>
               
@@ -222,36 +183,15 @@ export default function VelvetForksPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  How It Works
+                  {t("howItWorksTitle")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  The velvet fork process ensures smooth protocol evolution
+                  {t("howItWorksSubtitle")}
                 </p>
               </div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                {[
-                  {
-                    title: "Proposal Phase",
-                    description: "Community proposes protocol improvements through EIPs",
-                    icon: GitBranch,
-                  },
-                  {
-                    title: "Discussion & Review",
-                    description: "Technical review and community discussion",
-                    icon: Users,
-                  },
-                  {
-                    title: "Implementation",
-                    description: "Developers implement backward-compatible changes",
-                    icon: CheckCircle,
-                  },
-                  {
-                    title: "Gradual Activation",
-                    description: "Network adopts features without forced upgrades",
-                    icon: TrendingUp,
-                  },
-                ].map((step, index) => (
+                {howItWorks.map((step, index) => (
                   <div key={step.title} className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 h-full relative">
                     <div className="absolute -top-3 -left-3 w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center text-black font-bold text-sm">
                       {index + 1}
@@ -273,17 +213,17 @@ export default function VelvetForksPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Fork Comparison
+                  {t("comparisonTitle")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Understanding different approaches to blockchain protocol upgrades
+                  {t("comparisonSubtitle")}
                 </p>
               </div>
               
               <div className="grid md:grid-cols-3 gap-8">
                 <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
-                  <h3 className="text-xl font-semibold mb-4 text-red-400">Hard Fork</h3>
-                  <p className="text-neutral-400 text-sm mb-6">Breaking changes that require all nodes to upgrade</p>
+                  <h3 className="text-xl font-semibold mb-4 text-red-400">{t("comparison.hardFork.title")}</h3>
+                  <p className="text-neutral-400 text-sm mb-6">{t("comparison.hardFork.description")}</p>
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
@@ -315,8 +255,8 @@ export default function VelvetForksPage() {
                 </div>
 
                 <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
-                  <h3 className="text-xl font-semibold mb-4 text-yellow-400">Soft Fork</h3>
-                  <p className="text-neutral-400 text-sm mb-6">Backward-compatible changes that tighten rules</p>
+                  <h3 className="text-xl font-semibold mb-4 text-yellow-400">{t("comparison.softFork.title")}</h3>
+                  <p className="text-neutral-400 text-sm mb-6">{t("comparison.softFork.description")}</p>
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
@@ -348,8 +288,8 @@ export default function VelvetForksPage() {
                 </div>
 
                 <div className="bg-black/80 border border-white/10 rounded-3xl p-8 backdrop-blur-sm border-orange-400/40">
-                  <h3 className="text-xl font-semibold mb-4 text-orange-400">Velvet Fork</h3>
-                  <p className="text-neutral-400 text-sm mb-6">Ergo's approach: gradual feature introduction with full compatibility</p>
+                  <h3 className="text-xl font-semibold mb-4 text-orange-400">{t("comparison.velvetFork.title")}</h3>
+                  <p className="text-neutral-400 text-sm mb-6">{t("comparison.velvetFork.description")}</p>
                   <div className="space-y-4">
                     <div>
                       <h4 className="text-green-400 font-semibold mb-2">Pros</h4>
@@ -393,10 +333,10 @@ export default function VelvetForksPage() {
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Use Cases
+                  {t("useCasesTitle")}
                 </h2>
                 <p className="text-xl text-neutral-400 max-w-3xl mx-auto">
-                  Real-world applications of velvet fork technology
+                  {t("useCasesSubtitle")}
                 </p>
               </div>
               
@@ -422,10 +362,10 @@ export default function VelvetForksPage() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                  Frequently Asked Questions
+                  {t("faqTitle")}
                 </h2>
                 <p className="text-xl text-neutral-400">
-                  Common questions about velvet forks and their implementation
+                  {t("faqSubtitle")}
                 </p>
               </div>
               
@@ -468,7 +408,7 @@ export default function VelvetForksPage() {
         {/* Related Technologies - Data-driven */}
         <RelatedTechnologies 
           currentSlug="velvet-forks"
-          title="Related Technologies"
+          title={t("relatedTitle")}
         />
 
         {/* Related Blog Articles - lightweight */}

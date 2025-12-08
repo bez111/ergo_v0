@@ -88,6 +88,295 @@
         "viewCode": "View on GitHub"
       }
     },
+    "eutxoModel": {
+      "title": "eUTXO Model",
+      "subtitle": "The foundation of Ergo's advanced smart contract capabilities",
+      "description": "Extended UTXO combines Bitcoin's proven security model with powerful smart contract functionality via ErgoScript, enabling parallel execution and eliminating entire classes of vulnerabilities.",
+      "seo": {
+        "title": "eUTXO Model: Parallel Smart Contracts | Ergo",
+        "description": "Learn how Ergo's Extended UTXO model enables parallel execution, MEV resistance, and composable DeFi. No re-entrancy attacks by design.",
+        "keywords": "eUTXO, Extended UTXO, UTXO model, parallel execution, smart contracts, MEV resistance, composability, Ergo blockchain, DeFi security, box model"
+      },
+      "buttons": {
+        "learnMore": "Learn More",
+        "viewCode": "View Code"
+      },
+      "quickStart": {
+        "title": "Quick Start",
+        "exploreEutxo": {
+          "title": "Explore eUTXO",
+          "description": "Interactive visualization of the model"
+        },
+        "developerGuide": {
+          "title": "Developer Guide",
+          "description": "Build with eUTXO patterns"
+        },
+        "joinCommunity": {
+          "title": "Join Community",
+          "description": "Get help from experienced developers"
+        }
+      },
+      "featuresTitle": "Key Features",
+      "features": {
+        "0": {
+          "title": "Box-Based State",
+          "description": "Each UTXO is a 'box' containing value, data, and a guarding script that defines spending conditions."
+        },
+        "1": {
+          "title": "Immutable Data",
+          "description": "Boxes are immutable — once created, they cannot be modified, only consumed and new ones created."
+        },
+        "2": {
+          "title": "No Re-entrancy",
+          "description": "The UTXO model eliminates re-entrancy attacks by design — no mutable state to exploit."
+        },
+        "3": {
+          "title": "Parallel Execution",
+          "description": "Transactions touching different boxes can execute in parallel, improving scalability."
+        },
+        "4": {
+          "title": "Local Verification",
+          "description": "Smart contracts only need to verify their own inputs, not global blockchain state."
+        },
+        "5": {
+          "title": "Composable Protocols",
+          "description": "Complex DeFi protocols built from simple, reusable box patterns."
+        }
+      },
+      "comparisonTitle": "eUTXO vs Account Model",
+      "comparisonHeaders": {
+        "aspect": "Aspect",
+        "eutxo": "eUTXO Model",
+        "account": "Account Model",
+        "advantage": "Advantage"
+      },
+      "comparison": {
+        "0": {
+          "aspect": "State Management",
+          "eutxo": "No global balances — only unspent outputs",
+          "account": "Global state with account balances and storage",
+          "advantage": "eUTXO"
+        },
+        "1": {
+          "aspect": "Security",
+          "eutxo": "No re-entrancy attacks, predictable costs",
+          "account": "Vulnerable to re-entrancy, unpredictable gas",
+          "advantage": "eUTXO"
+        },
+        "2": {
+          "aspect": "Parallelism",
+          "eutxo": "Independent boxes enable parallel processing",
+          "account": "State contention forces sequential processing",
+          "advantage": "eUTXO"
+        },
+        "3": {
+          "aspect": "Privacy",
+          "eutxo": "Natural transaction privacy through separate boxes",
+          "account": "All balances publicly visible",
+          "advantage": "eUTXO"
+        },
+        "4": {
+          "aspect": "Composability",
+          "eutxo": "Modular outputs compose into complex protocols",
+          "account": "Monolithic contracts with complex interactions",
+          "advantage": "Tie"
+        }
+      },
+      "useCasesTitle": "Real-World Use Cases",
+      "useCases": {
+        "0": {
+          "title": "DEX Order Books",
+          "description": "Each order is a separate box, enabling parallel matching and atomic swaps",
+          "example": "Spectrum Finance"
+        },
+        "1": {
+          "title": "Lending Protocols",
+          "description": "Collateral locked in boxes with clear liquidation conditions",
+          "example": "DuckPools"
+        },
+        "2": {
+          "title": "Stablecoins",
+          "description": "Reserve boxes track collateral independently for each position",
+          "example": "SigmaUSD"
+        },
+        "3": {
+          "title": "NFT Auctions",
+          "description": "Bid boxes compete without blocking each other",
+          "example": "Ergo Auction House"
+        }
+      },
+      "codeExampleTitle": "Simple Yet Powerful",
+      "codeExampleDescription": "The eUTXO model simplifies smart contract development by treating everything as boxes with clear spending conditions. No complex state management, no re-entrancy concerns — just straightforward logic.",
+      "codeExampleBenefits": {
+        "0": "Predictable execution costs",
+        "1": "Natural transaction batching",
+        "2": "Built-in multi-sig support",
+        "3": "Atomic multi-asset swaps"
+      },
+      "faqTitle": "Frequently Asked Questions",
+      "faq": {
+        "0": {
+          "question": "How is eUTXO different from Bitcoin's basic UTXO?",
+          "answer": "While Bitcoin's UTXO model only tracks value transfers, Ergo's eUTXO extends this with arbitrary data storage in boxes and Turing-complete smart contracts via ErgoScript. This enables complex DeFi applications while keeping UTXO benefits."
+        },
+        "1": {
+          "question": "Can eUTXO handle complex DeFi applications?",
+          "answer": "Yes! Ergo has DEXes (Spectrum), lending protocols, stablecoins (SigmaUSD), and more. The eUTXO model actually makes these more secure by preventing re-entrancy and enabling parallel execution."
+        },
+        "2": {
+          "question": "Why is the eUTXO model more scalable?",
+          "answer": "Independent boxes enable parallel transaction processing. Unlike account models where state contention forces sequential execution, eUTXO transactions touching different boxes can run simultaneously."
+        },
+        "3": {
+          "question": "How do smart contracts work in eUTXO?",
+          "answer": "Each box has a guard script that defines its spending conditions. When spending a box, the script is executed with provided inputs. If it returns true, the box can be spent. This is simpler and more predictable than account-based execution."
+        }
+      },
+      "relatedTitle": "Continue Learning",
+      "relatedSubtitle": "Explore related Ergo technologies",
+      "exampleLabel": "Example"
+    },
+    "velvetForks": {
+      "title": "Velvet Forks",
+      "subtitle": "Backward-compatible protocol upgrades",
+      "description": "Enable protocol evolution without breaking changes or forced upgrades. Velvet forks allow gradual feature adoption while preserving ecosystem stability.",
+      "seo": {
+        "title": "Velvet Forks: Backward-Compatible Protocol Upgrades | Ergo",
+        "description": "Learn how Ergo enables protocol evolution without breaking changes through velvet forks. Gradual feature adoption while preserving ecosystem stability.",
+        "keywords": "velvet forks, protocol upgrades, backward compatibility, blockchain evolution, soft fork, hard fork"
+      },
+      "buttons": {
+        "readDocumentation": "Read Documentation",
+        "exploreOther": "Explore Other Technologies"
+      },
+      "quickStart": {
+        "title": "Quick Start",
+        "steps": {
+          "0": {
+            "number": "01",
+            "title": "Learn Concepts",
+            "description": "Understand velvet fork principles"
+          },
+          "1": {
+            "number": "02",
+            "title": "View Examples",
+            "description": "See velvet forks in action"
+          },
+          "2": {
+            "number": "03",
+            "title": "Join Discussion",
+            "description": "Participate in governance"
+          }
+        }
+      },
+      "featuresTitle": "Key Features",
+      "featuresSubtitle": "Why velvet forks are the future of blockchain protocol upgrades",
+      "features": {
+        "0": {
+          "title": "Backward Compatibility",
+          "description": "No breaking changes for existing applications and infrastructure"
+        },
+        "1": {
+          "title": "Gradual Adoption",
+          "description": "New features can be adopted incrementally by the network"
+        },
+        "2": {
+          "title": "Flexible Updates",
+          "description": "Protocol parameters can be adjusted without hard forks"
+        },
+        "3": {
+          "title": "Community Consensus",
+          "description": "Changes require broad community agreement and miner support"
+        },
+        "4": {
+          "title": "Security Preservation",
+          "description": "Maintains network security while enabling protocol evolution"
+        },
+        "5": {
+          "title": "Reduced Risk",
+          "description": "Lower risk of network splits and ecosystem fragmentation"
+        }
+      },
+      "howItWorksTitle": "How It Works",
+      "howItWorksSubtitle": "The velvet fork process ensures smooth protocol evolution",
+      "howItWorks": {
+        "0": {
+          "title": "Proposal Phase",
+          "description": "Community proposes protocol improvements through EIPs"
+        },
+        "1": {
+          "title": "Discussion & Review",
+          "description": "Technical review and community discussion"
+        },
+        "2": {
+          "title": "Implementation",
+          "description": "Developers implement backward-compatible changes"
+        },
+        "3": {
+          "title": "Gradual Activation",
+          "description": "Network adopts features without forced upgrades"
+        }
+      },
+      "comparisonTitle": "Fork Comparison",
+      "comparisonSubtitle": "Understanding different approaches to blockchain protocol upgrades",
+      "comparison": {
+        "hardFork": {
+          "title": "Hard Fork",
+          "description": "Breaking changes that require all nodes to upgrade",
+          "pros": ["Complete protocol redesign possible", "Can fix fundamental issues"],
+          "cons": ["Risk of network split", "Requires coordinated upgrade"]
+        },
+        "softFork": {
+          "title": "Soft Fork",
+          "description": "Backward-compatible changes that tighten rules",
+          "pros": ["Maintains backward compatibility", "No forced upgrades required"],
+          "cons": ["Limited to rule tightening", "Cannot add new features easily"]
+        },
+        "velvetFork": {
+          "title": "Velvet Fork",
+          "description": "Ergo's approach: gradual feature introduction with full compatibility",
+          "pros": ["No breaking changes ever", "Gradual feature adoption", "Preserves ecosystem stability"],
+          "tradeoffs": ["Slower feature rollout", "Requires careful design"]
+        }
+      },
+      "useCasesTitle": "Use Cases",
+      "useCasesSubtitle": "Real-world applications of velvet fork technology",
+      "useCases": {
+        "0": {
+          "title": "Light Client Upgrades",
+          "description": "Enable new features for light clients without breaking existing implementations"
+        },
+        "1": {
+          "title": "Privacy Enhancements",
+          "description": "Gradually introduce new privacy features while maintaining backward compatibility"
+        },
+        "2": {
+          "title": "Smart Contract Evolution",
+          "description": "Upgrade ErgoScript capabilities without requiring ecosystem-wide changes"
+        }
+      },
+      "faqTitle": "Frequently Asked Questions",
+      "faqSubtitle": "Common questions about velvet forks and their implementation",
+      "faq": {
+        "0": {
+          "question": "What exactly is a velvet fork?",
+          "answer": "A velvet fork is Ergo's approach to protocol upgrades that maintains complete backward compatibility while enabling new features. Unlike hard or soft forks, velvet forks never break existing functionality."
+        },
+        "1": {
+          "question": "How do velvet forks differ from soft forks?",
+          "answer": "While soft forks tighten existing rules, velvet forks can add entirely new features without affecting nodes that don't upgrade. This allows for more flexible protocol evolution."
+        },
+        "2": {
+          "question": "Are velvet forks secure?",
+          "answer": "Yes, velvet forks maintain the same security guarantees as the base protocol. New features are designed to be optional and don't compromise the security of existing functionality."
+        },
+        "3": {
+          "question": "Do I need to upgrade my node for velvet forks?",
+          "answer": "No, upgrades are optional. Your node will continue to work normally, though you won't have access to new features until you choose to upgrade."
+        }
+      },
+      "relatedTitle": "Related Technologies"
+    },
     "storageRent": {
       "title": "Storage Rent",
       "subtitle": "What is Storage Rent?",

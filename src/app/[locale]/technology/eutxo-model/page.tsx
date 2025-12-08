@@ -7,9 +7,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible"
-import { ChevronDown, ArrowRight, Box, Database, Shield, Zap, Eye, Code, ExternalLink, CheckCircle, BookOpen, Users, Coins } from "lucide-react"
+import { ChevronDown, Box, Database, Shield, Zap, Eye, Code, CheckCircle, BookOpen, Users } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import { useTranslations } from "next-intl"
 import { SchemaOrg } from "@/components/seo/schema-org"
 import { Breadcrumbs } from "@/components/seo/breadcrumbs"
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
@@ -31,7 +32,11 @@ const itemVariants = {
   visible: { opacity: 1, y: 0 },
 }
 
+// Feature icons mapping
+const featureIcons = [Box, Database, Shield, Zap, Eye, Code]
+
 export default function EUTXOModelPage() {
+  const t = useTranslations("technologyPages.eutxoModel")
   const [openFAQ, setOpenFAQ] = useState<number | null>(null)
 
   const scrollToSection = (id: string) => {
@@ -42,119 +47,34 @@ export default function EUTXOModelPage() {
     }
   }
 
-  const modelComparison = [
-    {
-      aspect: "State Management",
-      utxo: "No global balances — only unspent outputs",
-      account: "Global state with account balances and storage",
-      advantage: "eUTXO",
-    },
-    {
-      aspect: "Security",
-      utxo: "No re-entrancy attacks, predictable costs",
-      account: "Vulnerable to re-entrancy, unpredictable gas",
-      advantage: "eUTXO",
-    },
-    {
-      aspect: "Parallelism",
-      utxo: "Independent boxes enable parallel processing",
-      account: "State contention forces sequential processing",
-      advantage: "eUTXO",
-    },
-    {
-      aspect: "Privacy",
-      utxo: "Natural transaction privacy through separate boxes",
-      account: "All balances publicly visible",
-      advantage: "eUTXO",
-    },
-    {
-      aspect: "Composability",
-      utxo: "Modular outputs compose into complex protocols",
-      account: "Monolithic contracts with complex interactions",
-      advantage: "Tie",
-    },
-  ]
+  // Build data arrays from translations
+  const features = Array.from({ length: 6 }, (_, i) => ({
+    icon: featureIcons[i],
+    title: t(`features.${i}.title`),
+    description: t(`features.${i}.description`),
+  }))
 
-  const features = [
-    {
-      icon: Box,
-      title: "Box-Based State",
-      description: "Each UTXO is a 'box' containing value, data, and a guarding script that defines spending conditions.",
-    },
-    {
-      icon: Database,
-      title: "Immutable Data",
-      description: "Boxes are immutable — once created, they cannot be modified, only consumed and new ones created.",
-    },
-    {
-      icon: Shield,
-      title: "No Re-entrancy",
-      description: "The UTXO model eliminates re-entrancy attacks by design — no mutable state to exploit.",
-    },
-    {
-      icon: Zap,
-      title: "Parallel Execution",
-      description: "Transactions touching different boxes can execute in parallel, improving scalability.",
-    },
-    {
-      icon: Eye,
-      title: "Local Verification",
-      description: "Smart contracts only need to verify their own inputs, not global blockchain state.",
-    },
-    {
-      icon: Code,
-      title: "Composable Protocols",
-      description: "Complex DeFi protocols built from simple, reusable box patterns.",
-    },
-  ]
+  const modelComparison = Array.from({ length: 5 }, (_, i) => ({
+    aspect: t(`comparison.${i}.aspect`),
+    utxo: t(`comparison.${i}.eutxo`),
+    account: t(`comparison.${i}.account`),
+    advantage: t(`comparison.${i}.advantage`),
+  }))
 
-  const useCases = [
-    {
-      title: "DEX Order Books",
-      description: "Each order is a separate box, enabling parallel matching and atomic swaps",
-      example: "Spectrum Finance",
-    },
-    {
-      title: "Lending Protocols",
-      description: "Collateral locked in boxes with clear liquidation conditions",
-      example: "DuckPools",
-    },
-    {
-      title: "Stablecoins",
-      description: "Reserve boxes track collateral independently for each position",
-      example: "SigmaUSD",
-    },
-    {
-      title: "NFT Auctions",
-      description: "Bid boxes compete without blocking each other",
-      example: "Ergo Auction House",
-    },
-  ]
+  const useCases = Array.from({ length: 4 }, (_, i) => ({
+    title: t(`useCases.${i}.title`),
+    description: t(`useCases.${i}.description`),
+    example: t(`useCases.${i}.example`),
+  }))
 
-  const faqs = [
-    {
-      question: "How is eUTXO different from Bitcoin's basic UTXO?",
-      answer: "While Bitcoin's UTXO model only tracks value transfers, Ergo's eUTXO extends this with arbitrary data storage in boxes and Turing-complete smart contracts via ErgoScript. This enables complex DeFi applications while keeping UTXO benefits.",
-    },
-    {
-      question: "Can eUTXO handle complex DeFi applications?",
-      answer: "Yes! Ergo has DEXes (Spectrum), lending protocols, stablecoins (SigmaUSD), and more. The eUTXO model actually makes these more secure by preventing re-entrancy and enabling parallel execution.",
-    },
-    {
-      question: "Why is the eUTXO model more scalable?",
-      answer: "Independent boxes enable parallel transaction processing. Unlike account models where state contention forces sequential execution, eUTXO transactions touching different boxes can run simultaneously.",
-    },
-    {
-      question: "How do smart contracts work in eUTXO?",
-      answer: "Each box has a guard script that defines its spending conditions. When spending a box, the script is executed with provided inputs. If it returns true, the box can be spent. This is simpler and more predictable than account-based execution.",
-    },
-  ]
+  const faqs = Array.from({ length: 4 }, (_, i) => ({
+    question: t(`faq.${i}.question`),
+    answer: t(`faq.${i}.answer`),
+  }))
 
-  const lastUpdated = new Date().toLocaleDateString('en-US', { 
-    year: 'numeric', 
-    month: 'long', 
-    day: 'numeric' 
-  })
+  const codeExampleBenefits = Array.from({ length: 4 }, (_, i) => 
+    t(`codeExampleBenefits.${i}`)
+  )
 
   return (
     <>
@@ -173,7 +93,7 @@ export default function EUTXOModelPage() {
             {
               "@type": "ListItem", 
               position: 2,
-              name: "eUTXO Model",
+              name: t("title"),
               item: "https://ergoblockchain.org/technology/eutxo-model"
             }
           ]
@@ -186,12 +106,12 @@ export default function EUTXOModelPage() {
         data={{
           "@type": "FAQPage",
           mainEntity: faqs.map(faq => ({
-              "@type": "Question",
+            "@type": "Question",
             name: faq.question,
-              acceptedAnswer: {
-                "@type": "Answer", 
+            acceptedAnswer: {
+              "@type": "Answer", 
               text: faq.answer
-              }
+            }
           }))
         }}
       />
@@ -204,7 +124,7 @@ export default function EUTXOModelPage() {
           <Breadcrumbs
             items={[
               { name: "Technology", href: "/technology" },
-              { name: "eUTXO Model", href: "/technology/eutxo-model" }
+              { name: t("title"), href: "/technology/eutxo-model" }
             ]}
             className="mb-8"
           />
@@ -223,22 +143,20 @@ export default function EUTXOModelPage() {
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 <div>
                   <h1 className="text-5xl md:text-7xl font-bold mb-6 text-white">
-                    eUTXO Model
+                    {t("title")}
                   </h1>
                   <p className="text-xl md:text-2xl text-neutral-300 mb-8 max-w-2xl">
-                    The foundation of Ergo's advanced smart contract capabilities
+                    {t("subtitle")}
                   </p>
                   <p className="text-lg text-neutral-400 mb-8 max-w-2xl leading-relaxed">
-                    Extended UTXO combines Bitcoin's proven security model with powerful smart contract functionality via{" "}
-                    <GlossaryLink term="ergoscript" variant="subtle" />, 
-                    enabling parallel execution and eliminating entire classes of vulnerabilities.
+                    {t("description")}
                   </p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Button
                       className="bg-orange-500 hover:bg-orange-600 text-black font-semibold px-6 py-3 rounded-xl"
                       onClick={() => scrollToSection("features")}
                     >
-                      Learn More
+                      {t("buttons.learnMore")}
                     </Button>
                     <Button
                       variant="outline"
@@ -250,7 +168,7 @@ export default function EUTXOModelPage() {
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        View Code
+                        {t("buttons.viewCode")}
                       </a>
                     </Button>
                   </div>
@@ -258,7 +176,7 @@ export default function EUTXOModelPage() {
                 <motion.div className="relative z-10" whileHover={{ scale: 1.02 }} transition={{ type: "spring", stiffness: 300, damping: 24 }}>
                   <div className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                     <h3 className="text-2xl font-bold mb-6 text-center text-white">
-                      Quick Start
+                      {t("quickStart.title")}
                     </h3>
                     <div className="grid grid-cols-1 gap-4">
                       <Link
@@ -270,8 +188,8 @@ export default function EUTXOModelPage() {
                             <Box className="w-6 h-6" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-white text-lg">Explore eUTXO</h4>
-                            <p className="text-neutral-400 text-sm">Interactive visualization of the model</p>
+                            <h4 className="font-semibold text-white text-lg">{t("quickStart.exploreEutxo.title")}</h4>
+                            <p className="text-neutral-400 text-sm">{t("quickStart.exploreEutxo.description")}</p>
                           </div>
                         </div>
                       </Link>
@@ -285,8 +203,8 @@ export default function EUTXOModelPage() {
                             <BookOpen className="w-6 h-6" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-white text-lg">Developer Guide</h4>
-                            <p className="text-neutral-400 text-sm">Build with eUTXO patterns</p>
+                            <h4 className="font-semibold text-white text-lg">{t("quickStart.developerGuide.title")}</h4>
+                            <p className="text-neutral-400 text-sm">{t("quickStart.developerGuide.description")}</p>
                           </div>
                         </div>
                       </Link>
@@ -302,8 +220,8 @@ export default function EUTXOModelPage() {
                             <Users className="w-6 h-6" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-white text-lg">Join Community</h4>
-                            <p className="text-neutral-400 text-sm">Get help from experienced developers</p>
+                            <h4 className="font-semibold text-white text-lg">{t("quickStart.joinCommunity.title")}</h4>
+                            <p className="text-neutral-400 text-sm">{t("quickStart.joinCommunity.description")}</p>
                           </div>
                         </div>
                       </a>
@@ -325,7 +243,7 @@ export default function EUTXOModelPage() {
           >
             <div className="max-w-7xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
-                Key Features
+                {t("featuresTitle")}
               </h2>
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {features.map((feature, index) => {
@@ -369,17 +287,17 @@ export default function EUTXOModelPage() {
           >
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
-                eUTXO vs Account Model
+                {t("comparisonTitle")}
               </h2>
               <div className="bg-black/80 border border-white/10 rounded-3xl overflow-hidden backdrop-blur-sm hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300">
                 <div className="overflow-x-auto">
                   <table className="w-full">
                     <thead>
                       <tr className="bg-black/60 border-b border-white/10">
-                        <th className="text-left p-4 font-semibold text-white">Aspect</th>
-                        <th className="text-left p-4 font-semibold text-white">eUTXO Model</th>
-                        <th className="text-left p-4 font-semibold text-white">Account Model</th>
-                        <th className="text-center p-4 font-semibold text-white">Advantage</th>
+                        <th className="text-left p-4 font-semibold text-white">{t("comparisonHeaders.aspect")}</th>
+                        <th className="text-left p-4 font-semibold text-white">{t("comparisonHeaders.eutxo")}</th>
+                        <th className="text-left p-4 font-semibold text-white">{t("comparisonHeaders.account")}</th>
+                        <th className="text-center p-4 font-semibold text-white">{t("comparisonHeaders.advantage")}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -427,7 +345,7 @@ export default function EUTXOModelPage() {
           >
             <div className="max-w-6xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
-                Real-World Use Cases
+                {t("useCasesTitle")}
               </h2>
               <div className="grid md:grid-cols-2 gap-8">
                 {useCases.map((useCase, index) => (
@@ -444,7 +362,7 @@ export default function EUTXOModelPage() {
                       </CardHeader>
                       <CardContent>
                         <p className="text-neutral-300 mb-3">{useCase.description}</p>
-                        <p className="text-sm text-orange-400">Example: {useCase.example}</p>
+                        <p className="text-sm text-orange-400">{t("exampleLabel")}: {useCase.example}</p>
                       </CardContent>
                     </Card>
                   </motion.div>
@@ -465,19 +383,12 @@ export default function EUTXOModelPage() {
             <div className="max-w-6xl mx-auto">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
-                  <h2 className="text-4xl font-bold mb-6 text-white">Simple Yet Powerful</h2>
+                  <h2 className="text-4xl font-bold mb-6 text-white">{t("codeExampleTitle")}</h2>
                   <p className="text-neutral-300 mb-6 leading-relaxed">
-                    The <GlossaryLink term="eutxo" variant="subtle" /> model simplifies smart contract development by treating everything as{" "}
-                    <GlossaryLink term="boxes" variant="subtle" /> with clear 
-                    spending conditions. No complex state management, no re-entrancy concerns — just straightforward logic.
+                    {t("codeExampleDescription")}
                   </p>
                   <ul className="space-y-4">
-                    {[
-                      "Predictable execution costs",
-                      "Natural transaction batching",
-                      "Built-in multi-sig support",
-                      "Atomic multi-asset swaps"
-                    ].map((item) => (
+                    {codeExampleBenefits.map((item) => (
                       <li key={item} className="flex items-center gap-3">
                         <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                         <span className="text-neutral-200">{item}</span>
@@ -519,7 +430,7 @@ export default function EUTXOModelPage() {
           >
             <div className="max-w-3xl mx-auto">
               <h2 className="text-4xl font-bold text-center mb-10 md:mb-12 text-white">
-                Frequently Asked Questions
+                {t("faqTitle")}
               </h2>
               <div className="space-y-4">
                 {faqs.map((faq, index) => (
@@ -558,8 +469,8 @@ export default function EUTXOModelPage() {
           {/* Related Technologies - Data-driven from technology-topics.ts */}
           <RelatedTechnologies 
             currentSlug="eutxo-model"
-            title="Continue Learning"
-            subtitle="Explore related Ergo technologies"
+            title={t("relatedTitle")}
+            subtitle={t("relatedSubtitle")}
           />
 
           {/* Related Dev Patterns - Data-driven */}
