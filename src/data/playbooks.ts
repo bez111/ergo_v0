@@ -118,7 +118,7 @@ export const playbooks: Playbook[] = [
         duration: "1 day",
         resources: [
           { type: 'tool', title: "ErgoScript Playground", href: "https://scastie.scala-lang.org" },
-          { type: 'doc', title: "AppKit Setup Guide", href: "/docs/developers/appkit" },
+          { type: 'doc', title: "AppKit Setup Guide", href: "/docs/developers/tooling/frameworks/appkit" },
         ]
       },
       {
@@ -1558,7 +1558,7 @@ export const playbooks: Playbook[] = [
         description: "Create a test transaction requiring multiple signatures. Verify the signing process works and all signers can participate.",
         duration: "1 hour",
         resources: [
-          { type: "doc", title: "Multi-Sig Signing", href: "/docs/developers/contracts/multisig" },
+          { type: "doc", title: "Multi-Sig Signing", href: "/docs/developers/cryptographic-primitives/other-signatures/threshold" },
         ],
       },
       {

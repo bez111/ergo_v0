@@ -1,9 +1,14 @@
 import type { Metadata } from "next"
 import BabelFeesClient from "./BabelFeesClient"
-import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 import { getTranslations } from "next-intl/server"
 import { useTranslations } from "next-intl"
+import {
+  createTechArticleSchema,
+  createFAQSchema,
+  createHowToSchema,
+} from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params
@@ -52,78 +57,35 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default function BabelFeesPage() {
   const t = useTranslations('use.babelFees.schema')
 
-  // SEO схемы для Babel Fees
-  const babelFeesSchema = {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "@id": "https://ergoblockchain.org/use/babel-fees",
+  // Centralized SEO schemas (with i18n)
+  const techArticleSchema = createTechArticleSchema("/use/babel-fees", {
     headline: t('techArticle.headline'),
     description: t('techArticle.description'),
-    author: {
-      "@type": "Organization",
-      name: "Ergo Platform"
-    },
-    datePublished: "2024-01-01",
-    dateModified: new Date().toISOString(),
-    about: {
-      "@type": "Thing",
-      name: t('techArticle.about.name'),
-      description: t('techArticle.about.description')
-    }
-  }
-  
-  const faqSchema = SchemaTypes.FAQSchema([
-    {
-      question: t('faq.whatAre.question'),
-      answer: t('faq.whatAre.answer')
-    },
-    {
-      question: t('faq.howWork.question'),
-      answer: t('faq.howWork.answer')
-    },
-    {
-      question: t('faq.whichTokens.question'),
-      answer: t('faq.whichTokens.answer')
-    },
-    {
-      question: t('faq.expensive.question'),
-      answer: t('faq.expensive.answer')
-    }
+    about: [{ name: t('techArticle.about.name') }],
+  })
+
+  const faqSchema = createFAQSchema([
+    { question: t('faq.whatAre.question'), answer: t('faq.whatAre.answer') },
+    { question: t('faq.howWork.question'), answer: t('faq.howWork.answer') },
+    { question: t('faq.whichTokens.question'), answer: t('faq.whichTokens.answer') },
+    { question: t('faq.expensive.question'), answer: t('faq.expensive.answer') },
   ])
-  
-  const howToSchema = {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
+
+  const howToSchema = createHowToSchema({
     name: t('howTo.name'),
     description: t('howTo.description'),
-    step: [
-      {
-        "@type": "HowToStep",
-        name: t('howTo.steps.chooseDapp.name'),
-        text: t('howTo.steps.chooseDapp.text')
-      },
-      {
-        "@type": "HowToStep",
-        name: t('howTo.steps.selectToken.name'),
-        text: t('howTo.steps.selectToken.text')
-      },
-      {
-        "@type": "HowToStep",
-        name: t('howTo.steps.executeTransaction.name'),
-        text: t('howTo.steps.executeTransaction.text')
-      }
-    ]
-  }
-  
-  const knowledgeGraph = generateKnowledgeGraph('use-cases')
-  
+    steps: [
+      { name: t('howTo.steps.chooseDapp.name'), text: t('howTo.steps.chooseDapp.text') },
+      { name: t('howTo.steps.selectToken.name'), text: t('howTo.steps.selectToken.text') },
+      { name: t('howTo.steps.executeTransaction.name'), text: t('howTo.steps.executeTransaction.text') },
+    ],
+  })
+
+  const knowledgeGraph = generateKnowledgeGraph("use-cases")
+
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(babelFeesSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      
+      {renderSchemaScripts([techArticleSchema, faqSchema, howToSchema, knowledgeGraph])}
       <BabelFeesClient />
     </>
   )

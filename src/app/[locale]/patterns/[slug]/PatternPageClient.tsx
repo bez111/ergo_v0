@@ -481,7 +481,7 @@ export function PatternPageClient({ pattern, relatedPatterns, categoryLabel }: P
                     <ArrowRight className="w-4 h-4 text-neutral-500 group-hover:text-orange-400 group-hover:translate-x-1 transition-all" />
                   </Link>
                   <Link
-                    href="/builders"
+                    href="/developers"
                     className="flex items-center gap-3 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-colors group"
                   >
                     <div className="w-10 h-10 rounded-lg bg-orange-500/20 flex items-center justify-center">

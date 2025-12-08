@@ -496,7 +496,7 @@ export default function IntroductionClient() {
               </Link>
 
               <Link 
-                href="/builders"
+                href="/developers"
                 className="bg-black/80 border border-white/10 rounded-3xl p-8 hover:bg-black/90 hover:border-orange-400/40 transition-all duration-300 cursor-pointer block group"
               >
                 <div className="flex items-center gap-4 mb-4">

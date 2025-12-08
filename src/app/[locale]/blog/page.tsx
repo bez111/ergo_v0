@@ -5,12 +5,11 @@ import TrendingNow from "./_components/trending-now"
 import BlogClientStable from "./_components/blog-client-stable"
 import type { Metadata } from "next"
 import { notFound, redirect } from "next/navigation"
-// Link and NewsletterSignup removed - not used in this file
-import { SchemaTypes } from "@/lib/schema-ultimate"
 import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
-// Import client component wrapper for background
 import { BackgroundWrapper } from "@/components/home/background-wrapper"
 import { siteConfig } from "@/config/site-config"
+import { createBreadcrumbSchema, createFAQSchema } from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 
 export const revalidate = 300
@@ -200,15 +199,10 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     mainEntity: { "@id": listId },
   }
 
-  const breadcrumbsJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": "https://ergoblockchain.org/blog#breadcrumbs",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://ergoblockchain.org/" },
-      { "@type": "ListItem", position: 2, name: "Blog", item: "https://ergoblockchain.org/blog" },
-    ],
-  }
+  // Centralized breadcrumbs schema
+  const breadcrumbsJsonLd = createBreadcrumbSchema([
+    { name: "Blog", href: "/blog" },
+  ])
 
   const websiteSearchJsonLd = {
     "@context": "https://schema.org",
@@ -223,29 +217,37 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
     },
   }
   
-  // Добавляем продвинутые SEO схемы
-  const knowledgeGraph = generateKnowledgeGraph('blog')
+  // Centralized SEO schemas
+  const knowledgeGraph = generateKnowledgeGraph("blog")
   
-  const faqSchema = SchemaTypes.FAQSchema([
+  const faqSchema = createFAQSchema([
     {
       question: "What is the Ergo blog about?",
-      answer: "The Ergo blog covers blockchain technology updates, DeFi developments, technical guides, ecosystem news, and research insights about the Ergo platform."
+      answer: "The Ergo blog covers blockchain technology updates, DeFi developments, technical guides, ecosystem news, and research insights about the Ergo platform.",
     },
     {
       question: "How often is new content published?",
-      answer: "New articles are published regularly, covering technical updates, ecosystem developments, and educational content about Ergo blockchain."
+      answer: "New articles are published regularly, covering technical updates, ecosystem developments, and educational content about Ergo blockchain.",
     },
     {
       question: "Who writes for the Ergo blog?",
-      answer: "Content is created by Ergo core developers, community contributors, ecosystem projects, and technical writers passionate about decentralized technology."
-    }
+      answer: "Content is created by Ergo core developers, community contributors, ecosystem projects, and technical writers passionate about decentralized technology.",
+    },
   ])
   
-  const speakableSchema = SchemaTypes.SpeakableSchema({
-    headline: "Ergo Blog - Latest Updates",
-    summary: "News, research, technical guides and ecosystem updates from Ergo blockchain",
-    url: `${siteConfig.siteUrl}/blog`
-  })
+  // Speakable schema (kept inline as it's specialized)
+  const speakableSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${siteConfig.siteUrl}/blog#speakable`,
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".blog-description"],
+    },
+    name: "Ergo Blog - Latest Updates",
+    description: "News, research, technical guides and ecosystem updates from Ergo blockchain",
+    url: `${siteConfig.siteUrl}/blog`,
+  }
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
@@ -256,17 +258,17 @@ export default async function BlogPage({ searchParams }: { searchParams: Promise
       >
         Skip to main content
       </a>
-      {/* Существующие схемы */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSearchJsonLd) }} />
-      
-      {/* Новые продвинутые схемы */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
+      {/* All JSON-LD schemas via centralized renderer */}
+      {renderSchemaScripts([
+        blogJsonLd,
+        itemListJsonLd,
+        collectionPageJsonLd,
+        breadcrumbsJsonLd,
+        websiteSearchJsonLd,
+        knowledgeGraph,
+        faqSchema,
+        speakableSchema,
+      ])}
 
       {/* Background Effects */}
       <BackgroundWrapper>

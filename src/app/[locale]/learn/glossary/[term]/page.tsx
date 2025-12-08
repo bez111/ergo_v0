@@ -1,35 +1,32 @@
-import type { Metadata } from "next";
-import { notFound } from "next/navigation";
-import { siteConfig } from "@/config/site-config";
-import { glossaryTerms, getTermBySlug } from "@/data/glossary";
-import { GlossaryTermClient } from "./GlossaryTermClient";
+import type { Metadata } from "next"
+import { notFound } from "next/navigation"
+import { siteConfig } from "@/config/site-config"
+import { glossaryTerms, getTermBySlug } from "@/data/glossary"
+import { GlossaryTermClient } from "./GlossaryTermClient"
+import { createBreadcrumbSchema, createFAQSchema, createTechArticleSchema } from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 interface Props {
-  params: Promise<{ term: string; locale: string }>;
+  params: Promise<{ term: string; locale: string }>
 }
 
 // Generate static params for all glossary terms
 export async function generateStaticParams() {
-  return glossaryTerms.map((term) => ({
-    term: term.slug,
-  }));
+  return glossaryTerms.map((term) => ({ term: term.slug }))
 }
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
-  const params = await props.params;
-  const term = getTermBySlug(params.term);
+  const params = await props.params
+  const term = getTermBySlug(params.term)
 
   if (!term) {
-    return {
-      title: "Term Not Found",
-      description: "The requested glossary term could not be found.",
-    };
+    return { title: "Term Not Found", description: "The requested glossary term could not be found." }
   }
 
-  const origin = siteConfig.siteUrl;
-  const url = `${origin}/learn/glossary/${term.slug}`;
-  const title = term.seoTitle || `What is ${term.term}? | Ergo Glossary`;
-  const description = term.seoDescription || term.shortDefinition;
+  const origin = siteConfig.siteUrl
+  const url = `${origin}/learn/glossary/${term.slug}`
+  const title = term.seoTitle || `What is ${term.term}? | Ergo Glossary`
+  const description = term.seoDescription || term.shortDefinition
 
   return {
     title,
@@ -42,14 +39,7 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       siteName: "Ergo Platform",
       title,
       description,
-      images: [
-        {
-          url: `${origin}/og/glossary-${term.slug}.png`,
-          width: 1200,
-          height: 630,
-          alt: `${term.term} - Ergo Glossary`,
-        },
-      ],
+      images: [{ url: `${origin}/og/glossary-${term.slug}.png`, width: 1200, height: 630, alt: `${term.term} - Ergo Glossary` }],
       locale: "en_US",
     },
     twitter: {
@@ -61,25 +51,25 @@ export async function generateMetadata(props: Props): Promise<Metadata> {
       creator: siteConfig.twitterHandle,
     },
     robots: { index: true, follow: true },
-  };
+  }
 }
 
 export default async function GlossaryTermPage(props: Props) {
-  const params = await props.params;
-  const term = getTermBySlug(params.term);
+  const params = await props.params
+  const term = getTermBySlug(params.term)
 
   if (!term) {
-    notFound();
+    notFound()
   }
 
-  const origin = siteConfig.siteUrl;
-  const url = `${origin}/learn/glossary/${term.slug}`;
+  const origin = siteConfig.siteUrl
+  const url = `/learn/glossary/${term.slug}`
 
-  // Structured Data - DefinedTerm
-  const definedTermJsonLd = {
+  // DefinedTerm schema (special type, kept structured)
+  const definedTermSchema = {
     "@context": "https://schema.org",
     "@type": "DefinedTerm",
-    "@id": `${url}#term`,
+    "@id": `${origin}${url}#term`,
     name: term.term,
     description: term.definition,
     inDefinedTermSet: {
@@ -87,90 +77,37 @@ export default async function GlossaryTermPage(props: Props) {
       "@id": `${origin}/learn/glossary#glossary`,
       name: "Ergo Blockchain Glossary",
     },
-  };
+  }
 
-  // Breadcrumbs
-  const breadcrumbsJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: origin },
-      { "@type": "ListItem", position: 2, name: "Learn", item: `${origin}/learn` },
-      { "@type": "ListItem", position: 3, name: "Glossary", item: `${origin}/learn/glossary` },
-      {
-        "@type": "ListItem",
-        position: 4,
-        name: term.term,
-        item: url,
-      },
-    ],
-  };
+  // FAQ items
+  const faqItems = term.faq.map(item => ({
+    question: item.question,
+    answer: item.answer
+  }))
 
-  // FAQ Schema for rich snippets
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: term.faq.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  };
-
-  // TechArticle for the explanation
-  const articleJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    headline: `What is ${term.term}?`,
-    description: term.shortDefinition,
-    url,
-    datePublished: term.publishDate,
-    dateModified: term.updatedDate || term.publishDate,
-    author: {
-      "@type": "Organization",
-      name: "Ergo Platform",
-      url: origin,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Ergo Platform",
-      logo: {
-        "@type": "ImageObject",
-        url: `${origin}/logo-ergo.svg`,
-      },
-    },
-    about: {
-      "@type": "Thing",
-      name: term.term,
-    },
-    keywords: term.keywords.join(", "),
-    proficiencyLevel: term.difficulty === 'beginner' ? 'Beginner' : 
-                      term.difficulty === 'intermediate' ? 'Intermediate' : 'Advanced',
-  };
+  const schemas = [
+    definedTermSchema,
+    createTechArticleSchema(url, {
+      headline: `What is ${term.term}?`,
+      description: term.shortDefinition,
+      datePublished: term.publishDate,
+      dateModified: term.updatedDate || term.publishDate,
+      keywords: term.keywords,
+      proficiencyLevel: term.difficulty === 'beginner' ? 'Beginner' : 
+                        term.difficulty === 'intermediate' ? 'Intermediate' : 'Advanced',
+    }),
+    createBreadcrumbSchema([
+      { name: "Learn", href: "/learn" },
+      { name: "Glossary", href: "/learn/glossary" },
+      { name: term.term, href: url },
+    ]),
+    createFAQSchema(faqItems),
+  ]
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(definedTermJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
-      />
+      {renderSchemaScripts(schemas)}
       <GlossaryTermClient term={term} />
     </>
-  );
+  )
 }
-

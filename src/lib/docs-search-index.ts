@@ -343,7 +343,7 @@ export function buildDocsSearchIndex(): DocsSearchIndexItem[] {
   const mainPages = [
     { title: "For Miners", href: "/miners", section: "Personas", excerpt: "GPU mining guides, profitability calculator, pools, and software", tags: ["Mining", "GPU", "Autolykos", "Pools"] },
     { title: "For Hodlers", href: "/hodlers", section: "Personas", excerpt: "Long-term investment guides, wallets, and staking information", tags: ["Investment", "Wallets", "Staking", "HODL"] },
-    { title: "For Builders", href: "/builders", section: "Personas", excerpt: "Developer resources, SDKs, and smart contract guides", tags: ["Development", "ErgoScript", "SDK", "Smart Contracts"] },
+    { title: "For Developers", href: "/developers", section: "Personas", excerpt: "Developer resources, SDKs, and smart contract guides", tags: ["Development", "ErgoScript", "SDK", "Smart Contracts"] },
     { title: "Use Cases", href: "/use", section: "Platform", excerpt: "Practical guides for wallets, DeFi, mining, bridges, and more", tags: ["DeFi", "Wallets", "Bridges", "Stablecoins"] },
     { title: "Technology", href: "/technology", section: "Platform", excerpt: "Ergo's technical foundations: eUTXO, ErgoScript, NIPoPoWs", tags: ["eUTXO", "ErgoScript", "NIPoPoWs", "Technology"] },
     { title: "Ecosystem", href: "/ecosystem", section: "Platform", excerpt: "Explore Ergo ecosystem: dApps, tools, and community projects", tags: ["Ecosystem", "dApps", "Projects", "Community"] },

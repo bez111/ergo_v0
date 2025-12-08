@@ -359,8 +359,8 @@ test.describe('Persona Pages', () => {
     await checkA11y(page)
   })
 
-  test('Builders page loads', async ({ page }) => {
-    await page.goto('/builders')
+  test('Developers page loads', async ({ page }) => {
+    await page.goto('/developers')
     
     await expect(page.locator('h1')).toBeVisible()
     

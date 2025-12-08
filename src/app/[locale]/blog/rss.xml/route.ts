@@ -44,7 +44,7 @@ ${blogPosts
       <dc:creator><![CDATA[${post.author.name}]]></dc:creator>
       <category><![CDATA[${post.category}]]></category>
       ${post.tags?.map(tag => `<category><![CDATA[${tag}]]></category>`).join('\n      ') || ''}
-      ${post.image ? `<enclosure url="${baseUrl}${post.image}" type="image/jpeg"/>` : ''}
+      ${post.image ? `<enclosure url="${baseUrl}${post.image}" type="${post.image.endsWith('.png') ? 'image/png' : post.image.endsWith('.svg') ? 'image/svg+xml' : 'image/jpeg'}"/>` : ''}
       <content:encoded><![CDATA[
         <p>${post.excerpt}</p>
         <p>By ${post.author.name}${post.author.role ? ` - ${post.author.role}` : ''}</p>

@@ -34,7 +34,7 @@ export default function ContributePage() {
                   <b>Code Contributions:</b> Help build and improve Ergo's core protocol, node software, SDKs, tooling, and ecosystem projects.
                 </li>
                 <li>
-                  <b>Getting Started:</b> Check out the <Link href="/docs/developers/overview" className="text-cyan-400 hover:underline">Developer Contribution Overview</Link> and the <Link href="/docs/developers/guidelines" className="text-cyan-400 hover:underline">Technical Contribution Guidelines</Link>.
+                  <b>Getting Started:</b> Check out the <Link href="/docs/developers" className="text-cyan-400 hover:underline">Developer Documentation</Link> and the <Link href="/docs/developers/resources" className="text-cyan-400 hover:underline">Developer Resources</Link>.
                 </li>
                 <li>
                   <b>Finding Tasks:</b> Look for issues tagged <span className="text-orange-400">good first issue</span> or <span className="text-orange-400">help wanted</span> in core repositories like <a href="https://github.com/ergoplatform/ergo" target="_blank" className="text-cyan-400 hover:underline">ergo</a>, <a href="https://github.com/ScorexFoundation/sigmastate-interpreter" target="_blank" className="text-cyan-400 hover:underline">sigmastate-interpreter</a>, <a href="https://github.com/ergoplatform/sigma-rust" target="_blank" className="text-cyan-400 hover:underline">sigma-rust</a>, <a href="https://github.com/ergoplatform/ergo-appkit" target="_blank" className="text-cyan-400 hover:underline">ergo-appkit</a>.

@@ -32,7 +32,7 @@ export default function ExtensionSectionPage() {
       <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
         <h2 className="text-2xl font-bold mb-4 text-orange-400">Why is the Extension Section Important?</h2>
         <ul className="list-disc list-inside ml-4 space-y-3 text-gray-300">
-          <li><b>Flexibility:</b> Allows incorporating data that doesn't fit into the core block structure, supporting future <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">protocol upgrades</Link> and application-specific needs.</li>
+          <li><b>Flexibility:</b> Allows incorporating data that doesn't fit into the core block structure, supporting future <Link href="/docs/developers/infrastructure/node/protocol" className="text-orange-400 hover:underline">protocol upgrades</Link> and application-specific needs.</li>
           <li><b>Efficiency:</b> Enables <Link href="/docs/developers/ergoscript-languages/wallet-interaction" className="text-orange-400 hover:underline">nodes</Link> and clients to download only necessary block sections, optimizing storage, bandwidth, and processing resources.</li>
           <li><b>Light Client Support:</b> Stores essential information like system parameters and <Link href="/docs/developers/cryptographic-primitives/popow" className="text-orange-400 hover:underline">NiPoPoWs</Link> links, allowing light clients to efficiently validate the blockchain without downloading its full history.</li>
         </ul>
@@ -55,7 +55,7 @@ export default function ExtensionSectionPage() {
             <div>
               <h3 className="text-lg font-semibold text-orange-300 mb-1">0x00: System parameters</h3>
               <p className="text-gray-300 text-sm">
-                (e.g., maximum block size, <Link href="/docs/developers/emission" className="text-orange-400 hover:underline">block reward</Link>, <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">voting thresholds</Link>).
+                (e.g., maximum block size, <Link href="/technology/adaptive-emission" className="text-orange-400 hover:underline">block reward</Link>, <Link href="/docs/developers/infrastructure/node/protocol" className="text-orange-400 hover:underline">voting thresholds</Link>).
               </p>
             </div>
           </div>
@@ -97,7 +97,7 @@ Value: 0x0000000000020000 (Represents a block size of 512 KB)
           <div className="bg-neutral-900/50 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-red-300 mb-1">System Parameters</h3>
             <p className="text-gray-300 text-sm">
-              Stored every <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">voting epoch</Link> (1,024 blocks) to aid light clients in block processing without full history verification. These parameters include values like the maximum block size, block reward, and voting thresholds, which can change over time through the <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">miner voting process</Link>.
+              Stored every <Link href="/docs/developers/infrastructure/node/protocol" className="text-orange-400 hover:underline">voting epoch</Link> (1,024 blocks) to aid light clients in block processing without full history verification. These parameters include values like the maximum block size, block reward, and voting thresholds, which can change over time through the <Link href="/docs/developers/infrastructure/node/protocol" className="text-orange-400 hover:underline">miner voting process</Link>.
             </p>
           </div>
           <div className="bg-neutral-900/50 rounded-lg p-4">
@@ -109,7 +109,7 @@ Value: 0x0000000000020000 (Represents a block size of 512 KB)
           <div className="bg-neutral-900/50 rounded-lg p-4">
             <h3 className="text-lg font-semibold text-cyan-300 mb-1">Validation Rules</h3>
             <p className="text-gray-300 text-sm">
-              Records changes to <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">consensus rules</Link>, ensuring all nodes operate with the same set of rules. For example, a change to the minimum transaction fee or the activation of new cryptographic features would be recorded here.
+              Records changes to <Link href="/docs/developers/infrastructure/node/protocol" className="text-orange-400 hover:underline">consensus rules</Link>, ensuring all nodes operate with the same set of rules. For example, a change to the minimum transaction fee or the activation of new cryptographic features would be recorded here.
             </p>
           </div>
         </div>

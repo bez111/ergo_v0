@@ -1,4 +1,6 @@
 import { Metadata } from 'next'
+import { createBlogSchema } from '@/lib/seo'
+import { renderSchemaScripts } from '@/components/seo/SEOSchemas'
 
 export const metadata: Metadata = {
   title: {
@@ -31,7 +33,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://ergoblockchain.org/blog',
     types: {
-      'application/rss+xml': 'https://ergoblockchain.org/api/rss'
+      'application/rss+xml': 'https://ergoblockchain.org/blog/rss.xml',
+      'application/feed+json': 'https://ergoblockchain.org/blog/feed.json'
     }
   },
   robots: {
@@ -47,6 +50,13 @@ export const metadata: Metadata = {
   },
 }
 
+// Centralized Blog schema
+const blogSchema = createBlogSchema({
+  name: 'Ergo Blog',
+  description: 'News, research deep-dives, and how-tos from the Ergo ecosystem.',
+  url: '/blog',
+})
+
 export default function BlogLayout({
   children,
 }: {
@@ -54,31 +64,7 @@ export default function BlogLayout({
 }) {
   return (
     <>
-      {/* JSON-LD structured data for blog container */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'Blog',
-            name: 'Ergo Blog',
-            description: 'News, research deep-dives, and how-tos from the Ergo ecosystem.',
-            url: 'https://ergoblockchain.org/blog',
-            publisher: {
-              '@type': 'Organization',
-              name: 'Ergo Platform',
-              logo: {
-                '@type': 'ImageObject',
-                url: 'https://ergoblockchain.org/logo.png'
-              }
-            },
-            mainEntityOfPage: {
-              '@type': 'WebPage',
-              '@id': 'https://ergoblockchain.org/blog'
-            }
-          })
-        }}
-      />
+      {renderSchemaScripts([blogSchema])}
       {children}
     </>
   )

@@ -27,6 +27,8 @@ import {
   Smartphone
 } from 'lucide-react';
 import Link from 'next/link';
+import { createTechArticleSchema, createBreadcrumbSchema } from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const metadata: Metadata = {
   title: 'Ergo Key Features - eUTXO, Storage Rent, ErgoScript & More',
@@ -71,84 +73,26 @@ export const metadata: Metadata = {
 }
 
 export default function KeyFeaturesPage() {
-  // Schema.org structured data
-  const featuresSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'TechArticle',
-    headline: 'Ergo Key Features - Revolutionary Blockchain Technology',
-    description: 'Comprehensive overview of Ergo\'s key technological features and innovations.',
-    author: {
-      '@type': 'Organization',
-      name: 'Ergo Platform'
-    },
-    publisher: {
-      '@type': 'Organization',
-      name: 'Ergo Platform',
-      logo: {
-        '@type': 'ImageObject',
-        url: 'https://ergoblockchain.org/logo.png'
-      }
-    },
-    datePublished: '2024-01-01',
-    dateModified: new Date().toISOString(),
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': 'https://ergoblockchain.org/docs/introduction/key-features'
-    },
+  // Centralized SEO schemas
+  const featuresSchema = createTechArticleSchema("/docs/introduction/key-features", {
+    headline: "Ergo Key Features - Revolutionary Blockchain Technology",
+    description: "Comprehensive overview of Ergo's key technological features and innovations.",
     about: [
-      {
-        '@type': 'Thing',
-        name: 'Extended UTXO Model',
-        description: 'Advanced blockchain architecture for smart contracts'
-      },
-      {
-        '@type': 'Thing', 
-        name: 'Storage Rent',
-        description: 'Economic sustainability mechanism for blockchain'
-      },
-      {
-        '@type': 'Thing',
-        name: 'ErgoScript',
-        description: 'Flexible smart contract language'
-      }
-    ]
-  }
+      { name: "Extended UTXO Model" },
+      { name: "Storage Rent" },
+      { name: "ErgoScript" },
+    ],
+  })
 
-  const breadcrumbSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://ergoblockchain.org'
-      },
-      {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Documentation',
-        item: 'https://ergoblockchain.org/docs'
-      },
-      {
-        '@type': 'ListItem',
-        position: 3,
-        name: 'Introduction',
-        item: 'https://ergoblockchain.org/docs/introduction'
-      },
-      {
-        '@type': 'ListItem',
-        position: 4,
-        name: 'Key Features',
-        item: 'https://ergoblockchain.org/docs/introduction/key-features'
-      }
-    ]
-  }
+  const breadcrumbSchema = createBreadcrumbSchema([
+    { name: "Documentation", href: "/docs" },
+    { name: "Introduction", href: "/docs/introduction" },
+    { name: "Key Features", href: "/docs/introduction/key-features" },
+  ])
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(featuresSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {renderSchemaScripts([featuresSchema, breadcrumbSchema])}
       
       {/* Hero Section */}
       <div className="mb-12">
@@ -248,7 +192,7 @@ export default function KeyFeaturesPage() {
           </div>
         </Link>
 
-        <Link href="/developers/ergoscript" className="group">
+        <Link href="/learn/ergoscript" className="group">
           <div className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-6 hover:scale-105 transition-transform duration-200 cursor-pointer relative h-full">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">

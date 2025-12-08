@@ -1,55 +1,95 @@
-# 📘 РУКОВОДСТВО ПО ИСПОЛЬЗОВАНИЮ SEO-СИСТЕМ
+# SEO Guide for ergoblockchain.org
 
-## 🎯 БЫСТРЫЙ СТАРТ
+> **NOTE:** This document has been updated to reflect the new centralized SEO approach.  
+> For the complete technical reference, see [`src/lib/seo/README.md`](../src/lib/seo/README.md).
 
-### 1. Базовая интеграция на любой странице
+---
+
+## Quick Start (NEW Approach)
 
 ```typescript
-// app/любая-страница/page.tsx
+// app/[locale]/your-page/page.tsx
 
 import { Metadata } from 'next'
-import { SchemaTypes, generateCompleteSchema } from '@/lib/schema-ultimate'
+import { createMetadata, createBreadcrumbSchema, createFAQSchema } from '@/lib/seo'
+import { renderSchemaScripts } from '@/components/seo/SEOSchemas'
 import { generateKnowledgeGraph } from '@/lib/entity-knowledge-graph'
-import { targetQuestions, generateSnippetHTML } from '@/lib/featured-snippets-optimizer'
-import { InternalLinking } from '@/lib/ai-internal-linking'
 
-// 1. Метаданные страницы
-export const metadata: Metadata = {
-  title: 'Ваш заголовок | Ergo Platform',
-  description: 'Описание страницы для SEO',
-  keywords: 'ergo, blockchain, ваши ключевики',
-  openGraph: {
-    title: 'Заголовок для соцсетей',
-    description: 'Описание для соцсетей',
-    images: ['/api/og?title=Заголовок&description=Описание'],
-  },
-  alternates: {
-    canonical: 'https://ergoblockchain.org/ваша-страница'
-  }
+// 1. Metadata via centralized helper
+export async function generateMetadata(): Promise<Metadata> {
+  return createMetadata({
+    title: 'Your Page Title | Ergo Platform',
+    description: 'Page description for SEO',
+    path: '/your-page',
+    keywords: ['ergo', 'blockchain', 'your keywords'],
+    ogImage: '/og/your-page.png',
+  })
 }
 
 export default function YourPage() {
-  // 2. Генерируем Schema.org разметку
-  const schemas = generateCompleteSchema('home', { /* данные */ })
-  const knowledgeGraph = generateKnowledgeGraph('home')
-  
+  // 2. JSON-LD schemas via centralized helpers
+  const schemas = [
+    createBreadcrumbSchema([
+      { name: 'Section', href: '/section' },
+      { name: 'Your Page', href: '/your-page' },
+    ]),
+    createFAQSchema([
+      { question: 'What is this?', answer: 'This is...' },
+    ]),
+    generateKnowledgeGraph('your-category'),
+  ]
+
   return (
     <>
-      {/* 3. Вставляем Schema.org */}
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
-      />
-      <script 
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }}
-      />
+      {/* 3. Render all schemas at once */}
+      {renderSchemaScripts(schemas)}
       
-      {/* Ваш контент */}
-      <div>Контент страницы</div>
+      {/* Your content */}
+      <div>Page content</div>
     </>
   )
 }
+```
+
+---
+
+## Available Schema Functions
+
+| Function | Schema Type | Use Case |
+|----------|-------------|----------|
+| `createBreadcrumbSchema()` | BreadcrumbList | Navigation (almost every page) |
+| `createFAQSchema()` | FAQPage | Q&A sections |
+| `createTechArticleSchema()` | TechArticle | Technical content, blog |
+| `createCollectionSchema()` | CollectionPage | Hub pages, directories |
+| `createItemListSchema()` | ItemList | Lists of items |
+| `createHowToSchema()` | HowTo | Step-by-step guides |
+| `createSoftwareAppSchema()` | SoftwareApplication | dApps, ecosystem projects |
+| `createWebApplicationSchema()` | WebApplication | Interactive tools |
+| `createDatasetSchema()` | Dataset | Data collections |
+| `createFinancialServiceSchema()` | FinancialService | Grants, funding |
+| `createEventSchema()` | Event | Events, launches |
+
+See [`src/lib/seo/README.md`](../src/lib/seo/README.md) for full documentation.
+
+---
+
+## Legacy Approach (for reference)
+
+The following describes the OLD approach using `SchemaTypes`. New pages should use the centralized `@/lib/seo` module instead.
+
+```typescript
+// OLD - do not use for new pages
+import { SchemaTypes, generateCompleteSchema } from '@/lib/schema-ultimate'
+
+const faq = SchemaTypes.FAQSchema([...])
+<script dangerouslySetInnerHTML={{ __html: JSON.stringify(faq) }} />
+
+// NEW - use this instead
+import { createFAQSchema } from '@/lib/seo'
+import { renderSchemaScripts } from '@/components/seo/SEOSchemas'
+
+const faq = createFAQSchema([...])
+{renderSchemaScripts([faq])}
 ```
 
 ---

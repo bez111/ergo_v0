@@ -573,7 +573,7 @@ const canMint = (stateBox: Box, amount: bigint): boolean => {
     relatedPatterns: ["ergo-sigma-or-access-control", "ergo-multisig-wallet-m-of-n", "ergo-crowdfunding-assurance-contract"],
     
     resources: [
-      { type: "doc", title: "Time-Based Contracts", url: "/docs/developers/contracts/time-locks" },
+      { type: "doc", title: "Time-Based Contracts", url: "/docs/developers/ergoscript-languages/examples" },
       { type: "blog", title: "Vesting on Ergo", url: "/blog/vesting-contracts" }
     ],
     
@@ -859,7 +859,7 @@ const signedTx = combineSignatures([sig1, sig2]);`,
     relatedPatterns: ["ergo-dao-treasury-voting-pattern", "ergo-sigma-or-access-control", "ergo-block-height-time-lock"],
     
     resources: [
-      { type: "doc", title: "Multi-Sig Guide", url: "/docs/developers/contracts/multisig" },
+      { type: "doc", title: "Multi-Sig Guide", url: "/docs/developers/cryptographic-primitives/other-signatures/threshold" },
       { type: "playground", title: "Multi-Sig Playground", url: "https://ergoscript.org" }
     ],
     
@@ -1038,7 +1038,7 @@ const signedTx = combineSignatures([sig1, sig2]);`,
     relatedPatterns: ["ergo-multisig-wallet-m-of-n", "ergo-block-height-time-lock", "ergo-crowdfunding-assurance-contract"],
     
     resources: [
-      { type: "doc", title: "DAO Patterns", url: "/docs/developers/contracts/dao" },
+      { type: "doc", title: "DAO Patterns", url: "/docs/ecosystem/daos" },
       { type: "github", title: "Paideia Contracts", url: "https://github.com/paideiadao/paideia-contracts" }
     ],
     
@@ -2777,7 +2777,7 @@ async function claimRefund(
     relatedPatterns: ["ergo-block-height-time-lock", "ergo-dao-treasury-voting-pattern", "ergo-onchain-auction-pattern"],
     
     resources: [
-      { type: "doc", title: "Crowdfunding Contracts", url: "/docs/developers/contracts/crowdfunding" },
+      { type: "doc", title: "Crowdfunding Contracts", url: "/docs/developers/ergoscript-languages/examples" },
       { type: "blog", title: "Assurance Contracts", url: "/blog/assurance-contracts" }
     ],
     
@@ -3011,7 +3011,7 @@ async function settleAuction(auction: Auction): Promise<string> {
     relatedPatterns: ["ergo-nft-minting-guide", "ergo-block-height-time-lock", "ergo-crowdfunding-assurance-contract"],
     
     resources: [
-      { type: "doc", title: "Auction Contracts", url: "/docs/developers/contracts/auctions" },
+      { type: "doc", title: "Auction Contracts", url: "/docs/developers/ergoscript-languages/examples" },
       { type: "github", title: "ErgoAuctions", url: "https://github.com/ergoplatform/ergo-contracts" }
     ],
     

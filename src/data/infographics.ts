@@ -21,9 +21,9 @@ export const infographics: InfographicMeta[] = [
       "programmable privacy",
     ],
     previewImageUrl:
-      "/infographics/what-we-are-fighting-against-financial-repression-stack.jpg",
+      "/infographics/what-we-are-fighting-against-financial-repression-stack.png",
     fullImageUrl:
-      "/infographics/what-we-are-fighting-against-financial-repression-stack.jpg",
+      "/infographics/what-we-are-fighting-against-financial-repression-stack.png",
     imageAlt:
       "Infographic titled What We're Fighting Against showing a stacked tower of financial repression tools like CBDCs, KYC overreach, sanctions, freezing accounts and capital controls, contrasted with Ergo's censorship-resistant settlement, programmability without gatekeepers and privacy on demand.",
     publishDate: "2025-03-27T00:00:00.000Z",
@@ -497,6 +497,1130 @@ export const infographics: InfographicMeta[] = [
     ],
   },
   {
+    slug: "where-ergo-fits-among-major-chains",
+    title: "Where Ergo Fits Among Major Chains",
+    shortDescription:
+      "Scatterplot comparing Ergo, Bitcoin, Ethereum, Monero, Cardano, Solana, CBDCs and typical VC chains across launch model, programmability, DeFi and privacy.",
+    subtitle: "Sound money, smart contracts, and privacy in one PoW L1.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Bitcoin",
+      "Ethereum",
+      "Monero",
+      "Zcash",
+      "Cardano",
+      "Solana",
+      "CBDCs",
+      "VC chains",
+      "fair launch",
+      "PoW vs PoS",
+      "privacy",
+      "DeFi",
+      "smart contracts",
+    ],
+    previewImageUrl: "/og/infographics/where-ergo-fits-among-major-chains.png",
+    fullImageUrl: "/og/infographics/where-ergo-fits-among-major-chains.png",
+    imageAlt:
+      "Matrix-style scatterplot titled “Where Ergo Fits Among Major Chains”, showing Ergo in the top-left DeFi and privacy corner, contrasted with Bitcoin, Monero, Zcash, Ethereum, Cardano, Solana, typical VC chains and CBDCs along axes for programmability & privacy versus launch & power structure.",
+    publishDate: "2025-12-07T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Where Ergo Fits Among Major Chains: PoW Sound Money with DeFi and Privacy",
+    seoDescription:
+      "Infographic comparing Ergo with Bitcoin, Ethereum, Monero, Cardano, Solana, typical VC chains and CBDCs across launch model, programmability, DeFi and privacy to show why Ergo sits in the fair-launch, cypherpunk corner.",
+
+    aboutContent: [
+      "This infographic maps the major L1 ecosystems on a two-axis matrix: programmability and privacy on the vertical axis, and launch and power structure on the horizontal axis.",
+      "Ergo sits in the top-left corner: a fair-launch PoW chain with strong programmability and privacy, combining cypherpunk sound money roots with smart contracts and DeFi.",
+      "By contrast, VC-backed PoS chains and CBDCs cluster on the right side of the chart, where control, surveillance and foundation or state power dominate the design.",
+    ],
+    keyPoints: [
+      "Ergo combines fair-launch PoW, smart contracts and programmable privacy in one L1.",
+      "Bitcoin and Monero provide strong sound money and payment privacy, but with limited programmability.",
+      "Ethereum, Cardano, Solana and typical VC L1s focus on smart contracts and DeFi, but rely on PoS and foundation or VC-driven governance.",
+      "CBDCs sit in the far-right corner as fully programmable but centrally controlled and surveilled money.",
+    ],
+    howToRead: [
+      "Look at the horizontal axis: the further left a project is, the closer it is to fair-launch PoW and cypherpunk money roots; the further right, the more VC, foundation or state control.",
+      "Then check the vertical axis: the higher a project sits, the more it combines programmability, DeFi and privacy; the lower it is, the more it is focused on simple payments only.",
+      "Ergo’s highlighted orange region shows the unique combination of PoW sound money, advanced smart contracts and programmable privacy at the L1 level.",
+    ],
+    relatedTopics: [
+      "Ergo vs Ethereum",
+      "Ergo vs Bitcoin",
+      "privacy coins",
+      "PoW vs PoS",
+      "CBDCs and financial surveillance",
+    ],
+    customSections: [
+      {
+        title: "Why Ergo Sits in This Corner",
+        icon: "Info",
+        content: [
+          "Fair-launch PoW with no ICO, no premine and no VC rounds.",
+          "Smart contracts and DeFi on eUTXO using ErgoScript for complex dApps.",
+          "Programmable privacy via Sigma Protocols at the L1 level.",
+          "Long-term sustainability through storage rent and research-driven protocol design.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-zcash-zk-without-ceremony",
+    title: "Ergo vs Zcash: ZK Without Ceremony",
+    shortDescription:
+      "Side-by-side infographic comparing Ergo’s Sigma-based, trustless privacy and smart contracts with Zcash’s trusted-setup-based ZK model.",
+    subtitle:
+      "Sigma-based privacy and smart contracts without trusted setup.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Zcash",
+      "Sigma Protocols",
+      "zero-knowledge",
+      "trusted setup",
+      "privacy",
+      "DeFi",
+      "smart contracts",
+    ],
+    previewImageUrl: "/og/infographics/ergo-vs-zcash-zk-without-ceremony.png",
+    fullImageUrl: "/og/infographics/ergo-vs-zcash-zk-without-ceremony.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Zcash: ZK Without Ceremony”. On the left, a glowing Sigma Protocols diagram for Ergo with no trusted setup. On the right, a robed ceremony around a pedestal and furnace labeled toxic waste and key destruction for Zcash trusted setup, plus three comparison blocks for trusted setup, smart contracts & DeFi, and privacy model.",
+    publishDate: "2025-12-08T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Zcash: Sigma Protocols and ZK Privacy Without Trusted Ceremony",
+    seoDescription:
+      "Infographic showing how Ergo uses Sigma Protocols for trustless ZK smart contracts and DeFi, while Zcash relies on trusted setup ceremonies for shielded pools, comparing trusted setup, smart contracts and privacy models.",
+
+    aboutContent: [
+      "This infographic compares Ergo and Zcash through the lens of their underlying zero-knowledge technology and trust assumptions.",
+      "On the Ergo side, Sigma Protocols provide ZK proofs without any trusted setup ceremony, enabling a trustless base for programmable privacy and smart contracts.",
+      "On the Zcash side, the design historically relies on multi-party trusted setup ceremonies and toxic waste destruction for its shielded pools, which introduces additional trust and operational complexity.",
+    ],
+    keyPoints: [
+      "Ergo uses Sigma Protocols and does not require any trusted setup ceremony.",
+      "Zcash historically relies on trusted setups for its shielded pools, including toxic waste that must be securely destroyed.",
+      "Ergo combines ErgoScript and Sigma Protocols to enable programmable private DeFi and complex contracts on UTXO.",
+      "Zcash primarily focuses on shielded transfers for payments and does not have the same breadth of smart-contract DeFi.",
+      "Ergo’s privacy model is integrated with UTXO contracts, while Zcash provides opt-in shielded addresses mainly for payment flows.",
+    ],
+    howToRead: [
+      "Start with the top half: compare the visual models of Sigma Protocols on Ergo versus the trusted setup ceremony imagery for Zcash.",
+      "Then move to the three comparison blocks at the bottom that break things down into trusted setup, smart contracts & DeFi, and privacy model.",
+      "Use these sections to understand both the cryptographic trust assumptions and the practical implications for building private DeFi on each chain.",
+    ],
+    relatedTopics: [
+      "Sigma Protocols on Ergo",
+      "zero-knowledge proofs",
+      "trusted setup vs trustless ZK",
+      "privacy coins comparison",
+    ],
+    customSections: [
+      {
+        title: "Trusted setup vs trustless ZK",
+        icon: "Lock",
+        content: [
+          "Ergo: Sigma Protocols with no trusted setup ceremony required.",
+          "Zcash: historically depends on elaborate trusted setup ceremonies and secure destruction of toxic waste.",
+          "Removing trusted setup reduces systemic risk and eliminates a central point of failure for privacy guarantees.",
+        ],
+      },
+      {
+        title: "Smart contracts and private DeFi",
+        icon: "Shield",
+        content: [
+          "ErgoScript + Sigma Protocols allow building private, composable DeFi on a UTXO ledger.",
+          "Developers can encode complex access conditions, ring-like privacy patterns and advanced contracts directly at L1.",
+          "Zcash supports shielded transfers but lacks a broad, native smart-contract DeFi ecosystem.",
+        ],
+      },
+      {
+        title: "Privacy model in practice",
+        icon: "Info",
+        content: [
+          "Ergo integrates programmable privacy with contracts, enabling rich use cases beyond payments.",
+          "Zcash focuses on opt-in payment privacy for addresses and transactions.",
+          "For builders choosing a ZK platform, the difference between payment-only privacy and programmable privacy is critical.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-solana-tps-vs-sovereignty",
+    title: "Ergo vs Solana: TPS vs Sovereignty",
+    shortDescription:
+      "Infographic comparing Ergo’s high decentralization and sovereignty with Solana’s maximum throughput focus, including hardware, funding and design trade-offs.",
+    subtitle: "High throughput or high decentralization — pick your side.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Solana",
+      "TPS",
+      "throughput",
+      "sovereignty",
+      "decentralization",
+      "PoW",
+      "PoS",
+      "validators",
+      "VC funding",
+    ],
+    previewImageUrl: "/og/infographics/ergo-vs-solana-tps-vs-sovereignty.png",
+    fullImageUrl: "/og/infographics/ergo-vs-solana-tps-vs-sovereignty.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Solana: TPS vs Sovereignty”. On the left, a decentralized GPU miner network with high decentralization, security and sustainability for Ergo. On the right, a large speedometer showing 65,000+ TPS and data centers for Solana, plus comparison blocks for hardware requirements, launch & funding and focus.",
+    publishDate: "2025-12-09T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Solana: TPS vs Sovereignty and Decentralization Trade-offs",
+    seoDescription:
+      "Visual comparison of Ergo and Solana, contrasting fair-launch PoW decentralization and sovereignty with high-TPS, VC-funded PoS design, including hardware needs, funding model and focus.",
+
+    aboutContent: [
+      "This infographic contrasts two very different priorities in L1 design: Ergo’s focus on decentralization, sovereignty and sustainable PoW versus Solana’s focus on maximum throughput and TPS.",
+      "On the Ergo side, GPU-friendly PoW and broad miner participation aim to keep decentralization, security and sustainability high, aligning with cypherpunk-style sovereignty.",
+      "On the Solana side, extremely high TPS targets and complex validator requirements are supported by significant VC funding and large operators, trading off decentralization for raw throughput.",
+    ],
+    keyPoints: [
+      "Ergo emphasizes high decentralization, strong security and sustainable PoW, targeting sovereignty over maximum TPS.",
+      "Solana targets 65,000+ TPS and high throughput, with validator and infrastructure requirements that favor large, well-funded operators.",
+      "Ergo uses GPU-friendly PoW so a wide range of participants can help secure the network.",
+      "Solana relies on high-end validator hardware and data-center level setups, which can concentrate control.",
+      "Ergo launched with no VC, no premine and fair mining from genesis, while Solana involved significant VC funding and insider allocations.",
+    ],
+    howToRead: [
+      "Start with the left vs right panels: left shows Ergo’s decentralized miner network and sovereignty metrics, right shows Solana’s speedometer and TPS-centric design.",
+      "Move down to the comparison rows for hardware & validator requirements and launch & funding to understand who can realistically participate and who holds power.",
+      "Finish with the focus row to see how each chain prioritizes either cypherpunk sovereignty and sustainable PoW or maximum TPS with trade-offs in decentralization.",
+    ],
+    relatedTopics: [
+      "Ergo vs Solana",
+      "PoW vs PoS",
+      "TPS vs decentralization",
+      "validator hardware requirements",
+      "VC funding in L1 blockchains",
+    ],
+    customSections: [
+      {
+        title: "Decentralization and Sovereignty",
+        icon: "Shield",
+        content: [
+          "Ergo: High decentralization, high security and high sustainability via Autolykos-style PoW.",
+          "Solana: Focus on performance and throughput, with decentralization more constrained by infrastructure requirements.",
+          "Sovereignty is framed as the ability of regular users and miners to participate without relying on a small set of large validators.",
+        ],
+      },
+      {
+        title: "Hardware, Validators and Launch Model",
+        icon: "Cpu",
+        content: [
+          "Ergo: GPU-friendly PoW encourages broad miner participation, lowering the barrier to join consensus.",
+          "Solana: High-end validator hardware and complex setups favor fewer, larger operators.",
+          "Ergo launched with no VC, no premine and fair mining from genesis, whereas Solana involved significant VC funding and insider allocations.",
+        ],
+      },
+      {
+        title: "Focus and Trade-offs",
+        icon: "Info",
+        content: [
+          "Ergo’s focus: cypherpunk-style sovereignty, censorship resistance and sustainable PoW economics.",
+          "Solana’s focus: maximum TPS and throughput, accepting trade-offs in decentralization and hardware accessibility.",
+          "Builders and users must decide whether they prioritize sovereignty and openness or raw performance metrics like TPS.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-cardano-two-eutxo-paths",
+    title: "Ergo vs Cardano: Two eUTXO Paths",
+    shortDescription:
+      "Infographic comparing Ergo and Cardano as two eUTXO chains with the same research roots but different choices on consensus, launch, privacy and sustainability.",
+    subtitle:
+      "Same research roots, different choices on consensus, launch, and sustainability.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Cardano",
+      "eUTXO",
+      "PoW vs PoS",
+      "fair launch",
+      "ICO",
+      "Sigma Protocols",
+      "privacy",
+      "storage rent",
+      "sustainability",
+    ],
+    previewImageUrl: "/og/infographics/ergo-vs-cardano-two-eutxo-paths.png",
+    fullImageUrl: "/og/infographics/ergo-vs-cardano-two-eutxo-paths.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Cardano: Two eUTXO Paths”. A central eUTXO research hub splits into two roads: a blocky PoW fair-launch path for Ergo and a smooth PoS ICO and foundation path for Cardano, with four comparison panels for consensus, launch & distribution, privacy and sustainability.",
+    publishDate: "2025-12-10T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Cardano: Two eUTXO Paths for Consensus, Launch, Privacy and Sustainability",
+    seoDescription:
+      "Visual comparison of Ergo and Cardano as eUTXO chains, contrasting PoW fair launch vs PoS ICO model, programmable Sigma-based privacy vs no native L1 privacy, and storage rent sustainability vs off-protocol state management.",
+
+    aboutContent: [
+      "This infographic explores how Ergo and Cardano share eUTXO research roots but diverge on core design decisions such as consensus, launch model, privacy and long-term sustainability.",
+      "On the Ergo side, the path is defined by PoW Autolykos, GPU-friendly miner security, a fair launch with no ICO or VC, programmable privacy via Sigma Protocols and protocol-level storage rent.",
+      "On the Cardano side, the path emphasizes PoS with stake-based validators, an ICO and large foundation with early allocations, no native L1 privacy and off-protocol approaches to state growth and sustainability.",
+    ],
+    keyPoints: [
+      "Both Ergo and Cardano are eUTXO-based chains, but they take different routes on consensus and governance.",
+      "Ergo follows a PoW fair-launch approach with no ICO, no premine, no VC and miner-based security.",
+      "Cardano uses PoS with stake-based validators, backed by an ICO, large foundation and early allocations.",
+      "Ergo offers programmable privacy at L1 via Sigma Protocols, while Cardano has no native L1 privacy.",
+      "Ergo’s storage rent provides a built-in sustainability mechanism; Cardano manages state growth off-protocol without storage rent.",
+    ],
+    howToRead: [
+      "Start from the central eUTXO research roots and follow each road outward: the blocky PoW fair-launch path for Ergo and the smoother PoS ICO/foundation path for Cardano.",
+      "Read the four comparison panels at the bottom—consensus, launch & distribution, privacy and sustainability—to see how each chain implements these dimensions.",
+      "Use the visual separation of the two paths to understand that similar research foundations can still lead to very different practical trade-offs.",
+    ],
+    relatedTopics: [
+      "eUTXO model explained",
+      "Ergo vs Cardano",
+      "PoW vs PoS consensus",
+      "storage rent in Ergo",
+      "Sigma Protocols and programmable privacy",
+    ],
+    customSections: [
+      {
+        title: "Consensus and Security",
+        icon: "Shield",
+        content: [
+          "Ergo: PoW Autolykos with GPU-friendly mining and direct miner security.",
+          "Cardano: PoS with stake-based validators securing the network.",
+          "Consensus choice affects who can participate in securing the chain and how power is distributed.",
+        ],
+      },
+      {
+        title: "Launch, Distribution and Governance Roots",
+        icon: "Users",
+        content: [
+          "Ergo: Fair launch, no ICO, no VC, no premine; coins distributed through mining from genesis.",
+          "Cardano: ICO, large foundation and early allocations create a more centralized funding and governance base.",
+          "Launch and distribution shape long-term incentives and perceptions of neutrality.",
+        ],
+      },
+      {
+        title: "Privacy and Sustainability",
+        icon: "Info",
+        content: [
+          "Ergo: Programmable privacy via Sigma Protocols integrated at L1, plus storage rent as a protocol-level sustainability mechanism.",
+          "Cardano: No native L1 privacy and no storage rent, with state growth managed off-protocol.",
+          "These differences highlight how eUTXO can be extended toward either stronger privacy and sustainability or other design priorities.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-litecoin-digital-silver-vs-programmable-money",
+    title: "Ergo vs Litecoin: Digital Silver vs Programmable Money",
+    shortDescription:
+      "Infographic comparing Ergo as programmable PoW money for DeFi and alternative economic systems with Litecoin as digital silver / faster Bitcoin focused on payments.",
+    subtitle:
+      "From “fast Bitcoin” payments to PoW smart-contract DeFi.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Litecoin",
+      "digital silver",
+      "programmable money",
+      "PoW",
+      "smart contracts",
+      "DeFi",
+      "privacy",
+      "eUTXO",
+    ],
+    previewImageUrl:
+      "/og/infographics/ergo-vs-litecoin-digital-silver-vs-programmable-money.png",
+    fullImageUrl:
+      "/og/infographics/ergo-vs-litecoin-digital-silver-vs-programmable-money.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Litecoin: Digital Silver vs Programmable Money”. On the left, Ergo is shown as programmable PoW money with icons for smart contracts, DeFi, privacy and dApps. On the right, Litecoin appears as a speeding silver coin for faster Bitcoin-style payments, with comparison panels for role & narrative, smart contracts and privacy.",
+    publishDate: "2025-12-11T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Litecoin: From Digital Silver Payments to Programmable PoW Money",
+    seoDescription:
+      "Visual comparison of Ergo and Litecoin, contrasting Litecoin’s “digital silver / faster Bitcoin” payment focus with Ergo’s programmable PoW money for DeFi, smart contracts and integrated privacy.",
+
+    aboutContent: [
+      "This infographic contrasts Litecoin’s “digital silver / faster Bitcoin” narrative with Ergo’s positioning as programmable PoW money for DeFi and alternative economic systems.",
+      "On the Ergo side, the graphic highlights smart contracts on eUTXO, DeFi, dApps and programmable privacy built directly into contracts and transaction flows.",
+      "On the Litecoin side, the focus is on speed and payments, with no general smart-contract framework on L1 and only limited or optional privacy extensions.",
+    ],
+    keyPoints: [
+      "Ergo is designed as programmable PoW money, supporting DeFi, smart contracts and alternative economic systems.",
+      "Litecoin is positioned as digital silver or faster Bitcoin, optimized primarily for payments.",
+      "Ergo uses ErgoScript smart contracts on eUTXO, enabling rich dApp and DeFi functionality at L1.",
+      "Litecoin lacks a general-purpose smart-contract framework on its base layer.",
+      "Ergo integrates programmable privacy with contracts and flows, while Litecoin remains mostly transparent with limited privacy add-ons.",
+    ],
+    howToRead: [
+      "Start with the top half: compare the glowing Ergo programmable money panel on the left with the monochrome Litecoin payments panel on the right.",
+      "Then read the three comparison blocks along the bottom—role & narrative, smart contracts and privacy—to understand how each chain positions itself.",
+      "Use these sections to see the trade-off between a pure payment-focused digital silver design and a programmable PoW platform built for DeFi and privacy.",
+    ],
+    relatedTopics: [
+      "Ergo vs Litecoin",
+      "programmable PoW money",
+      "digital silver narrative",
+      "ErgoScript smart contracts",
+      "privacy on PoW chains",
+    ],
+    customSections: [
+      {
+        title: "Role & Narrative",
+        icon: "Info",
+        content: [
+          "Ergo: Programmable PoW money for DeFi and alternative economic systems.",
+          "Litecoin: Digital silver / faster Bitcoin, focused mainly on everyday payments.",
+          "Narrative determines whether a chain is viewed as a simple payment rail or a programmable financial platform.",
+        ],
+      },
+      {
+        title: "Smart Contracts & DeFi",
+        icon: "Code",
+        content: [
+          "Ergo: ErgoScript smart contracts on eUTXO enable complex dApps and DeFi primitives on L1.",
+          "Litecoin: No general smart-contract framework on the base layer.",
+          "This difference impacts what builders can create natively on each chain without relying on external layers.",
+        ],
+      },
+      {
+        title: "Privacy Model",
+        icon: "Eye",
+        content: [
+          "Ergo: Programmable privacy integrated directly with contracts and transaction flows.",
+          "Litecoin: Mostly transparent chain with limited or optional privacy extensions.",
+          "Integrated privacy allows Ergo to support more sophisticated private DeFi and contract interactions than a payment-only model.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-monero-privacy-modes",
+    title: "Ergo vs Monero: Privacy Modes",
+    shortDescription:
+      "Infographic comparing Monero’s always-on payment privacy with Ergo’s optional, programmable privacy for DeFi, smart contracts and selective disclosure.",
+    subtitle:
+      "Always-on payment privacy vs programmable privacy for DeFi.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Monero",
+      "privacy",
+      "privacy coins",
+      "programmable privacy",
+      "DeFi",
+      "smart contracts",
+      "selective disclosure",
+      "compliance",
+    ],
+    previewImageUrl: "/og/infographics/ergo-vs-monero-privacy-modes.png",
+    fullImageUrl: "/og/infographics/ergo-vs-monero-privacy-modes.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Monero: Privacy Modes”. A slider shows transparent to private with programmable privacy highlighted for Ergo and a large ON switch for full privacy for Monero, plus three comparison panels for privacy mode, scope of the chain and flexibility & compliance.",
+    publishDate: "2025-12-12T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Monero: Always-on Privacy vs Programmable Privacy for DeFi",
+    seoDescription:
+      "Visual comparison of Ergo and Monero privacy modes, contrasting Monero’s default full payment privacy with Ergo’s optional, programmable privacy for DeFi, smart contracts and selective disclosure.",
+
+    aboutContent: [
+      "This infographic compares the privacy philosophies of Ergo and Monero: Monero offers default, always-on payment privacy for every transaction, while Ergo focuses on optional, programmable privacy that can be tuned per use case.",
+      "On Ergo, privacy is integrated with smart contracts, DeFi, stablecoins and dApps, enabling complex flows where users and builders choose what to hide and when.",
+      "On Monero, the chain is heavily payment-focused with no general smart-contract platform, making it harder to design selectively transparent flows or compliance-friendly patterns.",
+    ],
+    keyPoints: [
+      "Monero provides default full payment privacy on every transaction by design.",
+      "Ergo offers optional, programmable privacy where contracts can decide what data is hidden or revealed.",
+      "Ergo supports smart contracts, DeFi, stablecoins and dApps with privacy options on top of eUTXO.",
+      "Monero is payments-focused and does not provide a general smart-contract framework.",
+      "Ergo can enable selectively transparent flows to help with flexibility and compliance, whereas Monero makes such patterns harder to implement.",
+    ],
+    howToRead: [
+      "Start with the privacy slider at the top: it shows the spectrum from transparent to private, with programmable privacy highlighted for Ergo and full privacy switched on for Monero.",
+      "Then read the three panels along the bottom—privacy mode, scope of the chain and flexibility & compliance—to see how each project uses its privacy model.",
+      "Use these comparisons to understand when always-on privacy is ideal and when programmable, selective privacy may be more suitable for DeFi and regulated use cases.",
+    ],
+    relatedTopics: [
+      "Ergo vs Monero",
+      "privacy coins comparison",
+      "programmable privacy in DeFi",
+      "Sigma Protocols and selective disclosure",
+    ],
+    customSections: [
+      {
+        title: "Privacy Mode and UX",
+        icon: "Shield",
+        content: [
+          "Ergo: Optional, programmable privacy—users and dApps choose what to hide and when.",
+          "Monero: Default full payment privacy for every transaction.",
+          "This affects user experience and how easily different transaction types can be expressed.",
+        ],
+      },
+      {
+        title: "Scope of the Chain",
+        icon: "Code",
+        content: [
+          "Ergo: Smart contracts, DeFi, stablecoins and dApps all gain access to privacy options.",
+          "Monero: Primarily designed for private payments, without a general smart-contract platform.",
+          "Broader scope on Ergo supports more complex financial and application-layer use cases.",
+        ],
+      },
+      {
+        title: "Flexibility & Compliance",
+        icon: "Info",
+        content: [
+          "Ergo: Can design flows with selective disclosure for auditors, counterparties or regulators when needed.",
+          "Monero: Harder to construct selectively transparent flows because privacy is always on by default.",
+          "Programmable privacy offers a middle ground between cypherpunk privacy and real-world compliance requirements.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-ethereum-same-power-less-pain",
+    title: "Ergo vs Ethereum: Same Power, Less Pain",
+    shortDescription:
+      "Infographic comparing Ergo and Ethereum on state model, MEV and fees, consensus power structure and privacy, showing how eUTXO aims for similar programmability with fewer account-model headaches.",
+    subtitle:
+      "Smart contracts and DeFi without account-model headaches and MEV wars.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Ethereum",
+      "eUTXO",
+      "EVM",
+      "smart contracts",
+      "DeFi",
+      "MEV",
+      "gas fees",
+      "PoW vs PoS",
+      "state model",
+    ],
+    previewImageUrl: "/og/infographics/ergo-vs-ethereum-same-power-less-pain.png",
+    fullImageUrl: "/og/infographics/ergo-vs-ethereum-same-power-less-pain.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Ethereum: Same Power, Less Pain”. Two balanced scales compare Ergo and Ethereum programmability, then another scale tilts under Ethereum’s heavy MEV risks, with four panels below for state model & safety, fees & MEV, consensus & power structure, and privacy.",
+    publishDate: "2025-12-13T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Ethereum: Same Smart-Contract Power with Less MEV and State-Model Pain",
+    seoDescription:
+      "Visual comparison of Ergo and Ethereum, highlighting how eUTXO, predictable fees and PoW miner-driven security aim to reduce MEV, reentrancy and centralization risks while keeping smart-contract programmability.",
+
+    aboutContent: [
+      "This infographic compares Ergo and Ethereum across four dimensions: state model and safety, fees and MEV, consensus and power structure, and privacy.",
+      "On the Ergo side, the eUTXO model, ErgoScript, L1 Sigma privacy and PoW Autolykos aim to provide strong programmability with local state, predictable execution and minimal MEV surface.",
+      "On the Ethereum side, the global account model, EVM, L2 scaling and PoS validators deliver powerful programmability but introduce shared mutable state, gas auctions, MEV markets and a more capital-based validator structure.",
+    ],
+    keyPoints: [
+      "Both Ergo and Ethereum offer powerful smart-contract programmability, but with different state models and risk profiles.",
+      "Ergo’s eUTXO model provides local state, no reentrancy and more predictable execution paths.",
+      "Ethereum’s global account model enables rich composability but brings reentrancy and shared mutable-state risks.",
+      "Ergo targets predictable fees and an eUTXO design that reduces MEV and gas-auction dynamics.",
+      "Ethereum faces gas auctions, MEV, priority fees and complex fee markets, concentrating power around capital-rich actors.",
+      "Ergo is secured by PoW Autolykos with GPU-friendly, miner-driven consensus, while Ethereum uses PoS with large validator sets and capital-based power.",
+      "Ergo offers L1 Sigma-based privacy for contracts and flows; Ethereum relies more on L2s and complex add-ons for privacy.",
+    ],
+    howToRead: [
+      "Begin with the central scales to see that Ergo and Ethereum can both deliver programmability, then follow the arrow to the second scale that contrasts risk profiles.",
+      "Read the four panels along the bottom—state model & safety, fees & MEV, consensus & power structure, and privacy—to understand how each design impacts developers and users.",
+      "Use these comparisons to evaluate whether you prefer eUTXO-style local state and reduced MEV exposure or the global account model with its composability and complexity.",
+    ],
+    relatedTopics: [
+      "eUTXO vs account model",
+      "MEV and gas auctions",
+      "ErgoScript vs EVM",
+      "PoW vs PoS validator incentives",
+      "L1 privacy vs L2 privacy solutions",
+    ],
+    customSections: [
+      {
+        title: "State Model & Safety",
+        icon: "Shield",
+        content: [
+          "Ergo: eUTXO with local state, no reentrancy and more predictable execution.",
+          "Ethereum: Global account model with shared mutable state and reentrancy risks.",
+          "State-model choice defines many of the downstream safety and UX trade-offs in DeFi.",
+        ],
+      },
+      {
+        title: "Fees, MEV and Power Structure",
+        icon: "Cpu",
+        content: [
+          "Ergo: Predictable fees and an eUTXO design that reduces MEV, gas auctions and complex fee markets.",
+          "Ethereum: Gas auctions, MEV, priority fees and capital-based validator power shape user and builder experience.",
+          "Ergo uses PoW Autolykos with GPU-friendly mining, while Ethereum uses PoS with large validator sets and stake-driven control.",
+        ],
+      },
+      {
+        title: "Privacy and Developer Experience",
+        icon: "Eye",
+        content: [
+          "Ergo: L1 Sigma-based privacy for contracts and flows, integrated directly into the main chain.",
+          "Ethereum: Privacy is mainly provided through L2s, specialized protocols and complex add-ons.",
+          "Developers must weigh direct L1 privacy against the composability and tooling ecosystem around EVM and its extensions.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-major-l1s-feature-checklist",
+    title: "Ergo vs Major L1s – Feature Checklist",
+    shortDescription:
+      "Side-by-side matrix for Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC chain, CBDCs and Ergo across consensus, launch, privacy, storage rent, MEV and more.",
+    subtitle:
+      "Consensus, launch, privacy, storage rent, MEV — all in one table.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Bitcoin",
+      "Ethereum",
+      "Cardano",
+      "Monero",
+      "Zcash",
+      "Solana",
+      "CBDCs",
+      "VC chains",
+      "fair launch",
+      "consensus",
+      "storage rent",
+      "MEV",
+      "privacy",
+    ],
+    previewImageUrl: "/og/infographics/ergo-vs-major-l1s-feature-checklist.png",
+    fullImageUrl: "/og/infographics/ergo-vs-major-l1s-feature-checklist.png",
+    imageAlt:
+      "Feature matrix titled “Ergo vs Major L1s – Feature Checklist”, comparing Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC chain, CBDCs and Ergo across rows like consensus, launch & distribution, state model, smart contracts, L1 privacy, storage rent, MEV resistance, light clients and censorship resistance, with the Ergo column highlighted in vibrant green.",
+    publishDate: "2025-12-14T00:00:00.000Z",
+    readingTimeMinutes: 5,
+
+    seoTitle:
+      "Ergo vs Major L1s: Full Feature Checklist for Consensus, Privacy, MEV and Sustainability",
+    seoDescription:
+      "A side-by-side feature matrix for Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC chain, CBDCs and Ergo, highlighting where Ergo combines fair-launch PoW, programmable DeFi, storage rent and L1 privacy in one chain.",
+
+    aboutContent: [
+      "This infographic condenses the design choices of major L1s into a single feature checklist, covering consensus, launch model, state model, smart contracts, L1 privacy, storage rent, MEV resistance, light clients and censorship resistance.",
+      "Each column represents a chain such as Bitcoin, Ethereum, Cardano, Monero, Zcash, Solana, a typical VC-style chain, CBDCs and Ergo, while each row shows how strongly that chain supports a particular feature, from red (absent or weak) to vibrant green (strong or ideal within its narrative).",
+      "The Ergo column is highlighted to show how fair-launch PoW, eUTXO with ErgoScript and Sigma extensions, L1 Sigma-based privacy, built-in storage rent and MEV-aware design combine into a unique mix that differs from both Bitcoin-style payment chains and VC-driven smart-contract platforms.",
+    ],
+    keyPoints: [
+      "The matrix compares nine different L1 designs across core categories such as consensus, launch & distribution, state model and smart contracts.",
+      "Bitcoin scores well on PoW security and censorship resistance but lacks L1 privacy, storage rent and rich smart contracts.",
+      "Ethereum, Cardano and Solana provide strong smart-contract capabilities but rely on PoS, VC or foundation-heavy launches and account-model or parallel-account state designs.",
+      "Monero and Zcash focus on payment privacy but have limited programmability or require trusted setups.",
+      "CBDCs and typical VC chains cluster toward centralized launches, transparent or issuer-visible ledgers and weaker censorship resistance.",
+      "Ergo combines fair-launch PoW Autolykos, eUTXO with ErgoScript and Sigma extensions, programmable L1 privacy, built-in storage rent, MEV-aware eUTXO and NiPoPoWs + SPV for light clients, while preserving strong censorship resistance.",
+    ],
+    howToRead: [
+      "Scan each row to understand the feature being evaluated (consensus, launch & distribution, state model, smart contracts, L1 privacy, storage rent, MEV resistance, light clients and censorship resistance).",
+      "Move across the row to see how each chain scores, using the color legend from red (0) to vibrant green (3) to gauge relative strength or absence.",
+      "Pay special attention to the highlighted Ergo column to see how its combination of features differs both from Bitcoin-style sound-money chains and from VC-driven smart-contract platforms or CBDCs.",
+    ],
+    relatedTopics: [
+      "Ergo vs Bitcoin",
+      "Ergo vs Ethereum",
+      "PoW vs PoS trade-offs",
+      "storage rent explained",
+      "MEV resistance in eUTXO",
+      "CBDCs vs public blockchains",
+    ],
+    customSections: [
+      {
+        title: "Consensus, Launch & State Model",
+        icon: "Shield",
+        content: [
+          "Shows how each chain approaches consensus (PoW, PoS, central-bank issuance, VC-driven PoS/DPoS) and launch model (fair launch vs ICO, premine, foundation or central bank).",
+          "Highlights the difference between account models, eUTXO, privacy-focused ledgers and centralized account balances.",
+          "Ergo: PoW Autolykos with GPU-friendly, ASIC-resistant mining, a fair launch with no ICO or VC and an eUTXO state model extended with Sigma logic.",
+        ],
+      },
+      {
+        title: "Smart Contracts, Privacy & Sustainability",
+        icon: "Cpu",
+        content: [
+          "Compares smart-contract depth from limited scripting through full EVM stacks to Sigma-based DeFi programming.",
+          "Shows where L1 privacy is absent, opt-in, payment-only or fully programmable at the contract layer.",
+          "Summarizes sustainability mechanisms such as the presence or absence of protocol-level storage rent and the resulting state-bloat or issuer-driven rewrites; Ergo stands out with built-in storage rent on inactive boxes.",
+        ],
+      },
+      {
+        title: "MEV, Light Clients & Censorship Resistance",
+        icon: "Eye",
+        content: [
+          "Evaluates MEV resistance, from low-MEV payment chains to high-MEV DeFi platforms and MEV-aware eUTXO designs.",
+          "Compares light-client and SPV options, from heavy RPC reliance to NiPoPoWs and mobile-friendly wallets.",
+          "Contrasts censorship resistance across PoW, PoS and centralized designs—showing Ergo’s high PoW-based resistance versus the weaker guarantees of foundation or issuer-controlled systems.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-avalanche-funding-story-and-power-structure",
+    title: "Ergo vs Avalanche: Funding Story and Power Structure",
+    shortDescription:
+      "Infographic comparing Ergo’s $0 VC, 100% mined distribution with Avalanche’s hundreds of millions in venture funding, and how that shapes consensus, control and incentives.",
+    subtitle:
+      "$0 VC and 100% mined vs hundreds of millions in venture funding.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Avalanche",
+      "VC funding",
+      "fair launch",
+      "PoW vs PoS",
+      "token distribution",
+      "governance",
+      "incentive structure",
+    ],
+    previewImageUrl:
+      "/og/infographics/ergo-vs-avalanche-funding-story-and-power-structure.png",
+    fullImageUrl:
+      "/og/infographics/ergo-vs-avalanche-funding-story-and-power-structure.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Avalanche: Funding Story and Power Structure”. On the left, Ergo shows a cold capital thermometer at zero and icons for mining and community PoW. On the right, Avalanche shows a red-hot thermometer labeled $290M+ with burning stacks of cash, VC coins and banks, plus comparison blocks for funding & launch, consensus & control, and incentive structure.",
+    publishDate: "2025-12-15T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Avalanche: $0 VC Fair Launch vs $290M+ in Venture Funding",
+    seoDescription:
+      "Visual comparison of Ergo and Avalanche, contrasting Ergo’s 100% mined, no-VC launch with Avalanche’s VC- and institution-funded model, and how this impacts consensus, control and long-term incentives.",
+
+    aboutContent: [
+      "This infographic focuses on the capital and governance stories behind Ergo and Avalanche rather than just raw tech specs.",
+      "Ergo is presented as a fair-launch PoW chain with 0 VC funding, 0 premine and 100% mined distribution, emphasizing community-driven security and alignment with long-term users and miners.",
+      "Avalanche is shown as a PoS ecosystem that has raised over $290M from VCs and institutions, with validator sets and staking power shaped by large early investors and ongoing capital flows.",
+    ],
+    keyPoints: [
+      "Ergo launched with no VC rounds, no premine and coins entering the system only via PoW mining.",
+      "Avalanche raised hundreds of millions of dollars from VCs and institutions, with early allocations playing a key role.",
+      "Ergo’s consensus is community PoW, where hashpower—not venture stakes—secures the network.",
+      "Avalanche uses PoS with validator sets and staking power influenced by capital concentration.",
+      "Incentives on Ergo are aligned with miners and long-term users, while Avalanche faces ongoing pressures from early investor unlocks and expected returns.",
+    ],
+    howToRead: [
+      "Start with the large panels at the top: compare the capital thermometer and icons for Ergo versus Avalanche to grasp the funding contrast at a glance.",
+      "Then move to the three comparison blocks—funding & launch, consensus & control, and incentive structure—to see how capital origin ties into who controls the network and why.",
+      "Use these sections to think about how different funding stories can shape long-term governance, decentralization and user alignment on each chain.",
+    ],
+    relatedTopics: [
+      "fair-launch vs VC-funded blockchains",
+      "Ergo vs Avalanche",
+      "PoW vs PoS governance",
+      "token distribution and decentralization",
+      "investor unlocks and overhang",
+    ],
+    customSections: [
+      {
+        title: "Funding & Launch",
+        icon: "Info",
+        content: [
+          "Ergo: No VC rounds, no premine; coins enter the economy via PoW mining only.",
+          "Avalanche: Heavy VC and institutional funding with early allocations at launch.",
+          "Launch structure defines who holds power from day one and how neutral the chain appears to new participants.",
+        ],
+      },
+      {
+        title: "Consensus & Control",
+        icon: "Shield",
+        content: [
+          "Ergo: Community PoW with hashpower-driven security and permissionless miner entry.",
+          "Avalanche: PoS family of protocols where validator sets and staking power can be capital-concentrated.",
+          "The consensus choice affects how easily new actors can join security and how much influence early capital can exert.",
+        ],
+      },
+      {
+        title: "Incentive Structure",
+        icon: "Users",
+        content: [
+          "Ergo: Incentives are aligned with miners and long-term users, with no investor overhang from large VC positions.",
+          "Avalanche: Ongoing pressures from early investor unlocks, returns and institutional expectations.",
+          "These incentive differences influence governance debates, upgrade decisions and the long-term culture of each ecosystem.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-bitcoin-bitcoin-with-the-missing-pieces",
+    title: "Ergo vs Bitcoin: Bitcoin With the Missing Pieces",
+    shortDescription:
+      "Infographic comparing simple UTXO Bitcoin money with Ergo’s eUTXO, smart contracts, privacy and storage rent — like adding missing layers on top of the Bitcoin brick.",
+    subtitle:
+      "From simple UTXO money to programmable, sustainable PoW DeFi.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Bitcoin",
+      "UTXO",
+      "eUTXO",
+      "smart contracts",
+      "Sigma Protocols",
+      "storage rent",
+      "privacy",
+      "PoW",
+      "NiPoPoWs",
+    ],
+    previewImageUrl:
+      "/og/infographics/ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.png",
+    fullImageUrl:
+      "/og/infographics/ergo-vs-bitcoin-bitcoin-with-the-missing-pieces.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Bitcoin: Bitcoin With the Missing Pieces”. On the left, an Ergo brick made of stacked layers for eUTXO money, smart contracts, privacy and sustainability; on the right, a simple Bitcoin UTXO brick with ghosted missing layers for smart contracts, privacy and sustainability, plus five comparison panels for state model, L1 privacy, long-term security & storage, use-cases and light clients.",
+    publishDate: "2025-12-16T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Bitcoin: Adding Smart Contracts, Privacy and Storage Rent to UTXO Money",
+    seoDescription:
+      "Visual comparison of Ergo and Bitcoin, showing how Ergo extends the UTXO model with eUTXO, smart contracts, Sigma-based privacy and storage rent, while Bitcoin remains simple UTXO money focused on store of value and payments.",
+
+    aboutContent: [
+      "This infographic treats Bitcoin as the original UTXO money brick and shows how Ergo adds the missing layers needed for programmable, sustainable PoW DeFi.",
+      "Ergo keeps the PoW sound-money foundation but extends it with eUTXO programmability via ErgoScript and Sigma Protocols, native L1 privacy and protocol-level storage rent.",
+      "Bitcoin remains a simple, robust UTXO system optimized for store-of-value and payments, but without native smart contracts, L1 privacy or a built-in mechanism for long-term state sustainability.",
+    ],
+    keyPoints: [
+      "Ergo uses a programmable eUTXO model with ErgoScript and Sigma Protocols, while Bitcoin’s UTXO model lacks native smart contracts.",
+      "Ergo offers native, programmable L1 privacy via Sigma Protocols; Bitcoin has no L1 privacy and relies on external tools and heuristics.",
+      "Ergo implements storage rent to recycle inactive UTXOs and support miner incentives; Bitcoin has infinite state growth with no built-in storage rent.",
+      "Ergo’s use-cases include sound money plus DeFi, stablecoins, DEXes and programmable contracts, versus Bitcoin’s focus on store of value and payments.",
+      "Ergo supports ultra-light clients via NiPoPoWs; Bitcoin typically uses SPV and heavier client models.",
+    ],
+    howToRead: [
+      "Start with the brick visuals: the Ergo brick stacks layers for money, smart contracts, privacy and sustainability, while the Bitcoin brick shows only simple UTXO money with missing upper layers.",
+      "Then scan the five panels at the bottom—state model & programmability, L1 privacy, long-term security & storage, use-cases and light clients—to see how each layer translates into concrete differences.",
+      "Use this comparison to understand how Ergo positions itself as “Bitcoin with the missing pieces” for programmable DeFi and long-term sustainability, while still preserving PoW sound-money roots.",
+    ],
+    relatedTopics: [
+      "Ergo vs Bitcoin",
+      "eUTXO vs UTXO",
+      "storage rent explained",
+      "Sigma Protocols and L1 privacy",
+      "NiPoPoWs and light clients",
+    ],
+    customSections: [
+      {
+        title: "State Model & Programmability",
+        icon: "Cpu",
+        content: [
+          "Ergo: Programmable eUTXO with ErgoScript and Sigma Protocols for complex contracts.",
+          "Bitcoin: UTXO without native smart contracts, focusing on simple, robust transfers.",
+          "Programmability determines whether the chain can host rich DeFi and application logic directly on L1.",
+        ],
+      },
+      {
+        title: "Privacy, Security & Storage",
+        icon: "Shield",
+        content: [
+          "Ergo: Native, programmable L1 privacy via Sigma Protocols plus storage rent to recycle inactive UTXOs.",
+          "Bitcoin: No native L1 privacy and no built-in storage rent, leading to reliance on external tools and unbounded state growth.",
+          "These features affect both user privacy guarantees and the long-term sustainability of the ledger.",
+        ],
+      },
+      {
+        title: "Use-cases & Light Clients",
+        icon: "Info",
+        content: [
+          "Ergo: Sound money plus DeFi, stablecoins, DEXes and programmable contracts, with NiPoPoWs for ultra-light verification.",
+          "Bitcoin: Primarily store of value and payments, with SPV and heavier client models.",
+          "The broader feature stack on Ergo opens up more on-chain use-cases while still anchoring to PoW sound money.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-cbdcs-control-vs-sovereignty",
+    title: "Ergo vs CBDCs: Control vs Sovereignty",
+    shortDescription:
+      "Infographic contrasting self-custodied programmable money on Ergo with centrally controlled CBDCs across ownership, privacy, censorship and monetary policy.",
+    subtitle:
+      "Central bank scripts vs self-custodied programmable money.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "CBDCs",
+      "sovereignty",
+      "self-custody",
+      "privacy",
+      "censorship resistance",
+      "monetary policy",
+      "programmable money",
+    ],
+    previewImageUrl: "/og/infographics/ergo-vs-cbdcs-control-vs-sovereignty.png",
+    fullImageUrl: "/og/infographics/ergo-vs-cbdcs-control-vs-sovereignty.png",
+    imageAlt:
+      "Infographic titled “Ergo vs CBDCs: Control vs Sovereignty”. On the left, a self-custody wallet with user-controlled keys for Ergo; on the right, a CBDC card held by a robot hand representing central bank accounts and surveillance. Below, four panels compare ownership & custody, privacy, censorship & programmability, and monetary policy between Ergo and CBDCs.",
+    publishDate: "2025-12-17T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs CBDCs: Self-Custodied Sovereign Money vs Centralized Control",
+    seoDescription:
+      "Visual comparison of Ergo and CBDCs showing the trade-off between self-custodied, censorship-resistant programmable money and centrally controlled, surveilled digital fiat with programmable restrictions and political monetary policy.",
+
+    aboutContent: [
+      "This infographic contrasts two radically different visions of digital money: Ergo as a self-custodied, programmable PoW currency versus central bank digital currencies (CBDCs) as centrally controlled account systems.",
+      "On the Ergo side, users hold their own keys in self-custody wallets, enjoy pseudonymous base-layer privacy and benefit from censorship resistance and fixed, predictable monetary rules.",
+      "On the CBDC side, balances sit in accounts at central banks or regulated intermediaries, offer full visibility to issuers and authorities, enable fine-grained control over transactions and are governed by politically driven monetary policy.",
+    ],
+    keyPoints: [
+      "Ergo uses self-custody wallets with user-controlled keys; CBDCs rely on accounts at central banks or regulated intermediaries.",
+      "Ergo offers a pseudonymous base layer with programmable privacy options; CBDCs are designed for full issuer and authority visibility.",
+      "Ergo is censorship resistant, with no central switch to freeze funds or block specific users.",
+      "CBDCs enable programmable restrictions, including targeted blocking, freezing and spending constraints.",
+      "Ergo follows a fixed emission schedule and predictable supply, aligning with sound-money principles.",
+      "CBDCs can be expanded, contracted or reprogrammed according to political and policy decisions.",
+      "The core difference is sovereignty: Ergo prioritizes user control and open participation; CBDCs prioritize state control and oversight.",
+    ],
+    howToRead: [
+      "Start with the central visual: a self-custody Ergo wallet on the left versus a CBDC card tied to central-bank infrastructure on the right, illustrating user-controlled keys versus account-based control.",
+      "Then read the four comparison panels—ownership & custody, privacy, censorship & programmability, and monetary policy—to see how each system behaves in practice.",
+      "Use these sections to decide whether you value sovereign self-custody and predictable monetary rules or centralized convenience with deep issuer control.",
+    ],
+    relatedTopics: [
+      "CBDCs vs public blockchains",
+      "self-custody vs custodial accounts",
+      "censorship resistance in PoW systems",
+      "programmable money and privacy",
+      "Ergo monetary policy",
+    ],
+    customSections: [
+      {
+        title: "Ownership & Custody",
+        icon: "Users",
+        content: [
+          "Ergo: Self-custody wallets with user-controlled keys and direct ownership of funds.",
+          "CBDCs: Balances held in accounts at a central bank or regulated intermediaries.",
+          "Custody design determines who ultimately has the final say over your money—users or institutions.",
+        ],
+      },
+      {
+        title: "Privacy, Censorship & Programmability",
+        icon: "Shield",
+        content: [
+          "Ergo: Pseudonymous base layer with programmable privacy and strong censorship resistance.",
+          "CBDCs: Full visibility for issuers and authorities by design, plus programmable restrictions and the ability to block or freeze accounts.",
+          "Programmability on Ergo is aimed at user-defined logic; on CBDCs it primarily enhances issuer control.",
+        ],
+      },
+      {
+        title: "Monetary Policy & Sovereignty",
+        icon: "Info",
+        content: [
+          "Ergo: Fixed emission schedule and predictable supply, aligned with sound-money and long-term planning.",
+          "CBDCs: Unlimited, politically driven supply and rules that can change with policy priorities.",
+          "Sovereign digital money requires both self-custody and rules that are not easily altered by short-term political incentives.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi",
+    title: "Ergo vs Ravencoin: Tokens on PoW – Basic vs Full DeFi",
+    shortDescription:
+      "Infographic comparing Ergo and Ravencoin as PoW token platforms, from simple asset issuance to a full programmable DeFi stack with privacy and advanced features.",
+    subtitle:
+      "From simple asset issuance to a full PoW DeFi platform.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Ravencoin",
+      "tokens",
+      "PoW",
+      "DeFi",
+      "asset issuance",
+      "smart contracts",
+      "privacy",
+      "storage rent",
+    ],
+    previewImageUrl:
+      "/og/infographics/ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.png",
+    fullImageUrl:
+      "/og/infographics/ergo-vs-ravencoin-tokens-on-pow-basic-vs-full-defi.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Ravencoin: Tokens on PoW – Basic vs Full DeFi”. On the left, Ergo powers a network of DEXes, stablecoins, lending and programmable DeFi built on native tokens. On the right, Ravencoin focuses on simple asset issuance and transfers, with three comparison panels for token model, smart contracts & DeFi, and privacy & advanced features.",
+    publishDate: "2025-12-18T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Ravencoin: Tokens on PoW – Basic Asset Issuance vs Full DeFi",
+    seoDescription:
+      "Visual comparison of Ergo and Ravencoin, showing how Ergo’s native eUTXO tokens, smart contracts and privacy create a full PoW DeFi platform, while Ravencoin focuses on simple token issuance and transfers.",
+
+    aboutContent: [
+      "This infographic compares two PoW chains that support tokens: Ergo and Ravencoin. Both enable native assets on top of proof-of-work security, but they aim at very different levels of complexity and programmability.",
+      "On Ergo, native tokens live at the eUTXO level and integrate directly with smart contracts, enabling DEXes, stablecoins, lending protocols and complex programmable DeFi flows with privacy and storage rent.",
+      "On Ravencoin, the emphasis is on straightforward token issuance and transfers on PoW, without a general-purpose smart-contract environment or the same depth of on-chain DeFi and protocol-level features.",
+    ],
+    keyPoints: [
+      "Both Ergo and Ravencoin support native tokens secured by PoW, but with different design goals.",
+      "Ergo models tokens at the eUTXO level and ties them into contracts, making them first-class citizens in DeFi protocols.",
+      "Ravencoin focuses on simple native asset issuance and movement rather than advanced protocol mechanics.",
+      "Ergo offers a full DeFi stack including DEXes, stablecoins, lending and complex contract logic.",
+      "Ravencoin does not provide a general-purpose smart-contract environment for DeFi.",
+      "Ergo adds programmable privacy, storage rent and other research-driven features on top of its token system.",
+    ],
+    howToRead: [
+      "Start with the main visual: on the left, an Ergo-based web of DEXes, stablecoins, lending and programmable DeFi; on the right, Ravencoin’s streamlined asset-issuance focus.",
+      "Then examine the three panels at the bottom—token model, smart contracts & DeFi, and privacy & advanced features—to understand how each project treats tokens and what can be built with them.",
+      "Use these comparisons to decide whether you need basic PoW token issuance or a full programmable DeFi platform with privacy and long-term protocol features.",
+    ],
+    relatedTopics: [
+      "tokens on PoW chains",
+      "Ergo native tokens",
+      "Ravencoin asset issuance",
+      "programmable DeFi on eUTXO",
+      "privacy and storage rent for tokens",
+    ],
+    customSections: [
+      {
+        title: "Token Model on PoW",
+        icon: "Info",
+        content: [
+          "Ergo: Native tokens at the eUTXO level, integrated tightly with contracts and box-level logic.",
+          "Ravencoin: Native asset issuance and transfers on PoW, optimized for simple token creation and movement.",
+          "The token model determines whether assets can participate deeply in DeFi logic or mainly serve as transferable markers.",
+        ],
+      },
+      {
+        title: "Smart Contracts & DeFi",
+        icon: "Code",
+        content: [
+          "Ergo: Full DeFi stack on L1—DEXes, stablecoins, lending and other protocols built with ErgoScript and Sigma.",
+          "Ravencoin: No general-purpose smart-contract environment, so DeFi functionality is limited.",
+          "Developers seeking rich PoW-native DeFi primitives will find more expressiveness on Ergo.",
+        ],
+      },
+      {
+        title: "Privacy & Advanced Features",
+        icon: "Shield",
+        content: [
+          "Ergo: Programmable privacy, storage rent and other research-driven features extend what token-based systems can do on-chain.",
+          "Ravencoin: Focuses primarily on token issuance rather than advanced protocol mechanics or privacy extensions.",
+          "These advanced features shape how suitable each chain is for long-term, privacy-aware financial applications.",
+        ],
+      },
+    ],
+  },
+  {
+    slug: "ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow",
+    title: "Ergo vs Kaspa: Programmable PoW vs High-Throughput PoW",
+    shortDescription:
+      "Infographic comparing Ergo’s programmable eUTXO DeFi stack with Kaspa’s high-throughput PoW payments layer built on a BlockDAG.",
+    subtitle:
+      "From pure PoW payments to a full programmable DeFi platform.",
+    category: "comparisons-matrices",
+    level: "intermediate",
+    tags: [
+      "Ergo",
+      "Kaspa",
+      "PoW",
+      "blockDAG",
+      "eUTXO",
+      "smart contracts",
+      "DeFi",
+      "high throughput",
+      "fair launch",
+    ],
+    previewImageUrl:
+      "/og/infographics/ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.png",
+    fullImageUrl:
+      "/og/infographics/ergo-vs-kaspa-programmable-pow-vs-high-throughput-pow.png",
+    imageAlt:
+      "Infographic titled “Ergo vs Kaspa: Programmable PoW vs High-Throughput PoW”. On the left, Ergo powers DEXes, stablecoins, lending and programmable DeFi built on native eUTXO tokens. On the right, Kaspa shows a fast BlockDAG highway for high-throughput PoW payments, with comparison panels for token model, smart contracts & DeFi, and privacy & advanced features.",
+    publishDate: "2025-12-19T00:00:00.000Z",
+    readingTimeMinutes: 4,
+
+    seoTitle:
+      "Ergo vs Kaspa: Programmable eUTXO DeFi vs High-Throughput PoW Payments",
+    seoDescription:
+      "Visual comparison of Ergo and Kaspa, contrasting Ergo’s programmable PoW DeFi stack with Kaspa’s high-throughput PoW BlockDAG for fast, fair-launched payments and future L2 smart contracts.",
+
+    aboutContent: [
+      "This infographic compares two fair-launch PoW projects that went in different directions: Ergo as a programmable eUTXO DeFi platform, and Kaspa as a high-throughput PoW payments layer built on a BlockDAG.",
+      "Ergo integrates native tokens, ErgoScript smart contracts, Sigma-based privacy and storage rent to support DEXes, stablecoins, lending and complex programmable DeFi on L1.",
+      "Kaspa focuses on rapid confirmations and scalable PoW payments using GHOSTDAG BlockDAG consensus, with a roadmap that looks toward L2 smart-contract frameworks and programmability built on top of the base layer.",
+    ],
+    keyPoints: [
+      "Both Ergo and Kaspa are proof-of-work, fair-launch projects with no ICO or premine, but they prioritize different goals.",
+      "Ergo: programmable eUTXO tokens, full DeFi stack (DEXes, stablecoins, lending) and L1 privacy plus storage rent.",
+      "Kaspa: high-throughput BlockDAG PoW focused on fast, scalable payments and settlement, with smart contracts planned on L2 rather than today on L1.",
+      "Ergo is designed as a comprehensive platform for decentralized finance on PoW; Kaspa positions itself as a fast, secure digital cash and settlement network.",
+      "Advanced features such as programmable privacy and protocol-level sustainability live on Ergo, while Kaspa emphasizes speed, simplicity and future extensibility.",
+    ],
+    howToRead: [
+      "Look at the main visual split: Ergo on the left with interconnected DeFi modules (DEX, stablecoins, lending, programmable DeFi) versus Kaspa on the right as a high-speed PoW highway for payments.",
+      "Then read the three comparison blocks along the bottom—token model, smart contracts & DeFi, and privacy & advanced features—to see how each chain treats programmability and tokens on top of PoW.",
+      "Use this comparison to decide whether your use case needs full programmable DeFi on PoW or a high-throughput PoW payments base layer with future L2 programmability.",
+    ],
+    relatedTopics: [
+      "tokens on PoW chains",
+      "Ergo vs Bitcoin",
+      "Kaspa BlockDAG and GHOSTDAG",
+      "programmable DeFi on eUTXO",
+      "L2 smart contracts on PoW payments layers",
+    ],
+    customSections: [
+      {
+        title: "Token Model on PoW",
+        icon: "Info",
+        content: [
+          "Ergo: Native tokens at the eUTXO level, tightly integrated with contracts and DeFi flows.",
+          "Kaspa: Native KAS coin for payments and fees; ecosystem is exploring L2 token and dApp layers rather than L1 token logic.",
+          "The token model determines whether assets are first-class citizens of the contract layer or mainly live on higher layers.",
+        ],
+      },
+      {
+        title: "Smart Contracts, DeFi & Throughput",
+        icon: "Code",
+        content: [
+          "Ergo: Full DeFi stack on L1 with ErgoScript + Sigma—DEXes, lending, stablecoins and complex programmable logic.",
+          "Kaspa: High-throughput blockDAG PoW optimized for fast confirmations and scalable payments, with smart contracts planned via L2 frameworks instead of present-day L1 execution.",
+          "Builders choosing between them weigh immediate on-chain programmability versus a lean, payment-first base layer with future L2 options.",
+        ],
+      },
+      {
+        title: "Privacy & Advanced Features",
+        icon: "Shield",
+        content: [
+          "Ergo: Programmable L1 privacy via Sigma Protocols, storage rent for long-term sustainability, and NiPoPoWs for ultra-light clients.",
+          "Kaspa: Focus on performance, fairness and decentralization at the base layer; privacy and advanced application features are expected to emerge from higher-layer solutions and external tooling.",
+          "These differences shape how suitable each chain is for privacy-aware DeFi versus transparent, high-speed settlement use cases.",
+        ],
+      },
+    ],
+  },
+  {
     slug: "autolykos-mining-without-masters",
     title: "Autolykos: Mining Without Masters",
     shortDescription:
@@ -580,9 +1704,9 @@ export const infographics: InfographicMeta[] = [
       "miners",
     ],
     previewImageUrl:
-      "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply.png",
+      "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply.jpg",
     fullImageUrl:
-      "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply.png",
+      "/infographics/who-starts-with-the-coins-vc-allocation-vs-ergo-supply.jpg",
     imageAlt:
       "Infographic titled Who Starts With the Coins? comparing a typical VC chain token allocation pie chart with Ergo's PoW-only supply over time.",
     publishDate: "2025-03-18T00:00:00.000Z",
@@ -1722,6 +2846,89 @@ export const infographics: InfographicMeta[] = [
       },
     ],
   },
+  {
+    slug: "ergo-babel-fees-pay-with-any-token",
+    title: "Babel Fees: Pay Transaction Fees with Any Token",
+    shortDescription:
+      "How Ergo's Babel Fees let users pay transaction costs in any token while miners still receive ERG through an on-chain market mechanism.",
+    subtitle: "Gas abstraction through eUTXO: pay fees in the token you hold, not the one the protocol demands.",
+    category: "eutxo-smart-contracts",
+    level: "intermediate",
+    tags: [
+      "Babel Fees",
+      "gas abstraction",
+      "transaction fees",
+      "eUTXO",
+      "UX",
+      "DeFi",
+      "token payments",
+      "Ergo",
+      "on-chain markets",
+    ],
+    previewImageUrl:
+      "/infographics/ergo-babel-fees-pay-with-any-token.png",
+    fullImageUrl:
+      "/infographics/ergo-babel-fees-pay-with-any-token.png",
+    imageAlt:
+      "Infographic explaining Ergo Babel Fees: how users can pay transaction fees in any token while miners receive ERG through automated on-chain exchange.",
+    publishDate: "2025-12-08T00:00:00.000Z",
+    readingTimeMinutes: 5,
+    seoTitle:
+      "Babel Fees on Ergo: Pay Transaction Fees with Any Token (Gas Abstraction)",
+    seoDescription:
+      "Learn how Ergo's Babel Fees enable gas abstraction: pay transaction fees in SigUSD, tokens, or NFTs while miners still receive ERG through an automated on-chain market.",
+    
+    aboutContent: [
+      "Babel Fees solve a common blockchain UX problem: users shouldn't need to hold the native token just to move their assets. On Ergo, Babel Fees let you pay transaction costs in whatever token you already have.",
+      "The mechanism works through on-chain intermediaries who accept your tokens and cover the ERG fee on your behalf. This creates a free market for fee payment: intermediaries compete on exchange rates, and users get better UX without sacrificing decentralization.",
+      "Unlike account-based 'gas sponsorship' that requires trusted relayers, Babel Fees leverage eUTXO's atomic transaction model. The swap happens in the same transaction as your payment, with no counterparty risk.",
+    ],
+    keyPoints: [
+      "Pay fees in any token — No need to hold ERG just to transact.",
+      "On-chain market — Intermediaries compete to offer the best exchange rates.",
+      "Atomic swaps — Token-to-ERG exchange happens in the same transaction.",
+      "No trusted relayers — Unlike account-model gas sponsorship, no counterparty risk.",
+      "Better UX for newcomers — Onboard users without forcing them to acquire ERG first.",
+      "DeFi-native — Works seamlessly with DEXes, lending, and other protocols.",
+    ],
+    howToRead: [
+      "Start with the problem: users need ERG to pay fees, but may only hold other tokens.",
+      "See how Babel Fees create an on-chain market where intermediaries offer to pay ERG fees in exchange for tokens.",
+      "Understand the atomic swap: user's tokens and intermediary's ERG exchange in a single transaction.",
+      "Notice the UX benefit: users never need to acquire ERG separately just to move their assets.",
+      "Connect to eUTXO: this works because Ergo transactions can compose multiple inputs/outputs atomically.",
+    ],
+    relatedTopics: [
+      "eUTXO transaction model",
+      "Gas abstraction in DeFi",
+      "Ergo native tokens",
+      "On-chain markets and DEXes",
+      "User experience in crypto",
+    ],
+    customSections: [
+      {
+        title: "The Problem",
+        icon: "AlertTriangle",
+        content: [
+          "Traditional blockchains require native tokens for fees.",
+          "Users holding only stablecoins or NFTs can't transact.",
+          "New users must acquire native tokens before doing anything useful.",
+          "This creates friction and poor onboarding experience.",
+        ],
+      },
+      {
+        title: "The Babel Fees Solution",
+        icon: "Coins",
+        content: [
+          "Users submit transactions offering tokens as fee payment.",
+          "Intermediaries watch for these 'Babel boxes' and fill them.",
+          "The intermediary pays ERG to miners, receives user's tokens.",
+          "Everything settles atomically in one transaction.",
+          "Market competition keeps exchange rates fair.",
+        ],
+      },
+    ],
+  },
 ];
 
 // Helper functions for filtering and sorting
@@ -1758,17 +2965,55 @@ export function filterInfographics(
 
   // Sort
   switch (filters.sort) {
-    case 'alphabetical':
+    case 'alphabetical': {
       filtered.sort((a, b) => a.title.localeCompare(b.title));
       break;
-    case 'popular':
-      // For now, sort by reading time as a proxy for complexity/popularity
-      filtered.sort((a, b) => (b.readingTimeMinutes || 0) - (a.readingTimeMinutes || 0));
+    }
+    case 'popular': {
+      // Curated popularity: comparisons & narratives first, then core tech
+      const categoryPriority: Record<string, number> = {
+        // 1) High-level Ergo positioning & intro
+        'ergo-overview': 4,
+        // 2) Narratives vs VC / banking etc.
+        'vc-chains-narratives': 3,
+        // 3) Comparisons with other L1s, CBDCs, etc.
+        'comparisons-matrices': 2,
+        // 4) Deeper technical infographics
+        'consensus-mining': 1,
+        'eutxo-smart-contracts': 1,
+        'storage-rent-economics': 1,
+        'privacy-sigma': 1,
+        'nipopows-light-clients': 1,
+        'dev-tooling': 1,
+        'scalability-performance': 1,
+        'scalability-settlement': 1,
+      };
+
+      const levelPriority: Record<string, number> = {
+        beginner: 3,
+        intermediate: 2,
+        advanced: 1,
+      };
+
+      filtered.sort((a, b) => {
+        const catA = categoryPriority[a.category] ?? 0;
+        const catB = categoryPriority[b.category] ?? 0;
+        if (catA !== catB) return catB - catA; // higher priority first
+
+        const lvlA = levelPriority[a.level] ?? 0;
+        const lvlB = levelPriority[b.level] ?? 0;
+        if (lvlA !== lvlB) return lvlB - lvlA; // beginner before advanced
+
+        // Newer first inside same bucket
+        return new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime();
+      });
       break;
+    }
     case 'newest':
-    default:
+    default: {
       filtered.sort((a, b) => new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime());
       break;
+    }
   }
 
   return filtered;

@@ -1,10 +1,19 @@
 import { Metadata } from "next"
-import { SchemaOrg } from "@/components/seo/schema-org"
 import { getTranslations } from "next-intl/server"
+import { createTechArticleSchema, createHowToSchema, createFAQSchema } from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
+// SEO Configuration
+const SEO = {
+  slug: "privacy",
+  ogImage: "/og-privacy.png",
+  canonicalPath: "/use/privacy-confidentiality",
+}
+
+// i18n Metadata
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'use.privacy.seo' });
+  const { locale } = await params
+  const t = await getTranslations({ locale, namespace: 'use.privacy.seo' })
   
   return {
     title: t('title'),
@@ -13,97 +22,63 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     openGraph: {
       title: t('ogTitle'),
       description: t('ogDescription'),
-      images: ["/og-privacy.png"],
+      images: [SEO.ogImage],
       type: "website",
-      url: "https://ergoblockchain.org/use/privacy-confidentiality",
+      url: `https://ergoblockchain.org${SEO.canonicalPath}`,
     },
     twitter: {
       card: "summary_large_image",
       title: t('twitterTitle'),
       description: t('twitterDescription'),
-      images: ["/og-privacy.png"],
+      images: [SEO.ogImage],
     },
     alternates: {
-      canonical: "https://ergoblockchain.org/use/privacy-confidentiality",
+      canonical: `https://ergoblockchain.org${SEO.canonicalPath}`,
     },
   }
 }
 
-export default async function PrivacyConfidentialityLayout({
-  children,
-  params,
-}: {
-  children: React.ReactNode
-  params: Promise<{ locale: string }>
-}) {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: 'use.privacy.schema' });
-  
+// Layout with Schemas
+export default function PrivacyLayout({ children }: { children: React.ReactNode }) {
+  const schemas = [
+    createTechArticleSchema(`/use/${SEO.slug}`, {
+      headline: "Privacy & Confidentiality on Ergo",
+      description: "Optional privacy features with ErgoMixer, Sigma protocols, and zero-knowledge proofs. Protect your financial data.",
+      image: SEO.ogImage,
+      datePublished: "2024-01-01",
+      keywords: ["ErgoMixer", "privacy", "Sigma protocols", "zero-knowledge proofs"],
+      about: [
+        { name: "Privacy" },
+        { name: "ErgoMixer" },
+        { name: "Zero-knowledge proofs" },
+      ],
+    }),
+    createHowToSchema({
+      name: "How to Use ErgoMixer for Privacy",
+      description: "Step-by-step guide to mixing ERG for enhanced privacy",
+      steps: [
+        { name: "Set up Wallet", text: "Download and configure an Ergo wallet" },
+        { name: "Access ErgoMixer", text: "Visit the ErgoMixer application" },
+        { name: "Configure Mixing", text: "Select mixing parameters and amounts" },
+        { name: "Mix Coins", text: "Execute the mixing transaction and wait for completion" },
+      ],
+    }),
+    createFAQSchema([
+      {
+        question: "What is ErgoMixer?",
+        answer: "ErgoMixer is a non-custodial mixing service that uses Sigma protocols to break the link between sender and receiver addresses."
+      },
+      {
+        question: "Is privacy on Ergo optional?",
+        answer: "Yes, privacy on Ergo is optional. Users can choose when to use privacy features like ErgoMixer for specific transactions."
+      }
+    ]),
+  ]
+
   return (
     <>
-      <SchemaOrg
-        type="TechArticle"
-        data={{
-          "@type": "TechArticle",
-          headline: t('techArticle.headline'),
-          description: t('techArticle.description'),
-          author: {
-            "@type": "Organization",
-            name: "Ergo Platform",
-            url: "https://ergoplatform.org",
-          },
-          publisher: {
-            "@type": "Organization",
-            name: "Ergo Platform",
-            url: "https://ergoplatform.org",
-            logo: {
-              "@type": "ImageObject",
-              url: "https://ergoblockchain.org/logo.png",
-            },
-          },
-          image: "https://ergoblockchain.org/og-privacy.png",
-          datePublished: "2024-01-01",
-          dateModified: new Date().toISOString(),
-          keywords: t('techArticle.keywords'),
-        }}
-      />
-      
-      <SchemaOrg
-        type="HowTo"
-        data={{
-          "@type": "HowTo",
-          name: t('howTo.name'),
-          description: t('howTo.description'),
-          step: [
-            {
-              "@type": "HowToStep",
-              position: 1,
-              name: t('howTo.steps.setupWallet.name'),
-              text: t('howTo.steps.setupWallet.text'),
-            },
-            {
-              "@type": "HowToStep",
-              position: 2,
-              name: t('howTo.steps.accessErgoMixer.name'),
-              text: t('howTo.steps.accessErgoMixer.text'),
-            },
-            {
-              "@type": "HowToStep",
-              position: 3,
-              name: t('howTo.steps.configureMixing.name'),
-              text: t('howTo.steps.configureMixing.text'),
-            },
-            {
-              "@type": "HowToStep",
-              position: 4,
-              name: t('howTo.steps.mixCoins.name'),
-              text: t('howTo.steps.mixCoins.text'),
-            },
-          ],
-        }}
-      />
-      
+      {renderSchemaScripts(schemas)}
       {children}
     </>
   )
-} 
+}

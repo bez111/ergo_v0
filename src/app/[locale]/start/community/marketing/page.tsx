@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: MarketingGuidePageProps): Pro
       description: "Master the art of spreading Ergo content across crypto communities, forums, and social platforms.",
       type: "article",
       images: [{
-        url: "/og/marketing-guide.png",
+        url: "/og/hubs/marketing.jpg",
         width: 1200,
         height: 630,
         alt: "Ergo Content Distribution Playbook"
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: MarketingGuidePageProps): Pro
       card: "summary_large_image",
       title: "Ergo Content Distribution Playbook",
       description: "Complete guide for distributing Ergo content across crypto communities.",
-      images: ["/og/marketing-guide.png"]
+      images: ["/og/hubs/marketing.jpg"]
     }
   }
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next"
 import { siteConfig } from "@/config/site-config"
 import { faqData, getFAQByLevel, beginnerCategories, technicalCategories } from "@/data/faq"
 import FAQPageClient from "./FAQPageClient"
+import { createBreadcrumbSchema, createFAQSchema } from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const revalidate = 86400
 
@@ -13,13 +15,16 @@ const firstSentence = (s: string) => {
   return (m?.[1] || s).slice(0, 500)
 }
 
+// SEO Configuration
+const SEO = {
+  title: "Ergo FAQ — Answers to 50+ Common Questions | Ergo",
+  description: "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy, eUTXO, ErgoScript — find what you need in seconds.",
+}
+
 export function generateMetadata(): Metadata {
-  const title = "Ergo FAQ — Answers to 50+ Common Questions | Ergo"
-  const description =
-    "50+ answered questions about Ergo blockchain. Wallets, mining, DeFi, privacy, eUTXO, ErgoScript — find what you need in seconds."
   return {
-    title,
-    description,
+    title: SEO.title,
+    description: SEO.description,
     alternates: { canonical: url },
     openGraph: {
       type: "website",
@@ -51,47 +56,27 @@ export default function FAQPage() {
   const beginnerCount = beginnerFAQ.length
   const technicalCount = technicalFAQ.length
 
-  // FAQPage schema for all questions
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqData.map((q) => ({
-      "@type": "Question",
-      "@id": `${url}#${slug(q.question)}`,
-      name: q.question,
-      url: `${url}#${slug(q.question)}`,
-      acceptedAnswer: { "@type": "Answer", text: firstSentence(q.answer) },
-      inLanguage: "en",
-    })),
-  }
+  // Convert faqData to FAQ items format
+  const faqItems = faqData.map(q => ({
+    question: q.question,
+    answer: firstSentence(q.answer)
+  }))
 
-  const breadcrumbsJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": `${url}#breadcrumbs`,
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: siteConfig.siteUrl },
-      { "@type": "ListItem", position: 2, name: "FAQ", item: url },
-    ],
-  }
+  const schemas = [
+    createFAQSchema(faqItems),
+    createBreadcrumbSchema([{ name: "FAQ", href: "/faq" }]),
+  ]
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
-
+      {renderSchemaScripts(schemas)}
       <FAQPageClient 
         beginnerFAQ={beginnerFAQ}
         technicalFAQ={technicalFAQ}
         beginnerCategories={beginnerCategories}
         technicalCategories={technicalCategories}
-        stats={{
-          total: totalQuestions,
-          beginner: beginnerCount,
-          technical: technicalCount
-        }}
+        stats={{ total: totalQuestions, beginner: beginnerCount, technical: technicalCount }}
       />
     </>
   )
 }
-

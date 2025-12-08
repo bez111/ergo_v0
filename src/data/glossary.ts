@@ -482,7 +482,7 @@ export const glossaryTerms: GlossaryTerm[] = [
     
     category: "smart-contracts",
     difficulty: "intermediate",
-    docsUrl: "/docs/developers/ergoscript",
+    docsUrl: "/docs/developers/ergoscript-languages",
     publishDate: "2025-01-01",
     updatedDate: "2025-11-26",
   },

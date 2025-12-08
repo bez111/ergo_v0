@@ -19,7 +19,7 @@ export function MadeForMassAdoption() {
       title: "Cypherpunks",
       desc: "Build unstoppable smart contracts with ErgoScript. Create privacy-preserving dApps that actually work.",
       cta: "Start building",
-      href: "/builders"
+      href: "/developers"
     },
     {
       icon: Pickaxe,

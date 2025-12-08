@@ -71,7 +71,7 @@ export function InfographicsClient() {
   const [filters, setFilters] = useState({
     category: 'all',
     search: '',
-    sort: 'newest'
+    sort: 'popular'
   });
   const [currentPage, setCurrentPage] = useState(() => getInitialPage());
   const [isFilterOpen, setIsFilterOpen] = useState(false);
@@ -362,7 +362,7 @@ export function InfographicsClient() {
                 <p className="text-neutral-400 mb-4">Try adjusting your filters or search terms.</p>
                 <Button
                   variant="outline"
-                  onClick={() => setFilters({ category: 'all', search: '', sort: 'newest' })}
+                  onClick={() => setFilters({ category: 'all', search: '', sort: 'popular' })}
                   className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black"
                 >
                   Reset filters

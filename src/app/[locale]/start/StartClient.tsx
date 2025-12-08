@@ -973,7 +973,7 @@ export default function StartPage() {
             </Link>
 
             <Link 
-              href="/builders"
+              href="/developers"
               className="bg-neutral-900/50 border border-neutral-700 rounded-xl p-5 hover:border-orange-500/50 hover:bg-neutral-900/80 transition-all duration-300 group"
             >
               <div className="flex items-center gap-3 mb-2">

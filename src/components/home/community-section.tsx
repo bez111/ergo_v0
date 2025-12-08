@@ -75,7 +75,7 @@ export function CommunitySection() {
               </p>
             </div>
             <Button asChild size="lg" className="gap-2">
-              <Link href="/community/contribute">
+              <Link href="/start/community">
                 Get Involved
                 <ArrowRight className="h-4 w-4" />
               </Link>

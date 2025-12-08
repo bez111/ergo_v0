@@ -199,7 +199,7 @@ export const topicClusters: TopicCluster[] = [
     },
     supporting: [
       // Personas
-      { url: '/builders', title: 'Builder Resources', type: 'persona', priority: 1 },
+      { url: '/developers', title: 'Developer Resources', type: 'persona', priority: 1 },
       
       // Developer Resources
       { url: '/playbooks/smart-contract-developer', title: 'Smart Contract Playbook', type: 'playbook', priority: 1 },

@@ -127,7 +127,7 @@ export const technologyTopics: TechnologyTopic[] = [
     relatedTopics: ["eutxo-model", "privacy-features"],
     relatedPatterns: ["ergo-fungible-token-minting-eip4"],
     relatedGlossary: ["ergoscript", "sigma-protocols", "smart-contract"],
-    docsUrl: "/docs/developers/ergoscript",
+    docsUrl: "/docs/developers/ergoscript-languages",
     githubUrl: "https://github.com/ergoplatform/ergo",
   },
   {

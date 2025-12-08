@@ -5,9 +5,11 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { comparisons } from "@/data/comparisons";
+import { infographics, filterInfographics } from "@/data/infographics";
 import { BackgroundWrapper } from "@/components/home/background-wrapper";
 import { PageTransition } from "@/components/animations/page-transition";
 import { FinalCTASimple } from "@/components/home/final-cta-simple";
+import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Scale, Shield, Zap, Eye, Users, TrendingUp } from "lucide-react";
 
 const iconMap: Record<string, React.ElementType> = {
@@ -40,6 +42,11 @@ const itemVariants = {
 };
 
 export function CompareHubClient() {
+  const comparisonInfographics = filterInfographics(infographics, {
+    category: "comparisons-matrices",
+    sort: "popular",
+  }).slice(0, 6);
+
   return (
     <BackgroundWrapper>
       <div className="container mx-auto px-4 py-16">
@@ -218,6 +225,95 @@ export function CompareHubClient() {
                 </motion.div>
               </div>
             </motion.section>
+
+            {/* Visual Comparisons & Matrices */}
+            {comparisonInfographics.length > 0 && (
+              <motion.section
+                className="mt-20"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+              >
+                <motion.div
+                  variants={itemVariants}
+                  className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8"
+                >
+                  <div>
+                    <h2 className="text-2xl md:text-3xl font-bold text-white">
+                      Visual comparisons &amp; matrices
+                    </h2>
+                    <p className="text-neutral-400 text-sm md:text-base max-w-2xl">
+                      Side-by-side Ergo vs other L1 diagrams that are easy to save and share.
+                    </p>
+                  </div>
+                  <Link
+                    href="/infographics?category=comparisons-matrices&sort=popular"
+                    className="inline-flex items-center gap-2 text-sm text-neutral-400 hover:text-orange-400 transition-colors"
+                  >
+                    View all comparison infographics
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </motion.div>
+
+                <div
+                  className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+                  role="list"
+                  aria-label="Visual comparison infographics"
+                >
+                  {comparisonInfographics.map((info, index) => (
+                    <motion.div
+                      key={info.slug}
+                      variants={itemVariants}
+                      role="listitem"
+                      className="h-full"
+                    >
+                      <Link
+                        href={`/infographics/${info.slug}`}
+                        className="block group h-full"
+                      >
+                        <div
+                          className="bg-black/70 border border-white/10 rounded-2xl p-6 h-full 
+                                     hover:border-orange-400/50 hover:bg-black/80 
+                                     transition-all duration-300 hover:scale-[1.02] flex flex-col"
+                        >
+                          <div className="flex items-center justify-between mb-3">
+                            <Badge
+                              variant="outline"
+                              className="border-orange-500/40 bg-orange-500/5 text-[10px] font-semibold uppercase tracking-wide text-orange-300"
+                            >
+                              Visual guide
+                            </Badge>
+                            {info.readingTimeMinutes && (
+                              <span className="text-[11px] text-neutral-400">
+                                {info.readingTimeMinutes} min
+                              </span>
+                            )}
+                          </div>
+
+                          <h3 className="text-base md:text-lg font-semibold text-white mb-2 group-hover:text-orange-400 transition-colors line-clamp-2">
+                            {info.title}
+                          </h3>
+                          <p className="text-sm text-neutral-400 mb-4 line-clamp-3">
+                            {info.shortDescription}
+                          </p>
+
+                          <div className="mt-auto flex items-center justify-between text-xs text-neutral-500">
+                            <span className="truncate max-w-[60%]">
+                              {info.tags.slice(0, 2).join(" • ")}
+                            </span>
+                            <span className="inline-flex items-center gap-1 text-orange-400">
+                              <span>Open infographic</span>
+                              <ArrowRight className="w-3 h-3" />
+                            </span>
+                          </div>
+                        </div>
+                      </Link>
+                    </motion.div>
+                  ))}
+                </div>
+              </motion.section>
+            )}
 
             {/* CTA Section */}
             <motion.section

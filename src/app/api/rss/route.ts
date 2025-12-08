@@ -40,7 +40,7 @@ export async function GET() {
       <link>${baseUrl}/blog/${post.slug}</link>
       <guid isPermaLink="true">${baseUrl}/blog/${post.slug}</guid>
       <pubDate>${new Date(post.date).toUTCString()}</pubDate>
-      <dc:creator><![CDATA[${post.author}]]></dc:creator>
+      <dc:creator><![CDATA[${post.author.name}]]></dc:creator>
       ${(post.tags || []).map(tag => `<category><![CDATA[${tag}]]></category>`).join('\n      ')}
     </item>`).join('')}
   </channel>

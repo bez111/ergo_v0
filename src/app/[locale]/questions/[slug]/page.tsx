@@ -1,33 +1,29 @@
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
-import Script from 'next/script';
-import { QuestionPageClient } from './QuestionPageClient';
-import { questions, getQuestionBySlug, getRelatedQuestions, getAllQuestionSlugs } from '@/data/questions';
-import { siteConfig } from '@/config/site-config';
+import { Metadata } from 'next'
+import { notFound } from 'next/navigation'
+import { QuestionPageClient } from './QuestionPageClient'
+import { getQuestionBySlug, getRelatedQuestions, getAllQuestionSlugs } from '@/data/questions'
+import { siteConfig } from '@/config/site-config'
+import { createBreadcrumbSchema, createFAQSchema, createHowToSchema, createTechArticleSchema } from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 interface Props {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ slug: string }>
 }
 
 export function generateStaticParams() {
-  return getAllQuestionSlugs().map(slug => ({ slug }));
+  return getAllQuestionSlugs().map(slug => ({ slug }))
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const question = getQuestionBySlug(slug);
+  const { slug } = await params
+  const question = getQuestionBySlug(slug)
 
   if (!question) {
-    return {
-      title: 'Question Not Found',
-      description: 'The requested question could not be found.'
-    };
+    return { title: 'Question Not Found', description: 'The requested question could not be found.' }
   }
 
-  const title = question.seoTitle || question.query;
-  const description = question.seoDescription || question.shortAnswer;
+  const title = question.seoTitle || question.query
+  const description = question.seoDescription || question.shortAnswer
 
   return {
     title: `${title} | Ergo Q&A`,
@@ -39,12 +35,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: `${siteConfig.siteUrl}/questions/${slug}`,
       siteName: 'Ergo Blockchain',
       type: 'article',
-      images: [{
-        url: `${siteConfig.siteUrl}/og/blog-default.svg`,
-        width: 1200,
-        height: 630,
-        alt: question.query
-      }]
+      images: [{ url: `${siteConfig.siteUrl}/og/blog-default.svg`, width: 1200, height: 630, alt: question.query }]
     },
     twitter: {
       card: 'summary_large_image',
@@ -52,159 +43,55 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description,
       images: [`${siteConfig.siteUrl}/og/blog-default.svg`]
     },
-    alternates: {
-      canonical: `${siteConfig.siteUrl}/questions/${slug}`
-    },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        'max-snippet': -1,
-        'max-image-preview': 'large'
-      }
-    }
-  };
+    alternates: { canonical: `${siteConfig.siteUrl}/questions/${slug}` },
+    robots: { index: true, follow: true, googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' } }
+  }
 }
 
 export default async function QuestionPage({ params }: Props) {
-  const { slug } = await params;
-  const question = getQuestionBySlug(slug);
+  const { slug } = await params
+  const question = getQuestionBySlug(slug)
 
   if (!question) {
-    notFound();
+    notFound()
   }
 
-  // Get related questions
-  const relatedQuestions = question.relatedQuestions 
-    ? getRelatedQuestions(question.relatedQuestions)
-    : [];
+  const relatedQuestions = question.relatedQuestions ? getRelatedQuestions(question.relatedQuestions) : []
+  const baseUrl = siteConfig.siteUrl
 
-  // Build JSON-LD based on question type
-  const baseUrl = siteConfig.siteUrl;
-  
-  // QAPage / FAQPage Schema
-  const qaSchema = question.jsonLdType === 'FAQPage' || question.jsonLdType === 'QAPage' ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [{
-      "@type": "Question",
-      "name": question.query,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": question.shortAnswer + (question.keyPoints ? ' ' + question.keyPoints.join(' ') : '')
-      }
-    }]
-  } : null;
+  // Build schemas based on question type
+  const schemas: object[] = [
+    createBreadcrumbSchema([
+      { name: "Q&A", href: "/questions" },
+      { name: question.query, href: `/questions/${slug}` },
+    ]),
+  ]
 
-  // HowTo Schema for how_to intent
-  const howToSchema = question.jsonLdType === 'HowTo' ? {
-    "@context": "https://schema.org",
-    "@type": "HowTo",
-    "name": question.query,
-    "description": question.shortAnswer,
-    "step": question.keyPoints?.map((point, index) => ({
-      "@type": "HowToStep",
-      "position": index + 1,
-      "name": point,
-      "text": point
-    })) || [],
-    "supply": [],
-    "tool": question.bestResources.map(r => ({
-      "@type": "HowToTool",
-      "name": r.title
+  // Add type-specific schema
+  if (question.jsonLdType === 'FAQPage' || question.jsonLdType === 'QAPage') {
+    schemas.push(createFAQSchema([{
+      question: question.query,
+      answer: question.shortAnswer + (question.keyPoints ? ' ' + question.keyPoints.join(' ') : '')
+    }]))
+  } else if (question.jsonLdType === 'HowTo') {
+    schemas.push(createHowToSchema({
+      name: question.query,
+      description: question.shortAnswer,
+      steps: question.keyPoints?.map(point => ({ name: point, text: point })) || [],
     }))
-  } : null;
-
-  // TechArticle Schema
-  const techArticleSchema = question.jsonLdType === 'TechArticle' ? {
-    "@context": "https://schema.org",
-    "@type": "TechArticle",
-    "headline": question.query,
-    "description": question.shortAnswer,
-    "author": {
-      "@type": "Organization",
-      "name": "Ergo Platform"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Ergo Platform",
-      "logo": {
-        "@type": "ImageObject",
-        "url": `${baseUrl}/logo.png`
-      }
-    },
-    "datePublished": question.publishDate,
-    "dateModified": question.updatedDate || question.publishDate,
-    "mainEntityOfPage": `${baseUrl}/questions/${slug}`,
-    "about": {
-      "@type": "Thing",
-      "name": question.category
-    }
-  } : null;
-
-  // BreadcrumbList Schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": baseUrl
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Q&A",
-        "item": `${baseUrl}/questions`
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "name": question.query,
-        "item": `${baseUrl}/questions/${slug}`
-      }
-    ]
-  };
+  } else if (question.jsonLdType === 'TechArticle') {
+    schemas.push(createTechArticleSchema(`/questions/${slug}`, {
+      headline: question.query,
+      description: question.shortAnswer,
+      datePublished: question.publishDate,
+      dateModified: question.updatedDate || question.publishDate,
+    }))
+  }
 
   return (
     <>
-      {/* JSON-LD Schemas */}
-      <Script
-        id="breadcrumb-schema"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      {qaSchema && (
-        <Script
-          id="qa-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(qaSchema) }}
-        />
-      )}
-      {howToSchema && (
-        <Script
-          id="howto-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
-        />
-      )}
-      {techArticleSchema && (
-        <Script
-          id="tech-article-schema"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(techArticleSchema) }}
-        />
-      )}
-      
-      <QuestionPageClient 
-        question={question} 
-        relatedQuestions={relatedQuestions}
-      />
+      {renderSchemaScripts(schemas)}
+      <QuestionPageClient question={question} relatedQuestions={relatedQuestions} />
     </>
-  );
+  )
 }
-

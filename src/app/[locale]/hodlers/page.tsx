@@ -1,19 +1,31 @@
-
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import type { Metadata } from "next"
 import { HoldersClient } from "./HoldersClient"
-import { FAQSchema } from '@/components/seo/faq-schema'
-import { SchemaTypes } from '@/lib/schema-ultimate'
-import { siteConfig } from '@/config/site-config'
+import {
+  createHubMetadata,
+  createBreadcrumbSchema,
+  createFAQSchema,
+} from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 interface HodlersPageProps {
   params: Promise<{ locale: string }>
 }
 
-const hodlersUrl = "https://ergoblockchain.org/hodlers"
+// SEO Configuration
+const SEO = {
+  path: "/hodlers",
+  title: "Hold ERG — Sound Money with No Pre-mine | Ergo",
+  description: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + optional privacy. Wallets, tokenomics & more.",
+  ogImage: "/og/hubs/hodlers.png",
+  keywords: [
+    "hold ERG", "Ergo investment", "sound money",
+    "cryptocurrency holders", "Bitcoin alternative", "fair launch",
+    "no pre-mine", "store of value", "financial sovereignty", "ERG tokenomics"
+  ],
+}
 
-// FAQ data for hodlers page
-const hodlersFAQ = [
+// FAQ Content
+const FAQ_ITEMS = [
   {
     question: "Where to store ERG?",
     answer: "Store ERG in a non-custodial wallet where you control the private keys. Popular options: Nautilus (browser extension), SAFEW (web wallet), Ergo Mobile Wallet (iOS/Android), or Terminus (mobile). For large amounts, use Ledger hardware wallet integration for maximum security."
@@ -36,79 +48,22 @@ const hodlersFAQ = [
   }
 ]
 
-export async function generateMetadata({ params }: HodlersPageProps): Promise<Metadata> {
-  const { locale } = await params
-
-  return {
-    title: "Hold ERG — Sound Money with No Pre-mine | Ergo",
-    description: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + optional privacy. Wallets, tokenomics & more.",
-    keywords: "hold ERG, Ergo investment, sound money, cryptocurrency holders, Bitcoin alternative, fair launch, no pre-mine, store of value, financial sovereignty, ERG tokenomics",
-    alternates: {
-      canonical: hodlersUrl,
-    },
-    openGraph: {
-      title: "Hold ERG — Sound Money with No Pre-mine",
-      description: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + optional privacy.",
-      url: hodlersUrl,
-      siteName: "Ergo Platform",
-      images: [
-        {
-          url: "https://ergoblockchain.org/og/holders.png",
-          width: 1200,
-          height: 630,
-          alt: "Hold ERG - Sound Money with Smart Contracts",
-        },
-      ],
-      type: "website",
-      locale: "en_US",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: "Hold ERG — Sound Money with No Pre-mine",
-      description: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + privacy.",
-      images: ["https://ergoblockchain.org/og/holders.png"],
-    },
-  }
+// Metadata
+export async function generateMetadata(): Promise<Metadata> {
+  return createHubMetadata(SEO.path, SEO.title, SEO.description, SEO.ogImage, SEO.keywords)
 }
 
+// Page Component
 export default async function HodlersPage({ params }: HodlersPageProps) {
-  const { locale } = await params
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: siteConfig.siteUrl
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Holders",
-        item: hodlersUrl
-      }
-    ]
-  }
-
-  const speakableSchema = SchemaTypes.SpeakableSchema({
-    headline: "Hold ERG - Sound Money with No Pre-mine",
-    summary: "Why hold ERG? 97.7M fixed supply, fair launch, no VC control. Bitcoin security + smart contracts + optional privacy.",
-    url: hodlersUrl
-  })
+  const schemas = [
+    createBreadcrumbSchema([{ name: "Holders", href: "/hodlers" }]),
+    createFAQSchema(FAQ_ITEMS),
+  ]
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      <FAQSchema 
-        faqs={hodlersFAQ}
-        pageUrl={hodlersUrl}
-      />
+      {renderSchemaScripts(schemas)}
       <HoldersClient />
     </>
   )
 }
-

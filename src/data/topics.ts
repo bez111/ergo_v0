@@ -110,7 +110,7 @@ export const topics: TopicHub[] = [
       { type: "playbook", title: "Build DeFi on Ergo", url: "/playbooks/build-defi-on-ergo", description: "Step-by-step guide to building DeFi apps", badge: "Developer Guide", priority: 1 },
       { type: "technology", title: "ErgoScript", url: "/technology/ergoscript", description: "Learn Ergo's smart contract language", badge: "Language", priority: 1 },
       { type: "glossary", title: "Boxes & Registers", url: "/learn/glossary/boxes", description: "Understanding eUTXO data structures", badge: "Concept", priority: 2 },
-      { type: "doc", title: "AppKit Documentation", url: "/docs/developers/appkit", description: "SDK for building Ergo applications", badge: "SDK", priority: 2 }
+      { type: "doc", title: "AppKit Documentation", url: "/docs/developers/tooling/frameworks/appkit", description: "SDK for building Ergo applications", badge: "SDK", priority: 2 }
     ],
     
     philosophy: [

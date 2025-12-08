@@ -2,5 +2,5 @@
 export const version = {
   "version": "0.1.5",
   "name": "ergo-blockchain",
-  "generatedAt": "2025-12-07T01:44:29.002Z"
+  "generatedAt": "2025-12-08T14:55:47.634Z"
 };

@@ -6,6 +6,8 @@ import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { GlobalSchemas } from "@/components/seo/global-schemas";
 import { SEOMonitor } from "@/components/seo/seo-monitor";
 import { Suspense } from "react";
+import { createOrganizationSchema } from "@/lib/seo";
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas";
 
 /* Отключаем любое кеширование */
 export const dynamic = "force-dynamic";
@@ -114,27 +116,8 @@ export const metadata: Metadata = {
   },
 }
 
-// JSON-LD структурированные данные
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Organization',
-  name: 'Ergo Platform',
-  url: siteConfig.siteUrl,
-  logo: `${siteConfig.siteUrl}/logo-ergo.svg`,
-  description: 'Ergo is a resilient blockchain platform for contractual money. Build DeFi applications with advanced smart contracts, built-in privacy, and sustainable economics.',
-  sameAs: [
-    'https://twitter.com/BuildOnErgo',
-    'https://github.com/ergoplatform',
-    'https://www.reddit.com/r/ergonauts/',
-    'https://t.me/ergoplatform'
-  ],
-  foundingDate: '2019',
-  contactPoint: {
-    '@type': 'ContactPoint',
-    contactType: 'Community Support',
-    url: 'https://ergoblockchain.org/docs'
-  }
-}
+// JSON-LD via centralized SEO module
+const organizationSchema = createOrganizationSchema()
 
 export default function RootLayout({
   children,
@@ -151,10 +134,7 @@ export default function RootLayout({
         {/* Google Fonts preconnect removed - fonts are self-hosted via next/font */}
         <link rel="dns-prefetch" href="https://ergoblockchain.org" />
         <link rel="preload" href="/og-image.png" as="image" type="image/png" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
+        {renderSchemaScripts([organizationSchema])}
       </head>
       <body className="min-h-screen bg-background font-sans antialiased" suppressHydrationWarning>
         <GlobalSchemas />

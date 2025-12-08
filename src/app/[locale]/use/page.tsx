@@ -1,10 +1,10 @@
 import type { Metadata } from "next"
 import UseClient from "./UseClient"
 import { useCases } from "./_data"
-import { SchemaTypes } from "@/lib/schema-ultimate"
-import { generateKnowledgeGraph } from "@/lib/entity-knowledge-graph"
 import { getTranslations } from "next-intl/server"
 import { siteConfig } from "@/config/site-config"
+import { createBreadcrumbSchema, createFAQSchema, createCollectionSchema, createItemListSchema } from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
 export const revalidate = 600
 
@@ -18,24 +18,18 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return {
     title,
     description,
-    alternates: {
-      canonical: url,
-      languages: {
-        "x-default": url,
-        en: url,
-      },
-    },
+    alternates: { canonical: url, languages: { "x-default": url, en: url } },
     openGraph: {
       type: "website",
       url,
       siteName: "ergoblockchain.org",
       title,
       description,
-      images: [{ url: "https://ergoblockchain.org/og/use-cases.png", width: 1200, height: 630 }],
+      images: [{ url: "https://ergoblockchain.org/og/use/use.png", width: 1200, height: 630 }],
     },
     twitter: {
       card: "summary_large_image",
-      images: ["https://ergoblockchain.org/og/use-cases.png"],
+      images: ["https://ergoblockchain.org/og/use/use.png"],
       ...(twitterHandle ? { site: twitterHandle, creator: twitterHandle } : {}),
     },
     robots: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1, "max-video-preview": -1 },
@@ -47,7 +41,16 @@ export default async function UsePage({ params }: { params: Promise<{ locale: st
   const t = await getTranslations({ locale, namespace: 'use' })
   const base = "https://ergoblockchain.org/use"
 
-  const listJsonLd = {
+  // FAQ items from translations
+  const faqItems = [
+    { question: t('faq.whatCanDo.question'), answer: t('faq.whatCanDo.answer') },
+    { question: t('faq.defiProtocols.question'), answer: t('faq.defiProtocols.answer') },
+    { question: t('faq.createNfts.question'), answer: t('faq.createNfts.answer') },
+    { question: t('faq.privacyWork.question'), answer: t('faq.privacyWork.answer') },
+  ]
+
+  // Use cases ItemList (complex, kept structured)
+  const useCasesItemList = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     "@id": `${base}#list`,
@@ -64,73 +67,25 @@ export default async function UsePage({ params }: { params: Promise<{ locale: st
         description: u.description,
         inLanguage: "en",
         keywords: (u.tags || []).join(", "),
-        about: (u.tags || []).map((t) => ({ "@type": "Thing", name: t })),
       },
     })),
   }
 
-  const collectionJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "@id": `${base}#collection`,
-    name: t('title'),
-    url: base,
-    isPartOf: { "@type": "WebSite", "@id": "https://ergoblockchain.org#website" },
-    inLanguage: "en",
-    mainEntity: { "@id": `${base}#list` },
-  }
-
-  const breadcrumbsJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "@id": `${base}#breadcrumbs`,
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: "https://ergoblockchain.org/" },
-      { "@type": "ListItem", position: 2, name: t('title'), item: base },
-    ],
-  }
-  
-  // Добавляем продвинутые SEO схемы
-  const knowledgeGraph = generateKnowledgeGraph('use')
-  
-  const faqSchema = SchemaTypes.FAQSchema([
-    {
-      question: t('faq.whatCanDo.question'),
-      answer: t('faq.whatCanDo.answer')
-    },
-    {
-      question: t('faq.defiProtocols.question'),
-      answer: t('faq.defiProtocols.answer')
-    },
-    {
-      question: t('faq.createNfts.question'),
-      answer: t('faq.createNfts.answer')
-    },
-    {
-      question: t('faq.privacyWork.question'),
-      answer: t('faq.privacyWork.answer')
-    }
-  ])
-  
-  const speakableSchema = SchemaTypes.SpeakableSchema({
-    headline: t('title'),
-    summary: t('description'),
-    url: base
-  })
+  const schemas = [
+    useCasesItemList,
+    createCollectionSchema({
+      name: t('title'),
+      description: t('description'),
+      url: "/use",
+    }),
+    createBreadcrumbSchema([{ name: t('title'), href: "/use" }]),
+    createFAQSchema(faqItems),
+  ]
 
   return (
     <>
-      {/* Существующие схемы */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }} />
-      
-      {/* Новые продвинутые схемы */}
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(knowledgeGraph) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(speakableSchema) }} />
-      
+      {renderSchemaScripts(schemas)}
       <UseClient />
     </>
   )
-} 
+}

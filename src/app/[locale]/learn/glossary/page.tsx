@@ -1,62 +1,55 @@
-import type { Metadata } from "next";
-import { siteConfig } from "@/config/site-config";
-import { glossaryTerms } from "@/data/glossary";
-import { GlossaryHubClient } from "./GlossaryHubClient";
+import type { Metadata } from "next"
+import { siteConfig } from "@/config/site-config"
+import { glossaryTerms } from "@/data/glossary"
+import { GlossaryHubClient } from "./GlossaryHubClient"
+import { createBreadcrumbSchema } from "@/lib/seo"
+import { renderSchemaScripts } from "@/components/seo/SEOSchemas"
 
-const glossaryUrl = `${siteConfig.siteUrl}/learn/glossary`;
+const glossaryUrl = `${siteConfig.siteUrl}/learn/glossary`
+
+// SEO Configuration
+const SEO = {
+  title: "Ergo Glossary — 250+ Blockchain Terms Explained | Ergo",
+  description: "250+ blockchain terms explained simply. From eUTXO to Sigma Protocols — your complete Ergo & crypto glossary. Search, filter, learn.",
+  keywords: [
+    "Ergo glossary", "blockchain terminology", "eUTXO explained",
+    "NiPoPoWs meaning", "Sigma Protocols definition", "ErgoScript tutorial",
+    "storage rent explained", "cryptocurrency terms", "blockchain definitions"
+  ],
+}
 
 export async function generateMetadata(): Promise<Metadata> {
-  const title = "Ergo Glossary — 250+ Blockchain Terms Explained | Ergo";
-  const description = "250+ blockchain terms explained simply. From eUTXO to Sigma Protocols — your complete Ergo & crypto glossary. Search, filter, learn.";
-
   return {
-    title,
-    description,
-    keywords: [
-      "Ergo glossary",
-      "blockchain terminology",
-      "eUTXO explained",
-      "NiPoPoWs meaning",
-      "Sigma Protocols definition",
-      "ErgoScript tutorial",
-      "storage rent explained",
-      "cryptocurrency terms",
-      "blockchain definitions",
-    ],
+    title: SEO.title,
+    description: SEO.description,
+    keywords: SEO.keywords,
     alternates: { canonical: glossaryUrl },
     openGraph: {
       type: "website",
       url: glossaryUrl,
       siteName: "Ergo Platform",
-      title,
-      description,
-      images: [
-        {
-          url: `${siteConfig.siteUrl}/og/glossary.png`,
-          width: 1200,
-          height: 630,
-          alt: "Ergo Blockchain Glossary",
-        },
-      ],
+      title: SEO.title,
+      description: SEO.description,
+      images: [{ url: `${siteConfig.siteUrl}/og/glossary.png`, width: 1200, height: 630, alt: "Ergo Blockchain Glossary" }],
       locale: "en_US",
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: SEO.title,
+      description: SEO.description,
       images: [`${siteConfig.siteUrl}/og/glossary.png`],
       site: siteConfig.twitterHandle,
       creator: siteConfig.twitterHandle,
     },
     robots: { index: true, follow: true },
-  };
+  }
 }
 
 export default function GlossaryPage() {
-  const origin = siteConfig.siteUrl;
+  const origin = siteConfig.siteUrl
 
-  // DefinedTermSet Schema
-  const glossarySchemaJsonLd = {
+  // DefinedTermSet Schema (complex, kept structured)
+  const glossarySchema = {
     "@context": "https://schema.org",
     "@type": "DefinedTermSet",
     "@id": `${glossaryUrl}#glossary`,
@@ -70,21 +63,10 @@ export default function GlossaryPage() {
       description: term.shortDefinition,
       url: `${origin}/learn/glossary/${term.slug}`,
     })),
-  };
+  }
 
-  // Breadcrumbs
-  const breadcrumbsJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: origin },
-      { "@type": "ListItem", position: 2, name: "Learn", item: `${origin}/learn` },
-      { "@type": "ListItem", position: 3, name: "Glossary", item: glossaryUrl },
-    ],
-  };
-
-  // ItemList for SEO
-  const itemListJsonLd = {
+  // ItemList for SEO (complex, kept structured)
+  const itemListSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
     name: "Ergo Blockchain Terms",
@@ -96,24 +78,21 @@ export default function GlossaryPage() {
       name: term.term,
       url: `${origin}/learn/glossary/${term.slug}`,
     })),
-  };
+  }
+
+  const schemas = [
+    glossarySchema,
+    itemListSchema,
+    createBreadcrumbSchema([
+      { name: "Learn", href: "/learn" },
+      { name: "Glossary", href: "/learn/glossary" },
+    ]),
+  ]
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(glossarySchemaJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbsJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }}
-      />
+      {renderSchemaScripts(schemas)}
       <GlossaryHubClient />
     </>
-  );
+  )
 }
-

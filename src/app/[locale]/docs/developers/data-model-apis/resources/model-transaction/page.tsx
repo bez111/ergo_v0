@@ -198,7 +198,7 @@ export default function ModelTransactionPage() {
               <li><a href="/docs/introduction/eutxo" className="text-orange-400 hover:underline">Extended UTXO Model</a></li>
               <li><a href="/docs/developers/data-model-apis" className="text-orange-400 hover:underline">Data Model & APIs</a></li>
               <li><a href="/docs/developers/box" className="text-orange-400 hover:underline">Box Overview</a></li>
-              <li><a href="/docs/developers/transactions" className="text-orange-400 hover:underline">Transaction Structure</a></li>
+              <li><a href="/docs/developers/data-model-apis/composing" className="text-orange-400 hover:underline">Transaction Structure</a></li>
             </ul>
           </div>
           <div>

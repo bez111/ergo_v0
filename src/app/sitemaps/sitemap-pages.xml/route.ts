@@ -9,7 +9,7 @@ export async function GET() {
     { url: '/use', priority: 0.9, changefreq: 'weekly' },
     { url: '/miners', priority: 0.9, changefreq: 'weekly' },
     { url: '/hodlers', priority: 0.9, changefreq: 'weekly' },
-    { url: '/builders', priority: 0.9, changefreq: 'weekly' },
+    { url: '/developers', priority: 0.9, changefreq: 'weekly' },
     { url: '/technology', priority: 0.9, changefreq: 'weekly' },
     { url: '/technology/privacy-features', priority: 0.8, changefreq: 'weekly' },
     { url: '/technology/ergoscript', priority: 0.8, changefreq: 'weekly' },

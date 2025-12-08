@@ -95,6 +95,15 @@ export function EutxoVsAccountsClient() {
     },
   ]
 
+  const articleContents = [
+    { label: "Transaction Models", href: "#transaction-models" },
+    { label: "The Ethereum Model", href: "#ethereum-model" },
+    { label: "The Ergo Model", href: "#ergo-model" },
+    { label: "Comparison", href: "#comparison" },
+    { label: "Why Ergo Chose eUTXO", href: "#why-ergo-chose" },
+    { label: "FAQ", href: "#faq" },
+  ]
+
   return (
     <BackgroundWrapper>
       {/* Sticky TOC for wide screens */}

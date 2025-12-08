@@ -92,7 +92,7 @@ export default function BlockHeaderPage() {
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">height</h3>
-              <p className="text-gray-300 text-sm">The block's height in the blockchain (<Link href="/docs/developers/emission" className="text-orange-400 hover:underline">genesis block</Link> has height 0 or 1 depending on convention, Ergo starts at 1).</p>
+              <p className="text-gray-300 text-sm">The block's height in the blockchain (<Link href="/technology/adaptive-emission" className="text-orange-400 hover:underline">genesis block</Link> has height 0 or 1 depending on convention, Ergo starts at 1).</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
@@ -107,7 +107,7 @@ export default function BlockHeaderPage() {
             
             <div className="bg-neutral-900/50 rounded-lg p-4">
               <h3 className="font-semibold text-yellow-300 mb-2">votes</h3>
-              <p className="text-gray-300 text-sm">Votes cast by miners to signal preferences for changes to <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">consensus parameters</Link>.</p>
+              <p className="text-gray-300 text-sm">Votes cast by miners to signal preferences for changes to <Link href="/docs/developers/infrastructure/node/protocol" className="text-orange-400 hover:underline">consensus parameters</Link>.</p>
             </div>
             
             <div className="bg-neutral-900/50 rounded-lg p-4">

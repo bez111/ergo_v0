@@ -42,7 +42,7 @@ export default function FeesPage() {
           </p>
           
           <p className="text-gray-300 mb-4">
-            This fee is calculated based on the serialized size of the boxes being created, with a minimum threshold set at <b>360 nanoerg per byte</b> and is adjustable via <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">miner voting</Link>. As a guideline, it is suggested to allocate <b>0.001 ERG (1,000,000 NanoErg) for each box</b> involved in the transaction.
+            This fee is calculated based on the serialized size of the boxes being created, with a minimum threshold set at <b>360 nanoerg per byte</b> and is adjustable via <Link href="/docs/developers/infrastructure/node/protocol" className="text-orange-400 hover:underline">miner voting</Link>. As a guideline, it is suggested to allocate <b>0.001 ERG (1,000,000 NanoErg) for each box</b> involved in the transaction.
           </p>
           
           <div className="mt-4 p-4 bg-yellow-900/30 border border-yellow-600/30 rounded-lg">
@@ -56,7 +56,7 @@ export default function FeesPage() {
         <div className="bg-orange-400/10 border border-orange-400/20 rounded-xl p-6">
           <h2 className="text-2xl font-bold mb-4">Miner Transaction Prioritization</h2>
           <p className="text-gray-300 mb-4">
-            Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a <Link href="/docs/developers/governance" className="text-orange-400 hover:underline">voting mechanism among miners</Link>. Nodes can sort transactions based on these metrics, settable in the <Link href="/docs/developers/conf-node" className="text-orange-400 hover:underline">node configuration</Link>.
+            Miners prioritize transactions based on either the fee per byte or the validation cost unit. These criteria are adjustable via a <Link href="/docs/developers/infrastructure/node/protocol" className="text-orange-400 hover:underline">voting mechanism among miners</Link>. Nodes can sort transactions based on these metrics, settable in the <Link href="/docs/developers/infrastructure/node/configuration" className="text-orange-400 hover:underline">node configuration</Link>.
           </p>
           
           <CodeBlock language="typescript">
